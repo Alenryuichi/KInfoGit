@@ -80,14 +80,21 @@ export default function Hero() {
 
           {/* Action Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <button className="flex items-center gap-2 bg-primary-600 hover:bg-primary-700 text-white px-6 py-3 rounded-lg transition-colors">
+            <a
+              href="/kylin-resume.pdf"
+              download="苗静思-Kylin-Resume.pdf"
+              className="flex items-center gap-2 bg-primary-600 hover:bg-primary-700 text-white px-6 py-3 rounded-lg transition-colors"
+            >
               <Download className="w-5 h-5" />
               下载简历 Resume
-            </button>
-            <button className="flex items-center gap-2 border border-gray-300 dark:border-gray-600 hover:border-primary-600 dark:hover:border-primary-400 text-gray-700 dark:text-gray-300 px-6 py-3 rounded-lg transition-colors">
+            </a>
+            <a
+              href="#projects"
+              className="flex items-center gap-2 border border-gray-300 dark:border-gray-600 hover:border-primary-600 dark:hover:border-primary-400 text-gray-700 dark:text-gray-300 px-6 py-3 rounded-lg transition-colors"
+            >
               <ExternalLink className="w-5 h-5" />
               查看项目 Projects
-            </button>
+            </a>
           </div>
 
           {/* Social Links */}

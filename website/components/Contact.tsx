@@ -127,14 +127,22 @@ export default function Contact() {
                 </h3>
                 
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <button className="flex items-center justify-center gap-3 bg-primary-600 hover:bg-primary-700 text-white px-6 py-3 rounded-lg transition-colors">
+                  <a
+                    href="/kylin-resume.pdf"
+                    download="苗静思-Kylin-Resume.pdf"
+                    className="flex items-center justify-center gap-3 bg-primary-600 hover:bg-primary-700 text-white px-6 py-3 rounded-lg transition-colors"
+                  >
                     <Download className="w-5 h-5" />
                     下载中文简历
-                  </button>
-                  <button className="flex items-center justify-center gap-3 border border-primary-600 text-primary-600 hover:bg-primary-600 hover:text-white px-6 py-3 rounded-lg transition-colors">
+                  </a>
+                  <a
+                    href="/kylin-resume.pdf"
+                    download="Kylin-Resume-EN.pdf"
+                    className="flex items-center justify-center gap-3 border border-primary-600 text-primary-600 hover:bg-primary-600 hover:text-white px-6 py-3 rounded-lg transition-colors"
+                  >
                     <Download className="w-5 h-5" />
                     Download English CV
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>
