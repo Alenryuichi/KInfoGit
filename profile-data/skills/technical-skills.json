@@ -1,0 +1,67 @@
+{
+  "programming_languages": {
+    "category": "编程语言",
+    "skills": [
+      { "name": "Python", "level": "熟练", "years": 5 },
+      { "name": "C++", "level": "熟练", "years": 4 },
+      { "name": "Go", "level": "熟练", "years": 3 },
+      { "name": "TypeScript", "level": "一般", "years": 3 },
+      { "name": "JavaScript", "level": "一般", "years": 4 },
+      { "name": "SQL", "level": "熟练", "years": 5 },
+      { "name": "Shell", "level": "熟练", "years": 4 }
+    ]
+  },
+  "frontend_technologies": {
+    "category": "前端技术",
+    "skills": [
+      { "name": "Vue.js", "level": "熟练", "years": 3 },
+      { "name": "HTML5", "level": "熟练", "years": 4 },
+      { "name": "CSS3", "level": "熟练", "years": 4 },
+      { "name": "TypeScript", "level": "熟练", "years": 3 },
+      { "name": "Swift", "level": "一般", "years": 1 },
+      { "name": "Figma", "level": "一般", "years": 2 }
+    ]
+  },
+  "backend_architecture": {
+    "category": "后端技术与架构",
+    "skills": [
+      { "name": "gRPC", "level": "熟练", "years": 3 },
+      { "name": "tRPC", "level": "熟练", "years": 2 },
+      { "name": "微服务架构设计", "level": "专家", "years": 3 },
+      { "name": "RESTful API", "level": "熟练", "years": 4 },
+      { "name": "GraphQL", "level": "熟练", "years": 2 },
+      { "name": "OLAP/OLTP 架构设计", "level": "专家", "years": 3 },
+      { "name": "高并发、高可用架构", "level": "专家", "years": 3 },
+      { "name": "分布式系统设计", "level": "专家", "years": 4 },
+      { "name": "权限管理系统", "level": "熟练", "years": 3 }
+    ]
+  },
+  "anti_fraud_security": {
+    "category": "反作弊与安全技术",
+    "skills": [
+      { "name": "特征工程与挖掘", "level": "专家", "years": 3 },
+      { "name": "风险识别算法", "level": "专家", "years": 3 },
+      { "name": "异常检测模型", "level": "专家", "years": 3 },
+      { "name": "策略全生命周期管理", "level": "专家", "years": 2 },
+      { "name": "图数据建模", "level": "专家", "years": 3 },
+      { "name": "关系网络分析", "level": "专家", "years": 3 },
+      { "name": "图算法应用", "level": "专家", "years": 3 },
+      { "name": "复杂查询优化", "level": "熟练", "years": 3 }
+    ]
+  },
+  "databases_bigdata": {
+    "category": "数据库与大数据",
+    "skills": [
+      { "name": "ClickHouse", "level": "专家", "years": 3 },
+      { "name": "MySQL", "level": "熟练", "years": 5 },
+      { "name": "HBase", "level": "熟练", "years": 3 },
+      { "name": "Redis", "level": "熟练", "years": 4 },
+      { "name": "TDW", "level": "熟练", "years": 3 },
+      { "name": "FeatureKv", "level": "熟练", "years": 2 },
+      { "name": "Flink", "level": "熟练", "years": 3 },
+      { "name": "Kafka", "level": "熟练", "years": 3 },
+      { "name": "10亿级数据处理", "level": "专家", "years": 3 },
+      { "name": "实时数据分析", "level": "专家", "years": 3 }
+    ]
+  }
+}

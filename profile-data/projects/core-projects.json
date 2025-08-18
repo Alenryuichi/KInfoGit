@@ -1,0 +1,190 @@
+[
+  {
+    "id": "portrait-platform",
+    "title": {
+      "zh": "画像中台系统",
+      "en": "Portrait Platform System"
+    },
+    "period": "2022-2024",
+    "company": "腾讯",
+    "role": {
+      "zh": "项目负责人",
+      "en": "Project Lead"
+    },
+    "tech_stack": ["Python", "Golang", "ClickHouse", "MySQL", "TDW", "Vue.js", "Spark"],
+    "responsibilities": {
+      "zh": ["系统架构设计", "前后端开发", "项目管理"],
+      "en": ["System Architecture Design", "Full-stack Development", "Project Management"]
+    },
+    "achievements": {
+      "zh": [
+        "从 0 到 1 构建 10 亿级数据分析平台",
+        "支持 200+ 标签维度分析",
+        "复杂分析 5 分钟内完成",
+        "刷单欺诈行为下降 30%"
+      ],
+      "en": [
+        "Built 10-billion-level data analysis platform from scratch",
+        "Support 200+ tag dimension analysis",
+        "Complex analysis completed within 5 minutes",
+        "30% reduction in fraudulent activities"
+      ]
+    },
+    "highlights": {
+      "zh": "设计五层架构 (权限管理、业务数据、画像资产、用户分群、业务应用)",
+      "en": "Designed five-layer architecture (permission management, business data, portrait assets, user segmentation, business applications)"
+    },
+    "impact": "10亿级数据处理能力",
+    "category": "system-architecture"
+  },
+  {
+    "id": "anti-fraud-governance",
+    "title": {
+      "zh": "自建应用反作弊治理系统",
+      "en": "Self-built Application Anti-fraud Governance System"
+    },
+    "period": "2023-2024",
+    "company": "腾讯",
+    "role": {
+      "zh": "项目负责人",
+      "en": "Project Lead"
+    },
+    "tech_stack": ["Python", "Golang", "C++", "反作弊算法", "自动化流程", "数据分析"],
+    "responsibilities": {
+      "zh": ["项目全生命周期管理", "算法设计", "流程自动化"],
+      "en": ["Full project lifecycle management", "Algorithm design", "Process automation"]
+    },
+    "achievements": {
+      "zh": [
+        "识别违规服务商 820 家",
+        "识别违规企业 52683 家",
+        "项目收益 300 万+",
+        "实现零投诉运营"
+      ],
+      "en": [
+        "Identified 820 violating service providers",
+        "Identified 52,683 violating enterprises", 
+        "Project revenue 3+ million RMB",
+        "Achieved zero-complaint operations"
+      ]
+    },
+    "highlights": {
+      "zh": "设计识别 → 匹配 → 灰度 → 通知 → 迁移 → 反馈的闭环流程，挖掘 10+ 维度特征",
+      "en": "Designed closed-loop process: identify → match → grayscale → notify → migrate → feedback, with 10+ dimensional feature mining"
+    },
+    "impact": "300万+直接收益",
+    "category": "anti-fraud"
+  },
+  {
+    "id": "anti-spam-graph",
+    "title": {
+      "zh": "反垃圾图应用平台",
+      "en": "Anti-spam Graph Application Platform"
+    },
+    "period": "2021-2023",
+    "company": "腾讯",
+    "role": {
+      "zh": "项目负责人",
+      "en": "Project Lead"
+    },
+    "tech_stack": ["图数据库", "Python", "关系网络分析", "数据挖掘"],
+    "responsibilities": {
+      "zh": ["图数据库架构设计", "图算法开发", "业务支持"],
+      "en": ["Graph database architecture design", "Graph algorithm development", "Business support"]
+    },
+    "achievements": {
+      "zh": [
+        "构建包含 20 余种实体、70 余种关系的图数据库",
+        "支持 4 种扩散分析、4 种溯源分析",
+        "提升策略打击准确性和覆盖率"
+      ],
+      "en": [
+        "Built graph database with 20+ entity types and 70+ relationship types",
+        "Support 4 types of diffusion analysis and 4 types of traceability analysis",
+        "Improved strategy accuracy and coverage"
+      ]
+    },
+    "highlights": {
+      "zh": "助力多个策略人员应用图能力",
+      "en": "Empowered multiple strategy personnel to apply graph capabilities"
+    },
+    "impact": "图数据库技术专家地位确立",
+    "category": "graph-database"
+  },
+  {
+    "id": "anti-spam-rollback",
+    "title": {
+      "zh": "反垃圾快速回滚系统",
+      "en": "Anti-spam Rapid Rollback System"
+    },
+    "period": "2023-2024",
+    "company": "腾讯",
+    "role": {
+      "zh": "项目负责人",
+      "en": "Project Lead"
+    },
+    "tech_stack": ["Go", "Vue.js", "分布式系统", "审批流程", "数据库事务", "微服务"],
+    "responsibilities": {
+      "zh": ["前后端开发", "系统架构设计", "审批流程设计"],
+      "en": ["Full-stack development", "System architecture design", "Approval process design"]
+    },
+    "achievements": {
+      "zh": [
+        "支持 33 种封禁类型回滚",
+        "秒级精确回滚",
+        "大规模回滚成功率 99.9%",
+        "演习模式保障系统可用性"
+      ],
+      "en": [
+        "Support rollback for 33 types of bans",
+        "Second-level precise rollback",
+        "99.9% success rate for large-scale rollback",
+        "Drill mode ensures system availability"
+      ]
+    },
+    "highlights": {
+      "zh": "多维度回滚能力，两级审批机制，一键回滚功能，支持影响评估和实时监控",
+      "en": "Multi-dimensional rollback capability, two-level approval mechanism, one-click rollback, impact assessment and real-time monitoring"
+    },
+    "impact": "99.9%回滚成功率",
+    "category": "system-reliability"
+  },
+  {
+    "id": "security-strategy-lifecycle",
+    "title": {
+      "zh": "安全策略全生命周期管理系统",
+      "en": "Security Strategy Lifecycle Management System"
+    },
+    "period": "2024-至今",
+    "company": "腾讯",
+    "role": {
+      "zh": "架构师",
+      "en": "Architect"
+    },
+    "tech_stack": ["Python", "Go", "C++", "机器学习平台", "策略引擎", "Flink", "Kafka"],
+    "responsibilities": {
+      "zh": ["系统架构设计", "策略研发平台建设", "全流程自动化"],
+      "en": ["System architecture design", "Strategy R&D platform construction", "Full-process automation"]
+    },
+    "achievements": {
+      "zh": [
+        "策略研发效率提升 60%",
+        "策略上线时间缩短至 2 天",
+        "误伤率降低 40%",
+        "策略覆盖率提升 50%"
+      ],
+      "en": [
+        "60% improvement in strategy development efficiency",
+        "Strategy deployment time reduced to 2 days",
+        "40% reduction in false positive rate",
+        "50% increase in strategy coverage"
+      ]
+    },
+    "highlights": {
+      "zh": "事前-事中-事后全流程管理，策略自动化测试，智能化策略优化，实时效果评估",
+      "en": "Full-process management (pre-during-post), automated strategy testing, intelligent optimization, real-time effect evaluation"
+    },
+    "impact": "策略研发效率提升60%",
+    "category": "strategy-automation"
+  }
+]

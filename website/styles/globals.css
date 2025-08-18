@@ -1,0 +1,186 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+/* Base styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100 dark:bg-gray-800;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-400 dark:bg-gray-600 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-500 dark:bg-gray-500;
+}
+
+/* Selection */
+::selection {
+  @apply bg-primary-500 text-white;
+}
+
+/* Focus styles */
+.focus-visible {
+  @apply outline-2 outline-primary-500 outline-offset-2;
+}
+
+/* Chinese font optimization */
+.font-zh {
+  font-family: 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif;
+}
+
+/* Animation utilities */
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.6s ease-out;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Custom components */
+.glass {
+  @apply bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm;
+}
+
+.glass-border {
+  @apply border border-gray-200/50 dark:border-gray-700/50;
+}
+
+.gradient-text {
+  @apply bg-gradient-to-r from-primary-600 to-accent-500 bg-clip-text text-transparent;
+}
+
+.gradient-bg {
+  background: linear-gradient(135deg, rgb(59 130 246 / 0.1) 0%, rgb(16 185 129 / 0.1) 100%);
+}
+
+/* Section spacing */
+section {
+  @apply py-20 lg:py-24;
+}
+
+/* Typography scale */
+.text-display {
+  @apply text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight;
+}
+
+.text-heading-1 {
+  @apply text-3xl lg:text-4xl font-bold tracking-tight;
+}
+
+.text-heading-2 {
+  @apply text-2xl lg:text-3xl font-semibold;
+}
+
+.text-heading-3 {
+  @apply text-xl lg:text-2xl font-semibold;
+}
+
+.text-body {
+  @apply text-base lg:text-lg leading-relaxed;
+}
+
+/* Card components */
+.card {
+  @apply bg-white dark:bg-gray-800 rounded-xl shadow-lg dark:shadow-gray-900/20 border border-gray-200 dark:border-gray-700;
+}
+
+.card-hover {
+  @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-1 hover:border-primary-300 dark:hover:border-primary-600;
+}
+
+/* Button components */
+.btn-primary {
+  @apply bg-primary-600 hover:bg-primary-700 text-white px-6 py-3 rounded-lg font-medium transition-colors;
+}
+
+.btn-secondary {
+  @apply border border-gray-300 dark:border-gray-600 hover:border-primary-600 dark:hover:border-primary-400 text-gray-700 dark:text-gray-300 px-6 py-3 rounded-lg font-medium transition-colors;
+}
+
+.btn-outline {
+  @apply border-2 border-primary-600 text-primary-600 hover:bg-primary-600 hover:text-white px-6 py-3 rounded-lg font-medium transition-all;
+}
+
+/* Skill level indicators */
+.skill-bar {
+  @apply w-full h-2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden;
+}
+
+.skill-fill {
+  @apply h-full bg-gradient-to-r from-primary-500 to-accent-500 transition-all duration-1000 ease-out;
+}
+
+/* Project status badges */
+.status-badge {
+  @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+}
+
+.status-completed {
+  @apply bg-green-100 text-green-800 dark:bg-green-900/20 dark:text-green-400;
+}
+
+.status-ongoing {
+  @apply bg-blue-100 text-blue-800 dark:bg-blue-900/20 dark:text-blue-400;
+}
+
+.status-planning {
+  @apply bg-yellow-100 text-yellow-800 dark:bg-yellow-900/20 dark:text-yellow-400;
+}
+
+/* Loading states */
+.skeleton {
+  @apply animate-pulse bg-gray-200 dark:bg-gray-700 rounded;
+}
+
+/* Mobile optimizations */
+@media (max-width: 640px) {
+  section {
+    @apply py-12;
+  }
+  
+  .text-display {
+    @apply text-3xl;
+  }
+  
+  .text-heading-1 {
+    @apply text-2xl;
+  }
+}
+
+/* Dark mode specific overrides */
+@media (prefers-color-scheme: dark) {
+  .glass {
+    @apply bg-gray-900/80;
+  }
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+}
