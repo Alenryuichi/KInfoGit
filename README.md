@@ -12,6 +12,7 @@ KInfoGit/
 │   ├── resume/            # Resume in multiple formats
 │   ├── projects/          # Project details and case studies
 │   ├── skills/            # Technical skills and certifications
+│   ├── career/            # Career planning and interview preparation
 │   └── blog/              # Blog posts and articles
 ├── website/               # Next.js website source
 │   ├── components/        # React components
@@ -103,6 +104,12 @@ Edit JSON files in the `/profile-data/` directory:
 1. Create new data files in `/profile-data/`
 2. Add corresponding components in `/website/components/`
 3. Import and use in `/website/pages/index.tsx`
+
+### Career Development Documentation
+The `/profile-data/career/` directory contains:
+- `career-planning.md` - Long-term career goals and transition strategy
+- `interview-preparation.md` - Interview questions and company research
+- `ai-learning-notes.md` - AI technology learning roadmap and notes
 
 ## 🎯 Key Highlights
 - **Anti-fraud Expert**: 10亿级 data processing, 300万+ revenue impact
