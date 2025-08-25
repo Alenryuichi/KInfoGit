@@ -1,217 +1,190 @@
-const skillCategories = [
-  {
-    name: '编程语言',
-    nameEn: 'Programming Languages',
-    icon: '💻',
-    skills: [
-      { name: 'Python', years: '5+ years', level: 'expert' },
-      { name: 'Go', years: '3+ years', level: 'expert' },
-      { name: 'C++', years: '4+ years', level: 'proficient' },
-      { name: 'TypeScript', years: '3+ years', level: 'proficient' },
-      { name: 'JavaScript', years: '4+ years', level: 'proficient' },
-      { name: 'SQL', years: '5+ years', level: 'expert' },
-    ]
-  },
-  {
-    name: '后端架构',
-    nameEn: 'Backend & Architecture',
-    icon: '🏗️',
-    skills: [
-      { name: 'gRPC/tRPC', years: '3+ years', level: 'expert' },
-      { name: '微服务架构', years: '专家级', level: 'expert' },
-      { name: 'OLAP/OLTP设计', years: '专家级', level: 'expert' },
-      { name: '分布式系统', years: '专家级', level: 'expert' },
-      { name: '高并发架构', years: '3+ years', level: 'expert' },
-    ]
-  },
-  {
-    name: '反作弊安全',
-    nameEn: 'Anti-fraud & Security',
-    icon: '🛡️',
-    skills: [
-      { name: '特征工程', years: '专家级', level: 'expert' },
-      { name: '风险识别算法', years: '专家级', level: 'expert' },
-      { name: '图数据建模', years: '专家级', level: 'expert' },
-      { name: '策略生命周期管理', years: '专家级', level: 'expert' },
-      { name: '关系网络分析', years: '3+ years', level: 'expert' },
-    ]
-  },
-  {
-    name: '数据库大数据',
-    nameEn: 'Database & Big Data',
-    icon: '📊',
-    skills: [
-      { name: 'ClickHouse', years: '专家级', level: 'expert' },
-      { name: 'MySQL/HBase', years: '5+ years', level: 'proficient' },
-      { name: 'Flink/Kafka', years: '3+ years', level: 'proficient' },
-      { name: '10亿级数据处理', years: '专家级', level: 'expert' },
-      { name: 'Redis/TDW', years: '3+ years', level: 'proficient' },
-    ]
-  },
-  {
-    name: '前端技术',
-    nameEn: 'Frontend Technologies',
-    icon: '🎨',
-    skills: [
-      { name: 'Vue.js', years: '3+ years', level: 'proficient' },
-      { name: 'HTML5/CSS3', years: '4+ years', level: 'proficient' },
-      { name: 'React/Next.js', years: '2+ years', level: 'intermediate' },
-      { name: 'Figma设计', years: '2+ years', level: 'intermediate' },
-    ]
-  }
+// Modern tech stack with animated marquee
+const frontendTech = [
+  { name: 'React', icon: 'https://cdn.simpleicons.org/react' },
+  { name: 'Next.js', icon: 'https://cdn.simpleicons.org/nextdotjs/white' },
+  { name: 'TypeScript', icon: 'https://cdn.simpleicons.org/typescript' },
+  { name: 'Tailwind CSS', icon: 'https://cdn.simpleicons.org/tailwindcss' },
+  { name: 'Vue.js', icon: 'https://cdn.simpleicons.org/vuedotjs' },
+  { name: 'Motion', icon: 'https://cdn.simpleicons.org/framer' },
 ]
 
-// 获取技能等级的样式
-const getSkillLevelStyle = (level: string) => {
-  switch (level) {
-    case 'expert':
-      return 'bg-gradient-to-r from-red-500 to-pink-500 text-white'
-    case 'proficient':
-      return 'bg-gradient-to-r from-blue-500 to-cyan-500 text-white'
-    case 'intermediate':
-      return 'bg-gradient-to-r from-green-500 to-emerald-500 text-white'
-    default:
-      return 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300'
-  }
-}
+const backendTech = [
+  { name: 'Node.js', icon: 'https://cdn.simpleicons.org/nodedotjs' },
+  { name: 'Go', icon: 'https://cdn.simpleicons.org/go' },
+  { name: 'Python', icon: 'https://cdn.simpleicons.org/python' },
+  { name: 'PostgreSQL', icon: 'https://cdn.simpleicons.org/postgresql' },
+  { name: 'MongoDB', icon: 'https://cdn.simpleicons.org/mongodb' },
+  { name: 'Redis', icon: 'https://cdn.simpleicons.org/redis' },
+]
 
-// 获取技能等级的中文标签
-const getSkillLevelLabel = (level: string) => {
-  switch (level) {
-    case 'expert':
-      return '专家'
-    case 'proficient':
-      return '熟练'
-    case 'intermediate':
-      return '一般'
-    default:
-      return '了解'
-  }
-}
+const toolsTech = [
+  { name: 'Docker', icon: 'https://cdn.simpleicons.org/docker' },
+  { name: 'Kubernetes', icon: 'https://cdn.simpleicons.org/kubernetes' },
+  { name: 'AWS', icon: 'https://cdn.simpleicons.org/amazonwebservices' },
+  { name: 'Git', icon: 'https://cdn.simpleicons.org/git' },
+  { name: 'Vercel', icon: 'https://cdn.simpleicons.org/vercel/white' },
+  { name: 'Linux', icon: 'https://cdn.simpleicons.org/linux' },
+]
+
+const qualities = [
+  'Accessible', 'Responsive', 'Dynamic', 'Scalable', 'Search Optimized',
+  'Interactive', 'Secure', 'Reliable', 'Engaging', 'Fast'
+]
+
+// Marquee component for animated tech stack
+const Marquee = ({ children, reverse = false }: { children: React.ReactNode, reverse?: boolean }) => (
+  <div className="flex overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]">
+    <div className={`flex shrink-0 justify-around [gap:var(--gap)] animate-marquee flex-row ${reverse ? '[animation-direction:reverse]' : ''}`} style={{ '--gap': '2rem' } as React.CSSProperties}>
+      {children}
+    </div>
+    <div className={`flex shrink-0 justify-around [gap:var(--gap)] animate-marquee flex-row ${reverse ? '[animation-direction:reverse]' : ''}`} style={{ '--gap': '2rem' } as React.CSSProperties}>
+      {children}
+    </div>
+  </div>
+)
+
+import { useEffect } from 'react'
+import { animateOnScroll, animateSkillTags } from '@/utils/animations'
+
+// Tech badge component
+const TechBadge = ({ tech }: { tech: { name: string, icon: string } }) => (
+  <div className="skill-tag inline-flex items-center justify-center rounded-lg border px-3 py-1 text-sm w-fit whitespace-nowrap shrink-0 gap-2 text-white border-gray-700 bg-gray-800/50 hover:bg-gray-700/50 transition-colors">
+    <img height="14" width="14" alt={tech.name} src={tech.icon} className="w-4" />
+    <span>{tech.name}</span>
+  </div>
+)
 
 export default function Skills() {
-
+  useEffect(() => {
+    // 初始化滚动动画
+    animateOnScroll('.skills-header')
+    animateSkillTags()
+    animateOnScroll('.skills-strengths')
+    animateOnScroll('.skills-cta')
+  }, [])
   return (
-    <section id="skills">
+    <section id="skills" className="py-20 bg-black text-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           {/* Section Header */}
-          <div className="text-center mb-16">
-            <h2 className="text-heading-1 gradient-text mb-4">
-              技术技能 Technical Skills
+          <div className="skills-header text-center mb-16">
+            <h2 className="text-4xl sm:text-5xl font-bold mb-6">
+              My Skills
+              <br />
+              <span className="bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+                The Secret Sauce
+              </span>
             </h2>
-            <p className="text-body text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-              深度掌握反作弊技术、大规模系统架构、图数据库等核心技术栈，
-              在企业级项目中积累了丰富的实战经验
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
+              Passionate about cutting-edge technologies and building scalable,
+              high-performance applications with modern tech stacks.
             </p>
           </div>
 
-          {/* Skills Grid */}
-          <div className="grid gap-8">
-            {skillCategories.map((category, categoryIndex) => (
-              <div key={category.name} className="card p-8">
-                {/* Category Header */}
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="text-4xl">{category.icon}</div>
-                  <div>
-                    <h3 className="text-heading-3 text-gray-900 dark:text-white font-zh">
-                      {category.name}
-                    </h3>
-                    <p className="text-gray-600 dark:text-gray-400">
-                      {category.nameEn}
-                    </p>
-                  </div>
-                </div>
+          {/* Tech Stack Marquees */}
+          <div className="skills-container space-y-8 mb-20">
+            {/* Frontend Technologies */}
+            <div>
+              <h3 className="text-lg font-semibold text-gray-300 mb-4 text-center">Frontend Technologies</h3>
+              <Marquee>
+                {frontendTech.map((tech, index) => (
+                  <TechBadge key={`frontend-${index}`} tech={tech} />
+                ))}
+              </Marquee>
+            </div>
 
-                {/* Skills Tags */}
-                <div className="flex flex-wrap gap-3">
-                  {category.skills.map((skill, skillIndex) => (
-                    <div
-                      key={skill.name}
-                      className={`group relative px-4 py-2 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg ${getSkillLevelStyle(skill.level)}`}
-                      style={{
-                        animationDelay: `${categoryIndex * 200 + skillIndex * 100}ms`
-                      }}
-                    >
-                      <div className="flex items-center gap-2">
-                        <span className="font-medium">{skill.name}</span>
-                        <span className="text-xs opacity-90 bg-white/20 px-2 py-1 rounded-full">
-                          {getSkillLevelLabel(skill.level)}
-                        </span>
-                      </div>
+            {/* Backend Technologies */}
+            <div>
+              <h3 className="text-lg font-semibold text-gray-300 mb-4 text-center">Backend & Database</h3>
+              <Marquee reverse>
+                {backendTech.map((tech, index) => (
+                  <TechBadge key={`backend-${index}`} tech={tech} />
+                ))}
+              </Marquee>
+            </div>
 
-                      {/* Tooltip */}
-                      <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-2 bg-gray-900 dark:bg-gray-100 text-white dark:text-gray-900 text-sm rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap z-10">
-                        经验: {skill.years}
-                        <div className="absolute top-full left-1/2 transform -translate-x-1/2 border-4 border-transparent border-t-gray-900 dark:border-t-gray-100"></div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            ))}
+            {/* Tools & DevOps */}
+            <div>
+              <h3 className="text-lg font-semibold text-gray-300 mb-4 text-center">Tools & DevOps</h3>
+              <Marquee>
+                {toolsTech.map((tech, index) => (
+                  <TechBadge key={`tools-${index}`} tech={tech} />
+                ))}
+              </Marquee>
+            </div>
           </div>
 
-          {/* Technical Highlights */}
-          <div className="mt-16">
-            <h3 className="text-heading-2 text-center text-gray-900 dark:text-white mb-8">
-              核心优势 Core Strengths
+          {/* Quality Attributes */}
+          <div className="mb-20">
+            <h3 className="text-2xl font-bold text-center mb-8">
+              Websites that stand out and make a difference
             </h3>
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="card card-hover p-6 text-center">
-                <div className="w-12 h-12 bg-gradient-to-br from-primary-500 to-primary-600 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <span className="text-white text-xl">🎯</span>
+            <Marquee>
+              {qualities.map((quality, index) => (
+                <div key={`quality-${index}`} className="px-6 py-3 bg-gray-800/30 border border-gray-700/50 rounded-full text-gray-300 whitespace-nowrap">
+                  {quality}
                 </div>
-                <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
-                  反作弊专家
-                </h4>
-                <p className="text-gray-600 dark:text-gray-400 text-sm">
-                  识别违规企业5万+家，直接收益300万+，零投诉运营
-                </p>
-              </div>
+              ))}
+            </Marquee>
+          </div>
 
-              <div className="card card-hover p-6 text-center">
-                <div className="w-12 h-12 bg-gradient-to-br from-accent-500 to-accent-600 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <span className="text-white text-xl">🏗️</span>
-                </div>
-                <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
-                  架构设计师
-                </h4>
-                <p className="text-gray-600 dark:text-gray-400 text-sm">
-                  从0到1构建10亿级数据平台，5分钟完成复杂分析
-                </p>
+          {/* Core Strengths */}
+          <div className="skills-strengths grid md:grid-cols-3 gap-8 mb-16">
+            <div className="group p-8 rounded-2xl bg-gray-900/50 border border-gray-800/50 hover:border-gray-700/50 transition-all duration-300 hover:bg-gray-900/70">
+              <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                <span className="text-white text-2xl">🎯</span>
               </div>
+              <h4 className="text-xl font-semibold text-white mb-3">
+                Anti-fraud Expert
+              </h4>
+              <p className="text-gray-400 leading-relaxed">
+                Identified 50,000+ fraudulent enterprises, generated 3M+ direct revenue with zero complaints operation.
+              </p>
+            </div>
 
-              <div className="card card-hover p-6 text-center">
-                <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <span className="text-white text-xl">🌐</span>
-                </div>
-                <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
-                  全栈开发
-                </h4>
-                <p className="text-gray-600 dark:text-gray-400 text-sm">
-                  精通前后端开发，具备完整项目交付能力
-                </p>
+            <div className="group p-8 rounded-2xl bg-gray-900/50 border border-gray-800/50 hover:border-gray-700/50 transition-all duration-300 hover:bg-gray-900/70">
+              <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                <span className="text-white text-2xl">🏗️</span>
               </div>
+              <h4 className="text-xl font-semibold text-white mb-3">
+                System Architect
+              </h4>
+              <p className="text-gray-400 leading-relaxed">
+                Built billion-scale data platforms from 0 to 1, enabling complex analysis completion in 5 minutes.
+              </p>
+            </div>
+
+            <div className="group p-8 rounded-2xl bg-gray-900/50 border border-gray-800/50 hover:border-gray-700/50 transition-all duration-300 hover:bg-gray-900/70">
+              <div className="w-16 h-16 bg-gradient-to-br from-pink-500 to-red-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                <span className="text-white text-2xl">🌐</span>
+              </div>
+              <h4 className="text-xl font-semibold text-white mb-3">
+                Full-Stack Developer
+              </h4>
+              <p className="text-gray-400 leading-relaxed">
+                Proficient in both frontend and backend development with complete project delivery capabilities.
+              </p>
             </div>
           </div>
 
-          {/* Skills Legend */}
-          <div className="mt-12 text-center">
-            <div className="inline-flex items-center gap-6 bg-gray-50 dark:bg-gray-800 px-6 py-3 rounded-full">
-              <div className="flex items-center gap-2">
-                <div className="w-4 h-4 bg-gradient-to-r from-red-500 to-pink-500 rounded-full"></div>
-                <span className="text-sm text-gray-600 dark:text-gray-400">专家级</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <div className="w-4 h-4 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full"></div>
-                <span className="text-sm text-gray-600 dark:text-gray-400">熟练</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <div className="w-4 h-4 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full"></div>
-                <span className="text-sm text-gray-600 dark:text-gray-400">一般</span>
-              </div>
-            </div>
+          {/* CTA Section */}
+          <div className="skills-cta text-center">
+            <h3 className="text-2xl font-bold text-white mb-4">
+              Ready to build something amazing?
+            </h3>
+            <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
+              I'm available for full-time roles & freelance projects.
+              Let's collaborate and create exceptional digital experiences.
+            </p>
+            <a
+              href="#contact"
+              className="inline-flex items-center px-8 py-4 bg-white text-black font-semibold rounded-full hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
+            >
+              Get In Touch
+              <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </a>
           </div>
         </div>
       </div>

@@ -1,10 +1,19 @@
+import { useEffect } from 'react'
+import { animateOnScroll, animateTimeline } from '@/utils/animations'
+
 export default function Experience() {
+  useEffect(() => {
+    // 初始化滚动动画
+    animateOnScroll('.experience-header')
+    animateTimeline()
+  }, [])
+
   return (
     <section id="experience">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           {/* Section Header */}
-          <div className="text-center mb-16">
+          <div className="experience-header text-center mb-16">
             <h2 className="text-heading-1 gradient-text mb-4">
               工作经历 Experience
             </h2>
@@ -14,12 +23,12 @@ export default function Experience() {
           </div>
 
           {/* Main Experience */}
-          <div className="relative">
+          <div className="timeline-container relative">
             {/* Timeline Line */}
             <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary-500 to-accent-500 hidden md:block"></div>
-            
+
             {/* Tencent Experience */}
-            <div className="relative mb-12">
+            <div className="timeline-item relative mb-12">
               <div className="md:flex items-start gap-8">
                 {/* Timeline Dot */}
                 <div className="hidden md:flex w-16 h-16 bg-primary-600 rounded-full items-center justify-center flex-shrink-0 relative z-10">

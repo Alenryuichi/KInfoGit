@@ -1,133 +1,130 @@
-import { useState, useEffect } from 'react'
-import { ChevronDown, Download, ExternalLink, Github, Linkedin, Mail } from 'lucide-react'
-
-const titles = [
-  '全栈反作弊技术专家',
-  'Full-stack Anti-fraud Expert',
-  '系统架构师',
-  'System Architect',
-  '全栈开发工程师',
-  'Full-stack Developer'
-]
+import { useEffect } from 'react'
+import { Github, Linkedin, Mail, ArrowRight } from 'lucide-react'
+import { animateHeroEntrance, addButtonHoverEffects } from '@/utils/animations'
 
 export default function Hero() {
-  const [currentTitleIndex, setCurrentTitleIndex] = useState(0)
-  
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentTitleIndex((prev) => (prev + 1) % titles.length)
-    }, 3000)
-    
-    return () => clearInterval(interval)
+    // 页面加载后启动Hero动画
+    const timer = setTimeout(() => {
+      animateHeroEntrance()
+      addButtonHoverEffects()
+    }, 100)
+
+    return () => clearTimeout(timer)
   }, [])
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center pt-16">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center space-y-8">
-          {/* Avatar */}
-          <div className="relative mx-auto w-32 h-32 sm:w-40 sm:h-40">
-            <div className="w-full h-full rounded-full bg-gradient-to-br from-primary-500 to-accent-500 p-1">
-              <div className="w-full h-full rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center">
-                <span className="text-4xl sm:text-5xl font-bold text-primary-600 dark:text-primary-400">
-                  苗
+    <section id="home" className="min-h-screen flex items-center justify-center bg-black text-white relative overflow-hidden">
+      {/* Background Effects */}
+      <div className="absolute inset-0">
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-blue-500/5 to-purple-500/5 rounded-full blur-3xl"></div>
+      </div>
+
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+        <div className="max-w-5xl mx-auto space-y-8">
+          {/* Main Heading */}
+          <div className="hero-title space-y-6">
+            <div className="space-y-2">
+              <p className="text-gray-400 text-lg font-medium">
+                I help founders turn ideas into
+              </p>
+              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight">
+                <span className="block mb-2">seamless digital</span>
+                <span className="bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+                  experiences
                 </span>
-              </div>
+              </h1>
             </div>
-            <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-accent-500 rounded-full flex items-center justify-center">
-              <span className="text-white text-sm">🚀</span>
-            </div>
-          </div>
 
-          {/* Name */}
-          <div className="space-y-2">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white">
-              <span className="font-zh">苗静思</span>{' '}
-              <span className="bg-gradient-to-r from-primary-600 to-accent-500 bg-clip-text text-transparent">
-                Kylin
-              </span>
-            </h1>
-            
-            {/* Dynamic Title */}
-            <div className="h-16 flex items-center justify-center">
-              <h2 className="text-xl sm:text-2xl text-gray-600 dark:text-gray-300 font-medium transition-all duration-500">
-                {titles[currentTitleIndex]}
+            <div className="hero-subtitle space-y-4">
+              <h2 className="text-2xl sm:text-3xl text-gray-300 font-light">
+                Hello, I'm <span className="font-semibold text-white">Kylin Miao</span>
               </h2>
-            </div>
-          </div>
-
-          {/* Stats */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-2xl mx-auto">
-            <div className="text-center">
-              <div className="text-3xl font-bold text-primary-600 dark:text-primary-400">10亿+</div>
-              <div className="text-sm text-gray-600 dark:text-gray-400">数据处理规模</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-primary-600 dark:text-primary-400">300万+</div>
-              <div className="text-sm text-gray-600 dark:text-gray-400">项目直接收益</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-primary-600 dark:text-primary-400">5+</div>
-              <div className="text-sm text-gray-600 dark:text-gray-400">核心项目</div>
+              <p className="text-lg text-gray-400">
+                a Full Stack Developer
+              </p>
             </div>
           </div>
 
           {/* Description */}
-          <p className="max-w-3xl mx-auto text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-            腾讯高级后端工程师，专注于反作弊技术、大规模分布式系统架构设计与优化。
-            擅长从 0 到 1 构建企业级平台，在风控系统、图数据库应用领域有丰富实战经验。
-          </p>
+          <div className="hero-description max-w-4xl mx-auto space-y-6">
+            <p className="text-xl text-gray-300 leading-relaxed">
+              Senior Backend Engineer at Tencent, specializing in anti-fraud technology and
+              large-scale distributed system architecture. Expert in building enterprise platforms
+              from 0 to 1, with rich experience in risk control systems and graph database applications.
+            </p>
 
-          {/* Action Buttons */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a
-              href="/kylin-resume.pdf"
-              download="苗静思-Kylin-Resume.pdf"
-              className="flex items-center gap-2 bg-primary-600 hover:bg-primary-700 text-white px-6 py-3 rounded-lg transition-colors"
-            >
-              <Download className="w-5 h-5" />
-              下载简历 Resume
-            </a>
+            {/* Contact Info */}
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-gray-400">
+              <a
+                href="mailto:kylinmiao@tencent.com"
+                className="flex items-center hover:text-white transition-colors group"
+              >
+                <Mail className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
+                kylinmiao@tencent.com
+              </a>
+              <div className="hidden sm:block w-1 h-1 bg-gray-600 rounded-full"></div>
+              <span className="flex items-center">
+                <div className="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></div>
+                Based in China
+              </span>
+            </div>
+          </div>
+
+          {/* CTA Buttons */}
+          <div className="hero-buttons flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
               href="#projects"
-              className="flex items-center gap-2 border border-gray-300 dark:border-gray-600 hover:border-primary-600 dark:hover:border-primary-400 text-gray-700 dark:text-gray-300 px-6 py-3 rounded-lg transition-colors"
+              className="animated-button group inline-flex items-center px-8 py-4 bg-white text-black font-semibold rounded-full hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
-              <ExternalLink className="w-5 h-5" />
-              查看项目 Projects
+              View My Work
+              <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </a>
+            <a
+              href="#contact"
+              className="animated-button inline-flex items-center px-8 py-4 border border-gray-600 text-gray-300 font-semibold rounded-full hover:border-gray-400 hover:text-white transition-all duration-300"
+            >
+              Let's Connect
             </a>
           </div>
 
           {/* Social Links */}
-          <div className="flex items-center justify-center gap-4">
+          <div className="hero-social flex items-center justify-center gap-4 pt-8">
             <a
-              href="mailto:miaojsi@outlook.com"
-              className="p-3 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+              href="mailto:kylinmiao@tencent.com"
+              className="p-3 rounded-full bg-gray-800/50 hover:bg-gray-700/50 transition-all duration-300 hover:scale-110 border border-gray-700/50 hover:border-gray-600/50"
               aria-label="Email"
             >
-              <Mail className="w-5 h-5 text-gray-600 dark:text-gray-400" />
+              <Mail className="w-5 h-5 text-gray-400 hover:text-white transition-colors" />
             </a>
             <a
-              href="#"
-              className="p-3 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+              href="https://github.com/kylinmiao"
+              className="p-3 rounded-full bg-gray-800/50 hover:bg-gray-700/50 transition-all duration-300 hover:scale-110 border border-gray-700/50 hover:border-gray-600/50"
               aria-label="GitHub"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              <Github className="w-5 h-5 text-gray-600 dark:text-gray-400" />
+              <Github className="w-5 h-5 text-gray-400 hover:text-white transition-colors" />
             </a>
             <a
-              href="#"
-              className="p-3 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+              href="https://linkedin.com/in/kylinmiao"
+              className="p-3 rounded-full bg-gray-800/50 hover:bg-gray-700/50 transition-all duration-300 hover:scale-110 border border-gray-700/50 hover:border-gray-600/50"
               aria-label="LinkedIn"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              <Linkedin className="w-5 h-5 text-gray-600 dark:text-gray-400" />
+              <Linkedin className="w-5 h-5 text-gray-400 hover:text-white transition-colors" />
             </a>
           </div>
+        </div>
+      </div>
 
-          {/* Scroll Indicator */}
-          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
-            <div className="animate-bounce">
-              <ChevronDown className="w-6 h-6 text-gray-400" />
-            </div>
-          </div>
+      {/* Scroll Indicator */}
+      <div className="hero-scroll absolute bottom-8 left-1/2 transform -translate-x-1/2">
+        <div className="w-6 h-10 border-2 border-gray-600 rounded-full flex justify-center animate-pulse">
+          <div className="w-1 h-3 bg-gray-400 rounded-full mt-2 animate-bounce"></div>
         </div>
       </div>
     </section>

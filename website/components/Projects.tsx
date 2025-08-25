@@ -1,253 +1,206 @@
+// Featured projects data
+const featuredProjects = [
+  {
+    id: 1,
+    title: "Anti-Fraud Strategy Management System",
+    description: "Enterprise-level strategy management platform enabling full lifecycle automation from R&D to operations. Achieved 60% efficiency improvement through intelligent optimization.",
+    image: "/projects/strategy-system.jpg",
+    tags: ["Go", "Vue.js", "ClickHouse", "Microservices"],
+    status: "Live",
+    year: "2024",
+    metrics: [
+      { label: "Efficiency Boost", value: "60%" },
+      { label: "False Positive Reduction", value: "40%" },
+      { label: "Coverage Increase", value: "50%" }
+    ],
+    link: "#",
+    featured: true
+  },
+  {
+    id: 2,
+    title: "Billion-Scale Graph Database Platform",
+    description: "Built from 0 to 1, processing 10+ billion data points with 5-minute complex analysis capability. Supports real-time relationship network analysis.",
+    image: "/projects/graph-db.jpg",
+    tags: ["Python", "Graph Database", "Big Data", "Analytics"],
+    status: "Live",
+    year: "2023",
+    metrics: [
+      { label: "Data Scale", value: "10B+" },
+      { label: "Query Speed", value: "5min" },
+      { label: "Accuracy", value: "99.5%" }
+    ],
+    link: "#",
+    featured: true
+  },
+  {
+    id: 3,
+    title: "Real-time Risk Control Engine",
+    description: "High-performance risk assessment system processing millions of transactions daily. Identified 50,000+ fraudulent enterprises with zero false positives.",
+    image: "/projects/risk-engine.jpg",
+    tags: ["Go", "Redis", "Machine Learning", "Real-time"],
+    status: "Live",
+    year: "2023",
+    metrics: [
+      { label: "Fraud Detection", value: "50K+" },
+      { label: "Revenue Impact", value: "$3M+" },
+      { label: "False Positives", value: "0" }
+    ],
+    link: "#",
+    featured: false
+  },
+  {
+    id: 4,
+    title: "Modern Portfolio Website",
+    description: "Responsive portfolio built with Next.js, featuring dark mode, blog system, and modern animations. Optimized for performance and SEO.",
+    image: "/projects/portfolio.jpg",
+    tags: ["Next.js", "TypeScript", "Tailwind CSS", "MDX"],
+    status: "Live",
+    year: "2025",
+    metrics: [
+      { label: "Performance", value: "98/100" },
+      { label: "Accessibility", value: "100/100" },
+      { label: "SEO", value: "100/100" }
+    ],
+    link: "#",
+    featured: false
+  }
+]
+
+import { useEffect } from 'react'
+import { animateOnScroll, animateProjectCards } from '@/utils/animations'
+
 export default function Projects() {
+  useEffect(() => {
+    // 初始化滚动动画
+    animateOnScroll('.projects-header')
+    animateProjectCards()
+  }, [])
+
   return (
-    <section id="projects" className="bg-gray-50 dark:bg-gray-800/50">
+    <section id="projects" className="py-20 bg-black text-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-7xl mx-auto">
           {/* Section Header */}
-          <div className="text-center mb-16">
-            <h2 className="text-heading-1 gradient-text mb-4">
-              核心项目 Core Projects
+          <div className="projects-header text-center mb-16">
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-6">
+              FEATURED CASE STUDIES
+            </div>
+            <h2 className="text-4xl sm:text-5xl font-bold mb-6">
+              Curated work
             </h2>
-            <p className="text-body text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-              主导多个从0到1的企业级项目，在反作弊、系统架构、图数据库等领域积累了丰富经验
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
+              A collection of projects that showcase my expertise in building scalable,
+              high-performance applications and solving complex technical challenges.
             </p>
           </div>
 
-          {/* Featured Project */}
-          <div className="card card-hover p-8 mb-12">
-            <div className="grid lg:grid-cols-2 gap-8 items-center">
-              <div className="space-y-6">
-                <div className="flex items-center gap-3">
-                  <span className="status-badge status-ongoing">进行中</span>
-                  <span className="text-sm text-gray-500">2024 - 至今</span>
-                </div>
-                
-                <h3 className="text-heading-2 text-gray-900 dark:text-white">
-                  安全策略全生命周期管理系统
-                </h3>
-                
-                <p className="text-body text-gray-600 dark:text-gray-300">
-                  作为架构师主导设计的企业级策略管理平台，实现了从策略研发到上线运营的全流程自动化管理。
-                  通过智能化优化和实时效果评估，显著提升了策略研发效率。
-                </p>
-
-                <div className="space-y-4">
-                  <div>
-                    <h4 className="font-semibold text-gray-900 dark:text-white mb-2">核心成果：</h4>
-                    <ul className="grid sm:grid-cols-2 gap-2 text-sm text-gray-600 dark:text-gray-400">
-                      <li className="flex items-center gap-2">
-                        <span className="text-accent-500">▲</span>
-                        研发效率提升60%
-                      </li>
-                      <li className="flex items-center gap-2">
-                        <span className="text-accent-500">▼</span>
-                        误伤率降低40%
-                      </li>
-                      <li className="flex items-center gap-2">
-                        <span className="text-accent-500">▲</span>
-                        覆盖率提升50%
-                      </li>
-                      <li className="flex items-center gap-2">
-                        <span className="text-accent-500">⚡</span>
-                        上线时间压缩至2天
-                      </li>
-                    </ul>
+          {/* Projects Grid */}
+          <div className="projects-container grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {featuredProjects.map((project, index) => (
+              <div
+                key={project.id}
+                className={`project-card group relative overflow-hidden rounded-2xl bg-gray-900/50 border border-gray-800/50 hover:border-gray-700/50 transition-all duration-500 hover:bg-gray-900/70 ${
+                  project.featured ? 'lg:col-span-2' : ''
+                }`}
+              >
+                {/* Project Image */}
+                <div className="aspect-video relative overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-purple-500/20"></div>
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="text-6xl opacity-20">🚀</div>
                   </div>
 
-                  <div className="flex flex-wrap gap-2">
-                    {['Python', 'Go', 'C++', '机器学习平台', 'Flink', 'Kafka'].map(tech => (
-                      <span key={tech} className="px-3 py-1 bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 rounded-full text-sm">
-                        {tech}
+                  {/* Status Badge */}
+                  <div className="absolute top-4 left-4">
+                    <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-green-500/20 text-green-400 border border-green-500/30">
+                      <div className="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></div>
+                      {project.status}
+                    </span>
+                  </div>
+
+                  {/* Year Badge */}
+                  <div className="absolute top-4 right-4">
+                    <span className="px-3 py-1 rounded-full text-xs font-medium bg-gray-800/80 text-gray-300 border border-gray-700/50">
+                      {project.year}
+                    </span>
+                  </div>
+                </div>
+
+                {/* Project Content */}
+                <div className="p-8">
+                  <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-blue-400 transition-colors">
+                    {project.title}
+                  </h3>
+
+                  <p className="text-gray-400 leading-relaxed mb-6">
+                    {project.description}
+                  </p>
+
+                  {/* Metrics */}
+                  <div className="grid grid-cols-3 gap-4 mb-6">
+                    {project.metrics.map((metric, idx) => (
+                      <div key={idx} className="text-center">
+                        <div className="text-2xl font-bold text-white mb-1">{metric.value}</div>
+                        <div className="text-xs text-gray-500">{metric.label}</div>
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* Tech Stack */}
+                  <div className="flex flex-wrap gap-2 mb-6">
+                    {project.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="px-3 py-1 text-xs bg-gray-800/60 text-gray-300 rounded-full border border-gray-700/50"
+                      >
+                        {tag}
                       </span>
                     ))}
                   </div>
-                </div>
-              </div>
 
-              <div className="relative">
-                <div className="aspect-video bg-gradient-to-br from-primary-500 to-accent-500 rounded-xl flex items-center justify-center">
-                  <div className="text-center text-white">
-                    <div className="text-4xl mb-4">🎯</div>
-                    <div className="text-xl font-bold mb-2">策略管理系统</div>
-                    <div className="text-sm opacity-90">全生命周期自动化</div>
-                  </div>
+                  {/* Project Link */}
+                  <a
+                    href={project.link}
+                    className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors group/link"
+                  >
+                    View Project
+                    <svg className="ml-2 w-4 h-4 group-hover/link:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                  </a>
                 </div>
+
+                {/* Hover Effect */}
+                <div className="absolute inset-0 bg-gradient-to-t from-blue-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
               </div>
-            </div>
+            ))}
           </div>
 
-          {/* Project Grid */}
-          <div className="grid md:grid-cols-2 gap-8">
-            {/* Project 1 */}
-            <div className="card card-hover p-6">
-              <div className="flex items-start justify-between mb-4">
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center">
-                    <span className="text-white">📊</span>
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-gray-900 dark:text-white">画像中台系统</h3>
-                    <span className="text-sm text-gray-500">2022-2024 • 项目负责人</span>
-                  </div>
-                </div>
-                <span className="status-badge status-completed">已完成</span>
-              </div>
-              
-              <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
-                从0到1构建10亿级数据分析平台，支持200+标签维度分析，复杂分析5分钟内完成，刷单欺诈行为下降30%
-              </p>
-              
-              <div className="space-y-3">
-                <div className="flex items-center justify-between text-sm">
-                  <span className="text-gray-600 dark:text-gray-400">数据处理规模</span>
-                  <span className="font-semibold text-primary-600">10亿级</span>
-                </div>
-                <div className="flex items-center justify-between text-sm">
-                  <span className="text-gray-600 dark:text-gray-400">分析维度</span>
-                  <span className="font-semibold text-primary-600">200+</span>
-                </div>
-                <div className="flex items-center justify-between text-sm">
-                  <span className="text-gray-600 dark:text-gray-400">欺诈行为下降</span>
-                  <span className="font-semibold text-accent-600">30%</span>
-                </div>
-              </div>
-
-              <div className="flex flex-wrap gap-1 mt-4">
-                {['Python', 'Golang', 'ClickHouse', 'Vue.js'].map(tech => (
-                  <span key={tech} className="px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded text-xs">
-                    {tech}
-                  </span>
-                ))}
-              </div>
-            </div>
-
-            {/* Project 2 */}
-            <div className="card card-hover p-6">
-              <div className="flex items-start justify-between mb-4">
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-gradient-to-br from-red-500 to-red-600 rounded-lg flex items-center justify-center">
-                    <span className="text-white">🛡️</span>
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-gray-900 dark:text-white">反作弊治理系统</h3>
-                    <span className="text-sm text-gray-500">2023-2024 • 项目负责人</span>
-                  </div>
-                </div>
-                <span className="status-badge status-completed">已完成</span>
-              </div>
-              
-              <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
-                识别违规服务商820家、企业52683家，项目收益300万+，实现零投诉运营
-              </p>
-              
-              <div className="space-y-3">
-                <div className="flex items-center justify-between text-sm">
-                  <span className="text-gray-600 dark:text-gray-400">违规服务商</span>
-                  <span className="font-semibold text-red-600">820家</span>
-                </div>
-                <div className="flex items-center justify-between text-sm">
-                  <span className="text-gray-600 dark:text-gray-400">违规企业</span>
-                  <span className="font-semibold text-red-600">52,683家</span>
-                </div>
-                <div className="flex items-center justify-between text-sm">
-                  <span className="text-gray-600 dark:text-gray-400">直接收益</span>
-                  <span className="font-semibold text-accent-600">300万+</span>
-                </div>
-              </div>
-
-              <div className="flex flex-wrap gap-1 mt-4">
-                {['Python', 'Go', 'C++', '反作弊算法'].map(tech => (
-                  <span key={tech} className="px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded text-xs">
-                    {tech}
-                  </span>
-                ))}
-              </div>
-            </div>
-
-            {/* Project 3 */}
-            <div className="card card-hover p-6">
-              <div className="flex items-start justify-between mb-4">
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-gradient-to-br from-purple-500 to-purple-600 rounded-lg flex items-center justify-center">
-                    <span className="text-white">🌐</span>
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-gray-900 dark:text-white">反垃圾图应用平台</h3>
-                    <span className="text-sm text-gray-500">2021-2023 • 项目负责人</span>
-                  </div>
-                </div>
-                <span className="status-badge status-completed">已完成</span>
-              </div>
-              
-              <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
-                构建包含20余种实体、70余种关系的图数据库，支持4种扩散分析、4种溯源分析
-              </p>
-              
-              <div className="space-y-3">
-                <div className="flex items-center justify-between text-sm">
-                  <span className="text-gray-600 dark:text-gray-400">实体类型</span>
-                  <span className="font-semibold text-purple-600">20+种</span>
-                </div>
-                <div className="flex items-center justify-between text-sm">
-                  <span className="text-gray-600 dark:text-gray-400">关系类型</span>
-                  <span className="font-semibold text-purple-600">70+种</span>
-                </div>
-                <div className="flex items-center justify-between text-sm">
-                  <span className="text-gray-600 dark:text-gray-400">分析类型</span>
-                  <span className="font-semibold text-accent-600">8种</span>
-                </div>
-              </div>
-
-              <div className="flex flex-wrap gap-1 mt-4">
-                {['图数据库', 'Python', '关系网络分析'].map(tech => (
-                  <span key={tech} className="px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded text-xs">
-                    {tech}
-                  </span>
-                ))}
-              </div>
-            </div>
-
-            {/* Project 4 */}
-            <div className="card card-hover p-6">
-              <div className="flex items-start justify-between mb-4">
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-gradient-to-br from-green-500 to-green-600 rounded-lg flex items-center justify-center">
-                    <span className="text-white">⚡</span>
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-gray-900 dark:text-white">快速回滚系统</h3>
-                    <span className="text-sm text-gray-500">2023-2024 • 项目负责人</span>
-                  </div>
-                </div>
-                <span className="status-badge status-completed">已完成</span>
-              </div>
-              
-              <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
-                支持33种封禁类型回滚，秒级精确回滚，大规模回滚成功率99.9%
-              </p>
-              
-              <div className="space-y-3">
-                <div className="flex items-center justify-between text-sm">
-                  <span className="text-gray-600 dark:text-gray-400">封禁类型</span>
-                  <span className="font-semibold text-green-600">33种</span>
-                </div>
-                <div className="flex items-center justify-between text-sm">
-                  <span className="text-gray-600 dark:text-gray-400">回滚速度</span>
-                  <span className="font-semibold text-green-600">秒级</span>
-                </div>
-                <div className="flex items-center justify-between text-sm">
-                  <span className="text-gray-600 dark:text-gray-400">成功率</span>
-                  <span className="font-semibold text-accent-600">99.9%</span>
-                </div>
-              </div>
-
-              <div className="flex flex-wrap gap-1 mt-4">
-                {['Go', 'Vue.js', '分布式系统', '微服务'].map(tech => (
-                  <span key={tech} className="px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded text-xs">
-                    {tech}
-                  </span>
-                ))}
-              </div>
+          {/* CTA Section */}
+          <div className="text-center mt-16">
+            <h3 className="text-2xl font-bold text-white mb-4">
+              Interested in working together?
+            </h3>
+            <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
+              I'm always open to discussing new opportunities and interesting projects.
+              Let's create something amazing together.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="#contact"
+                className="inline-flex items-center px-8 py-4 bg-white text-black font-semibold rounded-full hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
+              >
+                Start a Project
+                <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </a>
+              <a
+                href="/projects"
+                className="inline-flex items-center px-8 py-4 border border-gray-600 text-gray-300 font-semibold rounded-full hover:border-gray-400 hover:text-white transition-all duration-300"
+              >
+                See More Projects
+              </a>
             </div>
           </div>
         </div>

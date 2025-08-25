@@ -1,12 +1,32 @@
 import Head from 'next/head'
+import { useEffect } from 'react'
 import Hero from '@/components/Hero'
 import About from '@/components/About'
 import Skills from '@/components/Skills'
 import Projects from '@/components/Projects'
 import Experience from '@/components/Experience'
+import Blog from '@/components/Blog'
 import Contact from '@/components/Contact'
+import { animateOnScroll, cleanupScrollTriggers } from '@/utils/animations'
+import { BlogPost, getAllBlogPosts, getAllTags } from '@/lib/data'
 
-export default function Home() {
+interface HomeProps {
+  posts: BlogPost[]
+  tags: string[]
+}
+
+export default function Home({ posts, tags }: HomeProps) {
+  useEffect(() => {
+    // 初始化其他section的滚动动画
+    animateOnScroll('#about')
+    animateOnScroll('#blog')
+    animateOnScroll('#contact')
+
+    // 清理函数
+    return () => {
+      cleanupScrollTriggers()
+    }
+  }, [])
   return (
     <>
       <Head>
@@ -25,6 +45,7 @@ export default function Home() {
         <Skills />
         <Projects />
         <Experience />
+        <Blog posts={posts} tags={tags} />
         <Contact />
       </main>
     </>
@@ -32,7 +53,13 @@ export default function Home() {
 }
 
 export async function getStaticProps() {
+  const posts = await getAllBlogPosts()
+  const tags = await getAllTags()
+
   return {
-    props: {},
+    props: {
+      posts,
+      tags,
+    },
   }
 }

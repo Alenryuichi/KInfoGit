@@ -1,26 +1,61 @@
-import { Mail, Phone, MapPin, Github, Linkedin, Download } from 'lucide-react'
+'use client'
+
+import { useState } from 'react'
+import { Mail, Phone, MapPin, Github, Linkedin, Send, CheckCircle, Download } from 'lucide-react'
 
 export default function Contact() {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    subject: '',
+    message: ''
+  })
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [isSubmitted, setIsSubmitted] = useState(false)
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    setIsSubmitting(true)
+
+    // Simulate form submission
+    await new Promise(resolve => setTimeout(resolve, 2000))
+
+    setIsSubmitting(false)
+    setIsSubmitted(true)
+
+    // Reset form after 3 seconds
+    setTimeout(() => {
+      setIsSubmitted(false)
+      setFormData({ name: '', email: '', subject: '', message: '' })
+    }, 3000)
+  }
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData(prev => ({
+      ...prev,
+      [e.target.name]: e.target.value
+    }))
+  }
+
   const contactInfo = [
     {
       icon: Mail,
-      label: '邮箱',
-      value: 'miaojsi@outlook.com',
-      href: 'mailto:miaojsi@outlook.com',
-      color: 'text-blue-600'
-    },
-    {
-      icon: Phone, 
-      label: '电话',
-      value: '+86 175 1209 0401',
-      href: 'tel:+8617512090401',
-      color: 'text-green-600'
+      label: 'Email',
+      value: 'kylinmiao@tencent.com',
+      href: 'mailto:kylinmiao@tencent.com',
+      description: 'Send me an email'
     },
     {
       icon: MapPin,
-      label: '位置',
-      value: '广州, China',
-      color: 'text-red-600'
+      label: 'Location',
+      value: 'Guangzhou, China',
+      description: 'Based in China'
+    },
+    {
+      icon: Phone,
+      label: 'Response Time',
+      value: '24 hours',
+      description: 'Average response time'
     }
   ]
 
@@ -28,59 +63,172 @@ export default function Contact() {
     {
       icon: Github,
       label: 'GitHub',
-      href: '#',
-      color: 'hover:text-gray-900 dark:hover:text-white'
+      href: 'https://github.com/kylinmiao',
+      username: '@kylinmiao'
     },
     {
       icon: Linkedin,
-      label: 'LinkedIn', 
-      href: '#',
-      color: 'hover:text-blue-600'
+      label: 'LinkedIn',
+      href: 'https://linkedin.com/in/kylinmiao',
+      username: '@kylinmiao'
     },
     {
       icon: Mail,
       label: 'Email',
-      href: 'mailto:miaojsi@outlook.com',
-      color: 'hover:text-red-600'
+      href: 'mailto:kylinmiao@tencent.com',
+      username: 'kylinmiao@tencent.com'
     }
   ]
 
   return (
-    <section id="contact" className="bg-gray-50 dark:bg-gray-800/50">
+    <section id="contact" className="py-20 bg-black text-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-7xl mx-auto">
           {/* Section Header */}
           <div className="text-center mb-16">
-            <h2 className="text-heading-1 gradient-text mb-4">
-              联系我 Contact Me
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-green-500/10 border border-green-500/20 text-green-400 text-sm font-medium mb-6">
+              <div className="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></div>
+              AVAILABLE FOR OPPORTUNITIES
+            </div>
+            <h2 className="text-4xl sm:text-5xl font-bold mb-6">
+              Let's work{' '}
+              <span className="bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+                together
+              </span>
             </h2>
-            <p className="text-body text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-              如果您对我的经历和技能感兴趣，欢迎随时联系交流合作机会
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
+              I'm always interested in new opportunities and exciting projects.
+              Whether you have a question or just want to say hi, I'll get back to you within 24 hours.
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12">
+          <div className="grid lg:grid-cols-2 gap-16">
+            {/* Contact Form */}
+            <div>
+              <h3 className="text-2xl font-bold text-white mb-8">Send me a message</h3>
+
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div className="grid sm:grid-cols-2 gap-6">
+                  <div>
+                    <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
+                      Name
+                    </label>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleChange}
+                      required
+                      className="w-full px-4 py-3 bg-gray-900/50 border border-gray-700/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500/50 focus:bg-gray-900/70 transition-all duration-300"
+                      placeholder="Your name"
+                    />
+                  </div>
+
+                  <div>
+                    <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
+                      Email
+                    </label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      required
+                      className="w-full px-4 py-3 bg-gray-900/50 border border-gray-700/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500/50 focus:bg-gray-900/70 transition-all duration-300"
+                      placeholder="your@email.com"
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <label htmlFor="subject" className="block text-sm font-medium text-gray-300 mb-2">
+                    Subject
+                  </label>
+                  <input
+                    type="text"
+                    id="subject"
+                    name="subject"
+                    value={formData.subject}
+                    onChange={handleChange}
+                    required
+                    className="w-full px-4 py-3 bg-gray-900/50 border border-gray-700/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500/50 focus:bg-gray-900/70 transition-all duration-300"
+                    placeholder="What's this about?"
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
+                    Message
+                  </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    required
+                    rows={6}
+                    className="w-full px-4 py-3 bg-gray-900/50 border border-gray-700/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500/50 focus:bg-gray-900/70 transition-all duration-300 resize-none"
+                    placeholder="Tell me about your project..."
+                  />
+                </div>
+
+                <button
+                  type="submit"
+                  disabled={isSubmitting || isSubmitted}
+                  className={`w-full px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 ${
+                    isSubmitted
+                      ? 'bg-green-500 text-white'
+                      : isSubmitting
+                      ? 'bg-gray-600 text-gray-300 cursor-not-allowed'
+                      : 'bg-white text-black hover:bg-gray-100'
+                  }`}
+                >
+                  {isSubmitted ? (
+                    <span className="flex items-center justify-center">
+                      <CheckCircle className="w-5 h-5 mr-2" />
+                      Message Sent!
+                    </span>
+                  ) : isSubmitting ? (
+                    <span className="flex items-center justify-center">
+                      <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
+                      Sending...
+                    </span>
+                  ) : (
+                    <span className="flex items-center justify-center">
+                      <Send className="w-5 h-5 mr-2" />
+                      Send Message
+                    </span>
+                  )}
+                </button>
+              </form>
+            </div>
+
             {/* Contact Information */}
             <div className="space-y-8">
               <div>
-                <h3 className="text-heading-3 text-gray-900 dark:text-white mb-6">
-                  联系方式
-                </h3>
-                
-                <div className="space-y-4">
+                <h3 className="text-2xl font-bold text-white mb-8">Get in touch</h3>
+
+                <div className="space-y-6">
                   {contactInfo.map((contact, index) => {
                     const IconComponent = contact.icon
                     const content = (
-                      <div className="flex items-center gap-4 p-4 bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-primary-300 dark:hover:border-primary-600 transition-colors">
-                        <div className={`p-2 rounded-lg bg-gray-100 dark:bg-gray-700 ${contact.color}`}>
-                          <IconComponent className="w-5 h-5" />
-                        </div>
-                        <div>
-                          <div className="font-medium text-gray-900 dark:text-white">
-                            {contact.label}
+                      <div className="group p-6 bg-gray-900/50 border border-gray-800/50 rounded-2xl hover:border-gray-700/50 transition-all duration-300 hover:bg-gray-900/70">
+                        <div className="flex items-start gap-4">
+                          <div className="p-3 bg-gray-800/50 rounded-xl group-hover:bg-gray-700/50 transition-colors">
+                            <IconComponent className="w-6 h-6 text-gray-400 group-hover:text-white transition-colors" />
                           </div>
-                          <div className="text-gray-600 dark:text-gray-400">
-                            {contact.value}
+                          <div>
+                            <div className="font-semibold text-white mb-1">
+                              {contact.label}
+                            </div>
+                            <div className="text-gray-300 mb-2">
+                              {contact.value}
+                            </div>
+                            <div className="text-sm text-gray-500">
+                              {contact.description}
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -99,128 +247,65 @@ export default function Contact() {
 
               {/* Social Links */}
               <div>
-                <h3 className="text-heading-3 text-gray-900 dark:text-white mb-6">
-                  社交媒体
-                </h3>
-                
-                <div className="flex gap-4">
+                <h4 className="text-lg font-semibold text-white mb-6">Connect with me</h4>
+
+                <div className="space-y-4">
                   {socialLinks.map((social, index) => {
                     const IconComponent = social.icon
                     return (
                       <a
                         key={index}
                         href={social.href}
-                        className={`p-3 bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-400 ${social.color} transition-all hover:border-primary-300 dark:hover:border-primary-600 hover:transform hover:-translate-y-1`}
-                        aria-label={social.label}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="group flex items-center gap-4 p-4 bg-gray-900/50 border border-gray-800/50 rounded-xl hover:border-gray-700/50 transition-all duration-300 hover:bg-gray-900/70"
                       >
-                        <IconComponent className="w-5 h-5" />
+                        <div className="p-2 bg-gray-800/50 rounded-lg group-hover:bg-gray-700/50 transition-colors">
+                          <IconComponent className="w-5 h-5 text-gray-400 group-hover:text-white transition-colors" />
+                        </div>
+                        <div>
+                          <div className="font-medium text-white group-hover:text-blue-400 transition-colors">
+                            {social.label}
+                          </div>
+                          <div className="text-sm text-gray-400">
+                            {social.username}
+                          </div>
+                        </div>
                       </a>
                     )
                   })}
                 </div>
               </div>
-
-              {/* Download Resume */}
-              <div>
-                <h3 className="text-heading-3 text-gray-900 dark:text-white mb-6">
-                  简历下载
-                </h3>
-                
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <a
-                    href="/kylin-resume.pdf"
-                    download="苗静思-Kylin-Resume.pdf"
-                    className="flex items-center justify-center gap-3 bg-primary-600 hover:bg-primary-700 text-white px-6 py-3 rounded-lg transition-colors"
-                  >
-                    <Download className="w-5 h-5" />
-                    下载中文简历
-                  </a>
-                  <a
-                    href="/kylin-resume.pdf"
-                    download="Kylin-Resume-EN.pdf"
-                    className="flex items-center justify-center gap-3 border border-primary-600 text-primary-600 hover:bg-primary-600 hover:text-white px-6 py-3 rounded-lg transition-colors"
-                  >
-                    <Download className="w-5 h-5" />
-                    Download English CV
-                  </a>
-                </div>
-              </div>
             </div>
 
-            {/* Contact Form or Additional Info */}
-            <div className="card p-8">
-              <h3 className="text-heading-3 text-gray-900 dark:text-white mb-6">
-                关于合作
-              </h3>
-              
-              <div className="space-y-6">
-                <div>
-                  <h4 className="font-semibold text-gray-900 dark:text-white mb-3">
-                    💼 工作机会
-                  </h4>
-                  <p className="text-gray-600 dark:text-gray-400 text-sm">
-                    对反作弊技术、大规模系统架构、图数据库等领域的技术挑战充满热情，
-                    欢迎讨论相关的工作机会和技术合作。
-                  </p>
-                </div>
-
-                <div>
-                  <h4 className="font-semibold text-gray-900 dark:text-white mb-3">
-                    🤝 技术交流
-                  </h4>
-                  <p className="text-gray-600 dark:text-gray-400 text-sm">
-                    乐于分享在反作弊、系统架构设计方面的经验，
-                    也希望与同行交流学习新的技术和思路。
-                  </p>
-                </div>
-
-                <div>
-                  <h4 className="font-semibold text-gray-900 dark:text-white mb-3">
-                    📚 知识分享
-                  </h4>
-                  <p className="text-gray-600 dark:text-gray-400 text-sm">
-                    可以分享大规模数据处理、图数据库应用、
-                    反作弊算法等方面的实战经验和最佳实践。
-                  </p>
-                </div>
-
-                <div className="pt-4 border-t border-gray-200 dark:border-gray-700">
-                  <div className="flex items-center justify-between text-sm">
-                    <span className="text-gray-600 dark:text-gray-400">响应时间</span>
-                    <span className="text-primary-600 dark:text-primary-400 font-medium">通常24小时内</span>
-                  </div>
-                </div>
-
-                <div className="flex items-center justify-between text-sm">
-                  <span className="text-gray-600 dark:text-gray-400">工作时间</span>
-                  <span className="text-primary-600 dark:text-primary-400 font-medium">周一至周五 9:00-18:00</span>
-                </div>
-
-                <div className="flex items-center justify-between text-sm">
-                  <span className="text-gray-600 dark:text-gray-400">时区</span>
-                  <span className="text-primary-600 dark:text-primary-400 font-medium">UTC+8 北京时间</span>
-                </div>
-              </div>
-            </div>
           </div>
 
-          {/* Call to Action */}
+          {/* Bottom CTA */}
           <div className="mt-16 text-center">
-            <div className="card p-8 bg-gradient-to-r from-primary-50 to-accent-50 dark:from-primary-900/20 dark:to-accent-900/20 border-primary-200 dark:border-primary-700">
-              <h3 className="text-heading-3 text-gray-900 dark:text-white mb-4">
-                期待与您的合作
+            <div className="p-8 bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-gray-800/50 rounded-2xl">
+              <h3 className="text-2xl font-bold text-white mb-4">
+                Ready to start your project?
               </h3>
-              <p className="text-gray-600 dark:text-gray-300 mb-6 max-w-2xl mx-auto">
-                如果您正在寻找具有反作弊技术专长和大规模系统架构经验的工程师，
-                或者希望在相关技术领域进行交流合作，请随时联系我。
+              <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
+                I'm currently available for freelance work and full-time opportunities.
+                Let's discuss how we can bring your ideas to life.
               </p>
-              <a
-                href="mailto:miaojsi@outlook.com"
-                className="inline-flex items-center gap-2 bg-primary-600 hover:bg-primary-700 text-white px-8 py-3 rounded-lg transition-colors"
-              >
-                <Mail className="w-5 h-5" />
-                立即联系
-              </a>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a
+                  href="mailto:kylinmiao@tencent.com"
+                  className="inline-flex items-center px-8 py-4 bg-white text-black font-semibold rounded-full hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
+                >
+                  <Mail className="w-5 h-5 mr-2" />
+                  Send Email
+                </a>
+                <a
+                  href="/resume.pdf"
+                  download="Kylin-Miao-Resume.pdf"
+                  className="inline-flex items-center px-8 py-4 border border-gray-600 text-gray-300 font-semibold rounded-full hover:border-gray-400 hover:text-white transition-all duration-300"
+                >
+                  Download Resume
+                </a>
+              </div>
             </div>
           </div>
         </div>

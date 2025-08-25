@@ -30,6 +30,7 @@ KInfoGit/
 - **UI/UX**: Responsive design with dark/light theme
 - **Icons**: Lucide React icons
 - **Animations**: Framer Motion (ready to use)
+- **Task Runner**: Just command runner for development workflow
 
 ## 🚀 Features
 - 📱 Responsive multi-language support (中文/English)
@@ -38,19 +39,33 @@ KInfoGit/
 - 🔍 SEO optimized with proper meta tags
 - ⚡ Static site generation for optimal performance
 - 🎯 Professional portfolio sections
+- 🛠️ Streamlined development workflow with Just commands
+- 📝 Content management tools for blogs and projects
+- 🚀 One-command deployment to GitHub Pages
 
 ## 🛠️ Development
 
 ### Prerequisites
 - Node.js 18+
 - npm or yarn
+- [Just](https://github.com/casey/just) command runner (recommended)
 
-### Getting Started
+### Quick Start with Just (Recommended)
 ```bash
 # Clone the repository
 git clone https://github.com/username/KInfoGit.git
 cd KInfoGit
 
+# Install Just (macOS)
+brew install just
+
+# Quick setup and start development
+just setup
+just dev
+```
+
+### Manual Setup (Alternative)
+```bash
 # Install dependencies
 cd website
 npm install
@@ -60,6 +75,79 @@ npm run dev
 
 # Build for production
 npm run build
+```
+
+### Available Just Commands
+
+#### 🔧 Development Commands
+```bash
+just install        # Install npm dependencies
+just dev            # Start development server (localhost:3000)
+just build          # Build for production
+just serve          # Serve built website locally (localhost:8000)
+just clean          # Clean build artifacts and dependencies
+just check-updates  # Check for dependency updates
+just update-deps    # Update all dependencies
+```
+
+#### 📝 Git & Deployment Commands
+```bash
+just status         # Show repository status and recent commits
+just sync           # Pull and push to remote repository
+just quick          # Quick commit with timestamp
+just deploy         # Build and deploy to GitHub Pages
+just deploy "msg"   # Deploy with custom commit message
+just branch <name>  # Create and push new branch
+just main           # Switch to main branch and pull latest
+just log            # Show git history with graph
+just undo           # Undo last commit (keep changes)
+```
+
+#### 📄 Content Management Commands
+```bash
+just new-post "title"     # Create new blog post
+just list-posts           # List all blog posts
+just new-project "name"   # Create new project entry
+just update-resume        # Update resume timestamp
+just validate-json        # Validate all JSON files
+just content-stats        # Show content statistics
+```
+
+#### 🛠️ Utility Commands
+```bash
+just stats          # Show repository statistics
+just backup         # Create data backup
+```
+
+### Common Development Workflows
+
+#### Daily Development
+```bash
+# Start working
+just dev
+
+# Check status
+just status
+
+# Quick commit
+just quick
+
+# Deploy changes
+just deploy "Update personal info"
+```
+
+#### Project Maintenance
+```bash
+# Check for updates
+just check-updates
+
+# Update dependencies
+just update-deps
+
+# Clean rebuild
+just clean
+just install
+just build
 ```
 
 ### Project Structure
