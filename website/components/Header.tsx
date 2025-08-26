@@ -3,12 +3,15 @@
 import { useState, useEffect } from 'react'
 import { Menu, X, Search } from 'lucide-react'
 import Image from 'next/image'
+import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 const navigation = [
-  { name: 'Home', href: '#home' },
-  { name: 'About', href: '#about' },
-  { name: 'Work', href: '#projects' },
-  { name: 'Blog', href: '#blog' },
+  { name: 'Home', href: '/' },
+  { name: 'About', href: '/about' },
+  { name: 'Work', href: '/work' },
+  { name: 'Blog', href: '/blog' },
+  { name: 'Contact', href: '/contact' },
 ]
 
 interface HeaderProps {
@@ -36,11 +39,22 @@ const Logo = () => (
 )
 
 export default function Header({ onBookCallClick }: HeaderProps) {
+  const router = useRouter()
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [activeTab, setActiveTab] = useState('Home')
   const [isSearchOpen, setIsSearchOpen] = useState(false)
   const [searchQuery, setSearchQuery] = useState('')
   const [scrolled, setScrolled] = useState(false)
+
+  // Get current active tab based on route
+  const getActiveTab = () => {
+    const path = router.pathname
+    if (path === '/') return 'Home'
+    if (path === '/about') return 'About'
+    if (path === '/work') return 'Work'
+    if (path.startsWith('/blog')) return 'Blog'
+    if (path === '/contact') return 'Contact'
+    return 'Home'
+  }
 
   // Handle scroll effect
   useEffect(() => {
@@ -51,14 +65,8 @@ export default function Header({ onBookCallClick }: HeaderProps) {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  const handleTabClick = (tabName: string, href: string) => {
-    setActiveTab(tabName)
-
-    // All navigation items are now anchor links
-    const element = document.querySelector(href)
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' })
-    }
+  const handleTabClick = () => {
+    setIsMenuOpen(false)
   }
 
   const handleBookCallClick = () => {
@@ -110,7 +118,7 @@ export default function Header({ onBookCallClick }: HeaderProps) {
               <div
                 className="absolute top-glow-indicator rounded-lg transition-all duration-500 ease-out"
                 style={{
-                  left: `${6 + (navigation.findIndex(item => item.name === activeTab) * 80) + 20}px`,
+                  left: `${6 + (navigation.findIndex(item => item.name === getActiveTab()) * 70) + 15}px`,
                   top: '-3px',
                   width: '40px',
                   height: '20px',
@@ -122,8 +130,8 @@ export default function Header({ onBookCallClick }: HeaderProps) {
               <div
                 className="absolute top-1 bottom-1 bg-white/20 backdrop-blur-md rounded-full transition-all duration-500 ease-out border border-white/15"
                 style={{
-                  left: `${6 + navigation.findIndex(item => item.name === activeTab) * 80}px`,
-                  width: '80px',
+                  left: `${6 + navigation.findIndex(item => item.name === getActiveTab()) * 70}px`,
+                  width: '70px',
                   boxShadow: '0 2px 8px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.2)',
                   zIndex: 10,
                   borderWidth: '0.1px'
@@ -132,22 +140,23 @@ export default function Header({ onBookCallClick }: HeaderProps) {
 
               <div className="relative flex items-center">
                 {navigation.map((item) => (
-                  <button
+                  <Link
                     key={item.name}
-                    onClick={() => handleTabClick(item.name, item.href)}
+                    href={item.href}
+                    onClick={handleTabClick}
                     className={`relative px-4 py-2 text-sm font-medium rounded-full header-transition group ${
-                      activeTab === item.name
+                      getActiveTab() === item.name
                         ? 'text-white font-semibold'
                         : 'text-white/70 hover:text-white hover:scale-105'
                     }`}
-                    style={{ minWidth: '80px', zIndex: 20 }}
+                    style={{ minWidth: '70px', zIndex: 20 }}
                   >
                     <span className="relative z-30">{item.name}</span>
                     {/* Hover effect for non-active items */}
-                    {activeTab !== item.name && (
+                    {getActiveTab() !== item.name && (
                       <div className="absolute inset-0 bg-white/5 rounded-full opacity-0 group-hover:opacity-100 header-transition"></div>
                     )}
-                  </button>
+                  </Link>
                 ))}
 
                 {/* Book a Call button integrated into nav */}
@@ -228,14 +237,15 @@ export default function Header({ onBookCallClick }: HeaderProps) {
         <div className="md:hidden fixed top-20 right-4 bg-black/30 backdrop-blur-enhanced border border-white/20 rounded-2xl p-6 shadow-2xl min-w-[220px] z-60">
           <div className="space-y-3">
             {navigation.map((item) => (
-              <button
+              <Link
                 key={item.name}
+                href={item.href}
                 onClick={() => {
-                  handleTabClick(item.name, item.href)
+                  handleTabClick()
                   setIsMenuOpen(false)
                 }}
                 className={`block w-full text-left py-3 px-4 rounded-xl header-transition group relative ${
-                  activeTab === item.name
+                  getActiveTab() === item.name
                     ? 'bg-gradient-to-r from-white/95 to-white/90 text-black font-semibold shadow-lg'
                     : 'text-white/70 hover:text-white hover:bg-white/10 hover:scale-105'
                 }`}
@@ -244,10 +254,10 @@ export default function Header({ onBookCallClick }: HeaderProps) {
                   {item.name}
                 </span>
                 {/* Hover effect for non-active items */}
-                {activeTab !== item.name && (
+                {getActiveTab() !== item.name && (
                   <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-purple-500/5 rounded-xl opacity-0 group-hover:opacity-100 header-transition"></div>
                 )}
-              </button>
+              </Link>
             ))}
             <div className="pt-3 border-t border-white/20">
               <button
