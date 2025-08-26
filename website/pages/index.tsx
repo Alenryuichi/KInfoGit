@@ -1,6 +1,5 @@
 import Head from 'next/head'
 import Hero from '@/components/Hero'
-import Layout from '@/components/Layout'
 import { profileData } from '@/lib/config'
 
 export default function Home() {
@@ -16,11 +15,9 @@ export default function Home() {
         <link rel="canonical" href="https://alenryuichi.github.io/KInfoGit" />
       </Head>
 
-      <Layout>
-        <main className="min-h-screen">
-          <Hero />
-        </main>
-      </Layout>
+      <main className="min-h-screen">
+        <Hero />
+      </main>
     </>
   )
 }

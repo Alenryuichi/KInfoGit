@@ -41,8 +41,8 @@ export default function Contact() {
     {
       icon: Mail,
       label: 'Email',
-      value: 'kylinmiao@tencent.com',
-      href: 'mailto:kylinmiao@tencent.com',
+      value: 'miaojsi@outlook.com',
+      href: 'mailto:miaojsi@outlook.com',
       description: 'Send me an email'
     },
     {
@@ -75,8 +75,8 @@ export default function Contact() {
     {
       icon: Mail,
       label: 'Email',
-      href: 'mailto:kylinmiao@tencent.com',
-      username: 'kylinmiao@tencent.com'
+      href: 'mailto:miaojsi@outlook.com',
+      username: 'miaojsi@outlook.com'
     }
   ]
 
@@ -292,7 +292,7 @@ export default function Contact() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
-                  href="mailto:kylinmiao@tencent.com"
+                  href="mailto:miaojsi@outlook.com"
                   className="inline-flex items-center px-8 py-4 bg-white text-black font-semibold rounded-full hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
                 >
                   <Mail className="w-5 h-5 mr-2" />

@@ -59,11 +59,11 @@ export default function Hero() {
             {/* Contact Info */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-gray-400">
               <a
-                href="mailto:kylinmiao@tencent.com"
+                href="mailto:miaojsi@outlook.com"
                 className="flex items-center hover:text-white transition-colors group"
               >
                 <Mail className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
-                kylinmiao@tencent.com
+                miaojsi@outlook.com
               </a>
               <div className="hidden sm:block w-1 h-1 bg-gray-600 rounded-full"></div>
               <span className="flex items-center">
@@ -93,7 +93,7 @@ export default function Hero() {
           {/* Social Links */}
           <div className="hero-social flex items-center justify-center gap-4 pt-8">
             <a
-              href="mailto:kylinmiao@tencent.com"
+              href="mailto:miaojsi@outlook.com"
               className="p-3 rounded-full bg-gray-800/50 hover:bg-gray-700/50 transition-all duration-300 hover:scale-110 border border-gray-700/50 hover:border-gray-600/50"
               aria-label="Email"
             >

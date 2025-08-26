@@ -318,7 +318,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
   }
 
   const handleEmailClick = () => {
-    window.location.href = 'mailto:hello@aayushbharti.in'
+    window.location.href = 'mailto:miaojsi@outlook.com'
   }
 
   const handleCalendarClick = () => {
@@ -444,7 +444,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
                         <h3 className="text-base font-semibold text-white">Email</h3>
                       </div>
                       <div className="space-y-1">
-                        <p className="text-white text-sm font-medium">hello@aayushbharti.in</p>
+                        <p className="text-white text-sm font-medium">miaojsi@outlook.com</p>
                         <p className="text-gray-400 text-xs">Send me an email directly</p>
                       </div>
                     </div>

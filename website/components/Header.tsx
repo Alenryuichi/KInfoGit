@@ -11,7 +11,6 @@ const navigation = [
   { name: 'About', href: '/about' },
   { name: 'Work', href: '/work' },
   { name: 'Blog', href: '/blog' },
-  { name: 'Contact', href: '/contact' },
 ]
 
 interface HeaderProps {
@@ -52,7 +51,6 @@ export default function Header({ onBookCallClick }: HeaderProps) {
     if (path === '/about') return 'About'
     if (path === '/work') return 'Work'
     if (path.startsWith('/blog')) return 'Blog'
-    if (path === '/contact') return 'Contact'
     return 'Home'
   }
 
@@ -118,7 +116,7 @@ export default function Header({ onBookCallClick }: HeaderProps) {
               <div
                 className="absolute top-glow-indicator rounded-lg transition-all duration-500 ease-out"
                 style={{
-                  left: `${6 + (navigation.findIndex(item => item.name === getActiveTab()) * 70) + 15}px`,
+                  left: `${4 + navigation.findIndex(item => item.name === getActiveTab()) * 80 + 20}px`,
                   top: '-3px',
                   width: '40px',
                   height: '20px',
@@ -128,10 +126,10 @@ export default function Header({ onBookCallClick }: HeaderProps) {
 
               {/* Active tab background indicator - glass effect */}
               <div
-                className="absolute top-1 bottom-1 bg-white/20 backdrop-blur-md rounded-full transition-all duration-500 ease-out border border-white/15"
+                className="absolute top-1 bottom-1 bg-white/5 backdrop-blur-sm rounded-full transition-all duration-500 ease-out border border-white/15"
                 style={{
-                  left: `${6 + navigation.findIndex(item => item.name === getActiveTab()) * 70}px`,
-                  width: '70px',
+                  left: `${4 + navigation.findIndex(item => item.name === getActiveTab()) * 80}px`,
+                  width: '80px',
                   boxShadow: '0 2px 8px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.2)',
                   zIndex: 10,
                   borderWidth: '0.1px'
@@ -144,12 +142,12 @@ export default function Header({ onBookCallClick }: HeaderProps) {
                     key={item.name}
                     href={item.href}
                     onClick={handleTabClick}
-                    className={`relative px-4 py-2 text-sm font-medium rounded-full header-transition group ${
+                    className={`relative text-sm font-light rounded-full header-transition group flex items-center justify-center ${
                       getActiveTab() === item.name
-                        ? 'text-white font-semibold'
-                        : 'text-white/70 hover:text-white hover:scale-105'
+                        ? 'text-white font-normal'
+                        : 'text-white/70 hover:text-white'
                     }`}
-                    style={{ minWidth: '70px', zIndex: 20 }}
+                    style={{ width: '80px', height: '36px', zIndex: 20 }}
                   >
                     <span className="relative z-30">{item.name}</span>
                     {/* Hover effect for non-active items */}
