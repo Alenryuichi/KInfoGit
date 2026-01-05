@@ -1,0 +1,1 @@
+/Users/kylinmiao/Documents/project/KInfoGit/_bmad-output/bmb-creations/workflows/git-smart-commit/git-smart-commit.md
