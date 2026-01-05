@@ -73,15 +73,15 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* CTA Buttons */}
-          <div className="hero-buttons flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a
-              href="#projects"
-              className="animated-button group inline-flex items-center px-8 py-4 bg-white text-black font-semibold rounded-full hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg"
-            >
-              View My Work
-              <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </a>
+	          {/* CTA Buttons */}
+	          <div className="hero-buttons flex flex-col sm:flex-row gap-4 justify-center items-center">
+	            <a
+	              href="/work#projects"
+	              className="animated-button group inline-flex items-center px-8 py-4 bg-white text-black font-semibold rounded-full hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg"
+	            >
+	              View My Work
+	              <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+	            </a>
             <a
               href="#contact"
               className="animated-button inline-flex items-center px-8 py-4 border border-gray-600 text-gray-300 font-semibold rounded-full hover:border-gray-400 hover:text-white transition-all duration-300"

@@ -3,12 +3,14 @@ import Head from 'next/head'
 import Projects from '@/components/Projects'
 import Experience from '@/components/Experience'
 import { profileData } from '@/lib/config'
+import { getCoreProjects, type Project } from '@/lib/data'
 
 interface WorkPageProps {
-  profileData: typeof profileData
+	profileData: typeof profileData
+	projects: Project[]
 }
 
-export default function WorkPage({ profileData }: WorkPageProps) {
+export default function WorkPage({ profileData, projects }: WorkPageProps) {
   return (
     <>
       <Head>
@@ -30,10 +32,10 @@ export default function WorkPage({ profileData }: WorkPageProps) {
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-blue-500/5 to-purple-500/5 rounded-full blur-3xl"></div>
         </div>
 
-        {/* Projects Section */}
-        <section className="py-20 pt-32 relative z-10">
-          <Projects />
-        </section>
+	        {/* Projects Section */}
+	        <section className="py-20 pt-32 relative z-10">
+	          <Projects projects={projects} />
+	        </section>
 
         {/* Experience Section */}
         <section className="py-20 relative z-10">
@@ -44,10 +46,12 @@ export default function WorkPage({ profileData }: WorkPageProps) {
   )
 }
 
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      profileData,
-    },
-  }
+export const getStaticProps: GetStaticProps<WorkPageProps> = async () => {
+	const projects = await getCoreProjects()
+	return {
+		props: {
+			profileData,
+			projects: projects ?? [],
+		},
+	}
 }

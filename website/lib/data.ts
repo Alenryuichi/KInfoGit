@@ -45,30 +45,43 @@ export interface SkillCategory {
 
 // Project types
 export interface Project {
-  id: string
-  title: {
-    zh: string
-    en: string
-  }
-  period: string
-  company: string
-  role: {
-    zh: string
-    en: string
-  }
-  tech_stack: string[]
-  responsibilities: {
-    zh: string[]
-    en: string[]
-  }
-  achievements: {
-    zh: string[]
-    en: string[]
-  }
-  description?: {
-    zh: string
-    en: string
-  }
+	id: string
+	title: {
+		zh: string
+		en: string
+	}
+	period: string
+	company: string
+	role: {
+		zh: string
+		en: string
+	}
+	tech_stack: string[]
+	responsibilities: {
+		zh: string[]
+		en: string[]
+	}
+	achievements: {
+		zh: string[]
+		en: string[]
+	}
+	description?: {
+		zh: string
+		en: string
+	}
+	highlights?: {
+		zh: string
+		en: string
+	}
+	/**
+	 * 简要量化影响，用于列表卡片上的一行 summary，例如
+	 * "10亿级数据处理能力"、"300万+直接收益" 等。
+	 */
+	impact?: string
+	/**
+	 * 用于简单分组/过滤的项目类别，例如 "anti-fraud"、"graph-database" 等。
+	 */
+	category?: string
 }
 
 // Blog types
@@ -109,14 +122,25 @@ export async function getTechnicalSkills(): Promise<Record<string, SkillCategory
 }
 
 export async function getCoreProjects(): Promise<Project[] | null> {
-  try {
-    const filePath = path.join(profileDataDir, 'projects', 'core-projects.json')
-    const fileContents = fs.readFileSync(filePath, 'utf8')
-    return JSON.parse(fileContents)
-  } catch (error) {
-    console.error('Error loading core projects:', error)
-    return null
-  }
+	try {
+		const filePath = path.join(profileDataDir, 'projects', 'core-projects.json')
+		const fileContents = fs.readFileSync(filePath, 'utf8')
+		return JSON.parse(fileContents)
+	} catch (error) {
+		console.error('Error loading core projects:', error)
+		return null
+	}
+}
+
+export async function getProjectById(id: string): Promise<Project | null> {
+	try {
+		const projects = await getCoreProjects()
+		if (!projects) return null
+		return projects.find(project => project.id === id) ?? null
+	} catch (error) {
+		console.error('Error loading project by id:', error)
+		return null
+	}
 }
 
 // Utility functions
