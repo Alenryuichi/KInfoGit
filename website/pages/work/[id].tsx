@@ -36,7 +36,7 @@ export default function ProjectPage({ project }: ProjectPageProps) {
 					<div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-blue-500/5 to-purple-500/5 rounded-full blur-3xl" />
 				</div>
 
-				<section className="py-24 relative z-10">
+				<section className="py-16 md:py-20 relative z-10">
 					<div className="container mx-auto px-4 sm:px-6 lg:px-8">
 						<div className="max-w-4xl mx-auto">
 							<div className="mb-8 flex items-center justify-between gap-4">
@@ -52,7 +52,7 @@ export default function ProjectPage({ project }: ProjectPageProps) {
 								</span>
 							</div>
 
-							<header className="mb-10 space-y-4">
+							<header className="mb-8 md:mb-10 space-y-4">
 								<p className="text-sm text-blue-400 uppercase tracking-wide">
 									{project.category ?? 'Core Project'}
 								</p>
@@ -74,7 +74,7 @@ export default function ProjectPage({ project }: ProjectPageProps) {
 							</header>
 
 							{/* Project overview */}
-							<section className="mb-10">
+							<section className="mb-8">
 								<h2 className="text-lg font-semibold mb-3">Project overview</h2>
 								<p className="text-gray-300 leading-relaxed mb-4">
 									This project took place during {project.period} at {project.company}. I worked as
@@ -98,7 +98,7 @@ export default function ProjectPage({ project }: ProjectPageProps) {
 							</section>
 
 							{/* Snapshot card */}
-							<section className="mb-10">
+							<section className="mb-8">
 								<h2 className="text-lg font-semibold mb-3">Project snapshot</h2>
 								<div className="rounded-2xl border border-gray-800 bg-gray-900/40 p-6 grid gap-4 sm:grid-cols-2">
 									<div>
@@ -134,7 +134,7 @@ export default function ProjectPage({ project }: ProjectPageProps) {
 							</section>
 
 							{/* Responsibilities */}
-							<section className="mb-10">
+							<section className="mb-8">
 								<h2 className="text-lg font-semibold mb-3">我的角色与职责</h2>
 								<ul className="list-disc list-inside text-gray-300 space-y-1">
 									{project.responsibilities.zh.map((item) => (
@@ -144,7 +144,7 @@ export default function ProjectPage({ project }: ProjectPageProps) {
 							</section>
 
 							{/* Achievements */}
-							<section className="mb-10">
+							<section className="mb-8">
 								<h2 className="text-lg font-semibold mb-3">关键成果与指标</h2>
 								<ul className="list-disc list-inside text-gray-300 space-y-1">
 									{project.achievements.zh.map((item) => (
@@ -155,7 +155,7 @@ export default function ProjectPage({ project }: ProjectPageProps) {
 
 							{/* Optional description as background/goal section */}
 							{project.description?.zh && (
-								<section className="mb-10">
+								<section className="mb-8">
 									<h2 className="text-lg font-semibold mb-3">项目背景与目标</h2>
 									<p className="text-gray-300 leading-relaxed whitespace-pre-line">
 										{project.description.zh}
