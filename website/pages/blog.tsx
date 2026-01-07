@@ -1,10 +1,35 @@
-import React, { useState, useEffect, useMemo } from 'react'
+import React, { useState, useMemo } from 'react'
 import { GetStaticProps } from 'next'
 import Head from 'next/head'
+import { motion } from 'framer-motion'
 import BlogCard from '@/components/BlogCard'
-import SearchBox from '@/components/SearchBox'
 import TagCloud from '@/components/TagCloud'
 import { BlogPost, getAllBlogPosts, getAllTags } from '@/lib/data'
+
+// Animation variants for staggered card entrance
+const containerVariants = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+      delayChildren: 0.1
+    }
+  }
+}
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 20 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: "spring",
+      stiffness: 300,
+      damping: 24
+    }
+  }
+}
 
 interface BlogPageProps {
   posts: BlogPost[]
@@ -12,7 +37,6 @@ interface BlogPageProps {
 }
 
 export default function BlogPage({ posts, tags }: BlogPageProps) {
-  const [searchQuery, setSearchQuery] = useState('')
   const [selectedTags, setSelectedTags] = useState<string[]>([])
   const [selectedCategory, setSelectedCategory] = useState<string>('All')
 
@@ -22,15 +46,9 @@ export default function BlogPage({ posts, tags }: BlogPageProps) {
     return cats
   }, [posts])
 
-  // Filter posts based on search, tags, and category
+  // Filter posts based on tags and category (search removed - using global search)
   const filteredPosts = useMemo(() => {
     return posts.filter(post => {
-      // Search filter
-      const matchesSearch = searchQuery === '' ||
-        post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        post.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        post.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
-
       // Tags filter
       const matchesTags = selectedTags.length === 0 ||
         selectedTags.some(tag => post.tags.includes(tag))
@@ -38,9 +56,9 @@ export default function BlogPage({ posts, tags }: BlogPageProps) {
       // Category filter
       const matchesCategory = selectedCategory === 'All' || post.category === selectedCategory
 
-      return matchesSearch && matchesTags && matchesCategory
+      return matchesTags && matchesCategory
     })
-  }, [posts, searchQuery, selectedTags, selectedCategory])
+  }, [posts, selectedTags, selectedCategory])
 
   const handleTagClick = (tag: string) => {
     setSelectedTags(prev =>
@@ -48,10 +66,6 @@ export default function BlogPage({ posts, tags }: BlogPageProps) {
         ? prev.filter(t => t !== tag)
         : [...prev, tag]
     )
-  }
-
-  const handleSearch = (query: string) => {
-    setSearchQuery(query)
   }
 
   return (
@@ -81,62 +95,70 @@ export default function BlogPage({ posts, tags }: BlogPageProps) {
           </div>
         </div>
 
+        {/* Filter Section - Category buttons and Tag Cloud */}
         <div className="max-w-6xl mx-auto px-4 mb-12">
-          <div className="flex flex-col lg:flex-row gap-8 items-start">
-            <div className="flex-1">
-              <SearchBox onSearch={handleSearch} />
-            </div>
-
-            <div className="flex flex-wrap gap-2">
-              {categories.map(category => (
-                <button
-                  key={category}
-                  onClick={() => setSelectedCategory(category)}
-                  className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
-                    selectedCategory === category
-                      ? 'bg-white text-black'
-                      : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 hover:text-white'
-                  }`}
-                >
-                  {category}
-                </button>
-              ))}
-            </div>
+          {/* Category Buttons */}
+          <div className="flex flex-wrap gap-2 justify-center mb-8">
+            {categories.map(category => (
+              <motion.button
+                key={category}
+                onClick={() => setSelectedCategory(category)}
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-colors duration-300 ${
+                  selectedCategory === category
+                    ? 'bg-white text-black'
+                    : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 hover:text-white'
+                }`}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                transition={{ type: "spring", stiffness: 400, damping: 17 }}
+              >
+                {category}
+              </motion.button>
+            ))}
           </div>
 
-          <div className="mt-8">
-            <TagCloud
-              tags={tags}
-              selectedTags={selectedTags}
-              onTagClick={handleTagClick}
-            />
-          </div>
+          {/* Tag Cloud */}
+          <TagCloud
+            tags={tags}
+            selectedTags={selectedTags}
+            onTagClick={handleTagClick}
+          />
         </div>
 
         <div className="max-w-6xl mx-auto px-4 pb-20">
           {filteredPosts.length > 0 ? (
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <motion.div
+              className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+              variants={containerVariants}
+              initial="hidden"
+              animate="show"
+              key={`${selectedCategory}-${selectedTags.join('-')}`}
+            >
               {filteredPosts.map((post) => (
-                <BlogCard key={post.slug} post={post} />
+                <motion.div key={post.slug} variants={cardVariants}>
+                  <BlogCard post={post} />
+                </motion.div>
               ))}
-            </div>
+            </motion.div>
           ) : (
             <div className="text-center py-20">
               <div className="text-6xl mb-4">🔍</div>
               <h3 className="text-2xl font-bold text-white mb-4">No posts found</h3>
               <p className="text-gray-400 max-w-md mx-auto">
-                Try adjusting your search terms or selected filters to find what you're looking for.
+                Try adjusting your selected filters to find what you're looking for.
               </p>
-              <button
+              <motion.button
                 onClick={() => {
-                  setSearchQuery('')
                   setSelectedTags([])
                   setSelectedCategory('All')
                 }}
                 className="mt-6 px-6 py-3 bg-white text-black font-semibold rounded-full hover:bg-gray-100 transition-colors"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                transition={{ type: "spring", stiffness: 400, damping: 17 }}
               >
                 Clear All Filters
-              </button>
+              </motion.button>
             </div>
           )}
         </div>

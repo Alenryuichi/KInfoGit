@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
+import { motion } from 'framer-motion'
 import { BlogPost } from '@/lib/data'
 
 interface BlogCardProps {
@@ -21,8 +22,12 @@ export default function BlogCard({ post }: BlogCardProps) {
 
   return (
     <Link href={`/blog/${post.slug}`}>
-      <article className="group cursor-pointer">
-        <div className="relative overflow-hidden rounded-lg bg-gray-900/50 border border-gray-800/50 hover:border-gray-700/50 transition-all duration-300 hover:bg-gray-900/70">
+      <motion.article
+        className="group cursor-pointer"
+        whileHover={{ y: -8 }}
+        transition={{ type: "spring", stiffness: 300, damping: 20 }}
+      >
+        <div className="relative overflow-hidden rounded-lg bg-gray-900/50 border border-gray-800/50 hover:border-gray-700/50 transition-colors duration-300 hover:bg-gray-900/70 shadow-lg hover:shadow-xl hover:shadow-black/20">
           <div className="aspect-video relative overflow-hidden">
             <Image
               src={coverImage}
@@ -71,7 +76,7 @@ export default function BlogCard({ post }: BlogCardProps) {
             </div>
           </div>
         </div>
-      </article>
+      </motion.article>
     </Link>
   )
 }
