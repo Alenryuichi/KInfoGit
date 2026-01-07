@@ -96,7 +96,10 @@ For each entry in `commit_plan`:
    - If empty → `git reset` and skip this commit.
 
 3. Commit:
-   - `git commit -m "<message>"`
+   - If `body` is null or empty:
+     - `git commit -m "<subject>"`
+   - If `body` exists:
+     - `git commit -m "<subject>" -m "<body>"`
    - If commit fails → stop and exit.
 
 4. Record:
@@ -131,7 +134,7 @@ Re-sort `preferred_types` and `preferred_scopes` by frequency (highest first, to
 For each created commit, prepend to `recent_commits`:
 ```yaml
 - hash: {short_hash}
-  message: "{full_message}"
+  message: "{subject}"  # Subject line only, not body
   date: {current_date}
 ```
 

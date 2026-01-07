@@ -95,22 +95,57 @@ Apply preferences:
   - `_bmad-output/**` → `bmad`
   - otherwise → `repo`
 
-### 3) Build `commit_plan`
+### 3) Generate optional body (AI-friendly context)
+
+For **complex changes** (≥3 files OR refactor/feat type), generate a body that explains:
+
+- **Why** the change was made (not just what)
+- **Impact** or benefit of the change
+- **Key details** that aren't obvious from the diff
+
+**Body generation rules:**
+- Wrap at 72 characters per line
+- Use bullet points for multiple points
+- Keep it concise (2-5 lines max)
+- Skip body for trivial changes (single file docs/chore)
+
+**Body template:**
+```
+<1-2 sentence summary of why this change matters>
+
+- <key point 1>
+- <key point 2 if needed>
+```
+
+**Example with body:**
+```
+refactor(bmad): redesign sidecar with rolling window and statistics
+
+Replace append-only design with rolling window (max 20 commits) to prevent
+infinite file growth. Add aggregated type/scope statistics for preference
+learning.
+
+- Reduces sidecar file size by 92% (1206 → 98 lines)
+- Enables automatic preference updates based on usage frequency
+```
+
+### 4) Build `commit_plan`
 
 Each entry:
 
-- `message`
+- `subject`: The subject line (`type(scope): description`)
+- `body`: Optional body text (null for simple commits)
 - `paths`
 - `group_id`
 
-### 4) Display plan (informational)
+### 5) Display plan (informational)
 
 Print:
 
 - total commits planned
-- each commit message + file count
+- each commit subject + body preview (if any) + file count
 
-### 5. Present MENU OPTIONS
+### 6. Present MENU OPTIONS
 
 Display: "**Proceeding to multi-commit execution...**"
 
