@@ -15,21 +15,40 @@ web_bundle: false
 
 ## WORKFLOW ARCHITECTURE
 
-This is a **single-step interactive workflow** - no step files needed. Users select actions from a menu, and the workflow executes corresponding script commands.
+> **Adaptation Notice:** This is a **tool-based single-step workflow**. Standard step-file architecture rules are adapted for interactive menu-driven execution. No step files are required - all execution happens within this workflow.md through script delegation.
 
 ### Core Principles
 
-- **Tool-Based Design**: This workflow wraps a shell script for worktree management
-- **Interactive Menu**: Users select operations from a clear menu
-- **Script Execution**: All operations delegate to `worktree-manager.sh`
-- **Loop Until Exit**: Return to main menu after each operation until user quits
+- **Micro-file Design**: This workflow is self-contained - no separate step files needed for tool-based interaction
+- **Just-In-Time Loading**: Only this workflow.md is loaded; script executes on-demand per user action
+- **Sequential Enforcement**: Menu options are processed one at a time in user-selected order
+- **State Tracking**: Worktree state is tracked by git itself, not in output file frontmatter
+- **Append-Only Building**: N/A - this workflow manages external resources, not documents
+
+### Step Processing Rules (Adapted for Single-Step Workflow)
+
+1. **READ COMPLETELY**: Read this entire workflow.md before taking any action
+2. **FOLLOW SEQUENCE**: Execute initialization, then present menu, then handle user selection
+3. **WAIT FOR INPUT**: Always halt at menu and wait for user selection
+4. **CHECK CONTINUATION**: Return to main menu after each operation until user selects Quit
+5. **SAVE STATE**: N/A - git manages worktree state externally
+6. **LOAD NEXT**: N/A - single-step workflow, no next step file
 
 ### Critical Rules (NO EXCEPTIONS)
+
+- 🛑 **NEVER** load multiple step files simultaneously (N/A - single-step workflow)
+- 📖 **ALWAYS** read entire workflow file before execution
+- 🚫 **NEVER** skip menu options or optimize the sequence
+- 💾 **ALWAYS** execute script commands exactly as specified
+- 🎯 **ALWAYS** follow the exact instructions in this workflow
+- ⏸️ **ALWAYS** halt at menus and wait for user input
+- 📋 **NEVER** create mental todo lists - respond to user selections one at a time
+
+### Workflow-Specific Rules
 
 - 🛑 **NEVER** call `git worktree` directly - always use the script
 - 📖 **ALWAYS** show current worktree status before menu
 - 🎯 **ALWAYS** confirm destructive operations (cleanup)
-- ⏸️ **ALWAYS** halt at menu and wait for user input
 - ✅ **ALWAYS** speak output in `{communication_language}`
 
 ### Script Path
@@ -54,6 +73,10 @@ Display welcome message and check current worktree status:
 ```bash
 bash {project-root}/_bmad/custom/skills/worktree-manager/scripts/worktree-manager.sh list
 ```
+
+### 3. Begin Execution
+
+This is a single-step workflow. Proceed directly to the EXECUTION section below - no step files to load.
 
 ---
 
