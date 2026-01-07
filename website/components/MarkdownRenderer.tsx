@@ -1,8 +1,8 @@
-'use client'
-
+import React from 'react'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import { Components } from 'react-markdown'
+import MermaidDiagram from './MermaidDiagram'
 
 interface MarkdownRendererProps {
   content: string
@@ -11,14 +11,31 @@ interface MarkdownRendererProps {
 
 // Custom components for enhanced styling
 const components: Components = {
-  // Code blocks with syntax highlighting styling
-  code({ node, className, children, ...props }) {
+  // Code blocks with syntax highlighting styling and Mermaid support
+  code({ className, children, ...props }) {
     const match = /language-(\w+)/.exec(className || '')
+    const language = match ? match[1] : null
     const isInline = !match && !className
-    
+
+    // Mermaid 图表渲染
+    if (language === 'mermaid') {
+      // 安全地提取子元素文本内容
+      const getTextContent = (node: React.ReactNode): string => {
+        if (typeof node === 'string') return node
+        if (typeof node === 'number') return String(node)
+        if (Array.isArray(node)) return node.map(getTextContent).join('')
+        if (node && typeof node === 'object' && 'props' in node) {
+          return getTextContent((node as React.ReactElement).props.children)
+        }
+        return ''
+      }
+      const chart = getTextContent(children).replace(/\n$/, '')
+      return <MermaidDiagram chart={chart} className="my-6" />
+    }
+
     if (isInline) {
       return (
-        <code 
+        <code
           className="bg-gray-800 text-pink-300 px-1.5 py-0.5 rounded text-sm font-mono"
           {...props}
         >
@@ -26,7 +43,7 @@ const components: Components = {
         </code>
       )
     }
-    
+
     return (
       <code className={className} {...props}>
         {children}

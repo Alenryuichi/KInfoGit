@@ -10,7 +10,9 @@
     "tags": ["Python", "Golang", "ClickHouse", "MySQL", "Vue.js", "Spark"],
     "role": "项目负责人",
     "period": "2022-2024",
-    "hasDetailPage": true
+    "hasDetailPage": true,
+    "impact": "10亿级数据处理能力",
+    "layout": "featured"
   },
   {
     "id": "anti-fraud-governance",
@@ -23,7 +25,9 @@
     "tags": ["Python", "Golang", "C++", "Data Analysis"],
     "role": "项目负责人",
     "period": "2023-2024",
-    "hasDetailPage": true
+    "hasDetailPage": true,
+    "impact": "300万+直接收益",
+    "layout": "featured"
   },
   {
     "id": "security-strategy-lifecycle",
@@ -36,7 +40,9 @@
     "tags": ["Python", "Go", "C++", "Flink", "Kafka"],
     "role": "架构师",
     "period": "2024-至今",
-    "hasDetailPage": true
+    "hasDetailPage": true,
+    "impact": "策略效率提升60%",
+    "layout": "normal"
   },
   {
     "id": "anti-spam-graph",
@@ -49,7 +55,9 @@
     "tags": ["Python", "Graph Database", "Data Mining"],
     "role": "项目负责人",
     "period": "2021-2023",
-    "hasDetailPage": false
+    "hasDetailPage": false,
+    "impact": "图数据库技术专家",
+    "layout": "normal"
   },
   {
     "id": "anti-spam-rollback",
@@ -62,6 +70,8 @@
     "tags": ["Go", "Vue.js", "Distributed Systems", "Microservices"],
     "role": "项目负责人",
     "period": "2023-2024",
-    "hasDetailPage": false
+    "hasDetailPage": false,
+    "impact": "99.9%回滚成功率",
+    "layout": "compact"
   }
 ]

@@ -26,7 +26,7 @@ workflow_status:
   brainstorm-project: skipped
   research: skipped
   prd: required
-  create-ux-design: conditional
+  create-ux-design: _bmad-output/planning-artifacts/ux-design-specification.md
   create-architecture: required
   create-epics-and-stories: required
   test-design: optional

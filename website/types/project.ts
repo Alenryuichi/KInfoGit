@@ -17,6 +17,26 @@ export interface ProjectLinks {
 }
 
 /**
+ * 技术栈详细信息
+ */
+export interface TechStackDetail {
+  /** 技术名称 */
+  name: string;
+  /** 技术类别（如 language, database, framework） */
+  category: string;
+  /** 描述说明 */
+  description?: string;
+}
+
+/**
+ * Bento Grid 布局类型
+ * - featured: 大卡片，跨 2 列
+ * - normal: 标准卡片，1 列
+ * - compact: 紧凑卡片，1 列小尺寸
+ */
+export type ProjectLayout = 'featured' | 'normal' | 'compact';
+
+/**
  * Project 项目数据模型
  * 用于展示层的统一项目数据结构
  */
@@ -47,6 +67,12 @@ export interface Project {
   links?: ProjectLinks;
   /** 是否有 MDX 详情页 */
   hasDetailPage: boolean;
+  /** 量化影响，用于展示（如 "300万+收益"） */
+  impact?: string;
+  /** Bento Grid 布局类型 */
+  layout?: ProjectLayout;
+  /** 详细技术栈信息 */
+  techStackDetail?: TechStackDetail[];
 }
 
 /**
@@ -122,6 +148,31 @@ export function isProject(obj: unknown): obj is Project {
   // 验证可选字段 links
   if (p.links !== undefined && !isProjectLinks(p.links)) {
     return false;
+  }
+
+  // 验证可选字段 impact
+  if (p.impact !== undefined && typeof p.impact !== 'string') {
+    return false;
+  }
+
+  // 验证可选字段 layout
+  if (p.layout !== undefined) {
+    if (p.layout !== 'featured' && p.layout !== 'normal' && p.layout !== 'compact') {
+      return false;
+    }
+  }
+
+  // 验证可选字段 techStackDetail
+  if (p.techStackDetail !== undefined) {
+    if (!Array.isArray(p.techStackDetail)) {
+      return false;
+    }
+    for (const tech of p.techStackDetail) {
+      if (typeof tech !== 'object' || tech === null) return false;
+      const t = tech as Record<string, unknown>;
+      if (typeof t.name !== 'string' || typeof t.category !== 'string') return false;
+      if (t.description !== undefined && typeof t.description !== 'string') return false;
+    }
   }
 
   return true;
