@@ -50,17 +50,50 @@ export interface Project {
 }
 
 /**
+ * 验证 ProjectLinks 对象结构
+ * @param obj - 待检查的对象
+ * @returns 是否为有效的 ProjectLinks 对象
+ * @example
+ * isProjectLinks({ demo: 'https://example.com' }) // true
+ * isProjectLinks({ invalid: 'field' }) // false
+ */
+export function isProjectLinks(obj: unknown): obj is ProjectLinks {
+  if (typeof obj !== 'object' || obj === null || Array.isArray(obj)) {
+    return false;
+  }
+  const links = obj as Record<string, unknown>;
+  // 只允许 demo, github, article 字段，且必须是 string 或 undefined
+  const validKeys = ['demo', 'github', 'article'];
+  for (const key of Object.keys(links)) {
+    if (!validKeys.includes(key)) {
+      return false;
+    }
+    if (links[key] !== undefined && typeof links[key] !== 'string') {
+      return false;
+    }
+  }
+  return true;
+}
+
+/**
  * Project 类型守卫函数
  * 用于运行时类型检查
  * @param obj - 待检查的对象
  * @returns 是否为有效的 Project 对象
+ * @example
+ * const data = JSON.parse(response);
+ * if (isProject(data)) {
+ *   console.log(data.title); // TypeScript knows data is Project
+ * }
  */
 export function isProject(obj: unknown): obj is Project {
   if (typeof obj !== 'object' || obj === null) {
     return false;
   }
   const p = obj as Record<string, unknown>;
-  return (
+
+  // 验证必需字段
+  const hasRequiredFields =
     typeof p.id === 'string' &&
     typeof p.title === 'string' &&
     typeof p.slug === 'string' &&
@@ -68,10 +101,28 @@ export function isProject(obj: unknown): obj is Project {
     typeof p.featured === 'boolean' &&
     typeof p.order === 'number' &&
     typeof p.category === 'string' &&
-    Array.isArray(p.tags) &&
     typeof p.role === 'string' &&
     typeof p.period === 'string' &&
-    typeof p.hasDetailPage === 'boolean'
-  );
-}
+    typeof p.hasDetailPage === 'boolean';
 
+  if (!hasRequiredFields) {
+    return false;
+  }
+
+  // 验证 tags 数组且所有元素都是 string
+  if (!Array.isArray(p.tags) || !p.tags.every((tag) => typeof tag === 'string')) {
+    return false;
+  }
+
+  // 验证可选字段 thumbnail
+  if (p.thumbnail !== undefined && typeof p.thumbnail !== 'string') {
+    return false;
+  }
+
+  // 验证可选字段 links
+  if (p.links !== undefined && !isProjectLinks(p.links)) {
+    return false;
+  }
+
+  return true;
+}
