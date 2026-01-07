@@ -45,7 +45,7 @@ development_status:
   1-1-create-project-type-definition: done
   1-2-create-project-data-file: done
   1-3-create-project-data-functions: done
-  epic-1-retrospective: optional
+  epic-1-retrospective: done
 
   # Epic 2: 首页完整体验
   epic-2: done
@@ -75,4 +75,12 @@ development_status:
   5-2-about-page-contact: done  # About.tsx 已更新社交链接为真实 URL
   5-3-about-page-navigation: done  # Header.tsx 已有 About 导航
   epic-5-retrospective: optional
+
+  # Epic 6: UI/UX 优化 (来自 Epic 1 回顾行动项)
+  epic-6: in-progress
+  6-1-fix-lets-connect-button: review  # 修复 Let's Connect 按钮跳转
+  6-2-view-my-work-button-animation: ready-for-dev  # View My Work 按钮动画优化
+  6-3-about-page-optimization: ready-for-dev  # About 页面技能展示优化
+  6-4-blog-page-optimization: ready-for-dev  # Blog 页面优化 (删除搜索框+卡片样式)
+  epic-6-retrospective: optional
 
