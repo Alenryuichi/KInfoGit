@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { isProject, Project } from './project';
+import { isProject } from './project';
 import projectsData from '../../profile-data/projects.json';
 
 describe('projects.json data validation', () => {
@@ -92,4 +92,3 @@ describe('projects.json data validation', () => {
     });
   });
 });
-
