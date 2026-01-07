@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import React, { useEffect, Children } from 'react'
 import { motion } from 'framer-motion'
 import { animateOnScroll, animateSkillTags } from '@/utils/animations'
 
@@ -71,42 +71,62 @@ const qualities = [
   'Interactive', 'Secure', 'Reliable', 'Engaging', 'Fast'
 ]
 
-// Marquee component for animated tech stack - Fixed Gap
-const Marquee = ({ children, reverse = false }: { children: React.ReactNode, reverse?: boolean }) => (
-  <div className="flex overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)] group">
-    <div className={`flex shrink-0 gap-8 py-4 animate-marquee flex-row ${reverse ? '[animation-direction:reverse]' : ''} group-hover:[animation-play-state:paused]`}>
-      {children}
-    </div>
-    <div className={`flex shrink-0 gap-8 py-4 animate-marquee flex-row ${reverse ? '[animation-direction:reverse]' : ''} group-hover:[animation-play-state:paused]`}>
-      {children}
-    </div>
-  </div>
-)
+// Marquee component for animated tech stack - True Infinite Scroll
+const Marquee = ({ children, reverse = false }: { children: React.ReactNode, reverse?: boolean }) => {
+  // 将 children 复制多份以确保内容足够长，实现无缝滚动
+  const items = Children.toArray(children);
+  // 复制 4 份确保无缝
+  const repeatedItems = [...items, ...items, ...items, ...items];
 
-// Tech badge component with hover animation
+  return (
+    <div className="relative flex overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_10%,white_90%,transparent)] group">
+      <div
+        className={`flex shrink-0 py-3 flex-row items-center ${reverse ? 'animate-marquee-reverse' : 'animate-marquee'} group-hover:[animation-play-state:paused]`}
+      >
+        {repeatedItems.map((child, index) => (
+          <div key={`marquee-1-${index}`} className="flex-shrink-0 mx-2">
+            {child}
+          </div>
+        ))}
+      </div>
+      <div
+        className={`flex shrink-0 py-3 flex-row items-center ${reverse ? 'animate-marquee-reverse' : 'animate-marquee'} group-hover:[animation-play-state:paused]`}
+        aria-hidden="true"
+      >
+        {repeatedItems.map((child, index) => (
+          <div key={`marquee-2-${index}`} className="flex-shrink-0 mx-2">
+            {child}
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+// Tech badge component with hover animation - refined and compact
 const TechBadge = ({ tech }: { tech: { name: string, icon: string } }) => (
   <motion.div
-    className="skill-tag inline-flex items-center justify-center rounded-lg border px-4 py-2 text-sm w-fit whitespace-nowrap shrink-0 gap-3 text-white border-gray-700 bg-gray-800/50 transition-colors"
+    className="skill-tag inline-flex items-center justify-center rounded-md border px-3 py-1.5 text-xs w-fit whitespace-nowrap shrink-0 gap-2 text-white/90 border-gray-700/80 bg-gray-800/40 transition-colors"
     whileHover={{
-      scale: 1.05,
-      backgroundColor: "rgba(59, 130, 246, 0.2)",
-      borderColor: "rgba(59, 130, 246, 0.5)"
+      scale: 1.03,
+      backgroundColor: "rgba(59, 130, 246, 0.15)",
+      borderColor: "rgba(59, 130, 246, 0.4)"
     }}
-    whileTap={{ scale: 0.95 }}
-    transition={{ type: "spring", stiffness: 400, damping: 17 }}
+    whileTap={{ scale: 0.97 }}
+    transition={{ type: "spring", stiffness: 400, damping: 20 }}
   >
-    <img 
-      height="16" 
-      width="16" 
-      alt={tech.name} 
-      src={tech.icon} 
-      className="w-5 h-5 object-contain" 
+    <img
+      height="14"
+      width="14"
+      alt={tech.name}
+      src={tech.icon}
+      className="w-3.5 h-3.5 object-contain"
       onError={(e) => {
         // Fallback if icon fails to load
         e.currentTarget.style.display = 'none'
       }}
     />
-    <span className="font-medium">{tech.name}</span>
+    <span className="font-medium text-[11px]">{tech.name}</span>
   </motion.div>
 )
 
