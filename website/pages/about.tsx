@@ -46,14 +46,14 @@ export default function AboutPage({ profileData }: AboutPageProps) {
         </div>
 
         {/* About Section */}
-        <section className="py-20 pt-32 relative z-10">
+        <section className="pt-32 pb-8 relative z-10">
           <About />
         </section>
 
         {/* Skills Section */}
-        <section className="py-20 relative z-10">
+        <div className="relative z-10">
           <Skills />
-        </section>
+        </div>
       </main>
     </>
   )

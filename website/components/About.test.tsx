@@ -4,12 +4,26 @@
  * 
  * Tests for Story 6-1: Contact anchor for navigation
  */
-import { describe, it, expect } from 'vitest'
+import { describe, it, expect, vi, beforeAll } from 'vitest'
 import React from 'react'
 import { render } from '@testing-library/react'
 import About from './About'
 
 describe('About Component', () => {
+  beforeAll(() => {
+    // Mock IntersectionObserver for Framer Motion
+    const IntersectionObserverMock = class IntersectionObserver {
+      readonly root: Element | null = null
+      readonly rootMargin: string = ''
+      readonly thresholds: ReadonlyArray<number> = []
+      disconnect = vi.fn()
+      observe = vi.fn()
+      takeRecords = vi.fn()
+      unobserve = vi.fn()
+    }
+    vi.stubGlobal('IntersectionObserver', IntersectionObserverMock)
+  })
+
   describe('Contact Anchor (Story 6-1)', () => {
     it('should have element with id="contact"', () => {
       const { container } = render(<About />)
