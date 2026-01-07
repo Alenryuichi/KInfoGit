@@ -16,21 +16,22 @@ export default function BlogCard({ post }: BlogCardProps) {
     })
   }
 
+  // 使用自动生成的封面 (由 just build 保证存在)
+  const coverImage = `/blog/covers/${post.slug}.png`
+
   return (
     <Link href={`/blog/${post.slug}`}>
       <article className="group cursor-pointer">
         <div className="relative overflow-hidden rounded-lg bg-gray-900/50 border border-gray-800/50 hover:border-gray-700/50 transition-all duration-300 hover:bg-gray-900/70">
-          {post.image && (
-            <div className="aspect-video relative overflow-hidden">
-              <Image
-                src={post.image}
-                alt={post.title}
-                fill
-                className="object-cover group-hover:scale-105 transition-transform duration-500"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 to-transparent" />
-            </div>
-          )}
+          <div className="aspect-video relative overflow-hidden">
+            <Image
+              src={coverImage}
+              alt={post.title}
+              fill
+              className="object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 to-transparent" />
+          </div>
           
           <div className="p-6">
             <div className="flex items-center gap-2 text-sm text-gray-400 mb-3">

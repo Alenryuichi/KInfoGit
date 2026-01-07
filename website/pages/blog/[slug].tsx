@@ -4,6 +4,7 @@ import Link from 'next/link'
 import Layout from '@/components/Layout'
 import MarkdownRenderer from '@/components/MarkdownRenderer'
 import { BlogPost, getAllBlogPosts, getBlogPost } from '@/lib/data'
+import { siteConfig } from '@/lib/config'
 import { ArrowLeftIcon, CalendarIcon, ClockIcon, TagIcon } from '@heroicons/react/24/outline'
 
 interface BlogPostPageProps {
@@ -49,7 +50,10 @@ export default function BlogPostPage({ post }: BlogPostPageProps) {
         <meta property="og:title" content={post.title} />
         <meta property="og:description" content={post.excerpt} />
         <meta property="og:type" content="article" />
-        {post.image && <meta property="og:image" content={post.image} />}
+        <meta property="og:image" content={`${siteConfig.url}/blog/covers/${post.slug}.png`} />
+        <meta property="og:url" content={`${siteConfig.url}/blog/${post.slug}`} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content={`${siteConfig.url}/blog/covers/${post.slug}.png`} />
       </Head>
 
       <Layout>
