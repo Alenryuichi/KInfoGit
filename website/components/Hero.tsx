@@ -28,22 +28,22 @@ export default function Hero() {
           <div className="hero-title space-y-6">
             <div className="space-y-2">
               <p className="text-gray-400 text-lg font-medium">
-                I help founders turn ideas into
+                Building secure & intelligent systems
               </p>
               <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight">
-                <span className="block mb-2">seamless digital</span>
+                <span className="block mb-2">Anti-fraud Tech</span>
                 <span className="bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-                  experiences
+                  Expert
                 </span>
               </h1>
             </div>
 
             <div className="hero-subtitle space-y-4">
               <h2 className="text-2xl sm:text-3xl text-gray-300 font-light">
-                Hello, I'm <span className="font-semibold text-white">Kylin Miao</span>
+                Hi, I&apos;m <span className="font-semibold text-white">Kylin Miao</span>
               </h2>
               <p className="text-lg text-gray-400">
-                a Full Stack Developer
+                Senior Backend Engineer @ Tencent
               </p>
             </div>
           </div>
@@ -51,9 +51,8 @@ export default function Hero() {
           {/* Description */}
           <div className="hero-description max-w-4xl mx-auto space-y-6">
             <p className="text-xl text-gray-300 leading-relaxed">
-              Senior Backend Engineer at Tencent, specializing in anti-fraud technology and
-              large-scale distributed system architecture. Expert in building enterprise platforms
-              from 0 to 1, with rich experience in risk control systems and graph database applications.
+              Specializing in large-scale risk control systems and graph database applications.
+              Building enterprise platforms from 0 to 1 with expertise in distributed architecture.
             </p>
 
             {/* Contact Info */}
@@ -73,20 +72,20 @@ export default function Hero() {
             </div>
           </div>
 
-	          {/* CTA Buttons */}
-	          <div className="hero-buttons flex flex-col sm:flex-row gap-4 justify-center items-center">
-	            <a
-	              href="/work#projects"
-	              className="animated-button group inline-flex items-center px-8 py-4 bg-white text-black font-semibold rounded-full hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg"
-	            >
-	              View My Work
-	              <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-	            </a>
+          {/* CTA Buttons */}
+          <div className="hero-buttons flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
-              href="#contact"
+              href="/work#projects"
+              className="animated-button group inline-flex items-center px-8 py-4 bg-white text-black font-semibold rounded-full hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg"
+            >
+              View My Work
+              <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </a>
+            <a
+              href="mailto:miaojsi@outlook.com"
               className="animated-button inline-flex items-center px-8 py-4 border border-gray-600 text-gray-300 font-semibold rounded-full hover:border-gray-400 hover:text-white transition-all duration-300"
             >
-              Let's Connect
+              Let&apos;s Connect
             </a>
           </div>
 
