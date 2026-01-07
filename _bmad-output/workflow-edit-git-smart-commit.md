@@ -2,20 +2,25 @@
 workflow: edit-workflow
 target_workflow_name: git-smart-commit
 target_workflow_path: /Users/kylinmiao/Documents/project/KInfoGit/_bmad-output/bmb-creations/workflows/git-smart-commit/
-stepsCompleted: [1, 2, 3, 4]
+stepsCompleted: [1, 2, 3]
+lastStep: step-03-improve
 created: 2026-01-05
+updated: 2026-01-07
 ---
 
 # Workflow Edit Report: git-smart-commit
 
-## User Request (Input)
+## User Request (Current)
 
-- 目标：按最佳实践 **自动拆分多个 commit**
-- 约束：不提供选择，**YOLO 自动跑完**
+- 目标：**优化 sidecar 文件设计**
+- 问题：
+  - 文件持续 append 导致无限膨胀 (1200+ 行)
+  - 保留完整 commit 历史是冗余的（git log 已有）
+  - 学习偏好机制定义了但未实现
 
 ---
 
-## Workflow Analysis
+## Workflow Analysis (2026-01-07)
 
 ### Target Workflow
 
@@ -83,3 +88,112 @@ created: 2026-01-05
 
 - 建议在一次真实变更上跑通：确认分组是否符合预期
 - 若需要更强拆分（例如按 `git add -p` 级别），再扩展为交互式/半自动模式
+
+---
+
+## Improvement Goals - Sidecar Optimization (2026-01-07)
+
+### Motivation
+
+- **Trigger**: Sidecar 文件已膨胀到 1200+ 行
+- **User Feedback**: 无限 append 设计不合理
+- **Success Issues**: 偏好学习机制从未实现
+
+### Prioritized Improvements
+
+#### 🔴 Critical (Must Fix)
+
+1. **Sidecar 滚动窗口**: 只保留最近 20 条 commit 记录
+2. **聚合偏好统计**: 自动更新 type/scope/language 频率
+3. **精简日志格式**: 只存 message + hash + date，不存完整文件列表
+
+#### 🟡 Important (Should Fix)
+
+1. **清理 deprecated step-04**: 删除或确认不存在
+
+### New Sidecar Structure Design
+
+```yaml
+---
+created: 2026-01-07
+workflow: git-smart-commit
+last_updated: 2026-01-07
+---
+
+# Learned Preferences (auto-updated)
+preferred_types: [chore, feat, docs]
+preferred_scopes: [bmad, repo, claude]
+language: en
+
+# Type Statistics
+type_counts:
+  chore: 15
+  feat: 8
+  docs: 5
+
+# Scope Statistics
+scope_counts:
+  bmad: 20
+  repo: 5
+  claude: 3
+
+# Recent Commits (rolling window, max 20)
+recent_commits:
+  - hash: abc1234
+    message: "feat(bmad): add feature"
+    date: 2026-01-07
+```
+
+### Focus Areas for Next Step
+
+- 修改 step-01-init.md: 新 sidecar 初始化结构
+- 修改 step-03-generate.md: 读取聚合偏好
+- 修改 step-05-execute.md: 滚动窗口更新逻辑
+
+---
+
+_Goals identified on 2026-01-07_
+
+---
+
+## Improvement Log (2026-01-07)
+
+### Improvement 1: New Sidecar Initialization Structure
+
+- **File**: `steps/step-01-init.md`
+- **Change**: Replaced old append-only log template with structured YAML format
+- **Key Features**:
+  - `preferred_types` / `preferred_scopes` lists
+  - `type_counts` / `scope_counts` statistics
+  - `recent_commits` array (rolling window)
+  - `max_recent_commits` config (default: 20)
+- **User Approval**: YOLO
+
+### Improvement 2: Rolling Window + Statistics Update Logic
+
+- **File**: `steps/step-05-execute.md`
+- **Change**: Replaced simple append with structured update:
+  - Increment type/scope counters
+  - Re-sort preferred lists by frequency
+  - Prepend to recent_commits
+  - Trim to max_recent_commits limit
+- **User Approval**: YOLO
+
+### Improvement 3: Read Structured Preferences
+
+- **File**: `steps/step-03-generate.md`
+- **Change**: Updated preference loading to extract structured fields:
+  - `preferred_types`, `preferred_scopes`, `language`
+  - `type_counts`, `scope_counts` for reference
+- **User Approval**: YOLO
+
+### Improvement 4: Reset Sidecar to New Format
+
+- **File**: `.sidecar-git-smart-commit.md`
+- **Change**: Migrated from 1206 lines to 98 lines
+- **Data Preserved**: All 19 historical commits + computed statistics
+- **User Approval**: YOLO
+
+---
+
+_Improvements completed on 2026-01-07_
