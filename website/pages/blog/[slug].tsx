@@ -1,8 +1,8 @@
 import { GetStaticProps, GetStaticPaths } from 'next'
 import Head from 'next/head'
 import Link from 'next/link'
-import { useRouter } from 'next/router'
 import Layout from '@/components/Layout'
+import MarkdownRenderer from '@/components/MarkdownRenderer'
 import { BlogPost, getAllBlogPosts, getBlogPost } from '@/lib/data'
 import { ArrowLeftIcon, CalendarIcon, ClockIcon, TagIcon } from '@heroicons/react/24/outline'
 
@@ -117,12 +117,7 @@ export default function BlogPostPage({ post }: BlogPostPageProps) {
             </header>
 
             {/* Article Content */}
-            <div className="prose prose-invert prose-lg max-w-none">
-              <div 
-                className="markdown-content"
-                dangerouslySetInnerHTML={{ __html: formatMarkdownContent(post.content) }}
-              />
-            </div>
+            <MarkdownRenderer content={post.content} />
 
             {/* Article Footer */}
             <footer className="mt-16 pt-8 border-t border-gray-800">
@@ -148,39 +143,6 @@ export default function BlogPostPage({ post }: BlogPostPageProps) {
       </Layout>
     </>
   )
-}
-
-// Simple markdown to HTML converter (basic implementation)
-function formatMarkdownContent(content: string): string {
-  return content
-    // Headers
-    .replace(/^### (.*$)/gim, '<h3 class="text-2xl font-bold mt-8 mb-4 text-white">$1</h3>')
-    .replace(/^## (.*$)/gim, '<h2 class="text-3xl font-bold mt-10 mb-6 text-white">$1</h2>')
-    .replace(/^# (.*$)/gim, '<h1 class="text-4xl font-bold mt-12 mb-8 text-white">$1</h1>')
-    
-    // Code blocks
-    .replace(/```(\w+)?\n([\s\S]*?)```/g, '<pre class="bg-gray-900 border border-gray-700 rounded-lg p-4 overflow-x-auto my-6"><code class="text-sm text-gray-300">$2</code></pre>')
-    
-    // Inline code
-    .replace(/`([^`]+)`/g, '<code class="bg-gray-800 text-pink-300 px-2 py-1 rounded text-sm">$1</code>')
-    
-    // Bold
-    .replace(/\*\*(.*?)\*\*/g, '<strong class="font-semibold text-white">$1</strong>')
-    
-    // Italic
-    .replace(/\*(.*?)\*/g, '<em class="italic text-gray-300">$1</em>')
-    
-    // Links
-    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" class="text-blue-400 hover:text-blue-300 underline transition-colors" target="_blank" rel="noopener noreferrer">$1</a>')
-    
-    // Paragraphs
-    .replace(/\n\n/g, '</p><p class="mb-4 leading-relaxed text-gray-300">')
-    .replace(/^/, '<p class="mb-4 leading-relaxed text-gray-300">')
-    .replace(/$/, '</p>')
-    
-    // Lists
-    .replace(/^\- (.*$)/gim, '<li class="mb-2 text-gray-300">$1</li>')
-    .replace(/(<li.*<\/li>)/gm, '<ul class="list-disc list-inside mb-6 space-y-2">$1</ul>')
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
