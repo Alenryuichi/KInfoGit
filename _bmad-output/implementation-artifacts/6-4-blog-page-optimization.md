@@ -1,6 +1,6 @@
 # Story 6.4: Blog 页面优化
 
-Status: ready-for-dev
+Status: done
 
 ## Story
 
@@ -25,15 +25,17 @@ so that 我能快速浏览和找到感兴趣的文章。
 
 ## Tasks / Subtasks
 
-- [ ] Task 1: 删除 Blog 页面内的搜索框 (AC: #1)
-  - [ ] 移除搜索组件
-  - [ ] 调整布局填补空缺
-- [ ] Task 2: 优化文章卡片样式 (AC: #2, #4)
-  - [ ] 确保显示标题、日期、摘要
-  - [ ] 添加标签显示（如数据中有）
-- [ ] Task 3: 添加卡片 hover 效果 (AC: #3)
-  - [ ] translateY 上浮 + 阴影加深
-- [ ] Task 4: 优化移动端布局 (AC: #5)
+- [x] Task 1: 删除 Blog 页面内的搜索框 (AC: #1)
+  - [x] 移除 SearchBox 组件和相关 state
+  - [x] 调整布局 - 类别按钮居中显示
+- [x] Task 2: 优化文章卡片样式 (AC: #2, #4)
+  - [x] 已有标题、日期、摘要、封面图
+  - [x] 标签显示已存在
+- [x] Task 3: 添加卡片 hover 效果 (AC: #3)
+  - [x] Framer Motion whileHover y: -8 上浮
+  - [x] shadow-lg + hover:shadow-xl 阴影变化
+- [x] Task 4: 优化移动端布局 (AC: #5)
+  - [x] Tailwind 响应式已存在
 
 ## Dev Notes
 
@@ -110,3 +112,42 @@ so that 我能快速浏览和找到感兴趣的文章。
 - [Source: Epic 1 回顾 - 行动项 #4]
 - [Source: pages/blog.tsx]
 
+---
+
+## Dev Agent Record
+
+### Implementation Plan
+- 移除 SearchBox 组件导入和使用
+- 移除 searchQuery state 和 handleSearch 函数
+- 简化过滤逻辑（仅 tags 和 category）
+- 类别按钮居中布局
+- BlogCard 添加 Framer Motion hover 效果
+
+### Completion Notes
+- ✅ 删除 SearchBox 导入和 searchQuery state
+- ✅ 简化 filteredPosts 过滤逻辑
+- ✅ 类别按钮添加 motion.button + scale 动画
+- ✅ BlogCard 改为 motion.article + whileHover y: -8
+- ✅ 卡片添加 shadow-lg + hover:shadow-xl 阴影
+- ✅ "Clear All Filters" 按钮添加动画
+- ✅ 所有 46 个测试通过
+- ✅ npm run build 成功
+
+---
+
+## File List
+
+| 文件 | 操作 |
+|------|------|
+| `website/pages/blog.tsx` | 修改 - 移除 SearchBox, 简化过滤, 添加卡片入场动画 |
+| `website/components/BlogCard.tsx` | 修改 - 添加 Framer Motion hover 效果 |
+| `website/components/BlogCard.test.tsx` | 新建 - 9 个单元测试验证卡片组件 |
+
+---
+
+## Change Log
+
+| 日期 | 变更 |
+|------|------|
+| 2026-01-07 | Story 实现完成 - 移除冗余搜索框, 优化卡片交互 |
+| 2026-01-07 | Code Review 修复 - 添加卡片列表 stagger 入场动画, 添加 BlogCard.test.tsx |

@@ -147,6 +147,7 @@ const cardVariants = {
 | 文件 | 操作 |
 |------|------|
 | `website/components/Skills.tsx` | 修改 - 添加 Framer Motion 入场动画和 hover 效果 |
+| `website/components/Skills.test.tsx` | 新建 - 6 个单元测试验证组件功能 |
 
 ---
 
@@ -155,4 +156,5 @@ const cardVariants = {
 | 日期 | 变更 |
 |------|------|
 | 2026-01-07 | Story 实现完成 - Skills 组件现在有流畅的入场和交互动画 |
+| 2026-01-07 | Code Review 修复 - 删除未使用的 itemVariants, 修复 import 顺序, 添加 Skills.test.tsx |
 
