@@ -1,6 +1,6 @@
 # Story 6.1: 修复 Let's Connect 按钮
 
-Status: review
+Status: done
 
 ## Story
 
@@ -87,14 +87,33 @@ const handleClick = () => {
 - ✅ 确认 `globals.css` 已有 `scroll-behavior: smooth`
 - ✅ 所有 40 个现有测试通过，无回归
 
+### Code Review Fixes (2026-01-07)
+
+**Issue #1 [HIGH]: 跨页面导航平滑滚动不工作**
+- 修复: 在 `about.tsx` 添加 useEffect 处理 hash 导航后的平滑滚动
+
+**Issue #2 [MEDIUM]: 无可访问性考虑**
+- 修复: 在 Hero.tsx 的按钮添加 `aria-label="Let's Connect - Navigate to contact section"`
+
+**Issue #3 & #5 [MEDIUM]: Header 遮挡问题**
+- 修复: 在 About.tsx 的 `#contact` 元素添加 `scroll-mt-24` class
+
+**Issue #4 [MEDIUM]: 没有针对此 Story 的测试**
+- 修复: 创建 `Hero.test.tsx` 和 `About.test.tsx` 测试文件
+- 新增 6 个测试用例验证 href、aria-label、id="contact" 等
+
 ---
 
 ## File List
 
 | 文件 | 操作 |
 |------|------|
-| `website/components/About.tsx` | 修改 - 添加 id="contact" |
-| `website/components/Hero.tsx` | 修改 - 更新 href 为 /about#contact |
+| `website/components/About.tsx` | 修改 - 添加 id="contact" + scroll-mt-24 |
+| `website/components/Hero.tsx` | 修改 - 更新 href 为 /about#contact + aria-label |
+| `website/pages/about.tsx` | 修改 - 添加 hash 导航平滑滚动处理 |
+| `website/components/Hero.test.tsx` | 新增 - Let's Connect 按钮测试 |
+| `website/components/About.test.tsx` | 新增 - Contact 锚点测试 |
+| `website/vitest.config.ts` | 修改 - 支持 React 组件测试 |
 
 ---
 
@@ -103,4 +122,5 @@ const handleClick = () => {
 | 日期 | 变更 |
 |------|------|
 | 2026-01-07 | Story 实现完成 - Let's Connect 按钮现在跳转到 About 页面的联系区域 |
+| 2026-01-07 | Code Review 修复 - 解决平滑滚动、可访问性、Header遮挡、测试缺失问题 |
 

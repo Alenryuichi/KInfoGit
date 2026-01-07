@@ -1,6 +1,6 @@
 # Story 6.3: About 页面优化
 
-Status: ready-for-dev
+Status: done
 
 ## Story
 
@@ -25,15 +25,15 @@ so that 我能快速了解站主的技术能力和专业背景。
 
 ## Tasks / Subtasks
 
-- [ ] Task 1: 重新设计技能展示区块 (AC: #1, #2)
-  - [ ] 创建技能分类数据结构
-  - [ ] 使用图标库 (如 react-icons) 展示技术图标
-  - [ ] 按类别分组展示
-- [ ] Task 2: 添加技能标签 hover 效果 (AC: #3)
-- [ ] Task 3: 使用 Framer Motion 添加入场动画 (AC: #4)
-  - [ ] staggerChildren 实现依次淡入
-- [ ] Task 4: 优化移动端布局 (AC: #5)
-- [ ] Task 5: 确保联系区域有 id="contact" (配合 Story 6-1)
+- [x] Task 1: 重新设计技能展示区块 (AC: #1, #2)
+  - [x] 技能分类已存在 (Frontend, Backend, Tools)
+  - [x] 使用 simpleicons CDN 展示技术图标
+  - [x] 按类别分组展示 (Marquee 滚动)
+- [x] Task 2: 添加技能标签 hover 效果 (AC: #3)
+- [x] Task 3: 使用 Framer Motion 添加入场动画 (AC: #4)
+  - [x] staggerChildren 实现依次淡入
+- [x] Task 4: 优化移动端布局 (AC: #5)
+- [x] Task 5: 确保联系区域有 id="contact" (配合 Story 6-1)
 
 ## Dev Notes
 
@@ -106,4 +106,53 @@ const item = {
 
 - [Source: Epic 1 回顾 - 行动项 #3]
 - [react-icons](https://react-icons.github.io/react-icons/)
+
+---
+
+## Dev Agent Record
+
+### Implementation Plan
+- 保留现有 Skills 组件结构 (已有良好的分类和图标)
+- 为 TechBadge 组件添加 Framer Motion hover/tap 动画
+- 为 Section Header 添加 whileInView 入场动画
+- 为 Core Strengths 卡片添加 staggered 入场动画
+- 为 CTA 按钮添加 Framer Motion 动画
+
+### Completion Notes
+- ✅ TechBadge 组件添加了 motion.div + whileHover scale: 1.1
+- ✅ Skills Header 添加了 whileInView 淡入动画
+- ✅ Core Strengths 卡片使用 containerVariants + cardVariants 实现 staggerChildren
+- ✅ 卡片添加了 whileHover y: -8 上浮效果
+- ✅ CTA 按钮改为 motion.a + spring 动画
+- ✅ id="contact" 在 Story 6-1 已添加
+- ✅ 所有 46 个测试通过
+- ✅ npm run build 成功
+
+### Animation Config
+```typescript
+const containerVariants = {
+  hidden: { opacity: 0 },
+  show: { opacity: 1, transition: { staggerChildren: 0.1, delayChildren: 0.2 } }
+}
+const cardVariants = {
+  hidden: { opacity: 0, y: 30 },
+  show: { opacity: 1, y: 0, transition: { type: "spring", stiffness: 200, damping: 20 } }
+}
+```
+
+---
+
+## File List
+
+| 文件 | 操作 |
+|------|------|
+| `website/components/Skills.tsx` | 修改 - 添加 Framer Motion 入场动画和 hover 效果 |
+
+---
+
+## Change Log
+
+| 日期 | 变更 |
+|------|------|
+| 2026-01-07 | Story 实现完成 - Skills 组件现在有流畅的入场和交互动画 |
 

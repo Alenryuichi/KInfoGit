@@ -1,6 +1,6 @@
 # Story 6.2: View My Work 按钮动画优化
 
-Status: ready-for-dev
+Status: done
 
 ## Story
 
@@ -23,11 +23,11 @@ so that 网站给人专业、现代的第一印象。
 
 ## Tasks / Subtasks
 
-- [ ] Task 1: 安装 Framer Motion (如未安装) (AC: #1-3)
-  - [ ] `npm install framer-motion`
-- [ ] Task 2: 将按钮改为 motion 组件 (AC: #1-3)
-- [ ] Task 3: 添加 hover 和 tap 动画效果 (AC: #1-3)
-- [ ] Task 4: 测试桌面端和移动端效果 (AC: #4)
+- [x] Task 1: 安装 Framer Motion (如未安装) (AC: #1-3)
+  - [x] 已安装 framer-motion ^10.16.0
+- [x] Task 2: 将按钮改为 motion 组件 (AC: #1-3)
+- [x] Task 3: 添加 hover 和 tap 动画效果 (AC: #1-3)
+- [x] Task 4: 测试桌面端和移动端效果 (AC: #4)
 
 ## Dev Notes
 
@@ -80,4 +80,49 @@ import { motion } from 'framer-motion';
 
 - [Source: Epic 1 回顾 - 行动项 #2]
 - [Framer Motion 文档](https://www.framer.com/motion/)
+
+---
+
+## Dev Agent Record
+
+### Implementation Plan
+- 使用已安装的 Framer Motion 库
+- 定义 buttonVariants 和 buttonTransition 配置
+- 将两个 CTA 按钮 (`<a>`) 改为 `<motion.a>` 组件
+- 移除 CSS transform hover:scale，改用 Framer Motion 的 whileHover/whileTap
+
+### Completion Notes
+- ✅ Framer Motion 已存在 (^10.16.0)
+- ✅ 在 Hero.tsx 添加了 buttonVariants 和 buttonTransition 配置
+- ✅ "View My Work" 按钮使用 motion.a + spring 动画
+- ✅ "Let's Connect" 按钮同样应用，保持一致性
+- ✅ 移除了 CSS 的 `transform hover:scale-105`，避免冲突
+- ✅ 所有 46 个测试通过
+- ✅ npm run build 成功
+
+### Animation Config
+```typescript
+const buttonVariants = {
+  initial: { scale: 1 },
+  hover: { scale: 1.05, boxShadow: "0 10px 30px rgba(0,0,0,0.3)" },
+  tap: { scale: 0.98 }
+}
+const buttonTransition = { type: "spring", stiffness: 400, damping: 17 }
+```
+
+---
+
+## File List
+
+| 文件 | 操作 |
+|------|------|
+| `website/components/Hero.tsx` | 修改 - 添加 Framer Motion 动画 |
+
+---
+
+## Change Log
+
+| 日期 | 变更 |
+|------|------|
+| 2026-01-07 | Story 实现完成 - CTA 按钮现在有流畅的弹性动画效果 |
 
