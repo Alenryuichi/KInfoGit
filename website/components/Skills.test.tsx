@@ -5,6 +5,9 @@
  * Tests for Story 6-3: About page optimization - Skills section animations
  */
 import { describe, it, expect, vi } from 'vitest'
+import React from 'react'
+import { render } from '@testing-library/react'
+import Skills from './Skills'
 
 // Mock framer-motion to avoid animation issues in tests
 vi.mock('framer-motion', () => ({
@@ -21,35 +24,24 @@ vi.mock('@/utils/animations', () => ({
 }))
 
 describe('Skills Component', () => {
-  it('renders the Skills section with correct heading', async () => {
-    const { default: Skills } = await import('./Skills')
-    const React = await import('react')
-    const { render } = await import('@testing-library/react')
-
-    const { container } = render(React.createElement(Skills))
+  it('renders the Skills section with correct heading', () => {
+    const { container } = render(<Skills />)
 
     expect(container.textContent).toContain('My Skills')
     expect(container.textContent).toContain('The Secret Sauce')
   })
 
-  it('renders all three skill categories', async () => {
-    const { default: Skills } = await import('./Skills')
-    const React = await import('react')
-    const { render } = await import('@testing-library/react')
+  it('renders all four skill categories', () => {
+    const { container } = render(<Skills />)
 
-    const { container } = render(React.createElement(Skills))
-
-    expect(container.textContent).toContain('Frontend Technologies')
+    expect(container.textContent).toContain('Frontend')
     expect(container.textContent).toContain('Backend & Database')
+    expect(container.textContent).toContain('AI & Agentic Engineering')
     expect(container.textContent).toContain('Tools & DevOps')
   })
 
-  it('renders Core Strengths cards with motion animation', async () => {
-    const { default: Skills } = await import('./Skills')
-    const React = await import('react')
-    const { render } = await import('@testing-library/react')
-
-    const { container } = render(React.createElement(Skills))
+  it('renders Core Strengths cards with motion animation', () => {
+    const { container } = render(<Skills />)
 
     // Check that Core Strengths titles exist
     expect(container.textContent).toContain('Anti-fraud Expert')
@@ -61,12 +53,8 @@ describe('Skills Component', () => {
     expect(motionDivs.length).toBeGreaterThan(0)
   })
 
-  it('renders CTA section with Get In Touch button', async () => {
-    const { default: Skills } = await import('./Skills')
-    const React = await import('react')
-    const { render } = await import('@testing-library/react')
-
-    const { container } = render(React.createElement(Skills))
+  it('renders CTA section with Get In Touch button', () => {
+    const { container } = render(<Skills />)
 
     expect(container.textContent).toContain('Ready to build something amazing?')
 
@@ -75,12 +63,8 @@ describe('Skills Component', () => {
     expect(ctaButton?.textContent).toContain('Get In Touch')
   })
 
-  it('renders tech badges for each category', async () => {
-    const { default: Skills } = await import('./Skills')
-    const React = await import('react')
-    const { render } = await import('@testing-library/react')
-
-    const { container } = render(React.createElement(Skills))
+  it('renders tech badges for each category', () => {
+    const { container } = render(<Skills />)
 
     // Check some tech names exist
     expect(container.textContent).toContain('React')
@@ -88,16 +72,11 @@ describe('Skills Component', () => {
     expect(container.textContent).toContain('Docker')
   })
 
-  it('renders quality attributes section', async () => {
-    const { default: Skills } = await import('./Skills')
-    const React = await import('react')
-    const { render } = await import('@testing-library/react')
-
-    const { container } = render(React.createElement(Skills))
+  it('renders quality attributes section', () => {
+    const { container } = render(<Skills />)
 
     expect(container.textContent).toContain('Websites that stand out and make a difference')
     expect(container.textContent).toContain('Accessible')
     expect(container.textContent).toContain('Responsive')
   })
 })
-

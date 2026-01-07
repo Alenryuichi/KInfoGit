@@ -46,6 +46,17 @@ const backendTech = [
   { name: 'Redis', icon: 'https://cdn.simpleicons.org/redis' },
 ]
 
+const aiTech = [
+  { name: 'Claude Code', icon: 'https://cdn.simpleicons.org/anthropic' },
+  { name: 'Gemini CLI', icon: 'https://cdn.simpleicons.org/googlegemini' },
+  { name: 'Auggie', icon: 'https://img.icons8.com/ios-filled/50/ffffff/robot-2.png' }, // Placeholder for Auggie
+  { name: 'NotebookLM', icon: 'https://img.icons8.com/ios-filled/50/ffffff/notebook.png' }, // Placeholder for NotebookLM
+  { name: 'BMAD', icon: 'https://img.icons8.com/ios-filled/50/ffffff/artificial-intelligence.png' }, // Placeholder for BMAD
+  { name: 'Compound', icon: 'https://img.icons8.com/ios-filled/50/ffffff/network.png' }, // Placeholder for Compound
+  { name: 'Agent', icon: 'https://img.icons8.com/ios-filled/50/ffffff/bot.png' },
+  { name: 'Workflow', icon: 'https://img.icons8.com/ios-filled/50/ffffff/workflow.png' },
+]
+
 const toolsTech = [
   { name: 'Docker', icon: 'https://cdn.simpleicons.org/docker' },
   { name: 'Kubernetes', icon: 'https://cdn.simpleicons.org/kubernetes' },
@@ -60,13 +71,13 @@ const qualities = [
   'Interactive', 'Secure', 'Reliable', 'Engaging', 'Fast'
 ]
 
-// Marquee component for animated tech stack
+// Marquee component for animated tech stack - Fixed Gap
 const Marquee = ({ children, reverse = false }: { children: React.ReactNode, reverse?: boolean }) => (
-  <div className="flex overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]">
-    <div className={`flex shrink-0 justify-around [gap:var(--gap)] animate-marquee flex-row ${reverse ? '[animation-direction:reverse]' : ''}`} style={{ '--gap': '2rem' } as React.CSSProperties}>
+  <div className="flex overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)] group">
+    <div className={`flex shrink-0 gap-8 py-4 animate-marquee flex-row ${reverse ? '[animation-direction:reverse]' : ''} group-hover:[animation-play-state:paused]`}>
       {children}
     </div>
-    <div className={`flex shrink-0 justify-around [gap:var(--gap)] animate-marquee flex-row ${reverse ? '[animation-direction:reverse]' : ''}`} style={{ '--gap': '2rem' } as React.CSSProperties}>
+    <div className={`flex shrink-0 gap-8 py-4 animate-marquee flex-row ${reverse ? '[animation-direction:reverse]' : ''} group-hover:[animation-play-state:paused]`}>
       {children}
     </div>
   </div>
@@ -75,17 +86,27 @@ const Marquee = ({ children, reverse = false }: { children: React.ReactNode, rev
 // Tech badge component with hover animation
 const TechBadge = ({ tech }: { tech: { name: string, icon: string } }) => (
   <motion.div
-    className="skill-tag inline-flex items-center justify-center rounded-lg border px-3 py-1 text-sm w-fit whitespace-nowrap shrink-0 gap-2 text-white border-gray-700 bg-gray-800/50 transition-colors"
+    className="skill-tag inline-flex items-center justify-center rounded-lg border px-4 py-2 text-sm w-fit whitespace-nowrap shrink-0 gap-3 text-white border-gray-700 bg-gray-800/50 transition-colors"
     whileHover={{
-      scale: 1.1,
-      backgroundColor: "rgba(55, 65, 81, 0.7)",
-      borderColor: "rgba(107, 114, 128, 0.8)"
+      scale: 1.05,
+      backgroundColor: "rgba(59, 130, 246, 0.2)",
+      borderColor: "rgba(59, 130, 246, 0.5)"
     }}
     whileTap={{ scale: 0.95 }}
     transition={{ type: "spring", stiffness: 400, damping: 17 }}
   >
-    <img height="14" width="14" alt={tech.name} src={tech.icon} className="w-4" />
-    <span>{tech.name}</span>
+    <img 
+      height="16" 
+      width="16" 
+      alt={tech.name} 
+      src={tech.icon} 
+      className="w-5 h-5 object-contain" 
+      onError={(e) => {
+        // Fallback if icon fails to load
+        e.currentTarget.style.display = 'none'
+      }}
+    />
+    <span className="font-medium">{tech.name}</span>
   </motion.div>
 )
 
@@ -123,10 +144,10 @@ export default function Skills() {
           </motion.div>
 
           {/* Tech Stack Marquees */}
-          <div className="skills-container space-y-8 mb-20">
+          <div className="skills-container space-y-12 mb-20">
             {/* Frontend Technologies */}
             <div>
-              <h3 className="text-lg font-semibold text-gray-300 mb-4 text-center">Frontend Technologies</h3>
+              <h3 className="text-lg font-semibold text-gray-400 mb-2 text-center uppercase tracking-wider">Frontend</h3>
               <Marquee>
                 {frontendTech.map((tech, index) => (
                   <TechBadge key={`frontend-${index}`} tech={tech} />
@@ -136,7 +157,7 @@ export default function Skills() {
 
             {/* Backend Technologies */}
             <div>
-              <h3 className="text-lg font-semibold text-gray-300 mb-4 text-center">Backend & Database</h3>
+              <h3 className="text-lg font-semibold text-gray-400 mb-2 text-center uppercase tracking-wider">Backend & Database</h3>
               <Marquee reverse>
                 {backendTech.map((tech, index) => (
                   <TechBadge key={`backend-${index}`} tech={tech} />
@@ -144,10 +165,20 @@ export default function Skills() {
               </Marquee>
             </div>
 
+            {/* AI & Agentic Engineering */}
+            <div>
+              <h3 className="text-lg font-semibold text-gray-400 mb-2 text-center uppercase tracking-wider">AI & Agentic Engineering</h3>
+              <Marquee>
+                {aiTech.map((tech, index) => (
+                  <TechBadge key={`ai-${index}`} tech={tech} />
+                ))}
+              </Marquee>
+            </div>
+
             {/* Tools & DevOps */}
             <div>
-              <h3 className="text-lg font-semibold text-gray-300 mb-4 text-center">Tools & DevOps</h3>
-              <Marquee>
+              <h3 className="text-lg font-semibold text-gray-400 mb-2 text-center uppercase tracking-wider">Tools & DevOps</h3>
+              <Marquee reverse>
                 {toolsTech.map((tech, index) => (
                   <TechBadge key={`tools-${index}`} tech={tech} />
                 ))}
@@ -162,7 +193,7 @@ export default function Skills() {
             </h3>
             <Marquee>
               {qualities.map((quality, index) => (
-                <div key={`quality-${index}`} className="px-6 py-3 bg-gray-800/30 border border-gray-700/50 rounded-full text-gray-300 whitespace-nowrap">
+                <div key={`quality-${index}`} className="px-6 py-3 bg-gray-800/30 border border-gray-700/50 rounded-full text-gray-300 whitespace-nowrap hover:bg-gray-700/50 transition-colors">
                   {quality}
                 </div>
               ))}
