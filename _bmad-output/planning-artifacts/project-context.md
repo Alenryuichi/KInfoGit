@@ -4,7 +4,7 @@ user_name: 'alenryuichi'
 date: '2026-01-07'
 sections_completed: ['technology_stack', 'typescript_rules', 'framework_rules', 'code_quality', 'critical_rules']
 status: 'complete'
-rule_count: 45
+rule_count: 46
 optimized_for_llm: true
 ---
 
@@ -50,6 +50,32 @@ _This file contains critical rules and patterns that AI agents must follow when 
 ---
 
 ## Critical Implementation Rules
+
+### Library Selection Rules (AI Agent 强制执行)
+
+**🎯 核心原则:**
+对于公认应该使用第三方库的功能类型，必须先搜索现有方案，禁止直接自研。
+
+**📦 功能类型判断:**
+| 必须用库 | 可以自研 |
+|---------|---------|
+| 日期时间处理、表单验证 | 简单工具函数 |
+| HTTP 客户端、图表可视化 | 业务特定逻辑 |
+| Markdown/富文本、加密安全 | 简单 UI 组件 |
+| i18n、复杂动画、文件处理 | 配置/常量/映射 |
+
+**🔍 搜索流程 (遇到"必须用库"类型时):**
+1. 检查 Tier 1（项目已有库）是否满足需求
+2. 搜索 npm/GitHub 找 2-3 个候选
+3. 选择最合适的，或说明例外理由
+
+**✅ 库选择标准:**
+- Stars > 1k 或领域公认 | 6 个月内更新 | 有 TS 类型
+
+**📋 Tier 1 已有库 (优先复用，禁止引入竞品):**
+- 动画: Framer Motion, GSAP | 图标: Lucide, Heroicons | 内容: gray-matter, MDX
+
+**⚠️ 灰色地带:** 不确定时，默认先搜索。宁可多搜一次，不要自研后返工。
 
 ### TypeScript Rules
 
