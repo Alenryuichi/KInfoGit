@@ -80,11 +80,28 @@ wt-clean:
     bash scripts/worktree.sh cleanup
 ```
 
+## 最终方案（Party Mode 审核通过）
+
+**选择：方案 A - 完全放在 `_bmad/custom/skills/` 内（内聚性优先）**
+
+### 最终目录结构
+```
+_bmad/custom/skills/worktree-manager/
+├── SKILL.md                      # Skill 文档
+└── scripts/
+    └── worktree-manager.sh       # 管理脚本
+```
+
+### 调用方式
+```bash
+bash _bmad/custom/skills/worktree-manager/scripts/worktree-manager.sh <command>
+```
+
 ## 下一步
 
-- [ ] 移植并适配 `worktree-manager.sh`
+- [ ] 创建 `_bmad/custom/skills/worktree-manager/` 目录
+- [ ] 移植 `worktree-manager.sh` 脚本
 - [ ] 创建 SKILL.md 文档
-- [ ] 更新 justfile
 - [ ] 更新 .gitignore 添加 `.worktrees`
 - [ ] 测试验证
 
