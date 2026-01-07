@@ -1,6 +1,23 @@
 import { useEffect } from 'react'
+import { motion } from 'framer-motion'
 import { Github, Linkedin, Mail, ArrowRight } from 'lucide-react'
 import { animateHeroEntrance, addButtonHoverEffects } from '@/utils/animations'
+
+// Button animation variants for spring effect
+const buttonVariants = {
+  initial: { scale: 1 },
+  hover: {
+    scale: 1.05,
+    boxShadow: "0 10px 30px rgba(0,0,0,0.3)"
+  },
+  tap: { scale: 0.98 }
+}
+
+const buttonTransition = {
+  type: "spring",
+  stiffness: 400,
+  damping: 17
+}
 
 export default function Hero() {
   useEffect(() => {
@@ -74,19 +91,30 @@ export default function Hero() {
 
           {/* CTA Buttons */}
           <div className="hero-buttons flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a
+            <motion.a
               href="/work#projects"
-              className="animated-button group inline-flex items-center px-8 py-4 bg-white text-black font-semibold rounded-full hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg"
+              variants={buttonVariants}
+              initial="initial"
+              whileHover="hover"
+              whileTap="tap"
+              transition={buttonTransition}
+              className="animated-button group inline-flex items-center px-8 py-4 bg-white text-black font-semibold rounded-full hover:bg-gray-100 transition-colors duration-300 shadow-lg"
             >
               View My Work
               <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </a>
-            <a
+            </motion.a>
+            <motion.a
               href="/about#contact"
-              className="animated-button inline-flex items-center px-8 py-4 border border-gray-600 text-gray-300 font-semibold rounded-full hover:border-gray-400 hover:text-white transition-all duration-300"
+              aria-label="Let's Connect - Navigate to contact section"
+              variants={buttonVariants}
+              initial="initial"
+              whileHover="hover"
+              whileTap="tap"
+              transition={buttonTransition}
+              className="animated-button inline-flex items-center px-8 py-4 border border-gray-600 text-gray-300 font-semibold rounded-full hover:border-gray-400 hover:text-white transition-colors duration-300"
             >
               Let&apos;s Connect
-            </a>
+            </motion.a>
           </div>
 
           {/* Social Links */}
