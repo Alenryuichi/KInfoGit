@@ -3,13 +3,16 @@ import { useEffect } from 'react'
 import Head from 'next/head'
 import About from '@/components/About'
 import Skills from '@/components/Skills'
+import WorkExperience from '@/components/WorkExperience'
 import { profileData } from '@/lib/config'
+import { getWorkExperience, type WorkExperience as WorkExperienceType } from '@/lib/data'
 
 interface AboutPageProps {
   profileData: typeof profileData
+  workExperience: WorkExperienceType[]
 }
 
-export default function AboutPage({ profileData }: AboutPageProps) {
+export default function AboutPage({ profileData, workExperience }: AboutPageProps) {
   // Handle smooth scroll to hash anchor on page load (for cross-page navigation)
   useEffect(() => {
     if (typeof window !== 'undefined' && window.location.hash) {
@@ -50,6 +53,9 @@ export default function AboutPage({ profileData }: AboutPageProps) {
           <About />
         </section>
 
+        {/* Work Experience Section */}
+        <WorkExperience data={workExperience} />
+
         {/* Skills Section */}
         <section className="py-20 relative z-10">
           <Skills />
@@ -60,9 +66,11 @@ export default function AboutPage({ profileData }: AboutPageProps) {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
+  const workExperience = await getWorkExperience() || []
   return {
     props: {
       profileData,
+      workExperience,
     },
   }
 }

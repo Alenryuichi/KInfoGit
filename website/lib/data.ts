@@ -98,6 +98,25 @@ export interface BlogPost {
   content: string
 }
 
+// Work Experience types
+export interface WorkExperience {
+  company: {
+    zh: string
+    en: string
+  }
+  location: string
+  position: {
+    zh: string
+    en: string
+  }
+  period: string
+  responsibilities: {
+    zh: string[]
+    en: string[]
+  }
+  achievements: string[]
+}
+
 // Data fetching functions
 export async function getPersonalInfo(): Promise<PersonalInfo | null> {
   try {
@@ -117,6 +136,17 @@ export async function getTechnicalSkills(): Promise<Record<string, SkillCategory
     return JSON.parse(fileContents)
   } catch (error) {
     console.error('Error loading technical skills:', error)
+    return null
+  }
+}
+
+export async function getWorkExperience(): Promise<WorkExperience[] | null> {
+  try {
+    const filePath = path.join(profileDataDir, 'resume', 'work-experience.json')
+    const fileContents = fs.readFileSync(filePath, 'utf8')
+    return JSON.parse(fileContents)
+  } catch (error) {
+    console.error('Error loading work experience:', error)
     return null
   }
 }
