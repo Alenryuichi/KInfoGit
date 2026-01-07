@@ -1,4 +1,6 @@
+import { useEffect } from 'react'
 import { motion } from 'framer-motion'
+import { animateOnScroll, animateSkillTags } from '@/utils/animations'
 
 // Animation variants for staggered entrance
 const containerVariants = {
@@ -8,19 +10,6 @@ const containerVariants = {
     transition: {
       staggerChildren: 0.1,
       delayChildren: 0.2
-    }
-  }
-}
-
-const itemVariants = {
-  hidden: { opacity: 0, y: 20 },
-  show: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      type: "spring",
-      stiffness: 300,
-      damping: 24
     }
   }
 }
@@ -82,9 +71,6 @@ const Marquee = ({ children, reverse = false }: { children: React.ReactNode, rev
     </div>
   </div>
 )
-
-import { useEffect } from 'react'
-import { animateOnScroll, animateSkillTags } from '@/utils/animations'
 
 // Tech badge component with hover animation
 const TechBadge = ({ tech }: { tech: { name: string, icon: string } }) => (
