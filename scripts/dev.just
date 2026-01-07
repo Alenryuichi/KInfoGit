@@ -17,9 +17,17 @@ dev:
     fi
     cd website && npm run dev
 
+# Generate blog cover images
+generate-covers:
+    #!/usr/bin/env bash
+    echo "🎨 Generating blog cover images..."
+    cd website && npx tsx scripts/generate-covers.ts
+
 # Build for production
 build:
     #!/usr/bin/env bash
+    echo "🎨 Generating blog covers..."
+    just generate-covers
     echo "🏗️ Building website..."
     cd website && npm run build
 
