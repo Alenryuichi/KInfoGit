@@ -1,6 +1,6 @@
 # Story 1.1: 创建 Project 类型定义
 
-Status: ready-for-dev
+Status: review
 
 <!-- Note: Validation is optional. Run validate-create-story for quality check before dev-story. -->
 
@@ -33,13 +33,13 @@ so that 所有项目相关代码都有类型安全保障，数据结构一致。
 
 ## Tasks / Subtasks
 
-- [ ] Task 1: 创建 `website/types/` 目录 (AC: #1)
-- [ ] Task 2: 创建 `website/types/project.ts` 文件，定义 Project 接口 (AC: #1)
-  - [ ] 定义所有必需字段和可选字段
-  - [ ] 添加 JSDoc 注释说明每个字段用途
-  - [ ] 导出 Project 接口和相关类型
-- [ ] Task 3: 验证 TypeScript 编译通过 (AC: #2)
-  - [ ] 运行 `npm run type-check` 确保无错误
+- [x] Task 1: 创建 `website/types/` 目录 (AC: #1)
+- [x] Task 2: 创建 `website/types/project.ts` 文件，定义 Project 接口 (AC: #1)
+  - [x] 定义所有必需字段和可选字段
+  - [x] 添加 JSDoc 注释说明每个字段用途
+  - [x] 导出 Project 接口和相关类型
+- [x] Task 3: 验证 TypeScript 编译通过 (AC: #2)
+  - [x] 运行 `npm run type-check` 确保无错误
 
 ## Dev Notes
 
@@ -199,11 +199,28 @@ npm run lint         # ESLint 检查
 
 ### Agent Model Used
 
-{{agent_model_name_version}}
+Claude Opus 4.5 (Augment Agent)
 
 ### Debug Log References
 
+- TypeScript type-check passed successfully
+
 ### Completion Notes List
 
+- ✅ Created `website/types/` directory for type definitions
+- ✅ Created `website/types/project.ts` with complete Project interface
+- ✅ Added `ProjectLinks` interface for related links structure
+- ✅ Added `isProject()` type guard function for runtime type checking
+- ✅ All fields from AC #1 implemented with JSDoc documentation
+- ✅ Updated tsconfig.json with `@/types/*` path alias
+- ✅ TypeScript compilation passes with no errors (AC #2)
+
+### Change Log
+
+- 2026-01-07: Initial implementation of Project type definition (Story 1-1)
+
 ### File List
+
+- `website/types/project.ts` (NEW) - Project interface and ProjectLinks definitions
+- `website/tsconfig.json` (MODIFIED) - Added @/types/* path alias
 
