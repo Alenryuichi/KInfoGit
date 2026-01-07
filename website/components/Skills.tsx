@@ -1,3 +1,43 @@
+import { motion } from 'framer-motion'
+
+// Animation variants for staggered entrance
+const containerVariants = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+      delayChildren: 0.2
+    }
+  }
+}
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: "spring",
+      stiffness: 300,
+      damping: 24
+    }
+  }
+}
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 30 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: "spring",
+      stiffness: 200,
+      damping: 20
+    }
+  }
+}
+
 // Modern tech stack with animated marquee
 const frontendTech = [
   { name: 'React', icon: 'https://cdn.simpleicons.org/react' },
@@ -46,17 +86,26 @@ const Marquee = ({ children, reverse = false }: { children: React.ReactNode, rev
 import { useEffect } from 'react'
 import { animateOnScroll, animateSkillTags } from '@/utils/animations'
 
-// Tech badge component
+// Tech badge component with hover animation
 const TechBadge = ({ tech }: { tech: { name: string, icon: string } }) => (
-  <div className="skill-tag inline-flex items-center justify-center rounded-lg border px-3 py-1 text-sm w-fit whitespace-nowrap shrink-0 gap-2 text-white border-gray-700 bg-gray-800/50 hover:bg-gray-700/50 transition-colors">
+  <motion.div
+    className="skill-tag inline-flex items-center justify-center rounded-lg border px-3 py-1 text-sm w-fit whitespace-nowrap shrink-0 gap-2 text-white border-gray-700 bg-gray-800/50 transition-colors"
+    whileHover={{
+      scale: 1.1,
+      backgroundColor: "rgba(55, 65, 81, 0.7)",
+      borderColor: "rgba(107, 114, 128, 0.8)"
+    }}
+    whileTap={{ scale: 0.95 }}
+    transition={{ type: "spring", stiffness: 400, damping: 17 }}
+  >
     <img height="14" width="14" alt={tech.name} src={tech.icon} className="w-4" />
     <span>{tech.name}</span>
-  </div>
+  </motion.div>
 )
 
 export default function Skills() {
   useEffect(() => {
-    // 初始化滚动动画
+    // 初始化滚动动画 (保留兼容性)
     animateOnScroll('.skills-header')
     animateSkillTags()
     animateOnScroll('.skills-strengths')
@@ -66,8 +115,14 @@ export default function Skills() {
     <section id="skills" className="py-20 bg-black text-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          {/* Section Header */}
-          <div className="skills-header text-center mb-16">
+          {/* Section Header with entrance animation */}
+          <motion.div
+            className="skills-header text-center mb-16"
+            initial={{ opacity: 0, y: -20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+          >
             <h2 className="text-4xl sm:text-5xl font-bold mb-6">
               My Skills
               <br />
@@ -79,7 +134,7 @@ export default function Skills() {
               Passionate about cutting-edge technologies and building scalable,
               high-performance applications with modern tech stacks.
             </p>
-          </div>
+          </motion.div>
 
           {/* Tech Stack Marquees */}
           <div className="skills-container space-y-8 mb-20">
@@ -128,9 +183,19 @@ export default function Skills() {
             </Marquee>
           </div>
 
-          {/* Core Strengths */}
-          <div className="skills-strengths grid md:grid-cols-3 gap-8 mb-16">
-            <div className="group p-8 rounded-2xl bg-gray-900/50 border border-gray-800/50 hover:border-gray-700/50 transition-all duration-300 hover:bg-gray-900/70">
+          {/* Core Strengths with staggered entrance */}
+          <motion.div
+            className="skills-strengths grid md:grid-cols-3 gap-8 mb-16"
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, margin: "-50px" }}
+          >
+            <motion.div
+              className="group p-8 rounded-2xl bg-gray-900/50 border border-gray-800/50 hover:border-gray-700/50 transition-colors duration-300 hover:bg-gray-900/70"
+              variants={cardVariants}
+              whileHover={{ y: -8, transition: { type: "spring", stiffness: 300 } }}
+            >
               <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                 <span className="text-white text-2xl">🎯</span>
               </div>
@@ -140,9 +205,13 @@ export default function Skills() {
               <p className="text-gray-400 leading-relaxed">
                 Identified 50,000+ fraudulent enterprises, generated 3M+ direct revenue with zero complaints operation.
               </p>
-            </div>
+            </motion.div>
 
-            <div className="group p-8 rounded-2xl bg-gray-900/50 border border-gray-800/50 hover:border-gray-700/50 transition-all duration-300 hover:bg-gray-900/70">
+            <motion.div
+              className="group p-8 rounded-2xl bg-gray-900/50 border border-gray-800/50 hover:border-gray-700/50 transition-colors duration-300 hover:bg-gray-900/70"
+              variants={cardVariants}
+              whileHover={{ y: -8, transition: { type: "spring", stiffness: 300 } }}
+            >
               <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                 <span className="text-white text-2xl">🏗️</span>
               </div>
@@ -152,9 +221,13 @@ export default function Skills() {
               <p className="text-gray-400 leading-relaxed">
                 Built billion-scale data platforms from 0 to 1, enabling complex analysis completion in 5 minutes.
               </p>
-            </div>
+            </motion.div>
 
-            <div className="group p-8 rounded-2xl bg-gray-900/50 border border-gray-800/50 hover:border-gray-700/50 transition-all duration-300 hover:bg-gray-900/70">
+            <motion.div
+              className="group p-8 rounded-2xl bg-gray-900/50 border border-gray-800/50 hover:border-gray-700/50 transition-colors duration-300 hover:bg-gray-900/70"
+              variants={cardVariants}
+              whileHover={{ y: -8, transition: { type: "spring", stiffness: 300 } }}
+            >
               <div className="w-16 h-16 bg-gradient-to-br from-pink-500 to-red-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                 <span className="text-white text-2xl">🌐</span>
               </div>
@@ -164,11 +237,17 @@ export default function Skills() {
               <p className="text-gray-400 leading-relaxed">
                 Proficient in both frontend and backend development with complete project delivery capabilities.
               </p>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
 
-          {/* CTA Section */}
-          <div className="skills-cta text-center">
+          {/* CTA Section with entrance animation */}
+          <motion.div
+            className="skills-cta text-center"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          >
             <h3 className="text-2xl font-bold text-white mb-4">
               Ready to build something amazing?
             </h3>
@@ -176,16 +255,19 @@ export default function Skills() {
               I'm available for full-time roles & freelance projects.
               Let's collaborate and create exceptional digital experiences.
             </p>
-            <a
+            <motion.a
               href="#contact"
-              className="inline-flex items-center px-8 py-4 bg-white text-black font-semibold rounded-full hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
+              className="inline-flex items-center px-8 py-4 bg-white text-black font-semibold rounded-full hover:bg-gray-100 transition-colors duration-300 shadow-lg"
+              whileHover={{ scale: 1.05, boxShadow: "0 10px 30px rgba(0,0,0,0.3)" }}
+              whileTap={{ scale: 0.98 }}
+              transition={{ type: "spring", stiffness: 400, damping: 17 }}
             >
               Get In Touch
               <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
-            </a>
-          </div>
+            </motion.a>
+          </motion.div>
         </div>
       </div>
     </section>

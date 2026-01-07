@@ -1,4 +1,5 @@
 import { GetStaticProps } from 'next'
+import { useEffect } from 'react'
 import Head from 'next/head'
 import About from '@/components/About'
 import Skills from '@/components/Skills'
@@ -9,6 +10,20 @@ interface AboutPageProps {
 }
 
 export default function AboutPage({ profileData }: AboutPageProps) {
+  // Handle smooth scroll to hash anchor on page load (for cross-page navigation)
+  useEffect(() => {
+    if (typeof window !== 'undefined' && window.location.hash) {
+      const hash = window.location.hash.substring(1)
+      const element = document.getElementById(hash)
+      if (element) {
+        // Small delay to ensure page is fully rendered
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: 'smooth' })
+        }, 100)
+      }
+    }
+  }, [])
+
   return (
     <>
       <Head>
