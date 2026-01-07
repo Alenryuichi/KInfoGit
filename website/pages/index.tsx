@@ -1,8 +1,15 @@
+import { GetStaticProps } from 'next'
 import Head from 'next/head'
 import Hero from '@/components/Hero'
+import FeaturedProjects from '@/components/FeaturedProjects'
 import { profileData } from '@/lib/config'
+import { getFeaturedProjects, type Project } from '@/lib/projects'
 
-export default function Home() {
+interface HomeProps {
+  featuredProjects: Project[]
+}
+
+export default function Home({ featuredProjects }: HomeProps) {
   return (
     <>
       <Head>
@@ -15,10 +22,20 @@ export default function Home() {
         <link rel="canonical" href="https://alenryuichi.github.io/KInfoGit" />
       </Head>
 
-      <main className="min-h-screen">
+      <main className="min-h-screen bg-black">
         <Hero />
+        <FeaturedProjects projects={featuredProjects} />
       </main>
     </>
   )
+}
+
+export const getStaticProps: GetStaticProps<HomeProps> = async () => {
+  const featuredProjects = getFeaturedProjects()
+  return {
+    props: {
+      featuredProjects,
+    },
+  }
 }
 
