@@ -68,7 +68,18 @@ Generate an ordered `commit_plan`: one Conventional Commit message per `commit_g
 
 ### 1) Load sidecar preferences (if any)
 
-Read `{sidecarFile}`. Apply any strong preference (language/scopes/types). Default: English subject lines.
+Read `{sidecarFile}` and extract learned preferences:
+
+- `preferred_types`: Ordered list of most-used commit types
+- `preferred_scopes`: Ordered list of most-used scopes
+- `language`: Preferred language for commit messages (default: `en`)
+- `type_counts`: Statistics for type usage
+- `scope_counts`: Statistics for scope usage
+
+Apply preferences:
+- Use `language` for subject line language
+- Consider `preferred_scopes` when mapping paths to scopes
+- Fall back to defaults if sidecar is empty or missing fields
 
 ### 2) Choose type/scope/subject per group
 

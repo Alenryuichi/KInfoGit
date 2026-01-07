@@ -109,51 +109,49 @@ git status -sb
 
 If `{sidecarFile}` does not exist, create it with initial content (use the current timestamp):
 
-```markdown
+```yaml
 ---
 created: [current date]
 workflow: git-smart-commit
-purpose: Learning user commit preferences and project patterns
+last_updated: [current date]
+max_recent_commits: 20
 ---
 
-# Git Smart Commit - Learning History
+# Learned Preferences
 
-## User Preferences
+preferred_types:
+  - chore
+  - feat
+  - docs
 
-**Preferred commit types:** (will be learned)
-- Most used:
-- Frequency:
+preferred_scopes:
+  - bmad
+  - repo
 
-**Message style:** (will be learned)
-- Conciseness level:
-- Language preference:
+language: en
 
-**Scope preferences:** (will be learned)
-- Commonly used scopes:
-- Scope usage frequency:
+# Usage Statistics
 
-## Project Patterns
+type_counts:
+  chore: 0
+  feat: 0
+  docs: 0
+  fix: 0
+  refactor: 0
+  style: 0
+  test: 0
 
-**Common commit types:** (will be learned)
-- Project-specific type distribution:
+scope_counts:
+  bmad: 0
+  repo: 0
+  claude: 0
 
-**Frequent scopes:** (will be learned)
-- Scopes used in this project:
+# Recent Commits (rolling window)
 
-**Language preference:** (will be learned)
-- Detected language pattern:
-- Bilingual usage:
-
-## Commit History Log
-
-<!-- Each commit will append an entry here -->
-
----
-
-**Learning Status:** Initialized - Ready to learn from your first commit!
+recent_commits: []
 ```
 
-If it exists, load it and carry forward any strong preferences.
+If it exists, load it and extract preferences for use in step-03-generate.
 
 ### 5. Present MENU OPTIONS
 

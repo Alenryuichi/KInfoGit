@@ -112,15 +112,37 @@ After all groups:
 - `git log -n <N> --oneline`
 - `git status -sb`
 
-### 5) Update Sidecar
+### 5) Update Sidecar (Rolling Window + Statistics)
 
-Append one log entry per created commit to `{sidecarFile}`:
+Update `{sidecarFile}` with new data:
 
-- Timestamp
-- Commit message
-- Commit hash
-- Group id
-- Files committed (from `git show --name-only --pretty="" <hash>`)
+#### A. Update Statistics
+
+For each created commit, parse the message `type(scope): subject` and increment:
+- `type_counts.{type}` += 1
+- `scope_counts.{scope}` += 1
+
+#### B. Update Preferred Lists
+
+Re-sort `preferred_types` and `preferred_scopes` by frequency (highest first, top 3).
+
+#### C. Add to Recent Commits (Rolling Window)
+
+For each created commit, prepend to `recent_commits`:
+```yaml
+- hash: {short_hash}
+  message: "{full_message}"
+  date: {current_date}
+```
+
+#### D. Enforce Rolling Window Limit
+
+If `recent_commits` length > `max_recent_commits` (default 20):
+- Trim oldest entries to keep only the most recent 20
+
+#### E. Update Metadata
+
+Set `last_updated` to current date.
 
 ### 6) Completion
 
