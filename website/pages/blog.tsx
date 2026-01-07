@@ -75,7 +75,7 @@ export default function BlogPage({ posts, tags }: BlogPageProps) {
         <meta name="description" content="Handpicked insights from the pensieve - thoughts on frontend development, technology, and more." />
       </Head>
 
-      <div className="min-h-screen bg-black text-white">
+      <div className="min-h-screen text-white">
         <div className="relative py-20 px-4">
           <div className="max-w-6xl mx-auto text-center">
             <div className="mb-4">

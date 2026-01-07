@@ -2,7 +2,7 @@ import { Github, Linkedin, Mail, Heart } from 'lucide-react'
 
 export default function Footer() {
   return (
-    <footer className="bg-black text-gray-300 relative overflow-hidden">
+    <footer className="text-gray-300 relative overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl animate-pulse"></div>

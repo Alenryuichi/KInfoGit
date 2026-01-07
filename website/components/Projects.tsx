@@ -15,7 +15,7 @@ export default function Projects({ projects }: ProjectsProps) {
 	}, [])
 
 	return (
-		<section id="projects" className="py-20 bg-black text-white">
+		<section id="projects" className="py-20 text-white">
 			<div className="container mx-auto px-4 sm:px-6 lg:px-8">
 				<div className="max-w-7xl mx-auto">
 					{/* Section Header */}

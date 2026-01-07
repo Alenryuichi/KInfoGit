@@ -23,7 +23,7 @@ export default function Home({ featuredProjects }: HomeProps) {
         <link rel="canonical" href="https://alenryuichi.github.io/KInfoGit" />
       </Head>
 
-      <main className="min-h-screen bg-black">
+      <main className="min-h-screen">
         <Hero />
         <FeaturedProjects projects={featuredProjects} />
         <HomeCTA />

@@ -8,7 +8,7 @@ export default function HomeCTA() {
   }, [])
 
   return (
-    <section className="py-24 bg-black text-white relative overflow-hidden">
+    <section className="py-24 text-white relative overflow-hidden">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-900/5 to-transparent pointer-events-none" />
 
