@@ -1,0 +1,68 @@
+[
+  {
+    "id": "portrait-platform",
+    "title": "画像中台系统",
+    "slug": "portrait-platform",
+    "description": "从 0 到 1 构建 10 亿级用户画像数据分析平台，支持 200+ 标签维度分析",
+    "featured": true,
+    "order": 1,
+    "category": "system-architecture",
+    "tags": ["Python", "Golang", "ClickHouse", "MySQL", "Vue.js", "Spark"],
+    "role": "项目负责人",
+    "period": "2022-2024",
+    "hasDetailPage": true
+  },
+  {
+    "id": "anti-fraud-governance",
+    "title": "自建应用反作弊治理系统",
+    "slug": "anti-fraud-governance",
+    "description": "识别违规服务商 820 家，违规企业 52683 家，项目收益 300 万+",
+    "featured": true,
+    "order": 2,
+    "category": "anti-fraud",
+    "tags": ["Python", "Golang", "C++", "数据分析"],
+    "role": "项目负责人",
+    "period": "2023-2024",
+    "hasDetailPage": true
+  },
+  {
+    "id": "security-strategy-lifecycle",
+    "title": "安全策略全生命周期管理系统",
+    "slug": "security-strategy-lifecycle",
+    "description": "策略研发效率提升 60%，策略上线时间缩短至 2 天，误伤率降低 40%",
+    "featured": true,
+    "order": 3,
+    "category": "strategy-automation",
+    "tags": ["Python", "Go", "C++", "Flink", "Kafka"],
+    "role": "架构师",
+    "period": "2024-至今",
+    "hasDetailPage": true
+  },
+  {
+    "id": "anti-spam-graph",
+    "title": "反垃圾图应用平台",
+    "slug": "anti-spam-graph",
+    "description": "构建包含 20 余种实体、70 余种关系的图数据库，支持多种分析模式",
+    "featured": false,
+    "order": 4,
+    "category": "graph-database",
+    "tags": ["Python", "图数据库", "数据挖掘"],
+    "role": "项目负责人",
+    "period": "2021-2023",
+    "hasDetailPage": false
+  },
+  {
+    "id": "anti-spam-rollback",
+    "title": "反垃圾快速回滚系统",
+    "slug": "anti-spam-rollback",
+    "description": "支持 33 种封禁类型秒级精确回滚，大规模回滚成功率 99.9%",
+    "featured": false,
+    "order": 5,
+    "category": "system-reliability",
+    "tags": ["Go", "Vue.js", "分布式系统", "微服务"],
+    "role": "项目负责人",
+    "period": "2023-2024",
+    "hasDetailPage": false
+  }
+]
+
