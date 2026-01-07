@@ -1,6 +1,6 @@
 # Story 1.2: 创建项目数据文件
 
-Status: ready-for-dev
+Status: review
 
 <!-- Note: Validation is optional. Run validate-create-story for quality check before dev-story. -->
 
@@ -26,18 +26,18 @@ so that 项目信息集中维护，修改无需改动多处代码。
 
 ## Tasks / Subtasks
 
-- [ ] Task 1: 创建 `profile-data/projects.json` 文件 (AC: #1)
-- [ ] Task 2: 基于现有 `core-projects.json` 数据，转换为新 Project 接口格式 (AC: #2)
-  - [ ] 添加 slug 字段（基于 id 生成）
-  - [ ] 添加 description 字段（从 highlights 或 achievements 提取简短描述）
-  - [ ] 添加 featured 和 order 字段
-  - [ ] 将 tech_stack 映射为 tags
-  - [ ] 添加 hasDetailPage 字段
-- [ ] Task 3: 设置精选项目配置 (AC: #3)
-  - [ ] 选择 3-4 个代表性项目设置 featured=true
-  - [ ] 按重要性设置 order 值
-- [ ] Task 4: 验证 JSON 格式有效 (AC: #4)
-  - [ ] 使用 JSON 校验工具检查语法
+- [x] Task 1: 创建 `profile-data/projects.json` 文件 (AC: #1)
+- [x] Task 2: 基于现有 `core-projects.json` 数据，转换为新 Project 接口格式 (AC: #2)
+  - [x] 添加 slug 字段（基于 id 生成）
+  - [x] 添加 description 字段（从 highlights 或 achievements 提取简短描述）
+  - [x] 添加 featured 和 order 字段
+  - [x] 将 tech_stack 映射为 tags
+  - [x] 添加 hasDetailPage 字段
+- [x] Task 3: 设置精选项目配置 (AC: #3)
+  - [x] 选择 3-4 个代表性项目设置 featured=true
+  - [x] 按重要性设置 order 值
+- [x] Task 4: 验证 JSON 格式有效 (AC: #4)
+  - [x] 使用 JSON 校验工具检查语法
 
 ## Dev Notes
 
@@ -190,11 +190,40 @@ jq . profile-data/projects.json
 
 ### Agent Model Used
 
-{{agent_model_name_version}}
+Claude Opus 4.5 (Augment Agent)
 
 ### Debug Log References
 
+- JSON validation passed: `python3 -m json.tool`
+- TypeScript type-check passed
+- All 27 unit tests passed (14 type guards + 13 data validation)
+
 ### Completion Notes List
+
+- ✅ Created `profile-data/projects.json` with 5 projects converted from `core-projects.json`
+- ✅ All projects conform to the Project interface from Story 1-1
+- ✅ 3 featured projects selected: portrait-platform, anti-fraud-governance, security-strategy-lifecycle
+- ✅ Featured projects have `hasDetailPage=true`, non-featured have `hasDetailPage=false`
+- ✅ Order values set for ranking (1-5)
+- ✅ All slugs are URL-friendly (lowercase, hyphen-separated)
+- ✅ All descriptions under 100 characters
+- ✅ Added comprehensive test suite validating all ACs
+
+### Data Transformation Summary
+
+| Project | Featured | Order | hasDetailPage |
+|---------|----------|-------|---------------|
+| portrait-platform | ✅ | 1 | ✅ |
+| anti-fraud-governance | ✅ | 2 | ✅ |
+| security-strategy-lifecycle | ✅ | 3 | ✅ |
+| anti-spam-graph | ❌ | 4 | ❌ |
+| anti-spam-rollback | ❌ | 5 | ❌ |
+
+### Change Log
+
+- 2026-01-07: Initial creation of projects.json with 5 projects (Story 1-2)
 
 ### File List
 
+- `profile-data/projects.json` (NEW) - Project data file with 5 projects
+- `website/types/projects-data.test.ts` (NEW) - Data validation tests (13 tests)
