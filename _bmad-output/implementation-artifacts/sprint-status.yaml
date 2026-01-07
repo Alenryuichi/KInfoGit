@@ -48,31 +48,31 @@ development_status:
   epic-1-retrospective: optional
 
   # Epic 2: 首页完整体验
-  epic-2: in-progress
+  epic-2: done
   2-1-optimize-homepage-hero: done
   2-2-homepage-featured-projects: done
-  2-3-homepage-cta: backlog
+  2-3-homepage-cta: done
   epic-2-retrospective: optional
 
   # Epic 3: 项目展示系统
-  epic-3: backlog
-  3-1-project-list-page: backlog
-  3-2-project-card-component: backlog
-  3-3-project-detail-dynamic-route: backlog
-  3-4-mdx-project-detail-support: backlog
+  epic-3: done
+  3-1-project-list-page: done  # Pre-existing implementation
+  3-2-project-card-component: done  # Pre-existing implementation
+  3-3-project-detail-dynamic-route: done  # Pre-existing implementation
+  3-4-mdx-project-detail-support: done
   epic-3-retrospective: optional
 
   # Epic 4: 内容与博客入口
-  epic-4: backlog
-  4-1-blog-list-page: backlog
-  4-2-blog-detail-page: backlog
-  4-3-navigation-blog-entry: backlog
+  epic-4: done
+  4-1-blog-list-page: done  # 已存在 /pages/blog.tsx
+  4-2-blog-detail-page: done  # 已存在 /pages/blog/[slug].tsx
+  4-3-navigation-blog-entry: done  # Header.tsx 已有 Blog 导航
   epic-4-retrospective: optional
 
   # Epic 5: 关于页面
-  epic-5: backlog
-  5-1-about-page-content: backlog
-  5-2-about-page-contact: backlog
-  5-3-about-page-navigation: backlog
+  epic-5: done
+  5-1-about-page-content: done  # 已存在 /pages/about.tsx + About.tsx + Skills.tsx
+  5-2-about-page-contact: done  # About.tsx 已更新社交链接为真实 URL
+  5-3-about-page-navigation: done  # Header.tsx 已有 About 导航
   epic-5-retrospective: optional
 
