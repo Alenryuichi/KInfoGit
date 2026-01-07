@@ -82,7 +82,7 @@ export default function Hero() {
               <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </a>
             <a
-              href="mailto:miaojsi@outlook.com"
+              href="/about#contact"
               className="animated-button inline-flex items-center px-8 py-4 border border-gray-600 text-gray-300 font-semibold rounded-full hover:border-gray-400 hover:text-white transition-all duration-300"
             >
               Let&apos;s Connect

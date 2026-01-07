@@ -41,7 +41,7 @@ export default function About() {
               </div>
 
               {/* Social Links & Contact */}
-              <div className="flex items-center gap-4">
+              <div id="contact" className="flex items-center gap-4">
                 <a
                   href="mailto:miaojsi@outlook.com"
                   className="w-10 h-10 rounded-full bg-gray-800/50 hover:bg-gray-700/50 flex items-center justify-center transition-all duration-300 hover:scale-110 border border-gray-700/50 hover:border-gray-600/50"
