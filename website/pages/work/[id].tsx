@@ -2,13 +2,14 @@ import { GetStaticPaths, GetStaticProps } from 'next'
 import Head from 'next/head'
 import Link from 'next/link'
 import { profileData } from '@/lib/config'
-import { getCoreProjects, getProjectById, type Project } from '@/lib/data'
+import { getCoreProjects, getProjectById, getProjectDetailContent, type Project } from '@/lib/data'
 
 interface ProjectPageProps {
 	project: Project
+	detailContent: string | null
 }
 
-export default function ProjectPage({ project }: ProjectPageProps) {
+export default function ProjectPage({ project, detailContent }: ProjectPageProps) {
 		const responsibilitiesZh = project.responsibilities.zh
 		const achievementsZh = project.achievements.zh
 
@@ -163,6 +164,16 @@ export default function ProjectPage({ project }: ProjectPageProps) {
 								</section>
 							)}
 
+							{/* MDX/Markdown Detail Content */}
+							{detailContent && (
+								<section className="mb-8 prose prose-invert prose-lg max-w-none">
+									<div
+										className="markdown-content"
+										dangerouslySetInnerHTML={{ __html: formatMarkdownContent(detailContent) }}
+									/>
+								</section>
+							)}
+
 							<footer className="pt-4 border-t border-gray-800 mt-8 flex items-center justify-between text-sm text-gray-500">
 								<span>
 									Last updated: {project.period}
@@ -180,6 +191,38 @@ export default function ProjectPage({ project }: ProjectPageProps) {
 			</main>
 		</>
 	)
+}
+
+// Simple markdown to HTML converter
+function formatMarkdownContent(content: string): string {
+	return content
+		// Headers
+		.replace(/^### (.*$)/gim, '<h3 class="text-xl font-bold mt-6 mb-3 text-white">$1</h3>')
+		.replace(/^## (.*$)/gim, '<h2 class="text-2xl font-bold mt-8 mb-4 text-white">$1</h2>')
+		.replace(/^# (.*$)/gim, '<h1 class="text-3xl font-bold mt-10 mb-6 text-white">$1</h1>')
+
+		// Code blocks
+		.replace(/```(\w+)?\n([\s\S]*?)```/g, '<pre class="bg-gray-900 border border-gray-700 rounded-lg p-4 overflow-x-auto my-4"><code class="text-sm text-gray-300">$2</code></pre>')
+
+		// Inline code
+		.replace(/`([^`]+)`/g, '<code class="bg-gray-800 text-pink-300 px-2 py-1 rounded text-sm">$1</code>')
+
+		// Bold
+		.replace(/\*\*(.*?)\*\*/g, '<strong class="font-semibold text-white">$1</strong>')
+
+		// Italic
+		.replace(/\*(.*?)\*/g, '<em class="italic text-gray-300">$1</em>')
+
+		// Numbered lists
+		.replace(/^\d+\. (.*$)/gim, '<li class="mb-2 text-gray-300 ml-4">$1</li>')
+
+		// Unordered lists
+		.replace(/^- (.*$)/gim, '<li class="mb-2 text-gray-300 ml-4">$1</li>')
+
+		// Paragraphs (handle double newlines)
+		.replace(/\n\n(?!<)/g, '</p><p class="mb-4 leading-relaxed text-gray-300">')
+		.replace(/^(?!<)/, '<p class="mb-4 leading-relaxed text-gray-300">')
+		.replace(/(?<!>)$/, '</p>')
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
@@ -208,9 +251,12 @@ export const getStaticProps: GetStaticProps<ProjectPageProps> = async (context) 
 		}
 	}
 
+	const detailContent = await getProjectDetailContent(id)
+
 	return {
 		props: {
 			project,
+			detailContent,
 		},
 	}
 }

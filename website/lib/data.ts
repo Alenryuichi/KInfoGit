@@ -166,6 +166,24 @@ export function getYearsDisplay(years: number): string {
   return '< 1 year'
 }
 
+// Project detail content (Markdown)
+export async function getProjectDetailContent(id: string): Promise<string | null> {
+  try {
+    const fullPath = path.join(profileDataDir, 'projects', `${id}.md`)
+
+    if (!fs.existsSync(fullPath)) {
+      return null
+    }
+
+    const fileContents = fs.readFileSync(fullPath, 'utf8')
+    const { content } = matter(fileContents)
+    return content
+  } catch (error) {
+    console.error(`Error loading project detail for ${id}:`, error)
+    return null
+  }
+}
+
 // Blog data functions
 export async function getAllBlogPosts(): Promise<BlogPost[]> {
   try {
