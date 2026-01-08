@@ -58,13 +58,13 @@ export default function BlogPostPage({ post }: BlogPostPageProps) {
 
       <Layout>
         <div className="min-h-screen bg-black text-white">
-          {/* Back Button */}
-          <div className="max-w-4xl mx-auto px-4 pt-8">
+          {/* Back Button - Increased top padding to clear fixed header */}
+          <div className="max-w-4xl mx-auto px-4 pt-32 pb-4">
             <Link 
               href="/blog"
-              className="inline-flex items-center text-gray-400 hover:text-white transition-colors group"
+              className="inline-flex items-center px-4 py-2 rounded-full bg-gray-900/50 border border-gray-800 text-sm text-gray-400 hover:text-white hover:border-gray-700 hover:bg-gray-800/80 transition-all duration-300 group backdrop-blur-sm"
             >
-              <ArrowLeftIcon className="w-4 h-4 mr-2 group-hover:-translate-x-1 transition-transform" />
+              <ArrowLeftIcon className="w-4 h-4 mr-2 group-hover:-translate-x-1 transition-transform duration-300" />
               Back to Blog
             </Link>
           </div>
