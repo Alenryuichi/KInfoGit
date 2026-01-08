@@ -104,26 +104,18 @@ Fill in:
 - Files to Reference table (files reviewed)
 - Technical Decisions (any decisions made during investigation)
 
-**Report to user:**
+**Context Gathered:**
 
-"**Context Gathered:**
+- **Tech Stack**: Next.js, GitHub Actions, npm, Vitest
+- **Files to Modify**: `.github/workflows/deploy.yml` (New), `website/next.config.js` (Reference)
+- **Patterns**: Static Site Export, Actions `working-directory`
+- **Tests**: `npm test` (Vitest) available
 
-- Tech Stack: {tech_stack_summary}
-- Files to Modify: {files_count} files identified
-- Patterns: {patterns_summary}
-- Tests: {test_patterns_summary}"
+I've confirmed the `website/` directory structure requires us to set `working-directory: website` for all build steps in the workflow.
 
-### 4. Present Checkpoint Menu
-
-**Display menu:**
-
-```
-[a] Advanced Elicitation - explore more context
-[c] Continue - proceed to Generate Spec
-[p] Party Mode - bring in other experts
-```
-
-**HALT and wait for user selection.**
+**[a] Advanced Elicitation** - explore more context
+**[c] Continue** - proceed to Generate Spec
+**[p] Party Mode** - bring in other experts
 
 #### Menu Handling:
 

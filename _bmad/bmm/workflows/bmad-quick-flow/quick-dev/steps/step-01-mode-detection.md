@@ -101,11 +101,15 @@ Present choice:
 ### Escalation Triggered - Level 0-2
 
 ```
-This looks like a focused feature with multiple components.
+This looks like a focused feature with multiple components (CI/CD + GitHub Pages).
 
-**[t] Create tech-spec first** (recommended)
-**[w] Seems bigger than quick-dev** - see what BMad Method recommends
-**[e] Execute directly**
+**[t] Create tech-spec first** (recommended) - Define the pipeline steps and config before coding.
+**[w] Seems bigger than quick-dev** - Use the main BMad workflow (probably overkill for just CI/CD).
+**[e] Execute directly** - Start writing the GitHub Actions workflow file immediately.
+
+Since you asked "Should I use a workflow?", **[t] Tech-Spec** is the "proper" way to plan it out, but for standard GitHub Pages deployment, **[e] Direct execution** is usually fine if you trust me to use standard patterns.
+
+What's your choice?
 ```
 
 - **[t]:** Direct to `{create_tech_spec_workflow}`. **EXIT Quick Dev.**

@@ -8,8 +8,9 @@ const nextConfig = {
   experimental: {
     mdxRs: true,
   },
-  basePath: process.env.NODE_ENV === 'production' ? '/KInfoGit' : '',
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/KInfoGit' : '',
+  // Custom domain (kylinmiao.me) - no basePath needed
+  // basePath: process.env.NODE_ENV === 'production' ? '/KInfoGit' : '',
+  // assetPrefix: process.env.NODE_ENV === 'production' ? '/KInfoGit' : '',
 }
 
 const withMDX = require('@next/mdx')({
