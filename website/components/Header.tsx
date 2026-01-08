@@ -1,10 +1,19 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { Menu, X, Search } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
+import Fuse from 'fuse.js'
+
+interface SearchItem {
+  title: string
+  description: string
+  url: string
+  category: string
+  type: 'blog' | 'project'
+}
 
 const navigation = [
   { name: 'Home', href: '/' },
@@ -43,6 +52,8 @@ export default function Header({ onBookCallClick }: HeaderProps) {
   const [isSearchOpen, setIsSearchOpen] = useState(false)
   const [searchQuery, setSearchQuery] = useState('')
   const [scrolled, setScrolled] = useState(false)
+  const [searchResults, setSearchResults] = useState<SearchItem[]>([])
+  const fuseRef = useRef<Fuse<SearchItem> | null>(null)
 
   // Get current active tab based on route
   const getActiveTab = () => {
@@ -63,6 +74,32 @@ export default function Header({ onBookCallClick }: HeaderProps) {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  // Load search index
+  useEffect(() => {
+    if (isSearchOpen && !fuseRef.current) {
+      fetch('/search-index.json')
+        .then(res => res.json())
+        .then(data => {
+          fuseRef.current = new Fuse(data, {
+            keys: ['title', 'description', 'category'],
+            threshold: 0.3,
+            includeMatches: true
+          })
+        })
+        .catch(err => console.error('Failed to load search index:', err))
+    }
+  }, [isSearchOpen])
+
+  // Real-time search
+  useEffect(() => {
+    if (fuseRef.current && searchQuery.trim()) {
+      const results = fuseRef.current.search(searchQuery).map(r => r.item)
+      setSearchResults(results.slice(0, 5))
+    } else {
+      setSearchResults([])
+    }
+  }, [searchQuery])
+
   const handleTabClick = () => {
     setIsMenuOpen(false)
   }
@@ -71,25 +108,10 @@ export default function Header({ onBookCallClick }: HeaderProps) {
     onBookCallClick()
   }
 
-  const handleSearch = (e: React.FormEvent) => {
+  const handleSearchSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    if (searchQuery.trim()) {
-      const searchText = searchQuery.toLowerCase()
-      const elements = document.querySelectorAll('p, h1, h2, h3, h4, h5, h6, span, div')
-
-      elements.forEach(el => {
-        if (el.innerHTML.includes('<mark>')) {
-          el.innerHTML = el.innerHTML.replace(/<mark[^>]*>/g, '').replace(/<\/mark>/g, '')
-        }
-      })
-
-      elements.forEach(el => {
-        if (el.textContent?.toLowerCase().includes(searchText)) {
-          const regex = new RegExp(`(${searchText})`, 'gi')
-          el.innerHTML = el.innerHTML.replace(regex, '<mark style="background-color: yellow; color: black;">$1</mark>')
-        }
-      })
-
+    if (searchResults.length > 0) {
+      router.push(searchResults[0].url)
       setIsSearchOpen(false)
       setSearchQuery('')
     }
@@ -207,14 +229,14 @@ export default function Header({ onBookCallClick }: HeaderProps) {
       {/* Search Modal */}
       {isSearchOpen && (
         <div className="fixed top-24 left-1/2 transform -translate-x-1/2 w-full max-w-md px-4 z-[60]">
-          <form onSubmit={handleSearch}>
+          <form onSubmit={handleSearchSubmit}>
             <div className="relative group">
               <input
                 type="text"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                placeholder="Search website content..."
-                className="w-full px-6 py-4 bg-black/30 backdrop-blur-enhanced border border-white/20 text-white placeholder-white/50 rounded-2xl focus:border-white/40 focus:outline-none shadow-2xl header-transition focus:shadow-3xl"
+                placeholder="Search blog posts, projects..."
+                className="w-full px-6 py-4 bg-neutral-900/90 backdrop-blur-xl border border-white/20 text-white placeholder-white/40 rounded-2xl focus:border-blue-500/50 focus:outline-none shadow-2xl header-transition focus:shadow-[0_0_40px_rgba(59,130,246,0.15)]"
                 autoFocus
               />
               <button
@@ -224,9 +246,44 @@ export default function Header({ onBookCallClick }: HeaderProps) {
                 <Search className="w-5 h-5 header-transition" />
               </button>
               {/* Search input glow effect */}
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-2xl opacity-0 group-focus-within:opacity-100 header-transition -z-10 blur-xl"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-2xl opacity-0 group-focus-within:opacity-100 header-transition -z-10 blur-2xl"></div>
             </div>
           </form>
+
+          {/* Search Results Dropdown */}
+          {searchResults.length > 0 && (
+            <div className="mt-2 bg-neutral-900/95 backdrop-blur-xl border border-white/20 rounded-2xl overflow-hidden shadow-2xl animate-in fade-in slide-in-from-top-2 duration-300">
+              <div className="max-h-[60vh] overflow-y-auto">
+                {searchResults.map((result) => (
+                  <Link
+                    key={result.url}
+                    href={result.url}
+                    onClick={() => {
+                      setIsSearchOpen(false)
+                      setSearchQuery('')
+                    }}
+                    className="block p-4 hover:bg-white/5 transition-colors border-b border-white/5 last:border-0 group"
+                  >
+                    <div className="flex items-center justify-between mb-1">
+                      <span className="text-sm font-medium text-white group-hover:text-blue-400 transition-colors">
+                        {result.title}
+                      </span>
+                      <span className="text-[10px] px-2 py-0.5 rounded-full bg-white/10 text-white/50 uppercase tracking-wider">
+                        {result.type}
+                      </span>
+                    </div>
+                    <p className="text-xs text-white/60 line-clamp-1">{result.description}</p>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {searchQuery && searchResults.length === 0 && (
+            <div className="mt-2 p-6 text-center bg-neutral-900/90 backdrop-blur-xl border border-white/20 rounded-2xl text-white/50 text-sm shadow-2xl">
+              No results found for "{searchQuery}"
+            </div>
+          )}
         </div>
       )}
 
