@@ -1,9 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap');
+
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap');
 
 /* Base styles */
 html {
@@ -77,6 +77,14 @@ body {
 /* Logo hover effects */
 .logo-glow:hover {
   animation: subtle-glow 2s ease-in-out infinite;
+}
+
+/* Logo container - isolated stacking context */
+.logo-container {
+  isolation: isolate;
+  position: relative;
+  z-index: 30;
+  contain: layout style;
 }
 
 /* Navigation pill container */

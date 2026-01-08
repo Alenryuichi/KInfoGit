@@ -23,7 +23,7 @@ export default function TextReveal({ text, className = "", delay = 0 }: TextReve
       filter: "blur(0px)",
       y: 0,
       transition: {
-        type: "spring",
+        type: "spring" as const,
         damping: 12,
         stiffness: 100,
       },
@@ -33,7 +33,7 @@ export default function TextReveal({ text, className = "", delay = 0 }: TextReve
       filter: "blur(20px)",
       y: 20,
       transition: {
-        type: "spring",
+        type: "spring" as const,
         damping: 12,
         stiffness: 100,
       },

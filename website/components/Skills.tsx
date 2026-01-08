@@ -20,7 +20,7 @@ const cardVariants = {
     opacity: 1,
     y: 0,
     transition: {
-      type: "spring",
+      type: "spring" as const,
       stiffness: 200,
       damping: 20
     }
@@ -231,7 +231,7 @@ export default function Skills() {
             <motion.div
               className="group p-8 rounded-2xl bg-gray-900/50 border border-gray-800/50 hover:border-gray-700/50 transition-colors duration-300 hover:bg-gray-900/70"
               variants={cardVariants}
-              whileHover={{ y: -8, transition: { type: "spring", stiffness: 300 } }}
+              whileHover={{ y: -8, transition: { type: "spring" as const, stiffness: 300 } }}
             >
               <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                 <span className="text-white text-2xl">🎯</span>
@@ -247,7 +247,7 @@ export default function Skills() {
             <motion.div
               className="group p-8 rounded-2xl bg-gray-900/50 border border-gray-800/50 hover:border-gray-700/50 transition-colors duration-300 hover:bg-gray-900/70"
               variants={cardVariants}
-              whileHover={{ y: -8, transition: { type: "spring", stiffness: 300 } }}
+              whileHover={{ y: -8, transition: { type: "spring" as const, stiffness: 300 } }}
             >
               <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                 <span className="text-white text-2xl">🏗️</span>
@@ -263,7 +263,7 @@ export default function Skills() {
             <motion.div
               className="group p-8 rounded-2xl bg-gray-900/50 border border-gray-800/50 hover:border-gray-700/50 transition-colors duration-300 hover:bg-gray-900/70"
               variants={cardVariants}
-              whileHover={{ y: -8, transition: { type: "spring", stiffness: 300 } }}
+              whileHover={{ y: -8, transition: { type: "spring" as const, stiffness: 300 } }}
             >
               <div className="w-16 h-16 bg-gradient-to-br from-pink-500 to-red-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                 <span className="text-white text-2xl">🌐</span>

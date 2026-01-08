@@ -14,7 +14,7 @@ const buttonVariants = {
 }
 
 const buttonTransition = {
-  type: "spring",
+  type: "spring" as const,
   stiffness: 400,
   damping: 17
 }

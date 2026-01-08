@@ -116,33 +116,7 @@ export default function Projects({ projects }: ProjectsProps) {
 						))}
 					</div>
 
-					{/* CTA Section */}
-					<div className="text-center mt-16">
-						<h3 className="text-2xl font-bold text-white mb-4">
-							Interested in working together?
-						</h3>
-						<p className="text-gray-400 mb-8 max-w-2xl mx-auto">
-							I'm always open to discussing new opportunities and interesting projects.
-							Let's create something meaningful together.
-						</p>
-						<div className="flex flex-col sm:flex-row gap-4 justify-center">
-							<a
-								href="#contact"
-								className="inline-flex items-center px-8 py-4 bg-white text-black font-semibold rounded-full hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
-							>
-								Start a Project
-								<svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-									<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-								</svg>
-							</a>
-							<Link
-								href="/work#projects"
-								className="inline-flex items-center px-8 py-4 border border-gray-600 text-gray-300 font-semibold rounded-full hover:border-gray-400 hover:text-white transition-all duration-300"
-							>
-								See More Projects
-							</Link>
-						</div>
-					</div>
+
 				</div>
 			</div>
 		</section>
