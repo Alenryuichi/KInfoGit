@@ -206,7 +206,7 @@ export default function Header({ onBookCallClick }: HeaderProps) {
 
       {/* Search Modal */}
       {isSearchOpen && (
-        <div className="fixed top-24 left-1/2 transform -translate-x-1/2 w-full max-w-md px-4 z-60">
+        <div className="fixed top-24 left-1/2 transform -translate-x-1/2 w-full max-w-md px-4 z-[60]">
           <form onSubmit={handleSearch}>
             <div className="relative group">
               <input
@@ -232,7 +232,7 @@ export default function Header({ onBookCallClick }: HeaderProps) {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="md:hidden fixed top-20 right-4 bg-black/30 backdrop-blur-enhanced border border-white/20 rounded-2xl p-6 shadow-2xl min-w-[220px] z-60">
+        <div className="md:hidden fixed top-20 right-4 bg-black/30 backdrop-blur-enhanced border border-white/20 rounded-2xl p-6 shadow-2xl min-w-[220px] z-[60]">
           <div className="space-y-3">
             {navigation.map((item) => (
               <Link
