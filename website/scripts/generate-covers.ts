@@ -55,8 +55,12 @@ function createCoverElement(post: {
   date: string;
 }) {
   const theme = getThemeForTitle(post.title);
-  const displayTags = post.tags.slice(0, 4);
-
+  const displayTags = post.tags.slice(0, 3);
+  
+  // Design System Colors
+  const bgDark = '#030712'; // gray-950
+  const textSecondary = '#9CA3AF'; // gray-400
+  
   return {
     type: 'div',
     props: {
@@ -65,122 +69,217 @@ function createCoverElement(post: {
         height: '100%',
         display: 'flex',
         flexDirection: 'column',
-        justifyContent: 'space-between',
-        padding: '60px',
-        background: `linear-gradient(135deg, ${theme.from} 0%, ${theme.to} 100%)`,
+        backgroundColor: bgDark,
+        color: 'white',
         fontFamily: 'Noto Sans SC, Inter',
+        position: 'relative',
+        overflow: 'hidden',
+        padding: '60px', // Content safe area
       },
       children: [
-        // 顶部: BLOG 标签
+        // 1. Background Grid Pattern (Full Bleed)
         {
           type: 'div',
           props: {
             style: {
-              display: 'flex',
-              alignItems: 'center',
-              gap: '12px',
+              position: 'absolute',
+              inset: 0,
+              backgroundImage: 'linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px)',
+              backgroundSize: '40px 40px',
+              maskImage: 'linear-gradient(to bottom, black 40%, transparent 100%)',
             },
-            children: [
-              {
-                type: 'div',
-                props: {
-                  style: {
-                    background: 'rgba(255,255,255,0.2)',
-                    padding: '8px 20px',
-                    borderRadius: '20px',
-                    color: 'white',
-                    fontSize: '18px',
-                    fontWeight: 'bold',
-                  },
-                  children: '📖 BLOG',
-                },
-              },
-              {
-                type: 'div',
-                props: {
-                  style: {
-                    color: 'rgba(255,255,255,0.8)',
-                    fontSize: '16px',
-                  },
-                  children: post.category,
-                },
-              },
-            ],
           },
         },
-        // 中间: 标题
+        
+        // 2. Spotlight / Gradient Orb (Top Right & Bottom Left)
         {
           type: 'div',
           props: {
             style: {
+              position: 'absolute',
+              top: '-150px',
+              right: '-150px',
+              width: '800px',
+              height: '800px',
+              background: `radial-gradient(circle, ${theme.from} 0%, transparent 70%)`,
+              opacity: 0.15,
+              filter: 'blur(80px)',
+            },
+          },
+        },
+        {
+          type: 'div',
+          props: {
+            style: {
+              position: 'absolute',
+              bottom: '-200px',
+              left: '-200px',
+              width: '600px',
+              height: '600px',
+              background: `radial-gradient(circle, ${theme.to} 0%, transparent 70%)`,
+              opacity: 0.1,
+              filter: 'blur(80px)',
+            },
+          },
+        },
+
+        // 3. Content Layer (Direct layout, no inner card)
+        {
+          type: 'div',
+          props: {
+            style: {
+              flex: 1,
               display: 'flex',
               flexDirection: 'column',
-              gap: '20px',
-            },
-            children: [
-              {
-                type: 'div',
-                props: {
-                  style: {
-                    color: 'white',
-                    fontSize: post.title.length > 40 ? '42px' : '52px',
-                    fontWeight: 'bold',
-                    lineHeight: 1.2,
-                    textShadow: '0 2px 10px rgba(0,0,0,0.2)',
-                  },
-                  children: post.title,
-                },
-              },
-            ],
-          },
-        },
-        // 底部: 标签和元信息
-        {
-          type: 'div',
-          props: {
-            style: {
-              display: 'flex',
               justifyContent: 'space-between',
-              alignItems: 'flex-end',
+              position: 'relative',
+              zIndex: 10,
             },
             children: [
-              // 标签
+              // Header: Window Controls + Category
               {
                 type: 'div',
                 props: {
                   style: {
                     display: 'flex',
-                    gap: '10px',
-                    flexWrap: 'wrap',
-                  },
-                  children: displayTags.map(tag => ({
-                    type: 'div',
-                    props: {
-                      style: {
-                        background: 'rgba(255,255,255,0.25)',
-                        padding: '6px 14px',
-                        borderRadius: '16px',
-                        color: 'white',
-                        fontSize: '14px',
-                      },
-                      children: `#${tag}`,
-                    },
-                  })),
-                },
-              },
-              // 元信息
-              {
-                type: 'div',
-                props: {
-                  style: {
-                    display: 'flex',
-                    gap: '20px',
-                    color: 'rgba(255,255,255,0.9)',
-                    fontSize: '16px',
+                    justifyContent: 'space-between',
+                    alignItems: 'center',
                   },
                   children: [
-                    { type: 'span', props: { children: `⏱️ ${post.readTime}` } },
-                    { type: 'span', props: { children: `📅 ${post.date}` } },
+                    // Window Controls (Decoration)
+                    {
+                      type: 'div',
+                      props: {
+                        style: { display: 'flex', gap: '10px' },
+                        children: [
+                          { type: 'div', props: { style: { width: '14px', height: '14px', borderRadius: '50%', background: '#EF4444' } } },
+                          { type: 'div', props: { style: { width: '14px', height: '14px', borderRadius: '50%', background: '#EAB308' } } },
+                          { type: 'div', props: { style: { width: '14px', height: '14px', borderRadius: '50%', background: '#22C55E' } } },
+                        ],
+                      },
+                    },
+                    // Category
+                    {
+                      type: 'div',
+                      props: {
+                        style: {
+                          padding: '6px 16px',
+                          background: 'rgba(255,255,255,0.05)',
+                          border: '1px solid rgba(255,255,255,0.1)',
+                          borderRadius: '100px',
+                          color: theme.to,
+                          fontSize: '14px',
+                          fontWeight: '600',
+                          letterSpacing: '1px',
+                          textTransform: 'uppercase',
+                          display: 'flex',
+                          alignItems: 'center',
+                          gap: '8px',
+                        },
+                        children: [
+                          { type: 'span', props: { style: { fontSize: '12px' }, children: '✦' } },
+                          { type: 'span', props: { children: post.category } },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+              
+              // Title Area
+              {
+                type: 'div',
+                props: {
+                  style: {
+                    display: 'flex',
+                    flexDirection: 'column',
+                    gap: '24px',
+                  },
+                  children: [
+                    {
+                      type: 'h1',
+                      props: {
+                        style: {
+                          fontSize: post.title.length > 30 ? '64px' : '80px',
+                          fontWeight: '800',
+                          lineHeight: 1.1,
+                          margin: 0,
+                          // Use a slight gradient for text to give it sheen
+                          background: 'linear-gradient(to bottom right, #ffffff, #cbd5e1)',
+                          backgroundClip: 'text',
+                          color: 'transparent',
+                          letterSpacing: '-0.03em',
+                        },
+                        children: post.title,
+                      },
+                    },
+                    // Decorative line
+                    {
+                      type: 'div',
+                      props: {
+                        style: {
+                          width: '80px',
+                          height: '4px',
+                          background: `linear-gradient(90deg, ${theme.from}, ${theme.to})`,
+                          borderRadius: '2px',
+                        },
+                      },
+                    },
+                  ],
+                },
+              },
+              
+              // Footer: Tags + Meta
+              {
+                type: 'div',
+                props: {
+                  style: {
+                    display: 'flex',
+                    justifyContent: 'space-between',
+                    alignItems: 'flex-end',
+                  },
+                  children: [
+                    // Tags
+                    {
+                      type: 'div',
+                      props: {
+                        style: {
+                          display: 'flex',
+                          gap: '12px',
+                        },
+                        children: displayTags.map(tag => ({
+                          type: 'div',
+                          props: {
+                            style: {
+                              fontSize: '16px',
+                              color: textSecondary,
+                              fontFamily: 'monospace',
+                            },
+                            children: `#${tag}`,
+                          },
+                        })),
+                      },
+                    },
+                    
+                    // Meta Info
+                    {
+                      type: 'div',
+                      props: {
+                        style: {
+                          display: 'flex',
+                          gap: '24px',
+                          fontSize: '16px',
+                          color: textSecondary,
+                          fontFamily: 'monospace',
+                          opacity: 0.8,
+                        },
+                        children: [
+                          { type: 'span', props: { children: post.date } },
+                          { type: 'span', props: { children: '//' } },
+                          { type: 'span', props: { children: post.readTime } },
+                        ],
+                      },
+                    },
                   ],
                 },
               },

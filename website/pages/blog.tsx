@@ -3,7 +3,9 @@ import { GetStaticProps } from 'next'
 import Head from 'next/head'
 import { motion } from 'framer-motion'
 import BlogCard from '@/components/BlogCard'
-import TagCloud from '@/components/TagCloud'
+import FilterBar from '@/components/FilterBar'
+import TextReveal from '@/components/TextReveal'
+import FloatingLines from '@/components/FloatingLines'
 import { BlogPost, getAllBlogPosts, getAllTags } from '@/lib/data'
 
 // Animation variants for staggered card entrance
@@ -68,6 +70,9 @@ export default function BlogPage({ posts, tags }: BlogPageProps) {
     )
   }
 
+  // Check if we are in the default view (no filters applied) to enable featured layout
+  const isDefaultView = selectedCategory === 'All' && selectedTags.length === 0
+
   return (
     <React.Fragment>
       <Head>
@@ -75,57 +80,55 @@ export default function BlogPage({ posts, tags }: BlogPageProps) {
         <meta name="description" content="Handpicked insights from the pensieve - thoughts on frontend development, technology, and more." />
       </Head>
 
-      <div className="min-h-screen text-white">
-        <div className="relative py-20 px-4">
+      <div className="min-h-screen text-white relative overflow-hidden">
+        {/* Immersive Background */}
+        <div className="absolute inset-0 z-0 opacity-30 pointer-events-none">
+          <FloatingLines 
+            lineCount={[3]} 
+            lineDistance={[10]} 
+            animationSpeed={0.5} 
+            linesGradient={['#3B82F6', '#8B5CF6', '#EC4899']} 
+          />
+        </div>
+
+        <div className="relative z-10 py-20 px-4">
           <div className="max-w-6xl mx-auto text-center">
             <div className="mb-4">
               <span className="text-sm font-medium text-gray-400 uppercase tracking-wider">
                 THE BLOG
               </span>
             </div>
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Handpicked insights from the{' '}
-              <span className="bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+            <div className="flex flex-col md:flex-row flex-wrap justify-center items-center gap-x-3 text-4xl md:text-6xl font-bold mb-6 leading-tight">
+              <TextReveal text="Handpicked insights from the" className="justify-center" />
+              <motion.span 
+                initial={{ opacity: 0, filter: "blur(10px)" }}
+                animate={{ opacity: 1, filter: "blur(0px)" }}
+                transition={{ delay: 0.8, duration: 0.8 }}
+                className="bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent"
+              >
                 pensieve
-              </span>
-            </h1>
+              </motion.span>
+            </div>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
               Thoughts on frontend development, technology, and the art of building digital experiences.
             </p>
           </div>
         </div>
 
-        {/* Filter Section - Category buttons and Tag Cloud */}
-        <div className="max-w-6xl mx-auto px-4 mb-12">
-          {/* Category Buttons */}
-          <div className="flex flex-wrap gap-2 justify-center mb-8">
-            {categories.map(category => (
-              <motion.button
-                key={category}
-                onClick={() => setSelectedCategory(category)}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-colors duration-300 ${
-                  selectedCategory === category
-                    ? 'bg-white text-black'
-                    : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 hover:text-white'
-                }`}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                transition={{ type: "spring", stiffness: 400, damping: 17 }}
-              >
-                {category}
-              </motion.button>
-            ))}
-          </div>
-
-          {/* Tag Cloud */}
-          <TagCloud
+        {/* Filter Section - Modern Filter Bar */}
+        <div className="relative z-30 max-w-6xl mx-auto px-4 mb-12">
+          <FilterBar
+            categories={categories}
+            selectedCategory={selectedCategory}
+            onCategoryChange={setSelectedCategory}
             tags={tags}
             selectedTags={selectedTags}
             onTagClick={handleTagClick}
+            onClearAll={() => setSelectedTags([])}
           />
         </div>
 
-        <div className="max-w-6xl mx-auto px-4 pb-20">
+        <div className="relative z-10 max-w-6xl mx-auto px-4 pb-20">
           {filteredPosts.length > 0 ? (
             <motion.div
               className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
@@ -134,8 +137,12 @@ export default function BlogPage({ posts, tags }: BlogPageProps) {
               animate="show"
               key={`${selectedCategory}-${selectedTags.join('-')}`}
             >
-              {filteredPosts.map((post) => (
-                <motion.div key={post.slug} variants={cardVariants}>
+              {filteredPosts.map((post, index) => (
+                <motion.div 
+                  key={post.slug} 
+                  variants={cardVariants}
+                  className={isDefaultView && index === 0 ? "md:col-span-2 lg:col-span-2" : ""}
+                >
                   <BlogCard post={post} />
                 </motion.div>
               ))}
