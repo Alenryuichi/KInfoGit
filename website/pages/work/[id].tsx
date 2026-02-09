@@ -3,6 +3,7 @@ import Head from 'next/head'
 import Link from 'next/link'
 import { profileData } from '@/lib/config'
 import MarkdownRenderer from '@/components/MarkdownRenderer'
+import TableOfContents from '@/components/TableOfContents'
 import { getCoreProjects, getProjectById, getProjectDetailContent, type Project } from '@/lib/data'
 
 interface ProjectPageProps {
@@ -11,9 +12,6 @@ interface ProjectPageProps {
 }
 
 export default function ProjectPage({ project, detailContent }: ProjectPageProps) {
-		const responsibilitiesZh = project.responsibilities.zh
-		const achievementsZh = project.achievements.zh
-
 	return (
 		<>
 			<Head>
@@ -30,7 +28,7 @@ export default function ProjectPage({ project, detailContent }: ProjectPageProps
 				<meta property="og:type" content="article" />
 			</Head>
 
-			<main className="min-h-screen bg-black text-white relative overflow-hidden">
+			<main className="min-h-screen bg-black text-white relative">
 				{/* Background Effects - align with Work page */}
 				<div className="absolute inset-0">
 					<div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse" />
@@ -40,7 +38,9 @@ export default function ProjectPage({ project, detailContent }: ProjectPageProps
 
 				<section className="py-16 md:py-20 relative z-10">
 					<div className="container mx-auto px-4 sm:px-6 lg:px-8">
-						<div className="max-w-4xl mx-auto">
+						<div className="max-w-6xl mx-auto flex gap-8">
+							{/* Main Content */}
+							<div className="flex-1 min-w-0 max-w-4xl">
 							<div className="mb-8 flex items-center justify-between gap-4">
 								<Link
 									href="/work#projects"
@@ -75,96 +75,6 @@ export default function ProjectPage({ project, detailContent }: ProjectPageProps
 								)}
 							</header>
 
-							{/* Project overview */}
-							<section className="mb-8">
-								<h2 className="text-lg font-semibold mb-3">Project overview</h2>
-								<p className="text-gray-300 leading-relaxed mb-4">
-									This project took place during {project.period} at {project.company}. I worked as
-									<span className="mx-1 font-medium">{project.role.zh}</span>
-									and was mainly responsible for
-									<span className="mx-1">
-										{responsibilitiesZh.slice(0, 3).join('、')}
-									</span>
-									(and more).
-								</p>
-								{achievementsZh.length ? (
-									<div>
-										<h3 className="text-sm font-medium text-gray-400 mb-2">Key outcomes (snapshot)</h3>
-										<ul className="list-disc list-inside text-gray-300 space-y-1">
-											{achievementsZh.slice(0, 3).map((item) => (
-												<li key={item}>{item}</li>
-											))}
-										</ul>
-									</div>
-								) : null}
-							</section>
-
-							{/* Snapshot card */}
-							<section className="mb-8">
-								<h2 className="text-lg font-semibold mb-3">Project snapshot</h2>
-								<div className="rounded-2xl border border-gray-800 bg-gray-900/40 p-6 grid gap-4 sm:grid-cols-2">
-									<div>
-										<p className="text-xs text-gray-500 mb-1">Company</p>
-										<p className="text-sm text-gray-200">{project.company}</p>
-									</div>
-									<div>
-										<p className="text-xs text-gray-500 mb-1">Role</p>
-										<p className="text-sm text-gray-200">{project.role.zh}</p>
-									</div>
-									<div>
-										<p className="text-xs text-gray-500 mb-1">Period</p>
-										<p className="text-sm text-gray-200">{project.period}</p>
-									</div>
-									<div>
-										<p className="text-xs text-gray-500 mb-1">Category</p>
-										<p className="text-sm text-gray-200">{project.category ?? 'Core Project'}</p>
-									</div>
-									<div className="sm:col-span-2">
-										<p className="text-xs text-gray-500 mb-2">Tech Stack</p>
-										<div className="flex flex-wrap gap-2">
-											{project.tech_stack.map((tag) => (
-												<span
-													key={tag}
-													className="px-3 py-1 text-xs bg-gray-800/60 text-gray-300 rounded-full border border-gray-700/50"
-												>
-													{tag}
-												</span>
-											))}
-										</div>
-									</div>
-								</div>
-							</section>
-
-							{/* Responsibilities */}
-							<section className="mb-8">
-								<h2 className="text-lg font-semibold mb-3">我的角色与职责</h2>
-								<ul className="list-disc list-inside text-gray-300 space-y-1">
-									{project.responsibilities.zh.map((item) => (
-										<li key={item}>{item}</li>
-									))}
-								</ul>
-							</section>
-
-							{/* Achievements */}
-							<section className="mb-8">
-								<h2 className="text-lg font-semibold mb-3">关键成果与指标</h2>
-								<ul className="list-disc list-inside text-gray-300 space-y-1">
-									{project.achievements.zh.map((item) => (
-										<li key={item}>{item}</li>
-									))}
-								</ul>
-							</section>
-
-							{/* Optional description as background/goal section */}
-							{project.description?.zh && (
-								<section className="mb-8">
-									<h2 className="text-lg font-semibold mb-3">项目背景与目标</h2>
-									<p className="text-gray-300 leading-relaxed whitespace-pre-line">
-										{project.description.zh}
-									</p>
-								</section>
-							)}
-
 							{/* MDX/Markdown Detail Content */}
 							{detailContent && (
 								<section className="mb-8">
@@ -183,6 +93,9 @@ export default function ProjectPage({ project, detailContent }: ProjectPageProps
 									Back to all projects
 								</Link>
 							</footer>
+							</div>
+							{/* Table of Contents - sticky sidebar */}
+							{detailContent && <TableOfContents content={detailContent} />}
 						</div>
 					</div>
 				</section>
