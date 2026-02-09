@@ -21,14 +21,14 @@ export default function Projects({ projects }: ProjectsProps) {
 					{/* Section Header */}
 					<div className="projects-header text-center mb-16">
 						<div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-6">
-							FEATURED CASE STUDIES
+							FEATURED PROJECTS
 						</div>
 						<h2 className="text-4xl sm:text-5xl font-bold mb-6">
 							Curated work
 						</h2>
 						<p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
-							A collection of core projects from Tencent anti-fraud and large-scale
-							data systems, presented as concise case studies.
+							AI Agent 系统、RAG 架构设计与独立开发项目，
+							从企业级大规模系统到个人全栈应用。
 						</p>
 					</div>
 

@@ -45,27 +45,55 @@ export default function Experience() {
       type: 'work',
       icon: <BuildingIcon />,
       company: {
-        zh: '腾讯科技 (广州) 有限公司',
-        en: 'Tencent Technology (Guangzhou) Co., Ltd.'
+        zh: '腾讯 - 企业微信',
+        en: 'Tencent - WeCom'
       },
-      position: '高级后端工程师',
+      position: '全栈开发工程师',
       period: '2022.07 - Present',
       location: 'Guangzhou, China',
       roles: [
-        { title: '反作弊技术专家', color: 'blue' },
-        { title: '图数据库专家', color: 'emerald' },
-        { title: '系统架构师', color: 'purple' },
-        { title: '项目管理', color: 'orange' }
+        { title: 'AI Agent 架构师', color: 'blue' },
+        { title: 'RAG 系统专家', color: 'emerald' },
+        { title: '分布式系统', color: 'purple' },
+        { title: '图数据库', color: 'orange' }
       ],
       highlights: [
-        '主导反作弊治理全生命周期项目，识别违规服务商 820 家、企业 52,683 家',
-        '从 0 到 1 构建画像中台系统，支撑 10 亿级数据分析',
-        '构建包含 20+ 种实体、70+ 种关系的图数据库'
+        '独立设计 AI Agent 审核系统 V1→V4 架构演进，准确率从 70% 提升至 90%+',
+        '架构设计 10 亿级画像中台，支持 200+ 标签 5 分钟复杂分析',
+        '主导反作弊治理系统，识别违规服务商 820 家，年化收益近 4000 万',
+        '修复 PKV 分布式序列化缺陷，写入性能提升 130 倍'
       ],
       metrics: [
-        { value: '10亿+', label: '数据处理' },
-        { value: '300万+', label: '项目收益' },
-        { value: '99.9%', label: '系统可用性' }
+        { value: '90%+', label: 'AI 准确率' },
+        { value: '4000万', label: '年化收益' },
+        { value: '130x', label: '性能提升' }
+      ]
+    },
+    {
+      type: 'indie',
+      icon: <CodeIcon />,
+      company: {
+        zh: '独立开发者',
+        en: 'Independent Developer'
+      },
+      position: '全栈 iOS 开发',
+      period: '2025.09 - Present',
+      location: 'Side Project',
+      roles: [
+        { title: 'iOS 开发', color: 'pink' },
+        { title: 'AI 模型训练', color: 'blue' },
+        { title: 'DevOps', color: 'emerald' }
+      ],
+      highlights: [
+        '从 0 到 1 独立完成磕线 App 全流程：产品/UI/前后端/AI/DevOps',
+        '设计 VideoMind Chain-of-Roles 工作流，成本优化 39%，准确率 92%',
+        '训练 YOLO11m + MobileNet V3，CoreML 导出实现 300x 加速',
+        '自研 MCP Server（25 个运维工具）实现 AI Agent 远程服务器控制'
+      ],
+      metrics: [
+        { value: '300x', label: 'AI 加速' },
+        { value: '92%', label: '识别准确率' },
+        { value: '39%', label: '成本优化' }
       ]
     },
     {
@@ -79,10 +107,10 @@ export default function Experience() {
       period: '2019.09 - 2022.06',
       location: 'Guangzhou, China',
       highlights: [
-        '发表 CCF-C 类学术论文 1 篇',
-        '研究方向：分布式系统与数据挖掘'
+        '发表 CCF-C 类学术论文：UAV Visual Navigation System based on Digital Twin',
+        '研究方向：数字孪生、深度神经网络、无人机视觉导航'
       ],
-      skills: ['数据结构与算法', '计算机网络', '数据库系统', '机器学习', '软件工程']
+      skills: ['分布式系统', '深度学习', '计算机视觉', '数据挖掘', '软件工程']
     }
   ]
 
@@ -99,7 +127,7 @@ export default function Experience() {
               Experience
             </h2>
             <p className="text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed">
-              专注于反作弊技术、系统架构设计与大规模数据处理
+              专注于 AI Agent 系统、RAG 架构设计与全栈独立开发
             </p>
           </div>
 
@@ -211,8 +239,8 @@ export default function Experience() {
                 </div>
                 <h4 className="font-semibold text-white mb-2">Tech Stack</h4>
                 <p className="text-sm text-gray-400 leading-relaxed">
-                  Python · Go · C++ · TypeScript<br/>
-                  ClickHouse · MySQL · Vue.js
+                  Go · Swift · Python · TypeScript<br/>
+                  SwiftUI · CoreML · Docker
                 </p>
               </div>
 
@@ -222,8 +250,8 @@ export default function Experience() {
                 </div>
                 <h4 className="font-semibold text-white mb-2">Expertise</h4>
                 <p className="text-sm text-gray-400 leading-relaxed">
-                  反作弊技术 · 系统架构<br/>
-                  图数据库 · 大数据处理
+                  AI Agent · RAG 系统<br/>
+                  分布式架构 · 图数据库
                 </p>
               </div>
 
@@ -231,10 +259,10 @@ export default function Experience() {
                 <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-purple-500/20 to-purple-600/20 border border-purple-500/30 flex items-center justify-center mx-auto mb-4 text-purple-400 group-hover:scale-110 transition-transform">
                   <ChartIcon />
                 </div>
-                <h4 className="font-semibold text-white mb-2">Leadership</h4>
+                <h4 className="font-semibold text-white mb-2">Indie Dev</h4>
                 <p className="text-sm text-gray-400 leading-relaxed">
-                  0 到 1 系统建设<br/>
-                  跨部门协作管理
+                  0 到 1 全栈开发<br/>
+                  产品/UI/AI/DevOps
                 </p>
               </div>
             </div>

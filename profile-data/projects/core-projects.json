@@ -1,40 +1,160 @@
 [
   {
-    "id": "portrait-platform",
+    "id": "openmemory-plus",
     "title": {
-      "zh": "画像中台系统",
-      "en": "Portrait Platform System"
+      "zh": "OpenMemory Plus - AI Agent 双层记忆框架",
+      "en": "OpenMemory Plus - AI Agent Dual-Layer Memory Framework"
     },
-    "period": "2022-2024",
+    "period": "2026.02 - 至今",
+    "company": "独立开发",
+    "role": {
+      "zh": "独立开发者",
+      "en": "Independent Developer"
+    },
+    "tech_stack": ["MCP", "AI Agent", "Memory System", "Qdrant", "E2E Testing", "Multi-Agent"],
+    "responsibilities": {
+      "zh": ["架构设计", "核心开发", "测试体系构建"],
+      "en": ["Architecture Design", "Core Development", "Testing Framework"]
+    },
+    "achievements": {
+      "zh": [
+        "设计双层记忆架构，跨会话上下文保持率 95%+",
+        "实现 ROT 智能过滤（Redundant/Obsolete/Trivial），减少 40% 冗余记忆",
+        "构建 Agent 自闭环测试体系，15 项端到端测试全自动化",
+        "设计统一 _omp/ 目录结构，支持 4+ IDE Agent 无缝共享"
+      ],
+      "en": [
+        "Designed dual-layer memory architecture, 95%+ cross-session context retention",
+        "Implemented ROT intelligent filtering, 40% redundant memory reduction",
+        "Built Agent self-loop testing system, 15 E2E tests fully automated",
+        "Designed unified _omp/ directory structure, supporting 4+ IDE Agents"
+      ]
+    },
+    "highlights": {
+      "zh": "解决 AI Agent 跨会话上下文丢失问题，支持 Augment/Cursor/Windsurf/Cline 等主流 IDE",
+      "en": "Solves AI Agent cross-session context loss, supports Augment/Cursor/Windsurf/Cline IDEs"
+    },
+    "impact": "跨会话上下文保持率 95%+",
+    "category": "ai-agent"
+  },
+  {
+    "id": "betaline",
+    "title": {
+      "zh": "磕线 (Betaline) - 独立开发全流程 iOS 应用",
+      "en": "Betaline - Full-stack iOS Climbing App"
+    },
+    "period": "2025.09 - 至今",
+    "company": "独立开发",
+    "role": {
+      "zh": "独立开发者",
+      "en": "Independent Developer"
+    },
+    "tech_stack": ["SwiftUI", "CoreML", "YOLO11", "MobileNet V3", "Go/Gin", "Docker Compose", "MCP Server", "Prometheus"],
+    "responsibilities": {
+      "zh": ["产品设计", "UI/UX", "iOS 开发", "后端开发", "AI 模型训练", "DevOps"],
+      "en": ["Product Design", "UI/UX", "iOS Development", "Backend", "AI Training", "DevOps"]
+    },
+    "achievements": {
+      "zh": [
+        "独立完成全流程开发：产品/UI/前后端/AI/DevOps/运营",
+        "设计 VideoMind Chain-of-Roles 工作流（4000+ 行，6 角色），成本 -39%，准确率 92%",
+        "训练 YOLO11m 岩点检测 + MobileNet V3 分类器，CoreML 导出实现 300x 加速",
+        "构建 Go/Gin 三层架构 + JWT 双令牌轮换 + 8 层中间件",
+        "自研 MCP Server（25 个运维工具）实现 AI Agent 远程服务器控制"
+      ],
+      "en": [
+        "Completed full-stack development independently: Product/UI/Frontend/Backend/AI/DevOps",
+        "Designed VideoMind Chain-of-Roles workflow (4000+ lines, 6 roles), 39% cost reduction, 92% accuracy",
+        "Trained YOLO11m detection + MobileNet V3 classifier, 300x acceleration with CoreML",
+        "Built Go/Gin 3-layer architecture + JWT dual-token rotation + 8-layer middleware",
+        "Built custom MCP Server (25 ops tools) for AI Agent remote server control"
+      ]
+    },
+    "highlights": {
+      "zh": "从 0 到 1 独立完成攀岩 iOS 应用，涵盖产品设计、AI 模型训练、DevOps 全流程",
+      "en": "Built climbing iOS app from 0 to 1, covering product design, AI training, DevOps"
+    },
+    "impact": "全栈独立开发上线",
+    "category": "mobile-app"
+  },
+  {
+    "id": "ai-agent-review",
+    "title": {
+      "zh": "风控审核大模型 AI Agent",
+      "en": "Risk Control AI Agent Review System"
+    },
+    "period": "2025.12 - 至今",
     "company": "腾讯",
     "role": {
-      "zh": "项目负责人",
+      "zh": "技术负责人",
+      "en": "Tech Lead"
+    },
+    "tech_stack": ["Prompt Chaining", "CBR", "Multi-Query RAG", "策略短路", "RAGAS", "分布式异步", "Go", "Langfuse"],
+    "responsibilities": {
+      "zh": ["架构设计", "核心开发", "效果优化", "质量监控"],
+      "en": ["Architecture Design", "Core Development", "Effect Optimization", "Quality Monitoring"]
+    },
+    "achievements": {
+      "zh": [
+        "V1→V4 架构演进：朴素 RAG → CBR → Prompt Chaining → Multi-Query + 策略短路",
+        "设计 V4 策略短路机制，人脸解封场景识别率从 5-10% 提升至 94.89%",
+        "设计 V4 Multi-Query 并行检索策略，CBR 召回率提升 20%，整体覆盖率 50-60%",
+        "构建 Langfuse 深度整合工具链 + RAGAS 自动评估 + Badcase 定位",
+        "实现分布式高可用审核系统，支撑 2000+ 并发，日均 300+ 单自动结单"
+      ],
+      "en": [
+        "V1→V4 architecture evolution: Naive RAG → CBR → Prompt Chaining → Multi-Query + Strategy Shortcut",
+        "Designed V4 strategy shortcut, face unlock recognition rate improved from 5-10% to 94.89%",
+        "Designed V4 Multi-Query parallel retrieval, 20% CBR recall improvement, 50-60% overall coverage",
+        "Built Langfuse deep integration + RAGAS auto-evaluation + Badcase localization",
+        "Built distributed HA review system, supporting 2000+ concurrency, 300+ daily auto-completions"
+      ]
+    },
+    "highlights": {
+      "zh": "独立设计 V1→V4 架构演进，准确率从 70% 提升至 90%+，节省 2+ 人力/天",
+      "en": "Independently designed V1→V4 architecture, accuracy improved from 70% to 90%+"
+    },
+    "impact": "准确率 70%→90%+，节省 2+ 人力/天",
+    "category": "ai-agent"
+  },
+  {
+    "id": "portrait-platform",
+    "title": {
+      "zh": "策略全生命周期管理平台",
+      "en": "Strategy Lifecycle Management Platform"
+    },
+    "period": "2022.06 - 2025.06",
+    "company": "腾讯",
+    "role": {
+      "zh": "负责人",
       "en": "Project Lead"
     },
-    "tech_stack": ["Python", "Golang", "ClickHouse", "MySQL", "TDW", "Vue.js", "Spark"],
+    "tech_stack": ["ClickHouse", "图数据库", "TDW/MySQL", "Spark", "Vue.js"],
     "responsibilities": {
       "zh": ["系统架构设计", "前后端开发", "项目管理"],
       "en": ["System Architecture Design", "Full-stack Development", "Project Management"]
     },
     "achievements": {
       "zh": [
-        "从 0 到 1 构建 10 亿级数据分析平台",
-        "支持 200+ 标签维度分析",
-        "复杂分析 5 分钟内完成",
-        "刷单欺诈行为下降 30%"
+        "架构设计 10 亿级画像中台，OLAP ClickHouse + OLTP TDW/MySQL",
+        "支持 200+ 标签 5 分钟复杂分析，刷单欺诈 ↓30%，贷款投诉 ↓23%",
+        "构建图数据库（20+ 实体，70+ 关系），支持 4 种扩散 + 4 种溯源分析",
+        "主导策略质量保障平台，挖掘 228 个低质量策略，误封率 2.4%→0%",
+        "修复 PKV 分布式序列化缺陷，写入性能 90k/s→1200w/s（130 倍提升）"
       ],
       "en": [
-        "Built 10-billion-level data analysis platform from scratch",
-        "Support 200+ tag dimension analysis",
-        "Complex analysis completed within 5 minutes",
-        "30% reduction in fraudulent activities"
+        "Designed 10-billion-level portrait platform with OLAP ClickHouse + OLTP TDW/MySQL",
+        "Supports 200+ tags 5-min complex analysis, fraud ↓30%, loan complaints ↓23%",
+        "Built graph database (20+ entities, 70+ relations), 4 diffusion + 4 traceability analyses",
+        "Led strategy quality platform, mined 228 low-quality strategies, false ban rate 2.4%→0%",
+        "Fixed PKV distributed serialization bug, write performance 90k/s→1200w/s (130x improvement)"
       ]
     },
     "highlights": {
-      "zh": "设计五层架构 (权限管理、业务数据、画像资产、用户分群、业务应用)",
-      "en": "Designed five-layer architecture (permission management, business data, portrait assets, user segmentation, business applications)"
+      "zh": "整合画像中台、图能力、策略质量保障、特征系统的一站式策略管理平台",
+      "en": "One-stop strategy management platform integrating portrait, graph, quality assurance, and features"
     },
-    "impact": "10亿级数据处理能力",
+    "impact": "10 亿级数据处理，130 倍性能提升",
     "category": "system-architecture"
   },
   {
@@ -43,148 +163,36 @@
       "zh": "自建应用反作弊治理系统",
       "en": "Self-built Application Anti-fraud Governance System"
     },
-    "period": "2023-2024",
+    "period": "2023.01 - 2024.06",
     "company": "腾讯",
     "role": {
-      "zh": "项目负责人",
-      "en": "Project Lead"
+      "zh": "技术负责人",
+      "en": "Tech Lead"
     },
-    "tech_stack": ["Python", "Golang", "C++", "反作弊算法", "自动化流程", "数据分析"],
+    "tech_stack": ["图算法", "域名扩散", "IP 聚类", "社区发现", "TDW/Spark"],
     "responsibilities": {
       "zh": ["项目全生命周期管理", "算法设计", "流程自动化"],
       "en": ["Full project lifecycle management", "Algorithm design", "Process automation"]
     },
     "achievements": {
       "zh": [
-        "识别违规服务商 820 家",
-        "识别违规企业 52683 家",
-        "项目收益 300 万+",
-        "实现零投诉运营"
+        "识别违规服务商 820 家、企业 5.2 万家，处理亿级实体数据",
+        "实现年化收益近 4000 万（域名 178 万/月 + IP 38 万/月 + Path 30 万/月）",
+        "将人工干预减少 80%，构建 30+ 模块端到端自动化决策系统",
+        "实现零投诉运营，建立服务商违规条款，妥善处理百余家企业反馈"
       ],
       "en": [
-        "Identified 820 violating service providers",
-        "Identified 52,683 violating enterprises", 
-        "Project revenue 3+ million RMB",
-        "Achieved zero-complaint operations"
+        "Identified 820 violating service providers, 52,000+ enterprises, processed billion-level data",
+        "Achieved ~40M RMB annual revenue (domain 1.78M/month + IP 380K/month + Path 300K/month)",
+        "Reduced manual intervention by 80%, built 30+ module E2E automated decision system",
+        "Achieved zero-complaint operations, established violation terms, handled 100+ enterprise feedbacks"
       ]
     },
     "highlights": {
-      "zh": "设计识别 → 匹配 → 灰度 → 通知 → 迁移 → 反馈的闭环流程，挖掘 10+ 维度特征",
-      "en": "Designed closed-loop process: identify → match → grayscale → notify → migrate → feedback, with 10+ dimensional feature mining"
+      "zh": "大规模智能检测与自动化治理系统，覆盖 311 万活跃用户",
+      "en": "Large-scale intelligent detection and automated governance system covering 3.11M active users"
     },
-    "impact": "300万+直接收益",
+    "impact": "年化收益 4000 万，人工干预 ↓80%",
     "category": "anti-fraud"
-  },
-  {
-    "id": "anti-spam-graph",
-    "title": {
-      "zh": "反垃圾图应用平台",
-      "en": "Anti-spam Graph Application Platform"
-    },
-    "period": "2021-2023",
-    "company": "腾讯",
-    "role": {
-      "zh": "项目负责人",
-      "en": "Project Lead"
-    },
-    "tech_stack": ["图数据库", "Python", "关系网络分析", "数据挖掘"],
-    "responsibilities": {
-      "zh": ["图数据库架构设计", "图算法开发", "业务支持"],
-      "en": ["Graph database architecture design", "Graph algorithm development", "Business support"]
-    },
-    "achievements": {
-      "zh": [
-        "构建包含 20 余种实体、70 余种关系的图数据库",
-        "支持 4 种扩散分析、4 种溯源分析",
-        "提升策略打击准确性和覆盖率"
-      ],
-      "en": [
-        "Built graph database with 20+ entity types and 70+ relationship types",
-        "Support 4 types of diffusion analysis and 4 types of traceability analysis",
-        "Improved strategy accuracy and coverage"
-      ]
-    },
-    "highlights": {
-      "zh": "助力多个策略人员应用图能力",
-      "en": "Empowered multiple strategy personnel to apply graph capabilities"
-    },
-    "impact": "图数据库技术专家地位确立",
-    "category": "graph-database"
-  },
-  {
-    "id": "anti-spam-rollback",
-    "title": {
-      "zh": "反垃圾快速回滚系统",
-      "en": "Anti-spam Rapid Rollback System"
-    },
-    "period": "2023-2024",
-    "company": "腾讯",
-    "role": {
-      "zh": "项目负责人",
-      "en": "Project Lead"
-    },
-    "tech_stack": ["Go", "Vue.js", "分布式系统", "审批流程", "数据库事务", "微服务"],
-    "responsibilities": {
-      "zh": ["前后端开发", "系统架构设计", "审批流程设计"],
-      "en": ["Full-stack development", "System architecture design", "Approval process design"]
-    },
-    "achievements": {
-      "zh": [
-        "支持 33 种封禁类型回滚",
-        "秒级精确回滚",
-        "大规模回滚成功率 99.9%",
-        "演习模式保障系统可用性"
-      ],
-      "en": [
-        "Support rollback for 33 types of bans",
-        "Second-level precise rollback",
-        "99.9% success rate for large-scale rollback",
-        "Drill mode ensures system availability"
-      ]
-    },
-    "highlights": {
-      "zh": "多维度回滚能力，两级审批机制，一键回滚功能，支持影响评估和实时监控",
-      "en": "Multi-dimensional rollback capability, two-level approval mechanism, one-click rollback, impact assessment and real-time monitoring"
-    },
-    "impact": "99.9%回滚成功率",
-    "category": "system-reliability"
-  },
-  {
-    "id": "security-strategy-lifecycle",
-    "title": {
-      "zh": "安全策略全生命周期管理系统",
-      "en": "Security Strategy Lifecycle Management System"
-    },
-    "period": "2024-至今",
-    "company": "腾讯",
-    "role": {
-      "zh": "架构师",
-      "en": "Architect"
-    },
-    "tech_stack": ["Python", "Go", "C++", "机器学习平台", "策略引擎", "Flink", "Kafka"],
-    "responsibilities": {
-      "zh": ["系统架构设计", "策略研发平台建设", "全流程自动化"],
-      "en": ["System architecture design", "Strategy R&D platform construction", "Full-process automation"]
-    },
-    "achievements": {
-      "zh": [
-        "策略研发效率提升 60%",
-        "策略上线时间缩短至 2 天",
-        "误伤率降低 40%",
-        "策略覆盖率提升 50%"
-      ],
-      "en": [
-        "60% improvement in strategy development efficiency",
-        "Strategy deployment time reduced to 2 days",
-        "40% reduction in false positive rate",
-        "50% increase in strategy coverage"
-      ]
-    },
-    "highlights": {
-      "zh": "事前-事中-事后全流程管理，策略自动化测试，智能化策略优化，实时效果评估",
-      "en": "Full-process management (pre-during-post), automated strategy testing, intelligent optimization, real-time effect evaluation"
-    },
-    "impact": "策略研发效率提升60%",
-    "category": "strategy-automation"
   }
 ]

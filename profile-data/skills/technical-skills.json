@@ -1,39 +1,62 @@
 {
+  "ai_agent_rag": {
+    "category": "AI Agent & RAG",
+    "skills": [
+      { "name": "Multi-Query RAG", "level": "专家", "years": 1 },
+      { "name": "Prompt Chaining", "level": "专家", "years": 1 },
+      { "name": "CBR (Case-Based Reasoning)", "level": "专家", "years": 1 },
+      { "name": "RAGAS 自动评估", "level": "熟练", "years": 1 },
+      { "name": "Langfuse 工具链", "level": "熟练", "years": 1 },
+      { "name": "MCP 协议", "level": "专家", "years": 1 },
+      { "name": "Agentic Coding", "level": "专家", "years": 1 },
+      { "name": "Agent 自闭环", "level": "专家", "years": 1 }
+    ]
+  },
   "programming_languages": {
     "category": "编程语言",
     "skills": [
-      { "name": "Python", "level": "熟练", "years": 5 },
-      { "name": "C++", "level": "熟练", "years": 4 },
-      { "name": "Go", "level": "熟练", "years": 3 },
-      { "name": "TypeScript", "level": "一般", "years": 3 },
-      { "name": "JavaScript", "level": "一般", "years": 4 },
-      { "name": "SQL", "level": "熟练", "years": 5 },
-      { "name": "Shell", "level": "熟练", "years": 4 }
-    ]
-  },
-  "frontend_technologies": {
-    "category": "前端技术",
-    "skills": [
-      { "name": "Vue.js", "level": "熟练", "years": 3 },
-      { "name": "HTML5", "level": "熟练", "years": 4 },
-      { "name": "CSS3", "level": "熟练", "years": 4 },
+      { "name": "Go", "level": "专家", "years": 4 },
+      { "name": "Swift", "level": "熟练", "years": 2 },
+      { "name": "Python/PySpark", "level": "熟练", "years": 5 },
       { "name": "TypeScript", "level": "熟练", "years": 3 },
-      { "name": "Swift", "level": "一般", "years": 1 },
-      { "name": "Figma", "level": "一般", "years": 2 }
+      { "name": "C++", "level": "熟练", "years": 4 },
+      { "name": "SQL/Gremlin", "level": "专家", "years": 5 }
     ]
   },
-  "backend_architecture": {
-    "category": "后端技术与架构",
+  "mobile_cv": {
+    "category": "移动端 & 计算机视觉",
     "skills": [
-      { "name": "gRPC", "level": "熟练", "years": 3 },
-      { "name": "tRPC", "level": "熟练", "years": 2 },
-      { "name": "微服务架构设计", "level": "专家", "years": 3 },
-      { "name": "RESTful API", "level": "熟练", "years": 4 },
-      { "name": "GraphQL", "level": "熟练", "years": 2 },
-      { "name": "OLAP/OLTP 架构设计", "level": "专家", "years": 3 },
-      { "name": "高并发、高可用架构", "level": "专家", "years": 3 },
-      { "name": "分布式系统设计", "level": "专家", "years": 4 },
-      { "name": "权限管理系统", "level": "熟练", "years": 3 }
+      { "name": "SwiftUI", "level": "熟练", "years": 2 },
+      { "name": "SwiftData", "level": "熟练", "years": 1 },
+      { "name": "CoreML", "level": "熟练", "years": 1 },
+      { "name": "YOLO11", "level": "熟练", "years": 1 },
+      { "name": "MobileNet V3", "level": "熟练", "years": 1 },
+      { "name": "Detectron2", "level": "一般", "years": 1 }
+    ]
+  },
+  "backend_data": {
+    "category": "后端 & 数据",
+    "skills": [
+      { "name": "Go/Gin 框架", "level": "专家", "years": 3 },
+      { "name": "GORM ORM", "level": "熟练", "years": 3 },
+      { "name": "MySQL", "level": "熟练", "years": 5 },
+      { "name": "Redis", "level": "熟练", "years": 4 },
+      { "name": "ClickHouse (OLAP)", "level": "专家", "years": 3 },
+      { "name": "图数据库", "level": "专家", "years": 3 },
+      { "name": "HBase", "level": "熟练", "years": 3 },
+      { "name": "TDW", "level": "熟练", "years": 3 }
+    ]
+  },
+  "devops_monitoring": {
+    "category": "DevOps & 监控",
+    "skills": [
+      { "name": "Docker Compose", "level": "专家", "years": 2 },
+      { "name": "Nginx", "level": "熟练", "years": 3 },
+      { "name": "Prometheus", "level": "熟练", "years": 2 },
+      { "name": "Grafana", "level": "熟练", "years": 2 },
+      { "name": "Loki", "level": "熟练", "years": 1 },
+      { "name": "腾讯云/阿里云", "level": "熟练", "years": 3 },
+      { "name": "Supabase/Vercel", "level": "熟练", "years": 1 }
     ]
   },
   "anti_fraud_security": {
@@ -41,27 +64,9 @@
     "skills": [
       { "name": "特征工程与挖掘", "level": "专家", "years": 3 },
       { "name": "风险识别算法", "level": "专家", "years": 3 },
-      { "name": "异常检测模型", "level": "专家", "years": 3 },
       { "name": "策略全生命周期管理", "level": "专家", "years": 2 },
       { "name": "图数据建模", "level": "专家", "years": 3 },
-      { "name": "关系网络分析", "level": "专家", "years": 3 },
-      { "name": "图算法应用", "level": "专家", "years": 3 },
-      { "name": "复杂查询优化", "level": "熟练", "years": 3 }
-    ]
-  },
-  "databases_bigdata": {
-    "category": "数据库与大数据",
-    "skills": [
-      { "name": "ClickHouse", "level": "专家", "years": 3 },
-      { "name": "MySQL", "level": "熟练", "years": 5 },
-      { "name": "HBase", "level": "熟练", "years": 3 },
-      { "name": "Redis", "level": "熟练", "years": 4 },
-      { "name": "TDW", "level": "熟练", "years": 3 },
-      { "name": "FeatureKv", "level": "熟练", "years": 2 },
-      { "name": "Flink", "level": "熟练", "years": 3 },
-      { "name": "Kafka", "level": "熟练", "years": 3 },
-      { "name": "10亿级数据处理", "level": "专家", "years": 3 },
-      { "name": "实时数据分析", "level": "专家", "years": 3 }
+      { "name": "图算法应用", "level": "专家", "years": 3 }
     ]
   }
 }

@@ -27,7 +27,7 @@ const HIGHLIGHTS: HighlightItem[] = [
     id: 'athlete',
     label: 'Athlete',
     title: 'Global Top 4',
-    description: '2023 Pro Bodybuilding',
+    description: '2023 Pro Bodybuilding C Class',
     icon: Trophy,
     mediaType: 'video',
     src: '/videos/athlete.mp4',
@@ -37,8 +37,8 @@ const HIGHLIGHTS: HighlightItem[] = [
   {
     id: 'maker',
     label: 'Maker',
-    title: 'Kexian App',
-    description: 'Indie iOS Developer',
+    title: 'Betaline App',
+    description: 'Indie iOS Climbing App',
     icon: Smartphone,
     mediaType: 'video',
     src: '/videos/app-demo.mp4',
@@ -47,9 +47,9 @@ const HIGHLIGHTS: HighlightItem[] = [
   },
   {
     id: 'lifestyle',
-    label: 'Lifestyle',
-    title: '10+ Years',
-    description: 'Fitness & Climbing',
+    label: 'Climber',
+    title: 'V3 Level',
+    description: 'Bouldering Enthusiast',
     icon: Mountain,
     mediaType: 'video',
     src: '/videos/lifestyle.mp4',
@@ -241,12 +241,14 @@ export default function About() {
                   </h3>
                   <div className="space-y-4 text-gray-400 text-lg leading-relaxed">
                     <p>
-                      I&apos;m Kylin Miao, a proactive <span className="text-white font-medium">full-stack developer</span> passionate
-                      about creating dynamic web experiences. I thrive on solving complex problems with clean,
-                      efficient code.
+                      I&apos;m Kylin Miao, an <span className="text-white font-medium">AI Agent Engineer</span> at Tencent WeCom,
+                      specializing in RAG systems, distributed architecture, and full-stack development. I thrive on building
+                      intelligent systems from V1→V4.
                     </p>
                     <p>
-                      My expertise spans <span className="text-blue-400">React</span>, <span className="text-purple-400">Next.js</span>, and <span className="text-pink-400">Node.js</span>. I believe in software that doesn&apos;t just work, but feels <span className="italic text-white">magical</span>.
+                      From <span className="text-blue-400">AI Agent review systems</span> with 90%+ accuracy to
+                      indie <span className="text-purple-400">iOS apps</span> built from scratch, I believe in software that
+                      doesn&apos;t just work, but feels <span className="italic text-white">magical</span>.
                     </p>
                   </div>
                 </motion.div>

@@ -39,12 +39,12 @@ export default function Hero() {
           <div className="hero-title space-y-6">
             <div className="space-y-2">
               <p className="text-gray-400 text-lg font-medium">
-                Building secure & intelligent systems
+                Building AI-powered intelligent systems
               </p>
               <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight">
-                <span className="block mb-2">Anti-fraud Tech</span>
+                <span className="block mb-2">AI Agent</span>
                 <span className="bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-                  Expert
+                  Engineer
                 </span>
               </h1>
             </div>
@@ -54,7 +54,7 @@ export default function Hero() {
                 Hi, I&apos;m <span className="font-semibold text-white">Kylin Miao</span>
               </h2>
               <p className="text-lg text-gray-400">
-                Senior Backend Engineer @ Tencent
+                Full-stack Developer @ Tencent WeCom
               </p>
             </div>
           </div>
@@ -62,8 +62,8 @@ export default function Hero() {
           {/* Description */}
           <div className="hero-description max-w-4xl mx-auto space-y-6">
             <p className="text-xl text-gray-300 leading-relaxed">
-              Specializing in large-scale risk control systems and graph database applications.
-              Building enterprise platforms from 0 to 1 with expertise in distributed architecture.
+              Specializing in RAG/Agent systems, 10-billion-level data platforms, and full-stack iOS development.
+              From V1→V4 AI architecture evolution to indie app development from 0 to 1.
             </p>
 
             {/* Contact Info */}
@@ -121,7 +121,7 @@ export default function Hero() {
               <Mail className="w-5 h-5 text-gray-400 hover:text-white transition-colors" />
             </a>
             <a
-              href="https://github.com/kylinmiao"
+              href="https://github.com/Alenryuichi"
               className="p-3 rounded-full bg-gray-800/50 hover:bg-gray-700/50 transition-all duration-300 hover:scale-110 border border-gray-700/50 hover:border-gray-600/50"
               aria-label="GitHub"
               target="_blank"
