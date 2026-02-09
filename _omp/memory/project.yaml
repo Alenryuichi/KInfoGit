@@ -1,0 +1,50 @@
+# OpenMemory Plus Project Configuration
+# Generated: 2026-02-09T17:09:56.604Z
+# Updated: 2026-02-09
+
+project:
+  name: "KInfoGit"
+  full_name: "KInfoGit - Personal Profile Repository & Website"
+  version: "1.0.0"
+  description: "个人简介网站，展示反欺诈技术专家和全栈开发人员的专业经历"
+  author: "Kylin (苗静思)"
+  email: "miaojsi@outlook.com"
+  repository: "https://github.com/Alenryuichi/KInfoGit.git"
+
+tech_stack:
+  framework: "Next.js 16.1.1"
+  language: "TypeScript 5.0"
+  ui: "React 19.2.3"
+  styling: "Tailwind CSS 3.3.0"
+  content: "MDX 3.0.0"
+  testing: "Vitest + Playwright"
+  deployment: "GitHub Pages"
+  task_runner: "Just"
+
+memory:
+  project_store: "_omp/memory/"
+  user_store: "openmemory"
+
+classification:
+  project_keywords:
+    - "项目配置"
+    - "技术决策"
+    - "部署信息"
+    - "架构设计"
+    - "Next.js"
+    - "React"
+    - "TypeScript"
+    - "Tailwind"
+    - "博客"
+    - "简历"
+  user_keywords:
+    - "用户偏好"
+    - "编码风格"
+    - "技能"
+    - "习惯"
+    - "喜欢"
+
+agent:
+  auto_extract: true
+  auto_search: true
+  fallback_to_file: true
