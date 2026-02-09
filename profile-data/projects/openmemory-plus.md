@@ -10,21 +10,30 @@ OpenMemory Plus 是一个 AI Agent 双层记忆框架，解决 AI Agent 跨会�
 
 ### 双层记忆模型
 
-```
-用户交互 → AI Agent → 信息检测 → 智能分类 → 路由存储
-                                      │
-                    ┌─────────────────┴─────────────────┐
-                    ↓                                   ↓
-            项目级记忆                             用户级记忆
-         (_omp/memory/)                       (OpenMemory MCP)
-                    │                                   │
-         ┌─────────┴─────────┐              ┌─────────┴─────────┐
-         │  project.yaml     │              │  用户偏好          │
-         │  decisions.yaml   │              │  技能标签          │
-         │  changelog.yaml   │              │  跨项目上下文      │
-         └───────────────────┘              └───────────────────┘
-                    │                                   │
-              Git 版本控制                         语义向量存储
+```mermaid
+flowchart TB
+    A["用户交互"] --> B["AI Agent"]
+    B --> C["信息检测"]
+    C --> D["智能分类"]
+    D --> E{"路由存储"}
+
+    E --> F["项目级记忆<br/>(_omp/memory/)"]
+    E --> G["用户级记忆<br/>(OpenMemory MCP)"]
+
+    subgraph ProjectMemory["项目级存储"]
+        F --> F1["project.yaml"]
+        F --> F2["decisions.yaml"]
+        F --> F3["changelog.yaml"]
+    end
+
+    subgraph UserMemory["用户级存储"]
+        G --> G1["用户偏好"]
+        G --> G2["技能标签"]
+        G --> G3["跨项目上下文"]
+    end
+
+    F1 --> H["Git 版本控制"]
+    G1 --> I["语义向量存储"]
 ```
 
 ### 存储分层设计
