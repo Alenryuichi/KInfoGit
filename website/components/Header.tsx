@@ -60,7 +60,7 @@ export default function Header({ onBookCallClick }: HeaderProps) {
     const path = router.pathname
     if (path === '/') return 'Home'
     if (path === '/about') return 'About'
-    if (path === '/work') return 'Work'
+    if (path.startsWith('/work')) return 'Work'
     if (path.startsWith('/blog')) return 'Blog'
     return 'Home'
   }
