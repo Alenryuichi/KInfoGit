@@ -91,26 +91,26 @@ export const animateOnScroll = (selector: string, delay: number = 0) => {
 
 // 技能标签动画
 export const animateSkillTags = () => {
-  gsap.fromTo('.skill-tag',
-    {
-      opacity: 0,
-      scale: 0.8,
-      y: 20
-    },
-    {
-      opacity: 1,
-      scale: 1,
-      y: 0,
-      duration: 0.6,
-      ease: 'back.out(1.7)',
-      stagger: 0.1,
-      scrollTrigger: {
-        trigger: '.skills-container',
-        start: 'top 70%',
-        toggleActions: 'play none none reverse'
+  // 为每个技能分类单独设置滚动触发动画
+  gsap.utils.toArray('.skill-category').forEach((element) => {
+    gsap.fromTo(element as Element,
+      {
+        opacity: 0,
+        y: 30
+      },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 0.5,
+        ease: 'power2.out',
+        scrollTrigger: {
+          trigger: element as Element,
+          start: 'top 85%',
+          toggleActions: 'play none none none'
+        }
       }
-    }
-  )
+    )
+  })
 }
 
 // 项目卡片动画
