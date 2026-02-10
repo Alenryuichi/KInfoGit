@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { Mail, Phone, MapPin, Github, Linkedin, Send, CheckCircle, Download } from 'lucide-react'
+import { Mail, Phone, MapPin, Github, Linkedin, Send, CheckCircle, Download, Users } from 'lucide-react'
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -70,6 +70,12 @@ export default function Contact() {
       icon: Linkedin,
       label: 'LinkedIn',
       href: 'https://linkedin.com/in/kylinmiao',
+      username: '@kylinmiao'
+    },
+    {
+      icon: Users,
+      label: '脉脉',
+      href: 'https://maimai.cn/contact/share/card?u=n5xkqwimcgvt&_share_channel=copy_link',
       username: '@kylinmiao'
     },
     {

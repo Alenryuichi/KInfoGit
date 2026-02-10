@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect, useRef } from 'react'
-import { Mail, Calendar, Linkedin, Github, Twitter, Send } from 'lucide-react'
+import { Mail, Calendar, Linkedin, Github, Twitter, Send, Users } from 'lucide-react'
 import { animateModalOpen, animateModalClose, animateModalContent, animateDragClose } from '@/utils/animations'
 
 interface ContactModalProps {
@@ -384,6 +384,14 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
                 className="text-gray-400 hover:text-white transition-colors"
               >
                 <Github className="w-5 h-5" />
+              </a>
+              <a
+                href="https://maimai.cn/contact/share/card?u=n5xkqwimcgvt&_share_channel=copy_link"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white transition-colors"
+              >
+                <Users className="w-5 h-5" />
               </a>
               <a
                 href="https://twitter.com/kylin_miao"

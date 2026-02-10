@@ -166,7 +166,7 @@ export default function Skills() {
           {/* Tech Stack Marquees */}
           <div className="skills-container space-y-12 mb-20">
             {/* Frontend Technologies */}
-            <div>
+            <div className="skill-category">
               <h3 className="text-lg font-semibold text-gray-400 mb-2 text-center uppercase tracking-wider">Frontend</h3>
               <Marquee>
                 {frontendTech.map((tech, index) => (
@@ -176,7 +176,7 @@ export default function Skills() {
             </div>
 
             {/* Backend Technologies */}
-            <div>
+            <div className="skill-category">
               <h3 className="text-lg font-semibold text-gray-400 mb-2 text-center uppercase tracking-wider">Backend & Database</h3>
               <Marquee reverse>
                 {backendTech.map((tech, index) => (
@@ -186,7 +186,7 @@ export default function Skills() {
             </div>
 
             {/* AI & Agentic Engineering */}
-            <div>
+            <div className="skill-category">
               <h3 className="text-lg font-semibold text-gray-400 mb-2 text-center uppercase tracking-wider">AI & Agentic Engineering</h3>
               <Marquee>
                 {aiTech.map((tech, index) => (
@@ -196,7 +196,7 @@ export default function Skills() {
             </div>
 
             {/* Tools & DevOps */}
-            <div>
+            <div className="skill-category">
               <h3 className="text-lg font-semibold text-gray-400 mb-2 text-center uppercase tracking-wider">Tools & DevOps</h3>
               <Marquee reverse>
                 {toolsTech.map((tech, index) => (
