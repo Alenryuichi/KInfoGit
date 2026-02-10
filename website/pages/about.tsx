@@ -3,13 +3,27 @@ import { useEffect } from 'react'
 import Head from 'next/head'
 import About from '@/components/About'
 import Skills from '@/components/Skills'
+import GitHubActivity from '@/components/GitHubActivity'
 import { profileData } from '@/lib/config'
+
+interface GitHubRepo {
+  id: number
+  name: string
+  description: string | null
+  html_url: string
+  language: string | null
+  stargazers_count: number
+  forks_count: number
+  updated_at: string
+  pushed_at: string
+}
 
 interface AboutPageProps {
   profileData: typeof profileData
+  githubRepos: GitHubRepo[]
 }
 
-export default function AboutPage({ profileData }: AboutPageProps) {
+export default function AboutPage({ profileData, githubRepos }: AboutPageProps) {
   // Handle smooth scroll to hash anchor on page load (for cross-page navigation)
   useEffect(() => {
     if (typeof window !== 'undefined' && window.location.hash) {
@@ -43,6 +57,11 @@ export default function AboutPage({ profileData }: AboutPageProps) {
           <About />
         </section>
 
+        {/* GitHub Activity Section */}
+        <div className="relative z-10">
+          <GitHubActivity initialRepos={githubRepos} />
+        </div>
+
         {/* Skills Section */}
         <div className="relative z-10">
           <Skills />
@@ -53,9 +72,39 @@ export default function AboutPage({ profileData }: AboutPageProps) {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
+  const GITHUB_USERNAME = 'Alenryuichi'
+
+  const headers: HeadersInit = {
+    'Accept': 'application/vnd.github.v3+json',
+    'User-Agent': 'KInfoGit-Portfolio',
+  }
+
+  // Use GitHub token if available (increases rate limit from 60 to 5000/hour)
+  if (process.env.GITHUB_TOKEN) {
+    headers['Authorization'] = `Bearer ${process.env.GITHUB_TOKEN}`
+  }
+
+  let githubRepos: GitHubRepo[] = []
+
+  try {
+    const response = await fetch(
+      `https://api.github.com/users/${GITHUB_USERNAME}/repos?sort=pushed&per_page=3`,
+      { headers }
+    )
+
+    if (response.ok) {
+      githubRepos = await response.json()
+    } else {
+      console.error('GitHub API error:', response.status)
+    }
+  } catch (error) {
+    console.error('Failed to fetch GitHub repos:', error)
+  }
+
   return {
     props: {
       profileData,
+      githubRepos,
     },
   }
 }
