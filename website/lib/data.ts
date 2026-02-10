@@ -82,6 +82,10 @@ export interface Project {
 	 * 用于简单分组/过滤的项目类别，例如 "anti-fraud"、"graph-database" 等。
 	 */
 	category?: string
+	/**
+	 * 用于页面分区显示的分组名称，例如 "独立项目"、"企业微信" 等。
+	 */
+	section?: string
 }
 
 // Blog types

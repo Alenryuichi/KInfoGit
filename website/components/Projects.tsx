@@ -1,10 +1,93 @@
 import Link from 'next/link'
-import { useEffect } from 'react'
+import { useEffect, useMemo } from 'react'
 import type { Project } from '@/lib/data'
 import { animateOnScroll, animateProjectCards } from '@/utils/animations'
 
 interface ProjectsProps {
 	projects: Project[]
+}
+
+// 项目卡片组件
+function ProjectCard({ project }: { project: Project }) {
+	return (
+		<div
+			className="project-card group relative overflow-hidden rounded-2xl bg-gray-900/50 border border-gray-800/50 hover:border-gray-700/50 transition-all duration-500 hover:bg-gray-900/70"
+		>
+			{/* Meta band */}
+			<div className="px-8 pt-8 pb-4 flex items-center justify-between gap-4">
+				<div className="flex flex-col text-left">
+					<span className="text-xs font-medium text-blue-400 uppercase tracking-wide">
+						{project.category ?? 'Core Project'}
+					</span>
+					<span className="mt-1 text-sm text-gray-400">
+						{project.company} · {project.role.zh}
+					</span>
+				</div>
+				<span className="px-3 py-1 rounded-full text-xs font-medium bg-gray-800/80 text-gray-300 border border-gray-700/50">
+					{project.period}
+				</span>
+			</div>
+
+			{/* Project Content */}
+			<div className="px-8 pb-8">
+				<h3 className="text-2xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors">
+					{project.title.zh}
+				</h3>
+				{project.title.en && (
+					<p className="text-sm text-gray-400 mb-3">
+						{project.title.en}
+					</p>
+				)}
+
+				{project.highlights?.zh && (
+					<p className="text-gray-300 leading-relaxed mb-4">
+						{project.highlights.zh}
+					</p>
+				)}
+
+				{project.impact && (
+					<p className="text-sm text-blue-300 mb-4">
+						Impact: {project.impact}
+					</p>
+				)}
+
+				{/* Achievements preview */}
+				{project.achievements?.zh?.length ? (
+					<ul className="list-disc list-inside text-sm text-gray-400 space-y-1 mb-4">
+						{project.achievements.zh.slice(0, 3).map((item) => (
+							<li key={item}>{item}</li>
+						))}
+					</ul>
+				) : null}
+
+				{/* Tech Stack */}
+				<div className="flex flex-wrap gap-2 mb-6">
+					{project.tech_stack.map((tag) => (
+						<span
+							key={tag}
+							className="px-3 py-1 text-xs bg-gray-800/60 text-gray-300 rounded-full border border-gray-700/50"
+						>
+							{tag}
+						</span>
+					))}
+				</div>
+
+				{/* Project Link */}
+				<Link
+					href={`/work/${project.id}`}
+					className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors group/link"
+				>
+					<span>View full case study</span>
+					<svg className="ml-2 w-4 h-4 group-hover/link:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+					</svg>
+				</Link>
+			</div>
+
+			{/* Hover Effect */}
+			<div className="absolute inset-0 bg-gradient-to-t from-blue-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+		</div>
+	)
 }
 
 export default function Projects({ projects }: ProjectsProps) {
@@ -13,6 +96,29 @@ export default function Projects({ projects }: ProjectsProps) {
 		animateOnScroll('.projects-header')
 		animateProjectCards()
 	}, [])
+
+	// 按 section 分组项目
+	const groupedProjects = useMemo(() => {
+		const groups: Record<string, Project[]> = {}
+		const sectionOrder = ['独立项目', '企业微信'] // 定义分区顺序
+
+		projects.forEach((project) => {
+			const section = project.section || '其他项目'
+			if (!groups[section]) {
+				groups[section] = []
+			}
+			groups[section].push(project)
+		})
+
+		// 按预定义顺序排序
+		const orderedSections = sectionOrder.filter(s => groups[s])
+		const otherSections = Object.keys(groups).filter(s => !sectionOrder.includes(s))
+
+		return [...orderedSections, ...otherSections].map(section => ({
+			section,
+			projects: groups[section]
+		}))
+	}, [projects])
 
 	return (
 		<section id="projects" className="py-20 text-white">
@@ -32,91 +138,28 @@ export default function Projects({ projects }: ProjectsProps) {
 						</p>
 					</div>
 
-					{/* Projects Grid */}
-					<div className="projects-container grid grid-cols-1 lg:grid-cols-2 gap-8">
-						{projects.map((project) => (
-							<div
-								key={project.id}
-								className="project-card group relative overflow-hidden rounded-2xl bg-gray-900/50 border border-gray-800/50 hover:border-gray-700/50 transition-all duration-500 hover:bg-gray-900/70"
-							>
-								{/* Meta band */}
-								<div className="px-8 pt-8 pb-4 flex items-center justify-between gap-4">
-									<div className="flex flex-col text-left">
-										<span className="text-xs font-medium text-blue-400 uppercase tracking-wide">
-											{project.category ?? 'Core Project'}
-										</span>
-										<span className="mt-1 text-sm text-gray-400">
-											{project.company} · {project.role.zh}
-										</span>
-									</div>
-									<span className="px-3 py-1 rounded-full text-xs font-medium bg-gray-800/80 text-gray-300 border border-gray-700/50">
-										{project.period}
-									</span>
-								</div>
-
-								{/* Project Content */}
-								<div className="px-8 pb-8">
-									<h3 className="text-2xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors">
-										{project.title.zh}
+					{/* Projects by Section */}
+					<div className="space-y-16">
+						{groupedProjects.map(({ section, projects: sectionProjects }) => (
+							<div key={section}>
+								{/* Section Divider */}
+								<div className="flex items-center gap-4 mb-8">
+									<div className="h-px flex-1 bg-gradient-to-r from-transparent via-gray-700 to-transparent"></div>
+									<h3 className="text-lg font-semibold text-gray-300 px-4">
+										{section}
 									</h3>
-									{project.title.en && (
-										<p className="text-sm text-gray-400 mb-3">
-											{project.title.en}
-										</p>
-									)}
-
-									{project.highlights?.zh && (
-										<p className="text-gray-300 leading-relaxed mb-4">
-											{project.highlights.zh}
-										</p>
-									)}
-
-									{project.impact && (
-										<p className="text-sm text-blue-300 mb-4">
-											Impact: {project.impact}
-										</p>
-									)}
-
-									{/* Achievements preview */}
-									{project.achievements?.zh?.length ? (
-										<ul className="list-disc list-inside text-sm text-gray-400 space-y-1 mb-4">
-											{project.achievements.zh.slice(0, 3).map((item) => (
-												<li key={item}>{item}</li>
-											))}
-										</ul>
-									) : null}
-
-									{/* Tech Stack */}
-									<div className="flex flex-wrap gap-2 mb-6">
-										{project.tech_stack.map((tag) => (
-											<span
-												key={tag}
-												className="px-3 py-1 text-xs bg-gray-800/60 text-gray-300 rounded-full border border-gray-700/50"
-											>
-												{tag}
-											</span>
-										))}
-									</div>
-
-									{/* Project Link */}
-									<Link
-										href={`/work/${project.id}`}
-										className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors group/link"
-									>
-										<span>View full case study</span>
-										<svg className="ml-2 w-4 h-4 group-hover/link:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-											<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-										</svg>
-									</Link>
+									<div className="h-px flex-1 bg-gradient-to-r from-transparent via-gray-700 to-transparent"></div>
 								</div>
 
-								{/* Hover Effect */}
-								<div className="absolute inset-0 bg-gradient-to-t from-blue-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+								{/* Projects Grid */}
+								<div className="projects-container grid grid-cols-1 lg:grid-cols-2 gap-8">
+									{sectionProjects.map((project) => (
+										<ProjectCard key={project.id} project={project} />
+									))}
+								</div>
 							</div>
 						))}
 					</div>
-
-
 				</div>
 			</div>
 		</section>
