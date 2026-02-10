@@ -1,6 +1,6 @@
 import { useRef, useState, MouseEvent, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Terminal, Mail, Github, Linkedin, Trophy, Smartphone, Mountain } from 'lucide-react'
+import { Terminal, Mail, Github, Linkedin, Trophy, Smartphone, Mountain, Users } from 'lucide-react'
 import SpotlightCard from './SpotlightCard'
 import TextReveal from './TextReveal'
 
@@ -265,7 +265,8 @@ export default function About() {
                   {[
                     { icon: Mail, href: "mailto:miaojsi@outlook.com", color: "blue", label: "Email" },
                     { icon: Github, href: "https://github.com/Alenryuichi", color: "purple", label: "GitHub" },
-                    { icon: Linkedin, href: "https://linkedin.com/in/kylinmiao", color: "blue", label: "LinkedIn" }
+                    { icon: Linkedin, href: "https://linkedin.com/in/kylinmiao", color: "blue", label: "LinkedIn" },
+                    { icon: Users, href: "https://maimai.cn/contact/share/card?u=n5xkqwimcgvt&_share_channel=copy_link", color: "orange", label: "脉脉" }
                   ].map((item, i) => (
                     <a
                       key={i}

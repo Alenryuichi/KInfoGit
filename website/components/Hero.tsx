@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import { motion } from 'framer-motion'
-import { Github, Linkedin, Mail, ArrowRight } from 'lucide-react'
+import { Github, Linkedin, Mail, ArrowRight, Users } from 'lucide-react'
 import { animateHeroEntrance, addButtonHoverEffects } from '@/utils/animations'
 
 // Button animation variants for spring effect
@@ -137,6 +137,15 @@ export default function Hero() {
               rel="noopener noreferrer"
             >
               <Linkedin className="w-5 h-5 text-gray-400 hover:text-white transition-colors" />
+            </a>
+            <a
+              href="https://maimai.cn/contact/share/card?u=n5xkqwimcgvt&_share_channel=copy_link"
+              className="p-3 rounded-full bg-gray-800/50 hover:bg-gray-700/50 transition-all duration-300 hover:scale-110 border border-gray-700/50 hover:border-gray-600/50"
+              aria-label="脉脉"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Users className="w-5 h-5 text-gray-400 hover:text-white transition-colors" />
             </a>
           </div>
         </div>
