@@ -1,6 +1,6 @@
 import { useRef, useState, MouseEvent, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Terminal, Mail, Github, Linkedin, Trophy, Smartphone, Mountain, Users } from 'lucide-react'
+import { Terminal, Mail, Github, Linkedin, Trophy, Smartphone, Mountain, FileDown, Users } from 'lucide-react'
 import SpotlightCard from './SpotlightCard'
 import TextReveal from './TextReveal'
 
@@ -254,19 +254,19 @@ export default function About() {
                 </motion.div>
 
                 {/* Social Links */}
-                <motion.div 
+                <motion.div
                   id="contact"
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.5 }}
-                  className="flex items-center gap-4 pt-4 scroll-mt-24"
+                  className="flex flex-wrap items-center gap-3 pt-4 scroll-mt-24"
                 >
                   {[
-                    { icon: Mail, href: "mailto:miaojsi@outlook.com", color: "blue", label: "Email" },
-                    { icon: Github, href: "https://github.com/Alenryuichi", color: "purple", label: "GitHub" },
-                    { icon: Linkedin, href: "https://linkedin.com/in/kylinmiao", color: "blue", label: "LinkedIn" },
-                    { icon: Users, href: "https://maimai.cn/contact/share/card?u=n5xkqwimcgvt&_share_channel=copy_link", color: "orange", label: "脉脉" }
+                    { icon: Mail, href: "mailto:miaojsi@outlook.com", label: "Email" },
+                    { icon: Github, href: "https://github.com/Alenryuichi", label: "GitHub" },
+                    { icon: Linkedin, href: "https://linkedin.com/in/kylinmiao", label: "LinkedIn" },
+                    { icon: Users, href: "https://maimai.cn/contact/share/card?u=n5xkqwimcgvt&_share_channel=copy_link", label: "脉脉" }
                   ].map((item, i) => (
                     <a
                       key={i}
@@ -275,10 +275,19 @@ export default function About() {
                       rel="noopener noreferrer"
                       className="flex items-center gap-2 px-4 py-2 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all duration-300 group/link"
                     >
-                      <item.icon className={`w-4 h-4 text-gray-400 group-hover/link:text-white transition-colors`} />
+                      <item.icon className="w-4 h-4 text-gray-400 group-hover/link:text-white transition-colors" />
                       <span className="text-sm font-medium text-gray-500 group-hover/link:text-white transition-colors">{item.label}</span>
                     </a>
                   ))}
+                  {/* Resume Download Button */}
+                  <a
+                    href="/kylin-resume.pdf"
+                    download="Kylin-Miao-Resume.pdf"
+                    className="flex items-center gap-2 px-4 py-2 rounded-xl bg-blue-600/20 border border-blue-500/30 hover:bg-blue-600/30 hover:border-blue-500/50 transition-all duration-300 group/link"
+                  >
+                    <FileDown className="w-4 h-4 text-blue-400 group-hover/link:text-blue-300 transition-colors" />
+                    <span className="text-sm font-medium text-blue-400 group-hover/link:text-blue-300 transition-colors">Resume</span>
+                  </a>
                 </motion.div>
               </div>
             </SpotlightCard>

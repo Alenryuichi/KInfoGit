@@ -8,6 +8,8 @@ on:
     branches:
       - master
   workflow_dispatch:
+  schedule:
+    - cron: '0 0 * * *'  # 每天 UTC 00:00 (北京时间 08:00) 自动构建
 
 permissions:
   contents: read
@@ -47,6 +49,8 @@ jobs:
       - name: Build
         run: npm run build
         working-directory: website
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
