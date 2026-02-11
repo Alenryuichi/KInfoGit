@@ -18,7 +18,9 @@ const ROOT_DIR = path.resolve(__dirname, '..');
 const YUQUE_DOCS_DIR = path.join(ROOT_DIR, 'tools/yuque-sync/docs');
 const BLOG_OUTPUT_DIR = path.join(ROOT_DIR, 'profile-data/blog');
 const BLOG_IMAGES_DIR = path.join(ROOT_DIR, 'website/public/blog/images');
+const BLOG_COVERS_DIR = path.join(ROOT_DIR, 'website/public/blog/covers');
 const DEEPSEEK_API_URL = 'https://api.deepseek.com/chat/completions';
+const QWEN_API_URL = 'https://dashscope.aliyuncs.com/api/v1/services/aigc/text2image/image-synthesis';
 
 interface ConvertResult {
   success: boolean;
@@ -187,6 +189,399 @@ ${contentPreview}`;
 }
 
 /**
+ * 使用通义万相生成 AI 背景 + Sharp 叠加文字
+ * 最佳实践：AI 生成抽象背景，代码精确控制文字排版
+ */
+async function generateCoverImage(
+  title: string,
+  excerpt: string,
+  slug: string,
+  tags: string[] = [],
+  category: string = 'Blog'
+): Promise<string> {
+  const apiKey = process.env.QWEN_API_KEY;
+
+  // 封面尺寸 (OG Image 标准)
+  const WIDTH = 1200;
+  const HEIGHT = 630;
+
+  mkdirSync(BLOG_COVERS_DIR, { recursive: true });
+  const imageName = `${slug}.png`;
+  const imagePath = path.join(BLOG_COVERS_DIR, imageName);
+
+  try {
+    // Step 1: 生成 AI 抽象背景
+    let backgroundBuffer: Buffer;
+
+    if (apiKey) {
+      console.log(`   🎨 生成 AI 背景...`);
+      backgroundBuffer = await generateAIBackground(apiKey, title, WIDTH, HEIGHT);
+    } else {
+      console.log(`   ⚠️  未设置 QWEN_API_KEY，使用渐变背景`);
+      backgroundBuffer = await generateGradientBackground(title, WIDTH, HEIGHT);
+    }
+
+    // Step 2: 使用 Sharp 叠加文字层
+    console.log(`   ✍️  叠加文字层...`);
+    const finalImage = await composeCoverWithText(
+      backgroundBuffer,
+      title,
+      tags.slice(0, 3),
+      category,
+      WIDTH,
+      HEIGHT
+    );
+
+    await fs.writeFile(imagePath, finalImage);
+    console.log(`   🎨 封面已生成: ${imageName}`);
+    return `/blog/covers/${imageName}`;
+
+  } catch (error) {
+    const message = error instanceof Error ? error.message : String(error);
+    console.log(`   ⚠️  生成封面异常: ${message}，使用备用方案`);
+
+    // 备用方案：纯渐变 + 文字
+    try {
+      const fallbackBg = await generateGradientBackground(title, WIDTH, HEIGHT);
+      const fallbackImage = await composeCoverWithText(fallbackBg, title, tags.slice(0, 3), category, WIDTH, HEIGHT);
+      await fs.writeFile(imagePath, fallbackImage);
+      console.log(`   🎨 封面已生成 (备用): ${imageName}`);
+      return `/blog/covers/${imageName}`;
+    } catch {
+      return '/blog/images/default.jpg';
+    }
+  }
+}
+
+/**
+ * 调用通义万相生成抽象背景图
+ */
+async function generateAIBackground(apiKey: string, title: string, width: number, height: number): Promise<Buffer> {
+  // 根据标题提取关键词，生成相关的视觉元素
+  const keywords = extractKeywords(title);
+  const visualTheme = getVisualTheme(keywords);
+
+  // 通义万相优化 prompt - 简洁、具体、中文友好
+  const prompt = `${visualTheme.scene}，科技感数字艺术背景。
+风格：${visualTheme.style}，深色主题，${visualTheme.colors}渐变。
+元素：${visualTheme.elements}，光效，景深模糊。
+构图：简洁留白，适合叠加文字，无文字无人物。
+质量：高清，4K，专业设计感。`;
+
+  // 提交生成任务
+  const response = await fetch(QWEN_API_URL, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${apiKey}`,
+      'X-DashScope-Async': 'enable',
+    },
+    body: JSON.stringify({
+      model: 'wanx-v1',
+      input: { prompt },
+      parameters: {
+        style: '<auto>',
+        size: '1280*720',
+        n: 1,
+      },
+    }),
+  });
+
+  if (!response.ok) {
+    throw new Error(`AI 生成失败: ${response.status}`);
+  }
+
+  const data = await response.json() as any;
+  const taskId = data.output?.task_id;
+  if (!taskId) {
+    console.log(`      ❌ API 响应: ${JSON.stringify(data)}`);
+    throw new Error('未获取到任务ID');
+  }
+  console.log(`      📋 任务ID: ${taskId}`);
+
+  // 轮询等待（最多 90 次，每次 4 秒 = 6 分钟，通义万相队列可能较慢）
+  const taskUrl = `https://dashscope.aliyuncs.com/api/v1/tasks/${taskId}`;
+  for (let i = 0; i < 90; i++) {
+    await new Promise(resolve => setTimeout(resolve, 4000));
+    const taskResponse = await fetch(taskUrl, {
+      headers: { 'Authorization': `Bearer ${apiKey}` },
+    });
+    const taskData = await taskResponse.json() as any;
+    const status = taskData.output?.task_status;
+
+    // 每 20 秒输出一次状态
+    if (i % 5 === 0) {
+      console.log(`      ⏳ ${status} (${Math.floor(i * 4 / 60)}m${(i * 4) % 60}s)`);
+    }
+
+    if (status === 'SUCCEEDED') {
+      const imageUrl = taskData.output?.results?.[0]?.url;
+      if (imageUrl) {
+        const imgResponse = await fetch(imageUrl);
+        const buffer = Buffer.from(await imgResponse.arrayBuffer());
+        // 调整尺寸并添加暗化遮罩，让文字更清晰
+        const sharp = (await import('sharp')).default;
+        return await sharp(buffer)
+          .resize(width, height, { fit: 'cover' })
+          .composite([{
+            input: Buffer.from(
+              `<svg width="${width}" height="${height}">
+                <defs>
+                  <linearGradient id="overlay" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" style="stop-color:rgba(0,0,0,0.3)"/>
+                    <stop offset="50%" style="stop-color:rgba(0,0,0,0.5)"/>
+                    <stop offset="100%" style="stop-color:rgba(0,0,0,0.7)"/>
+                  </linearGradient>
+                </defs>
+                <rect width="100%" height="100%" fill="url(#overlay)"/>
+              </svg>`
+            ),
+            top: 0,
+            left: 0,
+          }])
+          .png()
+          .toBuffer();
+      }
+    } else if (status === 'FAILED') {
+      throw new Error('AI 生成任务失败');
+    }
+  }
+  throw new Error('AI 生成超时');
+}
+
+/**
+ * 生成渐变背景（备用方案）
+ */
+async function generateGradientBackground(title: string, width: number, height: number): Promise<Buffer> {
+  // 根据标题哈希选择渐变色
+  const gradients = [
+    { from: '#667eea', to: '#764ba2' },
+    { from: '#f093fb', to: '#f5576c' },
+    { from: '#4facfe', to: '#00f2fe' },
+    { from: '#43e97b', to: '#38f9d7' },
+    { from: '#fa709a', to: '#fee140' },
+    { from: '#a18cd1', to: '#fbc2eb' },
+  ];
+
+  let hash = 0;
+  for (let i = 0; i < title.length; i++) {
+    hash = ((hash << 5) - hash) + title.charCodeAt(i);
+    hash = hash & hash;
+  }
+  const theme = gradients[Math.abs(hash) % gradients.length];
+
+  const sharp = (await import('sharp')).default;
+
+  // 创建渐变背景 + 网格图案
+  const svg = `
+    <svg width="${width}" height="${height}">
+      <defs>
+        <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:${theme.from};stop-opacity:1" />
+          <stop offset="100%" style="stop-color:${theme.to};stop-opacity:1" />
+        </linearGradient>
+        <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+          <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+        </pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="#0a0a0a"/>
+      <rect width="100%" height="100%" fill="url(#grad)" opacity="0.6"/>
+      <rect width="100%" height="100%" fill="url(#grid)"/>
+      <!-- 光晕效果 -->
+      <ellipse cx="${width * 0.8}" cy="${height * 0.2}" rx="400" ry="300" fill="${theme.from}" opacity="0.15" filter="blur(80px)"/>
+      <ellipse cx="${width * 0.2}" cy="${height * 0.8}" rx="300" ry="250" fill="${theme.to}" opacity="0.15" filter="blur(80px)"/>
+    </svg>
+  `;
+
+  return await sharp(Buffer.from(svg)).png().toBuffer();
+}
+
+/**
+ * 使用 Sharp 在背景上叠加文字
+ */
+async function composeCoverWithText(
+  background: Buffer,
+  title: string,
+  tags: string[],
+  category: string,
+  width: number,
+  height: number
+): Promise<Buffer> {
+  const sharp = (await import('sharp')).default;
+
+  // 计算文字大小（标题长度决定字号）
+  const titleFontSize = title.length > 25 ? 48 : title.length > 15 ? 56 : 64;
+  const titleLineHeight = titleFontSize * 1.2;
+
+  // 文字换行处理
+  const maxCharsPerLine = title.length > 25 ? 20 : 25;
+  const titleLines = wrapText(title, maxCharsPerLine);
+
+  // 生成标签 SVG
+  const tagsSvg = tags.map((tag, i) => {
+    const x = 60 + i * 100;
+    return `
+      <rect x="${x}" y="${height - 100}" width="90" height="28" rx="14" fill="rgba(255,255,255,0.15)"/>
+      <text x="${x + 45}" y="${height - 82}" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="500" fill="rgba(255,255,255,0.9)" text-anchor="middle">${escapeXml(tag)}</text>
+    `;
+  }).join('');
+
+  // 生成标题 SVG（多行）
+  const titleSvg = titleLines.map((line, i) => {
+    const y = height / 2 - (titleLines.length - 1) * titleLineHeight / 2 + i * titleLineHeight;
+    return `<text x="60" y="${y}" font-family="Inter, system-ui, sans-serif" font-size="${titleFontSize}" font-weight="700" fill="white">${escapeXml(line)}</text>`;
+  }).join('');
+
+  // 完整的文字层 SVG
+  const textOverlay = `
+    <svg width="${width}" height="${height}">
+      <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap');
+      </style>
+
+      <!-- 分类标签 -->
+      <rect x="60" y="50" width="${category.length * 10 + 24}" height="28" rx="4" fill="rgba(99, 102, 241, 0.8)"/>
+      <text x="72" y="69" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="600" fill="white" text-transform="uppercase" letter-spacing="1">${escapeXml(category.toUpperCase())}</text>
+
+      <!-- 标题 -->
+      ${titleSvg}
+
+      <!-- 装饰线 -->
+      <rect x="60" y="${height / 2 + titleLines.length * titleLineHeight / 2 + 20}" width="80" height="4" rx="2" fill="url(#accentGrad)"/>
+
+      <!-- 标签 -->
+      ${tagsSvg}
+
+      <!-- 品牌 Logo -->
+      <text x="${width - 60}" y="${height - 40}" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="rgba(255,255,255,0.6)" text-anchor="end">KM Blog</text>
+
+      <defs>
+        <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" style="stop-color:#6366f1"/>
+          <stop offset="100%" style="stop-color:#a855f7"/>
+        </linearGradient>
+      </defs>
+    </svg>
+  `;
+
+  return await sharp(background)
+    .composite([{
+      input: Buffer.from(textOverlay),
+      top: 0,
+      left: 0,
+    }])
+    .png()
+    .toBuffer();
+}
+
+/**
+ * 文字换行
+ */
+function wrapText(text: string, maxChars: number): string[] {
+  const words = text.split(/\s+/);
+  const lines: string[] = [];
+  let currentLine = '';
+
+  for (const word of words) {
+    if ((currentLine + ' ' + word).trim().length <= maxChars) {
+      currentLine = (currentLine + ' ' + word).trim();
+    } else {
+      if (currentLine) lines.push(currentLine);
+      currentLine = word;
+    }
+  }
+  if (currentLine) lines.push(currentLine);
+
+  // 如果是中文，按字符数分割
+  if (lines.length === 1 && text.length > maxChars) {
+    const chars = text.split('');
+    lines.length = 0;
+    for (let i = 0; i < chars.length; i += maxChars) {
+      lines.push(chars.slice(i, i + maxChars).join(''));
+    }
+  }
+
+  return lines.slice(0, 3); // 最多 3 行
+}
+
+/**
+ * XML 转义
+ */
+function escapeXml(text: string): string {
+  return text
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&apos;');
+}
+
+/**
+ * 从标题提取关键词
+ */
+function extractKeywords(title: string): string[] {
+  const techKeywords: Record<string, string[]> = {
+    // 前端
+    'react|vue|angular|svelte': ['前端', '组件', 'UI'],
+    'css|样式|布局|grid|flex': ['设计', '布局', '视觉'],
+    'next|nuxt|remix': ['框架', '全栈', 'SSR'],
+    // 后端
+    'node|python|go|rust|java': ['后端', '服务器', '编程'],
+    'api|接口|graphql|rest': ['接口', '数据', '连接'],
+    'database|数据库|sql|mongo': ['数据', '存储', '结构'],
+    // AI/ML
+    'ai|人工智能|机器学习|ml|深度学习': ['AI', '智能', '神经网络'],
+    'gpt|llm|大模型|chatgpt': ['AI对话', '语言模型', '智能'],
+    // DevOps
+    'git|版本|commit': ['版本控制', '协作', '代码'],
+    'docker|k8s|kubernetes|部署': ['容器', '云原生', '部署'],
+    'ci|cd|自动化|workflow': ['自动化', '流水线', '效率'],
+    // 通用
+    '测试|test|单元测试': ['测试', '质量', '验证'],
+    '性能|优化|performance': ['性能', '速度', '优化'],
+    '安全|security|加密': ['安全', '防护', '加密'],
+  };
+
+  const lowerTitle = title.toLowerCase();
+  for (const [pattern, keywords] of Object.entries(techKeywords)) {
+    if (new RegExp(pattern, 'i').test(lowerTitle)) {
+      return keywords;
+    }
+  }
+  return ['科技', '数字', '创新'];
+}
+
+/**
+ * 根据关键词生成视觉主题
+ */
+function getVisualTheme(keywords: string[]): { scene: string; style: string; colors: string; elements: string } {
+  const themes: Record<string, { scene: string; style: string; colors: string; elements: string }> = {
+    '前端': { scene: '抽象的用户界面层叠', style: '扁平化设计', colors: '蓝紫色', elements: '几何方块、线条网格' },
+    'AI': { scene: '神经网络节点连接', style: '未来科技感', colors: '青蓝色', elements: '光点、连接线、波纹' },
+    '智能': { scene: '数据流动的抽象空间', style: '赛博朋克', colors: '紫青色', elements: '粒子、光束、全息' },
+    '数据': { scene: '数据可视化抽象图', style: '信息图表风', colors: '蓝绿色', elements: '图表、节点、流线' },
+    '版本控制': { scene: '分支合并的抽象树形', style: '极简线条', colors: '橙蓝色', elements: '分支线、节点、箭头' },
+    '容器': { scene: '模块化堆叠的立方体', style: '3D等距', colors: '蓝紫色', elements: '立方体、连接器、层次' },
+    '自动化': { scene: '齿轮与流程的融合', style: '机械美学', colors: '金蓝色', elements: '齿轮、箭头、循环' },
+    '性能': { scene: '速度与能量的抽象', style: '动感流线', colors: '红橙色', elements: '光速线、能量波' },
+    '安全': { scene: '盾牌与锁的数字化', style: '坚固稳重', colors: '深蓝绿', elements: '盾牌、锁、防护层' },
+    '设计': { scene: '色彩与形状的和谐', style: '艺术抽象', colors: '多彩渐变', elements: '色块、曲线、层叠' },
+  };
+
+  for (const keyword of keywords) {
+    if (themes[keyword]) return themes[keyword];
+  }
+
+  // 默认科技主题
+  return {
+    scene: '抽象的数字科技空间',
+    style: '现代极简',
+    colors: '深蓝紫色',
+    elements: '几何图形、光效、渐变'
+  };
+}
+
+/**
  * 生成 YAML frontmatter 字符串
  */
 function formatFrontmatter(fm: Frontmatter): string {
@@ -278,19 +673,34 @@ async function processFile(filePath: string): Promise<ConvertResult> {
     const title = extractTitle(cleanedContent);
     console.log(`   📖 标题: ${title}`);
 
+    // 检查输出文件是否已存在（避免重复调用 AI）
+    const outputFilename = generateBlogFilename(title);
+    const outputPath = path.join(BLOG_OUTPUT_DIR, outputFilename);
+    if (existsSync(outputPath)) {
+      console.log(`   ⏭️  跳过（博客已存在: ${outputFilename}）`);
+      return { success: true, file: outputFilename };
+    }
+
     // 3. 调用 DeepSeek 生成 frontmatter
     console.log(`   🤖 生成 frontmatter...`);
     const frontmatter = await generateFrontmatter(cleanedContent, title);
 
-    // 4. 移除原文中的第一个标题（frontmatter 中已有 title）
+    // 4. 生成封面图（传入 tags 和 category 用于文字叠加）
+    const slug = outputFilename.replace('.md', '');
+    console.log(`   🎨 生成封面图...`);
+    frontmatter.image = await generateCoverImage(
+      title,
+      frontmatter.excerpt,
+      slug,
+      frontmatter.tags || [],
+      frontmatter.category || 'Blog'
+    );
+
+    // 5. 移除原文中的第一个标题（frontmatter 中已有 title）
     const contentWithoutTitle = cleanedContent.replace(/^#\s+.+\n+/, '');
 
-    // 5. 组合 frontmatter + 清理后的内容
+    // 6. 组合 frontmatter + 清理后的内容
     const finalContent = formatFrontmatter(frontmatter) + '\n\n' + contentWithoutTitle;
-
-    // 生成输出文件名
-    const outputFilename = generateBlogFilename(title);
-    const outputPath = path.join(BLOG_OUTPUT_DIR, outputFilename);
 
     // 写入文件
     mkdirSync(BLOG_OUTPUT_DIR, { recursive: true });

@@ -1,14 +1,6 @@
-/**
- * Elog 配置文件模板
- * 复制为 elog.config.js 并配置 .elog.env 后使用
- *
- * 使用方法:
- * 1. 复制此文件为 elog.config.js
- * 2. 创建 .elog.env 文件（参考 .elog.env.example）
- * 3. 运行 npx yuque-sync sync
- */
+require('dotenv').config({ path: '.elog.env' });
 
-export default {
+module.exports = {
   write: {
     platform: 'yuque-pwd',
     'yuque-pwd': {
@@ -20,6 +12,7 @@ export default {
       linebreak: false,
       onlyPublic: false,
       onlyPublished: false,
+      timeout: 30000,
     },
   },
   deploy: {
@@ -40,4 +33,3 @@ export default {
     },
   },
 };
-
