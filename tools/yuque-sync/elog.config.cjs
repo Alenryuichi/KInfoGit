@@ -1,4 +1,10 @@
-require('dotenv').config({ path: '.elog.env' });
+// 仅在本地开发时从 .elog.env 加载环境变量
+// GitHub Action 中环境变量已通过 secrets 设置
+try {
+  require('dotenv').config({ path: '.elog.env' });
+} catch (e) {
+  // dotenv 不存在或文件不存在时忽略
+}
 
 module.exports = {
   write: {

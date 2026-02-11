@@ -41,69 +41,19 @@ jobs:
         working-directory: tools/yuque-sync
         run: npm run build
 
-      - name: Create elog config
-        working-directory: tools/yuque-sync
-        run: |
-          cat > elog.config.cjs << 'EOF'
-          module.exports = {
-            write: {
-              platform: 'yuque-pwd',
-              'yuque-pwd': {
-                username: process.env.YUQUE_USERNAME,
-                password: process.env.YUQUE_PASSWORD,
-                host: process.env.YUQUE_HOST || 'https://www.yuque.com',
-                login: process.env.YUQUE_LOGIN,
-                repo: process.env.YUQUE_REPO,
-                linebreak: false,
-                onlyPublic: false,
-                onlyPublished: false,
-              },
-            },
-            deploy: {
-              platform: 'local',
-              local: {
-                outputDir: './docs',
-                filename: 'title',
-                format: 'markdown',
-                catalog: true,
-              },
-            },
-            image: {
-              enable: true,
-              platform: 'local',
-              local: {
-                outputDir: './docs/images',
-                prefixKey: 'images',
-              },
-            },
-          };
-          EOF
-
-      - name: Create elog env file
-        working-directory: tools/yuque-sync
-        run: |
-          cat > .elog.env << EOF
-          YUQUE_USERNAME=${{ secrets.YUQUE_USERNAME }}
-          YUQUE_PASSWORD=${{ secrets.YUQUE_PASSWORD }}
-          YUQUE_HOST=https://www.yuque.com
-          YUQUE_LOGIN=${{ secrets.YUQUE_LOGIN }}
-          YUQUE_REPO=${{ secrets.YUQUE_REPO }}
-          DEEPSEEK_API_KEY=${{ secrets.DEEPSEEK_API_KEY }}
-          QWEN_API_KEY=${{ secrets.QWEN_API_KEY }}
-          EOF
-
       - name: Sync from Yuque
         working-directory: tools/yuque-sync
         env:
           YUQUE_USERNAME: ${{ secrets.YUQUE_USERNAME }}
           YUQUE_PASSWORD: ${{ secrets.YUQUE_PASSWORD }}
+          YUQUE_HOST: https://www.yuque.com
           YUQUE_LOGIN: ${{ secrets.YUQUE_LOGIN }}
           YUQUE_REPO: ${{ secrets.YUQUE_REPO }}
         run: |
           if [ "${{ github.event.inputs.force_sync }}" = "true" ]; then
             rm -f elog.cache.json
           fi
-          npx elog sync -e .elog.env
+          npx elog sync -c elog.config.cjs
 
       - name: Install dependencies for conversion script
         run: npm install sharp tsx
