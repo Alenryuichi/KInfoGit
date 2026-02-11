@@ -13,9 +13,37 @@ YELLOW='\033[1;33m'
 BLUE='\033[0;34m'
 NC='\033[0m' # No Color
 
-# Get repo root
-GIT_ROOT=$(git rev-parse --show-toplevel)
-WORKTREE_DIR="$GIT_ROOT/.worktrees"
+# Get repo root (works correctly even when running from within a worktree)
+# Detect if we're in a worktree and find the main repository
+detect_repo_paths() {
+  # Current worktree root (where we're running from)
+  CURRENT_ROOT=$(git rev-parse --show-toplevel)
+
+  # Check if .git is a file (worktree) or directory (main repo)
+  local git_path="$CURRENT_ROOT/.git"
+
+  if [[ -f "$git_path" ]]; then
+    # .git is a file - we're in a worktree
+    # Content: "gitdir: /path/to/main/.git/worktrees/branch-name"
+    local gitdir
+    gitdir=$(cat "$git_path" | sed 's/^gitdir: //')
+    # gitdir = /path/to/main/.git/worktrees/branch-name
+    # We need: /path/to/main
+    MAIN_REPO=$(dirname "$(dirname "$(dirname "$gitdir")")")
+    IN_WORKTREE=true
+    CURRENT_WORKTREE_NAME=$(basename "$CURRENT_ROOT")
+  else
+    # .git is a directory - we're in the main repository
+    MAIN_REPO="$CURRENT_ROOT"
+    IN_WORKTREE=false
+    CURRENT_WORKTREE_NAME=""
+  fi
+
+  WORKTREE_DIR="$MAIN_REPO/.worktrees"
+}
+
+# Initialize paths
+detect_repo_paths
 
 # Get default branch (auto-detect from remote or fallback to main)
 get_default_branch() {
@@ -69,8 +97,8 @@ has_uncommitted_changes() {
 
 # Ensure .worktrees is in .gitignore
 ensure_gitignore() {
-  if ! grep -q "^\.worktrees$" "$GIT_ROOT/.gitignore" 2>/dev/null; then
-    echo ".worktrees" >> "$GIT_ROOT/.gitignore"
+  if ! grep -q "^\.worktrees$" "$MAIN_REPO/.gitignore" 2>/dev/null; then
+    echo ".worktrees" >> "$MAIN_REPO/.gitignore"
   fi
 }
 
@@ -82,7 +110,7 @@ copy_env_files() {
 
   # Find all .env* files in root (excluding .env.example which should be in git)
   local env_files=()
-  for f in "$GIT_ROOT"/.env*; do
+  for f in "$MAIN_REPO"/.env*; do
     if [[ -f "$f" ]]; then
       local basename=$(basename "$f")
       # Skip .env.example (that's typically committed to git)
@@ -99,7 +127,7 @@ copy_env_files() {
 
   local copied=0
   for env_file in "${env_files[@]}"; do
-    local source="$GIT_ROOT/$env_file"
+    local source="$MAIN_REPO/$env_file"
     local dest="$worktree_path/$env_file"
 
     if [[ -f "$dest" ]]; then
@@ -210,6 +238,7 @@ create_worktree() {
 }
 
 # List all worktrees
+# Supports nested directory structure: .worktrees/type/name (e.g., feature/login, bugfix/issue-123)
 list_worktrees() {
   echo -e "${BLUE}Available worktrees:${NC}"
   echo ""
@@ -220,17 +249,25 @@ list_worktrees() {
   fi
 
   local count=0
-  for worktree_path in "$WORKTREE_DIR"/*; do
-    if [[ -d "$worktree_path" && -e "$worktree_path/.git" ]]; then
-      count=$((count + 1))
-      local worktree_name=$(basename "$worktree_path")
-      local branch=$(git -C "$worktree_path" rev-parse --abbrev-ref HEAD 2>/dev/null || echo "unknown")
 
-      if [[ "$PWD" == "$worktree_path" ]]; then
-        echo -e "${GREEN}✓ $worktree_name${NC} (current) → branch: $branch"
-      else
-        echo -e "  $worktree_name → branch: $branch"
-      fi
+  # Iterate through nested structure: .worktrees/type/name
+  for type_dir in "$WORKTREE_DIR"/*; do
+    if [[ -d "$type_dir" ]]; then
+      for worktree_path in "$type_dir"/*; do
+        if [[ -d "$worktree_path" && -e "$worktree_path/.git" ]]; then
+          count=$((count + 1))
+          local type_name=$(basename "$type_dir")
+          local worktree_name=$(basename "$worktree_path")
+          local full_name="$type_name/$worktree_name"
+          local branch=$(git -C "$worktree_path" rev-parse --abbrev-ref HEAD 2>/dev/null || echo "unknown")
+
+          if [[ "$CURRENT_ROOT" == "$worktree_path" ]]; then
+            echo -e "${GREEN}✓ $full_name${NC} (current) → branch: $branch"
+          else
+            echo -e "  $full_name → branch: $branch"
+          fi
+        fi
+      done
     fi
   done
 
@@ -243,9 +280,9 @@ list_worktrees() {
 
   echo ""
   echo -e "${BLUE}Main repository:${NC}"
-  local main_branch=$(git rev-parse --abbrev-ref HEAD 2>/dev/null || echo "unknown")
+  local main_branch=$(git -C "$MAIN_REPO" rev-parse --abbrev-ref HEAD 2>/dev/null || echo "unknown")
   echo "  Branch: $main_branch"
-  echo "  Path: $GIT_ROOT"
+  echo "  Path: $MAIN_REPO"
 }
 
 # Switch to a worktree
@@ -311,7 +348,50 @@ copy_env_to_worktree() {
   echo ""
 }
 
+# Clean up the current worktree (when running from within a worktree)
+cleanup_current_worktree() {
+  echo -e "${BLUE}Cleaning up current worktree: $CURRENT_WORKTREE_NAME${NC}"
+  echo ""
+
+  # Check for uncommitted changes
+  if has_uncommitted_changes "$CURRENT_ROOT"; then
+    echo -e "${RED}⚠️  WARNING: This worktree has uncommitted changes!${NC}"
+    echo ""
+    git -C "$CURRENT_ROOT" status --short
+    echo ""
+    echo -e "${RED}Cannot clean up worktree with uncommitted changes.${NC}"
+    echo "Please commit, stash, or discard your changes first."
+    return 1
+  fi
+
+  echo -e "${GREEN}✓ No uncommitted changes${NC}"
+  echo ""
+  echo -e "This will:"
+  echo -e "  1. Remove the worktree at: ${YELLOW}$CURRENT_ROOT${NC}"
+  echo -e "  2. You will need to cd to another directory after this"
+  echo ""
+  echo -e "${YELLOW}Are you sure you want to remove this worktree? (y/n)${NC}"
+  read -r response
+
+  if [[ "$response" != "y" ]]; then
+    echo -e "${YELLOW}Cleanup cancelled${NC}"
+    return
+  fi
+
+  # Remove the worktree (must be done from main repo)
+  echo -e "${BLUE}Removing worktree...${NC}"
+  git -C "$MAIN_REPO" worktree remove "$CURRENT_ROOT"
+
+  echo -e "${GREEN}✓ Worktree removed successfully!${NC}"
+  echo ""
+  echo -e "${YELLOW}Note: You are now in a deleted directory.${NC}"
+  echo -e "Run: ${BLUE}cd $MAIN_REPO${NC}"
+}
+
 # Clean up completed worktrees
+# Behavior:
+#   - In worktree: clean up CURRENT worktree only (after confirmation)
+#   - In main repo: clean up ALL inactive worktrees
 # [FIX #5] Check for uncommitted changes before removing
 cleanup_worktrees() {
   if [[ ! -d "$WORKTREE_DIR" ]]; then
@@ -319,6 +399,13 @@ cleanup_worktrees() {
     return
   fi
 
+  # If running from within a worktree, only clean up the current one
+  if [[ "$IN_WORKTREE" == "true" ]]; then
+    cleanup_current_worktree
+    return
+  fi
+
+  # Running from main repo - clean up all inactive worktrees
   echo -e "${BLUE}Checking for completed worktrees...${NC}"
   echo ""
 
@@ -326,15 +413,9 @@ cleanup_worktrees() {
   local to_remove=()
   local with_changes=()
 
-  for worktree_path in "$WORKTREE_DIR"/*; do
+  for worktree_path in "$WORKTREE_DIR"/*/*; do
     if [[ -d "$worktree_path" && -e "$worktree_path/.git" ]]; then
-      local worktree_name=$(basename "$worktree_path")
-
-      # Skip if current worktree
-      if [[ "$PWD" == "$worktree_path" ]]; then
-        echo -e "${YELLOW}(skip) $worktree_name - currently active${NC}"
-        continue
-      fi
+      local worktree_name=$(basename "$(dirname "$worktree_path")")/$(basename "$worktree_path")
 
       found=$((found + 1))
 
@@ -350,7 +431,7 @@ cleanup_worktrees() {
   done
 
   if [[ $found -eq 0 ]]; then
-    echo -e "${GREEN}No inactive worktrees to clean up${NC}"
+    echo -e "${GREEN}No worktrees to clean up${NC}"
     return
   fi
 
@@ -461,7 +542,9 @@ Commands:
   path <name>                         Get worktree path (for scripting: cd \$(... path name))
   copy-env | env [name]               Copy .env files from main repo to worktree
                                       (if name omitted, uses current worktree)
-  cleanup | clean                     Clean up inactive worktrees (protects uncommitted work)
+  cleanup | clean                     Clean up worktrees (protects uncommitted work)
+                                      - In worktree: removes CURRENT worktree
+                                      - In main repo: removes ALL inactive worktrees
   help                                Show this help message
 
 Environment Files:
