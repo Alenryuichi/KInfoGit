@@ -1,0 +1,144 @@
+name: Sync Yuque Blog
+
+on:
+  schedule:
+    # 每天 UTC 0:00 (北京时间 8:00)
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+    inputs:
+      force_sync:
+        description: '强制同步（忽略缓存）'
+        required: false
+        default: 'false'
+        type: boolean
+
+env:
+  NODE_VERSION: '20'
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+          cache-dependency-path: tools/yuque-sync/package-lock.json
+
+      - name: Install yuque-sync dependencies
+        working-directory: tools/yuque-sync
+        run: npm ci || npm install
+
+      - name: Build yuque-sync
+        working-directory: tools/yuque-sync
+        run: npm run build
+
+      - name: Create elog config
+        working-directory: tools/yuque-sync
+        run: |
+          cat > elog.config.cjs << 'EOF'
+          module.exports = {
+            write: {
+              platform: 'yuque-pwd',
+              'yuque-pwd': {
+                username: process.env.YUQUE_USERNAME,
+                password: process.env.YUQUE_PASSWORD,
+                host: process.env.YUQUE_HOST || 'https://www.yuque.com',
+                login: process.env.YUQUE_LOGIN,
+                repo: process.env.YUQUE_REPO,
+                linebreak: false,
+                onlyPublic: false,
+                onlyPublished: false,
+              },
+            },
+            deploy: {
+              platform: 'local',
+              local: {
+                outputDir: './docs',
+                filename: 'title',
+                format: 'markdown',
+                catalog: true,
+              },
+            },
+            image: {
+              enable: true,
+              platform: 'local',
+              local: {
+                outputDir: './docs/images',
+                prefixKey: 'images',
+              },
+            },
+          };
+          EOF
+
+      - name: Create elog env file
+        working-directory: tools/yuque-sync
+        run: |
+          cat > .elog.env << EOF
+          YUQUE_USERNAME=${{ secrets.YUQUE_USERNAME }}
+          YUQUE_PASSWORD=${{ secrets.YUQUE_PASSWORD }}
+          YUQUE_HOST=https://www.yuque.com
+          YUQUE_LOGIN=${{ secrets.YUQUE_LOGIN }}
+          YUQUE_REPO=${{ secrets.YUQUE_REPO }}
+          DEEPSEEK_API_KEY=${{ secrets.DEEPSEEK_API_KEY }}
+          QWEN_API_KEY=${{ secrets.QWEN_API_KEY }}
+          EOF
+
+      - name: Sync from Yuque
+        working-directory: tools/yuque-sync
+        env:
+          YUQUE_USERNAME: ${{ secrets.YUQUE_USERNAME }}
+          YUQUE_PASSWORD: ${{ secrets.YUQUE_PASSWORD }}
+          YUQUE_LOGIN: ${{ secrets.YUQUE_LOGIN }}
+          YUQUE_REPO: ${{ secrets.YUQUE_REPO }}
+        run: |
+          if [ "${{ github.event.inputs.force_sync }}" = "true" ]; then
+            rm -f elog.cache.json
+          fi
+          npx elog sync -e .elog.env
+
+      - name: Install dependencies for conversion script
+        run: npm install sharp tsx
+
+      - name: Convert to blog format
+        env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          QWEN_API_KEY: ${{ secrets.QWEN_API_KEY }}
+        run: npx tsx scripts/convert-to-blog.ts
+
+      - name: Check for changes
+        id: check_changes
+        run: |
+          git add .
+          if git diff --staged --quiet; then
+            echo "has_changes=false" >> $GITHUB_OUTPUT
+          else
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Commit and push changes
+        if: steps.check_changes.outputs.has_changes == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git commit -m "chore: sync yuque articles [skip ci]"
+          git push
+
+      - name: Summary
+        run: |
+          echo "## 🔄 语雀同步完成" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          if [ "${{ steps.check_changes.outputs.has_changes }}" = "true" ]; then
+            echo "✅ 发现新内容，已提交更新" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "📭 没有新内容需要同步" >> $GITHUB_STEP_SUMMARY
+          fi
+

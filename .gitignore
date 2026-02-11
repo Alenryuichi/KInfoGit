@@ -93,6 +93,11 @@ temp/
 website/scripts/fonts/
 website/public/blog/covers/.worktrees
 
+# Yuque sync
+tools/yuque-sync/.elog.env
+tools/yuque-sync/elog.cache.json
+tools/yuque-sync/docs/
+
 # TypeScript build info
 *.tsbuildinfo
 .worktrees

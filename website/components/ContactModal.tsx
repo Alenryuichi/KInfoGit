@@ -241,10 +241,20 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
     }
 
     try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1000))
+      // Send to Formspree
+      const response = await fetch('https://formspree.io/f/mjgegrnr', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      })
 
-      console.log('Form submitted:', formData)
+      if (!response.ok) {
+        throw new Error('Failed to send message')
+      }
+
       alert('Message sent successfully!')
 
       // Reset form
