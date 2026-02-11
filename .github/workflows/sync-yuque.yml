@@ -44,7 +44,7 @@ jobs:
       - name: Create elog config
         working-directory: tools/yuque-sync
         run: |
-          cat > elog.config.js << 'EOF'
+          cat > elog.config.cjs << 'EOF'
           module.exports = {
             write: {
               platform: 'yuque-pwd',
@@ -88,6 +88,8 @@ jobs:
           YUQUE_HOST=https://www.yuque.com
           YUQUE_LOGIN=${{ secrets.YUQUE_LOGIN }}
           YUQUE_REPO=${{ secrets.YUQUE_REPO }}
+          DEEPSEEK_API_KEY=${{ secrets.DEEPSEEK_API_KEY }}
+          QWEN_API_KEY=${{ secrets.QWEN_API_KEY }}
           EOF
 
       - name: Sync from Yuque
@@ -99,17 +101,17 @@ jobs:
           YUQUE_REPO: ${{ secrets.YUQUE_REPO }}
         run: |
           if [ "${{ github.event.inputs.force_sync }}" = "true" ]; then
-            npx yuque-sync sync --clean --verbose
-          else
-            npx yuque-sync sync --verbose
+            rm -f elog.cache.json
           fi
+          npx elog sync -e .elog.env
 
-      - name: Install tsx for conversion script
-        run: npm install -g tsx
+      - name: Install dependencies for conversion script
+        run: npm install sharp tsx
 
       - name: Convert to blog format
         env:
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          QWEN_API_KEY: ${{ secrets.QWEN_API_KEY }}
         run: npx tsx scripts/convert-to-blog.ts
 
       - name: Check for changes
