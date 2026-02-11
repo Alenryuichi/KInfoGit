@@ -1,7 +1,8 @@
 #!/usr/bin/env npx tsx
 /**
  * 语雀文章转换为博客格式
- * 使用 DeepSeek API 清理 HTML 标签并生成 frontmatter
+ * - 脚本清理 HTML 标签
+ * - DeepSeek API 专注生成 frontmatter
  */
 
 import fs from 'node:fs/promises';
@@ -25,37 +26,122 @@ interface ConvertResult {
   error?: string;
 }
 
+interface Frontmatter {
+  title: string;
+  date: string;
+  tags: string[];
+  category: string;
+  readTime: string;
+  featured: boolean;
+  image: string;
+  excerpt: string;
+}
+
 /**
- * 调用 DeepSeek API 转换文章
+ * 使用正则清理 HTML 标签
  */
-async function convertWithDeepSeek(content: string, filename: string): Promise<string> {
+function cleanHtmlTags(content: string): string {
+  let cleaned = content;
+
+  // 移除 <font> 标签（保留内容）
+  cleaned = cleaned.replace(/<font[^>]*>([\s\S]*?)<\/font>/gi, '$1');
+
+  // 移除 <span> 标签（保留内容）
+  cleaned = cleaned.replace(/<span[^>]*>([\s\S]*?)<\/span>/gi, '$1');
+
+  // 移除 <div> 标签（保留内容）
+  cleaned = cleaned.replace(/<div[^>]*>([\s\S]*?)<\/div>/gi, '$1');
+
+  // 移除 <p> 标签（保留内容）
+  cleaned = cleaned.replace(/<p[^>]*>([\s\S]*?)<\/p>/gi, '$1\n');
+
+  // 移除 <br> 标签
+  cleaned = cleaned.replace(/<br\s*\/?>/gi, '\n');
+
+  // 移除 <a> 标签中的 name 属性锚点（保留正常链接）
+  cleaned = cleaned.replace(/<a\s+name="[^"]*"\s*><\/a>/gi, '');
+
+  // 移除空的 HTML 标签
+  cleaned = cleaned.replace(/<([a-z]+)[^>]*>\s*<\/\1>/gi, '');
+
+  // 移除剩余的行内 style 属性的标签
+  cleaned = cleaned.replace(/<([a-z]+)\s+style="[^"]*"[^>]*>([\s\S]*?)<\/\1>/gi, '$2');
+
+  // 移除 HTML 注释
+  cleaned = cleaned.replace(/<!--[\s\S]*?-->/g, '');
+
+  // 修复图片路径
+  cleaned = cleaned.replace(/!\[([^\]]*)\]\(images\//g, '![$1](/blog/images/');
+
+  // 清理多余空行（超过2个连续空行变成2个）
+  cleaned = cleaned.replace(/\n{3,}/g, '\n\n');
+
+  // 清理行首行尾空格
+  cleaned = cleaned.split('\n').map(line => line.trimEnd()).join('\n');
+
+  return cleaned.trim();
+}
+
+/**
+ * 提取文章标题
+ */
+function extractTitle(content: string): string {
+  // 匹配第一个 # 标题
+  const match = content.match(/^#\s+(.+)$/m);
+  if (match) {
+    return match[1].trim();
+  }
+  // 如果没有标题，取第一行非空内容
+  const firstLine = content.split('\n').find(line => line.trim());
+  return firstLine?.slice(0, 50) || 'Untitled';
+}
+
+/**
+ * 计算阅读时间
+ */
+function calculateReadTime(content: string): string {
+  // 中文字符
+  const chineseChars = (content.match(/[\u4e00-\u9fa5]/g) || []).length;
+  // 英文单词
+  const englishWords = (content.match(/[a-zA-Z]+/g) || []).length;
+  // 中文 400 字/分钟，英文 200 词/分钟
+  const minutes = Math.ceil(chineseChars / 400 + englishWords / 200);
+  return `${Math.max(1, minutes)} min read`;
+}
+
+/**
+ * 调用 DeepSeek API 生成 frontmatter
+ */
+async function generateFrontmatter(content: string, title: string): Promise<Frontmatter> {
   const apiKey = process.env.DEEPSEEK_API_KEY;
   if (!apiKey) {
     throw new Error('DEEPSEEK_API_KEY 环境变量未设置');
   }
 
-  const prompt = `你是一个 Markdown 格式化专家。请将以下语雀导出的文章转换为标准博客格式。
+  const readTime = calculateReadTime(content);
+  const today = new Date().toISOString().split('T')[0];
+
+  // 截取前 2000 字符用于分析
+  const contentPreview = content.slice(0, 2000);
+
+  const prompt = `分析以下 Markdown 文章，生成 JSON 格式的 frontmatter 信息。
 
 要求：
-1. 移除所有 <font>、<span>、<div> 等 HTML 标签，保留纯 Markdown
-2. 保留代码块、链接、图片等 Markdown 语法
-3. 在文章开头添加 YAML frontmatter，包含：
-   - title: 从第一个 # 标题或文章内容提取
-   - date: "${new Date().toISOString().split('T')[0]}"
-   - tags: 根据内容推断 3-5 个相关标签（用数组格式）
-   - category: 从 ["Engineering", "AI", "iOS", "DevOps", "Career"] 中选择最合适的
-   - readTime: 根据字数估算阅读时间（中文约 400 字/分钟），格式如 "5 min read"
-   - featured: false
-   - image: "/blog/images/default.jpg"
-   - excerpt: 提取或生成 100 字以内的文章摘要
-4. 修复图片路径：将 images/xxx.png 改为 /blog/images/xxx.png
-5. 统一标题层级，确保文章只有一个 # 标题
-6. 直接返回转换后的完整 Markdown，不要有任何解释
+1. tags: 根据内容推断 3-5 个相关标签（中文或英文皆可）
+2. category: 从 ["Engineering", "AI", "iOS", "DevOps", "Career", "Life"] 中选择最合适的一个
+3. excerpt: 生成 50-100 字的中文摘要，概括文章核心内容
 
-原文件名: ${filename}
+只返回 JSON，不要任何解释：
+{
+  "tags": ["标签1", "标签2", "标签3"],
+  "category": "类别",
+  "excerpt": "摘要内容"
+}
 
-原文：
-${content}`;
+文章标题: ${title}
+
+文章内容:
+${contentPreview}`;
 
   const response = await fetch(DEEPSEEK_API_URL, {
     method: 'POST',
@@ -67,7 +153,7 @@ ${content}`;
       model: 'deepseek-chat',
       messages: [{ role: 'user', content: prompt }],
       temperature: 0.3,
-      max_tokens: 8000,
+      max_tokens: 500,
     }),
   });
 
@@ -77,7 +163,44 @@ ${content}`;
   }
 
   const data = await response.json() as any;
-  return data.choices[0].message.content;
+  const responseText = data.choices[0].message.content;
+
+  // 解析 JSON（处理可能的 markdown 代码块）
+  let jsonStr = responseText;
+  const jsonMatch = responseText.match(/```(?:json)?\s*([\s\S]*?)```/);
+  if (jsonMatch) {
+    jsonStr = jsonMatch[1];
+  }
+
+  const parsed = JSON.parse(jsonStr.trim());
+
+  return {
+    title,
+    date: today,
+    tags: parsed.tags || ['未分类'],
+    category: parsed.category || 'Engineering',
+    readTime,
+    featured: false,
+    image: '/blog/images/default.jpg',
+    excerpt: parsed.excerpt || title,
+  };
+}
+
+/**
+ * 生成 YAML frontmatter 字符串
+ */
+function formatFrontmatter(fm: Frontmatter): string {
+  const tagsStr = JSON.stringify(fm.tags);
+  return `---
+title: "${fm.title.replace(/"/g, '\\"')}"
+date: "${fm.date}"
+tags: ${tagsStr}
+category: "${fm.category}"
+readTime: "${fm.readTime}"
+featured: ${fm.featured}
+image: "${fm.image}"
+excerpt: "${fm.excerpt.replace(/"/g, '\\"')}"
+---`;
 }
 
 /**
@@ -135,31 +258,44 @@ async function copyImages(): Promise<void> {
  */
 async function processFile(filePath: string): Promise<ConvertResult> {
   const filename = path.basename(filePath);
-  
+
   try {
     console.log(`📝 处理: ${filename}`);
-    
-    const content = await fs.readFile(filePath, 'utf-8');
-    
+
+    const rawContent = await fs.readFile(filePath, 'utf-8');
+
     // 跳过已有 frontmatter 的文件
-    if (content.startsWith('---\n')) {
+    if (rawContent.startsWith('---\n')) {
       console.log(`   ⏭️  跳过（已有 frontmatter）`);
       return { success: true, file: filename };
     }
-    
-    // 调用 DeepSeek 转换
-    const converted = await convertWithDeepSeek(content, filename);
-    
+
+    // 1. 用脚本清理 HTML 标签
+    console.log(`   🧹 清理 HTML 标签...`);
+    const cleanedContent = cleanHtmlTags(rawContent);
+
+    // 2. 提取标题
+    const title = extractTitle(cleanedContent);
+    console.log(`   📖 标题: ${title}`);
+
+    // 3. 调用 DeepSeek 生成 frontmatter
+    console.log(`   🤖 生成 frontmatter...`);
+    const frontmatter = await generateFrontmatter(cleanedContent, title);
+
+    // 4. 移除原文中的第一个标题（frontmatter 中已有 title）
+    const contentWithoutTitle = cleanedContent.replace(/^#\s+.+\n+/, '');
+
+    // 5. 组合 frontmatter + 清理后的内容
+    const finalContent = formatFrontmatter(frontmatter) + '\n\n' + contentWithoutTitle;
+
     // 生成输出文件名
-    const titleMatch = converted.match(/title:\s*["']?([^"'\n]+)["']?/);
-    const title = titleMatch ? titleMatch[1] : filename.replace('.md', '');
     const outputFilename = generateBlogFilename(title);
     const outputPath = path.join(BLOG_OUTPUT_DIR, outputFilename);
-    
+
     // 写入文件
     mkdirSync(BLOG_OUTPUT_DIR, { recursive: true });
-    await fs.writeFile(outputPath, converted);
-    
+    await fs.writeFile(outputPath, finalContent);
+
     console.log(`   ✅ 已转换: ${outputFilename}`);
     return { success: true, file: outputFilename };
   } catch (error) {
