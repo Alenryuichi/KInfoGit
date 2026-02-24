@@ -332,8 +332,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
   }
 
   const handleCalendarClick = () => {
-    // 这里可以集成日历预约系统，比如 Calendly
-    window.open('https://calendly.com/your-calendar', '_blank')
+    window.open('https://calendly.com/alenryuichi', '_blank')
   }
 
   if (!isOpen) return null
