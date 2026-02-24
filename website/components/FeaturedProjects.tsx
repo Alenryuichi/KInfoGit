@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { useEffect } from 'react'
-import type { Project } from '@/lib/projects'
+import type { Project } from '@/lib/data'
 import { animateOnScroll } from '@/utils/animations'
 
 interface FeaturedProjectsProps {
@@ -51,17 +51,17 @@ export default function FeaturedProjects({ projects }: FeaturedProjectsProps) {
 
                   {/* Title */}
                   <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-400 transition-colors">
-                    {project.title}
+                    {project.title.zh}
                   </h3>
 
                   {/* Description */}
                   <p className="text-sm text-gray-400 mb-4 line-clamp-2">
-                    {project.description}
+                    {project.highlights?.zh}
                   </p>
 
                   {/* Tech Tags */}
                   <div className="flex flex-wrap gap-2 mb-4">
-                    {project.tags.slice(0, 3).map((tag) => (
+                    {project.tech_stack.slice(0, 3).map((tag) => (
                       <span
                         key={tag}
                         className="px-2 py-1 text-xs bg-gray-800/60 text-gray-300 rounded-full border border-gray-700/50"

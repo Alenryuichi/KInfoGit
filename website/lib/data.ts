@@ -86,6 +86,22 @@ export interface Project {
 	 * 用于页面分区显示的分组名称，例如 "独立项目"、"企业微信" 等。
 	 */
 	section?: string
+	/**
+	 * URL 友好的标识符，用于路由
+	 */
+	slug?: string
+	/**
+	 * 是否在首页精选区域展示
+	 */
+	featured?: boolean
+	/**
+	 * 排序权重，数字越小越靠前
+	 */
+	order?: number
+	/**
+	 * 是否有详情页
+	 */
+	hasDetailPage?: boolean
 }
 
 // Blog types
@@ -144,6 +160,24 @@ export async function getProjectById(id: string): Promise<Project | null> {
 	} catch (error) {
 		console.error('Error loading project by id:', error)
 		return null
+	}
+}
+
+/**
+ * 获取精选项目（featured=true），按 order 升序排序
+ * @returns 精选项目数组，按 order 从小到大排序
+ */
+export function getFeaturedProjects(): Project[] {
+	try {
+		const filePath = path.join(profileDataDir, 'projects', 'core-projects.json')
+		const fileContents = fs.readFileSync(filePath, 'utf8')
+		const projects: Project[] = JSON.parse(fileContents)
+		return projects
+			.filter((p) => p.featured)
+			.sort((a, b) => (a.order ?? 999) - (b.order ?? 999))
+	} catch (error) {
+		console.error('Error loading featured projects:', error)
+		return []
 	}
 }
 

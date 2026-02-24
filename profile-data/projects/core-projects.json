@@ -5,6 +5,7 @@
       "zh": "OpenMemory Plus - AI Agent 双层记忆框架",
       "en": "OpenMemory Plus - AI Agent Dual-Layer Memory Framework"
     },
+    "slug": "openmemory-plus",
     "period": "2026.02 - 至今",
     "company": "独立开发",
     "role": {
@@ -36,7 +37,10 @@
     },
     "impact": "跨会话上下文保持率 95%+",
     "category": "ai-agent",
-    "section": "独立项目"
+    "section": "独立项目",
+    "featured": true,
+    "order": 1,
+    "hasDetailPage": true
   },
   {
     "id": "betaline",
@@ -44,6 +48,7 @@
       "zh": "磕线 (Betaline) - 独立开发全流程 iOS 应用",
       "en": "Betaline - Full-stack iOS Climbing App"
     },
+    "slug": "betaline",
     "period": "2025.09 - 至今",
     "company": "独立开发",
     "role": {
@@ -77,7 +82,10 @@
     },
     "impact": "全栈独立开发上线",
     "category": "mobile-app",
-    "section": "独立项目"
+    "section": "独立项目",
+    "featured": true,
+    "order": 2,
+    "hasDetailPage": true
   },
   {
     "id": "ai-agent-review",
@@ -85,6 +93,7 @@
       "zh": "风控审核大模型 AI Agent",
       "en": "Risk Control AI Agent Review System"
     },
+    "slug": "ai-agent-review",
     "period": "2025.12 - 至今",
     "company": "腾讯",
     "role": {
@@ -118,7 +127,10 @@
     },
     "impact": "准确率 70%→90%+，节省 2+ 人力/天",
     "category": "ai-agent",
-    "section": "企业微信"
+    "section": "企业微信",
+    "featured": true,
+    "order": 3,
+    "hasDetailPage": true
   },
   {
     "id": "portrait-platform",
@@ -126,6 +138,7 @@
       "zh": "策略全生命周期管理平台",
       "en": "Strategy Lifecycle Management Platform"
     },
+    "slug": "portrait-platform",
     "period": "2022.06 - 2025.06",
     "company": "腾讯",
     "role": {
@@ -159,7 +172,10 @@
     },
     "impact": "10 亿级数据处理，130 倍性能提升",
     "category": "system-architecture",
-    "section": "企业微信"
+    "section": "企业微信",
+    "featured": false,
+    "order": 4,
+    "hasDetailPage": true
   },
   {
     "id": "anti-fraud-governance",
@@ -167,6 +183,7 @@
       "zh": "自建应用反作弊治理系统",
       "en": "Self-built Application Anti-fraud Governance System"
     },
+    "slug": "anti-fraud-governance",
     "period": "2023.01 - 2024.06",
     "company": "腾讯",
     "role": {
@@ -198,6 +215,9 @@
     },
     "impact": "年化收益 4000 万，人工干预 ↓80%",
     "category": "anti-fraud",
-    "section": "企业微信"
+    "section": "企业微信",
+    "featured": false,
+    "order": 5,
+    "hasDetailPage": true
   }
 ]

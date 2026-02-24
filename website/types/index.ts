@@ -3,6 +3,5 @@
  * 统一导出所有类型定义
  */
 
-export type { Project, ProjectLinks } from './project';
-export { isProject, isProjectLinks } from './project';
-
+// Project types are now defined in @/lib/data.ts
+export type { Project } from '@/lib/data';
