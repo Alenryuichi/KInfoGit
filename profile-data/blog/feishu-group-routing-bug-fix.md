@@ -1,3 +1,14 @@
+---
+title: "Bug: 飞书群组消息路由到错误的 Agent"
+date: 2026-02-28
+tags: ["OpenClaw", "Bug 修复", "Agent"]
+category: technology
+draft: false
+image: null
+excerpt: "记录飞书群组消息路由到错误 Agent 的问题排查和修复过程"
+readTime: "5 min read"
+---
+
 # Bug: 飞书群组消息路由到错误的 Agent
 
 > **状态**: ✅ 已解决  
@@ -127,3 +138,8 @@ launchctl bootstrap gui/$(id -u) ~/Library/LaunchAgents/ai.openclaw.gateway.plis
 - `~/.openclaw/agents/<agentId>/sessions/sessions.json` - Session 存储
 - 飞书群组 ID: `oc_22ef83f566fc9b0ae01633a12e92e4c0`
 
+---
+
+**标签**: #OpenClaw #Bug 修复 #Agent  
+**日期**: 2026-02-28  
+**状态**: ✅ 已解决
