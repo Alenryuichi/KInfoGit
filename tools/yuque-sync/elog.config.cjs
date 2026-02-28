@@ -17,7 +17,7 @@ module.exports = {
       repo: process.env.YUQUE_REPO,
       linebreak: false,
       onlyPublic: false,
-      onlyPublished: false,
+      onlyPublished: true,  // 只同步已发布的文章，忽略草稿
       timeout: 30000,
     },
   },
