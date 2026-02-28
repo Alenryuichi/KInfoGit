@@ -28,38 +28,52 @@
     "type": "blog"
   },
   {
-    "title": "Portrait Platform System",
-    "description": "10亿级数据处理能力",
+    "title": "Agent Teams 实战方法论：从 Anthropic 16 个并行 Claude 编写 C 编译器学到的 7 个核心模式",
+    "description": "Anthropic 用 16 个并行 Claude 实例编写了 10 万行 C 编译器。本文提炼出 7 个可立即实践的核心模式，帮你从'配对编程'升级到'自主团队'。",
+    "url": "/blog/2026-02-27-agent-teams-practice",
+    "category": "AI Engineering",
+    "type": "blog"
+  },
+  {
+    "title": "Bug: 飞书群组消息路由到错误的 Agent",
+    "description": "记录飞书群组消息路由到错误 Agent 的问题排查和修复过程",
+    "url": "/blog/feishu-group-routing-bug-fix",
+    "category": "technology",
+    "type": "blog"
+  },
+  {
+    "title": "OpenMemory Plus - AI Agent Dual-Layer Memory Framework",
+    "description": "跨会话上下文保持率 95%+",
+    "url": "/work/openmemory-plus",
+    "category": "ai-agent",
+    "type": "project"
+  },
+  {
+    "title": "Betaline - Full-stack iOS Climbing App",
+    "description": "全栈独立开发上线",
+    "url": "/work/betaline",
+    "category": "mobile-app",
+    "type": "project"
+  },
+  {
+    "title": "Risk Control AI Agent Review System",
+    "description": "准确率 70%→90%+，节省 2+ 人力/天",
+    "url": "/work/ai-agent-review",
+    "category": "ai-agent",
+    "type": "project"
+  },
+  {
+    "title": "Strategy Lifecycle Management Platform",
+    "description": "10 亿级数据处理，130 倍性能提升",
     "url": "/work/portrait-platform",
     "category": "system-architecture",
     "type": "project"
   },
   {
     "title": "Self-built Application Anti-fraud Governance System",
-    "description": "300万+直接收益",
+    "description": "年化收益 4000 万，人工干预 ↓80%",
     "url": "/work/anti-fraud-governance",
     "category": "anti-fraud",
-    "type": "project"
-  },
-  {
-    "title": "Anti-spam Graph Application Platform",
-    "description": "图数据库技术专家地位确立",
-    "url": "/work/anti-spam-graph",
-    "category": "graph-database",
-    "type": "project"
-  },
-  {
-    "title": "Anti-spam Rapid Rollback System",
-    "description": "99.9%回滚成功率",
-    "url": "/work/anti-spam-rollback",
-    "category": "system-reliability",
-    "type": "project"
-  },
-  {
-    "title": "Security Strategy Lifecycle Management System",
-    "description": "策略研发效率提升60%",
-    "url": "/work/security-strategy-lifecycle",
-    "category": "strategy-automation",
     "type": "project"
   }
 ]
