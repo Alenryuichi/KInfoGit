@@ -1,6 +1,6 @@
 ---
 title: "Bug: 飞书群组消息路由到错误的 Agent"
-date: 2026-02-28
+date: "2026-02-28"
 tags: ["OpenClaw", "Bug 修复", "Agent"]
 category: technology
 draft: false
