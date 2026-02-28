@@ -281,7 +281,7 @@ export async function getBlogPost(slug: string): Promise<BlogPost | null> {
       category: data.category || 'Uncategorized',
       readTime: data.readTime || '5 min read',
       featured: data.featured || false,
-      image: data.image,
+      image: data.image || null,
       excerpt: data.excerpt || '',
       content
     } as BlogPost

@@ -1,9 +1,37 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useState, Component, ReactNode } from 'react'
 import dynamic from 'next/dynamic'
 import { motion } from 'framer-motion'
-import { Github, ExternalLink, Star, GitFork, Clock } from 'lucide-react'
+import { Github, ExternalLink, Star, GitFork, Clock, AlertCircle } from 'lucide-react'
+
+// Error Boundary for GitHub Calendar
+interface ErrorBoundaryProps {
+  children: ReactNode
+  fallback: ReactNode
+}
+
+interface ErrorBoundaryState {
+  hasError: boolean
+}
+
+class CalendarErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
+  constructor(props: ErrorBoundaryProps) {
+    super(props)
+    this.state = { hasError: false }
+  }
+
+  static getDerivedStateFromError(): ErrorBoundaryState {
+    return { hasError: true }
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return this.props.fallback
+    }
+    return this.props.children
+  }
+}
 
 // Dynamic import to avoid SSR hydration issues
 const GitHubCalendar = dynamic(
@@ -131,17 +159,34 @@ export default function GitHubActivity({ className = '', initialRepos = [] }: Gi
 
             <div className="overflow-x-auto pb-2">
               <div className="min-w-[750px]">
-                <GitHubCalendar
-                  username={GITHUB_USERNAME}
-                  colorScheme="dark"
-                  theme={customTheme}
-                  fontSize={12}
-                  blockSize={12}
-                  blockMargin={4}
-                  labels={{
-                    totalCount: '{{count}} contributions in the last year',
-                  }}
-                />
+                <CalendarErrorBoundary
+                  fallback={
+                    <div className="flex items-center justify-center gap-2 text-gray-400 py-8">
+                      <AlertCircle className="w-5 h-5" />
+                      <span>Unable to load contribution graph. </span>
+                      <a
+                        href={`https://github.com/${GITHUB_USERNAME}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-blue-400 hover:underline"
+                      >
+                        View on GitHub
+                      </a>
+                    </div>
+                  }
+                >
+                  <GitHubCalendar
+                    username={GITHUB_USERNAME}
+                    colorScheme="dark"
+                    theme={customTheme}
+                    fontSize={12}
+                    blockSize={12}
+                    blockMargin={4}
+                    labels={{
+                      totalCount: '{{count}} contributions in the last year',
+                    }}
+                  />
+                </CalendarErrorBoundary>
               </div>
             </div>
           </motion.div>
