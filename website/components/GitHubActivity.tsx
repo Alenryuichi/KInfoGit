@@ -58,9 +58,24 @@ interface GitHubRepo {
   pushed_at: string
 }
 
+interface GitHubPR {
+  id: number
+  number: number
+  title: string
+  html_url: string
+  state: string
+  created_at: string
+  merged_at: string | null
+  repository_url: string
+  user: {
+    login: string
+  }
+}
+
 interface GitHubActivityProps {
   className?: string
   initialRepos?: GitHubRepo[]
+  initialPRs?: GitHubPR[]
 }
 
 // Language color mapping
@@ -99,9 +114,16 @@ function formatRelativeTime(dateString: string): string {
   return `${Math.floor(diffDays / 365)} years ago`
 }
 
-export default function GitHubActivity({ className = '', initialRepos = [] }: GitHubActivityProps) {
-  // Use initialRepos from getStaticProps (fetched at build time)
+// Extract repo name from repository_url
+function getRepoName(repositoryUrl: string): string {
+  const parts = repositoryUrl.split('/')
+  return parts[parts.length - 1] || ''
+}
+
+export default function GitHubActivity({ className = '', initialRepos = [], initialPRs = [] }: GitHubActivityProps) {
+  // Use initialRepos and initialPRs from getStaticProps (fetched at build time)
   const repos = initialRepos
+  const prs = initialPRs
   const loading = false
   const error = initialRepos.length === 0 ? 'No repositories found' : null
   const [mounted, setMounted] = useState(false)
@@ -282,6 +304,88 @@ export default function GitHubActivity({ className = '', initialRepos = [] }: Gi
               </div>
             )}
           </motion.div>
+
+          {/* Recent Pull Requests */}
+          {prs.length > 0 && (
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              className="mt-8"
+            >
+              <div className="flex items-center justify-between mb-6">
+                <h3 className="text-xl font-semibold text-white flex items-center gap-2">
+                  <GitFork className="w-5 h-5 text-purple-400" />
+                  Recent Pull Requests
+                </h3>
+              </div>
+
+              <div className="space-y-3">
+                {prs.slice(0, 5).map((pr, index) => (
+                  <motion.a
+                    key={pr.id}
+                    href={pr.html_url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.3, delay: index * 0.1 }}
+                    className="group flex items-center gap-4 bg-gray-900/50 border border-gray-800 rounded-xl p-4 hover:border-gray-700 hover:bg-gray-900/70 transition-all duration-300"
+                  >
+                    {/* PR Status Icon */}
+                    <div className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center ${
+                      pr.merged_at
+                        ? 'bg-purple-500/20 text-purple-400'
+                        : pr.state === 'open'
+                          ? 'bg-green-500/20 text-green-400'
+                          : 'bg-red-500/20 text-red-400'
+                    }`}>
+                      {pr.merged_at ? (
+                        <GitFork className="w-4 h-4" />
+                      ) : pr.state === 'open' ? (
+                        <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
+                      ) : (
+                        <div className="w-2 h-2 bg-red-400 rounded-full" />
+                      )}
+                    </div>
+
+                    {/* PR Info */}
+                    <div className="flex-1 min-w-0">
+                      <div className="flex items-center gap-2 mb-1">
+                        <span className="text-xs text-gray-500 font-mono">
+                          {getRepoName(pr.repository_url)}
+                        </span>
+                        <span className="text-xs text-gray-600">#{pr.number}</span>
+                      </div>
+                      <h4 className="text-white font-medium group-hover:text-purple-400 transition-colors truncate">
+                        {pr.title}
+                      </h4>
+                    </div>
+
+                    {/* Time & Status */}
+                    <div className="flex-shrink-0 text-right">
+                      <span className={`text-xs px-2 py-1 rounded-full ${
+                        pr.merged_at
+                          ? 'bg-purple-500/20 text-purple-400'
+                          : pr.state === 'open'
+                            ? 'bg-green-500/20 text-green-400'
+                            : 'bg-red-500/20 text-red-400'
+                      }`}>
+                        {pr.merged_at ? 'Merged' : pr.state === 'open' ? 'Open' : 'Closed'}
+                      </span>
+                      <p className="text-xs text-gray-600 mt-1">
+                        {mounted ? formatRelativeTime(pr.created_at) : ''}
+                      </p>
+                    </div>
+
+                    <ExternalLink className="w-4 h-4 text-gray-500 group-hover:text-purple-400 transition-colors flex-shrink-0" />
+                  </motion.a>
+                ))}
+              </div>
+            </motion.div>
+          )}
 
         </div>
       </div>

@@ -18,12 +18,27 @@ interface GitHubRepo {
   pushed_at: string
 }
 
+interface GitHubPR {
+  id: number
+  number: number
+  title: string
+  html_url: string
+  state: string
+  created_at: string
+  merged_at: string | null
+  repository_url: string
+  user: {
+    login: string
+  }
+}
+
 interface AboutPageProps {
   profileData: typeof profileData
   githubRepos: GitHubRepo[]
+  githubPRs: GitHubPR[]
 }
 
-export default function AboutPage({ profileData, githubRepos }: AboutPageProps) {
+export default function AboutPage({ profileData, githubRepos, githubPRs }: AboutPageProps) {
   // Handle smooth scroll to hash anchor on page load (for cross-page navigation)
   useEffect(() => {
     if (typeof window !== 'undefined' && window.location.hash) {
@@ -59,7 +74,7 @@ export default function AboutPage({ profileData, githubRepos }: AboutPageProps) 
 
         {/* GitHub Activity Section */}
         <div className="relative z-10">
-          <GitHubActivity initialRepos={githubRepos} />
+          <GitHubActivity initialRepos={githubRepos} initialPRs={githubPRs} />
         </div>
 
         {/* Skills Section */}
@@ -85,26 +100,42 @@ export const getStaticProps: GetStaticProps = async () => {
   }
 
   let githubRepos: GitHubRepo[] = []
+  let githubPRs: GitHubPR[] = []
 
   try {
-    const response = await fetch(
+    // Fetch repos
+    const reposResponse = await fetch(
       `https://api.github.com/users/${GITHUB_USERNAME}/repos?sort=pushed&per_page=3`,
       { headers }
     )
 
-    if (response.ok) {
-      githubRepos = await response.json()
+    if (reposResponse.ok) {
+      githubRepos = await reposResponse.json()
     } else {
-      console.error('GitHub API error:', response.status)
+      console.error('GitHub API error (repos):', reposResponse.status)
+    }
+
+    // Fetch recent PRs
+    const prsResponse = await fetch(
+      `https://api.github.com/search/issues?q=author:${GITHUB_USERNAME}+type:pr+sort:created-desc&per_page=5`,
+      { headers }
+    )
+
+    if (prsResponse.ok) {
+      const prsData = await prsResponse.json()
+      githubPRs = prsData.items || []
+    } else {
+      console.error('GitHub API error (PRs):', prsResponse.status)
     }
   } catch (error) {
-    console.error('Failed to fetch GitHub repos:', error)
+    console.error('Failed to fetch GitHub data:', error)
   }
 
   return {
     props: {
       profileData,
       githubRepos,
+      githubPRs,
     },
   }
 }
