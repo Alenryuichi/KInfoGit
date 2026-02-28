@@ -241,14 +241,18 @@ export default function About() {
                   </h3>
                   <div className="space-y-4 text-gray-400 text-lg leading-relaxed">
                     <p>
-                      I&apos;m Kylin Miao, an <span className="text-white font-medium">AI Agent Engineer</span> at Tencent WeCom,
-                      specializing in RAG systems, distributed architecture, and full-stack development. I thrive on building
-                      intelligent systems from V1→V4.
+                      I&apos;m Kylin Miao, an <span className="text-white font-medium">AI Agent Engineer</span> on a mission to build fully autonomous AI teams.
+                      My evolution: <span className="text-blue-400">Prompt</span> → <span className="text-purple-400">Context</span> → <span className="text-pink-400">Harness Engineering</span>.
                     </p>
                     <p>
-                      From <span className="text-blue-400">AI Agent review systems</span> with 90%+ accuracy to
-                      indie <span className="text-purple-400">iOS apps</span> built from scratch, I believe in software that
-                      doesn&apos;t just work, but feels <span className="italic text-white">magical</span>.
+                      At Tencent WeCom, I built AI Agent systems from V1→V4 with 90%+ accuracy.
+                      Now I&apos;m obsessed with orchestrating <span className="text-white font-medium">multi-agent collaboration</span> —
+                      agents that plan, execute, review, and compound their own work.
+                    </p>
+                    <p>
+                      <span className="text-blue-400">OpenMemory Plus</span>: Cross-agent memory for 4+ IDEs.
+                      <span className="text-purple-400 ml-2">MCP Server</span>: 25 ops tools for AI agent control.
+                      I don&apos;t just build AI tools — I&apos;m building infrastructure for <span className="italic text-white">AI teams to operate autonomously</span>.
                     </p>
                   </div>
                 </motion.div>
