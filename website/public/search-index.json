@@ -35,13 +35,6 @@
     "type": "blog"
   },
   {
-    "title": "context/experience/商品发放-钱包选择问题.md",
-    "description": "本文介绍了一种基于AI工程工具架构的知识复合实践，通过Command、Agent、Skill三层架构实现经验的持续沉淀与智能复用。文章阐述了经验沉淀与检索两条核心路径，展示了知识复利效应如何显著提升重复性任务效率，并与传统文档管理方式进行了本质对比。最后，文章总结了该理念对长期任务工程设计的启示，强调入口极简化和能力编码为Skill的设计思路。",
-    "url": "/blog/2026-02-28-context-experience-商品发放-钱包选择问题-md",
-    "category": "Engineering",
-    "type": "blog"
-  },
-  {
     "title": "飞书多 Bot 讨论实验总结",
     "description": "",
     "url": "/blog/2026-02-28-feishu-multi-bot-discussion",
@@ -56,23 +49,37 @@
     "type": "blog"
   },
   {
+    "title": "context/experience/商品发放-钱包选择问题.md",
+    "description": "本文介绍了一种基于AI工程工具架构的知识复合实践，通过设计Command、Agent、Skill三层架构，实现经验的持续沉淀与智能复用。文章阐述了经验沉淀与检索两条核心路径，展示了知识复利效应如何显著提升重复性任务的效率，并与传统文档管理方式进行了对比。最后，文章讨论了该理念对长期任务工程设计的启示，强调入口极简化和能力编码为Skill的设计思路。",
+    "url": "/blog/2026-04-05-context-experience-商品发放-钱包选择问题-md",
+    "category": "Engineering",
+    "type": "blog"
+  },
+  {
+    "title": "Page Agent 深度技术分析报告",
+    "description": "本文对阿里巴巴开源的 Page Agent 项目进行了深度技术分析，重点剖析了其整体架构、基于 Re-act 循环的核心执行流程、DOM 提取与简化、内置工具系统以及 Prompt 设计策略。报告旨在评估其与 atoms-plus 项目集成的可行性，并总结了其关键设计决策和潜在的集成方向。",
+    "url": "/blog/2026-04-05-page-agent-深度技术分析报告",
+    "category": "AI",
+    "type": "blog"
+  },
+  {
     "title": "#### Plan → Work → Review → Compound",
-    "description": "本文介绍了Compound Engineering Plugin如何通过Plan→Work→Review→Compound的闭环工作流，将AI辅助开发系统化。该工具包含27个Agent、19个Command和13个Skill，通过知识沉淀机制将团队经验结构化记录，实现错误自动规避、流程标准化和经验复用，最终打造出能够从经验中持续学习、自我进化的开发伙伴。",
-    "url": "/blog/2026-02-28-plan-work-review-compound",
+    "description": "本文介绍了Compound Engineering Plugin如何通过Plan→Work→Review→Compound的闭环工作流，将AI从被动工具转变为能持续学习和沉淀知识的开发伙伴。系统通过多代理并行规划、执行、审查，并将经验结构化记录，实现错误免疫和流程自动化，最终形成自我进化的开发体系。",
+    "url": "/blog/2026-04-05-plan-work-review-compound",
     "category": "Engineering",
     "type": "blog"
   },
   {
     "title": "### 最致命的问题：无法应对\"考古\"需求",
-    "description": "本文分析了传统需求规范工具（如speckit/openspec）在处理需要历史上下文（“考古”）需求时的致命缺陷，即缺乏对历史经验、业务边界和配置知识的自动检索能力，导致高度依赖人工审查和重复劳动。文章进而提出AI工程化的破局思路，核心是通过分层管理上下文、自动加载历史经验并持续沉淀知识，使AI能在完整信息下自主决策，从而显著降低边际成本并提升效率。",
-    "url": "/blog/2026-02-28-最致命的问题-无法应对-考古-需求",
+    "description": "文章分析了speckit和openspec等工具在应对需要历史上下文（“考古”）需求时的致命缺陷：它们缺乏对历史经验、业务边界和配置规范的自动检索能力，导致AI生成方案时信息不全，依赖人工review且耗时耗力。文章预告了AI工程化的解决思路，即通过分层管理上下文、自动加载历史经验、让知识复利，从而减少重复劳动，提升开发效率。",
+    "url": "/blog/2026-04-05-最致命的问题-无法应对-考古-需求",
     "category": "AI",
     "type": "blog"
   },
   {
     "title": "> 本文目标：教会你把 workflow 设计成“可被其它 workflow 调用的服务”，避免到处",
-    "description": "本文介绍了如何将 workflow 设计成可被其他 workflow 调用的服务，以避免重复逻辑。核心方法是创建支持多模式（mode）的服务型 workflow，通过 `<invoke-workflow>` 和 `<param>` 进行参数传递与调用，并利用 `template-output` 返回结构化数据供调用方使用，从而实现逻辑的封装与复用。",
-    "url": "/blog/2026-02-28-本文目标-教会你把-workflow-设计成-可被其它-workflow-调用的服务-避免到处",
+    "description": "本文介绍了如何将 workflow 设计成可被其他 workflow 调用的服务，以避免重复逻辑。核心方法是通过定义多模式（mode）路由来提供不同子能力，使用 `<invoke-workflow>` 和 `<param>` 进行参数传递，并利用 `template-output` 返回结构化结果，从而实现 workflow 之间的高效协作与复用。",
+    "url": "/blog/2026-04-05-本文目标-教会你把-workflow-设计成-可被其它-workflow-调用的服务-避免到处",
     "category": "Engineering",
     "type": "blog"
   },
