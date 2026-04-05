@@ -3,7 +3,7 @@ import type { AppProps } from 'next/app'
 import { Inter } from 'next/font/google'
 import Head from 'next/head'
 import { ThemeProvider } from '@/components/ThemeProvider'
-import Layout from '@/components/Layout'
+import { Layout } from '@/components/Layout'
 
 const inter = Inter({ subsets: ['latin'] })
 

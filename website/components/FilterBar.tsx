@@ -13,7 +13,7 @@ interface FilterBarProps {
   className?: string
 }
 
-export default function FilterBar({
+export function FilterBar({
   categories,
   selectedCategory,
   onCategoryChange,

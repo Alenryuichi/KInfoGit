@@ -1,9 +1,9 @@
 import { GetStaticProps } from 'next'
 import { useEffect } from 'react'
 import Head from 'next/head'
-import About from '@/components/About'
-import Skills from '@/components/Skills'
-import GitHubActivity from '@/components/GitHubActivity'
+import { About } from '@/components/About'
+import { Skills } from '@/components/Skills'
+import { GitHubActivity } from '@/components/GitHubActivity'
 import { profileData } from '@/lib/config'
 
 interface GitHubRepo {

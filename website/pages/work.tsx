@@ -1,7 +1,7 @@
 import { GetStaticProps } from 'next'
 import Head from 'next/head'
-import Projects from '@/components/Projects'
-import Experience from '@/components/Experience'
+import { Projects } from '@/components/Projects'
+import { Experience } from '@/components/Experience'
 import { profileData } from '@/lib/config'
 import { getCoreProjects, type Project } from '@/lib/data'
 

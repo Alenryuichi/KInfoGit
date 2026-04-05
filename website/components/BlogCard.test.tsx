@@ -43,7 +43,7 @@ const mockPost = {
 
 describe('BlogCard Component', () => {
   it('renders blog post title', async () => {
-    const { default: BlogCard } = await import('./BlogCard')
+    const { BlogCard } = await import('./BlogCard')
     const React = await import('react')
     const { render } = await import('@testing-library/react')
 
@@ -53,7 +53,7 @@ describe('BlogCard Component', () => {
   })
 
   it('renders formatted date', async () => {
-    const { default: BlogCard } = await import('./BlogCard')
+    const { BlogCard } = await import('./BlogCard')
     const React = await import('react')
     const { render } = await import('@testing-library/react')
 
@@ -64,7 +64,7 @@ describe('BlogCard Component', () => {
   })
 
   it('renders excerpt text', async () => {
-    const { default: BlogCard } = await import('./BlogCard')
+    const { BlogCard } = await import('./BlogCard')
     const React = await import('react')
     const { render } = await import('@testing-library/react')
 
@@ -74,7 +74,7 @@ describe('BlogCard Component', () => {
   })
 
   it('renders tags', async () => {
-    const { default: BlogCard } = await import('./BlogCard')
+    const { BlogCard } = await import('./BlogCard')
     const React = await import('react')
     const { render } = await import('@testing-library/react')
 
@@ -86,7 +86,7 @@ describe('BlogCard Component', () => {
   })
 
   it('renders read time', async () => {
-    const { default: BlogCard } = await import('./BlogCard')
+    const { BlogCard } = await import('./BlogCard')
     const React = await import('react')
     const { render } = await import('@testing-library/react')
 
@@ -96,7 +96,7 @@ describe('BlogCard Component', () => {
   })
 
   it('links to the correct blog post URL', async () => {
-    const { default: BlogCard } = await import('./BlogCard')
+    const { BlogCard } = await import('./BlogCard')
     const React = await import('react')
     const { render } = await import('@testing-library/react')
 
@@ -108,7 +108,7 @@ describe('BlogCard Component', () => {
   })
 
   it('renders motion article with hover animation (y: -8)', async () => {
-    const { default: BlogCard } = await import('./BlogCard')
+    const { BlogCard } = await import('./BlogCard')
     const React = await import('react')
     const { render } = await import('@testing-library/react')
 
@@ -120,7 +120,7 @@ describe('BlogCard Component', () => {
   })
 
   it('shows featured badge when post is featured', async () => {
-    const { default: BlogCard } = await import('./BlogCard')
+    const { BlogCard } = await import('./BlogCard')
     const React = await import('react')
     const { render } = await import('@testing-library/react')
 
@@ -131,7 +131,7 @@ describe('BlogCard Component', () => {
   })
 
   it('limits tags display to 4 and shows "+X more"', async () => {
-    const { default: BlogCard } = await import('./BlogCard')
+    const { BlogCard } = await import('./BlogCard')
     const React = await import('react')
     const { render } = await import('@testing-library/react')
 

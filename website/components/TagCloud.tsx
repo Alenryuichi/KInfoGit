@@ -1,5 +1,3 @@
-'use client'
-
 import { useState } from 'react'
 
 interface TagCloudProps {
@@ -9,7 +7,7 @@ interface TagCloudProps {
   className?: string
 }
 
-export default function TagCloud({ tags, selectedTags, onTagClick, className = '' }: TagCloudProps) {
+export function TagCloud({ tags, selectedTags, onTagClick, className = '' }: TagCloudProps) {
   const [hoveredTag, setHoveredTag] = useState<string | null>(null)
 
   // Calculate tag sizes based on frequency (mock implementation)

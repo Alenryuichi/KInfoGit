@@ -1,5 +1,3 @@
-'use client'
-
 import { useEffect, useRef, useMemo, useState } from 'react'
 import {
   Scene,
@@ -209,7 +207,7 @@ interface FloatingLinesProps {
 }
 
 
-export default function FloatingLines({
+export function FloatingLines({
   linesGradient,
   enabledWaves = ['top', 'middle', 'bottom'],
   lineCount = [6],

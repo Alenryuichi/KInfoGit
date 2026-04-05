@@ -1,8 +1,8 @@
 import { useRef, useState, MouseEvent, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Terminal, Mail, Github, Linkedin, Trophy, Smartphone, Mountain, FileDown, Users } from 'lucide-react'
-import SpotlightCard from './SpotlightCard'
-import TextReveal from './TextReveal'
+import { SpotlightCard } from './SpotlightCard'
+import { TextReveal } from './TextReveal'
 
 const PROFILE_IMAGES = [
   '/images/profile-1.jpg',
@@ -191,7 +191,7 @@ const GlareCard = ({ children, className = "" }: { children: React.ReactNode, cl
   )
 }
 
-export default function About() {
+export function About() {
   const [currentImageIdx, setCurrentImageIdx] = useState(0)
 
   useEffect(() => {

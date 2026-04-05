@@ -1,16 +1,16 @@
 import { ReactNode, useState } from 'react'
 import dynamic from 'next/dynamic'
-import Header from './Header'
-import Footer from './Footer'
-import ContactModal from './ContactModal'
+import { Header } from './Header'
+import { Footer } from './Footer'
+import { ContactModal } from './ContactModal'
 
-const FloatingLines = dynamic(() => import('./FloatingLines'), { ssr: false })
+const FloatingLines = dynamic(() => import('./FloatingLines').then(mod => mod.FloatingLines), { ssr: false })
 
 interface LayoutProps {
   children: ReactNode
 }
 
-export default function Layout({ children }: LayoutProps) {
+export function Layout({ children }: LayoutProps) {
   const [isContactModalOpen, setIsContactModalOpen] = useState(false)
 
   const handleBookCallClick = () => {

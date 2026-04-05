@@ -16,7 +16,7 @@ describe('Hero Component', () => {
   describe('Let\'s Connect Button (Story 6-1)', () => {
     it('should have href pointing to /about#contact', async () => {
       // Import dynamically after mocks are set up
-      const { default: Hero } = await import('./Hero')
+      const { Hero } = await import('./Hero')
       const React = await import('react')
       const { render } = await import('@testing-library/react')
       
@@ -30,7 +30,7 @@ describe('Hero Component', () => {
     })
 
     it('should have aria-label for accessibility', async () => {
-      const { default: Hero } = await import('./Hero')
+      const { Hero } = await import('./Hero')
       const React = await import('react')
       const { render } = await import('@testing-library/react')
       
@@ -43,7 +43,7 @@ describe('Hero Component', () => {
     })
 
     it('should have View My Work button linking to /work#projects', async () => {
-      const { default: Hero } = await import('./Hero')
+      const { Hero } = await import('./Hero')
       const React = await import('react')
       const { render } = await import('@testing-library/react')
       

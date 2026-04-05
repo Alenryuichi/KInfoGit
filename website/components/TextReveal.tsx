@@ -6,7 +6,7 @@ interface TextRevealProps {
   delay?: number
 }
 
-export default function TextReveal({ text, className = "", delay = 0 }: TextRevealProps) {
+export function TextReveal({ text, className = "", delay = 0 }: TextRevealProps) {
   const words = text.split(" ")
 
   const container = {

@@ -1,5 +1,3 @@
-'use client'
-
 import { useState, useEffect, useRef } from 'react'
 import { Menu, X, Search } from 'lucide-react'
 import Image from 'next/image'
@@ -46,7 +44,7 @@ const Logo = () => (
   </div>
 )
 
-export default function Header({ onBookCallClick }: HeaderProps) {
+export function Header({ onBookCallClick }: HeaderProps) {
   const router = useRouter()
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isSearchOpen, setIsSearchOpen] = useState(false)

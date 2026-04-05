@@ -8,7 +8,7 @@ interface CountUpProps {
   className?: string
 }
 
-export default function CountUp({ end, duration = 2000, suffix = "", className = "" }: CountUpProps) {
+export function CountUp({ end, duration = 2000, suffix = "", className = "" }: CountUpProps) {
   const [count, setCount] = useState(0)
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true })

@@ -90,7 +90,7 @@ function ProjectCard({ project }: { project: Project }) {
 	)
 }
 
-export default function Projects({ projects }: ProjectsProps) {
+export function Projects({ projects }: ProjectsProps) {
 	useEffect(() => {
 		// 初始化滚动动画
 		animateOnScroll('.projects-header')

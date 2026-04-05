@@ -130,7 +130,7 @@ const TechBadge = ({ tech }: { tech: { name: string, icon: string } }) => (
   </motion.div>
 )
 
-export default function Skills() {
+export function Skills() {
   useEffect(() => {
     // 初始化滚动动画 (保留兼容性)
     animateOnScroll('.skills-header')

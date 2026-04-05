@@ -1,5 +1,3 @@
-'use client'
-
 import { useEffect, useState } from 'react'
 
 interface TocItem {
@@ -12,7 +10,7 @@ interface TableOfContentsProps {
   content: string
 }
 
-export default function TableOfContents({ content }: TableOfContentsProps) {
+export function TableOfContents({ content }: TableOfContentsProps) {
   const [headings, setHeadings] = useState<TocItem[]>([])
   const [activeId, setActiveId] = useState<string>('')
 

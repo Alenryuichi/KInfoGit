@@ -34,7 +34,7 @@ const TargetIcon = () => (
   </svg>
 )
 
-export default function Experience() {
+export function Experience() {
   useEffect(() => {
     animateOnScroll('.experience-header')
     animateOnScroll('.experience-card')

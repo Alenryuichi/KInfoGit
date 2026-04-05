@@ -7,7 +7,7 @@
 import { describe, it, expect, vi } from 'vitest'
 import React from 'react'
 import { render } from '@testing-library/react'
-import Skills from './Skills'
+import { Skills } from './Skills'
 
 // Mock framer-motion to avoid animation issues in tests
 vi.mock('framer-motion', () => ({

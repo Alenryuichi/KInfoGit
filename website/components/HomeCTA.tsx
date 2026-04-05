@@ -2,7 +2,7 @@ import Link from 'next/link'
 import { useEffect } from 'react'
 import { animateOnScroll } from '@/utils/animations'
 
-export default function HomeCTA() {
+export function HomeCTA() {
   useEffect(() => {
     animateOnScroll('.home-cta-content')
   }, [])

@@ -19,7 +19,7 @@ const buttonTransition = {
   damping: 17
 }
 
-export default function Hero() {
+export function Hero() {
   useEffect(() => {
     // 页面加载后启动Hero动画
     const timer = setTimeout(() => {

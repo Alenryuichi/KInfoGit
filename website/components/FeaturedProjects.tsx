@@ -7,7 +7,7 @@ interface FeaturedProjectsProps {
   projects: Project[]
 }
 
-export default function FeaturedProjects({ projects }: FeaturedProjectsProps) {
+export function FeaturedProjects({ projects }: FeaturedProjectsProps) {
   useEffect(() => {
     animateOnScroll('.featured-projects-header')
     animateOnScroll('.featured-project-card')

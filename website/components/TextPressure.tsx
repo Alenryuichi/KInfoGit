@@ -1,5 +1,3 @@
-'use client'
-
 // Component ported from https://codepen.io/JuanFuentes/full/rgXKGQ
 // Source: https://reactbits.dev/text-animations/text-pressure
 
@@ -38,7 +36,7 @@ interface TextPressureProps {
   minFontSize?: number
 }
 
-export default function TextPressure({
+export function TextPressure({
   text = 'KM',
   fontFamily = 'Compressa VF',
   fontUrl = 'https://res.cloudinary.com/dr6lvwubh/raw/upload/v1529908256/CompressaPRO-GX.woff2',

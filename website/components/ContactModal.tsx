@@ -1,5 +1,3 @@
-'use client'
-
 import { useState, useEffect, useRef } from 'react'
 import { Mail, Calendar, Linkedin, Github, Twitter, Send, Users } from 'lucide-react'
 import { animateModalOpen, animateModalClose, animateModalContent, animateDragClose } from '@/utils/animations'
@@ -9,7 +7,7 @@ interface ContactModalProps {
   onClose: () => void
 }
 
-export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
+export function ContactModal({ isOpen, onClose }: ContactModalProps) {
   const [activeTab, setActiveTab] = useState<'quick' | 'form'>('quick')
   const [formData, setFormData] = useState({
     name: '',

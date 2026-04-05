@@ -1,10 +1,8 @@
-'use client'
-
 import { useEffect, useState } from 'react'
 import Script from 'next/script'
 import { Github, Mail, Linkedin, Users, Eye, UserCheck } from 'lucide-react'
 
-export default function Footer() {
+export function Footer() {
   const [mounted, setMounted] = useState(false)
 
   useEffect(() => {

@@ -2,13 +2,13 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { BlogPost } from '@/lib/data'
-import SpotlightCard from '@/components/SpotlightCard'
+import { SpotlightCard } from '@/components/SpotlightCard'
 
 interface BlogCardProps {
   post: BlogPost
 }
 
-export default function BlogCard({ post }: BlogCardProps) {
+export function BlogCard({ post }: BlogCardProps) {
   const formatDate = (dateString: string) => {
     const date = new Date(dateString)
     return date.toLocaleDateString('en-US', {

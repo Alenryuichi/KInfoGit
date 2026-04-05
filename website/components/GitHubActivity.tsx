@@ -1,5 +1,3 @@
-'use client'
-
 import { useEffect, useState, Component, ReactNode } from 'react'
 import dynamic from 'next/dynamic'
 import { motion } from 'framer-motion'
@@ -120,7 +118,7 @@ function getRepoName(repositoryUrl: string): string {
   return parts[parts.length - 1] || ''
 }
 
-export default function GitHubActivity({ className = '', initialRepos = [], initialPRs = [] }: GitHubActivityProps) {
+export function GitHubActivity({ className = '', initialRepos = [], initialPRs = [] }: GitHubActivityProps) {
   // Use initialRepos and initialPRs from getStaticProps (fetched at build time)
   const repos = initialRepos
   const prs = initialPRs

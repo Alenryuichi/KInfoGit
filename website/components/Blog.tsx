@@ -1,9 +1,7 @@
-'use client'
-
 import { useState, useEffect, useMemo } from 'react'
-import BlogCard from './BlogCard'
-import SearchBox from './SearchBox'
-import TagCloud from './TagCloud'
+import { BlogCard } from './BlogCard'
+import { SearchBox } from './SearchBox'
+import { TagCloud } from './TagCloud'
 import { BlogPost, getAllBlogPosts, getAllTags } from '@/lib/data'
 
 interface BlogProps {
@@ -11,7 +9,7 @@ interface BlogProps {
   tags?: string[]
 }
 
-export default function Blog({ posts = [], tags = [] }: BlogProps) {
+export function Blog({ posts = [], tags = [] }: BlogProps) {
   const [searchQuery, setSearchQuery] = useState('')
   const [selectedTags, setSelectedTags] = useState<string[]>([])
 

@@ -2,8 +2,8 @@ import { GetStaticPaths, GetStaticProps } from 'next'
 import Head from 'next/head'
 import Link from 'next/link'
 import { profileData } from '@/lib/config'
-import MarkdownRenderer from '@/components/MarkdownRenderer'
-import TableOfContents from '@/components/TableOfContents'
+import { MarkdownRenderer } from '@/components/MarkdownRenderer'
+import { TableOfContents } from '@/components/TableOfContents'
 import { getCoreProjects, getProjectById, getProjectDetailContent, type Project } from '@/lib/data'
 
 interface ProjectPageProps {

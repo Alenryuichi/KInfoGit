@@ -1,5 +1,3 @@
-'use client'
-
 import { useState, useEffect } from 'react'
 import { MagnifyingGlassIcon } from '@heroicons/react/24/outline'
 
@@ -8,7 +6,7 @@ interface SearchBoxProps {
   placeholder?: string
 }
 
-export default function SearchBox({ onSearch, placeholder = "Search..." }: SearchBoxProps) {
+export function SearchBox({ onSearch, placeholder = "Search..." }: SearchBoxProps) {
   const [query, setQuery] = useState('')
   const [isFocused, setIsFocused] = useState(false)
 

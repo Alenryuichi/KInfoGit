@@ -1,8 +1,8 @@
 import { GetStaticProps } from 'next'
 import Head from 'next/head'
-import Hero from '@/components/Hero'
-import FeaturedProjects from '@/components/FeaturedProjects'
-import HomeCTA from '@/components/HomeCTA'
+import { Hero } from '@/components/Hero'
+import { FeaturedProjects } from '@/components/FeaturedProjects'
+import { HomeCTA } from '@/components/HomeCTA'
 import { profileData } from '@/lib/config'
 import { getFeaturedProjects, type Project } from '@/lib/data'
 
