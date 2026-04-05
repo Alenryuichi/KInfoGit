@@ -1,3 +1,15 @@
+---
+paths:
+  - "website/**/*.ts"
+  - "website/**/*.tsx"
+---
+
+---
+paths:
+  - "website/**/*.ts"
+  - "website/**/*.tsx"
+---
+
 # 代码风格
 
 - 使用 TypeScript strict mode

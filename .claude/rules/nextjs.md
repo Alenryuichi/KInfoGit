@@ -10,5 +10,9 @@ paths:
 - 配置 `output: 'export'`，不可使用 API Routes、SSR、ISR
 - 图片使用 `unoptimized: true`（GitHub Pages 限制）
 - 自定义域名 `kylinmiao.me`，无需 basePath / assetPrefix
+- `trailingSlash: true` — 影响所有路由和 `<Link>` href，链接末尾须带 `/`
+- 配置文件使用 CommonJS (`require()`) 格式，不是 ESM
+- `experimental: { mdxRs: true }` 已启用
 - MDX 支持已配置，博客内容源在 `profile-data/blog/`
 - 修改 `next.config.js` 时注意 withMDX 包装
+- 禁止使用 `'use client'` 指令（Pages Router 不需要，加了也是无效代码）

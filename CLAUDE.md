@@ -37,19 +37,17 @@ scripts/              # just 任务模块 (dev, git, content, utils)
 
 ## 关键约定
 
-- **SSG only** — 纯静态导出 (`output: 'export'`)，无 API Routes、无 SSR
-- **Pages Router** — 使用 `getStaticProps` / `getStaticPaths`，不用 App Router
-- **自定义域名** — `kylinmiao.me`，无 basePath
-- **组件规范** — 函数组件 + TypeScript，Props 用 interface 定义
-- **样式** — Tailwind CSS，不写内联 style
-- **动画** — framer-motion + GSAP
+详细规范见 `.claude/rules/`，以下是核心要点：
+
+- SSG 纯静态导出，Pages Router（→ `nextjs.md`）
+- 函数组件 + TypeScript + Tailwind（→ `components.md`）
+- 博客文章在 `profile-data/blog/`（→ `blog-content.md`）
 
 ## 易踩的坑
 
 - 图片必须 `unoptimized: true`（GitHub Pages 无 Image Optimization API）
 - 博客文章在 `profile-data/blog/` 而非 `website/` 下
 - 构建前会自动生成博客封面图 (`just generate-covers`)
-- Playwright 在 macOS 上有路径问题，详见 `.claude/rules/playwright-macos.md`
 
 ## 规则
 
