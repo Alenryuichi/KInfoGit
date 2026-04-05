@@ -14,7 +14,7 @@ export default function WorkPage({ profileData, projects }: WorkPageProps) {
   return (
     <>
       <Head>
-        <title>Work - {profileData.name}</title>
+        <title>{`Work - ${profileData.name}`}</title>
         <meta name="description" content={`Explore ${profileData.name}'s professional work, projects, and experience`} />
         <meta property="og:title" content={`Work - ${profileData.name}`} />
         <meta property="og:description" content={`Explore ${profileData.name}'s professional work, projects, and experience`} />

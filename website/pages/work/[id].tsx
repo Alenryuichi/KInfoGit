@@ -15,7 +15,7 @@ export default function ProjectPage({ project, detailContent }: ProjectPageProps
 	return (
 		<>
 			<Head>
-				<title>{project.title.zh} - Case Study - {profileData.name}</title>
+				<title>{`${project.title.zh} - Case Study - ${profileData.name}`}</title>
 				<meta
 					name="description"
 					content={project.highlights?.zh ?? project.achievements.zh[0] ?? ''}

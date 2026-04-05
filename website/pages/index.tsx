@@ -14,7 +14,7 @@ export default function Home({ featuredProjects }: HomeProps) {
   return (
     <>
       <Head>
-        <title>{profileData.name} - {profileData.title}</title>
+        <title>{`${profileData.name} - ${profileData.title}`}</title>
         <meta name="description" content={profileData.bio} />
         <meta name="keywords" content="anti-fraud, full-stack developer, system architecture, graph database, data analysis, Python, Go, Vue.js" />
         <meta property="og:title" content={`${profileData.name} - ${profileData.title}`} />

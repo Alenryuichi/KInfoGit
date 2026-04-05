@@ -56,7 +56,7 @@ export default function AboutPage({ profileData, githubRepos, githubPRs }: About
   return (
     <>
       <Head>
-        <title>About - {profileData.name}</title>
+        <title>{`About - ${profileData.name}`}</title>
         <meta name="description" content={`Learn more about ${profileData.name}, ${profileData.title}`} />
         <meta property="og:title" content={`About - ${profileData.name}`} />
         <meta property="og:description" content={`Learn more about ${profileData.name}, ${profileData.title}`} />
