@@ -134,14 +134,11 @@ export default function BlogPostPage({ post, prevPost, nextPost }: BlogPostPageP
           <TableOfContents content={post.content} variant="mobile" />
         </div>
 
-        {/* Article Content */}
+        {/* Article Content + Desktop TOC */}
         <div className="relative max-w-4xl mx-auto px-5 sm:px-6 pb-12">
-          {/* Desktop TOC — fixed in right margin, follows scroll */}
-          <div className="hidden xl:block fixed top-32 w-56" style={{ left: 'calc(50% + 28rem + 2rem)' }}>
-            <TableOfContents content={post.content} variant="desktop" />
-          </div>
-
-          <article>
+          <div className="xl:flex xl:gap-8">
+            {/* Main article */}
+            <article className="min-w-0 flex-1">
             <MarkdownRenderer content={post.content} />
 
             {/* Prev/Next Navigation */}
@@ -196,6 +193,10 @@ export default function BlogPostPage({ post, prevPost, nextPost }: BlogPostPageP
               </div>
             </footer>
           </article>
+
+            {/* Desktop TOC — sticky sidebar */}
+            <TableOfContents content={post.content} variant="desktop" />
+          </div>
         </div>
       </div>
     </>

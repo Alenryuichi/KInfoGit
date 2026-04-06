@@ -264,6 +264,7 @@ export function FloatingLines({
   useEffect(() => {
     // WebGL compatibility check (Issue #7)
     if (!isWebGLSupported()) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setWebglSupported(false)
       return
     }

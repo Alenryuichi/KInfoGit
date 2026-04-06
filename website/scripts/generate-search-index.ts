@@ -41,7 +41,7 @@ async function generateIndex() {
   const projectsPath = path.join(profileDataDir, 'projects', 'core-projects.json')
   if (fs.existsSync(projectsPath)) {
     const projects = JSON.parse(fs.readFileSync(projectsPath, 'utf8'))
-    projects.forEach((project: any) => {
+    projects.forEach((project: { title: { en?: string; zh?: string }; description?: { en?: string; zh?: string }; impact?: string; id: string; category?: string }) => {
       searchIndex.push({
         title: project.title.en || project.title.zh || 'Project',
         description: project.description?.en || project.description?.zh || project.impact || '',

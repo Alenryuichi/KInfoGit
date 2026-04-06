@@ -115,8 +115,8 @@ const TechBadge = ({ tech }: { tech: { name: string, icon: string } }) => (
     whileTap={{ scale: 0.97 }}
     transition={{ type: "spring", stiffness: 400, damping: 20 }}
   >
+    {/* eslint-disable-next-line @next/next/no-img-element */}
     <img
-      height="14"
       width="14"
       alt={tech.name}
       src={tech.icon}
@@ -289,8 +289,8 @@ export function Skills() {
               Ready to build something amazing?
             </h3>
             <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
-              I'm available for full-time roles & freelance projects.
-              Let's collaborate and create exceptional digital experiences.
+              I&apos;m available for full-time roles & freelance projects.
+              Let&apos;s collaborate and create exceptional digital experiences.
             </p>
             <motion.a
               href="#contact"

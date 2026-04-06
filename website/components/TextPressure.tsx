@@ -66,6 +66,7 @@ export function TextPressure({
 
   // Only render dynamic styles after mount to avoid hydration mismatch
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setIsMounted(true)
   }, [])
 

@@ -289,7 +289,7 @@ export function Header({ onBookCallClick }: HeaderProps) {
 
           {searchQuery && searchResults.length === 0 && (
             <div className="mt-2 p-6 text-center bg-neutral-900/90 backdrop-blur-xl border border-white/20 rounded-2xl text-white/50 text-sm shadow-2xl">
-              No results found for "{searchQuery}"
+              No results found for &quot;{searchQuery}&quot;
             </div>
           )}
         </div>

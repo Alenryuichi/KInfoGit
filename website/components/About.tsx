@@ -15,7 +15,7 @@ interface HighlightItem {
   label: string
   title: string
   description: string
-  icon: any
+  icon: React.ComponentType<{ className?: string }>
   mediaType: 'video' | 'image'
   src: string
   poster?: string
@@ -95,6 +95,7 @@ const MediaCard = ({ item }: { item: HighlightItem }) => {
             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-60 group-hover:opacity-100"
           />
         ) : (
+          // eslint-disable-next-line @next/next/no-img-element
           <img 
             src={item.src} 
             alt={item.title} 
@@ -173,17 +174,17 @@ const GlareCard = ({ children, className = "" }: { children: React.ReactNode, cl
       style={{
         transform: 'rotateX(var(--rotate-x, 0deg)) rotateY(var(--rotate-y, 0deg))',
         transformStyle: 'preserve-3d'
-      } as any}
+      } as React.CSSProperties}
     >
       <div className="relative z-10 w-full h-full rounded-[2.5rem] overflow-hidden border border-white/10 bg-gray-900/40 backdrop-blur-2xl shadow-2xl">
         {/* Glare Overlay */}
-        <div 
+        <div
           className="pointer-events-none absolute inset-0 z-20 transition-opacity duration-500"
           style={{
             background: 'radial-gradient(circle at var(--glare-x, 50%) var(--glare-y, 50%), rgba(255,255,255,0.3) 0%, transparent 50%)',
             opacity: 'var(--glare-opacity, 0)',
             mixBlendMode: 'overlay'
-          } as any}
+          } as React.CSSProperties}
         />
         {children}
       </div>

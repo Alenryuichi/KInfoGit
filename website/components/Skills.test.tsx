@@ -12,8 +12,8 @@ import { Skills } from './Skills'
 // Mock framer-motion to avoid animation issues in tests
 vi.mock('framer-motion', () => ({
   motion: {
-    div: ({ children, className, ...props }: any) => <div className={className} data-testid="motion-div" {...props}>{children}</div>,
-    a: ({ children, className, href, ...props }: any) => <a className={className} href={href} data-testid="motion-a" {...props}>{children}</a>,
+    div: ({ children, className, ...props }: React.HTMLAttributes<HTMLDivElement> & { children?: React.ReactNode }) => <div className={className} data-testid="motion-div" {...props}>{children}</div>,
+    a: ({ children, className, href, ...props }: React.AnchorHTMLAttributes<HTMLAnchorElement> & { children?: React.ReactNode }) => <a className={className} href={href} data-testid="motion-a" {...props}>{children}</a>,
   },
 }))
 

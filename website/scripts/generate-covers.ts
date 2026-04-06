@@ -394,7 +394,7 @@ async function generateCover(
 ) {
   const element = createCoverElement(post);
 
-  const svg = await satori(element as any, {
+  const svg = await satori(element as React.ReactNode, {
     width: WIDTH,
     height: HEIGHT,
     fonts,

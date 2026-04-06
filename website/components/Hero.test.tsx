@@ -4,7 +4,7 @@
  * 
  * Tests for Story 6-1: Let's Connect button navigation
  */
-import { describe, it, expect, vi, beforeEach } from 'vitest'
+import { describe, it, expect, vi } from 'vitest'
 
 // Mock the animations module to avoid GSAP issues in tests
 vi.mock('@/utils/animations', () => ({

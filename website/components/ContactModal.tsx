@@ -49,9 +49,9 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
       document.documentElement.style.overflow = 'hidden'
       // 额外保险：隐藏所有可能的滚动条
       document.body.style.scrollbarWidth = 'none'
-      ;(document.body.style as any).msOverflowStyle = 'none'
+      ;(document.body.style as unknown as Record<string, string>).msOverflowStyle = 'none'
       document.documentElement.style.scrollbarWidth = 'none'
-      ;(document.documentElement.style as any).msOverflowStyle = 'none'
+      ;(document.documentElement.style as unknown as Record<string, string>).msOverflowStyle = 'none'
 
       // 清理之前的动画
       if (closeTimelineRef.current) {
@@ -106,9 +106,9 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
           document.body.style.overflow = 'unset'
           document.documentElement.style.overflow = 'unset'
           document.body.style.scrollbarWidth = 'auto'
-          ;(document.body.style as any).msOverflowStyle = 'auto'
+          ;(document.body.style as unknown as Record<string, string>).msOverflowStyle = 'auto'
           document.documentElement.style.scrollbarWidth = 'auto'
-          ;(document.documentElement.style as any).msOverflowStyle = 'auto'
+          ;(document.documentElement.style as unknown as Record<string, string>).msOverflowStyle = 'auto'
 
           // 重置内容元素状态，为下次打开做准备
           if (modalRef.current) {
@@ -133,9 +133,9 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
       document.body.style.overflow = 'unset'
       document.documentElement.style.overflow = 'unset'
       document.body.style.scrollbarWidth = 'auto'
-      ;(document.body.style as any).msOverflowStyle = 'auto'
+      ;(document.body.style as unknown as Record<string, string>).msOverflowStyle = 'auto'
       document.documentElement.style.scrollbarWidth = 'auto'
-      ;(document.documentElement.style as any).msOverflowStyle = 'auto'
+      ;(document.documentElement.style as unknown as Record<string, string>).msOverflowStyle = 'auto'
 
       // 清理动画
       if (openTimelineRef.current) {
@@ -166,6 +166,7 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
         document.removeEventListener('mouseup', handleGlobalMouseUp)
       }
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isDragging, startY, dragY])
 
   const validateField = (name: string, value: string) => {
@@ -359,7 +360,7 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
             overflow: isAnimating ? 'hidden' : 'auto',
             // 完全隐藏滚动条
             scrollbarWidth: 'none',
-            msOverflowStyle: 'none' as any
+            msOverflowStyle: 'none' as React.CSSProperties['msOverflowStyle']
           }}
         >
           {/* Drag Handle */}

@@ -100,7 +100,7 @@ const components: Components = {
     return <h3 id={id} {...props}>{children}</h3>
   },
   // Code blocks with syntax highlighting styling and Mermaid support
-  code({ node, className, children, ...props }) {
+  code({ className, children, ...props }) {
     const match = /language-(\w+)/.exec(className || '')
     const language = match ? match[1] : ''
     const isInline = !match && !className

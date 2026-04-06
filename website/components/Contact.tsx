@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Mail, Phone, MapPin, Github, Linkedin, Send, CheckCircle, Download, Users } from 'lucide-react'
+import { Mail, Phone, MapPin, Github, Linkedin, Send, CheckCircle, Users } from 'lucide-react'
 
 export function Contact() {
   const [formData, setFormData] = useState({
@@ -95,14 +95,14 @@ export function Contact() {
               AVAILABLE FOR OPPORTUNITIES
             </div>
             <h2 className="text-4xl sm:text-5xl font-bold mb-6">
-              Let's work{' '}
+              Let&apos;s work{' '}
               <span className="bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
                 together
               </span>
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
-              I'm always interested in new opportunities and exciting projects.
-              Whether you have a question or just want to say hi, I'll get back to you within 24 hours.
+              I&apos;m always interested in new opportunities and exciting projects.
+              Whether you have a question or just want to say hi, I&apos;ll get back to you within 24 hours.
             </p>
           </div>
 
@@ -291,8 +291,8 @@ export function Contact() {
                 Ready to start your project?
               </h3>
               <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
-                I'm currently available for freelance work and full-time opportunities.
-                Let's discuss how we can bring your ideas to life.
+                I&apos;m currently available for freelance work and full-time opportunities.
+                Let&apos;s discuss how we can bring your ideas to life.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
