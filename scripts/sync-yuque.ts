@@ -65,6 +65,7 @@ interface SyncState {
     slug: string;
     updated_at: string;
     category: string;
+    categoryOrder: number;
     blogFile: string;
   }>;
 }
@@ -386,11 +387,31 @@ async function main(): Promise<void> {
 
       // Check if unchanged
       const cached = syncState.docs[docIdStr];
-      if (cached && cached.updated_at === doc.updated_at) {
+      const categoryChanged = cached &&
+        (cached.category !== docInfo.category.name ||
+         cached.categoryOrder !== docInfo.category.order);
+
+      if (cached && cached.updated_at === doc.updated_at && !categoryChanged) {
         console.log(`   ⏭️  跳过（未变更）`);
-        // Update category in case it was moved
-        cached.category = docInfo.category.name;
         skipped++;
+        continue;
+      }
+
+      // If only category/order changed, update frontmatter in existing file
+      if (cached && cached.updated_at === doc.updated_at && categoryChanged) {
+        console.log(`   🔄 目录变更: ${cached.category} → ${docInfo.category.name}`);
+        const blogPath = path.join(BLOG_OUTPUT_DIR, cached.blogFile);
+        if (existsSync(blogPath)) {
+          const existingContent = readFileSync(blogPath, 'utf-8');
+          const updated = existingContent
+            .replace(/^category: ".*"$/m, `category: "${docInfo.category.name}"`)
+            .replace(/^categoryOrder: \d+$/m, `categoryOrder: ${docInfo.category.order}`);
+          await fs.writeFile(blogPath, updated);
+        }
+        cached.category = docInfo.category.name;
+        cached.categoryOrder = docInfo.category.order;
+        console.log(`   ✅ 已更新分类`);
+        synced++;
         continue;
       }
 
@@ -438,6 +459,7 @@ async function main(): Promise<void> {
         slug: docInfo.slug,
         updated_at: doc.updated_at,
         category: docInfo.category.name,
+        categoryOrder: docInfo.category.order,
         blogFile: filename,
       };
 
