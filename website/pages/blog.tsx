@@ -8,22 +8,7 @@ import { stripMarkdownTitle } from '@/lib/utils'
 
 // --- Theme tab types & config ---
 
-type Theme = '全部' | '文章' | '随笔' | '分享'
-
-const THEMES: Theme[] = ['全部', '文章', '随笔', '分享']
-
-// Category → theme mapping
-function mapCategoryToTheme(category: string): Theme {
-  const articleCategories = ['AI', 'AI Engineering', 'Engineering', '技术实践', '技术文档', 'technology']
-  const lower = category.toLowerCase()
-  if (articleCategories.some(c => c.toLowerCase() === lower)) {
-    return '文章'
-  }
-  if (category === '分享') {
-    return '分享'
-  }
-  return '随笔'
-}
+// Tabs are dynamically generated from post data
 
 // --- Year grouping ---
 
@@ -51,30 +36,32 @@ function groupByYear(posts: BlogPost[]): YearGroup[] {
 
 function ThemeTabs({
   active,
+  tabs,
   onChange,
 }: {
-  active: Theme
-  onChange: (t: Theme) => void
+  active: string
+  tabs: string[]
+  onChange: (t: string) => void
 }) {
   return (
     <div className="relative md:contents">
       <div className="flex gap-1 overflow-x-auto scrollbar-hide relative p-1 rounded-lg bg-white/5">
-        {THEMES.map((theme) => (
+        {tabs.map((tab) => (
           <button
-            key={theme}
-            onClick={() => onChange(theme)}
+            key={tab}
+            onClick={() => onChange(tab)}
             className={`relative px-4 py-2 text-sm font-medium rounded-md whitespace-nowrap transition-colors ${
-              active === theme ? 'text-white' : 'text-gray-400 hover:text-gray-200'
+              active === tab ? 'text-white' : 'text-gray-400 hover:text-gray-200'
             }`}
           >
-            {active === theme && (
+            {active === tab && (
               <motion.div
                 layoutId="theme-tab-indicator"
                 className="absolute inset-0 bg-white/10 rounded-md"
                 transition={{ type: 'spring', stiffness: 400, damping: 30 }}
               />
             )}
-            <span className="relative z-10">{theme}</span>
+            <span className="relative z-10">{tab}</span>
           </button>
         ))}
       </div>
@@ -145,21 +132,27 @@ interface BlogPageProps {
 }
 
 export default function BlogPage({ posts }: BlogPageProps) {
-  const [activeTheme, setActiveTheme] = useState<Theme>('全部')
+  const [activeTab, setActiveTab] = useState<string>('全部')
 
-  // Attach theme to each post
-  const postsWithTheme = useMemo(
-    () => posts.map((p) => ({ ...p, theme: mapCategoryToTheme(p.category) })),
-    [posts]
-  )
+  // Dynamic tabs from post categories, ordered by categoryOrder
+  const tabs = useMemo(() => {
+    const catMap = new Map<string, number>()
+    for (const p of posts) {
+      if (p.category && !catMap.has(p.category)) {
+        catMap.set(p.category, p.categoryOrder ?? 999)
+      }
+    }
+    const sorted = Array.from(catMap.entries()).sort((a, b) => a[1] - b[1]).map(([name]) => name)
+    return ['全部', ...sorted]
+  }, [posts])
 
-  // Filter by theme
+  // Filter by tab
   const filteredPosts = useMemo(
     () =>
-      activeTheme === '全部'
-        ? postsWithTheme
-        : postsWithTheme.filter((p) => p.theme === activeTheme),
-    [postsWithTheme, activeTheme]
+      activeTab === '全部'
+        ? posts
+        : posts.filter((p) => p.category === activeTab),
+    [posts, activeTab]
   )
 
   // Group by year
@@ -195,14 +188,14 @@ export default function BlogPage({ posts }: BlogPageProps) {
         <div className="max-w-3xl mx-auto px-4 pb-20">
           {/* Theme Tabs */}
           <div className="mb-6">
-            <ThemeTabs active={activeTheme} onChange={setActiveTheme} />
+            <ThemeTabs active={activeTab} tabs={tabs} onChange={setActiveTab} />
           </div>
 
           {/* Year Groups */}
           {yearGroups.length > 0 ? (
             <motion.div
               className="space-y-8"
-              key={activeTheme}
+              key={activeTab}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.2 }}

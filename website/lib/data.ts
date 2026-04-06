@@ -111,6 +111,7 @@ export interface BlogPost {
   date: string
   tags: string[]
   category: string
+  categoryOrder?: number
   readTime: string
   featured: boolean
   image?: string
@@ -247,6 +248,7 @@ export async function getAllBlogPosts(): Promise<BlogPost[]> {
           date: data.date || '',
           tags: data.tags || [],
           category: data.category || 'Uncategorized',
+          categoryOrder: data.categoryOrder ?? 999,
           readTime: data.readTime || '5 min read',
           featured: data.featured || false,
           image: data.image || null,

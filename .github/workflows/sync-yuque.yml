@@ -33,38 +33,21 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: ${{ env.NODE_VERSION }}
-          cache: 'npm'
-          cache-dependency-path: tools/yuque-sync/package-lock.json
 
-      - name: Install yuque-sync dependencies
-        working-directory: tools/yuque-sync
-        run: npm ci || npm install
-
-      - name: Build yuque-sync
-        working-directory: tools/yuque-sync
-        run: npm run build
-
-      - name: Sync from Yuque
-        working-directory: tools/yuque-sync
-        env:
-          YUQUE_USERNAME: ${{ secrets.YUQUE_USERNAME }}
-          YUQUE_PASSWORD: ${{ secrets.YUQUE_PASSWORD }}
-          YUQUE_HOST: https://www.yuque.com
-          YUQUE_LOGIN: ${{ secrets.YUQUE_LOGIN }}
-          YUQUE_REPO: ${{ secrets.YUQUE_REPO }}
-        run: |
-          if [ "${{ github.event.inputs.force_sync }}" = "true" ]; then
-            rm -f elog.cache.json
-          fi
-          npx elog sync -c elog.config.cjs
-
-      - name: Install dependencies for conversion script
+      - name: Install dependencies
         run: npm install tsx
 
-      - name: Convert to blog format
+      - name: Force sync (clear cache)
+        if: ${{ github.event.inputs.force_sync == 'true' }}
+        run: rm -f tools/yuque-sync/sync-state.json
+
+      - name: Sync from Yuque
         env:
+          YUQUE_TOKEN: ${{ secrets.YUQUE_TOKEN }}
+          YUQUE_LOGIN: ${{ secrets.YUQUE_LOGIN }}
+          YUQUE_REPO: ${{ secrets.YUQUE_REPO }}
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
-        run: npx tsx scripts/convert-to-blog.ts
+        run: npx tsx scripts/sync-yuque.ts
 
       - name: Check for changes
         id: check_changes
@@ -93,4 +76,3 @@ jobs:
           else
             echo "📭 没有新内容需要同步" >> $GITHUB_STEP_SUMMARY
           fi
-

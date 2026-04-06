@@ -1,93 +1,23 @@
 [
   {
-    "title": "CSS Grid vs Flexbox: When to Use Which",
-    "description": "Understanding the differences between CSS Grid and Flexbox, and knowing when to use each layout method for optimal web design.",
-    "url": "/blog/2024-12-20-css-grid-vs-flexbox",
-    "category": "Recently Updated",
-    "type": "blog"
-  },
-  {
-    "title": "How to Build a Blog with Next.js and MDX",
-    "description": "Build a blazing fast markdown blog using Next.js and MDX with this complete walkthrough guide. Perfect for developers who want full control.",
-    "url": "/blog/2025-01-08-how-to-build-blog-with-nextjs-mdx",
-    "category": "Recently Updated",
-    "type": "blog"
-  },
-  {
-    "title": "My 2025 Stack as a Frontend Developer",
-    "description": "As a Frontend Developer in 2025, I've fine-tuned my development stack and now have three key tools that help me deliver better, faster and more maintainable projects.",
-    "url": "/blog/2025-01-15-my-2025-stack-as-frontend-developer",
-    "category": "Recently Updated",
-    "type": "blog"
-  },
-  {
-    "title": "构建 AI 友好的 Git 工作流：从 git-smart-commit 看自动化与记忆机制",
-    "description": "在 AI 深度参与软件开发的时代，Commit Message 不再只是给人看的。它是 AI 理解代码变更意图的关键入口，也是自动化工具链的数据基础。",
-    "url": "/blog/2026-01-07-ai-friendly-git-commits",
-    "category": "Engineering",
-    "type": "blog"
-  },
-  {
-    "title": "Agent Teams 实战方法论：从 Anthropic 16 个并行 Claude 编写 C 编译器学到的 7 个核心模式",
-    "description": "Anthropic 用 16 个并行 Claude 实例编写了 10 万行 C 编译器。本文提炼出 7 个可立即实践的核心模式，帮你从'配对编程'升级到'自主团队'。",
-    "url": "/blog/2026-02-27-agent-teams-practice",
-    "category": "AI Engineering",
-    "type": "blog"
-  },
-  {
-    "title": "飞书多 Bot 讨论实验总结",
-    "description": "",
-    "url": "/blog/2026-02-28-feishu-multi-bot-discussion",
-    "category": "技术实践",
-    "type": "blog"
-  },
-  {
-    "title": "OpenClaw 能力追踪文档 v2 - 完整使用指南",
-    "description": "",
-    "url": "/blog/2026-02-28-openclaw-capability-tracking-v2",
-    "category": "技术文档",
-    "type": "blog"
-  },
-  {
-    "title": "context/experience/商品发放-钱包选择问题.md",
-    "description": "本文介绍了一种基于AI工程工具架构的知识复合实践，通过设计Command、Agent、Skill三层架构，实现经验的持续沉淀与智能复用。文章阐述了经验沉淀与检索两条核心路径，展示了知识复利效应如何显著提升重复性任务的效率，并与传统文档管理方式进行了对比。最后，文章讨论了该理念对长期任务工程设计的启示，强调入口极简化和能力编码为Skill的设计思路。",
-    "url": "/blog/2026-04-05-context-experience-商品发放-钱包选择问题-md",
-    "category": "Engineering",
-    "type": "blog"
-  },
-  {
     "title": "Page Agent 深度技术分析报告",
-    "description": "本文对阿里巴巴开源的 Page Agent 项目进行了深度技术分析，重点剖析了其整体架构、基于 Re-act 循环的核心执行流程、DOM 提取与简化、内置工具系统以及 Prompt 设计策略。报告旨在评估其与 atoms-plus 项目集成的可行性，并总结了其关键设计决策和潜在的集成方向。",
-    "url": "/blog/2026-04-05-page-agent-深度技术分析报告",
-    "category": "AI",
+    "description": "Page Agent 深度技术分析报告",
+    "url": "/blog/2026-03-06-page-agent-深度技术分析报告",
+    "category": "文章",
     "type": "blog"
   },
   {
-    "title": "#### Plan → Work → Review → Compound",
-    "description": "本文介绍了Compound Engineering Plugin如何通过Plan→Work→Review→Compound的闭环工作流，将AI从被动工具转变为能持续学习和沉淀知识的开发伙伴。系统通过多代理并行规划、执行、审查，并将经验结构化记录，实现错误免疫和流程自动化，最终形成自我进化的开发体系。",
-    "url": "/blog/2026-04-05-plan-work-review-compound",
-    "category": "Engineering",
+    "title": "Karpathy\"知识编辑\"有感——这么巧，我也在做。",
+    "description": "Karpathy\"知识编辑\"有感——这么巧，我也在做。",
+    "url": "/blog/2026-04-06-karpathy-知识编辑-有感-这么巧-我也在做",
+    "category": "随笔",
     "type": "blog"
   },
   {
-    "title": "### 最致命的问题：无法应对\"考古\"需求",
-    "description": "文章分析了speckit和openspec等工具在应对需要历史上下文（“考古”）需求时的致命缺陷：它们缺乏对历史经验、业务边界和配置规范的自动检索能力，导致AI生成方案时信息不全，依赖人工review且耗时耗力。文章预告了AI工程化的解决思路，即通过分层管理上下文、自动加载历史经验、让知识复利，从而减少重复劳动，提升开发效率。",
-    "url": "/blog/2026-04-05-最致命的问题-无法应对-考古-需求",
-    "category": "AI",
-    "type": "blog"
-  },
-  {
-    "title": "> 本文目标：教会你把 workflow 设计成“可被其它 workflow 调用的服务”，避免到处",
-    "description": "本文介绍了如何将 workflow 设计成可被其他 workflow 调用的服务，以避免重复逻辑。核心方法是通过定义多模式（mode）路由来提供不同子能力，使用 `<invoke-workflow>` 和 `<param>` 进行参数传递，并利用 `template-output` 返回结构化结果，从而实现 workflow 之间的高效协作与复用。",
-    "url": "/blog/2026-04-05-本文目标-教会你把-workflow-设计成-可被其它-workflow-调用的服务-避免到处",
-    "category": "Engineering",
-    "type": "blog"
-  },
-  {
-    "title": "Bug: 飞书群组消息路由到错误的 Agent",
-    "description": "记录飞书群组消息路由到错误 Agent 的问题排查和修复过程",
-    "url": "/blog/feishu-group-routing-bug-fix",
-    "category": "technology",
+    "title": "近日阅读",
+    "description": "近日阅读",
+    "url": "/blog/2026-04-06-近日阅读",
+    "category": "分享",
     "type": "blog"
   },
   {
