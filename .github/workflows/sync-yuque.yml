@@ -59,12 +59,11 @@ jobs:
           npx elog sync -c elog.config.cjs
 
       - name: Install dependencies for conversion script
-        run: npm install sharp tsx
+        run: npm install tsx
 
       - name: Convert to blog format
         env:
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
-          QWEN_API_KEY: ${{ secrets.QWEN_API_KEY }}
         run: npx tsx scripts/convert-to-blog.ts
 
       - name: Check for changes

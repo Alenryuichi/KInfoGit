@@ -7,7 +7,7 @@
     "prebuild": "tsx scripts/generate-search-index.ts",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "eslint .",
     "type-check": "tsc --noEmit",
     "test": "vitest run",
     "test:watch": "vitest"
