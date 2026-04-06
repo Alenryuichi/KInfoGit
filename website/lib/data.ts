@@ -183,8 +183,6 @@ export function getFeaturedProjects(): Project[] {
 
 // Utility functions
 
-export { stripMarkdownTitle } from './utils'
-
 export function formatPeriod(period: string): string {
   return period.replace('-', ' - ')
 }

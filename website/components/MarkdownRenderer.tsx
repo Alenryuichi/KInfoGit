@@ -67,6 +67,17 @@ function MermaidDiagram({ chart }: { chart: string }) {
   )
 }
 
+// Helper to extract plain text from React children (handles nested elements like links, code, etc.)
+function extractText(children: React.ReactNode): string {
+  if (typeof children === 'string') return children
+  if (typeof children === 'number') return String(children)
+  if (Array.isArray(children)) return children.map(extractText).join('')
+  if (children && typeof children === 'object' && 'props' in children) {
+    return extractText((children as React.ReactElement).props.children)
+  }
+  return ''
+}
+
 // Helper to generate heading id from text
 function generateHeadingId(text: string): string {
   return text
@@ -79,12 +90,12 @@ function generateHeadingId(text: string): string {
 const components: Components = {
   // Headings with id for TOC navigation
   h2({ children, ...props }) {
-    const text = String(children)
+    const text = extractText(children)
     const id = generateHeadingId(text)
     return <h2 id={id} {...props}>{children}</h2>
   },
   h3({ children, ...props }) {
-    const text = String(children)
+    const text = extractText(children)
     const id = generateHeadingId(text)
     return <h3 id={id} {...props}>{children}</h3>
   },

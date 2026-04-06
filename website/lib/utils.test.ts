@@ -26,8 +26,8 @@ describe('stripMarkdownTitle', () => {
     expect(stripMarkdownTitle('')).toBe('')
   })
 
-  it('trims whitespace', () => {
-    expect(stripMarkdownTitle('  ## Spaced Title  ')).toBe('## Spaced Title')
+  it('strips heading marker even with leading whitespace', () => {
+    expect(stripMarkdownTitle('  ## Spaced Title  ')).toBe('Spaced Title')
   })
 
   it('does not strip # without trailing space', () => {

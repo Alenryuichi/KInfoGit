@@ -3,5 +3,5 @@
  * Example: "### 最致命的问题：无法应对考古需求" → "最致命的问题：无法应对考古需求"
  */
 export function stripMarkdownTitle(title: string): string {
-  return title.replace(/^#{1,6}\s+/, '').trim()
+  return title.trim().replace(/^#{1,6}\s+/, '').trim()
 }
