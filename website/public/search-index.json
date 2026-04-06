@@ -1,58 +1,93 @@
 [
   {
     "title": "Page Agent 深度技术分析报告",
-    "description": "Page Agent 深度技术分析报告",
+    "description": "本文是一份关于阿里巴巴开源项目 Page Agent 的深度技术分析报告。报告详细剖析了其整体架构、基于 Re-act 循环的核心执行流程、DOM 提取与简化机制、内置工具系统、LLM 客户端设计以及视觉反馈系统。分析旨在评估其与 atoms-plus 项目集成的可行性，并总结了其关键设计决策和可能的集成方向。",
     "url": "/blog/2026-03-06-page-agent-深度技术分析报告",
     "category": "文章",
     "type": "blog"
   },
   {
+    "title": "context/experience/商品发放-钱包选择问题.md",
+    "description": "本文介绍了一种基于AI工程工具架构的知识复合实践。通过设计包含Command、Agent、Skill和experience-index的架构，实现了经验的持续沉淀与智能复用。文章阐述了经验沉淀与检索两条路径，并以支付需求为例展示了知识复利效应，强调了将知识沉淀到工具中以实现主动推送和效率提升的工程价值。",
+    "url": "/blog/2026-04-06-context-experience-商品发放-钱包选择问题-md",
+    "category": "Engineering",
+    "type": "blog"
+  },
+  {
     "title": "Karpathy\"知识编辑\"有感——这么巧，我也在做。",
-    "description": "Karpathy\"知识编辑\"有感——这么巧，我也在做。",
+    "description": "本文作者受Karpathy关于知识编辑和自进化观点的启发，分享了自己正在开发的知识库项目BookAnything。文章探讨了在AI时代知识快速膨胀的背景下，如何构建能够自动整理、结构化并实现自生长的知识管理系统，以应对知识更新迭代快、应用转化难等挑战。",
     "url": "/blog/2026-04-06-karpathy-知识编辑-有感-这么巧-我也在做",
     "category": "随笔",
     "type": "blog"
   },
   {
+    "title": "Page Agent 深度技术分析报告",
+    "description": "本文对阿里巴巴开源的 Page Agent 项目进行了深度技术分析，重点剖析了其整体架构、基于 Re-act 循环的核心执行流程、DOM 提取与简化、内置工具系统以及 Prompt 设计策略。报告旨在评估其与 atoms-plus 项目集成的可行性，并总结了其关键设计决策和潜在的集成方向。",
+    "url": "/blog/2026-04-06-page-agent-深度技术分析报告",
+    "category": "AI",
+    "type": "blog"
+  },
+  {
+    "title": "#### Plan → Work → Review → Compound",
+    "description": "本文介绍了Compound Engineering Plugin如何通过Plan→Work→Review→Compound的闭环工作流，将AI从被动工具转变为能持续学习的开发伙伴。系统通过多代理协作规划、执行、审查，并自动沉淀经验知识，实现错误免疫和流程标准化，最终形成自我进化的开发体系。",
+    "url": "/blog/2026-04-06-plan-work-review-compound",
+    "category": "Engineering",
+    "type": "blog"
+  },
+  {
+    "title": "### 最致命的问题：无法应对\"考古\"需求",
+    "description": "文章分析了speckit和openspec等工具在应对需要历史背景知识的“考古”需求时的局限性，指出其因缺乏上下文检索机制而无法自动关联历史经验、业务边界和配置规范，导致效率低下。进而提出AI工程化的解决思路，强调通过分层管理上下文、自动加载历史经验并持续沉淀知识，来提升AI决策质量并实现知识复利，从而降低边际成本。",
+    "url": "/blog/2026-04-06-最致命的问题-无法应对-考古-需求",
+    "category": "AI",
+    "type": "blog"
+  },
+  {
+    "title": "> 本文目标：教会你把 workflow 设计成“可被其它 workflow 调用的服务”，避免到处",
+    "description": "本文介绍了如何将 workflow 设计成可被其他 workflow 调用的服务，以避免重复逻辑。核心方法是创建支持多模式（mode）的服务型 workflow，通过 `<invoke-workflow>` 和 `<param>` 进行参数传递与调用，并利用 `template-output` 返回结构化结果，从而实现逻辑的封装与复用。",
+    "url": "/blog/2026-04-06-本文目标-教会你把-workflow-设计成-可被其它-workflow-调用的服务-避免到处",
+    "category": "Engineering",
+    "type": "blog"
+  },
+  {
     "title": "近日阅读",
-    "description": "近日阅读",
+    "description": "文章记录了作者对一本关于Transformer和大型语言模型的在线书籍的阅读体验，认为其知识点讲解通俗易懂，但指出其在算法深度探讨上有所不足，并推荐了“科学空间”博客作为对比，认为后者内容更为深入和精彩。",
     "url": "/blog/2026-04-06-近日阅读",
     "category": "分享",
     "type": "blog"
   },
   {
-    "title": "OpenMemory Plus - AI Agent Dual-Layer Memory Framework",
-    "description": "跨会话上下文保持率 95%+",
-    "url": "/work/openmemory-plus",
+    "title": "Self-built Application Anti-fraud Governance Project",
+    "description": "A core governance system for WeCom ecosystem security, identifying non-compliant service providers and enterprises through multi-dimensional algorithms and enabling end-to-end automated decision-making.",
+    "url": "/work/self-builtapplicationanti-fraudgovernanceproject",
+    "category": "system-architecture",
+    "type": "project"
+  },
+  {
+    "title": "Portrait Platform - Strategy Full Lifecycle Management Platform",
+    "description": "A core infrastructure platform for Tencent's WeChat Work, integrating portrait center, graph capabilities, strategy quality assurance, and feature systems into a one-stop strategy management platform, supporting data analysis for billions of users.",
+    "url": "/work/portraitplatform-strategyfulllifecyclemanagementpl",
+    "category": "system-architecture",
+    "type": "project"
+  },
+  {
+    "title": "Risk Control Review LLM AI Agent",
+    "description": "An intelligent risk control review system based on large language models, using AI Agents to automatically process risk control review tickets within the WeCom ecosystem. Evolved through four architecture versions from V1 to V4, increasing accuracy from 70% to over 90%.",
+    "url": "/work/riskcontrolreviewllmaiagent",
     "category": "ai-agent",
     "type": "project"
   },
   {
     "title": "Betaline - Full-stack iOS Climbing App",
-    "description": "全栈独立开发上线",
-    "url": "/work/betaline",
+    "description": "Betaline is a climbing iOS app independently built from scratch, covering the full process of product design, UI/UX, iOS frontend, Go backend, AI model training, and DevOps. Core features include video analysis of climbing movements, hold detection and classification, and training record management.",
+    "url": "/work/betaline-full-stackiosclimbingapp",
     "category": "mobile-app",
     "type": "project"
   },
   {
-    "title": "Risk Control AI Agent Review System",
-    "description": "准确率 70%→90%+，节省 2+ 人力/天",
-    "url": "/work/ai-agent-review",
+    "title": "OpenMemory Plus - AI Agent Dual-Layer Memory Framework",
+    "description": "OpenMemory Plus is a dual-layer memory framework designed for AI Agents to solve cross-session context loss. It supports mainstream IDE Agents like Augment, Cursor, Windsurf, and Cline, achieving unified memory management through the MCP protocol.",
+    "url": "/work/openmemoryplus-aiagentdual-layermemoryframework",
     "category": "ai-agent",
-    "type": "project"
-  },
-  {
-    "title": "Strategy Lifecycle Management Platform",
-    "description": "10 亿级数据处理，130 倍性能提升",
-    "url": "/work/portrait-platform",
-    "category": "system-architecture",
-    "type": "project"
-  },
-  {
-    "title": "Self-built Application Anti-fraud Governance System",
-    "description": "年化收益 4000 万，人工干预 ↓80%",
-    "url": "/work/anti-fraud-governance",
-    "category": "anti-fraud",
     "type": "project"
   }
 ]

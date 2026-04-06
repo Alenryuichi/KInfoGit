@@ -57,6 +57,7 @@ interface DocWithCategory {
   slug: string;
   title: string;
   category: CategoryInfo;
+  subcategory?: string;
 }
 
 interface SyncState {
@@ -66,6 +67,7 @@ interface SyncState {
     updated_at: string;
     category: string;
     categoryOrder: number;
+    subcategory?: string;
     blogFile: string;
   }>;
 }
@@ -76,6 +78,7 @@ interface Frontmatter {
   tags: string[];
   category: string;
   categoryOrder: number;
+  subcategory?: string;
   readTime: string;
   featured: boolean;
   excerpt: string;
@@ -95,19 +98,73 @@ function yuqueHeaders(): Record<string, string> {
   };
 }
 
-async function yuqueGet<T>(path: string): Promise<T> {
-  const url = `${YUQUE_API_BASE}${path}`;
-  const response = await fetch(url, { headers: yuqueHeaders() });
-  if (!response.ok) {
-    const text = await response.text();
-    throw new Error(`Yuque API ${response.status}: ${text}`);
+async function yuqueGet<T>(apiPath: string, retries = 3): Promise<T> {
+  const url = `${YUQUE_API_BASE}${apiPath}`;
+  for (let attempt = 1; attempt <= retries; attempt++) {
+    const response = await fetch(url, { headers: yuqueHeaders() });
+
+    // Log rate limit info
+    const remaining = response.headers.get('X-RateLimit-Remaining');
+    const limit = response.headers.get('X-RateLimit-Limit');
+    if (remaining !== null) {
+      console.log(`   📊 API 配额: ${remaining}/${limit}`);
+    }
+
+    if (response.status === 429) {
+      // Parse x-cchm header for remaining quota: "h:<hour>,m:<minute>"
+      const cchm = response.headers.get('x-cchm') || '';
+      const hourMatch = cchm.match(/h:(\d+)/);
+      const hourRemaining = hourMatch ? parseInt(hourMatch[1]) : -1;
+
+      if (hourRemaining === 0) {
+        // Hour quota exhausted — calculate wait until next hour
+        const now = new Date();
+        const minutesLeft = 60 - now.getMinutes();
+        console.warn(`   🚫 小时配额已耗尽 (${cchm})，需等待 ~${minutesLeft} 分钟到下一整点`);
+        if (attempt < retries) {
+          const waitSec = Math.min(minutesLeft * 60, 600); // 最多等 10 分钟
+          console.warn(`   ⏳ 等待 ${waitSec}s 后重试 (${attempt}/${retries})...`);
+          await new Promise(resolve => setTimeout(resolve, waitSec * 1000));
+          continue;
+        }
+      } else {
+        // Per-second / per-minute throttle — short wait
+        const wait = 5 * attempt;
+        console.warn(`   ⏳ 短暂限流 (${cchm})，等待 ${wait}s 后重试 (${attempt}/${retries})...`);
+        await new Promise(resolve => setTimeout(resolve, wait * 1000));
+        continue;
+      }
+
+      throw new Error(`Yuque API 429: 配额耗尽 (${cchm})，请等待下一整点后重试`);
+    }
+
+    if (!response.ok) {
+      const text = await response.text();
+      throw new Error(`Yuque API ${response.status}: ${text}`);
+    }
+    const json = await response.json() as { data: T };
+    return json.data;
   }
-  const json = await response.json() as { data: T };
-  return json.data;
+  throw new Error(`Yuque API: 重试 ${retries} 次后仍失败`);
 }
 
 async function getToc(namespace: string): Promise<TocNode[]> {
   return yuqueGet<TocNode[]>(`/repos/${namespace}/toc`);
+}
+
+/** Fetch doc list in one request — for checking updated_at without per-doc API calls */
+async function getDocList(namespace: string): Promise<YuqueDoc[]> {
+  const allDocs: YuqueDoc[] = [];
+  let offset = 0;
+  const limit = 100;
+  // eslint-disable-next-line no-constant-condition
+  while (true) {
+    const batch = await yuqueGet<YuqueDoc[]>(`/repos/${namespace}/docs?offset=${offset}&limit=${limit}`);
+    allDocs.push(...batch);
+    if (batch.length < limit) break;
+    offset += limit;
+  }
+  return allDocs;
 }
 
 async function getDoc(namespace: string, slug: string): Promise<YuqueDoc> {
@@ -126,12 +183,16 @@ function parseToc(toc: TocNode[]): ParsedToc {
   const docs: DocWithCategory[] = [];
 
   let currentCategory: CategoryInfo | null = null;
+  let currentSubcategory: string | undefined = undefined;
   let categoryIndex = 0;
 
   for (const node of toc) {
     if (node.type === 'TITLE' && node.depth === 1) {
       currentCategory = { name: node.title, order: categoryIndex++ };
+      currentSubcategory = undefined; // reset on new category
       categories.push(currentCategory);
+    } else if (node.type === 'TITLE' && node.depth === 2) {
+      currentSubcategory = node.title;
     } else if (node.type === 'DOC' && node.doc_id) {
       const category = currentCategory || { name: '未分类', order: 999 };
       docs.push({
@@ -139,6 +200,7 @@ function parseToc(toc: TocNode[]): ParsedToc {
         slug: node.slug,
         title: node.title,
         category,
+        subcategory: currentSubcategory,
       });
     }
   }
@@ -308,12 +370,13 @@ ${contentPreview}`;
 
 function formatFrontmatter(fm: Frontmatter): string {
   const tagsStr = JSON.stringify(fm.tags);
+  const subcategoryLine = fm.subcategory ? `\nsubcategory: "${fm.subcategory}"` : '';
   return `---
 title: "${fm.title.replace(/"/g, '\\"')}"
 date: "${fm.date}"
 tags: ${tagsStr}
 category: "${fm.category}"
-categoryOrder: ${fm.categoryOrder}
+categoryOrder: ${fm.categoryOrder}${subcategoryLine}
 readTime: "${fm.readTime}"
 featured: ${fm.featured}
 excerpt: "${fm.excerpt.replace(/"/g, '\\"')}"
@@ -366,10 +429,16 @@ async function main(): Promise<void> {
     return;
   }
 
-  // 2. Load sync state
+  // 2. Fetch doc list in batch (1 request) for updated_at checks
+  console.log('📋 获取文档列表...');
+  const docList = await getDocList(namespace);
+  const docMap = new Map(docList.map(d => [d.id, d]));
+  console.log(`   获取到 ${docList.length} 篇文档的元数据\n`);
+
+  // 3. Load sync state
   const syncState = await loadSyncState();
 
-  // 3. Process each doc
+  // 4. Process each doc
   mkdirSync(BLOG_OUTPUT_DIR, { recursive: true });
 
   let synced = 0;
@@ -378,44 +447,60 @@ async function main(): Promise<void> {
 
   for (const docInfo of docs) {
     const docIdStr = String(docInfo.doc_id);
+    const docMeta = docMap.get(docInfo.doc_id);
+
+    if (!docMeta) {
+      console.warn(`📝 ${docInfo.title}: ⚠️ 文档列表中未找到，跳过`);
+      continue;
+    }
 
     try {
-      // Fetch doc to check updated_at
       console.log(`📝 处理: ${docInfo.title}`);
 
-      const doc = await getDoc(namespace, docInfo.slug);
-
-      // Check if unchanged
+      // Check if unchanged using batch-fetched updated_at (no extra API call)
       const cached = syncState.docs[docIdStr];
       const categoryChanged = cached &&
         (cached.category !== docInfo.category.name ||
-         cached.categoryOrder !== docInfo.category.order);
+         cached.categoryOrder !== docInfo.category.order ||
+         cached.subcategory !== docInfo.subcategory);
 
-      if (cached && cached.updated_at === doc.updated_at && !categoryChanged) {
+      if (cached && cached.updated_at === docMeta.updated_at && !categoryChanged) {
         console.log(`   ⏭️  跳过（未变更）`);
         skipped++;
         continue;
       }
 
-      // If only category/order changed, update frontmatter in existing file
-      if (cached && cached.updated_at === doc.updated_at && categoryChanged) {
-        console.log(`   🔄 目录变更: ${cached.category} → ${docInfo.category.name}`);
+      // If only category/order/subcategory changed, update frontmatter in existing file
+      if (cached && cached.updated_at === docMeta.updated_at && categoryChanged) {
+        console.log(`   🔄 目录变更: ${cached.category}${cached.subcategory ? '/' + cached.subcategory : ''} → ${docInfo.category.name}${docInfo.subcategory ? '/' + docInfo.subcategory : ''}`);
         const blogPath = path.join(BLOG_OUTPUT_DIR, cached.blogFile);
         if (existsSync(blogPath)) {
           const existingContent = readFileSync(blogPath, 'utf-8');
-          const updated = existingContent
+          let updated = existingContent
             .replace(/^category: ".*"$/m, `category: "${docInfo.category.name}"`)
             .replace(/^categoryOrder: \d+$/m, `categoryOrder: ${docInfo.category.order}`);
+          // Handle subcategory: add, update, or remove
+          if (docInfo.subcategory) {
+            if (/^subcategory: ".*"$/m.test(updated)) {
+              updated = updated.replace(/^subcategory: ".*"$/m, `subcategory: "${docInfo.subcategory}"`);
+            } else {
+              updated = updated.replace(/^(categoryOrder: \d+)$/m, `$1\nsubcategory: "${docInfo.subcategory}"`);
+            }
+          } else {
+            updated = updated.replace(/^subcategory: ".*"\n?/m, '');
+          }
           await fs.writeFile(blogPath, updated);
         }
         cached.category = docInfo.category.name;
         cached.categoryOrder = docInfo.category.order;
+        cached.subcategory = docInfo.subcategory;
         console.log(`   ✅ 已更新分类`);
         synced++;
         continue;
       }
 
-      // Clean content
+      // Content changed or new doc — fetch full content (1 API call per changed doc)
+      const doc = await getDoc(namespace, docInfo.slug);
       console.log(`   🧹 清理内容...`);
       let content = cleanHtmlTags(doc.body || '');
 
@@ -442,6 +527,7 @@ async function main(): Promise<void> {
         tags,
         category: docInfo.category.name,
         categoryOrder: docInfo.category.order,
+        subcategory: docInfo.subcategory,
         readTime: calculateReadTime(content),
         featured: false,
         excerpt,
@@ -460,6 +546,7 @@ async function main(): Promise<void> {
         updated_at: doc.updated_at,
         category: docInfo.category.name,
         categoryOrder: docInfo.category.order,
+        subcategory: docInfo.subcategory,
         blogFile: filename,
       };
 

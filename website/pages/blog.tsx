@@ -1,14 +1,10 @@
-import React, { useState, useMemo } from 'react'
+import React, { useState, useMemo, useRef, useEffect, useCallback } from 'react'
 import { GetStaticProps } from 'next'
 import Head from 'next/head'
 import Link from 'next/link'
-import { motion } from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
 import { BlogPost, getAllBlogPosts } from '@/lib/data'
 import { stripMarkdownTitle } from '@/lib/utils'
-
-// --- Theme tab types & config ---
-
-// Tabs are dynamically generated from post data
 
 // --- Year grouping ---
 
@@ -32,37 +28,180 @@ function groupByYear(posts: BlogPost[]): YearGroup[] {
     }))
 }
 
+// --- Subcategory helpers ---
+
+/** Build a map: category → subcategory[] (only categories that have subcategories) */
+function buildSubcategoryMap(posts: BlogPost[]): Map<string, string[]> {
+  const map = new Map<string, Set<string>>()
+  for (const p of posts) {
+    if (p.subcategory) {
+      if (!map.has(p.category)) map.set(p.category, new Set())
+      map.get(p.category)!.add(p.subcategory)
+    }
+  }
+  const result = new Map<string, string[]>()
+  for (const [cat, subs] of Array.from(map.entries())) {
+    result.set(cat, Array.from(subs))
+  }
+  return result
+}
+
 // --- Components ---
+
+function SubcategoryPopover({
+  items,
+  active,
+  onSelect,
+}: {
+  items: string[]
+  active: string | null
+  onSelect: (sub: string | null) => void
+}) {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: -4 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -4 }}
+      transition={{ duration: 0.15 }}
+      className="absolute top-full left-0 mt-1 min-w-[140px] py-1 bg-gray-900/95 backdrop-blur-sm border border-white/10 rounded-lg shadow-xl z-50"
+    >
+      <button
+        onClick={() => onSelect(null)}
+        className={`w-full text-left px-4 py-2 text-sm transition-colors ${
+          active === null
+            ? 'text-blue-400 bg-white/5'
+            : 'text-gray-300 hover:bg-white/5 hover:text-white'
+        }`}
+      >
+        全部
+      </button>
+      {items.map((sub) => (
+        <button
+          key={sub}
+          onClick={() => onSelect(sub)}
+          className={`w-full text-left px-4 py-2 text-sm transition-colors ${
+            active === sub
+              ? 'text-blue-400 bg-white/5'
+              : 'text-gray-300 hover:bg-white/5 hover:text-white'
+          }`}
+        >
+          {sub}
+        </button>
+      ))}
+    </motion.div>
+  )
+}
 
 function ThemeTabs({
   active,
   tabs,
+  subcategoryMap,
+  activeSubcategory,
   onChange,
+  onSubcategoryChange,
 }: {
   active: string
   tabs: string[]
+  subcategoryMap: Map<string, string[]>
+  activeSubcategory: string | null
   onChange: (t: string) => void
+  onSubcategoryChange: (sub: string | null) => void
 }) {
+  const [openPopover, setOpenPopover] = useState<string | null>(null)
+  const containerRef = useRef<HTMLDivElement>(null)
+
+  // Close popover on click outside
+  useEffect(() => {
+    function handleMouseDown(e: MouseEvent) {
+      if (containerRef.current && !containerRef.current.contains(e.target as Node)) {
+        setOpenPopover(null)
+      }
+    }
+    document.addEventListener('mousedown', handleMouseDown)
+    return () => document.removeEventListener('mousedown', handleMouseDown)
+  }, [])
+
+  const handleTabClick = useCallback((tab: string) => {
+    const hasSubs = subcategoryMap.has(tab)
+
+    if (tab === active && hasSubs) {
+      // Toggle popover on same tab
+      setOpenPopover((prev) => (prev === tab ? null : tab))
+    } else {
+      // Switch tab
+      onChange(tab)
+      onSubcategoryChange(null)
+      if (hasSubs) {
+        setOpenPopover(tab)
+      } else {
+        setOpenPopover(null)
+      }
+    }
+  }, [active, subcategoryMap, onChange, onSubcategoryChange])
+
+  const handleSubSelect = useCallback((sub: string | null) => {
+    onSubcategoryChange(sub)
+    setOpenPopover(null)
+  }, [onSubcategoryChange])
+
+  // Build tab label
+  function tabLabel(tab: string): string {
+    if (tab === '全部') return tab
+    const hasSubs = subcategoryMap.has(tab)
+    if (!hasSubs) return tab
+    if (active === tab && activeSubcategory) {
+      return `${tab} · ${activeSubcategory}`
+    }
+    return tab
+  }
+
+  function tabHasArrow(tab: string): boolean {
+    return tab !== '全部' && subcategoryMap.has(tab)
+  }
+
   return (
-    <div className="relative md:contents">
+    <div className="relative md:contents" ref={containerRef}>
       <div className="flex gap-1 overflow-x-auto scrollbar-hide relative p-1 rounded-lg bg-white/5">
         {tabs.map((tab) => (
-          <button
-            key={tab}
-            onClick={() => onChange(tab)}
-            className={`relative px-4 py-2 text-sm font-medium rounded-md whitespace-nowrap transition-colors ${
-              active === tab ? 'text-white' : 'text-gray-400 hover:text-gray-200'
-            }`}
-          >
-            {active === tab && (
-              <motion.div
-                layoutId="theme-tab-indicator"
-                className="absolute inset-0 bg-white/10 rounded-md"
-                transition={{ type: 'spring', stiffness: 400, damping: 30 }}
-              />
-            )}
-            <span className="relative z-10">{tab}</span>
-          </button>
+          <div key={tab} className="relative">
+            <button
+              onClick={() => handleTabClick(tab)}
+              className={`relative px-4 py-2 text-sm font-medium rounded-md whitespace-nowrap transition-colors flex items-center gap-1 ${
+                active === tab ? 'text-white' : 'text-gray-400 hover:text-gray-200'
+              }`}
+            >
+              {active === tab && (
+                <motion.div
+                  layoutId="theme-tab-indicator"
+                  className="absolute inset-0 bg-white/10 rounded-md"
+                  transition={{ type: 'spring', stiffness: 400, damping: 30 }}
+                />
+              )}
+              <span className="relative z-10">{tabLabel(tab)}</span>
+              {tabHasArrow(tab) && (
+                <svg
+                  className={`relative z-10 w-3 h-3 transition-transform ${
+                    openPopover === tab ? 'rotate-180' : ''
+                  }`}
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth={2}
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                </svg>
+              )}
+            </button>
+            <AnimatePresence>
+              {openPopover === tab && subcategoryMap.has(tab) && (
+                <SubcategoryPopover
+                  items={subcategoryMap.get(tab)!}
+                  active={active === tab ? activeSubcategory : null}
+                  onSelect={handleSubSelect}
+                />
+              )}
+            </AnimatePresence>
+          </div>
         ))}
       </div>
       {/* Scroll hint overlay - mobile only */}
@@ -133,6 +272,7 @@ interface BlogPageProps {
 
 export default function BlogPage({ posts }: BlogPageProps) {
   const [activeTab, setActiveTab] = useState<string>('全部')
+  const [activeSubcategory, setActiveSubcategory] = useState<string | null>(null)
 
   // Dynamic tabs from post categories, ordered by categoryOrder
   const tabs = useMemo(() => {
@@ -146,17 +286,31 @@ export default function BlogPage({ posts }: BlogPageProps) {
     return ['全部', ...sorted]
   }, [posts])
 
-  // Filter by tab
-  const filteredPosts = useMemo(
-    () =>
-      activeTab === '全部'
-        ? posts
-        : posts.filter((p) => p.category === activeTab),
-    [posts, activeTab]
-  )
+  // Subcategory map
+  const subcategoryMap = useMemo(() => buildSubcategoryMap(posts), [posts])
+
+  // Filter by tab + subcategory
+  const filteredPosts = useMemo(() => {
+    let result = posts
+    if (activeTab !== '全部') {
+      result = result.filter((p) => p.category === activeTab)
+    }
+    if (activeSubcategory) {
+      result = result.filter((p) => p.subcategory === activeSubcategory)
+    }
+    return result
+  }, [posts, activeTab, activeSubcategory])
 
   // Group by year
   const yearGroups = useMemo(() => groupByYear(filteredPosts), [filteredPosts])
+
+  // Reset subcategory when switching tabs
+  const handleTabChange = useCallback((tab: string) => {
+    setActiveTab(tab)
+    if (tab === '全部') {
+      setActiveSubcategory(null)
+    }
+  }, [])
 
   return (
     <React.Fragment>
@@ -188,14 +342,21 @@ export default function BlogPage({ posts }: BlogPageProps) {
         <div className="max-w-3xl mx-auto px-4 pb-20">
           {/* Theme Tabs */}
           <div className="mb-6">
-            <ThemeTabs active={activeTab} tabs={tabs} onChange={setActiveTab} />
+            <ThemeTabs
+              active={activeTab}
+              tabs={tabs}
+              subcategoryMap={subcategoryMap}
+              activeSubcategory={activeSubcategory}
+              onChange={handleTabChange}
+              onSubcategoryChange={setActiveSubcategory}
+            />
           </div>
 
           {/* Year Groups */}
           {yearGroups.length > 0 ? (
             <motion.div
               className="space-y-8"
-              key={activeTab}
+              key={`${activeTab}-${activeSubcategory}`}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.2 }}
