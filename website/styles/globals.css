@@ -226,11 +226,6 @@ body {
   background: linear-gradient(135deg, rgb(59 130 246 / 0.1) 0%, rgb(16 185 129 / 0.1) 100%);
 }
 
-/* Section spacing */
-section {
-  @apply py-20 lg:py-24;
-}
-
 /* Typography scale */
 .text-display {
   @apply text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight;
@@ -307,10 +302,6 @@ section {
 
 /* Mobile optimizations */
 @media (max-width: 640px) {
-  section {
-    @apply py-12;
-  }
-  
   .text-display {
     @apply text-3xl;
   }

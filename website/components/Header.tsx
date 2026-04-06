@@ -3,6 +3,7 @@ import { Menu, X, Search } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
+import { motion, AnimatePresence } from 'framer-motion'
 import Fuse from 'fuse.js'
 
 interface SearchItem {
@@ -208,21 +209,30 @@ export function Header({ onBookCallClick }: HeaderProps) {
       </div>
 
       {/* Mobile Menu Button */}
-      <div className="md:hidden fixed top-6 right-4">
-        <button
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className={`p-3 bg-black/20 backdrop-blur-enhanced border border-white/10 rounded-full text-white/70 hover:text-white hover:scale-105 header-transition shadow-lg group ${
-            isMenuOpen ? 'bg-white/10 text-white scale-105' : ''
-          }`}
-          aria-label="Toggle menu"
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={isMenuOpen ? 'close' : 'open'}
+          className="md:hidden fixed top-6 right-4"
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -10 }}
+          transition={{ duration: 0.2 }}
         >
-          {isMenuOpen ?
-            <X className="w-6 h-6 header-transition rotate-90" /> :
-            <Menu className="w-6 h-6 header-transition" />
-          }
-          <div className="absolute inset-0 bg-white/5 rounded-full opacity-0 group-hover:opacity-100 header-transition"></div>
-        </button>
-      </div>
+          <button
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className={`p-3 bg-black/20 backdrop-blur-enhanced border border-white/10 rounded-full text-white/70 hover:text-white hover:scale-105 header-transition shadow-lg group ${
+              isMenuOpen ? 'bg-white/10 text-white scale-105' : ''
+            }`}
+            aria-label="Toggle menu"
+          >
+            {isMenuOpen ?
+              <X className="w-6 h-6 header-transition rotate-90" /> :
+              <Menu className="w-6 h-6 header-transition" />
+            }
+            <div className="absolute inset-0 bg-white/5 rounded-full opacity-0 group-hover:opacity-100 header-transition"></div>
+          </button>
+        </motion.div>
+      </AnimatePresence>
 
       {/* Search Modal */}
       {isSearchOpen && (
@@ -286,47 +296,54 @@ export function Header({ onBookCallClick }: HeaderProps) {
       )}
 
       {/* Mobile Menu */}
-      {isMenuOpen && (
-        <div className="md:hidden fixed top-20 right-4 bg-black/30 backdrop-blur-enhanced border border-white/20 rounded-2xl p-6 shadow-2xl min-w-[220px] z-[60]">
-          <div className="space-y-3">
-            {navigation.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                onClick={() => {
-                  handleTabClick()
-                  setIsMenuOpen(false)
-                }}
-                className={`block w-full text-left py-3 px-4 rounded-xl header-transition group relative ${
-                  getActiveTab() === item.name
-                    ? 'bg-gradient-to-r from-white/95 to-white/90 text-black font-semibold shadow-lg'
-                    : 'text-white/70 hover:text-white hover:bg-white/10 hover:scale-105'
-                }`}
-              >
-                <span className="relative z-10">
-                  {item.name}
-                </span>
-                {/* Hover effect for non-active items */}
-                {getActiveTab() !== item.name && (
-                  <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-purple-500/5 rounded-xl opacity-0 group-hover:opacity-100 header-transition"></div>
-                )}
-              </Link>
-            ))}
-            <div className="pt-3 border-t border-white/20">
-              <button
-                onClick={() => {
-                  handleBookCallClick()
-                  setIsMenuOpen(false)
-                }}
-                className="block w-full text-center py-3 bg-gradient-to-r from-blue-500/20 to-purple-500/20 hover:from-blue-500/30 hover:to-purple-500/30 text-white font-medium rounded-xl border border-white/20 hover:border-white/30 hover:scale-105 header-transition group relative"
-              >
-                <span className="relative z-10">Book a Call</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-xl opacity-0 group-hover:opacity-100 header-transition"></div>
-              </button>
+      <AnimatePresence>
+        {isMenuOpen && (
+          <motion.div
+            className="md:hidden fixed top-20 right-4 bg-black/30 backdrop-blur-enhanced border border-white/20 rounded-2xl p-6 shadow-2xl min-w-[220px] z-[60]"
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.2 }}
+          >
+            <div className="space-y-3">
+              {navigation.map((item) => (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  onClick={() => {
+                    handleTabClick()
+                    setIsMenuOpen(false)
+                  }}
+                  className={`block w-full text-left py-3 px-4 rounded-xl header-transition group relative ${
+                    getActiveTab() === item.name
+                      ? 'bg-gradient-to-r from-white/95 to-white/90 text-black font-semibold shadow-lg'
+                      : 'text-white/70 hover:text-white hover:bg-white/10 hover:scale-105'
+                  }`}
+                >
+                  <span className="relative z-10">
+                    {item.name}
+                  </span>
+                  {/* Hover effect for non-active items */}
+                  {getActiveTab() !== item.name && (
+                    <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-purple-500/5 rounded-xl opacity-0 group-hover:opacity-100 header-transition"></div>
+                  )}
+                </Link>
+              ))}
+              <div className="pt-3 border-t border-white/20">
+                <button
+                  onClick={() => {
+                    handleBookCallClick()
+                    setIsMenuOpen(false)
+                  }}
+                  className="block w-full text-center py-2.5 text-sm text-white/70 hover:text-white font-medium rounded-xl border border-white/20 hover:border-white/30 hover:bg-white/5 header-transition"
+                >
+                  Book a Call
+                </button>
+              </div>
             </div>
-          </div>
-        </div>
-      )}
+          </motion.div>
+        )}
+      </AnimatePresence>
     </header>
   )
 }

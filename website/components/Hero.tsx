@@ -31,7 +31,7 @@ export function Hero() {
   }, [])
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center text-white relative overflow-hidden">
+    <section id="home" className="min-h-screen flex items-center justify-center text-white relative overflow-hidden py-12 sm:py-20 lg:py-24">
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
         <div className="max-w-5xl mx-auto space-y-8">

@@ -4,6 +4,7 @@ import Head from 'next/head'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { BlogPost, getAllBlogPosts } from '@/lib/data'
+import { stripMarkdownTitle } from '@/lib/utils'
 
 // --- Theme tab types & config ---
 
@@ -56,25 +57,29 @@ function ThemeTabs({
   onChange: (t: Theme) => void
 }) {
   return (
-    <div className="flex gap-1 overflow-x-auto scrollbar-hide relative p-1 rounded-lg bg-white/5">
-      {THEMES.map((theme) => (
-        <button
-          key={theme}
-          onClick={() => onChange(theme)}
-          className={`relative px-4 py-2 text-sm font-medium rounded-md whitespace-nowrap transition-colors ${
-            active === theme ? 'text-white' : 'text-gray-400 hover:text-gray-200'
-          }`}
-        >
-          {active === theme && (
-            <motion.div
-              layoutId="theme-tab-indicator"
-              className="absolute inset-0 bg-white/10 rounded-md"
-              transition={{ type: 'spring', stiffness: 400, damping: 30 }}
-            />
-          )}
-          <span className="relative z-10">{theme}</span>
-        </button>
-      ))}
+    <div className="relative md:contents">
+      <div className="flex gap-1 overflow-x-auto scrollbar-hide relative p-1 rounded-lg bg-white/5">
+        {THEMES.map((theme) => (
+          <button
+            key={theme}
+            onClick={() => onChange(theme)}
+            className={`relative px-4 py-2 text-sm font-medium rounded-md whitespace-nowrap transition-colors ${
+              active === theme ? 'text-white' : 'text-gray-400 hover:text-gray-200'
+            }`}
+          >
+            {active === theme && (
+              <motion.div
+                layoutId="theme-tab-indicator"
+                className="absolute inset-0 bg-white/10 rounded-md"
+                transition={{ type: 'spring', stiffness: 400, damping: 30 }}
+              />
+            )}
+            <span className="relative z-10">{theme}</span>
+          </button>
+        ))}
+      </div>
+      {/* Scroll hint overlay - mobile only */}
+      <div className="absolute right-0 top-0 bottom-0 w-8 bg-gradient-to-l from-black/80 to-transparent pointer-events-none md:hidden rounded-r-lg" />
     </div>
   )
 }
@@ -93,7 +98,7 @@ function PostEntry({ post }: { post: BlogPost }) {
             href={`/blog/${post.slug}/`}
             className="text-base font-medium text-gray-100 group-hover:text-blue-400 transition-colors"
           >
-            {post.title}
+            {stripMarkdownTitle(post.title)}
           </Link>
           {post.excerpt && (
             <p className="mt-1 text-sm text-gray-400 line-clamp-2">{post.excerpt}</p>

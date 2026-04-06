@@ -77,7 +77,7 @@ export default function ProjectPage({ project, detailContent }: ProjectPageProps
 
 							{/* MDX/Markdown Detail Content */}
 							{detailContent && (
-								<section className="mb-8">
+								<section className="mb-8 py-12 sm:py-20 lg:py-24">
 									<MarkdownRenderer content={detailContent} />
 								</section>
 							)}
