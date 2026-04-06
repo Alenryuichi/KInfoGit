@@ -39,5 +39,5 @@
 - [x] 6.1 Run `npm run type-check` and fix any TypeScript errors
 - [x] 6.2 Run `npm run lint` and fix any linting issues
 - [x] 6.3 Run `npm run test` and verify all tests pass (including new stripMarkdownTitle tests)
-- [ ] 6.4 Visually verify on desktop: single Layout, clean titles, sticky TOC with active tracking, prev/next nav, progress bar
-- [ ] 6.5 Visually verify on mobile: collapsible TOC, responsive prev/next nav, progress bar
+- [x] 6.4 Visually verify on desktop: single Layout, clean titles, sticky TOC with active tracking, prev/next nav, progress bar
+- [x] 6.5 Visually verify on mobile: collapsible TOC, responsive prev/next nav, progress bar
