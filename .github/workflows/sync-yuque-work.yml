@@ -1,0 +1,83 @@
+name: Sync Yuque Work
+
+on:
+  schedule:
+    # 每周一 UTC 01:00（北京 09:00）
+    - cron: '0 1 * * 1'
+  workflow_dispatch:
+    inputs:
+      force_sync:
+        description: '强制同步（忽略缓存，重新调用 DeepSeek）'
+        required: false
+        default: 'false'
+        type: boolean
+
+env:
+  NODE_VERSION: '20'
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      - name: Install tsx
+        run: npm install tsx
+
+      - name: Delete sync state (force mode)
+        if: ${{ github.event.inputs.force_sync == 'true' }}
+        run: rm -f tools/yuque-sync/work-sync-state.json
+
+      - name: Sync Work projects from Yuque
+        env:
+          YUQUE_TOKEN: ${{ secrets.YUQUE_TOKEN }}
+          YUQUE_LOGIN: ${{ secrets.YUQUE_LOGIN }}
+          YUQUE_WORK_REPO: ${{ secrets.YUQUE_WORK_REPO }}
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+        run: |
+          ARGS=""
+          if [ "${{ github.event.inputs.force_sync }}" = "true" ]; then
+            ARGS="--force"
+          fi
+          npx tsx scripts/sync-yuque-work.ts $ARGS
+
+      - name: Check for changes
+        id: check_changes
+        run: |
+          git add .
+          if git diff --staged --quiet; then
+            echo "has_changes=false" >> $GITHUB_OUTPUT
+          else
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Commit and push changes
+        if: steps.check_changes.outputs.has_changes == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git commit -m "chore: sync yuque work projects [skip ci]"
+          git push
+
+      - name: Summary
+        run: |
+          echo "## 🔄 语雀 Work 同步完成" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          if [ "${{ steps.check_changes.outputs.has_changes }}" = "true" ]; then
+            echo "✅ 发现新内容，已提交更新" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "📭 没有新内容需要同步" >> $GITHUB_STEP_SUMMARY
+          fi
