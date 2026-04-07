@@ -1,45 +1,185 @@
 [
   {
-    "id": "openmemory-plus",
+    "id": "anti-fraud-governance",
     "title": {
-      "zh": "OpenMemory Plus - AI Agent 双层记忆框架",
-      "en": "OpenMemory Plus - AI Agent Dual-Layer Memory Framework"
+      "zh": "自建应用反作弊治理项目",
+      "en": "Self-built Application Anti-fraud Governance Project"
     },
-    "slug": "openmemory-plus",
-    "period": "2026.02 - 至今",
-    "company": "独立开发",
+    "slug": "anti-fraud-governance",
+    "period": "未提供",
+    "company": "企业微信",
     "role": {
-      "zh": "独立开发者",
-      "en": "Independent Developer"
+      "zh": "未提供",
+      "en": "Not Provided"
     },
-    "tech_stack": ["MCP", "AI Agent", "Memory System", "Qdrant", "E2E Testing", "Multi-Agent"],
+    "tech_stack": [
+      "社区检测算法",
+      "关联图谱",
+      "相似性分析",
+      "异常检测",
+      "Label Propagation",
+      "Louvain",
+      "图卷积网络"
+    ],
     "responsibilities": {
-      "zh": ["架构设计", "核心开发", "测试体系构建"],
-      "en": ["Architecture Design", "Core Development", "Testing Framework"]
+      "zh": [
+        "未提供"
+      ],
+      "en": [
+        "Not Provided"
+      ]
     },
     "achievements": {
       "zh": [
-        "设计双层记忆架构，跨会话上下文保持率 95%+",
-        "实现 ROT 智能过滤（Redundant/Obsolete/Trivial），减少 40% 冗余记忆",
-        "构建 Agent 自闭环测试体系，15 项端到端测试全自动化",
-        "设计统一 _omp/ 目录结构，支持 4+ IDE Agent 无缝共享"
+        "累计识别违规服务商 820+ 家",
+        "累计识别违规企业 52,683+ 家",
+        "月均收益 246 万",
+        "年化收益超 300 万元",
+        "实现 30+ 模块的端到端自动化决策"
       ],
       "en": [
-        "Designed dual-layer memory architecture, 95%+ cross-session context retention",
-        "Implemented ROT intelligent filtering, 40% redundant memory reduction",
-        "Built Agent self-loop testing system, 15 E2E tests fully automated",
-        "Designed unified _omp/ directory structure, supporting 4+ IDE Agents"
+        "Identified 820+ non-compliant service providers cumulatively",
+        "Identified 52,683+ non-compliant enterprises cumulatively",
+        "Average monthly revenue of 2.46 million",
+        "Annualized revenue exceeding 3 million",
+        "Implemented end-to-end automated decision-making across 30+ modules"
       ]
     },
-    "highlights": {
-      "zh": "解决 AI Agent 跨会话上下文丢失问题，支持 Augment/Cursor/Windsurf/Cline 等主流 IDE",
-      "en": "Solves AI Agent cross-session context loss, supports Augment/Cursor/Windsurf/Cline IDEs"
+    "description": {
+      "zh": "企业微信生态安全的核心治理系统，通过多维度算法识别违规服务商和企业，实现端到端自动化决策。",
+      "en": "A core governance system for WeCom ecosystem security, identifying non-compliant service providers and enterprises through multi-dimensional algorithms and enabling end-to-end automated decision-making."
     },
-    "impact": "跨会话上下文保持率 95%+",
-    "category": "ai-agent",
-    "section": "独立项目",
+    "highlights": {
+      "zh": "多维度算法驱动的反作弊治理系统，年化收益超300万。",
+      "en": "Multi-dimensional algorithm-driven anti-fraud governance system with annualized revenue exceeding 3 million."
+    },
+    "impact": "年化收益超 300 万元",
+    "category": "system-architecture",
+    "section": "企业微信",
+    "featured": true,
+    "order": 0,
+    "hasDetailPage": true
+  },
+  {
+    "id": "portrait-platform",
+    "title": {
+      "zh": "portrait-platform - 策略全生命周期管理平台",
+      "en": "Portrait Platform - Strategy Full Lifecycle Management Platform"
+    },
+    "slug": "portrait-platform",
+    "period": "未提供",
+    "company": "腾讯企业微信",
+    "role": {
+      "zh": "未提供",
+      "en": "Not Provided"
+    },
+    "tech_stack": [
+      "ClickHouse",
+      "TDW/Spark",
+      "MySQL",
+      "Redis",
+      "Vue.js"
+    ],
+    "responsibilities": {
+      "zh": [
+        "未提供"
+      ],
+      "en": [
+        "Not Provided"
+      ]
+    },
+    "achievements": {
+      "zh": [
+        "刷单欺诈率降低30%",
+        "贷款投诉率降低23%",
+        "识别并处理228个低质量策略，误封率从2.4%降至0%",
+        "PKV分布式序列化写入性能提升130倍（从90k/s到1200w/s）"
+      ],
+      "en": [
+        "Reduced fraudulent brushing by 30%",
+        "Reduced loan complaints by 23%",
+        "Identified and handled 228 low-quality strategies, reducing false positive rate from 2.4% to 0%",
+        "Achieved 130x performance improvement in PKV distributed serialization write speed (from 90k/s to 12 million/s)"
+      ]
+    },
+    "description": {
+      "zh": "腾讯企业微信的核心基础设施，整合画像中台、图能力、策略质量保障、特征系统的一站式策略管理平台，支撑10亿级用户规模的数据分析。",
+      "en": "A core infrastructure platform for Tencent's WeChat Work, integrating portrait center, graph capabilities, strategy quality assurance, and feature systems into a one-stop strategy management platform, supporting data analysis for billions of users."
+    },
+    "highlights": {
+      "zh": "支撑10亿级用户画像分析，实现关键业务指标显著优化与核心性能百倍提升。",
+      "en": "Supports portrait analysis for billions of users, achieving significant optimization of key business metrics and hundredfold improvement in core performance."
+    },
+    "impact": "10亿级用户画像，年化收益4000万+",
+    "category": "system-architecture",
+    "section": "企业微信",
     "featured": true,
     "order": 1,
+    "hasDetailPage": true
+  },
+  {
+    "id": "ai-agent-review",
+    "title": {
+      "zh": "风控审核大模型 AI Agent",
+      "en": "Risk Control Review Large Model AI Agent"
+    },
+    "slug": "ai-agent-review",
+    "period": "2025.12 - 至今",
+    "company": "腾讯",
+    "role": {
+      "zh": "技术负责人",
+      "en": "Technical Lead"
+    },
+    "tech_stack": [
+      "Controlled ReAct",
+      "Prompt Chaining",
+      "CBR",
+      "BM25",
+      "Multi-Query RAG",
+      "Go",
+      "Langfuse",
+      "RAGAS",
+      "Gemini 2.0 Flash"
+    ],
+    "responsibilities": {
+      "zh": [
+        "架构设计：主导五代架构演进路线，从朴素 RAG 演进到 Phase-Gated Controlled ReAct",
+        "核心开发：Orchestrator 编排引擎、领域 Agent 路由、MacroTool 取证体系、规则仲裁引擎",
+        "质量体系：Langfuse 可观测链路 + 声明式 Trace 验证框架 + RAGAS 自动评估"
+      ],
+      "en": [
+        "Architecture Design: Led the evolution roadmap of five generations of architecture, from naive RAG to Phase-Gated Controlled ReAct",
+        "Core Development: Orchestrator engine, domain Agent routing, MacroTool evidence collection system, rule arbitration engine",
+        "Quality System: Langfuse observable pipeline + declarative Trace verification framework + RAGAS automatic evaluation"
+      ]
+    },
+    "achievements": {
+      "zh": [
+        "设计 Phase-Gated Controlled ReAct 架构，将 Agent 审核流程拆为取证→定性→裁决 3 阶段确定性流水线，准确率从 70% 提升至 90%+",
+        "构建五层正交架构（Entry/Runtime/Agent/Tool/Policy）+ 注册中心路由，新增审核场景仅需添加配置文件和注册 Tool，不修改主流程代码",
+        "实现 Go 原生 BM25 知识检索引擎（中文分词 + 530 条规则库），将审核规则注入从全量 5000 token 降至按需 200 token，效率提升 25 倍",
+        "构建声明式 Trace 验证框架（YAML spec + Go CLI + 14 种断言操作符），实现 Agent 行为的自动化质量验证，替代人工目视 trace 判断"
+      ],
+      "en": [
+        "Designed Phase-Gated Controlled ReAct architecture, splitting the Agent review process into a deterministic 3-stage pipeline (evidence collection → qualification → adjudication), improving accuracy from ~70% to 90%+",
+        "Built a five-layer orthogonal architecture (Entry/Runtime/Agent/Tool/Policy) + registry routing, enabling new review scenarios by adding config files and registering Tools without modifying core code",
+        "Implemented a native Go BM25 knowledge retrieval engine (Chinese word segmentation + 530 rule library), reducing rule injection from 5000 tokens to 200 tokens on-demand, improving efficiency by 25x",
+        "Built a declarative Trace verification framework (YAML spec + Go CLI + 14 assertion operators), enabling automated quality verification of Agent behavior, replacing manual trace inspection"
+      ]
+    },
+    "description": {
+      "zh": "基于大模型的智能风控审核系统，通过 AI Agent 自动处理企业微信生态中的风控审核工单。主导 V1→V5 五代架构演进，核心设计哲学是'不信任 LLM 的流程判断，只信任 LLM 的内容判断'。",
+      "en": "An intelligent risk control review system based on large models, using AI Agents to automatically handle risk review tickets in the WeCom ecosystem. Led the evolution from V1 to V5 architecture, with a core design philosophy of 'distrusting LLM's process judgment, trusting only LLM's content judgment'."
+    },
+    "highlights": {
+      "zh": "设计 Phase-Gated Controlled ReAct 架构，将 LLM 推理与确定性流程控制分离，准确率提升至 90%+，日均自动结单 300+。",
+      "en": "Designed Phase-Gated Controlled ReAct architecture, separating LLM reasoning from deterministic process control, achieving 90%+ accuracy and 300+ daily automated ticket closures."
+    },
+    "impact": "准确率从 70% 提升至 90%+，日均自动结单 300+，节省 2+ 人力/天",
+    "category": "ai-agent",
+    "section": "企业微信",
+    "featured": true,
+    "order": 2,
     "hasDetailPage": true
   },
   {
@@ -55,169 +195,125 @@
       "zh": "独立开发者",
       "en": "Independent Developer"
     },
-    "tech_stack": ["SwiftUI", "CoreML", "YOLO11", "MobileNet V3", "Go/Gin", "Docker Compose", "MCP Server", "Prometheus"],
+    "tech_stack": [
+      "SwiftUI",
+      "CoreML",
+      "YOLO11",
+      "MobileNet V3",
+      "Go/Gin",
+      "Docker Compose",
+      "MCP Server",
+      "Prometheus"
+    ],
     "responsibilities": {
-      "zh": ["产品设计", "UI/UX", "iOS 开发", "后端开发", "AI 模型训练", "DevOps"],
-      "en": ["Product Design", "UI/UX", "iOS Development", "Backend", "AI Training", "DevOps"]
+      "zh": [
+        "产品设计",
+        "UI/UX",
+        "iOS 开发",
+        "后端开发",
+        "AI 模型训练",
+        "DevOps"
+      ],
+      "en": [
+        "Product Design",
+        "UI/UX",
+        "iOS Development",
+        "Backend Development",
+        "AI Model Training",
+        "DevOps"
+      ]
     },
     "achievements": {
       "zh": [
         "独立完成全流程开发：产品/UI/前后端/AI/DevOps/运营",
-        "设计 VideoMind Chain-of-Roles 工作流（4000+ 行，6 角色），成本 -39%，准确率 92%",
+        "设计 VideoMind Chain-of-Roles 工作流（4000+ 行，6 角色），成本降低 39%，准确率 92%",
         "训练 YOLO11m 岩点检测 + MobileNet V3 分类器，CoreML 导出实现 300x 加速",
         "构建 Go/Gin 三层架构 + JWT 双令牌轮换 + 8 层中间件",
         "自研 MCP Server（25 个运维工具）实现 AI Agent 远程服务器控制"
       ],
       "en": [
-        "Completed full-stack development independently: Product/UI/Frontend/Backend/AI/DevOps",
-        "Designed VideoMind Chain-of-Roles workflow (4000+ lines, 6 roles), 39% cost reduction, 92% accuracy",
-        "Trained YOLO11m detection + MobileNet V3 classifier, 300x acceleration with CoreML",
-        "Built Go/Gin 3-layer architecture + JWT dual-token rotation + 8-layer middleware",
-        "Built custom MCP Server (25 ops tools) for AI Agent remote server control"
+        "Completed full-stack development independently: product/UI/frontend/backend/AI/DevOps/operations",
+        "Designed VideoMind Chain-of-Roles workflow (4000+ lines, 6 roles), reducing cost by 39% with 92% accuracy",
+        "Trained YOLO11m climbing hold detection + MobileNet V3 classifier, achieving 300x speedup via CoreML export",
+        "Built Go/Gin three-layer architecture with JWT dual-token rotation and 8 middleware layers",
+        "Developed custom MCP Server (25 ops tools) enabling AI Agent remote server control"
       ]
     },
-    "highlights": {
-      "zh": "从 0 到 1 独立完成攀岩 iOS 应用，涵盖产品设计、AI 模型训练、DevOps 全流程",
-      "en": "Built climbing iOS app from 0 to 1, covering product design, AI training, DevOps"
+    "description": {
+      "zh": "磕线是一款从 0 到 1 独立开发的攀岩 iOS 应用，涵盖产品设计、UI/UX、iOS 前端、Go 后端、AI 模型训练、DevOps 全流程。核心功能包括视频分析攀岩动作、岩点检测与分类、训练记录管理等。",
+      "en": "Betaline is a climbing iOS app independently developed from scratch, covering the full process of product design, UI/UX, iOS frontend, Go backend, AI model training, and DevOps. Core features include video analysis of climbing movements, hold detection and classification, and training record management."
     },
-    "impact": "全栈独立开发上线",
+    "highlights": {
+      "zh": "全栈独立开发上线，集成 AI 视频分析与岩点检测",
+      "en": "Full-stack independent launch with integrated AI video analysis and climbing hold detection"
+    },
+    "impact": "AI 模型推理速度提升 300 倍",
     "category": "mobile-app",
     "section": "独立项目",
-    "featured": true,
-    "order": 2,
-    "hasDetailPage": true
-  },
-  {
-    "id": "ai-agent-review",
-    "title": {
-      "zh": "风控审核大模型 AI Agent",
-      "en": "Risk Control AI Agent Review System"
-    },
-    "slug": "ai-agent-review",
-    "period": "2025.12 - 至今",
-    "company": "腾讯",
-    "role": {
-      "zh": "技术负责人",
-      "en": "Tech Lead"
-    },
-    "tech_stack": ["Prompt Chaining", "CBR", "Multi-Query RAG", "策略短路", "RAGAS", "分布式异步", "Go", "Langfuse"],
-    "responsibilities": {
-      "zh": ["架构设计", "核心开发", "效果优化", "质量监控"],
-      "en": ["Architecture Design", "Core Development", "Effect Optimization", "Quality Monitoring"]
-    },
-    "achievements": {
-      "zh": [
-        "V1→V4 架构演进：朴素 RAG → CBR → Prompt Chaining → Multi-Query + 策略短路",
-        "设计 V4 策略短路机制，人脸解封场景识别率从 5-10% 提升至 94.89%",
-        "设计 V4 Multi-Query 并行检索策略，CBR 召回率提升 20%，整体覆盖率 50-60%",
-        "构建 Langfuse 深度整合工具链 + RAGAS 自动评估 + Badcase 定位",
-        "实现分布式高可用审核系统，支撑 2000+ 并发，日均 300+ 单自动结单"
-      ],
-      "en": [
-        "V1→V4 architecture evolution: Naive RAG → CBR → Prompt Chaining → Multi-Query + Strategy Shortcut",
-        "Designed V4 strategy shortcut, face unlock recognition rate improved from 5-10% to 94.89%",
-        "Designed V4 Multi-Query parallel retrieval, 20% CBR recall improvement, 50-60% overall coverage",
-        "Built Langfuse deep integration + RAGAS auto-evaluation + Badcase localization",
-        "Built distributed HA review system, supporting 2000+ concurrency, 300+ daily auto-completions"
-      ]
-    },
-    "highlights": {
-      "zh": "独立设计 V1→V4 架构演进，准确率从 70% 提升至 90%+，节省 2+ 人力/天",
-      "en": "Independently designed V1→V4 architecture, accuracy improved from 70% to 90%+"
-    },
-    "impact": "准确率 70%→90%+，节省 2+ 人力/天",
-    "category": "ai-agent",
-    "section": "企业微信",
-    "featured": true,
+    "featured": false,
     "order": 3,
     "hasDetailPage": true
   },
   {
-    "id": "portrait-platform",
+    "id": "openmemory-plus",
     "title": {
-      "zh": "策略全生命周期管理平台",
-      "en": "Strategy Lifecycle Management Platform"
+      "zh": "OpenMemory Plus - AI Agent 双层记忆框架",
+      "en": "OpenMemory Plus - AI Agent Dual-Layer Memory Framework"
     },
-    "slug": "portrait-platform",
-    "period": "2022.06 - 2025.06",
-    "company": "腾讯",
+    "slug": "openmemory-plus",
+    "period": "2026.02 - 至今",
+    "company": "独立开发",
     "role": {
-      "zh": "负责人",
-      "en": "Project Lead"
+      "zh": "独立开发者",
+      "en": "Independent Developer"
     },
-    "tech_stack": ["ClickHouse", "图数据库", "TDW/MySQL", "Spark", "Vue.js"],
+    "tech_stack": [
+      "MCP",
+      "AI Agent",
+      "Memory System",
+      "Qdrant",
+      "E2E Testing",
+      "Multi-Agent"
+    ],
     "responsibilities": {
-      "zh": ["系统架构设计", "前后端开发", "项目管理"],
-      "en": ["System Architecture Design", "Full-stack Development", "Project Management"]
+      "zh": [
+        "架构设计：设计双层记忆架构（短期记忆 + 长期记忆），实现跨会话上下文保持",
+        "核心开发：基于 Qdrant 向量数据库的记忆存储与检索系统",
+        "测试体系构建：构建 Agent 自闭环测试体系，15 项端到端测试全自动化"
+      ],
+      "en": [
+        "Architecture Design: Designed dual-layer memory architecture (short-term + long-term) for cross-session context retention",
+        "Core Development: Built memory storage and retrieval system based on Qdrant vector database",
+        "Testing System Construction: Established Agent self-closed-loop testing system with 15 fully automated end-to-end tests"
+      ]
     },
     "achievements": {
       "zh": [
-        "架构设计 10 亿级画像中台，OLAP ClickHouse + OLTP TDW/MySQL",
-        "支持 200+ 标签 5 分钟复杂分析，刷单欺诈 ↓30%，贷款投诉 ↓23%",
-        "构建图数据库（20+ 实体，70+ 关系），支持 4 种扩散 + 4 种溯源分析",
-        "主导策略质量保障平台，挖掘 228 个低质量策略，误封率 2.4%→0%",
-        "修复 PKV 分布式序列化缺陷，写入性能 90k/s→1200w/s（130 倍提升）"
+        "设计双层记忆架构，跨会话上下文保持率 95%+",
+        "实现 ROT 智能过滤（Redundant/Obsolete/Trivial），减少 40% 冗余记忆",
+        "构建 Agent 自闭环测试体系，15 项端到端测试全自动化",
+        "设计统一 _omp/ 目录结构，支持 4+ IDE Agent 无缝共享"
       ],
       "en": [
-        "Designed 10-billion-level portrait platform with OLAP ClickHouse + OLTP TDW/MySQL",
-        "Supports 200+ tags 5-min complex analysis, fraud ↓30%, loan complaints ↓23%",
-        "Built graph database (20+ entities, 70+ relations), 4 diffusion + 4 traceability analyses",
-        "Led strategy quality platform, mined 228 low-quality strategies, false ban rate 2.4%→0%",
-        "Fixed PKV distributed serialization bug, write performance 90k/s→1200w/s (130x improvement)"
+        "Designed dual-layer memory architecture achieving 95%+ cross-session context retention rate",
+        "Implemented ROT intelligent filtering (Redundant/Obsolete/Trivial), reducing redundant memory by 40%",
+        "Built Agent self-closed-loop testing system with 15 fully automated end-to-end tests",
+        "Designed unified _omp/ directory structure supporting seamless sharing across 4+ IDE Agents"
       ]
     },
-    "highlights": {
-      "zh": "整合画像中台、图能力、策略质量保障、特征系统的一站式策略管理平台",
-      "en": "One-stop strategy management platform integrating portrait, graph, quality assurance, and features"
+    "description": {
+      "zh": "OpenMemory Plus 是一个为 AI Agent 设计的双层记忆框架，解决跨会话上下文丢失问题。支持 Augment、Cursor、Windsurf、Cline 等主流 IDE Agent，通过 MCP 协议实现统一记忆管理。",
+      "en": "OpenMemory Plus is a dual-layer memory framework designed for AI Agents to solve cross-session context loss issues. It supports mainstream IDE Agents like Augment, Cursor, Windsurf, and Cline, achieving unified memory management through the MCP protocol."
     },
-    "impact": "10 亿级数据处理，130 倍性能提升",
-    "category": "system-architecture",
-    "section": "企业微信",
+    "highlights": {
+      "zh": "AI Agent 双层记忆框架，实现跨会话 95%+ 上下文保持率",
+      "en": "AI Agent dual-layer memory framework achieving 95%+ cross-session context retention"
+    },
+    "impact": "跨会话上下文保持率 95%+，减少 40% 冗余记忆",
+    "category": "ai-agent",
+    "section": "独立项目",
     "featured": false,
     "order": 4,
-    "hasDetailPage": true
-  },
-  {
-    "id": "anti-fraud-governance",
-    "title": {
-      "zh": "自建应用反作弊治理系统",
-      "en": "Self-built Application Anti-fraud Governance System"
-    },
-    "slug": "anti-fraud-governance",
-    "period": "2023.01 - 2024.06",
-    "company": "腾讯",
-    "role": {
-      "zh": "技术负责人",
-      "en": "Tech Lead"
-    },
-    "tech_stack": ["图算法", "域名扩散", "IP 聚类", "社区发现", "TDW/Spark"],
-    "responsibilities": {
-      "zh": ["项目全生命周期管理", "算法设计", "流程自动化"],
-      "en": ["Full project lifecycle management", "Algorithm design", "Process automation"]
-    },
-    "achievements": {
-      "zh": [
-        "识别违规服务商 820 家、企业 5.2 万家，处理亿级实体数据",
-        "实现年化收益近 4000 万（域名 178 万/月 + IP 38 万/月 + Path 30 万/月）",
-        "将人工干预减少 80%，构建 30+ 模块端到端自动化决策系统",
-        "实现零投诉运营，建立服务商违规条款，妥善处理百余家企业反馈"
-      ],
-      "en": [
-        "Identified 820 violating service providers, 52,000+ enterprises, processed billion-level data",
-        "Achieved ~40M RMB annual revenue (domain 1.78M/month + IP 380K/month + Path 300K/month)",
-        "Reduced manual intervention by 80%, built 30+ module E2E automated decision system",
-        "Achieved zero-complaint operations, established violation terms, handled 100+ enterprise feedbacks"
-      ]
-    },
-    "highlights": {
-      "zh": "大规模智能检测与自动化治理系统，覆盖 311 万活跃用户",
-      "en": "Large-scale intelligent detection and automated governance system covering 3.11M active users"
-    },
-    "impact": "年化收益 4000 万，人工干预 ↓80%",
-    "category": "anti-fraud",
-    "section": "企业微信",
-    "featured": false,
-    "order": 5,
     "hasDetailPage": true
   }
 ]
