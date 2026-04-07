@@ -64,6 +64,10 @@ export function Header({ onBookCallClick }: HeaderProps) {
     return 'Home'
   }
 
+  // Pre-calculate active tab index for animation offsets
+  const activeTabName = getActiveTab()
+  const activeTabIndex = Math.max(0, navigation.findIndex(item => item.name === activeTabName))
+
   // Handle scroll effect
   useEffect(() => {
     const handleScroll = () => {
@@ -147,9 +151,9 @@ export function Header({ onBookCallClick }: HeaderProps) {
             >
               {/* Top glowing indicator - positioned behind nav pill */}
               <div
-                className="absolute top-glow-indicator rounded-lg transition-transform duration-500 ease-out"
+                className="absolute top-glow-indicator rounded-lg transition-transform duration-500 ease-out will-change-transform"
                 style={{
-                  transform: `translateX(${4 + navigation.findIndex(item => item.name === getActiveTab()) * 80 + 20}px)`,
+                  transform: `translateX(${4 + activeTabIndex * 80 + 20}px)`,
                   left: 0,
                   top: '-3px',
                   width: '40px',
@@ -160,9 +164,9 @@ export function Header({ onBookCallClick }: HeaderProps) {
 
               {/* Ambient Spotlight - casts a very soft glow behind the active tab */}
               <div
-                className="absolute transition-transform duration-500 ease-out pointer-events-none"
+                className="absolute transition-transform duration-500 ease-out pointer-events-none will-change-transform"
                 style={{
-                  transform: `translateX(${4 + navigation.findIndex(item => item.name === getActiveTab()) * 80 - 10}px)`,
+                  transform: `translateX(${4 + activeTabIndex * 80 - 10}px)`,
                   left: 0,
                   top: 0,
                   bottom: 0,
@@ -174,9 +178,9 @@ export function Header({ onBookCallClick }: HeaderProps) {
 
               {/* Active tab background indicator - raised glass effect */}
               <div
-                className="absolute top-1 bottom-1 bg-white/[0.04] backdrop-blur-lg rounded-full transition-transform duration-500 ease-out border border-white/[0.05]"
+                className="absolute top-1 bottom-1 bg-white/[0.04] backdrop-blur-lg rounded-full transition-transform duration-500 ease-out border border-white/[0.05] will-change-transform"
                 style={{
-                  transform: `translateX(${4 + navigation.findIndex(item => item.name === getActiveTab()) * 80}px)`,
+                  transform: `translateX(${4 + activeTabIndex * 80}px)`,
                   left: 0,
                   width: '80px',
                   boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.3), inset 0 -1px 0 rgba(0, 0, 0, 0.4), inset 0 8px 20px rgba(255, 255, 255, 0.08)',
@@ -191,7 +195,7 @@ export function Header({ onBookCallClick }: HeaderProps) {
                     href={item.href}
                     onClick={handleTabClick}
                     className={`relative text-[13px] font-medium tracking-tight rounded-full header-transition group flex items-center justify-center ${
-                      getActiveTab() === item.name
+                      activeTabName === item.name
                         ? 'text-white'
                         : 'text-white/60 hover:text-white'
                     }`}
@@ -199,7 +203,7 @@ export function Header({ onBookCallClick }: HeaderProps) {
                   >
                     <span className="relative z-30">{item.name}</span>
                     {/* Hover effect for non-active items */}
-                    {getActiveTab() !== item.name && (
+                    {activeTabName !== item.name && (
                       <div className="absolute inset-0 bg-white/5 rounded-full opacity-0 group-hover:opacity-100 header-transition"></div>
                     )}
                   </Link>
