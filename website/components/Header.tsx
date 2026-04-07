@@ -147,9 +147,10 @@ export function Header({ onBookCallClick }: HeaderProps) {
             >
               {/* Top glowing indicator - positioned behind nav pill */}
               <div
-                className="absolute top-glow-indicator rounded-lg transition-all duration-500 ease-out"
+                className="absolute top-glow-indicator rounded-lg transition-transform duration-500 ease-out"
                 style={{
-                  left: `${4 + navigation.findIndex(item => item.name === getActiveTab()) * 80 + 20}px`,
+                  transform: `translateX(${4 + navigation.findIndex(item => item.name === getActiveTab()) * 80 + 20}px)`,
+                  left: 0,
                   top: '-3px',
                   width: '40px',
                   height: '20px',
@@ -159,11 +160,12 @@ export function Header({ onBookCallClick }: HeaderProps) {
 
               {/* Ambient Spotlight - casts a very soft glow behind the active tab */}
               <div
-                className="absolute transition-all duration-500 ease-out pointer-events-none"
+                className="absolute transition-transform duration-500 ease-out pointer-events-none"
                 style={{
+                  transform: `translateX(${4 + navigation.findIndex(item => item.name === getActiveTab()) * 80 - 10}px)`,
+                  left: 0,
                   top: 0,
                   bottom: 0,
-                  left: `${4 + navigation.findIndex(item => item.name === getActiveTab()) * 80 - 10}px`,
                   width: '100px',
                   background: 'radial-gradient(ellipse at top, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0) 70%)',
                   zIndex: 0
@@ -172,9 +174,10 @@ export function Header({ onBookCallClick }: HeaderProps) {
 
               {/* Active tab background indicator - raised glass effect */}
               <div
-                className="absolute top-1 bottom-1 bg-white/[0.04] backdrop-blur-lg rounded-full transition-all duration-500 ease-out border border-white/[0.05]"
+                className="absolute top-1 bottom-1 bg-white/[0.04] backdrop-blur-lg rounded-full transition-transform duration-500 ease-out border border-white/[0.05]"
                 style={{
-                  left: `${4 + navigation.findIndex(item => item.name === getActiveTab()) * 80}px`,
+                  transform: `translateX(${4 + navigation.findIndex(item => item.name === getActiveTab()) * 80}px)`,
+                  left: 0,
                   width: '80px',
                   boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.3), inset 0 -1px 0 rgba(0, 0, 0, 0.4), inset 0 8px 20px rgba(255, 255, 255, 0.08)',
                   zIndex: 10,
