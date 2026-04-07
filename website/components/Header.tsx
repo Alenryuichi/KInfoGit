@@ -145,15 +145,15 @@ export function Header({ onBookCallClick }: HeaderProps) {
               }`}
               style={{ zIndex: 10 }}
             >
-              {/* Top glowing indicator - positioned exactly on the top edge */}
+              {/* Top glowing indicator - positioned behind nav pill */}
               <div
-                className="absolute top-glow-indicator transition-all duration-500 ease-out"
+                className="absolute top-glow-indicator rounded-lg transition-all duration-500 ease-out"
                 style={{
                   left: `${4 + navigation.findIndex(item => item.name === getActiveTab()) * 80 + 20}px`,
                   top: '-3px',
                   width: '40px',
                   height: '20px',
-                  zIndex: 20
+                  zIndex: -10
                 }}
               />
 
@@ -175,17 +175,17 @@ export function Header({ onBookCallClick }: HeaderProps) {
                     key={item.name}
                     href={item.href}
                     onClick={handleTabClick}
-                    className={`relative text-[13px] font-medium rounded-full header-transition group flex items-center justify-center ${
+                    className={`relative text-sm font-light rounded-full header-transition group flex items-center justify-center ${
                       getActiveTab() === item.name
-                        ? 'text-white'
-                        : 'text-gray-400 hover:text-gray-200'
+                        ? 'text-white font-normal'
+                        : 'text-white/70 hover:text-white'
                     }`}
                     style={{ width: '80px', height: '36px', zIndex: 20 }}
                   >
                     <span className="relative z-30">{item.name}</span>
                     {/* Hover effect for non-active items */}
                     {getActiveTab() !== item.name && (
-                      <div className="absolute inset-0 bg-white/[0.04] rounded-full opacity-0 group-hover:opacity-100 header-transition"></div>
+                      <div className="absolute inset-0 bg-white/5 rounded-full opacity-0 group-hover:opacity-100 header-transition"></div>
                     )}
                   </Link>
                 ))}
@@ -193,12 +193,11 @@ export function Header({ onBookCallClick }: HeaderProps) {
                 {/* Book a Call button integrated into nav */}
                 <button
                   onClick={handleBookCallClick}
-                  className="relative px-4 py-2 text-[13px] font-medium rounded-full header-transition group bg-white/[0.06] border border-white/[0.08] text-gray-200 hover:text-white hover:bg-white/[0.1] hover:border-white/[0.15] ml-1 shadow-sm"
+                  className="relative px-4 py-2 text-sm font-medium rounded-full header-transition group bg-white/10 backdrop-blur-md text-white hover:bg-white/15 hover:scale-105 ml-2"
                   style={{ minWidth: '100px', zIndex: 20 }}
                 >
-                  <span className="relative z-30 flex items-center justify-center gap-1.5">
-                    Book a Call
-                  </span>
+                  <span className="relative z-30">Book a Call</span>
+                  <div className="absolute inset-0 bg-white/5 rounded-full opacity-0 group-hover:opacity-100 header-transition"></div>
                 </button>
               </div>
             </div>
