@@ -7,7 +7,7 @@ import { ReadingProgressBar } from '@/components/ReadingProgressBar'
 import { BlogPost, getAllBlogPosts, getBlogPost } from '@/lib/data'
 import { stripMarkdownTitle } from '@/lib/utils'
 import { siteConfig } from '@/lib/config'
-import { ArrowLeftIcon, CalendarIcon, ClockIcon, TagIcon } from '@heroicons/react/24/outline'
+import { ArrowLeftIcon } from '@heroicons/react/24/outline'
 
 interface AdjacentPost {
   slug: string
@@ -72,7 +72,7 @@ export default function BlogPostPage({ post, prevPost, nextPost }: BlogPostPageP
         <div className="max-w-4xl mx-auto px-5 sm:px-6 pt-32 pb-4">
           <Link
             href="/blog/"
-            className="inline-flex items-center px-4 py-2 rounded-full bg-gray-900/50 border border-gray-800 text-sm text-gray-400 hover:text-white hover:border-gray-700 hover:bg-gray-800/80 transition-all duration-300 group backdrop-blur-sm"
+            className="inline-flex items-center text-sm font-medium text-gray-500 hover:text-gray-300 transition-colors group"
           >
             <ArrowLeftIcon className="w-4 h-4 mr-2 group-hover:-translate-x-1 transition-transform duration-300" />
             Back to Blog
@@ -90,36 +90,28 @@ export default function BlogPostPage({ post, prevPost, nextPost }: BlogPostPageP
               </div>
             )}
 
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+            <h1 className="text-4xl md:text-5xl font-bold mb-4 leading-tight tracking-tight">
               {cleanTitle}
             </h1>
 
-            <div className="flex flex-wrap items-center gap-6 text-gray-400 mb-8">
-              <div className="flex items-center">
-                <CalendarIcon className="w-4 h-4 mr-2" />
-                <time>{formatDate(post.date)}</time>
-              </div>
-
-              <div className="flex items-center">
-                <ClockIcon className="w-4 h-4 mr-2" />
-                <span>{post.readTime}</span>
-              </div>
-
-              <div className="flex items-center">
-                <TagIcon className="w-4 h-4 mr-2" />
-                <span>{post.category}</span>
-              </div>
+            {/* Metadata */}
+            <div className="flex flex-wrap items-center gap-2.5 text-[13px] text-gray-400/80 mb-4">
+              <time className="font-medium text-gray-300">{formatDate(post.date)}</time>
+              <span className="text-white/10 select-none">·</span>
+              <span>{post.readTime}</span>
+              <span className="text-white/10 select-none">·</span>
+              <span className="text-gray-300">{post.category}</span>
             </div>
 
             {/* Tags */}
-            <div className="flex flex-wrap gap-2 mb-8">
+            <div className="flex flex-wrap gap-2 mb-12">
               {post.tags.map((tag) => (
                 <Link
                   key={tag}
                   href={`/blog/?tag=${encodeURIComponent(tag)}`}
-                  className="px-3 py-1 text-sm bg-gray-800/60 text-gray-300 rounded-full border border-gray-700/50 hover:bg-gray-700/60 hover:text-white transition-colors"
+                  className="px-2.5 py-1 text-xs font-medium bg-white/[0.02] text-gray-300 border border-white/[0.06] rounded-md hover:bg-white/[0.06] hover:border-white/[0.15] hover:text-white transition-all"
                 >
-                  #{tag}
+                  <span className="text-gray-500 mr-px">#</span>{tag}
                 </Link>
               ))}
             </div>
@@ -136,21 +128,19 @@ export default function BlogPostPage({ post, prevPost, nextPost }: BlogPostPageP
 
         {/* Article Content + Desktop TOC */}
         <div className="relative max-w-4xl mx-auto px-5 sm:px-6 pb-12">
-          <div className="xl:flex xl:gap-8">
-            {/* Main article */}
-            <article className="min-w-0 flex-1">
+            <article>
             <MarkdownRenderer content={post.content} />
 
             {/* Prev/Next Navigation */}
             {(prevPost || nextPost) && (
-              <nav className="mt-16 pt-8 border-t border-gray-800 flex items-stretch justify-between gap-4">
+              <nav className="mt-16 pt-8 border-t border-white/[0.06] flex items-stretch justify-between gap-4">
                 {prevPost ? (
                   <Link
                     href={`/blog/${prevPost.slug}/`}
-                    className="group flex-1 min-w-0 p-4 rounded-lg border border-gray-800 hover:border-gray-700 hover:bg-gray-900/50 transition-colors"
+                    className="group flex-1 min-w-0 p-4 rounded-xl border border-white/[0.04] bg-transparent hover:bg-white/[0.02] hover:border-white/[0.08] transition-all duration-200"
                   >
-                    <span className="text-xs text-gray-500 uppercase tracking-wider">上一篇</span>
-                    <p className="mt-1 text-sm text-gray-300 group-hover:text-white transition-colors truncate">
+                    <span className="text-[11px] font-medium text-gray-500 uppercase tracking-widest">上一篇</span>
+                    <p className="mt-1.5 text-sm text-gray-300 group-hover:text-white transition-colors truncate">
                       ← {stripMarkdownTitle(prevPost.title)}
                     </p>
                   </Link>
@@ -160,10 +150,10 @@ export default function BlogPostPage({ post, prevPost, nextPost }: BlogPostPageP
                 {nextPost ? (
                   <Link
                     href={`/blog/${nextPost.slug}/`}
-                    className="group flex-1 min-w-0 p-4 rounded-lg border border-gray-800 hover:border-gray-700 hover:bg-gray-900/50 transition-colors text-right"
+                    className="group flex-1 min-w-0 p-4 rounded-xl border border-white/[0.04] bg-transparent hover:bg-white/[0.02] hover:border-white/[0.08] transition-all duration-200 text-right"
                   >
-                    <span className="text-xs text-gray-500 uppercase tracking-wider">下一篇</span>
-                    <p className="mt-1 text-sm text-gray-300 group-hover:text-white transition-colors truncate">
+                    <span className="text-[11px] font-medium text-gray-500 uppercase tracking-widest">下一篇</span>
+                    <p className="mt-1.5 text-sm text-gray-300 group-hover:text-white transition-colors truncate">
                       {stripMarkdownTitle(nextPost.title)} →
                     </p>
                   </Link>
@@ -174,7 +164,7 @@ export default function BlogPostPage({ post, prevPost, nextPost }: BlogPostPageP
             )}
 
             {/* Article Footer */}
-            <footer className="mt-16 pt-8 border-t border-gray-800">
+            <footer className="mt-16 pt-8 border-t border-white/[0.06]">
               <div className="flex items-center justify-between">
                 <div className="text-gray-400">
                   <p>Thanks for reading!</p>
@@ -194,9 +184,8 @@ export default function BlogPostPage({ post, prevPost, nextPost }: BlogPostPageP
             </footer>
           </article>
 
-            {/* Desktop TOC — sticky sidebar */}
+            {/* Desktop TOC — positioned in right margin */}
             <TableOfContents content={post.content} variant="desktop" />
-          </div>
         </div>
       </div>
     </>

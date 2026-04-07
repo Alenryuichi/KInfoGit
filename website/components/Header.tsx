@@ -196,13 +196,12 @@ export function Header({ onBookCallClick }: HeaderProps) {
             {/* Search Button */}
             <button
               onClick={() => setIsSearchOpen(!isSearchOpen)}
-              className={`p-2.5 bg-black/20 backdrop-blur-enhanced border border-white/10 rounded-full text-white/70 hover:text-white hover:bg-white/10 hover:scale-105 header-transition shadow-lg group ${
-                isSearchOpen ? 'bg-white/10 text-white scale-105' : ''
+              className={`p-2.5 bg-white/[0.02] border border-white/[0.06] rounded-xl text-gray-400 hover:text-white hover:bg-white/[0.06] transition-colors group ${
+                isSearchOpen ? 'bg-white/[0.08] text-white border-white/[0.15]' : ''
               }`}
               aria-label="Search"
             >
-              <Search className={`w-4 h-4 header-transition ${isSearchOpen ? 'rotate-90' : ''}`} />
-              <div className="absolute inset-0 bg-white/5 rounded-full opacity-0 group-hover:opacity-100 header-transition"></div>
+              <Search className={`w-4 h-4 transition-transform duration-300 ${isSearchOpen ? 'rotate-90' : ''}`} />
             </button>
           </div>
         </div>
@@ -212,7 +211,7 @@ export function Header({ onBookCallClick }: HeaderProps) {
       <AnimatePresence mode="wait">
         <motion.div
           key={isMenuOpen ? 'close' : 'open'}
-          className="md:hidden fixed top-6 right-4"
+          className="md:hidden fixed top-6 right-4 z-50"
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -10 }}
@@ -220,92 +219,92 @@ export function Header({ onBookCallClick }: HeaderProps) {
         >
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className={`p-3 bg-black/20 backdrop-blur-enhanced border border-white/10 rounded-full text-white/70 hover:text-white hover:scale-105 header-transition shadow-lg group ${
-              isMenuOpen ? 'bg-white/10 text-white scale-105' : ''
+            className={`p-2.5 bg-[#0a0a0a] border border-white/[0.08] rounded-xl text-gray-400 hover:text-white hover:bg-white/[0.06] transition-colors shadow-xl group ${
+              isMenuOpen ? 'bg-white/[0.08] text-white border-white/[0.15]' : ''
             }`}
             aria-label="Toggle menu"
           >
             {isMenuOpen ?
-              <X className="w-6 h-6 header-transition rotate-90" /> :
-              <Menu className="w-6 h-6 header-transition" />
+              <X className="w-5 h-5 transition-transform duration-300 rotate-90" /> :
+              <Menu className="w-5 h-5 transition-transform duration-300" />
             }
-            <div className="absolute inset-0 bg-white/5 rounded-full opacity-0 group-hover:opacity-100 header-transition"></div>
           </button>
         </motion.div>
       </AnimatePresence>
 
       {/* Search Modal */}
       {isSearchOpen && (
-        <div className="fixed top-24 left-1/2 transform -translate-x-1/2 w-full max-w-md px-4 z-[60]">
-          <form onSubmit={handleSearchSubmit}>
-            <div className="relative group">
-              <input
-                type="text"
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                placeholder="Search blog posts, projects..."
-                className="w-full px-6 py-4 bg-neutral-900/90 backdrop-blur-xl border border-white/20 text-white placeholder-white/40 rounded-2xl focus:border-blue-500/50 focus:outline-none shadow-2xl header-transition focus:shadow-[0_0_40px_rgba(59,130,246,0.15)]"
-                autoFocus
-              />
-              <button
-                type="submit"
-                className="absolute right-4 top-1/2 transform -translate-y-1/2 p-2 text-white/50 hover:text-white hover:scale-110 header-transition group"
-              >
-                <Search className="w-5 h-5 header-transition" />
-              </button>
-              {/* Search input glow effect */}
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-2xl opacity-0 group-focus-within:opacity-100 header-transition -z-10 blur-2xl"></div>
-            </div>
-          </form>
-
-          {/* Search Results Dropdown */}
-          {searchResults.length > 0 && (
-            <div className="mt-2 bg-neutral-900/95 backdrop-blur-xl border border-white/20 rounded-2xl overflow-hidden shadow-2xl animate-in fade-in slide-in-from-top-2 duration-300">
-              <div className="max-h-[60vh] overflow-y-auto">
-                {searchResults.map((result) => (
-                  <Link
-                    key={result.url}
-                    href={result.url}
-                    onClick={() => {
-                      setIsSearchOpen(false)
-                      setSearchQuery('')
-                    }}
-                    className="block p-4 hover:bg-white/5 transition-colors border-b border-white/5 last:border-0 group"
-                  >
-                    <div className="flex items-center justify-between mb-1">
-                      <span className="text-sm font-medium text-white group-hover:text-blue-400 transition-colors">
-                        {result.title}
-                      </span>
-                      <span className="text-[10px] px-2 py-0.5 rounded-full bg-white/10 text-white/50 uppercase tracking-wider">
-                        {result.type}
-                      </span>
-                    </div>
-                    <p className="text-xs text-white/60 line-clamp-1">{result.description}</p>
-                  </Link>
-                ))}
+        <>
+          <div className="fixed inset-0 bg-black/40 backdrop-blur-sm z-[50]" onClick={() => setIsSearchOpen(false)} />
+          <div className="fixed top-24 left-1/2 transform -translate-x-1/2 w-full max-w-lg px-4 z-[60]">
+            <form onSubmit={handleSearchSubmit}>
+              <div className="relative group">
+                <input
+                  type="text"
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  placeholder="Search blog posts, projects..."
+                  className="w-full px-5 py-4 bg-[#0a0a0a] border border-white/[0.08] text-white placeholder-white/30 rounded-xl focus:border-white/20 focus:outline-none shadow-2xl transition-colors text-[15px]"
+                  autoFocus
+                />
+                <button
+                  type="submit"
+                  className="absolute right-3 top-1/2 transform -translate-y-1/2 p-2 text-white/40 hover:text-white transition-colors"
+                >
+                  <Search className="w-4 h-4" />
+                </button>
               </div>
-            </div>
-          )}
+            </form>
 
-          {searchQuery && searchResults.length === 0 && (
-            <div className="mt-2 p-6 text-center bg-neutral-900/90 backdrop-blur-xl border border-white/20 rounded-2xl text-white/50 text-sm shadow-2xl">
-              No results found for &quot;{searchQuery}&quot;
-            </div>
-          )}
-        </div>
+            {/* Search Results Dropdown */}
+            {searchResults.length > 0 && (
+              <div className="mt-3 bg-[#0a0a0a] border border-white/[0.08] rounded-xl overflow-hidden shadow-2xl animate-in fade-in slide-in-from-top-2 duration-200">
+                <div className="max-h-[50vh] overflow-y-auto">
+                  {searchResults.map((result) => (
+                    <Link
+                      key={result.url}
+                      href={result.url}
+                      onClick={() => {
+                        setIsSearchOpen(false)
+                        setSearchQuery('')
+                      }}
+                      className="block px-5 py-4 hover:bg-white/[0.03] transition-colors border-b border-white/[0.04] last:border-0 group"
+                    >
+                      <div className="flex items-center justify-between mb-1.5">
+                        <span className="text-sm font-medium text-gray-200 group-hover:text-white transition-colors">
+                          {result.title}
+                        </span>
+                        <span className="text-[11px] px-2 py-0.5 rounded-md bg-white/[0.04] border border-white/[0.06] text-gray-400 uppercase tracking-widest font-mono">
+                          {result.type}
+                        </span>
+                      </div>
+                      <p className="text-[13px] text-gray-500 line-clamp-1">{result.description}</p>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {searchQuery && searchResults.length === 0 && (
+              <div className="mt-3 p-6 text-center bg-[#0a0a0a] border border-white/[0.08] rounded-xl text-gray-500 text-[13px] shadow-2xl">
+                No results found for &quot;{searchQuery}&quot;
+              </div>
+            )}
+          </div>
+        </>
       )}
 
       {/* Mobile Menu */}
       <AnimatePresence>
         {isMenuOpen && (
           <motion.div
-            className="md:hidden fixed top-20 right-4 bg-black/30 backdrop-blur-enhanced border border-white/20 rounded-2xl p-6 shadow-2xl min-w-[220px] z-[60]"
+            className="md:hidden fixed top-20 right-4 bg-[#0a0a0a] border border-white/[0.08] rounded-xl p-5 shadow-2xl min-w-[200px] z-[60]"
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.2 }}
           >
-            <div className="space-y-3">
+            <div className="space-y-2">
               {navigation.map((item) => (
                 <Link
                   key={item.name}
@@ -314,28 +313,24 @@ export function Header({ onBookCallClick }: HeaderProps) {
                     handleTabClick()
                     setIsMenuOpen(false)
                   }}
-                  className={`block w-full text-left py-3 px-4 rounded-xl header-transition group relative ${
+                  className={`block w-full text-left py-2.5 px-4 rounded-lg transition-colors relative ${
                     getActiveTab() === item.name
-                      ? 'bg-gradient-to-r from-white/95 to-white/90 text-black font-semibold shadow-lg'
-                      : 'text-white/70 hover:text-white hover:bg-white/10 hover:scale-105'
+                      ? 'bg-white/[0.06] text-white font-medium'
+                      : 'text-gray-400 hover:text-gray-200 hover:bg-white/[0.03]'
                   }`}
                 >
-                  <span className="relative z-10">
+                  <span className="relative z-10 text-[15px]">
                     {item.name}
                   </span>
-                  {/* Hover effect for non-active items */}
-                  {getActiveTab() !== item.name && (
-                    <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-purple-500/5 rounded-xl opacity-0 group-hover:opacity-100 header-transition"></div>
-                  )}
                 </Link>
               ))}
-              <div className="pt-3 border-t border-white/20">
+              <div className="pt-3 mt-1 border-t border-white/[0.06]">
                 <button
                   onClick={() => {
                     handleBookCallClick()
                     setIsMenuOpen(false)
                   }}
-                  className="block w-full text-center py-2.5 text-sm text-white/70 hover:text-white font-medium rounded-xl border border-white/20 hover:border-white/30 hover:bg-white/5 header-transition"
+                  className="block w-full text-center py-2 text-[14px] text-gray-300 hover:text-white font-medium rounded-lg bg-white/[0.03] border border-white/[0.06] hover:bg-white/[0.06] transition-colors"
                 >
                   Book a Call
                 </button>

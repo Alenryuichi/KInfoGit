@@ -1,14 +1,147 @@
-import { useEffect, useRef } from 'react'
+import {
+  useState, useEffect, useRef, useCallback,
+  Children, isValidElement, cloneElement,
+  type ReactNode, type ReactElement,
+} from 'react'
+import React from 'react'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
-import { Components } from 'react-markdown'
+import rehypeRaw from 'rehype-raw'
+import type { Components } from 'react-markdown'
 
 interface MarkdownRendererProps {
   content: string
   className?: string
 }
 
-// Mermaid component for rendering diagrams
+// ─── Language Utilities ─────────────────────────────────────
+
+type AlertType = 'note' | 'tip' | 'important' | 'warning' | 'caution'
+
+const LANG_ALIASES: Record<string, string> = {
+  plain: 'text', plaintext: 'text', txt: 'text',
+  sh: 'bash', zsh: 'bash', shell: 'shellscript',
+  js: 'javascript', ts: 'typescript',
+  py: 'python', rb: 'ruby', yml: 'yaml', md: 'markdown',
+}
+
+const LANG_DISPLAY: Record<string, string> = {
+  javascript: 'JavaScript', typescript: 'TypeScript', python: 'Python',
+  bash: 'Bash', json: 'JSON', css: 'CSS', html: 'HTML',
+  tsx: 'TSX', jsx: 'JSX', yaml: 'YAML', sql: 'SQL',
+  go: 'Go', rust: 'Rust', java: 'Java', c: 'C', cpp: 'C++',
+  markdown: 'Markdown', text: 'Plain Text', diff: 'Diff', xml: 'XML',
+  shellscript: 'Shell', ruby: 'Ruby', php: 'PHP', swift: 'Swift',
+  kotlin: 'Kotlin', dockerfile: 'Dockerfile', graphql: 'GraphQL',
+  toml: 'TOML', vue: 'Vue', svelte: 'Svelte',
+}
+
+function normalizeLang(lang: string): string {
+  const lower = lang.toLowerCase()
+  return LANG_ALIASES[lower] || lower || 'text'
+}
+
+function displayLang(lang: string): string {
+  const n = normalizeLang(lang)
+  return LANG_DISPLAY[n] || lang.toUpperCase()
+}
+
+// ─── Text Extraction ────────────────────────────────────────
+
+function extractText(children: ReactNode): string {
+  if (typeof children === 'string') return children
+  if (typeof children === 'number') return String(children)
+  if (Array.isArray(children)) return children.map(extractText).join('')
+  if (children && typeof children === 'object' && 'props' in children) {
+    return extractText((children as ReactElement).props.children)
+  }
+  return ''
+}
+
+function generateHeadingId(text: string): string {
+  return text
+    .toLowerCase()
+    .replace(/[^\w\s\u4e00-\u9fff-]/g, '')
+    .replace(/\s+/g, '-')
+}
+
+// ─── Alert Detection ────────────────────────────────────────
+
+const ALERT_RE = /^\[!(NOTE|TIP|IMPORTANT|WARNING|CAUTION)\]/
+
+function detectAlert(children: ReactNode): { type: AlertType; content: ReactNode } | null {
+  const text = extractText(children)
+  const m = text.match(ALERT_RE)
+  if (!m) return null
+  return { type: m[1].toLowerCase() as AlertType, content: stripAlertMarker(children) }
+}
+
+function stripAlertMarker(children: ReactNode): ReactNode {
+  const arr = Children.toArray(children)
+  return arr.map((child, i) => {
+    if (i === 0 && isValidElement(child)) {
+      const gc = Children.toArray(child.props.children)
+      const cleaned = gc
+        .map((c, j) => {
+          if (j === 0 && typeof c === 'string') {
+            const s = c.replace(ALERT_RE, '').replace(/^\s*\n?/, '')
+            return s || null
+          }
+          return c
+        })
+        .filter(Boolean)
+      if (cleaned.length === 0) return null
+      return cloneElement(child as ReactElement, {}, ...cleaned)
+    }
+    return child
+  }).filter(Boolean)
+}
+
+const ALERT_CFG: Record<AlertType, { label: string; border: string; bg: string; accent: string; icon: ReactNode }> = {
+  note: {
+    label: 'Note', border: 'border-blue-500/50', bg: 'bg-blue-500/[0.06]', accent: 'text-blue-400',
+    icon: (
+      <svg viewBox="0 0 16 16" width="16" height="16" fill="currentColor">
+        <path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z" />
+      </svg>
+    ),
+  },
+  tip: {
+    label: 'Tip', border: 'border-green-500/50', bg: 'bg-green-500/[0.06]', accent: 'text-green-400',
+    icon: (
+      <svg viewBox="0 0 16 16" width="16" height="16" fill="currentColor">
+        <path d="M8 1.5c-2.363 0-4 1.69-4 3.75 0 .984.424 1.625.984 2.304l.214.253c.223.264.47.556.673.848.284.411.537.896.621 1.49a.75.75 0 0 1-1.484.211c-.04-.282-.163-.547-.37-.847a8 8 0 0 0-.542-.68c-.084-.1-.173-.205-.268-.32C3.201 7.75 2.5 6.766 2.5 5.25 2.5 2.31 4.863 0 8 0s5.5 2.31 5.5 5.25c0 1.516-.701 2.5-1.328 3.259-.095.115-.184.22-.268.319-.207.245-.383.453-.541.681-.208.3-.33.565-.37.847a.751.751 0 0 1-1.485-.212c.084-.593.337-1.078.621-1.489.203-.292.45-.584.673-.848.075-.088.147-.173.213-.253.561-.679.985-1.32.985-2.304 0-2.06-1.637-3.75-4-3.75ZM5.75 12h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1 0-1.5ZM6 15.25a.75.75 0 0 1 .75-.75h2.5a.75.75 0 0 1 0 1.5h-2.5a.75.75 0 0 1-.75-.75Z" />
+      </svg>
+    ),
+  },
+  important: {
+    label: 'Important', border: 'border-purple-500/50', bg: 'bg-purple-500/[0.06]', accent: 'text-purple-400',
+    icon: (
+      <svg viewBox="0 0 16 16" width="16" height="16" fill="currentColor">
+        <path d="M0 1.75C0 .784.784 0 1.75 0h12.5C15.216 0 16 .784 16 1.75v9.5A1.75 1.75 0 0 1 14.25 13H8.06l-2.573 2.573A1.458 1.458 0 0 1 3 14.543V13H1.75A1.75 1.75 0 0 1 0 11.25Zm1.75-.25a.25.25 0 0 0-.25.25v9.5c0 .138.112.25.25.25h2a.75.75 0 0 1 .75.75v2.19l2.72-2.72a.749.749 0 0 1 .53-.22h6.5a.25.25 0 0 0 .25-.25v-9.5a.25.25 0 0 0-.25-.25Zm7 2.25v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 9a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z" />
+      </svg>
+    ),
+  },
+  warning: {
+    label: 'Warning', border: 'border-amber-500/50', bg: 'bg-amber-500/[0.06]', accent: 'text-amber-400',
+    icon: (
+      <svg viewBox="0 0 16 16" width="16" height="16" fill="currentColor">
+        <path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z" />
+      </svg>
+    ),
+  },
+  caution: {
+    label: 'Caution', border: 'border-red-500/50', bg: 'bg-red-500/[0.06]', accent: 'text-red-400',
+    icon: (
+      <svg viewBox="0 0 16 16" width="16" height="16" fill="currentColor">
+        <path d="M4.47.22A.749.749 0 0 1 5 0h6c.199 0 .389.079.53.22l4.25 4.25c.141.14.22.331.22.53v6a.749.749 0 0 1-.22.53l-4.25 4.25A.749.749 0 0 1 11 16H5a.749.749 0 0 1-.53-.22L.22 11.53A.749.749 0 0 1 0 11V5c0-.199.079-.389.22-.53Zm.84 1.28L1.5 5.31v5.38l3.81 3.81h5.38l3.81-3.81V5.31L10.69 1.5ZM8 4a.75.75 0 0 1 .75.75v3.5a.75.75 0 0 1-1.5 0v-3.5A.75.75 0 0 1 8 4Zm0 8a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z" />
+      </svg>
+    ),
+  },
+}
+
+// ─── Mermaid Component ──────────────────────────────────────
+
 function MermaidDiagram({ chart }: { chart: string }) {
   const containerRef = useRef<HTMLDivElement>(null)
   const renderIdRef = useRef(0)
@@ -17,39 +150,21 @@ function MermaidDiagram({ chart }: { chart: string }) {
     const currentRenderId = ++renderIdRef.current
 
     const renderMermaid = async () => {
-      // Wait for next tick to ensure ref is attached
       await new Promise(resolve => setTimeout(resolve, 0))
-
       const container = containerRef.current
-      if (!container) return
-
-      // Check if this render is still current
-      if (currentRenderId !== renderIdRef.current) return
+      if (!container || currentRenderId !== renderIdRef.current) return
 
       try {
-        // Dynamically import mermaid
         const mermaid = (await import('mermaid')).default
-
-        // Initialize with hand-drawn style
-        mermaid.initialize({
-          startOnLoad: false,
-          theme: 'dark',
-        })
-
-        // Generate unique ID
+        mermaid.initialize({ startOnLoad: false, theme: 'dark' })
         const id = `mermaid-${Math.random().toString(36).substr(2, 9)}`
-
-        // Render the diagram
         const { svg } = await mermaid.render(id, chart)
-
-        // Double-check container still exists and render is current
         if (containerRef.current && currentRenderId === renderIdRef.current) {
           containerRef.current.innerHTML = svg
         }
       } catch (error) {
-        console.error('Mermaid rendering error:', error)
         if (containerRef.current && currentRenderId === renderIdRef.current) {
-          containerRef.current.innerHTML = `<pre class="text-red-400">Diagram rendering error: ${error}</pre>`
+          containerRef.current.innerHTML = `<pre class="text-red-400 text-sm">Diagram rendering error: ${error}</pre>`
         }
       }
     }
@@ -60,185 +175,335 @@ function MermaidDiagram({ chart }: { chart: string }) {
   return (
     <div
       ref={containerRef}
-      className="my-6 flex justify-center bg-gray-900/50 rounded-lg p-4 overflow-x-auto"
+      className="my-8 flex justify-center bg-gray-900/50 rounded-lg p-6 overflow-x-auto border border-white/[0.06]"
     >
-      <div className="text-gray-400 animate-pulse">Loading diagram...</div>
+      <div className="text-gray-500 text-sm animate-pulse">Loading diagram...</div>
     </div>
   )
 }
 
-// Helper to extract plain text from React children (handles nested elements like links, code, etc.)
-function extractText(children: React.ReactNode): string {
-  if (typeof children === 'string') return children
-  if (typeof children === 'number') return String(children)
-  if (Array.isArray(children)) return children.map(extractText).join('')
-  if (children && typeof children === 'object' && 'props' in children) {
-    return extractText((children as React.ReactElement).props.children)
-  }
-  return ''
+// ─── CodeBlock with Shiki ───────────────────────────────────
+
+function CodeBlock({ code, language }: { code: string; language: string }) {
+  const [html, setHtml] = useState('')
+  const [copied, setCopied] = useState(false)
+  const lang = normalizeLang(language)
+
+  useEffect(() => {
+    let cancelled = false
+    ;(async () => {
+      try {
+        const { codeToHtml } = await import('shiki')
+        const result = await codeToHtml(code, {
+          lang,
+          theme: 'github-dark-dimmed',
+        })
+        if (!cancelled) setHtml(result)
+      } catch {
+        try {
+          const { codeToHtml } = await import('shiki')
+          const result = await codeToHtml(code, { lang: 'text', theme: 'github-dark-dimmed' })
+          if (!cancelled) setHtml(result)
+        } catch {
+          /* fallback to plain text rendering */
+        }
+      }
+    })()
+    return () => { cancelled = true }
+  }, [code, lang])
+
+  const handleCopy = useCallback(async () => {
+    try {
+      await navigator.clipboard.writeText(code)
+      setCopied(true)
+      setTimeout(() => setCopied(false), 2000)
+    } catch { /* clipboard API unavailable */ }
+  }, [code])
+
+  return (
+    <div className="code-block group relative my-10 rounded-xl overflow-hidden border border-white/[0.06] bg-[#0a0a0a]">
+      {/* Header bar */}
+      <div className="flex items-center justify-between px-4 py-2.5 border-b border-white/5 bg-[#0a0a0a]">
+        <span className="text-xs font-medium text-gray-500 font-mono tracking-wide">
+          {displayLang(language)}
+        </span>
+        <button
+          onClick={handleCopy}
+          className="flex items-center gap-1.5 text-xs text-gray-500 hover:text-gray-300 transition-all px-2.5 py-1 rounded-md hover:bg-white/[0.06]"
+          aria-label="Copy code"
+        >
+          {copied ? (
+            <>
+              <svg className="w-3.5 h-3.5 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+              </svg>
+              <span className="text-green-400">Copied!</span>
+            </>
+          ) : (
+            <>
+              <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+              </svg>
+              <span className="hidden sm:inline">Copy</span>
+            </>
+          )}
+        </button>
+      </div>
+      {/* Code area */}
+      {html ? (
+        <div
+          className="shiki-output overflow-x-auto text-[13px] leading-[1.7] [&>pre]:!bg-transparent [&>pre]:!m-0 [&>pre]:!rounded-none [&>pre]:px-5 [&>pre]:py-4 [&_code]:!bg-transparent"
+          dangerouslySetInnerHTML={{ __html: html }}
+        />
+      ) : (
+        <pre className="bg-transparent px-5 py-4 overflow-x-auto m-0">
+          <code className="text-[13px] leading-[1.7] font-mono text-[#adbac7]">{code}</code>
+        </pre>
+      )}
+    </div>
+  )
 }
 
-// Helper to generate heading id from text
-function generateHeadingId(text: string): string {
-  return text
-    .toLowerCase()
-    .replace(/[^\w\s\u4e00-\u9fff-]/g, '')
-    .replace(/\s+/g, '-')
+// ─── Heading with Anchor ────────────────────────────────────
+
+function HeadingWithAnchor({ level, children }: { level: 2 | 3 | 4; children: ReactNode }) {
+  const text = extractText(children)
+  const id = generateHeadingId(text)
+  const Tag = `h${level}` as keyof JSX.IntrinsicElements
+
+  return (
+    <Tag id={id} className="group/heading relative scroll-mt-24">
+      <a
+        href={`#${id}`}
+        className="anchor-link absolute -left-7 top-1/2 -translate-y-1/2 opacity-0 group-hover/heading:opacity-100 transition-opacity duration-200 text-gray-600 hover:text-blue-400 no-underline"
+        aria-label={`Link to section: ${text}`}
+      >
+        <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+        </svg>
+      </a>
+      {children}
+    </Tag>
+  )
 }
 
-// Custom components for enhanced styling
+// ─── Custom Components ──────────────────────────────────────
+
 const components: Components = {
-  // Headings with id for TOC navigation
-  h2({ children, ...props }) {
-    const text = extractText(children)
-    const id = generateHeadingId(text)
-    return <h2 id={id} {...props}>{children}</h2>
+  h2({ children }) {
+    return <HeadingWithAnchor level={2}>{children}</HeadingWithAnchor>
   },
-  h3({ children, ...props }) {
-    const text = extractText(children)
-    const id = generateHeadingId(text)
-    return <h3 id={id} {...props}>{children}</h3>
+  h3({ children }) {
+    return <HeadingWithAnchor level={3}>{children}</HeadingWithAnchor>
   },
-  // Code blocks with syntax highlighting styling and Mermaid support
+  h4({ children }) {
+    return <HeadingWithAnchor level={4}>{children}</HeadingWithAnchor>
+  },
+
   code({ className, children, ...props }) {
     const match = /language-(\w+)/.exec(className || '')
-    const language = match ? match[1] : ''
-    const isInline = !match && !className
-
-    // Handle Mermaid diagrams
-    if (language === 'mermaid') {
-      const chart = String(children).replace(/\n$/, '')
-      return <MermaidDiagram chart={chart} />
-    }
-
-    if (isInline) {
+    if (match || className) {
       return (
-        <code
-          className="bg-gray-800 text-pink-300 px-1.5 py-0.5 rounded text-sm font-mono"
-          {...props}
-        >
+        <code className={className} data-language={match?.[1] || ''} {...props}>
           {children}
         </code>
       )
     }
-
     return (
-      <code className={className} {...props}>
+      <code
+        className="inline-code bg-white/[0.04] text-gray-200 px-[0.3em] py-[0.15em] rounded-md text-[0.85em] font-mono border border-white/[0.08]"
+        {...props}
+      >
         {children}
       </code>
     )
   },
-  // Enhanced pre block
-  pre({ children, ...props }) {
+
+  pre({ children }) {
+    const childArray = Children.toArray(children)
+    const codeChild = childArray.find(
+      (child) => isValidElement(child) && (child as ReactElement<Record<string, unknown>>).props?.className
+    ) as ReactElement<Record<string, unknown>> | undefined
+
+    if (codeChild) {
+      const codeProps = codeChild.props
+      const className = String(codeProps.className || '')
+      const language =
+        String(codeProps['data-language'] || '') ||
+        /language-(\w+)/.exec(className)?.[1] ||
+        ''
+      const code = String(codeProps.children).replace(/\n$/, '')
+
+      if (language === 'mermaid') return <MermaidDiagram chart={code} />
+      return <CodeBlock code={code} language={language} />
+    }
+
     return (
-      <pre 
-        className="bg-gray-900 border border-gray-700 rounded-lg p-4 overflow-x-auto my-6 text-sm"
-        {...props}
-      >
+      <pre className="bg-[#0a0a0a] border border-white/[0.06] rounded-xl p-5 overflow-x-auto my-10 text-[13px] leading-[1.7]">
         {children}
       </pre>
     )
   },
-  // Tables with dark theme styling
-  table({ children, ...props }) {
-    return (
-      <div className="overflow-x-auto my-6">
-        <table 
-          className="min-w-full border border-gray-700 rounded-lg overflow-hidden"
-          {...props}
-        >
-          {children}
-        </table>
-      </div>
-    )
-  },
-  thead({ children, ...props }) {
-    return (
-      <thead className="bg-gray-800" {...props}>
-        {children}
-      </thead>
-    )
-  },
-  th({ children, ...props }) {
-    return (
-      <th 
-        className="px-4 py-3 text-left text-sm font-semibold text-white border-b border-gray-700"
-        {...props}
-      >
-        {children}
-      </th>
-    )
-  },
-  tr({ children, ...props }) {
-    return (
-      <tr 
-        className="border-b border-gray-800 hover:bg-gray-800/50 transition-colors"
-        {...props}
-      >
-        {children}
-      </tr>
-    )
-  },
-  td({ children, ...props }) {
-    return (
-      <td className="px-4 py-3 text-sm text-gray-300" {...props}>
-        {children}
-      </td>
-    )
-  },
-  // Blockquotes
+
   blockquote({ children, ...props }) {
+    const alert = detectAlert(children)
+
+    if (alert) {
+      const cfg = ALERT_CFG[alert.type]
+      return (
+        <div className={`my-8 rounded-lg border-l-4 ${cfg.border} ${cfg.bg} px-5 py-4`}>
+          <div className={`flex items-center gap-2 font-semibold text-sm ${cfg.accent} mb-2`}>
+            {cfg.icon}
+            {cfg.label}
+          </div>
+          <div className="text-gray-300 text-[15px] leading-relaxed [&>p]:my-1.5 [&>p:first-child]:mt-0 [&>p:last-child]:mb-0">
+            {alert.content}
+          </div>
+        </div>
+      )
+    }
+
     return (
-      <blockquote 
-        className="border-l-4 border-blue-500 pl-4 py-2 my-6 bg-gray-800/50 rounded-r-lg italic text-gray-300"
+      <blockquote
+        className="border-l-2 border-gray-600/30 pl-6 py-2 my-10 text-gray-400 italic text-[1.05em] tracking-tight [&>p]:my-2 [&>p:first-child]:mt-0 [&>p:last-child]:mb-0"
         {...props}
       >
         {children}
       </blockquote>
     )
   },
-  // Links
-  a({ children, href, ...props }) {
+
+  table({ children, ...props }) {
     return (
-      <a 
+      <div className="overflow-x-auto my-10">
+        <table className="min-w-full text-sm text-left" {...props}>
+          {children}
+        </table>
+      </div>
+    )
+  },
+  thead({ children, ...props }) {
+    return <thead className="border-b border-white/10 text-gray-400" {...props}>{children}</thead>
+  },
+  th({ children, ...props }) {
+    return (
+      <th className="px-4 py-3 font-medium text-gray-300" {...props}>
+        {children}
+      </th>
+    )
+  },
+  tr({ children, ...props }) {
+    return (
+      <tr className="border-b border-white/[0.04] last:border-0 hover:bg-white/[0.02] transition-colors" {...props}>
+        {children}
+      </tr>
+    )
+  },
+  td({ children, ...props }) {
+    return <td className="px-4 py-3 text-gray-400" {...props}>{children}</td>
+  },
+
+  a({ children, href, ...props }) {
+    const isExternal = href?.startsWith('http')
+    return (
+      <a
         href={href}
-        className="text-blue-400 hover:text-blue-300 underline underline-offset-2 transition-colors"
-        target="_blank"
-        rel="noopener noreferrer"
+        className="text-blue-400 hover:text-blue-300 underline decoration-blue-400/30 hover:decoration-blue-300/60 underline-offset-[3px] transition-all duration-200"
+        {...(isExternal ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
         {...props}
       >
         {children}
+        {isExternal && (
+          <svg className="inline-block w-3.5 h-3.5 ml-0.5 -mt-0.5 opacity-40" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+          </svg>
+        )}
       </a>
     )
   },
-  // Horizontal rule
-  hr({ ...props }) {
-    return <hr className="border-gray-700 my-8" {...props} />
+
+  img({ src, alt, ...props }) {
+    return (
+      <figure className="my-10">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={src}
+          alt={alt || ''}
+          className="rounded-xl border border-white/[0.08] w-full shadow-lg shadow-black/20"
+          loading="lazy"
+          {...props}
+        />
+        {alt && alt !== src && (
+          <figcaption className="mt-3 text-center text-sm text-gray-500">
+            {alt}
+          </figcaption>
+        )}
+      </figure>
+    )
+  },
+
+  hr() {
+    return (
+      <div role="separator" className="my-12 flex items-center justify-center gap-1.5">
+        <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-white/[0.15]" />
+        <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-white/[0.25]" />
+        <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-white/[0.15]" />
+      </div>
+    )
+  },
+
+  input({ type, checked, ...props }) {
+    if (type === 'checkbox') {
+      return (
+        <span
+          className={`inline-flex items-center justify-center w-4 h-4 rounded border mr-2 align-text-bottom flex-shrink-0 ${
+            checked
+              ? 'bg-blue-500/20 border-blue-500/60 text-blue-400'
+              : 'border-gray-600 bg-transparent'
+          }`}
+          role="checkbox"
+          aria-checked={!!checked}
+        >
+          {checked && (
+            <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+            </svg>
+          )}
+        </span>
+      )
+    }
+    return <input type={type} checked={checked} {...props} />
   },
 }
 
+// ─── Main Renderer ──────────────────────────────────────────
+
 export function MarkdownRenderer({ content, className = '' }: MarkdownRendererProps) {
   return (
-    <div className={`prose prose-invert prose-lg max-w-none
-      prose-headings:text-white prose-headings:font-bold
-      prose-h1:text-3xl prose-h1:mt-8 prose-h1:mb-4
-      prose-h2:text-2xl prose-h2:mt-6 prose-h2:mb-3
-      prose-h3:text-xl prose-h3:mt-4 prose-h3:mb-2
-      prose-p:text-gray-300 prose-p:leading-relaxed prose-p:my-2
-      prose-strong:text-white prose-strong:font-semibold
-      prose-em:text-gray-300 prose-em:italic
-      prose-li:text-gray-300 prose-li:marker:text-gray-500 prose-li:my-0.5
-      prose-ul:my-2 prose-ol:my-2
-      prose-code:text-pink-300 prose-code:bg-gray-800
-      ${className}`}
+    <div
+      className={`markdown-body mx-auto w-full max-w-[65ch]
+        prose prose-invert prose-lg
+        antialiased selection:bg-blue-500/30 selection:text-blue-200
+        text-gray-300 leading-[1.75]
+        prose-p:my-6
+        prose-strong:text-gray-100 prose-strong:font-semibold
+        prose-headings:text-gray-100 prose-headings:font-medium prose-headings:tracking-tight
+        prose-h1:text-3xl prose-h1:mt-0 prose-h1:mb-8
+        prose-h2:text-2xl prose-h2:mt-16 prose-h2:mb-4 prose-h2:pb-2 prose-h2:border-b prose-h2:border-white/5
+        prose-h3:text-xl prose-h3:mt-12 prose-h3:mb-4
+        prose-h4:text-lg prose-h4:mt-8 prose-h4:mb-2 prose-h4:text-gray-200
+        prose-ul:my-6 prose-ul:list-outside prose-ul:pl-4
+        prose-ol:my-6 prose-ol:list-outside prose-ol:pl-4
+        prose-li:my-2 prose-li:leading-[1.75] prose-li:marker:text-gray-500
+        prose-a:text-gray-200 prose-a:font-medium prose-a:underline prose-a:underline-offset-[4px] 
+        prose-a:decoration-gray-500/50 hover:prose-a:decoration-gray-300 hover:prose-a:text-white 
+        prose-a:transition-colors
+        prose-img:rounded-xl prose-img:border prose-img:border-white/10 prose-img:shadow-sm prose-img:my-12
+        ${className}`}
     >
-      <ReactMarkdown
-        remarkPlugins={[remarkGfm]}
-        components={components}
-      >
+      <ReactMarkdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRaw]} components={components}>
         {content}
       </ReactMarkdown>
     </div>
   )
 }
-

@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap');
 
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
@@ -13,6 +14,15 @@ html {
 body {
   @apply bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100;
   transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hide scrollbar utility */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
 }
 
 /* Custom scrollbar */
@@ -398,4 +408,73 @@ body {
 
 .animate-scale-in {
   animation: scaleIn 0.4s ease-out;
+}
+
+/* ─── Blog Markdown Enhancements ───────────────────────────── */
+
+/* Shiki code block output refinements */
+.shiki-output pre {
+  tab-size: 2;
+}
+
+.shiki-output code {
+  font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', ui-monospace, monospace;
+  font-feature-settings: 'liga' 1, 'calt' 1;
+}
+
+.shiki-output .line {
+  display: inline-block;
+  width: 100%;
+  padding: 0 0.25rem;
+}
+
+/* Code block scrollbar */
+.code-block pre::-webkit-scrollbar,
+.shiki-output pre::-webkit-scrollbar {
+  height: 6px;
+}
+
+.code-block pre::-webkit-scrollbar-track,
+.shiki-output pre::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.code-block pre::-webkit-scrollbar-thumb,
+.shiki-output pre::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+}
+
+.code-block pre::-webkit-scrollbar-thumb:hover,
+.shiki-output pre::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Inline code refinements */
+.inline-code {
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  word-break: break-word;
+}
+
+/* Markdown body selection colors */
+.markdown-body ::selection {
+  background: rgba(56, 139, 253, 0.3);
+}
+
+/* Anchor link positioning for mobile */
+@media (max-width: 640px) {
+  .anchor-link {
+    display: none;
+  }
+}
+
+/* Task list item styling */
+.markdown-body li.task-list-item {
+  list-style-type: none;
+  margin-left: -1.5em;
+}
+
+/* Table cell nowrap for header */
+.markdown-body th {
+  white-space: nowrap;
 }

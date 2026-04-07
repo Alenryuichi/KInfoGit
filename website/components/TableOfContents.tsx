@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback, useRef, useMemo } from 'react'
+import { useState, useEffect, useRef, useMemo } from 'react'
 import { ChevronDownIcon } from '@heroicons/react/24/outline'
 
 interface TocHeading {
@@ -39,46 +39,48 @@ function extractHeadings(content: string): TocHeading[] {
 export function TableOfContents({ content, variant = 'both' }: TableOfContentsProps) {
   const [activeId, setActiveId] = useState<string>('')
   const [isOpen, setIsOpen] = useState(false)
-  const observerRef = useRef<IntersectionObserver | null>(null)
+  const tocScrollRef = useRef<HTMLDivElement>(null)
+  const itemRefs = useRef<Map<string, HTMLButtonElement>>(new Map())
 
   const headings = useMemo(() => extractHeadings(content), [content])
 
-  const setupObserver = useCallback(() => {
-    if (observerRef.current) {
-      observerRef.current.disconnect()
-    }
+  // Scroll-based active heading detection — more reliable than IntersectionObserver
+  useEffect(() => {
+    if (headings.length === 0) return
 
-    const headingElements = headings
-      .map(h => document.getElementById(h.id))
-      .filter(Boolean) as HTMLElement[]
+    function onScroll() {
+      const scrollY = window.scrollY
+      const offset = 100 // match header height
 
-    if (headingElements.length === 0) return
-
-    observerRef.current = new IntersectionObserver(
-      (entries) => {
-        const visibleEntries = entries.filter(e => e.isIntersecting)
-        if (visibleEntries.length > 0) {
-          setActiveId(visibleEntries[0].target.id)
+      // Find the last heading that has scrolled past the offset line
+      let current = ''
+      for (const h of headings) {
+        const el = document.getElementById(h.id)
+        if (el && el.offsetTop <= scrollY + offset) {
+          current = h.id
         }
-      },
-      {
-        rootMargin: '-80px 0px -60% 0px',
-        threshold: 0,
       }
-    )
-
-    for (const el of headingElements) {
-      observerRef.current.observe(el)
+      // If nothing passed the offset yet, highlight the first heading
+      if (!current && headings.length > 0) {
+        current = headings[0].id
+      }
+      setActiveId(current)
     }
+
+    onScroll() // set initial state
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
   }, [headings])
 
+  // Auto-scroll TOC sidebar to keep active item visible
   useEffect(() => {
-    const timer = setTimeout(setupObserver, 100)
-    return () => {
-      clearTimeout(timer)
-      observerRef.current?.disconnect()
+    if (!activeId) return
+    const btn = itemRefs.current.get(activeId)
+    const container = tocScrollRef.current
+    if (btn && container) {
+      btn.scrollIntoView({ block: 'nearest', behavior: 'smooth' })
     }
-  }, [setupObserver])
+  }, [activeId])
 
   if (headings.length < 2) {
     return null
@@ -94,17 +96,18 @@ export function TableOfContents({ content, variant = 'both' }: TableOfContentsPr
   }
 
   const tocList = (
-    <ul className="space-y-1 text-sm border-l border-gray-800">
+    <ul className="space-y-1 text-[13px] border-l border-white/[0.06]">
       {headings.map((heading) => (
         <li key={heading.id}>
           <button
+            ref={(el) => { if (el) itemRefs.current.set(heading.id, el) }}
             onClick={() => handleClick(heading.id)}
             className={`block w-full text-left py-1.5 transition-colors border-l-2 -ml-px ${
               heading.level === 2 ? 'pl-4' : 'pl-6'
             } ${
               activeId === heading.id
-                ? 'border-blue-500 text-blue-400'
-                : 'border-transparent text-gray-500 hover:text-gray-300 hover:border-gray-600'
+                ? 'border-white/[0.3] text-gray-200 font-medium'
+                : 'border-transparent text-gray-500 hover:text-gray-300 hover:border-white/[0.15]'
             }`}
           >
             {heading.text}
@@ -121,10 +124,10 @@ export function TableOfContents({ content, variant = 'both' }: TableOfContentsPr
     <>
       {/* Mobile: collapsible panel */}
       {showMobile && (
-        <div className="lg:hidden mb-8">
+        <div className="xl:hidden mb-8">
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="flex items-center gap-2 w-full px-4 py-3 rounded-lg bg-gray-900/50 border border-gray-800 text-sm text-gray-300 hover:text-white transition-colors"
+            className="flex items-center gap-2 w-full px-4 py-2.5 rounded-lg bg-white/[0.02] border border-white/[0.06] text-sm text-gray-300 hover:bg-white/[0.04] hover:text-white transition-colors"
           >
             <span className="font-medium">目录</span>
             <ChevronDownIcon
@@ -132,18 +135,21 @@ export function TableOfContents({ content, variant = 'both' }: TableOfContentsPr
             />
           </button>
           {isOpen && (
-            <div className="mt-2 px-4 py-3 rounded-lg bg-gray-900/50 border border-gray-800">
+            <div className="mt-2 px-4 py-3 rounded-lg bg-white/[0.02] border border-white/[0.06]">
               {tocList}
             </div>
           )}
         </div>
       )}
 
-      {/* Desktop: sticky sidebar */}
+      {/* Desktop: sticky sidebar positioned in the right margin */}
       {showDesktop && (
-        <aside className="hidden lg:block w-56 shrink-0">
-          <div className="sticky top-32 max-h-[calc(100vh-10rem)] overflow-y-auto">
-            <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3">
+        <aside className="hidden xl:block absolute top-0 bottom-0 left-full ml-8 w-56">
+          <div
+            ref={tocScrollRef}
+            className="sticky top-32 max-h-[calc(100vh-10rem)] overflow-y-auto overflow-x-hidden scrollbar-hide"
+          >
+            <p className="text-[11px] font-medium text-gray-500 uppercase tracking-widest mb-3 pl-1">
               目录
             </p>
             {tocList}
