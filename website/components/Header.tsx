@@ -99,6 +99,18 @@ export function Header({ onBookCallClick }: HeaderProps) {
     }
   }, [searchQuery])
 
+  // Keyboard shortcut for Search (Cmd+K or Ctrl+K)
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+        e.preventDefault()
+        setIsSearchOpen((prev) => !prev)
+      }
+    }
+    document.addEventListener('keydown', handleKeyDown)
+    return () => document.removeEventListener('keydown', handleKeyDown)
+  }, [])
+
   const handleTabClick = () => {
     setIsMenuOpen(false)
   }
@@ -193,16 +205,27 @@ export function Header({ onBookCallClick }: HeaderProps) {
 
           {/* Right Side Actions */}
           <div className="flex items-center">
-            {/* Search Button */}
+            {/* Search Button (Desktop) */}
             <button
-              onClick={() => setIsSearchOpen(!isSearchOpen)}
-              className={`nav-pill flex items-center justify-center rounded-full text-white/70 hover:text-white header-transition group ${
-                isSearchOpen ? 'scale-105 !text-white' : 'hover:scale-105'
-              } ${scrolled ? 'scrolled' : ''}`}
-              style={{ width: '42px', height: '42px' }}
+              onClick={() => setIsSearchOpen(true)}
+              className="hidden sm:flex items-center gap-2 md:gap-3 px-3 py-1.5 bg-[#0a0a0a]/50 hover:bg-white/[0.04] border border-white/[0.08] hover:border-white/[0.15] rounded-full transition-all duration-300 group shadow-sm"
               aria-label="Search"
             >
-              <Search className={`w-4 h-4 transition-transform duration-300 ${isSearchOpen ? 'rotate-90' : ''}`} />
+              <Search className="w-3.5 h-3.5 text-gray-500 group-hover:text-gray-300 transition-colors" />
+              <span className="text-[13px] text-gray-500 group-hover:text-gray-300 font-medium transition-colors">Search...</span>
+              <kbd className="hidden md:flex items-center justify-center gap-0.5 px-1.5 py-0.5 text-[10px] font-sans font-medium text-gray-500 bg-white/[0.03] rounded-md border border-white/[0.05] group-hover:text-gray-400 group-hover:border-white/[0.1] transition-all">
+                <span className="text-[11px] leading-none">⌘</span>
+                <span className="leading-none">K</span>
+              </kbd>
+            </button>
+
+            {/* Search Button (Mobile) */}
+            <button
+              onClick={() => setIsSearchOpen(true)}
+              className="sm:hidden p-2 text-gray-400 hover:text-white transition-colors"
+              aria-label="Search"
+            >
+              <Search className="w-5 h-5" />
             </button>
           </div>
         </div>
@@ -220,10 +243,9 @@ export function Header({ onBookCallClick }: HeaderProps) {
         >
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className={`nav-pill flex items-center justify-center rounded-full text-white/70 hover:text-white header-transition shadow-xl group ${
-              isMenuOpen ? 'scale-105 !text-white' : 'hover:scale-105'
-            } ${scrolled ? 'scrolled' : ''}`}
-            style={{ width: '46px', height: '46px' }}
+            className={`p-2.5 bg-[#0a0a0a] border border-white/[0.08] rounded-xl text-gray-400 hover:text-white hover:bg-white/[0.06] transition-colors shadow-xl group ${
+              isMenuOpen ? 'bg-white/[0.08] text-white border-white/[0.15]' : ''
+            }`}
             aria-label="Toggle menu"
           >
             {isMenuOpen ?
