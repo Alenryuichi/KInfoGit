@@ -207,17 +207,22 @@ export function Skills() {
           </div>
 
           {/* Quality Attributes */}
-          <div className="mb-20">
-            <h3 className="text-2xl font-bold text-center mb-8">
-              Websites that stand out and make a difference
+          <div className="mb-24">
+            <h3 className="text-xl sm:text-2xl font-medium text-gray-100 tracking-tight mb-8">
+              Built for scale, speed, and reliability.
             </h3>
-            <Marquee>
-              {qualities.map((quality, index) => (
-                <div key={`quality-${index}`} className="px-6 py-3 bg-gray-800/30 border border-gray-700/50 rounded-full text-gray-300 whitespace-nowrap hover:bg-gray-700/50 transition-colors">
-                  {quality}
-                </div>
-              ))}
-            </Marquee>
+            <div className="opacity-90">
+              <Marquee>
+                {qualities.map((quality, index) => (
+                  <div 
+                    key={`quality-${index}`} 
+                    className="px-3.5 py-1.5 bg-white/[0.04] border border-white/[0.08] rounded-md text-[13px] font-medium text-gray-300 whitespace-nowrap"
+                  >
+                    {quality}
+                  </div>
+                ))}
+              </Marquee>
+            </div>
           </div>
 
           {/* Core Strengths with staggered entrance */}
