@@ -161,7 +161,7 @@ function ThemeTabs({
 
   return (
     <div className="relative md:contents" ref={containerRef}>
-      <div className="flex gap-1 overflow-x-auto scrollbar-hide relative p-1 rounded-lg bg-white/5">
+      <div className="flex gap-1 overflow-x-auto overflow-y-visible scrollbar-hide relative p-1 rounded-lg bg-white/5">
         {tabs.map((tab) => (
           <div key={tab} className="relative">
             <button
