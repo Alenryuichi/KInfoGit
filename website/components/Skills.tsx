@@ -222,56 +222,53 @@ export function Skills() {
 
           {/* Core Strengths with staggered entrance */}
           <motion.div
-            className="skills-strengths grid md:grid-cols-3 gap-8 mb-16"
+            className="skills-strengths grid md:grid-cols-3 gap-6 mb-32"
             variants={containerVariants}
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, margin: "-50px" }}
           >
             <motion.div
-              className="group p-8 rounded-2xl bg-gray-900/50 border border-gray-800/50 hover:border-gray-700/50 transition-colors duration-300 hover:bg-gray-900/70"
+              className="p-8 rounded-xl bg-white/[0.02] border border-white/[0.08] hover:bg-white/[0.04] transition-colors duration-300"
               variants={cardVariants}
-              whileHover={{ y: -8, transition: { type: "spring" as const, stiffness: 300 } }}
             >
-              <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                <span className="text-white text-2xl">🎯</span>
+              <div className="text-[11px] font-mono text-gray-500 tracking-widest mb-6 uppercase">
+                01 / Domain
               </div>
-              <h4 className="text-xl font-semibold text-white mb-3">
+              <h4 className="text-lg font-semibold text-gray-200 mb-3">
                 Anti-fraud Expert
               </h4>
-              <p className="text-gray-400 leading-relaxed">
+              <p className="text-sm text-gray-400 leading-relaxed">
                 Identified 50,000+ fraudulent enterprises, generated 3M+ direct revenue with zero complaints operation.
               </p>
             </motion.div>
 
             <motion.div
-              className="group p-8 rounded-2xl bg-gray-900/50 border border-gray-800/50 hover:border-gray-700/50 transition-colors duration-300 hover:bg-gray-900/70"
+              className="p-8 rounded-xl bg-white/[0.02] border border-white/[0.08] hover:bg-white/[0.04] transition-colors duration-300"
               variants={cardVariants}
-              whileHover={{ y: -8, transition: { type: "spring" as const, stiffness: 300 } }}
             >
-              <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                <span className="text-white text-2xl">🏗️</span>
+              <div className="text-[11px] font-mono text-gray-500 tracking-widest mb-6 uppercase">
+                02 / Architecture
               </div>
-              <h4 className="text-xl font-semibold text-white mb-3">
+              <h4 className="text-lg font-semibold text-gray-200 mb-3">
                 System Architect
               </h4>
-              <p className="text-gray-400 leading-relaxed">
+              <p className="text-sm text-gray-400 leading-relaxed">
                 Built billion-scale data platforms from 0 to 1, enabling complex analysis completion in 5 minutes.
               </p>
             </motion.div>
 
             <motion.div
-              className="group p-8 rounded-2xl bg-gray-900/50 border border-gray-800/50 hover:border-gray-700/50 transition-colors duration-300 hover:bg-gray-900/70"
+              className="p-8 rounded-xl bg-white/[0.02] border border-white/[0.08] hover:bg-white/[0.04] transition-colors duration-300"
               variants={cardVariants}
-              whileHover={{ y: -8, transition: { type: "spring" as const, stiffness: 300 } }}
             >
-              <div className="w-16 h-16 bg-gradient-to-br from-pink-500 to-red-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                <span className="text-white text-2xl">🌐</span>
+              <div className="text-[11px] font-mono text-gray-500 tracking-widest mb-6 uppercase">
+                03 / Engineering
               </div>
-              <h4 className="text-xl font-semibold text-white mb-3">
+              <h4 className="text-lg font-semibold text-gray-200 mb-3">
                 Full-Stack Developer
               </h4>
-              <p className="text-gray-400 leading-relaxed">
+              <p className="text-sm text-gray-400 leading-relaxed">
                 Proficient in both frontend and backend development with complete project delivery capabilities.
               </p>
             </motion.div>
@@ -285,23 +282,21 @@ export function Skills() {
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <h3 className="text-2xl font-bold text-white mb-4">
+            <h3 className="text-2xl sm:text-3xl font-semibold tracking-tight text-gray-100 mb-4">
               Ready to build something amazing?
             </h3>
-            <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
+            <p className="text-sm text-gray-400 mb-10 max-w-xl mx-auto leading-relaxed">
               I&apos;m available for full-time roles & freelance projects.
               Let&apos;s collaborate and create exceptional digital experiences.
             </p>
             <motion.a
               href="#contact"
-              className="inline-flex items-center px-8 py-4 bg-white text-black font-semibold rounded-full hover:bg-gray-100 transition-colors duration-300 shadow-lg"
-              whileHover={{ scale: 1.05, boxShadow: "0 10px 30px rgba(0,0,0,0.3)" }}
+              className="inline-flex items-center px-6 py-3 bg-white/10 text-white text-sm font-medium rounded-xl border border-white/20 hover:bg-white/15 hover:border-white/30 transition-colors shadow-lg"
               whileTap={{ scale: 0.98 }}
-              transition={{ type: "spring", stiffness: 400, damping: 17 }}
             >
               Get In Touch
-              <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              <svg className="ml-2 w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
             </motion.a>
           </motion.div>
