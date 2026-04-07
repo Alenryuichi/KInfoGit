@@ -162,19 +162,21 @@ export function Header({ onBookCallClick }: HeaderProps) {
                 }}
               />
 
-              {/* Ambient Spotlight - casts a very soft glow behind the active tab */}
-              <div
-                className="absolute transition-transform duration-500 ease-out pointer-events-none will-change-transform"
-                style={{
-                  transform: `translateX(${4 + activeTabIndex * 80 - 10}px)`,
-                  left: 0,
-                  top: 0,
-                  bottom: 0,
-                  width: '100px',
-                  background: 'radial-gradient(ellipse at top, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0) 70%)',
-                  zIndex: 0
-                }}
-              />
+              {/* Wrapper to clip internal optical effects perfectly to the pill shape */}
+              <div className="absolute inset-0 rounded-full overflow-hidden pointer-events-none" style={{ zIndex: 0 }}>
+                {/* Ambient Spotlight - casts a very soft glow behind the active tab */}
+                <div
+                  className="absolute transition-transform duration-500 ease-out will-change-transform"
+                  style={{
+                    transform: `translateX(${4 + activeTabIndex * 80 - 10}px)`,
+                    left: 0,
+                    top: 0,
+                    bottom: 0,
+                    width: '100px',
+                    background: 'radial-gradient(ellipse at top, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0) 70%)',
+                  }}
+                />
+              </div>
 
               {/* Active tab background indicator - raised glass effect */}
               <div
