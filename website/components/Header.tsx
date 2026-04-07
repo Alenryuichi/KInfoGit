@@ -208,15 +208,16 @@ export function Header({ onBookCallClick }: HeaderProps) {
             {/* Search Button (Desktop) */}
             <button
               onClick={() => setIsSearchOpen(true)}
-              className="hidden sm:flex items-center gap-2 md:gap-3 px-3 py-1.5 bg-[#0a0a0a]/50 hover:bg-white/[0.04] border border-white/[0.08] hover:border-white/[0.15] rounded-full transition-all duration-300 group shadow-sm"
+              className="hidden sm:flex items-center justify-between w-44 lg:w-56 px-3 py-2 bg-[#0a0a0a] hover:bg-white/[0.03] border border-white/[0.08] hover:border-white/[0.15] rounded-xl transition-all duration-300 group"
               aria-label="Search"
             >
-              <Search className="w-3.5 h-3.5 text-gray-500 group-hover:text-gray-300 transition-colors" />
-              <span className="text-[13px] text-gray-500 group-hover:text-gray-300 font-medium transition-colors">Search...</span>
-              <kbd className="hidden md:flex items-center justify-center gap-0.5 px-1.5 py-0.5 text-[10px] font-sans font-medium text-gray-500 bg-white/[0.03] rounded-md border border-white/[0.05] group-hover:text-gray-400 group-hover:border-white/[0.1] transition-all">
-                <span className="text-[11px] leading-none">⌘</span>
-                <span className="leading-none">K</span>
-              </kbd>
+              <div className="flex items-center gap-2.5">
+                <Search className="w-4 h-4 text-gray-500 group-hover:text-gray-300 transition-colors" />
+                <span className="text-[13px] text-gray-400 group-hover:text-gray-200 transition-colors font-normal">Search...</span>
+              </div>
+              <div className="flex items-center justify-center px-1.5 py-0.5 text-[11px] font-sans font-medium text-gray-500 bg-white/[0.04] rounded-md border border-white/[0.08] group-hover:text-gray-300 group-hover:border-white/[0.15] transition-all">
+                ⌘K
+              </div>
             </button>
 
             {/* Search Button (Mobile) */}
