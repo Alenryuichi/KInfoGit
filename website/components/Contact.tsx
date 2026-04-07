@@ -260,8 +260,8 @@ export function Contact() {
                       <a
                         key={index}
                         href={social.href}
-                        target="_blank"
-                        rel="noopener noreferrer"
+                        target={social.href.startsWith('mailto:') ? undefined : '_blank'}
+                        rel={social.href.startsWith('mailto:') ? undefined : 'noopener noreferrer'}
                         className="group flex items-center gap-4 p-4 bg-gray-900/50 border border-gray-800/50 rounded-xl hover:border-gray-700/50 transition-all duration-300 hover:bg-gray-900/70"
                       >
                         <div className="p-2 bg-gray-800/50 rounded-lg group-hover:bg-gray-700/50 transition-colors">

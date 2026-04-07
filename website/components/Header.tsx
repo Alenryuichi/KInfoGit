@@ -196,9 +196,10 @@ export function Header({ onBookCallClick }: HeaderProps) {
             {/* Search Button */}
             <button
               onClick={() => setIsSearchOpen(!isSearchOpen)}
-              className={`p-2.5 bg-white/[0.02] border border-white/[0.06] rounded-xl text-gray-400 hover:text-white hover:bg-white/[0.06] transition-colors group ${
-                isSearchOpen ? 'bg-white/[0.08] text-white border-white/[0.15]' : ''
-              }`}
+              className={`nav-pill flex items-center justify-center rounded-full text-white/70 hover:text-white header-transition group ${
+                isSearchOpen ? 'scale-105 !text-white' : 'hover:scale-105'
+              } ${scrolled ? 'scrolled' : ''}`}
+              style={{ width: '42px', height: '42px' }}
               aria-label="Search"
             >
               <Search className={`w-4 h-4 transition-transform duration-300 ${isSearchOpen ? 'rotate-90' : ''}`} />
@@ -219,9 +220,10 @@ export function Header({ onBookCallClick }: HeaderProps) {
         >
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className={`p-2.5 bg-[#0a0a0a] border border-white/[0.08] rounded-xl text-gray-400 hover:text-white hover:bg-white/[0.06] transition-colors shadow-xl group ${
-              isMenuOpen ? 'bg-white/[0.08] text-white border-white/[0.15]' : ''
-            }`}
+            className={`nav-pill flex items-center justify-center rounded-full text-white/70 hover:text-white header-transition shadow-xl group ${
+              isMenuOpen ? 'scale-105 !text-white' : 'hover:scale-105'
+            } ${scrolled ? 'scrolled' : ''}`}
+            style={{ width: '46px', height: '46px' }}
             aria-label="Toggle menu"
           >
             {isMenuOpen ?

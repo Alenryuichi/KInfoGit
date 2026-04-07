@@ -276,8 +276,8 @@ export function About() {
                     <a
                       key={i}
                       href={item.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
+                      target={item.href.startsWith('mailto:') ? undefined : '_blank'}
+                      rel={item.href.startsWith('mailto:') ? undefined : 'noopener noreferrer'}
                       className="flex items-center gap-2 px-4 py-2 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all duration-300 group/link"
                     >
                       <item.icon className="w-4 h-4 text-gray-400 group-hover/link:text-white transition-colors" />

@@ -45,8 +45,8 @@ export function Footer() {
                     <a
                       key={i}
                       href={item.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
+                      target={item.href.startsWith('mailto:') ? undefined : '_blank'}
+                      rel={item.href.startsWith('mailto:') ? undefined : 'noopener noreferrer'}
                       className="flex items-center gap-2 px-3 py-2 rounded-lg bg-gray-800/50 border border-gray-700/50 hover:bg-gray-700/50 hover:border-gray-600 transition-all duration-300 group"
                       aria-label={item.label}
                     >
