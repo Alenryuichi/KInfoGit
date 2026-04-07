@@ -31,7 +31,7 @@ const Logo = () => (
     <div className="relative logo-glow">
       <div className="w-12 h-12 rounded-lg overflow-hidden shadow-lg group-hover:shadow-xl header-transition group-hover:scale-110 flex items-center justify-center">
         <Image
-          src="/logo.svg"
+          src="/logo.png"
           alt="KM Logo"
           width={48}
           height={48}
