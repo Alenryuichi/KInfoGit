@@ -172,11 +172,11 @@ export function Header({ onBookCallClick }: HeaderProps) {
 
               {/* Active tab background indicator - raised glass effect */}
               <div
-                className="absolute top-1 bottom-1 bg-white/[0.02] backdrop-blur-lg rounded-full transition-all duration-500 ease-out border border-white/[0.04]"
+                className="absolute top-1 bottom-1 bg-white/[0.04] backdrop-blur-lg rounded-full transition-all duration-500 ease-out border border-white/[0.05]"
                 style={{
                   left: `${4 + navigation.findIndex(item => item.name === getActiveTab()) * 80}px`,
                   width: '80px',
-                  boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.2), inset 0 -1px 0 rgba(0, 0, 0, 0.4), inset 0 8px 20px rgba(255, 255, 255, 0.04)',
+                  boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.3), inset 0 -1px 0 rgba(0, 0, 0, 0.4), inset 0 8px 20px rgba(255, 255, 255, 0.08)',
                   zIndex: 10,
                 }}
               />
