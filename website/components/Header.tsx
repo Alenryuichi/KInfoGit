@@ -157,15 +157,14 @@ export function Header({ onBookCallClick }: HeaderProps) {
                 }}
               />
 
-              {/* Active tab background indicator - glass effect */}
+              {/* Active tab background indicator - sunken lens effect */}
               <div
-                className="absolute top-1 bottom-1 bg-white/5 backdrop-blur-sm rounded-full transition-all duration-500 ease-out border border-white/15"
+                className="absolute top-1 bottom-1 bg-black/40 rounded-full transition-all duration-500 ease-out"
                 style={{
                   left: `${4 + navigation.findIndex(item => item.name === getActiveTab()) * 80}px`,
                   width: '80px',
-                  boxShadow: '0 2px 8px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.2)',
+                  boxShadow: 'inset 0 2px 6px rgba(0, 0, 0, 0.8), 0 1px 0 rgba(255, 255, 255, 0.05)',
                   zIndex: 10,
-                  borderWidth: '0.1px'
                 }}
               />
 
@@ -175,10 +174,10 @@ export function Header({ onBookCallClick }: HeaderProps) {
                     key={item.name}
                     href={item.href}
                     onClick={handleTabClick}
-                    className={`relative text-sm font-light rounded-full header-transition group flex items-center justify-center ${
+                    className={`relative text-[13px] font-medium tracking-tight rounded-full header-transition group flex items-center justify-center ${
                       getActiveTab() === item.name
-                        ? 'text-white font-normal'
-                        : 'text-white/70 hover:text-white'
+                        ? 'text-white'
+                        : 'text-white/60 hover:text-white'
                     }`}
                     style={{ width: '80px', height: '36px', zIndex: 20 }}
                   >
@@ -193,7 +192,7 @@ export function Header({ onBookCallClick }: HeaderProps) {
                 {/* Book a Call button integrated into nav */}
                 <button
                   onClick={handleBookCallClick}
-                  className="relative px-4 py-2 text-sm font-medium rounded-full header-transition group bg-white/10 backdrop-blur-md text-white hover:bg-white/15 hover:scale-105 ml-2"
+                  className="relative px-4 py-2 text-[13px] font-medium tracking-tight rounded-full header-transition group bg-white/10 backdrop-blur-md text-white hover:bg-white/15 hover:scale-105 ml-2"
                   style={{ minWidth: '100px', zIndex: 20 }}
                 >
                   <span className="relative z-30">Book a Call</span>
