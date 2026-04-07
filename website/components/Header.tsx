@@ -157,6 +157,34 @@ export function Header({ onBookCallClick }: HeaderProps) {
                 }}
               />
 
+              {/* Premium Dynamic Border Highlight Tracker */}
+              <div 
+                className="absolute inset-0 rounded-full pointer-events-none" 
+                style={{ 
+                  padding: '1px', 
+                  mask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)', 
+                  WebkitMask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)', 
+                  WebkitMaskComposite: 'xor', 
+                  maskComposite: 'exclude',
+                  zIndex: 20
+                }}
+              >
+                {/* 
+                  Instead of a hard white line, we use a wide, elliptical gradient that smoothly fades out.
+                  This mimics light diffusing through the frosted glass edge rather than a sharp LED.
+                */}
+                <div
+                  className="absolute transition-all duration-500 ease-out"
+                  style={{
+                    top: 0,
+                    bottom: 0,
+                    left: `${4 + navigation.findIndex(item => item.name === getActiveTab()) * 80 - 20}px`,
+                    width: '120px',
+                    background: 'radial-gradient(120px 40px at top center, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0.1) 40%, rgba(255,255,255,0) 100%)',
+                  }}
+                />
+              </div>
+
               {/* Active tab background indicator - raised glass effect */}
               <div
                 className="absolute top-1 bottom-1 bg-white/[0.06] backdrop-blur-md rounded-full transition-all duration-500 ease-out border border-white/[0.08]"
