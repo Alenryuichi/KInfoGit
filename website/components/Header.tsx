@@ -149,22 +149,23 @@ export function Header({ onBookCallClick }: HeaderProps) {
               <div
                 className="absolute top-glow-indicator transition-all duration-500 ease-out"
                 style={{
-                  left: `${4 + navigation.findIndex(item => item.name === getActiveTab()) * 80 + 24}px`,
-                  top: '-1px',
-                  width: '32px',
-                  height: '2px',
+                  left: `${4 + navigation.findIndex(item => item.name === getActiveTab()) * 80 + 20}px`,
+                  top: '-3px',
+                  width: '40px',
+                  height: '20px',
                   zIndex: 20
                 }}
               />
 
               {/* Active tab background indicator - glass effect */}
               <div
-                className="absolute top-1 bottom-1 bg-white/[0.06] backdrop-blur-md rounded-full transition-all duration-500 ease-out border border-white/[0.08]"
+                className="absolute top-1 bottom-1 bg-white/5 backdrop-blur-sm rounded-full transition-all duration-500 ease-out border border-white/15"
                 style={{
                   left: `${4 + navigation.findIndex(item => item.name === getActiveTab()) * 80}px`,
                   width: '80px',
-                  boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.05)',
-                  zIndex: 10
+                  boxShadow: '0 2px 8px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.2)',
+                  zIndex: 10,
+                  borderWidth: '0.1px'
                 }}
               />
 

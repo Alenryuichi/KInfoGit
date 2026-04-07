@@ -120,13 +120,14 @@ body {
 
 /* Top glow indicator for active tab */
 .top-glow-indicator {
-  background: rgba(255, 255, 255, 1);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.95) 50%, rgba(255, 255, 255, 0.8) 100%);
   box-shadow:
-    0 0 20px rgba(255, 255, 255, 0.8),
-    0 4px 40px rgba(255, 255, 255, 0.4),
-    0 8px 60px rgba(255, 255, 255, 0.2);
-  filter: blur(4px);
-  border-radius: 100%;
+    0 0 30px rgba(255, 255, 255, 1),
+    0 0 60px rgba(255, 255, 255, 0.8),
+    0 0 100px rgba(255, 255, 255, 0.6),
+    0 2px 12px rgba(255, 255, 255, 0.9);
+  filter: blur(0.3px);
+  border-radius: 8px;
 }
 
 .animate-breathing-pulse {
