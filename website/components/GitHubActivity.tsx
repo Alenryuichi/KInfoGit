@@ -1,46 +1,12 @@
-import { useEffect, useState, Component, ReactNode } from 'react'
-import dynamic from 'next/dynamic'
+import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
-import { Github, ExternalLink, Star, GitFork, Clock, AlertCircle } from 'lucide-react'
-
-// Error Boundary for GitHub Calendar
-interface ErrorBoundaryProps {
-  children: ReactNode
-  fallback: ReactNode
-}
-
-interface ErrorBoundaryState {
-  hasError: boolean
-}
-
-class CalendarErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
-  constructor(props: ErrorBoundaryProps) {
-    super(props)
-    this.state = { hasError: false }
-  }
-
-  static getDerivedStateFromError(): ErrorBoundaryState {
-    return { hasError: true }
-  }
-
-  render() {
-    if (this.state.hasError) {
-      return this.props.fallback
-    }
-    return this.props.children
-  }
-}
-
-// Dynamic import to avoid SSR hydration issues
-const GitHubCalendar = dynamic(
-  () => import('react-github-calendar').then((mod) => mod.GitHubCalendar),
-  { ssr: false, loading: () => <div className="h-32 bg-gray-800/50 rounded animate-pulse" /> }
-)
+import { Github, ExternalLink, Star, GitFork, Clock } from 'lucide-react'
+import { ActivityCalendar, ThemeInput } from 'react-activity-calendar'
 
 const GITHUB_USERNAME = 'Alenryuichi'
 
 // Custom theme matching the site's dark theme
-const customTheme = {
+const customTheme: ThemeInput = {
   dark: ['#161b22', '#0e4429', '#006d32', '#26a641', '#39d353'],
 }
 
@@ -70,10 +36,17 @@ interface GitHubPR {
   }
 }
 
+interface ContributionDay {
+  date: string
+  count: number
+  level: 0 | 1 | 2 | 3 | 4
+}
+
 interface GitHubActivityProps {
   className?: string
   initialRepos?: GitHubRepo[]
   initialPRs?: GitHubPR[]
+  contributionData?: ContributionDay[]
 }
 
 // Language color mapping
@@ -118,7 +91,7 @@ function getRepoName(repositoryUrl: string): string {
   return parts[parts.length - 1] || ''
 }
 
-export function GitHubActivity({ className = '', initialRepos = [], initialPRs = [] }: GitHubActivityProps) {
+export function GitHubActivity({ className = '', initialRepos = [], initialPRs = [], contributionData = [] }: GitHubActivityProps) {
   // Use initialRepos and initialPRs from getStaticProps (fetched at build time)
   const repos = initialRepos
   const prs = initialPRs
@@ -155,49 +128,34 @@ export function GitHubActivity({ className = '', initialRepos = [], initialPRs =
           </motion.div>
 
           {/* Contribution Calendar */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="bg-gray-900/50 border border-gray-800 rounded-2xl p-6 sm:p-8 mb-8"
-          >
-            <div className="flex items-center justify-between mb-6">
-              <h3 className="text-xl font-semibold text-white flex items-center gap-2">
-                <span className="w-3 h-3 bg-green-500 rounded-full animate-pulse" />
-                Contribution Graph
-              </h3>
-              <a
-                href={`https://github.com/${GITHUB_USERNAME}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 text-sm text-gray-400 hover:text-white transition-colors"
-              >
-                View Profile
-                <ExternalLink className="w-4 h-4" />
-              </a>
-            </div>
-
-            <div className="overflow-x-auto pb-2">
-              <div className="min-w-[750px]">
-                <CalendarErrorBoundary
-                  fallback={
-                    <div className="flex items-center justify-center gap-2 text-gray-400 py-8">
-                      <AlertCircle className="w-5 h-5" />
-                      <span>Unable to load contribution graph. </span>
-                      <a
-                        href={`https://github.com/${GITHUB_USERNAME}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-blue-400 hover:underline"
-                      >
-                        View on GitHub
-                      </a>
-                    </div>
-                  }
+          {contributionData.length > 0 && (
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="bg-gray-900/50 border border-gray-800 rounded-2xl p-6 sm:p-8 mb-8"
+            >
+              <div className="flex items-center justify-between mb-6">
+                <h3 className="text-xl font-semibold text-white flex items-center gap-2">
+                  <span className="w-3 h-3 bg-green-500 rounded-full animate-pulse" />
+                  Contribution Graph
+                </h3>
+                <a
+                  href={`https://github.com/${GITHUB_USERNAME}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-sm text-gray-400 hover:text-white transition-colors"
                 >
-                  <GitHubCalendar
-                    username={GITHUB_USERNAME}
+                  View Profile
+                  <ExternalLink className="w-4 h-4" />
+                </a>
+              </div>
+
+              <div className="overflow-x-auto pb-2">
+                <div className="min-w-[750px]">
+                  <ActivityCalendar
+                    data={contributionData}
                     colorScheme="dark"
                     theme={customTheme}
                     fontSize={12}
@@ -207,10 +165,10 @@ export function GitHubActivity({ className = '', initialRepos = [], initialPRs =
                       totalCount: '{{count}} contributions in the last year',
                     }}
                   />
-                </CalendarErrorBoundary>
+                </div>
               </div>
-            </div>
-          </motion.div>
+            </motion.div>
+          )}
 
           {/* Recent Projects */}
           <motion.div

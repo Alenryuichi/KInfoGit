@@ -36,9 +36,16 @@ interface AboutPageProps {
   profileData: typeof profileData
   githubRepos: GitHubRepo[]
   githubPRs: GitHubPR[]
+  contributionData: ContributionDay[]
 }
 
-export default function AboutPage({ profileData, githubRepos, githubPRs }: AboutPageProps) {
+interface ContributionDay {
+  date: string
+  count: number
+  level: 0 | 1 | 2 | 3 | 4
+}
+
+export default function AboutPage({ profileData, githubRepos, githubPRs, contributionData }: AboutPageProps) {
   // Handle smooth scroll to hash anchor on page load (for cross-page navigation)
   useEffect(() => {
     if (typeof window !== 'undefined' && window.location.hash) {
@@ -74,7 +81,7 @@ export default function AboutPage({ profileData, githubRepos, githubPRs }: About
 
         {/* GitHub Activity Section */}
         <div className="relative z-10">
-          <GitHubActivity initialRepos={githubRepos} initialPRs={githubPRs} />
+          <GitHubActivity initialRepos={githubRepos} initialPRs={githubPRs} contributionData={contributionData} />
         </div>
 
         {/* Skills Section */}
@@ -131,11 +138,74 @@ export const getStaticProps: GetStaticProps = async () => {
     console.error('Failed to fetch GitHub data:', error)
   }
 
+  // Fetch contribution calendar via GitHub GraphQL API
+  let contributionData: ContributionDay[] = []
+
+  if (process.env.GITHUB_TOKEN) {
+    try {
+      const graphqlResponse = await fetch('https://api.github.com/graphql', {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${process.env.GITHUB_TOKEN}`,
+          'Content-Type': 'application/json',
+          'User-Agent': 'KInfoGit-Portfolio',
+        },
+        body: JSON.stringify({
+          query: `query($username: String!) {
+            user(login: $username) {
+              contributionsCollection {
+                contributionCalendar {
+                  totalContributions
+                  weeks {
+                    contributionDays {
+                      date
+                      contributionCount
+                      color
+                    }
+                  }
+                }
+              }
+            }
+          }`,
+          variables: { username: GITHUB_USERNAME },
+        }),
+      })
+
+      if (graphqlResponse.ok) {
+        const graphqlData = await graphqlResponse.json()
+        const calendar = graphqlData?.data?.user?.contributionsCollection?.contributionCalendar
+
+        if (calendar) {
+          contributionData = calendar.weeks.flatMap(
+            (week: { contributionDays: { date: string; contributionCount: number }[] }) =>
+              week.contributionDays.map((day) => ({
+                date: day.date,
+                count: day.contributionCount,
+                level: day.contributionCount === 0 ? 0
+                  : day.contributionCount <= 3 ? 1
+                  : day.contributionCount <= 6 ? 2
+                  : day.contributionCount <= 9 ? 3
+                  : 4,
+              } as ContributionDay))
+          )
+          console.log(`GitHub contributions: ${calendar.totalContributions} total, ${contributionData.length} days`)
+        }
+      } else {
+        console.warn('GitHub GraphQL API error:', graphqlResponse.status)
+      }
+    } catch (error) {
+      console.warn('Failed to fetch GitHub contribution data:', error)
+    }
+  } else {
+    console.warn('GITHUB_TOKEN not set, skipping contribution calendar')
+  }
+
   return {
     props: {
       profileData,
       githubRepos,
       githubPRs,
+      contributionData,
     },
   }
 }
