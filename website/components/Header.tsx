@@ -145,27 +145,26 @@ export function Header({ onBookCallClick }: HeaderProps) {
               }`}
               style={{ zIndex: 10 }}
             >
-              {/* Top glowing indicator - positioned behind nav pill */}
+              {/* Top glowing indicator - positioned exactly on the top edge */}
               <div
-                className="absolute top-glow-indicator rounded-lg transition-all duration-500 ease-out"
+                className="absolute top-glow-indicator transition-all duration-500 ease-out"
                 style={{
-                  left: `${4 + navigation.findIndex(item => item.name === getActiveTab()) * 80 + 20}px`,
-                  top: '-3px',
-                  width: '40px',
-                  height: '20px',
-                  zIndex: -10
+                  left: `${4 + navigation.findIndex(item => item.name === getActiveTab()) * 80 + 24}px`,
+                  top: '-1px',
+                  width: '32px',
+                  height: '2px',
+                  zIndex: 20
                 }}
               />
 
               {/* Active tab background indicator - glass effect */}
               <div
-                className="absolute top-1 bottom-1 bg-white/5 backdrop-blur-sm rounded-full transition-all duration-500 ease-out border border-white/15"
+                className="absolute top-1 bottom-1 bg-white/[0.06] backdrop-blur-md rounded-full transition-all duration-500 ease-out border border-white/[0.08]"
                 style={{
                   left: `${4 + navigation.findIndex(item => item.name === getActiveTab()) * 80}px`,
                   width: '80px',
-                  boxShadow: '0 2px 8px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.2)',
-                  zIndex: 10,
-                  borderWidth: '0.1px'
+                  boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.05)',
+                  zIndex: 10
                 }}
               />
 
@@ -175,17 +174,17 @@ export function Header({ onBookCallClick }: HeaderProps) {
                     key={item.name}
                     href={item.href}
                     onClick={handleTabClick}
-                    className={`relative text-sm font-light rounded-full header-transition group flex items-center justify-center ${
+                    className={`relative text-[13px] font-medium rounded-full header-transition group flex items-center justify-center ${
                       getActiveTab() === item.name
-                        ? 'text-white font-normal'
-                        : 'text-white/70 hover:text-white'
+                        ? 'text-white'
+                        : 'text-gray-400 hover:text-gray-200'
                     }`}
                     style={{ width: '80px', height: '36px', zIndex: 20 }}
                   >
                     <span className="relative z-30">{item.name}</span>
                     {/* Hover effect for non-active items */}
                     {getActiveTab() !== item.name && (
-                      <div className="absolute inset-0 bg-white/5 rounded-full opacity-0 group-hover:opacity-100 header-transition"></div>
+                      <div className="absolute inset-0 bg-white/[0.04] rounded-full opacity-0 group-hover:opacity-100 header-transition"></div>
                     )}
                   </Link>
                 ))}
@@ -193,11 +192,12 @@ export function Header({ onBookCallClick }: HeaderProps) {
                 {/* Book a Call button integrated into nav */}
                 <button
                   onClick={handleBookCallClick}
-                  className="relative px-4 py-2 text-sm font-medium rounded-full header-transition group bg-white/10 backdrop-blur-md text-white hover:bg-white/15 hover:scale-105 ml-2"
+                  className="relative px-4 py-2 text-[13px] font-medium rounded-full header-transition group bg-white/[0.06] border border-white/[0.08] text-gray-200 hover:text-white hover:bg-white/[0.1] hover:border-white/[0.15] ml-1 shadow-sm"
                   style={{ minWidth: '100px', zIndex: 20 }}
                 >
-                  <span className="relative z-30">Book a Call</span>
-                  <div className="absolute inset-0 bg-white/5 rounded-full opacity-0 group-hover:opacity-100 header-transition"></div>
+                  <span className="relative z-30 flex items-center justify-center gap-1.5">
+                    Book a Call
+                  </span>
                 </button>
               </div>
             </div>
