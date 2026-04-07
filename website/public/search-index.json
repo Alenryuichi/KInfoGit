@@ -1,58 +1,86 @@
 [
   {
     "title": "Page Agent 深度技术分析报告",
-    "description": "本文是一份关于阿里巴巴开源项目 Page Agent 的深度技术分析报告。报告详细剖析了其整体架构、基于 Re-act 循环的核心执行流程、DOM 提取与简化机制、内置工具系统、LLM 客户端设计以及视觉反馈系统。分析旨在评估其与 atoms-plus 项目集成的可行性，并总结了其关键设计决策和可能的集成方向。",
+    "description": "本文是一份关于阿里巴巴开源项目 Page Agent 的深度技术分析报告。报告详细剖析了其整体架构、基于 Re-act 循环的核心执行流程、DOM 提取与简化、内置工具系统、LLM 客户端设计、视觉反馈系统以及 Prompt 设计策略等关键技术模块。分析旨在评估其与 atoms-plus 项目集成的可行性，并总结了关键设计决策和可能的集成方向。",
     "url": "/blog/2026-03-06-page-agent-深度技术分析报告",
-    "category": "文章",
+    "category": "研究",
+    "type": "blog"
+  },
+  {
+    "title": "AI-Native Corp",
+    "description": "文章探讨了AI Native公司的核心定义与运作模式，强调其并非简单地使用AI工具，而是将AI Agent作为组织架构和运行逻辑的底层设计。文章从沟通、分工和工具三个维度展开，主张通过Agent进行信息对齐以减少冗余沟通，采用“单人+Agent”的闭环分工提升人效，并构建“Agent First”的内部系统以实现自愈与协同，最终目标是重塑工作本质，将人的角色从执行者转变为编排者。",
+    "url": "/blog/2026-04-06-ai-native-corp",
+    "category": "AI",
     "type": "blog"
   },
   {
     "title": "Karpathy\"知识编辑\"有感——这么巧，我也在做。",
-    "description": "本文作者受Karpathy关于知识编辑和自进化观点的启发，分享了自己正在开发的知识库项目BookAnything。文章探讨了在AI时代知识快速膨胀的背景下，如何构建能够自动整理、结构化并实现自生长的知识管理系统，以应对知识更新迭代快、应用转化难等挑战。",
+    "description": "作者受Karpathy关于知识库应具备自进化能力的观点启发，分享了自己正在开发的个人知识库项目BookAnything。该项目旨在解决AI时代知识更新过快、传统工具跟不上的困境，目前已实现知识结构化整理，并正致力于实现知识的自进化与自探索能力，以自动生成新知识库并应用于实际业务场景。",
     "url": "/blog/2026-04-06-karpathy-知识编辑-有感-这么巧-我也在做",
     "category": "随笔",
     "type": "blog"
   },
   {
+    "title": "为什么 Harness?",
+    "description": "文章探讨了AI工程范式的演进，指出随着大模型智力成为公共品，未来的核心竞争力在于构建名为“Harness Engineering”的治理体系。它通过约束、反馈和反熵机制，为AI Agent在复杂环境中提供可控、可靠的运行时环境，确保其行为不偏离预期，是驾驭大模型力量的关键。",
+    "url": "/blog/2026-04-06-为什么-harness",
+    "category": "Harness",
+    "type": "blog"
+  },
+  {
     "title": "近日阅读",
-    "description": "文章记录了作者对一本关于Transformer和大型语言模型的在线书籍的阅读体验，认为其知识点讲解通俗易懂，但指出其在算法深度探讨上有所不足，并推荐了“科学空间”博客作为对比，认为后者内容更为深入和精彩。",
+    "description": "文章记录了作者对一本关于Transformer和大型语言模型的书籍的阅读感想，认为其知识点讲解通俗易懂，但指出其在算法深度探讨上有所不足，并推荐了另一个更深入、更优质的技术博客“科学空间”作为补充学习资源。",
     "url": "/blog/2026-04-06-近日阅读",
     "category": "分享",
     "type": "blog"
   },
   {
-    "title": "OpenMemory Plus - AI Agent Dual-Layer Memory Framework",
-    "description": "跨会话上下文保持率 95%+",
-    "url": "/work/openmemory-plus",
-    "category": "ai-agent",
+    "title": "LLM-utils",
+    "description": "本文介绍了三个用于评估大语言模型（LLM）性能的在线竞技场或排行榜网站，主要聚焦于代码生成和软件工程任务（如SWE-bench）的模型能力评测。这些平台提供了不同模型在特定基准测试中的排名和表现对比。",
+    "url": "/blog/2026-04-07-llm-utils",
+    "category": "分享",
+    "type": "blog"
+  },
+  {
+    "title": "Polanyi-we know more wo can tell",
+    "description": "文章探讨了哲学家迈克尔·波兰尼的“缄默知识”理论（即“我们所知多于我们所能言说”）及其与当前大语言模型的关联。作者分析了该理论的核心观点，如知识的不可完全符号化、基于模仿的传递方式，并反思了像思维链这样的显式推理技术可能导致的“知识退化”。文章也警示了在提示词中随意引入强语义实体（如“Michael Polanyi”）可能干扰模型原本的任务焦点。",
+    "url": "/blog/2026-04-07-polanyi-we-know-more-wo-can-tell",
+    "category": "随笔",
+    "type": "blog"
+  },
+  {
+    "title": "Self-built Application Anti-fraud Governance Project",
+    "description": "A core governance system for WeCom ecosystem security, identifying non-compliant service providers and enterprises through multi-dimensional algorithms and enabling end-to-end automated decision-making.",
+    "url": "/work/anti-fraud-governance",
+    "category": "system-architecture",
     "type": "project"
   },
   {
-    "title": "Betaline - Full-stack iOS Climbing App",
-    "description": "全栈独立开发上线",
-    "url": "/work/betaline",
-    "category": "mobile-app",
-    "type": "project"
-  },
-  {
-    "title": "Risk Control AI Agent Review System",
-    "description": "准确率 70%→90%+，节省 2+ 人力/天",
-    "url": "/work/ai-agent-review",
-    "category": "ai-agent",
-    "type": "project"
-  },
-  {
-    "title": "Strategy Lifecycle Management Platform",
-    "description": "10 亿级数据处理，130 倍性能提升",
+    "title": "Portrait Platform - Strategy Full Lifecycle Management Platform",
+    "description": "A core infrastructure platform for Tencent's WeChat Work, integrating portrait center, graph capabilities, strategy quality assurance, and feature systems into a one-stop strategy management platform, supporting data analysis for billions of users.",
     "url": "/work/portrait-platform",
     "category": "system-architecture",
     "type": "project"
   },
   {
-    "title": "Self-built Application Anti-fraud Governance System",
-    "description": "年化收益 4000 万，人工干预 ↓80%",
-    "url": "/work/anti-fraud-governance",
-    "category": "anti-fraud",
+    "title": "Risk Control Review Large Model AI Agent",
+    "description": "An intelligent risk control review system based on large models, using AI Agents to automatically handle risk review tickets in the WeCom ecosystem. Led the evolution from V1 to V5 architecture, with a core design philosophy of 'distrusting LLM's process judgment, trusting only LLM's content judgment'.",
+    "url": "/work/ai-agent-review",
+    "category": "ai-agent",
+    "type": "project"
+  },
+  {
+    "title": "Betaline - Full-stack iOS Climbing App",
+    "description": "Betaline is a climbing iOS app independently developed from scratch, covering the full process of product design, UI/UX, iOS frontend, Go backend, AI model training, and DevOps. Core features include video analysis of climbing movements, hold detection and classification, and training record management.",
+    "url": "/work/betaline",
+    "category": "mobile-app",
+    "type": "project"
+  },
+  {
+    "title": "OpenMemory Plus - AI Agent Dual-Layer Memory Framework",
+    "description": "OpenMemory Plus is a dual-layer memory framework designed for AI Agents to solve cross-session context loss issues. It supports mainstream IDE Agents like Augment, Cursor, Windsurf, and Cline, achieving unified memory management through the MCP protocol.",
+    "url": "/work/openmemory-plus",
+    "category": "ai-agent",
     "type": "project"
   }
 ]

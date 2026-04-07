@@ -162,26 +162,6 @@ export default function BlogPostPage({ post, prevPost, nextPost }: BlogPostPageP
                 )}
               </nav>
             )}
-
-            {/* Article Footer */}
-            <footer className="mt-16 pt-8 border-t border-white/[0.06]">
-              <div className="flex items-center justify-between">
-                <div className="text-gray-400">
-                  <p>Thanks for reading!</p>
-                </div>
-
-                <div className="flex items-center space-x-4">
-                  <Link
-                    href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(cleanTitle)}&url=${encodeURIComponent(`${siteConfig.url}/blog/${post.slug}`)}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-gray-400 hover:text-blue-400 transition-colors"
-                  >
-                    Share on Twitter
-                  </Link>
-                </div>
-              </div>
-            </footer>
           </article>
 
             {/* Desktop TOC — positioned in right margin */}

@@ -66,7 +66,7 @@ function SubcategoryPopover({
       animate={{ opacity: 1, y: 0, scale: 1 }}
       exit={{ opacity: 0, y: -8, scale: 0.96 }}
       transition={{ duration: 0.15, ease: 'easeOut' }}
-      className="fixed min-w-[160px] p-1.5 bg-[#1a1d23]/98 backdrop-blur-xl border border-white/[0.08] rounded-xl shadow-2xl shadow-black/40 z-[9999]"
+      className="fixed min-w-[160px] p-1.5 bg-[#1a1d23]/98 backdrop-blur-xl border border-white/[0.08] rounded-xl shadow-2xl shadow-black/40 z-[9999] subcategory-popover-container"
       style={{ top: position.top, left: position.left }}
     >
       <button
@@ -120,19 +120,26 @@ function ThemeTabs({
   // Update popover position when open tab changes
   useEffect(() => {
     if (!openPopover) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setPopoverPos(null)
       return
     }
     const btn = tabRefs.current.get(openPopover)
     if (!btn) return
     const rect = btn.getBoundingClientRect()
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setPopoverPos({ top: rect.bottom + 4, left: rect.left })
   }, [openPopover])
 
   // Close popover on click outside
   useEffect(() => {
     function handleMouseDown(e: MouseEvent) {
-      if (containerRef.current && !containerRef.current.contains(e.target as Node)) {
+      const target = e.target as Element
+      if (
+        containerRef.current && 
+        !containerRef.current.contains(target) &&
+        !target.closest('.subcategory-popover-container')
+      ) {
         setOpenPopover(null)
       }
     }
