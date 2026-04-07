@@ -3,6 +3,7 @@ import { GetStaticProps } from 'next'
 import Head from 'next/head'
 import Link from 'next/link'
 import { motion, AnimatePresence } from 'framer-motion'
+import { createPortal } from 'react-dom'
 import { BlogPost, getAllBlogPosts } from '@/lib/data'
 import { stripMarkdownTitle } from '@/lib/utils'
 
@@ -52,37 +53,41 @@ function SubcategoryPopover({
   items,
   active,
   onSelect,
+  position,
 }: {
   items: string[]
   active: string | null
   onSelect: (sub: string | null) => void
+  position: { top: number; left: number }
 }) {
   return (
     <motion.div
-      initial={{ opacity: 0, y: -4 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: -4 }}
-      transition={{ duration: 0.15 }}
-      className="absolute top-full left-0 mt-1 min-w-[140px] py-1 bg-gray-900/95 backdrop-blur-sm border border-white/10 rounded-lg shadow-xl z-50"
+      initial={{ opacity: 0, y: -8, scale: 0.96 }}
+      animate={{ opacity: 1, y: 0, scale: 1 }}
+      exit={{ opacity: 0, y: -8, scale: 0.96 }}
+      transition={{ duration: 0.15, ease: 'easeOut' }}
+      className="fixed min-w-[160px] p-1.5 bg-[#1a1d23]/98 backdrop-blur-xl border border-white/[0.08] rounded-xl shadow-2xl shadow-black/40 z-[9999]"
+      style={{ top: position.top, left: position.left }}
     >
       <button
         onClick={() => onSelect(null)}
-        className={`w-full text-left px-4 py-2 text-sm transition-colors ${
+        className={`w-full text-left px-3 py-1.5 text-[13px] transition-all duration-150 rounded-lg ${
           active === null
-            ? 'text-blue-400 bg-white/5'
-            : 'text-gray-300 hover:bg-white/5 hover:text-white'
+            ? 'text-white bg-white/[0.08] font-medium'
+            : 'text-gray-400 hover:text-gray-200 hover:bg-white/[0.04]'
         }`}
       >
         全部
       </button>
+      <div className="my-1 h-px bg-white/[0.06]" />
       {items.map((sub) => (
         <button
           key={sub}
           onClick={() => onSelect(sub)}
-          className={`w-full text-left px-4 py-2 text-sm transition-colors ${
+          className={`w-full text-left px-3 py-1.5 text-[13px] transition-all duration-150 rounded-lg ${
             active === sub
-              ? 'text-blue-400 bg-white/5'
-              : 'text-gray-300 hover:bg-white/5 hover:text-white'
+              ? 'text-white bg-white/[0.08] font-medium'
+              : 'text-gray-400 hover:text-gray-200 hover:bg-white/[0.04]'
           }`}
         >
           {sub}
@@ -109,6 +114,20 @@ function ThemeTabs({
 }) {
   const [openPopover, setOpenPopover] = useState<string | null>(null)
   const containerRef = useRef<HTMLDivElement>(null)
+  const tabRefs = useRef<Map<string, HTMLButtonElement>>(new Map())
+  const [popoverPos, setPopoverPos] = useState<{ top: number; left: number } | null>(null)
+
+  // Update popover position when open tab changes
+  useEffect(() => {
+    if (!openPopover) {
+      setPopoverPos(null)
+      return
+    }
+    const btn = tabRefs.current.get(openPopover)
+    if (!btn) return
+    const rect = btn.getBoundingClientRect()
+    setPopoverPos({ top: rect.bottom + 4, left: rect.left })
+  }, [openPopover])
 
   // Close popover on click outside
   useEffect(() => {
@@ -160,52 +179,56 @@ function ThemeTabs({
   }
 
   return (
-    <div className="relative md:contents" ref={containerRef}>
-      <div className="flex gap-1 overflow-x-auto overflow-y-visible scrollbar-hide relative p-1 rounded-lg bg-white/5">
+    <div className="relative" ref={containerRef}>
+      <div className="flex gap-1 overflow-x-auto scrollbar-hide relative p-1 rounded-lg bg-white/5">
         {tabs.map((tab) => (
-          <div key={tab} className="relative">
-            <button
-              onClick={() => handleTabClick(tab)}
-              className={`relative px-4 py-2 text-sm font-medium rounded-md whitespace-nowrap transition-colors flex items-center gap-1 ${
-                active === tab ? 'text-white' : 'text-gray-400 hover:text-gray-200'
-              }`}
-            >
-              {active === tab && (
-                <motion.div
-                  layoutId="theme-tab-indicator"
-                  className="absolute inset-0 bg-white/10 rounded-md"
-                  transition={{ type: 'spring', stiffness: 400, damping: 30 }}
-                />
-              )}
-              <span className="relative z-10">{tabLabel(tab)}</span>
-              {tabHasArrow(tab) && (
-                <svg
-                  className={`relative z-10 w-3 h-3 transition-transform ${
-                    openPopover === tab ? 'rotate-180' : ''
-                  }`}
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  strokeWidth={2}
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
-                </svg>
-              )}
-            </button>
-            <AnimatePresence>
-              {openPopover === tab && subcategoryMap.has(tab) && (
-                <SubcategoryPopover
-                  items={subcategoryMap.get(tab)!}
-                  active={active === tab ? activeSubcategory : null}
-                  onSelect={handleSubSelect}
-                />
-              )}
-            </AnimatePresence>
-          </div>
+          <button
+            key={tab}
+            ref={(el) => { if (el) tabRefs.current.set(tab, el) }}
+            onClick={() => handleTabClick(tab)}
+            className={`relative px-4 py-2 text-sm font-medium rounded-md whitespace-nowrap transition-colors flex items-center gap-1 ${
+              active === tab ? 'text-white' : 'text-gray-400 hover:text-gray-200'
+            }`}
+          >
+            {active === tab && (
+              <motion.div
+                layoutId="theme-tab-indicator"
+                className="absolute inset-0 bg-white/10 rounded-md"
+                transition={{ type: 'spring', stiffness: 400, damping: 30 }}
+              />
+            )}
+            <span className="relative z-10">{tabLabel(tab)}</span>
+            {tabHasArrow(tab) && (
+              <svg
+                className={`relative z-10 w-3 h-3 transition-transform ${
+                  openPopover === tab ? 'rotate-180' : ''
+                }`}
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+              </svg>
+            )}
+          </button>
         ))}
       </div>
       {/* Scroll hint overlay - mobile only */}
       <div className="absolute right-0 top-0 bottom-0 w-8 bg-gradient-to-l from-black/80 to-transparent pointer-events-none md:hidden rounded-r-lg" />
+
+      {/* Popover rendered via portal to avoid overflow clipping */}
+      {typeof document !== 'undefined' && openPopover && subcategoryMap.has(openPopover) && popoverPos && createPortal(
+        <AnimatePresence>
+          <SubcategoryPopover
+            items={subcategoryMap.get(openPopover)!}
+            active={active === openPopover ? activeSubcategory : null}
+            onSelect={handleSubSelect}
+            position={popoverPos}
+          />
+        </AnimatePresence>,
+        document.body
+      )}
     </div>
   )
 }
