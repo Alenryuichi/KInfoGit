@@ -157,41 +157,26 @@ export function Header({ onBookCallClick }: HeaderProps) {
                 }}
               />
 
-              {/* Premium Dynamic Border Highlight Tracker */}
-              <div 
-                className="absolute inset-0 rounded-full pointer-events-none" 
-                style={{ 
-                  padding: '1px', 
-                  mask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)', 
-                  WebkitMask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)', 
-                  WebkitMaskComposite: 'xor', 
-                  maskComposite: 'exclude',
-                  zIndex: 20
+              {/* Ambient Spotlight - casts a very soft glow behind the active tab */}
+              <div
+                className="absolute transition-all duration-500 ease-out pointer-events-none"
+                style={{
+                  top: 0,
+                  bottom: 0,
+                  left: `${4 + navigation.findIndex(item => item.name === getActiveTab()) * 80 - 10}px`,
+                  width: '100px',
+                  background: 'radial-gradient(ellipse at top, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0) 70%)',
+                  zIndex: 0
                 }}
-              >
-                {/* 
-                  Instead of a hard white line, we use a wide, elliptical gradient that smoothly fades out.
-                  This mimics light diffusing through the frosted glass edge rather than a sharp LED.
-                */}
-                <div
-                  className="absolute transition-all duration-500 ease-out"
-                  style={{
-                    top: 0,
-                    bottom: 0,
-                    left: `${4 + navigation.findIndex(item => item.name === getActiveTab()) * 80 - 20}px`,
-                    width: '120px',
-                    background: 'radial-gradient(120px 40px at top center, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0.1) 40%, rgba(255,255,255,0) 100%)',
-                  }}
-                />
-              </div>
+              />
 
               {/* Active tab background indicator - raised glass effect */}
               <div
-                className="absolute top-1 bottom-1 bg-white/[0.06] backdrop-blur-md rounded-full transition-all duration-500 ease-out border border-white/[0.08]"
+                className="absolute top-1 bottom-1 bg-white/[0.04] backdrop-blur-md rounded-full transition-all duration-500 ease-out border border-white/[0.05]"
                 style={{
                   left: `${4 + navigation.findIndex(item => item.name === getActiveTab()) * 80}px`,
                   width: '80px',
-                  boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.05)',
+                  boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.15), inset 0 -1px 0 rgba(0, 0, 0, 0.2)',
                   zIndex: 10,
                 }}
               />
