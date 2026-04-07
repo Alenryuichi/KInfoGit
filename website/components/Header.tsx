@@ -157,13 +157,13 @@ export function Header({ onBookCallClick }: HeaderProps) {
                 }}
               />
 
-              {/* Active tab background indicator - sunken lens effect */}
+              {/* Active tab background indicator - raised glass effect */}
               <div
-                className="absolute top-1 bottom-1 bg-black/40 rounded-full transition-all duration-500 ease-out"
+                className="absolute top-1 bottom-1 bg-white/[0.06] backdrop-blur-md rounded-full transition-all duration-500 ease-out border border-white/[0.08]"
                 style={{
                   left: `${4 + navigation.findIndex(item => item.name === getActiveTab()) * 80}px`,
                   width: '80px',
-                  boxShadow: 'inset 0 2px 6px rgba(0, 0, 0, 0.8), 0 1px 0 rgba(255, 255, 255, 0.05)',
+                  boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.05)',
                   zIndex: 10,
                 }}
               />
