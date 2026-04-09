@@ -127,7 +127,6 @@ function ThemeTabs({
     const btn = tabRefs.current.get(openPopover)
     if (!btn) return
     const rect = btn.getBoundingClientRect()
-    // eslint-disable-next-line react-hooks/set-state-in-effect
     setPopoverPos({ top: rect.bottom + 4, left: rect.left })
   }, [openPopover])
 
