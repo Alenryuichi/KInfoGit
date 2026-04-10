@@ -13,6 +13,7 @@ import { existsSync, mkdirSync, readFileSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { createHash } from 'node:crypto';
+import { cleanHtmlTags, removeHtmlComments, cleanAttachmentLinks, extractFullHtmlPages } from './html-utils.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -22,6 +23,7 @@ const ROOT_DIR = path.resolve(__dirname, '..');
 
 const PROJECTS_OUTPUT_DIR = path.join(ROOT_DIR, 'profile-data/projects');
 const WORK_IMAGES_DIR = path.join(ROOT_DIR, 'website/public/work/images');
+const WORK_EMBEDS_DIR = path.join(ROOT_DIR, 'website/public/work/embeds');
 const SYNC_STATE_FILE = path.join(ROOT_DIR, 'tools/yuque-sync/work-sync-state.json');
 const DEEPSEEK_API_URL = 'https://api.deepseek.com/chat/completions';
 const YUQUE_API_BASE = 'https://www.yuque.com/api/v2';
@@ -239,26 +241,6 @@ async function loadSyncState(): Promise<SyncState> {
 async function saveSyncState(state: SyncState): Promise<void> {
   mkdirSync(path.dirname(SYNC_STATE_FILE), { recursive: true });
   await fs.writeFile(SYNC_STATE_FILE, JSON.stringify(state, null, 2));
-}
-
-// --- HTML Cleaning ---
-
-function cleanHtmlTags(content: string): string {
-  let cleaned = content;
-
-  cleaned = cleaned.replace(/<font[^>]*>([\s\S]*?)<\/font>/gi, '$1');
-  cleaned = cleaned.replace(/<span[^>]*>([\s\S]*?)<\/span>/gi, '$1');
-  cleaned = cleaned.replace(/<div[^>]*>([\s\S]*?)<\/div>/gi, '$1');
-  cleaned = cleaned.replace(/<p[^>]*>([\s\S]*?)<\/p>/gi, '$1\n');
-  cleaned = cleaned.replace(/<br\s*\/?>/gi, '\n');
-  cleaned = cleaned.replace(/<a\s+name="[^"]*"\s*><\/a>/gi, '');
-  cleaned = cleaned.replace(/<([a-z]+)[^>]*>\s*<\/\1>/gi, '');
-  cleaned = cleaned.replace(/<([a-z]+)\s+style="[^"]*"[^>]*>([\s\S]*?)<\/\1>/gi, '$2');
-  cleaned = cleaned.replace(/<!--[\s\S]*?-->/g, '');
-  cleaned = cleaned.replace(/\n{3,}/g, '\n\n');
-  cleaned = cleaned.split('\n').map(line => line.trimEnd()).join('\n');
-
-  return cleaned.trim();
 }
 
 // --- Image Download ---
@@ -550,6 +532,16 @@ async function main(): Promise<void> {
       console.log(`   📷 下载图片...`);
       content = await downloadImages(content, docInfo.slug);
 
+      // Extract full HTML pages → standalone files + iframe
+      content = await extractFullHtmlPages(content, docInfo.slug, {
+        embedsDir: WORK_EMBEDS_DIR,
+        embedsUrlPrefix: '/work/embeds',
+      });
+
+      // Clean up after extraction
+      content = removeHtmlComments(content);
+      content = cleanAttachmentLinks(content);
+
       // Remove first heading if it matches title
       const contentWithoutTitle = content.replace(/^#\s+.+\n+/, '');
 
@@ -598,7 +590,31 @@ async function main(): Promise<void> {
     }
   }
 
-  // 4. Set featured: top N by order
+  // 4. Delete orphaned docs (removed from Yuque but still in local cache)
+  const remoteDocIds = new Set(docs.map(d => String(d.doc_id)));
+  let deleted = 0;
+  for (const [docId, cached] of Object.entries(syncState.docs)) {
+    if (!remoteDocIds.has(docId)) {
+      const mdPath = path.join(PROJECTS_OUTPUT_DIR, `${cached.project.slug}.md`);
+      if (existsSync(mdPath)) {
+        await fs.unlink(mdPath);
+        console.log(`🗑️  已删除: ${cached.project.slug}.md`);
+      }
+      // Also clean up any extracted embed files for this doc
+      const embedPrefix = cached.slug;
+      if (existsSync(WORK_EMBEDS_DIR)) {
+        const embedFiles = await fs.readdir(WORK_EMBEDS_DIR);
+        for (const f of embedFiles.filter(f => f.startsWith(embedPrefix))) {
+          await fs.unlink(path.join(WORK_EMBEDS_DIR, f));
+          console.log(`🗑️  已删除 embed: ${f}`);
+        }
+      }
+      delete syncState.docs[docId];
+      deleted++;
+    }
+  }
+
+  // 5. Set featured: top N by order
   allProjects.sort((a, b) => (a.order ?? 999) - (b.order ?? 999));
   for (let i = 0; i < allProjects.length; i++) {
     allProjects[i].featured = i < FEATURED_COUNT;
@@ -618,6 +634,7 @@ async function main(): Promise<void> {
   console.log(`\n📊 同步完成`);
   console.log(`   同步: ${synced}`);
   console.log(`   跳过: ${skipped}`);
+  console.log(`   删除: ${deleted}`);
   console.log(`   失败: ${failed}`);
   console.log(`   分区: ${sections.join(', ')}`);
   console.log(`   Featured: ${allProjects.filter(p => p.featured).map(p => p.id).join(', ')}`);

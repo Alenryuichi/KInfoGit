@@ -8,7 +8,7 @@
   },
   {
     "title": "AI-Native Corp",
-    "description": "文章探讨了AI Native公司的核心定义与运作模式，强调其并非简单地使用AI工具，而是将AI Agent作为组织架构和运行逻辑的底层设计。文章从沟通、分工和工具三个维度展开，主张通过Agent进行信息对齐以减少冗余沟通，采用“单人+Agent”的闭环分工提升人效，并构建“Agent First”的内部系统以实现自愈与协同，最终目标是重塑工作本质，将人的角色从执行者转变为编排者。",
+    "description": "本文探讨了AI Native公司的核心定义与运作模式，强调其并非简单地使用AI工具，而是将AI Agent作为组织底层架构和运行逻辑的设计基础。文章从沟通、分工和工具三个维度展开，指出AI Native公司通过Agent处理信息对齐、采用“单人+Agent”闭环功能单元，并构建Agent优先的内部系统，旨在大幅降低沟通与协调成本，重塑工作本质，实现人效的极致提升。",
     "url": "/blog/2026-04-06-ai-native-corp",
     "category": "AI",
     "type": "blog"
@@ -22,14 +22,14 @@
   },
   {
     "title": "为什么 Harness?",
-    "description": "文章探讨了AI工程范式的演进，指出随着大模型智力成为公共品，未来的核心竞争力在于构建名为“Harness Engineering”的治理体系。它通过约束、反馈和反熵机制，为AI Agent在复杂环境中提供可控、可靠的运行时环境，确保其行为不偏离预期，是驾驭大模型力量的关键。",
+    "description": "本文探讨了软件工程范式从提示词工程、上下文工程到脚手架工程的演进。文章指出，随着大模型智力成为公共品，未来的核心竞争力在于构建名为“Harness Engineering”的治理系统，即一套包含约束、反馈和可观测性的运行时环境，以确保AI Agent在复杂任务中行为可控、可靠且高效。",
     "url": "/blog/2026-04-06-为什么-harness",
     "category": "Harness",
     "type": "blog"
   },
   {
     "title": "近日阅读",
-    "description": "文章记录了作者对一本关于Transformer和大型语言模型的书籍的阅读感想，认为其知识点讲解通俗易懂，但指出其在算法深度探讨上有所不足，并推荐了另一个更深入、更优质的技术博客“科学空间”作为补充学习资源。",
+    "description": "文章记录了作者近期的阅读内容，主要关注深度学习领域，特别是Transformer架构。作者推荐了一本名为《LLM Transformer: From Zero to One》的在线书籍，认为其知识点讲解通俗易懂，但指出其在算法深度探讨上有所不足，并推荐了“科学空间”博客作为对比参考。",
     "url": "/blog/2026-04-06-近日阅读",
     "category": "分享",
     "type": "blog"
@@ -43,10 +43,52 @@
   },
   {
     "title": "Polanyi-we know more wo can tell",
-    "description": "文章探讨了哲学家迈克尔·波兰尼的“缄默知识”理论（即“我们所知多于我们所能言说”）及其与当前大语言模型的关联。作者分析了该理论的核心观点，如知识的不可完全符号化、基于模仿的传递方式，并反思了像思维链这样的显式推理技术可能导致的“知识退化”。文章也警示了在提示词中随意引入强语义实体（如“Michael Polanyi”）可能干扰模型原本的任务焦点。",
+    "description": "文章探讨了哲学家迈克尔·波兰尼的“缄默知识”理论及其在当今大语言模型领域的意外应用。作者分析了“我们知道的比能说出的更多”等核心观点，并指出LLM中编码的隐性知识与波兰尼的理论高度相似。文章进一步讨论了当前提示工程实践（如思维链）可能因过度形式化而导致知识失真，并警示随意使用“Michael Polanyi”这类强语义提示词可能干扰模型任务，强调理解原理比盲目套用更重要。",
     "url": "/blog/2026-04-07-polanyi-we-know-more-wo-can-tell",
     "category": "随笔",
     "type": "blog"
+  },
+  {
+    "title": "am i losing my ability? My Answer: No!",
+    "description": "文章探讨了AI代码覆盖率提升对程序员能力的影响，作者认为这并非能力丧失，而是技术抽象层次演进的必然结果。从历史角度看，编程语言持续向自然语言靠拢，淘汰旧技能的同时创造了更高层次的设计、验证等新角色。核心观点是未来关注点将从代码本身转向更高层的系统设计与整合。",
+    "url": "/blog/2026-04-08-am-i-losing-my-ability-my-answer-no",
+    "category": "随笔",
+    "type": "blog"
+  },
+  {
+    "title": "chunk 中的内容怎么影响 Embedding 空间的分布？",
+    "description": "本文探讨了文本分片（Chunking）策略如何影响Embedding在向量空间中的分布。文章指出，Chunk的大小和语义纯度是关键：过大导致向量模糊，过小丢失上下文，语义纯的Chunk在空间中位置明确，利于精准召回。同时，文章介绍了Q2Q、Q2A、A2A三种核心检索范式，解释了它们在不同场景下的应用与挑战。",
+    "url": "/blog/2026-04-09-chunk-中的内容怎么影响-embedding-空间的分布",
+    "category": "研究",
+    "type": "blog"
+  },
+  {
+    "title": "HTML 嵌入测试",
+    "description": "本文是一篇关于在Markdown文档中嵌入HTML元素的测试文章。作者展示了如何通过HTML代码块实现渐变背景卡片、样式化表格以及嵌入iframe框架，验证了Markdown与HTML混合渲染的兼容性与表现效果。",
+    "url": "/blog/2026-04-09-html-嵌入测试",
+    "category": "生活",
+    "type": "blog"
+  },
+  {
+    "title": "HTML Embedding Test",
+    "description": "A project for testing the embedding and rendering of HTML content within Markdown documents.",
+    "url": "/work/html",
+    "category": "web-testing",
+    "type": "project"
+  },
+  {
+    "title": "Betaline - Full-stack iOS Climbing App",
+    "description": "Betaline is a climbing iOS app independently developed from scratch, covering the full process of product design, UI/UX, iOS frontend, Go backend, AI model training, and DevOps. Core features include video analysis of climbing movements, hold detection and classification, and training record management.",
+    "url": "/work/betaline",
+    "category": "mobile-app",
+    "type": "project"
+  },
+  {
+    "title": "OpenMemory Plus - AI Agent Dual-Layer Memory Framework",
+    "description": "OpenMemory Plus is a dual-layer memory framework designed for AI Agents to solve cross-session context loss issues. It supports mainstream IDE Agents like Augment, Cursor, Windsurf, and Cline, achieving unified memory management through the MCP protocol.",
+    "url": "/work/openmemory-plus",
+    "category": "ai-agent",
+    "type": "project"
   },
   {
     "title": "Self-built Application Anti-fraud Governance Project",
@@ -66,20 +108,6 @@
     "title": "Risk Control Review Large Model AI Agent",
     "description": "An intelligent risk control review system based on large models, using AI Agents to automatically handle risk review tickets in the WeCom ecosystem. Led the evolution from V1 to V5 architecture, with a core design philosophy of 'distrusting LLM's process judgment, trusting only LLM's content judgment'.",
     "url": "/work/ai-agent-review",
-    "category": "ai-agent",
-    "type": "project"
-  },
-  {
-    "title": "Betaline - Full-stack iOS Climbing App",
-    "description": "Betaline is a climbing iOS app independently developed from scratch, covering the full process of product design, UI/UX, iOS frontend, Go backend, AI model training, and DevOps. Core features include video analysis of climbing movements, hold detection and classification, and training record management.",
-    "url": "/work/betaline",
-    "category": "mobile-app",
-    "type": "project"
-  },
-  {
-    "title": "OpenMemory Plus - AI Agent Dual-Layer Memory Framework",
-    "description": "OpenMemory Plus is a dual-layer memory framework designed for AI Agents to solve cross-session context loss issues. It supports mainstream IDE Agents like Augment, Cursor, Windsurf, and Cline, achieving unified memory management through the MCP protocol.",
-    "url": "/work/openmemory-plus",
     "category": "ai-agent",
     "type": "project"
   }

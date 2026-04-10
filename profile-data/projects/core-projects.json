@@ -1,188 +1,5 @@
 [
   {
-    "id": "anti-fraud-governance",
-    "title": {
-      "zh": "自建应用反作弊治理项目",
-      "en": "Self-built Application Anti-fraud Governance Project"
-    },
-    "slug": "anti-fraud-governance",
-    "period": "未提供",
-    "company": "企业微信",
-    "role": {
-      "zh": "未提供",
-      "en": "Not Provided"
-    },
-    "tech_stack": [
-      "社区检测算法",
-      "关联图谱",
-      "相似性分析",
-      "异常检测",
-      "Label Propagation",
-      "Louvain",
-      "图卷积网络"
-    ],
-    "responsibilities": {
-      "zh": [
-        "未提供"
-      ],
-      "en": [
-        "Not Provided"
-      ]
-    },
-    "achievements": {
-      "zh": [
-        "累计识别违规服务商 820+ 家",
-        "累计识别违规企业 52,683+ 家",
-        "月均收益 246 万",
-        "年化收益超 300 万元",
-        "实现 30+ 模块的端到端自动化决策"
-      ],
-      "en": [
-        "Identified 820+ non-compliant service providers cumulatively",
-        "Identified 52,683+ non-compliant enterprises cumulatively",
-        "Average monthly revenue of 2.46 million",
-        "Annualized revenue exceeding 3 million",
-        "Implemented end-to-end automated decision-making across 30+ modules"
-      ]
-    },
-    "description": {
-      "zh": "企业微信生态安全的核心治理系统，通过多维度算法识别违规服务商和企业，实现端到端自动化决策。",
-      "en": "A core governance system for WeCom ecosystem security, identifying non-compliant service providers and enterprises through multi-dimensional algorithms and enabling end-to-end automated decision-making."
-    },
-    "highlights": {
-      "zh": "多维度算法驱动的反作弊治理系统，年化收益超300万。",
-      "en": "Multi-dimensional algorithm-driven anti-fraud governance system with annualized revenue exceeding 3 million."
-    },
-    "impact": "年化收益超 300 万元",
-    "category": "system-architecture",
-    "section": "企业微信",
-    "featured": true,
-    "order": 0,
-    "hasDetailPage": true
-  },
-  {
-    "id": "portrait-platform",
-    "title": {
-      "zh": "portrait-platform - 策略全生命周期管理平台",
-      "en": "Portrait Platform - Strategy Full Lifecycle Management Platform"
-    },
-    "slug": "portrait-platform",
-    "period": "未提供",
-    "company": "腾讯企业微信",
-    "role": {
-      "zh": "未提供",
-      "en": "Not Provided"
-    },
-    "tech_stack": [
-      "ClickHouse",
-      "TDW/Spark",
-      "MySQL",
-      "Redis",
-      "Vue.js"
-    ],
-    "responsibilities": {
-      "zh": [
-        "未提供"
-      ],
-      "en": [
-        "Not Provided"
-      ]
-    },
-    "achievements": {
-      "zh": [
-        "刷单欺诈率降低30%",
-        "贷款投诉率降低23%",
-        "识别并处理228个低质量策略，误封率从2.4%降至0%",
-        "PKV分布式序列化写入性能提升130倍（从90k/s到1200w/s）"
-      ],
-      "en": [
-        "Reduced fraudulent brushing by 30%",
-        "Reduced loan complaints by 23%",
-        "Identified and handled 228 low-quality strategies, reducing false positive rate from 2.4% to 0%",
-        "Achieved 130x performance improvement in PKV distributed serialization write speed (from 90k/s to 12 million/s)"
-      ]
-    },
-    "description": {
-      "zh": "腾讯企业微信的核心基础设施，整合画像中台、图能力、策略质量保障、特征系统的一站式策略管理平台，支撑10亿级用户规模的数据分析。",
-      "en": "A core infrastructure platform for Tencent's WeChat Work, integrating portrait center, graph capabilities, strategy quality assurance, and feature systems into a one-stop strategy management platform, supporting data analysis for billions of users."
-    },
-    "highlights": {
-      "zh": "支撑10亿级用户画像分析，实现关键业务指标显著优化与核心性能百倍提升。",
-      "en": "Supports portrait analysis for billions of users, achieving significant optimization of key business metrics and hundredfold improvement in core performance."
-    },
-    "impact": "10亿级用户画像，年化收益4000万+",
-    "category": "system-architecture",
-    "section": "企业微信",
-    "featured": true,
-    "order": 1,
-    "hasDetailPage": true
-  },
-  {
-    "id": "ai-agent-review",
-    "title": {
-      "zh": "风控审核大模型 AI Agent",
-      "en": "Risk Control Review Large Model AI Agent"
-    },
-    "slug": "ai-agent-review",
-    "period": "2025.12 - 至今",
-    "company": "腾讯",
-    "role": {
-      "zh": "技术负责人",
-      "en": "Technical Lead"
-    },
-    "tech_stack": [
-      "Controlled ReAct",
-      "Prompt Chaining",
-      "CBR",
-      "BM25",
-      "Multi-Query RAG",
-      "Go",
-      "Langfuse",
-      "RAGAS",
-      "Gemini 2.0 Flash"
-    ],
-    "responsibilities": {
-      "zh": [
-        "架构设计：主导五代架构演进路线，从朴素 RAG 演进到 Phase-Gated Controlled ReAct",
-        "核心开发：Orchestrator 编排引擎、领域 Agent 路由、MacroTool 取证体系、规则仲裁引擎",
-        "质量体系：Langfuse 可观测链路 + 声明式 Trace 验证框架 + RAGAS 自动评估"
-      ],
-      "en": [
-        "Architecture Design: Led the evolution roadmap of five generations of architecture, from naive RAG to Phase-Gated Controlled ReAct",
-        "Core Development: Orchestrator engine, domain Agent routing, MacroTool evidence collection system, rule arbitration engine",
-        "Quality System: Langfuse observable pipeline + declarative Trace verification framework + RAGAS automatic evaluation"
-      ]
-    },
-    "achievements": {
-      "zh": [
-        "设计 Phase-Gated Controlled ReAct 架构，将 Agent 审核流程拆为取证→定性→裁决 3 阶段确定性流水线，准确率从 70% 提升至 90%+",
-        "构建五层正交架构（Entry/Runtime/Agent/Tool/Policy）+ 注册中心路由，新增审核场景仅需添加配置文件和注册 Tool，不修改主流程代码",
-        "实现 Go 原生 BM25 知识检索引擎（中文分词 + 530 条规则库），将审核规则注入从全量 5000 token 降至按需 200 token，效率提升 25 倍",
-        "构建声明式 Trace 验证框架（YAML spec + Go CLI + 14 种断言操作符），实现 Agent 行为的自动化质量验证，替代人工目视 trace 判断"
-      ],
-      "en": [
-        "Designed Phase-Gated Controlled ReAct architecture, splitting the Agent review process into a deterministic 3-stage pipeline (evidence collection → qualification → adjudication), improving accuracy from ~70% to 90%+",
-        "Built a five-layer orthogonal architecture (Entry/Runtime/Agent/Tool/Policy) + registry routing, enabling new review scenarios by adding config files and registering Tools without modifying core code",
-        "Implemented a native Go BM25 knowledge retrieval engine (Chinese word segmentation + 530 rule library), reducing rule injection from 5000 tokens to 200 tokens on-demand, improving efficiency by 25x",
-        "Built a declarative Trace verification framework (YAML spec + Go CLI + 14 assertion operators), enabling automated quality verification of Agent behavior, replacing manual trace inspection"
-      ]
-    },
-    "description": {
-      "zh": "基于大模型的智能风控审核系统，通过 AI Agent 自动处理企业微信生态中的风控审核工单。主导 V1→V5 五代架构演进，核心设计哲学是'不信任 LLM 的流程判断，只信任 LLM 的内容判断'。",
-      "en": "An intelligent risk control review system based on large models, using AI Agents to automatically handle risk review tickets in the WeCom ecosystem. Led the evolution from V1 to V5 architecture, with a core design philosophy of 'distrusting LLM's process judgment, trusting only LLM's content judgment'."
-    },
-    "highlights": {
-      "zh": "设计 Phase-Gated Controlled ReAct 架构，将 LLM 推理与确定性流程控制分离，准确率提升至 90%+，日均自动结单 300+。",
-      "en": "Designed Phase-Gated Controlled ReAct architecture, separating LLM reasoning from deterministic process control, achieving 90%+ accuracy and 300+ daily automated ticket closures."
-    },
-    "impact": "准确率从 70% 提升至 90%+，日均自动结单 300+，节省 2+ 人力/天",
-    "category": "ai-agent",
-    "section": "企业微信",
-    "featured": true,
-    "order": 2,
-    "hasDetailPage": true
-  },
-  {
     "id": "betaline",
     "title": {
       "zh": "磕线 (Betaline) - 独立开发全流程 iOS 应用",
@@ -250,8 +67,8 @@
     "impact": "AI 模型推理速度提升 300 倍",
     "category": "mobile-app",
     "section": "独立项目",
-    "featured": false,
-    "order": 3,
+    "featured": true,
+    "order": 0,
     "hasDetailPage": true
   },
   {
@@ -312,6 +129,189 @@
     "impact": "跨会话上下文保持率 95%+，减少 40% 冗余记忆",
     "category": "ai-agent",
     "section": "独立项目",
+    "featured": true,
+    "order": 1,
+    "hasDetailPage": true
+  },
+  {
+    "id": "anti-fraud-governance",
+    "title": {
+      "zh": "自建应用反作弊治理项目",
+      "en": "Self-built Application Anti-fraud Governance Project"
+    },
+    "slug": "anti-fraud-governance",
+    "period": "未提供",
+    "company": "企业微信",
+    "role": {
+      "zh": "未提供",
+      "en": "Not Provided"
+    },
+    "tech_stack": [
+      "社区检测算法",
+      "关联图谱",
+      "相似性分析",
+      "异常检测",
+      "Label Propagation",
+      "Louvain",
+      "图卷积网络"
+    ],
+    "responsibilities": {
+      "zh": [
+        "未提供"
+      ],
+      "en": [
+        "Not Provided"
+      ]
+    },
+    "achievements": {
+      "zh": [
+        "累计识别违规服务商 820+ 家",
+        "累计识别违规企业 52,683+ 家",
+        "月均收益 246 万",
+        "年化收益超 300 万元",
+        "实现 30+ 模块的端到端自动化决策"
+      ],
+      "en": [
+        "Identified 820+ non-compliant service providers cumulatively",
+        "Identified 52,683+ non-compliant enterprises cumulatively",
+        "Average monthly revenue of 2.46 million",
+        "Annualized revenue exceeding 3 million",
+        "Implemented end-to-end automated decision-making across 30+ modules"
+      ]
+    },
+    "description": {
+      "zh": "企业微信生态安全的核心治理系统，通过多维度算法识别违规服务商和企业，实现端到端自动化决策。",
+      "en": "A core governance system for WeCom ecosystem security, identifying non-compliant service providers and enterprises through multi-dimensional algorithms and enabling end-to-end automated decision-making."
+    },
+    "highlights": {
+      "zh": "多维度算法驱动的反作弊治理系统，年化收益超300万。",
+      "en": "Multi-dimensional algorithm-driven anti-fraud governance system with annualized revenue exceeding 3 million."
+    },
+    "impact": "年化收益超 300 万元",
+    "category": "system-architecture",
+    "section": "企业微信",
+    "featured": true,
+    "order": 2,
+    "hasDetailPage": true
+  },
+  {
+    "id": "portrait-platform",
+    "title": {
+      "zh": "portrait-platform - 策略全生命周期管理平台",
+      "en": "Portrait Platform - Strategy Full Lifecycle Management Platform"
+    },
+    "slug": "portrait-platform",
+    "period": "未提供",
+    "company": "腾讯企业微信",
+    "role": {
+      "zh": "未提供",
+      "en": "Not Provided"
+    },
+    "tech_stack": [
+      "ClickHouse",
+      "TDW/Spark",
+      "MySQL",
+      "Redis",
+      "Vue.js"
+    ],
+    "responsibilities": {
+      "zh": [
+        "未提供"
+      ],
+      "en": [
+        "Not Provided"
+      ]
+    },
+    "achievements": {
+      "zh": [
+        "刷单欺诈率降低30%",
+        "贷款投诉率降低23%",
+        "识别并处理228个低质量策略，误封率从2.4%降至0%",
+        "PKV分布式序列化写入性能提升130倍（从90k/s到1200w/s）"
+      ],
+      "en": [
+        "Reduced fraudulent brushing by 30%",
+        "Reduced loan complaints by 23%",
+        "Identified and handled 228 low-quality strategies, reducing false positive rate from 2.4% to 0%",
+        "Achieved 130x performance improvement in PKV distributed serialization write speed (from 90k/s to 12 million/s)"
+      ]
+    },
+    "description": {
+      "zh": "腾讯企业微信的核心基础设施，整合画像中台、图能力、策略质量保障、特征系统的一站式策略管理平台，支撑10亿级用户规模的数据分析。",
+      "en": "A core infrastructure platform for Tencent's WeChat Work, integrating portrait center, graph capabilities, strategy quality assurance, and feature systems into a one-stop strategy management platform, supporting data analysis for billions of users."
+    },
+    "highlights": {
+      "zh": "支撑10亿级用户画像分析，实现关键业务指标显著优化与核心性能百倍提升。",
+      "en": "Supports portrait analysis for billions of users, achieving significant optimization of key business metrics and hundredfold improvement in core performance."
+    },
+    "impact": "10亿级用户画像，年化收益4000万+",
+    "category": "system-architecture",
+    "section": "企业微信",
+    "featured": false,
+    "order": 3,
+    "hasDetailPage": true
+  },
+  {
+    "id": "ai-agent-review",
+    "title": {
+      "zh": "风控审核大模型 AI Agent",
+      "en": "Risk Control Review Large Model AI Agent"
+    },
+    "slug": "ai-agent-review",
+    "period": "2025.12 - 至今",
+    "company": "腾讯",
+    "role": {
+      "zh": "技术负责人",
+      "en": "Technical Lead"
+    },
+    "tech_stack": [
+      "Controlled ReAct",
+      "Prompt Chaining",
+      "CBR",
+      "BM25",
+      "Multi-Query RAG",
+      "Go",
+      "Langfuse",
+      "RAGAS",
+      "Gemini 2.0 Flash"
+    ],
+    "responsibilities": {
+      "zh": [
+        "架构设计：主导五代架构演进路线，从朴素 RAG 演进到 Phase-Gated Controlled ReAct",
+        "核心开发：Orchestrator 编排引擎、领域 Agent 路由、MacroTool 取证体系、规则仲裁引擎",
+        "质量体系：Langfuse 可观测链路 + 声明式 Trace 验证框架 + RAGAS 自动评估"
+      ],
+      "en": [
+        "Architecture Design: Led the evolution roadmap of five generations of architecture, from naive RAG to Phase-Gated Controlled ReAct",
+        "Core Development: Orchestrator engine, domain Agent routing, MacroTool evidence collection system, rule arbitration engine",
+        "Quality System: Langfuse observable pipeline + declarative Trace verification framework + RAGAS automatic evaluation"
+      ]
+    },
+    "achievements": {
+      "zh": [
+        "设计 Phase-Gated Controlled ReAct 架构，将 Agent 审核流程拆为取证→定性→裁决 3 阶段确定性流水线，准确率从 70% 提升至 90%+",
+        "构建五层正交架构（Entry/Runtime/Agent/Tool/Policy）+ 注册中心路由，新增审核场景仅需添加配置文件和注册 Tool，不修改主流程代码",
+        "实现 Go 原生 BM25 知识检索引擎（中文分词 + 530 条规则库），将审核规则注入从全量 5000 token 降至按需 200 token，效率提升 25 倍",
+        "构建声明式 Trace 验证框架（YAML spec + Go CLI + 14 种断言操作符），实现 Agent 行为的自动化质量验证，替代人工目视 trace 判断"
+      ],
+      "en": [
+        "Designed Phase-Gated Controlled ReAct architecture, splitting the Agent review process into a deterministic 3-stage pipeline (evidence collection → qualification → adjudication), improving accuracy from ~70% to 90%+",
+        "Built a five-layer orthogonal architecture (Entry/Runtime/Agent/Tool/Policy) + registry routing, enabling new review scenarios by adding config files and registering Tools without modifying core code",
+        "Implemented a native Go BM25 knowledge retrieval engine (Chinese word segmentation + 530 rule library), reducing rule injection from 5000 tokens to 200 tokens on-demand, improving efficiency by 25x",
+        "Built a declarative Trace verification framework (YAML spec + Go CLI + 14 assertion operators), enabling automated quality verification of Agent behavior, replacing manual trace inspection"
+      ]
+    },
+    "description": {
+      "zh": "基于大模型的智能风控审核系统，通过 AI Agent 自动处理企业微信生态中的风控审核工单。主导 V1→V5 五代架构演进，核心设计哲学是'不信任 LLM 的流程判断，只信任 LLM 的内容判断'。",
+      "en": "An intelligent risk control review system based on large models, using AI Agents to automatically handle risk review tickets in the WeCom ecosystem. Led the evolution from V1 to V5 architecture, with a core design philosophy of 'distrusting LLM's process judgment, trusting only LLM's content judgment'."
+    },
+    "highlights": {
+      "zh": "设计 Phase-Gated Controlled ReAct 架构，将 LLM 推理与确定性流程控制分离，准确率提升至 90%+，日均自动结单 300+。",
+      "en": "Designed Phase-Gated Controlled ReAct architecture, separating LLM reasoning from deterministic process control, achieving 90%+ accuracy and 300+ daily automated ticket closures."
+    },
+    "impact": "准确率从 70% 提升至 90%+，日均自动结单 300+，节省 2+ 人力/天",
+    "category": "ai-agent",
+    "section": "企业微信",
     "featured": false,
     "order": 4,
     "hasDetailPage": true

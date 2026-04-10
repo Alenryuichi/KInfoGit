@@ -287,6 +287,129 @@ function HeadingWithAnchor({ level, children }: { level: 2 | 3 | 4; children: Re
   )
 }
 
+// Tracks how many EmbedIframe instances are currently fullscreen.
+// Only reset body overflow when the last one exits.
+let fullscreenCount = 0
+
+// ─── Embed Iframe with Fullscreen & Auto-resize ────────────
+
+function EmbedIframe({ src, ...props }: React.IframeHTMLAttributes<HTMLIFrameElement> & { src: string }) {
+  const [loaded, setLoaded] = useState(false)
+  const [height, setHeight] = useState(800)
+  const [isFullscreen, setIsFullscreen] = useState(false)
+  const iframeRef = useRef<HTMLIFrameElement>(null)
+
+  // Listen for postMessage resize from embedded HTML
+  useEffect(() => {
+    function handleMessage(e: MessageEvent) {
+      if (e.data?.type === 'iframe-resize' && typeof e.data.height === 'number') {
+        // Verify the message is from our iframe
+        if (iframeRef.current && e.source === iframeRef.current.contentWindow) {
+          setHeight(e.data.height)
+        }
+      }
+    }
+    window.addEventListener('message', handleMessage)
+    return () => window.removeEventListener('message', handleMessage)
+  }, [])
+
+  const toggleFullscreen = useCallback(() => {
+    setIsFullscreen(prev => !prev)
+  }, [])
+
+  // Close overlay on ESC
+  useEffect(() => {
+    if (!isFullscreen) return
+    function handleEsc(e: KeyboardEvent) {
+      if (e.key === 'Escape') {
+        setIsFullscreen(false)
+      }
+    }
+    window.addEventListener('keydown', handleEsc)
+    return () => window.removeEventListener('keydown', handleEsc)
+  }, [isFullscreen])
+
+  // Lock body scroll when fullscreen (ref-counted for multiple instances)
+  useEffect(() => {
+    if (isFullscreen) {
+      fullscreenCount++
+      document.body.style.overflow = 'hidden'
+    }
+    return () => {
+      if (isFullscreen) {
+        fullscreenCount--
+        if (fullscreenCount <= 0) {
+          fullscreenCount = 0
+          document.body.style.overflow = ''
+        }
+      }
+    }
+  }, [isFullscreen])
+
+  const containerClass = isFullscreen
+    ? 'fixed inset-0 z-[9999] bg-black flex flex-col'
+    : 'relative my-10'
+
+  return (
+    <div
+      className={containerClass}
+      style={isFullscreen ? { width: '100vw', height: '100vh' } : undefined}
+    >
+      {/* Toolbar */}
+      <div className="flex items-center justify-between px-3 py-2 bg-[#0a0a0a] border border-white/[0.06] rounded-t-xl flex-shrink-0">
+        <span className="text-xs text-gray-500 truncate max-w-[70%]">
+          {src.split('/').pop()}
+        </span>
+        <button
+          onClick={toggleFullscreen}
+          className="flex items-center gap-1.5 px-2.5 py-1 text-xs text-gray-400 hover:text-white bg-white/[0.04] hover:bg-white/[0.08] border border-white/[0.06] rounded-md transition-all"
+          aria-label={isFullscreen ? 'Exit fullscreen' : 'Enter fullscreen'}
+        >
+          {isFullscreen ? (
+            <>
+              <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M9 9V4.5M9 9H4.5M9 9L3.75 3.75M9 15v4.5M9 15H4.5M9 15l-5.25 5.25M15 9h4.5M15 9V4.5M15 9l5.25-5.25M15 15h4.5M15 15v4.5M15 15l5.25 5.25" />
+              </svg>
+              Exit
+            </>
+          ) : (
+            <>
+              <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0 4.5L15 15" />
+              </svg>
+              Fullscreen
+            </>
+          )}
+        </button>
+      </div>
+
+      {/* Iframe container */}
+      <div className={`relative ${isFullscreen ? 'flex-1 min-h-0' : ''} border border-t-0 border-white/[0.06] rounded-b-xl overflow-hidden bg-[#0a0a0a]`}>
+        {/* Loading skeleton */}
+        {!loaded && (
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="flex flex-col items-center gap-3">
+              <div className="w-8 h-8 border-2 border-white/10 border-t-white/40 rounded-full animate-spin" />
+              <span className="text-xs text-gray-500">Loading...</span>
+            </div>
+          </div>
+        )}
+
+        <iframe
+          ref={iframeRef}
+          src={src}
+          width="100%"
+          height={isFullscreen ? '100%' : height}
+          onLoad={() => setLoaded(true)}
+          className={`border-0 block transition-opacity duration-300 ${loaded ? 'opacity-100' : 'opacity-0'} ${isFullscreen ? 'w-full h-full' : ''}`}
+          loading="lazy"
+          {...props}
+        />
+      </div>
+    </div>
+  )
+}
+
 // ─── Custom Components ──────────────────────────────────────
 
 const components: Components = {
@@ -473,6 +596,21 @@ const components: Components = {
       )
     }
     return <input type={type} checked={checked} {...props} />
+  },
+
+  iframe(props: React.IframeHTMLAttributes<HTMLIFrameElement>) {
+    const src = props.src
+    // Use custom EmbedIframe for blog/work embeds, plain iframe for everything else
+    if (src?.includes('/embeds/') && (src.startsWith('/blog/') || src.startsWith('/work/'))) {
+      return <EmbedIframe src={src} {...props} />
+    }
+    return (
+      <iframe
+        className="my-10 rounded-xl border border-white/[0.06]"
+        loading="lazy"
+        {...props}
+      />
+    )
   },
 }
 

@@ -13,6 +13,7 @@ import { existsSync, mkdirSync, readFileSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { createHash } from 'node:crypto';
+import { cleanHtmlTags, removeHtmlComments, cleanAttachmentLinks, extractFullHtmlPages } from './html-utils.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -22,6 +23,7 @@ const ROOT_DIR = path.resolve(__dirname, '..');
 
 const BLOG_OUTPUT_DIR = path.join(ROOT_DIR, 'profile-data/blog');
 const BLOG_IMAGES_DIR = path.join(ROOT_DIR, 'website/public/blog/images');
+const BLOG_EMBEDS_DIR = path.join(ROOT_DIR, 'website/public/blog/embeds');
 const SYNC_STATE_FILE = path.join(ROOT_DIR, 'tools/yuque-sync/sync-state.json');
 const DEEPSEEK_API_URL = 'https://api.deepseek.com/chat/completions';
 
@@ -222,37 +224,6 @@ async function loadSyncState(): Promise<SyncState> {
 async function saveSyncState(state: SyncState): Promise<void> {
   mkdirSync(path.dirname(SYNC_STATE_FILE), { recursive: true });
   await fs.writeFile(SYNC_STATE_FILE, JSON.stringify(state, null, 2));
-}
-
-// --- HTML Cleaning ---
-
-function cleanHtmlTags(content: string): string {
-  let cleaned = content;
-
-  // Remove <font> tags (keep content)
-  cleaned = cleaned.replace(/<font[^>]*>([\s\S]*?)<\/font>/gi, '$1');
-  // Remove <span> tags (keep content)
-  cleaned = cleaned.replace(/<span[^>]*>([\s\S]*?)<\/span>/gi, '$1');
-  // Remove <div> tags (keep content)
-  cleaned = cleaned.replace(/<div[^>]*>([\s\S]*?)<\/div>/gi, '$1');
-  // Remove <p> tags (keep content)
-  cleaned = cleaned.replace(/<p[^>]*>([\s\S]*?)<\/p>/gi, '$1\n');
-  // Remove <br> tags
-  cleaned = cleaned.replace(/<br\s*\/?>/gi, '\n');
-  // Remove <a> anchor-only tags
-  cleaned = cleaned.replace(/<a\s+name="[^"]*"\s*><\/a>/gi, '');
-  // Remove empty HTML tags
-  cleaned = cleaned.replace(/<([a-z]+)[^>]*>\s*<\/\1>/gi, '');
-  // Remove tags with inline style
-  cleaned = cleaned.replace(/<([a-z]+)\s+style="[^"]*"[^>]*>([\s\S]*?)<\/\1>/gi, '$2');
-  // Remove HTML comments
-  cleaned = cleaned.replace(/<!--[\s\S]*?-->/g, '');
-  // Collapse multiple blank lines
-  cleaned = cleaned.replace(/\n{3,}/g, '\n\n');
-  // Trim trailing whitespace per line
-  cleaned = cleaned.split('\n').map(line => line.trimEnd()).join('\n');
-
-  return cleaned.trim();
 }
 
 // --- Image Download ---
@@ -508,6 +479,16 @@ async function main(): Promise<void> {
       console.log(`   📷 下载图片...`);
       content = await downloadImages(content, docInfo.slug);
 
+      // Extract full HTML pages → standalone files + iframe
+      content = await extractFullHtmlPages(content, docInfo.slug, {
+        embedsDir: BLOG_EMBEDS_DIR,
+        embedsUrlPrefix: '/blog/embeds',
+      });
+
+      // Clean up after extraction: remove HTML comments and dead attachment links
+      content = removeHtmlComments(content);
+      content = cleanAttachmentLinks(content);
+
       // Extract title from content (or use API title)
       const title = doc.title || extractTitle(content);
       console.log(`   📖 标题: ${title}`);
@@ -562,7 +543,32 @@ async function main(): Promise<void> {
     }
   }
 
-  // 4. Save sync state
+  // 4. Delete orphaned docs (removed from Yuque but still in local cache)
+  const remoteDocIds = new Set(docs.map(d => String(d.doc_id)));
+  let deleted = 0;
+  for (const [docId, cached] of Object.entries(syncState.docs)) {
+    if (!remoteDocIds.has(docId)) {
+      const blogPath = path.join(BLOG_OUTPUT_DIR, cached.blogFile);
+      if (existsSync(blogPath)) {
+        await fs.unlink(blogPath);
+        console.log(`🗑️  已删除: ${cached.blogFile}`);
+      }
+      // Also clean up any extracted embed files for this doc
+      const embedPrefix = cached.slug;
+      const embedsDir = path.join(ROOT_DIR, 'website/public/blog/embeds');
+      if (existsSync(embedsDir)) {
+        const embedFiles = await fs.readdir(embedsDir);
+        for (const f of embedFiles.filter(f => f.startsWith(embedPrefix))) {
+          await fs.unlink(path.join(embedsDir, f));
+          console.log(`🗑️  已删除 embed: ${f}`);
+        }
+      }
+      delete syncState.docs[docId];
+      deleted++;
+    }
+  }
+
+  // 5. Save sync state
   syncState.lastSync = new Date().toISOString();
   await saveSyncState(syncState);
 
@@ -571,6 +577,7 @@ async function main(): Promise<void> {
   console.log(`\n📊 同步完成`);
   console.log(`   同步: ${synced}`);
   console.log(`   跳过: ${skipped}`);
+  console.log(`   删除: ${deleted}`);
   console.log(`   失败: ${failed}`);
   console.log(`   分类: ${categories.map(c => `${c.name}(${c.order})`).join(', ')}`);
 

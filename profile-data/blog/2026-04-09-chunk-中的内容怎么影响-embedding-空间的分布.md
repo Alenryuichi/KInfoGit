@@ -1,13 +1,13 @@
 ---
 title: "chunk 中的内容怎么影响 Embedding 空间的分布？"
 date: "2026-04-09"
-tags: ["Embedding","Chunking","RAG","向量检索","语义切分"]
+tags: ["Embedding","Chunking","RAG","信息检索","向量空间"]
 category: "研究"
 categoryOrder: 0
 subcategory: "实验"
 readTime: "4 min read"
 featured: false
-excerpt: "本文探讨了文本分片（Chunking）策略如何影响Embedding在向量空间中的分布。文章指出，Chunk的大小和语义纯度是关键：过大导致向量模糊，过小丢失上下文，语义纯的Chunk在空间中位置明确，利于精准召回。同时，文章介绍了Q2Q、Q2A、A2A三种核心检索范式，解释了不同匹配方式的应用场景与挑战。"
+excerpt: "本文探讨了文本分片（Chunking）策略如何影响Embedding在向量空间中的分布。文章指出，Chunk的大小和语义纯度是关键：过大导致向量模糊，过小丢失上下文，语义纯的Chunk在空间中位置明确，利于精准召回。同时，文章介绍了Q2Q、Q2A、A2A三种核心检索范式，解释了它们在不同场景下的应用与挑战。"
 ---
 
 最近在做提升召回率的工作，
