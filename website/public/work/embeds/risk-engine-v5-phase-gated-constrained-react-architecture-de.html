@@ -1,0 +1,2035 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Risk Engine V5 — Phase-Gated Constrained ReAct Architecture Deep Dive</title>
+<link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&f[]=satoshi@400,500,700&display=swap">
+<style>
+:root {
+--bg-primary: #0a0a0f;
+--bg-secondary: #12121a;
+--bg-tertiary: #1a1a24;
+--text-primary: #ffffff;
+--text-secondary: #a0a0b0;
+--accent: #00ff88;
+--accent-secondary: #00ccff;
+--accent-glow: rgba(0, 255, 136, 0.3);
+--orange: #fd6f32;
+--orange-glow: rgba(253, 111, 50, 0.3);
+--font-display: 'Clash Display', sans-serif;
+--font-body: 'Satoshi', sans-serif;
+--title-size: clamp(2rem, 5vw, 4rem);
+--h2-size: clamp(1.5rem, 3.5vw, 2.5rem);
+--h3-size: clamp(1.1rem, 2vw, 1.5rem);
+--body-size: clamp(0.8rem, 1.3vw, 1.1rem);
+--small-size: clamp(0.7rem, 1vw, 0.9rem);
+--slide-padding: clamp(1.5rem, 4vw, 3rem);
+}
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-snap-type: y mandatory; overflow-x: hidden; }
+body { background: var(--bg-primary); color: var(--text-primary); font-family: var(--font-body); line-height: 1.6; }
+h1 { font-family: var(--font-display); font-size: var(--title-size); font-weight: 700; line-height: 1.15; }
+h2 { font-family: var(--font-display); font-size: var(--h2-size); font-weight: 600; line-height: 1.2; margin-bottom: 1rem; }
+h3 { font-family: var(--font-display); font-size: var(--h3-size); font-weight: 600; line-height: 1.3; }
+p { font-size: var(--body-size); color: var(--text-secondary); }
+.slide {
+min-height: 100dvh; scroll-snap-align: start; position: relative;
+display: flex; align-items: center; justify-content: center;
+padding: var(--slide-padding);
+opacity: 0; transform: translateY(10px);
+transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.slide.visible { opacity: 1; transform: translateY(0); }
+.slide-content { max-width: 1100px; width: 100%; }
+.gradient-bg {
+background:
+    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(0,255,136,0.15), transparent),
+    radial-gradient(ellipse 60% 40% at 80% 50%, rgba(0,204,255,0.08), transparent),
+    radial-gradient(ellipse 50% 30% at 20% 80%, rgba(253,111,50,0.05), transparent);
+}
+.grid-bg {
+background-image:
+    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+background-size: 60px 60px;
+}
+.section-label {
+font-family: 'JetBrains Mono', monospace; font-size: var(--small-size); font-weight: 500;
+color: var(--accent); letter-spacing: 0.08em;
+display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.8rem;
+}
+.section-label::before {
+content: ''; width: 8px; height: 8px; border-radius: 50%;
+background: var(--accent); box-shadow: 0 0 8px var(--accent-glow);
+animation: pulse 2s infinite;
+}
+@keyframes pulse {
+0%, 100% { box-shadow: 0 0 8px var(--accent-glow); }
+50% { box-shadow: 0 0 16px var(--accent-glow); }
+}
+.progress-bar {
+position: fixed; top: 0; left: 0; height: 3px;
+background: linear-gradient(90deg, var(--accent), var(--accent-secondary));
+z-index: 999; transition: width 0.3s;
+}
+.nav-container {
+position: fixed; right: 1.5rem; top: 50%; transform: translateY(-50%);
+display: flex; flex-direction: column; gap: 6px; z-index: 999;
+}
+.nav-dot {
+width: 8px; height: 8px; border-radius: 50%;
+background: rgba(255,255,255,0.2); border: none;
+cursor: pointer; transition: all 0.3s; padding: 0;
+}
+.nav-dot.active {
+background: var(--accent); box-shadow: 0 0 8px var(--accent-glow); transform: scale(1.4);
+}
+.slide-counter {
+position: fixed; bottom: 1.5rem; left: 1.5rem;
+font-family: 'JetBrains Mono', monospace;
+font-size: 0.8rem; color: var(--text-secondary); z-index: 999;
+}
+.help-overlay {
+position: fixed; inset: 0; background: rgba(0,0,0,0.9);
+display: flex; align-items: center; justify-content: center;
+z-index: 2000; opacity: 0; visibility: hidden;
+transition: opacity 0.3s, visibility 0.3s;
+}
+.help-overlay.active { opacity: 1; visibility: visible; }
+.help-content {
+background: var(--bg-secondary); border: 1px solid rgba(255,255,255,0.15);
+border-radius: 16px; padding: 2rem; max-width: 500px; width: 90%;
+}
+.help-content h3 { font-family: var(--font-display); color: var(--accent); margin-bottom: 1rem; }
+.help-row {
+display: flex; justify-content: space-between; padding: 0.4rem 0;
+border-bottom: 1px solid rgba(255,255,255,0.06); font-size: 0.9rem;
+}
+.help-key {
+font-family: 'JetBrains Mono', monospace; background: var(--bg-tertiary);
+padding: 0.15em 0.5em; border-radius: 4px;
+border: 1px solid rgba(255,255,255,0.15); font-size: 0.85em;
+}
+.problem-box { background: rgba(248,113,113,0.08); border: 1px solid rgba(248,113,113,0.2); border-left: 3px solid #f87171; border-radius: 8px; padding: clamp(0.6rem,1.2vw,1rem) clamp(0.8rem,1.5vw,1.2rem); margin-bottom: 0.6rem; }
+.problem-label { color: #f87171; font-weight: 600; font-size: 0.85em; margin-bottom: 0.2rem; }
+.solution-box { background: rgba(52,211,153,0.08); border: 1px solid rgba(52,211,153,0.2); border-left: 3px solid #34d399; border-radius: 8px; padding: clamp(0.6rem,1.2vw,1rem) clamp(0.8rem,1.5vw,1.2rem); margin-bottom: 0.6rem; }
+.solution-label { color: #34d399; font-weight: 600; font-size: 0.85em; margin-bottom: 0.2rem; }
+.why-box { background: rgba(0,255,136,0.06); border: 1px solid rgba(0,255,136,0.2); border-left: 3px solid var(--accent); border-radius: 8px; padding: clamp(0.6rem,1.2vw,1rem) clamp(0.8rem,1.5vw,1.2rem); margin-bottom: 0.6rem; }
+.why-label { color: var(--accent); font-weight: 600; font-size: 0.85em; margin-bottom: 0.2rem; }
+.flow { display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; margin: 0.8rem 0; }
+.flow-node { font-family: 'JetBrains Mono', monospace; font-size: clamp(0.6rem,0.9vw,0.8rem); padding: 0.4em 0.8em; border-radius: 6px; background: var(--bg-tertiary); border: 1px solid rgba(255,255,255,0.1); color: var(--text-secondary); transition: border-color 0.3s; }
+.flow-node.active { border-color: rgba(0,255,136,0.3); color: var(--accent); background: rgba(0,255,136,0.1); }
+.flow-node.success { border-color: rgba(52,211,153,0.3); color: #34d399; background: rgba(52,211,153,0.1); }
+.flow-node.warn { border-color: rgba(251,191,36,0.3); color: #fbbf24; background: rgba(251,191,36,0.1); }
+.flow-node.blue { border-color: rgba(99,102,241,0.3); color: #818cf8; background: rgba(99,102,241,0.1); }
+.flow-arrow { color: var(--accent); font-size: 1.2em; }
+.arch-diagram { display: flex; flex-direction: column; gap: 0.5rem; margin: 0.8rem 0; }
+.arch-layer { background: var(--bg-secondary); border: 1px solid rgba(0,255,136,0.15); border-radius: 8px; padding: 0.5rem 0.8rem; display: flex; align-items: center; gap: 0.8rem; }
+.arch-layer.orange { border-color: rgba(253,111,50,0.3); }
+.arch-layer.blue { border-color: rgba(0,204,255,0.3); }
+.arch-layer.purple { border-color: rgba(168,85,247,0.3); }
+.arch-layer-name { font-family: 'JetBrains Mono', monospace; font-size: clamp(0.6rem,0.85vw,0.75rem); color: var(--accent); min-width: 120px; font-weight: 600; }
+.arch-layer.orange .arch-layer-name { color: var(--orange); }
+.arch-layer.blue .arch-layer-name { color: var(--accent-secondary); }
+.arch-layer.purple .arch-layer-name { color: #a855f7; }
+.arch-layer-content { display: flex; gap: 0.4rem; flex-wrap: wrap; }
+.arch-item { font-family: 'JetBrains Mono', monospace; font-size: clamp(0.55rem,0.8vw,0.7rem); padding: 0.25em 0.6em; border-radius: 4px; background: rgba(0,255,136,0.08); color: var(--accent); border: 1px solid rgba(0,255,136,0.15); }
+.arch-item.orange { background: rgba(253,111,50,0.08); color: var(--orange); border-color: rgba(253,111,50,0.15); }
+.arch-item.blue { background: rgba(0,204,255,0.08); color: var(--accent-secondary); border-color: rgba(0,204,255,0.15); }
+.arch-item.purple { background: rgba(168,85,247,0.08); color: #a855f7; border-color: rgba(168,85,247,0.15); }
+.code-block { background: var(--bg-secondary); border: 1px solid rgba(0,255,136,0.2); border-radius: 8px; padding: clamp(0.75rem,1.5vw,1rem); font-family: 'JetBrains Mono','Fira Code',monospace; font-size: clamp(0.65rem,0.9vw,0.85rem); overflow-x: auto; line-height: 1.5; white-space: pre-wrap; word-break: break-word; }
+.code-block .keyword { color: #ff79c6; }
+.code-block .string { color: #f1fa8c; }
+.code-block .function { color: #50fa7b; }
+.code-block .comment { color: #6272a4; }
+.code-block .class { color: #8be9fd; }
+code { background: rgba(0,255,136,0.1); color: var(--accent); padding: 0.2em 0.4em; border-radius: 3px; font-family: 'JetBrains Mono', monospace; font-size: 0.9em; }
+.stat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: clamp(0.5rem,1vw,1rem); }
+.stat-card { background: var(--bg-secondary); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: clamp(0.75rem,1.5vw,1.25rem); text-align: center; transition: border-color 0.3s; }
+.stat-card:hover { border-color: rgba(0,255,136,0.3); }
+.stat-number { font-family: 'Clash Display', sans-serif; font-size: clamp(1.5rem,3vw,2.5rem); font-weight: 700; color: var(--accent); line-height: 1.2; }
+.stat-number.orange { color: var(--orange); }
+.stat-number.blue { color: var(--accent-secondary); }
+.stat-label { font-size: var(--small-size); color: var(--text-secondary); }
+.modal-tag { display: inline-block; background: rgba(99,102,241,0.2); color: var(--accent-secondary); padding: 0.2em 0.6em; border-radius: 4px; font-size: 0.75rem; margin-right: 0.3em; margin-bottom: 0.3em; }
+.logo { font-family: var(--font-display); font-size: clamp(1.2rem,2vw,1.6rem); font-weight: 700; color: var(--accent); margin-bottom: 1rem; }
+.logo span { color: var(--text-secondary); font-weight: 400; font-size: 0.7em; }
+.subtitle { font-size: clamp(0.9rem,1.5vw,1.2rem); color: var(--text-secondary); margin-top: 0.8rem; }
+.meta { margin-top: 1.5rem; font-family: 'JetBrains Mono', monospace; font-size: var(--small-size); color: var(--text-secondary); opacity: 0.7; }
+.detail-btn {
+position: absolute; bottom: calc(var(--slide-padding) + 0.5rem); right: calc(var(--slide-padding) + 0.5rem);
+background: linear-gradient(135deg, var(--accent) 0%, var(--accent-secondary) 100%);
+color: var(--bg-primary); border: none; padding: 0.6em 1.2em; border-radius: 8px;
+font-weight: 600; cursor: pointer; box-shadow: 0 4px 20px var(--accent-glow);
+z-index: 100; transition: transform 0.2s, box-shadow 0.2s;
+font-family: var(--font-body); font-size: var(--small-size);
+}
+.detail-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 25px var(--accent-glow); }
+.detail-btn::before { content: '\1F4D6'; margin-right: 0.4em; }
+.modal-overlay {
+position: fixed; inset: 0; background: rgba(0,0,0,0.85);
+backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+display: flex; align-items: center; justify-content: center;
+z-index: 1000; opacity: 0; visibility: hidden; transition: opacity 0.3s, visibility 0.3s;
+}
+.modal-overlay.active { opacity: 1; visibility: visible; }
+.modal-content {
+background: var(--bg-secondary); border: 1px solid rgba(255,255,255,0.1);
+border-radius: 16px; padding: clamp(1.5rem,3vw,2.5rem);
+max-width: 900px; width: 90%; max-height: 85vh; overflow-y: auto; position: relative;
+transform: translateY(20px) scale(0.98); transition: transform 0.3s;
+}
+.modal-overlay.active .modal-content { transform: translateY(0) scale(1); }
+.modal-close {
+position: absolute; top: 1rem; right: 1rem;
+background: rgba(255,255,255,0.1); border: none;
+color: var(--text-secondary); width: 32px; height: 32px;
+border-radius: 50%; cursor: pointer; font-size: 1rem;
+display: flex; align-items: center; justify-content: center; transition: background 0.2s;
+}
+.modal-close:hover { background: rgba(255,255,255,0.2); }
+.modal-title { font-family: var(--font-display); font-size: clamp(1.2rem,2.5vw,1.8rem); font-weight: 600; margin-bottom: 1.5rem; color: var(--text-primary); }
+.modal-section { margin-bottom: 1.5rem; }
+.modal-section h4 { color: var(--accent-secondary); font-size: 1rem; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5em; }
+.modal-section ul { margin-left: 1.2rem; color: var(--text-secondary); font-size: 0.9rem; }
+.modal-section li { margin-bottom: 0.3rem; }
+.modal-section p { font-size: 0.9rem; }
+.strategy-card { border: 1px solid rgba(255,255,255,0.15); border-radius: 8px; padding: 0.8rem; margin-bottom: 0.6rem; background: rgba(255,255,255,0.03); }
+.strategy-card h5 { color: var(--accent); font-size: 0.95rem; margin-bottom: 0.4rem; }
+.modal-highlight { background: rgba(0,255,136,0.1); border-left: 3px solid var(--accent); padding: 0.8rem 1rem; border-radius: 0 8px 8px 0; margin-top: 0.5rem; font-size: 0.9rem; }
+.modal-code { background: rgba(0,0,0,0.4); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 1rem; font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; line-height: 1.5; white-space: pre-wrap; word-break: break-word; overflow-x: auto; }
+@media (max-width: 768px) {
+.nav-container { right: 0.5rem; }
+.nav-dot { width: 6px; height: 6px; }
+}
+@media print {
+.slide { min-height: auto; page-break-after: always; opacity: 1 !important; transform: none !important; padding: 1rem; }
+.nav-container, .slide-counter, .progress-bar, .detail-btn, .help-overlay { display: none !important; }
+.modal-overlay { position: relative; opacity: 1 !important; visibility: visible !important; background: white; page-break-before: always; }
+.modal-content { max-height: none; max-width: 100%; border: 1px solid #ccc; }
+body { background: white; color: black; }
+}
+</style>
+</head>
+<body>
+<!-- Fixed Chrome -->
+<div class="progress-bar" id="progressBar"></div>
+<div class="nav-container" id="navDots"></div>
+<div class="slide-counter" id="slideNumber"></div>
+<div class="help-overlay" id="helpOverlay">
+<div class="help-content">
+<h3>Keyboard Shortcuts</h3>
+<div class="help-row">Next slide<span class="help-key">&rarr; &darr; Space</span></div>
+<div class="help-row">Previous slide<span class="help-key">&larr; &uarr;</span></div>
+<div class="help-row">First / Last<span class="help-key">Home End</span></div>
+<div class="help-row">Open deep dive<span class="help-key">Enter D</span></div>
+<div class="help-row">Close modal<span class="help-key">Esc</span></div>
+<div class="help-row">This help<span class="help-key">?</span></div>
+<div style="margin-top:1rem;font-size:0.8rem;color:var(--text-secondary);">Touch: swipe up/down to navigate</div>
+</div>
+</div>
+
+<!-- ========== SLIDES 1-4: Title, TOC, Evolution, Core Architecture ========== -->
+
+<section class="slide gradient-bg grid-bg" id="slide-1">
+<div class="slide-content" style="text-align:center; display:flex; flex-direction:column; align-items:center; justify-content:center; height:100%;">
+<div class="logo" style="font-size:2.8rem; margin-bottom:0.5rem;">Risk Engine V5</div>
+<h1 class="gradient-bg" style="font-size:2.4rem; margin:0.8rem 0 0.5rem; -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;">Phase-Gated Constrained ReAct</h2>
+<p class="subtitle" style="font-size:1.1rem; margin-bottom:1.5rem;">WeCom Anti-Fraud · AI-Driven Risk Audit · Go 1.25</p>
+<div style="display:flex; flex-wrap:wrap; justify-content:center; gap:0.5rem; margin-bottom:2rem;">
+Gemini 2.0 Flash
+Controlled ReAct
+MacroTool
+PolicyArbiter
+SkillRouter
+Langfuse
+BM25
+Phase-Gated
+</div>
+<p class="meta" style="font-size:0.85rem;">← → 导航 · 点击目录跳转 · 点击 详情 查看展开</p>
+</div>
+</section>
+
+<section class="slide gradient-bg grid-bg" id="slide-2">
+<div class="slide-content">
+<div class="section-label">TABLE OF CONTENTS</div>
+<h2 style="margin-bottom:1.2rem;">目录导航</h2>
+<div style="display:grid; grid-template-columns:1fr 1fr; gap:0.6rem 1.5rem;">
+<div onclick="goToSlide(1)" style="padding:0.6rem 0.8rem; border-left:3px solid var(--text-secondary); cursor:pointer; opacity:0.5;">
+01 Title
+</div>
+<div onclick="goToSlide(2)" style="padding:0.6rem 0.8rem; border-left:3px solid var(--text-secondary); cursor:pointer; opacity:0.5;">
+02 TOC
+</div>
+<div onclick="goToSlide(3)" style="padding:0.6rem 0.8rem; border-left:3px solid var(--accent); cursor:pointer;">
+03 V1→V5 Evolution
+</div>
+<div onclick="goToSlide(4)" style="padding:0.6rem 0.8rem; border-left:3px solid var(--accent); cursor:pointer;">
+04 V5 Core Architecture
+</div>
+<div onclick="goToSlide(5)" style="padding:0.6rem 0.8rem; border-left:3px solid var(--orange); cursor:pointer;">
+05 Orchestrator: Phase-Gated ReAct
+</div>
+<div onclick="goToSlide(6)" style="padding:0.6rem 0.8rem; border-left:3px solid var(--orange); cursor:pointer;">
+06 DomainAgent + SkillRouter
+</div>
+<div onclick="goToSlide(7)" style="padding:0.6rem 0.8rem; border-left:3px solid var(--orange); cursor:pointer;">
+07 MacroTool System
+</div>
+<div onclick="goToSlide(8)" style="padding:0.6rem 0.8rem; border-left:3px solid var(--orange); cursor:pointer;">
+08 PolicyArbiter
+</div>
+<div onclick="goToSlide(9)" style="padding:0.6rem 0.8rem; border-left:3px solid var(--accent-secondary); cursor:pointer;">
+09 OpenSpec Weekly (3/23-3/30)
+</div>
+<div onclick="goToSlide(10)" style="padding:0.6rem 0.8rem; border-left:3px solid var(--accent-secondary); cursor:pointer;">
+10 BM25 Knowledge Retrieval
+</div>
+<div onclick="goToSlide(11)" style="padding:0.6rem 0.8rem; border-left:3px solid var(--accent-secondary); cursor:pointer;">
+11 Trace Validation Framework
+</div>
+<div onclick="goToSlide(12)" style="padding:0.6rem 0.8rem; border-left:3px solid var(--text-secondary); cursor:pointer;">
+12 Metrics Dashboard
+</div>
+<div onclick="goToSlide(13)" style="padding:0.6rem 0.8rem; border-left:3px solid var(--text-secondary); cursor:pointer;">
+13 V6 Roadmap
+</div>
+<div onclick="goToSlide(14)" style="padding:0.6rem 0.8rem; border-left:3px solid var(--text-secondary); cursor:pointer;">
+14 Summary
+</div>
+</div>
+</div>
+</section>
+
+<section class="slide gradient-bg grid-bg" id="slide-3">
+<div class="slide-content">
+<div class="section-label">EVOLUTION</div>
+<h2>从 V2 到 V5：四代架构演进</h2>
+<table style="width:100%; border-collapse:collapse; font-size:0.82rem; margin:0.8rem 0;">
+<thead>
+<tr style="border-bottom:2px solid var(--accent);">
+  <th style="text-align:left; padding:0.5rem; color:var(--accent);">版本</th>
+  <th style="text-align:left; padding:0.5rem; color:var(--accent);">架构模式</th>
+  <th style="text-align:left; padding:0.5rem; color:var(--accent);">核心问题</th>
+  <th style="text-align:left; padding:0.5rem; color:var(--accent);">核心能力</th>
+</tr>
+</thead>
+<tbody>
+<tr style="border-bottom:1px solid rgba(255,255,255,0.08);">
+  <td style="padding:0.5rem; color:var(--text-secondary);">V2</td>
+  <td style="padding:0.5rem;">Single Agent</td>
+  <td style="padding:0.5rem; color:var(--orange);">结构集中，难扩展</td>
+  <td style="padding:0.5rem;">EvidenceAgent + CBR</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(255,255,255,0.08);">
+  <td style="padding:0.5rem; color:var(--text-secondary);">V3</td>
+  <td style="padding:0.5rem;">Prompt Chain</td>
+  <td style="padding:0.5rem; color:var(--orange);">推理质量不足</td>
+  <td style="padding:0.5rem;">4-step Chain Analyzer</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(255,255,255,0.08);">
+  <td style="padding:0.5rem; color:var(--text-secondary);">V4</td>
+  <td style="padding:0.5rem;">Query Rewriter</td>
+  <td style="padding:0.5rem; color:var(--orange);">检索召回率低</td>
+  <td style="padding:0.5rem;">Multi-query RAG + Strategy Gate</td>
+</tr>
+<tr style="border-bottom:1px solid var(--accent);">
+  <td style="padding:0.5rem; color:var(--accent); font-weight:bold;">V5</td>
+  <td style="padding:0.5rem; color:var(--accent);">Controlled ReAct</td>
+  <td style="padding:0.5rem; color:var(--orange); font-weight:bold;">场景扩展成本高，主流程 if-else 膨胀</td>
+  <td style="padding:0.5rem; color:var(--accent);">Registry + DomainAgent + MacroTool + PolicyArbiter</td>
+</tr>
+</tbody>
+</table>
+<div class="problem-box">
+<div class="problem-label">V4 痛点</div>
+  新场景接入 = 修改主流程 if-else。证据获取与结论分析耦合过深。平台规则散落在多个地方，行为不一致。
+</div>
+<div class="solution-box">
+<div class="solution-label">V5 方案</div>
+  四层职责分离 — 流程控制(Orchestrator)、场景知识(DomainAgent)、证据获取(MacroTool)、平台规则(PolicyArbiter)。新增场景 = 注册 Agent + Tool，不改主循环。
+</div>
+<div class="why-box">
+<div class="why-label">WHY IT MATTERS</div>
+  V5 适合当前项目的原因，不在于它更像 AI，而在于它更适合长期扩风控场景。足够能扩，足够可控，足够能落地。
+</div>
+<button class="detail-btn" onclick="openModal('modal-evolution')">详情 →</button>
+</div>
+</section>
+
+<section class="slide gradient-bg grid-bg" id="slide-4">
+<div class="slide-content">
+<div class="section-label">CORE ARCHITECTURE</div>
+<h2>V5 五层正交架构</h2>
+<div class="arch-diagram">
+<div class="arch-layer">
+<div class="arch-layer-name" style="color:var(--accent);">① Entry Layer</div>
+<div class="arch-layer-content">
+  AuditHandler
+  EvidenceAgent (Facade)
+</div>
+  </div>
+<div class="arch-layer orange">
+<div class="arch-layer-name">② Runtime Layer</div>
+<div class="arch-layer-content">
+  RiskOrchestrator
+  Registry
+  EvidenceState
+</div>
+  </div>
+<div class="arch-layer blue">
+<div class="arch-layer-name">③ Agent Layer</div>
+<div class="arch-layer-content">
+  LLMDrivenAgent
+  SkillRouter
+  PrimaryRiskAgent (fallback)
+</div>
+  </div>
+<div class="arch-layer purple">
+<div class="arch-layer-name">④ Tool Layer</div>
+<div class="arch-layer-content">
+  7 Evidence Tools
+  2 Rule Tools
+</div>
+  </div>
+<div class="arch-layer">
+<div class="arch-layer-name" style="color:var(--accent);">⑤ Policy Layer</div>
+<div class="arch-layer-content">
+  PolicyArbiter
+  5 Override Rules
+</div>
+  </div>
+</div>
+<div class="flow" style="margin:1rem 0;">
+HTTP Request
+→
+Orchestrator
+→
+Agent.Plan()
+→
+Tool.Run()
+→
+PolicyArbiter
+→
+Decision
+</div>
+<div class="code-block">// orchestrator/orchestrator.go
+type RiskOrchestrator struct {
+cfg      OrchestratorConfig
+registry *domainagent.Registry
+tools    map[string]macrotool.Tool
+arbiter  Arbiter
+}</div>
+<div class="why-box">
+<div class="why-label">WHY IT MATTERS</div>
+  无隐藏状态 — 所有可变状态流经 EvidenceState，无回调、无 goroutine 私有状态，完整可观测。
+</div>
+<button class="detail-btn" onclick="openModal('modal-core-arch')">详情 →</button>
+</div>
+</section>
+
+<div class="modal-overlay" id="modal-evolution" onclick="if(event.target===this){this.classList.remove('active');document.body.style.overflow=''}">
+<div class="modal-content">
+<button class="modal-close" onclick="closeModal('modal-evolution')">✕</button>
+<div class="modal-title">V2→V5 架构演进详解</div>
+
+<div class="modal-section">
+<h3>V4 的三个核心短板</h3>
+<p><strong style="color:var(--orange);">① 场景扩展退化为 if-else</strong> — 每接入一个新封禁场景（如骗绑、恶意注册），都需要在主流程中添加分支判断。场景越多，主循环越臃肿，回归测试成本线性增长。</p>
+<p><strong style="color:var(--orange);">② 证据获取与结论分析耦合过深</strong> — V4 的 <code>fetchAllEvidence()</code> 一次性拉取全部证据，然后交给 ChainAnalyzer 串行分析。无法按需取证，也无法根据中间结论动态调整取证策略。</p>
+<p><strong style="color:var(--orange);">③ 平台规则缺少独立收口层</strong> — 「保守覆盖」「强制人工」「评分覆盖」等平台级规则散落在 analyzer、handler、config 多个位置，新增规则时容易遗漏或产生冲突。</p>
+</div>
+
+<div class="modal-section">
+<h3>V5 四层分离方案</h3>
+<div class="strategy-card">
+<strong style="color:var(--orange);">RiskOrchestrator</strong>
+<p>循环控制 · 步骤预算 · Tool 去重 · fallback 降级 · 结果收口。不包含任何场景知识，只管「跑几步、怎么跑、什么时候停」。</p>
+</div>
+<div class="strategy-card">
+<strong style="color:var(--accent-secondary);">DomainAgent</strong>
+<p>场景级 planning，每个场景一个 Agent。Agent 看到当前 EvidenceState，决定下一步调哪个 Tool。场景知识封装在 Agent 的 Skill prompt 中。</p>
+</div>
+<div class="strategy-card">
+<strong style="color:var(--purple, #a855f7);">MacroTool</strong>
+<p>取证能力做成可复用资产。FaceVerifyRule、GetAppealMaterial、SearchKnowledge 等 Tool 被多个 Agent 共享，避免重复实现。</p>
+</div>
+<div class="strategy-card">
+<strong style="color:var(--accent);">PolicyArbiter</strong>
+<p>保守覆盖 · 强约束 · 评分覆盖 · 证据充分性覆盖。所有平台级规则在此统一收口，Agent 的 proposal 必须经过 Arbiter 审批。</p>
+</div>
+</div>
+
+<div class="modal-section">
+<h3>V4 vs V5 代码对比</h3>
+<div class="modal-code">// V4 Anti-pattern: 场景知识耦合在主流程
+func analyze(order Order) {
+if order.Scenario == "theft" {
+evidence := fetchAllEvidence(order)  // 一次拉全部
+return chainAnalyzer.Run(evidence)    // 分析器承担流程控制
+} else if order.Scenario == "fraud" { ... }
+}
+// V5 Pattern: 场景知识下沉到 Agent
+agent := registry.Resolve(input.Capability)  // Registry 路由
+action := agent.Plan(ctx, state)             // Agent 自主取证
+tool.Run(ctx, state)                         // 按需取证
+arbiter.Arbitrate(ctx, state, proposal)      // 统一规则收口</div>
+</div>
+
+<div class="modal-section">
+<h3>Design Patterns</h3>
+<div style="display:flex; flex-wrap:wrap; gap:0.5rem;">
+Separation of Concerns
+Registry Pattern
+Strategy Pattern
+Tool Abstraction
+State Machine
+</div>
+</div>
+</div>
+</div>
+
+<div class="modal-overlay" id="modal-core-arch" onclick="if(event.target===this){this.classList.remove('active');document.body.style.overflow=''}">
+<div class="modal-content">
+<button class="modal-close" onclick="closeModal('modal-core-arch')">✕</button>
+<div class="modal-title">V5 核心架构详解</div>
+
+<div class="modal-section">
+<h3>EvidenceState: 显式共享状态</h3>
+<div class="modal-code">type EvidenceState struct {
+OrderID               string
+BlockUin              uint64                // 跨工单历史查询
+ToolRuns              []ToolRun             // 去重日志
+ToolResults           map[string]*Result    // 缓存
+CaseType              CaseType              // LLM 推理得出
+SpamType              string                // 定性结论
+CompletedPhases       []string              // 阶段追踪
+Sufficiency           string                // LLM 自评
+SufficiencyOverridden bool                  // 系统覆盖标记
+ThoughtHistory        []StepThought         // 推理链
+WorkingNotes          []string              // SkillRouter 信号
+AppealHistory         *AppealHistory        // 跨工单历史
+}</div>
+  <p>EvidenceState 是 Orchestrator 循环中唯一的可变载体。每个 Tool 只读写 State 中属于自己的字段，所有变更对 Langfuse trace 完全可见。</p>
+</div>
+
+<div class="modal-section">
+<h3>Registry: Agent 路由策略</h3>
+<p><strong style="color:var(--accent);">① PreferredAgentID</strong> — 精确匹配：调用方显式指定 Agent ID，Registry 直接返回对应实例。用于测试和特殊场景强制路由。</p>
+<p><strong style="color:var(--accent-secondary);">② Capability</strong> — 遍历 Registry，按已注册 Agent 的 capability 标签匹配。多个匹配时取优先级最高者。</p>
+<p><strong style="color:var(--orange);">③ Default</strong> — 无匹配时降级到 LLMDrivenAgent，使用通用 prompt 和全量 Tool 集合。</p>
+<p><strong style="color:var(--text-secondary);">④ aiClient 降级</strong> — 若 aiClient 不支持 ToolCallingClient 接口，降级到 PrimaryRiskAgent（固定序列，无 ReAct 循环）。</p>
+</div>
+
+<div class="modal-section">
+<h3>架构不变量</h3>
+<div class="strategy-card">
+<strong style="color:var(--accent);">不变量 1</strong>
+<p>EvidenceState 是唯一可变状态载体，无隐藏回调、无 goroutine 私有状态。</p>
+</div>
+<div class="strategy-card">
+<strong style="color:var(--orange);">不变量 2</strong>
+<p>Registry 控制 Agent 解析，Agent 不自注册。所有 Agent 在启动时由 cmd/api 注入 Registry。</p>
+</div>
+<div class="strategy-card">
+<strong style="color:var(--accent-secondary);">不变量 3</strong>
+<p>同一步内同名 Tool 不会被重复调用 — HasToolCall 去重机制防止 LLM 幻觉导致的重复取证。</p>
+</div>
+<div class="strategy-card">
+<strong style="color:var(--purple, #a855f7);">不变量 4</strong>
+<p>阶段完成状态记录在 state.CompletedPhases，不在 Agent 记忆中。Agent 重启不丢失进度。</p>
+</div>
+</div>
+
+<div class="modal-section">
+<div class="modal-highlight">核心设计：所有状态显式流经 EvidenceState，支持完整 Langfuse 追踪和回放。</div>
+<div style="display:flex; flex-wrap:wrap; gap:0.5rem; margin-top:0.8rem;">
+Explicit State
+Registry Pattern
+Deduplication
+Graceful Degradation
+Full Observability
+</div>
+</div>
+</div>
+</div>
+
+<!-- ========== SLIDES 5-7: Orchestrator, SkillRouter, MacroTool ========== -->
+
+<section class="slide gradient-bg grid-bg" id="slide-5">
+<div class="slide-content">
+ORCHESTRATOR
+<h2>Phase-Gated Constrained ReAct</h2>
+<p class="subtitle">核心改造：将纯 ReAct 循环拆为 3 阶段确定性流水线。取证阶段保持 LLM 自主，定性和裁决由 Orchestrator 强制驱动。</p>
+<div class="problem-box">
+<div class="problem-label">PROBLEM</div>
+  问题：纯 ReAct 架构下，LLM 可随时调用 finalize 跳过 classification/verdict。线上 trace 显示 spam_type='其他'、决策质量下降。本质上是"让 LLM 决定是否执行定性和裁决"的架构问题。
+</div>
+
+<div class="stat-grid" style="grid-template-columns: 1fr 1fr 1fr; gap: 1rem; margin: 1.2rem 0;">
+<div class="strategy-card" style="border-left: 3px solid #00ff88;">
+<strong style="color:#00ff88;">Phase 1 · Evidence</strong>
+ReAct Loop — LLM 自主选择工具。退出条件：Sufficiency='sufficient' 或 tool budget 耗尽(6 calls)。系统级 ComputeSufficiency() 兜底。
+</div>
+<div class="strategy-card" style="border-left: 3px solid #ff9500;">
+<strong style="color:#ff9500;">Phase 2 · Classification</strong>
+Constrained — ForcedSkill=classification, AllowedTools=[SearchAuditRules, GetHistoricalCasePack], BlockFinalize=true。LLM 调用 finalize 会被拦截为 PhaseComplete。
+</div>
+<div class="strategy-card" style="border-left: 3px solid #00d4ff;">
+<strong style="color:#00d4ff;">Phase 3 · Verdict</strong>
+Deterministic — ForcedSkill=verdict, 仅允许 finalize。输出 UNBLOCK / KEEP_BAN / MANUAL_REVIEW + confidence + reasoning。
+</div>
+</div>
+
+<div class="flow">
+Evidence
+→
+sufficiency ✓ / budget ✗
+→
+Classification
+→
+spam_type extracted
+→
+Verdict
+→
+finalize
+→
+PolicyArbiter
+</div>
+
+<div class="code-block">
+cp, ok := agent.(ConstrainedPlanner)  // type assertion
+if !ok { return o.runLegacyReActLoop(...) }  // 向后兼容
+o.runEvidencePhase(ctx, cp, state)       // Phase 1: 自由取证
+o.runClassificationPhase(ctx, cp, state) // Phase 2: 强制定性
+o.runVerdictPhase(ctx, cp, state)        // Phase 3: 强制裁决
+</div>
+
+<div class="why-box">
+<div class="why-label">WHY IT MATTERS</div>
+  不信任 LLM 的流程判断，只信任 LLM 的内容判断 — 证据阶段让 LLM 自主决定取什么证据，但阶段流转由 Orchestrator 确定性驱动。
+</div>
+
+<button class="detail-btn" onclick="openModal('modal-orchestrator')">查看完整设计 →</button>
+</div>
+</section>
+
+<section class="slide gradient-bg grid-bg" id="slide-6">
+<div class="slide-content">
+DOMAIN AGENT
+<h2>LLMDrivenAgent + SkillRouter</h2>
+<p class="subtitle">Agent 负责推理，Skill 提供领域知识。SkillRouter 基于 EvidenceState 动态选择最匹配的 Skill prompt 注入 LLM。</p>
+<div class="stat-grid" style="grid-template-columns: 1fr 1fr; gap: 1.5rem; margin: 1rem 0;">
+<div>
+<strong style="color:#00d4ff;">5 个 Skill (embed.FS 自动发现)</strong>
+<div class="code-block" style="margin-top:0.5rem; font-size:0.72rem;">
+prompts/skills/
+├── evidence-collection/  # pri=100, 首轮取证
+│   ├── SKILL.md         # 触发: tool_results_empty
+│   └── advanced/        # CaseType 条件注入
+├── content-review/       # pri=200, 内容审核
+├── behavior-review/      # pri=250, 行为分析
+├── classification/       # pri=300, 定性判断
+└── verdict/              # pri=400, 最终裁决
+                  # requires: [spam_type_set]
+</div>
+  </div>
+<div>
+<strong style="color:#ff9500;">Thought 推理链结构</strong>
+<div class="code-block" style="margin-top:0.5rem; font-size:0.72rem;">
+&lt;thought&gt;
+【场景判断】盗号/骗绑/色情/赌博/正常...
+【当前证据评估】已有申诉材料+设备验证
+【证据充分度】insufficient — 缺少行为风险
+【缺失信息】需 GetBehaviorRiskPack
+【下一步计划】调用 GetBehaviorRiskPack
+【自检】当前判断与证据一致
+&lt;/thought&gt;
+</div>
+  </div>
+</div>
+
+<div class="flow" style="margin: 1rem 0;">
+EvidenceState
+→
+SkillRouter.SelectSkill()
+→
+Skill Prompt (system msg)
+→
+LLM + tool_call
+→
+State Update
+→
+next iteration
+</div>
+
+<div class="solution-box">
+<div class="solution-label">SOLUTION</div>
+  Skill = 领域知识资产。新增审核场景 = 新增 .md 文件 + 注册触发条件，不改 Go 代码。高级段（advanced/）按 CaseType 精确匹配，避免无关规则 token 浪费。
+</div>
+
+<button class="detail-btn" onclick="openModal('modal-skill')">查看 Skill 路由细节 →</button>
+</div>
+</section>
+
+<section class="slide gradient-bg grid-bg" id="slide-7">
+<div class="slide-content">
+MACROTOOL
+<h2>MacroTool 证据获取体系</h2>
+<p class="subtitle">统一的 Tool.Run() 接口封装 RPC 调用、确定性规则和知识检索。LLM 按需调用，Orchestrator 控制预算。</p>
+<div class="stat-grid" style="grid-template-columns: 1fr 1fr 1fr; gap: 1rem; margin: 1rem 0;">
+<div class="strategy-card" style="border-left: 3px solid #bf5af2;">
+<strong style="color:#bf5af2;">Evidence Tools (RPC 适配)</strong>
+<ul style="font-size:0.7rem; margin:0.5rem 0 0 1rem; line-height:1.6;">
+  <li>GetAppealMaterialPack 申诉材料+聊天样本</li>
+  <li>GetCorpProfilePack 企业画像+投诉聚合</li>
+  <li>GetBehaviorRiskPack 活跃度+拦截记录</li>
+  <li>GetDeviceVerifyPack 设备验证统计</li>
+  <li>GetHistoricalCasePack CBR 相似案例</li>
+  <li>GetKnowledgeRulePack 语义知识检索</li>
+</ul>
+</div>
+<div class="strategy-card" style="border-left: 3px solid #00ff88;">
+<strong style="color:#00ff88;">Rule Tools (确定性)</strong>
+<ul style="font-size:0.7rem; margin:0.5rem 0 0 1rem; line-height:1.6;">
+  <li>ApplyFaceVerifyRules 人脸/证件校验, Confidence=1.0</li>
+  <li>GetAppealHistoryPack 跨工单历史申诉 NEW</li>
+</ul>
+</div>
+<div class="strategy-card" style="border-left: 3px solid #00d4ff;">
+<strong style="color:#00d4ff;">Knowledge Tools (BM25)</strong>
+<ul style="font-size:0.7rem; margin:0.5rem 0 0 1rem; line-height:1.6;">
+  <li>SearchAuditRules Go 原生 BM25 检索, CSV 知识库, top-3 规则</li>
+</ul>
+</div>
+</div>
+
+<div class="code-block" style="font-size:0.75rem;">
+type Tool interface {
+Name() string
+Run(ctx, Input) (*MacroToolResult, error)
+}
+// Result 包含 LLM 可读摘要 + 结构化事实 + 置信度
+// Evidence: Confidence=0.5 (需 LLM 判断)
+// Rule:     Confidence=1.0 (确定性)
+</div>
+
+<div class="why-box">
+<div class="why-label">WHY IT MATTERS</div>
+  新增取证能力 = 实现 Tool 接口 + 注册。RPC 适配层(adapters.go)将外部服务包装为 MacroTool，LLM 无感知底层协议差异。Setter 注入模式支持运行时动态绑定。
+</div>
+
+<button class="detail-btn" onclick="openModal('modal-macrotool')">查看 Tool 接口细节 →</button>
+</div>
+</section>
+
+<!-- ═══════════════════════════ MODAL: ORCHESTRATOR ═══════════════════════════ -->
+<div class="modal-overlay" id="modal-orchestrator">
+<div class="modal-content">
+<button class="modal-close" onclick="closeModal('modal-orchestrator')">✕</button>
+<h3 class="modal-title">Orchestrator · Phase-Gated Constrained ReAct 完整设计</h3>
+<!-- Section 1: ConstrainedPlanner 接口 -->
+<div class="modal-section">
+<h4>1. ConstrainedPlanner 接口</h4>
+<div class="modal-code">
+type ConstrainedPlanner interface {
+PlanConstrained(ctx context.Context, state *model.EvidenceState, opts PlanOptions) (*model.AgentAction, error)
+}
+type PlanOptions struct {
+ForcedSkill   string   // 强制注入的 Skill（如 "classification"）
+AllowedTools  []string // 工具白名单（空=全部允许）
+BlockFinalize bool     // true=拦截 finalize 调用, 返回 PhaseComplete
+}
+// 向后兼容：不实现 ConstrainedPlanner 的 Agent 自动 fallback 到纯 ReAct
+</div>
+</div>
+
+<!-- Section 2: 三阶段执行引擎 -->
+<div class="modal-section">
+<h4>2. 三阶段执行引擎</h4>
+<div class="strategy-card" style="border-left: 3px solid #00ff88; margin-bottom: 0.8rem;">
+<strong style="color:#00ff88;">Evidence Phase（自由 ReAct）</strong>
+LLM 自主选择 SkillRouter 推荐的 Skill，自由调用取证工具。退出条件：(1) state.Sufficiency='sufficient'（LLM + ComputeSufficiency 双重校验）；(2) tool budget 耗尽（默认 6）。系统级 ComputeSufficiency() 要求至少有 AppealMaterial + 1个内容/行为工具结果。LLM 自评 sufficient 但系统判定 insufficient 时，以系统为准。
+</div>
+
+<div class="strategy-card" style="border-left: 3px solid #ff9500; margin-bottom: 0.8rem;">
+<strong style="color:#ff9500;">Classification Phase（约束）</strong>
+ForcedSkill=classification, AllowedTools=[SearchAuditRules, GetHistoricalCasePack], BlockFinalize=true。LLM 必须输出【违规类型】（不含"正常"选项）。finalize 调用被拦截为 PhaseComplete，提取 state 后退出。最多 2 轮内循环。
+</div>
+
+<div class="strategy-card" style="border-left: 3px solid #00d4ff;">
+<strong style="color:#00d4ff;">Verdict Phase（确定性）</strong>
+ForcedSkill=verdict, 仅允许 finalize。LLM 输出 result_type + confidence + result_reason。UNBLOCK→SpamType 清空；KEEP_BAN→保留 SpamType；MANUAL_REVIEW→保留供人工参考。
+</div>
+</div>
+
+<!-- Section 3: 阶段转换条件 -->
+<div class="modal-section">
+<h4>3. 阶段转换条件</h4>
+<div class="modal-code">
+Evidence → Classification 转换条件:
+state.Sufficiency == "sufficient"
+AND ComputeSufficiency(state) == true
+OR  tool_budget 耗尽 (forced transition)
+Classification → Verdict 转换条件:
+state.SpamType != "" (已提取违规类型)
+OR  max_inner_steps 耗尽 (2 steps)
+Verdict → PolicyArbiter:
+LLM 输出 finalize action
+→ DecisionProposal → Arbiter.Arbitrate()
+</div>
+</div>
+
+<!-- Section 4: Langfuse 可观测性 -->
+<div class="modal-section">
+<h4>4. Langfuse 可观测性</h4>
+<div class="modal-code">
+orchestrator.Run
+├── phase.evidence      {exit_reason, inner_steps, sufficiency}
+│   ├── agent.Plan[step=0]   {skill_name, action_type}
+│   ├── macrotool.GetAppealMaterialPack
+│   └── agent.Plan[step=1]   {...}
+├── phase.classification {forced_skill, exit_reason, spam_type}
+│   └── agent.Plan[classification.step=0]
+├── phase.verdict       {forced_skill, exit_reason, result_type}
+│   └── agent.Plan[verdict.try=0]
+└── policy-arbiter.Arbitrate {input_result_type, override}
+</div>
+</div>
+
+<!-- Section 5: 核心设计思路 -->
+<div class="modal-section">
+<h4>5. 核心设计思路</h4>
+<div class="modal-highlight">
+不信任 LLM 的流程判断，只信任 LLM 的内容判断。Orchestrator 控制"何时做什么"，Agent 决定"具体做什么"。
+</div>
+</div>
+</div>
+</div>
+
+<!-- ═══════════════════════════ MODAL: SKILL ═══════════════════════════ -->
+<div class="modal-overlay" id="modal-skill">
+<div class="modal-content">
+<button class="modal-close" onclick="closeModal('modal-skill')">✕</button>
+<h3 class="modal-title">SkillRouter · 动态 Skill 路由与领域知识注入</h3>
+<!-- Section 1: Skill 路由算法 -->
+<div class="modal-section">
+<h4>1. Skill 路由算法</h4>
+<div class="modal-code">
+SkillRouter.SelectSkill(state) 算法:
+1. 遍历所有已注册 Skill（embed.FS 自动发现）
+2. 对每个 Skill 检查 trigger 条件:
+• tool_results_empty: true → 无任何工具结果
+• has_tool_result + source → 指定工具有结果
+• min_tool_count: N → 至少 N 个工具被调用
+• sufficiency_check: sufficient → LLM 自评充分
+• requires: [spam_type_set] → SpamType 已设置
+• excludes: [phase:X] → 跳过已完成阶段
+• case_types: [...] → CaseType 匹配（规划中）
+3. 收集所有匹配的 Skill
+4. 按 priority 排序（数字越大越优先）
+5. 返回最高优先级的 Skill
+6. 注入 Skill prompt 到 system message
+</div>
+</div>
+
+<!-- Section 2: 真实 Skill 内容示例 -->
+<div class="modal-section">
+<h4>2. 真实 Skill 内容示例</h4>
+<div class="modal-code">
+---
+name: evidence-collection
+priority: 100
+trigger:
+tool_results_empty: true
+---
+## 你的角色
+你是企微反欺诈风控审核专家。当前工单尚无任何证据。
+## 取证策略
+根据申诉内容判断取证优先级:
+- 明确恶意（色情/诈骗/赌博）→ 先 GetBehaviorRiskPack
+- 正常/不确定 → 先 GetAppealMaterialPack → GetCorpProfilePack
+## &lt;thought&gt; 模板
+&lt;thought&gt;
+【当前证据评估】尚无证据
+【证据充分度】insufficient
+【下一步计划】调用 GetAppealMaterialPack 获取基础材料
+&lt;/thought&gt;
+## 下一步建议
+完成首轮取证后:
+- 如需审核规则参考 → SearchAuditRules
+- 如有历史案例需求 → GetHistoricalCasePack
+</div>
+</div>
+
+<!-- Section 3: Phase-Aware Thought 模板 -->
+<div class="modal-section">
+<h4>3. Phase-Aware Thought 模板</h4>
+<div class="strategy-card" style="border-left: 3px solid #ff9500;">
+<strong style="color:#ff9500;">改进方案</strong>
+<ul style="margin: 0.5rem 0 0 1rem; line-height: 1.8;">
+  <li>System prompt 的 <code>&lt;thought&gt;</code> 模板精简为通用 fallback</li>
+  <li>各 Skill 在正文中定义阶段专属 thought 模板</li>
+  <li>LLM recency bias 自然覆盖 system prompt（无需代码改动）</li>
+  <li>content-review / behavior-review 新增【初步定性】字段，打破 CaseType 循环依赖</li>
+</ul>
+</div>
+</div>
+
+<!-- Section 4: 核心理念 -->
+<div class="modal-section">
+<div class="modal-highlight">
+Skill = 领域知识的声明式资产。新增场景 = 新增 .md 文件，SkillRouter 通过 embed.FS 自动发现，无需改 Go 代码。
+</div>
+</div>
+</div>
+</div>
+
+<!-- ═══════════════════════════ MODAL: MACROTOOL ═══════════════════════════ -->
+<div class="modal-overlay" id="modal-macrotool">
+<div class="modal-content">
+<button class="modal-close" onclick="closeModal('modal-macrotool')">✕</button>
+<h3 class="modal-title">MacroTool · 统一证据获取接口</h3>
+<!-- Section 1: Tool 接口定义 -->
+<div class="modal-section">
+<h4>1. Tool 接口定义</h4>
+<div class="modal-code">
+type Tool interface {
+Name() string
+Description() string
+Parameters() map[string]any  // JSON Schema for LLM
+Run(ctx context.Context, input Input) (*MacroToolResult, error)
+}
+type Input struct {
+OrderID   string
+State     *model.EvidenceState
+Arguments map[string]any  // LLM 传参
+}
+type MacroToolResult struct {
+ToolName       string
+Summary        string      // LLM 可读摘要（~200 字）
+Facts          []string    // 结构化事实列表
+MissingSources []string    // 缺失数据源
+RawData        any         // 原始数据（审计用）
+Confidence     float64     // 0.0~1.0
+}
+</div>
+</div>
+
+<!-- Section 2: RPC 适配层 -->
+<div class="modal-section">
+<h4>2. RPC 适配层 (adapters.go)</h4>
+<div class="strategy-card" style="border-left: 3px solid #bf5af2;">
+<div class="modal-code">
+// 每个 Evidence Tool 是一个 RPC 适配器:
+type GetAppealMaterialPackTool struct {
+fetcher func(ctx, orderID) (*MaterialResp, error)
+}
+func (t *GetAppealMaterialPackTool) Run(ctx, input) (*MacroToolResult, error) {
+resp, err := t.fetcher(ctx, input.OrderID)
+if err != nil { return nil, fmt.Errorf("RPC failed: %w", err) }
+return &MacroToolResult{
+Summary:    formatForLLM(resp),  // 压缩到 ~200 字
+Facts:      extractFacts(resp),
+Confidence: 0.5,  // RPC 数据是证据，不是结论
+}, nil
+}
+</div>
+  </div>
+</div>
+
+<!-- Section 3: Tool 注册与 Setter 注入 -->
+<div class="modal-section">
+<h4>3. Tool 注册与 Setter 注入</h4>
+<div class="strategy-card" style="border-left: 3px solid #00ff88;">
+<strong style="color:#00ff88;">依赖注入模式</strong>
+<ul style="margin: 0.5rem 0 0 1rem; line-height: 1.8;">
+  <li>核心 tools 在 <code>NewAuditHandler()</code> 构造时注册</li>
+  <li>可选 tools (CBR, Knowledge) 通过 Setter 运行时注入</li>
+  <li><code>SetCBRService()</code> / <code>SetKnowledgeClient()</code> / <code>SetQueryRewriter()</code></li>
+  <li><code>syncEvidenceAgentMacrotools()</code> 同步到 Agent 的 tool 列表</li>
+  <li>优点：不修改构造函数签名，支持灰度和动态绑定</li>
+</ul>
+</div>
+</div>
+
+<!-- Section 4: 核心理念 -->
+<div class="modal-section">
+<div class="modal-highlight">
+新增取证能力 = 实现 Tool 接口 + 在 handler 注册。底层是 RPC、API 还是本地计算，LLM 完全无感。
+</div>
+</div>
+</div>
+</div>
+
+<!-- ========== SLIDES 8-10: PolicyArbiter, OpenSpec, BM25 ========== -->
+
+<section class="slide gradient-bg grid-bg" id="slide-8">
+<div class="slide-content">
+<div class="section-label">POLICY ARBITER</div>
+<h2>PolicyArbiter 平台规则收口</h2>
+<p class="subtitle">Agent 提出 DecisionProposal，PolicyArbiter 用 5 条确定性规则做最终仲裁。AI 不可绕过，保证平台行为一致性。</p>
+
+<div style="display:flex;flex-direction:column;gap:10px;margin:18px 0 14px 0;">
+<div style="display:flex;align-items:flex-start;gap:12px;background:rgba(239,68,68,0.08);border:1px solid rgba(239,68,68,0.25);border-radius:8px;padding:12px 16px;">
+Rule 1
+好人分 Override — score≥0.85 且 Agent 判 KEEP_BAN → 覆盖为 UNBLOCK；score≤0.25 且 Agent 判 UNBLOCK → 覆盖为 KEEP_BAN。Logistic Regression 模型，权重按部署环境调优。
+</div>
+<div style="display:flex;align-items:flex-start;gap:12px;background:rgba(249,115,22,0.08);border:1px solid rgba(249,115,22,0.25);border-radius:8px;padding:12px 16px;">
+Rule 2
+关键证据缺失 Force Reject — ≥2 项关键证据源缺失（申诉材料 / 企业画像 / 行为风控）→ 强制 MANUAL_REVIEW。宁可打回人工，不在信息不足时自动决策。
+</div>
+<div style="display:flex;align-items:flex-start;gap:12px;background:rgba(234,179,8,0.08);border:1px solid rgba(234,179,8,0.25);border-radius:8px;padding:12px 16px;">
+Rule 3
+高风险+非管理员 Reject — spam_type∈{盗号,骗绑} 且不是管理员 → KEEP_BAN。高危场景对非管理员保持保守。
+</div>
+<div style="display:flex;align-items:flex-start;gap:12px;background:rgba(99,102,241,0.08);border:1px solid rgba(99,102,241,0.25);border-radius:8px;padding:12px 16px;">
+Rule 4
+管理员无恶意 Unban — isAdmin=true 且无投诉/无拦截 → UNBLOCK。管理员在清白时优先解封。
+</div>
+<div style="display:flex;align-items:flex-start;gap:12px;background:rgba(20,184,166,0.08);border:1px solid rgba(20,184,166,0.25);border-radius:8px;padding:12px 16px;">
+Rule 5
+Sanity Check — result_type 无效 → fallback REJECT。兜底规则防止 LLM 输出非法值。
+</div>
+</div>
+
+<div class="code-block" style="margin:14px 0 14px 0;font-size:12.5px;">
+// 5 条规则按顺序执行，前序规则覆盖后序
+func (a *PolicyArbiter) Arbitrate(ctx, state, proposal) {
+proposal = a.applyGoodPersonScore(state, proposal)
+proposal = a.applyCriticalMissing(state, proposal)
+proposal = a.applyHighRiskNonAdmin(state, proposal)
+proposal = a.applyAdminCleanOverride(state, proposal)
+proposal = a.applySanityCheck(proposal)
+return proposal
+}</div>
+
+<div class="why-box">
+<div class="why-label">WHY IT MATTERS</div>
+  LLM 做内容判断，PolicyArbiter 做平台规则。两层分离保证：即使 LLM 产生幻觉，确定性规则始终兜底。
+</div>
+</div>
+</section>
+
+<section class="slide gradient-bg grid-bg" id="slide-9">
+<div class="slide-content">
+<div class="section-label">OPENSPEC WEEKLY</div>
+<h2>11 项 OpenSpec 变更 (3/23 - 4/5)</h2>
+<p class="subtitle">Spec-Driven Development — 每个变更从 Proposal → Design → Spec → Tasks → Verify。两周内完成 V5 核心循环加固 + V5.x 功能交付。</p>
+
+<button class="detail-btn" onclick="openModal('modal-openspec')">查看 OpenSpec 详情 →</button>
+
+<div style="display:flex;flex-direction:column;gap:8px;margin:16px 0 0 0;">
+<div style="display:flex;align-items:flex-start;gap:12px;background:rgba(34,197,94,0.08);border:1px solid rgba(34,197,94,0.2);border-radius:8px;padding:11px 15px;">
+✅
+<div>
+  <div style="color:#22c55e;font-weight:700;font-size:14px;">Phase-Gated Constrained ReAct</div>
+  <div style="color:#94a3b8;font-size:12.5px;margin-top:3px;">问题：LLM 跳过 classification/verdict。方案：Orchestrator Run() 拆为 3 阶段确定性流水线。</div>
+    </div>
+  </div>
+<div style="display:flex;align-items:flex-start;gap:12px;background:rgba(34,197,94,0.08);border:1px solid rgba(34,197,94,0.2);border-radius:8px;padding:11px 15px;">
+✅
+<div>
+  <div style="color:#22c55e;font-weight:700;font-size:14px;">Cross-Order Appeal History</div>
+  <div style="color:#94a3b8;font-size:12.5px;margin-top:3px;">问题：Agent 对同一用户重复申诉无记忆。方案：新增 GetAppealHistoryPack MacroTool，block_uin 关联历史工单。</div>
+    </div>
+  </div>
+<div style="display:flex;align-items:flex-start;gap:12px;background:rgba(34,197,94,0.08);border:1px solid rgba(34,197,94,0.2);border-radius:8px;padding:11px 15px;">
+✅
+<div>
+  <div style="color:#22c55e;font-weight:700;font-size:14px;">Sufficiency Hard Validation</div>
+  <div style="color:#94a3b8;font-size:12.5px;margin-top:3px;">问题：LLM 在零证据时幻觉输出 sufficient。方案：ComputeSufficiency() 系统级校验 + CompletedPhases 阶段追踪。</div>
+    </div>
+  </div>
+<div style="display:flex;align-items:flex-start;gap:12px;background:rgba(34,197,94,0.08);border:1px solid rgba(34,197,94,0.2);border-radius:8px;padding:11px 15px;">
+✅
+<div>
+  <div style="color:#22c55e;font-weight:700;font-size:14px;">Phase-Aware Thought Templates</div>
+  <div style="color:#94a3b8;font-size:12.5px;margin-top:3px;">问题：静态 thought 模板导致 CaseType 循环依赖。方案：各 Skill 定义阶段专属 thought，LLM recency bias 自然覆盖。</div>
+    </div>
+  </div>
+<div style="display:flex;align-items:flex-start;gap:12px;background:rgba(34,197,94,0.08);border:1px solid rgba(34,197,94,0.2);border-radius:8px;padding:11px 15px;">
+✅
+<div>
+  <div style="color:#22c55e;font-weight:700;font-size:14px;">BM25 Knowledge Retrieval</div>
+  <div style="color:#94a3b8;font-size:12.5px;margin-top:3px;">问题：Skill 全量注入 2000-5000 token 浪费。方案：Go 原生 BM25 + CSV 知识库 + SearchAuditRules MacroTool。</div>
+    </div>
+  </div>
+<div style="display:flex;align-items:flex-start;gap:12px;background:rgba(34,197,94,0.08);border:1px solid rgba(34,197,94,0.2);border-radius:8px;padding:11px 15px;">
+✅
+<div>
+  <div style="color:#22c55e;font-weight:700;font-size:14px;">Trace Validation Framework</div>
+  <div style="color:#94a3b8;font-size:12.5px;margin-top:3px;">声明式 YAML spec + Go CLI 验证器 + fuzz tests + coverage ratchet 82.5%。</div>
+    </div>
+  </div>
+<div style="display:flex;align-items:flex-start;gap:12px;background:rgba(34,197,94,0.08);border:1px solid rgba(34,197,94,0.2);border-radius:8px;padding:11px 15px;">
+✅
+<div>
+  <div style="color:#22c55e;font-weight:700;font-size:14px;">Skill Intent Routing</div>
+  <div style="color:#94a3b8;font-size:12.5px;margin-top:3px;">CaseType 一维路由 + 高级段从 4→10 个，对齐 QA 审核规范。</div>
+    </div>
+  </div>
+  <!-- === Sprint 2 (4/1 - 4/5) === -->
+<div style="margin:8px 0 4px;font-size:11px;color:var(--accent);font-weight:600;letter-spacing:0.05em;">SPRINT 2 — 4/1 ~ 4/5</div>
+<div style="display:flex;align-items:flex-start;gap:12px;background:rgba(34,197,94,0.08);border:1px solid rgba(34,197,94,0.2);border-radius:8px;padding:11px 15px;">
+✅
+<div>
+  <div style="color:#22c55e;font-weight:700;font-size:14px;">Self-Review + Parallel ToolCall</div>
+  <div style="color:#94a3b8;font-size:12.5px;margin-top:3px;">P1-1: finalize 前 detectSelfCheckContradiction() 自检。P1-2: errgroup 并行执行多 tool call（max 3）。</div>
+    </div>
+  </div>
+<div style="display:flex;align-items:flex-start;gap:12px;background:rgba(34,197,94,0.08);border:1px solid rgba(34,197,94,0.2);border-radius:8px;padding:11px 15px;">
+✅
+<div>
+  <div style="color:#22c55e;font-weight:700;font-size:14px;">SpamType Multi-Classification</div>
+  <div style="color:#94a3b8;font-size:12.5px;margin-top:3px;">LLM 自由文本 → ww_spam_type_config 枚举标准化 + spam_type_details 多分类结构化输出。</div>
+    </div>
+  </div>
+<div style="display:flex;align-items:flex-start;gap:12px;background:rgba(34,197,94,0.08);border:1px solid rgba(34,197,94,0.2);border-radius:8px;padding:11px 15px;">
+✅
+<div>
+  <div style="color:#22c55e;font-weight:700;font-size:14px;">Agent History Reset + ExtraTools Auto-Execute</div>
+  <div style="color:#94a3b8;font-size:12.5px;margin-top:3px;">修复跨请求历史累积(token 23k+膨胀)。Verdict 阶段自动补执行 LLM 未调用的声明 tool。</div>
+    </div>
+  </div>
+<div style="display:flex;align-items:flex-start;gap:12px;background:rgba(34,197,94,0.08);border:1px solid rgba(34,197,94,0.2);border-radius:8px;padding:11px 15px;">
+✅
+<div>
+  <div style="color:#22c55e;font-weight:700;font-size:14px;">Batch Audit Async Pipeline</div>
+  <div style="color:#94a3b8;font-size:12.5px;margin-top:3px;">sync→async API 避免 504。两阶段 submit/poll + 流式 CSV + 吞吐量 10x 提升。</div>
+    </div>
+  </div>
+</div>
+</div>
+</section>
+
+<section class="slide gradient-bg grid-bg" id="slide-10">
+<div class="slide-content">
+<div class="section-label">KNOWLEDGE RETRIEVAL</div>
+<h2>BM25 审核规则知识库</h2>
+<p class="subtitle">从"全量注入"到"按需检索" — Agent 调用 SearchAuditRules 工具，BM25 排序返回 top-3 最相关规则。零外部依赖，纯 Go 实现。</p>
+
+<button class="detail-btn" onclick="openModal('modal-bm25')">查看 BM25 详情 →</button>
+
+<div class="problem-box">
+<div class="problem-label">PROBLEM</div>
+  每个 Skill 注入 2000-5000 token 审核规则，其中大量与当前案件无关（如诈骗案件注入色情规则）。规则原子化缺失，难以独立测试和维护。
+</div>
+
+<div class="solution-box">
+<div class="solution-label">SOLUTION</div>
+  审核规则原子化为 CSV 条目，按 domain 分区存储。Go 原生 BM25 引擎支持中文 bigram 分词和 IDF 加权。Agent 按案件特征检索最相关的 3 条规则。
+</div>
+
+<div class="flow" style="margin:18px 0;">
+<div class="flow-node">CSV embed.FS</div>
+<div class="flow-arrow">→</div>
+<div class="flow-node active">BM25 Index
+startup</div>
+<div class="flow-arrow">→</div>
+<div class="flow-node">Agent query</div>
+<div class="flow-arrow">→</div>
+<div class="flow-node blue">Tokenize</div>
+<div class="flow-arrow">→</div>
+<div class="flow-node blue">IDF Rank</div>
+<div class="flow-arrow">→</div>
+<div class="flow-node success">Top-3 Rules</div>
+<div class="flow-arrow">→</div>
+<div class="flow-node warn">LLM context</div>
+</div>
+
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:14px 0;">
+<div style="background:rgba(99,102,241,0.1);border:1px solid rgba(99,102,241,0.3);border-radius:8px;padding:12px 14px;text-align:center;">
+<div style="color:#818cf8;font-weight:700;font-size:13px;">content-rules</div>
+<div style="color:#94a3b8;font-size:11.5px;margin-top:3px;">内容违规规则</div>
+  </div>
+<div style="background:rgba(249,115,22,0.1);border:1px solid rgba(249,115,22,0.3);border-radius:8px;padding:12px 14px;text-align:center;">
+<div style="color:#fb923c;font-weight:700;font-size:13px;">behavior-rules</div>
+<div style="color:#94a3b8;font-size:11.5px;margin-top:3px;">行为风控规则</div>
+  </div>
+<div style="background:rgba(234,179,8,0.1);border:1px solid rgba(234,179,8,0.3);border-radius:8px;padding:12px 14px;text-align:center;">
+<div style="color:#eab308;font-weight:700;font-size:13px;">penalty-standards</div>
+<div style="color:#94a3b8;font-size:11.5px;margin-top:3px;">处罚标准</div>
+  </div>
+<div style="background:rgba(20,184,166,0.1);border:1px solid rgba(20,184,166,0.3);border-radius:8px;padding:12px 14px;text-align:center;">
+<div style="color:#14b8a6;font-weight:700;font-size:13px;">special-scenarios</div>
+<div style="color:#94a3b8;font-size:11.5px;margin-top:3px;">特殊场景</div>
+  </div>
+</div>
+
+<div class="code-block" style="font-size:12px;">
+// Agent 调用 SearchAuditRules MacroTool
+SearchAuditRules({
+"query": "企业账号多设备同时登录异常",
+"domain": "behavior-rules"
+})
+// 返回: top-3 规则 + BM25 score</div>
+
+<div class="why-box">
+<div class="why-label">WHY IT MATTERS</div>
+  Agent-First 设计 — 规则由 Agent 按需检索而非预加载全量。启动时一次性构建索引，查询延迟 &lt;5ms。embed.FS 编译进二进制，零运行时依赖。
+</div>
+</div>
+</section>
+
+<div class="modal-overlay" id="modal-openspec">
+<div class="modal-content">
+<button class="modal-close" onclick="closeModal('modal-openspec')">✕</button>
+<div class="modal-tag">OPENSPEC WEEKLY</div>
+<div class="modal-title">OpenSpec 变更详情 (3/23 - 3/30)</div>
+
+<div class="modal-section">
+<h3>OpenSpec 方法论</h3>
+<div class="modal-code">
+Spec-Driven Development 工作流:
+1. Proposal — 识别线上问题（trace 分析）
+2. Design   — 架构方案 + 代码级设计
+3. Spec     — 可执行断言（场景 + 预期结果）
+4. Tasks    — 原子化 Git commit 清单
+5. Verify   — trace_validator 验证修复效果
+本周 5 个已完成变更全部经历完整流程。</div>
+</div>
+
+<div class="modal-section">
+<h3>核心变更详解</h3>
+<div class="strategy-card">
+<h4 style="color:#00f0ff;margin:0 0 8px 0;font-size:15px;">Phase-Gated Constrained ReAct</h4>
+<p style="color:#c8d6e5;font-size:13.5px;line-height:1.6;margin:0;">线上 trace 2a09a7ab 和 8732adb0 暴露问题：classification/verdict 的触发完全依赖 LLM thought 输出，形成脆弱长链依赖。解决方案：Orchestrator.Run() 从 monolithic 拆为 runEvidencePhase() + runClassificationPhase() + runVerdictPhase()。新增 ConstrainedPlanner 可选接口，支持 ForcedSkill / AllowedTools / BlockFinalize。</p>
+</div>
+<div class="strategy-card">
+<h4 style="color:#00f0ff;margin:0 0 8px 0;font-size:15px;">Sufficiency Hard Validation</h4>
+<p style="color:#c8d6e5;font-size:13.5px;line-height:1.6;margin:0;">发现关键 Bug：handleToolCalls() 和 handleFinalizeToolCall() 硬编码 Sufficiency='insufficient'/'sufficient'，完全忽略了 LLM 在 thought 中的实际评估。修复后增加 ComputeSufficiency() 系统级校验：至少有 AppealMaterial + 1 个内容/行为工具结果。</p>
+</div>
+<div class="strategy-card">
+<h4 style="color:#00f0ff;margin:0 0 8px 0;font-size:15px;">Phase-Aware Thought Templates</h4>
+<p style="color:#c8d6e5;font-size:13.5px;line-height:1.6;margin:0;">CaseType 循环依赖：classification 触发需要 CaseType≠unknown，但 CaseType 只在 classification 模板中定义。解决方案：content-review/behavior-review 新增【初步定性】字段，打破循环。extractReflection fallback 逻辑收窄，减少关键词误命中。</p>
+</div>
+</div>
+
+<div class="modal-section">
+<h3>变更影响矩阵</h3>
+<table style="width:100%;border-collapse:collapse;font-size:13px;color:#c8d6e5;">
+<thead>
+  <tr style="border-bottom:2px solid rgba(0,240,255,0.3);">
+    <th style="text-align:left;padding:8px 10px;color:#00f0ff;font-weight:600;">变更</th>
+    <th style="text-align:left;padding:8px 10px;color:#00f0ff;font-weight:600;">改动范围</th>
+    <th style="text-align:left;padding:8px 10px;color:#00f0ff;font-weight:600;">风险</th>
+    <th style="text-align:left;padding:8px 10px;color:#00f0ff;font-weight:600;">向后兼容</th>
+  </tr>
+</thead>
+<tbody>
+  <tr style="border-bottom:1px solid rgba(255,255,255,0.06);">
+    <td style="padding:8px 10px;font-weight:600;">Phase-Gated</td>
+    <td style="padding:8px 10px;">orchestrator.go 核心改造</td>
+    <td style="padding:8px 10px;">高</td>
+    <td style="padding:8px 10px;">✅ ConstrainedPlanner 可选</td>
+  </tr>
+  <tr style="border-bottom:1px solid rgba(255,255,255,0.06);">
+    <td style="padding:8px 10px;font-weight:600;">Cross-Order</td>
+    <td style="padding:8px 10px;">新增 MacroTool + model</td>
+    <td style="padding:8px 10px;">低</td>
+    <td style="padding:8px 10px;">✅ 无历史时返回空</td>
+  </tr>
+  <tr style="border-bottom:1px solid rgba(255,255,255,0.06);">
+    <td style="padding:8px 10px;font-weight:600;">Sufficiency</td>
+    <td style="padding:8px 10px;">agentstate.go + skill_router</td>
+    <td style="padding:8px 10px;">中</td>
+    <td style="padding:8px 10px;">✅ 空 Sufficiency fallback</td>
+  </tr>
+  <tr style="border-bottom:1px solid rgba(255,255,255,0.06);">
+    <td style="padding:8px 10px;font-weight:600;">Thought Templates</td>
+    <td style="padding:8px 10px;">prompts/ 修改</td>
+    <td style="padding:8px 10px;">低</td>
+    <td style="padding:8px 10px;">✅ 纯 prompt 改动</td>
+  </tr>
+  <tr>
+    <td style="padding:8px 10px;font-weight:600;">BM25</td>
+    <td style="padding:8px 10px;">新增 pkg + macrotool</td>
+    <td style="padding:8px 10px;">低</td>
+    <td style="padding:8px 10px;">✅ 纯新增</td>
+  </tr>
+</tbody>
+</table>
+</div>
+
+<div class="modal-highlight">
+一周内从"灵活 ReAct + workaround"演进为"确定性阶段门控 + 系统级校验"。所有变更向后兼容，可灰度验证。
+</div>
+</div>
+</div>
+
+<div class="modal-overlay" id="modal-bm25">
+<div class="modal-content">
+<button class="modal-close" onclick="closeModal('modal-bm25')">✕</button>
+<div class="modal-tag">BM25 DEEP DIVE</div>
+<div class="modal-title">BM25 审核规则知识库 — 技术详解</div>
+
+<div class="modal-section">
+<h3>BM25 算法原理</h3>
+<div style="display:flex;flex-direction:column;gap:10px;">
+<div style="background:rgba(99,102,241,0.08);border:1px solid rgba(99,102,241,0.2);border-radius:8px;padding:12px 16px;">
+  <div style="color:#818cf8;font-weight:700;font-size:13px;margin-bottom:4px;">TF (Term Frequency)</div>
+  <div style="color:#c8d6e5;font-size:13px;">查询词在文档中出现的频率。出现越多，相关性越高。BM25 对 TF 做饱和处理，避免高频词过度主导。</div>
+    </div>
+<div style="background:rgba(249,115,22,0.08);border:1px solid rgba(249,115,22,0.2);border-radius:8px;padding:12px 16px;">
+  <div style="color:#fb923c;font-weight:700;font-size:13px;margin-bottom:4px;">IDF (Inverse Document Frequency)</div>
+  <div style="color:#c8d6e5;font-size:13px;">越稀有的词权重越高。"登录"出现在 80% 文档中权重低，"骗绑"只出现在 5% 文档中权重高。</div>
+    </div>
+<div style="background:rgba(20,184,166,0.08);border:1px solid rgba(20,184,166,0.2);border-radius:8px;padding:12px 16px;">
+  <div style="color:#14b8a6;font-weight:700;font-size:13px;margin-bottom:4px;">BM25 = 改进的 TF-IDF</div>
+  <div style="color:#c8d6e5;font-size:13px;">引入文档长度归一化（参数 b=0.75）和 TF 饱和度（参数 k1=1.2），短文档天然获得微弱加分。</div>
+    </div>
+<div style="background:rgba(234,179,8,0.08);border:1px solid rgba(234,179,8,0.2);border-radius:8px;padding:12px 16px;">
+  <div style="color:#eab308;font-weight:700;font-size:13px;margin-bottom:4px;">中文 bigram 分词</div>
+  <div style="color:#c8d6e5;font-size:13px;">将"多设备登录"拆为 <code style="color:#00f0ff;background:rgba(0,240,255,0.1);padding:2px 6px;border-radius:4px;">["多设", "设备", "备登", "登录"]</code>。无需外部分词器，纯 Go 实现。</div>
+    </div>
+<div style="background:rgba(139,92,246,0.08);border:1px solid rgba(139,92,246,0.2);border-radius:8px;padding:12px 16px;">
+  <div style="color:#a78bfa;font-weight:700;font-size:13px;margin-bottom:4px;">Go 纯实现</div>
+  <div style="color:#c8d6e5;font-size:13px;">无 cgo 依赖，无外部搜索引擎。编译为单一二进制，部署零配置。</div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-section">
+<h3>知识库结构 (CSV)</h3>
+<div class="modal-code">
+# prompts/knowledge/behavior-rules.csv
+id,domain,category,rule_text,keywords
+BR001,behavior,login,"同一账号短时间内在多个不同城市登录",多设备|异地登录|频繁切换
+BR002,behavior,device,"新设备首次登录后立即修改安全设置",新设备|安全设置|密码修改
+BR003,behavior,transaction,"大额转账前未进行身份验证",大额|转账|未验证
+...</div>
+  <p style="color:#94a3b8;font-size:13px;margin:10px 0 0 0;">共 4 个 CSV 文件，~530 条规则，通过 <code style="color:#00f0ff;background:rgba(0,240,255,0.1);padding:2px 6px;border-radius:4px;">embed.FS</code> 编译进二进制。</p>
+</div>
+
+<div class="modal-section">
+<h3>SearchAuditRules MacroTool 实现</h3>
+<div class="modal-code">
+func (t *SearchAuditRulesTool) Run(ctx, input) (*MacroToolResult, error) {
+query := input.Arguments["query"].(string)
+domain := input.Arguments["domain"].(string)
+// BM25 检索 top-3
+results := t.store.Search(query, domain, 3)
+// 格式化为 LLM 可读摘要
+var sb strings.Builder
+for i, r := range results {
+fmt.Fprintf(&sb, "[%d] %s (score=%.2f)\n%s\n\n",
+    i+1, r.Category, r.Score, r.RuleText)
+}
+return &MacroToolResult{
+Summary: sb.String(),
+Facts:   extractFacts(results),
+}, nil
+}</div>
+</div>
+
+<div class="modal-highlight">
+从 2000-5000 token 全量注入 → top-3 精准检索（~200 token）。Token 效率提升 10-25x，且规则可独立测试和维护。
+</div>
+</div>
+</div>
+
+<!-- ========== SLIDES 11-14: TraceValidator, Metrics, Roadmap, Summary ========== -->
+
+<section class="slide gradient-bg grid-bg" id="slide-11">
+<div class="slide-content">
+TRACE VALIDATION
+<h2>Trace Validation Framework</h2>
+<p class="subtitle">声明式 YAML spec + Go CLI 验证器 — 消除目视 Langfuse trace 的主观性，让机器判 PASS/FAIL。
+Agent-First 设计：spec 由 Claude Code 自动生成。</p>
+<div class="problem-box">
+<div class="problem-label">PROBLEM</div>
+  Claude 跑线上测试后目视 Langfuse trace 判断"通过/不通过"，主观且不可重复。一次验证中声称 P0/P1/P2 全修复 ✅，但 <code>spam_type='其他'</code> 完全没发现。根因：验证标准在 Claude 的理解里，不在代码里。
+</div>
+
+<div class="solution-box">
+<div class="solution-label">SOLUTION</div>
+  YAML spec 定义验证断言（12 种操作符），Go CLI 从 Langfuse API 获取 trace，逐条评估，输出结构化 PASS/FAIL 报告。severity 分级（critical 必须全过，warning 允许容忍度）。
+</div>
+
+<div class="flow">
+YAML Spec
+→
+Go CLI
+→
+Langfuse API
+<small>HTTP Basic Auth</small>
+→
+Trace +
+Observations
+→
+Evaluator
+<small>12 ops</small>
+→
+Verdict
+<small>pass rate</small>
+→
+Report
+<small>Table / JSON</small>
+→
+Exit Code
+<small>0/1/2</small>
+</div>
+
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; margin-top: 1.2rem;">
+<div>
+<div class="code-block" style="font-size: 0.62rem; line-height: 1.35;">
+# testdata/specs/phase-gated-v5.yaml
+name: phase-gated-v5-validation
+assertions:
+- id: spam-type-not-other
+path: output.spam_type
+op: neq
+value: "其他"
+severity: critical
+- id: classification-phase-exists
+span: "phase.classification"
+path: metadata.phase_name
+op: eq
+value: "classification"
+severity: critical
+- id: verdict-exit-reason
+span: "phase.verdict"
+path: metadata.exit_reason
+op: eq
+value: "finalize"
+severity: critical
+thresholds:
+critical_pass_rate: 1.0
+warning_pass_rate: 0.8
+</div>
+<div style="margin-top: 0.6rem; font-size: 0.65rem; color: #8be9fd; text-align: center; letter-spacing: 0.03em;">
+  <strong>12 操作符：</strong>
+  <code>eq</code> <code>neq</code> <code>in</code> <code>not_in</code> <code>gt</code> <code>gte</code> <code>lt</code> <code>lte</code> <code>contains</code> <code>not_contains</code> <code>regex</code> <code>exists</code>
+</div>
+  </div>
+
+<div>
+<div class="code-block" style="font-size: 0.6rem; line-height: 1.35;">
+┌────────────────────────────────────────────┐
+│ Spec: phase-gated-v5-validation            │
+│ Trace: 4f70029850799b82                    │
+├────────┬──────────┬────────┬───────────────┤
+│ Status │ Severity │ ID     │ Message       │
+├────────┼──────────┼────────┼───────────────┤
+│ ✅     │ critical │ spam-… │ OK            │
+│ ✅     │ critical │ class… │ OK            │
+│ ❌     │ warning  │ evid-… │ expected ≥3   │
+├────────┴──────────┴────────┴───────────────┤
+│ Critical: 100% (threshold: 100%)           │
+│ Warning:  80%  (threshold: 80%)            │
+│ Verdict: ✅ PASS                            │
+└────────────────────────────────────────────┘
+</div>
+<div style="margin-top: 0.6rem; font-size: 0.65rem; color: #bd93f9; text-align: center;">
+  Exit: <code>0</code>=PASS &nbsp; <code>1</code>=FAIL &nbsp; <code>2</code>=ERROR
+</div>
+  </div>
+</div>
+
+<div class="why-box" style="margin-top: 1rem;">
+<div class="why-label">WHY IT MATTERS</div>
+  验证标准从"Claude 的理解"迁移到"代码/配置" — 声明式、可重复、机器判定。Exit code 语义化 (0=PASS, 1=FAIL, 2=ERROR) 支持 CI/CD 集成。
+</div>
+
+<button class="detail-btn" onclick="openModal('modal-trace-validator')">查看详细架构 →</button>
+</div>
+</section>
+
+<section class="slide gradient-bg grid-bg" id="slide-12">
+<div class="slide-content">
+METRICS
+<h2>量化指标</h2>
+<div class="stat-grid" style="grid-template-columns: repeat(4, 1fr);">
+<div class="stat-card">
+<div class="stat-number">9</div>
+<div class="stat-label">MacroTools</div>
+  </div>
+<div class="stat-card">
+<div class="stat-number orange">5</div>
+<div class="stat-label">Skill Prompts</div>
+  </div>
+<div class="stat-card">
+<div class="stat-number blue">3</div>
+<div class="stat-label">Phases (Phase-Gated)</div>
+  </div>
+<div class="stat-card">
+<div class="stat-number">5</div>
+<div class="stat-label">Arbiter Rules</div>
+  </div>
+<div class="stat-card">
+<div class="stat-number orange">&lt;5s</div>
+<div class="stat-label">E2E Latency
+<small>含 LLM 2-5s + RPC ~200ms</small></div>
+  </div>
+<div class="stat-card">
+<div class="stat-number blue">100</div>
+<div class="stat-label">Orders/Batch
+<small>60s timeout</small></div>
+  </div>
+<div class="stat-card">
+<div class="stat-number">11</div>
+<div class="stat-label">OpenSpec Changes
+<small>2 weeks</small></div>
+  </div>
+<div class="stat-card">
+<div class="stat-number orange">25</div>
+<div class="stat-label">Assertions
+<small>phase-gated spec</small></div>
+  </div>
+</div>
+
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 1.5rem;">
+<div style="background: rgba(139,233,253,0.06); border: 1px solid rgba(139,233,253,0.2); border-radius: 10px; padding: 1.2rem;">
+<h3 style="color: #8be9fd; font-size: 0.95rem; margin: 0 0 0.8rem 0;">Langfuse 可观测链路</h3>
+<div class="code-block" style="font-size: 0.6rem; line-height: 1.5; margin: 0;">
+orchestrator.Run
+├── phase.evidence {exit_reason, inner_steps}
+│   ├── agent.Plan[step=0] {skill_name, action_type}
+│   ├── macrotool.GetAppealMaterialPack
+│   └── agent.Plan[step=1]
+├── phase.classification {forced_skill, spam_type}
+│   └── agent.Plan[classification.step=0]
+├── phase.verdict {forced_skill, result_type}
+│   └── agent.Plan[verdict.try=0]
+└── policy-arbiter.Arbitrate {override}
+</div>
+  </div>
+
+<div style="background: rgba(189,147,249,0.06); border: 1px solid rgba(189,147,249,0.2); border-radius: 10px; padding: 1.2rem;">
+<h3 style="color: #bd93f9; font-size: 0.95rem; margin: 0 0 0.8rem 0;">V5 关键技术决策</h3>
+<ul style="list-style: none; padding: 0; margin: 0; font-size: 0.72rem; line-height: 1.8; color: #ccc;">
+  <li style="margin-bottom: 0.5rem;">
+    ▸ 选择 <strong style="color: #f8f8f2;">Phase-Gated</strong> 而非 Multi-Agent：单 Agent 上下文连续性是风控审核核心优势
+  </li>
+  <li style="margin-bottom: 0.5rem;">
+    ▸ 选择 <strong style="color: #f8f8f2;">BM25</strong> 而非 Embedding：~530 条规则用精确匹配更可控，无向量化开销
+  </li>
+  <li style="margin-bottom: 0.5rem;">
+    ▸ 选择 <strong style="color: #f8f8f2;">embed.FS</strong> 而非数据库：Skill/Knowledge 编译进二进制，零运行时依赖
+  </li>
+  <li>
+    ▸ 选择 <strong style="color: #f8f8f2;">Setter 注入</strong>而非构造函数参数：不破坏已有签名，支持可选服务灰度
+  </li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+
+<section class="slide gradient-bg grid-bg" id="slide-13">
+<div class="slide-content">
+ROADMAP
+<h2>V5 → V6: Self-Evolving Agent</h2>
+<p class="subtitle">从无记忆的 single-shot agent 演进为跨工单自进化 Agent：记住判决、从纠正中学习、自动优化 Skill prompt。</p>
+<!-- Next Up: Prioritized OpenSpec Backlog -->
+<div style="margin-bottom:1rem;">
+<h3 style="color:var(--accent);font-size:0.9rem;margin-bottom:0.6rem;">📋 OpenSpec Backlog (按优先级排序)</h3>
+<div style="display:flex;flex-direction:column;gap:0.4rem;font-size:0.72rem;">
+<div style="display:flex;align-items:center;gap:0.6rem;background:rgba(34,197,94,0.08);border:1px solid rgba(34,197,94,0.2);border-radius:6px;padding:0.5rem 0.7rem;text-decoration:line-through;opacity:0.6;">
+  P1 ✅
+  <strong style="color:#f8f8f2;min-width:250px;">Self-Review + Parallel ToolCall</strong>
+  30 tasks · 已完成 (4/4) · Self-check 矛盾检测 + errgroup 并行 max 3
+</div>
+<div style="display:flex;align-items:center;gap:0.6rem;background:rgba(234,179,8,0.08);border:1px solid rgba(234,179,8,0.2);border-radius:6px;padding:0.5rem 0.7rem;">
+  P2 🟡
+  <strong style="color:#f8f8f2;min-width:250px;">Langfuse Skill Hot-Loading</strong>
+  20 tasks · Go 基建 · 运营效率，解锁 Skill 快速迭代
+</div>
+<div style="display:flex;align-items:center;gap:0.6rem;background:rgba(34,197,94,0.08);border:1px solid rgba(34,197,94,0.2);border-radius:6px;padding:0.5rem 0.7rem;">
+  P3 🟢
+  <strong style="color:#f8f8f2;min-width:250px;">Skill Evaluation Framework</strong>
+  25 tasks · Go 工具 · 质量度量基础设施，指导后续 Skill 优化
+</div>
+<div style="display:flex;align-items:center;gap:0.6rem;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:6px;padding:0.5rem 0.7rem;">
+  P4 ⚪
+  <strong style="color:#f8f8f2;min-width:250px;">Experience Memory</strong>
+  24 tasks · Go 核心 · 路线图 Phase 1，P1 已完成可启动
+</div>
+<div style="display:flex;align-items:center;gap:0.6rem;background:rgba(34,197,94,0.08);border:1px solid rgba(34,197,94,0.2);border-radius:6px;padding:0.5rem 0.7rem;text-decoration:line-through;opacity:0.6;">
+  P5 ✅
+  <strong style="color:#f8f8f2;min-width:250px;">Self-Evolving Learner</strong>
+  17 tasks · 已完成 (4/4) · Five-Gate 知识治理 + Confidence Decay
+</div>
+  </div>
+</div>
+
+<!-- V5 → V6 Evolution Architecture -->
+<div class="arch-diagram">
+<div class="arch-layer" style="border-color: #50fa7b;">
+V5 Current
+<div class="arch-layer-content">
+  Phase-Gated ReAct
+  SkillRouter
+  MacroTool
+  PolicyArbiter
+</div>
+  </div>
+<div class="arch-layer orange">
+P1-P2 近期
+<div class="arch-layer-content">
+  Self-Review + Parallel ToolCall
+<small>🔴 P1 · 30 tasks</small>
+  Langfuse Skill Hot-Loading
+<small>🟡 P2 · 20 tasks</small>
+  Skill Evaluation Framework
+<small>🟢 P3 · 25 tasks</small>
+</div>
+  </div>
+<div class="arch-layer blue">
+P4 中期
+<div class="arch-layer-content">
+  Experience Memory
+<small>⚪ P4 · 24 tasks · 依赖 P1</small>
+  Feedback Loop
+<small>⚠️ 外部依赖: 人工复核 webhook</small>
+</div>
+  </div>
+<div class="arch-layer purple">
+V6 Target
+<div class="arch-layer-content">
+  Policy Evolution
+<small>策略自动优化</small>
+  Quantitative Self-Eval
+<small>量化自评估</small>
+  MCP 协议化
+</div>
+  </div>
+</div>
+
+<div class="code-block" style="font-size: 0.65rem; line-height: 1.5; margin-top: 0.8rem;">
+V5 (current)                         V6 (target)
+───────────────                      ──────────────────
+每工单从零推理                        经验召回 → 类比推理
+判完即忘                             判决沉淀 → 跨工单记忆
+人工复核不回灌                        反馈闭环 → 自动学习
+Skill prompt 静态                    策略进化 → 数据驱动优化
+SelfCheckNote 文本                   量化自评 → 自动回退
+目视 trace 验证                       声明式 spec → 机器判 PASS/FAIL ✅
+</div>
+
+<div class="solution-box" style="margin-top: 0.6rem;">
+<div class="solution-label">SOLUTION</div>
+  渐进演进 — 11 个 OpenSpec change 已完成（P1 ✅ P5 ✅），3 个 Proposal 进行中（P2 Langfuse Hot-Loading / P3 Skill Evaluation / P4 Experience Memory）。V5 Phase-Gated 架构是所有后续迭代的执行基座。
+</div>
+</div>
+</section>
+
+<section class="slide gradient-bg grid-bg" id="slide-14" style="text-align: center;">
+<div class="slide-content" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+<div class="logo">Risk Engine V5</div>
+<h2 style="background: linear-gradient(135deg, #bd93f9, #8be9fd, #50fa7b); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-size: 2rem; margin: 0.5rem 0 1.5rem;">Architecture Summary</h2>
+
+<div class="arch-diagram" style="width: 100%; max-width: 700px;">
+<div class="arch-layer" style="border-color: #50fa7b;">
+Entry
+<div class="arch-layer-content">
+  AuditHandler
+  →
+  EvidenceAgent
+</div>
+  </div>
+<div class="arch-layer orange">
+Runtime
+<div class="arch-layer-content">
+  Phase-Gated Orchestrator
+  Registry
+  EvidenceState
+</div>
+  </div>
+<div class="arch-layer blue">
+Agent
+<div class="arch-layer-content">
+  LLMDrivenAgent
+  SkillRouter (5 Skills)
+</div>
+  </div>
+<div class="arch-layer" style="border-color: #f1fa8c;">
+Tool
+<div class="arch-layer-content">
+  9 MacroTools
+  BM25 Knowledge
+</div>
+  </div>
+<div class="arch-layer purple">
+Policy
+<div class="arch-layer-content">
+  PolicyArbiter (5 Rules)
+</div>
+  </div>
+<div class="arch-layer" style="border-color: #8be9fd;">
+Quality
+<div class="arch-layer-content">
+  Trace Validator (12 Operators)
+</div>
+  </div>
+</div>
+
+<div style="display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; margin: 1.5rem 0;">
+14 Slides
+8 Deep Dives
+9 MacroTools
+5 Skills
+3 Phases
+25 Assertions
+11 OpenSpec ✅
+3 Active Proposals
+</div>
+
+<blockquote style="font-size: 1.3rem; color: #f8f8f2; font-style: italic; border-left: 3px solid #bd93f9; padding-left: 1rem; margin: 1rem 0;">
+  "足够能扩，足够可控，足够能落地。"
+</blockquote>
+
+<p class="meta">← Slides 1-14 Complete &nbsp;|&nbsp; Click any "查看详细" button to explore deep dives &nbsp;|&nbsp; ESC to close modals →</p>
+</div>
+</section>
+
+<div class="modal-overlay" id="modal-trace-validator">
+<div class="modal-content">
+<button class="modal-close" onclick="closeModal('modal-trace-validator')">✕</button>
+<h2 class="modal-title">Trace Validation Framework — 详细架构</h2>
+<div class="modal-section">
+<h3>5 层验证架构</h3>
+<div class="strategy-card">
+<h4>① Spec Layer — <code>spec.go</code></h4>
+<p>YAML 解析 + 验证。<code>TestSpec</code> 包含 name / version / description / trace_id / assertions / thresholds。每个 <code>Assertion</code> 有 id / span / path / op / value / severity / message。12 种操作符在 <code>validOperators</code> map 中注册。</p>
+<div class="modal-code">
+type TestSpec struct {
+Name        string       `yaml:"name"`
+Version     string       `yaml:"version"`
+Description string       `yaml:"description"`
+TraceID     string       `yaml:"trace_id"`
+Assertions  []Assertion  `yaml:"assertions"`
+Thresholds  Thresholds   `yaml:"thresholds"`
+}
+var validOperators = map[string]bool{
+"eq": true, "neq": true, "in": true, "not_in": true,
+"gt": true, "gte": true, "lt": true, "lte": true,
+"contains": true, "not_contains": true,
+"regex": true, "exists": true,
+}
+</div>
+  </div>
+
+<div class="strategy-card">
+<h4>② Fetch Layer — <code>fetcher.go</code></h4>
+<p>Langfuse HTTP API 客户端。HTTP Basic Auth (<code>public_key:secret_key</code>)。<code>GET /api/public/traces/{id}</code> + <code>GET /api/public/observations?traceId={id}</code>。<code>TraceData</code> 包含 output/metadata + <code>[]Observation</code>。<code>toStringMap()</code> 处理双重编码 JSON。</p>
+<div class="modal-code">
+// FetchTrace: GET /api/public/traces/{traceID}
+// FetchObservations: GET /api/public/observations?traceId={traceID}
+func (f *Fetcher) FetchTrace(traceID string) (*TraceData, error)
+func (f *Fetcher) FetchObservations(traceID string) ([]Observation, error)
+// Auth: req.SetBasicAuth(f.publicKey, f.secretKey)
+</div>
+  </div>
+
+<div class="strategy-card">
+<h4>③ Evaluate Layer — <code>evaluator.go</code></h4>
+<p>dot-notation 路径提取 (<code>output.result.status</code> → <code>data["output"]["result"]["status"]</code>)。span 级过滤 (<code>findObservation</code> by name)。<code>mergeOutputMetadata</code> 构建统一查询结构 <code>{output: {...}, metadata: {...}}</code>。12 种操作符实现：数值比较归一化到 <code>float64</code>，字符串比较用 <code>fmt.Sprintf</code>。</p>
+<div class="modal-code">
+func extractPath(data map[string]any, path string) (any, bool) {
+parts := strings.Split(path, ".")  // dot-notation
+for _, part := range parts {
+m, ok := current.(map[string]any)
+current = m[part]
+}
+}
+func findObservation(obs []Observation, name string) *Observation
+func mergeOutputMetadata(obs *Observation) map[string]any
+</div>
+  </div>
+
+<div class="strategy-card">
+<h4>④ Report Layer — <code>reporter.go</code></h4>
+<p><code>ComputeVerdict</code> 按 severity 分别计算 pass rate。CriticalPassRate &lt; threshold → FAIL。table 格式用 box-drawing 字符（┌├└），JSON 格式用 <code>MarshalIndent</code>。<code>truncate()</code> 处理 Unicode (<code>[]rune</code>)。</p>
+<div class="modal-code">
+func ComputeVerdict(results []Result, thresholds Thresholds) Verdict {
+critPass := countBySeverity(results, "critical", true)
+critTotal := countBySeverity(results, "critical", false)
+critRate := float64(critPass) / float64(critTotal)
+// CriticalPassRate &lt; threshold → FAIL
+if critRate &lt; thresholds.CriticalPassRate { return FAIL }
+}
+</div>
+  </div>
+
+<div class="strategy-card">
+<h4>⑤ CLI Layer — <code>main.go</code></h4>
+<p>5 步流水线: <code>LoadSpec</code> → <code>LoadLangfuseConfig</code> → <code>FetchTrace</code> + <code>FetchObservations</code> → <code>EvaluateAssertions</code> → <code>ComputeVerdict</code> → <code>Report</code>。Exit code: <strong>0</strong>=PASS, <strong>1</strong>=FAIL, <strong>2</strong>=ERROR。</p>
+<div class="modal-code">
+spec := LoadSpec(specPath)           // Step 1
+cfg  := LoadLangfuseConfig(flags)     // Step 2
+trace, obs := fetcher.Fetch(traceID)  // Step 3
+results := EvaluateAssertions(spec, trace, obs) // Step 4
+verdict := ComputeVerdict(results, spec.Thresholds) // Step 5
+Report(verdict, format)               // Output
+os.Exit(verdict.ExitCode)              // 0=PASS, 1=FAIL, 2=ERROR
+</div>
+  </div>
+</div>
+
+<div class="modal-section">
+<h3>12 种断言操作符</h3>
+<table style="width: 100%; border-collapse: collapse; font-size: 0.8rem;">
+<thead>
+  <tr style="border-bottom: 2px solid #bd93f9;">
+    <th style="text-align: left; padding: 0.5rem; color: #bd93f9;">操作符</th>
+    <th style="text-align: left; padding: 0.5rem; color: #bd93f9;">类型</th>
+    <th style="text-align: left; padding: 0.5rem; color: #bd93f9;">示例</th>
+  </tr>
+</thead>
+<tbody style="color: #ccc;">
+  <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+    <td style="padding: 0.4rem 0.5rem;"><code>eq</code></td>
+    <td style="padding: 0.4rem 0.5rem;">等值</td>
+    <td style="padding: 0.4rem 0.5rem;"><code>value: "succeeded"</code></td>
+  </tr>
+  <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+    <td style="padding: 0.4rem 0.5rem;"><code>neq</code></td>
+    <td style="padding: 0.4rem 0.5rem;">不等</td>
+    <td style="padding: 0.4rem 0.5rem;"><code>value: "其他"</code></td>
+  </tr>
+  <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+    <td style="padding: 0.4rem 0.5rem;"><code>in</code></td>
+    <td style="padding: 0.4rem 0.5rem;">枚举</td>
+    <td style="padding: 0.4rem 0.5rem;"><code>value: [UNBLOCK, KEEP_BAN]</code></td>
+  </tr>
+  <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+    <td style="padding: 0.4rem 0.5rem;"><code>not_in</code></td>
+    <td style="padding: 0.4rem 0.5rem;">排除</td>
+    <td style="padding: 0.4rem 0.5rem;"><code>value: [1, 2]</code></td>
+  </tr>
+  <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+    <td style="padding: 0.4rem 0.5rem;"><code>gt</code> / <code>gte</code></td>
+    <td style="padding: 0.4rem 0.5rem;">数值比较</td>
+    <td style="padding: 0.4rem 0.5rem;"><code>value: 1</code> (tool_calls ≥ 1)</td>
+  </tr>
+  <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+    <td style="padding: 0.4rem 0.5rem;"><code>lt</code> / <code>lte</code></td>
+    <td style="padding: 0.4rem 0.5rem;">数值比较</td>
+    <td style="padding: 0.4rem 0.5rem;"><code>value: 2</code> (inner_steps ≤ 2)</td>
+  </tr>
+  <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+    <td style="padding: 0.4rem 0.5rem;"><code>contains</code></td>
+    <td style="padding: 0.4rem 0.5rem;">包含</td>
+    <td style="padding: 0.4rem 0.5rem;"><code>value: "classification"</code></td>
+  </tr>
+  <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+    <td style="padding: 0.4rem 0.5rem;"><code>not_contains</code></td>
+    <td style="padding: 0.4rem 0.5rem;">不包含</td>
+    <td style="padding: 0.4rem 0.5rem;"><code>value: "error"</code></td>
+  </tr>
+  <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+    <td style="padding: 0.4rem 0.5rem;"><code>regex</code></td>
+    <td style="padding: 0.4rem 0.5rem;">正则</td>
+    <td style="padding: 0.4rem 0.5rem;"><code>value: "^[0-9]+$"</code></td>
+  </tr>
+  <tr>
+    <td style="padding: 0.4rem 0.5rem;"><code>exists</code></td>
+    <td style="padding: 0.4rem 0.5rem;">存在</td>
+    <td style="padding: 0.4rem 0.5rem;">(无 value，path 存在即 pass)</td>
+  </tr>
+</tbody>
+</table>
+</div>
+
+<div class="modal-section">
+<h3>三层断言目标</h3>
+<div class="strategy-card">
+<h4>Trace 级 — 无 <code>span</code> 字段</h4>
+<p>验证 trace 最终输出。断言直接作用于 trace 的 output/metadata。</p>
+<div class="modal-code">
+- id: spam-type-exists
+path: output.spam_type       # 直接访问 trace output
+op: exists
+severity: critical
+</div>
+  </div>
+
+<div class="strategy-card">
+<h4>Span 级 — 指定 <code>span</code> 名称</h4>
+<p>验证特定 span 的 metadata/output。通过 <code>findObservation(name)</code> 定位。</p>
+<div class="modal-code">
+- id: classification-phase-exists
+span: "phase.classification"  # 匹配 observation name
+path: metadata.phase_name
+op: eq
+value: "classification"
+severity: critical
+</div>
+  </div>
+
+<div class="strategy-card">
+<h4>跨 Span — Agent.Plan 级别</h4>
+<p>验证 Agent 在特定 phase/step 的决策行为。span 名包含动态参数。</p>
+<div class="modal-code">
+- id: forced-classification-skill
+span: "agent.Plan[classification.step=0]"  # 参数化 span
+path: metadata.selected_skill
+op: eq
+value: "classification"
+severity: critical
+</div>
+  </div>
+</div>
+
+<div class="modal-section">
+<h3>CLI 使用方式</h3>
+<div class="modal-code">
+# 基础用法
+./bin/trace_validator \
+--spec testdata/specs/phase-gated-v5.yaml \
+--trace-id 4f70029850799b82
+# JSON 输出 (CI/CD 集成)
+./bin/trace_validator \
+--spec testdata/specs/phase-gated-v5.yaml \
+--trace-id abc123 \
+--format json
+# 自定义 Langfuse 连接
+./bin/trace_validator \
+--spec testdata/specs/xxx.yaml \
+--trace-id xyz \
+--langfuse-url https://langeval.woa.com \
+--langfuse-public-key pk-xxx \
+--langfuse-secret-key sk-xxx
+# Makefile 集成
+make verify-trace SPEC=testdata/specs/phase-gated-v5.yaml TRACE=abc123
+</div>
+</div>
+
+<div class="modal-highlight">
+<strong>Agent-First 质量保障</strong> — YAML spec 由 Claude Code 在每次修复任务中自动生成，非人工编写。验证标准随代码演进，不会过期。
+</div>
+</div>
+</div>
+
+<script>
+(function() {
+const slides = document.querySelectorAll('.slide');
+const progressBar = document.getElementById('progressBar');
+const navDots = document.getElementById('navDots');
+const slideNumber = document.getElementById('slideNumber');
+const totalSlides = slides.length;
+let currentSlide = 0;
+
+slides.forEach((_, i) => {
+    const d = document.createElement('button');
+    d.className = 'nav-dot';
+    d.setAttribute('aria-label', `Slide ${i+1}`);
+    d.addEventListener('click', () => goToSlide(i));
+    navDots.appendChild(d);
+});
+const dots = document.querySelectorAll('.nav-dot');
+
+function updateSlideState() {
+    progressBar.style.width = `${((currentSlide+1)/totalSlides)*100}%`;
+    slideNumber.textContent = `${currentSlide+1} / ${totalSlides}`;
+    dots.forEach((d,i) => d.classList.toggle('active', i===currentSlide));
+    slides.forEach((s,i) => s.classList.toggle('visible', i===currentSlide));
+}
+
+window.goToSlide = function goToSlide(i) {
+    if (i>=0 && i<totalSlides) {
+        currentSlide = i;
+        slides[i].scrollIntoView({behavior:'smooth'});
+        updateSlideState();
+    }
+}
+
+document.addEventListener('keydown', e => {
+    if (document.getElementById('helpOverlay').classList.contains('active')) {
+        document.getElementById('helpOverlay').classList.remove('active');
+        return;
+    }
+    if (document.querySelector('.modal-overlay.active')) return;
+    switch(e.key) {
+        case 'ArrowRight': case 'ArrowDown': case ' ': case 'PageDown':
+            e.preventDefault(); goToSlide(currentSlide+1); break;
+        case 'ArrowLeft': case 'ArrowUp': case 'PageUp':
+            e.preventDefault(); goToSlide(currentSlide-1); break;
+        case 'Home': e.preventDefault(); goToSlide(0); break;
+        case 'End': e.preventDefault(); goToSlide(totalSlides-1); break;
+        case 'Enter': case 'd': case 'D':
+            e.preventDefault();
+            var btn = slides[currentSlide].querySelector('.detail-btn');
+            if (btn) btn.click();
+            break;
+        case '?':
+            e.preventDefault();
+            document.getElementById('helpOverlay').classList.toggle('active');
+            break;
+    }
+});
+
+let isScrolling = false;
+document.addEventListener('wheel', e => {
+    if (document.querySelector('.modal-overlay.active')) return;
+    if (isScrolling) return;
+    isScrolling = true;
+    if (e.deltaY > 0) goToSlide(currentSlide+1);
+    else goToSlide(currentSlide-1);
+    setTimeout(() => { isScrolling = false; }, 800);
+}, {passive: true});
+
+let touchStartY = 0;
+document.addEventListener('touchstart', e => {
+    touchStartY = e.touches[0].clientY;
+}, {passive: true});
+document.addEventListener('touchend', e => {
+    if (document.querySelector('.modal-overlay.active')) return;
+    const dy = touchStartY - e.changedTouches[0].clientY;
+    if (Math.abs(dy) > 50) {
+        if (dy > 0) goToSlide(currentSlide+1);
+        else goToSlide(currentSlide-1);
+    }
+}, {passive: true});
+
+goToSlide(0);
+})();
+
+function openModal(id) {
+const m = document.getElementById(id);
+if (m) { m.classList.add('active'); document.body.style.overflow = 'hidden'; }
+}
+function closeModal(id) {
+const m = document.getElementById(id);
+if (m) { m.classList.remove('active'); document.body.style.overflow = ''; }
+}
+
+document.querySelectorAll('.modal-overlay').forEach(m => {
+m.addEventListener('click', e => {
+    if (e.target === m) { m.classList.remove('active'); document.body.style.overflow = ''; }
+});
+});
+
+document.addEventListener('keydown', e => {
+if (e.key === 'Escape') {
+    document.querySelectorAll('.modal-overlay.active').forEach(m => {
+        m.classList.remove('active'); document.body.style.overflow = '';
+    });
+    document.getElementById('helpOverlay').classList.remove('active');
+}
+});
+
+document.getElementById('helpOverlay').addEventListener('click', e => {
+if (e.target === document.getElementById('helpOverlay'))
+    e.target.classList.remove('active');
+});
+</script>
+
+<script>
+(function() {
+  function postHeight() {
+    window.parent.postMessage(
+      { type: 'iframe-resize', height: document.documentElement.scrollHeight },
+      '*'
+    );
+  }
+  window.addEventListener('load', postHeight);
+  window.addEventListener('resize', postHeight);
+  setTimeout(postHeight, 500);
+})();
+</script>
+</body>
+</html>
