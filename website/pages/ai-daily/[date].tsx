@@ -286,7 +286,7 @@ export default function AiDailyDetail({ digest, prevDate, nextDate, allDates, al
         <meta name="description" content={`AI Daily digest for ${formatted}: ${digest.itemCount} curated items.`} />
       </Head>
 
-      <div className="min-h-screen bg-black text-white">
+      <div className="min-h-screen bg-black text-white" data-pagefind-body>
         <div className="max-w-3xl mx-auto px-5 sm:px-6 pt-32 pb-20">
           {/* Back link */}
           <Link

@@ -67,7 +67,7 @@ export default function BlogPostPage({ post, prevPost, nextPost }: BlogPostPageP
 
       <ReadingProgressBar />
 
-      <div className="min-h-screen bg-black text-white">
+      <div className="min-h-screen bg-black text-white" data-pagefind-body>
         {/* Back Button */}
         <div className="max-w-4xl mx-auto px-5 sm:px-6 pt-32 pb-4">
           <Link

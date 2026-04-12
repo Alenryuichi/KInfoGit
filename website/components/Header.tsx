@@ -1,17 +1,28 @@
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect, useRef, useCallback } from 'react'
 import { Menu, X, Search } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { motion, AnimatePresence } from 'framer-motion'
-import Fuse from 'fuse.js'
 
-interface SearchItem {
-  title: string
-  description: string
+interface PagefindResult {
   url: string
-  category: string
-  type: 'blog' | 'project'
+  excerpt: string
+  meta: {
+    title?: string
+    image?: string
+  }
+  sub_results?: Array<{
+    title: string
+    url: string
+    excerpt: string
+  }>
+}
+
+interface SearchResult {
+  title: string
+  excerpt: string
+  url: string
 }
 
 const navigation = [
@@ -19,7 +30,10 @@ const navigation = [
   { name: 'About', href: '/about' },
   { name: 'Work', href: '/work' },
   { name: 'Blog', href: '/blog' },
+  { name: 'Stars', href: '/stars' },
 ]
+
+const TAB_WIDTH = 72
 
 interface HeaderProps {
   onBookCallClick: () => void
@@ -51,8 +65,11 @@ export function Header({ onBookCallClick }: HeaderProps) {
   const [isSearchOpen, setIsSearchOpen] = useState(false)
   const [searchQuery, setSearchQuery] = useState('')
   const [scrolled, setScrolled] = useState(false)
-  const [searchResults, setSearchResults] = useState<SearchItem[]>([])
-  const fuseRef = useRef<Fuse<SearchItem> | null>(null)
+  const [searchResults, setSearchResults] = useState<SearchResult[]>([])
+  const [isSearchLoading, setIsSearchLoading] = useState(false)
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const pagefindRef = useRef<any>(null)
+  const debounceRef = useRef<ReturnType<typeof setTimeout> | null>(null)
 
   // Get current active tab based on route
   const getActiveTab = () => {
@@ -77,31 +94,73 @@ export function Header({ onBookCallClick }: HeaderProps) {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  // Load search index
+  // Load Pagefind
   useEffect(() => {
-    if (isSearchOpen && !fuseRef.current) {
-      fetch('/search-index.json')
-        .then(res => res.json())
-        .then(data => {
-          fuseRef.current = new Fuse(data, {
-            keys: ['title', 'description', 'category'],
-            threshold: 0.3,
-            includeMatches: true
-          })
-        })
-        .catch(err => console.error('Failed to load search index:', err))
+    if (isSearchOpen && !pagefindRef.current) {
+      (async () => {
+        try {
+          // Pagefind assets are generated at build time in /pagefind/
+          // Use window.__pagefind if available, otherwise dynamic import
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
+          const w = window as any
+          if (w.__pagefind) {
+            pagefindRef.current = w.__pagefind
+            return
+          }
+          const pagefind = await import(
+            // @ts-expect-error Pagefind is generated at build time
+            /* webpackIgnore: true */ '/pagefind/pagefind.js'
+          )
+          await pagefind.init()
+          pagefindRef.current = pagefind
+        } catch {
+          console.error('Failed to load Pagefind search index')
+        }
+      })()
     }
   }, [isSearchOpen])
 
-  // Real-time search
-  useEffect(() => {
-    if (fuseRef.current && searchQuery.trim()) {
-      const results = fuseRef.current.search(searchQuery).map(r => r.item)
-      setSearchResults(results.slice(0, 5))
-    } else {
+  // Pagefind search with debounce
+  const performSearch = useCallback(async (query: string) => {
+    if (!pagefindRef.current || !query.trim()) {
+      setSearchResults([])
+      setIsSearchLoading(false)
+      return
+    }
+    try {
+      const search = await pagefindRef.current.search(query)
+      const results: SearchResult[] = []
+      for (const result of search.results.slice(0, 5)) {
+        const data: PagefindResult = await result.data()
+        results.push({
+          title: data.meta?.title || '',
+          excerpt: data.excerpt || '',
+          url: data.url.replace(/index\.html$/, ''),
+        })
+      }
+      setSearchResults(results)
+    } catch {
       setSearchResults([])
     }
-  }, [searchQuery])
+    setIsSearchLoading(false)
+  }, [])
+
+  // Real-time search with debounce
+  useEffect(() => {
+    if (debounceRef.current) clearTimeout(debounceRef.current)
+    if (!searchQuery.trim()) {
+      setSearchResults([])
+      setIsSearchLoading(false)
+      return
+    }
+    setIsSearchLoading(true)
+    debounceRef.current = setTimeout(() => {
+      performSearch(searchQuery)
+    }, 200)
+    return () => {
+      if (debounceRef.current) clearTimeout(debounceRef.current)
+    }
+  }, [searchQuery, performSearch])
 
   // Keyboard shortcut for Search (Cmd+K or Ctrl+K)
   useEffect(() => {
@@ -313,22 +372,22 @@ export function Header({ onBookCallClick }: HeaderProps) {
                       }}
                       className="block px-5 py-4 hover:bg-white/[0.03] transition-colors border-b border-white/[0.04] last:border-0 group"
                     >
-                      <div className="flex items-center justify-between mb-1.5">
+                      <div className="mb-1.5">
                         <span className="text-sm font-medium text-gray-200 group-hover:text-white transition-colors">
                           {result.title}
                         </span>
-                        <span className="text-[11px] px-2 py-0.5 rounded-md bg-white/[0.04] border border-white/[0.06] text-gray-400 uppercase tracking-widest font-mono">
-                          {result.type}
-                        </span>
                       </div>
-                      <p className="text-[13px] text-gray-500 line-clamp-1">{result.description}</p>
+                      <p
+                        className="text-[13px] text-gray-500 line-clamp-2 [&_mark]:bg-blue-500/30 [&_mark]:text-white [&_mark]:rounded-sm [&_mark]:px-0.5"
+                        dangerouslySetInnerHTML={{ __html: result.excerpt }}
+                      />
                     </Link>
                   ))}
                 </div>
               </div>
             )}
 
-            {searchQuery && searchResults.length === 0 && (
+            {searchQuery && !isSearchLoading && searchResults.length === 0 && (
               <div className="mt-3 p-6 text-center bg-[#0a0a0a] border border-white/[0.08] rounded-xl text-gray-500 text-[13px] shadow-2xl">
                 No results found for &quot;{searchQuery}&quot;
               </div>

@@ -73,7 +73,7 @@ export default function AboutPage({ profileData, githubRepos, githubPRs, contrib
         <meta name="twitter:description" content={`Learn more about ${profileData.name}, ${profileData.title}`} />
       </Head>
 
-      <main className="min-h-screen text-white relative overflow-hidden">
+      <main className="min-h-screen text-white relative overflow-hidden" data-pagefind-body>
         {/* About Section */}
         <section className="pt-32 pb-8 relative z-10">
           <About />
