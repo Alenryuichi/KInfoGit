@@ -519,6 +519,16 @@ async function main(): Promise<void> {
       const outputPath = path.join(BLOG_OUTPUT_DIR, filename);
       const finalContent = formatFrontmatter(frontmatter) + '\n\n' + contentWithoutTitle;
 
+      // Clean up old file if title changed (filename differs)
+      const oldBlogFile = syncState.docs[docIdStr]?.blogFile;
+      if (oldBlogFile && oldBlogFile !== filename) {
+        const oldPath = path.join(BLOG_OUTPUT_DIR, oldBlogFile);
+        if (existsSync(oldPath)) {
+          await fs.unlink(oldPath);
+          console.log(`   🗑️  标题变更，已删除旧文件: ${oldBlogFile}`);
+        }
+      }
+
       await fs.writeFile(outputPath, finalContent);
 
       // Update sync state

@@ -26,7 +26,7 @@ export default function AiDailyList({ dates }: AiDailyListProps) {
     <>
       <Head>
         <title>AI Daily — Kylin Miao</title>
-        <meta name="description" content="Curated AI news, delivered daily. Sourced from HN, arXiv, Reddit, and RSS." />
+        <meta name="description" content="Curated AI news, delivered daily. Sourced from HN, ArXiv, HF Papers, and RSS." />
       </Head>
 
       <div className="min-h-screen bg-black text-white">
@@ -35,7 +35,7 @@ export default function AiDailyList({ dates }: AiDailyListProps) {
           <h1 className="text-4xl md:text-5xl font-bold mb-3 tracking-tight">AI Daily</h1>
           <p className="text-gray-400 text-lg mb-12">
             Curated AI news, delivered daily.<br />
-            <span className="text-gray-500 text-sm">Sourced from HN · Reddit · RSS · GitHub · Powered by Horizon + DeepSeek</span>
+            <span className="text-gray-500 text-sm">Sourced from HN · ArXiv · HF Papers · RSS · Powered by Horizon + DeepSeek</span>
           </p>
 
           {/* Date list */}

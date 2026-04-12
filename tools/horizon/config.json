@@ -62,6 +62,18 @@
         "url": "https://huggingface.co/blog/feed.xml",
         "enabled": true,
         "category": "engineering"
+      },
+      {
+        "name": "Hugging Face Daily Papers",
+        "url": "https://raw.githubusercontent.com/huangboming/huggingface-daily-paper-feed/refs/heads/main/feed.xml",
+        "enabled": true,
+        "category": "research"
+      },
+      {
+        "name": "ArXiv AI Papers",
+        "url": "http://export.arxiv.org/api/query?search_query=cat:cs.AI+OR+cat:cs.CL+OR+cat:cs.LG&sortBy=submittedDate&sortOrder=descending&max_results=15",
+        "enabled": true,
+        "category": "research"
       }
     ],
     "github": [
@@ -69,32 +81,31 @@
         "type": "repo_releases",
         "owner": "langchain-ai",
         "repo": "langchain",
-        "enabled": true
+        "enabled": false
       },
       {
         "type": "repo_releases",
         "owner": "openai",
         "repo": "openai-python",
-        "enabled": true
+        "enabled": false
       },
       {
         "type": "repo_releases",
         "owner": "huggingface",
         "repo": "transformers",
-        "enabled": true
+        "enabled": false
       },
       {
         "type": "github_trending_search",
-        "enabled": true,
-        "topics": ["ai", "llm", "agent", "machine-learning", "generative-ai"],
-        "languages": ["python", "typescript"],
-        "min_stars": 50,
-        "created_within_days": 90
+        "enabled": false,
+        "topics": ["ai", "llm"],
+        "min_stars": 1000,
+        "created_within_days": 30
       },
       {
         "type": "github_trending_page",
-        "enabled": true,
-        "languages": ["python", ""],
+        "enabled": false,
+        "languages": ["python"],
         "trending_since": "daily"
       }
     ]

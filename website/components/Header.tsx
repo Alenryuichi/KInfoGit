@@ -34,6 +34,7 @@ const navigation = [
   { name: 'About', href: '/about' },
   { name: 'Work', href: '/work' },
   { name: 'Blog', href: '/blog' },
+  { name: 'AI Daily', href: '/ai-daily/' },
   { name: 'Stars', href: '/stars' },
 ]
 
