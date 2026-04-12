@@ -118,6 +118,7 @@ export function Header({ onBookCallClick }: HeaderProps) {
     if (path === '/about') return 'About'
     if (path.startsWith('/work')) return 'Work'
     if (path.startsWith('/blog')) return 'Blog'
+    if (path.startsWith('/ai-daily')) return 'AI Daily'
     if (path.startsWith('/stars')) return 'Stars'
     return 'Home'
   }
