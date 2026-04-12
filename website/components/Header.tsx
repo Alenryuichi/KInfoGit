@@ -11,6 +11,8 @@ interface PagefindResult {
   meta: {
     title?: string
     image?: string
+    type?: string
+    date?: string
   }
   sub_results?: Array<{
     title: string
@@ -23,6 +25,8 @@ interface SearchResult {
   title: string
   excerpt: string
   url: string
+  type: string
+  date: string
 }
 
 const navigation = [
@@ -34,6 +38,38 @@ const navigation = [
 ]
 
 const TAB_WIDTH = 72
+
+const TYPE_COLORS: Record<string, string> = {
+  Blog: 'bg-blue-500/20 text-blue-300 border-blue-400/30',
+  Stars: 'bg-amber-500/20 text-amber-300 border-amber-400/30',
+  'AI Daily': 'bg-cyan-500/20 text-cyan-300 border-cyan-400/30',
+  Work: 'bg-purple-500/20 text-purple-300 border-purple-400/30',
+  About: 'bg-emerald-500/20 text-emerald-300 border-emerald-400/30',
+}
+
+const HISTORY_KEY = 'pagefind-search-history'
+const MAX_HISTORY = 5
+
+function getSearchHistory(): string[] {
+  try {
+    const raw = localStorage.getItem(HISTORY_KEY)
+    if (!raw) return []
+    const parsed = JSON.parse(raw)
+    return Array.isArray(parsed) ? parsed.filter(s => typeof s === 'string') : []
+  } catch {
+    return []
+  }
+}
+
+function saveSearchHistory(query: string) {
+  try {
+    const history = getSearchHistory().filter(h => h !== query)
+    history.unshift(query)
+    localStorage.setItem(HISTORY_KEY, JSON.stringify(history.slice(0, MAX_HISTORY)))
+  } catch {
+    // localStorage unavailable — silent degradation
+  }
+}
 
 interface HeaderProps {
   onBookCallClick: () => void
@@ -67,8 +103,11 @@ export function Header({ onBookCallClick }: HeaderProps) {
   const [scrolled, setScrolled] = useState(false)
   const [searchResults, setSearchResults] = useState<SearchResult[]>([])
   const [isSearchLoading, setIsSearchLoading] = useState(false)
+  const [selectedIndex, setSelectedIndex] = useState(-1)
+  const [searchHistory, setSearchHistory] = useState<string[]>([])
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const pagefindRef = useRef<any>(null)
+  const pagefindLoadingRef = useRef(false)
   const debounceRef = useRef<ReturnType<typeof setTimeout> | null>(null)
 
   // Get current active tab based on route
@@ -95,31 +134,37 @@ export function Header({ onBookCallClick }: HeaderProps) {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  // Load Pagefind
-  useEffect(() => {
-    if (isSearchOpen && !pagefindRef.current) {
-      (async () => {
-        try {
-          // Pagefind assets are generated at build time in /pagefind/
-          // Use window.__pagefind if available, otherwise dynamic import
-          // eslint-disable-next-line @typescript-eslint/no-explicit-any
-          const w = window as any
-          if (w.__pagefind) {
-            pagefindRef.current = w.__pagefind
-            return
-          }
-          const pagefind = await import(
-            // @ts-expect-error Pagefind is generated at build time
-            /* webpackIgnore: true */ '/pagefind/pagefind.js'
-          )
-          await pagefind.init()
-          pagefindRef.current = pagefind
-        } catch {
-          console.error('Failed to load Pagefind search index')
-        }
-      })()
+  // Idempotent Pagefind loader — can be called from hover/focus/open
+  const loadPagefind = useCallback(async () => {
+    if (pagefindRef.current || pagefindLoadingRef.current) return
+    pagefindLoadingRef.current = true
+    try {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      const w = window as any
+      if (w.__pagefind) {
+        pagefindRef.current = w.__pagefind
+        return
+      }
+      const pagefind = await import(
+        // @ts-expect-error Pagefind is generated at build time
+        /* webpackIgnore: true */ '/pagefind/pagefind.js'
+      )
+      await pagefind.init()
+      pagefindRef.current = pagefind
+      pagefindLoadingRef.current = false
+    } catch {
+      console.error('Failed to load Pagefind search index')
+      pagefindLoadingRef.current = false
     }
-  }, [isSearchOpen])
+  }, [])
+
+  // Load Pagefind when modal opens
+  useEffect(() => {
+    if (isSearchOpen) {
+      loadPagefind()
+      setSearchHistory(getSearchHistory())
+    }
+  }, [isSearchOpen, loadPagefind])
 
   // Pagefind search with debounce
   const performSearch = useCallback(async (query: string) => {
@@ -137,6 +182,8 @@ export function Header({ onBookCallClick }: HeaderProps) {
           title: data.meta?.title || '',
           excerpt: data.excerpt || '',
           url: data.url.replace(/index\.html$/, ''),
+          type: data.meta?.type || '',
+          date: data.meta?.date || '',
         })
       }
       setSearchResults(results)
@@ -149,6 +196,7 @@ export function Header({ onBookCallClick }: HeaderProps) {
   // Real-time search with debounce
   useEffect(() => {
     if (debounceRef.current) clearTimeout(debounceRef.current)
+    setSelectedIndex(-1)
     if (!searchQuery.trim()) {
       setSearchResults([])
       setIsSearchLoading(false)
@@ -175,6 +223,35 @@ export function Header({ onBookCallClick }: HeaderProps) {
     return () => document.removeEventListener('keydown', handleKeyDown)
   }, [])
 
+  const searchQueryRef = useRef(searchQuery)
+  searchQueryRef.current = searchQuery
+
+  const navigateToResult = useCallback((result: SearchResult) => {
+    const q = searchQueryRef.current.trim()
+    if (q) saveSearchHistory(q)
+    router.push(result.url)
+    setIsSearchOpen(false)
+    setSearchQuery('')
+    setSelectedIndex(-1)
+  }, [router])
+
+  // Keyboard navigation inside search modal
+  useEffect(() => {
+    if (!isSearchOpen) return
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (searchResults.length === 0) return
+      if (e.key === 'ArrowDown') {
+        e.preventDefault()
+        setSelectedIndex(prev => (prev + 1) % searchResults.length)
+      } else if (e.key === 'ArrowUp') {
+        e.preventDefault()
+        setSelectedIndex(prev => prev <= 0 ? searchResults.length - 1 : prev - 1)
+      }
+    }
+    document.addEventListener('keydown', handleKeyDown)
+    return () => document.removeEventListener('keydown', handleKeyDown)
+  }, [isSearchOpen, searchResults.length])
+
   const handleTabClick = () => {
     setIsMenuOpen(false)
   }
@@ -186,9 +263,8 @@ export function Header({ onBookCallClick }: HeaderProps) {
   const handleSearchSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     if (searchResults.length > 0) {
-      router.push(searchResults[0].url)
-      setIsSearchOpen(false)
-      setSearchQuery('')
+      const idx = selectedIndex >= 0 ? selectedIndex : 0
+      if (searchResults[idx]) navigateToResult(searchResults[idx])
     }
   }
 
@@ -289,6 +365,8 @@ export function Header({ onBookCallClick }: HeaderProps) {
             {/* Search Button (Desktop) */}
             <button
               onClick={() => setIsSearchOpen(true)}
+              onMouseEnter={() => loadPagefind()}
+              onFocus={() => loadPagefind()}
               className="hidden sm:flex items-center gap-2.5 p-1.5 hover:bg-white/[0.04] rounded-xl transition-all duration-300 group"
               aria-label="Search"
             >
@@ -301,6 +379,8 @@ export function Header({ onBookCallClick }: HeaderProps) {
             {/* Search Button (Mobile) */}
             <button
               onClick={() => setIsSearchOpen(true)}
+              onMouseEnter={() => loadPagefind()}
+              onFocus={() => loadPagefind()}
               className="sm:hidden p-2 text-gray-400 hover:text-white transition-colors"
               aria-label="Search"
             >
@@ -363,20 +443,24 @@ export function Header({ onBookCallClick }: HeaderProps) {
             {searchResults.length > 0 && (
               <div className="mt-3 bg-[#0a0a0a] border border-white/[0.08] rounded-xl overflow-hidden shadow-2xl animate-in fade-in slide-in-from-top-2 duration-200">
                 <div className="max-h-[50vh] overflow-y-auto">
-                  {searchResults.map((result) => (
+                  {searchResults.map((result, index) => (
                     <Link
                       key={result.url}
                       href={result.url}
-                      onClick={() => {
-                        setIsSearchOpen(false)
-                        setSearchQuery('')
-                      }}
-                      className="block px-5 py-4 hover:bg-white/[0.03] transition-colors border-b border-white/[0.04] last:border-0 group"
+                      onClick={() => navigateToResult(result)}
+                      className={`block px-5 py-4 transition-colors border-b border-white/[0.04] last:border-0 group ${
+                        index === selectedIndex ? 'bg-white/[0.06]' : 'hover:bg-white/[0.03]'
+                      }`}
                     >
-                      <div className="mb-1.5">
+                      <div className="flex items-center justify-between mb-1.5">
                         <span className="text-sm font-medium text-gray-200 group-hover:text-white transition-colors">
                           {result.title}
                         </span>
+                        {result.type && (
+                          <span className={`text-[10px] px-2 py-0.5 rounded-full border font-medium shrink-0 ml-2 ${TYPE_COLORS[result.type] || 'bg-white/[0.04] text-gray-400 border-white/[0.06]'}`}>
+                            {result.type}
+                          </span>
+                        )}
                       </div>
                       <p
                         className="text-[13px] text-gray-500 line-clamp-2 [&_mark]:bg-blue-500/30 [&_mark]:text-white [&_mark]:rounded-sm [&_mark]:px-0.5"
@@ -385,6 +469,35 @@ export function Header({ onBookCallClick }: HeaderProps) {
                     </Link>
                   ))}
                 </div>
+              </div>
+            )}
+
+            {/* Empty state: history or guidance */}
+            {!searchQuery && isSearchOpen && (
+              <div className="mt-3 bg-[#0a0a0a] border border-white/[0.08] rounded-xl shadow-2xl overflow-hidden">
+                {searchHistory.length > 0 ? (
+                  <div className="p-3">
+                    <div className="text-[11px] font-medium text-gray-500 uppercase tracking-widest px-2 mb-2">最近搜索</div>
+                    {searchHistory.map((term) => (
+                      <button
+                        key={term}
+                        onClick={() => setSearchQuery(term)}
+                        className="w-full text-left px-3 py-2 text-sm text-gray-400 hover:text-white hover:bg-white/[0.03] rounded-lg transition-colors"
+                      >
+                        {term}
+                      </button>
+                    ))}
+                  </div>
+                ) : (
+                  <div className="p-5 text-center">
+                    <p className="text-[13px] text-gray-500 mb-2">搜索博客、项目、Stars、AI Daily...</p>
+                    <div className="flex items-center justify-center gap-3 text-[11px] text-gray-600">
+                      <span>↑↓ 导航</span>
+                      <span>↵ 打开</span>
+                      <span>esc 关闭</span>
+                    </div>
+                  </div>
+                )}
               </div>
             )}
 

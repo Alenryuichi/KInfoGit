@@ -216,7 +216,8 @@ export default function StarsDetail({ daily, prevDate, nextDate, allDates }: Sta
         <meta name="description" content={`GitHub stars for ${formatted}: ${daily.stars.length} repos.`} />
       </Head>
 
-      <div className="min-h-screen bg-black text-white" data-pagefind-body>
+      <div className="min-h-screen bg-black text-white" data-pagefind-body data-pagefind-meta="type:Stars">
+        <meta data-pagefind-meta={`date:${daily.date}`} />
         <div className="max-w-3xl mx-auto px-5 sm:px-6 pt-32 pb-20">
           {/* Back link */}
           <Link

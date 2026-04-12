@@ -67,7 +67,9 @@ export default function BlogPostPage({ post, prevPost, nextPost }: BlogPostPageP
 
       <ReadingProgressBar />
 
-      <div className="min-h-screen bg-black text-white" data-pagefind-body>
+      <div className="min-h-screen bg-black text-white" data-pagefind-body data-pagefind-meta="type:Blog">
+        {/* Pagefind date meta */}
+        <meta data-pagefind-meta={`date:${post.date}`} />
         {/* Back Button */}
         <div className="max-w-4xl mx-auto px-5 sm:px-6 pt-32 pb-4">
           <Link
@@ -133,7 +135,7 @@ export default function BlogPostPage({ post, prevPost, nextPost }: BlogPostPageP
 
             {/* Prev/Next Navigation */}
             {(prevPost || nextPost) && (
-              <nav className="mt-16 pt-8 border-t border-white/[0.06] flex items-stretch justify-between gap-4">
+              <nav className="mt-16 pt-8 border-t border-white/[0.06] flex items-stretch justify-between gap-4" data-pagefind-ignore>
                 {prevPost ? (
                   <Link
                     href={`/blog/${prevPost.slug}/`}
