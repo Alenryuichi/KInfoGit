@@ -2,17 +2,19 @@ import Head from 'next/head'
 import Link from 'next/link'
 import type { GetStaticProps, GetStaticPaths } from 'next'
 import {
-  getAllStarDates,
-  getStarsByDate,
+  getAllFeedDates,
+  getFeedByDate,
   getAdjacentDates,
-  type DailyStars,
+  type DailyFeed,
+  type FeedItem,
   type StarredRepo,
-} from '@/lib/github-stars'
+  type BlueskyPost,
+} from '@/lib/social-feeds'
 
 // --- Types ---
 
 interface StarsDetailProps {
-  daily: DailyStars
+  daily: DailyFeed
   prevDate: string | null
   nextDate: string | null
   allDates: string[]
@@ -21,7 +23,7 @@ interface StarsDetailProps {
 // --- Data Loading ---
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const dates = getAllStarDates()
+  const dates = getAllFeedDates()
   return {
     paths: dates.map(d => ({ params: { date: d.date } })),
     fallback: false,
@@ -30,11 +32,11 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 export const getStaticProps: GetStaticProps<StarsDetailProps> = async ({ params }) => {
   const date = params?.date as string
-  const daily = getStarsByDate(date)
+  const daily = getFeedByDate(date)
   if (!daily) return { notFound: true }
 
   const { prev, next } = getAdjacentDates(date)
-  const allDates = getAllStarDates().map(d => d.date)
+  const allDates = getAllFeedDates().map(d => d.date)
 
   return { props: { daily, prevDate: prev, nextDate: next, allDates } }
 }
@@ -62,7 +64,7 @@ function langColor(language: string | null): string {
   return LANG_COLORS[language] || 'bg-gray-500/20 text-gray-300'
 }
 
-// --- Repo Card ---
+// --- GitHub Repo Card ---
 
 function RepoCard({ star }: { star: StarredRepo }) {
   return (
@@ -138,6 +140,95 @@ function RepoCard({ star }: { star: StarredRepo }) {
   )
 }
 
+// --- Bluesky Post Card ---
+
+function BlueskyPostCard({ post }: { post: BlueskyPost }) {
+  const createdAt = new Date(post.createdAt)
+  const formatted = createdAt.toLocaleDateString('en-US', {
+    month: 'short',
+    day: 'numeric',
+    hour: '2-digit',
+    minute: '2-digit',
+  })
+
+  return (
+    <div className="py-5 border-b border-white/[0.04] last:border-0">
+      {/* Author header */}
+      <div className="flex items-center gap-3 mb-3">
+        {post.author.avatar && (
+          <img
+            src={post.author.avatar}
+            alt={post.author.handle}
+            className="w-9 h-9 rounded-full"
+          />
+        )}
+        <div className="flex-1">
+          <a
+            href={post.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-100 font-semibold hover:text-white transition-colors leading-snug"
+          >
+            {post.author.displayName}
+            <svg className="inline-block w-3.5 h-3.5 ml-1 -mt-0.5 opacity-30" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+          </a>
+          <p className="text-xs text-gray-500">@{post.author.handle}</p>
+        </div>
+      </div>
+
+      {/* Post content */}
+      <p className="text-gray-300 text-[15px] leading-relaxed mb-3 whitespace-pre-wrap break-words">
+        {post.content}
+      </p>
+
+      {/* Engagement metrics */}
+      <div className="flex items-center gap-3 text-xs text-gray-500 mb-3">
+        <span>{formatted}</span>
+        <span>·</span>
+        <span>❤️ {post.likeCount.toLocaleString()}</span>
+        <span>🔄 {post.repostCount.toLocaleString()}</span>
+        {post.replyCount > 0 && (
+          <>
+            <span>·</span>
+            <span>💬 {post.replyCount.toLocaleString()}</span>
+          </>
+        )}
+      </div>
+
+      {/* AI Commentary */}
+      {(post.highlights || post.worthReading) && (
+        <div className="mt-3 pl-3 border-l-2 border-white/[0.06]">
+          {post.highlights && (
+            <p className="text-gray-300 text-sm leading-relaxed">
+              <span className="text-gray-500 font-medium">Highlights: </span>
+              {post.highlights}
+            </p>
+          )}
+          {post.worthReading && (
+            <p className="text-gray-400 text-sm leading-relaxed mt-1">
+              <span className="text-gray-500 font-medium">Worth reading: </span>
+              {post.worthReading}
+            </p>
+          )}
+        </div>
+      )}
+    </div>
+  )
+}
+
+// --- Polymorphic Item Card ---
+
+function ItemCard({ item }: { item: FeedItem }) {
+  if (item.type === 'github') {
+    return <RepoCard star={item} />
+  } else if (item.type === 'bluesky') {
+    return <BlueskyPostCard post={item} />
+  }
+  return null
+}
+
 // --- Date Navigation ---
 
 function DateNav({
@@ -209,11 +300,15 @@ export default function StarsDetail({ daily, prevDate, nextDate, allDates }: Sta
     day: 'numeric',
   })
 
+  // Count items by type
+  const githubCount = daily.items.filter(item => item.type === 'github').length
+  const blueskyCount = daily.items.filter(item => item.type === 'bluesky').length
+
   return (
     <>
       <Head>
         <title>Stars — {daily.date} — Kylin Miao</title>
-        <meta name="description" content={`GitHub stars for ${formatted}: ${daily.stars.length} repos.`} />
+        <meta name="description" content={`GitHub stars and Bluesky posts for ${formatted}: ${daily.items.length} items.`} />
       </Head>
 
       <div className="min-h-screen bg-black text-white" data-pagefind-body data-pagefind-meta="type:Stars">
@@ -227,11 +322,11 @@ export default function StarsDetail({ daily, prevDate, nextDate, allDates }: Sta
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-4 h-4 mr-2 group-hover:-translate-x-1 transition-transform duration-300">
               <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
             </svg>
-            All Stars
+            All Stars & Posts
           </Link>
 
           {/* Header */}
-          <h1 className="text-3xl md:text-4xl font-bold mb-2 tracking-tight">Stars</h1>
+          <h1 className="text-3xl md:text-4xl font-bold mb-2 tracking-tight">Stars & Posts</h1>
           <p className="text-gray-400 mb-8">{formatted}</p>
 
           {/* Date nav */}
@@ -242,16 +337,31 @@ export default function StarsDetail({ daily, prevDate, nextDate, allDates }: Sta
             allDates={allDates}
           />
 
-          {/* Repo cards */}
+          {/* AI Daily Overview */}
+          {daily.summary && (
+            <div className="mb-10 p-5 rounded-xl bg-white/[0.02] border border-white/[0.06]">
+              <div className="flex items-center gap-2 mb-3">
+                <span className="text-sm font-semibold text-gray-300">Daily Overview</span>
+                <span className="text-[10px] px-1.5 py-0.5 rounded-full bg-purple-500/20 text-purple-300 font-medium">AI</span>
+              </div>
+              <p className="text-gray-400 text-[15px] leading-relaxed">
+                {daily.summary}
+              </p>
+            </div>
+          )}
+
+          {/* Item cards */}
           <div>
-            {daily.stars.map(star => (
-              <RepoCard key={star.repo} star={star} />
+            {daily.items.map((item, idx) => (
+              <ItemCard key={`${item.type}-${idx}`} item={item} />
             ))}
           </div>
 
           {/* Footer stats */}
           <div className="pt-6 border-t border-white/[0.06] text-xs text-gray-500">
-            {daily.stars.length} repos · Powered by DeepSeek
+            {githubCount > 0 && <span>{githubCount} repos · </span>}
+            {blueskyCount > 0 && <span>{blueskyCount} posts · </span>}
+            Powered by DeepSeek
           </div>
 
           {/* Bottom date nav */}

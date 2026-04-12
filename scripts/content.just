@@ -81,6 +81,10 @@ content-stats:
 fetch-stars:
     cd website && npx tsx ../scripts/fetch-stars.ts
 
-# Fetch GitHub stars and generate AI commentary
-fetch-stars:
-    cd website && npx tsx ../scripts/fetch-stars.ts
+# Fetch Bluesky posts from AI leaders
+fetch-bluesky:
+    cd website && npx tsx ../scripts/fetch-bluesky.ts
+
+# Fetch all social feeds (stars + bluesky)
+fetch-feeds: fetch-stars fetch-bluesky
+    cd website && npx tsx ../scripts/generate-summaries.ts
