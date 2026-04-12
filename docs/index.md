@@ -58,9 +58,6 @@
 - [../README.md](../README.md)
   项目主 README，包含完整的使用说明和 Just 命令参考
 
-- [../task_init.md](../task_init.md)
-  初始化任务文档
-
 ### 脚本文档
 
 - [../scripts/README.md](../scripts/README.md)
