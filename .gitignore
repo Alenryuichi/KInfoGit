@@ -104,3 +104,6 @@ tools/yuque-sync/docs/
 # TypeScript build info
 *.tsbuildinfo
 .worktrees
+
+# Horizon repository (contains large git history)
+tools/horizon/repo/
