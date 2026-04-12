@@ -472,18 +472,24 @@ async function main(): Promise<void> {
 
       // Content changed or new doc — fetch full content (1 API call per changed doc)
       const doc = await getDoc(namespace, docInfo.slug);
-      console.log(`   🧹 清理内容...`);
-      let content = cleanHtmlTags(doc.body || '');
 
-      // Download images
-      console.log(`   📷 下载图片...`);
-      content = await downloadImages(content, docInfo.slug);
+      let content = doc.body || '';
 
-      // Extract full HTML pages → standalone files + iframe
+      // Extract full HTML pages FIRST — before cleanHtmlTags, which would
+      // replace <br> with \n inside JS string literals and break the code.
+      console.log(`   📦 提取 HTML 页面...`);
       content = await extractFullHtmlPages(content, docInfo.slug, {
         embedsDir: BLOG_EMBEDS_DIR,
         embedsUrlPrefix: '/blog/embeds',
       });
+
+      // Now safe to clean remaining Markdown content
+      console.log(`   🧹 清理内容...`);
+      content = cleanHtmlTags(content);
+
+      // Download images
+      console.log(`   📷 下载图片...`);
+      content = await downloadImages(content, docInfo.slug);
 
       // Clean up after extraction: remove HTML comments and dead attachment links
       content = removeHtmlComments(content);

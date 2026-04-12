@@ -1097,79 +1097,79 @@ color: var(--text-secondary);
 <body>
 <header class="header">
 <div class="header-inner">
-<h1 class="logo">Embedding Lab</h1>
-<p class="tagline">交互式 Embedding 原理实验室 — 理解向量空间、分片策略与检索范式</p>
+  <h1 class="logo">Embedding Lab</h1>
+  <p class="tagline">交互式 Embedding 原理实验室 — 理解向量空间、分片策略与检索范式</p>
 </div>
 </header>
 
 <div class="tabs-sticky">
 <nav class="tabs" id="tabNav">
-<div class="tab-group">
-<button class="tab-group-btn active">
-  入门概念讲解▾
-</button>
-<div class="tab-group-dropdown">
-  <button class="tab active" data-tab="concept">概念讲解</button>
-  <button class="tab" data-tab="playground">Playground</button>
-</div>
+  <div class="tab-group">
+    <button class="tab-group-btn active">
+      <span class="tg-name">入门</span><span class="tg-current">概念讲解</span><span class="tg-chevron">▾</span>
+    </button>
+    <div class="tab-group-dropdown">
+      <button class="tab active" data-tab="concept">概念讲解</button>
+      <button class="tab" data-tab="playground">Playground</button>
+    </div>
   </div>
-<div class="tab-group">
-<button class="tab-group-btn">
-  分片与构建分片实验室▾
-</button>
-<div class="tab-group-dropdown">
-  <button class="tab" data-tab="chunking">分片实验室</button>
-  <button class="tab" data-tab="chunk-quality">Chunk 构建</button>
-  <button class="tab" data-tab="chunk-strategies">分片策略</button>
-  <button class="tab" data-tab="token-truncation">Token 截断</button>
-</div>
+  <div class="tab-group">
+    <button class="tab-group-btn">
+      <span class="tg-name">分片与构建</span><span class="tg-current">分片实验室</span><span class="tg-chevron">▾</span>
+    </button>
+    <div class="tab-group-dropdown">
+      <button class="tab" data-tab="chunking">分片实验室</button>
+      <button class="tab" data-tab="chunk-quality">Chunk 构建</button>
+      <button class="tab" data-tab="chunk-strategies">分片策略</button>
+      <button class="tab" data-tab="token-truncation">Token 截断</button>
+    </div>
   </div>
-<div class="tab-group">
-<button class="tab-group-btn">
-  检索管线检索范式▾
-</button>
-<div class="tab-group-dropdown">
-  <button class="tab" data-tab="retrieval">检索范式</button>
-  <button class="tab" data-tab="failures">检索失败</button>
-  <button class="tab" data-tab="topk">Top-K 与阈值</button>
-  <button class="tab" data-tab="ann-index">向量索引</button>
-  <button class="tab" data-tab="crosslingual">跨语言检索</button>
-</div>
+  <div class="tab-group">
+    <button class="tab-group-btn">
+      <span class="tg-name">检索管线</span><span class="tg-current">检索范式</span><span class="tg-chevron">▾</span>
+    </button>
+    <div class="tab-group-dropdown">
+      <button class="tab" data-tab="retrieval">检索范式</button>
+      <button class="tab" data-tab="failures">检索失败</button>
+      <button class="tab" data-tab="topk">Top-K 与阈值</button>
+      <button class="tab" data-tab="ann-index">向量索引</button>
+      <button class="tab" data-tab="crosslingual">跨语言检索</button>
+    </div>
   </div>
-<div class="tab-group">
-<button class="tab-group-btn">
-  重排与增强Reranker 原理▾
-</button>
-<div class="tab-group-dropdown">
-  <button class="tab" data-tab="reranker">Reranker 原理</button>
-  <button class="tab" data-tab="hyde">HyDE 原理</button>
-  <button class="tab" data-tab="sparse-dense">稀疏 vs 稠密</button>
-  <button class="tab" data-tab="contextual">Contextual</button>
-</div>
+  <div class="tab-group">
+    <button class="tab-group-btn">
+      <span class="tg-name">重排与增强</span><span class="tg-current">Reranker 原理</span><span class="tg-chevron">▾</span>
+    </button>
+    <div class="tab-group-dropdown">
+      <button class="tab" data-tab="reranker">Reranker 原理</button>
+      <button class="tab" data-tab="hyde">HyDE 原理</button>
+      <button class="tab" data-tab="sparse-dense">稀疏 vs 稠密</button>
+      <button class="tab" data-tab="contextual">Contextual</button>
+    </div>
   </div>
-<div class="tab-group">
-<button class="tab-group-btn">
-  模型与评估模型训练▾
-</button>
-<div class="tab-group-dropdown">
-  <button class="tab" data-tab="training">模型训练</button>
-  <button class="tab" data-tab="data-finetune">数据与微调</button>
-  <button class="tab" data-tab="finetune-decision">微调决策</button>
-  <button class="tab" data-tab="eval-metrics">评估指标</button>
-  <button class="tab" data-tab="model-guide">模型选型</button>
-  <button class="tab" data-tab="colbert">ColBERT</button>
-  <button class="tab" data-tab="quantization">向量量化</button>
-</div>
+  <div class="tab-group">
+    <button class="tab-group-btn">
+      <span class="tg-name">模型与评估</span><span class="tg-current">模型训练</span><span class="tg-chevron">▾</span>
+    </button>
+    <div class="tab-group-dropdown">
+      <button class="tab" data-tab="training">模型训练</button>
+      <button class="tab" data-tab="data-finetune">数据与微调</button>
+      <button class="tab" data-tab="finetune-decision">微调决策</button>
+      <button class="tab" data-tab="eval-metrics">评估指标</button>
+      <button class="tab" data-tab="model-guide">模型选型</button>
+      <button class="tab" data-tab="colbert">ColBERT</button>
+      <button class="tab" data-tab="quantization">向量量化</button>
+    </div>
   </div>
-<div class="tab-group">
-<button class="tab-group-btn">
-  工程与部署生产落地▾
-</button>
-<div class="tab-group-dropdown">
-  <button class="tab" data-tab="production">生产落地</button>
-  <button class="tab" data-tab="cache-dedup">缓存与去重</button>
-  <button class="tab" data-tab="multimodal">多模态</button>
-</div>
+  <div class="tab-group">
+    <button class="tab-group-btn">
+      <span class="tg-name">工程与部署</span><span class="tg-current">生产落地</span><span class="tg-chevron">▾</span>
+    </button>
+    <div class="tab-group-dropdown">
+      <button class="tab" data-tab="production">生产落地</button>
+      <button class="tab" data-tab="cache-dedup">缓存与去重</button>
+      <button class="tab" data-tab="multimodal">多模态</button>
+    </div>
   </div>
 </nav>
 </div>
@@ -1177,126 +1177,126 @@ color: var(--text-secondary);
 <!-- ═══ Tab 1: Concept Guide ═══ -->
 <section class="tab-content active" id="tab-concept">
 <div class="section-card">
-<h2>什么是 Embedding？</h2>
-<p>Embedding 是将文本映射到高维向量空间的过程。每段文本被转换为一个固定维度的数字向量（如 384 维），<strong>语义相似的文本在向量空间中距离更近</strong>。</p>
-<div class="concept-diagram">
-<div class="diagram-item">"这个手机拍照很好"</div>
-<div class="diagram-arrow">→ Embedding 模型 →</div>
-<div class="diagram-item vector">[0.12, -0.34, 0.56, ..., 0.78]<sub>384维</sub></div>
+  <h2>什么是 Embedding？</h2>
+  <p>Embedding 是将文本映射到高维向量空间的过程。每段文本被转换为一个固定维度的数字向量（如 384 维），<strong>语义相似的文本在向量空间中距离更近</strong>。</p>
+  <div class="concept-diagram">
+    <div class="diagram-item">"这个手机拍照很好"</div>
+    <div class="diagram-arrow">→ Embedding 模型 →</div>
+    <div class="diagram-item vector">[0.12, -0.34, 0.56, ..., 0.78]<sub>384维</sub></div>
   </div>
   <p>这个过程是<strong>有损压缩</strong>——不管文本多长，最终都压缩成固定维度的向量。因此，文本内容的质量和纯度直接影响向量的表达能力。</p>
 </div>
 
 <div class="section-card">
-<h2>余弦相似度：衡量语义距离</h2>
-<p>两个向量之间的<strong>余弦相似度</strong>衡量它们方向的一致性（0=无关，1=完全相同）。试试下面的预设句子对：</p>
-<div class="sim-demo">
-<div class="sim-presets">
-  <button class="btn btn-sm" onclick="loadConceptPreset('语义相近')">语义相近</button>
-  <button class="btn btn-sm" onclick="loadConceptPreset('语义相反')">语义相反</button>
-  <button class="btn btn-sm" onclick="loadConceptPreset('同主题不同表述')">同主题不同表述</button>
-</div>
-<div id="conceptPairsContainer"></div>
-<div class="sim-custom">
-  <p class="hint">或输入自定义句子（需加载浏览器模型，约 23MB）：</p>
-  <div class="input-row">
-    <input type="text" id="simInput1" placeholder="输入第一句话..." class="text-input">
-    <input type="text" id="simInput2" placeholder="输入第二句话..." class="text-input">
-    <button class="btn" onclick="computeCustomSimilarity()">计算相似度</button>
-  </div>
-  <div id="customSimResult" class="sim-result" style="display:none"></div>
+  <h2>余弦相似度：衡量语义距离</h2>
+  <p>两个向量之间的<strong>余弦相似度</strong>衡量它们方向的一致性（0=无关，1=完全相同）。试试下面的预设句子对：</p>
+  <div class="sim-demo">
+    <div class="sim-presets">
+      <button class="btn btn-sm" onclick="loadConceptPreset('语义相近')">语义相近</button>
+      <button class="btn btn-sm" onclick="loadConceptPreset('语义相反')">语义相反</button>
+      <button class="btn btn-sm" onclick="loadConceptPreset('同主题不同表述')">同主题不同表述</button>
+    </div>
+    <div id="conceptPairsContainer"></div>
+    <div class="sim-custom">
+      <p class="hint">或输入自定义句子（需加载浏览器模型，约 23MB）：</p>
+      <div class="input-row">
+        <input type="text" id="simInput1" placeholder="输入第一句话..." class="text-input">
+        <input type="text" id="simInput2" placeholder="输入第二句话..." class="text-input">
+        <button class="btn" onclick="computeCustomSimilarity()">计算相似度</button>
+      </div>
+      <div id="customSimResult" class="sim-result" style="display:none"></div>
     </div>
   </div>
 </div>
 
 <div class="section-card">
-<h2>Transformer 中的 Q·K·V 与 Embedding 检索</h2>
-<div class="qkv-diagram">
-<svg viewBox="0 0 700 220" class="qkv-svg">
-  <defs>
-    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="var(--text-secondary)" />
-    </marker>
-  </defs>
-  <!-- Q -->
-  <rect x="20" y="30" width="120" height="50" rx="8" class="svg-box svg-q"/>
-  <text x="80" y="60" text-anchor="middle" class="svg-label">Query (Q)</text>
-  <text x="80" y="90" text-anchor="middle" class="svg-sublabel">我在找什么？</text>
-  <!-- K -->
-  <rect x="200" y="30" width="120" height="50" rx="8" class="svg-box svg-k"/>
-  <text x="260" y="60" text-anchor="middle" class="svg-label">Key (K)</text>
-  <text x="260" y="90" text-anchor="middle" class="svg-sublabel">我身上有什么标签？</text>
-  <!-- dot product -->
-  <line x1="140" y1="55" x2="200" y2="55" class="svg-arrow" marker-end="url(#arrowhead)"/>
-  <text x="170" y="48" text-anchor="middle" class="svg-op">Q·K</text>
-  <!-- attention weights -->
-  <rect x="380" y="30" width="130" height="50" rx="8" class="svg-box svg-attn"/>
-  <text x="445" y="60" text-anchor="middle" class="svg-label">注意力权重</text>
-  <text x="445" y="90" text-anchor="middle" class="svg-sublabel">softmax(Q·K/√d)</text>
-  <line x1="320" y1="55" x2="380" y2="55" class="svg-arrow" marker-end="url(#arrowhead)"/>
-  <!-- V -->
-  <rect x="200" y="140" width="120" height="50" rx="8" class="svg-box svg-v"/>
-  <text x="260" y="170" text-anchor="middle" class="svg-label">Value (V)</text>
-  <text x="260" y="200" text-anchor="middle" class="svg-sublabel">实际携带的信息</text>
-  <!-- weighted sum -->
-  <line x1="445" y1="80" x2="445" y2="130" class="svg-arrow" marker-end="url(#arrowhead)"/>
-  <line x1="320" y1="165" x2="400" y2="140" class="svg-arrow" marker-end="url(#arrowhead)"/>
-  <rect x="390" y="130" width="110" height="50" rx="8" class="svg-box svg-out"/>
-  <text x="445" y="155" text-anchor="middle" class="svg-label">加权求和</text>
-  <text x="445" y="175" text-anchor="middle" class="svg-sublabel">Attention × V</text>
-  <!-- analogy -->
-  <rect x="550" y="70" width="140" height="100" rx="8" class="svg-box svg-analogy"/>
-  <text x="620" y="95" text-anchor="middle" class="svg-label">≈ Embedding 检索</text>
-  <text x="620" y="115" text-anchor="middle" class="svg-sublabel">Query · Document</text>
-  <text x="620" y="135" text-anchor="middle" class="svg-sublabel">→ 相似度分数</text>
-  <text x="620" y="155" text-anchor="middle" class="svg-sublabel">→ 返回最近结果</text>
-  <line x1="500" y1="155" x2="550" y2="130" class="svg-arrow" marker-end="url(#arrowhead)" stroke-dasharray="5,5"/>
-</svg>
-</div>
+  <h2>Transformer 中的 Q·K·V 与 Embedding 检索</h2>
+  <div class="qkv-diagram">
+    <svg viewBox="0 0 700 220" class="qkv-svg">
+      <defs>
+        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+          <polygon points="0 0, 10 3.5, 0 7" fill="var(--text-secondary)" />
+        </marker>
+      </defs>
+      <!-- Q -->
+      <rect x="20" y="30" width="120" height="50" rx="8" class="svg-box svg-q"/>
+      <text x="80" y="60" text-anchor="middle" class="svg-label">Query (Q)</text>
+      <text x="80" y="90" text-anchor="middle" class="svg-sublabel">我在找什么？</text>
+      <!-- K -->
+      <rect x="200" y="30" width="120" height="50" rx="8" class="svg-box svg-k"/>
+      <text x="260" y="60" text-anchor="middle" class="svg-label">Key (K)</text>
+      <text x="260" y="90" text-anchor="middle" class="svg-sublabel">我身上有什么标签？</text>
+      <!-- dot product -->
+      <line x1="140" y1="55" x2="200" y2="55" class="svg-arrow" marker-end="url(#arrowhead)"/>
+      <text x="170" y="48" text-anchor="middle" class="svg-op">Q·K</text>
+      <!-- attention weights -->
+      <rect x="380" y="30" width="130" height="50" rx="8" class="svg-box svg-attn"/>
+      <text x="445" y="60" text-anchor="middle" class="svg-label">注意力权重</text>
+      <text x="445" y="90" text-anchor="middle" class="svg-sublabel">softmax(Q·K/√d)</text>
+      <line x1="320" y1="55" x2="380" y2="55" class="svg-arrow" marker-end="url(#arrowhead)"/>
+      <!-- V -->
+      <rect x="200" y="140" width="120" height="50" rx="8" class="svg-box svg-v"/>
+      <text x="260" y="170" text-anchor="middle" class="svg-label">Value (V)</text>
+      <text x="260" y="200" text-anchor="middle" class="svg-sublabel">实际携带的信息</text>
+      <!-- weighted sum -->
+      <line x1="445" y1="80" x2="445" y2="130" class="svg-arrow" marker-end="url(#arrowhead)"/>
+      <line x1="320" y1="165" x2="400" y2="140" class="svg-arrow" marker-end="url(#arrowhead)"/>
+      <rect x="390" y="130" width="110" height="50" rx="8" class="svg-box svg-out"/>
+      <text x="445" y="155" text-anchor="middle" class="svg-label">加权求和</text>
+      <text x="445" y="175" text-anchor="middle" class="svg-sublabel">Attention × V</text>
+      <!-- analogy -->
+      <rect x="550" y="70" width="140" height="100" rx="8" class="svg-box svg-analogy"/>
+      <text x="620" y="95" text-anchor="middle" class="svg-label">≈ Embedding 检索</text>
+      <text x="620" y="115" text-anchor="middle" class="svg-sublabel">Query · Document</text>
+      <text x="620" y="135" text-anchor="middle" class="svg-sublabel">→ 相似度分数</text>
+      <text x="620" y="155" text-anchor="middle" class="svg-sublabel">→ 返回最近结果</text>
+      <line x1="500" y1="155" x2="550" y2="130" class="svg-arrow" marker-end="url(#arrowhead)" stroke-dasharray="5,5"/>
+    </svg>
+  </div>
   <p>本质上，Transformer 内部的 Q·K 注意力和 Embedding 检索中的 query·document 余弦相似度是<strong>同一个操作</strong>——在高维空间中做相似性匹配。区别在于：Attention 是模型内部的软检索（每层都在做），Embedding 检索是模型外部的硬检索（在知识库上做一次）。</p>
 </div>
 
 <div class="section-card">
-<h2>分片策略如何影响 Embedding 分布</h2>
-<div class="impact-grid">
-<div class="impact-item bad">
-  <h3>Chunk 太大 / 多主题混杂</h3>
-  <p>向量被"拉扯"到多个语义簇的中间地带，谁都沾点边但都不精确匹配。</p>
-</div>
-<div class="impact-item good">
-  <h3>Chunk 语义纯粹 / 单主题</h3>
-  <p>向量在空间中的位置"尖锐"明确，容易被精准召回。</p>
-</div>
-<div class="impact-item warn">
-  <h3>含转折词</h3>
-  <p>正面和负面语义对冲，向量落在两个方向的折中位置。</p>
-</div>
-<div class="impact-item neutral">
-  <h3>序号列表</h3>
-  <p>同主题列表：强化信号。跨主题列表：等同于多主题混杂。</p>
-</div>
+  <h2>分片策略如何影响 Embedding 分布</h2>
+  <div class="impact-grid">
+    <div class="impact-item bad">
+      <h3>Chunk 太大 / 多主题混杂</h3>
+      <p>向量被"拉扯"到多个语义簇的中间地带，谁都沾点边但都不精确匹配。</p>
+    </div>
+    <div class="impact-item good">
+      <h3>Chunk 语义纯粹 / 单主题</h3>
+      <p>向量在空间中的位置"尖锐"明确，容易被精准召回。</p>
+    </div>
+    <div class="impact-item warn">
+      <h3>含转折词</h3>
+      <p>正面和负面语义对冲，向量落在两个方向的折中位置。</p>
+    </div>
+    <div class="impact-item neutral">
+      <h3>序号列表</h3>
+      <p>同主题列表：强化信号。跨主题列表：等同于多主题混杂。</p>
+    </div>
   </div>
   <button class="btn btn-accent" onclick="switchTab('chunking')">去实验室亲自试试 →</button>
 </div>
 
 <div class="section-card">
-<h2>Q2Q / Q2A / A2A 检索范式</h2>
-<div class="paradigm-grid">
-<div class="paradigm-card">
-  <h3>Q2Q</h3>
-  <p class="paradigm-sub">问题 → 问题</p>
-  <p>知识库存的是问题，用新问题匹配已有问题，再返回对应答案。典型相似度：<strong>0.85-0.95</strong></p>
-</div>
-<div class="paradigm-card">
-  <h3>Q2A</h3>
-  <p class="paradigm-sub">问题 → 文档</p>
-  <p>知识库存的是文档/答案，用问题直接匹配文档。非对称匹配，典型相似度：<strong>0.50-0.70</strong></p>
-</div>
-<div class="paradigm-card">
-  <h3>A2A</h3>
-  <p class="paradigm-sub">文档 → 文档</p>
-  <p>用文档匹配文档，用于去重、聚类、相似推荐。对称匹配。</p>
-</div>
+  <h2>Q2Q / Q2A / A2A 检索范式</h2>
+  <div class="paradigm-grid">
+    <div class="paradigm-card">
+      <h3>Q2Q</h3>
+      <p class="paradigm-sub">问题 → 问题</p>
+      <p>知识库存的是问题，用新问题匹配已有问题，再返回对应答案。典型相似度：<strong>0.85-0.95</strong></p>
+    </div>
+    <div class="paradigm-card">
+      <h3>Q2A</h3>
+      <p class="paradigm-sub">问题 → 文档</p>
+      <p>知识库存的是文档/答案，用问题直接匹配文档。非对称匹配，典型相似度：<strong>0.50-0.70</strong></p>
+    </div>
+    <div class="paradigm-card">
+      <h3>A2A</h3>
+      <p class="paradigm-sub">文档 → 文档</p>
+      <p>用文档匹配文档，用于去重、聚类、相似推荐。对称匹配。</p>
+    </div>
   </div>
   <button class="btn btn-accent" onclick="switchTab('retrieval')">动手试试三种范式 →</button>
 </div>
@@ -1305,27 +1305,27 @@ color: var(--text-secondary);
 <!-- ═══ Tab 2: Playground ═══ -->
 <section class="tab-content" id="tab-playground">
 <div class="section-card">
-<h2>Embedding Playground</h2>
-<p>输入多段文本，实时看到它们在向量空间中的位置和相互间的相似度。</p>
-<div class="playground-controls">
-<div class="preset-btns">
-  预设示例：
-  <button class="btn btn-sm" onclick="loadPlaygroundPreset('语义相近')">语义相近</button>
-  <button class="btn btn-sm" onclick="loadPlaygroundPreset('语义相反')">语义相反</button>
-  <button class="btn btn-sm" onclick="loadPlaygroundPreset('同主题不同表述')">同主题不同表述</button>
-</div>
-<div class="input-area">
-  <textarea id="playgroundInput" class="text-input textarea" rows="6" placeholder="每行输入一段文本...&#10;例如：&#10;这个手机拍照效果很好&#10;这部手机的摄影功能非常出色&#10;今天天气不错"></textarea>
-  <div class="btn-row">
-    <button class="btn btn-accent" onclick="runPlayground()">生成 Embedding</button>
-    <button class="btn" onclick="clearPlayground()">清空</button>
-  </div>
+  <h2>Embedding Playground</h2>
+  <p>输入多段文本，实时看到它们在向量空间中的位置和相互间的相似度。</p>
+  <div class="playground-controls">
+    <div class="preset-btns">
+      <span class="label">预设示例：</span>
+      <button class="btn btn-sm" onclick="loadPlaygroundPreset('语义相近')">语义相近</button>
+      <button class="btn btn-sm" onclick="loadPlaygroundPreset('语义相反')">语义相反</button>
+      <button class="btn btn-sm" onclick="loadPlaygroundPreset('同主题不同表述')">同主题不同表述</button>
     </div>
-<div id="playgroundModelStatus" class="model-status" style="display:none"></div>
+    <div class="input-area">
+      <textarea id="playgroundInput" class="text-input textarea" rows="6" placeholder="每行输入一段文本...&#10;例如：&#10;这个手机拍照效果很好&#10;这部手机的摄影功能非常出色&#10;今天天气不错"></textarea>
+      <div class="btn-row">
+        <button class="btn btn-accent" onclick="runPlayground()">生成 Embedding</button>
+        <button class="btn" onclick="clearPlayground()">清空</button>
+      </div>
+    </div>
+    <div id="playgroundModelStatus" class="model-status" style="display:none"></div>
   </div>
-<div class="viz-row">
-<div class="viz-panel" id="playgroundScatter"></div>
-<div class="viz-panel" id="playgroundHeatmap"></div>
+  <div class="viz-row">
+    <div class="viz-panel" id="playgroundScatter"></div>
+    <div class="viz-panel" id="playgroundHeatmap"></div>
   </div>
 </div>
 </section>
@@ -1333,73 +1333,74 @@ color: var(--text-secondary);
 <!-- ═══ Tab 3: Chunking Lab ═══ -->
 <section class="tab-content" id="tab-chunking">
 <div class="section-card">
-<h2>分片实验室</h2>
-<p>选择预设实验，观察不同分片策略下的 Embedding 分布和召回效果。</p>
-<div class="experiment-selector">
-<button class="btn btn-sm active" onclick="loadExperiment('single_vs_multi', this)">单主题 vs 多主题</button>
-<button class="btn btn-sm" onclick="loadExperiment('transitional', this)">转折词影响</button>
-<button class="btn btn-sm" onclick="loadExperiment('numbered', this)">序号列表</button>
-<button class="btn btn-sm" onclick="loadExperiment('q2q_vs_q2a', this)">Q2Q vs Q2A</button>
-<button class="btn btn-sm" onclick="loadExperiment('overview', this)">全景视图</button>
-</div>
+  <h2>分片实验室</h2>
+  <p>选择预设实验，观察不同分片策略下的 Embedding 分布和召回效果。</p>
+  <div class="experiment-selector">
+    <button class="btn btn-sm active" onclick="loadExperiment('single_vs_multi', this)">单主题 vs 多主题</button>
+    <button class="btn btn-sm" onclick="loadExperiment('transitional', this)">转折词影响</button>
+    <button class="btn btn-sm" onclick="loadExperiment('numbered', this)">序号列表</button>
+    <button class="btn btn-sm" onclick="loadExperiment('q2q_vs_q2a', this)">Q2Q vs Q2A</button>
+    <button class="btn btn-sm" onclick="loadExperiment('overview', this)">全景视图</button>
+  </div>
 </div>
 <div class="experiment-panel">
-<div class="exp-description" id="expDescription"></div>
-<div class="viz-row">
-<div class="viz-panel viz-large" id="expScatter"></div>
-<div class="viz-panel viz-side" id="expSidePanel">
-  <div id="expMetrics"></div>
-  <div id="expTopK">
-    <label class="slider-label">Top-K: 3</label>
-    <input type="range" id="topKSlider" min="1" max="10" value="3" oninput="updateTopK(this.value)">
-  </div>
-  <div id="expResults"></div>
+  <div class="exp-description" id="expDescription"></div>
+  <div class="viz-row">
+    <div class="viz-panel viz-large" id="expScatter"></div>
+    <div class="viz-panel viz-side" id="expSidePanel">
+      <div id="expMetrics"></div>
+      <div id="expTopK">
+        <label class="slider-label">Top-K: <span id="topKValue">3</span></label>
+        <input type="range" id="topKSlider" min="1" max="10" value="3" oninput="updateTopK(this.value)">
+      </div>
+      <div id="expResults"></div>
     </div>
   </div>
 </div>
 <div class="section-card" style="margin-top:1rem">
-<h3>自定义文本</h3>
-<p class="hint">输入自定义 chunk，叠加到当前实验的散点图（需加载浏览器模型）：</p>
-<textarea id="customChunkInput" class="text-input textarea" rows="3" placeholder="每行一个 chunk..."></textarea>
-<button class="btn" onclick="addCustomChunks()">添加到图表</button>
+  <h3>自定义文本</h3>
+  <p class="hint">输入自定义 chunk，叠加到当前实验的散点图（需加载浏览器模型）：</p>
+  <textarea id="customChunkInput" class="text-input textarea" rows="3" placeholder="每行一个 chunk..."></textarea>
+  <button class="btn" onclick="addCustomChunks()">添加到图表</button>
 </div>
 </section>
 
 <!-- ═══ Tab 4: Retrieval Modes ═══ -->
 <section class="tab-content" id="tab-retrieval">
 <div class="section-card">
-<h2>检索范式对比</h2>
-<p>同一个 Query，在 Q2Q、Q2A、A2A 三种模式下的检索效果对比。</p>
-<div class="query-bar">
-当前 Query：
-</div>
-<div class="custom-query-bar">
-<input type="text" id="customQueryInput" class="text-input" placeholder="输入自定义 Query（需加载浏览器模型）...">
-<button class="btn" onclick="runCustomQuery()">自定义检索</button>
-</div>
+  <h2>检索范式对比</h2>
+  <p>同一个 Query，在 Q2Q、Q2A、A2A 三种模式下的检索效果对比。</p>
+  <div class="query-bar">
+    <span class="label">当前 Query：</span>
+    <span class="query-text" id="retrievalQuery"></span>
+  </div>
+  <div class="custom-query-bar">
+    <input type="text" id="customQueryInput" class="text-input" placeholder="输入自定义 Query（需加载浏览器模型）...">
+    <button class="btn" onclick="runCustomQuery()">自定义检索</button>
+  </div>
 </div>
 <div class="retrieval-grid">
-<div class="mode-panel">
-<h3 class="mode-title q2q-title">Q2Q — 问题匹配问题</h3>
-<div class="mode-desc">知识库 = 问题库，匹配最相似的已有问题</div>
-<div id="q2qResults" class="mode-results"></div>
+  <div class="mode-panel">
+    <h3 class="mode-title q2q-title">Q2Q — 问题匹配问题</h3>
+    <div class="mode-desc">知识库 = 问题库，匹配最相似的已有问题</div>
+    <div id="q2qResults" class="mode-results"></div>
   </div>
-<div class="mode-panel">
-<h3 class="mode-title q2a-title">Q2A — 问题匹配文档</h3>
-<div class="mode-desc">知识库 = 文档 chunks，直接匹配内容</div>
-<div id="q2aResults" class="mode-results"></div>
+  <div class="mode-panel">
+    <h3 class="mode-title q2a-title">Q2A — 问题匹配文档</h3>
+    <div class="mode-desc">知识库 = 文档 chunks，直接匹配内容</div>
+    <div id="q2aResults" class="mode-results"></div>
   </div>
-<div class="mode-panel">
-<h3 class="mode-title a2a-title">A2A — 文档匹配文档</h3>
-<div class="mode-desc">文档之间的聚类和相似度关系</div>
-<div id="a2aResults" class="mode-results"></div>
+  <div class="mode-panel">
+    <h3 class="mode-title a2a-title">A2A — 文档匹配文档</h3>
+    <div class="mode-desc">文档之间的聚类和相似度关系</div>
+    <div id="a2aResults" class="mode-results"></div>
   </div>
 </div>
 <div class="section-card" style="margin-top:1rem">
-<h3>三模式相似度对比</h3>
-<div class="viz-row">
-<div class="viz-panel" id="retrievalCompareChart"></div>
-<div class="viz-panel" id="retrievalScatter"></div>
+  <h3>三模式相似度对比</h3>
+  <div class="viz-row">
+    <div class="viz-panel" id="retrievalCompareChart"></div>
+    <div class="viz-panel" id="retrievalScatter"></div>
   </div>
 </div>
 </section>
@@ -1407,75 +1408,75 @@ color: var(--text-secondary);
 <!-- ═══ Tab 5: Model Training ═══ -->
 <section class="tab-content" id="tab-training">
 <div class="section-card">
-<h2>Bi-Encoder 架构</h2>
-<div class="qkv-diagram">
-<svg viewBox="0 0 700 240" class="qkv-svg">
-  <defs>
-    <marker id="arrow-train" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="var(--text-secondary)" />
-    </marker>
-  </defs>
-  <!-- Query side -->
-  <rect x="20" y="30" width="110" height="44" rx="8" class="svg-box svg-q"/>
-  <text x="75" y="57" text-anchor="middle" class="svg-label">Query</text>
-  <line x1="130" y1="52" x2="190" y2="52" class="svg-arrow" marker-end="url(#arrow-train)"/>
-  <rect x="190" y="20" width="140" height="64" rx="8" class="svg-box svg-attn"/>
-  <text x="260" y="48" text-anchor="middle" class="svg-label">Encoder</text>
-  <text x="260" y="68" text-anchor="middle" class="svg-sublabel">共享权重</text>
-  <line x1="330" y1="52" x2="400" y2="52" class="svg-arrow" marker-end="url(#arrow-train)"/>
-  <rect x="400" y="30" width="100" height="44" rx="8" class="svg-box svg-out"/>
-  <text x="450" y="57" text-anchor="middle" class="svg-label">vec_q</text>
-  <!-- Document side -->
-  <rect x="20" y="140" width="110" height="44" rx="8" class="svg-box svg-k"/>
-  <text x="75" y="167" text-anchor="middle" class="svg-label">Document</text>
-  <line x1="130" y1="162" x2="190" y2="162" class="svg-arrow" marker-end="url(#arrow-train)"/>
-  <rect x="190" y="130" width="140" height="64" rx="8" class="svg-box svg-attn"/>
-  <text x="260" y="158" text-anchor="middle" class="svg-label">Encoder</text>
-  <text x="260" y="178" text-anchor="middle" class="svg-sublabel">共享权重</text>
-  <line x1="330" y1="162" x2="400" y2="162" class="svg-arrow" marker-end="url(#arrow-train)"/>
-  <rect x="400" y="140" width="100" height="44" rx="8" class="svg-box svg-out"/>
-  <text x="450" y="167" text-anchor="middle" class="svg-label">vec_d</text>
-  <!-- Shared weights annotation -->
-  <line x1="260" y1="84" x2="260" y2="130" class="svg-arrow" stroke-dasharray="5,5"/>
-  <text x="290" y="112" text-anchor="middle" class="svg-sublabel" font-style="italic">共享权重</text>
-  <!-- Cosine similarity -->
-  <line x1="500" y1="52" x2="560" y2="107" class="svg-arrow" marker-end="url(#arrow-train)"/>
-  <line x1="500" y1="162" x2="560" y2="107" class="svg-arrow" marker-end="url(#arrow-train)"/>
-  <rect x="550" y="82" width="130" height="50" rx="8" class="svg-box svg-analogy"/>
-  <text x="615" y="103" text-anchor="middle" class="svg-label">cosine(q, d)</text>
-  <text x="615" y="123" text-anchor="middle" class="svg-sublabel">相似度分数</text>
-</svg>
-</div>
+  <h2>Bi-Encoder 架构</h2>
+  <div class="qkv-diagram">
+    <svg viewBox="0 0 700 240" class="qkv-svg">
+      <defs>
+        <marker id="arrow-train" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+          <polygon points="0 0, 10 3.5, 0 7" fill="var(--text-secondary)" />
+        </marker>
+      </defs>
+      <!-- Query side -->
+      <rect x="20" y="30" width="110" height="44" rx="8" class="svg-box svg-q"/>
+      <text x="75" y="57" text-anchor="middle" class="svg-label">Query</text>
+      <line x1="130" y1="52" x2="190" y2="52" class="svg-arrow" marker-end="url(#arrow-train)"/>
+      <rect x="190" y="20" width="140" height="64" rx="8" class="svg-box svg-attn"/>
+      <text x="260" y="48" text-anchor="middle" class="svg-label">Encoder</text>
+      <text x="260" y="68" text-anchor="middle" class="svg-sublabel">共享权重</text>
+      <line x1="330" y1="52" x2="400" y2="52" class="svg-arrow" marker-end="url(#arrow-train)"/>
+      <rect x="400" y="30" width="100" height="44" rx="8" class="svg-box svg-out"/>
+      <text x="450" y="57" text-anchor="middle" class="svg-label">vec_q</text>
+      <!-- Document side -->
+      <rect x="20" y="140" width="110" height="44" rx="8" class="svg-box svg-k"/>
+      <text x="75" y="167" text-anchor="middle" class="svg-label">Document</text>
+      <line x1="130" y1="162" x2="190" y2="162" class="svg-arrow" marker-end="url(#arrow-train)"/>
+      <rect x="190" y="130" width="140" height="64" rx="8" class="svg-box svg-attn"/>
+      <text x="260" y="158" text-anchor="middle" class="svg-label">Encoder</text>
+      <text x="260" y="178" text-anchor="middle" class="svg-sublabel">共享权重</text>
+      <line x1="330" y1="162" x2="400" y2="162" class="svg-arrow" marker-end="url(#arrow-train)"/>
+      <rect x="400" y="140" width="100" height="44" rx="8" class="svg-box svg-out"/>
+      <text x="450" y="167" text-anchor="middle" class="svg-label">vec_d</text>
+      <!-- Shared weights annotation -->
+      <line x1="260" y1="84" x2="260" y2="130" class="svg-arrow" stroke-dasharray="5,5"/>
+      <text x="290" y="112" text-anchor="middle" class="svg-sublabel" font-style="italic">共享权重</text>
+      <!-- Cosine similarity -->
+      <line x1="500" y1="52" x2="560" y2="107" class="svg-arrow" marker-end="url(#arrow-train)"/>
+      <line x1="500" y1="162" x2="560" y2="107" class="svg-arrow" marker-end="url(#arrow-train)"/>
+      <rect x="550" y="82" width="130" height="50" rx="8" class="svg-box svg-analogy"/>
+      <text x="615" y="103" text-anchor="middle" class="svg-label">cosine(q, d)</text>
+      <text x="615" y="123" text-anchor="middle" class="svg-sublabel">相似度分数</text>
+    </svg>
+  </div>
   <p>Bi-Encoder 是当前主流的 Embedding 模型架构。它的核心思想是：<strong>将 Query 和 Document 分别独立编码为向量</strong>，然后通过余弦相似度衡量语义相关性。两个编码器共享同一组参数（共享权重），这意味着同一个模型同时负责处理查询和文档。这种架构的优势是文档向量可以离线预计算并存入向量数据库，检索时只需编码一次 Query 然后做最近邻搜索，速度极快。</p>
 </div>
 
 <div class="section-card">
-<h2>训练三元组（Training Triplets）</h2>
-<div id="trainingTriplets"></div>
+  <h2>训练三元组（Training Triplets）</h2>
+  <div id="trainingTriplets"></div>
   <p>Embedding 模型通过<strong>三元组（Triplet）</strong>进行训练，每个三元组包含：一个查询（Query）、一个正例文档（Positive）和一个负例文档（Negative）。训练目标是让模型学会将 Query 的向量拉近 Positive，同时推远 Negative。例如：对于查询"怎么申请退款？"，正例是退款流程文档，负例是物流查询文档。经过大量三元组训练后，模型学会了将语义相关的文本映射到向量空间中的相邻位置。</p>
 </div>
 
 <div class="section-card">
-<h2>对比学习动画（Contrastive Loss）</h2>
-<div class="viz-row">
-<div class="viz-panel" id="trainingScatter"></div>
-<div class="viz-panel" id="trainingLossCurve"></div>
+  <h2>对比学习动画（Contrastive Loss）</h2>
+  <div class="viz-row">
+    <div class="viz-panel" id="trainingScatter"></div>
+    <div class="viz-panel" id="trainingLossCurve"></div>
   </div>
-<div style="margin-top:1rem; display:flex; align-items:center; gap:1rem; flex-wrap:wrap;">
-<button class="btn btn-accent" onclick="playTrainingAnimation()">▶ 播放训练过程</button>
-<label style="display:flex; align-items:center; gap:0.5rem;">
-  Epoch: 0
-  <input type="range" id="trainingEpochSlider" min="0" value="0" oninput="updateTrainingEpoch(parseInt(this.value))">
-</label>
-</div>
+  <div style="margin-top:1rem; display:flex; align-items:center; gap:1rem; flex-wrap:wrap;">
+    <button class="btn btn-accent" onclick="playTrainingAnimation()">▶ 播放训练过程</button>
+    <label style="display:flex; align-items:center; gap:0.5rem;">
+      Epoch: <span id="trainingEpochValue">0</span>
+      <input type="range" id="trainingEpochSlider" min="0" value="0" oninput="updateTrainingEpoch(parseInt(this.value))">
+    </label>
+  </div>
   <p>对比学习（Contrastive Learning）的损失函数驱动整个训练过程。每个 batch 中，模型计算 Query 与所有 Positive/Negative 的相似度，然后通过 <strong>InfoNCE Loss</strong> 使 Query-Positive 相似度最大化、Query-Negative 相似度最小化。左图展示了训练过程中向量空间的演变——随着训练推进，同类文本聚拢、异类文本分离；右图展示了 Loss 曲线的下降过程。</p>
 </div>
 
 <div class="section-card">
-<h2>难负例与数据质量（Hard Negatives）</h2>
-<div class="viz-row">
-<div class="viz-panel" id="trainingHardNegRandom"></div>
-<div class="viz-panel" id="trainingHardNegHard"></div>
+  <h2>难负例与数据质量（Hard Negatives）</h2>
+  <div class="viz-row">
+    <div class="viz-panel" id="trainingHardNegRandom"></div>
+    <div class="viz-panel" id="trainingHardNegHard"></div>
   </div>
   <p>负例的选择对训练效果影响巨大。<strong>随机负例</strong>（左图）通常与 Query 毫不相关，模型很容易区分——训练信号弱，学不到细粒度的语义差异。<strong>难负例（Hard Negatives）</strong>（右图）是与 Query 表面相似但实际不相关的文档（如同主题但不同子问题），模型必须捕捉细微语义差别才能区分——训练信号强，学到的向量表示更精确。优质的训练数据应尽量使用难负例来提升模型的判别能力。</p>
 </div>
@@ -1484,50 +1485,50 @@ color: var(--text-secondary);
 <!-- ═══ Tab 6: Retrieval Failure Modes ═══ -->
 <section class="tab-content" id="tab-failures">
 <div class="section-card">
-<h2>为什么我的 Chunk 检索不到？</h2>
-<p>即使 Embedding 模型质量很高，检索仍然可能失败。理解失败模式是优化 RAG 系统的关键。以下是三种最常见的检索失败原因——语义稀释、语义鸿沟和否定陷阱。点击切换查看每种模式的具体表现。</p>
-<div class="failure-mode-selector" style="display:flex; gap:0.5rem; margin-top:1rem; flex-wrap:wrap;">
-<button class="btn btn-sm active" onclick="loadFailureMode('dilution', this)">语义稀释</button>
-<button class="btn btn-sm" onclick="loadFailureMode('gap', this)">语义鸿沟</button>
-<button class="btn btn-sm" onclick="loadFailureMode('negation', this)">否定陷阱</button>
-</div>
+  <h2>为什么我的 Chunk 检索不到？</h2>
+  <p>即使 Embedding 模型质量很高，检索仍然可能失败。理解失败模式是优化 RAG 系统的关键。以下是三种最常见的检索失败原因——语义稀释、语义鸿沟和否定陷阱。点击切换查看每种模式的具体表现。</p>
+  <div class="failure-mode-selector" style="display:flex; gap:0.5rem; margin-top:1rem; flex-wrap:wrap;">
+    <button class="btn btn-sm active" onclick="loadFailureMode('dilution', this)">语义稀释</button>
+    <button class="btn btn-sm" onclick="loadFailureMode('gap', this)">语义鸿沟</button>
+    <button class="btn btn-sm" onclick="loadFailureMode('negation', this)">否定陷阱</button>
+  </div>
 </div>
 
 <div class="section-card">
-<div class="viz-row">
-<div class="viz-panel viz-large" id="failureScatter"></div>
-<div class="viz-panel viz-side" id="failureRankingTable"></div>
+  <div class="viz-row">
+    <div class="viz-panel viz-large" id="failureScatter"></div>
+    <div class="viz-panel viz-side" id="failureRankingTable"></div>
   </div>
-<div id="failureExplanation" style="margin-top:1rem;"></div>
+  <div id="failureExplanation" style="margin-top:1rem;"></div>
 </div>
 </section>
 
 <!-- ═══ Tab 7: Top-K & Threshold ═══ -->
 <section class="tab-content" id="tab-topk">
 <div class="section-card">
-<h2>Top-K 和阈值该怎么设？</h2>
-<p>在 RAG 系统中，<strong>Top-K</strong>（返回多少条结果）和<strong>相似度阈值</strong>（多低的分数可以接受）是两个关键参数。设得太高会引入噪声，设得太低会遗漏相关内容。理解相似度分数的分布特征，才能做出合理的参数选择。选择一个查询，观察其相似度分布：</p>
-<div style="margin-top:1rem;">
-<label>选择查询：</label>
-<select id="topkQuerySelector" onchange="renderTopKAnalysis(this.value)" class="text-input" style="display:inline-block; width:auto; min-width:200px;"></select>
-</div>
-</div>
-
-<div class="section-card">
-<h3>相似度分布</h3>
-<div class="viz-panel" id="topkHistogram"></div>
-<div class="topk-threshold-control" style="margin-top:1rem;">
-<label>相似度阈值: 0.50</label>
-<input type="range" id="topkThresholdSlider" min="0" max="1" step="0.01" value="0.50" oninput="updateTopKThreshold(this.value)">
-<div id="topkPRValues" class="metrics-grid" style="margin-top:0.5rem;"></div>
+  <h2>Top-K 和阈值该怎么设？</h2>
+  <p>在 RAG 系统中，<strong>Top-K</strong>（返回多少条结果）和<strong>相似度阈值</strong>（多低的分数可以接受）是两个关键参数。设得太高会引入噪声，设得太低会遗漏相关内容。理解相似度分数的分布特征，才能做出合理的参数选择。选择一个查询，观察其相似度分布：</p>
+  <div style="margin-top:1rem;">
+    <label>选择查询：</label>
+    <select id="topkQuerySelector" onchange="renderTopKAnalysis(this.value)" class="text-input" style="display:inline-block; width:auto; min-width:200px;"></select>
   </div>
 </div>
 
 <div class="section-card">
-<h3>Precision / Recall 权衡 与 Top-K 分析</h3>
-<div class="viz-row">
-<div class="viz-panel" id="topkPRCurve"></div>
-<div class="viz-panel" id="topkBarChart"></div>
+  <h3>相似度分布</h3>
+  <div class="viz-panel" id="topkHistogram"></div>
+  <div class="topk-threshold-control" style="margin-top:1rem;">
+    <label>相似度阈值: <span id="topkThresholdValue">0.50</span></label>
+    <input type="range" id="topkThresholdSlider" min="0" max="1" step="0.01" value="0.50" oninput="updateTopKThreshold(this.value)">
+    <div id="topkPRValues" class="metrics-grid" style="margin-top:0.5rem;"></div>
+  </div>
+</div>
+
+<div class="section-card">
+  <h3>Precision / Recall 权衡 与 Top-K 分析</h3>
+  <div class="viz-row">
+    <div class="viz-panel" id="topkPRCurve"></div>
+    <div class="viz-panel" id="topkBarChart"></div>
   </div>
 </div>
 </section>
@@ -1535,73 +1536,73 @@ color: var(--text-secondary);
 <!-- ═══ Tab 8: Reranker Principles ═══ -->
 <section class="tab-content" id="tab-reranker">
 <div class="section-card">
-<h2>Bi-Encoder vs Cross-Encoder：为什么 Reranker 有用？</h2>
-<div style="display:flex; gap:2rem; flex-wrap:wrap; justify-content:center; margin:1.5rem 0;">
-<!-- Bi-Encoder diagram -->
-<div>
-  <h4 style="text-align:center; margin-bottom:0.5rem;">Bi-Encoder（独立编码）</h4>
-  <svg viewBox="0 0 320 200" width="320" class="qkv-svg">
-    <defs>
-      <marker id="arrow-bi" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
-        <polygon points="0 0, 10 3.5, 0 7" fill="var(--text-secondary)" />
-      </marker>
-    </defs>
-    <rect x="10" y="20" width="80" height="36" rx="6" class="svg-box svg-q"/>
-    <text x="50" y="43" text-anchor="middle" class="svg-label">Query</text>
-    <line x1="90" y1="38" x2="130" y2="38" class="svg-arrow" marker-end="url(#arrow-bi)"/>
-    <rect x="130" y="15" width="90" height="46" rx="6" class="svg-box svg-attn"/>
-    <text x="175" y="43" text-anchor="middle" class="svg-label">Encoder</text>
-    <line x1="220" y1="38" x2="260" y2="38" class="svg-arrow" marker-end="url(#arrow-bi)"/>
-    <rect x="260" y="20" width="50" height="36" rx="6" class="svg-box svg-out"/>
-    <text x="285" y="43" text-anchor="middle" class="svg-sublabel">vec_q</text>
-    <rect x="10" y="100" width="80" height="36" rx="6" class="svg-box svg-k"/>
-    <text x="50" y="123" text-anchor="middle" class="svg-label">Doc</text>
-    <line x1="90" y1="118" x2="130" y2="118" class="svg-arrow" marker-end="url(#arrow-bi)"/>
-    <rect x="130" y="95" width="90" height="46" rx="6" class="svg-box svg-attn"/>
-    <text x="175" y="123" text-anchor="middle" class="svg-label">Encoder</text>
-    <line x1="220" y1="118" x2="260" y2="118" class="svg-arrow" marker-end="url(#arrow-bi)"/>
-    <rect x="260" y="100" width="50" height="36" rx="6" class="svg-box svg-out"/>
-    <text x="285" y="123" text-anchor="middle" class="svg-sublabel">vec_d</text>
-    <text x="285" y="166" text-anchor="middle" class="svg-label">cosine</text>
-    <text x="285" y="183" text-anchor="middle" class="svg-sublabel">相似度</text>
-    <line x1="285" y1="56" x2="285" y2="100" class="svg-arrow" stroke-dasharray="4,4"/>
-  </svg>
-</div>
+  <h2>Bi-Encoder vs Cross-Encoder：为什么 Reranker 有用？</h2>
+  <div style="display:flex; gap:2rem; flex-wrap:wrap; justify-content:center; margin:1.5rem 0;">
+    <!-- Bi-Encoder diagram -->
+    <div>
+      <h4 style="text-align:center; margin-bottom:0.5rem;">Bi-Encoder（独立编码）</h4>
+      <svg viewBox="0 0 320 200" width="320" class="qkv-svg">
+        <defs>
+          <marker id="arrow-bi" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="var(--text-secondary)" />
+          </marker>
+        </defs>
+        <rect x="10" y="20" width="80" height="36" rx="6" class="svg-box svg-q"/>
+        <text x="50" y="43" text-anchor="middle" class="svg-label">Query</text>
+        <line x1="90" y1="38" x2="130" y2="38" class="svg-arrow" marker-end="url(#arrow-bi)"/>
+        <rect x="130" y="15" width="90" height="46" rx="6" class="svg-box svg-attn"/>
+        <text x="175" y="43" text-anchor="middle" class="svg-label">Encoder</text>
+        <line x1="220" y1="38" x2="260" y2="38" class="svg-arrow" marker-end="url(#arrow-bi)"/>
+        <rect x="260" y="20" width="50" height="36" rx="6" class="svg-box svg-out"/>
+        <text x="285" y="43" text-anchor="middle" class="svg-sublabel">vec_q</text>
+        <rect x="10" y="100" width="80" height="36" rx="6" class="svg-box svg-k"/>
+        <text x="50" y="123" text-anchor="middle" class="svg-label">Doc</text>
+        <line x1="90" y1="118" x2="130" y2="118" class="svg-arrow" marker-end="url(#arrow-bi)"/>
+        <rect x="130" y="95" width="90" height="46" rx="6" class="svg-box svg-attn"/>
+        <text x="175" y="123" text-anchor="middle" class="svg-label">Encoder</text>
+        <line x1="220" y1="118" x2="260" y2="118" class="svg-arrow" marker-end="url(#arrow-bi)"/>
+        <rect x="260" y="100" width="50" height="36" rx="6" class="svg-box svg-out"/>
+        <text x="285" y="123" text-anchor="middle" class="svg-sublabel">vec_d</text>
+        <text x="285" y="166" text-anchor="middle" class="svg-label">cosine</text>
+        <text x="285" y="183" text-anchor="middle" class="svg-sublabel">相似度</text>
+        <line x1="285" y1="56" x2="285" y2="100" class="svg-arrow" stroke-dasharray="4,4"/>
+      </svg>
+    </div>
     <!-- Cross-Encoder diagram -->
-<div>
-  <h4 style="text-align:center; margin-bottom:0.5rem;">Cross-Encoder（联合编码）</h4>
-  <svg viewBox="0 0 320 200" width="320" class="qkv-svg">
-    <defs>
-      <marker id="arrow-ce" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
-        <polygon points="0 0, 10 3.5, 0 7" fill="var(--text-secondary)" />
-      </marker>
-    </defs>
-    <rect x="10" y="30" width="80" height="36" rx="6" class="svg-box svg-q"/>
-    <text x="50" y="53" text-anchor="middle" class="svg-label">Query</text>
-    <rect x="10" y="110" width="80" height="36" rx="6" class="svg-box svg-k"/>
-    <text x="50" y="133" text-anchor="middle" class="svg-label">Doc</text>
-    <line x1="90" y1="48" x2="130" y2="80" class="svg-arrow" marker-end="url(#arrow-ce)"/>
-    <line x1="90" y1="128" x2="130" y2="96" class="svg-arrow" marker-end="url(#arrow-ce)"/>
-    <rect x="130" y="55" width="90" height="66" rx="6" class="svg-box svg-v"/>
-    <text x="175" y="83" text-anchor="middle" class="svg-label">Encoder</text>
-    <text x="175" y="103" text-anchor="middle" class="svg-sublabel">Cross-Attention</text>
-    <line x1="220" y1="88" x2="260" y2="88" class="svg-arrow" marker-end="url(#arrow-ce)"/>
-    <rect x="260" y="68" width="50" height="40" rx="6" class="svg-box svg-analogy"/>
-    <text x="285" y="85" text-anchor="middle" class="svg-sublabel">相关性</text>
-    <text x="285" y="101" text-anchor="middle" class="svg-sublabel">分数</text>
-    <text x="175" y="155" text-anchor="middle" class="svg-sublabel" font-style="italic">联合编码，交叉注意力</text>
-  </svg>
-</div>
+    <div>
+      <h4 style="text-align:center; margin-bottom:0.5rem;">Cross-Encoder（联合编码）</h4>
+      <svg viewBox="0 0 320 200" width="320" class="qkv-svg">
+        <defs>
+          <marker id="arrow-ce" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="var(--text-secondary)" />
+          </marker>
+        </defs>
+        <rect x="10" y="30" width="80" height="36" rx="6" class="svg-box svg-q"/>
+        <text x="50" y="53" text-anchor="middle" class="svg-label">Query</text>
+        <rect x="10" y="110" width="80" height="36" rx="6" class="svg-box svg-k"/>
+        <text x="50" y="133" text-anchor="middle" class="svg-label">Doc</text>
+        <line x1="90" y1="48" x2="130" y2="80" class="svg-arrow" marker-end="url(#arrow-ce)"/>
+        <line x1="90" y1="128" x2="130" y2="96" class="svg-arrow" marker-end="url(#arrow-ce)"/>
+        <rect x="130" y="55" width="90" height="66" rx="6" class="svg-box svg-v"/>
+        <text x="175" y="83" text-anchor="middle" class="svg-label">Encoder</text>
+        <text x="175" y="103" text-anchor="middle" class="svg-sublabel">Cross-Attention</text>
+        <line x1="220" y1="88" x2="260" y2="88" class="svg-arrow" marker-end="url(#arrow-ce)"/>
+        <rect x="260" y="68" width="50" height="40" rx="6" class="svg-box svg-analogy"/>
+        <text x="285" y="85" text-anchor="middle" class="svg-sublabel">相关性</text>
+        <text x="285" y="101" text-anchor="middle" class="svg-sublabel">分数</text>
+        <text x="175" y="155" text-anchor="middle" class="svg-sublabel" font-style="italic">联合编码，交叉注意力</text>
+      </svg>
+    </div>
   </div>
   <p><strong>Bi-Encoder</strong> 将 Query 和 Document 独立编码为向量，速度快（文档可预计算），但无法捕捉 Query 和 Document 之间的细粒度交互。<strong>Cross-Encoder</strong> 将 Query 和 Document 拼接后联合输入 Transformer，通过 Cross-Attention 捕捉每个 token 之间的交互关系，精度更高但速度慢（每对都要过一次模型）。因此实际应用采用 <strong>两阶段模式</strong>：先用 Bi-Encoder 快速召回 Top-N 候选，再用 Cross-Encoder（Reranker）对候选精排。</p>
 </div>
 
 <div class="section-card">
-<h2>排序对比：Bi-Encoder vs Cross-Encoder</h2>
-<div id="rerankerQuerySelector" style="margin-bottom:1rem;"></div>
-<div class="viz-row">
-<div class="viz-panel" id="rerankerBiRanking"></div>
-<div class="viz-panel" id="rerankerCeRanking"></div>
+  <h2>排序对比：Bi-Encoder vs Cross-Encoder</h2>
+  <div id="rerankerQuerySelector" style="margin-bottom:1rem;"></div>
+  <div class="viz-row">
+    <div class="viz-panel" id="rerankerBiRanking"></div>
+    <div class="viz-panel" id="rerankerCeRanking"></div>
   </div>
   <p>上方展示同一 Query 下，Bi-Encoder（余弦相似度）排序与 Cross-Encoder（相关性分数）排序的对比。注意观察排名变化——某些文档在 Bi-Encoder 中排名较低，但被 Cross-Encoder 提升到前列（因为联合编码捕捉到了更深层的语义关联）。这就是 <strong>Retrieve-then-Rerank</strong> 的核心价值：用快速粗排筛选候选，用精排模型修正排序。</p>
 </div>
@@ -1610,24 +1611,24 @@ color: var(--text-secondary);
 <!-- ═══ Tab 9: HyDE Principles ═══ -->
 <section class="tab-content" id="tab-hyde">
 <div class="section-card">
-<h2>HyDE：假想文档 Embedding</h2>
-<p><strong>HyDE（Hypothetical Document Embeddings）</strong>解决的核心问题是：用户提问和知识库文档之间存在天然的<strong>语义空间偏移</strong>——提问是"问题空间"的表达，文档是"答案空间"的表达，两者在向量空间中可能距离较远。HyDE 的做法是：先让 LLM 根据 Query 生成一个<strong>假想答案</strong>（不需要准确），然后用这个假想答案的 Embedding 去检索。因为假想答案和真实文档都属于"答案空间"，它们在向量空间中更近。</p>
-<div style="display:flex; align-items:center; gap:0.5rem; flex-wrap:wrap; justify-content:center; margin:1.5rem 0; font-size:0.95rem;">
-<div class="diagram-item" style="padding:0.5rem 1rem;">Query</div>
-<div class="diagram-arrow">→ LLM →</div>
-<div class="diagram-item" style="padding:0.5rem 1rem; border-color:var(--accent);">假想答案</div>
-<div class="diagram-arrow">→ Embedding →</div>
-<div class="diagram-item vector" style="padding:0.5rem 1rem;">假想向量</div>
-<div class="diagram-arrow">→ 检索 →</div>
-<div class="diagram-item" style="padding:0.5rem 1rem;">真实文档</div>
+  <h2>HyDE：假想文档 Embedding</h2>
+  <p><strong>HyDE（Hypothetical Document Embeddings）</strong>解决的核心问题是：用户提问和知识库文档之间存在天然的<strong>语义空间偏移</strong>——提问是"问题空间"的表达，文档是"答案空间"的表达，两者在向量空间中可能距离较远。HyDE 的做法是：先让 LLM 根据 Query 生成一个<strong>假想答案</strong>（不需要准确），然后用这个假想答案的 Embedding 去检索。因为假想答案和真实文档都属于"答案空间"，它们在向量空间中更近。</p>
+  <div style="display:flex; align-items:center; gap:0.5rem; flex-wrap:wrap; justify-content:center; margin:1.5rem 0; font-size:0.95rem;">
+    <div class="diagram-item" style="padding:0.5rem 1rem;">Query</div>
+    <div class="diagram-arrow">→ LLM →</div>
+    <div class="diagram-item" style="padding:0.5rem 1rem; border-color:var(--accent);">假想答案</div>
+    <div class="diagram-arrow">→ Embedding →</div>
+    <div class="diagram-item vector" style="padding:0.5rem 1rem;">假想向量</div>
+    <div class="diagram-arrow">→ 检索 →</div>
+    <div class="diagram-item" style="padding:0.5rem 1rem;">真实文档</div>
   </div>
   <p>关键洞察：假想答案不需要事实正确，只需要在<strong>文体和语义结构上</strong>接近真实文档即可。因为 Embedding 模型关注的是语义空间位置而非事实准确性。</p>
 </div>
 
 <div class="section-card">
-<h2>向量空间可视化</h2>
-<div class="viz-panel" id="hydeScatter"></div>
-<div class="viz-panel" id="hydeSimilarityBars" style="margin-top:1rem;"></div>
+  <h2>向量空间可视化</h2>
+  <div class="viz-panel" id="hydeScatter"></div>
+  <div class="viz-panel" id="hydeSimilarityBars" style="margin-top:1rem;"></div>
   <p style="margin-top:1rem;">上方散点图展示了 Query、假想答案和真实文档在向量空间中的位置关系。箭头从 Query 指向假想答案、再指向真实文档，直观展示了 HyDE 如何"桥接"问题空间和答案空间。柱状图对比了 Query→文档 的直接相似度与 假想答案→文档 的相似度——后者通常更高，因为假想答案已经被"转换"到了文档所在的语义空间。</p>
 </div>
 </section>
@@ -1635,32 +1636,32 @@ color: var(--text-secondary);
 <!-- ═══ Tab 10: Sparse vs Dense ═══ -->
 <section class="tab-content" id="tab-sparse-dense">
 <div class="section-card">
-<h2>稀疏检索 vs 稠密检索：何时用哪个？</h2>
-<p><strong>稀疏检索（BM25）</strong>基于精确的词汇匹配——统计查询词在文档中出现的频率和稀有程度，适合精确关键词和专有名词。<strong>稠密检索（Embedding）</strong>基于语义匹配——即使查询和文档用词完全不同，只要语义相近就能匹配，适合口语化提问和同义改写。两种方法各有擅长场景，理解它们的差异是构建高质量检索系统的基础。</p>
-<div id="sdQuerySelector" style="margin-top:1rem;"></div>
+  <h2>稀疏检索 vs 稠密检索：何时用哪个？</h2>
+  <p><strong>稀疏检索（BM25）</strong>基于精确的词汇匹配——统计查询词在文档中出现的频率和稀有程度，适合精确关键词和专有名词。<strong>稠密检索（Embedding）</strong>基于语义匹配——即使查询和文档用词完全不同，只要语义相近就能匹配，适合口语化提问和同义改写。两种方法各有擅长场景，理解它们的差异是构建高质量检索系统的基础。</p>
+  <div id="sdQuerySelector" style="margin-top:1rem;"></div>
 </div>
 
 <div class="section-card">
-<h3>排序对比：BM25 vs Embedding</h3>
-<div class="viz-row">
-<div class="viz-panel" id="sdBM25Ranking"></div>
-<div class="viz-panel" id="sdEmbeddingRanking"></div>
+  <h3>排序对比：BM25 vs Embedding</h3>
+  <div class="viz-row">
+    <div class="viz-panel" id="sdBM25Ranking"></div>
+    <div class="viz-panel" id="sdEmbeddingRanking"></div>
   </div>
 </div>
 
 <div class="section-card">
-<h2>混合检索：Reciprocal Rank Fusion (RRF)</h2>
-<p>单独使用 BM25 或 Embedding 都会有盲区。<strong>混合检索</strong>通过融合两种排序来互补优缺点。RRF 是最常用的融合算法，其公式为：</p>
-<div class="rrf-formula">
-RRF(d) = Σ 1 / (k + rank<sub>i</sub>(d)), &nbsp; k = 60
-</div>
+  <h2>混合检索：Reciprocal Rank Fusion (RRF)</h2>
+  <p>单独使用 BM25 或 Embedding 都会有盲区。<strong>混合检索</strong>通过融合两种排序来互补优缺点。RRF 是最常用的融合算法，其公式为：</p>
+  <div class="rrf-formula">
+    RRF(d) = Σ 1 / (k + rank<sub>i</sub>(d)), &nbsp; k = 60
+  </div>
   <p>RRF 只使用排名而非原始分数，因此不受 BM25 分数无界（0~20+）和余弦相似度有界（0~1）的尺度差异影响。参数 k=60 是原始论文推荐的常数，用于平滑排名差异。</p>
-<div id="sdRRFTable" style="margin-top:1rem;"></div>
+  <div id="sdRRFTable" style="margin-top:1rem;"></div>
 </div>
 
 <div class="section-card">
-<h3>分数分布对比</h3>
-<div class="viz-panel" id="sdDistChart"></div>
+  <h3>分数分布对比</h3>
+  <div class="viz-panel" id="sdDistChart"></div>
   <p style="margin-top:1rem;">上图叠加展示了 BM25 分数和 Embedding 余弦相似度的分布。注意 BM25 分数是无界的（通常 0~20+），而余弦相似度被限制在 0~1 之间。这种尺度差异意味着<strong>不能简单地将两个分数相加</strong>——BM25 的高分会"压制"Embedding 分数。这正是 RRF 使用排名而非原始分数进行融合的原因。</p>
 </div>
 </section>
@@ -1668,90 +1669,92 @@ RRF(d) = Σ 1 / (k + rank<sub>i</sub>(d)), &nbsp; k = 60
 <!-- ═══ Tab 11: Chunk Construction Quality ═══ -->
 <section class="tab-content" id="tab-chunk-quality">
 <div class="section-card">
-<h2>Chunk 构建质量：噪声如何影响 Embedding</h2>
-<p>Embedding 模型的输入就是你的 chunk 文本——<strong>文本里的每一个字符都会变成 token 参与向量计算</strong>。JSON 括号、时间戳、页眉页脚、装饰符号……这些"噪声"都会占据有限的表示容量，稀释核心语义信号。下面通过 6 类常见噪声源，量化它们对检索相似度的真实影响。</p>
-<div class="cq-query-display">
-测试 Query：
-基准纯文本：
-</div>
-<div class="cq-category-selector" id="cqCategorySelector"></div>
+  <h2>Chunk 构建质量：噪声如何影响 Embedding</h2>
+  <p>Embedding 模型的输入就是你的 chunk 文本——<strong>文本里的每一个字符都会变成 token 参与向量计算</strong>。JSON 括号、时间戳、页眉页脚、装饰符号……这些"噪声"都会占据有限的表示容量，稀释核心语义信号。下面通过 6 类常见噪声源，量化它们对检索相似度的真实影响。</p>
+  <div class="cq-query-display">
+    <span class="cq-query-label">测试 Query：</span>
+    <span id="cqQuery" class="cq-query-text"></span>
+    <span class="cq-clean-label">基准纯文本：</span>
+    <span id="cqClean" class="cq-clean-text"></span>
+  </div>
+  <div class="cq-category-selector" id="cqCategorySelector"></div>
 </div>
 
 <div class="section-card">
-<h3 id="cqCategoryTitle"></h3>
-<p id="cqCategoryDesc"></p>
-<div class="viz-row">
-<div class="viz-panel viz-large" id="cqBarChart"></div>
-<div class="viz-panel viz-side" id="cqTokenChart"></div>
+  <h3 id="cqCategoryTitle"></h3>
+  <p id="cqCategoryDesc"></p>
+  <div class="viz-row">
+    <div class="viz-panel viz-large" id="cqBarChart"></div>
+    <div class="viz-panel viz-side" id="cqTokenChart"></div>
   </div>
 </div>
 
 <div class="section-card">
-<h3>各变体详情</h3>
-<div id="cqVariantsList"></div>
+  <h3>各变体详情</h3>
+  <div id="cqVariantsList"></div>
 </div>
 
 <div class="section-card cq-recommendation-card">
-<h3>实践建议</h3>
-<div id="cqRecommendation"></div>
+  <h3>实践建议</h3>
+  <div id="cqRecommendation"></div>
 </div>
 </section>
 
 <!-- ═══ Tab 12: Evaluation Metrics ═══ -->
 <section class="tab-content" id="tab-eval-metrics">
 <div class="section-card">
-<h2>检索评估指标：MRR / NDCG / MAP</h2>
-<p>检索系统的核心问题是：返回的结果<strong>排序够不够好</strong>？不同的评估指标从不同角度衡量排序质量。拖动下方文档改变排序，实时观察各指标的变化。</p>
-<div class="em-formula-grid">
-<div class="em-formula-card">
-  <h4>MRR (Mean Reciprocal Rank)</h4>
-  <div class="em-formula">MRR = 1 / rank<sub>first_relevant</sub></div>
+  <h2>检索评估指标：MRR / NDCG / MAP</h2>
+  <p>检索系统的核心问题是：返回的结果<strong>排序够不够好</strong>？不同的评估指标从不同角度衡量排序质量。拖动下方文档改变排序，实时观察各指标的变化。</p>
+  <div class="em-formula-grid">
+    <div class="em-formula-card">
+      <h4>MRR (Mean Reciprocal Rank)</h4>
+      <div class="em-formula">MRR = 1 / rank<sub>first_relevant</sub></div>
       <p>只关心<strong>第一个</strong>相关结果的位置。排在第1位=1.0，第2位=0.5，第3位=0.33…</p>
     </div>
-<div class="em-formula-card">
-  <h4>NDCG@K (Normalized DCG)</h4>
-  <div class="em-formula">DCG = Σ (2<sup>rel</sup> - 1) / log₂(rank+1)</div>
+    <div class="em-formula-card">
+      <h4>NDCG@K (Normalized DCG)</h4>
+      <div class="em-formula">DCG = Σ (2<sup>rel</sup> - 1) / log₂(rank+1)</div>
       <p>支持<strong>多级相关度</strong>（0/1/2/3），高相关度排在前面得分更高，除以理想排序 (IDCG) 归一化到 0~1。</p>
     </div>
-<div class="em-formula-card">
-  <h4>MAP (Mean Average Precision)</h4>
-  <div class="em-formula">AP = Σ P@k · rel(k) / |relevant|</div>
+    <div class="em-formula-card">
+      <h4>MAP (Mean Average Precision)</h4>
+      <div class="em-formula">AP = Σ P@k · rel(k) / |relevant|</div>
       <p>在每个相关文档位置计算 Precision@K 取平均。同时奖励<strong>数量多</strong>和<strong>排序靠前</strong>。</p>
     </div>
   </div>
 </div>
 
 <div class="section-card">
-<h3>交互实验：拖动文档，观察指标变化</h3>
-<div style="margin-bottom:1rem;">
-<label>选择查询：</label>
-<select id="emQuerySelector" onchange="loadEvalQuery(this.value)" class="text-input" style="display:inline-block; width:auto; min-width:200px;"></select>
-</div>
-<div class="em-query-display" id="emQueryDisplay"></div>
-<div class="em-layout">
-<div class="em-ranking-panel">
-  <h4>当前排序 （点击 ▲▼ 调整顺序）</h4>
-  <div id="emRankingList" class="em-ranking-list"></div>
-  <div style="margin-top:0.75rem; display:flex; gap:0.5rem; flex-wrap:wrap;">
-    <button class="btn btn-sm" onclick="resetEvalRanking()">重置为模型排序</button>
-    <button class="btn btn-sm" onclick="setIdealRanking()">设为理想排序</button>
-    <button class="btn btn-sm" onclick="setWorstRanking()">设为最差排序</button>
+  <h3>交互实验：拖动文档，观察指标变化</h3>
+  <div style="margin-bottom:1rem;">
+    <label>选择查询：</label>
+    <select id="emQuerySelector" onchange="loadEvalQuery(this.value)" class="text-input" style="display:inline-block; width:auto; min-width:200px;"></select>
   </div>
+  <div class="em-query-display" id="emQueryDisplay"></div>
+  <div class="em-layout">
+    <div class="em-ranking-panel">
+      <h4>当前排序 <span class="hint">（点击 ▲▼ 调整顺序）</span></h4>
+      <div id="emRankingList" class="em-ranking-list"></div>
+      <div style="margin-top:0.75rem; display:flex; gap:0.5rem; flex-wrap:wrap;">
+        <button class="btn btn-sm" onclick="resetEvalRanking()">重置为模型排序</button>
+        <button class="btn btn-sm" onclick="setIdealRanking()">设为理想排序</button>
+        <button class="btn btn-sm" onclick="setWorstRanking()">设为最差排序</button>
+      </div>
     </div>
-<div class="em-metrics-panel">
-  <h4>实时指标</h4>
-  <div id="emMetricsDisplay" class="em-metrics-display"></div>
-  <div class="viz-panel" id="emMetricsChart" style="margin-top:1rem;"></div>
+    <div class="em-metrics-panel">
+      <h4>实时指标</h4>
+      <div id="emMetricsDisplay" class="em-metrics-display"></div>
+      <div class="viz-panel" id="emMetricsChart" style="margin-top:1rem;"></div>
     </div>
   </div>
 </div>
 
 <div class="section-card">
-<h3>指标选择指南</h3>
-<div class="em-guide-grid">
-<div class="em-guide-item"><strong>MRR</strong> — 适合只需要找到"一个最佳答案"的场景（如问答系统）</div>
-<div class="em-guide-item"><strong>NDCG</strong> — 适合有多级相关度标注的场景（如搜索引擎，区分"完美匹配"和"部分相关"）</div>
-<div class="em-guide-item"><strong>MAP</strong> — 适合需要找到"所有相关结果"的场景（如法律文书检索、专利搜索）</div>
+  <h3>指标选择指南</h3>
+  <div class="em-guide-grid">
+    <div class="em-guide-item"><strong>MRR</strong> — 适合只需要找到"一个最佳答案"的场景（如问答系统）</div>
+    <div class="em-guide-item"><strong>NDCG</strong> — 适合有多级相关度标注的场景（如搜索引擎，区分"完美匹配"和"部分相关"）</div>
+    <div class="em-guide-item"><strong>MAP</strong> — 适合需要找到"所有相关结果"的场景（如法律文书检索、专利搜索）</div>
   </div>
 </div>
 </section>
@@ -1759,115 +1762,112 @@ RRF(d) = Σ 1 / (k + rank<sub>i</sub>(d)), &nbsp; k = 60
 <!-- ═══ Tab 13: Model Selection Guide ═══ -->
 <section class="tab-content" id="tab-model-guide">
 <div class="section-card">
-<h2>Embedding 模型选型指南</h2>
-<p>选择合适的 Embedding 模型是 RAG 系统的基础决策。模型的维度、语言支持、速度和精度各有权衡。通过下面的实验数据和对比表，帮助你做出明智的选择。</p>
+  <h2>Embedding 模型选型指南</h2>
+  <p>选择合适的 Embedding 模型是 RAG 系统的基础决策。模型的维度、语言支持、速度和精度各有权衡。通过下面的实验数据和对比表，帮助你做出明智的选择。</p>
 </div>
 
 <div class="section-card">
-<h3>维度截断实验：维度越高越好吗？</h3>
-<p>将同一模型（384维）的向量截断到不同维度，观察相似度的变化。这模拟了选择不同维度模型的效果。</p>
-<div class="viz-panel" id="mgDimChart"></div>
-  <p class="hint" style="margin-top:0.5rem;">实验使用 Query「」与 5 篇文档的相似度计算。</p>
+  <h3>维度截断实验：维度越高越好吗？</h3>
+  <p>将同一模型（384维）的向量截断到不同维度，观察相似度的变化。这模拟了选择不同维度模型的效果。</p>
+  <div class="viz-panel" id="mgDimChart"></div>
+  <p class="hint" style="margin-top:0.5rem;">实验使用 Query「<span id="mgDimQuery"></span>」与 5 篇文档的相似度计算。</p>
 </div>
 
 <div class="section-card">
-<h3>查询风格对检索效果的影响</h3>
-<p>同一个意图，用不同风格表达，检索效果差异很大。关键词查询、口语化提问、书面查询——模型对哪种更友好？</p>
-<div class="viz-panel" id="mgQueryTypeChart"></div>
-<div id="mgQueryTypeTable" style="margin-top:1rem;"></div>
+  <h3>查询风格对检索效果的影响</h3>
+  <p>同一个意图，用不同风格表达，检索效果差异很大。关键词查询、口语化提问、书面查询——模型对哪种更友好？</p>
+  <div class="viz-panel" id="mgQueryTypeChart"></div>
+  <div id="mgQueryTypeTable" style="margin-top:1rem;"></div>
 </div>
 
 <div class="section-card">
-<h3>主流模型对比</h3>
-<p>根据你的场景选择合适的模型：</p>
-<div id="mgModelTable" class="mg-model-table-wrapper"></div>
-<div class="mg-tips">
-<h4>选型建议</h4>
-<ul>
-  <li><strong>纯中文场景</strong>：优先 bge-base-zh / bge-large-zh，中文效果显著优于多语言通用模型</li>
-  <li><strong>多语言场景</strong>：multilingual-MiniLM 或 cohere-embed-v3</li>
-  <li><strong>追求极致精度</strong>：text-embedding-3-large 或 bge-large-zh，但成本和延迟更高</li>
-  <li><strong>预算有限</strong>：all-MiniLM-L6-v2（英文）或 multilingual-MiniLM（多语言），可自部署</li>
-  <li><strong>Matryoshka (套娃) 模型</strong>：支持运行时维度截断，如 text-embedding-3 系列</li>
-</ul>
-</div>
+  <h3>主流模型对比</h3>
+  <p>根据你的场景选择合适的模型：</p>
+  <div id="mgModelTable" class="mg-model-table-wrapper"></div>
+  <div class="mg-tips">
+    <h4>选型建议</h4>
+    <ul>
+      <li><strong>纯中文场景</strong>：优先 bge-base-zh / bge-large-zh，中文效果显著优于多语言通用模型</li>
+      <li><strong>多语言场景</strong>：multilingual-MiniLM 或 cohere-embed-v3</li>
+      <li><strong>追求极致精度</strong>：text-embedding-3-large 或 bge-large-zh，但成本和延迟更高</li>
+      <li><strong>预算有限</strong>：all-MiniLM-L6-v2（英文）或 multilingual-MiniLM（多语言），可自部署</li>
+      <li><strong>Matryoshka (套娃) 模型</strong>：支持运行时维度截断，如 text-embedding-3 系列</li>
+    </ul>
+  </div>
 </div>
 </section>
 
 <!-- ═══ Tab 14: ColBERT Late Interaction ═══ -->
 <section class="tab-content" id="tab-colbert">
 <div class="section-card">
-<h2>ColBERT：Late Interaction 检索</h2>
-<p>Bi-Encoder 把整段文本压缩成<strong>一个向量</strong>，信息损失大。Cross-Encoder 让 Query 和 Document 全交叉注意力，精度高但无法预计算。<strong>ColBERT</strong> 提出了折中方案——<strong>Late Interaction（延迟交互）</strong>：分别编码 Query 和 Document 的每个 token，然后在 token 级别做匹配。</p>
-<div class="cb-arch-flow">
-<div class="cb-arch-step">
-  <div class="cb-arch-label">Stage 1: 独立编码</div>
-  <div class="cb-arch-desc">Query → [vec_q₁, vec_q₂, …]
-Doc → [vec_d₁, vec_d₂, …]</div>
+  <h2>ColBERT：Late Interaction 检索</h2>
+  <p>Bi-Encoder 把整段文本压缩成<strong>一个向量</strong>，信息损失大。Cross-Encoder 让 Query 和 Document 全交叉注意力，精度高但无法预计算。<strong>ColBERT</strong> 提出了折中方案——<strong>Late Interaction（延迟交互）</strong>：分别编码 Query 和 Document 的每个 token，然后在 token 级别做匹配。</p>
+  <div class="cb-arch-flow">
+    <div class="cb-arch-step">
+      <div class="cb-arch-label">Stage 1: 独立编码</div>
+      <div class="cb-arch-desc">Query → [vec_q₁, vec_q₂, …]<br>Doc → [vec_d₁, vec_d₂, …]</div>
     </div>
-<div class="cb-arch-arrow">→</div>
-<div class="cb-arch-step">
-  <div class="cb-arch-label">Stage 2: MaxSim</div>
-  <div class="cb-arch-desc">对每个 q_token，找到最匹配的 d_token
-MaxSim = Σ max(sim(qᵢ, dⱼ)) / |Q|</div>
+    <div class="cb-arch-arrow">→</div>
+    <div class="cb-arch-step">
+      <div class="cb-arch-label">Stage 2: MaxSim</div>
+      <div class="cb-arch-desc">对每个 q_token，找到最匹配的 d_token<br>MaxSim = Σ max(sim(qᵢ, dⱼ)) / |Q|</div>
     </div>
-<div class="cb-arch-arrow">→</div>
-<div class="cb-arch-step">
-  <div class="cb-arch-label">最终得分</div>
-  <div class="cb-arch-desc">聚合 token 级匹配分数
-保留细粒度语义信号</div>
+    <div class="cb-arch-arrow">→</div>
+    <div class="cb-arch-step">
+      <div class="cb-arch-label">最终得分</div>
+      <div class="cb-arch-desc">聚合 token 级匹配分数<br>保留细粒度语义信号</div>
     </div>
   </div>
 </div>
 
 <div class="section-card">
-<h2>Token 级相似度矩阵</h2>
-<p>下方热力图展示 Query token 与 Document token 之间的逐对相似度。每行高亮的 cell 是该 query token 的 <strong>MaxSim</strong>（最佳匹配），所有 MaxSim 的均值即为 ColBERT 总分。</p>
-<div id="cbExampleSelector" style="margin-bottom:1rem;"></div>
-<div id="cbDocSelector" style="margin-bottom:1rem;"></div>
-<div class="viz-panel" id="cbTokenHeatmap"></div>
-<div id="cbMaxSimDetail" style="margin-top:1rem;"></div>
+  <h2>Token 级相似度矩阵</h2>
+  <p>下方热力图展示 Query token 与 Document token 之间的逐对相似度。每行高亮的 cell 是该 query token 的 <strong>MaxSim</strong>（最佳匹配），所有 MaxSim 的均值即为 ColBERT 总分。</p>
+  <div id="cbExampleSelector" style="margin-bottom:1rem;"></div>
+  <div id="cbDocSelector" style="margin-bottom:1rem;"></div>
+  <div class="viz-panel" id="cbTokenHeatmap"></div>
+  <div id="cbMaxSimDetail" style="margin-top:1rem;"></div>
 </div>
 
 <div class="section-card">
-<h2>Bi-Encoder vs ColBERT 对比</h2>
-<div class="viz-panel" id="cbCompareChart"></div>
+  <h2>Bi-Encoder vs ColBERT 对比</h2>
+  <div class="viz-panel" id="cbCompareChart"></div>
   <p style="margin-top:1rem;">ColBERT 的 Token 级匹配能捕捉到 Bi-Encoder 遗漏的局部语义对齐。例如 Query 中的「退款」token 可以精确匹配到文档中的「退款」和「申请退款」，而 Bi-Encoder 只能依赖整个句子的平均语义。</p>
 </div>
 
 <div class="section-card">
-<h2>三种架构对比</h2>
-<div id="cbArchTable"></div>
-<div class="viz-panel" id="cbSpeedAccuracyChart" style="margin-top:1rem;"></div>
+  <h2>三种架构对比</h2>
+  <div id="cbArchTable"></div>
+  <div class="viz-panel" id="cbSpeedAccuracyChart" style="margin-top:1rem;"></div>
 </div>
 </section>
 
 <!-- ═══ Tab 15: Chunking Strategies ═══ -->
 <section class="tab-content" id="tab-chunk-strategies">
 <div class="section-card">
-<h2>分片策略对比：怎么切才最好？</h2>
-<p>RAG 系统的第一步是把文档切成 chunk。切法不同，检索效果天差地别。下面用同一篇文档、同一个 Query，对比四种常见分片策略的召回效果。</p>
-<div class="cs-strategies-grid" id="csStrategyBtns"></div>
-<div style="margin-top:1rem;">
-<label>选择 Query：</label>
-<select id="csQuerySelector" class="text-input" style="display:inline-block; width:auto; min-width:200px;" onchange="renderChunkStrategyQuery(this.value)"></select>
-</div>
-</div>
-
-<div class="section-card">
-<h3>策略效果对比</h3>
-<div class="viz-panel" id="csCompareChart"></div>
+  <h2>分片策略对比：怎么切才最好？</h2>
+  <p>RAG 系统的第一步是把文档切成 chunk。切法不同，检索效果天差地别。下面用同一篇文档、同一个 Query，对比四种常见分片策略的召回效果。</p>
+  <div class="cs-strategies-grid" id="csStrategyBtns"></div>
+  <div style="margin-top:1rem;">
+    <label>选择 Query：</label>
+    <select id="csQuerySelector" class="text-input" style="display:inline-block; width:auto; min-width:200px;" onchange="renderChunkStrategyQuery(this.value)"></select>
+  </div>
 </div>
 
 <div class="section-card">
-<h3>分片详情：</h3>
-<div class="cs-source-display" id="csSourceDisplay"></div>
-<div class="viz-panel" id="csChunkSims" style="margin-top:1rem;"></div>
+  <h3>策略效果对比</h3>
+  <div class="viz-panel" id="csCompareChart"></div>
 </div>
 
 <div class="section-card">
-<h3>所有分片 UMAP 分布</h3>
-<div class="viz-panel" id="csUmapScatter"></div>
+  <h3>分片详情：<span id="csStrategyName"></span></h3>
+  <div class="cs-source-display" id="csSourceDisplay"></div>
+  <div class="viz-panel" id="csChunkSims" style="margin-top:1rem;"></div>
+</div>
+
+<div class="section-card">
+  <h3>所有分片 UMAP 分布</h3>
+  <div class="viz-panel" id="csUmapScatter"></div>
   <p class="hint" style="margin-top:0.5rem;">不同颜色代表不同分片策略。可以看到粒度越细的策略（如按句子分割）产生的点越分散，而固定长度切分的 chunk 可能跨越多个语义区域。</p>
 </div>
 </section>
@@ -1875,131 +1875,125 @@ MaxSim = Σ max(sim(qᵢ, dⱼ)) / |Q|</div>
 <!-- ═══ Tab 16: Contextual Retrieval ═══ -->
 <section class="tab-content" id="tab-contextual">
 <div class="section-card">
-<h2>Contextual Retrieval：给 Chunk 补上下文</h2>
-<p>Chunk 被从文档中切出后，失去了<strong>文档级别的上下文信息</strong>。比如一个 chunk 说"金额将在3-5个工作日内退回"，但不知道这是在说退款、工资还是退税。<strong>Contextual Retrieval</strong> 的核心思想是：在每个 chunk 前面加上一段由 LLM 生成的上下文摘要，让 chunk 自己"说清楚"自己是什么。</p>
-<div class="cr-flow-diagram">
-<div class="cr-flow-step">
-  <div class="cr-flow-label">原始 Chunk</div>
-  <div class="cr-flow-desc">金额将在3-5个工作日内退回…</div>
+  <h2>Contextual Retrieval：给 Chunk 补上下文</h2>
+  <p>Chunk 被从文档中切出后，失去了<strong>文档级别的上下文信息</strong>。比如一个 chunk 说"金额将在3-5个工作日内退回"，但不知道这是在说退款、工资还是退税。<strong>Contextual Retrieval</strong> 的核心思想是：在每个 chunk 前面加上一段由 LLM 生成的上下文摘要，让 chunk 自己"说清楚"自己是什么。</p>
+  <div class="cr-flow-diagram">
+    <div class="cr-flow-step">
+      <div class="cr-flow-label">原始 Chunk</div>
+      <div class="cr-flow-desc">金额将在3-5个工作日内退回…</div>
     </div>
-<div class="cr-flow-arrow">+ LLM →</div>
-<div class="cr-flow-step cr-flow-enhanced">
-  <div class="cr-flow-label">增强 Chunk</div>
-  <div class="cr-flow-desc"><em>来自「退款政策」文档…</em>
-金额将在3-5个工作日内退回…</div>
+    <div class="cr-flow-arrow">+ LLM →</div>
+    <div class="cr-flow-step cr-flow-enhanced">
+      <div class="cr-flow-label">增强 Chunk</div>
+      <div class="cr-flow-desc"><em>来自「退款政策」文档…</em><br>金额将在3-5个工作日内退回…</div>
     </div>
   </div>
 </div>
 
 <div class="section-card">
-<h3>实验对比：有无上下文的相似度变化</h3>
-<div class="viz-panel" id="crCompareChart"></div>
-<div id="crExampleCards" style="margin-top:1.5rem;"></div>
+  <h3>实验对比：有无上下文的相似度变化</h3>
+  <div class="viz-panel" id="crCompareChart"></div>
+  <div id="crExampleCards" style="margin-top:1.5rem;"></div>
 </div>
 
 <div class="section-card cr-takeaway">
-<h3>关键结论</h3>
-<ul>
-<li>上下文前缀平均提升相似度 <strong id="crAvgDelta"></strong>，对短 chunk 和含歧义内容的 chunk 提升最大</li>
-<li>上下文不需要很长——一句话点明"这来自什么文档、说的是什么"就够了</li>
-<li>生产中可用 LLM 批量生成，也可用规则（文件名 + 标题 + 摘要）拼接</li>
-</ul>
+  <h3>关键结论</h3>
+  <ul>
+    <li>上下文前缀平均提升相似度 <strong id="crAvgDelta"></strong>，对短 chunk 和含歧义内容的 chunk 提升最大</li>
+    <li>上下文不需要很长——一句话点明"这来自什么文档、说的是什么"就够了</li>
+    <li>生产中可用 LLM 批量生成，也可用规则（文件名 + 标题 + 摘要）拼接</li>
+  </ul>
 </div>
 </section>
 
 <!-- ═══ Tab 17: Quantization ═══ -->
 <section class="tab-content" id="tab-quantization">
 <div class="section-card">
-<h2>Embedding 量化：精度 vs 存储 vs 速度</h2>
-<p>一个 384 维的 float32 向量占 <strong>1,536 字节</strong>。当知识库有百万文档时，仅向量就需要 ~1.5GB 内存。<strong>量化</strong>通过降低每个维度的精度来压缩向量，但会引入误差。关键问题是：精度损失多少才能接受？</p>
-<div class="qt-comparison-grid">
-<div class="qt-card"><div class="qt-bits">32-bit</div><div class="qt-desc">float32 原始精度
-1,536 字节/向量</div></div>
-<div class="qt-card"><div class="qt-bits">8-bit</div><div class="qt-desc">int8 量化
-384 字节/向量 (4x)</div></div>
-<div class="qt-card"><div class="qt-bits">4-bit</div><div class="qt-desc">int4 量化
-192 字节/向量 (8x)</div></div>
-<div class="qt-card"><div class="qt-bits">2-bit</div><div class="qt-desc">int2 量化
-96 字节/向量 (16x)</div></div>
-<div class="qt-card"><div class="qt-bits">1-bit</div><div class="qt-desc">Binary 量化
-48 字节/向量 (32x)</div></div>
+  <h2>Embedding 量化：精度 vs 存储 vs 速度</h2>
+  <p>一个 384 维的 float32 向量占 <strong>1,536 字节</strong>。当知识库有百万文档时，仅向量就需要 ~1.5GB 内存。<strong>量化</strong>通过降低每个维度的精度来压缩向量，但会引入误差。关键问题是：精度损失多少才能接受？</p>
+  <div class="qt-comparison-grid">
+    <div class="qt-card"><div class="qt-bits">32-bit</div><div class="qt-desc">float32 原始精度<br>1,536 字节/向量</div></div>
+    <div class="qt-card"><div class="qt-bits">8-bit</div><div class="qt-desc">int8 量化<br>384 字节/向量 (4x)</div></div>
+    <div class="qt-card"><div class="qt-bits">4-bit</div><div class="qt-desc">int4 量化<br>192 字节/向量 (8x)</div></div>
+    <div class="qt-card"><div class="qt-bits">2-bit</div><div class="qt-desc">int2 量化<br>96 字节/向量 (16x)</div></div>
+    <div class="qt-card"><div class="qt-bits">1-bit</div><div class="qt-desc">Binary 量化<br>48 字节/向量 (32x)</div></div>
   </div>
 </div>
 
 <div class="section-card">
-<h3>精度悬崖：从哪一级开始有损？</h3>
-<p class="hint">下图展示不同量化精度的平均误差和排名相关性。注意 int8 的误差肉眼不可见，但从 int4 开始误差急剧上升——这就是"精度悬崖"。</p>
-<div class="viz-panel" id="qtCliffChart"></div>
+  <h3>精度悬崖：从哪一级开始有损？</h3>
+  <p class="hint">下图展示不同量化精度的平均误差和排名相关性。注意 int8 的误差肉眼不可见，但从 int4 开始误差急剧上升——这就是"精度悬崖"。</p>
+  <div class="viz-panel" id="qtCliffChart"></div>
 </div>
 
 <div class="section-card">
-<h3>量化对相似度的影响</h3>
-<div style="margin-bottom:1rem;">
-<label>选择 Query：</label>
-<select id="qtQuerySelector" class="text-input" style="display:inline-block; width:auto; min-width:200px;" onchange="renderQuantizationQuery(this.value)"></select>
-</div>
-<div class="viz-panel" id="qtSimChart"></div>
-</div>
-
-<div class="section-card">
-<h3>精度损失总结</h3>
-<div id="qtSummaryTable"></div>
+  <h3>量化对相似度的影响</h3>
+  <div style="margin-bottom:1rem;">
+    <label>选择 Query：</label>
+    <select id="qtQuerySelector" class="text-input" style="display:inline-block; width:auto; min-width:200px;" onchange="renderQuantizationQuery(this.value)"></select>
+  </div>
+  <div class="viz-panel" id="qtSimChart"></div>
 </div>
 
 <div class="section-card">
-<h3>维度 × 量化：低维度让量化更脆弱</h3>
-<p class="hint">高维向量的量化误差会在求和中抵消（中心极限定理）。维度越低，抵消效果越弱，量化损失越大。下图展示同一量化精度在不同维度下的误差变化。</p>
-<div class="viz-panel" id="qtDimQuantChart"></div>
+  <h3>精度损失总结</h3>
+  <div id="qtSummaryTable"></div>
+</div>
+
+<div class="section-card">
+  <h3>维度 × 量化：低维度让量化更脆弱</h3>
+  <p class="hint">高维向量的量化误差会在求和中抵消（中心极限定理）。维度越低，抵消效果越弱，量化损失越大。下图展示同一量化精度在不同维度下的误差变化。</p>
+  <div class="viz-panel" id="qtDimQuantChart"></div>
 </div>
 </section>
 
 <!-- ═══ Tab 18: ANN Index ═══ -->
 <section class="tab-content" id="tab-ann-index">
 <div class="section-card">
-<h2>向量索引与近似最近邻（ANN）</h2>
-<p>前面所有的检索实验都默认了一件事：我们可以快速从数十万甚至数百万向量中找到最相似的那几条。但现实中，<strong>暴力遍历每一条向量</strong>（Flat Search）的计算量随数据规模线性增长，很快就不可行。<strong>近似最近邻（ANN）</strong>通过构建索引结构，用少量精度损失换取数量级的速度提升。</p>
-<div class="ann-scale-demo">
-<h3>数据规模与检索延迟</h3>
-<p>拖动滑杆改变知识库大小，观察暴力检索和 ANN 的延迟差异：</p>
-<div class="ann-slider-row">
-  <label>知识库大小：<strong id="annScaleLabel">10,000</strong> 条向量</label>
-  <input type="range" id="annScaleSlider" min="3" max="7" step="0.1" value="4" oninput="updateANNScale(this.value)">
-</div>
-<div class="ann-latency-bars" id="annLatencyBars"></div>
+  <h2>向量索引与近似最近邻（ANN）</h2>
+  <p>前面所有的检索实验都默认了一件事：我们可以快速从数十万甚至数百万向量中找到最相似的那几条。但现实中，<strong>暴力遍历每一条向量</strong>（Flat Search）的计算量随数据规模线性增长，很快就不可行。<strong>近似最近邻（ANN）</strong>通过构建索引结构，用少量精度损失换取数量级的速度提升。</p>
+  <div class="ann-scale-demo">
+    <h3>数据规模与检索延迟</h3>
+    <p>拖动滑杆改变知识库大小，观察暴力检索和 ANN 的延迟差异：</p>
+    <div class="ann-slider-row">
+      <label>知识库大小：<strong id="annScaleLabel">10,000</strong> 条向量</label>
+      <input type="range" id="annScaleSlider" min="3" max="7" step="0.1" value="4" oninput="updateANNScale(this.value)">
+    </div>
+    <div class="ann-latency-bars" id="annLatencyBars"></div>
     <p class="hint" id="annScaleInsight"></p>
   </div>
 </div>
 
 <div class="section-card">
-<h2>HNSW：分层可导航小世界图</h2>
-<p><strong>HNSW（Hierarchical Navigable Small World）</strong>是目前最流行的 ANN 算法。它在向量之间建立多层图结构——顶层是稀疏的"高速公路"，底层是稠密的"本地道路"。检索时从顶层入口点出发，逐层向下跳跃，每层贪心地走向离目标最近的节点，直到底层找到候选集。</p>
-<div class="ann-hnsw-interactive">
-<div class="ann-hnsw-viz-wrapper">
-  <svg id="hnswGraphSvg" viewBox="0 0 700 420" class="ann-hnsw-svg"></svg>
-  <div class="ann-hnsw-controls">
-    <button class="btn btn-accent btn-sm" id="hnswPlayBtn" onclick="playHNSWAnimation()">▶ 播放检索过程</button>
-    <button class="btn btn-sm" onclick="stepHNSWAnimation()">下一步</button>
-    <button class="btn btn-sm" onclick="resetHNSWAnimation()">重置</button>
-    点击播放，观察 HNSW 如何从入口逐层导航到目标
-  </div>
+  <h2>HNSW：分层可导航小世界图</h2>
+  <p><strong>HNSW（Hierarchical Navigable Small World）</strong>是目前最流行的 ANN 算法。它在向量之间建立多层图结构——顶层是稀疏的"高速公路"，底层是稠密的"本地道路"。检索时从顶层入口点出发，逐层向下跳跃，每层贪心地走向离目标最近的节点，直到底层找到候选集。</p>
+  <div class="ann-hnsw-interactive">
+    <div class="ann-hnsw-viz-wrapper">
+      <svg id="hnswGraphSvg" viewBox="0 0 700 420" class="ann-hnsw-svg"></svg>
+      <div class="ann-hnsw-controls">
+        <button class="btn btn-accent btn-sm" id="hnswPlayBtn" onclick="playHNSWAnimation()">▶ 播放检索过程</button>
+        <button class="btn btn-sm" onclick="stepHNSWAnimation()">下一步</button>
+        <button class="btn btn-sm" onclick="resetHNSWAnimation()">重置</button>
+        <span class="ann-hnsw-status" id="hnswStatus">点击播放，观察 HNSW 如何从入口逐层导航到目标</span>
+      </div>
     </div>
-<div class="ann-hnsw-params">
-  <h4>关键参数</h4>
-  <div class="ann-param-grid">
-    <div class="ann-param-card">
-      <div class="ann-param-name">M</div>
-      <div class="ann-param-desc">每个节点的最大连接数。M 越大，图越稠密，精度越高，但构建和内存成本也越高。</div>
-      <div class="ann-param-typical">典型值：16~64</div>
+    <div class="ann-hnsw-params">
+      <h4>关键参数</h4>
+      <div class="ann-param-grid">
+        <div class="ann-param-card">
+          <div class="ann-param-name">M</div>
+          <div class="ann-param-desc">每个节点的最大连接数。M 越大，图越稠密，精度越高，但构建和内存成本也越高。</div>
+          <div class="ann-param-typical">典型值：16~64</div>
         </div>
-    <div class="ann-param-card">
-      <div class="ann-param-name">efConstruction</div>
-      <div class="ann-param-desc">构建时的候选队列大小。越大则构建越慢但索引质量越高。</div>
-      <div class="ann-param-typical">典型值：100~500</div>
+        <div class="ann-param-card">
+          <div class="ann-param-name">efConstruction</div>
+          <div class="ann-param-desc">构建时的候选队列大小。越大则构建越慢但索引质量越高。</div>
+          <div class="ann-param-typical">典型值：100~500</div>
         </div>
-    <div class="ann-param-card">
-      <div class="ann-param-name">efSearch</div>
-      <div class="ann-param-desc">检索时的候选队列大小。这是<strong>运行时最重要的旋钮</strong>——直接控制精度与速度的权衡。</div>
-      <div class="ann-param-typical">典型值：50~400</div>
+        <div class="ann-param-card">
+          <div class="ann-param-name">efSearch</div>
+          <div class="ann-param-desc">检索时的候选队列大小。这是<strong>运行时最重要的旋钮</strong>——直接控制精度与速度的权衡。</div>
+          <div class="ann-param-typical">典型值：50~400</div>
         </div>
       </div>
     </div>
@@ -2007,53 +2001,53 @@ MaxSim = Σ max(sim(qᵢ, dⱼ)) / |Q|</div>
 </div>
 
 <div class="section-card">
-<h2>Recall vs 延迟：efSearch 调参</h2>
-<p>增大 <code>efSearch</code> 可以提升召回率，但也会增加延迟。下面模拟了不同 efSearch 值下的权衡曲线。拖动滑杆选择你的工作点：</p>
-<div class="ann-efsearch-row">
-<label>efSearch = <strong id="annEfLabel">64</strong></label>
-<input type="range" id="annEfSlider" min="10" max="500" step="10" value="64" oninput="updateANNEfSearch(this.value)">
-</div>
-<div class="viz-row">
-<div class="viz-panel" id="annRecallLatencyChart"></div>
-<div class="viz-panel viz-side" id="annTradeoffSummary" style="min-height:auto;"></div>
+  <h2>Recall vs 延迟：efSearch 调参</h2>
+  <p>增大 <code>efSearch</code> 可以提升召回率，但也会增加延迟。下面模拟了不同 efSearch 值下的权衡曲线。拖动滑杆选择你的工作点：</p>
+  <div class="ann-efsearch-row">
+    <label>efSearch = <strong id="annEfLabel">64</strong></label>
+    <input type="range" id="annEfSlider" min="10" max="500" step="10" value="64" oninput="updateANNEfSearch(this.value)">
+  </div>
+  <div class="viz-row">
+    <div class="viz-panel" id="annRecallLatencyChart"></div>
+    <div class="viz-panel viz-side" id="annTradeoffSummary" style="min-height:auto;"></div>
   </div>
 </div>
 
 <div class="section-card">
-<h2>四种索引类型对比</h2>
-<p>不同场景适合不同的索引策略。理解它们的核心机制和权衡，才能选对方案：</p>
-<div id="annIndexTable"></div>
-<div class="ann-index-selector" style="margin-top:1rem;">
-<button class="btn btn-sm active" onclick="showANNIndexDetail('flat', this)">Flat</button>
-<button class="btn btn-sm" onclick="showANNIndexDetail('hnsw', this)">HNSW</button>
-<button class="btn btn-sm" onclick="showANNIndexDetail('ivf', this)">IVF</button>
-<button class="btn btn-sm" onclick="showANNIndexDetail('pq', this)">PQ</button>
-</div>
-<div id="annIndexDetail" class="ann-index-detail"></div>
+  <h2>四种索引类型对比</h2>
+  <p>不同场景适合不同的索引策略。理解它们的核心机制和权衡，才能选对方案：</p>
+  <div id="annIndexTable"></div>
+  <div class="ann-index-selector" style="margin-top:1rem;">
+    <button class="btn btn-sm active" onclick="showANNIndexDetail('flat', this)">Flat</button>
+    <button class="btn btn-sm" onclick="showANNIndexDetail('hnsw', this)">HNSW</button>
+    <button class="btn btn-sm" onclick="showANNIndexDetail('ivf', this)">IVF</button>
+    <button class="btn btn-sm" onclick="showANNIndexDetail('pq', this)">PQ</button>
+  </div>
+  <div id="annIndexDetail" class="ann-index-detail"></div>
 </div>
 
 <div class="section-card">
-<h2>索引选型决策</h2>
-<div class="ann-decision-grid">
-<div class="ann-decision-card">
-  <div class="ann-decision-scenario">< 10 万条</div>
-  <div class="ann-decision-recommend">Flat（暴力搜索）</div>
-  <div class="ann-decision-reason">数据量小，暴力搜索延迟在 10ms 以内，无需引入索引复杂度。</div>
+  <h2>索引选型决策</h2>
+  <div class="ann-decision-grid">
+    <div class="ann-decision-card">
+      <div class="ann-decision-scenario">< 10 万条</div>
+      <div class="ann-decision-recommend">Flat（暴力搜索）</div>
+      <div class="ann-decision-reason">数据量小，暴力搜索延迟在 10ms 以内，无需引入索引复杂度。</div>
     </div>
-<div class="ann-decision-card">
-  <div class="ann-decision-scenario">10 万 ~ 1000 万条</div>
-  <div class="ann-decision-recommend">HNSW</div>
-  <div class="ann-decision-reason">最主流选择。延迟低（<10ms），召回率高（>95%），支持增量插入。内存够用即选它。</div>
+    <div class="ann-decision-card">
+      <div class="ann-decision-scenario">10 万 ~ 1000 万条</div>
+      <div class="ann-decision-recommend">HNSW</div>
+      <div class="ann-decision-reason">最主流选择。延迟低（<10ms），召回率高（>95%），支持增量插入。内存够用即选它。</div>
     </div>
-<div class="ann-decision-card">
-  <div class="ann-decision-scenario">> 1000 万条且内存受限</div>
-  <div class="ann-decision-recommend">IVF + PQ</div>
-  <div class="ann-decision-reason">PQ 把每个向量压缩到数十字节，IVF 只搜索相关分区。牺牲部分召回率换取大幅降低内存。</div>
+    <div class="ann-decision-card">
+      <div class="ann-decision-scenario">> 1000 万条且内存受限</div>
+      <div class="ann-decision-recommend">IVF + PQ</div>
+      <div class="ann-decision-reason">PQ 把每个向量压缩到数十字节，IVF 只搜索相关分区。牺牲部分召回率换取大幅降低内存。</div>
     </div>
-<div class="ann-decision-card">
-  <div class="ann-decision-scenario">超大规模 + 实时更新</div>
-  <div class="ann-decision-recommend">HNSW + PQ 混合</div>
-  <div class="ann-decision-reason">用 PQ 压缩存储，用 HNSW 图结构做路由。在 Milvus、Qdrant 等引擎中常见此组合。</div>
+    <div class="ann-decision-card">
+      <div class="ann-decision-scenario">超大规模 + 实时更新</div>
+      <div class="ann-decision-recommend">HNSW + PQ 混合</div>
+      <div class="ann-decision-reason">用 PQ 压缩存储，用 HNSW 图结构做路由。在 Milvus、Qdrant 等引擎中常见此组合。</div>
     </div>
   </div>
 </div>
@@ -2062,108 +2056,106 @@ MaxSim = Σ max(sim(qᵢ, dⱼ)) / |Q|</div>
 <!-- ═══ Tab 19: Data & Finetune ═══ -->
 <section class="tab-content" id="tab-data-finetune">
 <div class="section-card">
-<h2>训练数据从哪里来？</h2>
-<p>在"模型训练"中我们了解了 Embedding 模型通过三元组（Query, Positive, Negative）训练。但在真实项目中，<strong>最大的挑战不是训练过程，而是获取高质量的训练数据</strong>。下面是四种最常见的数据来源，从零成本到高成本排列：</p>
-<div class="df-source-grid">
-<div class="df-source-card">
-  <div class="df-source-icon">📋</div>
-  <div class="df-source-title">FAQ / 知识库配对</div>
-  <div class="df-source-cost">成本：零</div>
-  <div class="df-source-desc">
-    已有的 FAQ 自带 (问题, 答案) 对，直接当作正样本。如果知识库有标题，标题和内容天然构成配对。
-  </div>
-  <div class="df-source-example">
-    <strong>正样本：</strong>"怎么退款？" → 退款流程文档
-    <strong>负样本：</strong>同批次其他 FAQ 的答案（in-batch negatives）
-  </div>
+  <h2>训练数据从哪里来？</h2>
+  <p>在"模型训练"中我们了解了 Embedding 模型通过三元组（Query, Positive, Negative）训练。但在真实项目中，<strong>最大的挑战不是训练过程，而是获取高质量的训练数据</strong>。下面是四种最常见的数据来源，从零成本到高成本排列：</p>
+  <div class="df-source-grid">
+    <div class="df-source-card">
+      <div class="df-source-icon">📋</div>
+      <div class="df-source-title">FAQ / 知识库配对</div>
+      <div class="df-source-cost">成本：零</div>
+      <div class="df-source-desc">
+        已有的 FAQ 自带 (问题, 答案) 对，直接当作正样本。如果知识库有标题，标题和内容天然构成配对。
+      </div>
+      <div class="df-source-example">
+        <strong>正样本：</strong>"怎么退款？" → 退款流程文档<br>
+        <strong>负样本：</strong>同批次其他 FAQ 的答案（in-batch negatives）
+      </div>
     </div>
-<div class="df-source-card">
-  <div class="df-source-icon">🔍</div>
-  <div class="df-source-title">搜索日志 / 点击日志</div>
-  <div class="df-source-cost">成本：低</div>
-  <div class="df-source-desc">
-    用户搜索后点击的结果是弱正样本，展示但未点击的是弱负样本。数据量大但噪声也大，需过滤。
-  </div>
-  <div class="df-source-example">
-    <strong>正样本：</strong>搜索 "退款" → 点击了第 3 条结果
-    <strong>过滤规则：</strong>停留 >30s 的点击更可靠
-  </div>
+    <div class="df-source-card">
+      <div class="df-source-icon">🔍</div>
+      <div class="df-source-title">搜索日志 / 点击日志</div>
+      <div class="df-source-cost">成本：低</div>
+      <div class="df-source-desc">
+        用户搜索后点击的结果是弱正样本，展示但未点击的是弱负样本。数据量大但噪声也大，需过滤。
+      </div>
+      <div class="df-source-example">
+        <strong>正样本：</strong>搜索 "退款" → 点击了第 3 条结果<br>
+        <strong>过滤规则：</strong>停留 >30s 的点击更可靠
+      </div>
     </div>
-<div class="df-source-card">
-  <div class="df-source-icon">🤖</div>
-  <div class="df-source-title">LLM 生成合成数据</div>
-  <div class="df-source-cost">成本：中</div>
-  <div class="df-source-desc">
-    给 LLM 一段文档，让它生成可能的用户问题。批量生产 (query, document) 对。质量取决于 prompt 设计。
-  </div>
-  <div class="df-source-example">
-    <strong>Prompt：</strong>"根据以下文档生成 3 个用户可能会问的问题"
-    <strong>验证：</strong>抽样检查生成质量，过滤低质问题
-  </div>
+    <div class="df-source-card">
+      <div class="df-source-icon">🤖</div>
+      <div class="df-source-title">LLM 生成合成数据</div>
+      <div class="df-source-cost">成本：中</div>
+      <div class="df-source-desc">
+        给 LLM 一段文档，让它生成可能的用户问题。批量生产 (query, document) 对。质量取决于 prompt 设计。
+      </div>
+      <div class="df-source-example">
+        <strong>Prompt：</strong>"根据以下文档生成 3 个用户可能会问的问题"<br>
+        <strong>验证：</strong>抽样检查生成质量，过滤低质问题
+      </div>
     </div>
-<div class="df-source-card">
-  <div class="df-source-icon">👨‍💻</div>
-  <div class="df-source-title">人工标注</div>
-  <div class="df-source-cost">成本：高</div>
-  <div class="df-source-desc">
-    标注员对 (query, document) 对打相关性分数（0~3）。质量最高，但成本随数据量线性增长。
-  </div>
-  <div class="df-source-example">
-    <strong>标注任务：</strong>这个 query 和 document 相关吗？(0=无关, 1=部分相关, 2=高度相关, 3=完美匹配)
-    <strong>规模建议：</strong>至少 1000~5000 对
-  </div>
+    <div class="df-source-card">
+      <div class="df-source-icon">👨‍💻</div>
+      <div class="df-source-title">人工标注</div>
+      <div class="df-source-cost">成本：高</div>
+      <div class="df-source-desc">
+        标注员对 (query, document) 对打相关性分数（0~3）。质量最高，但成本随数据量线性增长。
+      </div>
+      <div class="df-source-example">
+        <strong>标注任务：</strong>这个 query 和 document 相关吗？(0=无关, 1=部分相关, 2=高度相关, 3=完美匹配)<br>
+        <strong>规模建议：</strong>至少 1000~5000 对
+      </div>
     </div>
   </div>
 </div>
 
 <div class="section-card">
-<h2>负样本质量：从随机到困难</h2>
-<p>负样本的选择直接决定训练效果。下面展示了同一个 Query 在不同负样本策略下，<strong>相似度分数</strong>和模型学到的区分能力差异。注意观察正负样本之间的分数差（margin）——margin 越小，训练信号越强：</p>
-<div class="df-neg-selector">
-<button class="btn btn-sm active" onclick="showNegativeType('random', this)">随机负样本</button>
-<button class="btn btn-sm" onclick="showNegativeType('hard', this)">Hard Negative</button>
-<button class="btn btn-sm" onclick="showNegativeType('false', this)">False Negative</button>
-</div>
-<div id="dfNegativeDemo"></div>
+  <h2>负样本质量：从随机到困难</h2>
+  <p>负样本的选择直接决定训练效果。下面展示了同一个 Query 在不同负样本策略下，<strong>相似度分数</strong>和模型学到的区分能力差异。注意观察正负样本之间的分数差（margin）——margin 越小，训练信号越强：</p>
+  <div class="df-neg-selector">
+    <button class="btn btn-sm active" onclick="showNegativeType('random', this)">随机负样本</button>
+    <button class="btn btn-sm" onclick="showNegativeType('hard', this)">Hard Negative</button>
+    <button class="btn btn-sm" onclick="showNegativeType('false', this)">False Negative</button>
+  </div>
+  <div id="dfNegativeDemo"></div>
 </div>
 
 <div class="section-card">
-<h2>什么时候该微调？</h2>
-<p>微调 Embedding 模型是一个成本不低的决策。用错了时机会浪费资源，用对了可以显著提升效果。根据以下条件判断是否需要微调：</p>
-<div class="df-decision-tree">
-<div class="df-tree-node df-tree-question">
-  <div class="df-tree-q">通用模型在你的数据上 Recall@10 是否 > 80%？</div>
-  <div class="df-tree-branches">
-    <div class="df-tree-branch">
-      <div class="df-tree-answer df-tree-yes">是 → 通用模型可能够用</div>
-      <div class="df-tree-node df-tree-question">
-        <div class="df-tree-q">你的领域有大量专有术语或行话？</div>
-        <div class="df-tree-branches">
-          <div class="df-tree-branch">
-            <div class="df-tree-answer df-tree-yes">是 → 考虑微调</div>
-            <div class="df-tree-leaf df-tree-finetune">微调收益：中等
-专有术语的语义关系是通用模型没见过的</div>
+  <h2>什么时候该微调？</h2>
+  <p>微调 Embedding 模型是一个成本不低的决策。用错了时机会浪费资源，用对了可以显著提升效果。根据以下条件判断是否需要微调：</p>
+  <div class="df-decision-tree">
+    <div class="df-tree-node df-tree-question">
+      <div class="df-tree-q">通用模型在你的数据上 Recall@10 是否 > 80%？</div>
+      <div class="df-tree-branches">
+        <div class="df-tree-branch">
+          <div class="df-tree-answer df-tree-yes">是 → 通用模型可能够用</div>
+          <div class="df-tree-node df-tree-question">
+            <div class="df-tree-q">你的领域有大量专有术语或行话？</div>
+            <div class="df-tree-branches">
+              <div class="df-tree-branch">
+                <div class="df-tree-answer df-tree-yes">是 → 考虑微调</div>
+                <div class="df-tree-leaf df-tree-finetune">微调收益：中等<br>专有术语的语义关系是通用模型没见过的</div>
               </div>
-          <div class="df-tree-branch">
-            <div class="df-tree-answer df-tree-no">否 → 暂不微调</div>
-            <div class="df-tree-leaf df-tree-skip">先优化 chunking、prompt 和 reranker，这些成本更低</div>
+              <div class="df-tree-branch">
+                <div class="df-tree-answer df-tree-no">否 → 暂不微调</div>
+                <div class="df-tree-leaf df-tree-skip">先优化 chunking、prompt 和 reranker，这些成本更低</div>
               </div>
             </div>
           </div>
         </div>
-    <div class="df-tree-branch">
-      <div class="df-tree-answer df-tree-no">否 → 需要干预</div>
-      <div class="df-tree-node df-tree-question">
-        <div class="df-tree-q">你有 ≥ 1000 条标注数据或高质量配对？</div>
-        <div class="df-tree-branches">
-          <div class="df-tree-branch">
-            <div class="df-tree-answer df-tree-yes">是 → 微调</div>
-            <div class="df-tree-leaf df-tree-finetune">微调收益：高
-数据充足 + 现有模型不足 = 微调的最佳时机</div>
+        <div class="df-tree-branch">
+          <div class="df-tree-answer df-tree-no">否 → 需要干预</div>
+          <div class="df-tree-node df-tree-question">
+            <div class="df-tree-q">你有 ≥ 1000 条标注数据或高质量配对？</div>
+            <div class="df-tree-branches">
+              <div class="df-tree-branch">
+                <div class="df-tree-answer df-tree-yes">是 → 微调</div>
+                <div class="df-tree-leaf df-tree-finetune">微调收益：高<br>数据充足 + 现有模型不足 = 微调的最佳时机</div>
               </div>
-          <div class="df-tree-branch">
-            <div class="df-tree-answer df-tree-no">否 → 先攒数据</div>
-            <div class="df-tree-leaf df-tree-skip">用 LLM 合成数据 + 搜索日志收集，积累到足够规模再微调</div>
+              <div class="df-tree-branch">
+                <div class="df-tree-answer df-tree-no">否 → 先攒数据</div>
+                <div class="df-tree-leaf df-tree-skip">用 LLM 合成数据 + 搜索日志收集，积累到足够规模再微调</div>
               </div>
             </div>
           </div>
@@ -2174,35 +2166,35 @@ MaxSim = Σ max(sim(qᵢ, dⱼ)) / |Q|</div>
 </div>
 
 <div class="section-card">
-<h2>微调的成本与收益</h2>
-<div class="df-cost-grid">
-<div class="df-cost-card df-cost-benefit">
-  <h4>收益</h4>
-  <ul>
-    <li>领域术语的语义对齐提升 10~30%</li>
-    <li>专有名词和缩写的召回率显著改善</li>
-    <li>在特定任务上超越更大的通用模型</li>
-    <li>更小模型 + 微调 = 更大模型同等效果，推理更快</li>
-  </ul>
-</div>
-<div class="df-cost-card df-cost-risk">
-  <h4>成本与风险</h4>
-  <ul>
-    <li>需要 GPU 资源和训练时间（小模型约 1~4 小时）</li>
-    <li>微调后模型版本独立，需重新计算所有向量</li>
-    <li>数据质量差会导致模型退化（比通用模型更差）</li>
-    <li>过拟合风险：在训练集上表现好，其他数据上变差</li>
-  </ul>
-</div>
+  <h2>微调的成本与收益</h2>
+  <div class="df-cost-grid">
+    <div class="df-cost-card df-cost-benefit">
+      <h4>收益</h4>
+      <ul>
+        <li>领域术语的语义对齐提升 10~30%</li>
+        <li>专有名词和缩写的召回率显著改善</li>
+        <li>在特定任务上超越更大的通用模型</li>
+        <li>更小模型 + 微调 = 更大模型同等效果，推理更快</li>
+      </ul>
+    </div>
+    <div class="df-cost-card df-cost-risk">
+      <h4>成本与风险</h4>
+      <ul>
+        <li>需要 GPU 资源和训练时间（小模型约 1~4 小时）</li>
+        <li>微调后模型版本独立，需重新计算所有向量</li>
+        <li>数据质量差会导致模型退化（比通用模型更差）</li>
+        <li>过拟合风险：在训练集上表现好，其他数据上变差</li>
+      </ul>
+    </div>
   </div>
-<div class="df-checklist">
-<h4>微调前检查清单</h4>
-<div class="df-check-item">✓ 已经尝试过优化 chunking 策略</div>
-<div class="df-check-item">✓ 已经尝试过 query 改写或 HyDE</div>
-<div class="df-check-item">✓ 已经尝试过 Reranker</div>
-<div class="df-check-item">✓ 有 ≥ 1000 条高质量标注数据</div>
-<div class="df-check-item">✓ 有量化的评估基线（MRR/NDCG/Recall）</div>
-<div class="df-check-item">✓ 接受微调后需要重建所有向量索引</div>
+  <div class="df-checklist">
+    <h4>微调前检查清单</h4>
+    <div class="df-check-item">✓ 已经尝试过优化 chunking 策略</div>
+    <div class="df-check-item">✓ 已经尝试过 query 改写或 HyDE</div>
+    <div class="df-check-item">✓ 已经尝试过 Reranker</div>
+    <div class="df-check-item">✓ 有 ≥ 1000 条高质量标注数据</div>
+    <div class="df-check-item">✓ 有量化的评估基线（MRR/NDCG/Recall）</div>
+    <div class="df-check-item">✓ 接受微调后需要重建所有向量索引</div>
   </div>
 </div>
 </section>
@@ -2210,72 +2202,72 @@ MaxSim = Σ max(sim(qᵢ, dⱼ)) / |Q|</div>
 <!-- ═══ Tab: Token Truncation ═══ -->
 <section class="tab-content" id="tab-token-truncation">
 <div class="section-card">
-<h2>Token 截断：长文档的隐形杀手</h2>
-<p>Embedding 模型有固定的 <strong>max_length</strong>（通常 128~512 tokens）。超过这个长度的文本会被<strong>静默截断</strong>——尾部内容直接丢失，不会报错。这意味着如果关键信息在文档末尾，embedding 完全"看不到"它。</p>
-<div class="tt-key-insight">
-<strong>核心启示：</strong>分片长度的设计不是"越长越好"，而是必须在模型 max_length 范围内。超长文档分片必须考虑截断风险。
-</div>
-</div>
-
-<div class="section-card">
-<h3>截断对 Embedding 质量的影响</h3>
-<p class="hint">选择不同长度的文本，观察在不同截断长度下 embedding 与完整文本 embedding 的相似度。<strong>注意：</strong>本实验使用的模型 max_seq_length = 128 tokens。超过 128 tokens 的内容会被模型静默丢弃，因此 128 tokens 之后的曲线不会再变化——不是因为"几乎无损"，而是因为模型根本看不到更多内容。</p>
-<div style="margin-bottom:1rem;">
-<label>选择文本：</label>
-<select id="ttTextSelector" class="text-input" style="display:inline-block; width:auto; min-width:200px;" onchange="renderTokenTruncation(this.value)"></select>
-</div>
-<div class="viz-panel" id="ttEmbSimChart"></div>
-<div id="ttTextInfo" class="tt-text-info"></div>
+  <h2>Token 截断：长文档的隐形杀手</h2>
+  <p>Embedding 模型有固定的 <strong>max_length</strong>（通常 128~512 tokens）。超过这个长度的文本会被<strong>静默截断</strong>——尾部内容直接丢失，不会报错。这意味着如果关键信息在文档末尾，embedding 完全"看不到"它。</p>
+  <div class="tt-key-insight">
+    <strong>核心启示：</strong>分片长度的设计不是"越长越好"，而是必须在模型 max_length 范围内。超长文档分片必须考虑截断风险。
+  </div>
 </div>
 
 <div class="section-card">
-<h3>截断对检索的影响</h3>
-<p class="hint">同一文本在不同截断长度下，对 3 个 query 的检索相似度变化。关注：当截断长度不够时，与某些 query 的相似度可能大幅下降。</p>
-<div class="viz-panel" id="ttQuerySimChart"></div>
+  <h3>截断对 Embedding 质量的影响</h3>
+  <p class="hint">选择不同长度的文本，观察在不同截断长度下 embedding 与完整文本 embedding 的相似度。<strong>注意：</strong>本实验使用的模型 max_seq_length = 128 tokens。超过 128 tokens 的内容会被模型静默丢弃，因此 128 tokens 之后的曲线不会再变化——不是因为"几乎无损"，而是因为模型根本看不到更多内容。</p>
+  <div style="margin-bottom:1rem;">
+    <label>选择文本：</label>
+    <select id="ttTextSelector" class="text-input" style="display:inline-block; width:auto; min-width:200px;" onchange="renderTokenTruncation(this.value)"></select>
+  </div>
+  <div class="viz-panel" id="ttEmbSimChart"></div>
+  <div id="ttTextInfo" class="tt-text-info"></div>
 </div>
 
 <div class="section-card">
-<h3>尾部信息丢失实验</h3>
-<p class="hint">"跨境订单配送要多久？"这个 query 的答案在文档末尾。当文档被截断到 128 tokens 时，跨境相关内容完全丢失。</p>
-<div class="viz-panel" id="ttTailLossChart"></div>
-<div id="ttTailInsight" class="tt-tail-insight"></div>
+  <h3>截断对检索的影响</h3>
+  <p class="hint">同一文本在不同截断长度下，对 3 个 query 的检索相似度变化。关注：当截断长度不够时，与某些 query 的相似度可能大幅下降。</p>
+  <div class="viz-panel" id="ttQuerySimChart"></div>
+</div>
+
+<div class="section-card">
+  <h3>尾部信息丢失实验</h3>
+  <p class="hint">"跨境订单配送要多久？"这个 query 的答案在文档末尾。当文档被截断到 128 tokens 时，跨境相关内容完全丢失。</p>
+  <div class="viz-panel" id="ttTailLossChart"></div>
+  <div id="ttTailInsight" class="tt-tail-insight"></div>
 </div>
 </section>
 
 <!-- ═══ Tab: Fine-tune Decision ═══ -->
 <section class="tab-content" id="tab-finetune-decision">
 <div class="section-card">
-<h2>什么时候该微调 Embedding 模型？</h2>
-<p>微调能让 embedding 模型更好地理解你的<strong>领域术语和业务表述</strong>。但它有成本：需要标注数据、GPU 资源、重建所有向量。关键问题不是"能不能微调"，而是 <strong>"值不值得微调"</strong>。</p>
+  <h2>什么时候该微调 Embedding 模型？</h2>
+  <p>微调能让 embedding 模型更好地理解你的<strong>领域术语和业务表述</strong>。但它有成本：需要标注数据、GPU 资源、重建所有向量。关键问题不是"能不能微调"，而是 <strong>"值不值得微调"</strong>。</p>
 </div>
 
 <div class="section-card">
-<h3>决策树：是否需要微调？</h3>
-<p class="hint">跟随下面的决策流程，判断你当前是否需要微调 Embedding 模型。</p>
-<div class="ft-decision-tree" id="ftDecisionTree"></div>
+  <h3>决策树：是否需要微调？</h3>
+  <p class="hint">跟随下面的决策流程，判断你当前是否需要微调 Embedding 模型。</p>
+  <div class="ft-decision-tree" id="ftDecisionTree"></div>
 </div>
 
 <div class="section-card">
-<h3>通用 Query vs 领域 Query 效果对比</h3>
-<p class="hint">通用表述（如"怎么申请退款"）在预训练模型上效果不错；但领域术语（如"RMA 流程"、"SLA 时效"）的检索效果明显更差。微调后领域术语的检索效果显著提升。</p>
-<div class="ft-toggle-row">
-<button class="btn btn-sm ft-mode-btn active" onclick="selectFTMode('general', this)">通用 Query</button>
-<button class="btn btn-sm ft-mode-btn" onclick="selectFTMode('domain', this)">领域 Query (预训练)</button>
-<button class="btn btn-sm ft-mode-btn" onclick="selectFTMode('domain_ft', this)">领域 Query (微调后)</button>
-</div>
-<div class="viz-panel" id="ftCompareChart"></div>
-<div id="ftInsight" class="ft-insight"></div>
+  <h3>通用 Query vs 领域 Query 效果对比</h3>
+  <p class="hint">通用表述（如"怎么申请退款"）在预训练模型上效果不错；但领域术语（如"RMA 流程"、"SLA 时效"）的检索效果明显更差。微调后领域术语的检索效果显著提升。</p>
+  <div class="ft-toggle-row">
+    <button class="btn btn-sm ft-mode-btn active" onclick="selectFTMode('general', this)">通用 Query</button>
+    <button class="btn btn-sm ft-mode-btn" onclick="selectFTMode('domain', this)">领域 Query (预训练)</button>
+    <button class="btn btn-sm ft-mode-btn" onclick="selectFTMode('domain_ft', this)">领域 Query (微调后)</button>
+  </div>
+  <div class="viz-panel" id="ftCompareChart"></div>
+  <div id="ftInsight" class="ft-insight"></div>
 </div>
 
 <div class="section-card">
-<h3>微调前检查清单</h3>
-<div class="ft-checklist">
-<div class="ft-check-item">✓ 已尝试优化 chunking 策略（分片长度、重叠、按语义切分）</div>
-<div class="ft-check-item">✓ 已尝试 query 改写或 HyDE</div>
-<div class="ft-check-item">✓ 已尝试 Reranker 进行二阶段精排</div>
-<div class="ft-check-item">✓ 有 ≥ 1000 条高质量 (query, positive, negative) 标注数据</div>
-<div class="ft-check-item">✓ 已有量化评估基线（MRR / NDCG / Recall）</div>
-<div class="ft-check-item">✓ 接受微调后需要重建所有向量索引</div>
+  <h3>微调前检查清单</h3>
+  <div class="ft-checklist">
+    <div class="ft-check-item"><span class="ft-check-icon">✓</span> 已尝试优化 chunking 策略（分片长度、重叠、按语义切分）</div>
+    <div class="ft-check-item"><span class="ft-check-icon">✓</span> 已尝试 query 改写或 HyDE</div>
+    <div class="ft-check-item"><span class="ft-check-icon">✓</span> 已尝试 Reranker 进行二阶段精排</div>
+    <div class="ft-check-item"><span class="ft-check-icon">✓</span> 有 ≥ 1000 条高质量 (query, positive, negative) 标注数据</div>
+    <div class="ft-check-item"><span class="ft-check-icon">✓</span> 已有量化评估基线（MRR / NDCG / Recall）</div>
+    <div class="ft-check-item"><span class="ft-check-icon">✓</span> 接受微调后需要重建所有向量索引</div>
   </div>
 </div>
 </section>
@@ -2283,161 +2275,161 @@ MaxSim = Σ max(sim(qᵢ, dⱼ)) / |Q|</div>
 <!-- ═══ Tab: Cross-lingual Retrieval ═══ -->
 <section class="tab-content" id="tab-crosslingual">
 <div class="section-card">
-<h2>多语言 / 跨语言检索</h2>
-<p>多语言 Embedding 模型（如 multilingual-MiniLM）将不同语言映射到<strong>共享的向量空间</strong>。这意味着中文 query 可以直接检索英文文档，反之亦然——无需翻译。</p>
-<div class="cl-key-insight">
-<strong>核心机制：</strong>多语言模型在训练时使用平行语料（同一内容的多语言版本），迫使模型将相同语义的不同语言文本编码到相近位置。
-</div>
-</div>
-
-<div class="section-card">
-<h3>跨语言对齐：中英 Query 的向量相似度</h3>
-<p class="hint">相同语义的中英文 query 在向量空间中距离多近？下图展示语义等价的中英文 query 对之间的 cosine similarity。</p>
-<div class="viz-panel" id="clAlignChart"></div>
+  <h2>多语言 / 跨语言检索</h2>
+  <p>多语言 Embedding 模型（如 multilingual-MiniLM）将不同语言映射到<strong>共享的向量空间</strong>。这意味着中文 query 可以直接检索英文文档，反之亦然——无需翻译。</p>
+  <div class="cl-key-insight">
+    <strong>核心机制：</strong>多语言模型在训练时使用平行语料（同一内容的多语言版本），迫使模型将相同语义的不同语言文本编码到相近位置。
+  </div>
 </div>
 
 <div class="section-card">
-<h3>跨语言检索矩阵</h3>
-<p class="hint">选择查询方式，观察不同语言的 Query × Doc 检索效果。跨语言检索的精度略低于同语言，但仍保持较高水平。</p>
-<div class="cl-matrix-toggle">
-<button class="btn btn-sm cl-matrix-btn active" onclick="selectCLMatrix('zh2zh', this)">中文→中文</button>
-<button class="btn btn-sm cl-matrix-btn" onclick="selectCLMatrix('zh2en', this)">中文→英文</button>
-<button class="btn btn-sm cl-matrix-btn" onclick="selectCLMatrix('en2zh', this)">英文→中文</button>
-<button class="btn btn-sm cl-matrix-btn" onclick="selectCLMatrix('en2en', this)">英文→英文</button>
-</div>
-<div class="viz-panel" id="clMatrixChart"></div>
-<div id="clMatrixInsight" class="cl-matrix-insight"></div>
+  <h3>跨语言对齐：中英 Query 的向量相似度</h3>
+  <p class="hint">相同语义的中英文 query 在向量空间中距离多近？下图展示语义等价的中英文 query 对之间的 cosine similarity。</p>
+  <div class="viz-panel" id="clAlignChart"></div>
 </div>
 
 <div class="section-card">
-<h3>向量空间 UMAP 可视化</h3>
-<p class="hint">中英文的 query 和 document 在向量空间中的分布。注意语义等价的中英文内容聚集在一起。</p>
-<div class="viz-panel" id="clUmapScatter"></div>
+  <h3>跨语言检索矩阵</h3>
+  <p class="hint">选择查询方式，观察不同语言的 Query × Doc 检索效果。跨语言检索的精度略低于同语言，但仍保持较高水平。</p>
+  <div class="cl-matrix-toggle">
+    <button class="btn btn-sm cl-matrix-btn active" onclick="selectCLMatrix('zh2zh', this)">中文→中文</button>
+    <button class="btn btn-sm cl-matrix-btn" onclick="selectCLMatrix('zh2en', this)">中文→英文</button>
+    <button class="btn btn-sm cl-matrix-btn" onclick="selectCLMatrix('en2zh', this)">英文→中文</button>
+    <button class="btn btn-sm cl-matrix-btn" onclick="selectCLMatrix('en2en', this)">英文→英文</button>
+  </div>
+  <div class="viz-panel" id="clMatrixChart"></div>
+  <div id="clMatrixInsight" class="cl-matrix-insight"></div>
+</div>
+
+<div class="section-card">
+  <h3>向量空间 UMAP 可视化</h3>
+  <p class="hint">中英文的 query 和 document 在向量空间中的分布。注意语义等价的中英文内容聚集在一起。</p>
+  <div class="viz-panel" id="clUmapScatter"></div>
 </div>
 </section>
 
 <!-- ═══ Tab 20: Production ═══ -->
 <section class="tab-content" id="tab-production">
 <div class="section-card">
-<h2>从实验到生产：向量检索系统的工程挑战</h2>
-<p>在 Playground 里跑通了检索，离生产上线还有很大距离。向量检索系统的核心工程问题不在于"能不能检索到"，而在于<strong>数据变了怎么办、模型升级了怎么办、线上出问题怎么排查</strong>。</p>
+  <h2>从实验到生产：向量检索系统的工程挑战</h2>
+  <p>在 Playground 里跑通了检索，离生产上线还有很大距离。向量检索系统的核心工程问题不在于"能不能检索到"，而在于<strong>数据变了怎么办、模型升级了怎么办、线上出问题怎么排查</strong>。</p>
 </div>
 
 <div class="section-card">
-<h2>索引生命周期</h2>
-<p>文档不是一次性导入就完事的。新增、修改、删除文档都需要更新索引。不同更新策略的复杂度和一致性保证差异很大：</p>
-<div class="prod-lifecycle-grid">
-<div class="prod-lifecycle-card">
-  <div class="prod-lc-title">全量重建</div>
-  <div class="prod-lc-flow">删除旧索引 → 重新切分所有文档 → 重新 Embedding → 构建新索引 → 切换</div>
-  <div class="prod-lc-pros"><strong>优势：</strong>一致性最强，无残留脏数据</div>
-  <div class="prod-lc-cons"><strong>劣势：</strong>耗时长（百万级需要数小时），服务有切换窗口</div>
-  <div class="prod-lc-when"><strong>适用：</strong>模型升级、分片策略变更、低频更新场景</div>
+  <h2>索引生命周期</h2>
+  <p>文档不是一次性导入就完事的。新增、修改、删除文档都需要更新索引。不同更新策略的复杂度和一致性保证差异很大：</p>
+  <div class="prod-lifecycle-grid">
+    <div class="prod-lifecycle-card">
+      <div class="prod-lc-title">全量重建</div>
+      <div class="prod-lc-flow">删除旧索引 → 重新切分所有文档 → 重新 Embedding → 构建新索引 → 切换</div>
+      <div class="prod-lc-pros"><strong>优势：</strong>一致性最强，无残留脏数据</div>
+      <div class="prod-lc-cons"><strong>劣势：</strong>耗时长（百万级需要数小时），服务有切换窗口</div>
+      <div class="prod-lc-when"><strong>适用：</strong>模型升级、分片策略变更、低频更新场景</div>
     </div>
-<div class="prod-lifecycle-card">
-  <div class="prod-lc-title">增量更新</div>
-  <div class="prod-lc-flow">检测变更文档 → 仅对变更部分重新切分 + Embedding → 插入/替换索引条目</div>
-  <div class="prod-lc-pros"><strong>优势：</strong>速度快，对服务影响小</div>
-  <div class="prod-lc-cons"><strong>劣势：</strong>需要维护文档 → chunk → 向量的映射关系，可能积累碎片</div>
-  <div class="prod-lc-when"><strong>适用：</strong>高频更新场景（文档每天变化）</div>
+    <div class="prod-lifecycle-card">
+      <div class="prod-lc-title">增量更新</div>
+      <div class="prod-lc-flow">检测变更文档 → 仅对变更部分重新切分 + Embedding → 插入/替换索引条目</div>
+      <div class="prod-lc-pros"><strong>优势：</strong>速度快，对服务影响小</div>
+      <div class="prod-lc-cons"><strong>劣势：</strong>需要维护文档 → chunk → 向量的映射关系，可能积累碎片</div>
+      <div class="prod-lc-when"><strong>适用：</strong>高频更新场景（文档每天变化）</div>
     </div>
-<div class="prod-lifecycle-card">
-  <div class="prod-lc-title">双索引蓝绿切换</div>
-  <div class="prod-lc-flow">后台构建新索引（不影响线上）→ 验证通过 → 原子切换流量 → 下线旧索引</div>
-  <div class="prod-lc-pros"><strong>优势：</strong>零停机，可回滚</div>
-  <div class="prod-lc-cons"><strong>劣势：</strong>需要双倍存储，构建期间数据可能不一致</div>
-  <div class="prod-lc-when"><strong>适用：</strong>对可用性要求高的生产服务</div>
-    </div>
-  </div>
-</div>
-
-<div class="section-card">
-<h2>模型版本迁移</h2>
-<p>当你升级 Embedding 模型时，<strong>新旧模型产生的向量处于不同的向量空间</strong>——即使是相同文本，不同模型的向量也不能直接比较。这意味着：</p>
-<div class="prod-migration-steps">
-<div class="prod-mig-step">
-  <div class="prod-mig-num">1</div>
-  <div class="prod-mig-content">
-    <strong>新旧向量不可混用</strong>
-    <p>用旧模型编码的 query 去搜索新模型编码的文档，相似度分数没有意义。必须保证 query 和 document 用同一个模型。</p>
-  </div>
-    </div>
-<div class="prod-mig-step">
-  <div class="prod-mig-num">2</div>
-  <div class="prod-mig-content">
-    <strong>全量重算是最安全的做法</strong>
-    <p>升级模型后，对所有文档重新计算向量并重建索引。通过蓝绿切换实现零停机迁移。</p>
-  </div>
-    </div>
-<div class="prod-mig-step">
-  <div class="prod-mig-num">3</div>
-  <div class="prod-mig-content">
-    <strong>维度变化需要重建索引结构</strong>
-    <p>从 384 维升级到 768 维，索引不能复用。存储、内存、检索延迟都会变化，需要重新规划容量。</p>
-  </div>
-    </div>
-<div class="prod-mig-step">
-  <div class="prod-mig-num">4</div>
-  <div class="prod-mig-content">
-    <strong>评估基线必须对齐</strong>
-    <p>在切换前用同一份测试集分别跑新旧模型，确认新模型在你的数据上确实更好，再执行迁移。</p>
-  </div>
+    <div class="prod-lifecycle-card">
+      <div class="prod-lc-title">双索引蓝绿切换</div>
+      <div class="prod-lc-flow">后台构建新索引（不影响线上）→ 验证通过 → 原子切换流量 → 下线旧索引</div>
+      <div class="prod-lc-pros"><strong>优势：</strong>零停机，可回滚</div>
+      <div class="prod-lc-cons"><strong>劣势：</strong>需要双倍存储，构建期间数据可能不一致</div>
+      <div class="prod-lc-when"><strong>适用：</strong>对可用性要求高的生产服务</div>
     </div>
   </div>
 </div>
 
 <div class="section-card">
-<h2>线上监控：看什么指标？</h2>
-<p>上线后最怕的是"悄悄变差"。以下指标帮你及时发现问题：</p>
-<div class="prod-monitor-grid">
-<div class="prod-monitor-card">
-  <div class="prod-mon-name">空结果率</div>
-  <div class="prod-mon-threshold">阈值: < 5%</div>
-  <div class="prod-mon-desc">没有返回任何结果的查询占比。飙升通常意味着索引损坏、模型加载失败或 chunk 覆盖不足。</div>
+  <h2>模型版本迁移</h2>
+  <p>当你升级 Embedding 模型时，<strong>新旧模型产生的向量处于不同的向量空间</strong>——即使是相同文本，不同模型的向量也不能直接比较。这意味着：</p>
+  <div class="prod-migration-steps">
+    <div class="prod-mig-step">
+      <div class="prod-mig-num">1</div>
+      <div class="prod-mig-content">
+        <strong>新旧向量不可混用</strong>
+        <p>用旧模型编码的 query 去搜索新模型编码的文档，相似度分数没有意义。必须保证 query 和 document 用同一个模型。</p>
+      </div>
     </div>
-<div class="prod-monitor-card">
-  <div class="prod-mon-name">Top-1 相似度中位数</div>
-  <div class="prod-mon-threshold">关注趋势变化</div>
-  <div class="prod-mon-desc">最高相似度分数的中位数。持续下降可能说明新增文档的质量在下降，或者 query 的分布在漂移。</div>
+    <div class="prod-mig-step">
+      <div class="prod-mig-num">2</div>
+      <div class="prod-mig-content">
+        <strong>全量重算是最安全的做法</strong>
+        <p>升级模型后，对所有文档重新计算向量并重建索引。通过蓝绿切换实现零停机迁移。</p>
+      </div>
     </div>
-<div class="prod-monitor-card">
-  <div class="prod-mon-name">P99 延迟</div>
-  <div class="prod-mon-threshold">阈值: < 100ms</div>
-  <div class="prod-mon-desc">99% 请求的检索延迟。突然增高可能是索引碎片化、内存不足导致换页、或并发量超出预期。</div>
+    <div class="prod-mig-step">
+      <div class="prod-mig-num">3</div>
+      <div class="prod-mig-content">
+        <strong>维度变化需要重建索引结构</strong>
+        <p>从 384 维升级到 768 维，索引不能复用。存储、内存、检索延迟都会变化，需要重新规划容量。</p>
+      </div>
     </div>
-<div class="prod-monitor-card">
-  <div class="prod-mon-name">用户反馈/点击率</div>
-  <div class="prod-mon-threshold">代理 Recall 指标</div>
-  <div class="prod-mon-desc">用户是否点击了检索结果、是否给出负面反馈。这是离线评估指标（MRR/NDCG）在线上的代理。</div>
-    </div>
-<div class="prod-monitor-card">
-  <div class="prod-mon-name">向量维度一致性</div>
-  <div class="prod-mon-threshold">必须 100%</div>
-  <div class="prod-mon-desc">所有入库向量的维度必须和索引声明一致。维度不匹配会导致静默错误（返回随机结果）。</div>
-    </div>
-<div class="prod-monitor-card">
-  <div class="prod-mon-name">索引大小 / 文档数</div>
-  <div class="prod-mon-threshold">应与源文档同步</div>
-  <div class="prod-mon-desc">如果索引文档数显著少于源文档数，说明有数据丢失。如果显著多于，说明删除操作没有同步到索引。</div>
+    <div class="prod-mig-step">
+      <div class="prod-mig-num">4</div>
+      <div class="prod-mig-content">
+        <strong>评估基线必须对齐</strong>
+        <p>在切换前用同一份测试集分别跑新旧模型，确认新模型在你的数据上确实更好，再执行迁移。</p>
+      </div>
     </div>
   </div>
 </div>
 
 <div class="section-card">
-<h2>交互式故障排查剧本</h2>
-<p>线上向量检索系统出问题时，选择你遇到的症状，跟随排查路径一步步定位根因：</p>
-<div class="prod-playbook">
-<div class="prod-pb-symptoms" id="prodSymptomPanel">
-  <div class="prod-pb-prompt">选择你遇到的症状：</div>
+  <h2>线上监控：看什么指标？</h2>
+  <p>上线后最怕的是"悄悄变差"。以下指标帮你及时发现问题：</p>
+  <div class="prod-monitor-grid">
+    <div class="prod-monitor-card">
+      <div class="prod-mon-name">空结果率</div>
+      <div class="prod-mon-threshold">阈值: < 5%</div>
+      <div class="prod-mon-desc">没有返回任何结果的查询占比。飙升通常意味着索引损坏、模型加载失败或 chunk 覆盖不足。</div>
+    </div>
+    <div class="prod-monitor-card">
+      <div class="prod-mon-name">Top-1 相似度中位数</div>
+      <div class="prod-mon-threshold">关注趋势变化</div>
+      <div class="prod-mon-desc">最高相似度分数的中位数。持续下降可能说明新增文档的质量在下降，或者 query 的分布在漂移。</div>
+    </div>
+    <div class="prod-monitor-card">
+      <div class="prod-mon-name">P99 延迟</div>
+      <div class="prod-mon-threshold">阈值: < 100ms</div>
+      <div class="prod-mon-desc">99% 请求的检索延迟。突然增高可能是索引碎片化、内存不足导致换页、或并发量超出预期。</div>
+    </div>
+    <div class="prod-monitor-card">
+      <div class="prod-mon-name">用户反馈/点击率</div>
+      <div class="prod-mon-threshold">代理 Recall 指标</div>
+      <div class="prod-mon-desc">用户是否点击了检索结果、是否给出负面反馈。这是离线评估指标（MRR/NDCG）在线上的代理。</div>
+    </div>
+    <div class="prod-monitor-card">
+      <div class="prod-mon-name">向量维度一致性</div>
+      <div class="prod-mon-threshold">必须 100%</div>
+      <div class="prod-mon-desc">所有入库向量的维度必须和索引声明一致。维度不匹配会导致静默错误（返回随机结果）。</div>
+    </div>
+    <div class="prod-monitor-card">
+      <div class="prod-mon-name">索引大小 / 文档数</div>
+      <div class="prod-mon-threshold">应与源文档同步</div>
+      <div class="prod-mon-desc">如果索引文档数显著少于源文档数，说明有数据丢失。如果显著多于，说明删除操作没有同步到索引。</div>
+    </div>
+  </div>
+</div>
+
+<div class="section-card">
+  <h2>交互式故障排查剧本</h2>
+  <p>线上向量检索系统出问题时，选择你遇到的症状，跟随排查路径一步步定位根因：</p>
+  <div class="prod-playbook">
+    <div class="prod-pb-symptoms" id="prodSymptomPanel">
+      <div class="prod-pb-prompt">选择你遇到的症状：</div>
       <button class="prod-pb-symptom-btn" onclick="startPlaybook('recall')">召回质量突然下降</button>
       <button class="prod-pb-symptom-btn" onclick="startPlaybook('latency')">检索延迟突然升高</button>
       <button class="prod-pb-symptom-btn" onclick="startPlaybook('missing')">新文档搜不到</button>
       <button class="prod-pb-symptom-btn" onclick="startPlaybook('score')">相似度分数异常</button>
     </div>
-<div class="prod-pb-flow" id="prodPlaybookFlow" style="display:none;"></div>
-<div class="prod-pb-controls" id="prodPlaybookControls" style="display:none;">
-  <button class="btn btn-sm" onclick="resetPlaybook()">← 重新选择症状</button>
-</div>
+    <div class="prod-pb-flow" id="prodPlaybookFlow" style="display:none;"></div>
+    <div class="prod-pb-controls" id="prodPlaybookControls" style="display:none;">
+      <button class="btn btn-sm" onclick="resetPlaybook()">← 重新选择症状</button>
+    </div>
   </div>
 </div>
 </section>
@@ -2445,43 +2437,39 @@ MaxSim = Σ max(sim(qᵢ, dⱼ)) / |Q|</div>
 <!-- ═══ Tab: Cache & Dedup ═══ -->
 <section class="tab-content" id="tab-cache-dedup">
 <div class="section-card">
-<h2>Embedding 缓存与去重</h2>
-<p>生产中，知识库常有大量近似重复内容（如不同版本的文档、微调后的 FAQ）。重复 embed 相同内容既浪费算力，又让检索结果充斥冗余。<strong>缓存</strong>避免重复计算，<strong>去重</strong>清理冗余文档。</p>
+  <h2>Embedding 缓存与去重</h2>
+  <p>生产中，知识库常有大量近似重复内容（如不同版本的文档、微调后的 FAQ）。重复 embed 相同内容既浪费算力，又让检索结果充斥冗余。<strong>缓存</strong>避免重复计算，<strong>去重</strong>清理冗余文档。</p>
 </div>
 
 <div class="section-card">
-<h3>近似重复检测</h3>
-<p class="hint">近似重复（措辞微调）vs 语义相关但不同的内容——cosine similarity 能区分它们吗？阈值设多高才不误杀有用内容？</p>
-<div class="viz-panel" id="cdDupChart"></div>
+  <h3>近似重复检测</h3>
+  <p class="hint">近似重复（措辞微调）vs 语义相关但不同的内容——cosine similarity 能区分它们吗？阈值设多高才不误杀有用内容？</p>
+  <div class="viz-panel" id="cdDupChart"></div>
 </div>
 
 <div class="section-card">
-<h3>去重阈值与精度</h3>
-<p class="hint">调高阈值可以减少误判，但也会漏掉更多真正的重复。下图展示不同阈值下的去重效果。</p>
-<div class="viz-panel" id="cdThresholdChart"></div>
+  <h3>去重阈值与精度</h3>
+  <p class="hint">调高阈值可以减少误判，但也会漏掉更多真正的重复。下图展示不同阈值下的去重效果。</p>
+  <div class="viz-panel" id="cdThresholdChart"></div>
 </div>
 
 <div class="section-card">
-<h3>缓存策略：节省多少算力？</h3>
-<p class="hint">假设 15% 的文档是重复的，使用 hash→embedding 缓存可以节省多少 embed 调用？</p>
-<div class="viz-panel" id="cdCacheChart"></div>
-<div id="cdCacheInsight" class="cd-cache-insight"></div>
+  <h3>缓存策略：节省多少算力？</h3>
+  <p class="hint">假设 15% 的文档是重复的，使用 hash→embedding 缓存可以节省多少 embed 调用？</p>
+  <div class="viz-panel" id="cdCacheChart"></div>
+  <div id="cdCacheInsight" class="cd-cache-insight"></div>
 </div>
 
 <div class="section-card">
-<h3>推荐流程</h3>
-<div class="cd-pipeline">
-<div class="cd-pipe-step"><div class="cd-pipe-num">1</div><div class="cd-pipe-text"><strong>文本 Hash</strong>
-对原始文本计算 SHA-256，命中缓存直接返回已有向量</div></div>
-<div class="cd-pipe-arrow">→</div>
-<div class="cd-pipe-step"><div class="cd-pipe-num">2</div><div class="cd-pipe-text"><strong>Embed + 存缓存</strong>
-未命中则调用模型计算，将 hash→vector 写入缓存</div></div>
-<div class="cd-pipe-arrow">→</div>
-<div class="cd-pipe-step"><div class="cd-pipe-num">3</div><div class="cd-pipe-text"><strong>语义去重</strong>
-入库后用 cosine similarity ≥ 0.95 检测近似重复，保留最新版本</div></div>
-<div class="cd-pipe-arrow">→</div>
-<div class="cd-pipe-step"><div class="cd-pipe-num">4</div><div class="cd-pipe-text"><strong>定期清理</strong>
-全量扫描去重，清理过期缓存，重建索引</div></div>
+  <h3>推荐流程</h3>
+  <div class="cd-pipeline">
+    <div class="cd-pipe-step"><div class="cd-pipe-num">1</div><div class="cd-pipe-text"><strong>文本 Hash</strong><br>对原始文本计算 SHA-256，命中缓存直接返回已有向量</div></div>
+    <div class="cd-pipe-arrow">→</div>
+    <div class="cd-pipe-step"><div class="cd-pipe-num">2</div><div class="cd-pipe-text"><strong>Embed + 存缓存</strong><br>未命中则调用模型计算，将 hash→vector 写入缓存</div></div>
+    <div class="cd-pipe-arrow">→</div>
+    <div class="cd-pipe-step"><div class="cd-pipe-num">3</div><div class="cd-pipe-text"><strong>语义去重</strong><br>入库后用 cosine similarity ≥ 0.95 检测近似重复，保留最新版本</div></div>
+    <div class="cd-pipe-arrow">→</div>
+    <div class="cd-pipe-step"><div class="cd-pipe-num">4</div><div class="cd-pipe-text"><strong>定期清理</strong><br>全量扫描去重，清理过期缓存，重建索引</div></div>
   </div>
 </div>
 </section>
@@ -2489,34 +2477,34 @@ MaxSim = Σ max(sim(qᵢ, dⱼ)) / |Q|</div>
 <!-- ═══ Tab: Multimodal ═══ -->
 <section class="tab-content" id="tab-multimodal">
 <div class="section-card">
-<h2>多模态 Embedding：从文本到图片、音频</h2>
-<p>传统 Embedding 只处理文本。<strong>多模态模型</strong>（如 CLIP）将不同模态的数据映射到<strong>同一个向量空间</strong>，实现跨模态检索——用文字搜图片、用图片搜文字。</p>
-<div class="mm-key-insight">
-<strong>核心原理：</strong>训练时用大量（图片, 文本描述）配对数据，迫使模型将匹配的图文对编码到相近位置，不匹配的推远。这和文本 embedding 的对比学习思路完全一致。
-</div>
-</div>
-
-<div class="section-card">
-<h3>跨模态对齐实验</h3>
-<p class="hint">用文本 query 检索"图片描述"（模拟图文检索）。匹配的 query-图片对 vs 不匹配对的相似度差异有多大？</p>
-<div class="viz-panel" id="mmAlignChart"></div>
+  <h2>多模态 Embedding：从文本到图片、音频</h2>
+  <p>传统 Embedding 只处理文本。<strong>多模态模型</strong>（如 CLIP）将不同模态的数据映射到<strong>同一个向量空间</strong>，实现跨模态检索——用文字搜图片、用图片搜文字。</p>
+  <div class="mm-key-insight">
+    <strong>核心原理：</strong>训练时用大量（图片, 文本描述）配对数据，迫使模型将匹配的图文对编码到相近位置，不匹配的推远。这和文本 embedding 的对比学习思路完全一致。
+  </div>
 </div>
 
 <div class="section-card">
-<h3>文本 Query × 图片描述 检索矩阵</h3>
-<p class="hint">对角线是语义匹配的 query-图片对。理想情况下对角线应该最亮。</p>
-<div class="viz-panel" id="mmMatrixChart"></div>
+  <h3>跨模态对齐实验</h3>
+  <p class="hint">用文本 query 检索"图片描述"（模拟图文检索）。匹配的 query-图片对 vs 不匹配对的相似度差异有多大？</p>
+  <div class="viz-panel" id="mmAlignChart"></div>
 </div>
 
 <div class="section-card">
-<h3>向量空间 UMAP 可视化</h3>
-<p class="hint">图片描述和文本 query 在向量空间中的分布。语义匹配的图文对应该聚集在一起。</p>
-<div class="viz-panel" id="mmUmapScatter"></div>
+  <h3>文本 Query × 图片描述 检索矩阵</h3>
+  <p class="hint">对角线是语义匹配的 query-图片对。理想情况下对角线应该最亮。</p>
+  <div class="viz-panel" id="mmMatrixChart"></div>
 </div>
 
 <div class="section-card">
-<h3>多模态模型对比</h3>
-<div id="mmModelTable" class="mm-model-table-wrapper"></div>
+  <h3>向量空间 UMAP 可视化</h3>
+  <p class="hint">图片描述和文本 query 在向量空间中的分布。语义匹配的图文对应该聚集在一起。</p>
+  <div class="viz-panel" id="mmUmapScatter"></div>
+</div>
+
+<div class="section-card">
+  <h3>多模态模型对比</h3>
+  <div id="mmModelTable" class="mm-model-table-wrapper"></div>
 </div>
 </section>
 
@@ -2712,10 +2700,8 @@ btn.className = "tab-nav-btn" + (tab ? "" : " hidden");
 if (tab) btn.addEventListener("click", () => switchTab(tab.id));
 const isPrev = direction === "prev";
 btn.innerHTML = isPrev
-  ? `←<span class="nav-label">上一步
-${tab ? tab.label : ""}</span>`
-  : `<span class="nav-label">下一步
-${tab ? tab.label : ""}</span>→`;
+  ? `<span class="arrow">←</span><span><span class="nav-label">上一步</span><br><span class="nav-title">${tab ? tab.label : ""}</span></span>`
+  : `<span><span class="nav-label">下一步</span><br><span class="nav-title">${tab ? tab.label : ""}</span></span><span class="arrow">→</span>`;
 return btn;
 };
 
@@ -2835,10 +2821,10 @@ container.innerHTML = data.map(p => {
 const pct = Math.max(0, p.similarity * 100);
 const color = p.similarity >= 0.7 ? "var(--good)" : p.similarity >= 0.4 ? "var(--warn)" : "var(--bad)";
 return `<div class="sim-pair">
-  "${escapeHtml(p.s1)}"
-  "${escapeHtml(p.s2)}"
-<div><div class="sim-gauge"><div class="sim-gauge-fill" style="width:${pct}%;background:${color}"></div></div></div>
-  ${p.similarity.toFixed(3)}
+  <span class="s1">"${escapeHtml(p.s1)}"</span>
+  <span class="s2">"${escapeHtml(p.s2)}"</span>
+  <div><div class="sim-gauge"><div class="sim-gauge-fill" style="width:${pct}%;background:${color}"></div></div></div>
+  <span class="score" style="color:${color}">${p.similarity.toFixed(3)}</span>
 </div>`;
 }).join("");
 }
@@ -2855,10 +2841,10 @@ const embs = await browserEmbed([s1, s2]);
 const sim = cosineSim(embs[0], embs[1]);
 const color = sim >= 0.7 ? "var(--good)" : sim >= 0.4 ? "var(--warn)" : "var(--bad)";
 el.innerHTML = `<div class="sim-pair">
-  "${escapeHtml(s1)}"
-  "${escapeHtml(s2)}"
-<div><div class="sim-gauge"><div class="sim-gauge-fill" style="width:${Math.max(0,sim*100)}%;background:${color}"></div></div></div>
-  ${sim.toFixed(4)}
+  <span class="s1">"${escapeHtml(s1)}"</span>
+  <span class="s2">"${escapeHtml(s2)}"</span>
+  <div><div class="sim-gauge"><div class="sim-gauge-fill" style="width:${Math.max(0,sim*100)}%;background:${color}"></div></div></div>
+  <span class="score" style="color:${color}">${sim.toFixed(4)}</span>
 </div>`;
 } catch (e) {
 el.innerHTML = "计算失败: " + e.message;
@@ -3022,8 +3008,8 @@ avgSim /= count || 1;
 
 document.getElementById("expMetrics").innerHTML = `
 <div class="metrics-grid">
-<div class="metric-card"><div class="metric-value">${maxSim.toFixed(3)}</div><div class="metric-label">最高 Query-Chunk 相似度</div></div>
-<div class="metric-card"><div class="metric-value">${avgSim.toFixed(3)}</div><div class="metric-label">平均 Query-Chunk 相似度</div></div>
+  <div class="metric-card"><div class="metric-value">${maxSim.toFixed(3)}</div><div class="metric-label">最高 Query-Chunk 相似度</div></div>
+  <div class="metric-card"><div class="metric-value">${avgSim.toFixed(3)}</div><div class="metric-label">平均 Query-Chunk 相似度</div></div>
 </div>`;
 }
 
@@ -3051,8 +3037,7 @@ const ranked = chunkIndices.map(ci => ({ ci, sim: sims[qi][ci] })).sort((a,b) =>
 html += `<div style="margin:0.5rem 0;font-size:0.85rem;"><strong style="color:var(--accent)">Q: "${escapeHtml(qText.slice(0,25))}${qText.length>25?'…':''}"</strong>`;
 ranked.forEach((r, rank) => {
   const label = labels[r.ci] || types[r.ci] || "";
-  html += `<div class="result-item">#${rank+1}${escapeHtml(exp.texts[r.ci].slice(0,40))}… ${r.sim.toFixed(3)}
-[${escapeHtml(label)}]</div>`;
+  html += `<div class="result-item"><span class="result-rank">#${rank+1}</span>${escapeHtml(exp.texts[r.ci].slice(0,40))}… <span class="result-score ${scoreClass(r.sim)}">${r.sim.toFixed(3)}</span><br><span style="font-size:0.75rem;color:var(--text-secondary)">[${escapeHtml(label)}]</span></div>`;
 });
 html += "</div>";
 });
@@ -3111,13 +3096,13 @@ document.getElementById("retrievalQuery").textContent = `"${d.user_query}"`;
 
 let q2qHtml = "";
 d.q2q_results.forEach((r, i) => {
-q2qHtml += `<div class="result-item">#${i+1}${escapeHtml(r.question)}${r.similarity.toFixed(3)}<div class="result-answer">→ ${escapeHtml(r.answer)}</div></div>`;
+q2qHtml += `<div class="result-item"><span class="result-rank">#${i+1}</span>${escapeHtml(r.question)}<span class="result-score ${scoreClass(r.similarity)}">${r.similarity.toFixed(3)}</span><div class="result-answer">→ ${escapeHtml(r.answer)}</div></div>`;
 });
 document.getElementById("q2qResults").innerHTML = q2qHtml;
 
 let q2aHtml = "";
 d.q2a_results.forEach((r, i) => {
-q2aHtml += `<div class="result-item">#${i+1}${escapeHtml(r.text.slice(0,60))}…${r.similarity.toFixed(3)}</div>`;
+q2aHtml += `<div class="result-item"><span class="result-rank">#${i+1}</span>${escapeHtml(r.text.slice(0,60))}…<span class="result-score ${scoreClass(r.similarity)}">${r.similarity.toFixed(3)}</span></div>`;
 });
 document.getElementById("q2aResults").innerHTML = q2aHtml;
 
@@ -3133,7 +3118,7 @@ for (let a = 0; a < indices.length; a++) for (let b = a+1; b < indices.length; b
   intra += d.a2a_similarity_matrix[indices[a]][indices[b]]; cnt++;
 }
 intra = cnt ? intra / cnt : 0;
-a2aHtml += `<div class="result-item"><strong>${topic}</strong> (${indices.length} docs)${intra.toFixed(3)}<div class="result-answer">组内平均相似度</div></div>`;
+a2aHtml += `<div class="result-item"><strong>${topic}</strong> (${indices.length} docs)<span class="result-score ${scoreClass(intra)}">${intra.toFixed(3)}</span><div class="result-answer">组内平均相似度</div></div>`;
 }
 a2aHtml += "</div>";
 document.getElementById("a2aResults").innerHTML = a2aHtml;
@@ -3183,7 +3168,7 @@ const q2qSims = d.q2q_results.map((r, i) => ({ ...r, similarity: parseFloat(cosi
 q2qSims.sort((a, b) => b.similarity - a.similarity);
 let html = "";
 q2qSims.forEach((r, i) => {
-  html += `<div class="result-item">#${i+1}${escapeHtml(r.question)}${r.similarity.toFixed(3)}<div class="result-answer">→ ${escapeHtml(r.answer)}</div></div>`;
+  html += `<div class="result-item"><span class="result-rank">#${i+1}</span>${escapeHtml(r.question)}<span class="result-score ${scoreClass(r.similarity)}">${r.similarity.toFixed(3)}</span><div class="result-answer">→ ${escapeHtml(r.answer)}</div></div>`;
 });
 document.getElementById("q2qResults").innerHTML = html;
 
@@ -3192,7 +3177,7 @@ const q2aSims = d.q2a_results.map((r, i) => ({ ...r, similarity: parseFloat(cosi
 q2aSims.sort((a, b) => b.similarity - a.similarity);
 html = "";
 q2aSims.forEach((r, i) => {
-  html += `<div class="result-item">#${i+1}${escapeHtml(r.text.slice(0,60))}…${r.similarity.toFixed(3)}</div>`;
+  html += `<div class="result-item"><span class="result-rank">#${i+1}</span>${escapeHtml(r.text.slice(0,60))}…<span class="result-score ${scoreClass(r.similarity)}">${r.similarity.toFixed(3)}</span></div>`;
 });
 document.getElementById("q2aResults").innerHTML = html;
 
@@ -3219,19 +3204,19 @@ tripletsEl.innerHTML = d.triplets.map(t => {
   const posColor = scoreClass(t.pos_sim);
   const negColor = scoreClass(t.neg_sim);
   return `<div class="training-triplet">
-<div class="triplet-card query">
-  <div class="triplet-label">Query</div>
-  <div class="triplet-text">${t.query}</div>
+    <div class="triplet-card query">
+      <div class="triplet-label">Query</div>
+      <div class="triplet-text">${t.query}</div>
     </div>
-<div class="triplet-card positive">
-  <div class="triplet-label">Positive ✓</div>
-  <div class="triplet-text">${t.positive}</div>
-      ${t.pos_sim.toFixed(3)}
+    <div class="triplet-card positive">
+      <div class="triplet-label">Positive ✓</div>
+      <div class="triplet-text">${t.positive}</div>
+      <span class="triplet-score ${posColor}">${t.pos_sim.toFixed(3)}</span>
     </div>
-<div class="triplet-card negative">
-  <div class="triplet-label">Negative ✗</div>
-  <div class="triplet-text">${t.negative}</div>
-      ${t.neg_sim.toFixed(3)}
+    <div class="triplet-card negative">
+      <div class="triplet-label">Negative ✗</div>
+      <div class="triplet-text">${t.negative}</div>
+      <span class="triplet-score ${negColor}">${t.neg_sim.toFixed(3)}</span>
     </div>
   </div>`;
 }).join("");
@@ -3442,9 +3427,9 @@ indices.forEach((idx, rank) => {
   const isExpected = idx === data.expected_best_idx;
   const isActual = idx === data.actual_best_idx;
   let status = "";
-  if (isExpected && isActual) status = '✓ 命中';
-  else if (isExpected) status = '✗ 应为最佳';
-  else if (isActual) status = '⚠ 实际最佳';
+  if (isExpected && isActual) status = '<span style="color:var(--good)">✓ 命中</span>';
+  else if (isExpected) status = '<span style="color:var(--warn)">✗ 应为最佳</span>';
+  else if (isActual) status = '<span style="color:var(--bad)">⚠ 实际最佳</span>';
   const rowCls = isExpected ? "expected-row" : isActual ? "actual-row" : "";
   const label = data.labels[idx];
   html += `<tr class="${rowCls}">
@@ -3617,10 +3602,10 @@ const f1 = precision + recall > 0 ? 2 * precision * recall / (precision + recall
 const prEl = document.getElementById("topkPRValues");
 if (prEl) {
 prEl.innerHTML = `<div class="metrics-grid">
-<div class="metric-card"><div class="metric-value ${scoreClass(precision)}">${precision.toFixed(3)}</div><div class="metric-label">Precision</div></div>
-<div class="metric-card"><div class="metric-value ${scoreClass(recall)}">${recall.toFixed(3)}</div><div class="metric-label">Recall</div></div>
-<div class="metric-card"><div class="metric-value ${scoreClass(f1)}">${f1.toFixed(3)}</div><div class="metric-label">F1 Score</div></div>
-<div class="metric-card"><div class="metric-value">${tp + fp}</div><div class="metric-label">检索到的文档数</div></div>
+  <div class="metric-card"><div class="metric-value ${scoreClass(precision)}">${precision.toFixed(3)}</div><div class="metric-label">Precision</div></div>
+  <div class="metric-card"><div class="metric-value ${scoreClass(recall)}">${recall.toFixed(3)}</div><div class="metric-label">Recall</div></div>
+  <div class="metric-card"><div class="metric-value ${scoreClass(f1)}">${f1.toFixed(3)}</div><div class="metric-label">F1 Score</div></div>
+  <div class="metric-card"><div class="metric-value">${tp + fp}</div><div class="metric-label">检索到的文档数</div></div>
 </div>`;
 }
 
@@ -3679,10 +3664,10 @@ const biSorted = [...docs].sort((a, b) => a.bi_rank - b.bi_rank);
 biEl.innerHTML = biSorted.map(doc => {
   const pct = Math.max(0, Math.min(100, doc.bi_score * 100));
   return `<div class="rank-item">
-    #${doc.bi_rank}
-<div class="rank-text" title="${escapeHtml(doc.text)}">${escapeHtml(doc.text.length > 60 ? doc.text.slice(0, 60) + "…" : doc.text)}</div>
-<div class="rank-score-bar"><div class="rank-score-fill" style="width:${pct}%;background:var(--accent)"></div></div>
-    ${doc.bi_score.toFixed(4)}
+    <span class="rank-badge">#${doc.bi_rank}</span>
+    <div class="rank-text" title="${escapeHtml(doc.text)}">${escapeHtml(doc.text.length > 60 ? doc.text.slice(0, 60) + "…" : doc.text)}</div>
+    <div class="rank-score-bar"><div class="rank-score-fill" style="width:${pct}%;background:var(--accent)"></div></div>
+    <span class="rank-score-val">${doc.bi_score.toFixed(4)}</span>
   </div>`;
 }).join("");
 }
@@ -3698,11 +3683,11 @@ ceEl.innerHTML = ceSorted.map(doc => {
   else if (doc.ce_rank > doc.bi_rank) { arrow = `↓${doc.ce_rank - doc.bi_rank}`; badgeCls = "down"; }
   else { arrow = "—"; }
   return `<div class="rank-item">
-    #${doc.ce_rank}
-    ${arrow}
-<div class="rank-text" title="${escapeHtml(doc.text)}">${escapeHtml(doc.text.length > 60 ? doc.text.slice(0, 60) + "…" : doc.text)}</div>
-<div class="rank-score-bar"><div class="rank-score-fill" style="width:${pct}%;background:#E91E63"></div></div>
-    ${doc.ce_score.toFixed(4)}
+    <span class="rank-badge">#${doc.ce_rank}</span>
+    <span class="rank-badge ${badgeCls}">${arrow}</span>
+    <div class="rank-text" title="${escapeHtml(doc.text)}">${escapeHtml(doc.text.length > 60 ? doc.text.slice(0, 60) + "…" : doc.text)}</div>
+    <div class="rank-score-bar"><div class="rank-score-fill" style="width:${pct}%;background:#E91E63"></div></div>
+    <span class="rank-score-val">${doc.ce_score.toFixed(4)}</span>
   </div>`;
 }).join("");
 }
@@ -3838,9 +3823,9 @@ const hydeOverall = d.examples.reduce((sum, ex) => {
 }, 0) / d.examples.length;
 const improvement = hydeOverall - queryOverall;
 improvEl.innerHTML = `<div class="metrics-grid">
-<div class="metric-card"><div class="metric-value">${queryOverall.toFixed(3)}</div><div class="metric-label">Query→Doc 平均</div></div>
-<div class="metric-card"><div class="metric-value" style="color:var(--good)">${hydeOverall.toFixed(3)}</div><div class="metric-label">HyDE→Doc 平均</div></div>
-<div class="metric-card"><div class="metric-value" style="color:${improvement > 0 ? "var(--good)" : "var(--bad)"}">+${improvement.toFixed(3)}</div><div class="metric-label">相似度提升</div></div>
+  <div class="metric-card"><div class="metric-value">${queryOverall.toFixed(3)}</div><div class="metric-label">Query→Doc 平均</div></div>
+  <div class="metric-card"><div class="metric-value" style="color:var(--good)">${hydeOverall.toFixed(3)}</div><div class="metric-label">HyDE→Doc 平均</div></div>
+  <div class="metric-card"><div class="metric-value" style="color:${improvement > 0 ? "var(--good)" : "var(--bad)"}">+${improvement.toFixed(3)}</div><div class="metric-label">相似度提升</div></div>
 </div>`;
 }
 }
@@ -3857,7 +3842,7 @@ if (sel) {
 const categoryLabels = { bm25_wins: "BM25 胜", embedding_wins: "Embedding 胜", hybrid: "混合" };
 const categoryColors = { bm25_wins: "#4ECDC4", embedding_wins: "#FF6B6B", hybrid: "#F39C12" };
 sel.innerHTML = d.queries.map((q, i) => {
-  const badge = `${categoryLabels[q.category] || q.category}`;
+  const badge = `<span style="font-size:0.7rem;padding:1px 5px;border-radius:3px;background:${categoryColors[q.category] || "#666"};color:#fff;margin-left:4px">${categoryLabels[q.category] || q.category}</span>`;
   return `<button class="btn-sm${i === 0 ? " active" : ""}" onclick="renderSparseDenseComparison(${i}, this)">${q.query.length > 15 ? q.query.slice(0, 15) + "…" : q.query}${badge}</button>`;
 }).join("");
 }
@@ -3887,10 +3872,10 @@ bm25El.innerHTML = bm25Sorted.map(doc => {
   const pct = Math.max(0, Math.min(100, (doc.bm25_score / maxBm25) * 100));
   const highlighted = applyMatchHighlights(doc.text, doc.match_highlights);
   return `<div class="rank-item">
-    #${doc.bm25_rank}
-<div class="rank-text">${highlighted.length > 80 ? highlighted.slice(0, 80) + "…" : highlighted}</div>
-<div class="rank-score-bar"><div class="rank-score-fill" style="width:${pct}%;background:#4ECDC4"></div></div>
-    ${doc.bm25_score.toFixed(3)}
+    <span class="rank-badge">#${doc.bm25_rank}</span>
+    <div class="rank-text">${highlighted.length > 80 ? highlighted.slice(0, 80) + "…" : highlighted}</div>
+    <div class="rank-score-bar"><div class="rank-score-fill" style="width:${pct}%;background:#4ECDC4"></div></div>
+    <span class="rank-score-val">${doc.bm25_score.toFixed(3)}</span>
   </div>`;
 }).join("");
 }
@@ -3903,10 +3888,10 @@ embEl.innerHTML = embSorted.map(doc => {
   const pct = Math.max(0, Math.min(100, doc.embedding_score * 100));
   const txt = doc.text.length > 80 ? doc.text.slice(0, 80) + "…" : doc.text;
   return `<div class="rank-item">
-    #${doc.embedding_rank}
-<div class="rank-text">${escapeHtml(txt)}</div>
-<div class="rank-score-bar"><div class="rank-score-fill" style="width:${pct}%;background:#FF6B6B"></div></div>
-    ${doc.embedding_score.toFixed(4)}
+    <span class="rank-badge">#${doc.embedding_rank}</span>
+    <div class="rank-text">${escapeHtml(txt)}</div>
+    <div class="rank-score-bar"><div class="rank-score-fill" style="width:${pct}%;background:#FF6B6B"></div></div>
+    <span class="rank-score-val">${doc.embedding_score.toFixed(4)}</span>
   </div>`;
 }).join("");
 }
@@ -3978,7 +3963,7 @@ let result = "";
 let cursor = 0;
 for (const r of merged) {
 if (r.start > cursor) result += text.slice(cursor, r.start);
-result += `${text.slice(r.start, r.end)}`;
+result += `<span class="sd-match-highlight ${r.cls}">${text.slice(r.start, r.end)}</span>`;
 cursor = r.end;
 }
 if (cursor < text.length) result += text.slice(cursor);
@@ -4063,8 +4048,7 @@ Plotly.newPlot("cqBarChart", [{
   marker: { color: barColors },
   text: deltas.map(d => d === 0 ? "基准" : `${d > 0 ? "+" : ""}${d}%`),
   textposition: "outside", textfont: { color: "#e4e6f0", size: 11 },
-  hovertemplate: "%{x}
-相似度: %{y:.4f}<br>变化: %{text}<extra></extra>",
+  hovertemplate: "%{x}<br>相似度: %{y:.4f}<br>变化: %{text}<extra></extra>",
 }], {
   ...PLOTLY_CHART_BASE,
   title: `与 Query 的余弦相似度`,
@@ -4108,17 +4092,17 @@ list.innerHTML = `<div class="cq-variant-grid">${g.variants.map((v, i) => {
   const tokenRatio = d.clean_tokens > 0 ? (v.tokens / Math.max(...tokens)) * 100 : 0;
   const fillColor = tokColors[i];
   return `<div class="cq-variant-card${isBase ? " is-baseline" : ""}">
-<div class="cq-variant-header">
-  ${v.label}
-  <div class="cq-variant-metrics">
-    ${deltaStr}
-    ${v.sim_query.toFixed(4)}
-  </div>
+    <div class="cq-variant-header">
+      <span class="cq-variant-label">${v.label}</span>
+      <div class="cq-variant-metrics">
+        <span class="cq-metric ${metricCls}">${deltaStr}</span>
+        <span class="cq-metric cq-metric-neutral">${v.sim_query.toFixed(4)}</span>
+      </div>
     </div>
-<div class="cq-variant-text">${escapeHtml(v.text)}</div>
-<div class="cq-variant-tokens">
-  ${v.tokens} tokens
-  <div class="cq-token-bar"><div class="cq-token-fill" style="width:${tokenRatio}%; background:${fillColor};"></div></div>
+    <div class="cq-variant-text">${escapeHtml(v.text)}</div>
+    <div class="cq-variant-tokens">
+      <span>${v.tokens} tokens</span>
+      <div class="cq-token-bar"><div class="cq-token-fill" style="width:${tokenRatio}%; background:${fillColor};"></div></div>
     </div>
   </div>`;
 }).join("")}</div>`;
@@ -4165,16 +4149,16 @@ list.innerHTML = emCurrentDocs.map((doc, i) => {
 const relCls = `em-rel-${doc.relevance}`;
 const relLabels = ["不相关", "部分相关", "相关", "完全相关"];
 return `<div class="em-rank-item" data-idx="${i}">
-<div class="em-rank-num">${i + 1}</div>
-<div class="em-rank-text">${escapeHtml(doc.text.slice(0, 60))}…</div>
-<div class="em-rank-badges">
-rel=${doc.relevance} ${relLabels[doc.relevance]}
-${doc.similarity.toFixed(4)}
-</div>
-<div class="em-rank-arrows">
-<button onclick="moveEvalDoc(${i}, -1)">▲</button>
-<button onclick="moveEvalDoc(${i}, 1)">▼</button>
-</div>
+  <div class="em-rank-num">${i + 1}</div>
+  <div class="em-rank-text">${escapeHtml(doc.text.slice(0, 60))}…</div>
+  <div class="em-rank-badges">
+    <span class="em-rel-badge ${relCls}">rel=${doc.relevance} ${relLabels[doc.relevance]}</span>
+    <span class="em-sim-badge">${doc.similarity.toFixed(4)}</span>
+  </div>
+  <div class="em-rank-arrows">
+    <button onclick="moveEvalDoc(${i}, -1)">▲</button>
+    <button onclick="moveEvalDoc(${i}, 1)">▼</button>
+  </div>
 </div>`;
 }).join("");
 
@@ -4369,7 +4353,7 @@ const ex = d.examples[exIdx];
 
 const docSel = document.getElementById("cbDocSelector");
 if (docSel) {
-docSel.innerHTML = '选择文档：' +
+docSel.innerHTML = '<span style="margin-right:0.5rem; font-size:0.9rem;">选择文档：</span>' +
   ex.documents.map((doc, i) =>
     `<button class="btn btn-sm${i === docIdx ? " active" : ""}" onclick="loadColBERTExample(${exIdx}, ${i})">${escapeHtml(doc.text.slice(0, 25))}…</button>`
   ).join("");
@@ -4426,15 +4410,15 @@ if (!el) return;
 
 el.innerHTML = `
 <div class="cb-maxsim-detail">
-${bestMatches.map(m => `<div class="cb-match-card">
-${escapeHtml(m.q_token)} → ${escapeHtml(m.d_token)}
-${m.sim.toFixed(3)}
-</div>`).join("")}
+  ${bestMatches.map(m => `<div class="cb-match-card">
+    <span class="q-tok">${escapeHtml(m.q_token)}</span> → <span class="d-tok">${escapeHtml(m.d_token)}</span>
+    <span class="sim-val">${m.sim.toFixed(3)}</span>
+  </div>`).join("")}
 </div>
 <div style="margin-top:0.75rem; display:flex; gap:1.5rem; font-size:0.9rem;">
-<div><strong style="color:#2ECC71;">ColBERT MaxSim：</strong>${maxsimScore.toFixed(4)}</div>
-<div><strong style="color:#3498DB;">Bi-Encoder：</strong>${biScore.toFixed(4)}</div>
-<div><strong style="color:var(--text-secondary);">差异：</strong>${(maxsimScore - biScore > 0 ? "+" : "") + (maxsimScore - biScore).toFixed(4)}</div>
+  <div><strong style="color:#2ECC71;">ColBERT MaxSim：</strong><span style="font-family:var(--mono);">${maxsimScore.toFixed(4)}</span></div>
+  <div><strong style="color:#3498DB;">Bi-Encoder：</strong><span style="font-family:var(--mono);">${biScore.toFixed(4)}</span></div>
+  <div><strong style="color:var(--text-secondary);">差异：</strong><span style="font-family:var(--mono);">${(maxsimScore - biScore > 0 ? "+" : "") + (maxsimScore - biScore).toFixed(4)}</span></div>
 </div>`;
 }
 
@@ -4503,8 +4487,7 @@ if (!d) return;
 const btns = document.getElementById("csStrategyBtns");
 if (btns) {
 btns.innerHTML = d.strategies.map((s, i) =>
-  `<button class="cs-strategy-btn${i === 0 ? " active" : ""}" onclick="selectChunkStrategy(${i}, this)">${escapeHtml(s.name)}
-${s.chunk_count} chunks, 均${s.avg_len}字</button>`
+  `<button class="cs-strategy-btn${i === 0 ? " active" : ""}" onclick="selectChunkStrategy(${i}, this)">${escapeHtml(s.name)}<br><span style="font-size:0.75rem; opacity:0.6;">${s.chunk_count} chunks, 均${s.avg_len}字</span></button>`
 ).join("");
 }
 
@@ -4563,7 +4546,7 @@ let html = "";
 st.chunks.forEach((c, ci) => {
   const col = chunkColors[ci % chunkColors.length];
   const isBest = ci === bestIdx;
-  html += `${escapeHtml(c)} `;
+  html += `<span class="cs-chunk-highlight" style="border-color:${col}; ${isBest ? "background:rgba(46,204,113,0.15);" : ""}" title="Chunk ${ci + 1}: sim=${sims[ci]}">${escapeHtml(c)}</span> `;
 });
 display.innerHTML = html;
 }
@@ -4652,13 +4635,13 @@ cards.innerHTML = examples.map(e => {
   const arrow = e.delta > 0 ? "↑" : e.delta < 0 ? "↓" : "→";
   const color = e.delta > 0 ? "#2ECC71" : e.delta < 0 ? "#E74C3C" : "var(--text-secondary)";
   return `<div class="cr-example-card">
-<div class="cr-query">Q: ${escapeHtml(e.query)}</div>
-<div class="cr-chunk-text">${escapeHtml(e.context)}${escapeHtml(e.chunk)}</div>
-<div class="cr-sims">
-  无上下文: <strong>${e.sim_without.toFixed(4)}</strong>
-  有上下文: <strong style="color:#2ECC71;">${e.sim_with.toFixed(4)}</strong>
-  ${arrow} ${e.delta > 0 ? "+" : ""}${(e.delta_pct).toFixed(1)}%
-</div>
+    <div class="cr-query">Q: ${escapeHtml(e.query)}</div>
+    <div class="cr-chunk-text"><span class="cr-ctx">${escapeHtml(e.context)}</span>${escapeHtml(e.chunk)}</div>
+    <div class="cr-sims">
+      <span>无上下文: <strong>${e.sim_without.toFixed(4)}</strong></span>
+      <span>有上下文: <strong style="color:#2ECC71;">${e.sim_with.toFixed(4)}</strong></span>
+      <span style="color:${color};">${arrow} ${e.delta > 0 ? "+" : ""}${(e.delta_pct).toFixed(1)}%</span>
+    </div>
   </div>`;
 }).join("");
 }
@@ -5060,9 +5043,9 @@ container.innerHTML = bars.map(b => {
 const pct = Math.min(100, Math.max(2, (b.ms / maxMs) * 100));
 const msText = b.ms >= 1000 ? (b.ms / 1000).toFixed(1) + "s" : b.ms.toFixed(1) + "ms";
 return `<div class="ann-latency-bar-row">
-<div class="ann-latency-label">${b.label}</div>
-<div class="ann-latency-track">
-<div class="ann-latency-fill ${b.cls}" style="width:${pct}%">${msText}</div>
+  <div class="ann-latency-label">${b.label}</div>
+  <div class="ann-latency-track">
+    <div class="ann-latency-fill ${b.cls}" style="width:${pct}%">${msText}</div>
   </div>
 </div>`;
 }).join("");
@@ -5089,15 +5072,13 @@ Plotly.newPlot("annRecallLatencyChart", [
   mode: "lines+markers", name: "Recall@10 vs 延迟",
   line: { color: "#6c5ce7", width: 2 },
   marker: { size: 6 },
-  text: efValues.map(e => `ef=${e}`), hovertemplate: "%{text}
-Recall: %{y:.1f}%<br>延迟: %{x:.1f}ms",
+  text: efValues.map(e => `ef=${e}`), hovertemplate: "%{text}<br>Recall: %{y:.1f}%<br>延迟: %{x:.1f}ms",
 },
 {
   x: [currentLatency], y: [currentRecall * 100],
   mode: "markers", name: `当前 ef=${ef}`,
   marker: { size: 14, color: "#FF6B6B", symbol: "star" },
-  hovertemplate: `ef=${ef}
-Recall: %{y:.1f}%<br>延迟: %{x:.1f}ms`,
+  hovertemplate: `ef=${ef}<br>Recall: %{y:.1f}%<br>延迟: %{x:.1f}ms`,
 },
 ], {
 ...PLOTLY_CHART_BASE,
@@ -5112,20 +5093,20 @@ if (summary) {
 const recallPct = (currentRecall * 100).toFixed(1);
 const recallColor = currentRecall > 0.95 ? "#2ECC71" : currentRecall > 0.85 ? "#F39C12" : "#E74C3C";
 summary.innerHTML = `
-<div style="padding:1rem;">
-<div class="metric-card" style="margin-bottom:0.75rem;">
-  <div class="metric-value" style="color:${recallColor}">${recallPct}%</div>
-  <div class="metric-label">Recall@10</div>
+  <div style="padding:1rem;">
+    <div class="metric-card" style="margin-bottom:0.75rem;">
+      <div class="metric-value" style="color:${recallColor}">${recallPct}%</div>
+      <div class="metric-label">Recall@10</div>
     </div>
-<div class="metric-card" style="margin-bottom:0.75rem;">
-  <div class="metric-value">${currentLatency.toFixed(1)}ms</div>
-  <div class="metric-label">检索延迟</div>
+    <div class="metric-card" style="margin-bottom:0.75rem;">
+      <div class="metric-value">${currentLatency.toFixed(1)}ms</div>
+      <div class="metric-label">检索延迟</div>
     </div>
-<div style="font-size:0.82rem; color:var(--text-secondary); line-height:1.6; margin-top:1rem;">
-  ${ef < 50 ? "efSearch 偏低，检索速度快但可能遗漏相关结果。适合对延迟敏感、可容忍一定召回损失的场景。" :
-    ef < 150 ? "efSearch 处于常用范围，Recall 和延迟取得了较好平衡。大多数生产系统选择此区间。" :
-    "efSearch 较高，接近暴力检索的精度，但延迟也更大。适合对召回要求极高、延迟不敏感的离线场景。"}
-</div>
+    <div style="font-size:0.82rem; color:var(--text-secondary); line-height:1.6; margin-top:1rem;">
+      ${ef < 50 ? "efSearch 偏低，检索速度快但可能遗漏相关结果。适合对延迟敏感、可容忍一定召回损失的场景。" :
+        ef < 150 ? "efSearch 处于常用范围，Recall 和延迟取得了较好平衡。大多数生产系统选择此区间。" :
+        "efSearch 较高，接近暴力检索的精度，但延迟也更大。适合对召回要求极高、延迟不敏感的离线场景。"}
+    </div>
   </div>`;
 }
 }
@@ -5179,40 +5160,29 @@ table.innerHTML = `<table style="width:100%; border-collapse:collapse; font-size
 var ANN_INDEX_DETAILS = {
 flat: {
 title: "Flat（暴力搜索）",
-content: `<strong>原理：</strong>计算 query 向量与库中每一条向量的距离，返回最小的 K 条。没有任何近似，结果是精确的。
-
-<strong>适用场景：</strong>数据量 < 10 万条时是最佳选择——不需要构建索引、不需要调参、结果 100% 准确。在小数据量下，暴力搜索的延迟完全可接受（<10ms），引入 ANN 反而增加了不必要的复杂度。
-
+content: `<strong>原理：</strong>计算 query 向量与库中每一条向量的距离，返回最小的 K 条。没有任何近似，结果是精确的。<br><br>
+<strong>适用场景：</strong>数据量 < 10 万条时是最佳选择——不需要构建索引、不需要调参、结果 100% 准确。在小数据量下，暴力搜索的延迟完全可接受（<10ms），引入 ANN 反而增加了不必要的复杂度。<br><br>
 <strong>局限：</strong>检索时间随数据量线性增长。百万级数据时延迟达到秒级，不可接受。`
 },
 hnsw: {
 title: "HNSW（Hierarchical Navigable Small World）",
-content: `<strong>原理：</strong>在向量之间构建多层图结构。每个节点连接若干邻居，上层是稀疏的"快速通道"，下层是稠密的"本地搜索"。检索时从顶层入口贪心导航到底层。
-
-<strong>核心优势：</strong>检索速度极快（亚毫秒级），支持动态插入新向量（不需要重建），召回率高（通常 >95%）。这是目前生产环境中最主流的索引类型。
-
-<strong>代价：</strong>内存占用大——除了原始向量外，还需要存储图的连接关系（每个向量额外约 M×8 字节）。构建时间较长（需要为每个新向量找到并建立连接）。
-
+content: `<strong>原理：</strong>在向量之间构建多层图结构。每个节点连接若干邻居，上层是稀疏的"快速通道"，下层是稠密的"本地搜索"。检索时从顶层入口贪心导航到底层。<br><br>
+<strong>核心优势：</strong>检索速度极快（亚毫秒级），支持动态插入新向量（不需要重建），召回率高（通常 >95%）。这是目前生产环境中最主流的索引类型。<br><br>
+<strong>代价：</strong>内存占用大——除了原始向量外，还需要存储图的连接关系（每个向量额外约 M×8 字节）。构建时间较长（需要为每个新向量找到并建立连接）。<br><br>
 <strong>关键调参：</strong>M（每节点连接数）影响精度和内存；efSearch（检索时候选队列）直接控制精度-速度权衡。`
 },
 ivf: {
 title: "IVF（Inverted File Index）",
-content: `<strong>原理：</strong>先用 K-Means 把所有向量聚成 N 个簇（Voronoi 分区）。检索时先找到 query 最近的 nprobe 个簇，然后只在这些簇内做暴力搜索。
-
-<strong>核心优势：</strong>通过"先定位分区，再局部搜索"避免全量遍历。nprobe 越大精度越高但越慢。当 nprobe=N 时退化为暴力搜索。
-
-<strong>代价：</strong>构建时需要训练聚类中心（需要一定量的数据）。增量更新困难——新数据可能使聚类分布失效，需要定期重新训练。
-
+content: `<strong>原理：</strong>先用 K-Means 把所有向量聚成 N 个簇（Voronoi 分区）。检索时先找到 query 最近的 nprobe 个簇，然后只在这些簇内做暴力搜索。<br><br>
+<strong>核心优势：</strong>通过"先定位分区，再局部搜索"避免全量遍历。nprobe 越大精度越高但越慢。当 nprobe=N 时退化为暴力搜索。<br><br>
+<strong>代价：</strong>构建时需要训练聚类中心（需要一定量的数据）。增量更新困难——新数据可能使聚类分布失效，需要定期重新训练。<br><br>
 <strong>常见组合：</strong>IVF 常与 PQ 组合使用（IVF-PQ），先按分区缩小范围，再用 PQ 加速距离计算和压缩内存。`
 },
 pq: {
 title: "PQ（Product Quantization）",
-content: `<strong>原理：</strong>把高维向量切成 M 个子空间，每个子空间独立做 K-Means 量化为一个 codebook ID（通常 256 个中心，用 1 字节表示）。一个 384 维向量可以压缩到仅 48 字节（M=48 子空间）。
-
-<strong>核心优势：</strong>极致的内存压缩（可达 32x），使得十亿级向量可以放进单机内存。距离计算通过查表完成（ADC），比原始浮点计算更快。
-
-<strong>代价：</strong>量化引入了不可逆的信息损失，精度下降明显（尤其在高相似度区间）。需要训练 codebook（需要数据量足够覆盖向量分布）。
-
+content: `<strong>原理：</strong>把高维向量切成 M 个子空间，每个子空间独立做 K-Means 量化为一个 codebook ID（通常 256 个中心，用 1 字节表示）。一个 384 维向量可以压缩到仅 48 字节（M=48 子空间）。<br><br>
+<strong>核心优势：</strong>极致的内存压缩（可达 32x），使得十亿级向量可以放进单机内存。距离计算通过查表完成（ADC），比原始浮点计算更快。<br><br>
+<strong>代价：</strong>量化引入了不可逆的信息损失，精度下降明显（尤其在高相似度区间）。需要训练 codebook（需要数据量足够覆盖向量分布）。<br><br>
 <strong>实践建议：</strong>很少单独使用 PQ，通常配合 IVF 或 HNSW 使用。先粗筛候选，再用 PQ 压缩的距离做排序。如果精度要求高，可以用 Refine 步骤（对 Top-K 候选重新算原始距离）。`
 },
 };
@@ -5288,40 +5258,40 @@ const negBarCls = type === "false" ? "danger-fill" : "neg-fill";
 demo.innerHTML = `<div class="df-neg-demo-card">
 <div class="df-neg-query">Query：${escapeHtml(ex.query)}</div>
 <div class="df-neg-pair">
-<div class="df-neg-label pos">POSITIVE</div>
-<div class="df-neg-text">${escapeHtml(ex.positive)}</div>
+  <div class="df-neg-label pos">POSITIVE</div>
+  <div class="df-neg-text">${escapeHtml(ex.positive)}</div>
 </div>
 <div class="df-neg-pair">
-<div class="df-neg-label neg">NEGATIVE</div>
-<div class="df-neg-text">${escapeHtml(ex.negative)}</div>
+  <div class="df-neg-label neg">NEGATIVE</div>
+  <div class="df-neg-text">${escapeHtml(ex.negative)}</div>
 </div>
 <div class="df-sim-bar-group">
-<div class="df-sim-bar-row">
-<div class="df-sim-bar-label pos">POS</div>
-<div class="df-sim-bar-track">
-  <div class="df-sim-bar-fill pos-fill" style="width:0%" data-target="${ex.posSim * 100}">${ex.posSim.toFixed(2)}</div>
+  <div class="df-sim-bar-row">
+    <div class="df-sim-bar-label pos">POS</div>
+    <div class="df-sim-bar-track">
+      <div class="df-sim-bar-fill pos-fill" style="width:0%" data-target="${ex.posSim * 100}">${ex.posSim.toFixed(2)}</div>
     </div>
   </div>
-<div class="df-sim-bar-row">
-<div class="df-sim-bar-label neg">NEG</div>
-<div class="df-sim-bar-track">
-  <div class="df-sim-bar-fill ${negBarCls}" style="width:0%" data-target="${ex.negSim * 100}">${ex.negSim.toFixed(2)}</div>
+  <div class="df-sim-bar-row">
+    <div class="df-sim-bar-label neg">NEG</div>
+    <div class="df-sim-bar-track">
+      <div class="df-sim-bar-fill ${negBarCls}" style="width:0%" data-target="${ex.negSim * 100}">${ex.negSim.toFixed(2)}</div>
     </div>
   </div>
 </div>
 <div class="df-margin-indicator">
-<div class="df-margin-box ${marginCls}">Margin: ${marginSign}${margin.toFixed(2)}</div>
-<div class="df-margin-label">${margin > 0.3 ? "margin 过大 → 训练信号弱" : margin > 0 ? "margin 小 → 训练信号强" : "margin 为负 → 标注错误！"}</div>
+  <div class="df-margin-box ${marginCls}">Margin: ${marginSign}${margin.toFixed(2)}</div>
+  <div class="df-margin-label">${margin > 0.3 ? "margin 过大 → 训练信号弱" : margin > 0 ? "margin 小 → 训练信号强" : "margin 为负 → 标注错误！"}</div>
 </div>
 <div class="df-gradient-meter">
-<div class="df-gradient-meter-label">训练梯度信号强度</div>
-<div class="df-gradient-meter-track">
-<div class="df-gradient-meter-fill ${ex.gradientCls}" style="width:0%" data-target="${ex.gradientPct}"></div>
+  <div class="df-gradient-meter-label">训练梯度信号强度</div>
+  <div class="df-gradient-meter-track">
+    <div class="df-gradient-meter-fill ${ex.gradientCls}" style="width:0%" data-target="${ex.gradientPct}"></div>
   </div>
-<div class="df-gradient-meter-text">${ex.gradientLabel}</div>
+  <div class="df-gradient-meter-text">${ex.gradientLabel}</div>
 </div>
 <div class="df-neg-signal ${ex.signal}">
-${escapeHtml(ex.explanation)}
+  ${escapeHtml(ex.explanation)}
 </div>
 </div>`;
 
@@ -5521,12 +5491,12 @@ let html = `<div style="font-weight:700; color:var(--accent); margin-bottom:1rem
 prodPlaybookState.history.forEach((h, i) => {
 const step = pb.steps[h.stepIdx];
 html += `<div class="prod-pb-step" style="opacity:0.6;">
-  ${i + 1}
-  ${escapeHtml(step.check)}
-<div class="prod-pb-step-desc">${escapeHtml(step.desc)}</div>
-<div class="prod-pb-choices">
-<button class="prod-pb-choice selected">${escapeHtml(h.choiceLabel)}</button>
-</div>
+  <span class="prod-pb-step-num">${i + 1}</span>
+  <span class="prod-pb-step-check">${escapeHtml(step.check)}</span>
+  <div class="prod-pb-step-desc">${escapeHtml(step.desc)}</div>
+  <div class="prod-pb-choices">
+    <button class="prod-pb-choice selected">${escapeHtml(h.choiceLabel)}</button>
+  </div>
 </div>`;
 });
 
@@ -5534,14 +5504,14 @@ const currentStep = pb.steps[prodPlaybookState.stepIdx];
 if (currentStep && !prodPlaybookState.diagnosed) {
 const stepNum = prodPlaybookState.history.length + 1;
 html += `<div class="prod-pb-step">
-  ${stepNum}
-  ${escapeHtml(currentStep.check)}
-<div class="prod-pb-step-desc">${escapeHtml(currentStep.desc)}</div>
-<div class="prod-pb-choices">
-${currentStep.choices.map((c, ci) =>
-  `<button class="prod-pb-choice" onclick="choosePlaybookOption(${ci})">${escapeHtml(c.label)}</button>`
-).join("")}
-</div>
+  <span class="prod-pb-step-num">${stepNum}</span>
+  <span class="prod-pb-step-check">${escapeHtml(currentStep.check)}</span>
+  <div class="prod-pb-step-desc">${escapeHtml(currentStep.desc)}</div>
+  <div class="prod-pb-choices">
+    ${currentStep.choices.map((c, ci) =>
+      `<button class="prod-pb-choice" onclick="choosePlaybookOption(${ci})">${escapeHtml(c.label)}</button>`
+    ).join("")}
+  </div>
 </div>`;
 }
 
@@ -5549,9 +5519,8 @@ if (prodPlaybookState.diagnosed) {
 const diag = pb.diagnoses[prodPlaybookState.diagnosisKey];
 if (diag) {
   html += `<div class="prod-pb-diagnosis">
-<div class="prod-pb-diagnosis-title">${escapeHtml(diag.title)}</div>
-<div class="prod-pb-diagnosis-text">${escapeHtml(diag.text).replace(/\n/g, "
-")}</div>
+    <div class="prod-pb-diagnosis-title">${escapeHtml(diag.title)}</div>
+    <div class="prod-pb-diagnosis-text">${escapeHtml(diag.text).replace(/\n/g, "<br>")}</div>
   </div>`;
 }
 }
@@ -5672,8 +5641,7 @@ if (flatCount > 1) {
   annotations.push({
     x: (flatStart + levels.length - 1) / 2, y: 0.5,
     xref: "x",
-    text: "此区域 embedding 完全相同
-（模型只处理前 " + MODEL_MAX_SEQ + " tokens）",
+    text: "此区域 embedding 完全相同<br>（模型只处理前 " + MODEL_MAX_SEQ + " tokens）",
     showarrow: false,
     font: { color: "#E74C3C", size: 10 },
     bgcolor: "rgba(30,30,30,0.85)",
@@ -5729,14 +5697,12 @@ annotations: qAnnotations,
 }, PLOTLY_CONFIG);
 
 var infoHtml =
-"<strong>" + escapeHtml(text.name) + "</strong>：" + text.char_count + " 字 / " + text.token_count + " tokens
-" +
-"预览：" + escapeHtml(text.text_preview) + "";
+"<strong>" + escapeHtml(text.name) + "</strong>：" + text.char_count + " 字 / " + text.token_count + " tokens<br>" +
+"<span style=\"color:var(--text-secondary)\">预览：" + escapeHtml(text.text_preview) + "</span>";
 if (beyondMax) {
-infoHtml += "
-⚠ 该文本有 " + text.token_count +
+infoHtml += "<br><span style=\"color:#E74C3C;font-weight:600\">⚠ 该文本有 " + text.token_count +
   " tokens，超过模型 max_seq_length（" + MODEL_MAX_SEQ +
-  "）。超出部分被静默丢弃，128 tok 之后的曲线持平并非「几乎无损」，而是 embedding 完全相同。";
+  "）。超出部分被静默丢弃，128 tok 之后的曲线持平并非「几乎无损」，而是 embedding 完全相同。</span>";
 }
 document.getElementById("ttTextInfo").innerHTML = infoHtml;
 }
@@ -5770,8 +5736,7 @@ const worst = results[results.length - 1];
 const drop = ((worst.full_sim - worst.trunc128_sim) / worst.full_sim * 100).toFixed(1);
 document.getElementById("ttTailInsight").innerHTML =
 `<strong>发现：</strong>当文档包含多个主题时，128 tokens 截断只保留了开头的退款内容。` +
-`跨境相关信息完全丢失，相似度下降 <strong>${drop}%</strong>。
-` +
+`跨境相关信息完全丢失，相似度下降 <strong>${drop}%</strong>。<br>` +
 `<strong>教训：</strong>分片长度必须控制在模型 max_length 范围内。` +
 `如果文档很长，应该先分片再 embed，而不是把整个文档塞进模型。`;
 }
@@ -5797,7 +5762,7 @@ const icon = node.type === "question" ? "❓" : "✅";
 let html = `<div class="ft-dt-node ${cls}" style="margin-left:${depth * 1.5}rem">${icon} ${escapeHtml(node.text)}</div>`;
 for (const edge of edges) {
   html += `<div class="ft-dt-edge" style="margin-left:${(depth + 1) * 1.5}rem">`;
-  html += `${escapeHtml(edge.label)}`;
+  html += `<span class="ft-dt-label">${escapeHtml(edge.label)}</span>`;
   html += buildHTML(edge.to, depth + 1);
   html += `</div>`;
 }
@@ -5874,8 +5839,7 @@ marker: {
 },
 text: pairs.map(p => p.similarity.toFixed(3)),
 textposition: "outside",
-hovertext: pairs.map(p => `${p.zh_query} ↔ ${p.en_query}
-Similarity: ${p.similarity}`),
+hovertext: pairs.map(p => `${p.zh_query} ↔ ${p.en_query}<br>Similarity: ${p.similarity}`),
 hoverinfo: "text",
 }];
 
@@ -6109,8 +6073,7 @@ y: d.query_labels,
 type: "heatmap",
 colorscale: [[0, "#2d3436"], [0.5, "#6c5ce7"], [1, "#00cec9"]],
 text: d.cross_modal_matrix.map(function (row) { return row.map(function (v) { return v.toFixed(3); }); }),
-hovertemplate: "Query: %{y}
-Image: %{x}<br>Sim: %{text}<extra></extra>",
+hovertemplate: "Query: %{y}<br>Image: %{x}<br>Sim: %{text}<extra></extra>",
 }], {
 ...PLOTLY_CHART_BASE,
 title: { text: "Query × Image 检索矩阵", font: { size: 14 } },
@@ -6150,9 +6113,9 @@ var models = d.modality_comparison;
 var html = "<table><thead><tr><th>模型</th><th>文本</th><th>图片</th><th>音频</th><th>维度</th><th>备注</th></tr></thead><tbody>";
 models.forEach(function (m) {
 html += "<tr><td><strong>" + escapeHtml(m.name) + "</strong></td>" +
-  "<td>" + (m.text ? '✓' : '—') + "</td>" +
-  "<td>" + (m.image ? '✓' : '—') + "</td>" +
-  "<td>" + (m.audio ? '✓' : '—') + "</td>" +
+  "<td>" + (m.text ? '<span class="mm-check">✓</span>' : '<span class="mm-cross">—</span>') + "</td>" +
+  "<td>" + (m.image ? '<span class="mm-check">✓</span>' : '<span class="mm-cross">—</span>') + "</td>" +
+  "<td>" + (m.audio ? '<span class="mm-check">✓</span>' : '<span class="mm-cross">—</span>') + "</td>" +
   "<td>" + m.dim + "</td>" +
   "<td>" + escapeHtml(m.note) + "</td></tr>";
 });

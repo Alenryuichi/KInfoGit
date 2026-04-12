@@ -1,13 +1,13 @@
 ---
 title: "chunk 中的内容怎么影响 Embedding 空间的分布？"
 date: "2026-04-09"
-tags: ["Embedding","信息检索","向量数据库","分片策略","机器学习"]
+tags: ["Embedding","信息检索","向量数据库","分片策略","检索增强"]
 category: "研究"
 categoryOrder: 0
 subcategory: "实验"
 readTime: "2 min read"
 featured: false
-excerpt: "本文介绍了一个交互式教学网站，旨在系统讲解Embedding技术的核心概念与应用。网站涵盖了从Embedding原理、分片策略对向量分布的影响，到多种检索范式、模型训练、混合检索及生产落地的全链路知识，并通过可视化工具帮助用户直观理解chunk内容如何影响Embedding空间分布及检索效果。"
+excerpt: "本文介绍了一个交互式教学网站，旨在系统讲解Embedding技术的核心知识点与应用。网站涵盖了从基础概念、分片策略、检索范式到模型训练、生产落地的全流程，并通过可视化工具（如UMAP）和预设实验（如不同分片策略对比）来演示chunk内容如何影响Embedding空间分布及检索效果。"
 ---
 
 > 最近在做提升召回率的工作，对于 Embedding 中各阶段很感兴趣，于是做了一个交互教学网站，来讲解 Embedding 涉及的大部分知识点。
