@@ -76,3 +76,11 @@ content-stats:
     echo "Projects: $(find profile-data/projects -name "*.md" 2>/dev/null | wc -l)"
     echo "JSON files: $(find profile-data -name "*.json" 2>/dev/null | wc -l)"
     echo "Total markdown files: $(find profile-data -name "*.md" 2>/dev/null | wc -l)"
+
+# Fetch GitHub stars and generate AI commentary
+fetch-stars:
+    cd website && npx tsx ../scripts/fetch-stars.ts
+
+# Fetch GitHub stars and generate AI commentary
+fetch-stars:
+    cd website && npx tsx ../scripts/fetch-stars.ts

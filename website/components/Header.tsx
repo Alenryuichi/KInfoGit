@@ -78,6 +78,7 @@ export function Header({ onBookCallClick }: HeaderProps) {
     if (path === '/about') return 'About'
     if (path.startsWith('/work')) return 'Work'
     if (path.startsWith('/blog')) return 'Blog'
+    if (path.startsWith('/stars')) return 'Stars'
     return 'Home'
   }
 
@@ -212,7 +213,7 @@ export function Header({ onBookCallClick }: HeaderProps) {
               <div
                 className="absolute top-glow-indicator rounded-lg transition-transform duration-500 ease-out will-change-transform"
                 style={{
-                  transform: `translateX(${4 + activeTabIndex * 80 + 20}px)`,
+                  transform: `translateX(${4 + activeTabIndex * TAB_WIDTH + TAB_WIDTH / 2 - 20}px)`,
                   left: 0,
                   top: '-3px',
                   width: '40px',
@@ -227,11 +228,11 @@ export function Header({ onBookCallClick }: HeaderProps) {
                 <div
                   className="absolute transition-transform duration-500 ease-out will-change-transform"
                   style={{
-                    transform: `translateX(${4 + activeTabIndex * 80 - 10}px)`,
+                    transform: `translateX(${4 + activeTabIndex * TAB_WIDTH - 10}px)`,
                     left: 0,
                     top: 0,
                     bottom: 0,
-                    width: '100px',
+                    width: `${TAB_WIDTH + 20}px`,
                     background: 'radial-gradient(ellipse at top, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0) 70%)',
                   }}
                 />
@@ -241,9 +242,9 @@ export function Header({ onBookCallClick }: HeaderProps) {
               <div
                 className="absolute top-1 bottom-1 bg-white/[0.04] backdrop-blur-lg rounded-full transition-transform duration-500 ease-out border border-white/[0.05] will-change-transform"
                 style={{
-                  transform: `translateX(${4 + activeTabIndex * 80}px)`,
+                  transform: `translateX(${4 + activeTabIndex * TAB_WIDTH}px)`,
                   left: 0,
-                  width: '80px',
+                  width: `${TAB_WIDTH}px`,
                   boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.3), inset 0 -1px 0 rgba(0, 0, 0, 0.4), inset 0 8px 20px rgba(255, 255, 255, 0.08)',
                   zIndex: 10,
                 }}
@@ -260,7 +261,7 @@ export function Header({ onBookCallClick }: HeaderProps) {
                         ? 'text-white'
                         : 'text-white/60 hover:text-white'
                     }`}
-                    style={{ width: '80px', height: '36px', zIndex: 20 }}
+                    style={{ width: `${TAB_WIDTH}px`, height: '36px', zIndex: 20 }}
                   >
                     <span className="relative z-30">{item.name}</span>
                     {/* Hover effect for non-active items */}
