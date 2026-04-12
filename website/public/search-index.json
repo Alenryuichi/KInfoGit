@@ -56,6 +56,13 @@
     "type": "blog"
   },
   {
+    "title": "Am i losing my ability? My Answer: Yes!  But ...",
+    "description": "作者以AI代码覆盖率接近100%的个人体验切入，探讨技术抽象化进程中人类能力的“丧失”与进化。文章指出，编程语言持续向自然语言靠拢，当前交互仍是“有损压缩”，未来或需神经直连的高维协议。核心观点在于：每次技术飞跃都将上一代的核心竞争力沉淀为基底，职业生命力不在于固守旧技能，而在于敏锐识别并转向即将贬值的能力，主动拥抱定义新时代的“新权力”。",
+    "url": "/blog/2026-04-08-am-i-losing-my-ability-my-answer-yes-but",
+    "category": "随笔",
+    "type": "blog"
+  },
+  {
     "title": "chunk 中的内容怎么影响 Embedding 空间的分布？",
     "description": "本文探讨了文本分片（Chunking）策略如何影响Embedding在向量空间中的分布。文章指出，Chunk的大小和语义纯度是关键：过大导致向量模糊，过小丢失上下文，语义纯的Chunk在空间中位置明确，利于精准召回。同时，文章介绍了Q2Q、Q2A、A2A三种核心检索范式，解释了它们在不同场景下的应用与挑战。",
     "url": "/blog/2026-04-09-chunk-中的内容怎么影响-embedding-空间的分布",
@@ -64,17 +71,10 @@
   },
   {
     "title": "HTML 嵌入测试",
-    "description": "本文是一篇关于在Markdown文档中嵌入HTML元素的测试文章。作者展示了如何通过HTML代码块实现渐变背景卡片、样式化表格以及嵌入iframe框架，验证了Markdown与HTML混合渲染的兼容性与表现效果。",
+    "description": "本文是一篇关于在Markdown文档中嵌入HTML元素的测试文章。它展示了如何在Markdown中直接插入HTML代码块（如标题卡片和表格），并验证其渲染效果，探讨了混合使用Markdown与HTML的实践。",
     "url": "/blog/2026-04-09-html-嵌入测试",
     "category": "生活",
     "type": "blog"
-  },
-  {
-    "title": "HTML Embedding Test",
-    "description": "A project for testing the embedding and rendering of HTML content within Markdown documents.",
-    "url": "/work/html",
-    "category": "web-testing",
-    "type": "project"
   },
   {
     "title": "Betaline - Full-stack iOS Climbing App",

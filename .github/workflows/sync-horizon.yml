@@ -1,0 +1,89 @@
+name: Sync AI Daily (Horizon)
+
+on:
+  schedule:
+    # Every day UTC 02:00 (Beijing 10:00)
+    - cron: '0 2 * * *'
+  workflow_dispatch:
+
+env:
+  NODE_VERSION: '20'
+  PYTHON_VERSION: '3.13'
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+          submodules: false
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+
+      - name: Install uv
+        run: pip install uv
+
+      - name: Clone Horizon
+        run: |
+          if [ ! -d "tools/horizon/repo" ]; then
+            git clone --depth 1 https://github.com/Thysrael/Horizon.git tools/horizon/repo
+          fi
+
+      - name: Copy config
+        run: cp tools/horizon/config.json tools/horizon/repo/data/config.json
+
+      - name: Run Horizon
+        env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+        run: |
+          cd tools/horizon/repo
+          uv run horizon --hours 24
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      - name: Install tsx
+        run: npm install tsx
+
+      - name: Convert summaries to JSON
+        run: npx tsx scripts/convert-horizon.ts
+
+      - name: Check for changes
+        id: check_changes
+        run: |
+          git add .
+          if git diff --staged --quiet; then
+            echo "has_changes=false" >> $GITHUB_OUTPUT
+          else
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Commit and push changes
+        if: steps.check_changes.outputs.has_changes == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git commit -m "chore: sync AI daily digest [skip ci]"
+          git push
+
+      - name: Summary
+        run: |
+          echo "## 🤖 AI Daily Sync" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          if [ "${{ steps.check_changes.outputs.has_changes }}" = "true" ]; then
+            echo "✅ New digest generated and committed" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "📭 No new content today" >> $GITHUB_STEP_SUMMARY
+          fi
