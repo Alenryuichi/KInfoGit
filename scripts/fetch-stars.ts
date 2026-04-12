@@ -3,7 +3,26 @@ import path from 'path'
 
 // --- Config ---
 
-const GITHUB_USERS = ['Alenryuichi', 'karpathy', 'yironghuang']
+// NOTE: 14 users × 1 request each = 14 requests per run
+// Anonymous GitHub API: 60 req/hr. With GITHUB_TOKEN: 5000 req/hr.
+const GITHUB_USERS = [
+  // Personal
+  'Alenryuichi',
+  'yironghuang',
+  // AI Leaders
+  'karpathy',        // Andrej Karpathy
+  'simonw',          // Simon Willison — AI tools blogger, extremely active
+  'rasbt',           // Sebastian Raschka — LLMs from Scratch author
+  'ggerganov',       // Georgi Gerganov — llama.cpp creator
+  'hwchase17',       // Harrison Chase — LangChain founder
+  'lilianweng',      // Lilian Weng — ex-OpenAI VP, Lil'Log
+  'DrJimFan',        // Jim Fan — NVIDIA, embodied AI
+  'tridao',          // Tri Dao — Flash Attention
+  'jph00',           // Jeremy Howard — fast.ai
+  'thomwolf',        // Thomas Wolf — Hugging Face co-founder
+  'soumith',         // Soumith Chintala — PyTorch creator
+  'fchollet',        // François Chollet — Keras creator
+]
 const OUTPUT_DIR = path.join(__dirname, '..', 'profile-data', 'github-stars')
 const DEEPSEEK_API_KEY = process.env.DEEPSEEK_API_KEY || ''
 const DEEPSEEK_API_URL = 'https://api.deepseek.com/chat/completions'
@@ -146,21 +165,28 @@ async function main() {
     allStars.push(...stars)
   }
 
-  if (allStars.length === 0) {
-    console.log('No stars found. Done.')
+  // Keep stars from the last 7 days
+  const now = new Date()
+  const cutoff = new Date(now)
+  cutoff.setDate(cutoff.getDate() - 7)
+  const cutoffDate = cutoff.toISOString().split('T')[0]
+
+  const recentStars = allStars.filter(item => item.starredAt.split('T')[0] >= cutoffDate)
+
+  if (recentStars.length === 0) {
+    console.log(`No stars found in the last 7 days (since ${cutoffDate}). Done.`)
     return
   }
 
+  console.log(`  📅 Found ${recentStars.length} stars in the last 7 days`)
+
   // Group by date
   const byDate = new Map<string, StarredRepo[]>()
-
-  for (const item of allStars) {
+  for (const item of recentStars) {
     const date = item.starredAt.split('T')[0]
-    if (!byDate.has(date)) {
-      byDate.set(date, [])
-    }
+    if (!byDate.has(date)) byDate.set(date, [])
 
-    const star: StarredRepo = {
+    byDate.get(date)!.push({
       repo: item.repo.full_name,
       url: item.repo.html_url,
       description: item.repo.description || '',
@@ -170,9 +196,7 @@ async function main() {
       highlights: '',
       worthReading: '',
       topics: item.repo.topics || [],
-    }
-
-    byDate.get(date)!.push(star)
+    })
   }
 
   // Process each date
@@ -190,9 +214,9 @@ async function main() {
       }
     }
 
-    // Deduplicate by repo name
-    const repoSet = new Set(existingStars.map(s => s.repo))
-    const newStars = stars.filter(s => !repoSet.has(s.repo))
+    // Deduplicate by repo + starredBy (same person starring same repo)
+    const existingKeys = new Set(existingStars.map(s => `${s.repo}::${s.starredBy}`))
+    const newStars = stars.filter(s => !existingKeys.has(`${s.repo}::${s.starredBy}`))
 
     if (newStars.length === 0 && existingStars.length > 0) {
       console.log(`  📄 ${date}: No new stars (${existingStars.length} existing)`)
