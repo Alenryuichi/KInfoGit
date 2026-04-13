@@ -75,7 +75,7 @@ describe('Skills Component', () => {
   it('renders quality attributes section', () => {
     const { container } = render(<Skills />)
 
-    expect(container.textContent).toContain('Websites that stand out and make a difference')
+    expect(container.textContent).toContain('Built for scale, speed, and reliability.')
     expect(container.textContent).toContain('Accessible')
     expect(container.textContent).toContain('Responsive')
   })

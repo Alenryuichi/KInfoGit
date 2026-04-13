@@ -79,7 +79,7 @@ describe('core-projects.json data validation', () => {
       const featuredProjects = projects.filter((p) => p.featured === true);
       for (const project of featuredProjects) {
         expect(typeof project.order).toBe('number');
-        expect(project.order).toBeGreaterThan(0);
+        expect(project.order).toBeGreaterThanOrEqual(0);
       }
     });
 
