@@ -69,13 +69,20 @@ export function BlueskyPostCard({ post, personMap }: BlueskyPostCardProps) {
       </div>
 
       {/* Post content */}
-      <p className="text-gray-300 text-[15px] leading-relaxed mb-3 whitespace-pre-wrap break-words">
+      <a
+        href={post.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="block text-gray-300 text-[15px] leading-relaxed mb-3 whitespace-pre-wrap break-words hover:text-gray-200 transition-colors"
+      >
         {post.content}
-      </p>
+      </a>
 
       {/* Engagement metrics */}
       <div className="flex items-center gap-3 text-xs text-gray-500 mb-3">
-        <span>{formatted}</span>
+        <a href={post.url} target="_blank" rel="noopener noreferrer" className="hover:text-gray-300 transition-colors">
+          {formatted}
+        </a>
         <span>·</span>
         <span>❤️ {post.likeCount.toLocaleString()}</span>
         <span>🔄 {post.repostCount.toLocaleString()}</span>

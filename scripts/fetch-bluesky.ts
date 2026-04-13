@@ -280,34 +280,24 @@ async function main() {
     const newPosts = posts.filter(p => !existingUris.has(p.uri))
 
     if (newPosts.length === 0 && existingPosts.length > 0) {
-      console.log(`  📄 ${date}: No new posts (${existingPosts.length} existing)`)
-      continue
+      const needsBackfill = DEEPSEEK_API_KEY && existingPosts.some(p => !p.tags || p.tags.length === 0)
+      if (!needsBackfill) {
+        console.log(`  📄 ${date}: No new posts (${existingPosts.length} existing)`)
+        continue
+      }
+      console.log(`  📄 ${date}: No new posts, but backfilling tags for ${existingPosts.filter(p => !p.tags || p.tags.length === 0).length} posts`)
     }
 
-    // Generate AI commentary for new posts
+    // Extract tags for new posts (skip highlights/worthReading — posts are short enough to read directly)
     if (DEEPSEEK_API_KEY) {
-      console.log(`  🤖 Generating AI commentary for ${newPosts.length} posts on ${date}...`)
+      console.log(`  🏷️  Extracting tags for ${newPosts.length} posts on ${date}...`)
       for (const post of newPosts) {
         const commentary = await generateCommentary(post)
-        post.highlights = commentary.highlights
-        post.worthReading = commentary.worthReading
         post.tags = commentary.tags
       }
     }
 
-    // Also generate commentary for existing posts that lack it
-    if (DEEPSEEK_API_KEY) {
-      for (const post of existingPosts) {
-        if (!post.highlights && !post.worthReading) {
-          const commentary = await generateCommentary(post)
-          post.highlights = commentary.highlights
-          post.worthReading = commentary.worthReading
-          post.tags = commentary.tags
-        }
-      }
-    }
-
-    // Backfill tags for existing posts that have commentary but no tags
+    // Backfill tags for existing posts
     if (DEEPSEEK_API_KEY) {
       for (const post of existingPosts) {
         if (!post.tags || post.tags.length === 0) {

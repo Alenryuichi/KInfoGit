@@ -8,9 +8,14 @@
       "language": "Python",
       "stargazersCount": 1202,
       "starredBy": "simonw",
-      "highlights": "",
-      "worthReading": "",
-      "topics": []
+      "highlights": "This project enables fine-tuning of Gemma models (versions 4 and 3n) with multimodal data including audio, images, and text, specifically optimized for Apple Silicon hardware using PyTorch and Metal Performance Shaders. It provides a practical solution for running advanced multimodal fine-tuning on consumer Apple hardware.",
+      "worthReading": "It demonstrates how to leverage Apple's Metal framework for efficient multimodal training on accessible hardware, making advanced fine-tuning techniques more approachable for developers with Apple Silicon machines.",
+      "topics": [],
+      "tags": [
+        "fine-tuning",
+        "multi-modal",
+        "deployment"
+      ]
     },
     {
       "repo": "MemPalace/mempalace",
@@ -19,8 +24,8 @@
       "language": "Python",
       "stargazersCount": 42362,
       "starredBy": "simonw",
-      "highlights": "",
-      "worthReading": "",
+      "highlights": "MemPalace is a free, high-performance AI memory system that achieved top benchmark scores for memory retention and recall. It integrates with ChromaDB for vector storage and supports MCP (Model Context Protocol) for enhanced LLM interactions.",
+      "worthReading": "Its exceptional benchmark performance and open-source availability make it a valuable tool for developers building AI applications requiring reliable memory systems.",
       "topics": [
         "ai",
         "chromadb",
@@ -28,6 +33,10 @@
         "mcp",
         "memory",
         "python"
+      ],
+      "tags": [
+        "llm",
+        "tooling"
       ]
     }
   ]

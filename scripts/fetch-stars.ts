@@ -230,8 +230,13 @@ async function main() {
     const newStars = stars.filter(s => !existingKeys.has(`${s.repo}::${s.starredBy}`))
 
     if (newStars.length === 0 && existingStars.length > 0) {
-      console.log(`  📄 ${date}: No new stars (${existingStars.length} existing)`)
-      continue
+      // Check if any existing stars need backfill
+      const needsBackfill = DEEPSEEK_API_KEY && existingStars.some(s => !s.highlights && !s.worthReading)
+      if (!needsBackfill) {
+        console.log(`  📄 ${date}: No new stars (${existingStars.length} existing)`)
+        continue
+      }
+      console.log(`  📄 ${date}: No new stars, but backfilling ${existingStars.filter(s => !s.highlights).length} missing highlights`)
     }
 
     // Generate AI commentary for new stars
