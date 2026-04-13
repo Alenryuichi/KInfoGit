@@ -6,8 +6,6 @@ import {
   ArenaRankingTable,
   AiderLeaderboardTable,
   SweBenchTable,
-  BigCodeBenchTable,
-  EvalPlusTable,
   LiveCodeBenchTable,
 } from '@/components/code-weekly/BenchmarkTable'
 import { HeroCards, type BenchmarkSummary } from '@/components/code-weekly/charts/HeroCards'
@@ -22,85 +20,48 @@ interface BenchmarksPageProps {
 function buildSummaries(b: BenchmarkData): BenchmarkSummary[] {
   const summaries: BenchmarkSummary[] = []
 
-  if (b.arenaRanking.length > 0) {
+  const push = (
+    id: string, title: string, unit: string, maxValue: number,
+    topN: BenchmarkSummary['topN'],
+    opts?: { minValue?: number; lastUpdated?: string }
+  ) => {
+    if (topN.length === 0) return
     summaries.push({
-      id: 'arena-coding',
-      title: 'Arena Coding',
-      unit: 'Elo',
-      maxValue: 1600,
-      minValue: 1250,
-      topN: b.arenaRanking.slice(0, 10).map(e => ({
-        label: e.model, value: e.elo, org: e.org,
-      })),
+      id, title, unit, maxValue,
+      minValue: opts?.minValue ?? null,
+      lastUpdated: opts?.lastUpdated ?? null,
+      topN,
     })
   }
 
-  if (b.sweBench && b.sweBench.length > 0) {
-    summaries.push({
-      id: 'swe-bench',
-      title: 'SWE-bench',
-      unit: '%',
-      maxValue: 100,
-      topN: b.sweBench.slice(0, 10).map(e => ({
-        label: e.model, value: e.resolved, org: e.org || '',
-      })),
-    })
-  }
+  push('arena-coding', 'Arena Coding', 'Elo', 1600,
+    b.arenaRanking.slice(0, 10).map(e => ({ label: e.model, value: e.elo, org: e.org })),
+    { minValue: 1250, lastUpdated: b.arenaPublishDate },
+  )
 
-  if (b.aiderLeaderboard.length > 0) {
-    summaries.push({
-      id: 'aider',
-      title: 'Aider',
-      unit: '%',
-      maxValue: 100,
-      topN: b.aiderLeaderboard.slice(0, 10).map(e => ({
-        label: e.model, value: e.passRate, org: '',
-      })),
-    })
-  }
+  push('swe-bench', 'SWE-bench', '%', 100,
+    (b.sweBench ?? []).slice(0, 10).map(e => ({ label: e.model, value: e.resolved, org: e.org || '' })),
+    { lastUpdated: b.sweBenchLastUpdated },
+  )
 
-  if (b.liveCodeBench && b.liveCodeBench.length > 0) {
-    summaries.push({
-      id: 'livecodebench',
-      title: 'LiveCodeBench',
-      unit: '%',
-      maxValue: 100,
-      topN: b.liveCodeBench.slice(0, 10).map(e => ({
-        label: e.model, value: e.passRate, org: '',
-      })),
-    })
-  }
+  push('aider', 'Aider', '%', 100,
+    b.aiderLeaderboard.slice(0, 10).map(e => ({ label: e.model, value: e.passRate, org: '' })),
+    { lastUpdated: b.aiderLastUpdated },
+  )
 
-  if (b.bigCodeBench && b.bigCodeBench.length > 0) {
-    summaries.push({
-      id: 'bigcodebench',
-      title: 'BigCodeBench',
-      unit: '%',
-      maxValue: 100,
-      topN: b.bigCodeBench.slice(0, 10).map(e => ({
-        label: e.model, value: e.passRate, org: '',
-      })),
-    })
-  }
-
-  if (b.evalPlus && b.evalPlus.length > 0) {
-    summaries.push({
-      id: 'evalplus',
-      title: 'EvalPlus',
-      unit: '%',
-      maxValue: 100,
-      topN: b.evalPlus.slice(0, 10).map(e => ({
-        label: e.model, value: e.average, org: '',
-      })),
-    })
-  }
+  push('livecodebench', 'LiveCodeBench', '%', 100,
+    (b.liveCodeBench ?? []).slice(0, 10).map(e => ({ label: e.model, value: e.passRate, org: '' })),
+    { lastUpdated: b.liveCodeBenchLastUpdated },
+  )
 
   return summaries
 }
 
 export const getStaticProps: GetStaticProps<BenchmarksPageProps> = async () => {
-  const benchmarks = getLatestBenchmarks()
-  const summaries = benchmarks ? buildSummaries(benchmarks) : []
+  const raw = getLatestBenchmarks()
+  // JSON roundtrip to convert undefined → removed (Next.js SSG rejects undefined)
+  const benchmarks: BenchmarkData | null = raw ? JSON.parse(JSON.stringify(raw)) : null
+  const summaries = benchmarks ? JSON.parse(JSON.stringify(buildSummaries(benchmarks))) : []
   const formattedDate = benchmarks?.updatedAt
     ? new Date(benchmarks.updatedAt).toISOString().slice(0, 16).replace('T', ' ')
     : null
@@ -112,8 +73,6 @@ const SECTION_META: Record<string, { description: string }> = {
   'swe-bench': { description: '真实 GitHub issue 修复能力 · swebench.com' },
   'aider': { description: '代码编辑通过率 · aider.chat' },
   'livecodebench': { description: '竞赛编程（LeetCode / Codeforces）· livecodebench.github.io' },
-  'bigcodebench': { description: '综合代码生成能力 · bigcode-bench.github.io' },
-  'evalplus': { description: '经典代码生成基准增强版 · evalplus.github.io' },
 }
 
 export default function BenchmarksPage({ benchmarks, summaries, formattedDate }: BenchmarksPageProps) {
@@ -130,8 +89,6 @@ export default function BenchmarksPage({ benchmarks, summaries, formattedDate }:
     'arena-coding': <ArenaRankingTable rankings={benchmarks.arenaRanking} />,
     'aider': <AiderLeaderboardTable entries={benchmarks.aiderLeaderboard} />,
     'swe-bench': benchmarks.sweBench ? <SweBenchTable entries={benchmarks.sweBench} /> : null,
-    'bigcodebench': benchmarks.bigCodeBench ? <BigCodeBenchTable entries={benchmarks.bigCodeBench} /> : null,
-    'evalplus': benchmarks.evalPlus ? <EvalPlusTable entries={benchmarks.evalPlus} /> : null,
     'livecodebench': benchmarks.liveCodeBench ? <LiveCodeBenchTable entries={benchmarks.liveCodeBench} /> : null,
   }
 
@@ -195,7 +152,7 @@ export default function BenchmarksPage({ benchmarks, summaries, formattedDate }:
 
           {/* Footer */}
           <div className="pt-6 mt-12 border-t border-white/[0.06] text-xs text-gray-500">
-            数据每天自动更新 · 6 个评测源 · Chart/Table 可切换
+            数据每天自动更新 · 4 个评测源 · Chart/Table 可切换
           </div>
         </div>
       </div>
