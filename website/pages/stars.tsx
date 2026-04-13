@@ -155,10 +155,23 @@ export default function StarsList({ dates, latestDigest }: StarsListProps) {
               </svg>
             </a>
           </div>
-          <p className="text-gray-400 text-lg mb-12">
+          <p className="text-gray-400 text-lg mb-4">
             Recently starred GitHub repos and Bluesky posts from AI leaders.<br />
             <span className="text-gray-500 text-sm">Curated from GitHub & Bluesky · Powered by DeepSeek</span>
           </p>
+
+          {/* Quick links */}
+          <div className="flex items-center gap-4 mb-12">
+            <Link
+              href="/stars/people/"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 text-sm font-medium text-gray-400 hover:text-white bg-white/[0.04] hover:bg-white/[0.08] rounded-lg border border-white/[0.06] transition-colors"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M15 19.128a9.38 9.38 0 0 0 2.625.372 9.337 9.337 0 0 0 4.121-.952 4.125 4.125 0 0 0-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 0 1 8.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0 1 11.964-3.07M12 6.375a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0Zm8.25 2.25a2.625 2.625 0 1 1-5.25 0 2.625 2.625 0 0 1 5.25 0Z" />
+              </svg>
+              AI Leaders
+            </Link>
+          </div>
 
           {/* Weekly Digest Card */}
           {latestDigest && <WeeklyDigestCard digest={latestDigest} />}

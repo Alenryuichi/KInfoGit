@@ -28,6 +28,8 @@ build:
     #!/usr/bin/env bash
     echo "🎨 Generating blog covers..."
     just generate-covers
+    echo "👥 Generating people activity data..."
+    cd website && npx tsx ../scripts/generate-people-data.ts || echo "⚠️  People data generation failed, continuing..."
     echo "🏗️ Building website..."
     cd website && npm run build
 
