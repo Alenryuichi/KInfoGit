@@ -23,7 +23,7 @@ function buildSummaries(b: BenchmarkData): BenchmarkSummary[] {
   const push = (
     id: string, title: string, unit: string, maxValue: number,
     topN: BenchmarkSummary['topN'],
-    opts?: { minValue?: number; lastUpdated?: string }
+    opts?: { minValue?: number | null; lastUpdated?: string | null }
   ) => {
     if (topN.length === 0) return
     summaries.push({
