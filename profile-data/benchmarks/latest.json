@@ -456,56 +456,205 @@
     {
       "model": "o1-2024-12-17 (high)",
       "passRate": 61.7,
-      "delta": null
+      "delta": 0
     },
     {
       "model": "claude-sonnet-4-20250514 (32k thinking)",
       "passRate": 61.3,
-      "delta": null
+      "delta": 0
     },
     {
       "model": "o3-mini (high)",
       "passRate": 60.4,
-      "delta": null
+      "delta": 0
     },
     {
       "model": "claude-3-7-sonnet-20250219 (no thinking)",
       "passRate": 60.4,
-      "delta": null
+      "delta": 0
     },
     {
       "model": "Qwen3 235B A22B diff, no think, Alibaba API",
       "passRate": 59.6,
-      "delta": null
+      "delta": 0
     },
     {
       "model": "Kimi K2",
       "passRate": 59.1,
-      "delta": null
+      "delta": 0
     },
     {
       "model": "DeepSeek R1",
       "passRate": 56.9,
-      "delta": null
+      "delta": 0
     },
     {
       "model": "claude-sonnet-4-20250514 (no thinking)",
       "passRate": 56.4,
-      "delta": null
+      "delta": 0
     },
     {
       "model": "DeepSeek V3 (0324)",
       "passRate": 55.1,
-      "delta": null
+      "delta": 0
     },
     {
       "model": "gemini-2.5-flash-preview-05-20 (24k think)",
       "passRate": 55.1,
-      "delta": null
+      "delta": 0
     }
   ],
   "aiderLastUpdated": "2026-03-17",
-  "sweBench": [],
+  "sweBench": [
+    {
+      "model": "live-SWE-agent + Claude 4.5 Opus medium (20251101)",
+      "resolved": 79.2,
+      "org": "UIUC"
+    },
+    {
+      "model": "Sonar Foundation Agent + Claude 4.5 Opus",
+      "resolved": 79.2,
+      "org": "Sonar"
+    },
+    {
+      "model": "TRAE + Doubao-Seed-Code",
+      "resolved": 78.8,
+      "org": "ByteDance"
+    },
+    {
+      "model": "live-SWE-agent + Gemini 3 Pro Preview (2025-11-18)",
+      "resolved": 77.4,
+      "org": "UIUC"
+    },
+    {
+      "model": "Atlassian Rovo Dev (2025-09-02)",
+      "resolved": 76.8,
+      "org": "Atlassian"
+    },
+    {
+      "model": "EPAM AI/Run Developer Agent v20250719 + Claude 4 Sonnet",
+      "resolved": 76.8,
+      "org": "EPAM Systems, Inc."
+    },
+    {
+      "model": "mini-SWE-agent + Claude 4.5 Opus (high reasoning)",
+      "resolved": 76.8,
+      "org": "Anthropic"
+    },
+    {
+      "model": "ACoder",
+      "resolved": 76.4,
+      "org": "ACoder"
+    },
+    {
+      "model": "mini-SWE-agent + Gemini 3 Flash (high reasoning)",
+      "resolved": 75.8,
+      "org": "Google DeepMind"
+    },
+    {
+      "model": "mini-SWE-agent + MiniMax M2.5 (high reasoning)",
+      "resolved": 75.8,
+      "org": "Minimax"
+    },
+    {
+      "model": "Warp",
+      "resolved": 75.6,
+      "org": "Warp"
+    },
+    {
+      "model": "mini-SWE-agent + Claude Opus 4.6",
+      "resolved": 75.6,
+      "org": "Anthropic"
+    },
+    {
+      "model": "TRAE + Claude Sonnet 4 + Opus 4 + Sonnet 3.7 + Gemini 2.5 Pro",
+      "resolved": 75.2,
+      "org": "TRAE"
+    },
+    {
+      "model": "Harness AI",
+      "resolved": 74.8,
+      "org": "Harness"
+    },
+    {
+      "model": "Sonar Foundation Agent + Claude 4.5 Sonnet",
+      "resolved": 74.8,
+      "org": "Sonar"
+    },
+    {
+      "model": "Lingxi-v1.5_claude-4-sonnet-20250514",
+      "resolved": 74.6,
+      "org": "Lingxi"
+    },
+    {
+      "model": "JoyCode + Claude 4 Sonnet + GPT-4.1",
+      "resolved": 74.6,
+      "org": "JoyCode"
+    },
+    {
+      "model": "Refact.ai Agent + Claude 4 Sonnet + o4-mini",
+      "resolved": 74.4,
+      "org": "Refact.ai"
+    },
+    {
+      "model": "Prometheus-v1.2.1 + GPT-5",
+      "resolved": 74.4,
+      "org": "EuniAI"
+    },
+    {
+      "model": "mini-SWE-agent + Claude 4.5 Opus medium (20251101)",
+      "resolved": 74.4,
+      "org": "Anthropic"
+    },
+    {
+      "model": "mini-SWE-agent + Gemini 3 Pro Preview (2025-11-18)",
+      "resolved": 74.2,
+      "org": "Google DeepMind"
+    },
+    {
+      "model": "Salesforce AI Research SAGE (OpenHands)",
+      "resolved": 73.8,
+      "org": "Salesforce AI Research"
+    },
+    {
+      "model": "Tools + Claude 4 Opus (2025-05-22)",
+      "resolved": 73.2
+    },
+    {
+      "model": "Salesforce AI Research SAGE (bash-only)",
+      "resolved": 73,
+      "org": "Salesforce AI Research"
+    },
+    {
+      "model": "mini-SWE-agent + GPT-5-2 Codex",
+      "resolved": 72.8,
+      "org": "OpenAI"
+    },
+    {
+      "model": "mini-SWE-agent + GLM-5 (high reasoning)",
+      "resolved": 72.8,
+      "org": "Z-AI"
+    },
+    {
+      "model": "mini-SWE-agent + GPT-5-2 (high reasoning)",
+      "resolved": 72.8,
+      "org": "OpenAI"
+    },
+    {
+      "model": "Tools + Claude 4 Sonnet (2025-05-22)",
+      "resolved": 72.4
+    },
+    {
+      "model": "OpenHands + GPT-5",
+      "resolved": 71.8,
+      "org": "OpenHands"
+    },
+    {
+      "model": "mini-SWE-agent + GPT-5.2 (2025-12-11) (high reasoning)",
+      "resolved": 71.8,
+      "org": "OpenAI"
+    }
+  ],
   "bigCodeBench": [
     {
       "model": "GPT-4o-2024-05-13",
@@ -1075,5 +1224,5 @@
     }
   ],
   "notable": "No significant changes",
-  "updatedAt": "2026-04-13T09:01:12.753Z"
+  "updatedAt": "2026-04-13T09:14:52.731Z"
 }
