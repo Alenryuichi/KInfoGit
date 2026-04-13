@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import type { GetStaticProps } from 'next'
-import { getLatestBenchmarks, type BenchmarkData } from '@/lib/code-weekly'
+import { getLatestBenchmarks, getOrgTrendData, type BenchmarkData, type OrgTrendSeries } from '@/lib/code-weekly'
 import {
   ArenaRankingTable,
   AiderLeaderboardTable,
@@ -10,10 +10,12 @@ import {
 } from '@/components/code-weekly/BenchmarkTable'
 import { HeroCards, type BenchmarkSummary } from '@/components/code-weekly/charts/HeroCards'
 import { BenchmarkSection } from '@/components/code-weekly/charts/BenchmarkSection'
+import { OrgTrendChart } from '@/components/code-weekly/charts/OrgTrendChart'
 
 interface BenchmarksPageProps {
   benchmarks: BenchmarkData | null
   summaries: BenchmarkSummary[]
+  orgTrend: OrgTrendSeries[]
   formattedDate: string | null
 }
 
@@ -62,10 +64,11 @@ export const getStaticProps: GetStaticProps<BenchmarksPageProps> = async () => {
   // JSON roundtrip to convert undefined → removed (Next.js SSG rejects undefined)
   const benchmarks: BenchmarkData | null = raw ? JSON.parse(JSON.stringify(raw)) : null
   const summaries = benchmarks ? JSON.parse(JSON.stringify(buildSummaries(benchmarks))) : []
+  const orgTrend: OrgTrendSeries[] = JSON.parse(JSON.stringify(getOrgTrendData()))
   const formattedDate = benchmarks?.updatedAt
-    ? new Date(benchmarks.updatedAt).toISOString().slice(0, 16).replace('T', ' ')
+    ? new Date(benchmarks.updatedAt).toISOString().slice(0, 10)
     : null
-  return { props: { benchmarks, summaries, formattedDate } }
+  return { props: { benchmarks, summaries, orgTrend, formattedDate } }
 }
 
 const SECTION_META: Record<string, { description: string }> = {
@@ -75,7 +78,7 @@ const SECTION_META: Record<string, { description: string }> = {
   'livecodebench': { description: '竞赛编程（LeetCode / Codeforces）· livecodebench.github.io' },
 }
 
-export default function BenchmarksPage({ benchmarks, summaries, formattedDate }: BenchmarksPageProps) {
+export default function BenchmarksPage({ benchmarks, summaries, orgTrend, formattedDate }: BenchmarksPageProps) {
   if (!benchmarks) {
     return (
       <div className="min-h-screen bg-black text-white flex items-center justify-center">
@@ -96,7 +99,7 @@ export default function BenchmarksPage({ benchmarks, summaries, formattedDate }:
     <>
       <Head>
         <title>Coding Benchmarks — Code Weekly — Kylin Miao</title>
-        <meta name="description" content="AI coding benchmark rankings: Arena Coding, SWE-bench, Aider, LiveCodeBench, BigCodeBench, EvalPlus." />
+        <meta name="description" content="AI coding benchmark rankings: Arena Coding, SWE-bench, Aider, LiveCodeBench." />
       </Head>
 
       <div className="min-h-screen bg-black text-white">
@@ -120,7 +123,7 @@ export default function BenchmarksPage({ benchmarks, summaries, formattedDate }:
 
           {formattedDate && (
             <p className="text-xs text-gray-600 mb-10">
-              数据采集: {formattedDate} UTC
+              数据采集: {formattedDate}
               {benchmarks.arenaPublishDate && (
                 <span className="ml-3">· Arena 数据: {benchmarks.arenaPublishDate}</span>
               )}
@@ -129,6 +132,19 @@ export default function BenchmarksPage({ benchmarks, summaries, formattedDate }:
 
           {/* Hero cards */}
           <HeroCards benchmarks={summaries} />
+
+          {/* Org Trend — Arms Race */}
+          {orgTrend.length > 0 && (
+            <div className="mb-14">
+              <h2 className="text-xl font-semibold text-gray-200 mb-1">Arms Race</h2>
+              <p className="text-sm text-gray-500 mb-4">
+                各厂商最强模型的 Arena Coding Elo 趋势 · 每日更新
+              </p>
+              <div className="rounded-xl border border-white/[0.06] bg-white/[0.02] p-4">
+                <OrgTrendChart series={orgTrend} />
+              </div>
+            </div>
+          )}
 
           {/* Benchmark sections */}
           <div className="space-y-14">

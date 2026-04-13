@@ -3,6 +3,8 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { HorizontalBarChart } from './HorizontalBarChart'
 import type { BenchmarkSummary } from './HeroCards'
 
+type ViewMode = 'chart' | 'table'
+
 interface BenchmarkSectionProps {
   benchmark: BenchmarkSummary
   description: string
@@ -10,7 +12,7 @@ interface BenchmarkSectionProps {
 }
 
 export function BenchmarkSection({ benchmark, description, tableContent }: BenchmarkSectionProps) {
-  const [view, setView] = useState<'chart' | 'table'>('chart')
+  const [view, setView] = useState<ViewMode>('chart')
 
   return (
     <section id={benchmark.id} className="scroll-mt-32">

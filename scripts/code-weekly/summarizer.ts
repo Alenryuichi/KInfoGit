@@ -5,6 +5,7 @@ import type { RssArticle } from './sources/rss-feeds'
 import type { TavilyResult } from './sources/tavily-search'
 import type { BailianResult } from './sources/bailian-search'
 import type { NpmRelease } from './sources/npm-registry'
+import type { ChangelogEntry } from './sources/changelog-page'
 
 export interface SummarizedEditor {
   name: string
@@ -35,6 +36,7 @@ interface RawData {
   tavilyResults: TavilyResult[]
   bailianResults: BailianResult[]
   npmReleases?: NpmRelease[]
+  changelogEntries?: ChangelogEntry[]
 }
 
 export async function summarizeWeekly(raw: RawData): Promise<SummarizedWeekly> {
@@ -178,6 +180,10 @@ export function collectUrlsFromRaw(raw: RawData): { allUrls: Set<string>; editor
   for (const r of (raw.npmReleases || [])) {
     addUrl(r.editor, `https://www.npmjs.com/package/${r.pkg}`)
   }
+  // changelog page entries
+  for (const r of (raw.changelogEntries || [])) {
+    addUrl(r.editor, r.url)
+  }
 
   return { allUrls, editorUrls }
 }
@@ -237,6 +243,23 @@ function buildPrompt(raw: RawData): string {
       Array.from(byEditor.entries()).map(([editor, releases]) =>
         `### ${editor}\n${releases.slice(0, 5).map(r => `- ${r.version} (${r.publishedAt.slice(0, 10)})`).join('\n')}` +
         (releases.length > 5 ? `\n- ... and ${releases.length - 5} more versions` : '')
+      ).join('\n\n')
+    )
+  }
+
+  if (raw.changelogEntries && raw.changelogEntries.length > 0) {
+    // Group by editor
+    const byEditor = new Map<string, typeof raw.changelogEntries>()
+    for (const r of raw.changelogEntries) {
+      const list = byEditor.get(r.editor) || []
+      list.push(r)
+      byEditor.set(r.editor, list)
+    }
+    sections.push('## Changelog Page Entries (recent 7 days)\n' +
+      Array.from(byEditor.entries()).map(([editor, entries]) =>
+        `### ${editor}\n${entries.slice(0, 5).map(r => `- ${r.version ? `v${r.version} ` : ''}(${r.publishedAt}): ${r.summary.slice(0, 300)}`).join('\n')}` +
+        (entries.length > 5 ? `\n- ... and ${entries.length - 5} more entries` : '') +
+        `\n- URL: ${entries[0].url}`
       ).join('\n\n')
     )
   }

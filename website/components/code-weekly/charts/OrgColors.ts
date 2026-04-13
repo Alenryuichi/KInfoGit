@@ -19,6 +19,7 @@ export const ORG_COLORS: Record<string, string> = {
   MiniMax: '#A78BFA',
   ByteDance: '#14B8A6',   // teal
   Tencent: '#60A5FA',     // blue-light
+  KwaiKAT: '#FB923C',     // orange-light (快手)
 }
 
 export const DEFAULT_BAR_COLOR = '#6B7280' // gray-500
@@ -40,6 +41,7 @@ const MODEL_ORG_PATTERNS: Array<[RegExp, string]> = [
   [/mimo/i, 'Xiaomi'],
   [/trae|doubao|seed/i, 'ByteDance'],
   [/codebuddy|hunyuan/i, 'Tencent'],
+  [/kat[-\s]?coder|kwai/i, 'KwaiKAT'],
 ]
 
 /** Infer org from model name if org is empty */

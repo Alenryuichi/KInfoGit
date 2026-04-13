@@ -32,6 +32,7 @@ import { fetchArenaRankings } from './code-weekly/sources/arena-rankings'
 import { fetchAiderLeaderboard } from './code-weekly/sources/aider-leaderboard'
 import { fetchSweBench } from './code-weekly/sources/swe-bench'
 import { fetchLiveCodeBench } from './code-weekly/sources/livecodebench'
+import { fetchChangelogEntries } from './code-weekly/sources/changelog-page'
 import { summarizeWeekly, collectUrlsFromRaw } from './code-weekly/summarizer'
 
 // ─── ISO Week Helpers ──────────────────────────────────────
@@ -88,7 +89,7 @@ async function main() {
 
   // Parallel data collection with Promise.allSettled
   console.log('📡 Fetching from all sources...')
-  const [githubResult, rssResult, tavilyResult, bailianResult, npmResult, arenaResult, aiderResult, sweResult, lcbResult] = await Promise.allSettled([
+  const [githubResult, rssResult, tavilyResult, bailianResult, npmResult, arenaResult, aiderResult, sweResult, lcbResult, changelogResult] = await Promise.allSettled([
     fetchGitHubReleases(),
     fetchRssFeeds(),
     fetchTavilyForEditors(tavilyEditors),
@@ -98,6 +99,7 @@ async function main() {
     fetchAiderLeaderboard(),
     fetchSweBench(),
     fetchLiveCodeBench(),
+    fetchChangelogEntries(),
   ])
 
   const githubReleases = githubResult.status === 'fulfilled' ? githubResult.value : []
@@ -105,6 +107,7 @@ async function main() {
   const tavilyResults = tavilyResult.status === 'fulfilled' ? tavilyResult.value : []
   const bailianResults = bailianResult.status === 'fulfilled' ? bailianResult.value : []
   const npmReleases = npmResult.status === 'fulfilled' ? npmResult.value : []
+  const changelogEntries = changelogResult.status === 'fulfilled' ? changelogResult.value : []
   const arenaRankings = arenaResult.status === 'fulfilled' ? arenaResult.value : []
   const aiderLeaderboard = aiderResult.status === 'fulfilled' ? aiderResult.value : []
   const sweBench = sweResult.status === 'fulfilled' ? sweResult.value : []
@@ -117,6 +120,7 @@ async function main() {
     ['Tavily', tavilyResult],
     ['Bailian', bailianResult],
     ['npm', npmResult],
+    ['Changelog', changelogResult],
     ['Arena', arenaResult],
     ['Aider', aiderResult],
     ['SWE-bench', sweResult],
@@ -138,6 +142,7 @@ async function main() {
   console.log(`  Tavily Results: ${tavilyResults.length}`)
   console.log(`  Bailian Results: ${bailianResults.length}`)
   console.log(`  npm Releases: ${npmReleases.length}`)
+  console.log(`  Changelog Entries: ${changelogEntries.length}`)
   console.log(`  Arena Rankings: ${arenaRankings.length}`)
   console.log(`  Aider Entries: ${aiderLeaderboard.length}`)
   console.log(`  SWE-bench: ${sweBench.length}`)
@@ -151,6 +156,7 @@ async function main() {
     tavilyResults,
     bailianResults,
     npmReleases,
+    changelogEntries,
   }
   const summary = await summarizeWeekly(rawData)
 

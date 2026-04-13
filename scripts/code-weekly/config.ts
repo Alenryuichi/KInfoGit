@@ -12,6 +12,7 @@ export interface EditorConfig {
     tavilyQuery?: string       // English search query template
     bailianQuery?: string      // Chinese search query template
     npmPackage?: string        // npm package name — for npm registry API
+    changelogUrl?: string      // HTML changelog page URL — for changelog-page scraper
   }
 }
 
@@ -44,6 +45,8 @@ export const EDITORS: EditorConfig[] = [
     name: 'Trae',
     category: 'ide',
     sources: {
+      githubRepo: 'bytedance/trae-agent',
+      changelogUrl: 'https://docs.trae.ai/ide/changelog',
       bailianQuery: 'Trae AI 编辑器 最新功能 更新',
       tavilyQuery: 'Trae AI editor ByteDance new features this week',
     },
@@ -99,6 +102,7 @@ export const EDITORS: EditorConfig[] = [
     name: 'CodeBuddy',
     category: 'cli',
     sources: {
+      npmPackage: '@tencent-ai/codebuddy-code',
       bailianQuery: 'CodeBuddy 腾讯 AI 编程助手 最新功能 更新',
       tavilyQuery: 'CodeBuddy Tencent AI coding assistant new features',
     },

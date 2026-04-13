@@ -1,0 +1,857 @@
+{
+  "arenaRanking": [
+    {
+      "rank": 1,
+      "model": "Claude Opus 4.6 Thinking",
+      "elo": 1546,
+      "org": "Anthropic",
+      "delta": null
+    },
+    {
+      "rank": 2,
+      "model": "Claude Opus 4.6",
+      "elo": 1543,
+      "org": "Anthropic",
+      "delta": null
+    },
+    {
+      "rank": 3,
+      "model": "Claude Sonnet 4.6",
+      "elo": 1521,
+      "org": "Anthropic",
+      "delta": null
+    },
+    {
+      "rank": 4,
+      "model": "Claude Opus 4.5 20251101 Thinking 32k",
+      "elo": 1491,
+      "org": "Anthropic",
+      "delta": null
+    },
+    {
+      "rank": 5,
+      "model": "Claude Opus 4.5 20251101",
+      "elo": 1465,
+      "org": "Anthropic",
+      "delta": null
+    },
+    {
+      "rank": 6,
+      "model": "GPT-5.4 High (codex Harness)",
+      "elo": 1457,
+      "org": "OpenAI",
+      "delta": null
+    },
+    {
+      "rank": 7,
+      "model": "Gemini 3.1 Pro Preview",
+      "elo": 1456,
+      "org": "Google",
+      "delta": null
+    },
+    {
+      "rank": 8,
+      "model": "Qwen3.6 Plus Preview",
+      "elo": 1454,
+      "org": "Alibaba",
+      "delta": null
+    },
+    {
+      "rank": 9,
+      "model": "GLM 5",
+      "elo": 1441,
+      "org": "Z.ai",
+      "delta": null
+    },
+    {
+      "rank": 10,
+      "model": "GLM 4.7",
+      "elo": 1439,
+      "org": "Z.ai",
+      "delta": null
+    },
+    {
+      "rank": 11,
+      "model": "Gemini 3 Pro",
+      "elo": 1438,
+      "org": "Google",
+      "delta": null
+    },
+    {
+      "rank": 12,
+      "model": "Gemini 3 Flash",
+      "elo": 1436,
+      "org": "Google",
+      "delta": null
+    },
+    {
+      "rank": 13,
+      "model": "Mimo V2 Pro",
+      "elo": 1433,
+      "org": "Xiaomi",
+      "delta": null
+    },
+    {
+      "rank": 14,
+      "model": "Kimi K2.5 Thinking",
+      "elo": 1429,
+      "org": "Moonshot",
+      "delta": null
+    },
+    {
+      "rank": 15,
+      "model": "Minimax M2.7",
+      "elo": 1428,
+      "org": "MiniMax",
+      "delta": null
+    },
+    {
+      "rank": 16,
+      "model": "GPT-5.4 Medium (codex Harness)",
+      "elo": 1427,
+      "org": "OpenAI",
+      "delta": null
+    },
+    {
+      "rank": 17,
+      "model": "Kimi K2.5 Instant",
+      "elo": 1408,
+      "org": "Moonshot",
+      "delta": null
+    },
+    {
+      "rank": 18,
+      "model": "GPT-5.3 Codex (codex Harness)",
+      "elo": 1407,
+      "org": "OpenAI",
+      "delta": null
+    },
+    {
+      "rank": 19,
+      "model": "GPT-5.2",
+      "elo": 1403,
+      "org": "OpenAI",
+      "delta": null
+    },
+    {
+      "rank": 20,
+      "model": "Minimax M2.5",
+      "elo": 1396,
+      "org": "MiniMax",
+      "delta": null
+    },
+    {
+      "rank": 21,
+      "model": "GPT-5 Medium",
+      "elo": 1392,
+      "org": "OpenAI",
+      "delta": null
+    },
+    {
+      "rank": 22,
+      "model": "Minimax M2.1 Preview",
+      "elo": 1391,
+      "org": "MiniMax",
+      "delta": null
+    },
+    {
+      "rank": 23,
+      "model": "Gemini 3 Flash (thinking Minimal)",
+      "elo": 1391,
+      "org": "Google",
+      "delta": null
+    },
+    {
+      "rank": 24,
+      "model": "GPT-5.1 Medium",
+      "elo": 1390,
+      "org": "OpenAI",
+      "delta": null
+    },
+    {
+      "rank": 25,
+      "model": "Claude Sonnet 4.5 20250929 Thinking 32k",
+      "elo": 1388,
+      "org": "Anthropic",
+      "delta": null
+    },
+    {
+      "rank": 26,
+      "model": "Qwen3.5 397b A17b",
+      "elo": 1386,
+      "org": "Alibaba",
+      "delta": null
+    },
+    {
+      "rank": 27,
+      "model": "Claude Sonnet 4.5 20250929",
+      "elo": 1386,
+      "org": "Anthropic",
+      "delta": null
+    },
+    {
+      "rank": 28,
+      "model": "Grok 4.20 Beta 0309 Reasoning",
+      "elo": 1386,
+      "org": "xAI",
+      "delta": null
+    },
+    {
+      "rank": 29,
+      "model": "GPT-5.4 Mini High",
+      "elo": 1385,
+      "org": "OpenAI",
+      "delta": null
+    },
+    {
+      "rank": 30,
+      "model": "Claude Opus 4.1 20250805",
+      "elo": 1384,
+      "org": "Anthropic",
+      "delta": null
+    },
+    {
+      "rank": 31,
+      "model": "Deepseek V3.2 Thinking",
+      "elo": 1368,
+      "org": "DeepSeek",
+      "delta": null
+    },
+    {
+      "rank": 32,
+      "model": "Qwen3.5 122b A10b",
+      "elo": 1362,
+      "org": "Alibaba",
+      "delta": null
+    },
+    {
+      "rank": 33,
+      "model": "GLM 4.6",
+      "elo": 1354,
+      "org": "Z.ai",
+      "delta": null
+    },
+    {
+      "rank": 34,
+      "model": "Qwen3.5 27b",
+      "elo": 1344,
+      "org": "Alibaba",
+      "delta": null
+    },
+    {
+      "rank": 35,
+      "model": "GPT-5.1",
+      "elo": 1339,
+      "org": "OpenAI",
+      "delta": null
+    },
+    {
+      "rank": 36,
+      "model": "Mimo V2 Flash (non Thinking)",
+      "elo": 1337,
+      "org": "Xiaomi",
+      "delta": null
+    },
+    {
+      "rank": 37,
+      "model": "GPT-5.2 Codex",
+      "elo": 1335,
+      "org": "OpenAI",
+      "delta": null
+    },
+    {
+      "rank": 38,
+      "model": "Kimi K2 Thinking Turbo",
+      "elo": 1329,
+      "org": "Moonshot",
+      "delta": null
+    },
+    {
+      "rank": 39,
+      "model": "GPT-5.1 Codex",
+      "elo": 1328,
+      "org": "OpenAI",
+      "delta": null
+    },
+    {
+      "rank": 40,
+      "model": "Deepseek V3.2",
+      "elo": 1327,
+      "org": "DeepSeek",
+      "delta": null
+    },
+    {
+      "rank": 41,
+      "model": "Claude Haiku 4.5 20251001",
+      "elo": 1312,
+      "org": "Anthropic",
+      "delta": null
+    },
+    {
+      "rank": 42,
+      "model": "Minimax M2",
+      "elo": 1303,
+      "org": "MiniMax",
+      "delta": null
+    },
+    {
+      "rank": 43,
+      "model": "Mimo V2 Flash (thinking)",
+      "elo": 1300,
+      "org": "Xiaomi",
+      "delta": null
+    },
+    {
+      "rank": 44,
+      "model": "Deepseek V3.2 Exp",
+      "elo": 1285,
+      "org": "DeepSeek",
+      "delta": null
+    },
+    {
+      "rank": 45,
+      "model": "Qwen3 Coder 480b A35b Instruct",
+      "elo": 1280,
+      "org": "Alibaba",
+      "delta": null
+    },
+    {
+      "rank": 46,
+      "model": "KAT Coder Pro V1",
+      "elo": 1257,
+      "org": "KwaiKAT",
+      "delta": null
+    },
+    {
+      "rank": 47,
+      "model": "Qwen3.5 35b A3b",
+      "elo": 1247,
+      "org": "Alibaba",
+      "delta": null
+    },
+    {
+      "rank": 48,
+      "model": "Gemini 3.1 Flash Lite Preview",
+      "elo": 1238,
+      "org": "Google",
+      "delta": null
+    },
+    {
+      "rank": 49,
+      "model": "GPT-5.1 Codex Mini",
+      "elo": 1238,
+      "org": "OpenAI",
+      "delta": null
+    },
+    {
+      "rank": 50,
+      "model": "Qwen3.5 Flash",
+      "elo": 1235,
+      "org": "Alibaba",
+      "delta": null
+    }
+  ],
+  "arenaPublishDate": "2026-04-09",
+  "aiderLeaderboard": [
+    {
+      "model": "gpt-5 (high)",
+      "passRate": 88,
+      "delta": null
+    },
+    {
+      "model": "gpt-5 (medium)",
+      "passRate": 86.7,
+      "delta": null
+    },
+    {
+      "model": "o3-pro (high)",
+      "passRate": 84.9,
+      "delta": null
+    },
+    {
+      "model": "gemini-2.5-pro-preview-06-05 (32k think)",
+      "passRate": 83.1,
+      "delta": null
+    },
+    {
+      "model": "o3 (high)",
+      "passRate": 81.3,
+      "delta": null
+    },
+    {
+      "model": "gpt-5 (low)",
+      "passRate": 81.3,
+      "delta": null
+    },
+    {
+      "model": "grok-4 (high)",
+      "passRate": 79.6,
+      "delta": null
+    },
+    {
+      "model": "gemini-2.5-pro-preview-06-05 (default think)",
+      "passRate": 79.1,
+      "delta": null
+    },
+    {
+      "model": "o3 (high) + gpt-4.1",
+      "passRate": 78.2,
+      "delta": null
+    },
+    {
+      "model": "Gemini 2.5 Pro Preview 05-06",
+      "passRate": 76.9,
+      "delta": null
+    },
+    {
+      "model": "o3",
+      "passRate": 76.9,
+      "delta": null
+    },
+    {
+      "model": "DeepSeek-V3.2-Exp (Reasoner)",
+      "passRate": 74.2,
+      "delta": null
+    },
+    {
+      "model": "Gemini 2.5 Pro Preview 03-25",
+      "passRate": 72.9,
+      "delta": null
+    },
+    {
+      "model": "o4-mini (high)",
+      "passRate": 72,
+      "delta": null
+    },
+    {
+      "model": "claude-opus-4-20250514 (32k thinking)",
+      "passRate": 72,
+      "delta": null
+    },
+    {
+      "model": "DeepSeek R1 (0528)",
+      "passRate": 71.4,
+      "delta": null
+    },
+    {
+      "model": "claude-opus-4-20250514 (no think)",
+      "passRate": 70.7,
+      "delta": null
+    },
+    {
+      "model": "DeepSeek-V3.2-Exp (Chat)",
+      "passRate": 70.2,
+      "delta": null
+    },
+    {
+      "model": "claude-3-7-sonnet-20250219 (32k thinking tokens)",
+      "passRate": 64.9,
+      "delta": null
+    },
+    {
+      "model": "DeepSeek R1 + claude-3-5-sonnet-20241022",
+      "passRate": 64,
+      "delta": null
+    },
+    {
+      "model": "o1-2024-12-17 (high)",
+      "passRate": 61.7,
+      "delta": null
+    },
+    {
+      "model": "claude-sonnet-4-20250514 (32k thinking)",
+      "passRate": 61.3,
+      "delta": null
+    },
+    {
+      "model": "o3-mini (high)",
+      "passRate": 60.4,
+      "delta": null
+    },
+    {
+      "model": "claude-3-7-sonnet-20250219 (no thinking)",
+      "passRate": 60.4,
+      "delta": null
+    },
+    {
+      "model": "Qwen3 235B A22B diff, no think, Alibaba API",
+      "passRate": 59.6,
+      "delta": null
+    },
+    {
+      "model": "Kimi K2",
+      "passRate": 59.1,
+      "delta": null
+    },
+    {
+      "model": "DeepSeek R1",
+      "passRate": 56.9,
+      "delta": null
+    },
+    {
+      "model": "claude-sonnet-4-20250514 (no thinking)",
+      "passRate": 56.4,
+      "delta": null
+    },
+    {
+      "model": "DeepSeek V3 (0324)",
+      "passRate": 55.1,
+      "delta": null
+    },
+    {
+      "model": "gemini-2.5-flash-preview-05-20 (24k think)",
+      "passRate": 55.1,
+      "delta": null
+    }
+  ],
+  "sweBench": [
+    {
+      "model": "live-SWE-agent + Claude 4.5 Opus medium (20251101)",
+      "resolved": 79.2,
+      "org": "UIUC"
+    },
+    {
+      "model": "Sonar Foundation Agent + Claude 4.5 Opus",
+      "resolved": 79.2,
+      "org": "Sonar"
+    },
+    {
+      "model": "TRAE + Doubao-Seed-Code",
+      "resolved": 78.8,
+      "org": "ByteDance"
+    },
+    {
+      "model": "live-SWE-agent + Gemini 3 Pro Preview (2025-11-18)",
+      "resolved": 77.4,
+      "org": "UIUC"
+    },
+    {
+      "model": "Atlassian Rovo Dev (2025-09-02)",
+      "resolved": 76.8,
+      "org": "Atlassian"
+    },
+    {
+      "model": "EPAM AI/Run Developer Agent v20250719 + Claude 4 Sonnet",
+      "resolved": 76.8,
+      "org": "EPAM Systems, Inc."
+    },
+    {
+      "model": "mini-SWE-agent + Claude 4.5 Opus (high reasoning)",
+      "resolved": 76.8,
+      "org": "Anthropic"
+    },
+    {
+      "model": "ACoder",
+      "resolved": 76.4,
+      "org": "ACoder"
+    },
+    {
+      "model": "mini-SWE-agent + Gemini 3 Flash (high reasoning)",
+      "resolved": 75.8,
+      "org": "Google DeepMind"
+    },
+    {
+      "model": "mini-SWE-agent + MiniMax M2.5 (high reasoning)",
+      "resolved": 75.8,
+      "org": "Minimax"
+    },
+    {
+      "model": "Warp",
+      "resolved": 75.6,
+      "org": "Warp"
+    },
+    {
+      "model": "mini-SWE-agent + Claude Opus 4.6",
+      "resolved": 75.6,
+      "org": "Anthropic"
+    },
+    {
+      "model": "TRAE + Claude Sonnet 4 + Opus 4 + Sonnet 3.7 + Gemini 2.5 Pro",
+      "resolved": 75.2,
+      "org": "TRAE"
+    },
+    {
+      "model": "Harness AI",
+      "resolved": 74.8,
+      "org": "Harness"
+    },
+    {
+      "model": "Sonar Foundation Agent + Claude 4.5 Sonnet",
+      "resolved": 74.8,
+      "org": "Sonar"
+    },
+    {
+      "model": "Lingxi-v1.5_claude-4-sonnet-20250514",
+      "resolved": 74.6,
+      "org": "Lingxi"
+    },
+    {
+      "model": "JoyCode + Claude 4 Sonnet + GPT-4.1",
+      "resolved": 74.6,
+      "org": "JoyCode"
+    },
+    {
+      "model": "Refact.ai Agent + Claude 4 Sonnet + o4-mini",
+      "resolved": 74.4,
+      "org": "Refact.ai"
+    },
+    {
+      "model": "Prometheus-v1.2.1 + GPT-5",
+      "resolved": 74.4,
+      "org": "EuniAI"
+    },
+    {
+      "model": "mini-SWE-agent + Claude 4.5 Opus medium (20251101)",
+      "resolved": 74.4,
+      "org": "Anthropic"
+    },
+    {
+      "model": "mini-SWE-agent + Gemini 3 Pro Preview (2025-11-18)",
+      "resolved": 74.2,
+      "org": "Google DeepMind"
+    },
+    {
+      "model": "Salesforce AI Research SAGE (OpenHands)",
+      "resolved": 73.8,
+      "org": "Salesforce AI Research"
+    },
+    {
+      "model": "Tools + Claude 4 Opus (2025-05-22)",
+      "resolved": 73.2
+    },
+    {
+      "model": "Salesforce AI Research SAGE (bash-only)",
+      "resolved": 73,
+      "org": "Salesforce AI Research"
+    },
+    {
+      "model": "mini-SWE-agent + GPT-5-2 Codex",
+      "resolved": 72.8,
+      "org": "OpenAI"
+    },
+    {
+      "model": "mini-SWE-agent + GLM-5 (high reasoning)",
+      "resolved": 72.8,
+      "org": "Z-AI"
+    },
+    {
+      "model": "mini-SWE-agent + GPT-5-2 (high reasoning)",
+      "resolved": 72.8,
+      "org": "OpenAI"
+    },
+    {
+      "model": "Tools + Claude 4 Sonnet (2025-05-22)",
+      "resolved": 72.4
+    },
+    {
+      "model": "OpenHands + GPT-5",
+      "resolved": 71.8,
+      "org": "OpenHands"
+    },
+    {
+      "model": "mini-SWE-agent + GPT-5.2 (2025-12-11) (high reasoning)",
+      "resolved": 71.8,
+      "org": "OpenAI"
+    }
+  ],
+  "liveCodeBench": [
+    {
+      "model": "O4-Mini (High)",
+      "passRate": 87.3,
+      "easy": 98.4,
+      "medium": 92.7,
+      "hard": 71.1
+    },
+    {
+      "model": "O3 (High)",
+      "passRate": 84.7,
+      "easy": 99.1,
+      "medium": 89.8,
+      "hard": 66
+    },
+    {
+      "model": "O4-Mini (Medium)",
+      "passRate": 84.5,
+      "easy": 98.8,
+      "medium": 92.2,
+      "hard": 62.9
+    },
+    {
+      "model": "DeepSeek-R1-0528",
+      "passRate": 84.4,
+      "easy": 99.2,
+      "medium": 90.9,
+      "hard": 63.6
+    },
+    {
+      "model": "Gemini-2.5-Pro-06-05",
+      "passRate": 84.3,
+      "easy": 99.1,
+      "medium": 92.2,
+      "hard": 62
+    },
+    {
+      "model": "Gemini-2.5-Pro-05-06",
+      "passRate": 82.7,
+      "easy": 98.8,
+      "medium": 90.6,
+      "hard": 59.4
+    },
+    {
+      "model": "OpenReasoning-Nemotron-32B",
+      "passRate": 81,
+      "easy": 98.6,
+      "medium": 87.5,
+      "hard": 57.5
+    },
+    {
+      "model": "EXAONE-4.0-32B",
+      "passRate": 80.9,
+      "easy": 98.8,
+      "medium": 88.3,
+      "hard": 56.3
+    },
+    {
+      "model": "Qwen3-235B-A22B",
+      "passRate": 80.4,
+      "easy": 99.1,
+      "medium": 88.8,
+      "hard": 54
+    },
+    {
+      "model": "XBai-o4-medium",
+      "passRate": 80.1,
+      "easy": 98.8,
+      "medium": 90.1,
+      "hard": 52
+    },
+    {
+      "model": "OpenCodeReasoning-Nemotron-1.1-32B",
+      "passRate": 78.5,
+      "easy": 98,
+      "medium": 85.7,
+      "hard": 52.8
+    },
+    {
+      "model": "Grok-3-Mini (High)",
+      "passRate": 78.1,
+      "easy": 98.1,
+      "medium": 85.9,
+      "hard": 51.1
+    },
+    {
+      "model": "O3-Mini-2025-01-31 (High)",
+      "passRate": 77.7,
+      "easy": 99.1,
+      "medium": 87.5,
+      "hard": 47.4
+    },
+    {
+      "model": "O4-Mini (Low)",
+      "passRate": 77.4,
+      "easy": 98.1,
+      "medium": 86.2,
+      "hard": 48.9
+    },
+    {
+      "model": "Gemini-2.5-Flash-05-20",
+      "passRate": 76.2,
+      "easy": 99.1,
+      "medium": 82.5,
+      "hard": 48.3
+    },
+    {
+      "model": "O3-Mini-2025-01-31 (Med)",
+      "passRate": 75.4,
+      "easy": 98.8,
+      "medium": 85.1,
+      "hard": 43.1
+    },
+    {
+      "model": "Gemini-2.5-Flash-04-17",
+      "passRate": 75.1,
+      "easy": 98.4,
+      "medium": 81.2,
+      "hard": 46.9
+    },
+    {
+      "model": "O3-Mini-2025-01-31 (Low)",
+      "passRate": 70.6,
+      "easy": 97.8,
+      "medium": 77.5,
+      "hard": 38
+    },
+    {
+      "model": "Claude-Opus-4 (Thinking)",
+      "passRate": 70.4,
+      "easy": 99.1,
+      "medium": 80.4,
+      "hard": 33.1
+    },
+    {
+      "model": "Claude-Sonnet-4 (Thinking)",
+      "passRate": 68.5,
+      "easy": 98.8,
+      "medium": 76,
+      "hard": 32.6
+    },
+    {
+      "model": "Claude-Opus-4",
+      "passRate": 62.4,
+      "easy": 96.3,
+      "medium": 69.2,
+      "hard": 23.7
+    },
+    {
+      "model": "Claude-Sonnet-4",
+      "passRate": 59.4,
+      "easy": 96.3,
+      "medium": 64,
+      "hard": 20.6
+    },
+    {
+      "model": "DeepSeek-V3",
+      "passRate": 49.6,
+      "easy": 83.3,
+      "medium": 53.5,
+      "hard": 14.2
+    },
+    {
+      "model": "Claude-3.5-Sonnet-20241022",
+      "passRate": 48.7,
+      "easy": 92.6,
+      "medium": 44.6,
+      "hard": 12.8
+    },
+    {
+      "model": "GPT-4O-2024-08-06",
+      "passRate": 38.3,
+      "easy": 82.5,
+      "medium": 32.1,
+      "hard": 4.5
+    },
+    {
+      "model": "GPT-4-Turbo-2024-04-09",
+      "passRate": 37.3,
+      "easy": 81.4,
+      "medium": 30.7,
+      "hard": 4
+    },
+    {
+      "model": "GPT-4O-mini-2024-07-18",
+      "passRate": 35.5,
+      "easy": 81.7,
+      "medium": 25.2,
+      "hard": 4.3
+    },
+    {
+      "model": "Claude-3-Haiku",
+      "passRate": 22.5,
+      "easy": 61.1,
+      "medium": 9,
+      "hard": 1.9
+    }
+  ],
+  "notable": "Backfilled",
+  "updatedAt": "2026-04-09T12:00:00.000Z"
+}
