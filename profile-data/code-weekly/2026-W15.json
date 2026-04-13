@@ -1,7 +1,7 @@
 {
-  "week": "2026-W16",
-  "dateRange": "2026-04-12 — 2026-04-18",
-  "generatedAt": "2026-04-13T07:06:46.560Z",
+  "week": "2026-W15",
+  "dateRange": "2026-04-05 — 2026-04-11",
+  "generatedAt": "2026-04-13T09:35:40.877Z",
   "editors": [
     {
       "name": "Cursor",
@@ -9,12 +9,11 @@
       "version": "",
       "highlights": [
         "Bugbot 更新，支持实时自我改进和 MCP 协议。",
-        "推出名为 Automations 的新代理编码系统，可自动触发代理。",
-        "v3.0 版本引入了后台代理、云代理和改进的 Composer 2.0。"
+        "推出名为 Automations 的新代理系统，可自动触发代理任务。"
       ],
       "source": "Company Blog, Search Results",
       "sourceUrl": "https://cursor.com/changelog/04-08-26",
-      "aiSummary": "Cursor 本周发布了 Bugbot 更新，增强了其自我改进能力并支持 MCP 协议。同时，其 v3.0 版本引入了新的代理自动化系统，旨在提升团队级的代理编码效率。"
+      "aiSummary": "Cursor 本周更新了其 Bugbot 功能，增加了实时自我改进能力和 MCP 支持。同时，有报道称其正在推广一种新的自动化代理系统，允许用户根据代码库变更或定时器自动启动编码代理。"
     },
     {
       "name": "Windsurf",
@@ -28,71 +27,61 @@
     {
       "name": "Trae",
       "category": "ide",
-      "version": "",
+      "version": "v3.5.47",
       "highlights": [
+        "新增‘命令执行时自动打开终端’设置。",
         "优化了 AI 输入框和代码审查功能的用户体验。",
-        "全量上线 Claude 3.7 Sonnet 模型，支持扩展思维混合推理模式。",
-        "推出 2.0 版本及 SOLO 模式，实现端到端开发闭环。",
-        "集成 SiliconCloud 平台，支持接入多种专业编码模型。",
-        "新增规则系统与 #Web/#Doc 上下文能力，强化工程化落地。"
+        "提高了代码审查的成功率。"
       ],
-      "source": "Search Results",
-      "sourceUrl": "https://www.trae.ai/changelog",
-      "aiSummary": "Trae 本周进行了多项用户体验优化，并正式上线了 Claude 3.7 Sonnet 模型。其 2.0 版本和 SOLO 模式标志着向全流程 AI 协同开发的迈进，同时加强了与外部模型平台和团队知识库的集成。"
+      "source": "Changelog",
+      "sourceUrl": "https://docs.trae.ai/ide/changelog",
+      "aiSummary": "Trae 本周发布了 v3.5.47 版本，主要是一些用户体验优化，包括新增自动打开终端的设置，以及改进了 AI 输入框和代码审查功能。"
     },
     {
       "name": "Augment",
       "category": "ide",
       "version": "",
-      "highlights": [
-        "修复了 MCP 服务器初始化慢导致的聊天挂起问题。",
-        "修复了设置中 MCP 日志显示、工作空间加载等多个问题。",
-        "推出了支持 MCP 协议的语义编码能力，可供任何 AI 代理使用。"
-      ],
-      "source": "Search Results",
-      "sourceUrl": "https://www.augmentcode.com/changelog",
-      "aiSummary": "Augment 本周发布了一系列修复更新，解决了 MCP 相关及界面交互的多个问题。其核心进展在于通过 MCP 协议开放了语义编码能力，旨在赋能更广泛的 AI 开发生态。"
+      "highlights": [],
+      "source": "",
+      "sourceUrl": "",
+      "aiSummary": "本周暂无重大更新"
     },
     {
       "name": "Claude Code",
       "category": "cli",
       "version": "",
-      "highlights": [
-        "增加了交互式 `/powerup` 课程，改进了恢复流程和性能。",
-        "修复了长会话中 Hook 失败、对话框、滚动等多个可靠性问题。",
-        "四月更新包括改进的团队协作工具和一系列功能增强。"
-      ],
-      "source": "Search Results",
-      "sourceUrl": "https://releasebot.io/updates/anthropic/claude-code",
-      "aiSummary": "Claude Code 本周发布了包含新课程和性能改进的更新。重点在于提升用户体验的流畅性和修复各类稳定性问题，同时增强了团队协作功能。"
+      "highlights": [],
+      "source": "",
+      "sourceUrl": "",
+      "aiSummary": "本周暂无重大更新"
     },
     {
       "name": "Gemini CLI",
       "category": "cli",
       "version": "v0.39.0-nightly.20260411.0957f7d3e",
       "highlights": [
-        "修复了 API 错误消息中的 Uint8Array 和多字节 UTF-8 解码问题。",
-        "增加了可选的 debugRainbow UI 调试设置。",
-        "通过清理监听器和闭包解决了生命周期内存泄漏。",
-        "重构了子代理工具为统一的 invoke_subagent 工具。",
-        "在计划模式中要求用户确认 activate_skill 操作。"
+        "修复 API 错误消息中的 Uint8Array 和多字节 UTF-8 解码问题。",
+        "为 UI 添加可选的 debugRainbow 调试设置。",
+        "修复生命周期内存泄漏，清理监听器和闭包。",
+        "在计划模式中，激活技能需要用户确认。",
+        "在 Windows 上使用目录连接点进行技能链接。"
       ],
       "source": "GitHub Releases",
       "sourceUrl": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.39.0-nightly.20260411.0957f7d3e",
-      "aiSummary": "Gemini CLI 本周发布了多个夜间构建版本，主要聚焦于错误修复、内存泄漏解决和代理工具重构。更新增强了稳定性和开发体验，并引入了新的调试选项。"
+      "aiSummary": "Gemini CLI 本周发布了多个夜间构建版本，包含一系列错误修复和功能改进。主要更新包括修复内存泄漏、改进错误处理、增加调试选项，并在计划模式中增强了技能激活的安全性。"
     },
     {
       "name": "OpenCode",
       "category": "cli",
       "version": "",
       "highlights": [
-        "为远程 MCP 服务器添加了可配置的 OAuth 重定向 URI。",
-        "修复了 C/C++ 工作区中 clangd 选择项目根目录的问题。",
-        "修复了同源桌面和 Web 应用中的终端连接问题。"
+        "为远程 MCP 服务器添加可配置的 OAuth 重定向 URI。",
+        "修复 C/C++ 工作区中 clangd 选择项目根目录的问题。",
+        "修复桌面和 Web 客户端中的终端连接问题。"
       ],
-      "source": "Search Results",
+      "source": "Changelog",
       "sourceUrl": "https://opencode.ai/changelog",
-      "aiSummary": "OpenCode 本周更新了其变更日志，包含了对 MCP 服务器认证、语言服务器配置和终端连接的修复与改进，提升了工具的安全性和兼容性。"
+      "aiSummary": "OpenCode 本周更新了其变更日志，主要包含对 MCP 服务器、C/C++ 语言支持以及终端连接稳定性的修复和改进。"
     },
     {
       "name": "Aider",
@@ -108,28 +97,26 @@
       "category": "cli",
       "version": "",
       "highlights": [
-        "更新了使用和可靠性限制以保持服务快速可靠。",
-        "在 Copilot 使用指标 API 报告中添加了云代理活跃用户聚合计数。",
-        "宣布自 2026年4月24日起将使用 Copilot 交互数据训练 AI 模型。"
+        "GitHub 宣布自 2026年4月24日起，将使用 Copilot 交互数据训练 AI 模型。",
+        "VS Code 扩展的 3 月更新发布，增强了对代理运行的控制和功能。"
       ],
-      "source": "Search Results",
-      "sourceUrl": "https://releasebot.io/updates/github",
-      "aiSummary": "GitHub Copilot 本周更新了服务策略，引入了新的使用限制和更详细的用量报告。同时宣布了一项重要的数据政策变更，将利用用户交互数据改进模型。"
+      "source": "GitHub Changelog, News",
+      "sourceUrl": "https://github.blog/changelog/2026-04-08-github-copilot-in-visual-studio-code-march-releases/",
+      "aiSummary": "GitHub Copilot 本周更新了其使用政策，宣布将开始利用用户交互数据来训练模型。同时，其 VS Code 扩展发布了 3 月更新，提供了更多控制代理运行的方式。"
     },
     {
       "name": "CodeBuddy",
       "category": "cli",
       "version": "2.0",
       "highlights": [
-        "正式发布 Code CLI 2.0，新增 Plan 模式并支持 ACP 协议。",
-        "Craft 智能体升级，可基于自然语言一句话生成高保真 Web 应用。",
-        "插件全 IDE 兼容升级，新增 WebStorm 支持及 Unit Test 模块。",
-        "MCP Server 增强，新增 Git 安全扫描、知识库直连等功能。",
-        "企业版上线研效度量看板与组织知识资产托管中心。"
+        "发布 Code CLI 2.0，新增 Plan 任务规划模式和 Skills 技能体系。",
+        "JetBrains 插件升级至 3.1.9，内置 MCP Server 入口。",
+        "独立 IDE 开启公测，支持全项目语义理解和跨文件重构。",
+        "企业版上线，支持统一身份认证和研效度量看板。"
       ],
-      "source": "Search Results",
-      "sourceUrl": "https://copilot.tencent.com",
-      "aiSummary": "腾讯 CodeBuddy 本周发布了重磅的 2.0 版本，核心是引入了计划模式和 ACP 协议支持。其 Craft 智能体、IDE 插件、MCP 服务和企业版功能均得到显著增强，展示了全面的平台化升级。"
+      "source": "Search Results (Chinese)",
+      "sourceUrl": "https://copilot.tencent.com/blog/codebuddy-code-v2-0",
+      "aiSummary": "腾讯 CodeBuddy 本周有多项重大更新，包括 CLI 工具升级到 2.0 版本，引入计划模式和技能体系；JetBrains 插件集成 MCP；独立 IDE 开始公测，具备深度代码分析能力；并推出了面向企业的功能套件。"
     }
   ],
   "benchmarks": {
@@ -152,7 +139,7 @@
         "rank": 3,
         "model": "GLM 5.1",
         "elo": 1530,
-        "org": "Zai",
+        "org": "Z.ai",
         "delta": null
       },
       {
@@ -180,7 +167,7 @@
         "rank": 7,
         "model": "GPT-5.4 High (codex Harness)",
         "elo": 1457,
-        "org": "Openai",
+        "org": "OpenAI",
         "delta": null
       },
       {
@@ -201,14 +188,14 @@
         "rank": 10,
         "model": "GLM 4.7",
         "elo": 1439,
-        "org": "Zai",
+        "org": "Z.ai",
         "delta": null
       },
       {
         "rank": 11,
         "model": "GLM 5",
         "elo": 1439,
-        "org": "Zai",
+        "org": "Z.ai",
         "delta": null
       },
       {
@@ -222,7 +209,7 @@
         "rank": 13,
         "model": "GPT-5.4 Medium (codex Harness)",
         "elo": 1437,
-        "org": "Openai",
+        "org": "OpenAI",
         "delta": null
       },
       {
@@ -250,7 +237,7 @@
         "rank": 17,
         "model": "Minimax M2.7",
         "elo": 1425,
-        "org": "Minimax",
+        "org": "MiniMax",
         "delta": null
       },
       {
@@ -264,49 +251,49 @@
         "rank": 19,
         "model": "GPT-5.3 Codex (codex Harness)",
         "elo": 1407,
-        "org": "Openai",
+        "org": "OpenAI",
         "delta": null
       },
       {
         "rank": 20,
         "model": "GPT-5.2",
         "elo": 1403,
-        "org": "Openai",
+        "org": "OpenAI",
         "delta": null
       },
       {
         "rank": 21,
         "model": "Grok 4.20 Beta 0309 Reasoning",
         "elo": 1393,
-        "org": "Xai",
+        "org": "xAI",
         "delta": null
       },
       {
         "rank": 22,
         "model": "GPT-5 Medium",
         "elo": 1393,
-        "org": "Openai",
+        "org": "OpenAI",
         "delta": null
       },
       {
         "rank": 23,
         "model": "Minimax M2.5",
         "elo": 1392,
-        "org": "Minimax",
+        "org": "MiniMax",
         "delta": null
       },
       {
         "rank": 24,
         "model": "Minimax M2.1 Preview",
         "elo": 1391,
-        "org": "Minimax",
+        "org": "MiniMax",
         "delta": null
       },
       {
         "rank": 25,
         "model": "GPT-5.1 Medium",
         "elo": 1390,
-        "org": "Openai",
+        "org": "OpenAI",
         "delta": null
       },
       {
@@ -327,7 +314,7 @@
         "rank": 28,
         "model": "GPT-5.4 Mini High",
         "elo": 1388,
-        "org": "Openai",
+        "org": "OpenAI",
         "delta": null
       },
       {
@@ -355,7 +342,7 @@
         "rank": 32,
         "model": "Deepseek V3.2 Thinking",
         "elo": 1368,
-        "org": "Deepseek",
+        "org": "DeepSeek",
         "delta": null
       },
       {
@@ -369,7 +356,7 @@
         "rank": 34,
         "model": "GLM 4.6",
         "elo": 1354,
-        "org": "Zai",
+        "org": "Z.ai",
         "delta": null
       },
       {
@@ -383,7 +370,7 @@
         "rank": 36,
         "model": "GPT-5.1",
         "elo": 1339,
-        "org": "Openai",
+        "org": "OpenAI",
         "delta": null
       },
       {
@@ -397,14 +384,14 @@
         "rank": 38,
         "model": "GPT-5.2 Codex",
         "elo": 1335,
-        "org": "Openai",
+        "org": "OpenAI",
         "delta": null
       },
       {
         "rank": 39,
         "model": "Deepseek V3.2",
         "elo": 1330,
-        "org": "Deepseek",
+        "org": "DeepSeek",
         "delta": null
       },
       {
@@ -418,7 +405,7 @@
         "rank": 41,
         "model": "GPT-5.1 Codex",
         "elo": 1329,
-        "org": "Openai",
+        "org": "OpenAI",
         "delta": null
       },
       {
@@ -432,7 +419,7 @@
         "rank": 43,
         "model": "Minimax M2",
         "elo": 1304,
-        "org": "Minimax",
+        "org": "MiniMax",
         "delta": null
       },
       {
@@ -446,7 +433,7 @@
         "rank": 45,
         "model": "Deepseek V3.2 Exp",
         "elo": 1286,
-        "org": "Deepseek",
+        "org": "DeepSeek",
         "delta": null
       },
       {
@@ -460,7 +447,7 @@
         "rank": 47,
         "model": "KAT Coder Pro V1",
         "elo": 1257,
-        "org": "",
+        "org": "KwaiKAT",
         "delta": null
       },
       {
@@ -474,7 +461,7 @@
         "rank": 49,
         "model": "GPT-5.1 Codex Mini",
         "elo": 1239,
-        "org": "Openai",
+        "org": "OpenAI",
         "delta": null
       },
       {
@@ -507,12 +494,12 @@
         "delta": null
       },
       {
-        "model": "gpt-5 (low)",
+        "model": "o3 (high)",
         "passRate": 81.3,
         "delta": null
       },
       {
-        "model": "o3 (high)",
+        "model": "gpt-5 (low)",
         "passRate": 81.3,
         "delta": null
       },
@@ -532,12 +519,12 @@
         "delta": null
       },
       {
-        "model": "o3",
+        "model": "Gemini 2.5 Pro Preview 05-06",
         "passRate": 76.9,
         "delta": null
       },
       {
-        "model": "Gemini 2.5 Pro Preview 05-06",
+        "model": "o3",
         "passRate": 76.9,
         "delta": null
       },
@@ -552,12 +539,12 @@
         "delta": null
       },
       {
-        "model": "claude-opus-4-20250514 (32k thinking)",
+        "model": "o4-mini (high)",
         "passRate": 72,
         "delta": null
       },
       {
-        "model": "o4-mini (high)",
+        "model": "claude-opus-4-20250514 (32k thinking)",
         "passRate": 72,
         "delta": null
       },
@@ -585,6 +572,56 @@
         "model": "DeepSeek R1 + claude-3-5-sonnet-20241022",
         "passRate": 64,
         "delta": null
+      },
+      {
+        "model": "o1-2024-12-17 (high)",
+        "passRate": 61.7,
+        "delta": null
+      },
+      {
+        "model": "claude-sonnet-4-20250514 (32k thinking)",
+        "passRate": 61.3,
+        "delta": null
+      },
+      {
+        "model": "o3-mini (high)",
+        "passRate": 60.4,
+        "delta": null
+      },
+      {
+        "model": "claude-3-7-sonnet-20250219 (no thinking)",
+        "passRate": 60.4,
+        "delta": null
+      },
+      {
+        "model": "Qwen3 235B A22B diff, no think, Alibaba API",
+        "passRate": 59.6,
+        "delta": null
+      },
+      {
+        "model": "Kimi K2",
+        "passRate": 59.1,
+        "delta": null
+      },
+      {
+        "model": "DeepSeek R1",
+        "passRate": 56.9,
+        "delta": null
+      },
+      {
+        "model": "claude-sonnet-4-20250514 (no thinking)",
+        "passRate": 56.4,
+        "delta": null
+      },
+      {
+        "model": "DeepSeek V3 (0324)",
+        "passRate": 55.1,
+        "delta": null
+      },
+      {
+        "model": "gemini-2.5-flash-preview-05-20 (24k think)",
+        "passRate": 55.1,
+        "delta": null
       }
     ],
     "notable": ""
@@ -595,7 +632,7 @@
       "title": "Bugbot Learned Rules and MCP Support",
       "url": "https://cursor.com/changelog/04-08-26",
       "publishedAt": "Wed, 08 Apr 2026 00:00:00 GMT",
-      "summary": "Cursor 发布了 Bugbot 更新，使其能够实时自我改进，并新增了对 MCP 协议的支持，同时改进了 Bugbot Autofix，达到了迄今为止最高的问题解决率。",
+      "summary": "Cursor 发布了 Bugbot 的更新，使其能够实时自我改进，并增加了对 MCP（模型控制协议）的支持，同时提升了 Bugbot Autofix 的解决率。",
       "tags": [
         "AI",
         "编程工具"
@@ -606,7 +643,7 @@
       "title": "Agentic Infrastructure",
       "url": "https://vercel.com/blog/agentic-infrastructure",
       "publishedAt": "",
-      "summary": "文章探讨了 LLM 和编码代理如何驱动新一代基础设施的演进，从手动配置服务器到云 API，再到由应用本身衍生的基础设施。",
+      "summary": "文章探讨了 LLM 和编码代理如何推动新一代基础设施的演进，从手动配置服务器到云 API，再到由应用本身衍生的基础设施。",
       "tags": [
         "AI",
         "基础设施"
@@ -617,10 +654,10 @@
       "title": "Agent responsibly",
       "url": "https://vercel.com/blog/agent-responsibly",
       "publishedAt": "",
-      "summary": "基于 Vercel 内部演讲，分享了在利用编码代理高速生成代码时，如何通过框架确保代码质量和工程纪律，避免技术债务。",
+      "summary": "文章分享了在 Vercel 内部关于负责任地部署编码代理的框架，强调了在高速生成代码的同时，保持工程纪律和系统可靠性的重要性。",
       "tags": [
         "AI",
-        "工程实践"
+        "最佳实践"
       ]
     },
     {
@@ -628,12 +665,12 @@
       "title": "Making Turborepo 96% faster with agents, sandboxes, and humans",
       "url": "https://vercel.com/blog/making-turborepo-ninety-six-percent-faster-with-agents-sandboxes-and-humans",
       "publishedAt": "",
-      "summary": "介绍了如何结合 AI 代理、沙箱和人工协作，将 Turborepo 的任务图计算速度提升了 81-91%，显著改善了大型代码库的开发体验。",
+      "summary": "Vercel 介绍了如何利用 AI 代理、沙箱和人工协作，将 Turborepo 的任务图计算速度提升了 81-91%，显著改善了开发体验。",
       "tags": [
         "AI",
         "开发工具"
       ]
     }
   ],
-  "weekSummary": "本周 AI 代码编辑器生态活跃，多个工具发布重要更新。Gemini CLI 和 OpenCode 专注于错误修复与稳定性提升；Cursor 和 CodeBuddy 则推出了重大的版本迭代，分别强化了代理自动化系统和平台化能力；Trae 和 Augment 在模型集成与协议支持方面取得进展。同时，基础设施提供商 Vercel 发布多篇博客，深入探讨了代理时代的基础设施与工程实践。"
+  "weekSummary": "本周 AI 编程工具生态持续活跃。Gemini CLI 发布了多个夜间构建版本，专注于错误修复和内存优化。Cursor 更新了其 Bugbot，增加了 MCP 支持和自我改进能力。腾讯 CodeBuddy 动作频繁，发布了 CLI 2.0、插件更新和 IDE 公测版，展示了全面的产品升级。GitHub Copilot 则更新了其数据使用政策，引发社区关注。整体来看，工具更新更侧重于稳定性、协议集成（如 MCP）以及企业级功能的拓展。"
 }
