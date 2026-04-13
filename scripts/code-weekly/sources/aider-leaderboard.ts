@@ -1,104 +1,80 @@
 // Aider Leaderboard — code editing benchmark data
-import { TAVILY_API_URL } from '../config'
+// Primary: GitHub YAML (official source of truth)
+// Fallback: HTML scraping of aider.chat
 
 export interface AiderEntry {
   model: string
   passRate: number
 }
 
-export async function fetchAiderLeaderboard(): Promise<AiderEntry[]> {
-  // Direct HTML scraping is more reliable than Tavily text parsing
-  const direct = await fetchAiderDirectly()
-  if (direct.length > 0) return direct
+// ─── GitHub YAML (primary) ────────────────────────────────
 
-  // Fallback to Tavily
-  const apiKey = process.env.TAVILY_API_KEY
-  if (!apiKey) {
-    console.warn('[aider] No data from direct fetch and TAVILY_API_KEY not set')
-    return []
-  }
+const AIDER_YAML_URL =
+  'https://raw.githubusercontent.com/Aider-AI/aider/main/aider/website/_data/polyglot_leaderboard.yml'
 
-  try {
-    const res = await fetch(TAVILY_API_URL, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        api_key: apiKey,
-        query: 'aider leaderboard code editing benchmark latest results site:aider.chat',
-        search_depth: 'advanced',
-        max_results: 3,
-        include_answer: true,
-      }),
-    })
+/** Minimal YAML parser — handles the flat list-of-objects format used by Aider. */
+function parseSimpleYaml(yaml: string): Array<Record<string, string>> {
+  const items: Array<Record<string, string>> = []
+  let current: Record<string, string> | null = null
 
-    if (!res.ok) {
-      console.warn(`[aider] Tavily HTTP ${res.status}`)
-      return []
+  for (const line of yaml.split('\n')) {
+    const trimmed = line.trimEnd()
+    if (trimmed.startsWith('- ')) {
+      // New item
+      if (current) items.push(current)
+      current = {}
+      const kv = trimmed.slice(2).match(/^(\w[\w_]*):\s*(.*)$/)
+      if (kv) current[kv[1]] = kv[2].trim()
+    } else if (trimmed.startsWith('  ') && current) {
+      const kv = trimmed.match(/^\s+(\w[\w_]*):\s*(.*)$/)
+      if (kv) current[kv[1]] = kv[2].trim()
     }
-
-    const data = await res.json() as {
-      answer?: string
-      results: Array<{ content: string }>
-    }
-
-    const text = [data.answer || '', ...data.results.map(r => r.content)].join('\n')
-    return parseAiderLeaderboard(text)
-  } catch (err) {
-    console.warn('[aider] Tavily failed:', err)
-    return []
   }
+  if (current) items.push(current)
+
+  return items
 }
 
-async function fetchAiderDirectly(): Promise<AiderEntry[]> {
+async function fetchFromGitHubYaml(): Promise<AiderEntry[]> {
   try {
-    const res = await fetch('https://aider.chat/docs/leaderboards/', {
+    const res = await fetch(AIDER_YAML_URL, {
       headers: { 'User-Agent': 'KInfoGit-Code-Weekly' },
     })
 
     if (!res.ok) {
-      console.warn(`[aider] Direct fetch HTTP ${res.status}`)
+      console.warn(`[aider] GitHub YAML HTTP ${res.status}`)
       return []
     }
 
-    const html = await res.text()
-    return parseAiderFromHtml(html)
-  } catch (err) {
-    console.warn('[aider] Direct fetch failed:', err)
-    return []
-  }
-}
+    const yaml = await res.text()
+    const items = parseSimpleYaml(yaml)
 
-function parseAiderLeaderboard(text: string): AiderEntry[] {
-  const entries: AiderEntry[] = []
-  const seen = new Set<string>()
-  const lines = text.split('\n')
+    const entries: AiderEntry[] = []
+    const seen = new Set<string>()
 
-  for (const line of lines) {
-    // Pattern: model_name - XX.X% or model_name | XX.X%
-    const match = line.match(/(.+?)\s*[\-–|]\s*(\d{1,3}(?:\.\d+)?)\s*%/)
-    if (match) {
-      const model = match[1].trim()
-      const passRate = parseFloat(match[2])
+    for (const item of items) {
+      const model = (item.model || '').replace(/^["']|["']$/g, '')
+      const passRateStr = item.pass_rate_2 || item.pass_rate || ''
+      const passRate = parseFloat(passRateStr)
 
-      // Filter out noise: model names should be reasonable length,
-      // pass rates should be plausible (10-100%), and no duplicates
-      if (
-        model.length >= 2 &&
-        model.length <= 80 &&
-        passRate >= 10 &&
-        passRate <= 100 &&
-        !seen.has(model)
-      ) {
+      if (model && !isNaN(passRate) && passRate >= 0 && passRate <= 100 && !seen.has(model)) {
         seen.add(model)
         entries.push({ model, passRate })
       }
     }
-  }
 
-  return entries
-    .sort((a, b) => b.passRate - a.passRate)
-    .slice(0, 20)
+    const sorted = entries.sort((a, b) => b.passRate - a.passRate).slice(0, 30)
+    if (sorted.length > 0) {
+      console.log(`[aider] GitHub YAML: ${sorted.length} models loaded`)
+    }
+    return sorted
+  } catch (err) {
+    console.warn('[aider] GitHub YAML failed:', err)
+    return []
+  }
 }
+
+// ─── HTML scraping fallback ───────────────────────────────
 
 /** Decode common HTML entities */
 function decodeEntities(s: string): string {
@@ -111,46 +87,61 @@ function decodeEntities(s: string): string {
     .replace(/&nbsp;/g, ' ')
 }
 
-/** Strip HTML tags from a string */
-function stripTags(s: string): string {
-  return s.replace(/<[^>]*>/g, '').trim()
-}
+async function fetchFromHtml(): Promise<AiderEntry[]> {
+  try {
+    const res = await fetch('https://aider.chat/docs/leaderboards/', {
+      headers: { 'User-Agent': 'KInfoGit-Code-Weekly' },
+    })
 
-function parseAiderFromHtml(html: string): AiderEntry[] {
-  const entries: AiderEntry[] = []
-  const seen = new Set<string>()
+    if (!res.ok) {
+      console.warn(`[aider] HTML fetch HTTP ${res.status}`)
+      return []
+    }
 
-  // Aider HTML: <tr id="main-row-N"> with <td> columns
-  // We extract model from td with <span> (no class) and pass rate from td.bar-cell (not cost-bar-cell)
-  const rowPattern = /<tr\s+id="main-row-\d+"[^>]*>([\s\S]*?)<\/tr>/g
-  let rowMatch: RegExpExecArray | null
+    const html = await res.text()
+    const entries: AiderEntry[] = []
+    const seen = new Set<string>()
 
-  while ((rowMatch = rowPattern.exec(html)) !== null) {
-    const rowHtml = rowMatch[1]
+    const rowPattern = /<tr\s+id="main-row-\d+"[^>]*>([\s\S]*?)<\/tr>/g
+    let rowMatch: RegExpExecArray | null
 
-    // Extract model name: second <td> contains <span>model name</span>
-    const modelSpanMatch = rowHtml.match(
-      /<td[^>]*>\s*<span>([^<]+)<\/span>\s*<\/td>/
-    )
+    while ((rowMatch = rowPattern.exec(html)) !== null) {
+      const rowHtml = rowMatch[1]
+      const modelSpanMatch = rowHtml.match(/<td[^>]*>\s*<span>([^<]+)<\/span>\s*<\/td>/)
+      const barCellMatch = rowHtml.match(/<td\s+class="bar-cell">\s*[\s\S]*?<span>([\d.]+)%<\/span>\s*<\/td>/)
 
-    // Extract pass rate: td with exactly class="bar-cell" (cost cell has "bar-cell cost-bar-cell")
-    const barCellMatch = rowHtml.match(
-      /<td\s+class="bar-cell">\s*[\s\S]*?<span>([\d.]+)%<\/span>\s*<\/td>/
-    )
+      if (modelSpanMatch && barCellMatch) {
+        const model = decodeEntities(modelSpanMatch[1].trim())
+        const passRate = parseFloat(barCellMatch[1])
 
-    if (modelSpanMatch && barCellMatch) {
-      const model = decodeEntities(modelSpanMatch[1].trim())
-      const passRate = parseFloat(barCellMatch[1])
-
-      // Sanity-check: pass rate should be 0–100, model name non-empty
-      if (model && !seen.has(model) && passRate >= 0 && passRate <= 100) {
-        seen.add(model)
-        entries.push({ model, passRate })
+        if (model && !seen.has(model) && passRate >= 0 && passRate <= 100) {
+          seen.add(model)
+          entries.push({ model, passRate })
+        }
       }
     }
-  }
 
-  return entries
-    .sort((a, b) => b.passRate - a.passRate)
-    .slice(0, 20)
+    const sorted = entries.sort((a, b) => b.passRate - a.passRate).slice(0, 20)
+    if (sorted.length > 0) {
+      console.log(`[aider] HTML fallback: ${sorted.length} models loaded`)
+    }
+    return sorted
+  } catch (err) {
+    console.warn('[aider] HTML fallback failed:', err)
+    return []
+  }
+}
+
+// ─── Public API ───────────────────────────────────────────
+
+export async function fetchAiderLeaderboard(): Promise<AiderEntry[]> {
+  const yaml = await fetchFromGitHubYaml()
+  if (yaml.length > 0) return yaml
+
+  console.warn('[aider] GitHub YAML failed, trying HTML fallback')
+  const html = await fetchFromHtml()
+  if (html.length > 0) return html
+
+  console.warn('[aider] All aider sources failed')
+  return []
 }

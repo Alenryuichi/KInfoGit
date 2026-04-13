@@ -40,7 +40,12 @@ export function BenchmarkSection({ benchmark, description, tableContent }: Bench
           </button>
         </div>
       </div>
-      <p className="text-sm text-gray-500 mb-5">{description}</p>
+      <p className="text-sm text-gray-500 mb-5">
+        {description}
+        {benchmark.lastUpdated && (
+          <span className="ml-2 text-xs text-gray-600">· 数据更新: {benchmark.lastUpdated}</span>
+        )}
+      </p>
 
       {/* Content */}
       <AnimatePresence mode="wait">
@@ -55,7 +60,7 @@ export function BenchmarkSection({ benchmark, description, tableContent }: Bench
             <HorizontalBarChart
               data={benchmark.topN}
               maxValue={benchmark.maxValue}
-              minValue={benchmark.minValue}
+              minValue={benchmark.minValue ?? undefined}
               unit={benchmark.unit}
             />
           </motion.div>

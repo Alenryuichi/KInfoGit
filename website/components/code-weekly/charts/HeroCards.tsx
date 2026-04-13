@@ -6,7 +6,8 @@ export interface BenchmarkSummary {
   title: string
   unit: string
   maxValue: number
-  minValue?: number
+  minValue?: number | null
+  lastUpdated?: string | null
   topN: Array<{ label: string; value: number; org: string }>
 }
 

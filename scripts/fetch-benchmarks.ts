@@ -22,7 +22,7 @@ if (fs.existsSync(envPath)) {
 }
 
 import { BENCHMARKS_DIR, BENCHMARKS_HISTORY_DIR } from './code-weekly/config'
-import { fetchArenaRankings, type ArenaEntry } from './code-weekly/sources/arena-rankings'
+import { fetchArenaRankings, fetchArenaPublishDate, type ArenaEntry } from './code-weekly/sources/arena-rankings'
 import { fetchAiderLeaderboard, type AiderEntry } from './code-weekly/sources/aider-leaderboard'
 import { fetchSweBench } from './code-weekly/sources/swe-bench'
 import { fetchBigCodeBench } from './code-weekly/sources/bigcodebench'
@@ -35,10 +35,15 @@ interface BenchmarkSnapshot {
   arenaRanking: Array<ArenaEntry & { delta: number | null }>
   arenaPublishDate?: string
   aiderLeaderboard: Array<AiderEntry & { delta: number | null }>
+  aiderLastUpdated?: string
   sweBench: Array<{ model: string; resolved: number; org?: string }>
+  sweBenchLastUpdated?: string
   bigCodeBench: Array<{ model: string; passRate: number; completeRate: number; size?: number }>
+  bigCodeBenchLastUpdated?: string
   evalPlus: Array<{ model: string; humanEvalPlus: number; mbppPlus: number; average: number; size?: number }>
+  evalPlusLastUpdated?: string
   liveCodeBench: Array<{ model: string; passRate: number; easy?: number; medium?: number; hard?: number }>
+  liveCodeBenchLastUpdated?: string
   notable: string
   updatedAt: string
 }
@@ -86,15 +91,14 @@ function calculateAiderDelta(
   }))
 }
 
-// ─── Arena publish date ────────────────────────────────────
+// ─── Fetch Last-Modified date from HTTP header ─────────────
 
-async function fetchArenaPublishDate(): Promise<string | undefined> {
+async function fetchLastModified(url: string): Promise<string | undefined> {
   try {
-    const url = 'https://datasets-server.huggingface.co/rows?dataset=lmarena-ai/leaderboard-dataset&config=webdev&split=latest&offset=0&length=1'
-    const res = await fetch(url, { headers: { 'User-Agent': 'KInfoGit-Code-Weekly' } })
-    if (!res.ok) return undefined
-    const data = await res.json() as { rows: Array<{ row: { leaderboard_publish_date?: string } }> }
-    return data.rows?.[0]?.row?.leaderboard_publish_date || undefined
+    const res = await fetch(url, { method: 'HEAD', headers: { 'User-Agent': 'Mozilla/5.0' } })
+    const lm = res.headers.get('last-modified')
+    if (lm) return new Date(lm).toISOString().slice(0, 10)
+    return undefined
   } catch {
     return undefined
   }
@@ -116,9 +120,10 @@ async function main() {
 
   const previous = loadPreviousSnapshot(benchDir)
 
-  // Fetch all 6 benchmarks in parallel
+  // Fetch all 6 benchmarks + dates in parallel
   console.log('📡 Fetching benchmark data...')
-  const [arenaR, aiderR, sweR, bcbR, epR, lcbR, dateR] = await Promise.allSettled([
+  const [arenaR, aiderR, sweR, bcbR, epR, lcbR, dateR,
+    aiderDateR, bcbDateR, epDateR] = await Promise.allSettled([
     fetchArenaRankings(),
     fetchAiderLeaderboard(),
     fetchSweBench(),
@@ -126,6 +131,9 @@ async function main() {
     fetchEvalPlus(),
     fetchLiveCodeBench(),
     fetchArenaPublishDate(),
+    fetchLastModified('https://aider.chat/docs/leaderboards/'),
+    fetchLastModified('https://bigcode-bench.github.io/results.json'),
+    fetchLastModified('https://evalplus.github.io/results.json'),
   ])
 
   const arenaRaw = arenaR.status === 'fulfilled' ? arenaR.value : []
@@ -135,12 +143,15 @@ async function main() {
   const epRaw = epR.status === 'fulfilled' ? epR.value : []
   const lcbRaw = lcbR.status === 'fulfilled' ? lcbR.value : []
   const arenaDate = dateR.status === 'fulfilled' ? dateR.value : undefined
+  const aiderDate = aiderDateR.status === 'fulfilled' ? aiderDateR.value : undefined
+  const bcbDate = bcbDateR.status === 'fulfilled' ? bcbDateR.value : undefined
+  const epDate = epDateR.status === 'fulfilled' ? epDateR.value : undefined
 
-  console.log(`  Arena Coding:    ${arenaRaw.length} models${arenaDate ? ` (published ${arenaDate})` : ''}`)
-  console.log(`  Aider:           ${aiderRaw.length} models`)
+  console.log(`  Arena Coding:    ${arenaRaw.length} models${arenaDate ? ` (${arenaDate})` : ''}`)
+  console.log(`  Aider:           ${aiderRaw.length} models${aiderDate ? ` (${aiderDate})` : ''}`)
   console.log(`  SWE-bench:       ${sweRaw.length} models`)
-  console.log(`  BigCodeBench:    ${bcbRaw.length} models`)
-  console.log(`  EvalPlus:        ${epRaw.length} models`)
+  console.log(`  BigCodeBench:    ${bcbRaw.length} models${bcbDate ? ` (${bcbDate})` : ''}`)
+  console.log(`  EvalPlus:        ${epRaw.length} models${epDate ? ` (${epDate})` : ''}`)
   console.log(`  LiveCodeBench:   ${lcbRaw.length} models`)
 
   // Calculate deltas for Arena & Aider
@@ -164,10 +175,15 @@ async function main() {
     arenaRanking,
     arenaPublishDate: arenaDate,
     aiderLeaderboard,
+    aiderLastUpdated: aiderDate,
     sweBench: sweRaw,
+    sweBenchLastUpdated: undefined, // SWE-bench date is embedded in data, not HTTP header
     bigCodeBench: bcbRaw,
+    bigCodeBenchLastUpdated: bcbDate,
     evalPlus: epRaw,
+    evalPlusLastUpdated: epDate,
     liveCodeBench: lcbRaw,
+    liveCodeBenchLastUpdated: undefined,
     notable: notableChanges.join('; ') || 'No significant changes',
     updatedAt: new Date().toISOString(),
   }

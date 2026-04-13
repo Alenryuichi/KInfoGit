@@ -66,6 +66,11 @@ export interface BenchmarkData {
   notable?: string
   updatedAt?: string
   arenaPublishDate?: string
+  aiderLastUpdated?: string
+  sweBenchLastUpdated?: string
+  bigCodeBenchLastUpdated?: string
+  evalPlusLastUpdated?: string
+  liveCodeBenchLastUpdated?: string
 }
 
 export interface BlogPost {
