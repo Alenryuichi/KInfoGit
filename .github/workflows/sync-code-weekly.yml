@@ -2,8 +2,8 @@ name: Sync Code Weekly
 
 on:
   schedule:
-    # Weekly report: Sunday UTC 04:00 (Beijing 12:00)
-    - cron: '0 4 * * 0'
+    # Weekly report: Monday UTC 04:00 (Beijing 12:00) — generates last week's report
+    - cron: '0 4 * * 1'
     # Benchmarks: Daily UTC 05:00 (Beijing 13:00)
     - cron: '0 5 * * *'
   workflow_dispatch:
@@ -29,7 +29,7 @@ jobs:
     runs-on: ubuntu-latest
     # Run weekly job on Sunday schedule or manual trigger with weekly/all
     if: >
-      (github.event.schedule == '0 4 * * 0') ||
+      (github.event.schedule == '0 4 * * 1') ||
       (github.event_name == 'workflow_dispatch' && (github.event.inputs.task == 'weekly' || github.event.inputs.task == 'all'))
 
     steps:

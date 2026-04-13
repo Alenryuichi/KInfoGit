@@ -60,9 +60,13 @@ function getWeekDateRange(date: Date): string {
 
 async function main() {
   console.log('🚀 Code Weekly — starting data collection...\n')
+  // Use yesterday's date to determine the week — the script runs on Monday
+  // and should generate the report for the previous week (Mon–Sun).
   const now = new Date()
-  const week = getISOWeek(now)
-  const dateRange = getWeekDateRange(now)
+  const yesterday = new Date(now)
+  yesterday.setDate(now.getDate() - 1)
+  const week = getISOWeek(yesterday)
+  const dateRange = getWeekDateRange(yesterday)
 
   console.log(`📅 Week: ${week} (${dateRange})\n`)
 
