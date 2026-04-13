@@ -8,6 +8,8 @@ import { BlogPost, getAllBlogPosts, getBlogPost } from '@/lib/data'
 import { stripMarkdownTitle } from '@/lib/utils'
 import { siteConfig } from '@/lib/config'
 import { ArrowLeftIcon } from '@heroicons/react/24/outline'
+import { BusuanziCounter } from '@/components/BusuanziCounter'
+import { BlogComments } from '@/components/BlogComments'
 
 interface AdjacentPost {
   slug: string
@@ -103,6 +105,8 @@ export default function BlogPostPage({ post, prevPost, nextPost }: BlogPostPageP
               <span>{post.readTime}</span>
               <span className="text-white/10 select-none">·</span>
               <span className="text-gray-300">{post.category}</span>
+              <span className="text-white/10 select-none">·</span>
+              <BusuanziCounter key={post.slug} />
             </div>
 
             {/* Tags */}
@@ -170,6 +174,9 @@ export default function BlogPostPage({ post, prevPost, nextPost }: BlogPostPageP
                 )}
               </nav>
             )}
+
+            {/* Comments */}
+            <BlogComments />
           </article>
 
             {/* Desktop TOC — positioned in right margin */}
