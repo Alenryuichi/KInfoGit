@@ -70,7 +70,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git commit -m "chore: sync code weekly report [skip ci]"
+          git commit -m "chore: sync code weekly report"
           git push
 
   benchmarks:
@@ -96,8 +96,6 @@ jobs:
         run: npm install tsx
 
       - name: Fetch Benchmarks
-        env:
-          TAVILY_API_KEY: ${{ secrets.TAVILY_API_KEY }}
         run: npx tsx scripts/fetch-benchmarks.ts
 
       - name: Check for changes
@@ -115,5 +113,5 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git commit -m "chore: sync benchmark data [skip ci]"
+          git commit -m "chore: sync benchmark data"
           git push
