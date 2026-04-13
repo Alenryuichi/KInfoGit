@@ -9,7 +9,7 @@ on:
       - master
   workflow_dispatch:
   schedule:
-    - cron: '0 0 * * *'  # 每天 UTC 00:00 (北京时间 08:00) 自动构建
+    - cron: '0 4 * * *'  # 每天 UTC 04:00 (北京时间 12:00) 自动构建，确保在所有数据同步(00:00-03:00)完成后执行
 
 permissions:
   contents: read
