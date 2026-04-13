@@ -58,10 +58,13 @@ function extractAtomLink(xml: string): string {
 
 function extractDate(itemXml: string): string {
   // RSS: <pubDate>, Atom: <published> or <updated>
-  return extractTag(itemXml, 'pubDate')
+  const raw = extractTag(itemXml, 'pubDate')
     || extractTag(itemXml, 'published')
     || extractTag(itemXml, 'updated')
     || ''
+  // Some feeds (e.g. Vercel Atom) emit literal "null" — treat as empty
+  if (!raw || raw === 'null' || raw === 'undefined') return ''
+  return raw
 }
 
 async function fetchFeed(feed: RssFeedConfig): Promise<RssArticle[]> {
