@@ -4,8 +4,18 @@
     <title>Stars &amp; Posts — Kylin Miao</title>
     <link>https://kylinmiao.me/stars/</link>
     <description>Daily curated GitHub starred repos and Bluesky posts from AI leaders with AI-powered summaries.</description>
-    <lastBuildDate>Mon, 13 Apr 2026 04:00:12 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 13 Apr 2026 08:00:49 GMT</lastBuildDate>
     <atom:link href="https://kylinmiao.me/stars/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Stars &amp; Posts — 2026-04-13</title>
+      <link>https://kylinmiao.me/stars/2026-04-13/</link>
+      <guid isPermaLink="true">https://kylinmiao.me/stars/2026-04-13/</guid>
+      <pubDate>Mon, 13 Apr 2026 12:00:00 GMT</pubDate>
+      <description>Today&apos;s focus is on the intersection of AI and academic culture, with a notable project offering a critical lens on research trends. A standout tool is a LinkedIn feed overlay that performs importance sampling based on conference acceptance rates, surfacing anonymized rejected paper posts to provide a more balanced view of the research landscape. This sparks discussion on the visibility of failure and the metrics driving academic prestige, highlighting a community push for greater transparency beyond publication successes.
+
+Bluesky Posts:
+* angela zhou: a linkedin feed overlay that will do importance sampling based on acceptance rates at various venues and pull up some (anonymized) rejected paper post...</description>
+    </item>
     <item>
       <title>Stars &amp; Posts — 2026-04-12</title>
       <link>https://kylinmiao.me/stars/2026-04-12/</link>
@@ -14,11 +24,23 @@
       <description>Today&apos;s focus is on the upcoming CHI 2026 conference, with Mark Riedl highlighting his lab&apos;s novel API for generating counterfactual explanations within agentic AI workflows, a key step toward making complex AI pipelines more interpretable. In model releases, Nathan Lambert notes that the recently launched Gemma 4 models are seeing a slight edge over comparable Qwen 3.5 versions in download velocity, indicating strong developer interest. The overall theme is practical advancement, bridging cutting-edge research in human-computer interaction with the rapid adoption of new, open-weight models.
 
 Bluesky Posts:
+* Mark Riedl: Regardless of one’s personal beliefs about AI or Mr Altman, this is not appropriate
+* Mark Riedl: Fortunately, I speak fluent LLM, and... no, dear emailer, I do not have bandwidth to mentor a high school student at this time, sorry.
 * Mark Riedl: CHI 2026 is right around the corner. Here is some cool stuff from my lab.
 
 1. Counterfactual Explanations for Agentic Workflows (github.com/eilab-gt/e...
 * Mark Riedl: I am?
-* Nathan Lambert: a bit over 7 days out from the Gemma 4 release and it&apos;s models are outpacing (slightly) the equivalent Qwen 3.5 models on downloads. Big numbers!</description>
+* Marc Lanctot: The Amazing Digital Circus Episode 9 &quot;The Last Act&quot; is coming out June 19th!
+
+And get this:... itwill be shown (with episode 8) in THEATRES June 4th!!...
+* Marc Lanctot: More Bluesky icons spotted in the wild! 🦋😀
+
+Just discovered a game called &quot;The Castle&quot;🏰 by @pointpixeladv.bsky.social : a #retrogames adventure ins...
+* Nathan Lambert: a bit over 7 days out from the Gemma 4 release and it&apos;s models are outpacing (slightly) the equivalent Qwen 3.5 models on downloads. Big numbers!
+* Chris Rackauckas: Real-world telemetry data and Internet of Things collide with scientific machine learning #sciml? Devices which can learn how to adapt to reality and ...
+* Ethan Mollick: Currently, ChatGPT has the best way of viewing thinking traces, a short summary of steps in the main window, and a detailed audit in the sidebar if yo...
+* Ethan Mollick: It is notable that the hot debate in AI engineering is exactly which markdown files are most important to feed AI (skills, memory, tool instructions) ...
+* Emily M. Bender: Join us tomorrow!</description>
     </item>
     <item>
       <title>Stars &amp; Posts — 2026-04-11</title>
@@ -40,7 +62,14 @@ share.google/xHwAIaMQuFzz...
 Out of curiosity, I checked out the journal and the first paper has an LLM a...
 * Nathan Lambert: Great stuff happening as we start to build out the codebases for my RLHF book (sorry, I haven&apos;t had much time until now!). Very accessible to issues, ...
 * Nathan Lambert: In 5-10 years, as models get more expensive &amp; capable, I see the funding structures and support for open models breaking down. We need to consider if ...
-* hardmaru: A “Neural Computer” is built by adapting video generation architectures to train a World Model of an actual computer that can directly simulate a comp...</description>
+* hardmaru: A “Neural Computer” is built by adapting video generation architectures to train a World Model of an actual computer that can directly simulate a comp...
+* Ethan Mollick: A lot of our education on writing well focuses on logic, clarity, and argument. AI will force us to think more about style. The boredom that comes fro...
+* Ethan Mollick: Neat experiment finds AI fact checks on Twitter are rated as more helpful &amp; less ideological than human ones.
+
+&quot;LLM-generated Community Notes can achi...
+* Emily M. Bender: @poetofcode.bsky.social の面白くて重要な本は今日本語版があります。
+
+book.impress.co.jp/books/112410...</description>
     </item>
     <item>
       <title>Stars &amp; Posts — 2026-04-10</title>
@@ -49,19 +78,13 @@ Out of curiosity, I checked out the journal and the first paper has an LLM a...
       <pubDate>Fri, 10 Apr 2026 12:00:00 GMT</pubDate>
       <description>Today&apos;s discussions spotlight AI reliability and practical learning. Mark Riedl highlights critical vulnerabilities in &quot;vibe-coded&quot; software and the real-world consequences of AI failures, comparing problematic government chatbots to Air Canada&apos;s legal troubles. In educational resources, Jia-Bin Huang&apos;s curated YouTube playlist offers a modern explainer on Transformer architectures, while Gus shares enthusiasm for on-device AI, specifically praising the interactive experience with Gemma 4. Meanwhile, the community continues to rally around Bluesky, noting its growth as a preferred platform for academic associations and a refuge from throttled alternatives.
 
+GitHub Repos:
+* openai/symphony — Symphony turns project work into isolated, autonomous implementation runs, allowing teams to manage work instead of supervising coding agents. [Elixir]
+* ekzhang/jax-js — JAX in JavaScript – ML library for the web, running on WebGPU &amp; Wasm [TypeScript]
+
 Bluesky Posts:
 * Mark Riedl: studying the vulnerabilities in vibe-coded software www.cc.gatech.edu/news/bad-vib...
 * Mark Riedl: Chatbots in local government are having their Air Canada moment
-* Jia-Bin Huang: **Modern Transformer architecture explained**
-
-I compiled a list of videos on the Transformer architecture into a short &quot;YouTube course&quot;.
-
-www.youtube...
-* Gus: You should try this app!
-
-Playing with Gemma 4 on device is super fun!
-* Mina Kimes: I can&apos;t stop laughing at this post. It&apos;s perfect.
-* Christian Wolf: This is exactly what I needed ...
 * Marc Lanctot: Another academic conference / association on Bulesky! 👍
 * Marc Lanctot: The last straw for me was when Twitter starting throttling the non-paying users. I stopped using it when that was clearly happening, in early 2024.
 * Marc Lanctot: 50 goals for Cole Caufield!! #gohabsgo
@@ -72,10 +95,26 @@ Last time it was achieved for the @canadiens.com was 36 years ago!
 
 In the ...
 * Marc Lanctot: Some great points in this post! Bluesky first in the list of alternative platforms, and *another* Bluesky share button spotted in the wild! Let&apos;s go!!...
-* bluestatedon.bsky.social: Maybe it’s no longer a fictional condition…
+* Nathan Lambert: Incredible video. Very pure experience in why so many of us love science. www.youtube.com/watch?v=oaXR...
+* Ethan Mollick: Our Lab just posted a new research report from Zimran Ahmed about how the game industry is adapting to AI. He spoke to people at 20 different studios ...
+* Ethan Mollick: AI finally lets us see Raphael&apos;s The School of Athens the way Raphael obviously intended it, illustrating the delicate dance and subtle conflicts betw...
+* Ethan Mollick: So we now have a pretty good picture of the state of the frontier AI model makers. 1/
 
-Bixonimania: the inability of AI systems to discern the difference between factual reality and bullshit.
-* Nathan Lambert: Incredible video. Very pure experience in why so many of us love science. www.youtube.com/watch?v=oaXR...</description>
+US closed source models continue to lead. Google, OpenAI, and A...
+* Ethan Mollick: All is not lost. Duckerton is still possible.
+
+Here is Seedance 2.0 with the same prompt.
+* Emily M. Bender: We are super excited for the next Mystery AI Hype Theater 3000 when @alexhanna.bsky.social and I get to talk with Carmen Maria Machado about the use o...
+* Emily M. Bender: NYC(-area) folks -- two events coming up!!
+
+1) The first ever LIVE taping of Mystery AI Hype Theater 3000, April 30
+
+bsky.app/profile/alex...
+
+&gt;&gt;
+* angela zhou: Zohran&apos;s teams&apos; videos are most NYC john wilson thing since John Wilson, and now they are 2x John Wilson
+* angela zhou: 📣 Philanthropists shouldn&apos;t condition nonprofit funding on AI innovation because LLMs and compute are expensive
+* Ben Recht: Solving the game of prediction with calibration and accounting strategies: A lecture blog post on defensive forecasting.</description>
     </item>
     <item>
       <title>Stars &amp; Posts — 2026-04-09</title>
@@ -86,32 +125,11 @@ Bixonimania: the inability of AI systems to discern the difference between factu
 
 GitHub Repos:
 * jsoma/natural-pdf — A friendly library for working with PDFs [Jupyter Notebook]
+* prawnydagrate/rschess — A Rust chess library with the aim to be as feature-rich as possible [Rust]
+* pkooij/open-arms-mini — open-arms-mini: cheap human like teleoperation device that supports human in the loop corrections
 
 Bluesky Posts:
 * Mark Riedl: Having too many transformers is a problem because we don&apos;t have enough transformers
-* Electronic Frontier Foundation: After almost twenty years on the platform, EFF is logging off of X.
-
-This isn’t a decision we made lightly, but it might be overdue. 🧵 (1/5)
-www.eff....
-* max 🌌: 
-* Janelle Shane: Food generally tastes less flavorful in space, hence the prime importance of hot sauce!
-* Karl Weinmeister: Running powerful local models on your phone is now a reality.
-
-The Google AI Edge Gallery goes way beyond chat with agent skills, device control, and ...
-* Don Moynihan: &quot;To put it bluntly, an X post today receives less than 3% of the views a single tweet delivered seven years ago.&quot; 
-If you think it is necessary to be ...
-* Srinath Padmanabhan: Gemini CLI v0.37.0 is here! 🚀
-
-• 🌐 Experimental Browser Agent 
-• 🛡️ Enhanced Sandbox Security 
-• 🎨 New Tokyo Night Theme 
-• ☁️ Google Cloud (gclou...
-* Bluesky: More and more organizations, publishers, and creators are abandoning legacy platforms that throttle their reach. Bluesky gives them a direct line to t...
-* Natalie Collina: Excited to give a tutorial this year at ICML 2026!
-* Maria Antoniak: My #atscience talk about Lea is now online! If you&apos;ve only ever heard me talk about NLP, here&apos;s a chance to hear me rant about #atproto (the protocol ...
-* Scott McGrath: Lea is an awesome idea being brought to life by @mariaa.bsky.social and @eugenevinitsky.bsky.social
-
-I definitely recommend watching the video to lear...
 * Marc Lanctot: Ok so first of the three biographies: I am Glad My Mom Died by Jeannette McCurdy.
 
 Provocative title, amazing book about a child actress who was pushe...
@@ -119,7 +137,10 @@ Provocative title, amazing book about a child actress who was pushe...
 * Nathan Lambert: 1. dont fall for anti open model fearmongering, but
 2. acknowledge that AI capabilities are proceeding fast, and eventually there may be a reason to b...
 * Nathan Lambert: My book, Reinforcement Learning from Human Feedback, is wrapping up and going into final production (copyediting, making pretty, formatting, etc.). Sh...
-* Nathan Lambert: Directionally, I agree with this piece, but it&apos;s important to note that this is the first blip in a long, slow transition towards a more hybrid model ...</description>
+* Nathan Lambert: Directionally, I agree with this piece, but it&apos;s important to note that this is the first blip in a long, slow transition towards a more hybrid model ...
+* Emily M. Bender: &quot;It is not about whether AI will help itself to your job. It is about whether the people who make AI are helping themselves to your country.&quot;
+* Emily M. Bender: Almost a year ago, I was described in the FT as &quot;a Cassandra with a wry grin and twinkling eye&quot;, and was entertained becaus Cassandra (famously) was r...
+* Naomi Saphra: I used to believe this and then I saw the budget requested for a traditional chemistry grant.</description>
     </item>
     <item>
       <title>Stars &amp; Posts — 2026-04-08</title>
@@ -130,17 +151,18 @@ Provocative title, amazing book about a child actress who was pushe...
 
 GitHub Repos:
 * PABannier/sam3.cpp — Fast state-of-the-art image and video segmentation in portable C/C++ [C++]
+* xl0/lovely-tensors — Tensors, for human consumption [Jupyter Notebook]
 
 Bluesky Posts:
 * Simon Willison: Pelicans for Meta&apos;s new Muse Spark models - plus I did a bit of a deep dive into the Code Interpreter and fascinating &quot;container.visual_grounding&quot; too...
-* Mark Riedl: Final results from the AI NCAA bracket tournament (got distracted by Artemis II flyby of the moon). The non-LLM baseline using Bayesian and Monte Carl...
 * Mark Riedl: So many people assume that story generation has been solved for a while. Mythos is showing one of the typical failure modes of LLM story generation: t...
 * Mark Riedl: Local NPR coverage of my work with Dr. Jennifer Kim on building LLM-based tools to support neurodivergent job seekers www.gpb.org/news/2026/03...
 * Marc Lanctot: I have strongly hesitated becoming too dependent on AI myself because I suspected some version of this would be true. 😭
-* Mia Sato: New: 150 unionized ProPublica workers are on strike TODAY over AI, layoff protections, wages, and more. 
+* Nathan Lambert: New report is out with the latest open model adoption data we have gathered for Interconnects &amp; The ATOM Project. At the surface level, we can see Chi...
+* Ethan Mollick: In different hands, Mythos would be an unprecedented cyberweapon
 
-They&apos;re asking readers to not visit ProPubli...
-* Nathan Lambert: New report is out with the latest open model adoption data we have gathered for Interconnects &amp; The ATOM Project. At the surface level, we can see Chi...</description>
+I am not sure how we deal with this, except to note a narrow window where we know on...
+* Ethan Mollick: I think the story that was shared in the Mythos System Card still has the signs of flawed LLM writing (which looks like good writing at a glance): A s...</description>
     </item>
     <item>
       <title>Stars &amp; Posts — 2026-04-07</title>
@@ -152,33 +174,28 @@ They&apos;re asking readers to not visit ProPubli...
 GitHub Repos:
 * mattmireles/gemma-tuner-multimodal — Fine-tune Gemma 4 and 3n with audio, images and text on Apple Silicon, using PyTorch and Metal Performance Shaders. [Python]
 * MemPalace/mempalace — The highest-scoring AI memory system ever benchmarked. And it&apos;s free. [Python]
+* mattmireles/gemma-tuner-multimodal — Fine-tune Gemma 4 and 3n with audio, images and text on Apple Silicon, using PyTorch and Metal Performance Shaders. [Python]
 
 Bluesky Posts:
-* Russ Cox: It has been quite the few weeks for “security work we are not going to tell you details of.”
 * Simon Willison: Wrote up some thoughts on Anthropic&apos;s Project Glassing, where their latest Opus-beating model is available to partnered security research organization...
 * Simon Willison: I&apos;m a big fan of the pelican GLM-5.1 drew me today, it even animated it! simonwillison.net/2026/Apr/7/g...
-* Kyle Reardon: Just so you know what kind of dork I am: I was looking at the Artemis II mission stuff and said to @kaylahornbrook.bsky.social, “The cutaway in those ...
 * Mark Riedl: *fondly remembers when GPT-2 was too dangerous to release*
-* Chris Stokel-Walker: 🚨 For nearly two years - and even now, depending on the day and model - AI models could tell you all about bixonimania, a totally made-up disease in ...
-* depths of wikipedia: this wikipedia editor is orbiting the moon right now!
-* Guillaume Laforge: 💎 The Google Gemma models are also available via the #Gemini Interactions API:
-
-github.com/glaforge/gem...
-
-(an example with my #Java SDK ☕️ showing ...
 * Marc Lanctot: Ok so it happened to me: paper cites our work with hallucinated author list and incorrect year. 
 
 (Luckily it&apos;s just arXiv so hopefully fixed by an em...
-* Paige Bailey (webpaige.dev): Demis Hassabis, co-founder &amp; CEO of DeepMind, is coming to YC! 🎉
+* Ethan Mollick: Oh no.
+* Ethan Mollick: SuperClaude (Mythos) still seems irreducibly Claude-y given the transcripts in the system card.
 
-&gt; Fireside chat w/ Garry Tan
-&gt; Keynote from DeepMind researchers 
-&gt; Talks &amp; live de...
-* NASA | ESA Space Updates: #Artemis II - The crew onboard the Orion are now witnessing a solar eclipse from behind the moon, something nobody from the history of humanity has ev...
-* Charlie Warzel: something strange and horrible and somehow fitting that we should have a very real threat of madman civilizational destruction at the very moment when...
-* Judd Legum: Whatever happens, this is a deeply shameful episode in American history that will leave a permanent stain on the country. 
+Here two versions of Mythos are forced to talk to eac...
+* Ethan Mollick: I was told about the Mythos release, but have no personal experience to add.
 
-Repeatedly vowing to commi...</description>
+Two points from brief:
+1) It is not built for IT software security, it i...
+* Ethan Mollick: I suspect that popularity of AI is going to start looking like surveys where people trust their own doctors but are distrustful of the medical establi...
+* angela zhou: brutal to read cover letters from revisions that sound like they are written by chatgpt 🫠 
+putting a lot of my cover letters to sound like they are w...
+* Ben Recht: A little more than a decade ago, a bunch of universities decided they needed to start schools of computing. What are the great success stories of this...
+* Ben Recht: Pulling from this week’s lecture and op-ed on silicon sampling, I map the territory of simulation and its many purposes.</description>
     </item>
     <item>
       <title>Stars &amp; Posts — 2026-04-06</title>
@@ -187,47 +204,21 @@ Repeatedly vowing to commi...</description>
       <pubDate>Mon, 06 Apr 2026 12:00:00 GMT</pubDate>
       <description>Today&apos;s tech community is captivated by the Artemis II mission, with AI leaders like Mark Riedl sharing humorous and poignant real-time reactions to the historic lunar flyby and communications blackout. Amidst the space excitement, NeurIPS 2026 announced a key deadline shift, moving its unified submission site opening to April 15th. Meanwhile, The Linux Foundation highlighted the immense economic impact of open source, underscoring its foundational role in global industry.
 
-Bluesky Posts:
-* NeurIPS Conference: The NeurIPS 2026 submission site opening has been moved to April 15th.
+GitHub Repos:
+* badlogic/pi-share-hf — Collect, review, and upload redacted pi session files to a Hugging Face dataset [TypeScript]
 
-Note that all tracks (Main Submission, Evaluations &amp; Datasets, and Position Pa...
-* Andrea L. Guzman, PhD: The Artemis crew can’t get any news from earth for the next few minutes, and I’m so jealous of them right now.
+Bluesky Posts:
 * Mark Riedl: Watched a large chunk of the Artemus II lunar flyby with members of my lab. Watching science and history being made together is time well spent!
 
 Ever...
 * Mark Riedl: Artemis II just set a record. No one has ever been farther from a fully operational toilet.
 * Mark Riedl: Forget inbox zero, now is the time for inbox... USS Enterprise.
-* NASA | ESA Space Updates: #Artemis II - They are back, Orion’s blackout has ended 
-
-Mission Control - “Integrity. we have you loud and clear”
-
-Orion - “Houston we have you the ...
-* The Linux Foundation: How much does #opensource contribute to the global economy?
-A new framework from LF Research, reviewed by Irving Wladawsky-Berger, shows developer con...
 * Marc Lanctot: And we&apos;re back! 👨‍🚀🌖🌙
 
 www.cbc.ca/news/science...
-* Marc Lanctot: How a minister and a GP created the UK&apos;s biggest tabletop gaming event - BBC News share.google/Cwuh7lxF63jY... 
-
-Expecting 50k participants this year ...
-* Marc Lanctot: Oh look at this: @pnas.org has a Bluesky share button! 🙌🥳 :success-kid.jpg:
-
-**And it comes before the LinkedIn one** 😁😎</description>
-    </item>
-    <item>
-      <title>Stars &amp; Posts — 2026-04-05</title>
-      <link>https://kylinmiao.me/stars/2026-04-05/</link>
-      <guid isPermaLink="true">https://kylinmiao.me/stars/2026-04-05/</guid>
-      <pubDate>Sun, 05 Apr 2026 12:00:00 GMT</pubDate>
-      <description>Today&apos;s discussions center on the practical challenges and regulatory shifts shaping AI development. Agentic engineering is a key theme, with Simon Willison highlighting nuanced pitfalls in relying on coding agents, while Mark Riedl points to the revealing &quot;Claude Code&quot; leak as a case study in fully AI-generated software. In a lighter note, LLMs&apos; limitations are underscored by their poor performance in predictive tasks like NCAA brackets. Meanwhile, regulatory focus is shifting, as noted by Jeff Horwitz, with China taking a distinct approach by targeting AI&apos;s impact on personal likeness and safety.
-
-Bluesky Posts:
-* Simon Willison: This is excellent, one of my favorite long-form pieces on agentic engineering - includes several non-obvious ways in which leaning on coding agents ca...
-* Mark Riedl: All the LLM-generated NCAA brackets are busted. The non-LLM baseline is the only bracket still alive
-* Mark Riedl: What does a product look like with 100% AI-written code look like? Reading about the Claude Code leak is fascinating. techtrenches.dev/p/the-snake-...
-* Jeff Horwitz: Chinese government decides to regulate AI from the right to personal likeness, child safety and addiction angles. 
-
-www.reuters.com/world/china/...</description>
+* Ben Recht: In this incredibly detailed and gracious review of “The Irrational Decision,” @himself.bsky.social  situates the book in the web of intellectual histo...
+* Ben Recht: In lieu of lecture blogging on simulation and prediction, check out this fortuitously timed op-ed in the NY Times by @leifw.bsky.social and me on the ...
+* Lijun An: Our work is now out in @natmed.nature.com www.nature.com/articles/s41... We developed a state-of-the-art AI-proteomics model for diagnosing multiple n...</description>
     </item>
   </channel>
 </rss>

@@ -30,6 +30,15 @@ const BLUESKY_HANDLES = [
   'tkipf.bsky.social',             // Thomas Kipf — Google DeepMind, GNNs
   'jonbarron.bsky.social',         // Jon Barron — Google DeepMind, neural rendering
   'phillipisola.bsky.social',      // Phillip Isola — MIT, generative models
+  // Recently active
+  'emollick.bsky.social',          // Ethan Mollick — Wharton, AI + education
+  'emilymbender.bsky.social',      // Emily M. Bender — UW, AI ethics
+  'nsaphra.bsky.social',           // Naomi Saphra — ML/NLP professor
+  'angelamczhou.bsky.social',      // Angela Zhou — USC, causal inference
+  'beenwrekt.bsky.social',         // Ben Recht — UC Berkeley, ML theory
+  'anlijuncn.bsky.social',         // Lijun An — AI + neuroscience
+  'claireve.bsky.social',          // Claire Vernade — UT Nuremberg, RL
+  'axz.bsky.social',               // Amy Zhang — UW, social computing
 ]
 
 const OUTPUT_DIR = path.join(__dirname, '..', 'profile-data', 'bluesky-posts')

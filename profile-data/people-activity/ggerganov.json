@@ -8,13 +8,16 @@
       "language": "C++",
       "stargazersCount": 261,
       "starredBy": "ggerganov",
-      "highlights": "",
-      "worthReading": "",
+      "highlights": "A fast, portable C/C++ implementation of state-of-the-art image and video segmentation, enabling efficient segmentation tasks without heavy dependencies. It provides real-time performance for both images and videos with tracking capabilities.",
+      "worthReading": "For developers needing high-performance segmentation in resource-constrained environments or wanting to integrate segmentation into C/C++ applications without Python overhead.",
       "topics": [
         "image-segmentation",
         "segment-anything",
         "video-segmentation",
         "video-tracking"
+      ],
+      "tags": [
+        "multi-modal"
       ],
       "type": "github"
     }
@@ -54,5 +57,5 @@
     0,
     0
   ],
-  "interestSummary": "Georgi Gerganov is focused on efficient, portable C/C++ implementations, as shown by his interest in a fast, state-of-the-art image and video segmentation library."
+  "interestSummary": "They are focused on efficient, portable C/C++ implementations of AI models, as evidenced by their interest in a fast segmentation library."
 }

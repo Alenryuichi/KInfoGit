@@ -22,6 +22,17 @@ const GITHUB_USERS = [
   'thomwolf',        // Thomas Wolf — Hugging Face co-founder
   'soumith',         // Soumith Chintala — PyTorch creator
   'fchollet',        // François Chollet — Keras creator
+  // High-frequency starrers
+  'minimaxir',       // Max Woolf — AI tools & content creator
+  'pcuenca',         // Pedro Cuenca — Hugging Face
+  'cfahlgren1',      // Caleb Fahlgren — Hugging Face Spaces
+  'lucidrains',      // Phil Wang — paper implementations
+  'merveenoyan',     // Merve Noyan — Hugging Face DevRel
+  'srush',           // Sasha Rush — Cornell, Mamba
+  'stas00',          // Stas Bekman — Hugging Face, training
+  'younesbelkada',   // Younes Belkada — Hugging Face, PEFT
+  'sayakpaul',       // Sayak Paul — Hugging Face, diffusion
+  'philschmid',      // Philipp Schmid — Hugging Face, deployment
 ]
 const OUTPUT_DIR = path.join(__dirname, '..', 'profile-data', 'github-stars')
 const DEEPSEEK_API_KEY = process.env.DEEPSEEK_API_KEY || ''
