@@ -35,6 +35,7 @@ const navigation = [
   { name: 'Work', href: '/work' },
   { name: 'Blog', href: '/blog' },
   { name: 'AI Daily', href: '/ai-daily/' },
+  { name: 'Code', href: '/code/' },
   { name: 'Stars', href: '/stars' },
 ]
 
@@ -44,6 +45,7 @@ const TYPE_COLORS: Record<string, string> = {
   Blog: 'bg-blue-500/20 text-blue-300 border-blue-400/30',
   Stars: 'bg-amber-500/20 text-amber-300 border-amber-400/30',
   'AI Daily': 'bg-cyan-500/20 text-cyan-300 border-cyan-400/30',
+  Code: 'bg-green-500/20 text-green-300 border-green-400/30',
   Work: 'bg-purple-500/20 text-purple-300 border-purple-400/30',
   About: 'bg-emerald-500/20 text-emerald-300 border-emerald-400/30',
 }
@@ -119,6 +121,7 @@ export function Header({ onBookCallClick }: HeaderProps) {
     if (path.startsWith('/work')) return 'Work'
     if (path.startsWith('/blog')) return 'Blog'
     if (path.startsWith('/ai-daily')) return 'AI Daily'
+    if (path.startsWith('/code')) return 'Code'
     if (path.startsWith('/stars')) return 'Stars'
     return 'Home'
   }

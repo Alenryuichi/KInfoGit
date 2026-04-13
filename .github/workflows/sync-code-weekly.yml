@@ -1,0 +1,119 @@
+name: Sync Code Weekly
+
+on:
+  schedule:
+    # Weekly report: Sunday UTC 04:00 (Beijing 12:00)
+    - cron: '0 4 * * 0'
+    # Benchmarks: Daily UTC 05:00 (Beijing 13:00)
+    - cron: '0 5 * * *'
+  workflow_dispatch:
+    inputs:
+      task:
+        description: 'Which task to run'
+        required: false
+        default: 'all'
+        type: choice
+        options:
+          - all
+          - weekly
+          - benchmarks
+
+env:
+  NODE_VERSION: '20'
+
+permissions:
+  contents: write
+
+jobs:
+  code-weekly:
+    runs-on: ubuntu-latest
+    # Run weekly job on Sunday schedule or manual trigger with weekly/all
+    if: >
+      (github.event.schedule == '0 4 * * 0') ||
+      (github.event_name == 'workflow_dispatch' && (github.event.inputs.task == 'weekly' || github.event.inputs.task == 'all'))
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      - name: Install tsx
+        run: npm install tsx
+
+      - name: Fetch Code Weekly
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          TAVILY_API_KEY: ${{ secrets.TAVILY_API_KEY }}
+          BAILIAN_API_KEY: ${{ secrets.BAILIAN_API_KEY }}
+        run: npx tsx scripts/fetch-code-weekly.ts
+
+      - name: Check for changes
+        id: check_changes
+        run: |
+          git add .
+          if git diff --staged --quiet; then
+            echo "has_changes=false" >> $GITHUB_OUTPUT
+          else
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Commit and push changes
+        if: steps.check_changes.outputs.has_changes == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git commit -m "chore: sync code weekly report [skip ci]"
+          git push
+
+  benchmarks:
+    runs-on: ubuntu-latest
+    # Run benchmarks on daily schedule or manual trigger with benchmarks/all
+    if: >
+      (github.event.schedule == '0 5 * * *') ||
+      (github.event_name == 'workflow_dispatch' && (github.event.inputs.task == 'benchmarks' || github.event.inputs.task == 'all'))
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      - name: Install tsx
+        run: npm install tsx
+
+      - name: Fetch Benchmarks
+        env:
+          TAVILY_API_KEY: ${{ secrets.TAVILY_API_KEY }}
+        run: npx tsx scripts/fetch-benchmarks.ts
+
+      - name: Check for changes
+        id: check_changes
+        run: |
+          git add .
+          if git diff --staged --quiet; then
+            echo "has_changes=false" >> $GITHUB_OUTPUT
+          else
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Commit and push changes
+        if: steps.check_changes.outputs.has_changes == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git commit -m "chore: sync benchmark data [skip ci]"
+          git push
