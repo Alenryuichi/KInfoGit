@@ -1,8 +1,6 @@
-import { useRef, useState, MouseEvent, useEffect } from 'react'
+import { useRef, useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Terminal, Mail, Github, Linkedin, Trophy, Smartphone, Mountain, FileDown, Users } from 'lucide-react'
-import { SpotlightCard } from './SpotlightCard'
-import { TextReveal } from './TextReveal'
+import { Mail, Github, Linkedin, FileDown, Users } from 'lucide-react'
 
 const PROFILE_IMAGES = [
   '/images/profile-1.jpg',
@@ -15,11 +13,15 @@ interface HighlightItem {
   label: string
   title: string
   description: string
-  icon: React.ComponentType<{ className?: string }>
   mediaType: 'video' | 'image'
   src: string
   poster?: string
-  color: string
+  colorTheme: {
+    text: string
+    bg: string
+    border: string
+  }
+  hudCode: string
 }
 
 const HIGHLIGHTS: HighlightItem[] = [
@@ -28,59 +30,31 @@ const HIGHLIGHTS: HighlightItem[] = [
     label: 'Athlete',
     title: 'Global Top 4',
     description: '2023 Pro Bodybuilding C Class',
-    icon: Trophy,
     mediaType: 'video',
     src: '/videos/athlete.mp4',
     poster: '/images/athlete-poster.jpg',
-    color: 'text-yellow-400'
+    colorTheme: { text: 'text-yellow-400', bg: 'bg-yellow-400/10', border: 'border-yellow-400/20' },
+    hudCode: 'ATH_01'
   },
   {
     id: 'maker',
     label: 'Maker',
     title: 'Betaline App',
     description: 'Indie iOS Climbing App',
-    icon: Smartphone,
     mediaType: 'video',
     src: '/videos/app-demo.mp4',
     poster: '/images/app-poster.jpg',
-    color: 'text-pink-400'
-  },
-  {
-    id: 'lifestyle',
-    label: 'Climber',
-    title: 'V3 Level',
-    description: 'Bouldering Enthusiast',
-    icon: Mountain,
-    mediaType: 'video',
-    src: '/videos/lifestyle.mp4',
-    poster: '/images/lifestyle-poster.jpg',
-    color: 'text-blue-400'
+    colorTheme: { text: 'text-pink-400', bg: 'bg-pink-400/10', border: 'border-pink-400/20' },
+    hudCode: 'MKR_02'
   }
 ]
 
-// --- Sub-component: MediaCard (Cinematic Video/Image Card) ---
+// --- Sub-component: MediaCard ---
 const MediaCard = ({ item }: { item: HighlightItem }) => {
   const videoRef = useRef<HTMLVideoElement>(null)
 
-  const handleMouseEnter = () => {
-    // Optional: Speed up video or unmute on hover? For now, just brightness.
-    if (videoRef.current) {
-      // videoRef.current.playbackRate = 1.5 // Example: Speed up
-    }
-  }
-
-  const handleMouseLeave = () => {
-    if (videoRef.current) {
-      // videoRef.current.playbackRate = 1.0
-    }
-  }
-
   return (
-    <div 
-      className="relative h-64 lg:h-80 rounded-3xl overflow-hidden group border border-white/10 bg-gray-900"
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-    >
+    <div className="relative w-full aspect-[4/3] sm:aspect-[16/9] rounded-2xl overflow-hidden group border border-white/10 bg-gray-900">
       {/* Media Layer */}
       <div className="absolute inset-0 z-0">
         {item.mediaType === 'video' ? (
@@ -92,265 +66,208 @@ const MediaCard = ({ item }: { item: HighlightItem }) => {
             muted
             loop
             playsInline
-            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-60 group-hover:opacity-100"
+            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100"
           />
         ) : (
           // eslint-disable-next-line @next/next/no-img-element
           <img 
             src={item.src} 
             alt={item.title} 
-            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-60 group-hover:opacity-100" 
+            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100" 
           />
         )}
       </div>
 
-      {/* Dark Gradient Overlay (Always visible for text readability) */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent z-10 transition-opacity duration-500 group-hover:opacity-80" />
+      {/* Dark Gradient Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent z-10 pointer-events-none opacity-80 group-hover:opacity-100 transition-opacity duration-500" />
+      
+      {/* HUD Corners */}
+      <div className="absolute inset-[10px] border border-white/10 pointer-events-none z-20 transition-all duration-500 ease-out group-hover:inset-[15px] group-hover:border-blue-400/40 group-hover:bg-blue-400/5 rounded-xl" />
 
       {/* Content Layer */}
-      <div className="absolute inset-0 z-20 p-6 flex flex-col justify-end">
-        <div className="transform transition-transform duration-500 group-hover:-translate-y-2">
-          {/* Icon & Label */}
-          <div className="flex items-center gap-2 mb-2 opacity-80 group-hover:opacity-100">
-            <div className={`p-1.5 rounded-lg bg-white/10 backdrop-blur-md border border-white/10 ${item.color}`}>
-              <item.icon className="w-4 h-4" />
-            </div>
-            <span className="text-xs font-bold text-white/80 uppercase tracking-widest">{item.label}</span>
-          </div>
-          
-          {/* Main Title */}
-          <h3 className="text-3xl font-bold text-white mb-1 leading-tight group-hover:text-white/100 transition-colors">
-            {item.title}
-          </h3>
-          
-          {/* Description */}
-          <p className="text-sm text-gray-400 font-medium group-hover:text-gray-300 transition-colors">
-            {item.description}
-          </p>
+      <div className="absolute bottom-6 left-6 z-20 font-mono transform transition-transform duration-500 group-hover:-translate-y-2">
+        <div className={`text-[10px] ${item.colorTheme.text} ${item.colorTheme.bg} ${item.colorTheme.border} px-2 py-0.5 rounded inline-block mb-3 uppercase tracking-widest border`}>
+            [{item.label}]
         </div>
+        <h3 className="text-3xl font-bold text-white mb-1 tracking-tight group-hover:text-white transition-colors">
+          {item.title}
+        </h3>
+        <p className="text-xs text-white/50 group-hover:text-white/70 transition-colors">
+          {item.description}
+        </p>
       </div>
 
-      {/* Spotlight Border Effect (Simple CSS) */}
-      <div className="absolute inset-0 border border-white/0 group-hover:border-white/20 rounded-3xl transition-colors duration-300 pointer-events-none z-30" />
+      {/* Decorative HUD Elements */}
+      <div className="absolute top-6 right-6 z-20 font-mono text-[9px] text-white/30 text-right opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
+        DAT: {item.hudCode}<br/>
+        STS: ACTIVE
+      </div>
     </div>
   )
 }
 
-// --- Sub-component: GlareCard (Kept for Profile Photo) ---
-const GlareCard = ({ children, className = "" }: { children: React.ReactNode, className?: string }) => {
-  const cardRef = useRef<HTMLDivElement>(null)
-  
-  const handleMouseMove = (e: MouseEvent<HTMLDivElement>) => {
-    if (!cardRef.current) return
-    const rect = cardRef.current.getBoundingClientRect()
-    const x = e.clientX - rect.left
-    const y = e.clientY - rect.top
-    const centerX = rect.width / 2
-    const centerY = rect.height / 2
-    
-    const rotateX = (y - centerY) / 15 // Reduced rotation sensitivity
-    const rotateY = (centerX - x) / 15
-    
-    cardRef.current.style.setProperty('--rotate-x', `${rotateX}deg`)
-    cardRef.current.style.setProperty('--rotate-y', `${rotateY}deg`)
-    cardRef.current.style.setProperty('--glare-x', `${(x / rect.width) * 100}%`)
-    cardRef.current.style.setProperty('--glare-y', `${(y / rect.height) * 100}%`)
-    cardRef.current.style.setProperty('--glare-opacity', '0.4') // Subtler glare
-  }
+// --- Sub-component: ProfileSlideshow ---
+const ProfileSlideshow = () => {
+  const [currentIdx, setCurrentIdx] = useState(0)
 
-  const handleMouseLeave = () => {
-    if (!cardRef.current) return
-    cardRef.current.style.setProperty('--rotate-x', `0deg`)
-    cardRef.current.style.setProperty('--rotate-y', `0deg`)
-    cardRef.current.style.setProperty('--glare-opacity', '0')
-  }
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentIdx((prev) => (prev + 1) % PROFILE_IMAGES.length)
+    }, 5000)
+    return () => clearInterval(timer)
+  }, [])
 
   return (
-    <div 
-      ref={cardRef}
-      onMouseMove={handleMouseMove}
-      onMouseLeave={handleMouseLeave}
-      className={`relative transition-transform duration-300 ease-out perspective-1000 ${className}`}
-      style={{
-        transform: 'rotateX(var(--rotate-x, 0deg)) rotateY(var(--rotate-y, 0deg))',
-        transformStyle: 'preserve-3d'
-      } as React.CSSProperties}
-    >
-      <div className="relative z-10 w-full h-full rounded-[2.5rem] overflow-hidden border border-white/10 bg-gray-900/40 backdrop-blur-2xl shadow-2xl">
-        {/* Glare Overlay */}
-        <div
-          className="pointer-events-none absolute inset-0 z-20 transition-opacity duration-500"
-          style={{
-            background: 'radial-gradient(circle at var(--glare-x, 50%) var(--glare-y, 50%), rgba(255,255,255,0.3) 0%, transparent 50%)',
-            opacity: 'var(--glare-opacity, 0)',
-            mixBlendMode: 'overlay'
-          } as React.CSSProperties}
+    <div className="relative w-full aspect-[4/3] sm:aspect-[16/9] rounded-2xl overflow-hidden group border border-white/10 bg-gray-900">
+      <AnimatePresence mode="wait">
+        <motion.img 
+          key={currentIdx}
+          src={PROFILE_IMAGES[currentIdx]}
+          alt="Kylin Miao Profile"
+          initial={{ opacity: 0, scale: 1.05 }}
+          animate={{ opacity: 1, scale: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 1 }}
+          className="absolute inset-0 w-full h-full object-cover filter grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700"
         />
-        {children}
+      </AnimatePresence>
+
+      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent z-10 pointer-events-none opacity-80 group-hover:opacity-100 transition-opacity duration-500" />
+      
+      {/* HUD Corners */}
+      <div className="absolute inset-[10px] border border-white/10 pointer-events-none z-20 transition-all duration-500 ease-out group-hover:inset-[15px] group-hover:border-emerald-400/40 group-hover:bg-emerald-400/5 rounded-xl" />
+
+      {/* Content */}
+      <div className="absolute bottom-6 left-6 z-20 font-mono transform transition-transform duration-500 group-hover:-translate-y-2">
+        <div className="flex gap-2 mb-3">
+          <div className="text-[10px] text-emerald-400 bg-emerald-400/10 border border-emerald-400/20 px-2 py-0.5 rounded inline-block uppercase tracking-widest">
+            [ Operator ]
+          </div>
+          <div className="text-[10px] text-white/50 bg-white/5 border border-white/10 px-2 py-0.5 rounded flex items-center gap-1.5 uppercase tracking-widest">
+            <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 shadow-[0_0_8px_#10b981] animate-pulse"></div>
+            Online
+          </div>
+        </div>
+        <h3 className="text-3xl font-bold text-white mb-1 tracking-tight">Kylin Miao</h3>
+        <p className="text-xs text-white/50 font-mono">Location: China</p>
+      </div>
+
+      <div className="absolute top-6 right-6 z-20 font-mono text-[9px] text-white/30 text-right opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
+        SYS_ID: K_001<br/>
+        ACC: AUTHORIZED
       </div>
     </div>
   )
 }
 
 export function About() {
-  const [currentImageIdx, setCurrentImageIdx] = useState(0)
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentImageIdx((prev) => (prev + 1) % PROFILE_IMAGES.length)
-    }, 5000)
-    return () => clearInterval(timer)
-  }, [])
-
   return (
-    <section id="about" className="relative py-20 overflow-hidden">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="max-w-6xl mx-auto">
-          {/* Section Header */}
-          <div className="mb-16">
-            <motion.p 
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="text-xs font-bold text-blue-500 mb-4 tracking-[0.3em] uppercase"
-            >
-              Beyond the Code
-            </motion.p>
-            <h2 className="text-5xl lg:text-7xl font-bold text-white leading-tight">
-              <TextReveal text="Crafting Digital" delay={0.1} />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-pink-500 animate-gradient-x">
-                Experiences.
-              </span>
-            </h2>
-          </div>
-
-          {/* Bento Grid Layout */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 mb-6">
+    <section id="about" className="relative pb-20">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 z-10 relative h-full max-w-7xl">
+        
+        <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-start">
             
-            {/* Bio Card (Occupies 7 cols) */}
-            <SpotlightCard className="lg:col-span-7 flex flex-col justify-center p-8 lg:p-12 group min-h-[400px]">
-              <div className="space-y-6">
+            {/* LEFT: Sticky Bio & Photo */}
+            <div className="w-full lg:w-5/12 lg:sticky lg:top-24 space-y-8 z-20">
+                <div>
+                    <motion.p 
+                      initial={{ opacity: 0, x: -20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      viewport={{ once: true }}
+                      className="font-mono text-emerald-400 text-[10px] sm:text-xs uppercase tracking-[0.3em] mb-4 flex items-center gap-2"
+                    >
+                        <span className="w-2 h-2 bg-emerald-500 rounded-full shadow-[0_0_8px_#10b981] animate-pulse"></span>
+                        Identity.Log
+                    </motion.p>
+                    <motion.h1 
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: 0.1 }}
+                      className="text-5xl sm:text-6xl font-bold tracking-tight text-white mb-6"
+                    >
+                        Kylin <span className="font-serif italic font-light text-white/60">Miao</span>
+                    </motion.h1>
+                </div>
+
+                <motion.div 
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.2 }}
+                  className="font-mono text-sm text-white/60 space-y-5 border-l-2 border-white/10 pl-6 relative"
+                >
+                    {/* Simulated typing cursor */}
+                    <div className="absolute -left-[2px] top-1 w-[2px] h-4 bg-emerald-400 animate-[blink_1s_step-end_infinite]"></div>
+                    
+                    <p className="leading-relaxed">
+                        <span className="text-white/90 font-medium">ROLE:</span> AI Agent Engineer @ Tencent WeCom<br/>
+                        <span className="text-white/90 font-medium">STACK:</span> Prompt <span className="text-blue-400 mx-1">→</span> Context <span className="text-blue-400 mx-1">→</span> Harness
+                    </p>
+                    <p className="leading-relaxed">
+                        Now orchestrating <span className="text-white/90 font-medium">multi-agent collaboration</span> — agents that plan, execute, review, and compound their own work.
+                    </p>
+                    <p className="border-l-2 border-emerald-500/30 pl-4 py-1 italic bg-emerald-500/5">
+                        <span className="text-blue-400 not-italic font-medium">Beyond the terminal:</span> Passionate about extreme sports.<br/>
+                        <span className="text-purple-400 not-italic font-medium">Bouldering (V3) / Snowboarding / Bodybuilding / Kitesurfing</span>
+                    </p>
+                    <p className="text-emerald-400">
+                        &gt; Building infrastructure for AI teams to operate autonomously.
+                    </p>
+                </motion.div>
+
+                <motion.div 
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.4 }}
+                  className="flex flex-wrap gap-3 font-mono text-xs pt-4 mb-8"
+                >
+                    <a href="mailto:miaojsi@outlook.com" className="border border-white/20 hover:border-white/60 hover:text-white text-white/60 px-4 py-2 rounded transition-colors flex items-center gap-2 group/btn">
+                      <Mail className="w-3.5 h-3.5 group-hover/btn:text-white transition-colors" /> [ Email ]
+                    </a>
+                    <a href="https://github.com/Alenryuichi" target="_blank" rel="noopener noreferrer" className="border border-white/20 hover:border-white/60 hover:text-white text-white/60 px-4 py-2 rounded transition-colors flex items-center gap-2 group/btn">
+                      <Github className="w-3.5 h-3.5 group-hover/btn:text-white transition-colors" /> [ GitHub ]
+                    </a>
+                    <a href="https://www.linkedin.com/in/jingsi-miao-b67ba33ab/" target="_blank" rel="noopener noreferrer" className="border border-white/20 hover:border-white/60 hover:text-white text-white/60 px-4 py-2 rounded transition-colors flex items-center gap-2 group/btn">
+                      <Linkedin className="w-3.5 h-3.5 group-hover/btn:text-white transition-colors" /> [ LinkedIn ]
+                    </a>
+                    <a href="https://maimai.cn/contact/share/card?u=n5xkqwimcgvt&_share_channel=copy_link" target="_blank" rel="noopener noreferrer" className="border border-white/20 hover:border-white/60 hover:text-white text-white/60 px-4 py-2 rounded transition-colors flex items-center gap-2 group/btn">
+                      <Users className="w-3.5 h-3.5 group-hover/btn:text-white transition-colors" /> [ 脉脉 ]
+                    </a>
+                    <a href="/kylin-resume.pdf" download="Kylin-Miao-Resume.pdf" className="border border-blue-500/30 bg-blue-500/10 hover:bg-blue-500/20 hover:border-blue-400/50 text-blue-400 px-4 py-2 rounded transition-all flex items-center gap-2 shadow-[0_0_15px_rgba(59,130,246,0.1)]">
+                      <FileDown className="w-3.5 h-3.5" /> [ Resume ]
+                    </a>
+                </motion.div>
+
+                {/* Profile Slideshow moved to Left Column */}
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ delay: 0.3 }}
-                >
-                  <h3 className="text-2xl font-bold text-white mb-4 flex items-center gap-3">
-                    <Terminal className="w-6 h-6 text-blue-400" />
-                    Who is Kylin?
-                  </h3>
-                  <div className="space-y-4 text-gray-400 text-lg leading-relaxed">
-                    <p>
-                      I&apos;m Kylin Miao, an <span className="text-white font-medium">AI Agent Engineer</span> on a mission to build fully autonomous AI teams.
-                      My evolution: <span className="text-blue-400">Prompt</span> → <span className="text-purple-400">Context</span> → <span className="text-pink-400">Harness Engineering</span>.
-                    </p>
-                    <p>
-                      At Tencent WeCom, I built AI Agent systems from V1→V4 with 90%+ accuracy.
-                      Now I&apos;m obsessed with orchestrating <span className="text-white font-medium">multi-agent collaboration</span> —
-                      agents that plan, execute, review, and compound their own work.
-                    </p>
-                    <p>
-                      <span className="text-blue-400">OpenMemory Plus</span>: Cross-agent memory for 4+ IDEs.
-                      <span className="text-purple-400 ml-2">MCP Server</span>: 25 ops tools for AI agent control.
-                      I don&apos;t just build AI tools — I&apos;m building infrastructure for <span className="italic text-white">AI teams to operate autonomously</span>.
-                    </p>
-                  </div>
-                </motion.div>
-
-                {/* Social Links */}
-                <motion.div
-                  id="contact"
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  viewport={{ once: true }}
                   transition={{ delay: 0.5 }}
-                  className="flex flex-wrap items-center gap-3 pt-4 scroll-mt-24"
                 >
-                  {[
-                    { icon: Mail, href: "mailto:miaojsi@outlook.com", label: "Email" },
-                    { icon: Github, href: "https://github.com/Alenryuichi", label: "GitHub" },
-                    { icon: Linkedin, href: "https://linkedin.com/in/kylinmiao", label: "LinkedIn" },
-                    { icon: Users, href: "https://maimai.cn/contact/share/card?u=n5xkqwimcgvt&_share_channel=copy_link", label: "脉脉" }
-                  ].map((item, i) => (
-                    <a
-                      key={i}
-                      href={item.href}
-                      target={item.href.startsWith('mailto:') ? undefined : '_blank'}
-                      rel={item.href.startsWith('mailto:') ? undefined : 'noopener noreferrer'}
-                      className="flex items-center gap-2 px-4 py-2 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all duration-300 group/link"
-                    >
-                      <item.icon className="w-4 h-4 text-gray-400 group-hover/link:text-white transition-colors" />
-                      <span className="text-sm font-medium text-gray-500 group-hover/link:text-white transition-colors">{item.label}</span>
-                    </a>
-                  ))}
-                  {/* Resume Download Button */}
-                  <a
-                    href="/kylin-resume.pdf"
-                    download="Kylin-Miao-Resume.pdf"
-                    className="flex items-center gap-2 px-4 py-2 rounded-xl bg-blue-600/20 border border-blue-500/30 hover:bg-blue-600/30 hover:border-blue-500/50 transition-all duration-300 group/link"
-                  >
-                    <FileDown className="w-4 h-4 text-blue-400 group-hover/link:text-blue-300 transition-colors" />
-                    <span className="text-sm font-medium text-blue-400 group-hover/link:text-blue-300 transition-colors">Resume</span>
-                  </a>
+                  <ProfileSlideshow />
                 </motion.div>
-              </div>
-            </SpotlightCard>
-
-            {/* Profile Photo Card (Occupies 5 cols) */}
-            <div className="lg:col-span-5 h-[400px] lg:h-auto">
-              <GlareCard className="h-full group">
-                <div className="relative w-full h-full overflow-hidden">
-                  <AnimatePresence mode="wait">
-                    <motion.img 
-                      key={currentImageIdx}
-                      src={PROFILE_IMAGES[currentImageIdx]}
-                      alt="Kylin Miao"
-                      initial={{ opacity: 0, scale: 1.1 }}
-                      animate={{ opacity: 1, scale: 1 }}
-                      exit={{ opacity: 0 }}
-                      transition={{ duration: 0.8 }}
-                      className="absolute inset-0 w-full h-full object-cover"
-                    />
-                  </AnimatePresence>
-                  
-                  {/* Indicators Overlay */}
-                  <div className="absolute bottom-6 inset-x-0 flex justify-center gap-2 z-30">
-                    {PROFILE_IMAGES.map((_, idx) => (
-                      <div 
-                        key={idx}
-                        className={`h-1 rounded-full transition-all duration-500 ${
-                          idx === currentImageIdx ? 'w-8 bg-blue-500' : 'w-2 bg-white/20'
-                        }`}
-                      />
-                    ))}
-                  </div>
-
-                  {/* Glass Label */}
-                  <div className="absolute top-6 right-6 z-30 px-4 py-2 rounded-full bg-black/40 backdrop-blur-md border border-white/10 flex items-center gap-2">
-                    <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-                    <span className="text-[10px] font-bold text-white uppercase tracking-widest">Available</span>
-                  </div>
-                </div>
-              </GlareCard>
             </div>
-          </div>
 
-          {/* Highlights Gallery (Video Cards) */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {HIGHLIGHTS.map((item, idx) => (
-              <motion.div
-                key={item.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: idx * 0.1 + 0.5 }}
-              >
-                <MediaCard item={item} />
-              </motion.div>
-            ))}
-          </div>
+            {/* RIGHT: Scrolling Media Array */}
+            <div className="w-full lg:w-7/12 space-y-6 sm:space-y-12">
+                
+                {/* Highlights */}
+                {HIGHLIGHTS.map((item, idx) => (
+                  <motion.div
+                    key={item.id}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: idx * 0.1 + 0.3 }}
+                  >
+                    <MediaCard item={item} />
+                  </motion.div>
+                ))}
 
+            </div>
         </div>
       </div>
     </section>

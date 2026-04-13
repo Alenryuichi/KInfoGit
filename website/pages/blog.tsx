@@ -1,9 +1,9 @@
-import React, { useState, useMemo, useRef, useEffect, useCallback } from 'react'
+import React, { useState, useMemo, useCallback } from 'react'
 import { GetStaticProps } from 'next'
 import Head from 'next/head'
 import Link from 'next/link'
-import { motion, AnimatePresence } from 'framer-motion'
-import { createPortal } from 'react-dom'
+import { motion } from 'framer-motion'
+import { Folder, FolderOpen, FileText, ChevronDown } from 'lucide-react'
 import { BlogPost, getAllBlogPosts } from '@/lib/data'
 import { stripMarkdownTitle } from '@/lib/utils'
 
@@ -49,54 +49,6 @@ function buildSubcategoryMap(posts: BlogPost[]): Map<string, string[]> {
 
 // --- Components ---
 
-function SubcategoryPopover({
-  items,
-  active,
-  onSelect,
-  position,
-}: {
-  items: string[]
-  active: string | null
-  onSelect: (sub: string | null) => void
-  position: { top: number; left: number }
-}) {
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: -8, scale: 0.96 }}
-      animate={{ opacity: 1, y: 0, scale: 1 }}
-      exit={{ opacity: 0, y: -8, scale: 0.96 }}
-      transition={{ duration: 0.15, ease: 'easeOut' }}
-      className="fixed min-w-[160px] p-1.5 bg-[#1a1d23]/98 backdrop-blur-xl border border-white/[0.08] rounded-xl shadow-2xl shadow-black/40 z-[9999] subcategory-popover-container"
-      style={{ top: position.top, left: position.left }}
-    >
-      <button
-        onClick={() => onSelect(null)}
-        className={`w-full text-left px-3 py-1.5 text-[13px] transition-all duration-150 rounded-lg ${
-          active === null
-            ? 'text-white bg-white/[0.08] font-medium'
-            : 'text-gray-400 hover:text-gray-200 hover:bg-white/[0.04]'
-        }`}
-      >
-        全部
-      </button>
-      <div className="my-1 h-px bg-white/[0.06]" />
-      {items.map((sub) => (
-        <button
-          key={sub}
-          onClick={() => onSelect(sub)}
-          className={`w-full text-left px-3 py-1.5 text-[13px] transition-all duration-150 rounded-lg ${
-            active === sub
-              ? 'text-white bg-white/[0.08] font-medium'
-              : 'text-gray-400 hover:text-gray-200 hover:bg-white/[0.04]'
-          }`}
-        >
-          {sub}
-        </button>
-      ))}
-    </motion.div>
-  )
-}
-
 function ThemeTabs({
   active,
   tabs,
@@ -112,128 +64,63 @@ function ThemeTabs({
   onChange: (t: string) => void
   onSubcategoryChange: (sub: string | null) => void
 }) {
-  const [openPopover, setOpenPopover] = useState<string | null>(null)
-  const containerRef = useRef<HTMLDivElement>(null)
-  const tabRefs = useRef<Map<string, HTMLButtonElement>>(new Map())
-  const [popoverPos, setPopoverPos] = useState<{ top: number; left: number } | null>(null)
-
-  // Update popover position when open tab changes
-  useEffect(() => {
-    if (!openPopover) {
-      // eslint-disable-next-line react-hooks/set-state-in-effect
-      setPopoverPos(null)
-      return
-    }
-    const btn = tabRefs.current.get(openPopover)
-    if (!btn) return
-    const rect = btn.getBoundingClientRect()
-    setPopoverPos({ top: rect.bottom + 4, left: rect.left })
-  }, [openPopover])
-
-  // Close popover on click outside
-  useEffect(() => {
-    function handleMouseDown(e: MouseEvent) {
-      const target = e.target as Element
-      if (
-        containerRef.current && 
-        !containerRef.current.contains(target) &&
-        !target.closest('.subcategory-popover-container')
-      ) {
-        setOpenPopover(null)
-      }
-    }
-    document.addEventListener('mousedown', handleMouseDown)
-    return () => document.removeEventListener('mousedown', handleMouseDown)
-  }, [])
-
-  const handleTabClick = useCallback((tab: string) => {
-    const hasSubs = subcategoryMap.has(tab)
-
-    if (tab === active && hasSubs) {
-      // Toggle popover on same tab
-      setOpenPopover((prev) => (prev === tab ? null : tab))
-    } else {
-      // Switch tab
-      onChange(tab)
-      onSubcategoryChange(null)
-      if (hasSubs) {
-        setOpenPopover(tab)
-      } else {
-        setOpenPopover(null)
-      }
-    }
-  }, [active, subcategoryMap, onChange, onSubcategoryChange])
-
-  const handleSubSelect = useCallback((sub: string | null) => {
-    onSubcategoryChange(sub)
-    setOpenPopover(null)
-  }, [onSubcategoryChange])
-
-  // Build tab label
-  function tabLabel(tab: string): string {
-    if (tab === '全部') return tab
-    const hasSubs = subcategoryMap.has(tab)
-    if (!hasSubs) return tab
-    if (active === tab && activeSubcategory) {
-      return `${tab} · ${activeSubcategory}`
-    }
-    return tab
-  }
-
-  function tabHasArrow(tab: string): boolean {
-    return tab !== '全部' && subcategoryMap.has(tab)
-  }
+  const currentSubs = active !== '全部' ? (subcategoryMap.get(active) || []) : []
 
   return (
-    <div className="relative" ref={containerRef}>
-      <div className="flex gap-1 overflow-x-auto scrollbar-hide relative p-1 rounded-lg bg-white/5">
-        {tabs.map((tab) => (
+    <div className="mb-10">
+      {/* Level 1: Primary Tabs (Root Directories) */}
+      <div className="flex gap-6 border-b border-white/10 pb-[1px] mb-4 overflow-x-auto scrollbar-hide">
+        {tabs.map((tab) => {
+          const isActive = active === tab
+          return (
+            <button
+              key={tab}
+              onClick={() => {
+                onChange(tab)
+                onSubcategoryChange(null)
+              }}
+              className={`text-[13px] font-mono flex items-center gap-1.5 pb-2.5 transition-colors whitespace-nowrap ${
+                isActive ? 'text-white border-b-2 border-blue-500 -mb-[1px]' : 'text-gray-500 hover:text-gray-300'
+              }`}
+            >
+              <Folder className={`w-3.5 h-3.5 ${isActive ? 'text-blue-400' : ''}`} />
+              {tab === '全部' ? '~/all' : `~/${tab.toLowerCase()}`}
+            </button>
+          )
+        })}
+      </div>
+
+      {/* Level 2: Secondary Tabs (Subdirectories) */}
+      {currentSubs.length > 0 && (
+        <div className="flex flex-wrap gap-2 pl-2">
+          {/* Simulated tree branch line */}
+          <div className="w-4 h-4 border-b border-l border-white/20 rounded-bl-lg -ml-4 -mt-2 opacity-50"></div>
+          
           <button
-            key={tab}
-            ref={(el) => { if (el) tabRefs.current.set(tab, el) }}
-            onClick={() => handleTabClick(tab)}
-            className={`relative px-4 py-2 text-sm font-medium rounded-md whitespace-nowrap transition-colors flex items-center gap-1 ${
-              active === tab ? 'text-white' : 'text-gray-400 hover:text-gray-200'
+            onClick={() => onSubcategoryChange(null)}
+            className={`text-[11px] font-mono px-2.5 py-1 rounded border flex items-center gap-1 transition-colors ${
+              activeSubcategory === null
+                ? 'text-blue-400 bg-blue-500/10 border-blue-500/20'
+                : 'text-gray-500 hover:text-gray-300 hover:bg-white/5 border-transparent'
             }`}
           >
-            {active === tab && (
-              <motion.div
-                layoutId="theme-tab-indicator"
-                className="absolute inset-0 bg-white/10 rounded-md"
-                transition={{ type: 'spring', stiffness: 400, damping: 30 }}
-              />
-            )}
-            <span className="relative z-10">{tabLabel(tab)}</span>
-            {tabHasArrow(tab) && (
-              <svg
-                className={`relative z-10 w-3 h-3 transition-transform ${
-                  openPopover === tab ? 'rotate-180' : ''
-                }`}
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                strokeWidth={2}
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
-              </svg>
-            )}
+            ./all_{active.toLowerCase()}
           </button>
-        ))}
-      </div>
-      {/* Scroll hint overlay - mobile only */}
-      <div className="absolute right-0 top-0 bottom-0 w-8 bg-gradient-to-l from-black/80 to-transparent pointer-events-none md:hidden rounded-r-lg" />
-
-      {/* Popover rendered via portal to avoid overflow clipping */}
-      {typeof document !== 'undefined' && openPopover && subcategoryMap.has(openPopover) && popoverPos && createPortal(
-        <AnimatePresence>
-          <SubcategoryPopover
-            items={subcategoryMap.get(openPopover)!}
-            active={active === openPopover ? activeSubcategory : null}
-            onSelect={handleSubSelect}
-            position={popoverPos}
-          />
-        </AnimatePresence>,
-        document.body
+          
+          {currentSubs.map((sub) => (
+            <button
+              key={sub}
+              onClick={() => onSubcategoryChange(sub)}
+              className={`text-[11px] font-mono px-2.5 py-1 rounded border flex items-center gap-1 transition-colors ${
+                activeSubcategory === sub
+                  ? 'text-blue-400 bg-blue-500/10 border-blue-500/20'
+                  : 'text-gray-500 hover:text-gray-300 hover:bg-white/5 border-transparent'
+              }`}
+            >
+              ./{sub.toLowerCase()}
+            </button>
+          ))}
+        </div>
       )}
     </div>
   )
@@ -241,53 +128,99 @@ function ThemeTabs({
 
 function PostEntry({ post }: { post: BlogPost }) {
   const dateStr = post.date
-    ? `${String(new Date(post.date).getMonth() + 1).padStart(2, '0')}/${String(new Date(post.date).getDate()).padStart(2, '0')}`
+    ? `${new Date(post.date).toLocaleString('en-US', { month: 'short' })} ${String(new Date(post.date).getDate()).padStart(2, '0')}`
     : ''
   const displayTags = post.tags.slice(0, 4)
+  const titleText = stripMarkdownTitle(post.title)
+  const descriptionText = post.excerpt || ''
 
   return (
-    <div className="group py-4">
-      <div className="flex items-start justify-between gap-4">
-        <div className="min-w-0 flex-1">
-          <Link
-            href={`/blog/${post.slug}/`}
-            className="text-base font-medium text-gray-100 group-hover:text-blue-400 transition-colors"
-          >
-            {stripMarkdownTitle(post.title)}
-          </Link>
-          {post.excerpt && (
-            <p className="mt-1 text-sm text-gray-400 line-clamp-2">{post.excerpt}</p>
-          )}
+    <Link
+      href={`/blog/${post.slug}/`}
+      className="group flex flex-col px-3 py-3 sm:pl-8 rounded-lg relative transition-colors mt-2"
+    >
+      <div className="flex items-start sm:items-center justify-between gap-4 w-full">
+        <div className="flex items-center gap-3 min-w-0">
+          <FileText className="w-4 h-4 text-gray-600 shrink-0 group-hover:text-blue-400 transition-colors mt-0.5 sm:mt-0" />
+          <div className="relative inline-block min-w-0">
+            <h3 className="text-[15px] font-medium text-white/80 truncate group-hover:text-white transition-colors pb-0.5">
+              {titleText}
+            </h3>
+            <div className="absolute bottom-0 left-0 w-0 h-[1px] bg-blue-500 group-hover:w-full transition-all duration-300 ease-out"></div>
+          </div>
+        </div>
+
+        <div className="flex items-center gap-4 shrink-0 pl-7 sm:pl-0">
+          {/* Tags */}
           {displayTags.length > 0 && (
-            <div className="mt-2 flex flex-wrap gap-1.5">
-              {displayTags.map((tag) => (
+            <div className="hidden sm:flex gap-1.5">
+              {displayTags.map((tag, idx) => (
                 <span
                   key={tag}
-                  className="inline-block px-2 py-0.5 text-xs rounded-full bg-white/5 text-gray-400"
+                  className={`text-[10px] font-mono px-1.5 py-0.5 rounded-sm ${
+                    idx === 0
+                      ? 'text-emerald-400/80 bg-emerald-400/5 border border-emerald-400/20'
+                      : 'text-white/40 bg-white/5 border border-white/10'
+                  }`}
                 >
                   {tag}
                 </span>
               ))}
             </div>
           )}
+          <span className="text-[11px] font-mono text-gray-600 group-hover:text-gray-400 transition-colors shrink-0">
+            {dateStr}
+          </span>
         </div>
-        <span className="shrink-0 text-sm tabular-nums text-gray-500 pt-0.5">{dateStr}</span>
       </div>
-    </div>
+
+      {descriptionText && (
+        <div className="mt-2 pl-7 sm:pl-7 pr-4">
+          <p className="text-[13px] text-gray-500 line-clamp-2 font-sans leading-relaxed group-hover:text-gray-400 transition-colors">
+            {descriptionText}
+          </p>
+        </div>
+      )}
+    </Link>
   )
 }
 
 function YearSection({ group }: { group: YearGroup }) {
+  const [isOpen, setIsOpen] = useState(true)
+
   return (
-    <div>
-      <div className="flex items-center gap-4 mb-2">
-        <h2 className="text-lg font-semibold text-gray-300 shrink-0">{group.year}</h2>
-        <div className="h-px flex-1 bg-white/10" />
-      </div>
-      <div className="divide-y divide-white/5">
-        {group.posts.map((post) => (
-          <PostEntry key={post.slug} post={post} />
-        ))}
+    <div className="space-y-1 font-mono folder-block">
+      {/* Interactive Directory (Year) Header */}
+      <button 
+        onClick={() => setIsOpen(!isOpen)}
+        className={`w-full flex items-center gap-2 px-2 py-2 text-sm sticky top-0 bg-[#0a0a0a]/90 backdrop-blur z-20 border-b border-white/5 mt-4 transition-colors cursor-pointer group ${isOpen ? 'text-white/50 hover:text-white/80' : 'text-white/30 hover:text-white/60'}`}
+      >
+        <ChevronDown 
+          className={`w-4 h-4 chevron-icon transition-transform duration-300 ${isOpen ? 'rotate-0' : '-rotate-90'}`} 
+        />
+        {isOpen ? (
+          <FolderOpen className="w-4 h-4 text-blue-400/70 group-hover:text-blue-400 transition-colors" />
+        ) : (
+          <Folder className="w-4 h-4 text-blue-400/70 group-hover:text-blue-400 transition-colors" />
+        )}
+        <span className="font-bold">{group.year}</span>
+        <span className="text-[10px] ml-2 text-white/20 font-sans tracking-wide">{group.posts.length} items</span>
+      </button>
+
+      {/* Collapsible Content Area */}
+      <div 
+        className="folder-content" 
+        style={{
+          display: 'grid',
+          gridTemplateRows: isOpen ? '1fr' : '0fr',
+          transition: 'grid-template-rows 0.3s ease-out'
+        }}
+      >
+        <div className="folder-content-inner overflow-hidden">
+          {group.posts.map((post) => (
+            <PostEntry key={post.slug} post={post} />
+          ))}
+        </div>
       </div>
     </div>
   )
@@ -353,22 +286,36 @@ export default function BlogPage({ posts }: BlogPageProps) {
 
       <div className="min-h-screen text-white">
         {/* Header */}
-        <div className="pt-20 pb-8 px-4">
-          <div className="max-w-3xl mx-auto">
-            <span className="text-sm font-medium text-gray-400 uppercase tracking-wider">
-              THE BLOG
-            </span>
-            <h1 className="mt-3 text-3xl md:text-4xl font-bold">
-              Handpicked insights from the{' '}
-              <span className="bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-                pensieve
-              </span>
-            </h1>
+        <div className="pt-32 pb-12 px-4">
+          <div className="max-w-4xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+            >
+              <div className="mb-6 inline-block">
+                  <p className="font-mono text-purple-400/80 text-[10px] sm:text-xs uppercase tracking-[0.4em] mb-2 flex items-center gap-2">
+                      <span className="w-2 h-2 bg-purple-500 rounded-full shadow-[0_0_8px_#a855f7] animate-pulse"></span>
+                      System.Pensieve
+                  </p>
+                  <div className="h-px w-full bg-gradient-to-r from-purple-500/30 to-transparent"></div>
+              </div>
+              <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+                <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-white drop-shadow-[0_0_15px_rgba(255,255,255,0.1)]">
+                    Handpicked <span className="font-serif italic font-light text-white/70">Insights</span>
+                </h1>
+                <div className="font-mono text-xs text-white/30 pb-1.5 flex items-center gap-2">
+                  <span className="text-purple-500/50">/*</span>
+                  Question <span className="text-white/20">·</span> Reason <span className="text-white/20">·</span> Document
+                  <span className="text-purple-500/50">*/</span>
+                </div>
+              </div>
+            </motion.div>
           </div>
         </div>
 
         {/* Content */}
-        <div className="max-w-3xl mx-auto px-4 pb-20">
+        <div className="max-w-4xl mx-auto px-4 pb-20">
           {/* Theme Tabs */}
           <div className="mb-6">
             <ThemeTabs

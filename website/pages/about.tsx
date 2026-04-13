@@ -4,6 +4,7 @@ import Head from 'next/head'
 import { About } from '@/components/About'
 import { Skills } from '@/components/Skills'
 import { GitHubActivity } from '@/components/GitHubActivity'
+import { ReadingList, ReadingIssue } from '@/components/ReadingList'
 import { profileData } from '@/lib/config'
 
 interface GitHubRepo {
@@ -37,6 +38,7 @@ interface AboutPageProps {
   githubRepos: GitHubRepo[]
   githubPRs: GitHubPR[]
   contributionData: ContributionDay[]
+  readingIssues: ReadingIssue[]
 }
 
 interface ContributionDay {
@@ -45,7 +47,7 @@ interface ContributionDay {
   level: 0 | 1 | 2 | 3 | 4
 }
 
-export default function AboutPage({ profileData, githubRepos, githubPRs, contributionData }: AboutPageProps) {
+export default function AboutPage({ profileData, githubRepos, githubPRs, contributionData, readingIssues }: AboutPageProps) {
   // Handle smooth scroll to hash anchor on page load (for cross-page navigation)
   useEffect(() => {
     if (typeof window !== 'undefined' && window.location.hash) {
@@ -73,11 +75,16 @@ export default function AboutPage({ profileData, githubRepos, githubPRs, contrib
         <meta name="twitter:description" content={`Learn more about ${profileData.name}, ${profileData.title}`} />
       </Head>
 
-      <main className="min-h-screen text-white relative overflow-hidden" data-pagefind-body data-pagefind-meta="type:About">
+      <main className="min-h-screen text-white relative" data-pagefind-body data-pagefind-meta="type:About">
         {/* About Section */}
         <section className="pt-32 pb-8 relative z-10">
           <About />
         </section>
+
+        {/* Reading List / Ingestion Pipeline */}
+        <div className="relative z-10">
+          <ReadingList initialIssues={readingIssues} />
+        </div>
 
         {/* GitHub Activity Section */}
         <div className="relative z-10">
@@ -91,6 +98,19 @@ export default function AboutPage({ profileData, githubRepos, githubPRs, contrib
       </main>
     </>
   )
+}
+
+const fetchWithTimeout = async (url: string, options: RequestInit, timeoutMs = 3000) => {
+  const controller = new AbortController()
+  const id = setTimeout(() => controller.abort(), timeoutMs)
+  try {
+    const response = await fetch(url, { ...options, signal: controller.signal })
+    clearTimeout(id)
+    return response
+  } catch (error) {
+    clearTimeout(id)
+    throw error
+  }
 }
 
 export const getStaticProps: GetStaticProps = async () => {
@@ -108,10 +128,11 @@ export const getStaticProps: GetStaticProps = async () => {
 
   let githubRepos: GitHubRepo[] = []
   let githubPRs: GitHubPR[] = []
+  let readingIssues: ReadingIssue[] = []
 
   try {
     // Fetch repos
-    const reposResponse = await fetch(
+    const reposResponse = await fetchWithTimeout(
       `https://api.github.com/users/${GITHUB_USERNAME}/repos?sort=pushed&per_page=3`,
       { headers }
     )
@@ -123,7 +144,7 @@ export const getStaticProps: GetStaticProps = async () => {
     }
 
     // Fetch recent PRs
-    const prsResponse = await fetch(
+    const prsResponse = await fetchWithTimeout(
       `https://api.github.com/search/issues?q=author:${GITHUB_USERNAME}+type:pr+sort:created-desc&per_page=5`,
       { headers }
     )
@@ -134,6 +155,19 @@ export const getStaticProps: GetStaticProps = async () => {
     } else {
       console.error('GitHub API error (PRs):', prsResponse.status)
     }
+
+    // Fetch Reading List
+    const readingListResponse = await fetchWithTimeout(
+      `https://api.github.com/search/issues?q=author:${GITHUB_USERNAME}+type:issue+label:reading-list+sort:updated-desc&per_page=4`,
+      { headers }
+    )
+
+    if (readingListResponse.ok) {
+      const readingData = await readingListResponse.json()
+      readingIssues = readingData.items || []
+    } else {
+      console.error('GitHub API error (Reading List):', readingListResponse.status)
+    }
   } catch (error) {
     console.error('Failed to fetch GitHub data:', error)
   }
@@ -143,7 +177,7 @@ export const getStaticProps: GetStaticProps = async () => {
 
   if (process.env.GITHUB_TOKEN) {
     try {
-      const graphqlResponse = await fetch('https://api.github.com/graphql', {
+      const graphqlResponse = await fetchWithTimeout('https://api.github.com/graphql', {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${process.env.GITHUB_TOKEN}`,
@@ -205,6 +239,7 @@ export const getStaticProps: GetStaticProps = async () => {
       profileData,
       githubRepos,
       githubPRs,
+      readingIssues,
       contributionData,
     },
   }
