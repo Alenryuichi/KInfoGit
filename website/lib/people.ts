@@ -1,6 +1,6 @@
 import fs from 'fs'
 import path from 'path'
-import type { StarredRepo, BlueskyPost } from './social-feeds'
+import type { StarredRepo, BlueskyPost, YouTubeVideo, BlogPost } from './social-feeds'
 
 // --- Types ---
 
@@ -10,6 +10,8 @@ export interface Person {
   bio?: string
   github?: string
   bluesky?: string
+  youtubeChannel?: string
+  blogAuthor?: string
   avatar?: string
 }
 
@@ -21,6 +23,8 @@ export interface PersonActivity {
   id: string
   stars: StarredRepo[]
   posts: BlueskyPost[]
+  videos: YouTubeVideo[]
+  blogs: BlogPost[]
   dailyCounts: number[]
   interestSummary: string
 }
@@ -84,7 +88,7 @@ export function getAllPeople(): PersonSummary[] {
   return people.map(person => {
     const activity = loadPersonActivity(person.id)
     const activityCount = activity
-      ? activity.stars.length + activity.posts.length
+      ? activity.stars.length + activity.posts.length + (activity.videos?.length || 0) + (activity.blogs?.length || 0)
       : 0
 
     return { ...person, activityCount }
@@ -101,6 +105,8 @@ export function getPersonByHandle(handle: string): PersonDetail | null {
     id: person.id,
     stars: [],
     posts: [],
+    videos: [],
+    blogs: [],
     dailyCounts: new Array(30).fill(0),
     interestSummary: '',
   }

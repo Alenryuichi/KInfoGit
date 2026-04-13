@@ -1,0 +1,17 @@
+{
+  "date": "2025-10-17",
+  "videos": [
+    {
+      "videoId": "bxDDLMe6KuU",
+      "title": "A Tour of the Solveit Platform",
+      "description": "NB: There is also a written version of these docs: https://www.fast.ai/posts/2025-11-07-solveit-features.html\nLarge language models make it remarkably easy to generate code. Ask ChatGPT or Claude to build an application, and you’ll receive hundreds of lines of working code in seconds. But this creates a problem: you get code you don’t understand, and when you need to modify it, fix a bug, or add a feature, you’re stuck.\n\nSolveit ( https://solve.it.com ) takes a different approach. Rather than generating large blocks of code, it works with you interactively to build solutions piece by piece. You write one or two lines at a time, understand what they do, then move to the next step. The AI sees your full working context and suggests what comes next based on what you’re actually building.\n\nThis method may sometimes be slower initially, but produces something more valuable: working code that you understand. Code you can modify, extend, and maintain. Code that becomes part of your expanding skill set rather than a black box you’re afraid to touch.\n\nThis video covers the features of the Solveit platform, built specifically to support this interactive, incremental approach to development.",
+      "channelTitle": "Jeremy Howard",
+      "publishedAt": "2025-10-17T22:05:35Z",
+      "thumbnail": "https://i.ytimg.com/vi/bxDDLMe6KuU/hqdefault.jpg",
+      "viewCount": 14651,
+      "url": "https://www.youtube.com/watch?v=bxDDLMe6KuU",
+      "highlights": "The Solveit platform addresses a key limitation of current AI code generation tools: while LLMs can quickly produce working code, they often create complex solutions that users don't understand, making modification and maintenance difficult. Solveit takes a different approach by focusing on generating understandable, maintainable code that users can actually work with and modify when needed.",
+      "worthReading": "This video is worth watching because it presents a practical solution to a real problem developers face with AI-generated code, and Jeremy Howard's clear explanation makes complex technical concepts accessible to both technical and non-technical audiences."
+    }
+  ]
+}

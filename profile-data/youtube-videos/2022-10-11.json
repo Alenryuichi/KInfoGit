@@ -1,0 +1,17 @@
+{
+  "date": "2022-10-11",
+  "videos": [
+    {
+      "videoId": "q8SA3rM6ckI",
+      "title": "Building makemore Part 4: Becoming a Backprop Ninja",
+      "description": "We take the 2-layer MLP (with BatchNorm) from the previous video and backpropagate through it manually without using PyTorch autograd's loss.backward(): through the cross entropy loss, 2nd linear layer, tanh, batchnorm, 1st linear layer, and the embedding table. Along the way, we get a strong intuitive understanding about how gradients flow backwards through the compute graph and on the level of efficient Tensors, not just individual scalars like in micrograd. This helps build competence and intuition around how neural nets are optimized and sets you up to more confidently innovate on and debug modern neural networks.\n\n!!!!!!!!!!!!\nI recommend you work through the exercise yourself but work with it in tandem and whenever you are stuck unpause the video and see me give away the answer. This video is not super intended to be simply watched. The exercise is here:\nhttps://colab.research.google.com/drive/1WV2oi2fh9XXyldh02wupFQX0wh5ZC-z-?usp=sharing\n!!!!!!!!!!!!\n\nLinks:\n- makemore on github: https://github.com/karpathy/makemore\n- jupyter notebook I built in this video: https://github.com/karpathy/nn-zero-to-hero/blob/master/lectures/makemore/makemore_part4_backprop.ipynb\n- collab notebook: https://colab.research.google.com/drive/1WV2oi2fh9XXyldh02wupFQX0wh5ZC-z-?usp=sharing\n- my website: https://karpathy.ai\n- my twitter: https://twitter.com/karpathy\n- our Discord channel: https://discord.gg/3zy8kqD9Cp\n\nSupplementary links:\n- Yes you should understand backprop: https://karpathy.medium.com/yes-you-should-understand-backprop-e2f06eab496b\n- BatchNorm paper: https://arxiv.org/abs/1502.03167\n- Bessel’s Correction: http://math.oxford.emory.edu/site/math117/besselCorrection/\n- Bengio et al. 2003 MLP LM https://www.jmlr.org/papers/volume3/bengio03a/bengio03a.pdf \n\nChapters:\n00:00:00 intro: why you should care & fun history\n00:07:26 starter code\n00:13:01 exercise 1: backproping the atomic compute graph\n01:05:17 brief digression: bessel’s correction in batchnorm\n01:26:31 exercise 2: cross entropy loss backward pass\n01:36:37 exercise 3: batch norm layer backward pass\n01:50:02 exercise 4: putting it all together\n01:54:24 outro",
+      "channelTitle": "Andrej Karpathy",
+      "publishedAt": "2022-10-11T17:56:19Z",
+      "thumbnail": "https://i.ytimg.com/vi/q8SA3rM6ckI/hqdefault.jpg",
+      "viewCount": 335387,
+      "url": "https://www.youtube.com/watch?v=q8SA3rM6ckI",
+      "highlights": "This video demonstrates manual backpropagation through a complete 2-layer MLP with BatchNorm, covering gradients from cross entropy loss through embedding tables. It builds intuitive understanding of gradient flow at the tensor level, beyond scalar implementations like micrograd, while reinforcing core deep learning concepts.",
+      "worthReading": "Essential viewing for developers wanting to move beyond autograd black boxes and truly understand gradient computation in neural networks, presented by one of the field's most effective educators."
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "date": "2025-07-23",
+  "videos": [
+    {
+      "videoId": "hpC4qjWu_aY",
+      "title": "Context Rot: How Increasing Input Tokens Impacts LLM Performance (Paper Analysis)",
+      "description": "Paper: https://research.trychroma.com/context-rot\n\nAbstract:\nLarge Language Models (LLMs) are typically presumed to process context uniformly—that is, the model should handle the 10,000th token just as reliably as the 100th. However, in practice, this assumption does not hold. We observe that model performance varies significantly as input length changes, even on simple tasks.\nIn this report, we evaluate 18 LLMs, including the state-of-the-art GPT-4.1, Claude 4, Gemini 2.5, and Qwen3 models. Our results reveal that models do not use their context uniformly; instead, their performance grows increasingly unreliable as input length grows.\n\nAuthors: Kelly Hong, Anton Troynikov, Jeff Huber\n\nLinks:\nHomepage: https://ykilcher.com\nMerch: https://ykilcher.com/merch\nYouTube: https://www.youtube.com/c/yannickilcher\nTwitter: https://twitter.com/ykilcher\nDiscord: https://ykilcher.com/discord\nLinkedIn: https://www.linkedin.com/in/ykilcher\n\nIf you want to support me, the best thing to do is to share out the content :)\n\nIf you want to support me financially (completely optional and voluntary, but a lot of people have asked for this):\nSubscribeStar: https://www.subscribestar.com/yannickilcher\nPatreon: https://www.patreon.com/yannickilcher\nBitcoin (BTC): bc1q49lsw3q325tr58ygf8sudx2dqfguclvngvy2cq\nEthereum (ETH): 0x7ad3513E3B8f66799f507Aa7874b1B0eBC7F85e2\nLitecoin (LTC): LQW2TRyKYetVC8WjFkhpPhtpbDM4Vw7r9m\nMonero (XMR): 4ACL8AGrEo5hAir8A9CeVrW8pEauWvnp1WnSDZxW7tziCDLhZAGsgzhRQABDnFy8yuM9fWJDviJPHKRjV4FWt19CJZN9D4n",
+      "channelTitle": "Yannic Kilcher",
+      "publishedAt": "2025-07-23T11:10:52Z",
+      "thumbnail": "https://i.ytimg.com/vi/hpC4qjWu_aY/hqdefault.jpg",
+      "viewCount": 32545,
+      "url": "https://www.youtube.com/watch?v=hpC4qjWu_aY",
+      "highlights": "The video analyzes research showing that LLMs don't process all tokens in long contexts equally, with performance degrading as input length increases, even on simple tasks. This challenges the common assumption that models handle early and late tokens with equal reliability, revealing a phenomenon called 'context rot' across 18 tested models including GPT-4.1 and Claude 4.",
+      "worthReading": "It's worth watching because it reveals a fundamental limitation in how current LLMs process information that affects real-world applications, and provides empirical evidence from testing major models that developers should consider when designing systems with long contexts."
+    }
+  ]
+}

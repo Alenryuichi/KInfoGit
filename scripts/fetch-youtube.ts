@@ -5,9 +5,9 @@ import path from 'path'
 
 // AI leader YouTube channels to monitor
 const YOUTUBE_CHANNELS = [
-  { name: 'Andrej Karpathy', channelId: 'UCNJINJRR_UpocDm5BkndigbQ' },
+  { name: 'Andrej Karpathy', channelId: 'UCXUPKJO5MZQN11PqgIvyuvQ' },
   { name: 'Jeremy Howard (fast.ai)', channelId: 'UCX7Y2qWriXpqocG97SFW2OQ' },
-  { name: 'Yannic Kilcher', channelId: 'UCZHmQk67mN31gbHey6BVyNw' },
+  { name: 'Yannic Kilcher', channelId: 'UCZHmQk67mSJgfCCTn7xBfew' },
 ]
 
 const YOUTUBE_API_KEY = process.env.YOUTUBE_API_KEY || ''
@@ -77,14 +77,7 @@ async function fetchPlaylistVideos(playlistId: string): Promise<YouTubeVideoData
     const data = await res.json()
     const items = data.items || []
 
-    const sevenDaysAgo = new Date()
-    sevenDaysAgo.setDate(sevenDaysAgo.getDate() - 7)
-
     return items
-      .filter((item: any) => {
-        const publishedAt = new Date(item.snippet.publishedAt)
-        return publishedAt >= sevenDaysAgo
-      })
       .map((item: any) => {
         const snippet = item.snippet
         const videoId = snippet.resourceId?.videoId || ''
@@ -217,7 +210,7 @@ async function main() {
   }
 
   if (allVideos.length === 0) {
-    console.log('No videos found in the last 7 days. Done.')
+    console.log('No videos found. Done.')
     return
   }
 

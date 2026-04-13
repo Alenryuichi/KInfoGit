@@ -2,9 +2,11 @@ import Head from 'next/head'
 import Link from 'next/link'
 import type { GetStaticProps, GetStaticPaths } from 'next'
 import { getAllPersonIds, getPersonByHandle, type PersonDetail } from '@/lib/people'
-import type { StarredRepo, BlueskyPost, FeedItem } from '@/lib/social-feeds'
+import type { StarredRepo, BlueskyPost, YouTubeVideo, BlogPost, FeedItem } from '@/lib/social-feeds'
 import { RepoCard } from '@/components/stars/RepoCard'
 import { BlueskyPostCard } from '@/components/stars/BlueskyPostCard'
+import { YouTubeVideoCard } from '@/components/stars/YouTubeVideoCard'
+import { BlogPostCard } from '@/components/stars/BlogPostCard'
 import { PlatformBadge } from '@/components/stars/PlatformBadge'
 import { ActivitySparkline } from '@/components/stars/ActivitySparkline'
 
@@ -32,23 +34,21 @@ export const getStaticProps: GetStaticProps<PersonPageProps> = async ({ params }
 export default function PersonPage({ person }: PersonPageProps) {
   const { activity } = person
 
-  // Merge stars and posts into a chronological list (newest first)
+  // Merge all activity into a chronological list
   const allItems: FeedItem[] = [
     ...activity.stars.map(s => ({ ...s, type: 'github' as const })),
     ...activity.posts.map(p => ({ ...p, type: 'bluesky' as const })),
-  ].sort((a, b) => {
-    const dateA = a.type === 'bluesky' ? (a as BlueskyPost).createdAt : ''
-    const dateB = b.type === 'bluesky' ? (b as BlueskyPost).createdAt : ''
-    return dateB.localeCompare(dateA)
-  })
+    ...(activity.videos || []).map(v => ({ ...v, type: 'youtube' as const })),
+    ...(activity.blogs || []).map(b => ({ ...b, type: 'blog' as const })),
+  ]
 
-  const totalActivity = activity.stars.length + activity.posts.length
+  const totalActivity = activity.stars.length + activity.posts.length + (activity.videos?.length || 0) + (activity.blogs?.length || 0)
 
   return (
     <>
       <Head>
         <title>{person.name} — Stars — Kylin Miao</title>
-        <meta name="description" content={`${person.name}'s recent activity: ${activity.stars.length} GitHub stars and ${activity.posts.length} Bluesky posts.`} />
+        <meta name="description" content={`${person.name}'s recent activity: ${activity.stars.length} stars, ${activity.posts.length} posts, ${activity.videos?.length || 0} videos, ${activity.blogs?.length || 0} blogs.`} />
       </Head>
 
       <div className="min-h-screen bg-black text-white">
@@ -107,12 +107,17 @@ export default function PersonPage({ person }: PersonPageProps) {
           )}
 
           {/* Activity sparkline */}
-          {totalActivity > 0 && (
+          {totalActivity > 0 && activity.dailyCounts.some(c => c > 0) && (
             <div className="mb-8 p-5 rounded-xl bg-white/[0.02] border border-white/[0.06]">
               <div className="flex items-center justify-between mb-3">
-                <span className="text-sm font-semibold text-gray-300">30-Day Activity</span>
+                <span className="text-sm font-semibold text-gray-300">Recent Activity</span>
                 <span className="text-xs text-gray-500">
-                  {activity.stars.length} stars · {activity.posts.length} posts
+                  {[
+                    activity.stars.length > 0 && `${activity.stars.length} stars`,
+                    activity.posts.length > 0 && `${activity.posts.length} posts`,
+                    (activity.videos?.length || 0) > 0 && `${activity.videos.length} videos`,
+                    (activity.blogs?.length || 0) > 0 && `${activity.blogs.length} blogs`,
+                  ].filter(Boolean).join(' · ') || 'No activity'}
                 </span>
               </div>
               <ActivitySparkline data={activity.dailyCounts} width={600} height={48} />
@@ -135,6 +140,10 @@ export default function PersonPage({ person }: PersonPageProps) {
                   return <RepoCard key={`github-${idx}`} star={item as StarredRepo} />
                 } else if (item.type === 'bluesky') {
                   return <BlueskyPostCard key={`bluesky-${idx}`} post={item as BlueskyPost} />
+                } else if (item.type === 'youtube') {
+                  return <YouTubeVideoCard key={`youtube-${idx}`} video={item as YouTubeVideo} />
+                } else if (item.type === 'blog') {
+                  return <BlogPostCard key={`blog-${idx}`} post={item as BlogPost} />
                 }
                 return null
               })}
@@ -145,7 +154,9 @@ export default function PersonPage({ person }: PersonPageProps) {
           <div className="pt-6 border-t border-white/[0.06] text-xs text-gray-500 mt-8">
             {activity.stars.length > 0 && <span>{activity.stars.length} repos · </span>}
             {activity.posts.length > 0 && <span>{activity.posts.length} posts · </span>}
-            Last 30 days
+            {(activity.videos?.length || 0) > 0 && <span>{activity.videos.length} videos · </span>}
+            {(activity.blogs?.length || 0) > 0 && <span>{activity.blogs.length} blogs · </span>}
+            All time
           </div>
         </div>
       </div>

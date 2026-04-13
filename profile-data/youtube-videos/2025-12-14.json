@@ -1,0 +1,17 @@
+{
+  "date": "2025-12-14",
+  "videos": [
+    {
+      "videoId": "v67plFw1nMw",
+      "title": "Titans: Learning to Memorize at Test Time (Paper Analysis)",
+      "description": "Paper: https://arxiv.org/abs/2501.00663\n\nAbstract:\nOver more than a decade there has been an extensive research effort on how to effectively utilize recurrent models and attention. While recurrent models aim to compress the data into a fixed-size memory (called hidden state), attention allows attending to the entire context window, capturing the direct dependencies of all tokens. This more accurate modeling of dependencies, however, comes with a quadratic cost, limiting the model to a fixed-length context. We present a new neural long-term memory module that learns to memorize historical context and helps attention to attend to the current context while utilizing long past information. We show that this neural memory has the advantage of fast parallelizable training while maintaining a fast inference. From a memory perspective, we argue that attention due to its limited context but accurate dependency modeling performs as a short-term memory, while neural memory due to its ability to memorize the data, acts as a long-term, more persistent, memory. Based on these two modules, we introduce a new family of architectures, called Titans, and present three variants to address how one can effectively incorporate memory into this architecture. Our experimental results on language modeling, common-sense reasoning, genomics, and time series tasks show that Titans are more effective than Transformers and recent modern linear recurrent models. They further can effectively scale to larger than 2M context window size with higher accuracy in needle-in-haystack tasks compared to baselines.\n\nAuthors: Ali Behrouz, Peilin Zhong, Vahab Mirrokni\n\nLinks:\nHomepage: https://ykilcher.com\nMerch: https://ykilcher.com/merch\nYouTube: https://www.youtube.com/c/yannickilcher\nTwitter: https://twitter.com/ykilcher\nDiscord: https://ykilcher.com/discord\nLinkedIn: https://www.linkedin.com/in/ykilcher\n\nIf you want to support me, the best thing to do is to share out the content :)\n\nIf you want to support me financially (completely optional and voluntary, but a lot of people have asked for this):\nSubscribeStar: https://www.subscribestar.com/yannickilcher\nPatreon: https://www.patreon.com/yannickilcher\nBitcoin (BTC): bc1q49lsw3q325tr58ygf8sudx2dqfguclvngvy2cq\nEthereum (ETH): 0x7ad3513E3B8f66799f507Aa7874b1B0eBC7F85e2\nLitecoin (LTC): LQW2TRyKYetVC8WjFkhpPhtpbDM4Vw7r9m\nMonero (XMR): 4ACL8AGrEo5hAir8A9CeVrW8pEauWvnp1WnSDZxW7tziCDLhZAGsgzhRQABDnFy8yuM9fWJDviJPHKRjV4FWt19CJZN9D4n",
+      "channelTitle": "Yannic Kilcher",
+      "publishedAt": "2025-12-14T16:22:15Z",
+      "thumbnail": "https://i.ytimg.com/vi/v67plFw1nMw/hqdefault.jpg",
+      "viewCount": 22448,
+      "url": "https://www.youtube.com/watch?v=v67plFw1nMw",
+      "highlights": "The paper introduces 'Titans', a novel approach that combines the strengths of recurrent models and attention mechanisms. It enables AI models to dynamically memorize relevant information during inference, potentially overcoming the quadratic computational cost limitations of pure attention while maintaining contextual awareness.",
+      "worthReading": "This analysis provides clear insights into an important advancement in efficient AI architecture design, explaining how Titans could enable longer context windows without prohibitive computational costs."
+    }
+  ]
+}

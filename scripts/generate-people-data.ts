@@ -6,6 +6,8 @@ import path from 'path'
 const PEOPLE_JSON_PATH = path.join(__dirname, '..', 'profile-data', 'people.json')
 const GITHUB_STARS_DIR = path.join(__dirname, '..', 'profile-data', 'github-stars')
 const BLUESKY_POSTS_DIR = path.join(__dirname, '..', 'profile-data', 'bluesky-posts')
+const YOUTUBE_VIDEOS_DIR = path.join(__dirname, '..', 'profile-data', 'youtube-videos')
+const BLOG_POSTS_DIR = path.join(__dirname, '..', 'profile-data', 'blog-posts')
 const OUTPUT_DIR = path.join(__dirname, '..', 'profile-data', 'people-activity')
 const DEEPSEEK_API_KEY = process.env.DEEPSEEK_API_KEY || ''
 const DEEPSEEK_API_URL = 'https://api.deepseek.com/chat/completions'
@@ -18,6 +20,8 @@ interface Person {
   bio?: string
   github?: string
   bluesky?: string
+  youtubeChannel?: string
+  blogAuthor?: string
   avatar?: string
 }
 
@@ -52,10 +56,37 @@ interface BlueskyPost {
   worthReading: string
 }
 
+interface YouTubeVideo {
+  type?: string
+  videoId: string
+  title: string
+  description: string
+  channelTitle: string
+  publishedAt: string
+  thumbnail: string
+  viewCount: number
+  url: string
+  highlights: string
+  worthReading: string
+}
+
+interface BlogPost {
+  type?: string
+  title: string
+  url: string
+  author: string
+  publishedAt: string
+  summary: string
+  highlights: string
+  worthReading: string
+}
+
 interface PersonActivity {
   id: string
   stars: StarredRepo[]
   posts: BlueskyPost[]
+  videos: YouTubeVideo[]
+  blogs: BlogPost[]
   dailyCounts: number[]
   interestSummary: string
 }
@@ -162,6 +193,8 @@ async function main() {
   // Load all GitHub stars and Bluesky posts within the date range
   const allStarsByDate = new Map<string, StarredRepo[]>()
   const allPostsByDate = new Map<string, BlueskyPost[]>()
+  const allVideosByDate = new Map<string, YouTubeVideo[]>()
+  const allBlogsByDate = new Map<string, BlogPost[]>()
 
   if (fs.existsSync(GITHUB_STARS_DIR)) {
     const files = fs.readdirSync(GITHUB_STARS_DIR).filter(f => f.endsWith('.json'))
@@ -191,6 +224,32 @@ async function main() {
     }
   }
 
+  if (fs.existsSync(YOUTUBE_VIDEOS_DIR)) {
+    const files = fs.readdirSync(YOUTUBE_VIDEOS_DIR).filter(f => f.endsWith('.json'))
+    for (const file of files) {
+      const date = file.replace('.json', '')
+      const data = loadJsonFile<{ date: string; videos: YouTubeVideo[] }>(
+        path.join(YOUTUBE_VIDEOS_DIR, file)
+      )
+      if (data?.videos) {
+        allVideosByDate.set(date, data.videos.map(v => ({ ...v, type: 'youtube' })))
+      }
+    }
+  }
+
+  if (fs.existsSync(BLOG_POSTS_DIR)) {
+    const files = fs.readdirSync(BLOG_POSTS_DIR).filter(f => f.endsWith('.json'))
+    for (const file of files) {
+      const date = file.replace('.json', '')
+      const data = loadJsonFile<{ date: string; posts: BlogPost[] }>(
+        path.join(BLOG_POSTS_DIR, file)
+      )
+      if (data?.posts) {
+        allBlogsByDate.set(date, data.posts.map(b => ({ ...b, type: 'blog' })))
+      }
+    }
+  }
+
   // Create output directory
   fs.mkdirSync(OUTPUT_DIR, { recursive: true })
 
@@ -198,6 +257,8 @@ async function main() {
   for (const person of people) {
     const personStars: StarredRepo[] = []
     const personPosts: BlueskyPost[] = []
+    const personVideos: YouTubeVideo[] = []
+    const personBlogs: BlogPost[] = []
     const dailyCounts = new Array(30).fill(0)
 
     // Collect stars
@@ -224,6 +285,22 @@ async function main() {
       }
     }
 
+    // Collect videos
+    if (person.youtubeChannel) {
+      for (const [, videos] of allVideosByDate) {
+        const matched = videos.filter(v => v.channelTitle === person.youtubeChannel)
+        personVideos.push(...matched)
+      }
+    }
+
+    // Collect blogs
+    if (person.blogAuthor) {
+      for (const [, blogs] of allBlogsByDate) {
+        const matched = blogs.filter(b => b.author === person.blogAuthor)
+        personBlogs.push(...matched)
+      }
+    }
+
     // Generate AI interest summary
     const interestSummary = await generateInterestSummary(person, personStars, personPosts)
 
@@ -231,13 +308,16 @@ async function main() {
       id: person.id,
       stars: personStars,
       posts: personPosts,
+      videos: personVideos,
+      blogs: personBlogs,
       dailyCounts,
       interestSummary,
     }
 
     const outputPath = path.join(OUTPUT_DIR, `${person.id}.json`)
     fs.writeFileSync(outputPath, JSON.stringify(activity, null, 2) + '\n')
-    console.log(`  ✅ ${person.id}: ${personStars.length} stars, ${personPosts.length} posts`)
+    const total = personStars.length + personPosts.length + personVideos.length + personBlogs.length
+    console.log(`  ✅ ${person.id}: ${personStars.length} stars, ${personPosts.length} posts, ${personVideos.length} videos, ${personBlogs.length} blogs`)
   }
 
   console.log('🎉 People data generation complete!')

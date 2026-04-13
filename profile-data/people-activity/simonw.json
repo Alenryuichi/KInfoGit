@@ -47,23 +47,6 @@
   ],
   "posts": [
     {
-      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mirqhe5e2s2g",
-      "url": "https://bsky.app/profile/simonwillison.net/post/3mirqhe5e2s2g",
-      "author": {
-        "handle": "simonwillison.net",
-        "displayName": "Simon Willison",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
-      },
-      "content": "This is excellent, one of my favorite long-form pieces on agentic engineering - includes several non-obvious ways in which leaning on coding agents can catch you out",
-      "createdAt": "2026-04-05T21:55:10.335Z",
-      "likeCount": 203,
-      "replyCount": 9,
-      "repostCount": 25,
-      "highlights": "",
-      "worthReading": "",
-      "type": "bluesky"
-    },
-    {
       "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3miwpxjyqa22c",
       "url": "https://bsky.app/profile/simonwillison.net/post/3miwpxjyqa22c",
       "author": {
@@ -78,6 +61,7 @@
       "repostCount": 32,
       "highlights": "",
       "worthReading": "",
+      "tags": [],
       "type": "bluesky"
     },
     {
@@ -95,6 +79,7 @@
       "repostCount": 5,
       "highlights": "",
       "worthReading": "",
+      "tags": [],
       "type": "bluesky"
     },
     {
@@ -107,12 +92,36 @@
       },
       "content": "Pelicans for Meta's new Muse Spark models - plus I did a bit of a deep dive into the Code Interpreter and fascinating \"container.visual_grounding\" tools in their meta.ai chat UI simonwillison.net/2026/Apr/8/m...",
       "createdAt": "2026-04-08T23:12:58.789Z",
-      "likeCount": 49,
+      "likeCount": 48,
       "replyCount": 7,
       "repostCount": 2,
       "highlights": "",
       "worthReading": "",
+      "tags": [],
       "type": "bluesky"
+    }
+  ],
+  "videos": [],
+  "blogs": [
+    {
+      "title": "Anthropic's Project Glasswing - restricting Claude Mythos to security researchers - sounds necessary to me",
+      "url": "https://simonwillison.net/2026/Apr/7/project-glasswing/#atom-entries",
+      "author": "Simon Willison",
+      "publishedAt": "2026-04-07T20:52:54+00:00",
+      "summary": "<p>Anthropic <em>didn't</em> release their latest model, Claude Mythos (<a href=\"https://www-cdn.anthropic.com/53566bf5440a10affd749724787c8913a2ae0841.pdf\">system card PDF</a>), today. They have instead made it available to a very restricted set of preview partners under their newly announced <a...",
+      "highlights": "Anthropic is taking a cautious approach with Claude Mythos by restricting access to security researchers through Project Glasswing, rather than releasing it publicly. This reflects growing industry awareness of AI safety risks and the need for controlled testing before broader deployment.",
+      "worthReading": "The post offers timely insight into how leading AI companies are balancing innovation with safety, providing context on current industry practices around responsible AI deployment.",
+      "type": "blog"
+    },
+    {
+      "title": "Meta's new model is Muse Spark, and meta.ai chat has some interesting tools",
+      "url": "https://simonwillison.net/2026/Apr/8/muse-spark/#atom-entries",
+      "author": "Simon Willison",
+      "publishedAt": "2026-04-08T23:07:44+00:00",
+      "summary": "<p>Meta <a href=\"https://ai.meta.com/blog/introducing-muse-spark-msl/\">announced Muse Spark</a> today, their first model release since Llama 4 <a href=\"https://simonwillison.net/2025/Apr/5/llama-4-notes/\">almost exactly a year ago</a>. It's hosted, not open weights, and the API is currently \"a...",
+      "highlights": "Meta's Muse Spark represents their first major model release in about a year, following Llama 4. Unlike previous models, Muse Spark is a hosted service rather than open weights, indicating a shift in Meta's AI deployment strategy.",
+      "worthReading": "The post provides timely analysis of Meta's strategic pivot in AI model distribution and highlights new tools available through meta.ai chat that developers and researchers should explore.",
+      "type": "blog"
     }
   ],
   "dailyCounts": [
@@ -137,7 +146,7 @@
     0,
     0,
     0,
-    1,
+    0,
     0,
     4,
     1,
@@ -147,5 +156,5 @@
     0,
     0
   ],
-  "interestSummary": ""
+  "interestSummary": "Simon Willison is currently focused on exploring cutting-edge AI models and tools, with a particular interest in multimodal fine-tuning, AI memory systems, and the latest model releases and capabilities from companies like Anthropic and Meta."
 }

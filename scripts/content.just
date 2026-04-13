@@ -92,3 +92,11 @@ generate-people-data:
 # Fetch all social feeds (stars + bluesky)
 fetch-feeds: fetch-stars fetch-bluesky
     cd website && npx tsx ../scripts/generate-summaries.ts
+
+# Fetch Code Weekly report (editor updates + blogs)
+fetch-code-weekly:
+    cd website && npx tsx ../scripts/fetch-code-weekly.ts
+
+# Fetch benchmark data (Arena + Aider rankings)
+fetch-benchmarks:
+    cd website && npx tsx ../scripts/fetch-benchmarks.ts

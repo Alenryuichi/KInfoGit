@@ -1,0 +1,17 @@
+{
+  "date": "2025-10-11",
+  "videos": [
+    {
+      "videoId": "zKohTkN0Fyk",
+      "title": "[Paper Analysis] On the Theoretical Limitations of Embedding-Based Retrieval (Warning: Rant)",
+      "description": "Paper: https://arxiv.org/abs/2508.21038\n\nAbstract:\nVector embeddings have been tasked with an ever-increasing set of retrieval tasks over the years, with a nascent rise in using them for reasoning, instruction-following, coding, and more. These new benchmarks push embeddings to work for any query and any notion of relevance that could be given. While prior works have pointed out theoretical limitations of vector embeddings, there is a common assumption that these difficulties are exclusively due to unrealistic queries, and those that are not can be overcome with better training data and larger models. In this work, we demonstrate that we may encounter these theoretical limitations in realistic settings with extremely simple queries. We connect known results in learning theory, showing that the number of top-k subsets of documents capable of being returned as the result of some query is limited by the dimension of the embedding. We empirically show that this holds true even if we restrict to k=2, and directly optimize on the test set with free parameterized embeddings. We then create a realistic dataset called LIMIT that stress tests models based on these theoretical results, and observe that even state-of-the-art models fail on this dataset despite the simple nature of the task. Our work shows the limits of embedding models under the existing single vector paradigm and calls for future research to develop methods that can resolve this fundamental limitation.\n\nAuthors: Orion Weller, Michael Boratko, Iftekhar Naim, Jinhyuk Lee\n\nLinks:\nHomepage: https://ykilcher.com\nMerch: https://ykilcher.com/merch\nYouTube: https://www.youtube.com/c/yannickilcher\nTwitter: https://twitter.com/ykilcher\nDiscord: https://ykilcher.com/discord\nLinkedIn: https://www.linkedin.com/in/ykilcher\n\nIf you want to support me, the best thing to do is to share out the content :)\n\nIf you want to support me financially (completely optional and voluntary, but a lot of people have asked for this):\nSubscribeStar: https://www.subscribestar.com/yannickilcher\nPatreon: https://www.patreon.com/yannickilcher\nBitcoin (BTC): bc1q49lsw3q325tr58ygf8sudx2dqfguclvngvy2cq\nEthereum (ETH): 0x7ad3513E3B8f66799f507Aa7874b1B0eBC7F85e2\nLitecoin (LTC): LQW2TRyKYetVC8WjFkhpPhtpbDM4Vw7r9m\nMonero (XMR): 4ACL8AGrEo5hAir8A9CeVrW8pEauWvnp1WnSDZxW7tziCDLhZAGsgzhRQABDnFy8yuM9fWJDviJPHKRjV4FWt19CJZN9D4n",
+      "channelTitle": "Yannic Kilcher",
+      "publishedAt": "2025-10-11T16:07:41Z",
+      "thumbnail": "https://i.ytimg.com/vi/zKohTkN0Fyk/hqdefault.jpg",
+      "viewCount": 35367,
+      "url": "https://www.youtube.com/watch?v=zKohTkN0Fyk",
+      "highlights": "The video analyzes theoretical limitations of embedding-based retrieval systems, challenging the common assumption that their difficulties stem only from practical implementation issues. It argues that fundamental mathematical constraints exist regardless of how embeddings are constructed or optimized.",
+      "worthReading": "Yannic Kilcher provides a critical examination of embedding limitations that's valuable for anyone working with retrieval systems, offering insights that go beyond typical practical optimization discussions."
+    }
+  ]
+}

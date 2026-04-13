@@ -41,7 +41,7 @@ export default function PeopleIndex({ people }: PeopleIndexProps) {
           {/* Header */}
           <h1 className="text-3xl md:text-4xl font-bold mb-2 tracking-tight">People</h1>
           <p className="text-gray-400 mb-10">
-            {people.length} AI leaders tracked across GitHub and Bluesky.
+            {people.length} AI leaders tracked across GitHub, Bluesky, YouTube & blogs.
           </p>
 
           {/* People grid */}

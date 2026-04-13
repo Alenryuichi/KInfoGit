@@ -131,6 +131,26 @@ function WeeklyDigestCard({ digest }: { digest: WeeklyDigest }) {
 // --- Page ---
 
 export default function StarsList({ dates, latestDigest }: StarsListProps) {
+  const [sourceFilter, setSourceFilter] = useState<string>('all')
+
+  // Compute which sources have data
+  const hasSources = {
+    github: dates.some(d => d.githubCount > 0),
+    bluesky: dates.some(d => d.blueskyCount > 0),
+    youtube: dates.some(d => d.youtubeCount > 0),
+    blog: dates.some(d => d.blogCount > 0),
+  }
+
+  // Filter dates by source
+  const filteredDates = sourceFilter === 'all'
+    ? dates
+    : dates.filter(d => {
+        if (sourceFilter === 'github') return d.githubCount > 0
+        if (sourceFilter === 'bluesky') return d.blueskyCount > 0
+        if (sourceFilter === 'youtube') return d.youtubeCount > 0
+        if (sourceFilter === 'blog') return d.blogCount > 0
+        return true
+      })
   return (
     <>
       <Head>
@@ -156,12 +176,12 @@ export default function StarsList({ dates, latestDigest }: StarsListProps) {
             </a>
           </div>
           <p className="text-gray-400 text-lg mb-4">
-            Recently starred GitHub repos and Bluesky posts from AI leaders.<br />
-            <span className="text-gray-500 text-sm">Curated from GitHub & Bluesky · Powered by DeepSeek</span>
+            Recently starred GitHub repos, Bluesky posts, YouTube videos, and blog articles from AI leaders.<br />
+            <span className="text-gray-500 text-sm">Curated from GitHub, Bluesky, YouTube & RSS · Powered by DeepSeek</span>
           </p>
 
           {/* Quick links */}
-          <div className="flex items-center gap-4 mb-12">
+          <div className="flex items-center gap-3 mb-6">
             <Link
               href="/stars/people/"
               className="inline-flex items-center gap-1.5 px-3 py-1.5 text-sm font-medium text-gray-400 hover:text-white bg-white/[0.04] hover:bg-white/[0.08] rounded-lg border border-white/[0.06] transition-colors"
@@ -173,17 +193,41 @@ export default function StarsList({ dates, latestDigest }: StarsListProps) {
             </Link>
           </div>
 
+          {/* Source filter */}
+          <div className="flex flex-wrap gap-2 mb-8">
+            {(['all', 'github', 'bluesky', 'youtube', 'blog'] as const).map(source => {
+              if (source !== 'all' && !hasSources[source]) return null
+              const labels: Record<string, string> = { all: 'All', github: 'GitHub', bluesky: 'Bluesky', youtube: 'YouTube', blog: 'Blog' }
+              const isActive = sourceFilter === source
+              return (
+                <button
+                  key={source}
+                  onClick={() => setSourceFilter(source)}
+                  className={`px-3 py-1 text-xs font-medium rounded-full transition-colors ${
+                    isActive
+                      ? 'bg-white/[0.12] text-white'
+                      : 'bg-white/[0.04] text-gray-400 hover:bg-white/[0.08] hover:text-gray-300'
+                  }`}
+                >
+                  {labels[source]}
+                </button>
+              )
+            })}
+          </div>
+
           {/* Weekly Digest Card */}
           {latestDigest && <WeeklyDigestCard digest={latestDigest} />}
 
           {/* Date list */}
-          {dates.length === 0 ? (
+          {filteredDates.length === 0 ? (
             <div className="text-center py-20">
-              <p className="text-gray-500 text-lg">No stars or posts yet. Check back soon.</p>
+              <p className="text-gray-500 text-lg">
+                {sourceFilter === 'all' ? 'No stars or posts yet. Check back soon.' : `No ${sourceFilter} content yet.`}
+              </p>
             </div>
           ) : (
             <div className="space-y-1">
-              {dates.map(({ date, githubCount, blueskyCount, youtubeCount, blogCount }) => {
+              {filteredDates.map(({ date, githubCount, blueskyCount, youtubeCount, blogCount }) => {
                 const d = new Date(date + 'T00:00:00')
                 const formatted = d.toLocaleDateString('en-US', {
                   weekday: 'long',
