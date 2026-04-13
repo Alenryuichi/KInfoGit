@@ -15,6 +15,9 @@ export default function App({ Component, pageProps }: AppProps) {
         <link rel="icon" href="/favicon.PNG" type="image/png" />
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#3b82f6" />
+        <meta property="og:image" content="/KInfoGit/images/og-default.png" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Kylin Miao" />
       </Head>
       <ThemeProvider>
         <div className={inter.className}>
