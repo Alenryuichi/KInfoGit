@@ -152,7 +152,7 @@ export default function BenchmarksPage({ benchmarks, summaries, formattedDate }:
 
           {/* Footer */}
           <div className="pt-6 mt-12 border-t border-white/[0.06] text-xs text-gray-500">
-            数据每天自动更新 · 4 个评测源 · Chart/Table 可切换
+            每日自动更新 · Arena · SWE-bench · Aider · LiveCodeBench
           </div>
         </div>
       </div>

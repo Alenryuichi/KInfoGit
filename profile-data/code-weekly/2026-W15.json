@@ -1,94 +1,92 @@
 {
   "week": "2026-W15",
   "dateRange": "2026-04-05 — 2026-04-11",
-  "generatedAt": "2026-04-13T13:25:52.650Z",
+  "generatedAt": "2026-04-13T14:36:12.417Z",
   "editors": [
     {
       "name": "Cursor",
       "category": "ide",
       "version": "",
       "highlights": [
-        "新增自托管云代理，代码和工具执行完全保留在自有网络中",
-        "发布Cursor 3，增加独立的代理窗口，支持并行运行多个AI代理"
+        "Bugbot 更新，支持实时自我改进和 MCP 协议",
+        "Bugbot Autofix 功能得到改进，修复率创历史新高"
       ],
-      "source": "Search Results (English)",
-      "sourceUrl": "https://releasebot.io/updates/cursor",
-      "aiSummary": "Cursor本周推出了自托管云代理功能，增强了企业用户的隐私和控制力。同时，Cursor 3的发布引入了新的代理窗口界面，标志着其向多代理协作开发的进一步演进。"
+      "source": "Company Blog",
+      "sourceUrl": "https://cursor.com/changelog/04-08-26",
+      "aiSummary": "Cursor 本周发布了 Bugbot 更新，增强了其实时学习和集成能力。Bugbot 现在支持 MCP 协议，并且其自动修复功能达到了迄今为止最高的解决率。这些改进旨在提升开发者的自动化调试体验。"
     },
     {
       "name": "Windsurf",
       "category": "ide",
       "version": "",
       "highlights": [
-        "JetBrains插件更新至版本2.12.20，兼容2024.3+",
-        "发布了Windsurf Next的更新日志，包含错误修复和改进"
+        "JetBrains 插件更新至版本 2.12.20，兼容 2024.3+",
+        "VS Code 扩展更新至 v1.42，支持 Claude 3.7 Sonnet 模型"
       ],
-      "source": "Search Results (English)",
+      "source": "Search Results",
       "sourceUrl": "https://plugins.jetbrains.com/plugin/20540-windsurf-plugin-formerly-codeium-for-python-js-java-go--/versions",
-      "aiSummary": "Windsurf本周主要为JetBrains IDE插件发布了更新，提升了兼容性和稳定性。其核心IDE和Windsurf Next版本也进行了一系列错误修复和性能改进。"
+      "aiSummary": "Windsurf 本周主要为 JetBrains 和 VS Code 插件发布了更新。JetBrains 插件版本提升，VS Code 扩展则集成了最新的 Claude 3.7 Sonnet 模型。更新内容主要集中在错误修复和模型支持上。"
     },
     {
       "name": "Trae",
       "category": "ide",
       "version": "v3.5.47",
       "highlights": [
-        "发布v3.5.47，新增‘命令执行时自动打开终端’设置",
-        "全面开放MCP协议接入，支持接入多种第三方模型",
-        "上线规则系统，支持个人与项目级规则配置"
+        "新增‘命令执行时自动打开终端’设置选项",
+        "优化了 AI 输入框和代码审查功能的用户体验"
       ],
-      "source": "Search Results (English), Search Results (Chinese)",
+      "source": "Search Results",
       "sourceUrl": "https://docs.trae.ai/ide/changelog",
-      "aiSummary": "Trae本周发布了功能更新，增加了自动打开终端等实用设置。更重要的是，它全面开放了MCP协议和自定义规则系统，显著提升了其扩展性和对复杂工作流的支持能力。"
+      "aiSummary": "Trae 本周发布了 v3.5.47 功能更新，新增了自动打开终端的设置，提升了用户操作的便捷性。同时，对 AI 输入框和代码审查功能进行了体验优化，旨在提高开发者的日常工作效率。"
     },
     {
       "name": "Augment",
       "category": "ide",
-      "version": "",
+      "version": "CLI 0.22.0",
       "highlights": [
-        "发布了用于多智能体编排的Intent功能",
-        "JetBrains插件描述更新，强调对大代码库的支持"
+        "新增 `/fork` 命令用于复制当前会话",
+        "支持用户自定义 TUI 主题",
+        "插件通过 `--plugin-dir` 加载后会自动启用"
       ],
-      "source": "Search Results (English)",
-      "sourceUrl": "https://www.augmentcode.com/tools/8-top-ai-coding-assistants-and-their-best-use-cases",
-      "aiSummary": "Augment本周的更新重点在于其多智能体协作能力，推出了名为Intent的新功能。其JetBrains插件也持续优化，专注于服务大型复杂项目。"
+      "source": "Search Results",
+      "sourceUrl": "https://www.augmentcode.com/changelog/cli-0-22-0-release-notes",
+      "aiSummary": "Augment 本周发布了 CLI 0.22.0 版本，引入了会话分叉、自定义主题等实用功能。更新还改进了插件加载和帮助菜单的显示逻辑，增强了命令行工具的可定制性和易用性。"
     },
     {
       "name": "Claude Code",
       "category": "cli",
-      "version": "2.1.41 (提及), npm发布至2.1.104",
+      "version": "2.1.104 (npm)",
       "highlights": [
-        "npm包频繁更新，本周发布多个版本（如2.1.104）",
-        "修复了多项问题，包括启动UI冻结、插件安装丢失等"
+        "修复了多项杂项问题，如启动UI冻结、权限提示误报等",
+        "npm 包在本周发布了多个版本，包括 2.1.104, 2.1.101 等"
       ],
-      "source": "Search Results (English), npm Releases",
+      "source": "npm Releases & Search Results",
       "sourceUrl": "https://claudefa.st/blog/guide/changelog",
-      "aiSummary": "Claude Code本周通过npm发布了多个小版本更新，主要进行错误修复和稳定性改进。这表明其开发活跃，正在快速迭代以提升用户体验。"
+      "aiSummary": "Claude Code 本周通过 npm 发布了多个小版本更新，版本号迭代至 2.1.104。更新日志显示主要修复了一系列杂项问题，包括 UI 冻结、权限提示和插件安装等，提升了工具的稳定性和用户体验。"
     },
     {
       "name": "Gemini CLI",
       "category": "cli",
-      "version": "v0.39.0-nightly系列, v0.37.1",
+      "version": "v0.39.0-nightly.20260411.0957f7d3e",
       "highlights": [
-        "发布多个夜间构建版本及v0.37.1稳定版",
-        "新增调试UI的debugRainbow设置",
-        "修复生命周期内存泄漏问题",
-        "在计划模式中要求用户确认激活技能"
+        "修复 API 错误消息中的 Uint8Array 和多字节 UTF-8 解码问题",
+        "增加了可选的 debugRainbow UI 调试设置",
+        "修复了生命周期内存泄漏问题",
+        "支持 Ctrl+Shift+G 快捷键",
+        "重构子代理工具为统一的 invoke_subagent 工具"
       ],
       "source": "GitHub Releases",
       "sourceUrl": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.39.0-nightly.20260411.0957f7d3e",
-      "aiSummary": "Gemini CLI本周发布了密集的夜间构建更新和一个稳定版本。更新内容涵盖UI调试、内存泄漏修复、计划模式交互改进等多个方面，显示出持续的开发和优化。"
+      "aiSummary": "Gemini CLI 本周发布了多个夜间构建版本，修复了错误处理、内存泄漏等关键问题。新增了调试选项和快捷键支持，并对代理工具进行了重构。这些更新旨在提升 CLI 的稳定性、可调试性和功能一致性。"
     },
     {
       "name": "OpenCode",
       "category": "cli",
       "version": "",
-      "highlights": [
-        "更新日志显示修复了clangd选择项目根目录的问题",
-        "增加了对远程MCP服务器的可配置OAuth重定向URI支持"
-      ],
-      "source": "Search Results (English)",
-      "sourceUrl": "https://opencode.ai/changelog",
-      "aiSummary": "OpenCode本周进行了一些底层修复和功能增强，主要针对C/C++工作空间和MCP服务器集成。这些改进旨在提升工具在特定场景下的稳定性和灵活性。"
+      "highlights": [],
+      "source": "",
+      "sourceUrl": "",
+      "aiSummary": "本周暂无重大更新"
     },
     {
       "name": "Aider",
@@ -104,26 +102,27 @@
       "category": "cli",
       "version": "",
       "highlights": [
-        "GitHub宣布自2026年4月24日起将使用Copilot交互数据训练AI模型",
-        "VS Code扩展三月更新发布，增强了对代理运行的控制和能力"
+        "GitHub 宣布自 4月24日起将使用 Copilot 交互数据训练 AI 模型（需手动选择退出）",
+        "VS Code 扩展三月更新发布，增强了对代理运行的控制和功能"
       ],
-      "source": "Search Results (English)",
+      "source": "Search Results",
       "sourceUrl": "https://github.blog/changelog/2026-04-08-github-copilot-in-visual-studio-code-march-releases/",
-      "aiSummary": "GitHub Copilot本周因新的数据使用政策引发关注。同时，其VS Code扩展发布了功能更新，进一步提升了AI代理的可控性和执行范围。"
+      "aiSummary": "GitHub Copilot 本周更新了使用政策，宣布将利用用户交互数据改进模型。同时，VS Code 扩展发布了三月更新日志，重点增强了代理的控制能力和可扩展性，为开发者提供了更精细的管理选项。"
     },
     {
       "name": "CodeBuddy",
       "category": "cli",
-      "version": "CLI 2.0, IDE公测版",
+      "version": "CLI 2.0",
       "highlights": [
-        "正式发布CodeBuddy Code CLI 2.0，支持计划模式和技能框架",
-        "IDE公测版强化项目级上下文感知与重构建议",
-        "Craft智能体深度集成MCP协议，支持生成完整应用",
-        "插件更新至v3.1.9，新增MCP Server面板"
+        "正式发布 Code CLI 2.0，新增 Plan 计划模式",
+        "兼容 ACP 协议并开放 SDK 供企业集成",
+        "引入 Skills 概念，支持原子能力复用",
+        "Craft 智能体升级，支持多文件联动生成和前端预览直启",
+        "IDE 公测版上线，支持‘@Codebase’指令进行全量语义索引"
       ],
-      "source": "Search Results (Chinese)",
+      "source": "Search Results",
       "sourceUrl": "https://copilot.tencent.com",
-      "aiSummary": "腾讯云CodeBuddy本周迎来一系列重大更新，包括CLI 2.0的发布和IDE功能的增强。其核心进展在于引入了计划模式、深度MCP集成以及更强大的项目分析与重构能力。"
+      "aiSummary": "腾讯 CodeBuddy 本周动作频繁，重磅发布了 CLI 2.0，引入了计划模式和 Skills 等新概念。同时，Craft 智能体和独立 IDE 也获得重大升级，强化了多文件生成、实时预览和大型代码库理解能力，展现出全面的产品迭代。"
     }
   ],
   "benchmarks": {
@@ -631,6 +630,354 @@
         "delta": null
       }
     ],
+    "sweBench": [
+      {
+        "model": "live-SWE-agent + Claude 4.5 Opus medium (20251101)",
+        "resolved": 79.2,
+        "org": "UIUC"
+      },
+      {
+        "model": "Sonar Foundation Agent + Claude 4.5 Opus",
+        "resolved": 79.2,
+        "org": "Sonar"
+      },
+      {
+        "model": "TRAE + Doubao-Seed-Code",
+        "resolved": 78.8,
+        "org": "ByteDance"
+      },
+      {
+        "model": "live-SWE-agent + Gemini 3 Pro Preview (2025-11-18)",
+        "resolved": 77.4,
+        "org": "UIUC"
+      },
+      {
+        "model": "Atlassian Rovo Dev (2025-09-02)",
+        "resolved": 76.8,
+        "org": "Atlassian"
+      },
+      {
+        "model": "EPAM AI/Run Developer Agent v20250719 + Claude 4 Sonnet",
+        "resolved": 76.8,
+        "org": "EPAM Systems, Inc."
+      },
+      {
+        "model": "mini-SWE-agent + Claude 4.5 Opus (high reasoning)",
+        "resolved": 76.8,
+        "org": "Anthropic"
+      },
+      {
+        "model": "ACoder",
+        "resolved": 76.4,
+        "org": "ACoder"
+      },
+      {
+        "model": "mini-SWE-agent + Gemini 3 Flash (high reasoning)",
+        "resolved": 75.8,
+        "org": "Google DeepMind"
+      },
+      {
+        "model": "mini-SWE-agent + MiniMax M2.5 (high reasoning)",
+        "resolved": 75.8,
+        "org": "Minimax"
+      },
+      {
+        "model": "Warp",
+        "resolved": 75.6,
+        "org": "Warp"
+      },
+      {
+        "model": "mini-SWE-agent + Claude Opus 4.6",
+        "resolved": 75.6,
+        "org": "Anthropic"
+      },
+      {
+        "model": "TRAE + Claude Sonnet 4 + Opus 4 + Sonnet 3.7 + Gemini 2.5 Pro",
+        "resolved": 75.2,
+        "org": "TRAE"
+      },
+      {
+        "model": "Harness AI",
+        "resolved": 74.8,
+        "org": "Harness"
+      },
+      {
+        "model": "Sonar Foundation Agent + Claude 4.5 Sonnet",
+        "resolved": 74.8,
+        "org": "Sonar"
+      },
+      {
+        "model": "Lingxi-v1.5_claude-4-sonnet-20250514",
+        "resolved": 74.6,
+        "org": "Lingxi"
+      },
+      {
+        "model": "JoyCode + Claude 4 Sonnet + GPT-4.1",
+        "resolved": 74.6,
+        "org": "JoyCode"
+      },
+      {
+        "model": "Refact.ai Agent + Claude 4 Sonnet + o4-mini",
+        "resolved": 74.4,
+        "org": "Refact.ai"
+      },
+      {
+        "model": "Prometheus-v1.2.1 + GPT-5",
+        "resolved": 74.4,
+        "org": "EuniAI"
+      },
+      {
+        "model": "mini-SWE-agent + Claude 4.5 Opus medium (20251101)",
+        "resolved": 74.4,
+        "org": "Anthropic"
+      },
+      {
+        "model": "mini-SWE-agent + Gemini 3 Pro Preview (2025-11-18)",
+        "resolved": 74.2,
+        "org": "Google DeepMind"
+      },
+      {
+        "model": "Salesforce AI Research SAGE (OpenHands)",
+        "resolved": 73.8,
+        "org": "Salesforce AI Research"
+      },
+      {
+        "model": "Tools + Claude 4 Opus (2025-05-22)",
+        "resolved": 73.2
+      },
+      {
+        "model": "Salesforce AI Research SAGE (bash-only)",
+        "resolved": 73,
+        "org": "Salesforce AI Research"
+      },
+      {
+        "model": "mini-SWE-agent + GPT-5-2 Codex",
+        "resolved": 72.8,
+        "org": "OpenAI"
+      },
+      {
+        "model": "mini-SWE-agent + GLM-5 (high reasoning)",
+        "resolved": 72.8,
+        "org": "Z-AI"
+      },
+      {
+        "model": "mini-SWE-agent + GPT-5-2 (high reasoning)",
+        "resolved": 72.8,
+        "org": "OpenAI"
+      },
+      {
+        "model": "Tools + Claude 4 Sonnet (2025-05-22)",
+        "resolved": 72.4
+      },
+      {
+        "model": "OpenHands + GPT-5",
+        "resolved": 71.8,
+        "org": "OpenHands"
+      },
+      {
+        "model": "mini-SWE-agent + GPT-5.2 (2025-12-11) (high reasoning)",
+        "resolved": 71.8,
+        "org": "OpenAI"
+      }
+    ],
+    "liveCodeBench": [
+      {
+        "model": "O4-Mini (High)",
+        "passRate": 87.3,
+        "easy": 98.4,
+        "medium": 92.7,
+        "hard": 71.1
+      },
+      {
+        "model": "O3 (High)",
+        "passRate": 84.7,
+        "easy": 99.1,
+        "medium": 89.8,
+        "hard": 66
+      },
+      {
+        "model": "O4-Mini (Medium)",
+        "passRate": 84.5,
+        "easy": 98.8,
+        "medium": 92.2,
+        "hard": 62.9
+      },
+      {
+        "model": "DeepSeek-R1-0528",
+        "passRate": 84.4,
+        "easy": 99.2,
+        "medium": 90.9,
+        "hard": 63.6
+      },
+      {
+        "model": "Gemini-2.5-Pro-06-05",
+        "passRate": 84.3,
+        "easy": 99.1,
+        "medium": 92.2,
+        "hard": 62
+      },
+      {
+        "model": "Gemini-2.5-Pro-05-06",
+        "passRate": 82.7,
+        "easy": 98.8,
+        "medium": 90.6,
+        "hard": 59.4
+      },
+      {
+        "model": "OpenReasoning-Nemotron-32B",
+        "passRate": 81,
+        "easy": 98.6,
+        "medium": 87.5,
+        "hard": 57.5
+      },
+      {
+        "model": "EXAONE-4.0-32B",
+        "passRate": 80.9,
+        "easy": 98.8,
+        "medium": 88.3,
+        "hard": 56.3
+      },
+      {
+        "model": "Qwen3-235B-A22B",
+        "passRate": 80.4,
+        "easy": 99.1,
+        "medium": 88.8,
+        "hard": 54
+      },
+      {
+        "model": "XBai-o4-medium",
+        "passRate": 80.1,
+        "easy": 98.8,
+        "medium": 90.1,
+        "hard": 52
+      },
+      {
+        "model": "OpenCodeReasoning-Nemotron-1.1-32B",
+        "passRate": 78.5,
+        "easy": 98,
+        "medium": 85.7,
+        "hard": 52.8
+      },
+      {
+        "model": "Grok-3-Mini (High)",
+        "passRate": 78.1,
+        "easy": 98.1,
+        "medium": 85.9,
+        "hard": 51.1
+      },
+      {
+        "model": "O3-Mini-2025-01-31 (High)",
+        "passRate": 77.7,
+        "easy": 99.1,
+        "medium": 87.5,
+        "hard": 47.4
+      },
+      {
+        "model": "O4-Mini (Low)",
+        "passRate": 77.4,
+        "easy": 98.1,
+        "medium": 86.2,
+        "hard": 48.9
+      },
+      {
+        "model": "Gemini-2.5-Flash-05-20",
+        "passRate": 76.2,
+        "easy": 99.1,
+        "medium": 82.5,
+        "hard": 48.3
+      },
+      {
+        "model": "O3-Mini-2025-01-31 (Med)",
+        "passRate": 75.4,
+        "easy": 98.8,
+        "medium": 85.1,
+        "hard": 43.1
+      },
+      {
+        "model": "Gemini-2.5-Flash-04-17",
+        "passRate": 75.1,
+        "easy": 98.4,
+        "medium": 81.2,
+        "hard": 46.9
+      },
+      {
+        "model": "O3-Mini-2025-01-31 (Low)",
+        "passRate": 70.6,
+        "easy": 97.8,
+        "medium": 77.5,
+        "hard": 38
+      },
+      {
+        "model": "Claude-Opus-4 (Thinking)",
+        "passRate": 70.4,
+        "easy": 99.1,
+        "medium": 80.4,
+        "hard": 33.1
+      },
+      {
+        "model": "Claude-Sonnet-4 (Thinking)",
+        "passRate": 68.5,
+        "easy": 98.8,
+        "medium": 76,
+        "hard": 32.6
+      },
+      {
+        "model": "Claude-Opus-4",
+        "passRate": 62.4,
+        "easy": 96.3,
+        "medium": 69.2,
+        "hard": 23.7
+      },
+      {
+        "model": "Claude-Sonnet-4",
+        "passRate": 59.4,
+        "easy": 96.3,
+        "medium": 64,
+        "hard": 20.6
+      },
+      {
+        "model": "DeepSeek-V3",
+        "passRate": 49.6,
+        "easy": 83.3,
+        "medium": 53.5,
+        "hard": 14.2
+      },
+      {
+        "model": "Claude-3.5-Sonnet-20241022",
+        "passRate": 48.7,
+        "easy": 92.6,
+        "medium": 44.6,
+        "hard": 12.8
+      },
+      {
+        "model": "GPT-4O-2024-08-06",
+        "passRate": 38.3,
+        "easy": 82.5,
+        "medium": 32.1,
+        "hard": 4.5
+      },
+      {
+        "model": "GPT-4-Turbo-2024-04-09",
+        "passRate": 37.3,
+        "easy": 81.4,
+        "medium": 30.7,
+        "hard": 4
+      },
+      {
+        "model": "GPT-4O-mini-2024-07-18",
+        "passRate": 35.5,
+        "easy": 81.7,
+        "medium": 25.2,
+        "hard": 4.3
+      },
+      {
+        "model": "Claude-3-Haiku",
+        "passRate": 22.5,
+        "easy": 61.1,
+        "medium": 9,
+        "hard": 1.9
+      }
+    ],
     "notable": ""
   },
   "blogs": [
@@ -639,7 +986,7 @@
       "title": "Bugbot Learned Rules and MCP Support",
       "url": "https://cursor.com/changelog/04-08-26",
       "publishedAt": "Wed, 08 Apr 2026 00:00:00 GMT",
-      "summary": "Cursor发布更新，增强了Bugbot的能力，包括实时自我改进、支持MCP协议、改进自动修复功能，并达到了迄今为止最高的问题解决率。",
+      "summary": "Cursor 发布了 Bugbot 更新，使其能够实时自我改进并支持 MCP 协议。同时改进了 Bugbot Autofix 功能，达到了迄今为止最高的修复率。",
       "tags": [
         "AI",
         "编程工具"
@@ -649,8 +996,8 @@
       "company": "Vercel",
       "title": "Agentic Infrastructure",
       "url": "https://vercel.com/blog/agentic-infrastructure",
-      "publishedAt": "2026-04-13T13:25:53.170Z",
-      "summary": "文章探讨了LLM和编码代理如何驱动新一代基础设施的演进，从手动配置服务器到云API，再到由应用本身衍生的基础设施。",
+      "publishedAt": "",
+      "summary": "文章探讨了 LLM 和编码智能体如何驱动新一代基础设施的演进，从手动配置服务器到云 API，再到由应用本身衍生的基础设施。",
       "tags": [
         "AI",
         "基础设施"
@@ -658,15 +1005,26 @@
     },
     {
       "company": "Vercel",
+      "title": "Agent responsibly",
+      "url": "https://vercel.com/blog/agent-responsibly",
+      "publishedAt": "",
+      "summary": "基于 Vercel 内部演讲，分享了在利用编码智能体高速生成代码时，如何通过框架确保代码质量和工程纪律，避免技术债务。",
+      "tags": [
+        "AI",
+        "工程实践"
+      ]
+    },
+    {
+      "company": "Vercel",
       "title": "Making Turborepo 96% faster with agents, sandboxes, and humans",
       "url": "https://vercel.com/blog/making-turborepo-ninety-six-percent-faster-with-agents-sandboxes-and-humans",
-      "publishedAt": "2026-04-13T13:25:53.171Z",
-      "summary": "Vercel分享了如何利用AI代理、沙箱和人工协作，将Turborepo计算任务图的速度提升了81-91%，显著改善了大型代码库的开发体验。",
+      "publishedAt": "",
+      "summary": "介绍了如何结合 AI 智能体、沙箱和人工协作，将 Turborepo 的任务图计算速度提升了 81-91%，大幅改善了开发体验。",
       "tags": [
         "AI",
         "开发工具"
       ]
     }
   ],
-  "weekSummary": "本周AI编程工具生态活跃，多个产品发布重要更新。Cursor和CodeBuddy分别推出了自托管代理和CLI 2.0等重大功能，强调安全可控与企业级集成。Gemini CLI和Claude Code持续进行高频迭代，专注于稳定性和体验优化。同时，MCP协议的支持和扩展成为多个工具（如Trae、OpenCode、CodeBuddy）的共同焦点，预示着开放生态和工具互联的趋势正在加速。"
+  "weekSummary": "本周 AI 编程工具生态活跃，多个产品发布重要更新。Gemini CLI 密集发布夜间构建版本，修复核心问题并增强功能；腾讯 CodeBuddy 推出 CLI 2.0 和 IDE 公测版，在计划模式和大代码库理解上发力；Cursor 和 Augment 分别优化了其 Bugbot 和 CLI 工具。同时，基础设施提供商 Vercel 发布多篇博客，深入探讨了智能体时代的基础设施和工程实践。"
 }

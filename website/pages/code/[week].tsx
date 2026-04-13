@@ -8,7 +8,7 @@ import {
   type CodeWeekly,
 } from '@/lib/code-weekly'
 import { EditorCard } from '@/components/code-weekly/EditorCard'
-import { ArenaRankingTable, AiderLeaderboardTable } from '@/components/code-weekly/BenchmarkTable'
+import { ArenaRankingTable, AiderLeaderboardTable, SweBenchTable, LiveCodeBenchTable } from '@/components/code-weekly/BenchmarkTable'
 import { BlogCard } from '@/components/code-weekly/BlogCard'
 import { WeeklyTabs } from '@/components/code-weekly/WeeklyTabs'
 
@@ -205,15 +205,31 @@ export default function CodeWeekDetail({ data, prevWeek, nextWeek, allWeeks }: C
                       </h2>
                       <ArenaRankingTable rankings={data.benchmarks.arenaRanking} />
                     </div>
+                    {data.benchmarks.sweBench && data.benchmarks.sweBench.length > 0 && (
+                      <div>
+                        <h2 className="text-xs font-semibold tracking-[0.15em] uppercase text-gray-500 mb-4 pb-3 border-b border-white/[0.06]">
+                          SWE-bench Verified
+                        </h2>
+                        <SweBenchTable entries={data.benchmarks.sweBench} />
+                      </div>
+                    )}
                     <div>
                       <h2 className="text-xs font-semibold tracking-[0.15em] uppercase text-gray-500 mb-4 pb-3 border-b border-white/[0.06]">
                         Aider Leaderboard
                       </h2>
                       <AiderLeaderboardTable entries={data.benchmarks.aiderLeaderboard} />
                     </div>
+                    {data.benchmarks.liveCodeBench && data.benchmarks.liveCodeBench.length > 0 && (
+                      <div>
+                        <h2 className="text-xs font-semibold tracking-[0.15em] uppercase text-gray-500 mb-4 pb-3 border-b border-white/[0.06]">
+                          LiveCodeBench
+                        </h2>
+                        <LiveCodeBenchTable entries={data.benchmarks.liveCodeBench} />
+                      </div>
+                    )}
                     {data.benchmarks.notable && (
                       <p className="text-sm text-gray-400">
-                        📊 {data.benchmarks.notable}
+                        {data.benchmarks.notable}
                       </p>
                     )}
                   </div>
@@ -244,8 +260,7 @@ export default function CodeWeekDetail({ data, prevWeek, nextWeek, allWeeks }: C
 
           {/* Footer */}
           <div className="pt-6 mt-10 border-t border-white/[0.06] text-xs text-gray-500">
-            📊 {data.editors.length} editors · {data.blogs.length} blogs
-            <span className="ml-3">🤖 Powered by Tavily + DeepSeek</span>
+            {data.editors.length} editors · {data.blogs.length} blogs · 每周一自动生成
           </div>
 
           {/* Bottom week nav */}

@@ -27,7 +27,7 @@ export default function CodeList({ weeks }: CodeListProps) {
           <p className="text-gray-400 text-lg mb-12">
             AI Code 编辑器生态周报<br />
             <span className="text-gray-500 text-sm">
-              Tracking Cursor · Claude Code · Gemini CLI · Aider · and more · Powered by Tavily + DeepSeek
+              Cursor · Claude Code · Gemini CLI · Windsurf · and more · 每周一更新
             </span>
           </p>
 
@@ -76,7 +76,7 @@ export default function CodeList({ weeks }: CodeListProps) {
                   🏆 查看最新评测排名
                 </h3>
                 <p className="text-sm text-gray-500 mt-1">
-                  Chatbot Arena · Aider Leaderboard · 每日更新
+                  Arena · SWE-bench · Aider · LiveCodeBench · 每日更新
                 </p>
               </div>
               <span className="text-gray-500 text-sm">→</span>

@@ -30,6 +30,8 @@ import { fetchBailianForEditors } from './code-weekly/sources/bailian-search'
 import { fetchNpmReleases } from './code-weekly/sources/npm-registry'
 import { fetchArenaRankings } from './code-weekly/sources/arena-rankings'
 import { fetchAiderLeaderboard } from './code-weekly/sources/aider-leaderboard'
+import { fetchSweBench } from './code-weekly/sources/swe-bench'
+import { fetchLiveCodeBench } from './code-weekly/sources/livecodebench'
 import { summarizeWeekly, collectUrlsFromRaw } from './code-weekly/summarizer'
 
 // ─── ISO Week Helpers ──────────────────────────────────────
@@ -86,7 +88,7 @@ async function main() {
 
   // Parallel data collection with Promise.allSettled
   console.log('📡 Fetching from all sources...')
-  const [githubResult, rssResult, tavilyResult, bailianResult, npmResult, arenaResult, aiderResult] = await Promise.allSettled([
+  const [githubResult, rssResult, tavilyResult, bailianResult, npmResult, arenaResult, aiderResult, sweResult, lcbResult] = await Promise.allSettled([
     fetchGitHubReleases(),
     fetchRssFeeds(),
     fetchTavilyForEditors(tavilyEditors),
@@ -94,6 +96,8 @@ async function main() {
     fetchNpmReleases(npmPackages),
     fetchArenaRankings(),
     fetchAiderLeaderboard(),
+    fetchSweBench(),
+    fetchLiveCodeBench(),
   ])
 
   const githubReleases = githubResult.status === 'fulfilled' ? githubResult.value : []
@@ -103,6 +107,8 @@ async function main() {
   const npmReleases = npmResult.status === 'fulfilled' ? npmResult.value : []
   const arenaRankings = arenaResult.status === 'fulfilled' ? arenaResult.value : []
   const aiderLeaderboard = aiderResult.status === 'fulfilled' ? aiderResult.value : []
+  const sweBench = sweResult.status === 'fulfilled' ? sweResult.value : []
+  const liveCodeBench = lcbResult.status === 'fulfilled' ? lcbResult.value : []
 
   // Log failures explicitly
   const sources = [
@@ -113,6 +119,8 @@ async function main() {
     ['npm', npmResult],
     ['Arena', arenaResult],
     ['Aider', aiderResult],
+    ['SWE-bench', sweResult],
+    ['LiveCodeBench', lcbResult],
   ] as const
   let failCount = 0
   for (const [name, result] of sources) {
@@ -132,6 +140,8 @@ async function main() {
   console.log(`  npm Releases: ${npmReleases.length}`)
   console.log(`  Arena Rankings: ${arenaRankings.length}`)
   console.log(`  Aider Entries: ${aiderLeaderboard.length}`)
+  console.log(`  SWE-bench: ${sweBench.length}`)
+  console.log(`  LiveCodeBench: ${liveCodeBench.length}`)
 
   // AI Summarization
   console.log('\n🤖 Summarizing with DeepSeek...')
@@ -200,6 +210,8 @@ async function main() {
     benchmarks: {
       arenaRanking: arenaRankings.map((e, i) => ({ ...e, rank: e.rank || i + 1, delta: null })),
       aiderLeaderboard: aiderLeaderboard.map(e => ({ ...e, delta: null })),
+      sweBench: sweBench.length > 0 ? sweBench : undefined,
+      liveCodeBench: liveCodeBench.length > 0 ? liveCodeBench : undefined,
       notable: '',
     },
     blogs: summary.blogs,
