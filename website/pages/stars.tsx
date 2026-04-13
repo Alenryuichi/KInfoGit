@@ -216,7 +216,7 @@ export default function StarsList({ dates, latestDigest }: StarsListProps) {
           </div>
 
           {/* Weekly Digest Card */}
-          {latestDigest && <WeeklyDigestCard digest={latestDigest} />}
+          {latestDigest && sourceFilter === 'all' && <WeeklyDigestCard digest={latestDigest} />}
 
           {/* Date list */}
           {filteredDates.length === 0 ? (
@@ -236,10 +236,18 @@ export default function StarsList({ dates, latestDigest }: StarsListProps) {
                   day: 'numeric',
                 })
                 const parts: string[] = []
-                if (githubCount > 0) parts.push(`${githubCount} repo${githubCount === 1 ? '' : 's'}`)
-                if (blueskyCount > 0) parts.push(`${blueskyCount} post${blueskyCount === 1 ? '' : 's'}`)
-                if (youtubeCount > 0) parts.push(`${youtubeCount} video${youtubeCount === 1 ? '' : 's'}`)
-                if (blogCount > 0) parts.push(`${blogCount} blog${blogCount === 1 ? '' : 's'}`)
+                if (sourceFilter === 'all' || sourceFilter === 'github') {
+                  if (githubCount > 0) parts.push(`${githubCount} repo${githubCount === 1 ? '' : 's'}`)
+                }
+                if (sourceFilter === 'all' || sourceFilter === 'bluesky') {
+                  if (blueskyCount > 0) parts.push(`${blueskyCount} post${blueskyCount === 1 ? '' : 's'}`)
+                }
+                if (sourceFilter === 'all' || sourceFilter === 'youtube') {
+                  if (youtubeCount > 0) parts.push(`${youtubeCount} video${youtubeCount === 1 ? '' : 's'}`)
+                }
+                if (sourceFilter === 'all' || sourceFilter === 'blog') {
+                  if (blogCount > 0) parts.push(`${blogCount} blog${blogCount === 1 ? '' : 's'}`)
+                }
                 return (
                   <Link
                     key={date}
