@@ -27,6 +27,11 @@ const OUTPUT_DIR = path.join(__dirname, '..', 'profile-data', 'github-stars')
 const DEEPSEEK_API_KEY = process.env.DEEPSEEK_API_KEY || ''
 const DEEPSEEK_API_URL = 'https://api.deepseek.com/chat/completions'
 
+const VALID_TAGS = [
+  'agent', 'llm', 'infra', 'rag', 'multi-modal',
+  'safety', 'fine-tuning', 'evaluation', 'deployment', 'tooling',
+] as const
+
 // --- Types ---
 
 interface GitHubStarResponse {
@@ -51,6 +56,7 @@ interface StarredRepo {
   highlights: string
   worthReading: string
   topics: string[]
+  tags: string[]
 }
 
 interface DailyStars {
@@ -98,14 +104,15 @@ async function fetchUserStars(username: string): Promise<{ starredAt: string; re
 
 // --- DeepSeek API ---
 
-async function generateCommentary(repo: StarredRepo): Promise<{ highlights: string; worthReading: string }> {
+async function generateCommentary(repo: StarredRepo): Promise<{ highlights: string; worthReading: string; tags: string[] }> {
   if (!DEEPSEEK_API_KEY) {
-    return { highlights: '', worthReading: '' }
+    return { highlights: '', worthReading: '', tags: [] }
   }
 
   const prompt = `You are a technical reviewer. Given a GitHub repository, provide:
 1. "highlights": Core value and key features of this project (2-3 sentences, concise)
 2. "worthReading": Why it's worth exploring (1-2 sentences)
+3. "tags": Pick 1-3 tags from this EXACT list that best describe the project: ${VALID_TAGS.join(', ')}. Return an empty array if none fit.
 
 Repository: ${repo.repo}
 Description: ${repo.description || 'No description'}
@@ -113,7 +120,7 @@ Language: ${repo.language || 'Unknown'}
 Topics: ${repo.topics.join(', ') || 'None'}
 Stars: ${repo.stargazersCount}
 
-Respond in JSON format: {"highlights": "...", "worthReading": "..."}`
+Respond in JSON format: {"highlights": "...", "worthReading": "...", "tags": ["..."]}`
 
   try {
     const res = await fetch(DEEPSEEK_API_URL, {
@@ -133,19 +140,22 @@ Respond in JSON format: {"highlights": "...", "worthReading": "..."}`
 
     if (!res.ok) {
       console.warn(`⚠️  DeepSeek API error for ${repo.repo}: ${res.status}`)
-      return { highlights: '', worthReading: '' }
+      return { highlights: '', worthReading: '', tags: [] }
     }
 
     const data = await res.json()
     const content = data.choices?.[0]?.message?.content || ''
     const parsed = JSON.parse(content)
+    const rawTags: string[] = Array.isArray(parsed.tags) ? parsed.tags : []
+    const validTags = rawTags.filter((t: string) => (VALID_TAGS as readonly string[]).includes(t))
     return {
       highlights: parsed.highlights || '',
       worthReading: parsed.worthReading || '',
+      tags: validTags,
     }
   } catch (err) {
     console.error(`❌ DeepSeek error for ${repo.repo}:`, err)
-    return { highlights: '', worthReading: '' }
+    return { highlights: '', worthReading: '', tags: [] }
   }
 }
 
@@ -196,6 +206,7 @@ async function main() {
       highlights: '',
       worthReading: '',
       topics: item.repo.topics || [],
+      tags: [],
     })
   }
 
@@ -230,6 +241,7 @@ async function main() {
         const commentary = await generateCommentary(star)
         star.highlights = commentary.highlights
         star.worthReading = commentary.worthReading
+        star.tags = commentary.tags
       }
     }
 
@@ -240,6 +252,17 @@ async function main() {
           const commentary = await generateCommentary(star)
           star.highlights = commentary.highlights
           star.worthReading = commentary.worthReading
+          star.tags = commentary.tags
+        }
+      }
+    }
+
+    // Backfill tags for existing stars that have commentary but no tags
+    if (DEEPSEEK_API_KEY) {
+      for (const star of existingStars) {
+        if (!star.tags || star.tags.length === 0) {
+          const commentary = await generateCommentary(star)
+          star.tags = commentary.tags
         }
       }
     }

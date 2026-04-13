@@ -1,33 +1,167 @@
+import { useState } from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
 import type { GetStaticProps } from 'next'
-import { getAllFeedDates, type DailyFeedSummary } from '@/lib/social-feeds'
+import {
+  getAllFeedDates,
+  getAllWeeklyDigests,
+  getWeeklyDigestByWeek,
+  type DailyFeedSummary,
+  type WeeklyDigest,
+} from '@/lib/social-feeds'
 
 interface StarsListProps {
   dates: DailyFeedSummary[]
+  latestDigest: WeeklyDigest | null
 }
 
 export const getStaticProps: GetStaticProps<StarsListProps> = async () => {
   const dates = getAllFeedDates()
-  return { props: { dates } }
+  const digests = getAllWeeklyDigests()
+  const latestDigest = digests.length > 0
+    ? getWeeklyDigestByWeek(digests[0].week)
+    : null
+
+  return { props: { dates, latestDigest } }
 }
 
-export default function StarsList({ dates }: StarsListProps) {
+// --- Weekly Digest Card ---
+
+function WeeklyDigestCard({ digest }: { digest: WeeklyDigest }) {
+  const [expanded, setExpanded] = useState(false)
+
+  // Preview: first 2 sentences of overview
+  const sentences = digest.overview.match(/[^.!?]+[.!?]+/g) || []
+  const preview = sentences.slice(0, 2).join('').trim() || digest.overview.slice(0, 200)
+
+  return (
+    <div className="mb-10 rounded-xl bg-white/[0.02] border border-white/[0.06] overflow-hidden">
+      <button
+        onClick={() => setExpanded(!expanded)}
+        className="w-full text-left p-5 hover:bg-white/[0.02] transition-colors"
+      >
+        <div className="flex items-center justify-between mb-2">
+          <div className="flex items-center gap-2">
+            <span className="text-sm font-semibold text-gray-300">This Week</span>
+            <span className="text-[10px] px-1.5 py-0.5 rounded-full bg-purple-500/20 text-purple-300 font-medium">
+              AI Digest
+            </span>
+          </div>
+          <div className="flex items-center gap-3">
+            <span className="text-xs text-gray-500">
+              {digest.stats.totalRepos} repos · {digest.stats.totalPosts} posts
+            </span>
+            <svg
+              className={`w-4 h-4 text-gray-500 transition-transform ${expanded ? 'rotate-180' : ''}`}
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth={2}
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </div>
+        </div>
+        <p className="text-xs text-gray-500 mb-2">
+          {digest.week} · {digest.dateRange.start} – {digest.dateRange.end}
+        </p>
+        <p className="text-gray-400 text-[15px] leading-relaxed">
+          {preview}
+        </p>
+      </button>
+
+      {expanded && (
+        <div className="px-5 pb-5 border-t border-white/[0.04]">
+          {/* Trending Topics */}
+          {digest.trendingTopics.length > 0 && (
+            <div className="mt-4">
+              <h3 className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">
+                Trending Topics
+              </h3>
+              <div className="space-y-2">
+                {digest.trendingTopics.map((topic) => (
+                  <div key={topic.topic}>
+                    <span className="text-gray-200 text-sm font-medium">{topic.topic}</span>
+                    <span className="text-gray-500 text-sm"> — {topic.description}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* Cross-References */}
+          {digest.crossReferences.length > 0 && (
+            <div className="mt-4">
+              <h3 className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">
+                Starred by Multiple People
+              </h3>
+              <div className="space-y-1">
+                {digest.crossReferences.map((cr) => (
+                  <div key={cr.repo} className="text-sm">
+                    <a
+                      href={cr.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-gray-200 hover:text-white transition-colors"
+                    >
+                      {cr.repo}
+                    </a>
+                    <span className="text-gray-500"> — {cr.starredBy.join(', ')}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* Link to full digest */}
+          <div className="mt-4 pt-3 border-t border-white/[0.04]">
+            <Link
+              href={`/stars/weekly/${digest.week}/`}
+              className="text-sm text-gray-400 hover:text-white transition-colors"
+            >
+              View full digest →
+            </Link>
+          </div>
+        </div>
+      )}
+    </div>
+  )
+}
+
+// --- Page ---
+
+export default function StarsList({ dates, latestDigest }: StarsListProps) {
   return (
     <>
       <Head>
         <title>Stars — Kylin Miao</title>
         <meta name="description" content="Recently starred GitHub repos and Bluesky posts from AI leaders with AI-powered highlights." />
+        <link rel="alternate" type="application/rss+xml" title="Stars & Posts — Kylin Miao" href="/stars/feed.xml" />
       </Head>
 
       <div className="min-h-screen bg-black text-white">
         <div className="max-w-3xl mx-auto px-5 sm:px-6 pt-32 pb-20">
           {/* Header */}
-          <h1 className="text-4xl md:text-5xl font-bold mb-3 tracking-tight">Stars & Posts</h1>
+          <div className="flex items-center gap-3">
+            <h1 className="text-4xl md:text-5xl font-bold mb-3 tracking-tight">Stars & Posts</h1>
+            <a
+              href="/stars/feed.xml"
+              title="RSS Feed"
+              className="text-gray-400 hover:text-orange-400 transition-colors mb-1"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
+                <circle cx="6.18" cy="17.82" r="2.18" />
+                <path d="M4 4.44v2.83c7.03 0 12.73 5.7 12.73 12.73h2.83c0-8.59-6.97-15.56-15.56-15.56zm0 5.66v2.83c3.9 0 7.07 3.17 7.07 7.07h2.83c0-5.47-4.43-9.9-9.9-9.9z" />
+              </svg>
+            </a>
+          </div>
           <p className="text-gray-400 text-lg mb-12">
             Recently starred GitHub repos and Bluesky posts from AI leaders.<br />
             <span className="text-gray-500 text-sm">Curated from GitHub & Bluesky · Powered by DeepSeek</span>
           </p>
+
+          {/* Weekly Digest Card */}
+          {latestDigest && <WeeklyDigestCard digest={latestDigest} />}
 
           {/* Date list */}
           {dates.length === 0 ? (
@@ -36,7 +170,7 @@ export default function StarsList({ dates }: StarsListProps) {
             </div>
           ) : (
             <div className="space-y-1">
-              {dates.map(({ date, itemCount, githubCount, blueskyCount }) => {
+              {dates.map(({ date, githubCount, blueskyCount }) => {
                 const d = new Date(date + 'T00:00:00')
                 const formatted = d.toLocaleDateString('en-US', {
                   weekday: 'long',

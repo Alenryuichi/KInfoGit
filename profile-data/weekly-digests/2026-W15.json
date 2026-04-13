@@ -1,0 +1,57 @@
+{
+  "week": "2026-W15",
+  "dateRange": {
+    "start": "2026-04-06",
+    "end": "2026-04-12"
+  },
+  "overview": "This week saw a strong focus on AI memory systems, multimodal model fine-tuning, and growing concerns around AI transparency and security practices. The open-source community rallied around tools that democratize access to cutting-edge AI capabilities, from free memory benchmarking systems to Apple Silicon-optimized model tuners.\n\nA notable thread ran through Bluesky discussions as AI leaders debated the ethics of secretive AI security projects, with Anthropic's restricted research drawing particular scrutiny. The conversation highlighted the tension between responsible AI development and the need for openness in the research community.\n\nOn the infrastructure side, several new developer tools emerged for building AI-powered applications, including MCP integrations, vector database utilities, and workflow automation frameworks. The Artemis II mission provided a surreal backdrop to the week's tech discourse, bridging human achievement with ongoing AI ethics debates.",
+  "trendingTopics": [
+    {
+      "topic": "AI Memory Systems",
+      "description": "MemPalace emerged as a top-starred repo, offering a free, benchmark-leading AI memory system using ChromaDB and Python."
+    },
+    {
+      "topic": "Multimodal Fine-Tuning",
+      "description": "Multiple projects focused on fine-tuning models with audio, images, and text, particularly on Apple Silicon hardware."
+    },
+    {
+      "topic": "AI Transparency Debate",
+      "description": "Bluesky discussions centered on opaque AI security practices and the balance between safety and openness."
+    }
+  ],
+  "notableRepos": [
+    {
+      "repo": "MemPalace/mempalace",
+      "url": "https://github.com/MemPalace/mempalace",
+      "stars": 42362,
+      "description": "The highest-scoring AI memory system ever benchmarked, built with ChromaDB and Python. Free and open-source.",
+      "starredBy": ["simonw"]
+    },
+    {
+      "repo": "mattmireles/gemma-tuner-multimodal",
+      "url": "https://github.com/mattmireles/gemma-tuner-multimodal",
+      "stars": 1202,
+      "description": "Fine-tune Gemma 4 and 3n with audio, images and text on Apple Silicon, using PyTorch and Metal Performance Shaders.",
+      "starredBy": ["simonw"]
+    }
+  ],
+  "keyDiscussions": [
+    {
+      "title": "AI Security and Transparency",
+      "summary": "AI leaders debated Anthropic's restricted 'Project Glassing' and the broader implications of secretive AI security research.",
+      "author": "various"
+    },
+    {
+      "title": "Artemis II and Human Achievement",
+      "summary": "The historic Artemis II mission sparked discussion about the juxtaposition of human space exploration with AI ethics concerns.",
+      "author": "various"
+    }
+  ],
+  "crossReferences": [],
+  "stats": {
+    "totalRepos": 4,
+    "totalPosts": 12,
+    "uniqueAuthors": 5,
+    "daysWithContent": 5
+  }
+}

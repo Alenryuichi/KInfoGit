@@ -47,6 +47,14 @@ jobs:
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
         run: npx tsx scripts/generate-summaries.ts
 
+      - name: Generate weekly digest
+        env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+        run: npx tsx scripts/generate-weekly-digest.ts
+
+      - name: Generate RSS feed
+        run: npx tsx scripts/generate-stars-rss.ts
+
       - name: Check for changes
         id: check_changes
         run: |
@@ -84,6 +92,12 @@ jobs:
               date=$(basename "$f" .json)
               count=$(grep -c '"uri"' "$f" || echo 0)
               echo "- **${date}**: ${count} posts" >> $GITHUB_STEP_SUMMARY
+            done
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "### Weekly Digests" >> $GITHUB_STEP_SUMMARY
+            ls -1 profile-data/weekly-digests/*.json 2>/dev/null | while read f; do
+              week=$(basename "$f" .json)
+              echo "- **${week}**: digest generated" >> $GITHUB_STEP_SUMMARY
             done
           else
             echo "📭 No new content this week" >> $GITHUB_STEP_SUMMARY

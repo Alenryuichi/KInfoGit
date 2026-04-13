@@ -85,6 +85,10 @@ fetch-stars:
 fetch-bluesky:
     cd website && npx tsx ../scripts/fetch-bluesky.ts
 
+# Generate people activity data from existing feeds
+generate-people-data:
+    cd website && npx tsx ../scripts/generate-people-data.ts
+
 # Fetch all social feeds (stars + bluesky)
 fetch-feeds: fetch-stars fetch-bluesky
     cd website && npx tsx ../scripts/generate-summaries.ts

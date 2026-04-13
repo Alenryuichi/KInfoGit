@@ -36,6 +36,11 @@ const OUTPUT_DIR = path.join(__dirname, '..', 'profile-data', 'bluesky-posts')
 const DEEPSEEK_API_KEY = process.env.DEEPSEEK_API_KEY || ''
 const DEEPSEEK_API_URL = 'https://api.deepseek.com/chat/completions'
 
+const VALID_TAGS = [
+  'agent', 'llm', 'infra', 'rag', 'multi-modal',
+  'safety', 'fine-tuning', 'evaluation', 'deployment', 'tooling',
+] as const
+
 // Bluesky public API (no auth required)
 const BLUESKY_API_URL = 'https://public.api.bsky.app/xrpc'
 
@@ -72,6 +77,7 @@ interface BlueskyPost {
   repostCount: number
   highlights: string
   worthReading: string
+  tags: string[]
 }
 
 interface DailyBlueskyPosts {
@@ -126,20 +132,21 @@ async function fetchAuthorFeed(handle: string, limit: number = 30): Promise<Blue
 
 // --- DeepSeek API ---
 
-async function generateCommentary(post: BlueskyPost): Promise<{ highlights: string; worthReading: string }> {
+async function generateCommentary(post: BlueskyPost): Promise<{ highlights: string; worthReading: string; tags: string[] }> {
   if (!DEEPSEEK_API_KEY) {
-    return { highlights: '', worthReading: '' }
+    return { highlights: '', worthReading: '', tags: [] }
   }
 
   const prompt = `You are a technical reviewer. Given a Bluesky post about AI/tech, provide:
 1. "highlights": Core insight or key takeaway (2-3 sentences, concise)
 2. "worthReading": Why it's worth exploring (1-2 sentences)
+3. "tags": Pick 1-3 tags from this EXACT list that best describe the post: ${VALID_TAGS.join(', ')}. Return an empty array if none fit.
 
 Post Author: ${post.author.displayName} (@${post.author.handle})
 Content: ${post.content}
 Engagement: ${post.likeCount} likes, ${post.repostCount} reposts
 
-Respond in JSON format: {"highlights": "...", "worthReading": "..."}`
+Respond in JSON format: {"highlights": "...", "worthReading": "...", "tags": ["..."]}`
 
   try {
     const res = await fetch(DEEPSEEK_API_URL, {
@@ -159,19 +166,22 @@ Respond in JSON format: {"highlights": "...", "worthReading": "..."}`
 
     if (!res.ok) {
       console.warn(`⚠️  DeepSeek API error for ${post.author.handle}: ${res.status}`)
-      return { highlights: '', worthReading: '' }
+      return { highlights: '', worthReading: '', tags: [] }
     }
 
     const data = await res.json()
     const content = data.choices?.[0]?.message?.content || ''
     const parsed = JSON.parse(content)
+    const rawTags: string[] = Array.isArray(parsed.tags) ? parsed.tags : []
+    const validTags = rawTags.filter((t: string) => (VALID_TAGS as readonly string[]).includes(t))
     return {
       highlights: parsed.highlights || '',
       worthReading: parsed.worthReading || '',
+      tags: validTags,
     }
   } catch (err) {
     console.error(`❌ DeepSeek error for ${post.author.handle}:`, err)
-    return { highlights: '', worthReading: '' }
+    return { highlights: '', worthReading: '', tags: [] }
   }
 }
 
@@ -230,6 +240,7 @@ async function main() {
       repostCount: item.postData.repostCount,
       highlights: '',
       worthReading: '',
+      tags: [],
     })
   }
 
@@ -264,6 +275,7 @@ async function main() {
         const commentary = await generateCommentary(post)
         post.highlights = commentary.highlights
         post.worthReading = commentary.worthReading
+        post.tags = commentary.tags
       }
     }
 
@@ -274,6 +286,17 @@ async function main() {
           const commentary = await generateCommentary(post)
           post.highlights = commentary.highlights
           post.worthReading = commentary.worthReading
+          post.tags = commentary.tags
+        }
+      }
+    }
+
+    // Backfill tags for existing posts that have commentary but no tags
+    if (DEEPSEEK_API_KEY) {
+      for (const post of existingPosts) {
+        if (!post.tags || post.tags.length === 0) {
+          const commentary = await generateCommentary(post)
+          post.tags = commentary.tags
         }
       }
     }

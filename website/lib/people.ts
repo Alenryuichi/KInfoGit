@@ -1,0 +1,130 @@
+import fs from 'fs'
+import path from 'path'
+import type { StarredRepo, BlueskyPost } from './social-feeds'
+
+// --- Types ---
+
+export interface Person {
+  id: string
+  name: string
+  bio?: string
+  github?: string
+  bluesky?: string
+  avatar?: string
+}
+
+export interface PersonSummary extends Person {
+  activityCount: number
+}
+
+export interface PersonActivity {
+  id: string
+  stars: StarredRepo[]
+  posts: BlueskyPost[]
+  dailyCounts: number[]
+  interestSummary: string
+}
+
+export interface PersonDetail extends Person {
+  activity: PersonActivity
+}
+
+// --- Data Directories ---
+
+const PEOPLE_JSON_PATH = path.join(process.cwd(), '..', 'profile-data', 'people.json')
+const PEOPLE_ACTIVITY_DIR = path.join(process.cwd(), '..', 'profile-data', 'people-activity')
+
+function getPeopleJsonPath(): string {
+  if (fs.existsSync(PEOPLE_JSON_PATH)) return PEOPLE_JSON_PATH
+  const alt = path.join(process.cwd(), 'profile-data', 'people.json')
+  if (fs.existsSync(alt)) return alt
+  return PEOPLE_JSON_PATH
+}
+
+function getPeopleActivityDir(): string {
+  if (fs.existsSync(PEOPLE_ACTIVITY_DIR)) return PEOPLE_ACTIVITY_DIR
+  const alt = path.join(process.cwd(), 'profile-data', 'people-activity')
+  if (fs.existsSync(alt)) return alt
+  return PEOPLE_ACTIVITY_DIR
+}
+
+// --- Helper Functions ---
+
+function loadPeopleJson(): Person[] {
+  const filePath = getPeopleJsonPath()
+  if (!fs.existsSync(filePath)) return []
+
+  try {
+    const content = fs.readFileSync(filePath, 'utf-8')
+    return JSON.parse(content) as Person[]
+  } catch {
+    return []
+  }
+}
+
+function loadPersonActivity(id: string): PersonActivity | null {
+  const dir = getPeopleActivityDir()
+  const filePath = path.join(dir, `${id}.json`)
+
+  if (!fs.existsSync(filePath)) return null
+
+  try {
+    const content = fs.readFileSync(filePath, 'utf-8')
+    return JSON.parse(content) as PersonActivity
+  } catch {
+    return null
+  }
+}
+
+// --- Public API ---
+
+export function getAllPeople(): PersonSummary[] {
+  const people = loadPeopleJson()
+
+  return people.map(person => {
+    const activity = loadPersonActivity(person.id)
+    const activityCount = activity
+      ? activity.stars.length + activity.posts.length
+      : 0
+
+    return { ...person, activityCount }
+  })
+}
+
+export function getPersonByHandle(handle: string): PersonDetail | null {
+  const people = loadPeopleJson()
+  const person = people.find(p => p.id === handle)
+
+  if (!person) return null
+
+  const activity = loadPersonActivity(person.id) || {
+    id: person.id,
+    stars: [],
+    posts: [],
+    dailyCounts: new Array(30).fill(0),
+    interestSummary: '',
+  }
+
+  return { ...person, activity }
+}
+
+export function getAllPersonIds(): string[] {
+  const people = loadPeopleJson()
+  return people.map(p => p.id)
+}
+
+export function getHandleToPersonMap(): Record<string, string> {
+  const people = loadPeopleJson()
+  const map: Record<string, string> = {}
+
+  for (const person of people) {
+    if (person.github) {
+      map[`github:${person.github}`] = person.id
+    }
+    if (person.bluesky) {
+      map[`bluesky:${person.bluesky}`] = person.id
+    }
+  }
+
+  return map
+}

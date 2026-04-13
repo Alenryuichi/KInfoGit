@@ -14,6 +14,7 @@ export interface StarredRepo {
   highlights: string
   worthReading: string
   topics: string[]
+  tags: string[]
 }
 
 export interface BlueskyPost {
@@ -32,9 +33,52 @@ export interface BlueskyPost {
   repostCount: number
   highlights: string
   worthReading: string
+  tags: string[]
 }
 
 export type FeedItem = StarredRepo | BlueskyPost
+
+// --- Weekly Digest Types ---
+
+export interface WeeklyDigest {
+  week: string                // "2026-W15"
+  dateRange: {
+    start: string             // "2026-04-06"
+    end: string               // "2026-04-12"
+  }
+  overview: string
+  trendingTopics: Array<{ topic: string; description: string }>
+  notableRepos: Array<{
+    repo: string
+    url: string
+    stars: number
+    description: string
+    starredBy: string[]
+  }>
+  keyDiscussions: Array<{ title: string; summary: string; author: string }>
+  crossReferences: Array<{ repo: string; starredBy: string[]; url: string }>
+  stats: {
+    totalRepos: number
+    totalPosts: number
+    uniqueAuthors: number
+    daysWithContent: number
+  }
+}
+
+export interface WeeklyDigestSummary {
+  week: string
+  dateRange: {
+    start: string
+    end: string
+  }
+  overview: string
+  stats: {
+    totalRepos: number
+    totalPosts: number
+    uniqueAuthors: number
+    daysWithContent: number
+  }
+}
 
 export interface DailyFeed {
   date: string
@@ -54,6 +98,7 @@ export interface DailyFeedSummary {
 const GITHUB_STARS_DIR = path.join(process.cwd(), '..', 'profile-data', 'github-stars')
 const BLUESKY_POSTS_DIR = path.join(process.cwd(), '..', 'profile-data', 'bluesky-posts')
 const SUMMARIES_DIR = path.join(process.cwd(), '..', 'profile-data', 'daily-summaries')
+const WEEKLY_DIGESTS_DIR = path.join(process.cwd(), '..', 'profile-data', 'weekly-digests')
 
 function getGitHubDir(): string {
   if (fs.existsSync(GITHUB_STARS_DIR)) return GITHUB_STARS_DIR
@@ -74,6 +119,13 @@ function getSummariesDir(): string {
   const alt = path.join(process.cwd(), 'profile-data', 'daily-summaries')
   if (fs.existsSync(alt)) return alt
   return SUMMARIES_DIR
+}
+
+function getWeeklyDigestsDir(): string {
+  if (fs.existsSync(WEEKLY_DIGESTS_DIR)) return WEEKLY_DIGESTS_DIR
+  const alt = path.join(process.cwd(), 'profile-data', 'weekly-digests')
+  if (fs.existsSync(alt)) return alt
+  return WEEKLY_DIGESTS_DIR
 }
 
 // --- Helper Functions ---
@@ -106,6 +158,7 @@ function loadGitHubStars(date: string): StarredRepo[] {
     return (data.stars || []).map((star: any) => ({
       ...star,
       type: 'github' as const,
+      tags: star.tags ?? [],
     }))
   } catch {
     return []
@@ -125,6 +178,7 @@ function loadBlueskyPosts(date: string): BlueskyPost[] {
     return (data.posts || []).map((post: any) => ({
       ...post,
       type: 'bluesky' as const,
+      tags: post.tags ?? [],
     }))
   } catch {
     return []
@@ -248,4 +302,59 @@ export function getStarsByDate(date: string): DailyStars | null {
 
   const stars = feed.items.filter((item): item is StarredRepo => item.type === 'github')
   return { date, stars }
+}
+
+// --- Weekly Digest API ---
+
+export function getAllWeeklyDigests(): WeeklyDigestSummary[] {
+  const dir = getWeeklyDigestsDir()
+  if (!fs.existsSync(dir)) return []
+
+  const files = fs.readdirSync(dir).filter(f => f.endsWith('.json'))
+  const digests: WeeklyDigestSummary[] = []
+
+  for (const file of files) {
+    const match = file.match(/^(\d{4}-W\d{2})\.json$/)
+    if (!match) continue
+
+    try {
+      const content = fs.readFileSync(path.join(dir, file), 'utf-8')
+      const data = JSON.parse(content) as WeeklyDigest
+      digests.push({
+        week: data.week,
+        dateRange: data.dateRange,
+        overview: data.overview,
+        stats: data.stats,
+      })
+    } catch {
+      continue
+    }
+  }
+
+  return digests.sort((a, b) => b.week.localeCompare(a.week))
+}
+
+export function getWeeklyDigestByWeek(week: string): WeeklyDigest | null {
+  const dir = getWeeklyDigestsDir()
+  const filePath = path.join(dir, `${week}.json`)
+
+  if (!fs.existsSync(filePath)) return null
+
+  try {
+    const content = fs.readFileSync(filePath, 'utf-8')
+    return JSON.parse(content) as WeeklyDigest
+  } catch {
+    return null
+  }
+}
+
+export function getAdjacentWeeks(week: string): { prev: string | null; next: string | null } {
+  const weeks = getAllWeeklyDigests().map(d => d.week)
+  const idx = weeks.indexOf(week)
+  if (idx === -1) return { prev: null, next: null }
+
+  return {
+    prev: idx < weeks.length - 1 ? weeks[idx + 1] : null,
+    next: idx > 0 ? weeks[idx - 1] : null,
+  }
 }
