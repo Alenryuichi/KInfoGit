@@ -36,7 +36,32 @@ export interface BlueskyPost {
   tags: string[]
 }
 
-export type FeedItem = StarredRepo | BlueskyPost
+export interface YouTubeVideo {
+  type: 'youtube'
+  videoId: string
+  title: string
+  description: string
+  channelTitle: string
+  publishedAt: string
+  thumbnail: string
+  viewCount: number
+  url: string
+  highlights: string
+  worthReading: string
+}
+
+export interface BlogPost {
+  type: 'blog'
+  title: string
+  url: string
+  author: string
+  publishedAt: string
+  summary: string
+  highlights: string
+  worthReading: string
+}
+
+export type FeedItem = StarredRepo | BlueskyPost | YouTubeVideo | BlogPost
 
 // --- Weekly Digest Types ---
 
@@ -91,6 +116,8 @@ export interface DailyFeedSummary {
   itemCount: number
   githubCount: number
   blueskyCount: number
+  youtubeCount: number
+  blogCount: number
 }
 
 // --- Data Directories ---
@@ -99,6 +126,8 @@ const GITHUB_STARS_DIR = path.join(process.cwd(), '..', 'profile-data', 'github-
 const BLUESKY_POSTS_DIR = path.join(process.cwd(), '..', 'profile-data', 'bluesky-posts')
 const SUMMARIES_DIR = path.join(process.cwd(), '..', 'profile-data', 'daily-summaries')
 const WEEKLY_DIGESTS_DIR = path.join(process.cwd(), '..', 'profile-data', 'weekly-digests')
+const BLOG_POSTS_DIR = path.join(process.cwd(), '..', 'profile-data', 'blog-posts')
+const YOUTUBE_VIDEOS_DIR = path.join(process.cwd(), '..', 'profile-data', 'youtube-videos')
 
 function getGitHubDir(): string {
   if (fs.existsSync(GITHUB_STARS_DIR)) return GITHUB_STARS_DIR
@@ -126,6 +155,20 @@ function getWeeklyDigestsDir(): string {
   const alt = path.join(process.cwd(), 'profile-data', 'weekly-digests')
   if (fs.existsSync(alt)) return alt
   return WEEKLY_DIGESTS_DIR
+}
+
+function getBlogPostsDir(): string {
+  if (fs.existsSync(BLOG_POSTS_DIR)) return BLOG_POSTS_DIR
+  const alt = path.join(process.cwd(), 'profile-data', 'blog-posts')
+  if (fs.existsSync(alt)) return alt
+  return BLOG_POSTS_DIR
+}
+
+function getYouTubeDir(): string {
+  if (fs.existsSync(YOUTUBE_VIDEOS_DIR)) return YOUTUBE_VIDEOS_DIR
+  const alt = path.join(process.cwd(), 'profile-data', 'youtube-videos')
+  if (fs.existsSync(alt)) return alt
+  return YOUTUBE_VIDEOS_DIR
 }
 
 // --- Helper Functions ---
@@ -185,12 +228,50 @@ function loadBlueskyPosts(date: string): BlueskyPost[] {
   }
 }
 
+function loadBlogPosts(date: string): BlogPost[] {
+  const dir = getBlogPostsDir()
+  const filePath = path.join(dir, `${date}.json`)
+
+  if (!fs.existsSync(filePath)) return []
+
+  try {
+    const content = fs.readFileSync(filePath, 'utf-8')
+    const data = JSON.parse(content)
+    return (data.posts || []).map((post: any) => ({
+      ...post,
+      type: 'blog' as const,
+    }))
+  } catch {
+    return []
+  }
+}
+
+function loadYouTubeVideos(date: string): YouTubeVideo[] {
+  const dir = getYouTubeDir()
+  const filePath = path.join(dir, `${date}.json`)
+
+  if (!fs.existsSync(filePath)) return []
+
+  try {
+    const content = fs.readFileSync(filePath, 'utf-8')
+    const data = JSON.parse(content)
+    return (data.videos || []).map((video: any) => ({
+      ...video,
+      type: 'youtube' as const,
+    }))
+  } catch {
+    return []
+  }
+}
+
 // --- Public API ---
 
 export function getAllFeedDates(): DailyFeedSummary[] {
   const githubDir = getGitHubDir()
   const blueskyDir = getBlueskyDir()
-  const dateMap = new Map<string, { github: number; bluesky: number }>()
+  const blogDir = getBlogPostsDir()
+  const youtubeDir = getYouTubeDir()
+  const dateMap = new Map<string, { github: number; bluesky: number; blog: number; youtube: number }>()
 
   // Scan GitHub stars directory
   if (fs.existsSync(githubDir)) {
@@ -204,7 +285,7 @@ export function getAllFeedDates(): DailyFeedSummary[] {
         const data = JSON.parse(content)
         const date = data.date
         if (!dateMap.has(date)) {
-          dateMap.set(date, { github: 0, bluesky: 0 })
+          dateMap.set(date, { github: 0, bluesky: 0, blog: 0, youtube: 0 })
         }
         dateMap.get(date)!.github = (data.stars || []).length
       } catch {
@@ -225,9 +306,51 @@ export function getAllFeedDates(): DailyFeedSummary[] {
         const data = JSON.parse(content)
         const date = data.date
         if (!dateMap.has(date)) {
-          dateMap.set(date, { github: 0, bluesky: 0 })
+          dateMap.set(date, { github: 0, bluesky: 0, blog: 0, youtube: 0 })
         }
         dateMap.get(date)!.bluesky = (data.posts || []).length
+      } catch {
+        continue
+      }
+    }
+  }
+
+  // Scan blog posts directory
+  if (fs.existsSync(blogDir)) {
+    const files = fs.readdirSync(blogDir).filter(f => f.endsWith('.json'))
+    for (const file of files) {
+      const dateMatch = file.match(/^(\d{4}-\d{2}-\d{2})\.json$/)
+      if (!dateMatch) continue
+
+      try {
+        const content = fs.readFileSync(path.join(blogDir, file), 'utf-8')
+        const data = JSON.parse(content)
+        const date = data.date
+        if (!dateMap.has(date)) {
+          dateMap.set(date, { github: 0, bluesky: 0, blog: 0, youtube: 0 })
+        }
+        dateMap.get(date)!.blog = (data.posts || []).length
+      } catch {
+        continue
+      }
+    }
+  }
+
+  // Scan YouTube videos directory
+  if (fs.existsSync(youtubeDir)) {
+    const files = fs.readdirSync(youtubeDir).filter(f => f.endsWith('.json'))
+    for (const file of files) {
+      const dateMatch = file.match(/^(\d{4}-\d{2}-\d{2})\.json$/)
+      if (!dateMatch) continue
+
+      try {
+        const content = fs.readFileSync(path.join(youtubeDir, file), 'utf-8')
+        const data = JSON.parse(content)
+        const date = data.date
+        if (!dateMap.has(date)) {
+          dateMap.set(date, { github: 0, bluesky: 0, blog: 0, youtube: 0 })
+        }
+        dateMap.get(date)!.youtube = (data.videos || []).length
       } catch {
         continue
       }
@@ -239,9 +362,11 @@ export function getAllFeedDates(): DailyFeedSummary[] {
   dateMap.forEach((counts, date) => {
     summaries.push({
       date,
-      itemCount: counts.github + counts.bluesky,
+      itemCount: counts.github + counts.bluesky + counts.blog + counts.youtube,
       githubCount: counts.github,
       blueskyCount: counts.bluesky,
+      youtubeCount: counts.youtube,
+      blogCount: counts.blog,
     })
   })
 
@@ -251,14 +376,16 @@ export function getAllFeedDates(): DailyFeedSummary[] {
 export function getFeedByDate(date: string): DailyFeed | null {
   const githubStars = loadGitHubStars(date)
   const blueskyPosts = loadBlueskyPosts(date)
+  const blogPosts = loadBlogPosts(date)
+  const youtubeVideos = loadYouTubeVideos(date)
 
-  // If neither source has data, return null
-  if (githubStars.length === 0 && blueskyPosts.length === 0) {
+  // If no source has data, return null
+  if (githubStars.length === 0 && blueskyPosts.length === 0 && blogPosts.length === 0 && youtubeVideos.length === 0) {
     return null
   }
 
-  // Merge items — GitHub stars first, then Bluesky posts
-  const items: FeedItem[] = [...githubStars, ...blueskyPosts]
+  // Merge items — GitHub stars first, then Bluesky posts, then YouTube videos, then blog posts
+  const items: FeedItem[] = [...githubStars, ...blueskyPosts, ...youtubeVideos, ...blogPosts]
 
   // Load AI-generated daily summary
   const summary = loadDailySummary(date)

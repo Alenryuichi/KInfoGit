@@ -12,6 +12,8 @@ import {
 import { getHandleToPersonMap } from '@/lib/people'
 import { RepoCard } from '@/components/stars/RepoCard'
 import { BlueskyPostCard } from '@/components/stars/BlueskyPostCard'
+import { BlogPostCard } from '@/components/stars/BlogPostCard'
+import { YouTubeVideoCard } from '@/components/stars/YouTubeVideoCard'
 
 // --- Types ---
 
@@ -45,7 +47,8 @@ export const getStaticProps: GetStaticProps<StarsDetailProps> = async ({ params 
 
   const tagSet = new Set<string>()
   for (const item of daily.items) {
-    for (const t of item.tags ?? []) {
+    const tags = 'tags' in item ? (item.tags ?? []) : []
+    for (const t of tags) {
       tagSet.add(t)
     }
   }
@@ -76,6 +79,10 @@ function ItemCard({ item, personMap }: { item: FeedItem; personMap: Record<strin
     return <RepoCard star={item} personMap={personMap} />
   } else if (item.type === 'bluesky') {
     return <BlueskyPostCard post={item} personMap={personMap} />
+  } else if (item.type === 'blog') {
+    return <BlogPostCard post={item} />
+  } else if (item.type === 'youtube') {
+    return <YouTubeVideoCard video={item} />
   }
   return null
 }
@@ -127,17 +134,21 @@ function TopicFilter({
 
 // --- Source Filter ---
 
+type SourceKey = 'all' | 'github' | 'bluesky' | 'blog' | 'youtube'
+
 function SourceFilter({
   activeSource,
   onSelect,
 }: {
-  activeSource: 'all' | 'github' | 'bluesky'
-  onSelect: (source: 'all' | 'github' | 'bluesky') => void
+  activeSource: SourceKey
+  onSelect: (source: SourceKey) => void
 }) {
-  const sources: { key: 'all' | 'github' | 'bluesky'; label: string }[] = [
+  const sources: { key: SourceKey; label: string }[] = [
     { key: 'all', label: 'All' },
     { key: 'github', label: 'GitHub' },
     { key: 'bluesky', label: 'Bluesky' },
+    { key: 'blog', label: 'Blogs' },
+    { key: 'youtube', label: 'YouTube' },
   ]
 
   return (
@@ -223,7 +234,7 @@ function DateNav({
 
 export default function StarsDetail({ daily, prevDate, nextDate, allDates, allTags, personMap }: StarsDetailProps) {
   const [activeTopic, setActiveTopic] = useState<string | null>(null)
-  const [activeSource, setActiveSource] = useState<'all' | 'github' | 'bluesky'>('all')
+  const [activeSource, setActiveSource] = useState<SourceKey>('all')
 
   const d = new Date(daily.date + 'T00:00:00')
   const formatted = d.toLocaleDateString('en-US', {
@@ -236,11 +247,13 @@ export default function StarsDetail({ daily, prevDate, nextDate, allDates, allTa
   // Count items by type
   const githubCount = daily.items.filter(item => item.type === 'github').length
   const blueskyCount = daily.items.filter(item => item.type === 'bluesky').length
+  const blogCount = daily.items.filter(item => item.type === 'blog').length
+  const youtubeCount = daily.items.filter(item => item.type === 'youtube').length
 
   // Apply composed filters (topic + source)
   const filteredItems = daily.items.filter(item => {
     if (activeSource !== 'all' && item.type !== activeSource) return false
-    if (activeTopic && !(item.tags ?? []).includes(activeTopic)) return false
+    if (activeTopic && !('tags' in item ? (item.tags ?? []) : []).includes(activeTopic)) return false
     return true
   })
 
@@ -299,8 +312,8 @@ export default function StarsDetail({ daily, prevDate, nextDate, allDates, allTa
             />
           )}
 
-          {/* Source Filter — show when both sources present */}
-          {githubCount > 0 && blueskyCount > 0 && (
+          {/* Source Filter — show when multiple source types present */}
+          {[githubCount, blueskyCount, blogCount, youtubeCount].filter(c => c > 0).length >= 2 && (
             <SourceFilter
               activeSource={activeSource}
               onSelect={setActiveSource}
@@ -318,6 +331,8 @@ export default function StarsDetail({ daily, prevDate, nextDate, allDates, allTa
           <div className="pt-6 border-t border-white/[0.06] text-xs text-gray-500">
             {githubCount > 0 && <span>{githubCount} repos · </span>}
             {blueskyCount > 0 && <span>{blueskyCount} posts · </span>}
+            {blogCount > 0 && <span>{blogCount} blogs · </span>}
+            {youtubeCount > 0 && <span>{youtubeCount} videos · </span>}
             Powered by DeepSeek
           </div>
 

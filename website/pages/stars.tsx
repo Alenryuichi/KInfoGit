@@ -183,7 +183,7 @@ export default function StarsList({ dates, latestDigest }: StarsListProps) {
             </div>
           ) : (
             <div className="space-y-1">
-              {dates.map(({ date, githubCount, blueskyCount }) => {
+              {dates.map(({ date, githubCount, blueskyCount, youtubeCount, blogCount }) => {
                 const d = new Date(date + 'T00:00:00')
                 const formatted = d.toLocaleDateString('en-US', {
                   weekday: 'long',
@@ -191,6 +191,11 @@ export default function StarsList({ dates, latestDigest }: StarsListProps) {
                   month: 'long',
                   day: 'numeric',
                 })
+                const parts: string[] = []
+                if (githubCount > 0) parts.push(`${githubCount} repo${githubCount === 1 ? '' : 's'}`)
+                if (blueskyCount > 0) parts.push(`${blueskyCount} post${blueskyCount === 1 ? '' : 's'}`)
+                if (youtubeCount > 0) parts.push(`${youtubeCount} video${youtubeCount === 1 ? '' : 's'}`)
+                if (blogCount > 0) parts.push(`${blogCount} blog${blogCount === 1 ? '' : 's'}`)
                 return (
                   <Link
                     key={date}
@@ -201,9 +206,7 @@ export default function StarsList({ dates, latestDigest }: StarsListProps) {
                       {formatted}
                     </span>
                     <span className="text-gray-500 text-sm flex-shrink-0 ml-3">
-                      {githubCount > 0 && <span>{githubCount} repo{githubCount === 1 ? '' : 's'}</span>}
-                      {githubCount > 0 && blueskyCount > 0 && <span> · </span>}
-                      {blueskyCount > 0 && <span>{blueskyCount} post{blueskyCount === 1 ? '' : 's'}</span>}
+                      {parts.join(' · ')}
                       <span> →</span>
                     </span>
                   </Link>

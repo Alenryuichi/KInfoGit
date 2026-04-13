@@ -103,7 +103,23 @@ async function fetchAuthorFeed(handle: string, limit: number = 30): Promise<Blue
     }
 
     const data = await res.json()
-    return (data.feed || [])
+    const feedEntries: any[] = data.feed || []
+
+    // Filter out reposts before mapping
+    const originalEntries = feedEntries.filter((entry: any) => {
+      // Skip reposts (entries with reasonRepost)
+      if (entry.reason?.$type === 'app.bsky.feed.defs#reasonRepost') return false
+      // Only keep posts from the requested author (safety check)
+      if (entry.post?.author?.handle !== handle) return false
+      return true
+    })
+
+    const filteredCount = feedEntries.length - originalEntries.length
+    if (filteredCount > 0) {
+      console.log(`     Filtered ${filteredCount} reposts`)
+    }
+
+    return originalEntries
       .map((entry: any) => ({
         uri: entry.post.uri,
         cid: entry.post.cid,
@@ -125,7 +141,7 @@ async function fetchAuthorFeed(handle: string, limit: number = 30): Promise<Blue
         return postDate >= sevenDaysAgo
       })
   } catch (err) {
-    console.error(`❌ Failed to fetch posts for ${authorHandle}:`, err)
+    console.error(`❌ Failed to fetch posts for ${handle}:`, err)
     return []
   }
 }

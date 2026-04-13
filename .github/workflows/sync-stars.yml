@@ -42,6 +42,17 @@ jobs:
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
         run: npx tsx scripts/fetch-bluesky.ts
 
+      - name: Fetch blog posts
+        env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+        run: npx tsx scripts/fetch-blogs.ts
+
+      - name: Fetch YouTube videos
+        env:
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+        run: npx tsx scripts/fetch-youtube.ts
+
       - name: Generate daily summaries
         env:
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
@@ -92,6 +103,13 @@ jobs:
               date=$(basename "$f" .json)
               count=$(grep -c '"uri"' "$f" || echo 0)
               echo "- **${date}**: ${count} posts" >> $GITHUB_STEP_SUMMARY
+            done
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "### YouTube Videos" >> $GITHUB_STEP_SUMMARY
+            ls -1 profile-data/youtube-videos/*.json 2>/dev/null | while read f; do
+              date=$(basename "$f" .json)
+              count=$(grep -c '"videoId"' "$f" || echo 0)
+              echo "- **${date}**: ${count} videos" >> $GITHUB_STEP_SUMMARY
             done
             echo "" >> $GITHUB_STEP_SUMMARY
             echo "### Weekly Digests" >> $GITHUB_STEP_SUMMARY
