@@ -4,6 +4,7 @@ import type { GitHubRelease } from './sources/github-releases'
 import type { RssArticle } from './sources/rss-feeds'
 import type { TavilyResult } from './sources/tavily-search'
 import type { BailianResult } from './sources/bailian-search'
+import type { NpmRelease } from './sources/npm-registry'
 
 export interface SummarizedEditor {
   name: string
@@ -33,6 +34,7 @@ interface RawData {
   rssArticles: RssArticle[]
   tavilyResults: TavilyResult[]
   bailianResults: BailianResult[]
+  npmReleases?: NpmRelease[]
 }
 
 export async function summarizeWeekly(raw: RawData): Promise<SummarizedWeekly> {
@@ -200,6 +202,22 @@ function buildPrompt(raw: RawData): string {
     sections.push('## Company Blog Articles\n' +
       raw.rssArticles.map(r =>
         `### ${r.company}: ${r.title}\n- URL: ${r.url}\n- Published: ${r.publishedAt}\n- ${r.summary.slice(0, 300)}`
+      ).join('\n\n')
+    )
+  }
+
+  if (raw.npmReleases && raw.npmReleases.length > 0) {
+    // Group by editor
+    const byEditor = new Map<string, typeof raw.npmReleases>()
+    for (const r of raw.npmReleases) {
+      const list = byEditor.get(r.editor) || []
+      list.push(r)
+      byEditor.set(r.editor, list)
+    }
+    sections.push('## npm Releases (recent 7 days)\n' +
+      Array.from(byEditor.entries()).map(([editor, releases]) =>
+        `### ${editor}\n${releases.slice(0, 5).map(r => `- ${r.version} (${r.publishedAt.slice(0, 10)})`).join('\n')}` +
+        (releases.length > 5 ? `\n- ... and ${releases.length - 5} more versions` : '')
       ).join('\n\n')
     )
   }

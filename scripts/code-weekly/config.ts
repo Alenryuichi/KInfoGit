@@ -11,6 +11,7 @@ export interface EditorConfig {
     rssUrl?: string            // company blog RSS feed
     tavilyQuery?: string       // English search query template
     bailianQuery?: string      // Chinese search query template
+    npmPackage?: string        // npm package name — for npm registry API
   }
 }
 
@@ -36,7 +37,7 @@ export const EDITORS: EditorConfig[] = [
     name: 'Windsurf',
     category: 'ide',
     sources: {
-      tavilyQuery: 'Windsurf editor AI coding new features this week',
+      tavilyQuery: 'Windsurf IDE updates OR Windsurf release notes OR Codeium Windsurf changelog',
     },
   },
   {
@@ -51,7 +52,7 @@ export const EDITORS: EditorConfig[] = [
     name: 'Augment',
     category: 'ide',
     sources: {
-      tavilyQuery: 'Augment Code AI IDE new features this week',
+      tavilyQuery: 'Augment Code editor updates OR Augment IDE release notes OR Augment AI announcement',
     },
   },
   // CLI / Plugin
@@ -59,8 +60,8 @@ export const EDITORS: EditorConfig[] = [
     name: 'Claude Code',
     category: 'cli',
     sources: {
-      // Claude Code is distributed via npm, not GitHub Releases
-      tavilyQuery: 'Claude Code CLI Anthropic new features updates this week',
+      npmPackage: '@anthropic-ai/claude-code',
+      tavilyQuery: 'Claude Code release OR Claude CLI update OR Anthropic Claude Code changelog',
     },
   },
   {
@@ -114,6 +115,7 @@ export const RSS_FEEDS: RssFeedConfig[] = [
   { company: 'Google AI', url: 'https://blog.google/innovation-and-ai/technology/ai/rss/', tags: ['gemini', 'deepmind'] },
   { company: 'Cursor', url: 'https://cursor.com/changelog/rss.xml', tags: ['cursor', 'ide'] },
   { company: 'Vercel', url: 'https://vercel.com/atom', tags: ['v0', 'ai-sdk'] },
+  { company: 'Windsurf', url: 'https://windsurf.com/feed.xml', tags: ['windsurf', 'codeium', 'ide'] },
 ]
 
 // ─── API Configuration ─────────────────────────────────────

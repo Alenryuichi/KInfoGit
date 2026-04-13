@@ -27,6 +27,7 @@ import { fetchGitHubReleases } from './code-weekly/sources/github-releases'
 import { fetchRssFeeds } from './code-weekly/sources/rss-feeds'
 import { fetchTavilyForEditors } from './code-weekly/sources/tavily-search'
 import { fetchBailianForEditors } from './code-weekly/sources/bailian-search'
+import { fetchNpmReleases } from './code-weekly/sources/npm-registry'
 import { fetchArenaRankings } from './code-weekly/sources/arena-rankings'
 import { fetchAiderLeaderboard } from './code-weekly/sources/aider-leaderboard'
 import { summarizeWeekly, collectUrlsFromRaw } from './code-weekly/summarizer'
@@ -79,13 +80,18 @@ async function main() {
     .filter(e => e.sources.bailianQuery)
     .map(e => ({ name: e.name, query: e.sources.bailianQuery! }))
 
+  const npmPackages = EDITORS
+    .filter(e => e.sources.npmPackage)
+    .map(e => ({ editor: e.name, pkg: e.sources.npmPackage! }))
+
   // Parallel data collection with Promise.allSettled
   console.log('📡 Fetching from all sources...')
-  const [githubResult, rssResult, tavilyResult, bailianResult, arenaResult, aiderResult] = await Promise.allSettled([
+  const [githubResult, rssResult, tavilyResult, bailianResult, npmResult, arenaResult, aiderResult] = await Promise.allSettled([
     fetchGitHubReleases(),
     fetchRssFeeds(),
     fetchTavilyForEditors(tavilyEditors),
     fetchBailianForEditors(bailianEditors),
+    fetchNpmReleases(npmPackages),
     fetchArenaRankings(),
     fetchAiderLeaderboard(),
   ])
@@ -94,6 +100,7 @@ async function main() {
   const rssArticles = rssResult.status === 'fulfilled' ? rssResult.value : []
   const tavilyResults = tavilyResult.status === 'fulfilled' ? tavilyResult.value : []
   const bailianResults = bailianResult.status === 'fulfilled' ? bailianResult.value : []
+  const npmReleases = npmResult.status === 'fulfilled' ? npmResult.value : []
   const arenaRankings = arenaResult.status === 'fulfilled' ? arenaResult.value : []
   const aiderLeaderboard = aiderResult.status === 'fulfilled' ? aiderResult.value : []
 
@@ -101,6 +108,7 @@ async function main() {
   console.log(`  RSS Articles: ${rssArticles.length}`)
   console.log(`  Tavily Results: ${tavilyResults.length}`)
   console.log(`  Bailian Results: ${bailianResults.length}`)
+  console.log(`  npm Releases: ${npmReleases.length}`)
   console.log(`  Arena Rankings: ${arenaRankings.length}`)
   console.log(`  Aider Entries: ${aiderLeaderboard.length}`)
 
@@ -111,6 +119,7 @@ async function main() {
     rssArticles,
     tavilyResults,
     bailianResults,
+    npmReleases,
   }
   const summary = await summarizeWeekly(rawData)
 
