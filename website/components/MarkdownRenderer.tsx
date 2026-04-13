@@ -547,7 +547,7 @@ const components: Components = {
 
   img({ src, alt, ...props }) {
     return (
-      <figure className="my-10">
+      <span className="block my-10">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={src}
@@ -557,11 +557,11 @@ const components: Components = {
           {...props}
         />
         {alt && alt !== src && (
-          <figcaption className="mt-3 text-center text-sm text-gray-500">
+          <span className="block mt-3 text-center text-sm text-gray-500">
             {alt}
-          </figcaption>
+          </span>
         )}
-      </figure>
+      </span>
     )
   },
 

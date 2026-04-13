@@ -82,8 +82,8 @@ export default function BlogPostPage({ post, prevPost, nextPost }: BlogPostPageP
         </div>
 
         {/* Article Header */}
-        <div className="max-w-4xl mx-auto px-5 sm:px-6 py-12">
-          <header className="mb-12">
+        <div className="max-w-4xl mx-auto px-5 sm:px-6 pt-12 pb-2">
+          <header className="mb-2">
             {post.featured && (
               <div className="mb-4">
                 <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-blue-500/20 text-blue-300 border border-blue-400/30">
@@ -106,7 +106,7 @@ export default function BlogPostPage({ post, prevPost, nextPost }: BlogPostPageP
             </div>
 
             {/* Tags */}
-            <div className="flex flex-wrap gap-2 mb-12">
+            <div className="flex flex-wrap gap-2 mb-5">
               {post.tags.map((tag) => (
                 <Link
                   key={tag}
@@ -118,9 +118,15 @@ export default function BlogPostPage({ post, prevPost, nextPost }: BlogPostPageP
               ))}
             </div>
 
-            {/* Excerpt */}
-            <div className="text-xl text-gray-300 leading-relaxed border-l-4 border-blue-500/50 pl-6 italic">
-              {post.excerpt}
+            {/* AI Summary */}
+            <div className="mb-2 p-5 rounded-xl bg-white/[0.02] border border-white/[0.06]">
+              <div className="flex items-center gap-2 mb-3">
+                <span className="text-sm font-semibold text-gray-300">Summary</span>
+                <span className="text-[10px] px-1.5 py-0.5 rounded-full bg-purple-500/20 text-purple-300 font-medium">AI</span>
+              </div>
+              <p className="text-gray-400 text-[15px] leading-relaxed">
+                {post.excerpt}
+              </p>
             </div>
           </header>
 

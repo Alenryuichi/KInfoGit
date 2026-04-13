@@ -7,7 +7,7 @@ categoryOrder: 1
 subcategory: "AI Native"
 readTime: "5 min read"
 featured: false
-excerpt: "本文探讨了AI Native公司的核心定义与运作模式，强调其并非简单地使用AI工具，而是将AI Agent作为组织底层架构和运行逻辑的设计基础。文章从沟通、分工和工具三个维度展开，指出AI Native公司通过Agent处理信息对齐、采用“单人+Agent”闭环功能单元，并构建Agent优先的内部系统，旨在大幅降低沟通与协调成本，重塑工作本质，实现人效的极致提升。"
+excerpt: “AI Native公司的本质是用Agent网络重写组织架构，实现人效的极致提升。其核心在于将AI Agent作为组织底层设计基础，而非简单工具；通过Agent处理信息对齐，将沟通成本聚焦于决策；构建”单人+Agent”闭环功能单元，大幅降低跨人协调成本；并以Agent优先原则设计内部系统，支持自愈与协同。”
 ---
 
 ## 你认为什么是 AI Native 公司？
