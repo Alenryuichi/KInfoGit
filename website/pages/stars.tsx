@@ -6,13 +6,21 @@ import {
   getAllFeedDates,
   getAllWeeklyDigests,
   getWeeklyDigestByWeek,
+  getTagStats,
+  getTopHighlights,
   type DailyFeedSummary,
   type WeeklyDigest,
+  type TagStat,
+  type HighlightItem,
 } from '@/lib/social-feeds'
+import { TagCloud } from '@/components/stars/TagCloud'
+import { HighlightCards } from '@/components/stars/HighlightCards'
 
 interface StarsListProps {
   dates: DailyFeedSummary[]
   latestDigest: WeeklyDigest | null
+  tagStats: TagStat[]
+  highlights: HighlightItem[]
 }
 
 export const getStaticProps: GetStaticProps<StarsListProps> = async () => {
@@ -21,8 +29,10 @@ export const getStaticProps: GetStaticProps<StarsListProps> = async () => {
   const latestDigest = digests.length > 0
     ? getWeeklyDigestByWeek(digests[0].week)
     : null
+  const tagStats = getTagStats()
+  const highlights = getTopHighlights(6)
 
-  return { props: { dates, latestDigest } }
+  return { props: { dates, latestDigest, tagStats, highlights } }
 }
 
 // --- Weekly Digest Card ---
@@ -130,7 +140,7 @@ function WeeklyDigestCard({ digest }: { digest: WeeklyDigest }) {
 
 // --- Page ---
 
-export default function StarsList({ dates, latestDigest }: StarsListProps) {
+export default function StarsList({ dates, latestDigest, tagStats, highlights }: StarsListProps) {
   const [sourceFilter, setSourceFilter] = useState<string>('all')
 
   // Compute which sources have data
@@ -191,10 +201,19 @@ export default function StarsList({ dates, latestDigest }: StarsListProps) {
               </svg>
               AI Leaders
             </Link>
+            <Link
+              href="/stars/timeline/"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 text-sm font-medium text-gray-400 hover:text-white bg-white/[0.04] hover:bg-white/[0.08] rounded-lg border border-white/[0.06] transition-colors"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25H12" />
+              </svg>
+              Timeline
+            </Link>
           </div>
 
           {/* Source filter */}
-          <div className="flex flex-wrap gap-2 mb-8">
+          <div className="flex flex-wrap gap-2 mb-4">
             {(['all', 'github', 'bluesky', 'youtube', 'blog'] as const).map(source => {
               if (source !== 'all' && !hasSources[source]) return null
               const labels: Record<string, string> = { all: 'All', github: 'GitHub', bluesky: 'Bluesky', youtube: 'YouTube', blog: 'Blog' }
@@ -215,8 +234,18 @@ export default function StarsList({ dates, latestDigest }: StarsListProps) {
             })}
           </div>
 
+          {/* Trending Topics — inline pills */}
+          {sourceFilter === 'all' && tagStats.length > 0 && (
+            <TagCloud tagStats={tagStats} latestDate={dates[0]?.date || ''} />
+          )}
+
           {/* Weekly Digest Card */}
           {latestDigest && sourceFilter === 'all' && <WeeklyDigestCard digest={latestDigest} />}
+
+          {/* Top Highlights */}
+          {sourceFilter === 'all' && highlights.length > 0 && (
+            <HighlightCards highlights={highlights} />
+          )}
 
           {/* Date list */}
           {filteredDates.length === 0 ? (

@@ -485,3 +485,99 @@ export function getAdjacentWeeks(week: string): { prev: string | null; next: str
     next: idx > 0 ? weeks[idx - 1] : null,
   }
 }
+
+// --- Tag Stats ---
+
+export interface TagStat {
+  tag: string
+  count: number
+}
+
+export function getTagStats(): TagStat[] {
+  const dates = getAllFeedDates()
+  const tagCounts = new Map<string, number>()
+
+  for (const { date } of dates) {
+    const githubStars = loadGitHubStars(date)
+    const blueskyPosts = loadBlueskyPosts(date)
+
+    for (const star of githubStars) {
+      for (const tag of star.tags ?? []) {
+        tagCounts.set(tag, (tagCounts.get(tag) || 0) + 1)
+      }
+    }
+    for (const post of blueskyPosts) {
+      for (const tag of post.tags ?? []) {
+        tagCounts.set(tag, (tagCounts.get(tag) || 0) + 1)
+      }
+    }
+  }
+
+  const stats: TagStat[] = []
+  tagCounts.forEach((count, tag) => {
+    stats.push({ tag, count })
+  })
+
+  return stats.sort((a, b) => b.count - a.count)
+}
+
+// --- Top Highlights ---
+
+function getItemEngagement(item: FeedItem): number {
+  if (item.type === 'github') return item.stargazersCount
+  if (item.type === 'bluesky') return item.likeCount + item.repostCount
+  if (item.type === 'youtube') return item.viewCount || 0
+  if (item.type === 'blog') return item.highlights ? 10 : 0
+  return 0
+}
+
+export interface HighlightItem {
+  item: FeedItem
+  date: string
+  engagement: number
+}
+
+export function getTopHighlights(limit: number = 5): HighlightItem[] {
+  const dates = getAllFeedDates()
+  const all: HighlightItem[] = []
+
+  for (const { date } of dates) {
+    const feed = getFeedByDate(date)
+    if (!feed) continue
+
+    for (const item of feed.items) {
+      all.push({ item, date, engagement: getItemEngagement(item) })
+    }
+  }
+
+  return all.sort((a, b) => b.engagement - a.engagement).slice(0, limit)
+}
+
+// --- All Feed Items (for timeline) ---
+
+export interface TimelineFeedItem {
+  item: FeedItem
+  date: string
+  sortTime: string
+}
+
+export function getAllFeedItems(): TimelineFeedItem[] {
+  const dates = getAllFeedDates()
+  const all: TimelineFeedItem[] = []
+
+  for (const { date } of dates) {
+    const feed = getFeedByDate(date)
+    if (!feed) continue
+
+    for (const item of feed.items) {
+      let sortTime = date
+      if (item.type === 'bluesky') sortTime = item.createdAt
+      else if (item.type === 'youtube') sortTime = item.publishedAt
+      else if (item.type === 'blog') sortTime = item.publishedAt
+
+      all.push({ item, date, sortTime })
+    }
+  }
+
+  return all.sort((a, b) => b.sortTime.localeCompare(a.sortTime))
+}
