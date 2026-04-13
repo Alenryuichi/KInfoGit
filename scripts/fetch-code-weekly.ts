@@ -104,6 +104,27 @@ async function main() {
   const arenaRankings = arenaResult.status === 'fulfilled' ? arenaResult.value : []
   const aiderLeaderboard = aiderResult.status === 'fulfilled' ? aiderResult.value : []
 
+  // Log failures explicitly
+  const sources = [
+    ['GitHub Releases', githubResult],
+    ['RSS', rssResult],
+    ['Tavily', tavilyResult],
+    ['Bailian', bailianResult],
+    ['npm', npmResult],
+    ['Arena', arenaResult],
+    ['Aider', aiderResult],
+  ] as const
+  let failCount = 0
+  for (const [name, result] of sources) {
+    if (result.status === 'rejected') {
+      console.error(`  ❌ ${name} failed: ${(result.reason as Error)?.message || result.reason}`)
+      failCount++
+    }
+  }
+  if (failCount > 0) {
+    console.warn(`  ⚠️ ${failCount} source(s) failed`)
+  }
+
   console.log(`  GitHub Releases: ${githubReleases.length}`)
   console.log(`  RSS Articles: ${rssArticles.length}`)
   console.log(`  Tavily Results: ${tavilyResults.length}`)

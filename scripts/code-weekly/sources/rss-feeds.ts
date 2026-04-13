@@ -97,7 +97,7 @@ async function fetchFeed(feed: RssFeedConfig): Promise<RssArticle[]> {
 
     if (!title || !link) continue
 
-    // Filter by date if available
+    // Filter by date if available; skip undated articles (may be stale)
     if (dateStr) {
       const pubDate = new Date(dateStr)
       if (!isNaN(pubDate.getTime()) && pubDate < oneWeekAgo) continue
@@ -107,7 +107,7 @@ async function fetchFeed(feed: RssFeedConfig): Promise<RssArticle[]> {
       company: feed.company,
       title,
       url: link,
-      publishedAt: dateStr || new Date().toISOString(),
+      publishedAt: dateStr || '',
       summary: description.replace(/<[^>]*>/g, '').slice(0, 500),
       tags: feed.tags || [],
     })

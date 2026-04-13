@@ -3,6 +3,7 @@
 
 export interface NpmRelease {
   editor: string
+  pkg: string
   version: string
   publishedAt: string
 }
@@ -72,6 +73,7 @@ async function fetchPackageReleases(
 
       releases.push({
         editor,
+        pkg,
         version,
         publishedAt: dateStr,
       })

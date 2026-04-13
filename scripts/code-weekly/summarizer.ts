@@ -135,6 +135,21 @@ export async function summarizeWeekly(raw: RawData): Promise<SummarizedWeekly> {
       return fallbackSummary(raw)
     }
 
+    // Sanitize: ensure required fields have correct types
+    for (const editor of parsed.editors) {
+      if (!editor.name) continue
+      if (!Array.isArray(editor.highlights)) editor.highlights = []
+      if (typeof editor.aiSummary !== 'string') editor.aiSummary = ''
+      if (typeof editor.source !== 'string') editor.source = ''
+      if (typeof editor.sourceUrl !== 'string') editor.sourceUrl = ''
+      if (typeof editor.category !== 'string') editor.category = 'cli'
+    }
+    if (!Array.isArray(parsed.blogs)) parsed.blogs = []
+    if (typeof parsed.weekSummary !== 'string') parsed.weekSummary = ''
+
+    // Filter out editors with no name (malformed entries)
+    parsed.editors = parsed.editors.filter(e => e.name)
+
     return parsed
   } catch (err) {
     console.warn('[summarizer] DeepSeek failed:', err)
@@ -159,6 +174,10 @@ export function collectUrlsFromRaw(raw: RawData): { allUrls: Set<string>; editor
   for (const r of raw.tavilyResults) addUrl(r.editor, r.url)
   for (const r of raw.bailianResults) addUrl(r.editor, r.url)
   for (const r of raw.rssArticles) allUrls.add(r.url)
+  // npm releases: construct npmjs.com links from package name
+  for (const r of (raw.npmReleases || [])) {
+    addUrl(r.editor, `https://www.npmjs.com/package/${r.pkg}`)
+  }
 
   return { allUrls, editorUrls }
 }
