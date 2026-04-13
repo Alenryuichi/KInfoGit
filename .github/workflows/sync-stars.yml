@@ -66,6 +66,11 @@ jobs:
       - name: Generate RSS feed
         run: npx tsx scripts/generate-stars-rss.ts
 
+      - name: Generate people activity data
+        env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+        run: npx tsx scripts/generate-people-data.ts
+
       - name: Check for changes
         id: check_changes
         run: |
