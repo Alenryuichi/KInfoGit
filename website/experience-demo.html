@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terminal/Git Branch Experience</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #030712; 
+            color: #ffffff;
+            min-height: 100vh;
+            padding: 4rem 2rem;
+            /* Terminal subtle noise/gradient */
+            background-image: radial-gradient(circle at center, rgba(255, 255, 255, 0.02) 0%, transparent 80%);
+        }
+
+        /* 
+         * Terminal Tree Logic (Pure CSS)
+         */
+        .tree-node {
+            position: relative;
+            padding-left: 2rem;
+            padding-bottom: 2rem;
+        }
+
+        /* Adjust vertical line colors based on branch */
+        .tree-node.main-branch::before, .tree-node.main-branch::after {
+            background: rgba(168, 85, 247, 0.3); /* Purple for main */
+        }
+        .tree-node.side-branch::before, .tree-node.side-branch::after {
+            background: rgba(59, 130, 246, 0.3); /* Blue for side project */
+        }
+        .tree-node.edu-branch::before, .tree-node.edu-branch::after {
+            background: rgba(255, 255, 255, 0.15); /* Gray for history */
+        }
+
+        .tree-node::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 1px;
+        }
+
+        .tree-node::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 1rem;
+            width: 1.5rem;
+            height: 1px;
+        }
+
+        .tree-node:last-child::before {
+            bottom: auto;
+            height: 1rem;
+        }
+        
+        .tree-node:last-child {
+            padding-bottom: 0;
+        }
+
+        .tree-node:hover::before,
+        .tree-node:hover::after {
+            background: rgba(255, 255, 255, 0.6);
+        }
+
+        .tree-node:hover .node-content {
+            opacity: 1;
+        }
+
+        .node-content {
+            opacity: 0.8;
+            transition: opacity 0.2s ease;
+        }
+
+        .blink-cursor {
+            display: inline-block;
+            width: 8px;
+            height: 15px;
+            background-color: rgba(255, 255, 255, 0.6);
+            animation: blink 1s step-end infinite;
+            vertical-align: middle;
+            margin-left: 4px;
+            margin-top: -2px;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+
+        .log-tag {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.65rem;
+            color: rgba(52, 211, 153, 0.8);
+            margin-right: 0.5rem;
+            font-weight: 500;
+            letter-spacing: -0.02em;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="max-w-3xl mx-auto w-full">
+        
+        <!-- Terminal Header -->
+        <div class="mb-12 font-mono text-sm border-b border-white/10 pb-6">
+            <span class="text-emerald-400">kylin@macbook</span>
+            <span class="text-white/40">:</span>
+            <span class="text-blue-400">~/experience</span>
+            <span class="text-white/40">$</span>
+            <span class="text-white/90 ml-2">git log --graph --all</span>
+            <span class="blink-cursor"></span>
+        </div>
+
+        <div class="space-y-16">
+            
+            <!-- Log Entry 1: Tencent (Main Branch) -->
+            <div class="font-mono">
+                <!-- Commit Header -->
+                <div class="flex flex-wrap items-center text-xs mb-2">
+                    <span class="text-purple-400 font-semibold mr-2">* branch</span>
+                    <span class="bg-purple-500/10 text-purple-300 border border-purple-500/20 px-1.5 py-0.5 rounded text-[0.65rem]">main</span>
+                    <span class="text-emerald-400 ml-2 select-none">(active)</span>
+                    <span class="text-white/20 mx-3">|</span>
+                    <span class="text-white/40">Since: 2022.07</span>
+                </div>
+
+                <div class="ml-[0.25rem] mt-4">
+                    
+                    <div class="tree-node main-branch">
+                        <div class="node-content font-sans pt-1">
+                            <h3 class="text-lg font-medium text-white/90 tracking-tight">全栈开发工程师 / AI Agent 架构师</h3>
+                            <p class="text-sm text-white/40 mt-1">腾讯企业微信 · Tencent WeCom</p>
+                        </div>
+                    </div>
+
+
+                    <div class="tree-node main-branch">
+                        <div class="node-content pt-1">
+                            <div class="text-[0.65rem] text-white/30 uppercase tracking-widest mb-3">Execution Log</div>
+                            <div class="text-sm text-white/60 font-light flex leading-relaxed font-sans">
+                                <span class="font-mono text-emerald-500/50 mr-3 mt-0.5 select-none">-&gt;</span>
+                                <span><span class="log-tag">[System_Arch]</span>在百亿级数据的黑灰产对抗中，从零手搓了企业微信 AI Agent 审核网络，把复杂场景的拦截率硬拔到 90%+。受够了黑盒式的风控运营，干脆造了个轮子，打通了从「特征监控、策略分析到问题定位」的全生命周期平台，顺道把前后端一锅端，把自己逼成了全栈开发。</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Log Entry 2: Indie Developer (Parallel Branch) -->
+            <div class="font-mono">
+                <!-- Branch Header (Showing it's a parallel ongoing branch) -->
+                <div class="flex flex-wrap items-center text-xs mb-2">
+                    <span class="text-blue-400 font-semibold mr-2">| * branch</span>
+                    <span class="bg-blue-500/10 text-blue-300 border border-blue-500/20 px-1.5 py-0.5 rounded text-[0.65rem]">indie-dev</span>
+                    <span class="text-emerald-400 ml-2 select-none">(active/parallel)</span>
+                    <span class="text-white/20 mx-3">|</span>
+                    <span class="text-white/40">Since: 2025.06</span>
+                </div>
+
+                <!-- Indented slightly to show it's parallel to main -->
+                <div class="ml-[0.85rem] mt-4 border-l border-purple-500/20 pl-4 relative">
+                    <div class="absolute -left-[1px] top-0 bottom-0 w-[1px] bg-purple-500/20"></div>
+                    
+                    <div class="tree-node side-branch">
+                        <div class="node-content font-sans pt-1">
+                            <h3 class="text-lg font-medium text-white/90 tracking-tight">全栈 iOS 开发 / 独立开发者</h3>
+                            <p class="text-sm text-white/40 mt-1">Independent Developer</p>
+                        </div>
+                    </div>
+
+
+                    <div class="tree-node side-branch">
+                        <div class="node-content pt-1">
+                            <div class="text-[0.65rem] text-white/30 uppercase tracking-widest mb-3">Execution Log</div>
+                            <div class="text-sm text-white/60 font-light flex leading-relaxed font-sans">
+                                <span class="font-mono text-emerald-500/50 mr-3 mt-0.5 select-none">-&gt;</span>
+                                <span><span class="log-tag">[Indie_Hacker]</span>上线了国内首款攀岩 AI 应用「磕线」，集齐了 AI 高光生成、训练数据分析与日常攀爬记录。为了不让高昂的云端 GPU 烧空钱包，硬生生把庞大的视觉推理流塞进手机端侧，靠压榨 CoreML 算力换取了极其流畅的实时体验。</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Log Entry 3: Education (Past Commit) -->
+            <div class="font-mono">
+                <!-- Commit Header (Back to main line history) -->
+                <div class="flex flex-wrap items-center text-xs mb-2">
+                    <span class="text-white/60 font-semibold mr-2">* commit</span>
+                    <span class="text-white/40 text-[0.65rem] mr-2">8c2d4f1</span>
+                    <span class="text-white/20 mx-3">|</span>
+                    <span class="text-white/40">Date: 2019.09 — 2022.06</span>
+                </div>
+
+                <div class="ml-[0.25rem] mt-4">
+                    
+                    <div class="tree-node edu-branch">
+                        <div class="node-content font-sans pt-1">
+                            <h3 class="text-lg font-medium text-white/90 tracking-tight">计算机科学与技术 · 硕士</h3>
+                            <p class="text-sm text-white/40 mt-1">华南理工大学 · South China University of Technology</p>
+                        </div>
+                    </div>
+
+
+                    <div class="tree-node edu-branch">
+                        <div class="node-content pt-1">
+                            <div class="text-[0.65rem] text-white/30 uppercase tracking-widest mb-3">Execution Log</div>
+                            <div class="text-sm text-white/60 font-light flex leading-relaxed font-sans">
+                                <span class="font-mono text-emerald-500/50 mr-3 mt-0.5 select-none">-&gt;</span>
+                                <span><span class="log-tag">[Research]</span>顶着技术思维严重脱节还要强行微操的导师高压，硬抗下了无人机视觉导航与数字孪生底座的重任。在无数个和深度神经网络玩“极限压缩”的深夜里，硬是把这套让无人机在虚拟世界里自主认路的系统跑通了，顺便发了一篇 CCF。</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Terminal End Marker -->
+            <div class="mt-16 font-mono text-xs text-white/20 text-center select-none">
+                ~ [END OF LOG] ~
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

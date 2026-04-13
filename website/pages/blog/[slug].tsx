@@ -73,7 +73,7 @@ export default function BlogPostPage({ post, prevPost, nextPost }: BlogPostPageP
         {/* Pagefind date meta */}
         <meta data-pagefind-meta={`date:${post.date}`} />
         {/* Back Button */}
-        <div className="max-w-4xl mx-auto px-5 sm:px-6 pt-32 pb-4">
+        <div className="max-w-3xl mx-auto px-5 sm:px-6 pt-32 pb-4">
           <Link
             href="/blog/"
             className="inline-flex items-center text-sm font-medium text-gray-500 hover:text-gray-300 transition-colors group"
@@ -84,7 +84,7 @@ export default function BlogPostPage({ post, prevPost, nextPost }: BlogPostPageP
         </div>
 
         {/* Article Header */}
-        <div className="max-w-4xl mx-auto px-5 sm:px-6 pt-12 pb-2">
+        <div className="max-w-3xl mx-auto px-5 sm:px-6 pt-12 pb-2">
           <header className="mb-2">
             {post.featured && (
               <div className="mb-4">
@@ -139,7 +139,7 @@ export default function BlogPostPage({ post, prevPost, nextPost }: BlogPostPageP
         </div>
 
         {/* Article Content + Desktop TOC */}
-        <div className="relative max-w-4xl mx-auto px-5 sm:px-6 pb-12">
+        <div className="relative max-w-3xl mx-auto px-5 sm:px-6 pb-12">
             <article>
             <MarkdownRenderer content={post.content} />
 

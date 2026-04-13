@@ -38,9 +38,9 @@ export default function ProjectPage({ project, detailContent }: ProjectPageProps
 
 				<section className="py-16 md:py-20 relative z-10">
 					<div className="container mx-auto px-4 sm:px-6 lg:px-8">
-						<div className="max-w-6xl mx-auto flex gap-8">
+						<div className="max-w-3xl mx-auto relative flex flex-col">
 							{/* Main Content */}
-							<div className="flex-1 min-w-0 max-w-4xl">
+							<div className="w-full min-w-0">
 							<div className="mb-8 flex items-center justify-between gap-4">
 								<Link
 									href="/work#projects"
@@ -77,7 +77,7 @@ export default function ProjectPage({ project, detailContent }: ProjectPageProps
 
 							{/* MDX/Markdown Detail Content */}
 							{detailContent && (
-								<section className="mb-8 py-12 sm:py-20 lg:py-24">
+								<section className="mb-8 mt-6 sm:mt-10">
 									<MarkdownRenderer content={detailContent} />
 								</section>
 							)}

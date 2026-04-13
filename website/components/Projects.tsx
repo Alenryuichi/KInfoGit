@@ -7,100 +7,224 @@ interface ProjectsProps {
 	projects: Project[]
 }
 
-// 项目卡片组件
+// 辅助函数：根据项目 ID 映射硬核监控数据和日志
+function getProjectProcessData(id: string) {
+    const data: Record<string, any> = {
+        'betaline': {
+            pid: '00001',
+            mem: '32MB',
+            env: 'Production',
+            metrics: [
+                { label: 'EDGE_ACCEL', value: '300x', percent: 95 },
+                { label: 'DETECTION', value: '92%', percent: 92 },
+                { label: 'CLOUD_COST', value: '-39%', percent: 39 },
+            ],
+            logs: [
+                '▸ [SYS] Initializing YOLO11m with MobileNet V3...',
+                '▸ [SYS] Compressing model for CoreML deployment...',
+                '▸ [OK] Edge inference latency dropped to 12ms.'
+            ]
+        },
+        'openmemory-plus': {
+            pid: '90210',
+            mem: '128MB',
+            env: 'Local/MCP',
+            metrics: [
+                { label: 'RETENTION', value: '95%+', percent: 95 },
+                { label: 'REDUNDANCY', value: '-40%', percent: 40 },
+                { label: 'E2E_TESTS', value: '15', percent: 100 },
+            ],
+            logs: [
+                '▸ [SYS] Bootstrapping dual-layer memory context...',
+                '▸ [INFO] Compacting redundant memory vectors in Qdrant...',
+                '▸ [OK] Cross-session context retention stable at 95%+.'
+            ]
+        },
+        'anti-fraud-governance': {
+            pid: '11032',
+            mem: '64.5G',
+            env: 'Cluster',
+            metrics: [
+                { label: 'BANNED_SVCS', value: '820+', percent: 85 },
+                { label: 'ANNUAL_REV', value: '3M+', percent: 90 },
+                { label: 'AUTO_MODS', value: '30+', percent: 100 },
+            ],
+            logs: [
+                '▸ [WARN] Anomalous sub-graph structure detected in WeCom network.',
+                '▸ [SYS] Executing Label Propagation and Graph Convolution...',
+                '▸ [OK] 820+ malicious service providers isolated and banned.'
+            ]
+        },
+        'portrait-platform': {
+            pid: '82194',
+            mem: '128G',
+            env: 'Production',
+            metrics: [
+                { label: 'USERS_SCALE', value: '1B+', percent: 100 },
+                { label: 'WRITE_PERF', value: '130x', percent: 95 },
+                { label: 'FRAUD_DROP', value: '-30%', percent: 30 },
+            ],
+            logs: [
+                '▸ [WARN] High concurrency lock contention detected on PKV nodes.',
+                '▸ [INFO] Rewriting distributed PKV serialization protocol...',
+                '▸ [OK] Write throughput skyrocketed from 90k/s to 12M/s.'
+            ]
+        },
+        'ai-agent-review': {
+            pid: '44910',
+            mem: '16.2G',
+            env: 'Production',
+            metrics: [
+                { label: 'ACCURACY', value: '90%+', percent: 90 },
+                { label: 'AUTO_CLOSE', value: '300+/d', percent: 85 },
+                { label: 'RULE_TOKENS', value: '200', percent: 10 },
+            ],
+            logs: [
+                '▸ [SYS] Initializing Phase-Gated Controlled ReAct engine...',
+                '▸ [INFO] Routing to domain agent. Injecting BM25 retrieved rules...',
+                '▸ [OK] Complex review ticket automatically resolved. Accuracy 90%+.'
+            ]
+        }
+    }
+
+    return data[id] || {
+        pid: Math.floor(Math.random() * 90000 + 10000).toString(),
+        mem: '512MB',
+        env: 'Production',
+        metrics: [
+            { label: 'HEALTH', value: '100%', percent: 100 },
+            { label: 'UPTIME', value: '99.9%', percent: 99 },
+        ],
+        logs: [
+            '▸ [SYS] Bootstrapping process...',
+            '▸ [INFO] Loading configuration and modules...',
+            '▸ [OK] System is running normally.'
+        ]
+    }
+}
+
+// 生成 TUI 进度条
+function renderTuiBar(percent: number) {
+    const totalBlocks = 20
+    const filledBlocks = Math.round((percent / 100) * totalBlocks)
+    const emptyBlocks = totalBlocks - filledBlocks
+    
+    return (
+        <span className="tui-bar flex-1 mx-2 text-[0.65rem] tracking-[1px] font-mono">
+            <span className="tui-fill">{'■'.repeat(filledBlocks)}</span>
+            <span className="tui-empty text-white/15">{'■'.repeat(emptyBlocks)}</span>
+        </span>
+    )
+}
+
+// 项目卡片组件 (Process Monitor Style)
 function ProjectCard({ project }: { project: Project }) {
+    const isIndie = project.section === '独立项目'
+    const themeColor = isIndie ? 'text-purple-400' : 'text-emerald-400'
+    const themeColorHex = isIndie ? '#a855f7' : '#34d399'
+    const themeHoverBorder = isIndie ? 'hover:border-purple-500/50' : 'hover:border-emerald-500/50'
+    const themeHoverShadow = isIndie ? 'hover:shadow-[inset_0_0_20px_rgba(0,0,0,1),0_0_30px_rgba(168,85,247,0.1)]' : 'hover:shadow-[inset_0_0_20px_rgba(0,0,0,1),0_0_30px_rgba(52,211,153,0.1)]'
+    const prefix = isIndie ? '~/' : './'
+    
+    const processData = getProjectProcessData(project.id)
+
 	return (
-		<div
-			className="project-card group relative overflow-hidden rounded-2xl bg-gray-900/50 border border-gray-800/50 hover:border-gray-700/50 transition-all duration-500 hover:bg-gray-900/70"
+		<Link
+            href={project.hasDetailPage === false ? '#' : `/work/${project.id}`}
+			className={`block group relative bg-[#050505] border border-white/10 rounded-md overflow-hidden transition-all duration-300 ${themeHoverBorder} ${themeHoverShadow} shadow-[inset_0_0_20px_rgba(0,0,0,1)] hover:-translate-y-0.5`}
 		>
-			{/* Meta band */}
-			<div className="px-8 pt-8 pb-4 flex items-center justify-between gap-4">
-				<div className="flex flex-col text-left">
-					<span className="text-xs font-medium text-blue-400 uppercase tracking-wide">
-						{project.category ?? 'Core Project'}
-					</span>
-					<span className="mt-1 text-sm text-gray-400">
-						{project.company} · {project.role.zh}
-					</span>
-				</div>
-				<span className="px-3 py-1 rounded-full text-xs font-medium bg-gray-800/80 text-gray-300 border border-gray-700/50">
-					{project.period}
-				</span>
-			</div>
+            <style jsx>{`
+                .card-${project.id} .tui-fill { color: ${themeColorHex}; }
+                .card-${project.id} .log-highlight { color: ${themeColorHex}; }
+            `}</style>
 
-			{/* Project Content */}
-			<div className="px-8 pb-8">
-				<h3 className="text-2xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors">
-					{project.title.zh}
-				</h3>
-				{project.title.en && (
-					<p className="text-sm text-gray-400 mb-3">
-						{project.title.en}
-					</p>
-				)}
+            {/* Header (Status Bar) */}
+            <div className="bg-[#0a0a0a] border-b border-white/10 px-4 py-2.5 flex justify-between items-center font-mono text-[0.65rem]">
+                <div className="flex items-center gap-2">
+                    <span 
+                        className="inline-block w-2 h-2 animate-[blink_2s_step-end_infinite]" 
+                        style={{ backgroundColor: themeColorHex, boxShadow: `0 0 8px ${themeColorHex}` }}
+                    ></span>
+                    <span className={`${themeColor} font-bold tracking-widest uppercase`}>
+                        {isIndie ? 'DEPLOYED' : 'RUNNING'}
+                    </span>
+                </div>
+                <div className="text-white/40 flex gap-4 hidden sm:flex">
+                    <span>PID: <span className="text-white/80">{processData.pid}</span></span>
+                    <span>MEM: <span className="text-white/80">{processData.mem}</span></span>
+                    <span>ENV: <span className="text-white/80">{processData.env}</span></span>
+                </div>
+            </div>
 
-				{project.highlights?.zh && (
-					<p className="text-gray-300 leading-relaxed mb-4">
-						{project.highlights.zh}
-					</p>
-				)}
+			<div className={`p-6 relative z-10 card-${project.id}`}>
+                {/* Title & Desc */}
+                <div className="mb-5 border-b border-white/5 pb-5">
+                    <h3 className={`text-lg font-mono text-white/90 tracking-tight group-hover:${themeColor} transition-colors mb-2`}>
+                        <span className="text-white/30 mr-1 select-none">{prefix}</span>
+                        {project.slug || project.id}
+                    </h3>
+                    <p className="text-sm text-white/50 font-light leading-relaxed font-sans line-clamp-2">
+                        {project.description?.zh || project.highlights?.zh || `${project.company} · ${project.role.zh}`}
+                    </p>
+                </div>
 
-				{project.impact && (
-					<p className="text-sm text-blue-300 mb-4">
-						Impact: {project.impact}
-					</p>
-				)}
+                {/* Hardcore TUI Metrics */}
+                <div className="space-y-3 font-mono text-[0.65rem] mb-6">
+                    {processData.metrics.map((m: any, i: number) => (
+                        <div key={i} className="flex items-center justify-between">
+                            <span className="text-white/50 w-24 truncate">{m.label}</span>
+                            {renderTuiBar(m.percent)}
+                            <span className="text-white/90 w-12 text-right">{m.value}</span>
+                        </div>
+                    ))}
+                </div>
 
-				{/* Achievements preview */}
-				{project.achievements?.zh?.length ? (
-					<ul className="list-disc list-inside text-sm text-gray-400 space-y-1 mb-4">
-						{project.achievements.zh.slice(0, 3).map((item) => (
-							<li key={item}>{item}</li>
-						))}
-					</ul>
-				) : null}
+                {/* Stdout Log Window */}
+                <div className={`bg-black border border-white/5 rounded p-3 font-mono text-[0.6rem] leading-relaxed text-white/40 h-[4.5rem] overflow-hidden relative group-hover:border-${isIndie ? 'purple' : 'emerald'}-500/30 transition-colors`}>
+                    <div className="absolute top-0 left-0 right-0 h-6 bg-gradient-to-b from-black to-transparent z-10 pointer-events-none"></div>
+                    {processData.logs.map((log: string, i: number) => {
+                        const isLast = i === processData.logs.length - 1
+                        return (
+                            <span 
+                                key={i} 
+                                className={`block transform translate-y-2 opacity-0 group-hover:animate-[log-scroll_0.3s_forwards_ease-out] ${isLast ? 'log-highlight opacity-100' : ''}`}
+                                style={{ animationDelay: `${i * 0.15}s`, opacity: isLast ? 1 : 0.7 }}
+                            >
+                                {log}
+                            </span>
+                        )
+                    })}
+                </div>
 
-				{/* Tech Stack */}
-				<div className="flex flex-wrap gap-2 mb-6">
-					{project.tech_stack.map((tag) => (
-						<span
-							key={tag}
-							className="px-3 py-1 text-xs bg-gray-800/60 text-gray-300 rounded-full border border-gray-700/50"
-						>
-							{tag}
-						</span>
-					))}
-				</div>
-
-				{/* Project Link */}
-				<Link
-					href={`/work/${project.id}`}
-					className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors group/link"
-				>
-					<span>View full case study</span>
-					<svg className="ml-2 w-4 h-4 group-hover/link:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-						<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-					</svg>
-				</Link>
-			</div>
-
-			{/* Hover Effect */}
-			<div className="absolute inset-0 bg-gradient-to-t from-blue-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
-		</div>
+                {/* Footer Tags */}
+                <div className="flex items-center justify-between pt-5 mt-2">
+                    <div className="flex flex-wrap gap-2 font-mono text-[0.6rem] text-white/40">
+                        {project.tech_stack.slice(0, 3).map((tag) => (
+                            <span key={tag} className="bg-white/5 px-1.5 py-0.5 rounded border border-white/5 truncate max-w-[80px]">
+                                {tag}
+                            </span>
+                        ))}
+                    </div>
+                    {project.hasDetailPage !== false && (
+                        <span className={`font-mono text-[0.65rem] text-white/20 group-hover:${themeColor} transition-colors select-none whitespace-nowrap ml-2`}>
+                            [ Execute ] -&gt;
+                        </span>
+                    )}
+                </div>
+            </div>
+		</Link>
 	)
 }
 
 export function Projects({ projects }: ProjectsProps) {
 	useEffect(() => {
-		// 初始化滚动动画
 		animateOnScroll('.projects-header')
 		animateProjectCards()
 	}, [])
 
-	// 按 section 分组项目
 	const groupedProjects = useMemo(() => {
 		const groups: Record<string, Project[]> = {}
-		const sectionOrder = ['独立项目', '企业微信'] // 定义分区顺序
+		const sectionOrder = ['独立项目', '企业微信'] 
 
 		projects.forEach((project) => {
 			const section = project.section || '其他项目'
@@ -110,7 +234,6 @@ export function Projects({ projects }: ProjectsProps) {
 			groups[section].push(project)
 		})
 
-		// 按预定义顺序排序
 		const orderedSections = sectionOrder.filter(s => groups[s])
 		const otherSections = Object.keys(groups).filter(s => !sectionOrder.includes(s))
 
@@ -122,19 +245,16 @@ export function Projects({ projects }: ProjectsProps) {
 
 	return (
 		<section id="projects" className="py-20 text-white">
+            <style dangerouslySetInnerHTML={{__html: `
+                @keyframes log-scroll { to { transform: translateY(0); opacity: 1; } }
+            `}} />
 			<div className="container mx-auto px-4 sm:px-6 lg:px-8">
-				<div className="max-w-7xl mx-auto">
+				<div className="max-w-5xl mx-auto w-full">
 					{/* Section Header */}
-					<div className="projects-header text-center mb-16">
-						<div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-6">
-							FEATURED PROJECTS
-						</div>
-						<h2 className="text-4xl sm:text-5xl font-bold mb-6">
-							Curated work
-						</h2>
-						<p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
-							AI Agent 系统、RAG 架构设计与独立开发项目，
-							从企业级大规模系统到个人全栈应用。
+					<div className="projects-header mb-16 border-b border-white/10 pb-4">
+						<h2 className="text-2xl font-mono text-emerald-400">~/projects/curated_work</h2>
+						<p className="text-sm text-white/40 mt-2 font-sans font-light">
+							Executing core AI Agent systems, RAG architectures, and independent mobile applications.
 						</p>
 					</div>
 
@@ -144,15 +264,14 @@ export function Projects({ projects }: ProjectsProps) {
 							<div key={section}>
 								{/* Section Divider */}
 								<div className="flex items-center gap-4 mb-8">
-									<div className="h-px flex-1 bg-gradient-to-r from-transparent via-gray-700 to-transparent"></div>
-									<h3 className="text-lg font-semibold text-gray-300 px-4">
-										{section}
+									<h3 className="text-xs font-mono text-white/30 uppercase tracking-widest">
+										[ {section} ]
 									</h3>
-									<div className="h-px flex-1 bg-gradient-to-r from-transparent via-gray-700 to-transparent"></div>
+									<div className="h-px flex-1 bg-white/5"></div>
 								</div>
 
 								{/* Projects Grid */}
-								<div className="projects-container grid grid-cols-1 lg:grid-cols-2 gap-8">
+								<div className="projects-container grid grid-cols-1 md:grid-cols-2 gap-6">
 									{sectionProjects.map((project) => (
 										<ProjectCard key={project.id} project={project} />
 									))}

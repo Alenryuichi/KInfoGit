@@ -106,8 +106,8 @@ export function TableOfContents({ content, variant = 'both' }: TableOfContentsPr
               heading.level === 2 ? 'pl-4' : 'pl-6'
             } ${
               activeId === heading.id
-                ? 'border-white/[0.3] text-gray-200 font-medium'
-                : 'border-transparent text-gray-500 hover:text-gray-300 hover:border-white/[0.15]'
+                ? 'border-white/30 text-white/90 font-medium'
+                : 'border-transparent text-white/40 hover:text-white/70 hover:border-white/10'
             }`}
           >
             {heading.text}
@@ -149,7 +149,7 @@ export function TableOfContents({ content, variant = 'both' }: TableOfContentsPr
             ref={tocScrollRef}
             className="sticky top-32 max-h-[calc(100vh-10rem)] overflow-y-auto overflow-x-hidden scrollbar-hide"
           >
-            <p className="text-[11px] font-medium text-gray-500 uppercase tracking-widest mb-3 pl-1">
+            <p className="text-[11px] font-mono text-white/30 uppercase tracking-widest mb-3 pl-1">
               目录
             </p>
             {tocList}

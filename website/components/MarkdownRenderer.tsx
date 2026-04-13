@@ -434,7 +434,7 @@ const components: Components = {
     }
     return (
       <code
-        className="inline-code bg-white/[0.04] text-gray-200 px-[0.3em] py-[0.15em] rounded-md text-[0.85em] font-mono border border-white/[0.08]"
+        className="inline-code bg-white/5 text-white/80 px-1.5 py-0.5 rounded-md text-[0.85em] font-mono border border-white/10"
         {...props}
       >
         {children}
@@ -488,7 +488,7 @@ const components: Components = {
 
     return (
       <blockquote
-        className="border-l-2 border-gray-600/30 pl-6 py-2 my-10 text-gray-400 italic text-[1.05em] tracking-tight [&>p]:my-2 [&>p:first-child]:mt-0 [&>p:last-child]:mb-0"
+        className="border-l-2 border-white/10 pl-6 py-2 my-10 text-white/50 italic text-[1.05em] tracking-tight [&>p]:my-2 [&>p:first-child]:mt-0 [&>p:last-child]:mb-0"
         {...props}
       >
         {children}
@@ -619,24 +619,24 @@ const components: Components = {
 export function MarkdownRenderer({ content, className = '' }: MarkdownRendererProps) {
   return (
     <div
-      className={`markdown-body mx-auto w-full max-w-[65ch]
-        prose prose-invert prose-lg
-        antialiased selection:bg-blue-500/30 selection:text-blue-200
-        text-gray-300 leading-[1.75]
+      className={`markdown-body w-full max-w-none
+        prose prose-invert
+        antialiased selection:bg-purple-500/30 selection:text-purple-200
+        text-white/60 leading-[1.8] font-light
         prose-p:my-6
-        prose-strong:text-gray-100 prose-strong:font-semibold
-        prose-headings:text-gray-100 prose-headings:font-medium prose-headings:tracking-tight
+        prose-strong:text-white/90 prose-strong:font-medium
+        prose-headings:text-white/90 prose-headings:font-medium prose-headings:tracking-tight
         prose-h1:text-3xl prose-h1:mt-0 prose-h1:mb-8
-        prose-h2:text-2xl prose-h2:mt-16 prose-h2:mb-4 prose-h2:pb-2 prose-h2:border-b prose-h2:border-white/5
+        prose-h2:text-2xl prose-h2:mt-16 prose-h2:mb-6 prose-h2:pb-3 prose-h2:border-b prose-h2:border-white/5
         prose-h3:text-xl prose-h3:mt-12 prose-h3:mb-4
-        prose-h4:text-lg prose-h4:mt-8 prose-h4:mb-2 prose-h4:text-gray-200
-        prose-ul:my-6 prose-ul:list-outside prose-ul:pl-4
-        prose-ol:my-6 prose-ol:list-outside prose-ol:pl-4
-        prose-li:my-2 prose-li:leading-[1.75] prose-li:marker:text-gray-500
-        prose-a:text-gray-200 prose-a:font-medium prose-a:underline prose-a:underline-offset-[4px] 
-        prose-a:decoration-gray-500/50 hover:prose-a:decoration-gray-300 hover:prose-a:text-white 
+        prose-h4:text-lg prose-h4:mt-8 prose-h4:mb-2 prose-h4:text-white/80
+        prose-ul:my-6 prose-ul:list-disc prose-ul:pl-6 prose-ul:marker:text-white/20
+        prose-ol:my-6 prose-ol:list-decimal prose-ol:pl-6 prose-ol:marker:text-white/20
+        prose-li:my-2 prose-li:leading-[1.8]
+        prose-a:text-blue-400 prose-a:font-normal prose-a:no-underline hover:prose-a:text-blue-300
         prose-a:transition-colors
-        prose-img:rounded-xl prose-img:border prose-img:border-white/10 prose-img:shadow-sm prose-img:my-12
+        prose-img:rounded-xl prose-img:border prose-img:border-white/5 prose-img:shadow-[0_20px_40px_-20px_rgba(0,0,0,0.8)] prose-img:my-12
+        [&>*:first-child]:mt-0
         ${className}`}
     >
       <ReactMarkdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRaw]} components={components}>
