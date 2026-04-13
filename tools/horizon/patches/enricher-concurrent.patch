@@ -1,0 +1,81 @@
+diff --git a/src/ai/enricher.py b/src/ai/enricher.py
+index 8478fbc..bcc4920 100644
+--- a/src/ai/enricher.py
++++ b/src/ai/enricher.py
+@@ -5,6 +5,7 @@ For items that pass the score threshold, this module:
+ 2. Feeds search results + item content to AI to generate grounded background knowledge
+ """
+ 
++import asyncio
+ import json
+ import re
+ import sys
+@@ -29,27 +30,33 @@ class ContentEnricher:
+     def __init__(self, ai_client: AIClient):
+         self.client = ai_client
+ 
+-    async def enrich_batch(self, items: List[ContentItem]) -> None:
++    async def enrich_batch(self, items: List[ContentItem], concurrency: int = 3) -> None:
+         """Enrich items in-place with background knowledge.
+ 
+         Args:
+             items: Content items to enrich (modified in-place)
++            concurrency: Max number of items to enrich in parallel
+         """
+-        with Progress(
++        semaphore = asyncio.Semaphore(concurrency)
++        progress = Progress(
+             SpinnerColumn(),
+             TextColumn("[progress.description]{task.description}"),
+             BarColumn(),
+             MofNCompleteColumn(),
+             transient=True,
+-        ) as progress:
+-            task = progress.add_task("Enriching", total=len(items))
++        )
+ 
+-            for item in items:
++        async def _enrich_one(item: ContentItem, task_id) -> None:
++            async with semaphore:
+                 try:
+                     await self._enrich_item(item)
+                 except Exception as e:
+                     print(f"Error enriching item {item.id}: {e}")
+-                progress.advance(task)
++                progress.advance(task_id)
++
++        with progress:
++            task_id = progress.add_task("Enriching", total=len(items))
++            await asyncio.gather(*[_enrich_one(item, task_id) for item in items])
+ 
+     async def _web_search(self, query: str, max_results: int = 3) -> list:
+         """Search the web for context via DuckDuckGo.
+@@ -143,13 +150,23 @@ class ContentEnricher:
+         # Step 1: AI identifies concepts to explain
+         queries = await self._extract_concepts(item, content_text)
+ 
+-        # Step 2: Search web for each concept
++        # Step 2: Search web for each concept (in parallel)
++        # Skip web search for paper sources — they already have abstracts
++        feed_name = (item.metadata.get("feed_name") or "").lower()
++        is_paper = "arxiv" in feed_name or "paper" in feed_name or "arxiv.org" in str(item.url)
++
+         all_results = []
+         web_sections = []
+-        for query in queries:
+-            results = await self._web_search(query)
+-            all_results.extend(results)
+-            if results:
++        if is_paper:
++            # Papers have rich abstracts; skip web search
++            pass
++        elif queries:
++            search_tasks = [self._web_search(query) for query in queries]
++            search_results = await asyncio.gather(*search_tasks, return_exceptions=True)
++            for query, results in zip(queries, search_results):
++                if isinstance(results, Exception) or not results:
++                    continue
++                all_results.extend(results)
+                 lines = [f"- [{r['title']}]({r['url']}): {r['body']}" for r in results]
+                 web_sections.append(f"**{query}:**\n" + "\n".join(lines))
+         web_context = "\n\n".join(web_sections) if web_sections else ""
