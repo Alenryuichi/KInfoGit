@@ -17,8 +17,9 @@ export function BenchmarkSection({ benchmark, description, tableContent }: Bench
       {/* Header */}
       <div className="flex items-center justify-between mb-2">
         <h2 className="text-xl font-semibold text-gray-200">{benchmark.title}</h2>
-        <div className="flex gap-0.5 rounded-lg bg-white/[0.03] border border-white/[0.06] p-0.5 text-xs">
+        <div role="group" aria-label="View mode" className="flex gap-0.5 rounded-lg bg-white/[0.03] border border-white/[0.06] p-0.5 text-xs">
           <button
+            aria-pressed={view === 'chart'}
             onClick={() => setView('chart')}
             className={`px-3 py-1.5 rounded-md transition-colors ${
               view === 'chart'
@@ -29,6 +30,7 @@ export function BenchmarkSection({ benchmark, description, tableContent }: Bench
             Chart
           </button>
           <button
+            aria-pressed={view === 'table'}
             onClick={() => setView('table')}
             className={`px-3 py-1.5 rounded-md transition-colors ${
               view === 'table'

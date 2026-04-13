@@ -22,7 +22,7 @@ function formatHeroValue(v: number, unit: string) {
 
 export function HeroCards({ benchmarks }: HeroCardsProps) {
   return (
-    <div className="grid grid-cols-2 md:grid-cols-3 gap-3 mb-12">
+    <div className="grid grid-cols-2 md:grid-cols-3 gap-2 sm:gap-3 mb-12">
       {benchmarks.map((b, i) => {
         const winner = b.topN[0]
         if (!winner) return null
