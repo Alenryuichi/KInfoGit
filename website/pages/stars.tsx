@@ -2,6 +2,7 @@ import { useState } from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
 import type { GetStaticProps } from 'next'
+import { motion } from 'framer-motion'
 import {
   getAllFeedDates,
   getAllWeeklyDigests,
@@ -13,8 +14,6 @@ import {
   type TagStat,
   type HighlightItem,
 } from '@/lib/social-feeds'
-import { TagCloud } from '@/components/stars/TagCloud'
-import { HighlightCards } from '@/components/stars/HighlightCards'
 
 interface StarsListProps {
   dates: DailyFeedSummary[]
@@ -35,105 +34,20 @@ export const getStaticProps: GetStaticProps<StarsListProps> = async () => {
   return { props: { dates, latestDigest, tagStats, highlights } }
 }
 
-// --- Weekly Digest Card ---
+// --- Weekly Digest Alert Component (Terminal Style) ---
 
-function WeeklyDigestCard({ digest }: { digest: WeeklyDigest }) {
-  const [expanded, setExpanded] = useState(false)
-
+function WeeklyDigestAlert({ digest }: { digest: WeeklyDigest }) {
   // Preview: first 2 sentences of overview
   const sentences = digest.overview.match(/[^.!?]+[.!?]+/g) || []
   const preview = sentences.slice(0, 2).join('').trim() || digest.overview.slice(0, 200)
 
   return (
-    <div className="mb-10 rounded-xl bg-white/[0.02] border border-white/[0.06] overflow-hidden">
-      <button
-        onClick={() => setExpanded(!expanded)}
-        className="w-full text-left p-5 hover:bg-white/[0.02] transition-colors"
-      >
-        <div className="flex items-center justify-between mb-2">
-          <div className="flex items-center gap-2">
-            <span className="text-sm font-semibold text-gray-300">This Week</span>
-            <span className="text-[10px] px-1.5 py-0.5 rounded-full bg-purple-500/20 text-purple-300 font-medium">
-              AI Digest
-            </span>
-          </div>
-          <div className="flex items-center gap-3">
-            <span className="text-xs text-gray-500">
-              {digest.stats.totalRepos} repos · {digest.stats.totalPosts} posts
-            </span>
-            <svg
-              className={`w-4 h-4 text-gray-500 transition-transform ${expanded ? 'rotate-180' : ''}`}
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              strokeWidth={2}
-            >
-              <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
-            </svg>
-          </div>
-        </div>
-        <p className="text-xs text-gray-500 mb-2">
-          {digest.week} · {digest.dateRange.start} – {digest.dateRange.end}
-        </p>
-        <p className="text-gray-400 text-[15px] leading-relaxed">
-          {preview}
-        </p>
-      </button>
-
-      {expanded && (
-        <div className="px-5 pb-5 border-t border-white/[0.04]">
-          {/* Trending Topics */}
-          {digest.trendingTopics.length > 0 && (
-            <div className="mt-4">
-              <h3 className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">
-                Trending Topics
-              </h3>
-              <div className="space-y-2">
-                {digest.trendingTopics.map((topic) => (
-                  <div key={topic.topic}>
-                    <span className="text-gray-200 text-sm font-medium">{topic.topic}</span>
-                    <span className="text-gray-500 text-sm"> — {topic.description}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
-
-          {/* Cross-References */}
-          {digest.crossReferences.length > 0 && (
-            <div className="mt-4">
-              <h3 className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">
-                Starred by Multiple People
-              </h3>
-              <div className="space-y-1">
-                {digest.crossReferences.map((cr) => (
-                  <div key={cr.repo} className="text-sm">
-                    <a
-                      href={cr.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-gray-200 hover:text-white transition-colors"
-                    >
-                      {cr.repo}
-                    </a>
-                    <span className="text-gray-500"> — {cr.starredBy.join(', ')}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
-
-          {/* Link to full digest */}
-          <div className="mt-4 pt-3 border-t border-white/[0.04]">
-            <Link
-              href={`/stars/weekly/${digest.week}/`}
-              className="text-sm text-gray-400 hover:text-white transition-colors"
-            >
-              View full digest →
-            </Link>
-          </div>
-        </div>
-      )}
+    <div className="mb-8 border-l-2 border-purple-500 pl-4 py-2 bg-purple-500/5">
+        <div className="text-[10px] text-purple-400 uppercase tracking-widest mb-2">++ Digest: {digest.week} Alert ++</div>
+        <div className="text-gray-300">{preview}</div>
+        <Link href={`/stars/weekly/${digest.week}/`} className="text-[10px] text-purple-400 hover:underline mt-2 inline-block">
+            Read full digest -{'>'}
+        </Link>
     </div>
   )
 }
@@ -161,6 +75,7 @@ export default function StarsList({ dates, latestDigest, tagStats, highlights }:
         if (sourceFilter === 'blog') return d.blogCount > 0
         return true
       })
+
   return (
     <>
       <Head>
@@ -169,133 +84,185 @@ export default function StarsList({ dates, latestDigest, tagStats, highlights }:
         <link rel="alternate" type="application/rss+xml" title="Stars & Posts — Kylin Miao" href="/stars/feed.xml" />
       </Head>
 
-      <div className="min-h-screen bg-black text-white relative">
-        <div className="fixed inset-0 bg-black -z-10" />
-        <div className="max-w-3xl mx-auto px-5 sm:px-6 pt-32 pb-20 relative z-10">
-          {/* Header */}
-          <div className="flex items-center gap-3">
-            <h1 className="text-4xl md:text-5xl font-bold mb-3 tracking-tight">Stars & Posts</h1>
-            <a
-              href="/stars/feed.xml"
-              title="RSS Feed"
-              className="text-gray-400 hover:text-orange-400 transition-colors mb-1"
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
-                <circle cx="6.18" cy="17.82" r="2.18" />
-                <path d="M4 4.44v2.83c7.03 0 12.73 5.7 12.73 12.73h2.83c0-8.59-6.97-15.56-15.56-15.56zm0 5.66v2.83c3.9 0 7.07 3.17 7.07 7.07h2.83c0-5.47-4.43-9.9-9.9-9.9z" />
-              </svg>
-            </a>
-          </div>
-          <p className="text-gray-400 text-lg mb-4">
-            Recently starred GitHub repos, Bluesky posts, YouTube videos, and blog articles from AI leaders.<br />
-            <span className="text-gray-500 text-sm">Curated from GitHub, Bluesky, YouTube & RSS · Powered by DeepSeek</span>
-          </p>
-
-          {/* Quick links */}
-          <div className="flex items-center gap-3 mb-6">
-            <Link
-              href="/stars/people/"
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 text-sm font-medium text-gray-400 hover:text-white bg-white/[0.04] hover:bg-white/[0.08] rounded-lg border border-white/[0.06] transition-colors"
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M15 19.128a9.38 9.38 0 0 0 2.625.372 9.337 9.337 0 0 0 4.121-.952 4.125 4.125 0 0 0-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 0 1 8.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0 1 11.964-3.07M12 6.375a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0Zm8.25 2.25a2.625 2.625 0 1 1-5.25 0 2.625 2.625 0 0 1 5.25 0Z" />
-              </svg>
-              AI Leaders
-            </Link>
-            <Link
-              href="/stars/timeline/"
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 text-sm font-medium text-gray-400 hover:text-white bg-white/[0.04] hover:bg-white/[0.08] rounded-lg border border-white/[0.06] transition-colors"
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25H12" />
-              </svg>
-              Timeline
-            </Link>
-          </div>
-
-          {/* Source filter */}
-          <div className="flex flex-wrap gap-2 mb-4">
-            {(['all', 'github', 'bluesky', 'youtube', 'blog'] as const).map(source => {
-              if (source !== 'all' && !hasSources[source]) return null
-              const labels: Record<string, string> = { all: 'All', github: 'GitHub', bluesky: 'Bluesky', youtube: 'YouTube', blog: 'Blog' }
-              const isActive = sourceFilter === source
-              return (
-                <button
-                  key={source}
-                  onClick={() => setSourceFilter(source)}
-                  className={`px-3 py-1 text-xs font-medium rounded-full transition-colors ${
-                    isActive
-                      ? 'bg-white/[0.12] text-white'
-                      : 'bg-white/[0.04] text-gray-400 hover:bg-white/[0.08] hover:text-gray-300'
-                  }`}
-                >
-                  {labels[source]}
-                </button>
-              )
-            })}
-          </div>
-
-          {/* Trending Topics — inline pills */}
-          {sourceFilter === 'all' && tagStats.length > 0 && (
-            <TagCloud tagStats={tagStats} latestDate={dates[0]?.date || ''} />
-          )}
-
-          {/* Weekly Digest Card */}
-          {latestDigest && sourceFilter === 'all' && <WeeklyDigestCard digest={latestDigest} />}
-
-          {/* Top Highlights */}
-          {sourceFilter === 'all' && highlights.length > 0 && (
-            <HighlightCards highlights={highlights} />
-          )}
-
-          {/* Date list */}
-          {filteredDates.length === 0 ? (
-            <div className="text-center py-20">
-              <p className="text-gray-500 text-lg">
-                {sourceFilter === 'all' ? 'No stars or posts yet. Check back soon.' : `No ${sourceFilter} content yet.`}
-              </p>
-            </div>
-          ) : (
-            <div className="space-y-1">
-              {filteredDates.map(({ date, githubCount, blueskyCount, youtubeCount, blogCount }) => {
-                const d = new Date(date + 'T00:00:00')
-                const formatted = d.toLocaleDateString('en-US', {
-                  weekday: 'long',
-                  year: 'numeric',
-                  month: 'long',
-                  day: 'numeric',
-                })
-                const parts: string[] = []
-                if (sourceFilter === 'all' || sourceFilter === 'github') {
-                  if (githubCount > 0) parts.push(`${githubCount} repo${githubCount === 1 ? '' : 's'}`)
-                }
-                if (sourceFilter === 'all' || sourceFilter === 'bluesky') {
-                  if (blueskyCount > 0) parts.push(`${blueskyCount} post${blueskyCount === 1 ? '' : 's'}`)
-                }
-                if (sourceFilter === 'all' || sourceFilter === 'youtube') {
-                  if (youtubeCount > 0) parts.push(`${youtubeCount} video${youtubeCount === 1 ? '' : 's'}`)
-                }
-                if (sourceFilter === 'all' || sourceFilter === 'blog') {
-                  if (blogCount > 0) parts.push(`${blogCount} blog${blogCount === 1 ? '' : 's'}`)
-                }
-                return (
-                  <Link
-                    key={date}
-                    href={`/stars/${date}/`}
-                    className="flex items-center justify-between py-4 px-4 -mx-4 rounded-lg hover:bg-white/[0.02] transition-colors group"
-                  >
-                    <span className="text-gray-200 font-medium group-hover:text-white transition-colors">
-                      {formatted}
-                    </span>
-                    <span className="text-gray-500 text-sm flex-shrink-0 ml-3">
-                      {parts.join(' · ')}
-                      <span> →</span>
-                    </span>
+      <div className="min-h-screen bg-[#050505] text-white relative font-mono" data-pagefind-body data-pagefind-meta="type:Stars">
+        <div className="fixed inset-0 bg-[#050505] -z-10" />
+        <div className="max-w-4xl mx-auto px-6 pt-32 pb-32 relative z-10">
+          
+          {/* Terminal Header */}
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="mb-12 border-b border-white/10 pb-8"
+          >
+              <div className="flex items-center gap-3 mb-4">
+                  <span className="w-2 h-4 bg-orange-500 animate-pulse"></span>
+                  <span className="text-orange-400 text-xs uppercase tracking-widest">System.Social_Ingestion</span>
+              </div>
+              <h1 className="text-4xl font-bold tracking-tight text-white mb-4 font-sans">Stars / Feed</h1>
+              <div className="text-xs text-gray-500 mb-6 leading-relaxed">
+                  [STATUS] Monitoring 50+ AI leaders across GitHub, Bluesky, YouTube, Blog RSS.<br/>
+                  [ENGINE] Summarization powered by DeepSeek.
+              </div>
+              
+              {/* CMD Links */}
+              <div className="flex gap-4 text-xs flex-wrap">
+                  <Link href="/stars/people/" className="text-gray-400 hover:text-white transition-colors flex items-center gap-2">
+                      <span className="text-orange-500/50">$</span> ./view_leaders.sh
                   </Link>
-                )
-              })}
-            </div>
+                  <Link href="/stars/timeline/" className="text-gray-400 hover:text-white transition-colors flex items-center gap-2">
+                      <span className="text-orange-500/50">$</span> tail -f global_timeline.log
+                  </Link>
+                  <a href="/stars/feed.xml" className="text-gray-400 hover:text-white transition-colors flex items-center gap-2">
+                      <span className="text-orange-500/50">$</span> curl -O rss_feed.xml
+                  </a>
+              </div>
+          </motion.div>
+
+          {/* Filters Terminal Style */}
+          <motion.div 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="flex flex-wrap items-center gap-4 mb-8 text-[10px] uppercase tracking-widest"
+          >
+              <span className="text-gray-600">grep SOURCE=</span>
+              <div className="flex flex-wrap gap-2">
+                {(['all', 'github', 'bluesky', 'youtube', 'blog'] as const).map(source => {
+                  if (source !== 'all' && !hasSources[source]) return null
+                  const labels: Record<string, string> = { all: '[*All]', github: 'GitHub', bluesky: 'Bluesky', youtube: 'YouTube', blog: 'Blog' }
+                  const isActive = sourceFilter === source
+                  return (
+                    <button
+                      key={source}
+                      onClick={() => setSourceFilter(source)}
+                      className={`px-2 py-0.5 rounded transition-colors ${
+                        isActive
+                          ? 'text-white bg-white/10 border border-white/20'
+                          : 'text-gray-500 hover:text-white border border-transparent'
+                      }`}
+                    >
+                      {labels[source]}
+                    </button>
+                  )
+                })}
+              </div>
+          </motion.div>
+
+          {/* System Variables (Trending) */}
+          {sourceFilter === 'all' && tagStats.length > 0 && (
+            <motion.div 
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              className="mb-8 font-mono text-[10px] sm:text-xs"
+            >
+                <div className="text-gray-500 uppercase tracking-widest mb-2 border-b border-white/10 pb-2">++ Runtime_Variables ++</div>
+                <div className="flex flex-col gap-2 text-gray-400 mt-4">
+                    <div><span className="text-orange-400">ACTIVE_VECTORS</span>=[{tagStats.slice(0, 5).map(t => `"${t.tag} (${t.count})"`).join(', ')}]</div>
+                </div>
+            </motion.div>
           )}
+
+          {/* Top Signals (Highlights) */}
+          {sourceFilter === 'all' && highlights.length > 0 && (
+            <motion.div 
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              className="mb-10 border-l-2 border-orange-500 pl-4 py-2 bg-orange-500/5 font-mono text-[10px] sm:text-xs overflow-hidden"
+            >
+                <div className="text-orange-400 uppercase tracking-widest mb-2">++ System.Highlights (Top Signals) ++</div>
+                <div className="space-y-3 mt-3 pr-2">
+                  {highlights.map((hl, i) => {
+                    const type = hl.item.type
+                    const url = type === 'github' ? hl.item.url : type === 'bluesky' ? hl.item.url : type === 'youtube' ? hl.item.url : hl.item.url
+                    const title = type === 'github' ? hl.item.repo : type === 'bluesky' ? hl.item.content.slice(0, 50) + '...' : type === 'youtube' ? hl.item.title : hl.item.title
+                    const stats = type === 'github' ? `★ ${(hl.item.stargazersCount / 1000).toFixed(1)}k` : type === 'bluesky' ? `❤️ ${hl.item.likeCount}` : type === 'youtube' ? `👁 ${(hl.item.viewCount / 1000).toFixed(1)}k` : ''
+                    const leaderCount = type === 'github' ? (hl.item.starredBy?.split(',').length || 1) : 1
+                    
+                    return (
+                      <div key={i} className="flex sm:items-center flex-col sm:flex-row gap-1 sm:gap-2">
+                          <span className={`${type === 'github' ? 'text-gray-500' : type === 'bluesky' ? 'text-blue-400' : type === 'youtube' ? 'text-red-400' : 'text-emerald-400'} w-12 shrink-0`}>
+                              [{type === 'github' ? 'GH' : type === 'bluesky' ? 'BSKY' : type === 'youtube' ? 'YT' : 'BLOG'}]
+                          </span>
+                          <a href={url} target="_blank" rel="noopener noreferrer" className="text-gray-200 hover:text-orange-400 cursor-pointer transition-colors truncate max-w-sm sm:max-w-md">
+                              {title}
+                          </a>
+                          <div className="flex items-center gap-2">
+                              {stats && <span className="text-orange-400/80 sm:mx-2 whitespace-nowrap">{stats}</span>}
+                              <span className="text-gray-500 whitespace-nowrap"># {leaderCount} leader{leaderCount > 1 ? 's' : ''}</span>
+                          </div>
+                      </div>
+                    )
+                  })}
+                </div>
+            </motion.div>
+          )}
+
+          {/* Data Log */}
+          <div className="space-y-4 text-sm mt-12">
+              {/* Top Signals (Warning style - Digest) */}
+              {latestDigest && sourceFilter === 'all' && (
+                <motion.div 
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.5, delay: 0.5 }}
+                >
+                  <WeeklyDigestAlert digest={latestDigest} />
+                </motion.div>
+              )}
+
+              {/* Table Header */}
+              {filteredDates.length > 0 && (
+                <div className="flex text-[10px] text-gray-600 border-b border-white/10 pb-2 uppercase tracking-widest mb-4 mt-8 hidden sm:flex">
+                    <div className="w-32">DATE</div>
+                    <div className="flex-1">ACTIVITY_METRICS</div>
+                    <div className="w-24 text-right">ACTION</div>
+                </div>
+              )}
+
+              {/* Rows */}
+              {filteredDates.length === 0 ? (
+                <div className="text-gray-500 text-sm font-mono mt-8">No content matches criteria.</div>
+              ) : (
+                filteredDates.map((item, idx) => {
+                  const isLatest = idx === 0;
+                  
+                  return (
+                    <motion.div
+                      key={item.date}
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.3, delay: 0.6 + Math.min(idx, 20) * 0.05 }}
+                    >
+                      <Link href={`/stars/${item.date}/`} className="flex flex-col sm:flex-row sm:items-center py-2 hover:bg-white/[0.03] transition-colors group gap-2 sm:gap-0 -mx-4 px-4 sm:mx-0 sm:px-0 rounded sm:rounded-none">
+                          <div className={`w-32 transition-colors ${isLatest ? 'text-orange-400' : 'text-gray-400 group-hover:text-gray-200'}`}>
+                              {item.date}
+                          </div>
+                          <div className={`flex-1 flex flex-wrap gap-4 text-xs transition-colors ${isLatest ? 'text-gray-400' : 'text-gray-500'}`}>
+                              {item.githubCount > 0 && <span>[GH] {item.githubCount}</span>}
+                              {item.blueskyCount > 0 && <span>[BSKY] {item.blueskyCount}</span>}
+                              {item.youtubeCount > 0 && <span>[YT] {item.youtubeCount}</span>}
+                              {item.blogCount > 0 && <span>[BLOG] {item.blogCount}</span>}
+                          </div>
+                          <div className={`w-24 sm:text-right transition-colors hidden sm:block ${isLatest ? 'text-gray-600 group-hover:text-orange-400' : 'text-gray-600 group-hover:text-white'}`}>
+                              cat &gt;
+                          </div>
+                      </Link>
+                    </motion.div>
+                  )
+                })
+              )}
+
+              {/* EOF Marker */}
+              {filteredDates.length > 0 && (
+                <div className="mt-8 text-gray-600 text-[10px] uppercase tracking-widest pt-4 border-t border-white/10">
+                    -- END OF LOG --
+                </div>
+              )}
+          </div>
+
         </div>
       </div>
     </>
