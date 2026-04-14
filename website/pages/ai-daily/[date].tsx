@@ -287,6 +287,7 @@ export default function AiDailyDetail({ digest, prevDate, nextDate, allDates, al
       </Head>
 
       <div className="min-h-screen bg-[#050505] text-white relative" data-pagefind-body data-pagefind-meta="type:AI Daily">
+        <div className="fixed inset-0 bg-[#050505] -z-10" />
         <meta data-pagefind-meta={`date:${digest.date}`} />
         
         <div className="max-w-4xl mx-auto px-6 pt-24 pb-32 relative z-10">

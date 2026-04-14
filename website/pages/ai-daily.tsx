@@ -31,6 +31,7 @@ export default function AiDailyList({ dates }: AiDailyListProps) {
       </Head>
 
       <div className="min-h-screen bg-[#0a0a0a] text-white relative" data-pagefind-body data-pagefind-meta="type:AI Daily">
+        <div className="fixed inset-0 bg-[#0a0a0a] -z-10" />
         <div className="max-w-4xl mx-auto px-5 sm:px-6 pt-32 pb-32 relative z-10">
             
             {/* Header */}

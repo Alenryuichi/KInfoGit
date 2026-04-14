@@ -114,9 +114,10 @@ export default function CodeWeekDetail({ data, prevWeek, nextWeek, allWeeks }: C
         <meta name="description" content={`Code Weekly ${data.week}: ${data.weekSummary?.slice(0, 150)}`} />
       </Head>
 
-      <div className="min-h-screen bg-[#050505] text-white" data-pagefind-body data-pagefind-meta="type:Code">
+      <div className="min-h-screen bg-[#050505] text-white relative" data-pagefind-body data-pagefind-meta="type:Code">
+        <div className="fixed inset-0 bg-[#050505] -z-10" />
         {/* Top Nav spacing (header is global, so we just add pt) */}
-        <div className="max-w-6xl mx-auto px-5 sm:px-6 pt-32 pb-20">
+        <div className="max-w-6xl mx-auto px-5 sm:px-6 pt-32 pb-20 relative z-10">
           
           {/* Top Summary Card */}
           <div className="bg-gradient-to-br from-[#0a0a0a] to-[#050505] border border-white/10 rounded-2xl p-6 sm:p-8 mb-8 shadow-2xl relative overflow-hidden">

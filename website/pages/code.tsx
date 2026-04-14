@@ -22,6 +22,7 @@ export default function CodeList({ weeks }: CodeListProps) {
       </Head>
 
       <div className="min-h-screen bg-[#050505] text-white relative" data-pagefind-body data-pagefind-meta="type:Code">
+        <div className="fixed inset-0 bg-[#050505] -z-10" />
         <div className="max-w-4xl mx-auto px-5 sm:px-6 pt-32 pb-32 relative z-10">
           
           {/* Header Section */}

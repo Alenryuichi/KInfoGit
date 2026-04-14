@@ -169,8 +169,9 @@ export default function StarsList({ dates, latestDigest, tagStats, highlights }:
         <link rel="alternate" type="application/rss+xml" title="Stars & Posts — Kylin Miao" href="/stars/feed.xml" />
       </Head>
 
-      <div className="min-h-screen bg-black text-white">
-        <div className="max-w-3xl mx-auto px-5 sm:px-6 pt-32 pb-20">
+      <div className="min-h-screen bg-black text-white relative">
+        <div className="fixed inset-0 bg-black -z-10" />
+        <div className="max-w-3xl mx-auto px-5 sm:px-6 pt-32 pb-20 relative z-10">
           {/* Header */}
           <div className="flex items-center gap-3">
             <h1 className="text-4xl md:text-5xl font-bold mb-3 tracking-tight">Stars & Posts</h1>
