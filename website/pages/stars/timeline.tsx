@@ -54,7 +54,8 @@ export default function Timeline({ items, personMap }: TimelineProps) {
         <meta name="description" content="All starred repos, posts, videos, and articles from AI leaders in chronological order." />
       </Head>
 
-      <div className="min-h-screen bg-black text-white">
+      <div className="min-h-screen bg-black text-white relative">
+        <div className="fixed inset-0 bg-black -z-10" />
         <div className="max-w-3xl mx-auto px-5 sm:px-6 pt-32 pb-20">
           {/* Back link */}
           <Link

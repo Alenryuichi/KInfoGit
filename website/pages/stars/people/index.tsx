@@ -25,7 +25,8 @@ export default function PeopleIndex({ people }: PeopleIndexProps) {
         <meta name="description" content={`Directory of ${people.length} tracked AI leaders with cross-platform activity from GitHub and Bluesky.`} />
       </Head>
 
-      <div className="min-h-screen bg-black text-white">
+      <div className="min-h-screen bg-black text-white relative">
+        <div className="fixed inset-0 bg-black -z-10" />
         <div className="max-w-3xl mx-auto px-5 sm:px-6 pt-32 pb-20">
           {/* Back link */}
           <Link

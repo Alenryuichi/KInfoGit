@@ -81,7 +81,8 @@ const SECTION_META: Record<string, { description: string }> = {
 export default function BenchmarksPage({ benchmarks, summaries, orgTrend, formattedDate }: BenchmarksPageProps) {
   if (!benchmarks) {
     return (
-      <div className="min-h-screen bg-black text-white flex items-center justify-center">
+      <div className="min-h-screen bg-black text-white flex items-center justify-center relative">
+        <div className="fixed inset-0 bg-black -z-10" />
         <p className="text-gray-500 text-lg">暂无评测数据，请稍后再来。</p>
       </div>
     )
@@ -102,7 +103,8 @@ export default function BenchmarksPage({ benchmarks, summaries, orgTrend, format
         <meta name="description" content="AI coding benchmark rankings: Arena Coding, SWE-bench, Aider, LiveCodeBench." />
       </Head>
 
-      <div className="min-h-screen bg-black text-white">
+      <div className="min-h-screen bg-black text-white relative">
+        <div className="fixed inset-0 bg-black -z-10" />
         <div className="max-w-3xl mx-auto px-5 sm:px-6 pt-32 pb-20">
           {/* Back */}
           <Link

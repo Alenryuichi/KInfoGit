@@ -251,7 +251,8 @@ export default function StarsDetail({ daily, prevDate, nextDate, allDates, allTa
         <meta name="description" content={`GitHub stars and Bluesky posts for ${formatted}: ${daily.items.length} items.`} />
       </Head>
 
-      <div className="min-h-screen bg-black text-white" data-pagefind-body data-pagefind-meta="type:Stars">
+      <div className="min-h-screen bg-black text-white relative" data-pagefind-body data-pagefind-meta="type:Stars">
+        <div className="fixed inset-0 bg-black -z-10" />
         <meta data-pagefind-meta={`date:${daily.date}`} />
         <div className="max-w-3xl mx-auto px-5 sm:px-6 pt-32 pb-20">
           {/* Back link */}

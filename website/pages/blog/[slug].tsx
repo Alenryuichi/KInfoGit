@@ -26,7 +26,8 @@ export default function BlogPostPage({ post, prevPost, nextPost }: BlogPostPageP
 
   if (!post) {
     return (
-      <div className="min-h-screen bg-black text-white flex items-center justify-center">
+      <div className="min-h-screen bg-black text-white flex items-center justify-center relative">
+        <div className="fixed inset-0 bg-black -z-10" />
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-4">Post Not Found</h1>
           <p className="text-gray-400 mb-8">The blog post you&apos;re looking for doesn&apos;t exist.</p>
@@ -69,7 +70,8 @@ export default function BlogPostPage({ post, prevPost, nextPost }: BlogPostPageP
 
       <ReadingProgressBar />
 
-      <div className="min-h-screen bg-black text-white" data-pagefind-body data-pagefind-meta="type:Blog">
+      <div className="min-h-screen bg-black text-white relative" data-pagefind-body data-pagefind-meta="type:Blog">
+        <div className="fixed inset-0 bg-black -z-10" />
         {/* Pagefind date meta */}
         <meta data-pagefind-meta={`date:${post.date}`} />
         {/* Back Button */}
