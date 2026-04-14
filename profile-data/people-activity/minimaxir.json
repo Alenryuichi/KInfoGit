@@ -8,10 +8,14 @@
       "language": "Python",
       "stargazersCount": 1239,
       "starredBy": "minimaxir",
-      "highlights": "",
-      "worthReading": "",
+      "highlights": "This project enables multimodal fine-tuning of Gemma models (4 and 3n) with audio, image, and text data on Apple Silicon hardware. It leverages PyTorch and Metal Performance Shaders for optimized performance on Apple's M-series chips.",
+      "worthReading": "It's worth exploring for developers interested in running advanced multimodal AI models efficiently on consumer Apple hardware without relying on cloud services.",
       "topics": [],
-      "tags": [],
+      "tags": [
+        "fine-tuning",
+        "multi-modal",
+        "deployment"
+      ],
       "type": "github"
     },
     {
@@ -21,8 +25,8 @@
       "language": "Rust",
       "stargazersCount": 56,
       "starredBy": "minimaxir",
-      "highlights": "",
-      "worthReading": "",
+      "highlights": "A comprehensive Rust chess library focused on extensive feature support, including FEN, PGN, SAN, and UCI protocol handling. It aims to provide robust chess logic and move representation for developers building chess applications.",
+      "worthReading": "For Rust developers interested in game programming or chess applications, this library offers well-structured chess logic with multiple notation formats supported.",
       "topics": [
         "chess",
         "fen",
@@ -30,7 +34,9 @@
         "san",
         "uci"
       ],
-      "tags": [],
+      "tags": [
+        "tooling"
+      ],
       "type": "github"
     }
   ],
@@ -60,14 +66,14 @@
     0,
     0,
     0,
-    0,
     1,
     0,
     1,
+    0,
     0,
     0,
     0,
     0
   ],
-  "interestSummary": "Max Woolf is currently focused on exploring multimodal AI fine-tuning, specifically for Gemma models on Apple Silicon, and has a secondary interest in feature-rich chess engine development in Rust."
+  "interestSummary": "Max Woolf is currently interested in fine-tuning multimodal AI models on Apple hardware and exploring feature-rich chess libraries implemented in Rust."
 }

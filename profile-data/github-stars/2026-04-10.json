@@ -8,10 +8,14 @@
       "language": "Elixir",
       "stargazersCount": 14998,
       "starredBy": "merveenoyan",
-      "highlights": "",
-      "worthReading": "",
+      "highlights": "Symphony enables teams to manage project work through isolated, autonomous implementation runs rather than directly supervising coding agents. It provides a framework for turning project specifications into self-contained execution units that can operate independently.",
+      "worthReading": "This project offers a novel approach to managing AI-assisted development workflows at scale, particularly valuable for teams looking to integrate autonomous coding agents into their processes without constant supervision.",
       "topics": [],
-      "tags": []
+      "tags": [
+        "agent",
+        "deployment",
+        "tooling"
+      ]
     },
     {
       "repo": "ekzhang/jax-js",
@@ -20,8 +24,8 @@
       "language": "TypeScript",
       "stargazersCount": 784,
       "starredBy": "srush",
-      "highlights": "",
-      "worthReading": "",
+      "highlights": "JAX in JavaScript brings JAX's ML capabilities to web environments, enabling GPU-accelerated machine learning directly in browsers via WebGPU and WebAssembly. It provides familiar JAX APIs for neural networks and numerical computing, making ML accessible without server-side dependencies.",
+      "worthReading": "This project demonstrates innovative web-native ML infrastructure by bridging JAX's powerful abstractions with modern browser capabilities, offering a glimpse into the future of client-side AI applications.",
       "topics": [
         "javascript",
         "jax",
@@ -33,7 +37,11 @@
         "webgl",
         "webgpu"
       ],
-      "tags": []
+      "tags": [
+        "llm",
+        "infra",
+        "deployment"
+      ]
     }
   ]
 }

@@ -46,10 +46,14 @@
       "language": "Python",
       "stargazersCount": 1239,
       "starredBy": "minimaxir",
-      "highlights": "",
-      "worthReading": "",
+      "highlights": "This project enables multimodal fine-tuning of Gemma models (4 and 3n) with audio, image, and text data on Apple Silicon hardware. It leverages PyTorch and Metal Performance Shaders for optimized performance on Apple's M-series chips.",
+      "worthReading": "It's worth exploring for developers interested in running advanced multimodal AI models efficiently on consumer Apple hardware without relying on cloud services.",
       "topics": [],
-      "tags": []
+      "tags": [
+        "fine-tuning",
+        "multi-modal",
+        "deployment"
+      ]
     }
   ]
 }

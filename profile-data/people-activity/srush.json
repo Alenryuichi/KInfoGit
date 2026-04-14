@@ -8,8 +8,8 @@
       "language": "TypeScript",
       "stargazersCount": 784,
       "starredBy": "srush",
-      "highlights": "",
-      "worthReading": "",
+      "highlights": "JAX in JavaScript brings JAX's ML capabilities to web environments, enabling GPU-accelerated machine learning directly in browsers via WebGPU and WebAssembly. It provides familiar JAX APIs for neural networks and numerical computing, making ML accessible without server-side dependencies.",
+      "worthReading": "This project demonstrates innovative web-native ML infrastructure by bridging JAX's powerful abstractions with modern browser capabilities, offering a glimpse into the future of client-side AI applications.",
       "topics": [
         "javascript",
         "jax",
@@ -21,7 +21,11 @@
         "webgl",
         "webgpu"
       ],
-      "tags": [],
+      "tags": [
+        "llm",
+        "infra",
+        "deployment"
+      ],
       "type": "github"
     }
   ],
@@ -54,11 +58,11 @@
     0,
     0,
     0,
-    0,
     1,
+    0,
     0,
     0,
     0
   ],
-  "interestSummary": "Sasha Rush has shown recent interest in machine learning frameworks for web deployment, specifically exploring the integration of JAX with JavaScript and WebGPU."
+  "interestSummary": "Sasha Rush's recent activity shows an interest in machine learning frameworks for web deployment, specifically exploring JAX's implementation in JavaScript for WebGPU and Wasm."
 }
