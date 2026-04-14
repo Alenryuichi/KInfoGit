@@ -440,9 +440,20 @@ export function getAllWeeklyDigests(): WeeklyDigestSummary[] {
   const files = fs.readdirSync(dir).filter(f => f.endsWith('.json'))
   const digests: WeeklyDigestSummary[] = []
 
+  // Compute current ISO week to exclude incomplete weeks
+  const now = new Date()
+  const d = new Date(Date.UTC(now.getFullYear(), now.getMonth(), now.getDate()))
+  d.setUTCDate(d.getUTCDate() + 4 - (d.getUTCDay() || 7))
+  const yearStart = new Date(Date.UTC(d.getUTCFullYear(), 0, 1))
+  const weekNo = Math.ceil((((d.getTime() - yearStart.getTime()) / 86400000) + 1) / 7)
+  const currentWeek = `${d.getUTCFullYear()}-W${weekNo.toString().padStart(2, '0')}`
+
   for (const file of files) {
     const match = file.match(/^(\d{4}-W\d{2})\.json$/)
     if (!match) continue
+
+    // Skip current (incomplete) week
+    if (match[1] >= currentWeek) continue
 
     try {
       const content = fs.readFileSync(path.join(dir, file), 'utf-8')

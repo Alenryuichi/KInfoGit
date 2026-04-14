@@ -182,18 +182,29 @@ export default function StarsList({ dates, latestDigest, tagStats, highlights }:
                     const stats = type === 'github' ? `★ ${(hl.item.stargazersCount / 1000).toFixed(1)}k` : type === 'bluesky' ? `❤️ ${hl.item.likeCount}` : type === 'youtube' ? `👁 ${(hl.item.viewCount / 1000).toFixed(1)}k` : ''
                     const leaderCount = type === 'github' ? (hl.item.starredBy?.split(',').length || 1) : 1
                     
+                    const description = type === 'github' ? hl.item.description : type === 'bluesky' ? hl.item.content : type === 'youtube' ? hl.item.description : hl.item.summary
+                    
                     return (
-                      <div key={i} className="flex sm:items-center flex-col sm:flex-row gap-1 sm:gap-2">
-                          <span className={`${type === 'github' ? 'text-gray-500' : type === 'bluesky' ? 'text-blue-400' : type === 'youtube' ? 'text-red-400' : 'text-emerald-400'} w-6 shrink-0 flex justify-center`} title={type}>
-                              {type === 'github' ? <Github className="w-4 h-4" /> : type === 'bluesky' ? <MessageSquare className="w-4 h-4" /> : type === 'youtube' ? <Youtube className="w-4 h-4" /> : <FileText className="w-4 h-4" />}
-                          </span>
-                          <a href={url} target="_blank" rel="noopener noreferrer" className="text-gray-200 hover:text-orange-400 cursor-pointer transition-colors truncate max-w-sm sm:max-w-md">
-                              {title}
-                          </a>
-                          <div className="flex items-center gap-2">
-                              {stats && <span className="text-orange-400/80 sm:mx-2 whitespace-nowrap">{stats}</span>}
-                              <span className="text-gray-500 whitespace-nowrap"># {leaderCount} leader{leaderCount > 1 ? 's' : ''}</span>
+                      <div key={i} className="group flex flex-col">
+                          <div className="flex sm:items-center flex-col sm:flex-row gap-1 sm:gap-2">
+                              <span className={`${type === 'github' ? 'text-gray-500' : type === 'bluesky' ? 'text-blue-400' : type === 'youtube' ? 'text-red-400' : 'text-emerald-400'} w-6 shrink-0 flex justify-center`} title={type}>
+                                  {type === 'github' ? <Github className="w-4 h-4" /> : type === 'bluesky' ? <MessageSquare className="w-4 h-4" /> : type === 'youtube' ? <Youtube className="w-4 h-4" /> : <FileText className="w-4 h-4" />}
+                              </span>
+                              <a href={url} target="_blank" rel="noopener noreferrer" className="text-gray-200 group-hover:text-orange-400 cursor-pointer transition-colors truncate max-w-sm sm:max-w-md">
+                                  {title}
+                              </a>
+                              <div className="flex items-center gap-2">
+                                  {stats && <span className="text-orange-400/80 sm:mx-2 whitespace-nowrap">{stats}</span>}
+                                  <span className="text-gray-500 whitespace-nowrap"># {leaderCount} leader{leaderCount > 1 ? 's' : ''}</span>
+                              </div>
                           </div>
+                          {description && (
+                              <div className="overflow-hidden max-h-0 group-hover:max-h-[350px] group-hover:overflow-y-auto overscroll-contain transition-all duration-500 ease-in-out">
+                                  <div className="text-gray-400 text-xs sm:ml-8 max-w-2xl border-l-2 border-white/10 pl-3 py-1 my-2 pr-2 whitespace-pre-wrap font-sans opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                      {description}
+                                  </div>
+                              </div>
+                          )}
                       </div>
                     )
                   })}

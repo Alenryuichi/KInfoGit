@@ -316,7 +316,12 @@ function getWeeksToProcess(): string[] {
     weeks.add(formatWeek(year, week))
   }
 
-  return Array.from(weeks).sort()
+  // Exclude the current (incomplete) week
+  const now = new Date()
+  const { year: curYear, week: curWeek } = getISOWeek(now)
+  const currentWeek = formatWeek(curYear, curWeek)
+
+  return Array.from(weeks).filter(w => w < currentWeek).sort()
 }
 
 // --- Main ---
