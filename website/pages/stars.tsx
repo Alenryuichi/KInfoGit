@@ -14,6 +14,7 @@ import {
   type TagStat,
   type HighlightItem,
 } from '@/lib/social-feeds'
+import { Github, MessageSquare, Youtube, FileText } from 'lucide-react'
 
 interface StarsListProps {
   dates: DailyFeedSummary[]
@@ -183,8 +184,8 @@ export default function StarsList({ dates, latestDigest, tagStats, highlights }:
                     
                     return (
                       <div key={i} className="flex sm:items-center flex-col sm:flex-row gap-1 sm:gap-2">
-                          <span className={`${type === 'github' ? 'text-gray-500' : type === 'bluesky' ? 'text-blue-400' : type === 'youtube' ? 'text-red-400' : 'text-emerald-400'} w-12 shrink-0`}>
-                              [{type === 'github' ? 'GH' : type === 'bluesky' ? 'BSKY' : type === 'youtube' ? 'YT' : 'BLOG'}]
+                          <span className={`${type === 'github' ? 'text-gray-500' : type === 'bluesky' ? 'text-blue-400' : type === 'youtube' ? 'text-red-400' : 'text-emerald-400'} w-6 shrink-0 flex justify-center`} title={type}>
+                              {type === 'github' ? <Github className="w-4 h-4" /> : type === 'bluesky' ? <MessageSquare className="w-4 h-4" /> : type === 'youtube' ? <Youtube className="w-4 h-4" /> : <FileText className="w-4 h-4" />}
                           </span>
                           <a href={url} target="_blank" rel="noopener noreferrer" className="text-gray-200 hover:text-orange-400 cursor-pointer transition-colors truncate max-w-sm sm:max-w-md">
                               {title}
@@ -241,10 +242,10 @@ export default function StarsList({ dates, latestDigest, tagStats, highlights }:
                               {item.date}
                           </div>
                           <div className={`flex-1 flex flex-wrap gap-4 text-xs transition-colors ${isLatest ? 'text-gray-400' : 'text-gray-500'}`}>
-                              {item.githubCount > 0 && <span>[GH] {item.githubCount}</span>}
-                              {item.blueskyCount > 0 && <span>[BSKY] {item.blueskyCount}</span>}
-                              {item.youtubeCount > 0 && <span>[YT] {item.youtubeCount}</span>}
-                              {item.blogCount > 0 && <span>[BLOG] {item.blogCount}</span>}
+                              {item.githubCount > 0 && <span className="flex items-center gap-1.5"><Github className="w-3.5 h-3.5" /> {item.githubCount}</span>}
+                              {item.blueskyCount > 0 && <span className="flex items-center gap-1.5"><MessageSquare className="w-3.5 h-3.5" /> {item.blueskyCount}</span>}
+                              {item.youtubeCount > 0 && <span className="flex items-center gap-1.5"><Youtube className="w-3.5 h-3.5" /> {item.youtubeCount}</span>}
+                              {item.blogCount > 0 && <span className="flex items-center gap-1.5"><FileText className="w-3.5 h-3.5" /> {item.blogCount}</span>}
                           </div>
                           <div className={`w-24 sm:text-right transition-colors hidden sm:block ${isLatest ? 'text-gray-600 group-hover:text-orange-400' : 'text-gray-600 group-hover:text-white'}`}>
                               cat &gt;
