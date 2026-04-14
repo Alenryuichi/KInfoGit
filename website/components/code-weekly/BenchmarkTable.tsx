@@ -50,38 +50,40 @@ export function ArenaRankingTable({ rankings, defaultVisible = 10 }: ArenaTableP
       <table className="w-full text-sm">
         <caption className="sr-only">Chatbot Arena Rankings</caption>
         <thead>
-          <tr className="border-b border-white/[0.08] text-xs text-gray-500 uppercase tracking-wider">
-            <th className="text-left py-3 px-3 w-12">#</th>
-            <th className="text-left py-3 px-3">Model</th>
-            <th className="text-right py-3 px-3">Elo</th>
-            <th className="text-right py-3 px-3 w-20">Δ</th>
-            <th className="text-left py-3 px-3">Org</th>
+          <tr className="border-b border-white/[0.08] text-[10px] text-gray-500 uppercase tracking-wider whitespace-nowrap">
+            <th className="text-left py-2.5 px-2 w-8">#</th>
+            <th className="text-left py-2.5 px-2">Model</th>
+            <th className="text-right py-2.5 px-2">Elo</th>
+            <th className="text-right py-2.5 px-2 w-12">Δ</th>
+            <th className="text-left py-2.5 px-2">Org</th>
           </tr>
         </thead>
         <tbody>
           {visible.map((entry, i) => (
             <tr
               key={`${entry.model}-${i}`}
-              className="border-b border-white/[0.04] hover:bg-white/[0.02] transition-colors"
+              className="border-b border-white/[0.04] hover:bg-white/[0.02] transition-colors whitespace-nowrap"
             >
-              <td className="py-3 px-3 text-gray-500 font-mono">{entry.rank}</td>
-              <td className="py-3 px-3 text-gray-200 font-medium">{entry.model}</td>
-              <td className="py-3 px-3 text-right text-gray-300 font-mono">{entry.elo}</td>
-              <td className="py-3 px-3 text-right font-mono text-xs">
+              <td className="py-2.5 px-2 text-gray-500 font-mono text-xs">{entry.rank}</td>
+              <td className="py-2.5 px-2 text-gray-200 font-medium text-xs">{entry.model}</td>
+              <td className="py-2.5 px-2 text-right text-gray-300 font-mono text-xs">{entry.elo}</td>
+              <td className="py-2.5 px-2 text-right font-mono text-[10px]">
                 <DeltaCell delta={entry.delta} />
               </td>
-              <td className="py-3 px-3 text-gray-500">{entry.org}</td>
+              <td className="py-2.5 px-2 text-gray-500 text-xs">{entry.org}</td>
             </tr>
           ))}
         </tbody>
       </table>
       {hasMore && (
-        <button
-          onClick={() => setShowAll(!showAll)}
-          className="mt-3 text-xs text-gray-500 hover:text-gray-300 transition-colors"
-        >
-          {showAll ? '收起' : `显示全部 ${rankings.length} 个模型`}
-        </button>
+        <div className="pt-2">
+          <button
+            onClick={() => setShowAll(!showAll)}
+            className="w-full py-2.5 text-[10px] text-gray-500 hover:text-white hover:bg-white/[0.04] rounded-lg transition-colors font-mono uppercase tracking-widest text-center"
+          >
+            {showAll ? 'Collapse' : `View All ${rankings.length} Models`}
+          </button>
+        </div>
       )}
     </div>
   )
@@ -106,21 +108,21 @@ export function AiderLeaderboardTable({ entries, defaultVisible = 10 }: AiderTab
       <table className="w-full text-sm">
         <caption className="sr-only">Aider Code Editing Leaderboard</caption>
         <thead>
-          <tr className="border-b border-white/[0.08] text-xs text-gray-500 uppercase tracking-wider">
-            <th className="text-left py-3 px-3">Model</th>
-            <th className="text-right py-3 px-3">Pass Rate</th>
-            <th className="text-right py-3 px-3 w-20">Δ</th>
+          <tr className="border-b border-white/[0.08] text-[10px] text-gray-500 uppercase tracking-wider whitespace-nowrap">
+            <th className="text-left py-2.5 px-2">Model</th>
+            <th className="text-right py-2.5 px-2">Pass Rate</th>
+            <th className="text-right py-2.5 px-2 w-12">Δ</th>
           </tr>
         </thead>
         <tbody>
           {visible.map((entry, i) => (
             <tr
               key={`${entry.model}-${i}`}
-              className="border-b border-white/[0.04] hover:bg-white/[0.02] transition-colors"
+              className="border-b border-white/[0.04] hover:bg-white/[0.02] transition-colors whitespace-nowrap"
             >
-              <td className="py-3 px-3 text-gray-200 font-medium">{entry.model}</td>
-              <td className="py-3 px-3 text-right text-gray-300 font-mono">{entry.passRate}%</td>
-              <td className="py-3 px-3 text-right font-mono text-xs">
+              <td className="py-2.5 px-2 text-gray-200 font-medium text-xs">{entry.model}</td>
+              <td className="py-2.5 px-2 text-right text-gray-300 font-mono text-xs">{entry.passRate}%</td>
+              <td className="py-2.5 px-2 text-right font-mono text-[10px]">
                 <DeltaCell delta={entry.delta} />
               </td>
             </tr>
@@ -128,12 +130,14 @@ export function AiderLeaderboardTable({ entries, defaultVisible = 10 }: AiderTab
         </tbody>
       </table>
       {hasMore && (
-        <button
-          onClick={() => setShowAll(!showAll)}
-          className="mt-3 text-xs text-gray-500 hover:text-gray-300 transition-colors"
-        >
-          {showAll ? '收起' : `显示全部 ${entries.length} 个模型`}
-        </button>
+        <div className="pt-2">
+          <button
+            onClick={() => setShowAll(!showAll)}
+            className="w-full py-2.5 text-[10px] text-gray-500 hover:text-white hover:bg-white/[0.04] rounded-lg transition-colors font-mono uppercase tracking-widest text-center"
+          >
+            {showAll ? 'Collapse' : `View All ${entries.length} Models`}
+          </button>
+        </div>
       )}
     </div>
   )
@@ -167,9 +171,9 @@ function SimpleTable<T extends Record<string, any>>({
       <table className="w-full text-sm">
         <caption className="sr-only">{caption}</caption>
         <thead>
-          <tr className="border-b border-white/[0.08] text-xs text-gray-500 uppercase tracking-wider">
+          <tr className="border-b border-white/[0.08] text-[10px] text-gray-500 uppercase tracking-wider whitespace-nowrap">
             {columns.map(col => (
-              <th key={String(col.key)} className={`py-3 px-3 ${col.align === 'right' ? 'text-right' : 'text-left'}`}>
+              <th key={String(col.key)} className={`py-2.5 px-2 ${col.align === 'right' ? 'text-right' : 'text-left'}`}>
                 {col.label}
               </th>
             ))}
@@ -177,9 +181,9 @@ function SimpleTable<T extends Record<string, any>>({
         </thead>
         <tbody>
           {visible.map((row, i) => (
-            <tr key={i} className="border-b border-white/[0.04] hover:bg-white/[0.02] transition-colors">
+            <tr key={i} className="border-b border-white/[0.04] hover:bg-white/[0.02] transition-colors whitespace-nowrap">
               {columns.map(col => (
-                <td key={String(col.key)} className={`py-3 px-3 ${col.align === 'right' ? 'text-right font-mono text-gray-300' : 'text-gray-200 font-medium'}`}>
+                <td key={String(col.key)} className={`py-2.5 px-2 text-xs ${col.align === 'right' ? 'text-right font-mono text-gray-300' : 'text-gray-200 font-medium'}`}>
                   {col.format ? col.format(row[col.key]) : String(row[col.key] ?? '—')}
                 </td>
               ))}
@@ -188,12 +192,14 @@ function SimpleTable<T extends Record<string, any>>({
         </tbody>
       </table>
       {hasMore && (
-        <button
-          onClick={() => setShowAll(!showAll)}
-          className="mt-3 text-xs text-gray-500 hover:text-gray-300 transition-colors"
-        >
-          {showAll ? '收起' : `显示全部 ${data.length} 个模型`}
-        </button>
+        <div className="pt-2">
+          <button
+            onClick={() => setShowAll(!showAll)}
+            className="w-full py-2.5 text-[10px] text-gray-500 hover:text-white hover:bg-white/[0.04] rounded-lg transition-colors font-mono uppercase tracking-widest text-center"
+          >
+            {showAll ? 'Collapse' : `View All ${data.length} Models`}
+          </button>
+        </div>
       )}
     </div>
   )

@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Link from 'next/link'
 import type { GetStaticProps } from 'next'
 import { getAllCodeWeeks, type CodeWeeklySummary } from '@/lib/code-weekly'
+import { motion } from 'framer-motion'
 
 interface CodeListProps {
   weeks: CodeWeeklySummary[]
@@ -20,67 +21,124 @@ export default function CodeList({ weeks }: CodeListProps) {
         <meta name="description" content="Weekly digest of AI Code editor ecosystem: features, benchmarks, and company blogs." />
       </Head>
 
-      <div className="min-h-screen bg-black text-white">
-        <div className="max-w-3xl mx-auto px-5 sm:px-6 pt-32 pb-20">
-          {/* Header */}
-          <h1 className="text-4xl md:text-5xl font-bold mb-3 tracking-tight">Code Weekly</h1>
-          <p className="text-gray-400 text-lg mb-12">
-            AI Code 编辑器生态周报<br />
-            <span className="text-gray-500 text-sm">
-              Cursor · Claude Code · Gemini CLI · Windsurf · and more · 每周一更新
-            </span>
-          </p>
+      <div className="min-h-screen bg-[#050505] text-white relative" data-pagefind-body data-pagefind-meta="type:Code">
+        <div className="max-w-4xl mx-auto px-5 sm:px-6 pt-32 pb-32 relative z-10">
+          
+          {/* Header Section */}
+          <div className="pb-4">
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="font-mono text-emerald-500/80 text-[10px] tracking-[0.2em] uppercase mb-4 flex items-center gap-2"
+            >
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                Edition / Weekly
+            </motion.div>
+            <motion.h1 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white mb-4"
+              style={{ fontFamily: "'Space Grotesk', sans-serif" }}
+            >
+                Code Weekly
+            </motion.h1>
+            <motion.p 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="text-gray-400 text-sm sm:text-base leading-relaxed max-w-2xl mb-8"
+            >
+                AI Code 编辑器生态周报. Tracking the evolution of Cursor, Claude Code, Windsurf, Trae & more.
+            </motion.p>
+          </div>
+
+          {/* LEADERBOARDS: The Inline Bar */}
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            className="border-t border-b border-white/10 py-5 mb-10 flex flex-col sm:flex-row sm:items-center justify-between gap-4"
+          >
+            <div className="flex items-center gap-4">
+                <Link href="/code/benchmarks/" className="group inline-flex items-center gap-3 bg-white text-black px-6 py-2.5 rounded-full hover:bg-emerald-400 transition-colors font-medium text-sm">
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    View Leaderboards
+                </Link>
+            </div>
+            <div className="text-[10px] text-gray-500 font-mono uppercase tracking-widest">
+                Arena · SWE-bench · LiveCodeBench
+            </div>
+          </motion.div>
 
           {/* Week list */}
-          {weeks.length === 0 ? (
-            <div className="text-center py-20">
-              <p className="text-gray-500 text-lg">暂无周报数据，请稍后再来。</p>
-            </div>
-          ) : (
-            <div className="space-y-1">
-              {weeks.map(({ week, dateRange, weekSummary, editorCount }) => (
-                <Link
-                  key={week}
-                  href={`/code/${week}/`}
-                  className="flex items-center justify-between py-4 px-4 -mx-4 rounded-lg hover:bg-white/[0.02] transition-colors group"
-                >
-                  <div className="min-w-0">
-                    <div className="flex items-center gap-3 mb-1">
-                      <span className="text-gray-200 font-medium group-hover:text-white transition-colors">
-                        {week}
-                      </span>
-                      <span className="text-xs text-gray-600">{dateRange}</span>
-                    </div>
-                    {weekSummary && (
-                      <p className="text-sm text-gray-500 line-clamp-1">
-                        {weekSummary}
-                      </p>
-                    )}
-                  </div>
-                  <span className="text-gray-500 text-sm flex-shrink-0 ml-3">
-                    {editorCount} editors →
-                  </span>
-                </Link>
-              ))}
-            </div>
-          )}
-
-          {/* Benchmarks entry */}
-          <div className="mt-16 pt-8 border-t border-white/[0.06]">
-            <Link
-              href="/code/benchmarks/"
-              className="flex items-center justify-between py-4 px-5 rounded-xl bg-white/[0.02] border border-white/[0.06] hover:border-white/[0.1] transition-colors group"
-            >
-              <div>
-                <h3 className="text-gray-200 font-medium group-hover:text-white transition-colors">
-                  🏆 查看最新评测排名
-                </h3>
-                <p className="text-sm text-gray-500 mt-1">
-                  Arena · SWE-bench · Aider · LiveCodeBench · 每日更新
-                </p>
+          <div className="space-y-2">
+            {weeks.length === 0 ? (
+              <div className="py-20 text-center text-gray-500 text-sm font-mono uppercase tracking-widest">
+                -- No Tracking Logs --
               </div>
-              <span className="text-gray-500 text-sm">→</span>
-            </Link>
+            ) : (
+              weeks.map(({ week, dateRange, weekSummary, editorCount }, idx) => {
+                const isLatest = idx === 0;
+                
+                return (
+                  <motion.div
+                    key={week}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.4, delay: idx * 0.1 + 0.4 }}
+                  >
+                    <Link href={`/code/${week}/`} className={`group flex flex-col md:flex-row gap-4 md:gap-8 p-6 -mx-6 rounded-2xl hover:bg-white/[0.02] border border-transparent hover:border-white/5 transition-all items-start relative ${!isLatest ? 'opacity-80 hover:opacity-100' : ''}`}>
+                      
+                      {/* Timeline/Active indicator for the latest item */}
+                      <div className={`absolute left-0 top-1/2 -translate-y-1/2 w-1 h-0 transition-all duration-300 rounded-r opacity-0 group-hover:opacity-100 hidden md:block ${isLatest ? 'bg-emerald-500 group-hover:h-1/2' : 'bg-white/20 group-hover:h-1/2'}`}></div>
+
+                      <div className="md:w-48 shrink-0">
+                          <div className={`text-2xl font-bold transition-colors ${isLatest ? 'text-white group-hover:text-emerald-400' : 'text-gray-400 group-hover:text-white'}`} style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
+                            {week}
+                          </div>
+                          <div className="font-mono text-xs text-gray-500 mt-1">{dateRange}</div>
+                          {isLatest && (
+                            <div className="inline-block mt-3 px-2 py-0.5 bg-emerald-500/10 text-emerald-400 text-[10px] font-mono rounded uppercase tracking-widest border border-emerald-500/20">
+                              Latest
+                            </div>
+                          )}
+                      </div>
+                      
+                      <div className="flex-1">
+                          <h3 className={`text-[15px] font-serif font-light mb-4 leading-[1.8] tracking-widest transition-colors ${isLatest ? 'text-gray-300 group-hover:text-gray-100' : 'text-gray-400 group-hover:text-gray-200'}`}>
+                              {weekSummary || "AI Code 编辑器生态周报汇总更新。"}
+                          </h3>
+                          <div className="font-mono text-[10px] text-gray-600 flex flex-wrap gap-4 uppercase tracking-widest mt-6 pt-4 border-t border-white/5 inline-flex">
+                              <span className="flex items-center gap-1.5">
+                                <span className={`w-1 h-1 rounded-full ${isLatest ? 'bg-emerald-500/50' : 'bg-gray-500'}`}></span> 
+                                {editorCount} editors tracked
+                              </span>
+                          </div>
+                      </div>
+                    </Link>
+                    
+                    {/* Separator between items */}
+                    {idx < weeks.length - 1 && (
+                      <div className="h-px bg-white/5 w-full my-2"></div>
+                    )}
+                  </motion.div>
+                )
+              })
+            )}
+            
+            {/* EOF Marker */}
+            {weeks.length > 0 && (
+              <motion.div 
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.5, delay: 1 }}
+                className="mt-16 text-center font-mono text-[10px] text-gray-600 uppercase tracking-widest"
+              >
+                  -- End of Tracking Logs --
+              </motion.div>
+            )}
           </div>
         </div>
       </div>

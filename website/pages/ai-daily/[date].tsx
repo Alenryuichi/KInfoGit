@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import { useState } from 'react'
+import { motion } from 'framer-motion'
 import type { GetStaticProps, GetStaticPaths } from 'next'
 import {
   getAllDailyDates,
@@ -14,12 +15,12 @@ import {
 // ─── Focus Topic Labels & Colors ────────────────────────────
 
 const FOCUS_TOPIC_META: Record<string, { label: string; color: string }> = {
-  memory: { label: 'Memory', color: 'bg-purple-500/20 text-purple-300' },
-  'self-evolution': { label: 'Self-Evolution', color: 'bg-amber-500/20 text-amber-300' },
-  'multi-agent': { label: 'Multi-Agent', color: 'bg-cyan-500/20 text-cyan-300' },
-  planning: { label: 'Planning', color: 'bg-emerald-500/20 text-emerald-300' },
-  reflection: { label: 'Reflection', color: 'bg-rose-500/20 text-rose-300' },
-  'tool-use': { label: 'Tool Use', color: 'bg-blue-500/20 text-blue-300' },
+  memory: { label: 'Memory', color: 'text-purple-400 border-purple-400/20 hover:bg-purple-500/10' },
+  'self-evolution': { label: 'Self-Evolution', color: 'text-amber-400 border-amber-400/20 hover:bg-amber-500/10' },
+  'multi-agent': { label: 'Multi-Agent', color: 'text-cyan-400 border-cyan-400/20 hover:bg-cyan-500/10' },
+  planning: { label: 'Planning', color: 'text-emerald-500 border-emerald-500/20 hover:bg-emerald-500/10' },
+  reflection: { label: 'Reflection', color: 'text-rose-500 border-rose-500/20 hover:bg-rose-500/10' },
+  'tool-use': { label: 'Tool Use', color: 'text-gray-400 border-gray-400/20 hover:bg-gray-500/10' },
 }
 
 // ─── Types ──────────────────────────────────────────────────
@@ -65,70 +66,83 @@ export const getStaticProps: GetStaticProps<AiDailyDetailProps> = async ({ param
 
 // ─── Score Color ────────────────────────────────────────────
 
-function scoreColor(score: number): string {
-  if (score >= 8) return 'text-emerald-400'
-  if (score >= 7) return 'text-yellow-400'
-  return 'text-blue-400'
+function scoreColor(score: number): { text: string, bg: string } {
+  if (score >= 8) return { text: 'text-emerald-400', bg: 'bg-emerald-400/10' }
+  if (score >= 7) return { text: 'text-yellow-400', bg: 'bg-yellow-400/10' }
+  return { text: 'text-blue-400', bg: 'bg-blue-400/10' }
 }
 
 // ─── News Item Component ────────────────────────────────────
 
-function NewsItemCard({ item }: { item: NewsItem }) {
+function NewsItemCard({ item, index }: { item: NewsItem, index: number }) {
   const sourceLine = item.sources
     .map(s => s.meta ? `${s.name} · ${s.meta}` : s.name)
     .join(' · ')
+    
+  const sColor = scoreColor(item.score)
 
   return (
-    <div className="py-5 border-b border-white/[0.04] last:border-0">
-      {/* Title */}
-      <a
-        href={item.url}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="text-gray-100 font-semibold hover:text-white transition-colors leading-snug"
-      >
-        <span className={`${scoreColor(item.score)} text-sm font-mono mr-2`}>
+    <motion.div 
+      initial={{ opacity: 0, y: 10 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.4, delay: index * 0.1 }}
+      className="group relative"
+    >
+      {/* Hover dot indicator */}
+      <div className="absolute -left-[21px] top-2 w-1.5 h-1.5 rounded-full bg-gray-700 group-hover:bg-blue-400 transition-colors hidden sm:block"></div>
+      
+      <div className="flex items-start gap-3 mb-2">
+        {/* Score Badge */}
+        <span className={`${sColor.text} ${sColor.bg} font-mono text-[10px] px-1.5 py-0.5 rounded mt-1 shrink-0`}>
           {item.score.toFixed(1)}
         </span>
-        {item.title}
-        <svg className="inline-block w-3.5 h-3.5 ml-1 -mt-0.5 opacity-30" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-          <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-        </svg>
-      </a>
+        
+        {/* Title */}
+        <a
+          href={item.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-lg font-semibold text-gray-200 group-hover:text-blue-400 transition-colors leading-snug"
+        >
+          {item.title}
+        </a>
+      </div>
 
       {/* Summary */}
-      <p className="text-gray-400 text-[15px] leading-relaxed mt-2">
-        {item.summary.length > 300 ? item.summary.slice(0, 300) + '...' : item.summary}
+      <p className="text-sm text-gray-400 leading-relaxed mb-4">
+        {item.summary}
       </p>
 
-      {/* Source + Tags */}
-      <div className="flex items-center gap-3 mt-2.5 text-xs text-gray-500">
-        {sourceLine && <span>{sourceLine}</span>}
+      {/* Metadata Row */}
+      <div className="flex flex-wrap items-center gap-3 font-mono text-[10px] text-gray-600 mb-8">
+        {sourceLine && <span className="text-gray-500">{sourceLine}</span>}
+        
         {item.tags.length > 0 && (
-          <span className="text-gray-600">
+          <span>
             {item.tags.slice(0, 3).map(t => `#${t}`).join(' ')}
           </span>
         )}
+        
+        {/* Focus Topic Badges */}
+        {(item.focusTopics ?? []).length > 0 && (
+          <>
+            {(item.focusTopics ?? []).map(topic => {
+              const meta = FOCUS_TOPIC_META[topic]
+              if (!meta) return null
+              return (
+                <span
+                  key={topic}
+                  className={`${meta.color.split(' ')[0]} transition-colors`}
+                >
+                  [{meta.label}]
+                </span>
+              )
+            })}
+          </>
+        )}
       </div>
-
-      {/* Focus Topic Badges */}
-      {(item.focusTopics ?? []).length > 0 && (
-        <div className="flex flex-wrap gap-1.5 mt-2">
-          {(item.focusTopics ?? []).map(topic => {
-            const meta = FOCUS_TOPIC_META[topic]
-            if (!meta) return null
-            return (
-              <span
-                key={topic}
-                className={`inline-block px-2 py-0.5 text-[11px] font-medium rounded-full ${meta.color}`}
-              >
-                {meta.label}
-              </span>
-            )
-          })}
-        </div>
-      )}
-    </div>
+    </motion.div>
   )
 }
 
@@ -144,32 +158,35 @@ function FocusTopicFilter({
   onSelect: (topic: string | null) => void
 }) {
   return (
-    <div className="flex flex-wrap gap-2 mb-8">
+    <div className="flex flex-wrap gap-2 mb-16 font-mono text-[10px]">
       <button
         onClick={() => onSelect(null)}
-        className={`px-3 py-1 text-xs font-medium rounded-full transition-colors ${
+        className={`px-3 py-1.5 rounded transition-colors border ${
           activeTopic === null
-            ? 'bg-white/[0.12] text-white'
-            : 'bg-white/[0.04] text-gray-400 hover:bg-white/[0.08] hover:text-gray-300'
+            ? 'bg-white/10 text-white border-white/20'
+            : 'bg-transparent text-gray-500 border-white/5 hover:text-white hover:border-white/20'
         }`}
       >
-        All
+        [*All]
       </button>
       {topics.map(topic => {
         const meta = FOCUS_TOPIC_META[topic]
         if (!meta) return null
         const isActive = activeTopic === topic
+        // Extract base text color for active state
+        const textColor = meta.color.split(' ')[0]
+        
         return (
           <button
             key={topic}
             onClick={() => onSelect(isActive ? null : topic)}
-            className={`px-3 py-1 text-xs font-medium rounded-full transition-colors ${
+            className={`px-3 py-1.5 rounded transition-colors border ${
               isActive
-                ? meta.color
-                : 'bg-white/[0.04] text-gray-400 hover:bg-white/[0.08] hover:text-gray-300'
-            }`}
+                ? `${textColor} bg-white/5 border-current`
+                : `${textColor} border-transparent ${meta.color.split(' ').find(c => c.startsWith('hover:'))}`
+            } opacity-80 hover:opacity-100`}
           >
-            {meta.label}
+            [{meta.label}]
           </button>
         )
       })}
@@ -187,13 +204,15 @@ function SectionBlock({ section, filterTopic }: { section: DigestSection; filter
   if (filteredItems.length === 0) return null
 
   return (
-    <div className="mb-12">
-      <h2 className="text-xs font-semibold tracking-[0.15em] uppercase text-gray-500 mb-1 pb-3 border-b border-white/[0.06]">
-        {section.title}
+    <div className="mb-16">
+      <h2 className="text-xs font-mono font-bold tracking-[0.2em] uppercase text-blue-400 mb-6 flex items-center gap-2">
+        <span className="text-blue-400/50">&gt;</span> {section.title}
       </h2>
-      {filteredItems.map((item, i) => (
-        <NewsItemCard key={i} item={item} />
-      ))}
+      <div className="space-y-2 border-l border-white/10 pl-5 ml-1">
+        {filteredItems.map((item, i) => (
+          <NewsItemCard key={i} item={item} index={i} />
+        ))}
+      </div>
     </div>
   )
 }
@@ -211,53 +230,34 @@ function DateNav({
   nextDate: string | null
   allDates: string[]
 }) {
-  // Show up to 5 nearby dates
-  const idx = allDates.indexOf(currentDate)
-  const start = Math.max(0, idx - 2)
-  const nearby = allDates.slice(start, start + 5)
-
   return (
-    <div className="flex items-center justify-between mb-10">
-      {/* Prev */}
-      {prevDate ? (
-        <Link
-          href={`/ai-daily/${prevDate}/`}
-          className="text-gray-500 hover:text-white text-sm transition-colors"
-        >
-          ← {prevDate}
-        </Link>
-      ) : (
-        <span className="text-gray-700 text-sm">← oldest</span>
-      )}
-
-      {/* Date pills */}
-      <div className="hidden sm:flex items-center gap-1.5">
-        {nearby.map(d => (
-          <Link
-            key={d}
-            href={`/ai-daily/${d}/`}
-            className={`px-2.5 py-1 text-xs rounded-md transition-colors ${
-              d === currentDate
-                ? 'bg-white/[0.08] text-white font-medium'
-                : 'text-gray-500 hover:text-gray-300 hover:bg-white/[0.04]'
-            }`}
-          >
-            {d.slice(5)}
+    <div className="flex items-center justify-between mb-12 text-xs font-mono text-gray-500 border-b border-white/5 pb-4">
+      <Link href="/ai-daily/" className="hover:text-blue-400 transition-colors flex items-center gap-2">
+          <span className="text-blue-500/50 hidden sm:inline">~/</span>
+          <span className="hidden sm:inline">ai-daily</span>
+          <span className="text-blue-500/50 sm:hidden">←</span>
+          <span className="sm:text-blue-400 sm:before:content-['/']">cd ..</span>
+      </Link>
+      
+      <div className="flex items-center gap-4">
+        {prevDate ? (
+          <Link href={`/ai-daily/${prevDate}/`} className="hover:text-white transition-colors">
+            ← prev
           </Link>
-        ))}
+        ) : (
+          <span className="text-gray-700 cursor-not-allowed">← null</span>
+        )}
+        
+        <span className="text-white/20">|</span>
+        
+        {nextDate ? (
+          <Link href={`/ai-daily/${nextDate}/`} className="hover:text-white transition-colors">
+            next →
+          </Link>
+        ) : (
+          <span className="text-white/40 cursor-not-allowed">today</span>
+        )}
       </div>
-
-      {/* Next */}
-      {nextDate ? (
-        <Link
-          href={`/ai-daily/${nextDate}/`}
-          className="text-gray-500 hover:text-white text-sm transition-colors"
-        >
-          {nextDate} →
-        </Link>
-      ) : (
-        <span className="text-gray-700 text-sm">latest →</span>
-      )}
     </div>
   )
 }
@@ -286,25 +286,12 @@ export default function AiDailyDetail({ digest, prevDate, nextDate, allDates, al
         <meta name="description" content={`AI Daily digest for ${formatted}: ${digest.itemCount} curated items.`} />
       </Head>
 
-      <div className="min-h-screen bg-black text-white" data-pagefind-body data-pagefind-meta="type:AI Daily">
+      <div className="min-h-screen bg-[#050505] text-white relative" data-pagefind-body data-pagefind-meta="type:AI Daily">
         <meta data-pagefind-meta={`date:${digest.date}`} />
-        <div className="max-w-3xl mx-auto px-5 sm:px-6 pt-32 pb-20">
-          {/* Back link */}
-          <Link
-            href="/ai-daily/"
-            className="inline-flex items-center text-sm font-medium text-gray-500 hover:text-gray-300 transition-colors group mb-8"
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-4 h-4 mr-2 group-hover:-translate-x-1 transition-transform duration-300">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
-            </svg>
-            All Digests
-          </Link>
-
-          {/* Header */}
-          <h1 className="text-3xl md:text-4xl font-bold mb-2 tracking-tight">AI Daily</h1>
-          <p className="text-gray-400 mb-8">{formatted}</p>
-
-          {/* Date nav */}
+        
+        <div className="max-w-4xl mx-auto px-6 pt-24 pb-32 relative z-10">
+          
+          {/* Top Date nav */}
           <DateNav
             currentDate={digest.date}
             prevDate={prevDate}
@@ -312,35 +299,60 @@ export default function AiDailyDetail({ digest, prevDate, nextDate, allDates, al
             allDates={allDates}
           />
 
+          {/* Header */}
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="mb-12"
+          >
+            <div className="font-mono text-blue-500/80 text-[10px] tracking-[0.2em] uppercase mb-4 flex items-center gap-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-blue-500 animate-pulse shadow-[0_0_8px_rgba(59,130,246,0.8)]"></span>
+                Intelligence.Log
+            </div>
+            <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-white mb-6">
+                {formatted}
+            </h1>
+            <div className="text-xs font-mono text-gray-500 border-l-2 border-blue-500/30 pl-4 py-1.5 bg-blue-500/5">
+                Extracted: {digest.itemCount} items. Sources: {uniqueSources.size}. Filter: Score &gt;= 6.0
+            </div>
+          </motion.div>
+
           {/* Focus Topic Filter */}
           {allFocusTopics.length > 0 && (
-            <FocusTopicFilter
-              topics={allFocusTopics}
-              activeTopic={activeTopic}
-              onSelect={setActiveTopic}
-            />
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+            >
+              <FocusTopicFilter
+                topics={allFocusTopics}
+                activeTopic={activeTopic}
+                onSelect={setActiveTopic}
+              />
+            </motion.div>
           )}
 
           {/* Sections */}
-          {digest.sections.map(section => (
-            <SectionBlock key={section.id} section={section} filterTopic={activeTopic} />
-          ))}
+          <div className="min-h-[40vh]">
+            {digest.sections.map((section, idx) => (
+              <motion.div
+                key={section.id}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.5, delay: 0.3 + idx * 0.1 }}
+              >
+                <SectionBlock section={section} filterTopic={activeTopic} />
+              </motion.div>
+            ))}
+          </div>
 
           {/* Footer stats */}
-          <div className="pt-6 border-t border-white/[0.06] text-xs text-gray-500">
-            📊 {digest.itemCount} items · {uniqueSources.size} sources · AI score ≥ 6.0
-            <span className="ml-3">🤖 Powered by Horizon + DeepSeek</span>
+          <div className="pt-8 mt-16 border-t border-white/[0.06] text-[10px] sm:text-xs font-mono text-gray-600 flex flex-col sm:flex-row justify-between items-center gap-4">
+            <div>[STATS] {digest.itemCount} items · {uniqueSources.size} sources · Score &gt;= 6.0</div>
+            <div className="text-blue-500/50">Powered by Horizon + DeepSeek</div>
           </div>
-
-          {/* Bottom date nav */}
-          <div className="mt-10">
-            <DateNav
-              currentDate={digest.date}
-              prevDate={prevDate}
-              nextDate={nextDate}
-              allDates={allDates}
-            />
-          </div>
+          
         </div>
       </div>
     </>
