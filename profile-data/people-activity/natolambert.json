@@ -165,6 +165,45 @@
         "deployment"
       ],
       "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:brkj2yocng7vtggmyujy4khq/app.bsky.feed.post/3mjibwesiaq2a",
+      "url": "https://bsky.app/profile/natolambert.bsky.social/post/3mjibwesiaq2a",
+      "author": {
+        "handle": "natolambert.bsky.social",
+        "displayName": "Nathan Lambert",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:brkj2yocng7vtggmyujy4khq/bafkreibrwiekumktnfukcbrl2w7emcft4icv2zlt6vxnorfwmwlwlzepqm"
+      },
+      "content": "One of my key strategies with Interconnects is to develop the practice of making my work obviously compelling to a wider audience, keeping them hooked over time and wondering what I'm up to, etc.\nwww.interconnects.ai/p/what-ive-b...",
+      "createdAt": "2026-04-14T21:06:22.182Z",
+      "likeCount": 7,
+      "replyCount": 1,
+      "repostCount": 0,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [],
+      "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:brkj2yocng7vtggmyujy4khq/app.bsky.feed.post/3mjhuczin322v",
+      "url": "https://bsky.app/profile/natolambert.bsky.social/post/3mjhuczin322v",
+      "author": {
+        "handle": "natolambert.bsky.social",
+        "displayName": "Nathan Lambert",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:brkj2yocng7vtggmyujy4khq/bafkreibrwiekumktnfukcbrl2w7emcft4icv2zlt6vxnorfwmwlwlzepqm"
+      },
+      "content": "Excited to launch the accompanying free RLHF Course for my book. To kick it off, I've released:\n- Welcome video\n- Lecture 1: Overview of RLHF & Post-training\n- Lecture 2: IFT, Reward Models, Rejection Sampling\n- Lecture 3: RL Math\n- Lecture 4: RL Implementation\nLanding page: rlhfbook.com/course",
+      "createdAt": "2026-04-14T17:02:54.164Z",
+      "likeCount": 64,
+      "replyCount": 5,
+      "repostCount": 18,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [
+        "fine-tuning",
+        "evaluation"
+      ],
+      "type": "bluesky"
     }
   ],
   "videos": [],
@@ -188,10 +227,19 @@
       "highlights": "The article argues that despite general skepticism toward consortia, the AI field urgently requires an open model consortium to ensure transparency, collaboration, and ethical standards. This collective approach is framed as essential for addressing the rapid, often opaque advancements in AI development.",
       "worthReading": "It offers a pragmatic perspective on overcoming industry fragmentation and highlights the critical role of open collaboration in shaping responsible AI innovation.",
       "type": "blog"
+    },
+    {
+      "title": "What I’ve been building: ATOM Report, post-training course, finishing my book, and ongoing research",
+      "url": "https://www.interconnects.ai/p/what-ive-been-building-atom-report",
+      "author": "Nathan Lambert",
+      "publishedAt": "Tue, 14 Apr 2026 20:41:12 GMT",
+      "summary": "What I've been up to!",
+      "highlights": "The post offers a personal update on Nathan Lambert's multifaceted contributions to AI/ML, including the ATOM Report for technical insights, a post-training course for practical education, and his book for broader dissemination of knowledge. It highlights the importance of bridging research, education, and community engagement in advancing the field.",
+      "worthReading": "It provides a concise overview of current projects from an active researcher, useful for those interested in AI/ML trends, educational resources, or community contributions.",
+      "type": "blog"
     }
   ],
   "dailyCounts": [
-    0,
     0,
     0,
     0,
@@ -220,7 +268,8 @@
     2,
     1,
     0,
+    2,
     0
   ],
-  "interestSummary": "Nathan Lambert's recent focus is on the evolving landscape of open and closed AI models, analyzing adoption trends and advocating for sustainable open ecosystems. He is also finalizing his book on Reinforcement Learning from Human Feedback and developing its accompanying codebases."
+  "interestSummary": "Nathan Lambert is focused on the release and promotion of his upcoming book on Reinforcement Learning from Human Feedback, including a supporting online course. He is also analyzing trends in open and closed AI model adoption, particularly highlighting the growth of Chinese models and discussing the future sustainability of the open-source ecosystem."
 }
