@@ -51,6 +51,7 @@ jobs:
         working-directory: website
         env:
           GITHUB_TOKEN: ${{ secrets.GH_PAT }}
+          WORK_PASSWORD: ${{ secrets.WORK_PASSWORD }}
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

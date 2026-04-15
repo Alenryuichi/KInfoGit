@@ -16,7 +16,7 @@ interface ProjectDetailData {
 
 interface ProjectPageProps {
 	/** Present when encrypted */
-	encryptedPayloads?: EncryptedPayload[]
+	encryptedPayload?: EncryptedPayload
 	/** Present in dev mode (no encryption) */
 	project?: Project
 	detailContent?: string | null
@@ -25,7 +25,7 @@ interface ProjectPageProps {
 }
 
 export default function ProjectPage({
-	encryptedPayloads,
+	encryptedPayload,
 	project: plainProject,
 	detailContent: plainDetail,
 	projectTitle,
@@ -42,7 +42,7 @@ export default function ProjectPage({
 		}
 	}, [])
 
-	const isLocked = !decrypted && encryptedPayloads
+	const isLocked = !decrypted && encryptedPayload
 	const project = decrypted?.project
 	const detailContent = decrypted?.detailContent
 
@@ -87,7 +87,7 @@ export default function ProjectPage({
 									</Link>
 								</div>
 								<WorkAuthGate
-									encryptedPayloads={encryptedPayloads!}
+									encryptedPayload={encryptedPayload!}
 									onDecrypted={handleDecrypted}
 									hint="Project details require authentication."
 								/>
@@ -189,15 +189,15 @@ export const getStaticProps: GetStaticProps<ProjectPageProps> = async (context) 
 	}
 
 	const detailContent = await getProjectDetailContent(id)
-	const secret = process.env.TOTP_SECRET
+	const secret = process.env.WORK_PASSWORD
 
 	if (secret) {
-		const { getEncryptedPayloads } = await import('@/lib/crypto')
+		const { getEncryptedPayload } = await import('@/lib/crypto')
 		const data: ProjectDetailData = { project, detailContent }
-		const encryptedPayloads = getEncryptedPayloads(data, secret)
+		const encryptedPayload = getEncryptedPayload(data, secret)
 		return {
 			props: {
-				encryptedPayloads,
+				encryptedPayload,
 				projectTitle: project.title.zh,
 			},
 		}
