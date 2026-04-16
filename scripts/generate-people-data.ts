@@ -8,6 +8,7 @@ const GITHUB_STARS_DIR = path.join(__dirname, '..', 'profile-data', 'github-star
 const BLUESKY_POSTS_DIR = path.join(__dirname, '..', 'profile-data', 'bluesky-posts')
 const YOUTUBE_VIDEOS_DIR = path.join(__dirname, '..', 'profile-data', 'youtube-videos')
 const BLOG_POSTS_DIR = path.join(__dirname, '..', 'profile-data', 'blog-posts')
+const X_SIGNALS_DIR = path.join(__dirname, '..', 'profile-data', 'x-signals')
 const OUTPUT_DIR = path.join(__dirname, '..', 'profile-data', 'people-activity')
 const DEEPSEEK_API_KEY = process.env.DEEPSEEK_API_KEY || ''
 const DEEPSEEK_API_URL = 'https://api.deepseek.com/chat/completions'
@@ -22,6 +23,7 @@ interface Person {
   bluesky?: string
   youtubeChannel?: string
   blogAuthor?: string
+  x?: string
   avatar?: string
 }
 
@@ -81,12 +83,32 @@ interface BlogPost {
   worthReading: string
 }
 
+interface XPost {
+  type?: string
+  id: string
+  url: string
+  author: {
+    handle: string
+    displayName: string
+    avatar: string | null
+  }
+  content: string
+  createdAt: string
+  likeCount: number
+  replyCount: number
+  retweetCount: number
+  highlights: string
+  worthReading: string
+  tags: string[]
+}
+
 interface PersonActivity {
   id: string
   stars: StarredRepo[]
   posts: BlueskyPost[]
   videos: YouTubeVideo[]
   blogs: BlogPost[]
+  xPosts?: XPost[]
   dailyCounts: number[]
   interestSummary: string
 }
@@ -118,10 +140,11 @@ function loadJsonFile<T>(filePath: string): T | null {
 async function generateInterestSummary(
   person: Person,
   stars: StarredRepo[],
-  posts: BlueskyPost[]
+  posts: BlueskyPost[],
+  xPosts?: XPost[]
 ): Promise<string> {
   if (!DEEPSEEK_API_KEY) return ''
-  if (stars.length === 0 && posts.length === 0) return ''
+  if (stars.length === 0 && posts.length === 0 && (!xPosts || xPosts.length === 0)) return ''
 
   const starDescriptions = stars.slice(0, 15).map(s =>
     `- ${s.repo}: ${s.description || 'No description'}`
@@ -130,6 +153,10 @@ async function generateInterestSummary(
   const postDescriptions = posts.slice(0, 15).map(p =>
     `- ${p.content.slice(0, 200)}`
   ).join('\n')
+
+  const xPostDescriptions = xPosts ? xPosts.slice(0, 10).map(p =>
+    `- ${p.content.slice(0, 200)}`
+  ).join('\n') : ''
 
   const prompt = `Given this person's recent activity, write a 1-2 sentence summary of their recent interests and focus areas.
 
@@ -141,6 +168,9 @@ ${starDescriptions || 'None'}
 
 Recent Bluesky posts (${posts.length} total):
 ${postDescriptions || 'None'}
+
+Recent X posts (${xPosts?.length || 0} total):
+${xPostDescriptions || 'None'}
 
 Respond with ONLY the 1-2 sentence summary, no quotes or prefixes.`
 
@@ -195,6 +225,7 @@ async function main() {
   const allPostsByDate = new Map<string, BlueskyPost[]>()
   const allVideosByDate = new Map<string, YouTubeVideo[]>()
   const allBlogsByDate = new Map<string, BlogPost[]>()
+  const allXPostsByDate = new Map<string, XPost[]>()
 
   if (fs.existsSync(GITHUB_STARS_DIR)) {
     const files = fs.readdirSync(GITHUB_STARS_DIR).filter(f => f.endsWith('.json'))
@@ -250,6 +281,20 @@ async function main() {
     }
   }
 
+  if (fs.existsSync(X_SIGNALS_DIR)) {
+    const files = fs.readdirSync(X_SIGNALS_DIR).filter(f => f.endsWith('.json'))
+    for (const file of files) {
+      const date = file.replace('.json', '')
+      if (!dateSet.has(date)) continue
+      const data = loadJsonFile<{ date: string; posts: XPost[] }>(
+        path.join(X_SIGNALS_DIR, file)
+      )
+      if (data?.posts) {
+        allXPostsByDate.set(date, data.posts.map(p => ({ ...p, type: 'x' })))
+      }
+    }
+  }
+
   // Create output directory
   fs.mkdirSync(OUTPUT_DIR, { recursive: true })
 
@@ -259,6 +304,7 @@ async function main() {
     const personPosts: BlueskyPost[] = []
     const personVideos: YouTubeVideo[] = []
     const personBlogs: BlogPost[] = []
+    const personXPosts: XPost[] = []
     const dailyCounts = new Array(30).fill(0)
 
     // Collect stars
@@ -301,8 +347,20 @@ async function main() {
       }
     }
 
+    // Collect X posts
+    if (person.x) {
+      for (const [date, xPosts] of allXPostsByDate) {
+        const matched = xPosts.filter(p => p.author.handle === person.x)
+        personXPosts.push(...matched)
+        const dayIndex = dates.indexOf(date)
+        if (dayIndex >= 0) {
+          dailyCounts[dayIndex] += matched.length
+        }
+      }
+    }
+
     // Generate AI interest summary
-    const interestSummary = await generateInterestSummary(person, personStars, personPosts)
+    const interestSummary = await generateInterestSummary(person, personStars, personPosts, personXPosts)
 
     const activity: PersonActivity = {
       id: person.id,
@@ -310,14 +368,15 @@ async function main() {
       posts: personPosts,
       videos: personVideos,
       blogs: personBlogs,
+      xPosts: personXPosts.length > 0 ? personXPosts : undefined,
       dailyCounts,
       interestSummary,
     }
 
     const outputPath = path.join(OUTPUT_DIR, `${person.id}.json`)
     fs.writeFileSync(outputPath, JSON.stringify(activity, null, 2) + '\n')
-    const total = personStars.length + personPosts.length + personVideos.length + personBlogs.length
-    console.log(`  ✅ ${person.id}: ${personStars.length} stars, ${personPosts.length} posts, ${personVideos.length} videos, ${personBlogs.length} blogs`)
+    const total = personStars.length + personPosts.length + personVideos.length + personBlogs.length + personXPosts.length
+    console.log(`  ✅ ${person.id}: ${personStars.length} stars, ${personPosts.length} posts, ${personVideos.length} videos, ${personBlogs.length} blogs, ${personXPosts.length} x-posts`)
   }
 
   console.log('🎉 People data generation complete!')

@@ -61,7 +61,26 @@ export interface BlogPost {
   worthReading: string
 }
 
-export type FeedItem = StarredRepo | BlueskyPost | YouTubeVideo | BlogPost
+export interface XPost {
+  type: 'x'
+  id: string
+  url: string
+  author: {
+    handle: string
+    displayName: string
+    avatar: string | null
+  }
+  content: string
+  createdAt: string
+  likeCount: number
+  replyCount: number
+  retweetCount: number
+  highlights: string
+  worthReading: string
+  tags: string[]
+}
+
+export type FeedItem = StarredRepo | BlueskyPost | YouTubeVideo | BlogPost | XPost
 
 // --- Weekly Digest Types ---
 
@@ -118,6 +137,7 @@ export interface DailyFeedSummary {
   blueskyCount: number
   youtubeCount: number
   blogCount: number
+  xCount: number
 }
 
 // --- Data Directories ---
@@ -128,6 +148,7 @@ const SUMMARIES_DIR = path.join(process.cwd(), '..', 'profile-data', 'daily-summ
 const WEEKLY_DIGESTS_DIR = path.join(process.cwd(), '..', 'profile-data', 'weekly-digests')
 const BLOG_POSTS_DIR = path.join(process.cwd(), '..', 'profile-data', 'blog-posts')
 const YOUTUBE_VIDEOS_DIR = path.join(process.cwd(), '..', 'profile-data', 'youtube-videos')
+const X_SIGNALS_DIR = path.join(process.cwd(), '..', 'profile-data', 'x-signals')
 
 function getGitHubDir(): string {
   if (fs.existsSync(GITHUB_STARS_DIR)) return GITHUB_STARS_DIR
@@ -169,6 +190,13 @@ function getYouTubeDir(): string {
   const alt = path.join(process.cwd(), 'profile-data', 'youtube-videos')
   if (fs.existsSync(alt)) return alt
   return YOUTUBE_VIDEOS_DIR
+}
+
+function getXSignalsDir(): string {
+  if (fs.existsSync(X_SIGNALS_DIR)) return X_SIGNALS_DIR
+  const alt = path.join(process.cwd(), 'profile-data', 'x-signals')
+  if (fs.existsSync(alt)) return alt
+  return X_SIGNALS_DIR
 }
 
 // --- Helper Functions ---
@@ -264,6 +292,26 @@ function loadYouTubeVideos(date: string): YouTubeVideo[] {
   }
 }
 
+function loadXSignals(date: string): XPost[] {
+  const dir = getXSignalsDir()
+  const filePath = path.join(dir, `${date}.json`)
+
+  if (!fs.existsSync(filePath)) return []
+
+  try {
+    const content = fs.readFileSync(filePath, 'utf-8')
+    const data = JSON.parse(content)
+    // Ensure all items have type: 'x'
+    return (data.posts || []).map((post: any) => ({
+      ...post,
+      type: 'x' as const,
+      tags: post.tags ?? [],
+    }))
+  } catch {
+    return []
+  }
+}
+
 // --- Public API ---
 
 export function getAllFeedDates(): DailyFeedSummary[] {
@@ -271,7 +319,8 @@ export function getAllFeedDates(): DailyFeedSummary[] {
   const blueskyDir = getBlueskyDir()
   const blogDir = getBlogPostsDir()
   const youtubeDir = getYouTubeDir()
-  const dateMap = new Map<string, { github: number; bluesky: number; blog: number; youtube: number }>()
+  const xDir = getXSignalsDir()
+  const dateMap = new Map<string, { github: number; bluesky: number; blog: number; youtube: number; x: number }>()
 
   // Scan GitHub stars directory
   if (fs.existsSync(githubDir)) {
@@ -285,7 +334,7 @@ export function getAllFeedDates(): DailyFeedSummary[] {
         const data = JSON.parse(content)
         const date = data.date
         if (!dateMap.has(date)) {
-          dateMap.set(date, { github: 0, bluesky: 0, blog: 0, youtube: 0 })
+          dateMap.set(date, { github: 0, bluesky: 0, blog: 0, youtube: 0, x: 0 })
         }
         dateMap.get(date)!.github = (data.stars || []).length
       } catch {
@@ -306,7 +355,7 @@ export function getAllFeedDates(): DailyFeedSummary[] {
         const data = JSON.parse(content)
         const date = data.date
         if (!dateMap.has(date)) {
-          dateMap.set(date, { github: 0, bluesky: 0, blog: 0, youtube: 0 })
+          dateMap.set(date, { github: 0, bluesky: 0, blog: 0, youtube: 0, x: 0 })
         }
         dateMap.get(date)!.bluesky = (data.posts || []).length
       } catch {
@@ -327,7 +376,7 @@ export function getAllFeedDates(): DailyFeedSummary[] {
         const data = JSON.parse(content)
         const date = data.date
         if (!dateMap.has(date)) {
-          dateMap.set(date, { github: 0, bluesky: 0, blog: 0, youtube: 0 })
+          dateMap.set(date, { github: 0, bluesky: 0, blog: 0, youtube: 0, x: 0 })
         }
         dateMap.get(date)!.blog = (data.posts || []).length
       } catch {
@@ -348,9 +397,30 @@ export function getAllFeedDates(): DailyFeedSummary[] {
         const data = JSON.parse(content)
         const date = data.date
         if (!dateMap.has(date)) {
-          dateMap.set(date, { github: 0, bluesky: 0, blog: 0, youtube: 0 })
+          dateMap.set(date, { github: 0, bluesky: 0, blog: 0, youtube: 0, x: 0 })
         }
         dateMap.get(date)!.youtube = (data.videos || []).length
+      } catch {
+        continue
+      }
+    }
+  }
+
+  // Scan X signals directory
+  if (fs.existsSync(xDir)) {
+    const files = fs.readdirSync(xDir).filter(f => f.endsWith('.json'))
+    for (const file of files) {
+      const dateMatch = file.match(/^(\d{4}-\d{2}-\d{2})\.json$/)
+      if (!dateMatch) continue
+
+      try {
+        const content = fs.readFileSync(path.join(xDir, file), 'utf-8')
+        const data = JSON.parse(content)
+        const date = data.date
+        if (!dateMap.has(date)) {
+          dateMap.set(date, { github: 0, bluesky: 0, blog: 0, youtube: 0, x: 0 })
+        }
+        dateMap.get(date)!.x = (data.posts || []).length
       } catch {
         continue
       }
@@ -362,11 +432,12 @@ export function getAllFeedDates(): DailyFeedSummary[] {
   dateMap.forEach((counts, date) => {
     summaries.push({
       date,
-      itemCount: counts.github + counts.bluesky + counts.blog + counts.youtube,
+      itemCount: counts.github + counts.bluesky + counts.blog + counts.youtube + counts.x,
       githubCount: counts.github,
       blueskyCount: counts.bluesky,
       youtubeCount: counts.youtube,
       blogCount: counts.blog,
+      xCount: counts.x,
     })
   })
 
@@ -378,14 +449,15 @@ export function getFeedByDate(date: string): DailyFeed | null {
   const blueskyPosts = loadBlueskyPosts(date)
   const blogPosts = loadBlogPosts(date)
   const youtubeVideos = loadYouTubeVideos(date)
+  const xPosts = loadXSignals(date)
 
   // If no source has data, return null
-  if (githubStars.length === 0 && blueskyPosts.length === 0 && blogPosts.length === 0 && youtubeVideos.length === 0) {
+  if (githubStars.length === 0 && blueskyPosts.length === 0 && blogPosts.length === 0 && youtubeVideos.length === 0 && xPosts.length === 0) {
     return null
   }
 
-  // Merge items — GitHub stars first, then Bluesky posts, then YouTube videos, then blog posts
-  const items: FeedItem[] = [...githubStars, ...blueskyPosts, ...youtubeVideos, ...blogPosts]
+  // Merge items — GitHub stars first, then Bluesky posts, then X posts, then YouTube videos, then blog posts
+  const items: FeedItem[] = [...githubStars, ...blueskyPosts, ...xPosts, ...youtubeVideos, ...blogPosts]
 
   // Load AI-generated daily summary
   const summary = loadDailySummary(date)
@@ -511,6 +583,7 @@ export function getTagStats(): TagStat[] {
   for (const { date } of dates) {
     const githubStars = loadGitHubStars(date)
     const blueskyPosts = loadBlueskyPosts(date)
+    const xPosts = loadXSignals(date)
 
     for (const star of githubStars) {
       for (const tag of star.tags ?? []) {
@@ -518,6 +591,11 @@ export function getTagStats(): TagStat[] {
       }
     }
     for (const post of blueskyPosts) {
+      for (const tag of post.tags ?? []) {
+        tagCounts.set(tag, (tagCounts.get(tag) || 0) + 1)
+      }
+    }
+    for (const post of xPosts) {
       for (const tag of post.tags ?? []) {
         tagCounts.set(tag, (tagCounts.get(tag) || 0) + 1)
       }
@@ -537,6 +615,7 @@ export function getTagStats(): TagStat[] {
 function getItemEngagement(item: FeedItem): number {
   if (item.type === 'github') return item.stargazersCount
   if (item.type === 'bluesky') return item.likeCount + item.repostCount
+  if (item.type === 'x') return item.likeCount + item.retweetCount
   if (item.type === 'youtube') return item.viewCount || 0
   if (item.type === 'blog') return item.highlights ? 10 : 0
   return 0
@@ -583,6 +662,7 @@ export function getAllFeedItems(): TimelineFeedItem[] {
     for (const item of feed.items) {
       let sortTime = date
       if (item.type === 'bluesky') sortTime = item.createdAt
+      else if (item.type === 'x') sortTime = item.createdAt
       else if (item.type === 'youtube') sortTime = item.publishedAt
       else if (item.type === 'blog') sortTime = item.publishedAt
 
