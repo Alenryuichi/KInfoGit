@@ -1,0 +1,56 @@
+{
+  "date": "2026-04-15",
+  "stars": [
+    {
+      "repo": "zalandoresearch/pytorch-vq-vae",
+      "url": "https://github.com/zalandoresearch/pytorch-vq-vae",
+      "description": "PyTorch implementation of VQ-VAE by Aäron van den Oord et al.",
+      "language": "Jupyter Notebook",
+      "stargazersCount": 602,
+      "starredBy": "pcuenca",
+      "highlights": "This repository provides a PyTorch implementation of Vector Quantized Variational Autoencoder (VQ-VAE), a neural architecture that learns discrete latent representations for images. It demonstrates how to use vector quantization in the latent space to capture important features while maintaining reconstruction quality.",
+      "worthReading": "The implementation is clean and well-documented, making it an excellent educational resource for understanding how VQ-VAEs work and how to implement them in PyTorch.",
+      "topics": [
+        "deep-learning",
+        "pytorch",
+        "vae",
+        "vq-vae"
+      ],
+      "tags": []
+    },
+    {
+      "repo": "DWarez/kernels_bench",
+      "url": "https://github.com/DWarez/kernels_bench",
+      "description": "",
+      "language": "Python",
+      "stargazersCount": 9,
+      "starredBy": "sayakpaul",
+      "highlights": "This project appears to benchmark computational kernels, likely focusing on performance comparisons of core operations in Python. It provides a framework for evaluating execution speed and efficiency across different implementations or hardware configurations.",
+      "worthReading": "For developers working on performance-critical applications, it offers insights into optimizing computational kernels and understanding performance trade-offs.",
+      "topics": [],
+      "tags": [
+        "evaluation",
+        "tooling"
+      ]
+    },
+    {
+      "repo": "millionco/claude-doctor",
+      "url": "https://github.com/millionco/claude-doctor",
+      "description": "Diagnose your Claude Code sessions",
+      "language": "TypeScript",
+      "stargazersCount": 198,
+      "starredBy": "philschmid",
+      "highlights": "This project provides diagnostic tools for Claude Code sessions, helping developers identify issues and optimize their interactions with Claude's coding capabilities. It offers session analysis and debugging features specifically tailored for Claude's code generation workflows.",
+      "worthReading": "It addresses a practical need for developers working with Claude's coding features, providing insights that can improve productivity and code quality.",
+      "topics": [
+        "claude",
+        "code",
+        "doctor"
+      ],
+      "tags": [
+        "tooling",
+        "evaluation"
+      ]
+    }
+  ]
+}

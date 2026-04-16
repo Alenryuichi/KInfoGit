@@ -21,6 +21,22 @@
         "tooling"
       ],
       "type": "github"
+    },
+    {
+      "repo": "DWarez/kernels_bench",
+      "url": "https://github.com/DWarez/kernels_bench",
+      "description": "",
+      "language": "Python",
+      "stargazersCount": 9,
+      "starredBy": "sayakpaul",
+      "highlights": "This project appears to benchmark computational kernels, likely focusing on performance comparisons of core operations in Python. It provides a framework for evaluating execution speed and efficiency across different implementations or hardware configurations.",
+      "worthReading": "For developers working on performance-critical applications, it offers insights into optimizing computational kernels and understanding performance trade-offs.",
+      "topics": [],
+      "tags": [
+        "evaluation",
+        "tooling"
+      ],
+      "type": "github"
     }
   ],
   "posts": [],
@@ -54,9 +70,9 @@
     0,
     0,
     0,
-    0,
+    1,
     1,
     0
   ],
-  "interestSummary": "Based on their bio and recent activity, Sayak Paul's focus remains on the Hugging Face ecosystem and practical tooling for model deployment, as shown by their interest in a CLI for estimating inference memory."
+  "interestSummary": "Their recent activity shows a focus on practical tools for model deployment, specifically benchmarking inference memory requirements and evaluating computational kernels."
 }
