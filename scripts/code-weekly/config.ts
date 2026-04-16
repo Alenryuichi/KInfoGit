@@ -38,6 +38,7 @@ export const EDITORS: EditorConfig[] = [
     name: 'Windsurf',
     category: 'ide',
     sources: {
+      changelogUrl: 'https://windsurf.com/changelog',
       tavilyQuery: 'Windsurf IDE updates OR Windsurf release notes OR Codeium Windsurf changelog',
     },
   },
@@ -55,6 +56,7 @@ export const EDITORS: EditorConfig[] = [
     name: 'Augment',
     category: 'ide',
     sources: {
+      changelogUrl: 'https://www.augmentcode.com/changelog',
       tavilyQuery: 'Augment Code editor updates OR Augment IDE release notes OR Augment AI announcement',
     },
   },
@@ -64,6 +66,7 @@ export const EDITORS: EditorConfig[] = [
     category: 'cli',
     sources: {
       npmPackage: '@anthropic-ai/claude-code',
+      changelogUrl: 'https://platform.claude.com/docs/en/agents-and-tools/claude-code/changelog',
       tavilyQuery: 'Claude Code release OR Claude CLI update OR Anthropic Claude Code changelog',
     },
   },

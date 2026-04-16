@@ -48,6 +48,8 @@ export interface DiscoveredProject {
   pushedAt: string
   discoveredAt: string       // ISO date when first discovered
   source: 'github' | 'npm'
+  aiRelevant?: boolean       // AI 判断是否与 spec-driven development 相关
+  aiReason?: string          // AI 推荐理由或排除原因
 }
 
 export interface FrameworkDelta {

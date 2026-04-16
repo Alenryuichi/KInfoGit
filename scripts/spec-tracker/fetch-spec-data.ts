@@ -28,7 +28,7 @@ import { fetchAllGitHubStats } from './sources/github-stats'
 import { fetchAllNpmStats } from './sources/npm-downloads'
 import { discoverProjects } from './sources/discovery'
 import { computeDeltas, computeWeeklyDiff } from './delta'
-import { generateInsights } from './insights'
+import { generateInsights, filterDiscoveredProjects } from './insights'
 import type { SpecFramework, SpecSnapshot } from './types'
 
 async function main() {
@@ -105,8 +105,33 @@ async function main() {
   snapshot.deltas = deltas
   snapshot.weeklyDiff = weeklyDiff
 
-  // ─── AI Trend Insights ─────────────────────────────────────
-  // Call DeepSeek API for trend analysis (fault-tolerant)
+  // ─── AI: Filter Discovery (then Insights) ──────────────
+  // Filter first so insights analyzes clean data
+  const [filterResult] = await Promise.allSettled([filterDiscoveredProjects(discovered)])
+
+  if (filterResult.status === 'fulfilled' && filterResult.value.length > 0) {
+    const scoreMap = new Map(filterResult.value.map(s => [s.fullName, s]))
+    for (const p of snapshot.discovered) {
+      const score = scoreMap.get(p.fullName)
+      if (score) {
+        p.aiRelevant = score.relevant
+        p.aiReason = score.reason
+      }
+    }
+    const before = snapshot.discovered.length
+    snapshot.discovered = snapshot.discovered.filter(p => p.aiRelevant !== false)
+    const after = snapshot.discovered.length
+    if (before !== after) {
+      console.log(`🔍 AI filter: ${before} → ${after} discovered projects (removed ${before - after} noise)`)
+    }
+  } else {
+    if (filterResult.status === 'rejected') {
+      console.warn('⚠️ AI filter failed:', filterResult.reason)
+    }
+    console.log('🔍 AI filter: skipped, keeping all discovered projects')
+  }
+
+  // Generate insights after filtering (so analysis references clean data)
   const [insightsResult] = await Promise.allSettled([generateInsights(snapshot)])
   if (insightsResult.status === 'fulfilled' && insightsResult.value) {
     snapshot.insights = insightsResult.value
@@ -142,7 +167,7 @@ async function main() {
   console.log('\n📊 Summary:')
   console.log(`  GitHub: ${githubStats.size}/${FRAMEWORKS.filter(f => f.sources.githubRepo).length} repos`)
   console.log(`  npm: ${npmStats.size}/${FRAMEWORKS.filter(f => f.sources.npmPackage).length} packages`)
-  console.log(`  Discovered: ${discovered.length} emerging projects`)
+  console.log(`  Discovered: ${snapshot.discovered.length} emerging projects`)
   console.log(`\n📁 Output:`)
   console.log(`  ${latestPath}`)
   console.log(`  ${historyPath}`)

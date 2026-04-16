@@ -48,6 +48,8 @@ export interface DiscoveredProject {
   pushedAt: string
   discoveredAt: string
   source: 'github' | 'npm'
+  aiRelevant?: boolean
+  aiReason?: string
 }
 
 export interface FrameworkDelta {

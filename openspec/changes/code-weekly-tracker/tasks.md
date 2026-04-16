@@ -44,4 +44,4 @@
 ## 8. 依赖与配置
 
 - [x] 8.1 安装 RSS 解析依赖（如 `rss-parser`）并添加到 package.json
-- [ ] 8.2 验证 Tavily 和百炼 API key 可用，本地运行 `just fetch-code-weekly` 端到端测试
+- [x] 8.2 验证 Tavily 和百炼 API key 可用，本地运行 `just fetch-code-weekly` 端到端测试

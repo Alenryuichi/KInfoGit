@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-16T07:09:14.234Z",
+  "updatedAt": "2026-04-16T09:36:43.544Z",
   "frameworks": [
     {
       "id": "spec-kit",
@@ -9,9 +9,9 @@
       "website": "https://github.com/github/spec-kit",
       "github": {
         "repo": "github/spec-kit",
-        "stars": 88404,
-        "forks": 7601,
-        "openIssues": 628,
+        "stars": 88447,
+        "forks": 7608,
+        "openIssues": 630,
         "pushedAt": "2026-04-15T23:11:28Z",
         "latestRelease": {
           "tag": "v0.7.1",
@@ -29,8 +29,8 @@
       "website": "https://github.com/bmad-code-org/BMAD-METHOD",
       "github": {
         "repo": "bmad-code-org/BMAD-METHOD",
-        "stars": 44798,
-        "forks": 5315,
+        "stars": 44811,
+        "forks": 5316,
         "openIssues": 169,
         "pushedAt": "2026-04-14T21:10:49Z",
         "latestRelease": {
@@ -43,7 +43,7 @@
       "npm": {
         "package": "bmad-method",
         "latestVersion": "6.3.0",
-        "weeklyDownloads": 23351,
+        "weeklyDownloads": 22927,
         "lastPublishedAt": "2026-04-10T01:01:11.301Z"
       }
     },
@@ -55,8 +55,8 @@
       "website": "https://github.com/Fission-AI/OpenSpec",
       "github": {
         "repo": "Fission-AI/OpenSpec",
-        "stars": 40411,
-        "forks": 2755,
+        "stars": 40481,
+        "forks": 2759,
         "openIssues": 283,
         "pushedAt": "2026-04-15T10:33:52Z",
         "latestRelease": {
@@ -69,7 +69,7 @@
       "npm": {
         "package": "openspec",
         "latestVersion": "0.0.0",
-        "weeklyDownloads": 2340,
+        "weeklyDownloads": 2282,
         "lastPublishedAt": "2019-04-09T11:53:58.989Z"
       }
     },
@@ -81,9 +81,9 @@
       "website": "https://github.com/gsd-build/gsd-2",
       "github": {
         "repo": "gsd-build/gsd-2",
-        "stars": 5918,
+        "stars": 5941,
         "forks": 610,
-        "openIssues": 329,
+        "openIssues": 331,
         "pushedAt": "2026-04-16T03:25:39Z",
         "latestRelease": {
           "tag": "v2.75.0",
@@ -95,7 +95,7 @@
       "npm": {
         "package": "gsd-pi",
         "latestVersion": "2.75.0",
-        "weeklyDownloads": 33602,
+        "weeklyDownloads": 30807,
         "lastPublishedAt": "2026-04-15T22:56:54.805Z"
       }
     },
@@ -115,7 +115,7 @@
       "npm": {
         "package": "tessl",
         "latestVersion": "0.76.0",
-        "weeklyDownloads": 759,
+        "weeklyDownloads": 746,
         "lastPublishedAt": "2026-04-14T15:27:41.084Z"
       }
     },
@@ -143,9 +143,9 @@
       "website": "https://github.com/PatrickJS/awesome-cursorrules",
       "github": {
         "repo": "PatrickJS/awesome-cursorrules",
-        "stars": 39088,
-        "forks": 3324,
-        "openIssues": 126,
+        "stars": 39092,
+        "forks": 3323,
+        "openIssues": 125,
         "pushedAt": "2025-10-24T16:37:26Z",
         "weeklyCommits": 0,
         "contributors": 65
@@ -156,24 +156,15 @@
     {
       "name": "get-shit-done",
       "fullName": "gsd-build/get-shit-done",
-      "stars": 53703,
+      "stars": 53772,
       "description": "A light-weight and powerful meta-prompting, context engineering and spec-driven development system for Claude Code by TÂCHES.",
       "url": "https://github.com/gsd-build/get-shit-done",
       "language": "JavaScript",
       "pushedAt": "2026-04-16T05:35:40Z",
       "discoveredAt": "2026-04-16",
-      "source": "github"
-    },
-    {
-      "name": "go-zero",
-      "fullName": "zeromicro/go-zero",
-      "stars": 32920,
-      "description": "A cloud-native Go microservices framework with cli tool for productivity.",
-      "url": "https://github.com/zeromicro/go-zero",
-      "language": "Go",
-      "pushedAt": "2026-04-13T20:49:58Z",
-      "discoveredAt": "2026-04-16",
-      "source": "github"
+      "source": "github",
+      "aiRelevant": true,
+      "aiReason": "为Claude Code提供规范驱动开发系统"
     },
     {
       "name": "potpie",
@@ -182,75 +173,76 @@
       "description": "Spec-driven development for large codebases",
       "url": "https://github.com/potpie-ai/potpie",
       "language": "Python",
-      "pushedAt": "2026-04-15T11:30:35Z",
+      "pushedAt": "2026-04-16T07:57:49Z",
       "discoveredAt": "2026-04-16",
-      "source": "github"
+      "source": "github",
+      "aiRelevant": true,
+      "aiReason": "为大代码库提供规范驱动开发"
     },
     {
       "name": "agent-os",
       "fullName": "buildermethods/agent-os",
-      "stars": 4326,
+      "stars": 4327,
       "description": "Agent OS is a system for injecting your codebase standards and writing better specs for spec-driven development.",
       "url": "https://github.com/buildermethods/agent-os",
       "language": "Shell",
       "pushedAt": "2026-01-20T21:50:38Z",
       "discoveredAt": "2026-04-16",
-      "source": "github"
+      "source": "github",
+      "aiRelevant": true,
+      "aiReason": "系统用于注入代码标准并编写规范"
     },
     {
       "name": "spec-workflow-mcp",
       "fullName": "Pimzino/spec-workflow-mcp",
-      "stars": 4126,
+      "stars": 4127,
       "description": "A Model Context Protocol (MCP) server that provides structured spec-driven development workflow tools for AI-assisted software development, featuring a real-time web dashboard and VSCode extension for monitoring and managing your project's progress directly in your development environment.",
       "url": "https://github.com/Pimzino/spec-workflow-mcp",
       "language": "TypeScript",
       "pushedAt": "2026-03-07T00:05:39Z",
       "discoveredAt": "2026-04-16",
-      "source": "github"
+      "source": "github",
+      "aiRelevant": true,
+      "aiReason": "为AI辅助开发提供结构化规范驱动工作流工具"
     },
     {
       "name": "cc-sdd",
       "fullName": "gotalab/cc-sdd",
-      "stars": 3112,
+      "stars": 3113,
       "description": "Spec-driven development (SDD) for your team's workflow. Kiro style commands that enforce structured requirements→design→tasks workflow and steering, transforming how you build with AI. Support Claude Code, Codex, Opencode, Cursor, Github Copilot, Gemini CLI and Windsurf. ",
       "url": "https://github.com/gotalab/cc-sdd",
       "language": "TypeScript",
       "pushedAt": "2026-04-14T21:46:11Z",
       "discoveredAt": "2026-04-16",
-      "source": "github"
+      "source": "github",
+      "aiRelevant": true,
+      "aiReason": "为团队工作流提供规范驱动开发"
     },
     {
       "name": "ouroboros",
       "fullName": "Q00/ouroboros",
-      "stars": 2387,
+      "stars": 2390,
       "description": "Stop prompting. Start specifying.",
       "url": "https://github.com/Q00/ouroboros",
       "language": "Python",
       "pushedAt": "2026-04-15T16:21:30Z",
       "discoveredAt": "2026-04-16",
-      "source": "github"
+      "source": "github",
+      "aiRelevant": true,
+      "aiReason": "强调用规范替代提示"
     },
     {
       "name": "pilot-shell",
       "fullName": "maxritter/pilot-shell",
-      "stars": 1645,
+      "stars": 1644,
       "description": "Make Claude Code production-ready — spec-driven plans, enforced quality gates, persistent knowledge",
       "url": "https://github.com/maxritter/pilot-shell",
       "language": "TypeScript",
       "pushedAt": "2026-04-15T11:38:12Z",
       "discoveredAt": "2026-04-16",
-      "source": "github"
-    },
-    {
-      "name": "claude-code-settings",
-      "fullName": "feiskyer/claude-code-settings",
-      "stars": 1442,
-      "description": "Claude Code settings, commands and agents for vibe coding",
-      "url": "https://github.com/feiskyer/claude-code-settings",
-      "language": "Python",
-      "pushedAt": "2026-04-07T11:33:05Z",
-      "discoveredAt": "2026-04-16",
-      "source": "github"
+      "source": "github",
+      "aiRelevant": true,
+      "aiReason": "使Claude Code生产就绪，含规范驱动计划"
     },
     {
       "name": "agent-teams-lite",
@@ -261,29 +253,31 @@
       "language": "Shell",
       "pushedAt": "2026-03-26T18:11:06Z",
       "discoveredAt": "2026-04-16",
-      "source": "github"
+      "source": "github",
+      "aiRelevant": true,
+      "aiReason": "使用AI子代理进行规范驱动开发"
     }
   ],
   "deltas": [
     {
       "frameworkId": "spec-kit",
-      "starsDelta": 305,
+      "starsDelta": 348,
       "npmDelta": null
     },
     {
       "frameworkId": "bmad",
-      "starsDelta": 116,
-      "npmDelta": 0
+      "starsDelta": 129,
+      "npmDelta": -424
     },
     {
       "frameworkId": "openspec",
-      "starsDelta": 314,
+      "starsDelta": 384,
       "npmDelta": null
     },
     {
       "frameworkId": "gsd",
-      "starsDelta": 82,
-      "npmDelta": 0
+      "starsDelta": 105,
+      "npmDelta": -2795
     },
     {
       "frameworkId": "kiro",
@@ -293,7 +287,7 @@
     {
       "frameworkId": "tessl",
       "starsDelta": null,
-      "npmDelta": 0
+      "npmDelta": -13
     },
     {
       "frameworkId": "rulebook-ai",
@@ -302,17 +296,17 @@
     },
     {
       "frameworkId": "awesome-cursorrules",
-      "starsDelta": 26,
+      "starsDelta": 30,
       "npmDelta": null
     }
   ],
   "weeklyDiff": {
     "topGainer": {
       "frameworkId": "openspec",
-      "delta": 314
+      "delta": 384
     },
     "newDiscovered": [],
     "exitedDiscovered": []
   },
-  "insights": "从本周数据来看，OpenSpec 表现最为突出，新增 314 颗星，成为涨幅最大的框架，其总星数（40411）已接近头部框架 BMAD Method（44798）。同时，Spec-Kit 也保持了强劲增长，新增 305 颗星，总星数（88404）稳居榜首，显示出成熟工具包的持续吸引力。\n\n在活跃度方面，多个主流框架（如 Spec-Kit、BMAD Method、OpenSpec、GSD-2）的周提交数均为 0，表明近期核心功能开发可能趋于稳定或进入维护阶段。然而，GSD-2 的 npm 周下载量（33602）显著高于 BMAD Method（23351）和 OpenSpec（2340），说明其在生产环境中的实际使用可能更为活跃。\n\n新发现的项目揭示了生态的多元化扩展。gsd-build/get-shit-done（53703★）作为新的元提示和规范驱动开发系统，星数已超过许多老牌框架，显示出强劲势头。此外，potpie-ai/potpie、buildermethods/agent-os 以及多个专注于集成开发环境（IDE）和团队工作流的项目（如 Pimzino/spec-workflow-mcp、gotalab/cc-sdd）纷纷涌现，表明趋势正从基础框架向具体开发流程、团队协作和工具链集成等应用层深化。"
+  "insights": "从数据来看，OpenSpec 是本周增长最快的框架，stars 增加了 384 个，涨幅领先。同时，作为生态龙头的 Spec-Kit 也保持了强劲增长，增加了 348 个 stars，其庞大的基数（88447）仍在持续扩大。这表明以“工具包”形式存在的核心框架（Spec-Kit, OpenSpec）依然是最受开发者关注的焦点。\n\n然而，部分框架的增长势头有所放缓或出现分化。例如，BMAD Method 的 stars 虽增加了 129 个，但其 npm 周下载量却下降了 424 次。同样，GSD-2 的 npm 周下载量大幅下降了 2795 次。这或许表明，一些框架的用户活跃度（以下载量衡量）与社区关注度（以 stars 衡量）的增长并不同步，实际使用可能面临挑战或进入平台期。\n\n新发现的项目揭示了生态的多样化趋势。gsd-build/get-shit-done 以 53772 颗 stars 成为一颗耀眼的新星，其定位为“轻量级、强大的元提示和规范驱动开发系统”。此外，多个新项目（如 potpie, agent-os, spec-workflow-mcp, cc-sdd）都明确聚焦于“规范驱动开发（SDD）”在工作流、团队协作和 IDE 集成中的具体应用，显示出该领域正从基础框架向工具链、平台和具体实践场景深度扩展。"
 }

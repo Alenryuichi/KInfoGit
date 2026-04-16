@@ -1,7 +1,15 @@
 // Spec Tracker — AI trend insights via DeepSeek API
 
 import { DEEPSEEK_API_URL, DEEPSEEK_MODEL } from '../code-weekly/config'
-import type { SpecSnapshot } from './types'
+import type { SpecSnapshot, DiscoveredProject } from './types'
+
+// ─── Types ────────────────────────────────────────────────
+
+export interface ScoredProject {
+  fullName: string
+  relevant: boolean
+  reason: string
+}
 
 /**
  * Generate 2-3 paragraphs of Chinese trend analysis from snapshot + delta data.
@@ -129,4 +137,101 @@ function buildPrompt(snapshot: SpecSnapshot): string {
   lines.push('\n请基于以上数据，生成 2-3 段中文趋势分析。')
 
   return lines.join('\n')
+}
+
+// ─── Discovery AI Filter ─────────────────────────────────
+
+/**
+ * Use DeepSeek to judge whether discovered projects are relevant to
+ * "AI coding spec-driven development". Returns empty array on failure
+ * (caller should fallback to keeping all projects unfiltered).
+ */
+export async function filterDiscoveredProjects(
+  projects: DiscoveredProject[],
+): Promise<ScoredProject[]> {
+  if (projects.length === 0) return []
+
+  const apiKey = process.env.DEEPSEEK_API_KEY
+  if (!apiKey) {
+    console.warn('[filter] DEEPSEEK_API_KEY not set, skipping AI filter')
+    return []
+  }
+
+  const projectList = projects.map(p =>
+    `- ${p.fullName} (${p.stars}★, ${p.language}) — ${p.description}`
+  ).join('\n')
+
+  const prompt = `以下是通过 GitHub 搜索发现的项目列表。请判断每个项目是否与 "AI coding spec-driven development"（AI 辅助编程中的规范驱动开发）相关。
+
+相关的定义：
+- 提供 spec/规范 驱动的 AI 编程工作流
+- 为 AI coding agent 提供结构化规范、规则或方法论
+- spec-driven development 工具链（规范编写、验证、执行）
+- AI 编程助手的 rules/cursorrules 管理工具
+
+不相关的例子：
+- 通用微服务框架、Web 框架
+- 纯 LLM 应用（聊天机器人、RAG）
+- 与编程规范无关的 AI 工具
+
+项目列表：
+${projectList}
+
+请返回纯 JSON 数组，每个元素包含：
+- fullName: 项目全名
+- relevant: true/false
+- reason: 一句话理由（中文，不超过 30 字）
+
+只返回 JSON，不要 markdown code fence。`
+
+  try {
+    const res = await fetch(DEEPSEEK_API_URL, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${apiKey}`,
+      },
+      body: JSON.stringify({
+        model: DEEPSEEK_MODEL,
+        messages: [
+          {
+            role: 'system',
+            content: '你是一个 AI Coding 生态分析师。只返回纯 JSON，不要任何其他文字。',
+          },
+          { role: 'user', content: prompt },
+        ],
+        temperature: 0.3,
+        max_tokens: 2048,
+      }),
+      signal: AbortSignal.timeout(30_000),
+    })
+
+    if (!res.ok) {
+      console.warn(`[filter] DeepSeek API returned ${res.status}`)
+      return []
+    }
+
+    const data = await res.json()
+    const content = data?.choices?.[0]?.message?.content?.trim()
+    if (!content) return []
+
+    // Parse — handle possible code fences
+    let jsonStr = content
+    const fenceMatch = jsonStr.match(/```(?:json)?\s*\n?([\s\S]*?)```/)
+    if (fenceMatch) {
+      jsonStr = fenceMatch[1].trim()
+    }
+
+    const parsed = JSON.parse(jsonStr) as ScoredProject[]
+    if (!Array.isArray(parsed)) return []
+
+    const relevant = parsed.filter(p => p.relevant).length
+    const total = parsed.length
+    console.log(`[filter] AI judged ${relevant}/${total} projects as relevant`)
+
+    return parsed
+  } catch (err) {
+    console.warn(`[filter] DeepSeek API call failed: ${err}`)
+    return []
+  }
 }
