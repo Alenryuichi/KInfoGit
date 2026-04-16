@@ -1,0 +1,261 @@
+{
+  "updatedAt": "2026-04-15T08:31:38.470Z",
+  "frameworks": [
+    {
+      "id": "spec-kit",
+      "name": "Spec-Kit",
+      "category": "toolkit",
+      "description": "GitHub 官方 spec-driven development toolkit，constitution → specify → plan → tasks → implement",
+      "website": "https://github.com/github/spec-kit",
+      "github": {
+        "repo": "github/spec-kit",
+        "stars": 88099,
+        "forks": 7579,
+        "openIssues": 627,
+        "pushedAt": "2026-04-14T21:08:29Z",
+        "latestRelease": {
+          "tag": "v0.7.0",
+          "publishedAt": "2026-04-14T18:04:39Z"
+        },
+        "weeklyCommits": 0,
+        "contributors": 162
+      }
+    },
+    {
+      "id": "bmad",
+      "name": "BMAD Method",
+      "category": "agent-framework",
+      "description": "21 个专家角色 (PM/架构师/Dev/QA…) + 34+ workflows 的 AI 驱动敏捷开发框架",
+      "website": "https://github.com/bmad-code-org/BMAD-METHOD",
+      "github": {
+        "repo": "bmad-code-org/BMAD-METHOD",
+        "stars": 44682,
+        "forks": 5306,
+        "openIssues": 159,
+        "pushedAt": "2026-04-14T21:10:49Z",
+        "latestRelease": {
+          "tag": "v6.3.0",
+          "publishedAt": "2026-04-10T01:01:14Z"
+        },
+        "weeklyCommits": 0,
+        "contributors": 132
+      },
+      "npm": {
+        "package": "bmad-method",
+        "latestVersion": "6.3.0",
+        "weeklyDownloads": 23351,
+        "lastPublishedAt": "2026-04-10T01:01:11.301Z"
+      }
+    },
+    {
+      "id": "openspec",
+      "name": "OpenSpec",
+      "category": "toolkit",
+      "description": "轻量 spec-driven development，brownfield 友好，fluid iterative 变更管理",
+      "website": "https://github.com/Fission-AI/OpenSpec",
+      "github": {
+        "repo": "Fission-AI/OpenSpec",
+        "stars": 40097,
+        "forks": 2735,
+        "openIssues": 279,
+        "pushedAt": "2026-04-14T07:53:31Z",
+        "latestRelease": {
+          "tag": "v1.3.0",
+          "publishedAt": "2026-04-11T15:47:58Z"
+        },
+        "weeklyCommits": 0,
+        "contributors": 53
+      }
+    },
+    {
+      "id": "gsd",
+      "name": "GSD-2",
+      "category": "toolkit",
+      "description": "自主 agent CLI — Milestone→Slice→Task 分层执行，crash recovery + 成本追踪",
+      "website": "https://github.com/gsd-build/gsd-2",
+      "github": {
+        "repo": "gsd-build/gsd-2",
+        "stars": 5836,
+        "forks": 606,
+        "openIssues": 310,
+        "pushedAt": "2026-04-15T04:41:36Z",
+        "latestRelease": {
+          "tag": "v2.74.0",
+          "publishedAt": "2026-04-14T16:01:06Z"
+        },
+        "weeklyCommits": 0,
+        "contributors": 81
+      },
+      "npm": {
+        "package": "gsd-pi",
+        "latestVersion": "2.74.0",
+        "weeklyDownloads": 33602,
+        "lastPublishedAt": "2026-04-14T16:01:02.683Z"
+      }
+    },
+    {
+      "id": "kiro",
+      "name": "Kiro",
+      "category": "ide",
+      "description": "AWS 出品 agentic IDE，EARS notation spec-driven + Agent Hooks + autopilot",
+      "website": "https://kiro.dev"
+    },
+    {
+      "id": "tessl",
+      "name": "Tessl",
+      "category": "platform",
+      "description": "Agent enablement platform — skill registry + performance evaluation，Snyk 创始人创办",
+      "website": "https://tessl.io",
+      "npm": {
+        "package": "tessl",
+        "latestVersion": "0.76.0",
+        "weeklyDownloads": 759,
+        "lastPublishedAt": "2026-04-14T15:27:41.084Z"
+      }
+    },
+    {
+      "id": "rulebook-ai",
+      "name": "Rulebook-AI",
+      "category": "toolkit",
+      "description": "一次定义 rules 环境，同步到 10+ AI 工具 (Cursor/Claude Code/Copilot/...)",
+      "website": "https://github.com/botingw/rulebook-ai",
+      "github": {
+        "repo": "botingw/rulebook-ai",
+        "stars": 590,
+        "forks": 82,
+        "openIssues": 11,
+        "pushedAt": "2025-10-03T00:56:25Z",
+        "weeklyCommits": 0,
+        "contributors": 6
+      }
+    },
+    {
+      "id": "awesome-cursorrules",
+      "name": "awesome-cursorrules",
+      "category": "rules",
+      "description": "39k★ 社区 .cursorrules 模板合集，150+ 框架/语言覆盖",
+      "website": "https://github.com/PatrickJS/awesome-cursorrules",
+      "github": {
+        "repo": "PatrickJS/awesome-cursorrules",
+        "stars": 39062,
+        "forks": 3325,
+        "openIssues": 125,
+        "pushedAt": "2025-10-24T16:37:26Z",
+        "weeklyCommits": 0,
+        "contributors": 65
+      }
+    }
+  ],
+  "discovered": [
+    {
+      "name": "get-shit-done",
+      "fullName": "gsd-build/get-shit-done",
+      "stars": 53209,
+      "description": "A light-weight and powerful meta-prompting, context engineering and spec-driven development system for Claude Code by TÂCHES.",
+      "url": "https://github.com/gsd-build/get-shit-done",
+      "language": "JavaScript",
+      "pushedAt": "2026-04-15T02:08:35Z",
+      "discoveredAt": "2026-04-15",
+      "source": "github"
+    },
+    {
+      "name": "go-zero",
+      "fullName": "zeromicro/go-zero",
+      "stars": 32917,
+      "description": "A cloud-native Go microservices framework with cli tool for productivity.",
+      "url": "https://github.com/zeromicro/go-zero",
+      "language": "Go",
+      "pushedAt": "2026-04-13T20:49:58Z",
+      "discoveredAt": "2026-04-15",
+      "source": "github"
+    },
+    {
+      "name": "potpie",
+      "fullName": "potpie-ai/potpie",
+      "stars": 5326,
+      "description": "Spec-driven development for large codebases",
+      "url": "https://github.com/potpie-ai/potpie",
+      "language": "Python",
+      "pushedAt": "2026-04-15T08:26:49Z",
+      "discoveredAt": "2026-04-15",
+      "source": "github"
+    },
+    {
+      "name": "agent-os",
+      "fullName": "buildermethods/agent-os",
+      "stars": 4322,
+      "description": "Agent OS is a system for injecting your codebase standards and writing better specs for spec-driven development.",
+      "url": "https://github.com/buildermethods/agent-os",
+      "language": "Shell",
+      "pushedAt": "2026-01-20T21:50:38Z",
+      "discoveredAt": "2026-04-15",
+      "source": "github"
+    },
+    {
+      "name": "spec-workflow-mcp",
+      "fullName": "Pimzino/spec-workflow-mcp",
+      "stars": 4121,
+      "description": "A Model Context Protocol (MCP) server that provides structured spec-driven development workflow tools for AI-assisted software development, featuring a real-time web dashboard and VSCode extension for monitoring and managing your project's progress directly in your development environment.",
+      "url": "https://github.com/Pimzino/spec-workflow-mcp",
+      "language": "TypeScript",
+      "pushedAt": "2026-03-07T00:05:39Z",
+      "discoveredAt": "2026-04-15",
+      "source": "github"
+    },
+    {
+      "name": "cc-sdd",
+      "fullName": "gotalab/cc-sdd",
+      "stars": 3102,
+      "description": "Spec-driven development (SDD) for your team's workflow. Kiro style commands that enforce structured requirements→design→tasks workflow and steering, transforming how you build with AI. Support Claude Code, Codex, Opencode, Cursor, Github Copilot, Gemini CLI and Windsurf. ",
+      "url": "https://github.com/gotalab/cc-sdd",
+      "language": "TypeScript",
+      "pushedAt": "2026-04-14T21:46:11Z",
+      "discoveredAt": "2026-04-15",
+      "source": "github"
+    },
+    {
+      "name": "ouroboros",
+      "fullName": "Q00/ouroboros",
+      "stars": 2374,
+      "description": "Stop prompting. Start specifying.",
+      "url": "https://github.com/Q00/ouroboros",
+      "language": "Python",
+      "pushedAt": "2026-04-14T19:04:35Z",
+      "discoveredAt": "2026-04-15",
+      "source": "github"
+    },
+    {
+      "name": "pilot-shell",
+      "fullName": "maxritter/pilot-shell",
+      "stars": 1641,
+      "description": "Make Claude Code production-ready — spec-driven plans, enforced quality gates, persistent knowledge",
+      "url": "https://github.com/maxritter/pilot-shell",
+      "language": "TypeScript",
+      "pushedAt": "2026-04-14T13:15:09Z",
+      "discoveredAt": "2026-04-15",
+      "source": "github"
+    },
+    {
+      "name": "claude-code-settings",
+      "fullName": "feiskyer/claude-code-settings",
+      "stars": 1440,
+      "description": "Claude Code settings, commands and agents for vibe coding",
+      "url": "https://github.com/feiskyer/claude-code-settings",
+      "language": "Python",
+      "pushedAt": "2026-04-07T11:33:05Z",
+      "discoveredAt": "2026-04-15",
+      "source": "github"
+    },
+    {
+      "name": "agent-teams-lite",
+      "fullName": "Gentleman-Programming/agent-teams-lite",
+      "stars": 1150,
+      "description": "Spec-Driven Development with AI Sub-Agents. An orchestrator + 9 specialized sub-agents for structured feature development. Zero dependencies. Pure Markdown. Works with Claude Code, OpenCode, Cursor, and more.",
+      "url": "https://github.com/Gentleman-Programming/agent-teams-lite",
+      "language": "Shell",
+      "pushedAt": "2026-03-26T18:11:06Z",
+      "discoveredAt": "2026-04-15",
+      "source": "github"
+    }
+  ]
+}

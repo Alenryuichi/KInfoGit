@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subpages Design Alignment Demos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&family=Noto+Serif+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body { background: #050505; color: #fff; font-family: 'Inter', sans-serif; }
+        .font-mono { font-family: 'JetBrains Mono', monospace; }
+        .font-display { font-family: 'Space Grotesk', sans-serif; }
+        .font-serif { font-family: 'Noto Serif SC', serif; }
+        .browser-mockup { border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; overflow: hidden; margin-bottom: 80px; }
+        .browser-header { display: flex; align-items: center; gap: 6px; padding: 12px 16px; background: #0a0a0a; border-bottom: 1px solid rgba(255,255,255,0.06); }
+        .browser-dot { width: 10px; height: 10px; border-radius: 50%; }
+        .dot-red { background: #ff5f57; } .dot-yellow { background: #febc2e; } .dot-green { background: #28c840; }
+        
+        /* Scrollbar */
+        ::-webkit-scrollbar { width: 4px; height: 4px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background-color: rgba(255, 255, 255, 0.25); border-radius: 4px; }
+    </style>
+</head>
+<body class="p-10">
+
+    <div class="max-w-5xl mx-auto mb-16">
+        <h1 class="text-3xl font-bold mb-4 font-display">Subpages Design Alignment Demos</h1>
+        <p class="text-gray-400 text-sm leading-relaxed">
+            为了对齐主页面的**极客高定风格**（Hacker Terminal / Bento Dashboard / IDE Explorer 等），我为这 6 个二级/三级页面设计了最佳的统一方案。你可以直接滚动查看每一页的最终形态。
+        </p>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <!-- 1. AI Leaders 列表页 (/stars/people/)                       -->
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <div class="max-w-5xl mx-auto w-full">
+        <div class="mb-4 font-mono text-orange-500 text-sm">1. AI Leaders Directory (/stars/people/)</div>
+        <p class="text-xs text-gray-500 mb-6">对齐 **The Hacker Terminal** 风格。把人物列表做成系统用户目录 `/etc/passwd` 或者探员库的感觉。放弃平庸的卡片，改用极高信息密度的终端数据栅格。</p>
+
+        <div class="browser-mockup">
+            <div class="browser-header"><div class="browser-dot dot-red"></div><div class="browser-dot dot-yellow"></div><div class="browser-dot dot-green"></div></div>
+            <div class="bg-[#050505] font-mono min-h-[600px] p-8">
+                
+                <!-- Nav & Header -->
+                <div class="flex items-center justify-between mb-12 text-xs text-gray-500 border-b border-white/5 pb-4">
+                    <div class="hover:text-orange-400 transition-colors"><span class="text-orange-500/50">~/</span>stars<span class="text-orange-500/50">/</span>people <span class="text-orange-400">/</span> ls -la</div>
+                </div>
+
+                <div class="mb-12">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="w-2 h-4 bg-orange-500 animate-pulse shadow-[0_0_8px_rgba(249,115,22,0.8)]"></span>
+                        <span class="text-orange-400 text-[10px] uppercase tracking-widest">System.Entity_Registry</span>
+                    </div>
+                    <h1 class="text-4xl font-bold tracking-tight text-white mb-6 font-sans">Active Targets</h1>
+                    <div class="text-xs text-gray-500 border-l-2 border-orange-500/30 pl-4 py-1.5 bg-orange-500/5">
+                        Tracking 52 high-value entities across GitHub, Bluesky, YouTube, and RSS.
+                    </div>
+                </div>
+
+                <!-- Terminal Table -->
+                <div class="overflow-x-auto">
+                    <div class="flex text-[10px] text-gray-600 border-b border-white/10 pb-2 uppercase tracking-widest mb-4 w-[800px] sm:w-full">
+                        <div class="w-16">ID</div>
+                        <div class="w-56">ENTITY_NAME</div>
+                        <div class="w-48">VECTORS</div>
+                        <div class="flex-1">LATEST_SIGNAL</div>
+                    </div>
+
+                    <!-- Row 1 -->
+                    <div class="flex items-center py-3 hover:bg-white/[0.03] transition-colors border-b border-white/5 w-[800px] sm:w-full group cursor-pointer">
+                        <div class="w-16 text-gray-500 text-xs">#001</div>
+                        <div class="w-56 flex items-center gap-3">
+                            <div class="w-6 h-6 rounded-sm bg-white/10 flex items-center justify-center text-[10px] text-white">K</div>
+                            <div>
+                                <div class="text-gray-200 group-hover:text-orange-400 font-bold font-sans">Andrej Karpathy</div>
+                                <div class="text-[10px] text-gray-600">@karpathy</div>
+                            </div>
+                        </div>
+                        <div class="w-48 flex gap-2">
+                            <span class="px-1.5 py-0.5 rounded bg-gray-800 text-gray-400 text-[10px]">GH</span>
+                            <span class="px-1.5 py-0.5 rounded bg-blue-900/30 text-blue-400 text-[10px]">BSKY</span>
+                            <span class="px-1.5 py-0.5 rounded border border-white/10 text-gray-500 text-[10px]">+2</span>
+                        </div>
+                        <div class="flex-1 text-xs text-gray-400 truncate pr-4">
+                            [12h ago] Starred microsoft/autogen
+                        </div>
+                    </div>
+
+                    <!-- Row 2 -->
+                    <div class="flex items-center py-3 hover:bg-white/[0.03] transition-colors border-b border-white/5 w-[800px] sm:w-full group cursor-pointer">
+                        <div class="w-16 text-gray-500 text-xs">#002</div>
+                        <div class="w-56 flex items-center gap-3">
+                            <img src="https://github.com/rauchg.png" class="w-6 h-6 rounded-sm grayscale group-hover:grayscale-0 transition-all" />
+                            <div>
+                                <div class="text-gray-200 group-hover:text-orange-400 font-bold font-sans">Guillermo Rauch</div>
+                                <div class="text-[10px] text-gray-600">@rauchg</div>
+                            </div>
+                        </div>
+                        <div class="w-48 flex gap-2">
+                            <span class="px-1.5 py-0.5 rounded bg-gray-800 text-gray-400 text-[10px]">GH</span>
+                            <span class="px-1.5 py-0.5 rounded bg-blue-900/30 text-blue-400 text-[10px]">BSKY</span>
+                        </div>
+                        <div class="flex-1 text-xs text-gray-400 truncate pr-4">
+                            [1d ago] Posted "Generative UI is the future..."
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <!-- 2. AI Leader 个人主页 (/stars/people/[handle])               -->
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <div class="max-w-5xl mx-auto w-full">
+        <div class="mb-4 font-mono text-orange-500 text-sm">2. AI Leader Profile (/stars/people/[handle])</div>
+        <p class="text-xs text-gray-500 mb-6">探员档案卡（Agent Dossier）风格。顶部是身份识别区，下方是该实体的行动轨迹图表（Sparkline）和具体的活动输出 Log。</p>
+
+        <div class="browser-mockup">
+            <div class="browser-header"><div class="browser-dot dot-red"></div><div class="browser-dot dot-yellow"></div><div class="browser-dot dot-green"></div></div>
+            <div class="bg-[#050505] font-mono min-h-[600px] p-8">
+                
+                <div class="flex items-center justify-between mb-12 text-xs text-gray-500 border-b border-white/5 pb-4">
+                    <div class="hover:text-orange-400 transition-colors"><span class="text-orange-500/50">~/</span>stars<span class="text-orange-500/50">/</span>people <span class="text-orange-400">/</span> cat karpathy.json</div>
+                </div>
+
+                <!-- Identity Module -->
+                <div class="flex flex-col sm:flex-row gap-8 mb-16 border border-white/10 p-6 bg-white/[0.02] relative overflow-hidden">
+                    <!-- Scanner effect line -->
+                    <div class="absolute top-0 left-0 w-full h-[1px] bg-orange-500/50 shadow-[0_0_10px_#f97316] animate-[scan_3s_ease-in-out_infinite]"></div>
+                    
+                    <img src="https://github.com/karpathy.png" class="w-24 h-24 border border-white/20 p-1 grayscale" />
+                    
+                    <div class="flex-1">
+                        <div class="text-[10px] text-orange-400 uppercase tracking-widest mb-1">Entity ID: #001</div>
+                        <h1 class="text-3xl font-bold text-white mb-2 font-sans">Andrej Karpathy</h1>
+                        <p class="text-gray-400 text-sm font-sans mb-4">Building a kind of J.A.R.V.I.S. Previously Director of AI at Tesla, founding team at OpenAI.</p>
+                        <div class="flex gap-4 text-xs">
+                            <span class="px-2 py-1 bg-white/5 border border-white/10 rounded flex gap-2 items-center"><span class="text-gray-500">GH:</span> karpathy</span>
+                            <span class="px-2 py-1 bg-white/5 border border-white/10 rounded flex gap-2 items-center"><span class="text-blue-400">BSKY:</span> karpathy.ai</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sparkline / Pulse -->
+                <div class="mb-16">
+                    <div class="text-gray-500 uppercase tracking-widest text-[10px] mb-4 border-b border-white/10 pb-2">++ Activity.Pulse (30 Days) ++</div>
+                    <div class="h-16 w-full flex items-end gap-1">
+                        <!-- Fake bar chart for demo -->
+                        <div class="w-full bg-white/[0.02] h-full flex items-end gap-[2px] p-2 border border-white/5">
+                            <div class="w-full bg-orange-500/20 h-[10%] hover:bg-orange-500/80 transition-colors"></div>
+                            <div class="w-full bg-orange-500/20 h-[30%] hover:bg-orange-500/80 transition-colors"></div>
+                            <div class="w-full bg-orange-500/20 h-[5%] hover:bg-orange-500/80 transition-colors"></div>
+                            <div class="w-full bg-orange-500/50 h-[80%] hover:bg-orange-500/80 transition-colors"></div>
+                            <div class="w-full bg-orange-500/20 h-[20%] hover:bg-orange-500/80 transition-colors"></div>
+                            <div class="w-full bg-orange-500/20 h-[60%] hover:bg-orange-500/80 transition-colors"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Action Logs -->
+                <div class="mb-16">
+                    <div class="text-gray-500 uppercase tracking-widest text-[10px] mb-4 border-b border-white/10 pb-2">++ Action.Logs ++</div>
+                    <div class="space-y-6 mt-4">
+                        <div class="flex gap-4">
+                            <div class="text-gray-500 w-12 shrink-0 pt-1 text-xs">04-14</div>
+                            <div>
+                                <div class="text-gray-200 font-bold font-sans">Starred microsoft/autogen</div>
+                                <div class="text-[10px] text-gray-600 mt-1">GITHUB · ★ 24.5k</div>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="text-gray-500 w-12 shrink-0 pt-1 text-xs">04-13</div>
+                            <div>
+                                <div class="text-gray-200 font-bold font-sans leading-relaxed">Posted: "We need better evals, not better models. The bottleneck is now evaluation infrastructure."</div>
+                                <div class="text-[10px] text-gray-600 mt-1">BLUESKY · ❤️ 1,204 Likes</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <!-- 3. Global Timeline (/stars/timeline.tsx)                    -->
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <div class="max-w-5xl mx-auto w-full">
+        <div class="mb-4 font-mono text-orange-500 text-sm">3. Global Timeline (/stars/timeline)</div>
+        <p class="text-xs text-gray-500 mb-6">这本来就是时间线，最适合直接用 `tail -f` 滚动日志的形式。完全融入 Hacker Terminal，去除卡片，纯文本流输出。</p>
+
+        <div class="browser-mockup">
+            <div class="browser-header"><div class="browser-dot dot-red"></div><div class="browser-dot dot-yellow"></div><div class="browser-dot dot-green"></div></div>
+            <div class="bg-[#050505] font-mono min-h-[400px] p-8 text-sm">
+                
+                <div class="mb-8 text-gray-500 text-xs">
+                    $ tail -f /var/log/social_ingestion.log<br>
+                    <span class="text-orange-500 animate-pulse">Monitoring stream...</span>
+                </div>
+
+                <div class="space-y-2 font-mono text-[11px] leading-relaxed">
+                    <div class="text-gray-600">-- 2026-04-14 --</div>
+                    <div class="flex gap-4 hover:bg-white/[0.02] p-1">
+                        <span class="text-gray-500">14:02:11</span>
+                        <span class="text-blue-400">[BSKY]</span>
+                        <span class="text-gray-300"><span class="text-white font-bold">@rauchg</span> posted: "Generative UI is the future..."</span>
+                    </div>
+                    <div class="flex gap-4 hover:bg-white/[0.02] p-1">
+                        <span class="text-gray-500">11:45:00</span>
+                        <span class="text-gray-400">[ GH ]</span>
+                        <span class="text-gray-300"><span class="text-white font-bold">karpathy</span> starred microsoft/autogen</span>
+                    </div>
+                    <div class="flex gap-4 hover:bg-white/[0.02] p-1">
+                        <span class="text-gray-500">09:12:33</span>
+                        <span class="text-red-400">[ YT ]</span>
+                        <span class="text-gray-300"><span class="text-white font-bold">Andrej Karpathy</span> published "Let's build GPT: from scratch"</span>
+                    </div>
+                    <div class="text-gray-600 mt-4">-- 2026-04-13 --</div>
+                    <div class="flex gap-4 hover:bg-white/[0.02] p-1">
+                        <span class="text-gray-500">22:10:05</span>
+                        <span class="text-emerald-400">[BLOG]</span>
+                        <span class="text-gray-300"><span class="text-white font-bold">Lilian Weng</span> published "Prompt Engineering"</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <!-- 4. Benchmarks 全局大盘 (/code/benchmarks)                   -->
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <div class="max-w-5xl mx-auto w-full">
+        <div class="mb-4 font-mono text-blue-500 text-sm">4. Benchmarks Dashboard (/code/benchmarks)</div>
+        <p class="text-xs text-gray-500 mb-6">对齐 **The Matrix Dashboard** (Code Weekly)。黑色背景，带发光边框的 Bento 网格，图表与数据看板的专业呈现。</p>
+
+        <div class="browser-mockup">
+            <div class="browser-header"><div class="browser-dot dot-red"></div><div class="browser-dot dot-yellow"></div><div class="browser-dot dot-green"></div></div>
+            <div class="bg-[#050505] min-h-[600px] p-8">
+                
+                <!-- Dashboard Header -->
+                <div class="bg-gradient-to-br from-[#0a0a0a] to-[#050505] border border-white/10 rounded-2xl p-6 mb-6 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-64 h-64 bg-blue-500/5 rounded-full blur-[80px]"></div>
+                    <div class="relative z-10">
+                        <div class="flex items-center gap-3 mb-2">
+                            <span class="text-[9px] px-2 py-0.5 rounded-full bg-blue-500/20 text-blue-300 font-mono uppercase tracking-widest">Global Metrics</span>
+                        </div>
+                        <h1 class="text-3xl font-bold text-white mb-2 font-display">Benchmarks Dashboard</h1>
+                        <p class="text-gray-400 text-sm font-mono">Real-time aggregate data for LLM coding capabilities.</p>
+                    </div>
+                </div>
+
+                <!-- Bento Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+                    <!-- Top Cards -->
+                    <div class="bg-white/[0.02] border border-white/[0.06] rounded-xl p-5">
+                        <div class="text-xs font-mono text-gray-500 mb-2">Arena Coding (Elo)</div>
+                        <div class="text-2xl font-display font-bold text-white mb-1">GPT-4o</div>
+                        <div class="text-xs text-blue-400">1345 Elo · Rank #1</div>
+                    </div>
+                    <div class="bg-white/[0.02] border border-white/[0.06] rounded-xl p-5">
+                        <div class="text-xs font-mono text-gray-500 mb-2">SWE-bench</div>
+                        <div class="text-2xl font-display font-bold text-white mb-1">Claude 3.5</div>
+                        <div class="text-xs text-blue-400">42.5% Resolved</div>
+                    </div>
+                    <div class="bg-white/[0.02] border border-white/[0.06] rounded-xl p-5 lg:col-span-2">
+                        <div class="text-xs font-mono text-gray-500 mb-2">Org Trend (Trailing 30d)</div>
+                        <!-- Fake Line Chart -->
+                        <div class="h-12 w-full flex items-end gap-1 mt-2">
+                            <div class="w-full h-[20%] bg-blue-500/20 rounded-t"></div>
+                            <div class="w-full h-[40%] bg-blue-500/40 rounded-t"></div>
+                            <div class="w-full h-[50%] bg-blue-500/60 rounded-t"></div>
+                            <div class="w-full h-[90%] bg-blue-500 rounded-t"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tables Section -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    <div class="bg-white/[0.02] border border-white/[0.06] rounded-xl p-6">
+                        <h3 class="text-sm font-bold text-white mb-4 uppercase tracking-wide">Arena Coding Leaderboard</h3>
+                        <table class="w-full text-sm">
+                            <tr class="border-b border-white/5 text-gray-500 text-xs font-mono">
+                                <th class="text-left font-normal py-2">Model</th><th class="text-right font-normal py-2">Elo</th>
+                            </tr>
+                            <tr class="border-b border-white/5">
+                                <td class="py-2 text-gray-200">GPT-4o</td><td class="text-right text-blue-400 font-mono">1345</td>
+                            </tr>
+                            <tr class="border-b border-white/5">
+                                <td class="py-2 text-gray-200">Claude 3.5 Sonnet</td><td class="text-right text-blue-400 font-mono">1338</td>
+                            </tr>
+                        </table>
+                        <button class="w-full mt-4 py-2 text-[10px] text-gray-500 bg-white/[0.02] hover:bg-white/[0.05] rounded-lg font-mono uppercase tracking-widest transition-colors">View All Models</button>
+                    </div>
+                    <div class="bg-white/[0.02] border border-white/[0.06] rounded-xl p-6">
+                        <h3 class="text-sm font-bold text-white mb-4 uppercase tracking-wide">SWE-bench</h3>
+                        <table class="w-full text-sm">
+                            <tr class="border-b border-white/5 text-gray-500 text-xs font-mono">
+                                <th class="text-left font-normal py-2">Model</th><th class="text-right font-normal py-2">Resolved</th>
+                            </tr>
+                            <tr class="border-b border-white/5">
+                                <td class="py-2 text-gray-200">Claude 3.5 Sonnet</td><td class="text-right text-blue-400 font-mono">42.5%</td>
+                            </tr>
+                            <tr class="border-b border-white/5">
+                                <td class="py-2 text-gray-200">GPT-4o</td><td class="text-right text-blue-400 font-mono">38.2%</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <!-- 5. Blog 文章详情页 (/blog/[slug])                            -->
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <div class="max-w-5xl mx-auto w-full">
+        <div class="mb-4 font-mono text-emerald-500 text-sm">5. Blog Detail (/blog/[slug])</div>
+        <p class="text-xs text-gray-500 mb-6">既然 Blog 列表页是 IDE Explorer，详情页就应该是 IDE Editor 或 Readme 预览区。顶部带文件路径，右侧带极简 TOC 滚动条。</p>
+
+        <div class="browser-mockup">
+            <div class="browser-header"><div class="browser-dot dot-red"></div><div class="browser-dot dot-yellow"></div><div class="browser-dot dot-green"></div></div>
+            <div class="bg-[#050505] min-h-[600px] flex">
+                
+                <!-- Main Editor Area -->
+                <div class="flex-1 p-8">
+                    <!-- File Path Header -->
+                    <div class="flex items-center gap-2 text-xs font-mono text-gray-500 mb-12 bg-white/[0.02] px-3 py-1.5 rounded border border-white/5 w-max">
+                        <span>kylin</span><span class="text-gray-700">/</span><span>blog</span><span class="text-gray-700">/</span><span class="text-emerald-400">how-to-build-a-gpt.md</span>
+                    </div>
+
+                    <article class="max-w-2xl text-gray-300 font-serif leading-relaxed">
+                        <h1 class="text-4xl font-sans font-bold text-white mb-4">How to Build a GPT from Scratch</h1>
+                        <div class="flex gap-4 text-xs font-mono text-gray-500 mb-12 border-b border-white/10 pb-6">
+                            <span>April 14, 2026</span>
+                            <span>15 min read</span>
+                        </div>
+
+                        <p class="mb-6">We build a Generatively Pretrained Transformer (GPT), following the paper "Attention is All You Need" and OpenAI's GPT-2 / GPT-3.</p>
+                        
+                        <h2 class="text-2xl font-sans font-bold text-white mt-10 mb-4">The Architecture</h2>
+                        <p class="mb-6">The core of the transformer is the self-attention mechanism. Let's implement it in PyTorch.</p>
+                        
+                        <div class="bg-[#0a0a0a] border border-white/10 rounded-lg p-4 font-mono text-sm mb-6 text-gray-400">
+                            <span class="text-purple-400">import</span> torch<br>
+                            <span class="text-purple-400">import</span> torch.nn <span class="text-purple-400">as</span> nn<br><br>
+                            <span class="text-purple-400">class</span> <span class="text-emerald-400">SelfAttention</span>(nn.Module):<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="text-gray-600"># Implementation details...</span>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Right Sidebar (TOC) -->
+                <div class="w-64 border-l border-white/10 p-8 hidden lg:block bg-white/[0.01]">
+                    <div class="text-[10px] font-mono text-gray-500 uppercase tracking-widest mb-6">Outline</div>
+                    <div class="space-y-3 text-sm font-sans text-gray-400">
+                        <div class="text-emerald-400">Introduction</div>
+                        <div class="pl-3 hover:text-white cursor-pointer transition-colors">The Architecture</div>
+                        <div class="pl-3 hover:text-white cursor-pointer transition-colors">Self-Attention</div>
+                        <div class="pl-3 hover:text-white cursor-pointer transition-colors">Feed Forward</div>
+                        <div class="hover:text-white cursor-pointer transition-colors">Training Loop</div>
+                        <div class="hover:text-white cursor-pointer transition-colors">Conclusion</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <!-- 6. Work 项目经历详情页 (/work/[id])                          -->
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <div class="max-w-5xl mx-auto w-full">
+        <div class="mb-4 font-mono text-purple-500 text-sm">6. Work Detail (/work/[id])</div>
+        <p class="text-xs text-gray-500 mb-6">对齐 Work 列表页的 **Process Monitor (系统进程)** 风格。顶部是该进程的运行指标和架构属性，下方是类似技术蓝图的模块化呈现。</p>
+
+        <div class="browser-mockup">
+            <div class="browser-header"><div class="browser-dot dot-red"></div><div class="browser-dot dot-yellow"></div><div class="browser-dot dot-green"></div></div>
+            <div class="bg-[#050505] min-h-[600px] p-8 text-sm">
+                
+                <div class="flex items-center justify-between mb-12 text-xs text-gray-500 border-b border-white/5 pb-4 font-mono">
+                    <div class="hover:text-purple-400 transition-colors"><span class="text-purple-500/50">~/</span>work <span class="text-purple-400">/</span> inspect PID 8492</div>
+                    <div>STATUS: <span class="text-emerald-400">TERMINATED (SUCCESS)</span></div>
+                </div>
+
+                <!-- Process Header -->
+                <div class="flex flex-col md:flex-row gap-8 mb-12">
+                    <div class="w-32 h-32 rounded-2xl bg-white/[0.05] border border-white/10 flex items-center justify-center shadow-[0_0_30px_rgba(255,255,255,0.05)]">
+                        <!-- Placeholder Logo -->
+                        <span class="text-4xl font-bold text-gray-600">R</span>
+                    </div>
+                    <div class="flex-1">
+                        <div class="flex items-center gap-2 mb-2">
+                            <h1 class="text-4xl font-bold text-white font-display">Refactor.AI</h1>
+                            <span class="px-2 py-0.5 rounded bg-white/10 text-gray-300 text-xs font-mono border border-white/10">v2.0.1</span>
+                        </div>
+                        <p class="text-gray-400 text-base mb-4 font-sans">Enterprise scale codebase modernization tool powered by AST and LLMs.</p>
+                        
+                        <!-- Tech Stack Tags -->
+                        <div class="flex flex-wrap gap-2 font-mono text-[10px]">
+                            <span class="px-2 py-1 bg-white/[0.03] border border-white/10 rounded text-gray-300">TypeScript</span>
+                            <span class="px-2 py-1 bg-white/[0.03] border border-white/10 rounded text-gray-300">AST</span>
+                            <span class="px-2 py-1 bg-white/[0.03] border border-white/10 rounded text-gray-300">OpenAI</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Blueprint Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Left: Metadata -->
+                    <div class="space-y-6">
+                        <div class="bg-white/[0.02] border border-white/10 rounded-xl p-5 font-mono text-xs">
+                            <div class="text-gray-500 uppercase tracking-widest mb-4">++ Execution_Context ++</div>
+                            <div class="space-y-3 text-gray-400">
+                                <div class="flex justify-between"><span class="text-gray-600">ROLE</span><span class="text-white">Tech Lead</span></div>
+                                <div class="flex justify-between"><span class="text-gray-600">TIME</span><span class="text-white">2023 - 2024</span></div>
+                                <div class="flex justify-between"><span class="text-gray-600">SCALE</span><span class="text-white">1M+ LOC</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Content -->
+                    <div class="md:col-span-2 space-y-6">
+                        <div class="bg-white/[0.02] border border-white/10 rounded-xl p-6">
+                            <h2 class="text-sm font-bold text-white uppercase tracking-wide mb-4 flex items-center gap-2">
+                                <span class="w-1.5 h-4 bg-purple-500 rounded-full"></span>
+                                Architecture & Impact
+                            </h2>
+                            <p class="text-gray-400 leading-relaxed font-sans mb-4">
+                                Designed and implemented a hybrid parsing system that combines traditional Abstract Syntax Trees (AST) with Large Language Models to safely perform massive codebase migrations.
+                            </p>
+                            <ul class="list-disc list-inside text-gray-400 space-y-2 font-sans pl-4">
+                                <li>Reduced migration time from 3 months to 2 weeks.</li>
+                                <li>Achieved 99.8% AST compilation success rate.</li>
+                                <li>Integrated directly into the CI/CD pipeline.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

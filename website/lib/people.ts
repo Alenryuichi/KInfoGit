@@ -17,6 +17,8 @@ export interface Person {
 
 export interface PersonSummary extends Person {
   activityCount: number
+  latestActivityAt: string | null
+  platformCount: number
 }
 
 export interface PersonActivity {
@@ -91,7 +93,28 @@ export function getAllPeople(): PersonSummary[] {
       ? activity.stars.length + activity.posts.length + (activity.videos?.length || 0) + (activity.blogs?.length || 0)
       : 0
 
-    return { ...person, activityCount }
+    // Compute latest activity timestamp across all sources
+    let latestActivityAt: string | null = null
+    if (activity) {
+      const timestamps: string[] = [
+        ...activity.posts.map(p => p.createdAt),
+        ...activity.videos.map(v => v.publishedAt),
+        ...activity.blogs.map(b => b.publishedAt),
+      ].filter(Boolean)
+      if (timestamps.length > 0) {
+        timestamps.sort((a, b) => b.localeCompare(a))
+        latestActivityAt = timestamps[0]
+      }
+    }
+
+    // Count active platforms (vectors)
+    let platformCount = 0
+    if (person.github) platformCount++
+    if (person.bluesky) platformCount++
+    if (person.youtubeChannel) platformCount++
+    if (person.blogAuthor) platformCount++
+
+    return { ...person, activityCount, latestActivityAt, platformCount }
   })
 }
 

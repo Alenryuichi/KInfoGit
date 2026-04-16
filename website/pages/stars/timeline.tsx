@@ -58,42 +58,47 @@ export default function Timeline({ items, personMap }: TimelineProps) {
         <div className="fixed inset-0 bg-black -z-10" />
         <div className="max-w-3xl mx-auto px-5 sm:px-6 pt-32 pb-20">
           {/* Back link */}
-          <Link
-            href="/stars/"
-            className="inline-flex items-center text-sm font-medium text-gray-500 hover:text-gray-300 transition-colors group mb-8"
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-4 h-4 mr-2 group-hover:-translate-x-1 transition-transform duration-300">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
-            </svg>
-            All Stars & Posts
-          </Link>
+          <div className="flex items-center justify-between mb-12 text-xs text-gray-500 border-b border-white/5 pb-4 font-mono">
+            <Link href="/stars/" className="hover:text-orange-400 transition-colors flex items-center">
+              <span className="text-orange-500/50">~/</span>stars <span className="text-orange-400 ml-2">/</span><span className="ml-2">tail -f global_timeline.log</span>
+            </Link>
+          </div>
 
-          <h1 className="text-3xl md:text-4xl font-bold mb-2 tracking-tight">Timeline</h1>
-          <p className="text-gray-400 mb-6">
-            {filtered.length} items from all sources, sorted by time
-          </p>
+          <div className="mb-12">
+            <div className="flex items-center gap-3 mb-4">
+              <span className="w-2 h-4 bg-orange-500 animate-pulse shadow-[0_0_8px_rgba(249,115,22,0.8)]"></span>
+              <span className="text-orange-400 text-[10px] uppercase tracking-widest">System.Timeline</span>
+            </div>
+            <h1 className="text-4xl font-bold tracking-tight text-white mb-6 font-sans">Global Timeline</h1>
+            <div className="text-xs text-gray-500 border-l-2 border-orange-500/30 pl-4 py-1.5 bg-orange-500/5">
+              {filtered.length} items from all sources, sorted by time
+            </div>
+          </div>
 
           {/* Source Filter */}
-          <div className="flex flex-wrap gap-2 mb-8">
-            {([
-              { key: 'all' as SourceKey, label: 'All' },
-              { key: 'github' as SourceKey, label: 'GitHub' },
-              { key: 'bluesky' as SourceKey, label: 'Bluesky' },
-              { key: 'youtube' as SourceKey, label: 'YouTube' },
-              { key: 'blog' as SourceKey, label: 'Blog' },
-            ]).map(({ key, label }) => (
-              <button
-                key={key}
-                onClick={() => { setSourceFilter(key); setVisibleCount(30) }}
-                className={`px-3 py-1 text-xs font-medium rounded-full transition-colors ${
-                  sourceFilter === key
-                    ? 'bg-white/[0.12] text-white'
-                    : 'bg-white/[0.04] text-gray-400 hover:bg-white/[0.08] hover:text-gray-300'
-                }`}
-              >
-                {label}
-              </button>
-            ))}
+          <div className="flex flex-wrap items-center gap-4 mb-12 text-[10px] uppercase tracking-widest font-mono">
+            <span className="text-gray-600">grep SOURCE=</span>
+            <div className="flex flex-wrap gap-2">
+              {([
+                { key: 'all' as SourceKey, label: '[*All]' },
+                { key: 'github' as SourceKey, label: 'GitHub' },
+                { key: 'bluesky' as SourceKey, label: 'Bluesky' },
+                { key: 'youtube' as SourceKey, label: 'YouTube' },
+                { key: 'blog' as SourceKey, label: 'Blog' },
+              ]).map(({ key, label }) => (
+                <button
+                  key={key}
+                  onClick={() => { setSourceFilter(key); setVisibleCount(30) }}
+                  className={`px-2 py-0.5 rounded transition-colors ${
+                    sourceFilter === key
+                      ? 'bg-white/10 text-white border border-white/20'
+                      : 'text-gray-500 hover:text-white border border-transparent'
+                  }`}
+                >
+                  {label}
+                </button>
+              ))}
+            </div>
           </div>
 
           {/* Timeline items */}
