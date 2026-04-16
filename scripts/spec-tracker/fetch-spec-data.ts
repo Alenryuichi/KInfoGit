@@ -27,6 +27,8 @@ import { FRAMEWORKS, SPECS_DIR, SPECS_HISTORY_DIR } from './config'
 import { fetchAllGitHubStats } from './sources/github-stats'
 import { fetchAllNpmStats } from './sources/npm-downloads'
 import { discoverProjects } from './sources/discovery'
+import { computeDeltas, computeWeeklyDiff } from './delta'
+import { generateInsights } from './insights'
 import type { SpecFramework, SpecSnapshot } from './types'
 
 async function main() {
@@ -76,11 +78,50 @@ async function main() {
     discovered,
   }
 
-  // Write output
-  // __dirname = scripts/spec-tracker/, project root is two levels up
+  // ─── Delta Calculation ─────────────────────────────────────
+  // Read yesterday's history file to compute deltas
   const projectRoot = path.join(__dirname, '..', '..')
-  const specsDir = path.join(projectRoot, SPECS_DIR)
   const historyDir = path.join(projectRoot, SPECS_HISTORY_DIR)
+  const yesterday = new Date()
+  yesterday.setDate(yesterday.getDate() - 1)
+  const yesterdayStr = yesterday.toISOString().slice(0, 10)
+  const yesterdayPath = path.join(historyDir, `${yesterdayStr}.json`)
+
+  let previousSnapshot: SpecSnapshot | null = null
+  if (fs.existsSync(yesterdayPath)) {
+    try {
+      previousSnapshot = JSON.parse(fs.readFileSync(yesterdayPath, 'utf-8')) as SpecSnapshot
+      console.log(`📈 Found yesterday's snapshot: ${yesterdayStr}`)
+    } catch (e) {
+      console.warn(`⚠️ Could not parse yesterday's snapshot: ${e}`)
+    }
+  } else {
+    console.log('📈 No yesterday snapshot found, deltas will be null')
+  }
+
+  const deltas = computeDeltas(snapshot, previousSnapshot)
+  const weeklyDiff = computeWeeklyDiff(snapshot, previousSnapshot, deltas)
+
+  snapshot.deltas = deltas
+  snapshot.weeklyDiff = weeklyDiff
+
+  // ─── AI Trend Insights ─────────────────────────────────────
+  // Call DeepSeek API for trend analysis (fault-tolerant)
+  const [insightsResult] = await Promise.allSettled([generateInsights(snapshot)])
+  if (insightsResult.status === 'fulfilled' && insightsResult.value) {
+    snapshot.insights = insightsResult.value
+    console.log('🤖 AI insights generated')
+  } else {
+    snapshot.insights = null
+    if (insightsResult.status === 'rejected') {
+      console.warn('⚠️ AI insights failed:', insightsResult.reason)
+    } else {
+      console.log('🤖 AI insights: none (no API key or empty response)')
+    }
+  }
+
+  // Write output
+  const specsDir = path.join(projectRoot, SPECS_DIR)
 
   if (!fs.existsSync(specsDir)) {
     fs.mkdirSync(specsDir, { recursive: true })

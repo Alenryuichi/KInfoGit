@@ -50,10 +50,25 @@ export interface DiscoveredProject {
   source: 'github' | 'npm'
 }
 
+export interface FrameworkDelta {
+  frameworkId: string
+  starsDelta: number | null
+  npmDelta: number | null
+}
+
+export interface WeeklyDiff {
+  topGainer: { frameworkId: string; delta: number } | null
+  newDiscovered: string[]
+  exitedDiscovered: string[]
+}
+
 export interface SpecSnapshot {
   updatedAt: string
   frameworks: SpecFramework[]
   discovered: DiscoveredProject[]
+  deltas?: FrameworkDelta[]
+  weeklyDiff?: WeeklyDiff | null
+  insights?: string | null
 }
 
 export interface StarsTrendPoint {

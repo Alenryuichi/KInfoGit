@@ -6,6 +6,8 @@ import {
   getSpecTrend,
   type SpecSnapshot,
   type StarsTrendSeries,
+  type FrameworkDelta,
+  type WeeklyDiff as WeeklyDiffType,
 } from '@/lib/spec-tracker'
 import { SpecHeroCards } from '@/components/spec-tracker/SpecHeroCards'
 import { StarsTrendChart } from '@/components/spec-tracker/StarsTrendChart'
@@ -13,11 +15,16 @@ import { NpmDownloadsChart } from '@/components/spec-tracker/NpmDownloadsChart'
 import { FrameworkTable } from '@/components/spec-tracker/FrameworkTable'
 import { RecentActivity } from '@/components/spec-tracker/RecentActivity'
 import { EmergingSpecs } from '@/components/spec-tracker/EmergingSpecs'
+import { TrendInsights } from '@/components/spec-tracker/TrendInsights'
+import { WeeklyDiff } from '@/components/spec-tracker/WeeklyDiff'
 
 interface SpecsPageProps {
   snapshot: SpecSnapshot | null
   trend: StarsTrendSeries[]
   formattedDate: string | null
+  deltas: FrameworkDelta[] | null
+  weeklyDiff: WeeklyDiffType | null
+  insights: string | null
 }
 
 export const getStaticProps: GetStaticProps<SpecsPageProps> = async () => {
@@ -27,10 +34,13 @@ export const getStaticProps: GetStaticProps<SpecsPageProps> = async () => {
   const formattedDate = snapshot?.updatedAt
     ? new Date(snapshot.updatedAt).toISOString().slice(0, 10)
     : null
-  return { props: { snapshot, trend, formattedDate } }
+  const deltas = snapshot?.deltas ?? null
+  const weeklyDiff = snapshot?.weeklyDiff ?? null
+  const insights = snapshot?.insights ?? null
+  return { props: { snapshot, trend, formattedDate, deltas, weeklyDiff, insights } }
 }
 
-export default function SpecsPage({ snapshot, trend, formattedDate }: SpecsPageProps) {
+export default function SpecsPage({ snapshot, trend, formattedDate, deltas, weeklyDiff, insights }: SpecsPageProps) {
   if (!snapshot) {
     return (
       <div className="min-h-screen bg-black text-white flex items-center justify-center relative">
@@ -80,7 +90,25 @@ export default function SpecsPage({ snapshot, trend, formattedDate }: SpecsPageP
           )}
 
           {/* Hero Cards */}
-          <SpecHeroCards frameworks={frameworks} />
+          <SpecHeroCards frameworks={frameworks} deltas={deltas ?? undefined} />
+
+          {/* Trend Insights */}
+          {insights && (
+            <div className="mb-12">
+              <TrendInsights insights={insights} />
+            </div>
+          )}
+
+          {/* Weekly Diff */}
+          {weeklyDiff && (
+            <div className="mb-14">
+              <h2 className="text-xl font-semibold text-gray-200 mb-1">Weekly Diff</h2>
+              <p className="text-sm text-gray-500 mb-4">
+                较前日变化
+              </p>
+              <WeeklyDiff weeklyDiff={weeklyDiff} frameworks={frameworks} />
+            </div>
+          )}
 
           {/* Stars Trend */}
           {hasTrend && (
@@ -115,7 +143,7 @@ export default function SpecsPage({ snapshot, trend, formattedDate }: SpecsPageP
               {frameworks.length} 个框架全览
             </p>
             <div className="rounded-xl border border-white/[0.06] bg-white/[0.02] p-4">
-              <FrameworkTable frameworks={frameworks} />
+              <FrameworkTable frameworks={frameworks} deltas={deltas ?? undefined} />
             </div>
           </div>
 

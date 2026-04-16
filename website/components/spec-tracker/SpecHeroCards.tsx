@@ -1,8 +1,9 @@
 import { motion } from 'framer-motion'
-import type { SpecFramework } from '@/lib/spec-tracker'
+import type { SpecFramework, FrameworkDelta } from '@/lib/spec-tracker'
 
 interface SpecHeroCardsProps {
   frameworks: SpecFramework[]
+  deltas?: FrameworkDelta[]
 }
 
 function formatStars(n: number): string {
@@ -18,7 +19,7 @@ const CATEGORY_COLORS: Record<string, string> = {
   rules: '#EC4899',
 }
 
-export function SpecHeroCards({ frameworks }: SpecHeroCardsProps) {
+export function SpecHeroCards({ frameworks, deltas }: SpecHeroCardsProps) {
   // Top 4 by stars
   const top4 = frameworks
     .filter(f => f.github?.stars)
@@ -28,6 +29,7 @@ export function SpecHeroCards({ frameworks }: SpecHeroCardsProps) {
   if (top4.length === 0) return null
 
   const maxStars = top4[0]?.github?.stars ?? 1
+  const deltaMap = new Map(deltas?.map(d => [d.frameworkId, d]) ?? [])
 
   return (
     <div className="grid grid-cols-2 md:grid-cols-4 gap-2 sm:gap-3 mb-12">
@@ -58,6 +60,21 @@ export function SpecHeroCards({ frameworks }: SpecHeroCardsProps) {
               <p className="text-lg font-mono" style={{ color }}>
                 {formatStars(stars)} ★
               </p>
+              {(() => {
+                const delta = deltaMap.get(fw.id)
+                const sd = delta?.starsDelta
+                if (sd != null && sd !== 0) {
+                  return (
+                    <span
+                      className="text-xs font-mono"
+                      style={{ color: sd > 0 ? '#22C55E' : '#EF4444' }}
+                    >
+                      {sd > 0 ? '▲' : '▼'}{Math.abs(sd)}
+                    </span>
+                  )
+                }
+                return null
+              })()}
               {version && (
                 <p className="text-xs text-gray-500 truncate">{version}</p>
               )}

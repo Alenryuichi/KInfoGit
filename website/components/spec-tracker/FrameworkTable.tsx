@@ -1,7 +1,8 @@
-import type { SpecFramework } from '@/lib/spec-tracker'
+import type { SpecFramework, FrameworkDelta } from '@/lib/spec-tracker'
 
 interface FrameworkTableProps {
   frameworks: SpecFramework[]
+  deltas?: FrameworkDelta[]
 }
 
 function formatStars(n: number): string {
@@ -35,10 +36,11 @@ const CATEGORY_LABELS: Record<string, string> = {
   rules: 'Rules',
 }
 
-export function FrameworkTable({ frameworks }: FrameworkTableProps) {
+export function FrameworkTable({ frameworks, deltas }: FrameworkTableProps) {
   const sorted = [...frameworks].sort(
     (a, b) => (b.github?.stars ?? 0) - (a.github?.stars ?? 0),
   )
+  const deltaMap = new Map(deltas?.map(d => [d.frameworkId, d]) ?? [])
 
   return (
     <div className="overflow-x-auto">
@@ -81,6 +83,20 @@ export function FrameworkTable({ frameworks }: FrameworkTableProps) {
                 </td>
                 <td className="text-right py-2.5 px-3 font-mono text-gray-300">
                   {downloads != null ? formatDownloads(downloads) : '—'}
+                  {(() => {
+                    const nd = deltaMap.get(fw.id)?.npmDelta
+                    if (nd != null && nd !== 0) {
+                      return (
+                        <span
+                          className="ml-1 text-[10px]"
+                          style={{ color: nd > 0 ? '#22C55E' : '#EF4444' }}
+                        >
+                          {nd > 0 ? '▲' : '▼'}
+                        </span>
+                      )
+                    }
+                    return null
+                  })()}
                 </td>
                 <td className="py-2.5 px-3 text-gray-500 hidden sm:table-cell">
                   {CATEGORY_LABELS[fw.category] ?? fw.category}
