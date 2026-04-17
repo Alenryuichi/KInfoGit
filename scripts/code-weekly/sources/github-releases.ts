@@ -1,5 +1,5 @@
 // GitHub Releases API — fetch latest releases for open-source editors
-import { EDITORS } from '../config'
+import { EDITORS, type WeekBounds } from '../config'
 
 export interface GitHubRelease {
   editor: string
@@ -9,7 +9,7 @@ export interface GitHubRelease {
   htmlUrl: string
 }
 
-export async function fetchGitHubReleases(): Promise<GitHubRelease[]> {
+export async function fetchGitHubReleases(bounds: WeekBounds): Promise<GitHubRelease[]> {
   const editorsWithRepo = EDITORS.filter(e => e.sources.githubRepo)
   const results: GitHubRelease[] = []
 
@@ -25,7 +25,7 @@ export async function fetchGitHubReleases(): Promise<GitHubRelease[]> {
   const settled = await Promise.allSettled(
     editorsWithRepo.map(async (editor) => {
       const repo = editor.sources.githubRepo!
-      const url = `https://api.github.com/repos/${repo}/releases?per_page=5`
+      const url = `https://api.github.com/repos/${repo}/releases?per_page=10`
 
       const res = await fetch(url, { headers })
       if (!res.ok) {
@@ -40,12 +40,12 @@ export async function fetchGitHubReleases(): Promise<GitHubRelease[]> {
         html_url: string
       }>
 
-      // Filter to releases within the last 7 days
-      const oneWeekAgo = new Date()
-      oneWeekAgo.setDate(oneWeekAgo.getDate() - 7)
-
+      // Filter to releases within the target week (Asia/Shanghai Mon–Sun).
       return releases
-        .filter(r => new Date(r.published_at) >= oneWeekAgo)
+        .filter(r => {
+          const pub = new Date(r.published_at).getTime()
+          return pub >= bounds.start.getTime() && pub < bounds.end.getTime()
+        })
         .map(r => ({
           editor: editor.name,
           version: r.tag_name,

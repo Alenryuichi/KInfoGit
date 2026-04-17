@@ -1,7 +1,7 @@
 // Changelog Page — fetch and parse HTML changelog pages
 // Lightweight regex-based extraction (no DOM parser dependency)
 
-import { EDITORS } from '../config'
+import { EDITORS, type WeekBounds } from '../config'
 
 export interface ChangelogEntry {
   editor: string
@@ -12,15 +12,15 @@ export interface ChangelogEntry {
 }
 
 /**
- * Fetch recent changelog entries (published within last 7 days) for editors
+ * Fetch changelog entries published within the target week for editors
  * that have `changelogUrl` configured.
  */
-export async function fetchChangelogEntries(): Promise<ChangelogEntry[]> {
+export async function fetchChangelogEntries(bounds: WeekBounds): Promise<ChangelogEntry[]> {
   const editors = EDITORS.filter(e => e.sources.changelogUrl)
   if (editors.length === 0) return []
 
   const results = await Promise.allSettled(
-    editors.map(e => fetchEditorChangelog(e.name, e.sources.changelogUrl!))
+    editors.map(e => fetchEditorChangelog(e.name, e.sources.changelogUrl!, bounds))
   )
 
   const entries: ChangelogEntry[] = []
@@ -36,6 +36,7 @@ export async function fetchChangelogEntries(): Promise<ChangelogEntry[]> {
 async function fetchEditorChangelog(
   editor: string,
   url: string,
+  bounds: WeekBounds,
 ): Promise<ChangelogEntry[]> {
   try {
     const res = await fetch(url, {
@@ -57,9 +58,9 @@ async function fetchEditorChangelog(
       return []
     }
 
-    const entries = parseChangelogHtml(editor, url, html)
+    const entries = parseChangelogHtml(editor, url, html, bounds)
     if (entries.length > 0) {
-      console.log(`[changelog] ${editor}: ${entries.length} entries in last 7 days`)
+      console.log(`[changelog] ${editor}: ${entries.length} entries in ${bounds.weekLabel}`)
     }
     return entries
   } catch (err) {
@@ -74,16 +75,14 @@ async function fetchEditorChangelog(
  * Parse changelog entries from HTML. Strategy:
  * 1. Strip HTML tags to get plain text
  * 2. Split on version/date header patterns
- * 3. Filter to last 7 days
+ * 3. Filter to the target week window
  */
 function parseChangelogHtml(
   editor: string,
   url: string,
   html: string,
+  bounds: WeekBounds,
 ): ChangelogEntry[] {
-  const oneWeekAgo = new Date()
-  oneWeekAgo.setDate(oneWeekAgo.getDate() - 7)
-
   // Strip HTML tags but preserve block-level breaks
   const text = html
     .replace(/<script[\s\S]*?<\/script>/gi, '')
@@ -128,8 +127,9 @@ function parseChangelogHtml(
   for (let i = 0; i < matches.length; i++) {
     const { version, date } = matches[i]
 
-    // Skip entries older than 7 days
-    if (date < oneWeekAgo) continue
+    // Keep only entries inside the target week window
+    const t = date.getTime()
+    if (t < bounds.start.getTime() || t >= bounds.end.getTime()) continue
 
     const start = matches[i].index
     const end = i + 1 < matches.length ? matches[i + 1].index : text.length

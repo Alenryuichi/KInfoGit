@@ -22,7 +22,7 @@ if (fs.existsSync(envPath)) {
   }
 }
 
-import { EDITORS, CODE_WEEKLY_DIR } from './code-weekly/config'
+import { EDITORS, CODE_WEEKLY_DIR, getWeekBoundsInShanghai } from './code-weekly/config'
 import { fetchGitHubReleases } from './code-weekly/sources/github-releases'
 import { fetchRssFeeds } from './code-weekly/sources/rss-feeds'
 import { fetchTavilyForEditors } from './code-weekly/sources/tavily-search'
@@ -35,44 +35,20 @@ import { fetchLiveCodeBench } from './code-weekly/sources/livecodebench'
 import { fetchChangelogEntries } from './code-weekly/sources/changelog-page'
 import { summarizeWeekly, collectUrlsFromRaw } from './code-weekly/summarizer'
 
-// ─── ISO Week Helpers ──────────────────────────────────────
-
-function getISOWeek(date: Date): string {
-  // MDN-recommended UTC-based algorithm
-  const d = new Date(Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()))
-  d.setUTCDate(d.getUTCDate() + 4 - (d.getUTCDay() || 7))
-  const yearStart = new Date(Date.UTC(d.getUTCFullYear(), 0, 1))
-  const weekNo = Math.ceil(((d.getTime() - yearStart.getTime()) / 86400000 + 1) / 7)
-  return `${d.getUTCFullYear()}-W${weekNo.toString().padStart(2, '0')}`
-}
-
-function getWeekDateRange(date: Date): string {
-  const d = new Date(date)
-  d.setHours(0, 0, 0, 0)
-  const day = d.getDay() // 0=Sun, 1=Mon, ...
-  const mondayOffset = day === 0 ? -6 : 1 - day
-  const monday = new Date(d)
-  monday.setDate(d.getDate() + mondayOffset)
-  const sunday = new Date(monday)
-  sunday.setDate(monday.getDate() + 6)
-
-  const fmt = (dt: Date) => dt.toISOString().slice(0, 10)
-  return `${fmt(monday)} — ${fmt(sunday)}`
-}
-
 // ─── Main ──────────────────────────────────────────────────
 
 async function main() {
   console.log('🚀 Code Weekly — starting data collection...\n')
-  // Use yesterday's date to determine the week — the script runs on Monday
-  // and should generate the report for the previous week (Mon–Sun).
+  // Use yesterday's instant as the reference — the cron runs Monday early
+  // morning (Asia/Shanghai) and should generate the report for the week
+  // that just ended (i.e. yesterday falls into Sun of last week).
   const now = new Date()
-  const yesterday = new Date(now)
-  yesterday.setDate(now.getDate() - 1)
-  const week = getISOWeek(yesterday)
-  const dateRange = getWeekDateRange(yesterday)
+  const yesterday = new Date(now.getTime() - 24 * 60 * 60 * 1000)
+  const bounds = getWeekBoundsInShanghai(yesterday)
+  const { weekLabel: week, dateRange } = bounds
 
-  console.log(`📅 Week: ${week} (${dateRange})\n`)
+  console.log(`📅 Week: ${week} (${dateRange})`)
+  console.log(`   bounds: [${bounds.start.toISOString()}, ${bounds.end.toISOString()})\n`)
 
   // Build search queries from editor config
   const tavilyEditors = EDITORS
@@ -90,16 +66,16 @@ async function main() {
   // Parallel data collection with Promise.allSettled
   console.log('📡 Fetching from all sources...')
   const [githubResult, rssResult, tavilyResult, bailianResult, npmResult, arenaResult, aiderResult, sweResult, lcbResult, changelogResult] = await Promise.allSettled([
-    fetchGitHubReleases(),
-    fetchRssFeeds(),
+    fetchGitHubReleases(bounds),
+    fetchRssFeeds(bounds),
     fetchTavilyForEditors(tavilyEditors),
     fetchBailianForEditors(bailianEditors),
-    fetchNpmReleases(npmPackages),
+    fetchNpmReleases(npmPackages, bounds),
     fetchArenaRankings(),
     fetchAiderLeaderboard(),
     fetchSweBench(),
     fetchLiveCodeBench(),
-    fetchChangelogEntries(),
+    fetchChangelogEntries(bounds),
   ])
 
   const githubReleases = githubResult.status === 'fulfilled' ? githubResult.value : []
@@ -137,12 +113,43 @@ async function main() {
     console.warn(`  ⚠️ ${failCount} source(s) failed`)
   }
 
-  console.log(`  GitHub Releases: ${githubReleases.length}`)
-  console.log(`  RSS Articles: ${rssArticles.length}`)
+  // ─── Defensive re-filter against week bounds ────────────
+  // Sources should already filter by bounds internally, but a belt-and-
+  // braces pass here guarantees no dated item leaks in (e.g. if an API
+  // starts returning timezone-shifted timestamps after a schema change).
+  // Items without a parseable publishedAt are kept — Tavily/Bailian
+  // search results don't carry reliable dates, and the LLM summarizer
+  // is the last line of defense for those.
+  const inBounds = (iso: string | undefined | null): boolean => {
+    if (!iso) return true
+    const t = new Date(iso).getTime()
+    if (isNaN(t)) return true
+    return t >= bounds.start.getTime() && t < bounds.end.getTime()
+  }
+  const leakFilter = <T extends { publishedAt?: string }>(arr: T[], label: string): T[] => {
+    const kept: T[] = []
+    let dropped = 0
+    for (const item of arr) {
+      if (inBounds(item.publishedAt)) kept.push(item)
+      else dropped++
+    }
+    if (dropped > 0) {
+      console.warn(`  🔒 ${label}: dropped ${dropped} out-of-bounds item(s) at second-pass filter`)
+    }
+    return kept
+  }
+
+  const boundedGithubReleases = leakFilter(githubReleases, 'github-releases')
+  const boundedRssArticles = leakFilter(rssArticles, 'rss-feeds')
+  const boundedNpmReleases = leakFilter(npmReleases, 'npm-registry')
+  const boundedChangelogEntries = leakFilter(changelogEntries, 'changelog')
+
+  console.log(`  GitHub Releases: ${boundedGithubReleases.length}`)
+  console.log(`  RSS Articles: ${boundedRssArticles.length}`)
   console.log(`  Tavily Results: ${tavilyResults.length}`)
   console.log(`  Bailian Results: ${bailianResults.length}`)
-  console.log(`  npm Releases: ${npmReleases.length}`)
-  console.log(`  Changelog Entries: ${changelogEntries.length}`)
+  console.log(`  npm Releases: ${boundedNpmReleases.length}`)
+  console.log(`  Changelog Entries: ${boundedChangelogEntries.length}`)
   console.log(`  Arena Rankings: ${arenaRankings.length}`)
   console.log(`  Aider Entries: ${aiderLeaderboard.length}`)
   console.log(`  SWE-bench: ${sweBench.length}`)
@@ -151,12 +158,12 @@ async function main() {
   // AI Summarization
   console.log('\n🤖 Summarizing with DeepSeek...')
   const rawData = {
-    githubReleases,
-    rssArticles,
+    githubReleases: boundedGithubReleases,
+    rssArticles: boundedRssArticles,
     tavilyResults,
     bailianResults,
-    npmReleases,
-    changelogEntries,
+    npmReleases: boundedNpmReleases,
+    changelogEntries: boundedChangelogEntries,
   }
   const summary = await summarizeWeekly(rawData)
 

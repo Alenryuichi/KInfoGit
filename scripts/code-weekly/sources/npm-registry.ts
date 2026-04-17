@@ -1,5 +1,6 @@
 // npm Registry — fetch recent package versions
 // Uses the public npm registry API (no auth needed)
+import type { WeekBounds } from '../config'
 
 export interface NpmRelease {
   editor: string
@@ -16,17 +17,16 @@ interface NpmPackageData {
 }
 
 /**
- * Fetch recent versions (published within last 7 days) for configured npm packages.
- * Uses the abbreviated metadata endpoint for smaller payloads.
+ * Fetch package versions published within the target week for configured
+ * npm packages. Uses the full metadata endpoint to get the per-version
+ * timestamp map.
  */
 export async function fetchNpmReleases(
-  packages: Array<{ editor: string; pkg: string }>
+  packages: Array<{ editor: string; pkg: string }>,
+  bounds: WeekBounds,
 ): Promise<NpmRelease[]> {
-  const oneWeekAgo = new Date()
-  oneWeekAgo.setDate(oneWeekAgo.getDate() - 7)
-
   const results = await Promise.allSettled(
-    packages.map(p => fetchPackageReleases(p.editor, p.pkg, oneWeekAgo))
+    packages.map(p => fetchPackageReleases(p.editor, p.pkg, bounds))
   )
 
   const releases: NpmRelease[] = []
@@ -42,7 +42,7 @@ export async function fetchNpmReleases(
 async function fetchPackageReleases(
   editor: string,
   pkg: string,
-  since: Date
+  bounds: WeekBounds,
 ): Promise<NpmRelease[]> {
   try {
     const res = await fetch(`${NPM_REGISTRY}/${pkg}`, {
@@ -68,8 +68,8 @@ async function fetchPackageReleases(
       // Skip metadata keys
       if (version === 'created' || version === 'modified') continue
 
-      const pubDate = new Date(dateStr)
-      if (isNaN(pubDate.getTime()) || pubDate < since) continue
+      const pub = new Date(dateStr).getTime()
+      if (isNaN(pub) || pub < bounds.start.getTime() || pub >= bounds.end.getTime()) continue
 
       releases.push({
         editor,
@@ -83,7 +83,7 @@ async function fetchPackageReleases(
     releases.sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime())
 
     if (releases.length > 0) {
-      console.log(`[npm] ${pkg}: ${releases.length} versions in last 7 days (latest: ${releases[0].version})`)
+      console.log(`[npm] ${pkg}: ${releases.length} versions in ${bounds.weekLabel} (latest: ${releases[0].version})`)
     }
 
     return releases

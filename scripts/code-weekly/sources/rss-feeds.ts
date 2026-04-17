@@ -1,5 +1,5 @@
 // RSS/Atom feed parser — fetch company blog articles
-import { RSS_FEEDS, type RssFeedConfig } from '../config'
+import { RSS_FEEDS, type RssFeedConfig, type WeekBounds } from '../config'
 
 export interface RssArticle {
   company: string
@@ -67,7 +67,7 @@ function extractDate(itemXml: string): string {
   return raw
 }
 
-async function fetchFeed(feed: RssFeedConfig): Promise<RssArticle[]> {
+async function fetchFeed(feed: RssFeedConfig, bounds: WeekBounds): Promise<RssArticle[]> {
   const res = await fetch(feed.url, {
     headers: { 'User-Agent': 'KInfoGit-Code-Weekly' },
     redirect: 'follow',
@@ -82,9 +82,6 @@ async function fetchFeed(feed: RssFeedConfig): Promise<RssArticle[]> {
   const xml = await res.text()
   const items = extractItems(xml).slice(0, 10)
 
-  const oneWeekAgo = new Date()
-  oneWeekAgo.setDate(oneWeekAgo.getDate() - 7)
-
   const articles: RssArticle[] = []
 
   for (const itemXml of items) {
@@ -97,17 +94,18 @@ async function fetchFeed(feed: RssFeedConfig): Promise<RssArticle[]> {
 
     if (!title || !link) continue
 
-    // Filter by date if available; skip undated articles (may be stale)
-    if (dateStr) {
-      const pubDate = new Date(dateStr)
-      if (!isNaN(pubDate.getTime()) && pubDate < oneWeekAgo) continue
-    }
+    // Filter strictly into the target week. Items with an unparseable
+    // date are dropped (used to be kept — that leaked stale content).
+    if (!dateStr) continue
+    const pub = new Date(dateStr).getTime()
+    if (isNaN(pub)) continue
+    if (pub < bounds.start.getTime() || pub >= bounds.end.getTime()) continue
 
     articles.push({
       company: feed.company,
       title,
       url: link,
-      publishedAt: dateStr || '',
+      publishedAt: dateStr,
       summary: description.replace(/<[^>]*>/g, '').slice(0, 500),
       tags: feed.tags || [],
     })
@@ -116,9 +114,9 @@ async function fetchFeed(feed: RssFeedConfig): Promise<RssArticle[]> {
   return articles
 }
 
-export async function fetchRssFeeds(): Promise<RssArticle[]> {
+export async function fetchRssFeeds(bounds: WeekBounds): Promise<RssArticle[]> {
   const settled = await Promise.allSettled(
-    RSS_FEEDS.map(feed => fetchFeed(feed))
+    RSS_FEEDS.map(feed => fetchFeed(feed, bounds))
   )
 
   const results: RssArticle[] = []

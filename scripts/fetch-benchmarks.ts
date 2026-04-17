@@ -21,13 +21,14 @@ if (fs.existsSync(envPath)) {
   }
 }
 
-import { BENCHMARKS_DIR, BENCHMARKS_HISTORY_DIR } from './code-weekly/config'
+import { BENCHMARKS_DIR, BENCHMARKS_HISTORY_DIR, BENCHMARKS_HEALTH_DIR } from './code-weekly/config'
 import { fetchArenaRankings, fetchArenaPublishDate, type ArenaEntry } from './code-weekly/sources/arena-rankings'
 import { fetchAiderLeaderboard, type AiderEntry } from './code-weekly/sources/aider-leaderboard'
 import { fetchSweBench } from './code-weekly/sources/swe-bench'
 import { fetchBigCodeBench } from './code-weekly/sources/bigcodebench'
 import { fetchEvalPlus } from './code-weekly/sources/evalplus'
 import { fetchLiveCodeBench } from './code-weekly/sources/livecodebench'
+import { evaluate as evaluateHealth, appendHealthRecord } from './code-weekly/benchmarks-health'
 
 // ─── Types ─────────────────────────────────────────────────
 
@@ -111,8 +112,9 @@ async function main() {
 
   const benchDir = path.join(__dirname, '..', BENCHMARKS_DIR)
   const historyDir = path.join(__dirname, '..', BENCHMARKS_HISTORY_DIR)
+  const healthDir = path.join(__dirname, '..', BENCHMARKS_HEALTH_DIR)
 
-  for (const dir of [benchDir, historyDir]) {
+  for (const dir of [benchDir, historyDir, healthDir]) {
     if (!fs.existsSync(dir)) {
       fs.mkdirSync(dir, { recursive: true })
     }
@@ -154,7 +156,63 @@ async function main() {
   console.log(`  EvalPlus:        ${epRaw.length} models${epDate ? ` (${epDate})` : ''}`)
   console.log(`  LiveCodeBench:   ${lcbRaw.length} models`)
 
-  // Calculate deltas for Arena & Aider
+  // ─── Health check: decide whether the snapshot is safe to persist ─
+  const today = new Date().toISOString().slice(0, 10)
+  const health = evaluateHealth({
+    runAt: new Date().toISOString(),
+    weekRelative: today,
+    current: {
+      arena: arenaRaw.length,
+      aider: aiderRaw.length,
+      sweBench: sweRaw.length,
+      bigCodeBench: bcbRaw.length,
+      evalPlus: epRaw.length,
+      liveCodeBench: lcbRaw.length,
+    },
+    previous: {
+      arena: previous?.arenaRanking?.length ?? 0,
+      aider: previous?.aiderLeaderboard?.length ?? 0,
+      sweBench: previous?.sweBench?.length ?? 0,
+      bigCodeBench: previous?.bigCodeBench?.length ?? 0,
+      evalPlus: previous?.evalPlus?.length ?? 0,
+      liveCodeBench: previous?.liveCodeBench?.length ?? 0,
+    },
+    // Arena and Aider are the two sources that actually drive the
+    // `/code/benchmarks` page above-the-fold. If either is empty we've
+    // still got something to show, but if BOTH are empty the page is
+    // effectively broken, so we refuse to persist that state.
+    criticalSources: ['arena', 'aider'],
+  })
+
+  console.log(`\n🩺 Health: ${health.summary}`)
+  for (const src of health.sources) {
+    if (src.status !== 'ok') {
+      console.log(`   - ${src.name}: ${src.status}${src.note ? ` (${src.note})` : ''}`)
+    }
+  }
+
+  // Always append the health record, even when we refuse to write.
+  appendHealthRecord(healthDir, health)
+
+  if (health.refusedWrite) {
+    console.error('\n❌ Refusing to overwrite latest.json — keeping previous snapshot live.')
+    console.error('   See profile-data/benchmarks/_health/ for the failure record.')
+    // Still exit 0 so CI doesn't retry-storm. The health log is the
+    // durable signal; a future alert hook can watch it.
+    return
+  }
+
+  // ─── Fallback for failed auxiliary sources ──────────────────────
+  // When an auxiliary source returned 0 but had data last time, we reuse
+  // the previous rows so the page doesn't lose entire sections. Mark
+  // the snapshot so the frontend can display a "stale" badge if desired.
+  const fbSet = new Set(health.auxiliaryFallback)
+  const sweFinal  = fbSet.has('sweBench')      && previous ? previous.sweBench      : sweRaw
+  const bcbFinal  = fbSet.has('bigCodeBench')  && previous ? previous.bigCodeBench  : bcbRaw
+  const epFinal   = fbSet.has('evalPlus')      && previous ? previous.evalPlus      : epRaw
+  const lcbFinal  = fbSet.has('liveCodeBench') && previous ? previous.liveCodeBench : lcbRaw
+
+  // Calculate deltas for Arena & Aider (only run when we have fresh data)
   const arenaRanking = calculateArenaDelta(arenaRaw, previous)
   const aiderLeaderboard = calculateAiderDelta(aiderRaw, previous)
 
@@ -176,13 +234,13 @@ async function main() {
     arenaPublishDate: arenaDate,
     aiderLeaderboard,
     aiderLastUpdated: aiderDate,
-    sweBench: sweRaw,
+    sweBench: sweFinal,
     sweBenchLastUpdated: undefined, // SWE-bench date is embedded in data, not HTTP header
-    bigCodeBench: bcbRaw,
+    bigCodeBench: bcbFinal,
     bigCodeBenchLastUpdated: bcbDate,
-    evalPlus: epRaw,
+    evalPlus: epFinal,
     evalPlusLastUpdated: epDate,
-    liveCodeBench: lcbRaw,
+    liveCodeBench: lcbFinal,
     liveCodeBenchLastUpdated: undefined,
     notable: notableChanges.join('; ') || 'No significant changes',
     updatedAt: new Date().toISOString(),
@@ -194,7 +252,6 @@ async function main() {
   console.log(`\n✅ Updated: ${latestPath}`)
 
   // Write history snapshot
-  const today = new Date().toISOString().slice(0, 10)
   const historyPath = path.join(historyDir, `${today}.json`)
   fs.writeFileSync(historyPath, JSON.stringify(snapshot, null, 2), 'utf-8')
   console.log(`✅ History: ${historyPath}`)
