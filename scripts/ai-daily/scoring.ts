@@ -6,9 +6,14 @@ import {
   SCORING_BATCH_SIZE,
   AI_FALLBACK_KEYWORDS,
   MAX_RETRY_DEPTH,
+  FOCUS_TOPICS,
+  MAX_TAGS_PER_ITEM,
+  MAX_FOCUS_TOPICS_PER_ITEM,
   getTodayInShanghai,
 } from './config'
 import type { RawNewsItem, ScoredItem } from './types'
+
+const FOCUS_TOPIC_SET = new Set<string>(FOCUS_TOPICS)
 
 // ─── Runtime counters (reset each scoreItems() call) ───────
 interface RunStats {
@@ -120,6 +125,8 @@ interface LlmScoreEntry {
   category: string
   aiRelevant: boolean
   oneLiner: string
+  tags: string[]
+  focusTopics: string[]
 }
 
 /**
@@ -171,14 +178,46 @@ aiRelevant 判断（必须同时满足两个条件才为 true）:
 - Reddit/论坛旧讨论帖
 - 通用科技、安全事件、量子计算（除非直接用于 AI）
 
+tags（3-5 个自由标签）:
+- 英文小写，每个 1-3 个词，不含 # 符号
+- 描述内容主题、技术栈、领域（如 "llm", "benchmark", "open-source", "multimodal"）
+- 避免重复（不要同时给 "ai" 和 "artificial-intelligence"）
+
+focusTopics（0-${MAX_FOCUS_TOPICS_PER_ITEM} 个）:
+- **必须且仅能**从下列 6 个受控值中选择，任何其他值一律无效，会被丢弃：
+  * memory          —— 长期记忆、RAG、向量检索、上下文管理、context window
+  * self-evolution  —— 自我迭代、自监督、在线学习、自我批判、self-improvement
+  * multi-agent     —— 多 agent 协同、swarm、agent communication
+  * planning        —— 任务分解、ReAct、思维链（CoT）、tree search
+  * reflection      —— 自我反思、错误修正、回溯、self-critique
+  * tool-use        —— 工具调用、function calling、code execution、API 编排
+- **严格匹配才打**：只有条目核心议题与某个 topic 深度相关才打，泛 AI 新闻应返回空数组 []
+- 最多打 ${MAX_FOCUS_TOPICS_PER_ITEM} 个；大多数条目应为 0 个
+
 新闻列表:
 ${itemList}
 
 返回一个 JSON 对象（根级），形如：
 {
   "results": [
-    { "index": 1, "score": 8.5, "category": "research", "aiRelevant": true, "oneLiner": "一句话中文摘要" },
-    ...
+    {
+      "index": 1,
+      "score": 8.5,
+      "category": "research",
+      "aiRelevant": true,
+      "oneLiner": "一句话中文摘要",
+      "tags": ["llm", "benchmark", "reasoning"],
+      "focusTopics": ["planning"]
+    },
+    {
+      "index": 2,
+      "score": 6.0,
+      "category": "insight",
+      "aiRelevant": true,
+      "oneLiner": "另一句摘要",
+      "tags": ["ai-coding", "developer-tools"],
+      "focusTopics": []
+    }
   ]
 }
 
@@ -249,6 +288,8 @@ results 数组必须与输入一一对应（按 index 升序）。oneLiner 不�
         category: typeof r.category === 'string' ? r.category : 'insight',
         aiRelevant: typeof r.aiRelevant === 'boolean' ? r.aiRelevant : true,
         oneLiner: typeof r.oneLiner === 'string' ? r.oneLiner : '',
+        tags: sanitizeTags(r.tags),
+        focusTopics: sanitizeFocusTopics(r.focusTopics),
       })
     }
 
@@ -257,6 +298,50 @@ results 数组必须与输入一一对应（按 index 升序）。oneLiner 不�
     console.warn(`[scoring] DeepSeek call failed: ${err}`)
     return null
   }
+}
+
+/**
+ * Sanitize free-form tags from LLM output:
+ * - string only, trim + lowercase
+ * - drop empty or overlong (>30 chars)
+ * - strip leading '#' that some models emit despite instructions
+ * - dedupe, cap at MAX_TAGS_PER_ITEM
+ */
+function sanitizeTags(raw: unknown): string[] {
+  if (!Array.isArray(raw)) return []
+  const seen = new Set<string>()
+  const out: string[] = []
+  for (const t of raw) {
+    if (typeof t !== 'string') continue
+    const normalized = t.trim().toLowerCase().replace(/^#+/, '').trim()
+    if (!normalized || normalized.length > 30) continue
+    if (seen.has(normalized)) continue
+    seen.add(normalized)
+    out.push(normalized)
+    if (out.length >= MAX_TAGS_PER_ITEM) break
+  }
+  return out
+}
+
+/**
+ * Whitelist focusTopics against the controlled vocabulary. Drops any
+ * value outside FOCUS_TOPICS to prevent LLM drift (e.g. "reasoning",
+ * "agent" that look plausible but aren't in the frontend's known set).
+ */
+function sanitizeFocusTopics(raw: unknown): string[] {
+  if (!Array.isArray(raw)) return []
+  const seen = new Set<string>()
+  const out: string[] = []
+  for (const t of raw) {
+    if (typeof t !== 'string') continue
+    const normalized = t.trim().toLowerCase()
+    if (!FOCUS_TOPIC_SET.has(normalized)) continue
+    if (seen.has(normalized)) continue
+    seen.add(normalized)
+    out.push(normalized)
+    if (out.length >= MAX_FOCUS_TOPICS_PER_ITEM) break
+  }
+  return out
 }
 
 /**
@@ -276,6 +361,8 @@ function finalizeScored(item: RawNewsItem, s: LlmScoreEntry, stats: RunStats): S
     category: validateCategory(s.category),
     aiRelevant: s.aiRelevant,
     oneLiner: s.oneLiner || item.summary.slice(0, 50),
+    tags: s.tags,
+    focusTopics: s.focusTopics,
   }
 }
 
@@ -301,6 +388,8 @@ export function keywordFallback(item: RawNewsItem): ScoredItem {
     category: 'insight',
     aiRelevant,
     oneLiner: item.summary.slice(0, 50),
+    tags: [],
+    focusTopics: [],
   }
 }
 

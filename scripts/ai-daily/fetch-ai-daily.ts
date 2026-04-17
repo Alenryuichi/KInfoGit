@@ -168,8 +168,8 @@ function toNewsItem(item: ScoredItem): NewsItem {
     url: item.url,
     score: item.score,
     sources: [{ name: item.sourceName }],
-    tags: [],
-    focusTopics: [],
+    tags: item.tags,
+    focusTopics: item.focusTopics,
   }
 }
 

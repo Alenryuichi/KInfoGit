@@ -62,6 +62,28 @@ export const AI_FALLBACK_KEYWORDS = [
  */
 export const MAX_RETRY_DEPTH = 4
 
+/**
+ * Controlled vocabulary for per-item focusTopics. Must stay in sync with
+ * the frontend FOCUS_TOPIC_META keys in:
+ *   website/pages/ai-daily.tsx
+ *   website/pages/ai-daily/[date].tsx
+ * LLM output is whitelisted against this list; any value outside the set
+ * is dropped during parse to prevent drift.
+ */
+export const FOCUS_TOPICS = [
+  'memory',          // long-term memory, RAG, vector retrieval, context mgmt
+  'self-evolution',  // self-improvement, self-supervision, online learning
+  'multi-agent',     // multi-agent coordination, swarm, agent communication
+  'planning',        // task decomposition, ReAct, CoT, tree search
+  'reflection',      // self-critique, error correction, backtracking
+  'tool-use',        // function calling, code execution, API orchestration
+] as const
+export type FocusTopic = typeof FOCUS_TOPICS[number]
+
+/** Max tags/focusTopics per item (keep scoped to avoid LLM noise). */
+export const MAX_TAGS_PER_ITEM = 5
+export const MAX_FOCUS_TOPICS_PER_ITEM = 2
+
 // ─── Output ───────────────────────────────────────────────
 
 export const AI_DAILY_DIR = 'profile-data/ai-daily'

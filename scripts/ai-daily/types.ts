@@ -15,6 +15,8 @@ export interface ScoredItem extends RawNewsItem {
   category: 'breaking' | 'research' | 'release' | 'insight'
   aiRelevant: boolean
   oneLiner: string           // Chinese one-line summary
+  tags: string[]             // free-form lowercase tags, 3-5 preferred
+  focusTopics: string[]      // values restricted to FOCUS_TOPICS whitelist, 0-2
 }
 
 // Output format — compatible with existing DailyDigest

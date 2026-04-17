@@ -1,6 +1,21 @@
 import fs from 'fs'
 import path from 'path'
 
+// --- Config ---
+
+/**
+ * Minimum score (inclusive) for a NewsItem to be shown in the UI.
+ * Items below this line are dropped from the rendered digest in both
+ * the list page (focusTopics aggregation) and the detail page (section
+ * items). Keep in sync with the header/footer copy in [date].tsx.
+ *
+ * 5.0 is chosen because the scoring pipeline's keywordFallback path
+ * assigns score=5 to items that survived keyword matching after LLM
+ * failure — we want to keep those, but drop anything the LLM explicitly
+ * scored below 5 as low-quality.
+ */
+export const MIN_SCORE = 5.0
+
 // --- Types ---
 
 export interface NewsSource {
@@ -67,9 +82,13 @@ export function getAllDailyDates(): DailyDigestSummary[] {
     try {
       const content = fs.readFileSync(path.join(dir, file), 'utf-8')
       const data = JSON.parse(content) as DailyDigest
+      // Apply MIN_SCORE filter so list-page counts/topics match detail-page render
       const allTopics = new Set<string>()
+      let filteredCount = 0
       for (const section of data.sections) {
         for (const item of section.items) {
+          if (item.score < MIN_SCORE) continue
+          filteredCount += 1
           for (const t of item.focusTopics ?? []) {
             allTopics.add(t)
           }
@@ -78,7 +97,7 @@ export function getAllDailyDates(): DailyDigestSummary[] {
       const topicArray = allTopics.size > 0 ? Array.from(allTopics).sort() : []
       summaries.push({
         date: data.date,
-        itemCount: data.itemCount,
+        itemCount: filteredCount,
         ...(topicArray.length > 0 ? { focusTopics: topicArray } : {}),
       })
     } catch {
@@ -87,6 +106,27 @@ export function getAllDailyDates(): DailyDigestSummary[] {
   }
 
   return summaries.sort((a, b) => b.date.localeCompare(a.date))
+}
+
+/**
+ * Return a digest with sections/items filtered to score >= MIN_SCORE
+ * and an itemCount recomputed from the visible items. Empty sections
+ * are removed so the UI never shows a zero-item header.
+ */
+export function getFilteredDailyDigest(date: string): DailyDigest | null {
+  const raw = getDailyDigest(date)
+  if (!raw) return null
+
+  const sections = raw.sections
+    .map(s => ({
+      ...s,
+      items: s.items.filter(i => i.score >= MIN_SCORE),
+    }))
+    .filter(s => s.items.length > 0)
+
+  const itemCount = sections.reduce((n, s) => n + s.items.length, 0)
+
+  return { ...raw, sections, itemCount }
 }
 
 export function getDailyDigest(date: string): DailyDigest | null {

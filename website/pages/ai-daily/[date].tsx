@@ -5,8 +5,9 @@ import { motion } from 'framer-motion'
 import type { GetStaticProps, GetStaticPaths } from 'next'
 import {
   getAllDailyDates,
-  getDailyDigest,
+  getFilteredDailyDigest,
   getAdjacentDates,
+  MIN_SCORE,
   type DailyDigest,
   type DigestSection,
   type NewsItem,
@@ -31,6 +32,7 @@ interface AiDailyDetailProps {
   nextDate: string | null
   allDates: string[]
   allFocusTopics: string[]
+  minScore: number
 }
 
 // ─── Data Loading ───────────────────────────────────────────
@@ -45,12 +47,14 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 export const getStaticProps: GetStaticProps<AiDailyDetailProps> = async ({ params }) => {
   const date = params?.date as string
-  const digest = getDailyDigest(date)
+  const digest = getFilteredDailyDigest(date)
   if (!digest) return { notFound: true }
 
   const { prev, next } = getAdjacentDates(date)
   const allDates = getAllDailyDates().map(d => d.date)
 
+  // Compute focus topics from the already-filtered digest so the filter UI
+  // never offers topics whose only items were below MIN_SCORE.
   const topicSet = new Set<string>()
   for (const section of digest.sections) {
     for (const item of section.items) {
@@ -61,7 +65,7 @@ export const getStaticProps: GetStaticProps<AiDailyDetailProps> = async ({ param
   }
   const allFocusTopics = Array.from(topicSet).sort()
 
-  return { props: { digest, prevDate: prev, nextDate: next, allDates, allFocusTopics } }
+  return { props: { digest, prevDate: prev, nextDate: next, allDates, allFocusTopics, minScore: MIN_SCORE } }
 }
 
 // ─── Anchor Helpers ────────────────────────────────────────
@@ -346,7 +350,7 @@ function DateNav({
 
 // ─── Page ───────────────────────────────────────────────────
 
-export default function AiDailyDetail({ digest, prevDate, nextDate, allDates, allFocusTopics }: AiDailyDetailProps) {
+export default function AiDailyDetail({ digest, prevDate, nextDate, allDates, allFocusTopics, minScore }: AiDailyDetailProps) {
   const [activeTopic, setActiveTopic] = useState<string | null>(null)
 
   const d = new Date(digest.date + 'T00:00:00')
@@ -397,7 +401,7 @@ export default function AiDailyDetail({ digest, prevDate, nextDate, allDates, al
                 {formatted}
             </h1>
             <div className="text-xs font-mono text-gray-500 border-l-2 border-blue-500/30 pl-4 py-1.5 bg-blue-500/5">
-                Extracted: {digest.itemCount} items. Sources: {uniqueSources.size}. Filter: Score &gt;= 6.0
+                Extracted: {digest.itemCount} items. Sources: {uniqueSources.size}. Filter: Score &gt;= {minScore.toFixed(1)}
             </div>
           </motion.div>
 
@@ -447,7 +451,7 @@ export default function AiDailyDetail({ digest, prevDate, nextDate, allDates, al
 
           {/* Footer stats */}
           <div className="pt-8 mt-16 border-t border-white/[0.06] text-[10px] sm:text-xs font-mono text-gray-600 flex flex-col sm:flex-row justify-between items-center gap-4">
-            <div>[STATS] {digest.itemCount} items · {uniqueSources.size} sources · Score &gt;= 6.0</div>
+            <div>[STATS] {digest.itemCount} items · {uniqueSources.size} sources · Score &gt;= {minScore.toFixed(1)}</div>
             <div className="text-blue-500/50">Powered by Tavily + Exa + RSS + DeepSeek</div>
           </div>
           
