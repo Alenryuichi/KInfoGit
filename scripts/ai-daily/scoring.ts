@@ -13,10 +13,30 @@ import {
   MAX_FOCUS_TOPICS_PER_ITEM,
   getTodayInShanghai,
 } from './config'
+import type { FocusTopic } from './config'
 import { loadScoringAnchors, formatAnchorBlock, type ScoringAnchor } from './anchors'
 import type { RawNewsItem, ScoredItem } from './types'
 
 const FOCUS_TOPIC_SET = new Set<string>(FOCUS_TOPICS)
+
+/**
+ * Prompt-embedded descriptions for each focus topic. Updated whenever
+ * FOCUS_TOPICS changes (scripts/ai-daily/config.ts). Kept here rather
+ * than in config.ts because the natural-language descriptions are a
+ * scoring concern, not a data-model concern.
+ *
+ * Ordering mirrors FOCUS_TOPICS so diffs stay minimal.
+ */
+const FOCUS_TOPIC_DESCRIPTIONS: Record<FocusTopic, string> = {
+  'coding-agents':       'AI 编程助手/IDE agent（Cursor、Claude Code、Codebuddy、Copilot、Devin、AI IDE 新功能）',
+  'context-engineering': '长上下文、RAG、prompt caching、记忆系统、KV cache、context window 扩展',
+  'agent-harness':       'Agent 框架/编排/协同（multi-agent、skills、MCP、agent SDK、swarm、A2A 协议）',
+  'planning':            '任务分解、ReAct、思维链（CoT）、tree search、reasoning 模型专项能力',
+  'tool-use':            '工具调用、function calling、code execution、API 编排、computer use',
+  'post-training':       '后训练/对齐（RLHF、DPO、RLAIF、constitutional AI、SFT、online learning）',
+  'model-release':       '重大模型发布/升级（GPT/Claude/Gemini/DeepSeek/Llama/Qwen 等新版本或基准跃升）',
+  'evals':               '基准测试、红队评估、回归追踪、leaderboard、新 benchmark 提出',
+}
 
 // Resolve project root once, so scoring.ts stays invocable regardless of
 // the caller's cwd (matters for CI and for unit tests).
@@ -215,13 +235,8 @@ tags（3-5 个自由标签）:
 - 避免重复（不要同时给 "ai" 和 "artificial-intelligence"）
 
 focusTopics（0-${MAX_FOCUS_TOPICS_PER_ITEM} 个）:
-- **必须且仅能**从下列 6 个受控值中选择，任何其他值一律无效，会被丢弃：
-  * memory          —— 长期记忆、RAG、向量检索、上下文管理、context window
-  * self-evolution  —— 自我迭代、自监督、在线学习、自我批判、self-improvement
-  * multi-agent     —— 多 agent 协同、swarm、agent communication
-  * planning        —— 任务分解、ReAct、思维链（CoT）、tree search
-  * reflection      —— 自我反思、错误修正、回溯、self-critique
-  * tool-use        —— 工具调用、function calling、code execution、API 编排
+- **必须且仅能**从下列 ${FOCUS_TOPICS.length} 个受控值中选择，任何其他值一律无效，会被丢弃：
+${FOCUS_TOPICS.map(t => `  * ${t.padEnd(20)} —— ${FOCUS_TOPIC_DESCRIPTIONS[t]}`).join('\n')}
 - **严格匹配才打**：只有条目核心议题与某个 topic 深度相关才打，泛 AI 新闻应返回空数组 []
 - 最多打 ${MAX_FOCUS_TOPICS_PER_ITEM} 个；大多数条目应为 0 个
 ${anchorBlock}

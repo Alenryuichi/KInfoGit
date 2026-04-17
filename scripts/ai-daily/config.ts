@@ -85,16 +85,31 @@ export const MAX_RETRY_DEPTH = 4
  * the frontend FOCUS_TOPIC_META keys in:
  *   website/pages/ai-daily.tsx
  *   website/pages/ai-daily/[date].tsx
+ *   website/lib/ai-daily-metrics.ts (TOPIC_VOCAB)
+ * And with the prompt-embedded topic descriptions in:
+ *   scripts/ai-daily/scoring.ts (FOCUS_TOPICS_PROMPT_BLOCK)
+ *
  * LLM output is whitelisted against this list; any value outside the set
  * is dropped during parse to prevent drift.
+ *
+ * Revision history:
+ *   v1 (2026-04): memory / self-evolution / multi-agent / planning /
+ *     reflection / tool-use. Data after ~30 days showed 4/6 dead and the
+ *     set skewed to 2024 academic terminology.
+ *   v2 (2026-04-17, current): renamed for 2026 language + coverage of
+ *     product-signal news (model releases, coding agents, evals). Old
+ *     per-day digests keep v1 values; historical rows on the Topic Health
+ *     dashboard will show the crossover naturally.
  */
 export const FOCUS_TOPICS = [
-  'memory',          // long-term memory, RAG, vector retrieval, context mgmt
-  'self-evolution',  // self-improvement, self-supervision, online learning
-  'multi-agent',     // multi-agent coordination, swarm, agent communication
-  'planning',        // task decomposition, ReAct, CoT, tree search
-  'reflection',      // self-critique, error correction, backtracking
-  'tool-use',        // function calling, code execution, API orchestration
+  'coding-agents',       // Cursor, Claude Code, Codebuddy, Copilot, IDE agents
+  'context-engineering', // long context, RAG, prompt caching, memory, KV cache
+  'agent-harness',       // agent frameworks, skills, MCP, orchestration, swarms
+  'planning',            // task decomposition, ReAct, CoT, tree search, reasoning
+  'tool-use',            // function calling, code execution, API orchestration
+  'post-training',       // RLHF, DPO, RLAIF, constitutional AI, fine-tuning
+  'model-release',       // major model launches: GPT/Claude/Gemini/DeepSeek/Llama
+  'evals',               // benchmarks, red-teaming, regression tracking, leaderboards
 ] as const
 export type FocusTopic = typeof FOCUS_TOPICS[number]
 

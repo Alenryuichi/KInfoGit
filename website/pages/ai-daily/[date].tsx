@@ -16,12 +16,21 @@ import {
 // ─── Focus Topic Labels & Colors ────────────────────────────
 
 const FOCUS_TOPIC_META: Record<string, { label: string; color: string }> = {
-  memory: { label: 'Memory', color: 'text-purple-400 border-purple-400/20 hover:bg-purple-500/10' },
-  'self-evolution': { label: 'Self-Evolution', color: 'text-amber-400 border-amber-400/20 hover:bg-amber-500/10' },
-  'multi-agent': { label: 'Multi-Agent', color: 'text-cyan-400 border-cyan-400/20 hover:bg-cyan-500/10' },
-  planning: { label: 'Planning', color: 'text-emerald-500 border-emerald-500/20 hover:bg-emerald-500/10' },
-  reflection: { label: 'Reflection', color: 'text-rose-500 border-rose-500/20 hover:bg-rose-500/10' },
-  'tool-use': { label: 'Tool Use', color: 'text-gray-400 border-gray-400/20 hover:bg-gray-500/10' },
+  // Current anchors (v2, 2026-04-17)
+  'coding-agents':       { label: 'Coding Agents',       color: 'text-blue-400 border-blue-400/20 hover:bg-blue-500/10' },
+  'context-engineering': { label: 'Context Engineering', color: 'text-purple-400 border-purple-400/20 hover:bg-purple-500/10' },
+  'agent-harness':       { label: 'Agent Harness',       color: 'text-cyan-400 border-cyan-400/20 hover:bg-cyan-500/10' },
+  'planning':            { label: 'Planning',            color: 'text-emerald-500 border-emerald-500/20 hover:bg-emerald-500/10' },
+  'tool-use':            { label: 'Tool Use',            color: 'text-gray-400 border-gray-400/20 hover:bg-gray-500/10' },
+  'post-training':       { label: 'Post-Training',       color: 'text-amber-400 border-amber-400/20 hover:bg-amber-500/10' },
+  'model-release':       { label: 'Model Release',       color: 'text-pink-400 border-pink-400/20 hover:bg-pink-500/10' },
+  'evals':               { label: 'Evals',               color: 'text-lime-400 border-lime-400/20 hover:bg-lime-500/10' },
+
+  // Legacy anchors (v1) — kept so historical digests still render labels
+  memory:          { label: 'Memory',         color: 'text-purple-400/60 border-purple-400/10 hover:bg-purple-500/5' },
+  'self-evolution':{ label: 'Self-Evolution', color: 'text-amber-400/60 border-amber-400/10 hover:bg-amber-500/5' },
+  'multi-agent':   { label: 'Multi-Agent',    color: 'text-cyan-400/60 border-cyan-400/10 hover:bg-cyan-500/5' },
+  reflection:      { label: 'Reflection',     color: 'text-rose-500/60 border-rose-500/10 hover:bg-rose-500/5' },
 }
 
 // ─── Types ──────────────────────────────────────────────────

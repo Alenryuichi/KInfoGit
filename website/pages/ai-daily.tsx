@@ -9,12 +9,21 @@ interface AiDailyListProps {
 }
 
 const FOCUS_TOPIC_META: Record<string, { label: string; color: string }> = {
-  memory: { label: 'Memory', color: 'text-purple-400' },
-  'self-evolution': { label: 'Self-Evolution', color: 'text-amber-400' },
-  'multi-agent': { label: 'Multi-Agent', color: 'text-cyan-400' },
-  planning: { label: 'Planning', color: 'text-emerald-500/70' },
-  reflection: { label: 'Reflection', color: 'text-rose-500/70' },
-  'tool-use': { label: 'Tool Use', color: 'text-gray-400' },
+  // Current anchors (v2, 2026-04-17)
+  'coding-agents':       { label: 'Coding Agents',       color: 'text-blue-400' },
+  'context-engineering': { label: 'Context Engineering', color: 'text-purple-400' },
+  'agent-harness':       { label: 'Agent Harness',       color: 'text-cyan-400' },
+  'planning':            { label: 'Planning',            color: 'text-emerald-500/70' },
+  'tool-use':            { label: 'Tool Use',            color: 'text-gray-400' },
+  'post-training':       { label: 'Post-Training',       color: 'text-amber-400' },
+  'model-release':       { label: 'Model Release',       color: 'text-pink-400' },
+  'evals':               { label: 'Evals',               color: 'text-lime-400' },
+
+  // Legacy anchors (v1) — kept so historical digests still render labels
+  memory:          { label: 'Memory',         color: 'text-purple-400/60' },
+  'self-evolution':{ label: 'Self-Evolution', color: 'text-amber-400/60' },
+  'multi-agent':   { label: 'Multi-Agent',    color: 'text-cyan-400/60' },
+  reflection:      { label: 'Reflection',     color: 'text-rose-500/60' },
 }
 
 export const getStaticProps: GetStaticProps<AiDailyListProps> = async () => {

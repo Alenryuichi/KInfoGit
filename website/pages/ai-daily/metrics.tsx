@@ -1,13 +1,16 @@
 import Head from 'next/head'
 import Link from 'next/link'
+import React from 'react'
 import type { GetStaticProps } from 'next'
 import {
   getAllRunRecords,
   computeKpis,
   findAnomalies,
+  computeTopicHealth,
   type RunRecord,
   type MetricsKpis,
   type AnomalyAlert,
+  type TopicHealthRow,
 } from '@/lib/ai-daily-metrics'
 
 // ─── Types ────────────────────────────────────────────────
@@ -16,6 +19,7 @@ interface MetricsPageProps {
   records: RunRecord[]
   kpis: MetricsKpis
   anomalies: AnomalyAlert[]
+  topicHealth: TopicHealthRow[]
 }
 
 // ─── Data Loading ─────────────────────────────────────────
@@ -24,7 +28,8 @@ export const getStaticProps: GetStaticProps<MetricsPageProps> = async () => {
   const records = getAllRunRecords()
   const kpis = computeKpis(records, 7)
   const anomalies = findAnomalies(records)
-  return { props: { records, kpis, anomalies } }
+  const topicHealth = computeTopicHealth()
+  return { props: { records, kpis, anomalies, topicHealth } }
 }
 
 // ─── Chart primitives (zero external deps) ──────────────────
@@ -214,7 +219,7 @@ function SourceStackChart({ records }: { records: RunRecord[] }) {
 
 // ─── Page ─────────────────────────────────────────────────
 
-export default function AiDailyMetrics({ records, kpis, anomalies }: MetricsPageProps) {
+export default function AiDailyMetrics({ records, kpis, anomalies, topicHealth }: MetricsPageProps) {
   const hasData = records.length > 0
 
   return (
@@ -314,6 +319,19 @@ export default function AiDailyMetrics({ records, kpis, anomalies }: MetricsPage
                     <span className="text-pink-400">■ horizon</span>
                   </div>
                 </div>
+              </section>
+
+              {/* Topic Health */}
+              <section className="mb-12">
+                <h2 className="text-xs font-mono text-gray-500 uppercase tracking-[0.2em] mb-2">
+                  Topic Health (last 30 days)
+                </h2>
+                <p className="text-xs text-gray-500 font-mono mb-4 leading-relaxed">
+                  Hit counts per controlled-vocabulary focusTopic. Used to decide which anchors
+                  to keep, rename, or retire in the next iteration of{' '}
+                  <code className="text-blue-400">FOCUS_TOPICS</code>.
+                </p>
+                <TopicHealthTable rows={topicHealth} />
               </section>
 
               {/* Anomalies */}
@@ -416,6 +434,94 @@ function KpiCard({
     <div className={`border rounded-lg p-4 ${toneMap[tone]}`}>
       <div className="text-xs uppercase tracking-wider opacity-70 mb-2 font-mono">{label}</div>
       <div className="text-2xl font-bold font-mono">{value}</div>
+    </div>
+  )
+}
+
+// ─── Topic Health Table ────────────────────────────────────
+
+function TopicHealthTable({ rows }: { rows: TopicHealthRow[] }) {
+  if (rows.length === 0) {
+    return (
+      <div className="border border-gray-800 rounded-lg p-6 text-gray-500 font-mono text-sm">
+        No digest data available.
+      </div>
+    )
+  }
+
+  const maxHits = Math.max(...rows.map(r => r.hits30d), 1)
+
+  const statusMeta: Record<TopicHealthRow['status'], { label: string; color: string }> = {
+    healthy: { label: 'healthy', color: 'text-emerald-400 bg-emerald-500/10 border-emerald-500/30' },
+    watch:   { label: 'watch',   color: 'text-amber-400 bg-amber-500/10 border-amber-500/30' },
+    stale:   { label: 'stale',   color: 'text-orange-400 bg-orange-500/10 border-orange-500/30' },
+    dead:    { label: 'dead',    color: 'text-rose-400 bg-rose-500/10 border-rose-500/30' },
+    legacy:  { label: 'legacy',  color: 'text-gray-500 bg-gray-700/20 border-gray-600/40' },
+  }
+
+  // Find index of first legacy row so we can insert a visual divider.
+  const firstLegacyIdx = rows.findIndex(r => r.isLegacy)
+
+  return (
+    <div className="border border-gray-800 rounded-lg bg-gray-900/20 divide-y divide-gray-800">
+      {rows.map((row, idx) => {
+        const barPct = (row.hits30d / maxHits) * 100
+        const meta = statusMeta[row.status]
+        const showLegacyDivider = idx === firstLegacyIdx && firstLegacyIdx > 0
+        return (
+          <React.Fragment key={row.topic}>
+            {showLegacyDivider && (
+              <div className="px-4 py-2 bg-gray-900/40 text-[10px] font-mono text-gray-500 uppercase tracking-[0.2em]">
+                ── retired anchors (v1, kept for historical display) ──
+              </div>
+            )}
+            <div className={`p-4 ${row.isLegacy ? 'opacity-60' : ''}`}>
+              {/* Row header: topic name + bar + numbers */}
+              <div className="flex items-center gap-4 mb-2">
+                <div className="font-mono text-sm text-white shrink-0 w-36">{row.topic}</div>
+                <div className={`px-2 py-0.5 border rounded text-[10px] font-mono uppercase tracking-wider shrink-0 ${meta.color}`}>
+                  {meta.label}
+                </div>
+                <div className="flex-1 h-2 bg-gray-800 rounded-full overflow-hidden">
+                  <div
+                    className={`h-full ${
+                      row.status === 'healthy' ? 'bg-emerald-500' :
+                      row.status === 'watch'   ? 'bg-amber-500' :
+                      row.status === 'stale'   ? 'bg-orange-500' :
+                      row.status === 'legacy'  ? 'bg-gray-600' : 'bg-rose-500/50'
+                    }`}
+                    style={{ width: `${barPct}%` }}
+                  />
+                </div>
+                <div className="font-mono text-xs text-gray-400 shrink-0 flex gap-3">
+                  <span title="hits in last 7 days"><span className="text-gray-600">7d</span> {row.hits7d}</span>
+                  <span title="hits in last 14 days"><span className="text-gray-600">14d</span> {row.hits14d}</span>
+                  <span className="text-white" title="hits in last 30 days"><span className="text-gray-600">30d</span> {row.hits30d}</span>
+                </div>
+              </div>
+
+              {/* Examples */}
+              {row.recentExamples.length > 0 ? (
+                <ul className="ml-40 space-y-1 mt-2">
+                  {row.recentExamples.map((ex, i) => (
+                    <li key={i} className="text-xs font-mono text-gray-400 flex gap-3">
+                      <Link href={`/ai-daily/${ex.date}`} className="text-gray-600 hover:text-blue-400 shrink-0">
+                        {ex.date}
+                      </Link>
+                      <span className="text-amber-400/70 shrink-0">{ex.score.toFixed(1)}</span>
+                      <span className="text-gray-500 truncate">{ex.title}</span>
+                    </li>
+                  ))}
+                </ul>
+              ) : (
+                <div className="ml-40 text-xs font-mono text-gray-600 italic mt-1">
+                  no examples in last 30 days
+                </div>
+              )}
+            </div>
+          </React.Fragment>
+        )
+      })}
     </div>
   )
 }
