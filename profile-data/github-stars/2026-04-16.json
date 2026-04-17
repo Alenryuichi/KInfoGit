@@ -1,25 +1,35 @@
 {
-  "id": "philschmid",
+  "date": "2026-04-16",
   "stars": [
     {
-      "repo": "millionco/claude-doctor",
-      "url": "https://github.com/millionco/claude-doctor",
-      "description": "Diagnose your Claude Code sessions",
-      "language": "TypeScript",
-      "stargazersCount": 198,
-      "starredBy": "philschmid",
-      "highlights": "This project provides diagnostic tools for Claude Code sessions, helping developers identify issues and optimize their interactions with Claude's coding capabilities. It offers session analysis and debugging features specifically tailored for Claude's code generation workflows.",
-      "worthReading": "It addresses a practical need for developers working with Claude's coding features, providing insights that can improve productivity and code quality.",
-      "topics": [
-        "claude",
-        "code",
-        "doctor"
-      ],
+      "repo": "j4orz/teenygrad",
+      "url": "https://github.com/j4orz/teenygrad",
+      "description": "llm201n: neural networks zero to super hero. the bridge from mirograd to tinygrad!",
+      "language": "Python",
+      "stargazersCount": 68,
+      "starredBy": "jph00",
+      "highlights": "Teenygrad is an educational neural network framework that builds from basic autograd concepts to advanced implementations, serving as a bridge between minimal gradient systems like micrograd and more comprehensive frameworks like tinygrad. It provides hands-on learning for understanding neural network fundamentals through progressive complexity.",
+      "worthReading": "It offers practical implementation insights for those wanting to understand how neural network frameworks work under the hood, making it valuable for educational purposes and foundational learning.",
+      "topics": [],
       "tags": [
-        "tooling",
-        "evaluation"
-      ],
-      "type": "github"
+        "llm",
+        "tooling"
+      ]
+    },
+    {
+      "repo": "vllm-project/tpu-inference",
+      "url": "https://github.com/vllm-project/tpu-inference",
+      "description": "TPU inference for vLLM, with unified JAX and PyTorch support.",
+      "language": "Python",
+      "stargazersCount": 290,
+      "starredBy": "sayakpaul",
+      "highlights": "Enables high-performance TPU inference for vLLM, offering unified support for both JAX and PyTorch backends. This allows efficient large language model serving on Google's specialized hardware.",
+      "worthReading": "It addresses a key infrastructure gap by bringing vLLM's optimized serving capabilities to TPU hardware, which is valuable for production deployments requiring scale.",
+      "topics": [],
+      "tags": [
+        "infra",
+        "deployment"
+      ]
     },
     {
       "repo": "ashwwwin/automation-mcp",
@@ -37,8 +47,7 @@
       "tags": [
         "agent",
         "tooling"
-      ],
-      "type": "github"
+      ]
     },
     {
       "repo": "omaclaren/pi-markdown-preview",
@@ -52,8 +61,7 @@
       "topics": [],
       "tags": [
         "tooling"
-      ],
-      "type": "github"
+      ]
     },
     {
       "repo": "nicobailon/pi-subagents",
@@ -69,8 +77,7 @@
         "agent",
         "deployment",
         "tooling"
-      ],
-      "type": "github"
+      ]
     },
     {
       "repo": "espennilsen/pi",
@@ -82,44 +89,7 @@
       "highlights": "The espennilsen/pi repository appears to be a TypeScript project focused on mathematical or computational implementations, likely related to Pi calculations or mathematical constants. With 91 stars, it demonstrates community interest in numerical computation or algorithm optimization.",
       "worthReading": "It's worth exploring for developers interested in mathematical algorithms, TypeScript implementations of computational methods, or educational code examples for numerical computing.",
       "topics": [],
-      "tags": [],
-      "type": "github"
+      "tags": []
     }
-  ],
-  "posts": [],
-  "videos": [],
-  "blogs": [],
-  "dailyCounts": [
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    1,
-    4,
-    0
-  ],
-  "interestSummary": "They are focused on AI agent deployment and tool integration, particularly exploring the Pi AI ecosystem and Claude-related debugging tools."
+  ]
 }

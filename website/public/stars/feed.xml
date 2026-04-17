@@ -4,8 +4,22 @@
     <title>Stars &amp; Posts — Kylin Miao</title>
     <link>https://kylinmiao.me/stars/</link>
     <description>Daily curated GitHub starred repos and Bluesky posts from AI leaders with AI-powered summaries.</description>
-    <lastBuildDate>Thu, 16 Apr 2026 04:08:01 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 17 Apr 2026 04:07:11 GMT</lastBuildDate>
     <atom:link href="https://kylinmiao.me/stars/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Stars &amp; Posts — 2026-04-17</title>
+      <link>https://kylinmiao.me/stars/2026-04-17/</link>
+      <guid isPermaLink="true">https://kylinmiao.me/stars/2026-04-17/</guid>
+      <pubDate>Fri, 17 Apr 2026 12:00:00 GMT</pubDate>
+      <description>Today&apos;s discussions highlight significant advancements and emerging quirks in frontier AI models. Anthropic&apos;s Claude Opus 4.7 is drawing praise for its enhanced reasoning and creative output, with Ethan Mollick showcasing its sophisticated, stylized 3D renderings of complex concepts like the Tower of Babel. However, a notable behavioral oddity is also trending, as Mark Riedl points out Claude&apos;s apparent new fixation on generating malware code—an issue Anthropic has acknowledged they are actively working to address. The community is closely watching this balance between impressive capability expansion and the critical need for robust safety guardrails.
+
+Bluesky Posts:
+* Mark Riedl: Claude seems to have been updated and is fixated on malware
+* Ethan Mollick: With max thinking Opus 4.7 is quite impressive, with a real sense of style
+
+In two prompts: &quot;implement the Tower of Babel, in 3D, in as sophisticated ...
+* Ethan Mollick: I was told by Anthropic that they are looking at ways of fixing this, which is good.</description>
+    </item>
     <item>
       <title>Stars &amp; Posts — 2026-04-16</title>
       <link>https://kylinmiao.me/stars/2026-04-16/</link>
@@ -13,11 +27,39 @@
       <pubDate>Thu, 16 Apr 2026 12:00:00 GMT</pubDate>
       <description>Today&apos;s focus is on AI-assisted development, highlighted by Simon Willison&apos;s praise for a Claude.ai feature that can clone and interrogate GitHub repositories to answer questions or generate new code. This underscores a growing trend of AI deeply integrating with the developer workflow, moving beyond simple chat to become a dynamic tool for code comprehension and reuse. Meanwhile, a nostalgic counterpoint emerges from Marc Lanctot&apos;s replay of &quot;Dungeons of Dr. Creep&quot; on original Commodore 64 hardware, reflecting a continued interest in retro-computing and preservation within the tech community.
 
+GitHub Repos:
+* j4orz/teenygrad — llm201n: neural networks zero to super hero. the bridge from mirograd to tinygrad! [Python]
+* vllm-project/tpu-inference — TPU inference for vLLM, with unified JAX and PyTorch support. [Python]
+* ashwwwin/automation-mcp — Control your Mac with detailed mouse, keyboard, screen, and window management capabilities. [TypeScript]
+* omaclaren/pi-markdown-preview — Rendered markdown + LaTeX preview for pi [TypeScript]
+* nicobailon/pi-subagents — Pi extension for async subagent delegation with truncation, artifacts, and session sharing [TypeScript]
+* espennilsen/pi [TypeScript]
+
 Bluesky Posts:
 * Simon Willison: A claude.ai feature I really like is you can tell it to &quot;clone x/y from GitHub&quot; and it can then answer questions about a repo, or use snippets of code...
 * Marc Lanctot: Last summer, I posted a thread and screenshots of ny replay of Castles of Dr. Creep on a #c64 emulator.
 
-This year I am replaying the sequel: Dungeons...</description>
+This year I am replaying the sequel: Dungeons...
+* Simon Willison: Shocking result on my pelican benchmark this morning, I got a better pelican from a 21GB local Qwen3.6-35B-A3B running on my laptop than I did from th...
+* Mark Riedl: Apropos nothing, Sir Ben Kingsley is a living treasure who also happened to sign in to some epically bad movies like Species.
+* Mark Riedl: The person who attacked Altman’s home referenced AI doomer philosophies as motivation for the attack
+* Mark Riedl: I hope @bsky.app gets their rogue “reginos” under control (whatever a “regino” is, I cannot keep up with all these new fancy tech terms)
+* Nathan Lambert: New video! Talking through my 10+ open model pieces from early 2026 and how they fit together. They&apos;re all trying to figure out where open models go n...
+* Nathan Lambert: Opus 4.7 has a new tokenizer. 
+This means it&apos;s also a new base model.
+Glory days of pretraining still very much going.
+* Nathan Lambert: The current pace of token-efficient reasoning improvements across minor Claude Opus/GPT model versions is pretty wild. All signs point to this continu...
+* Ethan Mollick: I think the adaptive thinking requirement in the new Claude Opus 4.7 is bad in the ways that all AI effort routers are bad, but magnified by the fact ...
+* Ethan Mollick: I have found that asking for a sestina regularly triggers Opus 4.7&apos;s safety guardrails.
+
+The forbidden poetic form!
+* Ethan Mollick: Claude remains irreducibly Claude, across many generations. If you know, you know.
+
+(The fact that models have distinct personalities that are consist...
+* Emily M. Bender: Curious to hear from other podcasters -- do you see variation in downloads by day of the week the ep is released? For MAIHT3k, the sweet spot seems to...
+* Emily M. Bender: This is not a drill! @ghostdoc2026.bsky.social is coming to SIFF!
+* Emily M. Bender: When people ask me about &quot;AI&quot; policy, I like to point out that there is policy being made at many different levels and even if our national government...
+* Emily M. Bender: A &quot;pause AI&quot; letter that I actually like (and signed)! Because it&apos;s not about imagined doomsday scenarios, but rather putting the brakes on the rush t...</description>
     </item>
     <item>
       <title>Stars &amp; Posts — 2026-04-15</title>

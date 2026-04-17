@@ -37,6 +37,22 @@
         "tooling"
       ],
       "type": "github"
+    },
+    {
+      "repo": "vllm-project/tpu-inference",
+      "url": "https://github.com/vllm-project/tpu-inference",
+      "description": "TPU inference for vLLM, with unified JAX and PyTorch support.",
+      "language": "Python",
+      "stargazersCount": 290,
+      "starredBy": "sayakpaul",
+      "highlights": "Enables high-performance TPU inference for vLLM, offering unified support for both JAX and PyTorch backends. This allows efficient large language model serving on Google's specialized hardware.",
+      "worthReading": "It addresses a key infrastructure gap by bringing vLLM's optimized serving capabilities to TPU hardware, which is valuable for production deployments requiring scale.",
+      "topics": [],
+      "tags": [
+        "infra",
+        "deployment"
+      ],
+      "type": "github"
     }
   ],
   "posts": [],
@@ -69,10 +85,10 @@
     0,
     0,
     0,
-    0,
+    1,
     1,
     1,
     0
   ],
-  "interestSummary": "Their recent activity shows a focus on practical tools for model deployment, specifically benchmarking inference memory requirements and evaluating computational kernels."
+  "interestSummary": "Their recent focus is on practical tools for model deployment and performance, specifically around inference memory estimation for Hugging Face models and TPU inference benchmarking for vLLM."
 }
