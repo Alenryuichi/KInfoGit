@@ -11,7 +11,11 @@
       "viewCount": 32545,
       "url": "https://www.youtube.com/watch?v=hpC4qjWu_aY",
       "highlights": "The video analyzes research showing that LLMs don't process all tokens in long contexts equally, with performance degrading as input length increases, even on simple tasks. This challenges the common assumption that models handle early and late tokens with equal reliability, revealing a phenomenon called 'context rot' across 18 tested models including GPT-4.1 and Claude 4.",
-      "worthReading": "It's worth watching because it reveals a fundamental limitation in how current LLMs process information that affects real-world applications, and provides empirical evidence from testing major models that developers should consider when designing systems with long contexts."
+      "worthReading": "It's worth watching because it reveals a fundamental limitation in how current LLMs process information that affects real-world applications, and provides empirical evidence from testing major models that developers should consider when designing systems with long contexts.",
+      "tags": [
+        "llm",
+        "evaluation"
+      ]
     }
   ]
 }

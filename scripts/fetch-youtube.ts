@@ -16,6 +16,13 @@ const OUTPUT_DIR = path.join(__dirname, '..', 'profile-data', 'youtube-videos')
 const DEEPSEEK_API_KEY = process.env.DEEPSEEK_API_KEY || ''
 const DEEPSEEK_API_URL = 'https://api.deepseek.com/chat/completions'
 
+// Kept in sync with fetch-bluesky.ts VALID_TAGS — single source of truth for
+// the Stars topic filter vocabulary.
+const VALID_TAGS = [
+  'agent', 'llm', 'infra', 'rag', 'multi-modal',
+  'safety', 'fine-tuning', 'evaluation', 'deployment', 'tooling',
+] as const
+
 // --- Types ---
 
 interface YouTubeVideoData {
@@ -29,6 +36,7 @@ interface YouTubeVideoData {
   url: string
   highlights: string
   worthReading: string
+  tags: string[]
 }
 
 interface DailyYouTubeVideos {
@@ -92,6 +100,7 @@ async function fetchPlaylistVideos(playlistId: string): Promise<YouTubeVideoData
           url: `https://www.youtube.com/watch?v=${videoId}`,
           highlights: '',
           worthReading: '',
+          tags: [],
         }
       })
   } catch (err) {
@@ -131,21 +140,22 @@ async function fetchVideoStats(videoIds: string[]): Promise<Map<string, number>>
 
 // --- DeepSeek API ---
 
-async function generateCommentary(video: YouTubeVideoData): Promise<{ highlights: string; worthReading: string }> {
+async function generateCommentary(video: YouTubeVideoData): Promise<{ highlights: string; worthReading: string; tags: string[] }> {
   if (!DEEPSEEK_API_KEY) {
-    return { highlights: '', worthReading: '' }
+    return { highlights: '', worthReading: '', tags: [] }
   }
 
   const prompt = `You are a technical reviewer. Given a YouTube video about AI/tech, provide:
 1. "highlights": Core insight or key takeaway (2-3 sentences, concise)
 2. "worthReading": Why it's worth watching (1-2 sentences)
+3. "tags": Pick 1-3 tags from this EXACT list that best describe the video: ${VALID_TAGS.join(', ')}. Return an empty array if none fit.
 
 Video Title: ${video.title}
 Channel: ${video.channelTitle}
 Description: ${video.description.slice(0, 500)}
 Views: ${video.viewCount.toLocaleString()}
 
-Respond in JSON format: {"highlights": "...", "worthReading": "..."}`
+Respond in JSON format: {"highlights": "...", "worthReading": "...", "tags": ["..."]}`
 
   try {
     const res = await fetch(DEEPSEEK_API_URL, {
@@ -165,19 +175,22 @@ Respond in JSON format: {"highlights": "...", "worthReading": "..."}`
 
     if (!res.ok) {
       console.warn(`⚠️  DeepSeek API error for "${video.title}": ${res.status}`)
-      return { highlights: '', worthReading: '' }
+      return { highlights: '', worthReading: '', tags: [] }
     }
 
     const data = await res.json()
     const content = data.choices?.[0]?.message?.content || ''
     const parsed = JSON.parse(content)
+    const rawTags: string[] = Array.isArray(parsed.tags) ? parsed.tags : []
+    const validTags = rawTags.filter((t: string) => (VALID_TAGS as readonly string[]).includes(t))
     return {
       highlights: parsed.highlights || '',
       worthReading: parsed.worthReading || '',
+      tags: validTags,
     }
   } catch (err) {
     console.error(`❌ DeepSeek error for "${video.title}":`, err)
-    return { highlights: '', worthReading: '' }
+    return { highlights: '', worthReading: '', tags: [] }
   }
 }
 
@@ -250,8 +263,14 @@ async function main() {
     const newVideos = videos.filter(v => !existingIds.has(v.videoId))
 
     if (newVideos.length === 0 && existingVideos.length > 0) {
-      console.log(`  📄 ${date}: No new videos (${existingVideos.length} existing)`)
-      continue
+      const needsBackfill = DEEPSEEK_API_KEY && existingVideos.some(v =>
+        (!v.highlights && !v.worthReading) || !v.tags || v.tags.length === 0
+      )
+      if (!needsBackfill) {
+        console.log(`  📄 ${date}: No new videos (${existingVideos.length} existing)`)
+        continue
+      }
+      console.log(`  📄 ${date}: No new videos, but backfilling commentary/tags for existing`)
     }
 
     // Generate AI commentary for new videos
@@ -261,16 +280,24 @@ async function main() {
         const commentary = await generateCommentary(video)
         video.highlights = commentary.highlights
         video.worthReading = commentary.worthReading
+        video.tags = commentary.tags
       }
     }
 
-    // Also generate commentary for existing videos that lack it
+    // Also generate commentary for existing videos that lack it (highlights/worthReading OR tags)
     if (DEEPSEEK_API_KEY) {
       for (const video of existingVideos) {
-        if (!video.highlights && !video.worthReading) {
+        const missingCommentary = !video.highlights && !video.worthReading
+        const missingTags = !video.tags || video.tags.length === 0
+        if (missingCommentary || missingTags) {
           const commentary = await generateCommentary(video)
-          video.highlights = commentary.highlights
-          video.worthReading = commentary.worthReading
+          if (missingCommentary) {
+            video.highlights = commentary.highlights
+            video.worthReading = commentary.worthReading
+          }
+          if (missingTags) {
+            video.tags = commentary.tags
+          }
         }
       }
     }

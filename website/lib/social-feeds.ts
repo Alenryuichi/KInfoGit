@@ -48,6 +48,7 @@ export interface YouTubeVideo {
   url: string
   highlights: string
   worthReading: string
+  tags: string[]
 }
 
 export interface BlogPost {
@@ -286,6 +287,7 @@ function loadYouTubeVideos(date: string): YouTubeVideo[] {
     return (data.videos || []).map((video: any) => ({
       ...video,
       type: 'youtube' as const,
+      tags: video.tags ?? [],
     }))
   } catch {
     return []
@@ -583,6 +585,7 @@ export function getTagStats(): TagStat[] {
   for (const { date } of dates) {
     const githubStars = loadGitHubStars(date)
     const blueskyPosts = loadBlueskyPosts(date)
+    const youtubeVideos = loadYouTubeVideos(date)
     const xPosts = loadXSignals(date)
 
     for (const star of githubStars) {
@@ -592,6 +595,11 @@ export function getTagStats(): TagStat[] {
     }
     for (const post of blueskyPosts) {
       for (const tag of post.tags ?? []) {
+        tagCounts.set(tag, (tagCounts.get(tag) || 0) + 1)
+      }
+    }
+    for (const video of youtubeVideos) {
+      for (const tag of video.tags ?? []) {
         tagCounts.set(tag, (tagCounts.get(tag) || 0) + 1)
       }
     }

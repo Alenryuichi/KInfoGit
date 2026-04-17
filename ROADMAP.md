@@ -112,16 +112,22 @@
 
 #### P0 — 已知缺口
 
-- 📐 **空 URL / 无效卡片的彻底清理**：前期 bluesky 空 URL 问题修了一次（见早期 P0 plan），但偶有新源引入新的空字段。做一个 pre-commit 的数据校验步骤，digest 生成前把"没 URL 的 post"直接 drop。
-- 📐 **YouTube 视频描述抓全**：当前只抓 title + thumbnail，没拉 description，导致 topic filter 对 YouTube 识别率低
+- ✅ ~~**空 URL / 无效卡片的彻底清理**~~：2026-04-17 复查数据（122 条 bluesky posts 全部 URL 有效），`fetch-bluesky.ts` 已从 `handle + uri` 拼 URL，结构性风险消除。**降级为 P2 防御护栏**（见下）。
+- ✅ **YouTube → topic filter 管线打通**（2026-04-17）：原 ROADMAP 以为"description 没抓"，实查 30 条 video 的 `description` 平均 2000+ 字符早已落盘。真正缺口是 **YouTube 无 tag 抽取、getTagStats 跳过 youtube**。已修复：
+    1. `fetch-youtube.ts` DeepSeek prompt 改为输出 `{highlights, worthReading, tags}`，复用与 bluesky 同一份 `VALID_TAGS`
+    2. `YouTubeVideo` interface 加 `tags: string[]`
+    3. `loadYouTubeVideos` map 补 `tags: video.tags ?? []`
+    4. `getTagStats()` 加 YouTube 分支
+    5. 历史 30 条 video 已一次性 backfill tags
 
 #### P1 — 信号质量
 
 - 📐 **Stars 打分**：现在所有 star 同等展示，但"Karpathy star 一个 1k star 的新 agent repo" 明显比 "Karpathy star 一个经典 ML 教材" 信号强。引入 DeepSeek 对 star 做相关性/新鲜度打分，列表按分数排序。
 - 💡 **"今天谁被多人 star" 视图**：同一个 repo 被 N 个 AI leader 同时 star 是非常强的信号。当前数据已经支持，但 UI 没凸显。做一个"本周被 ≥ 3 人共同 star"的专属卡片。
 
-#### P2 — 关注列表维护
+#### P2 — 关注列表维护 & 数据护栏
 
+- 💡 **pre-digest 数据校验护栏**（原 P0-1 降级）：在 `generate-weekly-digest.ts` 的 `loadStarsForDate` / `loadPostsForDate` 里 `.filter(x => x.url && x.url.trim())`，防止未来新源引入空字段时悄无声息污染 digest。当前无需修，留作预防。
 - 💡 **关注对象的自动增删**：每半年回看谁还在活跃、是否有新的上升人物该加入。做一个"候选人物面板"，按发言量 + 被其他已关注人互动的频次自动提名。
 - 💡 **加 X/Twitter signal**：已有 `fetch-x-signals.ts`，但集成到 stars 的路径尚未设计
 
