@@ -32,7 +32,11 @@ async function fetchFeed(name: string, url: string, since: Date): Promise<RawNew
   try {
     const res = await fetch(url, {
       headers: {
-        'User-Agent': 'KInfoGit-AI-Daily',
+        // Some feeds (notably openai.com/news/rss) block non-browser UAs and
+        // return an empty document. Use a common browser UA to stay reachable.
+        // Keep a project fragment in the UA so server admins can still identify
+        // us if they wish (and so we honor polite-bot norms).
+        'User-Agent': 'Mozilla/5.0 (compatible; KInfoGit-AI-Daily/1.0; +https://github.com)',
         Accept: 'application/rss+xml, application/atom+xml, application/xml, text/xml',
       },
       signal: AbortSignal.timeout(15_000),

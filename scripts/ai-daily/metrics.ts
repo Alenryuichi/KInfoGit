@@ -23,6 +23,7 @@ export interface SourceBreakdown {
   search: number
   social: number
   horizon: number
+  github: number
 }
 
 export interface DedupStats {
@@ -66,7 +67,7 @@ export interface RunRecord {
 
 export class MetricsCollector {
   private startedAt: number
-  private sources: SourceBreakdown = { rss: 0, search: 0, social: 0, horizon: 0 }
+  private sources: SourceBreakdown = { rss: 0, search: 0, social: 0, horizon: 0, github: 0 }
   private dedup: DedupStats = { urlDropped: 0, titleDropped: 0 }
   private scoring: ScoringStats = { batches: 0, failed: 0, halveRetries: 0, keywordFallback: 0, hnWeighted: 0 }
   private anchors: AnchorStats = { loaded: 0, bands: [] }

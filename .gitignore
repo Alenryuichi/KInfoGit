@@ -108,3 +108,14 @@ tools/yuque-sync/docs/
 
 # Horizon repository (contains large git history)
 tools/horizon/repo/
+
+# CodeBuddy IDE local state
+.codebuddy/
+# Playwright MCP local state
+.playwright-mcp/
+# Local screenshots (dev-only, not meant to ship)
+topic-health-*.png
+ai-daily-metrics.png
+ai-daily-detail-*.png
+# Backup files created during migrations
+profile-data/ai-daily/*.bak.json

@@ -29,6 +29,7 @@ import { fetchRssItems } from './sources/rss-feeds'
 import { fetchSearchItems } from './sources/search'
 import { fetchSocialItems } from './sources/social'
 import { fetchHorizonItems } from './sources/horizon'
+import { fetchGithubTrendingItems } from './sources/github-trending'
 import { scoreItems, generateDailyBrief } from './scoring'
 import { MetricsCollector, computeOutputStats } from './metrics'
 import type { RawNewsItem, ScoredItem, DailyDigest, NewsItem, DigestSection } from './types'
@@ -39,27 +40,31 @@ async function main() {
   const metrics = new MetricsCollector()
 
   // ─── Parallel source collection ─────────────────────────
-  const [rssResult, searchResult] = await Promise.allSettled([
+  const [rssResult, searchResult, githubResult] = await Promise.allSettled([
     fetchRssItems(),
     fetchSearchItems(),
+    fetchGithubTrendingItems(),
   ])
 
   const rssItems = rssResult.status === 'fulfilled' ? rssResult.value : []
   const searchItems = searchResult.status === 'fulfilled' ? searchResult.value : []
+  const githubItems = githubResult.status === 'fulfilled' ? githubResult.value : []
   const socialItems = fetchSocialItems(projectRoot)
   const horizonItems = fetchHorizonItems(projectRoot)
 
   if (rssResult.status === 'rejected') console.error('❌ RSS failed:', rssResult.reason)
   if (searchResult.status === 'rejected') console.error('❌ Search failed:', searchResult.reason)
+  if (githubResult.status === 'rejected') console.error('❌ GitHub failed:', githubResult.reason)
 
-  const allRaw: RawNewsItem[] = [...rssItems, ...searchItems, ...socialItems, ...horizonItems]
-  console.log(`\n📊 Raw items: RSS=${rssItems.length} Search=${searchItems.length} Social=${socialItems.length} Horizon=${horizonItems.length} Total=${allRaw.length}`)
+  const allRaw: RawNewsItem[] = [...rssItems, ...searchItems, ...socialItems, ...horizonItems, ...githubItems]
+  console.log(`\n📊 Raw items: RSS=${rssItems.length} Search=${searchItems.length} Social=${socialItems.length} Horizon=${horizonItems.length} GitHub=${githubItems.length} Total=${allRaw.length}`)
 
   metrics.recordSources({
     rss: rssItems.length,
     search: searchItems.length,
     social: socialItems.length,
     horizon: horizonItems.length,
+    github: githubItems.length,
   })
 
   // ─── Deduplication: URL normalization, then title similarity ──

@@ -5,7 +5,7 @@ export interface RawNewsItem {
   url: string
   summary: string
   sourceName: string         // e.g. "ArXiv", "Tavily", "Bluesky"
-  sourceType: 'rss' | 'search' | 'social' | 'horizon'
+  sourceType: 'rss' | 'search' | 'social' | 'horizon' | 'github'
   publishedAt: string        // ISO date or date string
   priorScore?: number        // 0-1 normalized community signal (e.g. HN score/10); undefined for non-signal sources
 }

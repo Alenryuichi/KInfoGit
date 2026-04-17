@@ -8,20 +8,66 @@ export interface RssFeedConfig {
 
 // ─── RSS Feeds (AI-specific) ──────────────────────────────
 
+/**
+ * Curated AI RSS feeds. Selection philosophy:
+ *
+ *   - ArXiv cs.AI / cs.CL → research firehose (high volume, filtered by scoring)
+ *   - Google AI Blog, Hugging Face → lab/platform official product news
+ *   - Simon Willison → high-signal independent commentary
+ *   - OpenAI News → frontier lab product announcements (Anthropic does NOT
+ *     publish an RSS feed as of 2026-04; we rely on Exa allowlist instead)
+ *   - Latent Space, The Gradient, Interconnects → technical long-form essays
+ *     by practitioners (Swyx, Nathan Lambert, etc.)
+ *   - Pragmatic Engineer → eng-leadership lens on AI tooling adoption
+ *
+ * Feed health notes:
+ *   - Anthropic has no public RSS. /rss.xml, /feed.xml, /news/rss.xml all 404
+ *     (verified 2026-04-17). If they ship one later, add it here.
+ *   - OpenAI feed blocks non-browser User-Agents. The fetcher in
+ *     sources/rss-feeds.ts sends a Mozilla UA specifically to reach it.
+ *   - Substack feeds (Latent Space, Pragmatic Engineer, Interconnects) deliver
+ *     paywalled posts as truncated summaries, which is fine for scoring.
+ */
 export const RSS_FEEDS: RssFeedConfig[] = [
-  { name: 'ArXiv cs.AI', url: 'https://rss.arxiv.org/rss/cs.AI', category: 'research' },
-  { name: 'ArXiv cs.CL', url: 'https://rss.arxiv.org/rss/cs.CL', category: 'research' },
-  { name: 'Google AI Blog', url: 'https://blog.google/technology/ai/rss/', category: 'breaking' },
-  { name: 'Hugging Face', url: 'https://huggingface.co/blog/feed.xml', category: 'release' },
-  { name: 'Simon Willison', url: 'https://simonwillison.net/atom/everything/', category: 'insight' },
+  // Research firehose
+  { name: 'ArXiv cs.AI',       url: 'https://rss.arxiv.org/rss/cs.AI',                   category: 'research' },
+  { name: 'ArXiv cs.CL',       url: 'https://rss.arxiv.org/rss/cs.CL',                   category: 'research' },
+
+  // Lab / platform official
+  { name: 'OpenAI News',       url: 'https://openai.com/news/rss',                       category: 'release' },
+  { name: 'Google AI Blog',    url: 'https://blog.google/technology/ai/rss/',            category: 'breaking' },
+  { name: 'Hugging Face',      url: 'https://huggingface.co/blog/feed.xml',              category: 'release' },
+
+  // Technical long-form (practitioner voices)
+  { name: 'Latent Space',      url: 'https://www.latent.space/feed',                     category: 'insight' },
+  { name: 'Interconnects',     url: 'https://www.interconnects.ai/feed',                 category: 'insight' },
+  { name: 'The Gradient',      url: 'https://thegradient.pub/rss/',                      category: 'insight' },
+  { name: 'Simon Willison',    url: 'https://simonwillison.net/atom/everything/',        category: 'insight' },
+
+  // Engineering leadership lens
+  { name: 'Pragmatic Engineer', url: 'https://newsletter.pragmaticengineer.com/feed',    category: 'insight' },
 ]
 
 // ─── Search Queries ───────────────────────────────────────
 
+/**
+ * Tavily queries — "wide-funnel" design: each query is a broad OR group
+ * covering a cluster of focus topics, NOT a per-topic narrow search.
+ * Rationale:
+ *   - Per-topic queries create confirmation bias — you only find what you
+ *     already defined. Wide funnels let unexpected topics surface, which is
+ *     essential for the topic-discovery loop (metrics/Topic Health).
+ *   - Tavily charges per-query and caps at ~8 results, so narrow queries
+ *     waste quota on overlapping hits.
+ *   - Keep count small (4) to leave headroom if we add more later.
+ *
+ * Each query is designed to cover ≥2 focus topics from FOCUS_TOPICS.
+ */
 export const TAVILY_QUERIES = [
-  'AI model release OR LLM launch announcement today',
-  'AI research paper published OR new machine learning breakthrough',
-  'new AI coding assistant OR developer tool launched OR AI startup funding',
+  'AI model release OR LLM launch OR new foundation model announcement',        // → model-release
+  'AI research paper OR benchmark results OR evaluation OR safety evaluation',  // → evals
+  'AI coding agent OR AI developer tool OR AI IDE OR programming assistant',    // → coding-agents
+  'AI agent framework OR orchestration platform OR multi-agent system OR MCP',  // → agent-harness
 ]
 
 export const EXA_QUERY = 'artificial intelligence news'
@@ -36,12 +82,15 @@ export const EXA_QUERY = 'artificial intelligence news'
  * - Tier 1 business/industry: wired, theinformation, wsj, bloomberg
  * - AI-specific trade press: semafor (AI vertical), decoder, axios
  * - Research-adjacent: mit.edu (Tech Review), nature, science
+ * - Frontier lab corporate comms: anthropic.com (no RSS available,
+ *   so Exa is our only way to pick up Anthropic's product announcements)
  */
 export const EXA_DOMAINS = [
   'techcrunch.com', 'theverge.com', 'arstechnica.com', 'venturebeat.com',
   'wired.com', 'theinformation.com', 'bloomberg.com', 'wsj.com',
   'semafor.com', 'axios.com',
   'technologyreview.com', 'nature.com', 'science.org',
+  'anthropic.com',
 ]
 export const EXA_NUM_RESULTS = 10
 
