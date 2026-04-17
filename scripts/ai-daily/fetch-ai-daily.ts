@@ -28,7 +28,7 @@ import { AI_DAILY_DIR, getTodayInShanghai } from './config'
 import { fetchRssItems } from './sources/rss-feeds'
 import { fetchSearchItems } from './sources/search'
 import { fetchSocialItems } from './sources/social'
-import { fetchHorizonItems } from './sources/horizon'
+import { fetchHorizonItems } from './sources/hn'
 import { fetchGithubTrendingItems } from './sources/github-trending'
 import { scoreItems, generateDailyBrief } from './scoring'
 import { MetricsCollector, computeOutputStats } from './metrics'
@@ -40,21 +40,23 @@ async function main() {
   const metrics = new MetricsCollector()
 
   // ─── Parallel source collection ─────────────────────────
-  const [rssResult, searchResult, githubResult] = await Promise.allSettled([
+  const [rssResult, searchResult, githubResult, horizonResult] = await Promise.allSettled([
     fetchRssItems(),
     fetchSearchItems(),
     fetchGithubTrendingItems(),
+    fetchHorizonItems(projectRoot),
   ])
 
   const rssItems = rssResult.status === 'fulfilled' ? rssResult.value : []
   const searchItems = searchResult.status === 'fulfilled' ? searchResult.value : []
   const githubItems = githubResult.status === 'fulfilled' ? githubResult.value : []
+  const horizonItems = horizonResult.status === 'fulfilled' ? horizonResult.value : []
   const socialItems = fetchSocialItems(projectRoot)
-  const horizonItems = fetchHorizonItems(projectRoot)
 
   if (rssResult.status === 'rejected') console.error('❌ RSS failed:', rssResult.reason)
   if (searchResult.status === 'rejected') console.error('❌ Search failed:', searchResult.reason)
   if (githubResult.status === 'rejected') console.error('❌ GitHub failed:', githubResult.reason)
+  if (horizonResult.status === 'rejected') console.error('❌ HN failed:', horizonResult.reason)
 
   const allRaw: RawNewsItem[] = [...rssItems, ...searchItems, ...socialItems, ...horizonItems, ...githubItems]
   console.log(`\n📊 Raw items: RSS=${rssItems.length} Search=${searchItems.length} Social=${socialItems.length} Horizon=${horizonItems.length} GitHub=${githubItems.length} Total=${allRaw.length}`)
