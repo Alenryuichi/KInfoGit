@@ -7,7 +7,6 @@ import { ReadingProgressBar } from '@/components/ReadingProgressBar'
 import { BlogPost, getAllBlogPosts, getBlogPost } from '@/lib/data'
 import { stripMarkdownTitle } from '@/lib/utils'
 import { siteConfig } from '@/lib/config'
-import { ArrowLeftIcon } from '@heroicons/react/24/outline'
 import { BusuanziCounter } from '@/components/BusuanziCounter'
 import { BlogComments } from '@/components/BlogComments'
 
@@ -33,10 +32,12 @@ export default function BlogPostPage({ post, prevPost, nextPost }: BlogPostPageP
           <p className="text-gray-400 mb-8">The blog post you&apos;re looking for doesn&apos;t exist.</p>
           <Link
             href="/blog/"
-            className="inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors"
+            className="inline-flex items-center gap-2 text-sm font-mono text-gray-500 hover:text-purple-400 transition-colors"
           >
-            <ArrowLeftIcon className="w-4 h-4 mr-2" />
-            Back to Blog
+            <span className="text-purple-500/50 hidden sm:inline">~/</span>
+            <span className="hidden sm:inline">blog</span>
+            <span className="text-purple-500/50 sm:hidden">←</span>
+            <span className="sm:text-purple-400 sm:before:content-['/']">cd ..</span>
           </Link>
         </div>
       </div>
@@ -78,10 +79,12 @@ export default function BlogPostPage({ post, prevPost, nextPost }: BlogPostPageP
         <div className="max-w-3xl mx-auto px-5 sm:px-6 pt-32 pb-4">
           <Link
             href="/blog/"
-            className="inline-flex items-center text-sm font-medium text-gray-500 hover:text-gray-300 transition-colors group"
+            className="inline-flex items-center gap-2 text-sm font-mono text-gray-500 hover:text-purple-400 transition-colors group"
           >
-            <ArrowLeftIcon className="w-4 h-4 mr-2 group-hover:-translate-x-1 transition-transform duration-300" />
-            Back to Blog
+            <span className="text-purple-500/50 hidden sm:inline">~/</span>
+            <span className="hidden sm:inline">blog</span>
+            <span className="text-purple-500/50 sm:hidden">←</span>
+            <span className="sm:text-purple-400 sm:before:content-['/'] group-hover:-translate-x-1 transition-transform duration-300">cd ..</span>
           </Link>
         </div>
 
