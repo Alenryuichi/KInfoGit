@@ -68,6 +68,8 @@ interface StarredRepo {
   worthReading: string
   topics: string[]
   tags: string[]
+  score: number           // 0–10, integer. Higher = stronger signal.
+  scoreReason: string     // One-liner explanation from DeepSeek
 }
 
 interface DailyStars {
@@ -115,23 +117,37 @@ async function fetchUserStars(username: string): Promise<{ starredAt: string; re
 
 // --- DeepSeek API ---
 
-async function generateCommentary(repo: StarredRepo): Promise<{ highlights: string; worthReading: string; tags: string[] }> {
+async function generateCommentary(repo: StarredRepo): Promise<{
+  highlights: string
+  worthReading: string
+  tags: string[]
+  score: number
+  scoreReason: string
+}> {
   if (!DEEPSEEK_API_KEY) {
-    return { highlights: '', worthReading: '', tags: [] }
+    return { highlights: '', worthReading: '', tags: [], score: 0, scoreReason: '' }
   }
 
-  const prompt = `You are a technical reviewer. Given a GitHub repository, provide:
-1. "highlights": Core value and key features of this project (2-3 sentences, concise)
-2. "worthReading": Why it's worth exploring (1-2 sentences)
-3. "tags": Pick 1-3 tags from this EXACT list that best describe the project: ${VALID_TAGS.join(', ')}. Return an empty array if none fit.
+  const prompt = `You are a senior AI engineer curating a feed of "what top AI leaders are starring on GitHub this week". For the repository below, produce five fields:
+
+1. "highlights": Core value and key features (2-3 sentences, concise).
+2. "worthReading": Why it's worth exploring (1-2 sentences).
+3. "tags": Pick 1-3 tags from this EXACT list: ${VALID_TAGS.join(', ')}. Return [] if none fit.
+4. "score": Integer 0-10 signalling how much attention THIS star deserves in an AI-leader feed. Use the rubric:
+   - Freshness (weight 0-4): Is the repo young/rising (low-to-mid stargazer count but clearly gaining traction)? Established (10k+) but releasing something new counts half. Very old/famous repos with no recent angle score 0-1 here.
+   - Relevance (weight 0-4): How squarely does it sit in frontier AI topics (agents, LLM infra, evals, post-training, multi-modal, tooling for AI devs, RAG, agent-harness)? Non-AI dev tools or general CS utilities score low.
+   - Concreteness (weight 0-2): Does the description signal a real, specific artifact (working code, benchmark, novel approach) vs vague/aspirational/placeholder?
+   Sum the three. Clamp to 0-10. Aim for realistic spread — only truly noteworthy repos get 8+.
+5. "scoreReason": ONE sentence justifying the score (reference freshness / relevance / concreteness explicitly).
 
 Repository: ${repo.repo}
 Description: ${repo.description || 'No description'}
 Language: ${repo.language || 'Unknown'}
 Topics: ${repo.topics.join(', ') || 'None'}
 Stars: ${repo.stargazersCount}
+Starred by: ${repo.starredBy}
 
-Respond in JSON format: {"highlights": "...", "worthReading": "...", "tags": ["..."]}`
+Respond in JSON format: {"highlights": "...", "worthReading": "...", "tags": ["..."], "score": 7, "scoreReason": "..."}`
 
   try {
     const res = await fetch(DEEPSEEK_API_URL, {
@@ -143,15 +159,15 @@ Respond in JSON format: {"highlights": "...", "worthReading": "...", "tags": [".
       body: JSON.stringify({
         model: 'deepseek-chat',
         messages: [{ role: 'user', content: prompt }],
-        temperature: 0.7,
-        max_tokens: 300,
+        temperature: 0.4,
+        max_tokens: 400,
         response_format: { type: 'json_object' },
       }),
     })
 
     if (!res.ok) {
       console.warn(`⚠️  DeepSeek API error for ${repo.repo}: ${res.status}`)
-      return { highlights: '', worthReading: '', tags: [] }
+      return { highlights: '', worthReading: '', tags: [], score: 0, scoreReason: '' }
     }
 
     const data = await res.json()
@@ -159,14 +175,18 @@ Respond in JSON format: {"highlights": "...", "worthReading": "...", "tags": [".
     const parsed = JSON.parse(content)
     const rawTags: string[] = Array.isArray(parsed.tags) ? parsed.tags : []
     const validTags = rawTags.filter((t: string) => (VALID_TAGS as readonly string[]).includes(t))
+    const rawScore = typeof parsed.score === 'number' ? parsed.score : parseInt(parsed.score, 10)
+    const score = Number.isFinite(rawScore) ? Math.max(0, Math.min(10, Math.round(rawScore))) : 0
     return {
       highlights: parsed.highlights || '',
       worthReading: parsed.worthReading || '',
       tags: validTags,
+      score,
+      scoreReason: parsed.scoreReason || '',
     }
   } catch (err) {
     console.error(`❌ DeepSeek error for ${repo.repo}:`, err)
-    return { highlights: '', worthReading: '', tags: [] }
+    return { highlights: '', worthReading: '', tags: [], score: 0, scoreReason: '' }
   }
 }
 
@@ -218,6 +238,8 @@ async function main() {
       worthReading: '',
       topics: item.repo.topics || [],
       tags: [],
+      score: 0,
+      scoreReason: '',
     })
   }
 
@@ -241,13 +263,17 @@ async function main() {
     const newStars = stars.filter(s => !existingKeys.has(`${s.repo}::${s.starredBy}`))
 
     if (newStars.length === 0 && existingStars.length > 0) {
-      // Check if any existing stars need backfill
-      const needsBackfill = DEEPSEEK_API_KEY && existingStars.some(s => !s.highlights && !s.worthReading)
+      // Check if any existing stars need backfill (commentary / tags / score)
+      const needsBackfill = DEEPSEEK_API_KEY && existingStars.some(s =>
+        (!s.highlights && !s.worthReading) ||
+        !s.tags || s.tags.length === 0 ||
+        !s.score || s.score === 0
+      )
       if (!needsBackfill) {
         console.log(`  📄 ${date}: No new stars (${existingStars.length} existing)`)
         continue
       }
-      console.log(`  📄 ${date}: No new stars, but backfilling ${existingStars.filter(s => !s.highlights).length} missing highlights`)
+      console.log(`  📄 ${date}: No new stars, backfilling commentary/tags/score for existing`)
     }
 
     // Generate AI commentary for new stars
@@ -258,27 +284,28 @@ async function main() {
         star.highlights = commentary.highlights
         star.worthReading = commentary.worthReading
         star.tags = commentary.tags
+        star.score = commentary.score
+        star.scoreReason = commentary.scoreReason
       }
     }
 
-    // Also generate commentary for existing stars that lack it
+    // Unified backfill for existing stars — single pass, fills whichever fields are missing
     if (DEEPSEEK_API_KEY) {
       for (const star of existingStars) {
-        if (!star.highlights && !star.worthReading) {
-          const commentary = await generateCommentary(star)
+        const missingCommentary = !star.highlights && !star.worthReading
+        const missingTags = !star.tags || star.tags.length === 0
+        const missingScore = !star.score || star.score === 0
+        if (!missingCommentary && !missingTags && !missingScore) continue
+
+        const commentary = await generateCommentary(star)
+        if (missingCommentary) {
           star.highlights = commentary.highlights
           star.worthReading = commentary.worthReading
-          star.tags = commentary.tags
         }
-      }
-    }
-
-    // Backfill tags for existing stars that have commentary but no tags
-    if (DEEPSEEK_API_KEY) {
-      for (const star of existingStars) {
-        if (!star.tags || star.tags.length === 0) {
-          const commentary = await generateCommentary(star)
-          star.tags = commentary.tags
+        if (missingTags) star.tags = commentary.tags
+        if (missingScore) {
+          star.score = commentary.score
+          star.scoreReason = commentary.scoreReason
         }
       }
     }

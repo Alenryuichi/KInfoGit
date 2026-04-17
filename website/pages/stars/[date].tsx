@@ -72,11 +72,25 @@ function ItemCard({ item, personMap }: { item: FeedItem; personMap: Record<strin
             <span className="text-[10px]">GH</span>
           </div>
           <div className="flex-1">
-            <div className="flex items-center gap-3 mb-2">
+            <div className="flex items-center gap-3 mb-2 flex-wrap">
               <a href={item.url} target="_blank" rel="noopener noreferrer" className="text-lg font-bold text-gray-200 group-hover:text-orange-400 transition-colors font-sans">
                 {item.repo}
               </a>
               <span className="text-[10px] text-orange-400/80 bg-orange-500/10 px-1.5 py-0.5 rounded">★ {(item.stargazersCount / 1000).toFixed(1)}k</span>
+              {item.score > 0 && (
+                <span
+                  className={`text-[10px] px-1.5 py-0.5 rounded font-mono ${
+                    item.score >= 8
+                      ? 'bg-yellow-500/15 text-yellow-300 border border-yellow-500/30'
+                      : item.score >= 5
+                      ? 'bg-gray-500/15 text-gray-300 border border-gray-500/25'
+                      : 'bg-gray-500/5 text-gray-500 border border-gray-500/15'
+                  }`}
+                  title={item.scoreReason || `AI-assigned signal score: ${item.score}/10`}
+                >
+                  ▲ {item.score}/10
+                </span>
+              )}
             </div>
             <p className="text-sm text-gray-400 mb-3 font-sans">
               {item.description}
@@ -441,6 +455,7 @@ function DateNav({
 export default function StarsDetail({ daily, prevDate, nextDate, allTags, personMap, coStarred }: StarsDetailProps) {
   const [activeTopic, setActiveTopic] = useState<string | null>(null)
   const [activeSource, setActiveSource] = useState<SourceKey>('all')
+  const [sortMode, setSortMode] = useState<'score' | 'time'>('score')
 
   const d = new Date(daily.date + 'T00:00:00')
   const formatted = d.toLocaleDateString('en-US', {
@@ -470,6 +485,24 @@ export default function StarsDetail({ daily, prevDate, nextDate, allTags, person
     if (activeTopic && !('tags' in item ? (item.tags ?? []) : []).includes(activeTopic)) return false
     return true
   })
+
+  // Sort items. In 'score' mode, GitHub items are ordered by DeepSeek score desc
+  // (with stargazersCount as tiebreaker), then non-github items follow. In
+  // 'time' mode, the original feed order (chronological per ingestion) is kept.
+  const sortedItems = sortMode === 'score'
+    ? [...filteredItems].sort((a, b) => {
+        const isGhA = a.type === 'github'
+        const isGhB = b.type === 'github'
+        if (isGhA && isGhB) {
+          const scoreA = a.score || 0
+          const scoreB = b.score || 0
+          if (scoreB !== scoreA) return scoreB - scoreA
+          return (b.stargazersCount || 0) - (a.stargazersCount || 0)
+        }
+        if (isGhA !== isGhB) return isGhA ? -1 : 1
+        return 0
+      })
+    : filteredItems
 
   return (
     <>
@@ -542,14 +575,43 @@ export default function StarsDetail({ daily, prevDate, nextDate, allTags, person
                 onSelect={setActiveSource}
               />
             )}
+
+            {/* Sort Mode — only meaningful when GitHub items are in view */}
+            {githubCount > 0 && (activeSource === 'all' || activeSource === 'github') && (
+              <div className="flex flex-wrap items-center gap-4 text-[10px] uppercase tracking-widest">
+                <span className="text-gray-600">sort --by=</span>
+                <div className="flex flex-wrap gap-2">
+                  <button
+                    onClick={() => setSortMode('score')}
+                    className={`px-2 py-0.5 rounded transition-colors ${
+                      sortMode === 'score'
+                        ? 'bg-white/10 text-white border border-white/20'
+                        : 'text-gray-500 hover:text-white border border-transparent'
+                    }`}
+                  >
+                    [Score]
+                  </button>
+                  <button
+                    onClick={() => setSortMode('time')}
+                    className={`px-2 py-0.5 rounded transition-colors ${
+                      sortMode === 'time'
+                        ? 'bg-white/10 text-white border border-white/20'
+                        : 'text-gray-500 hover:text-white border border-transparent'
+                    }`}
+                  >
+                    [Time]
+                  </button>
+                </div>
+              </div>
+            )}
           </div>
 
           {/* Log Stream */}
           <div className="space-y-12">
-            {filteredItems.length === 0 ? (
+            {sortedItems.length === 0 ? (
               <div className="text-gray-500 text-sm font-mono mt-8">No content matches criteria.</div>
             ) : (
-              filteredItems.map((item, idx) => (
+              sortedItems.map((item, idx) => (
                 <ItemCard key={`${item.type}-${idx}`} item={item} personMap={personMap} />
               ))
             )}

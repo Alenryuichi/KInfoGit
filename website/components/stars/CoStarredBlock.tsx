@@ -154,6 +154,18 @@ export default function CoStarredBlock({
                   <span className="text-yellow-400 bg-yellow-500/10 px-2 py-0.5 rounded">
                     ×{repo.count} starrers
                   </span>
+                  {repo.maxScore > 0 && (
+                    <span
+                      className={`px-1.5 py-0.5 rounded ${
+                        repo.maxScore >= 8
+                          ? 'bg-yellow-500/15 text-yellow-300 border border-yellow-500/30'
+                          : 'bg-gray-500/10 text-gray-300 border border-gray-500/20'
+                      }`}
+                      title={`AI signal score (max across starrers): ${repo.maxScore}/10`}
+                    >
+                      ▲ {repo.maxScore}/10
+                    </span>
+                  )}
                   {repo.stargazersCount > 0 && (
                     <span className="text-orange-400/80 bg-orange-500/10 px-1.5 py-0.5 rounded">
                       ★ {repo.stargazersCount >= 1000 ? (repo.stargazersCount / 1000).toFixed(1) + 'k' : repo.stargazersCount}

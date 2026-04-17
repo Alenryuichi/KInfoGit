@@ -15,6 +15,8 @@ export interface StarredRepo {
   worthReading: string
   topics: string[]
   tags: string[]
+  score: number          // 0–10, 0 = not yet scored
+  scoreReason: string
 }
 
 export interface BlueskyPost {
@@ -231,6 +233,8 @@ function loadGitHubStars(date: string): StarredRepo[] {
       ...star,
       type: 'github' as const,
       tags: star.tags ?? [],
+      score: typeof star.score === 'number' ? star.score : 0,
+      scoreReason: star.scoreReason ?? '',
     }))
   } catch {
     return []
@@ -631,6 +635,7 @@ export interface CoStarredRepo {
   count: number            // starredBy.length
   firstDate: string        // earliest YYYY-MM-DD observed in window
   latestDate: string       // latest YYYY-MM-DD observed in window
+  maxScore: number         // highest DeepSeek score among the contributing stars (0-10)
 }
 
 /**
@@ -653,6 +658,7 @@ export function computeCoStarredRepos(
     starredBy: Set<string>
     firstDate: string
     latestDate: string
+    maxScore: number
   }>()
 
   for (const date of dates) {
@@ -668,6 +674,7 @@ export function computeCoStarredRepos(
           starredBy: new Set<string>(),
           firstDate: date,
           latestDate: date,
+          maxScore: 0,
         })
       }
       const entry = repoMap.get(star.repo)!
@@ -681,6 +688,9 @@ export function computeCoStarredRepos(
       // keep largest known star count (may differ across days)
       if ((star.stargazersCount || 0) > entry.stargazersCount) {
         entry.stargazersCount = star.stargazersCount
+      }
+      if ((star.score || 0) > entry.maxScore) {
+        entry.maxScore = star.score || 0
       }
       if (date < entry.firstDate) entry.firstDate = date
       if (date > entry.latestDate) entry.latestDate = date
@@ -707,12 +717,14 @@ export function computeCoStarredRepos(
       count: starredByArr.length,
       firstDate: e.firstDate,
       latestDate: e.latestDate,
+      maxScore: e.maxScore,
     })
   })
 
-  // Sort by: count desc, then stargazersCount desc, then latestDate desc
+  // Sort by: count desc, then maxScore desc, then stargazersCount desc, then latestDate desc
   return result.sort((a, b) => {
     if (b.count !== a.count) return b.count - a.count
+    if (b.maxScore !== a.maxScore) return b.maxScore - a.maxScore
     if (b.stargazersCount !== a.stargazersCount) return b.stargazersCount - a.stargazersCount
     return b.latestDate.localeCompare(a.latestDate)
   })
