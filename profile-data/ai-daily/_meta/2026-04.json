@@ -1,0 +1,43 @@
+[
+  {
+    "date": "2026-04-17",
+    "timestamp": "2026-04-17T12:21:39.136Z",
+    "durationMs": 125844,
+    "sources": {
+      "rss": 25,
+      "search": 9,
+      "social": 2,
+      "horizon": 0
+    },
+    "dedup": {
+      "urlDropped": 0,
+      "titleDropped": 0
+    },
+    "scoring": {
+      "batches": 3,
+      "failed": 0,
+      "halveRetries": 0,
+      "keywordFallback": 0,
+      "hnWeighted": 0
+    },
+    "anchors": {
+      "loaded": 4,
+      "bands": [
+        "top",
+        "median",
+        "median",
+        "low"
+      ]
+    },
+    "output": {
+      "itemCount": 33,
+      "avgScore": 6.9,
+      "maxScore": 8.5,
+      "sectionCounts": {
+        "headlines": 2,
+        "research": 21,
+        "engineering": 10
+      }
+    }
+  }
+]

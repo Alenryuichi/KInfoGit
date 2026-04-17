@@ -1,6 +1,6 @@
 {
   "date": "2026-04-17",
-  "itemCount": 35,
+  "itemCount": 33,
   "sections": [
     {
       "id": "headlines",
@@ -27,9 +27,9 @@
           ]
         },
         {
-          "title": "Tiger Global-Backed Upscale AI in Talks for $2 Billion Valuation",
-          "summary": "Tiger Global支持的Upscale AI正洽谈20亿美元估值融资",
-          "url": "https://www.bloomberg.com/news/articles/2026-04-16/tiger-global-backed-upscale-ai-in-talks-for-2-billion-valuation?srnd=phx-technology",
+          "title": "Mark Zuckerberg Dives Into AI to Build a Zuckbot - Bloomberg.com",
+          "summary": "马克·扎克伯格正在训练AI代理处理部分CEO职责，Meta深入探索AI助手应用",
+          "url": "https://www.bloomberg.com/news/newsletters/2026-04-16/mark-zuckerberg-is-training-an-ai-agent-to-handle-some-ceo-duties",
           "score": 7.5,
           "sources": [
             {
@@ -37,12 +37,14 @@
             }
           ],
           "tags": [
-            "funding",
-            "startup",
-            "valuation",
-            "ai-company"
+            "ai-agent",
+            "meta",
+            "ceo-tasks",
+            "automation"
           ],
-          "focusTopics": []
+          "focusTopics": [
+            "multi-agent"
+          ]
         }
       ]
     },
@@ -52,7 +54,7 @@
       "items": [
         {
           "title": "Simulating Human Cognition: Heartbeat-Driven Autonomous Thinking Activity Scheduling for LLM-based AI systems",
-          "summary": "提出心跳驱动的自主思考活动调度方法，用于模拟LLM系统的人类认知过程",
+          "summary": "提出心跳驱动的自主思维活动调度方法，用于模拟基于LLM的AI系统的人类认知过程",
           "url": "https://arxiv.org/abs/2604.14178",
           "score": 7.5,
           "sources": [
@@ -81,16 +83,18 @@
             }
           ],
           "tags": [
-            "llm-finetuning",
+            "fine-tuning",
             "reinforcement-learning",
-            "reward-learning",
-            "imitation-learning"
+            "llm-training",
+            "reward-optimization"
           ],
-          "focusTopics": []
+          "focusTopics": [
+            "self-evolution"
+          ]
         },
         {
           "title": "Credo: Declarative Control of LLM Pipelines via Beliefs and Policies",
-          "summary": "提出Credo框架，通过信念和政策声明式控制LLM管道",
+          "summary": "提出Credo框架，通过信念和政策声明式控制LLM管道，用于长期状态决策系统",
           "url": "https://arxiv.org/abs/2604.14401",
           "score": 7.5,
           "sources": [
@@ -102,7 +106,7 @@
             "llm-pipelines",
             "declarative-control",
             "agentic-ai",
-            "belief-policies"
+            "decision-making"
           ],
           "focusTopics": [
             "multi-agent"
@@ -110,7 +114,7 @@
         },
         {
           "title": "Compressed-Sensing-Guided, Inference-Aware Structured Reduction for Large Language Models",
-          "summary": "提出压缩感知引导的推理感知结构化缩减方法，用于大型语言模型",
+          "summary": "提出压缩感知引导、推理感知的结构化缩减方法，用于大型语言模型参数优化",
           "url": "https://arxiv.org/abs/2604.14156",
           "score": 7.5,
           "sources": [
@@ -119,10 +123,10 @@
             }
           ],
           "tags": [
-            "llm-compression",
-            "structured-reduction",
-            "compressed-sensing",
-            "inference-efficiency"
+            "model-compression",
+            "large-language-models",
+            "inference-efficiency",
+            "structured-reduction"
           ],
           "focusTopics": []
         },
@@ -145,28 +149,8 @@
           "focusTopics": []
         },
         {
-          "title": "EviSearch: A Human in the Loop System for Extracting and Auditing Clinical Evidence for Systematic Reviews",
-          "summary": "用于系统评价中临床证据提取与审核的多智能体人机交互系统",
-          "url": "https://arxiv.org/abs/2604.14165",
-          "score": 7.5,
-          "sources": [
-            {
-              "name": "ArXiv cs.CL"
-            }
-          ],
-          "tags": [
-            "multi-agent",
-            "clinical-evidence",
-            "systematic-review",
-            "extraction"
-          ],
-          "focusTopics": [
-            "multi-agent"
-          ]
-        },
-        {
           "title": "NuHF Claw: A Risk Constrained Cognitive Agent Framework for Human Centered Procedure Support in Digital Nuclear Control Rooms",
-          "summary": "提出NuHF Claw框架，用于核电站数字化控制室中基于认知代理的人类中心程序支持",
+          "summary": "提出NuHF Claw框架，用于核电站数字控制室中基于认知代理的人类中心程序支持，具有风险约束",
           "url": "https://arxiv.org/abs/2604.14160",
           "score": 7,
           "sources": [
@@ -177,14 +161,14 @@
           "tags": [
             "cognitive-agent",
             "human-centered-ai",
-            "nuclear-safety",
-            "risk-constrained"
+            "risk-management",
+            "nuclear-safety"
           ],
           "focusTopics": []
         },
         {
           "title": "Seeing Through Experts Eyes A Foundational Vision Language Model Trained on Radiologists Gaze and Reasoning",
-          "summary": "提出基于放射科医生注视和推理训练的基础视觉语言模型，用于胸部X光解读",
+          "summary": "提出基于放射科医生注视和推理训练的基础视觉语言模型，用于胸部X光片解读",
           "url": "https://arxiv.org/abs/2604.14316",
           "score": 7,
           "sources": [
@@ -202,7 +186,7 @@
         },
         {
           "title": "Mistake gating leads to energy and memory efficient continual learning",
-          "summary": "提出错误门控机制，实现能量和内存高效的持续学习",
+          "summary": "提出错误门控机制，实现能量和内存高效的持续学习，受生物突触可塑性启发",
           "url": "https://arxiv.org/abs/2604.14336",
           "score": 7,
           "sources": [
@@ -217,12 +201,12 @@
             "synaptic-plasticity"
           ],
           "focusTopics": [
-            "self-evolution"
+            "memory"
           ]
         },
         {
           "title": "Equifinality in Mixture of Experts: Routing Topology Does Not Determine Language Modeling Quality",
-          "summary": "研究混合专家中的等效性，发现路由拓扑不决定语言建模质量",
+          "summary": "研究混合专家模型中的等效性，发现路由拓扑不决定语言建模质量",
           "url": "https://arxiv.org/abs/2604.14419",
           "score": 7,
           "sources": [
@@ -240,7 +224,7 @@
         },
         {
           "title": "MemGround: Long-Term Memory Evaluation Kit for Large Language Models in Gamified Scenarios",
-          "summary": "提出MemGround，用于游戏化场景中LLM长期记忆评估的工具包",
+          "summary": "提出MemGround，用于游戏化场景中大型语言模型长期记忆评估的工具包",
           "url": "https://arxiv.org/abs/2604.14158",
           "score": 7,
           "sources": [
@@ -252,7 +236,7 @@
             "long-term-memory",
             "llm-evaluation",
             "gamified-scenarios",
-            "memory-benchmark"
+            "memory-testing"
           ],
           "focusTopics": [
             "memory"
@@ -260,7 +244,7 @@
         },
         {
           "title": "How to Fine-Tune a Reasoning Model? A Teacher-Student Cooperation Framework to Synthesize Student-Consistent SFT Data",
-          "summary": "提出师生合作框架，为微调推理模型生成学生一致性的合成数据",
+          "summary": "提出师生合作框架，为推理模型生成一致的微调数据",
           "url": "https://arxiv.org/abs/2604.14164",
           "score": 7,
           "sources": [
@@ -269,18 +253,36 @@
             }
           ],
           "tags": [
-            "fine-tuning",
             "reasoning",
+            "fine-tuning",
             "synthetic-data",
             "teacher-student"
           ],
+          "focusTopics": []
+        },
+        {
+          "title": "EviSearch: A Human in the Loop System for Extracting and Auditing Clinical Evidence for Systematic Reviews",
+          "summary": "用于系统评价中临床证据提取与审核的多智能体系统",
+          "url": "https://arxiv.org/abs/2604.14165",
+          "score": 7,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "multi-agent",
+            "evidence-extraction",
+            "clinical",
+            "systematic-review"
+          ],
           "focusTopics": [
-            "self-evolution"
+            "multi-agent"
           ]
         },
         {
           "title": "Hierarchical Retrieval Augmented Generation for Adversarial Technique Annotation in Cyber Threat Intelligence Text",
-          "summary": "提出分层检索增强生成方法，用于网络威胁情报文本中的对抗技术标注",
+          "summary": "使用分层检索增强生成技术标注网络威胁情报文本中的对抗技术",
           "url": "https://arxiv.org/abs/2604.14166",
           "score": 7,
           "sources": [
@@ -290,9 +292,9 @@
           ],
           "tags": [
             "rag",
-            "cyber-threat-intelligence",
-            "mitre-attack",
-            "annotation"
+            "cybersecurity",
+            "threat-intelligence",
+            "mitre-attack"
           ],
           "focusTopics": [
             "memory"
@@ -327,16 +329,16 @@
             }
           ],
           "tags": [
-            "ai-ethics",
+            "machine-ethics",
             "moral-agents",
             "formal-logic",
-            "kantian-ethics"
+            "philosophy"
           ],
           "focusTopics": []
         },
         {
           "title": "HUOZIIME: An On-Device LLM-enhanced Input Method for Deep Personalization",
-          "summary": "提出HUOZIIME，一种设备端LLM增强的输入法，支持深度个性化",
+          "summary": "提出HUOZIIME，一种设备端LLM增强的输入法，支持深度个性化文本输入",
           "url": "https://arxiv.org/abs/2604.14159",
           "score": 6.5,
           "sources": [
@@ -345,16 +347,16 @@
             }
           ],
           "tags": [
-            "on-device-llm",
+            "on-device-ai",
             "input-method",
             "personalization",
-            "mobile-ai"
+            "mobile-ime"
           ],
           "focusTopics": []
         },
         {
           "title": "Can Large Language Models Detect Methodological Flaws? Evidence from Gesture Recognition for UAV-Based Rescue Operation Based on Deep Learning",
-          "summary": "研究LLM检测方法学缺陷的能力，基于无人机救援中手势识别的深度学习案例",
+          "summary": "研究大型语言模型检测方法学缺陷的能力，基于无人机救援中深度学习手势识别的证据",
           "url": "https://arxiv.org/abs/2604.14161",
           "score": 6.5,
           "sources": [
@@ -363,12 +365,14 @@
             }
           ],
           "tags": [
-            "llm-evaluation",
             "methodological-flaws",
+            "llm-evaluation",
             "gesture-recognition",
             "uav-rescue"
           ],
-          "focusTopics": []
+          "focusTopics": [
+            "reflection"
+          ]
         },
         {
           "title": "Chinese Essay Rhetoric Recognition Using LoRA, In-context Learning and Model Ensemble",
@@ -381,16 +385,16 @@
             }
           ],
           "tags": [
+            "nlp",
             "lora",
             "in-context-learning",
-            "essay-scoring",
-            "chinese-nlp"
+            "essay-scoring"
           ],
           "focusTopics": []
         },
         {
           "title": "Interpretable and Explainable Surrogate Modeling for Simulations: A State-of-the-Art Survey and Perspectives on Explainable AI for Decision-Making",
-          "summary": "关于可解释和可解释替代建模的综述，聚焦于决策中的可解释AI",
+          "summary": "关于可解释和可解释的仿真代理建模的综述，探讨可解释AI在决策中的应用前景",
           "url": "https://arxiv.org/abs/2604.14240",
           "score": 6,
           "sources": [
@@ -400,15 +404,15 @@
           ],
           "tags": [
             "explainable-ai",
-            "surrogate-models",
-            "survey",
-            "decision-making"
+            "surrogate-modeling",
+            "decision-making",
+            "survey"
           ],
           "focusTopics": []
         },
         {
           "title": "Decoupling Scores and Text: The Politeness Principle in Peer Review",
-          "summary": "研究同行评审中的礼貌原则，探讨分数与文本内容的解耦问题",
+          "summary": "研究同行评审中的礼貌原则，探讨分数与文本解耦对作者解读反馈的影响",
           "url": "https://arxiv.org/abs/2604.14162",
           "score": 6,
           "sources": [
@@ -419,14 +423,14 @@
           "tags": [
             "peer-review",
             "politeness-principle",
-            "llm-analysis",
-            "academic-communication"
+            "feedback-interpretation",
+            "academic-ai"
           ],
           "focusTopics": []
         },
         {
           "title": "AI for climate: from technological solutions to relational accountability",
-          "summary": "npj Climate Action研究AI在气候行动中的技术方案与责任关系",
+          "summary": "Nature子刊论文探讨AI在气候行动中从技术解决方案到关系问责的转变",
           "url": "https://www.nature.com/articles/s44168-026-00376-0",
           "score": 6,
           "sources": [
@@ -435,28 +439,10 @@
             }
           ],
           "tags": [
-            "climate-ai",
+            "ai-climate",
             "sustainability",
-            "environmental-science",
-            "ai-applications"
-          ],
-          "focusTopics": []
-        },
-        {
-          "title": "The data-only illusion in materials discovery - Nature",
-          "summary": "Nature文章讨论材料发现中'仅数据'方法的局限性",
-          "url": "https://www.nature.com/articles/s41563-026-02578-7",
-          "score": 6,
-          "sources": [
-            {
-              "name": "nature.com"
-            }
-          ],
-          "tags": [
-            "materials-science",
-            "ai-research",
-            "scientific-discovery",
-            "data-limitations"
+            "accountability",
+            "environmental-ai"
           ],
           "focusTopics": []
         }
@@ -468,7 +454,7 @@
       "items": [
         {
           "title": "Anthropic releases Claude Opus 4.7: How to try it, benchmarks, safety - Mashable",
-          "summary": "Anthropic发布Claude Opus 4.7模型，介绍使用方法、基准测试和安全特性",
+          "summary": "Anthropic发布Claude Opus 4.7模型，介绍其功能、基准测试和安全性",
           "url": "https://mashable.com/article/anthropic-releases-claude-opus-4-7",
           "score": 8.5,
           "sources": [
@@ -477,10 +463,10 @@
             }
           ],
           "tags": [
-            "anthropic",
-            "claude-opus",
-            "llm-release",
-            "benchmarks"
+            "claude",
+            "model-release",
+            "benchmarks",
+            "safety"
           ],
           "focusTopics": []
         },
@@ -495,16 +481,16 @@
             }
           ],
           "tags": [
+            "browser-ai",
             "google",
-            "chrome",
-            "ai-assistant",
-            "browser-integration"
+            "product-launch",
+            "web-search"
           ],
           "focusTopics": []
         },
         {
           "title": "New ways to create personalized images in the Gemini app",
-          "summary": "谷歌Gemini应用推出新功能，可根据个人数据创建个性化图像",
+          "summary": "谷歌Gemini应用推出个性化图像生成新功能",
           "url": "https://blog.google/innovation-and-ai/products/gemini-app/personal-intelligence-nano-banana/",
           "score": 7.5,
           "sources": [
@@ -514,51 +500,51 @@
           ],
           "tags": [
             "gemini",
-            "personalized-ai",
             "image-generation",
+            "personalization",
             "google-ai"
           ],
           "focusTopics": []
         },
         {
           "title": "Anthropic Releases Claude Opus 4.7 to Remind Everyone How Great Mythos Is - Gizmodo",
-          "summary": "Gizmodo报道Anthropic发布Claude Opus 4.7，强调其相对于Mythos的改进",
+          "summary": "Anthropic发布Claude Opus 4.7，强调其对Mythos模型的改进",
           "url": "https://gizmodo.com/anthropic-releases-claude-opus-4-7-to-remind-everyone-how-great-mythos-is-2000747469",
-          "score": 7,
+          "score": 7.5,
           "sources": [
             {
               "name": "gizmodo.com"
             }
           ],
           "tags": [
+            "claude",
             "anthropic",
-            "claude-opus",
-            "model-comparison",
+            "model-update",
             "ai-news"
           ],
           "focusTopics": []
         },
         {
-          "title": "Why having “humans in the loop” in an AI war is an illusion",
-          "summary": "MIT Technology Review分析AI战争中'人在回路'概念的局限性",
-          "url": "https://www.technologyreview.com/2026/04/16/1136029/humans-in-the-loop-ai-war-illusion/",
+          "title": "AI economics for the common good | Nature Machine Intelligence",
+          "summary": "《自然·机器智能》期刊文章探讨AI经济学与公共利益",
+          "url": "https://www.nature.com/articles/s42256-026-01212-0",
           "score": 7,
           "sources": [
             {
-              "name": "technologyreview.com"
+              "name": "nature.com"
             }
           ],
           "tags": [
-            "ai-warfare",
-            "human-in-the-loop",
-            "military-ai",
-            "ethics"
+            "ai-economics",
+            "policy",
+            "ethics",
+            "research-paper"
           ],
           "focusTopics": []
         },
         {
           "title": "llm-anthropic 0.25",
-          "summary": "llm-anthropic 0.25版本发布，新增Claude 3.7模型支持",
+          "summary": "llm-anthropic工具发布0.25版本，支持Claude 3.7模型",
           "url": "https://simonwillison.net/2026/Apr/16/llm-anthropic/#atom-everything",
           "score": 6.5,
           "sources": [
@@ -578,7 +564,7 @@
         },
         {
           "title": "Making AI operational in constrained public sector environments",
-          "summary": "MIT技术评论文章探讨在资源受限的公共部门环境中实施AI的挑战",
+          "summary": "MIT Technology Review探讨AI在资源受限的公共部门环境中的实际部署挑战与策略",
           "url": "https://www.technologyreview.com/2026/04/16/1135216/making-ai-operational-in-constrained-public-sector-environments/",
           "score": 6.5,
           "sources": [
@@ -587,28 +573,10 @@
             }
           ],
           "tags": [
+            "ai-deployment",
             "public-sector",
-            "ai-adoption",
-            "operational-challenges",
-            "policy"
-          ],
-          "focusTopics": []
-        },
-        {
-          "title": "AI economics for the common good | Nature Machine Intelligence",
-          "summary": "Nature Machine Intelligence探讨AI经济学与公共利益的关系",
-          "url": "https://www.nature.com/articles/s42256-026-01212-0",
-          "score": 6.5,
-          "sources": [
-            {
-              "name": "nature.com"
-            }
-          ],
-          "tags": [
-            "ai-economics",
-            "policy",
-            "social-impact",
-            "governance"
+            "operational-ai",
+            "constraints"
           ],
           "focusTopics": []
         },
@@ -623,16 +591,16 @@
             }
           ],
           "tags": [
-            "qwen",
-            "claude",
             "image-generation",
-            "benchmark-comparison"
+            "benchmark",
+            "local-llm",
+            "qwen"
           ],
           "focusTopics": []
         },
         {
           "title": "With max thinking Opus 4.7 is quite impressive, with a real sense of style\n\nIn two prompts: \"impleme",
-          "summary": "Bluesky用户分享Claude Opus 4.7在创意任务中的表现体验",
+          "summary": "Bluesky用户分享Claude Opus 4.7在创意任务中展现出色风格与思维深度的个人观察",
           "url": "https://bsky.app/profile/emollick.bsky.social/post/3mjnuzt5jvs2k",
           "score": 5.5,
           "sources": [
@@ -642,15 +610,17 @@
           ],
           "tags": [
             "claude-opus",
-            "llm-evaluation",
-            "creative-tasks",
+            "creative-ai",
+            "reasoning",
             "user-experience"
           ],
-          "focusTopics": []
+          "focusTopics": [
+            "planning"
+          ]
         },
         {
           "title": "I was told by Anthropic that they are looking at ways of fixing this, which is good.",
-          "summary": "Bluesky用户透露Anthropic正在研究修复某个问题",
+          "summary": "Bluesky用户透露Anthropic正在研究修复Claude模型中的特定问题",
           "url": "https://bsky.app/profile/emollick.bsky.social/post/3mjnt4ldvxs2k",
           "score": 5,
           "sources": [
@@ -660,14 +630,16 @@
           ],
           "tags": [
             "anthropic",
-            "llm-development",
-            "bug-fixes",
-            "company-update"
+            "model-fixes",
+            "user-feedback",
+            "llm-improvement"
           ],
-          "focusTopics": []
+          "focusTopics": [
+            "reflection"
+          ]
         }
       ]
     }
   ],
-  "aiSummary": "今日AI领域动态：融资市场热度不减，**Factory**以15亿美元估值融资[（详情）](#item-techcrunch-com-2026-04-16-factory-hits-1-5b-valuation-to-bui)，**Upscale AI**亦寻求20亿美元估值[（详情）](#item-bloomberg-com-news-articles-2026-04-16-tiger-global-backed-u)。研究方面，新论文探索**LLM的人类认知模拟**[（详情）](#item-arxiv-org-abs-2604-14178)及**声明式控制管道框架**[（详情）](#item-arxiv-org-abs-2604-14401)。产品更新上，**Anthropic发布Claude Opus 4.7**[（详情）](#item-mashable-com-article-anthropic-releases-claude-opus-4-7)，**谷歌则为Chrome推出AI模式**[（详情）](#item-blog-google-products-and-platforms-products-search-ai-mode-c)。观点聚焦于**AI战争中“人在回路”的局限性**[（详情）](#item-technologyreview-com-2026-04-16-1136029-humans-in-the-loop-a)与**公共部门部署AI的挑战**[（详情）](#item-technologyreview-com-2026-04-16-1135216-making-ai-operationa)。"
+  "aiSummary": "今日AI领域动态：企业AI编码平台[Factory估值达15亿美元](#item-techcrunch-com-2026-04-16-factory-hits-1-5b-valuation-to-bui)，同时[扎克伯格正训练AI代理分担CEO职责](#item-bloomberg-com-news-newsletters-2026-04-16-mark-zuckerberg-is)。研究方面，新论文提出[心跳驱动的LLM认知模拟](#item-arxiv-org-abs-2604-14178)及[声明式控制LLM管道的Credo框架](#item-arxiv-org-abs-2604-14401)。工具更新包括[Anthropic发布Claude Opus 4.7](#item-mashable-com-article-anthropic-releases-claude-opus-4-7)和[谷歌为Chrome推出AI探索模式](#item-blog-google-products-and-platforms-products-search-ai-mode-c)。观点聚焦于[AI经济学如何服务公共利益](#item-nature-com-articles-s42256-026-01212-0)及[公共部门部署AI的挑战](#item-technologyreview-com-2026-04-16-1135216-making-ai-operationa)。"
 }
