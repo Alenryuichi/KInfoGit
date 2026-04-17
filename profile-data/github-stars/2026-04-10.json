@@ -15,7 +15,9 @@
         "agent",
         "deployment",
         "tooling"
-      ]
+      ],
+      "score": 6,
+      "scoreReason": "Freshness: 2 (established OpenAI repo with fresh angle), Relevance: 3 (AI agent infrastructure), Concreteness: 1 (description is somewhat concrete but lacks implementation details)"
     },
     {
       "repo": "ekzhang/jax-js",
@@ -41,7 +43,9 @@
         "llm",
         "infra",
         "deployment"
-      ]
+      ],
+      "score": 7,
+      "scoreReason": "Freshness: Young repo with rising traction (784 stars) and modern WebGPU/Wasm approach. Relevance: High - brings JAX/ML to web frontier. Concreteness: Concrete implementation of JAX in JavaScript with specific technical details."
     }
   ]
 }

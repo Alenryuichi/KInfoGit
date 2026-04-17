@@ -13,7 +13,9 @@
       "topics": [],
       "tags": [
         "tooling"
-      ]
+      ],
+      "score": 3,
+      "scoreReason": "Freshness: 2 (young repo with moderate stars but not rapid growth), Relevance: 1 (PDF library is general utility, not frontier AI), Concreteness: 0 (vague description lacking concrete AI artifact or benchmark)"
     },
     {
       "repo": "prawnydagrate/rschess",
@@ -33,7 +35,9 @@
       ],
       "tags": [
         "tooling"
-      ]
+      ],
+      "score": 2,
+      "scoreReason": "Freshness: 1 (established chess library with modest star growth, not AI-focused), Relevance: 0 (chess library unrelated to frontier AI topics), Concreteness: 1 (concrete chess implementation but not AI innovation)"
     },
     {
       "repo": "pkooij/open-arms-mini",
@@ -47,7 +51,9 @@
       "topics": [],
       "tags": [
         "tooling"
-      ]
+      ],
+      "score": 6,
+      "scoreReason": "Freshness: 3 (young repo with low star count gaining traction from notable AI leader), Relevance: 2 (teleoperation/human-in-the-loop aligns with frontier AI/robotics but not core LLM/agent focus), Concreteness: 1 (concrete device description but lacks technical depth/benchmarks)"
     }
   ]
 }

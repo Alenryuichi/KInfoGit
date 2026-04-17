@@ -16,7 +16,9 @@
         "vae",
         "vq-vae"
       ],
-      "tags": []
+      "tags": [],
+      "score": 3,
+      "scoreReason": "Low freshness (old repo with no recent activity), high relevance (VQ-VAE is foundational for modern generative AI), moderate concreteness (specific implementation but not novel approach)."
     },
     {
       "repo": "DWarez/kernels_bench",
@@ -31,7 +33,9 @@
       "tags": [
         "evaluation",
         "tooling"
-      ]
+      ],
+      "score": 2,
+      "scoreReason": "Low freshness (9 stars, no description suggests minimal traction), moderate relevance (Python kernels could relate to AI but unclear), low concreteness (no description or topics makes assessment impossible)."
     },
     {
       "repo": "millionco/claude-doctor",
@@ -50,7 +54,9 @@
       "tags": [
         "tooling",
         "evaluation"
-      ]
+      ],
+      "score": 6,
+      "scoreReason": "Freshness: moderate (young repo with rising traction, 198 stars); Relevance: high (AI dev tooling for Claude Code sessions); Concreteness: moderate (concrete diagnostic tool but somewhat narrow scope)"
     }
   ]
 }

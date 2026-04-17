@@ -14,7 +14,9 @@
       "tags": [
         "llm",
         "tooling"
-      ]
+      ],
+      "score": 6,
+      "scoreReason": "Freshness: high (young repo with low star count gaining traction from notable AI leader jph00). Relevance: moderate (educational neural network implementation bridging concepts, but not cutting-edge frontier AI). Concreteness: moderate (concrete educational artifact but not novel benchmark or approach)."
     },
     {
       "repo": "vllm-project/tpu-inference",
@@ -29,7 +31,9 @@
       "tags": [
         "infra",
         "deployment"
-      ]
+      ],
+      "score": 7,
+      "scoreReason": "High relevance for frontier AI (TPU inference for vLLM), moderate freshness (young repo gaining traction at 290 stars), good concreteness (unified JAX/PyTorch support for concrete implementation)"
     },
     {
       "repo": "ashwwwin/automation-mcp",
@@ -47,7 +51,9 @@
       "tags": [
         "agent",
         "tooling"
-      ]
+      ],
+      "score": 7,
+      "scoreReason": "Freshness: Young repo with moderate stars gaining traction (386 stars). Relevance: Directly addresses frontier AI (MCP server for agent control). Concreteness: Concrete implementation for Mac automation with specific capabilities."
     },
     {
       "repo": "omaclaren/pi-markdown-preview",
@@ -61,7 +67,9 @@
       "topics": [],
       "tags": [
         "tooling"
-      ]
+      ],
+      "score": 2,
+      "scoreReason": "Low relevance (markdown/LaTeX preview tool, not frontier AI) and low freshness (39 stars with no indication of recent traction), though concrete in implementation."
     },
     {
       "repo": "nicobailon/pi-subagents",
@@ -77,7 +85,9 @@
         "agent",
         "deployment",
         "tooling"
-      ]
+      ],
+      "score": 7,
+      "scoreReason": "Freshness: Young repo with moderate stars gaining traction; Relevance: Directly addresses frontier AI (agent delegation/LLM infra); Concreteness: Describes specific technical features (truncation, artifacts, session sharing)"
     },
     {
       "repo": "espennilsen/pi",
@@ -89,7 +99,9 @@
       "highlights": "The espennilsen/pi repository appears to be a TypeScript project focused on mathematical or computational implementations, likely related to Pi calculations or mathematical constants. With 91 stars, it demonstrates community interest in numerical computation or algorithm optimization.",
       "worthReading": "It's worth exploring for developers interested in mathematical algorithms, TypeScript implementations of computational methods, or educational code examples for numerical computing.",
       "topics": [],
-      "tags": []
+      "tags": [],
+      "score": 2,
+      "scoreReason": "Repository lacks description and topics, making relevance and concreteness unverifiable; moderate freshness from recent star gain but insufficient information for higher scoring."
     }
   ]
 }

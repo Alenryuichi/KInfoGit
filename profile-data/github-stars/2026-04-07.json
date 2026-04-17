@@ -15,7 +15,9 @@
         "fine-tuning",
         "multi-modal",
         "deployment"
-      ]
+      ],
+      "score": 8,
+      "scoreReason": "High freshness (multimodal fine-tuning on Apple Silicon is novel and gaining traction), high relevance (frontier AI tooling for multimodal LLMs), high concreteness (specific implementation with PyTorch and Metal Performance Shaders)"
     },
     {
       "repo": "MemPalace/mempalace",
@@ -37,7 +39,9 @@
       "tags": [
         "llm",
         "tooling"
-      ]
+      ],
+      "score": 8,
+      "scoreReason": "High relevance as frontier AI memory system with concrete benchmark claims, moderate freshness due to Simonw's recent star despite high existing star count, strong concreteness with specific performance claims."
     },
     {
       "repo": "mattmireles/gemma-tuner-multimodal",
@@ -53,7 +57,9 @@
         "fine-tuning",
         "multi-modal",
         "deployment"
-      ]
+      ],
+      "score": 7,
+      "scoreReason": "Strong relevance for multimodal fine-tuning on Apple Silicon (frontier AI), good concreteness with specific technical implementation, moderate freshness with decent star count but not yet established"
     }
   ]
 }
