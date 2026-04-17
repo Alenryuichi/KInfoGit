@@ -1,5 +1,7 @@
 // AI Daily — DeepSeek unified scoring, classification, and filtering
 
+import path from 'path'
+import { fileURLToPath } from 'url'
 import {
   DEEPSEEK_API_URL,
   DEEPSEEK_MODEL,
@@ -11,9 +13,20 @@ import {
   MAX_FOCUS_TOPICS_PER_ITEM,
   getTodayInShanghai,
 } from './config'
+import { loadScoringAnchors, formatAnchorBlock, type ScoringAnchor } from './anchors'
 import type { RawNewsItem, ScoredItem } from './types'
 
 const FOCUS_TOPIC_SET = new Set<string>(FOCUS_TOPICS)
+
+// Resolve project root once, so scoring.ts stays invocable regardless of
+// the caller's cwd (matters for CI and for unit tests).
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
+const PROJECT_ROOT = path.resolve(__dirname, '..', '..')
+
+// Cache anchors for the lifetime of one scoreItems() call — they're the
+// same across batches within a single run, no need to re-read files each time.
+let anchorCache: ScoringAnchor[] | null = null
 
 // ─── Runtime counters (reset each scoreItems() call) ───────
 interface RunStats {
@@ -45,6 +58,13 @@ export async function scoreItems(items: RawNewsItem[]): Promise<ScoredItem[]> {
   }
 
   const stats = freshStats()
+
+  // Load cross-day anchors once per run; cached for all batches
+  anchorCache = loadScoringAnchors(PROJECT_ROOT)
+  if (anchorCache.length > 0) {
+    const summary = anchorCache.map(a => `${a.band}=${a.score.toFixed(1)}`).join(' ')
+    console.log(`[scoring] loaded ${anchorCache.length} cross-day anchors (${summary})`)
+  }
 
   // Split into batches of SCORING_BATCH_SIZE
   const batches: RawNewsItem[][] = []
@@ -150,6 +170,8 @@ async function callDeepSeek(apiKey: string, items: RawNewsItem[]): Promise<LlmSc
 
   const today = getTodayInShanghai()
 
+  const anchorBlock = formatAnchorBlock(anchorCache ?? [])
+
   const prompt = `今天是 ${today}。以下是采集到的科技资讯列表。请为每条进行评分、分类和过滤。
 
 评分标准 (0-10):
@@ -193,7 +215,7 @@ focusTopics（0-${MAX_FOCUS_TOPICS_PER_ITEM} 个）:
   * tool-use        —— 工具调用、function calling、code execution、API 编排
 - **严格匹配才打**：只有条目核心议题与某个 topic 深度相关才打，泛 AI 新闻应返回空数组 []
 - 最多打 ${MAX_FOCUS_TOPICS_PER_ITEM} 个；大多数条目应为 0 个
-
+${anchorBlock}
 新闻列表:
 ${itemList}
 
