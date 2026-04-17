@@ -1,6 +1,6 @@
 # ROADMAP — AI Daily / Code / Stars
 
-> Last updated: **2026-04-17** — _本次变更：Stars P0 全部关闭（空 URL 验证无问题 → 降级护栏；YouTube topic filter 管线打通 + 历史 30 条 backfill）；**P1 "Co-Starred 视图" 落地并双端接入**；**P1 "Stars 打分" 落地，历史 21 条 backfill 分布 2–8/10**；**AI Daily P0 "Horizon / HN 当日可用性" 关闭（换直连 HN Algolia front_page API，去掉对 markdown 文件节奏的依赖）**_
+> Last updated: **2026-04-17** — _本次变更：Stars P0 全部关闭（空 URL 验证无问题 → 降级护栏；YouTube topic filter 管线打通 + 历史 30 条 backfill）；**P1 "Co-Starred 视图" 落地并双端接入**；**P1 "Stars 打分" 落地，历史 21 条 backfill 分布 2–8/10**；**AI Daily P0 "Horizon / HN 当日可用性" 关闭（换直连 HN Algolia front_page API，去掉对 markdown 文件节奏的依赖）**；**Code benchmarks 退役 BigCodeBench (frozen 366d) + EvalPlus (frozen 478d)，数据冻结为历史存档、live pipeline 收敛到 Arena / Aider / SWE-bench / LiveCodeBench 4 源**_
 >
 > 本文档只覆盖站点上三个**持续更新型内容板块**（AI Daily、Code、Stars）的演进规划。
 > 简历、博客、Work 等静态内容演进请见各自的 openspec change；构建/部署流程见 `docs/guides/DEPLOYMENT_GUIDE.md`。
@@ -88,7 +88,7 @@
 ### 观察指标
 
 - 每周 `/code/[week]` PV（当前站点尚未埋点，先放 placeholder）
-- 三大 benchmark 抓取成功率（目标 ≥ 95%/月）
+- Live benchmark 源抓取成功率（4 源：Arena / Aider / SWE-bench / LiveCodeBench；目标 ≥ 95%/月。BigCodeBench / EvalPlus 已退役为冻结档，不纳入指标）
 - 周报生成耗时（DeepSeek 调用，目标 < 2 分钟）
 
 ---
