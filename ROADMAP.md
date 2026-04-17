@@ -1,6 +1,6 @@
 # ROADMAP — AI Daily / Code / Stars
 
-> Last updated: **2026-04-17** — _本次变更：Stars P0 全部关闭（空 URL 验证无问题 → 降级护栏；YouTube topic filter 管线打通 + 历史 30 条 backfill）；**P1 "Co-Starred 视图" 落地并双端接入**；**P1 "Stars 打分" 落地，历史 21 条 backfill 分布 2–8/10**_
+> Last updated: **2026-04-17** — _本次变更：Stars P0 全部关闭（空 URL 验证无问题 → 降级护栏；YouTube topic filter 管线打通 + 历史 30 条 backfill）；**P1 "Co-Starred 视图" 落地并双端接入**；**P1 "Stars 打分" 落地，历史 21 条 backfill 分布 2–8/10**；**AI Daily P0 "Horizon / HN 当日可用性" 关闭（换直连 HN Algolia front_page API，去掉对 markdown 文件节奏的依赖）**_
 >
 > 本文档只覆盖站点上三个**持续更新型内容板块**（AI Daily、Code、Stars）的演进规划。
 > 简历、博客、Work 等静态内容演进请见各自的 openspec change；构建/部署流程见 `docs/guides/DEPLOYMENT_GUIDE.md`。
@@ -31,7 +31,7 @@
 
 - 🚧 **v2 词表观察期**（7 天）：等到 4/24 回看 7d 命中分布，定是否淘汰 `planning`（目前 0 命中），是否再合并 `post-training`+`model-release`（两者常在同一条 release 新闻里）
 - 📐 **OpenAI RSS 403 修复或下线**：当前换浏览器 UA 后 curl OK 但 Node fetch 仍 403，疑 Cloudflare TLS fingerprint。两条路：(a) 用 `undici` 自定义 TLS ciphers；(b) 接受现状，因为 Exa allowlist 已覆盖 `openai.com` → **倾向 (b)，1 周后若 Exa 漏采再回头**
-- 📐 **Horizon / HN 源当日可用性**：现在 horizon 依赖 `tools/horizon/repo/data/summaries/horizon-YYYY-MM-DD-en.md`，但该文件生成节奏不稳定（4/17 的没生成 → 当天 HN=0）。要么改为直接跑 Horizon 作为 pipeline 子步骤，要么换直连 HN API（后者更轻量）
+- ✅ **Horizon / HN 源当日可用性**（2026-04-17 落地）：原依赖 `tools/horizon/repo/data/summaries/horizon-YYYY-MM-DD-en.md`，文件生成节奏不稳（4/17 当天没生成 → HN=0）。已换成直连 HN Algolia `front_page` API（`scripts/ai-daily/sources/hn.ts`，无 key / 无配额 / ~30 条 live hits），`priorScore = clamp(points/500, 0, 1)`，下游 `sourceType='horizon'` 字段保持不变以兼容历史 metrics / dashboard。旧 markdown parser 保留为 fallback 分支。Smoke test 30 条，顶部全 AI（Claude Opus 4.7 / Qwen3.6 / Codex）。
 
 #### P1 — 内容质量与发现力
 
