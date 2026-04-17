@@ -20,47 +20,8 @@
           "focusTopics": []
         },
         {
-          "title": "Anthropic releases Claude Opus 4.7: How to try it, benchmarks, safety - Mashable",
-          "summary": "媒体报道Anthropic发布Claude Opus 4.7模型，包含基准测试和安全信息。",
-          "url": "https://mashable.com/article/anthropic-releases-claude-opus-4-7",
-          "score": 8.5,
-          "sources": [
-            {
-              "name": "mashable.com"
-            }
-          ],
-          "tags": [],
-          "focusTopics": []
-        },
-        {
-          "title": "Anthropic Releases Claude Opus 4.7 to Remind Everyone How Great Mythos Is - Gizmodo",
-          "summary": "媒体报道Anthropic发布Claude Opus 4.7，强调其对Mythos模型的改进。",
-          "url": "https://gizmodo.com/anthropic-releases-claude-opus-4-7-to-remind-everyone-how-great-mythos-is-2000747469",
-          "score": 8.5,
-          "sources": [
-            {
-              "name": "gizmodo.com"
-            }
-          ],
-          "tags": [],
-          "focusTopics": []
-        },
-        {
-          "title": "New ways to create personalized images in the Gemini app",
-          "summary": "谷歌Gemini应用推出新的个性化图像创建功能。",
-          "url": "https://blog.google/innovation-and-ai/products/gemini-app/personal-intelligence-nano-banana/",
-          "score": 8,
-          "sources": [
-            {
-              "name": "Google AI Blog"
-            }
-          ],
-          "tags": [],
-          "focusTopics": []
-        },
-        {
           "title": "Factory hits $1.5B valuation to build AI coding for enterprises - TechCrunch",
-          "summary": "报道AI编码初创公司Factory获得15亿美元估值，专注于企业工程。",
+          "summary": "AI编码初创公司Factory完成融资，估值达15亿美元。",
           "url": "https://techcrunch.com/2026/04/16/factory-hits-1-5b-valuation-to-build-ai-coding-for-enterprises/",
           "score": 8,
           "sources": [
@@ -73,7 +34,7 @@
         },
         {
           "title": "This $1.5 Billion AI Startup Steps In When Software Breaks - Forbes",
-          "summary": "报道估值15亿美元的AI初创公司Resolve AI，专注于软件故障修复。",
+          "summary": "AI初创公司Resolve AI估值达15亿美元，专注于软件故障自动修复。",
           "url": "https://www.forbes.com/sites/sofiachierchio/2026/04/16/this-15-billion-ai-startup-steps-in-when-software-breaks/",
           "score": 7.5,
           "sources": [
@@ -91,21 +52,8 @@
       "title": "Research & Innovation",
       "items": [
         {
-          "title": "GFT: From Imitation to Reward Fine-Tuning with Unbiased Group Advantages and Dynamic Coefficient Rectification",
-          "summary": "提出从模仿学习到奖励微调的GFT方法，用于大语言模型的后训练。",
-          "url": "https://arxiv.org/abs/2604.14258",
-          "score": 7.5,
-          "sources": [
-            {
-              "name": "ArXiv cs.AI"
-            }
-          ],
-          "tags": [],
-          "focusTopics": []
-        },
-        {
           "title": "Compressed-Sensing-Guided, Inference-Aware Structured Reduction for Large Language Models",
-          "summary": "提出压缩感知引导、推理感知的结构化缩减方法，用于大语言模型压缩。",
+          "summary": "提出压缩感知引导、推理感知的结构化缩减方法，用于大型语言模型。",
           "url": "https://arxiv.org/abs/2604.14156",
           "score": 7.5,
           "sources": [
@@ -117,21 +65,8 @@
           "focusTopics": []
         },
         {
-          "title": "How to Fine-Tune a Reasoning Model? A Teacher-Student Cooperation Framework to Synthesize Student-Consistent SFT Data",
-          "summary": "提出师生合作框架，用于合成学生一致的SFT数据以微调推理模型。",
-          "url": "https://arxiv.org/abs/2604.14164",
-          "score": 7.5,
-          "sources": [
-            {
-              "name": "ArXiv cs.CL"
-            }
-          ],
-          "tags": [],
-          "focusTopics": []
-        },
-        {
           "title": "Simulating Human Cognition: Heartbeat-Driven Autonomous Thinking Activity Scheduling for LLM-based AI systems",
-          "summary": "提出基于心跳驱动的自主思维活动调度方法，用于模拟LLM智能体的人类认知。",
+          "summary": "提出基于心跳驱动的自主思考活动调度方法，用于模拟LLM智能体的人类认知。",
           "url": "https://arxiv.org/abs/2604.14178",
           "score": 7,
           "sources": [
@@ -143,8 +78,21 @@
           "focusTopics": []
         },
         {
+          "title": "GFT: From Imitation to Reward Fine-Tuning with Unbiased Group Advantages and Dynamic Coefficient Rectification",
+          "summary": "提出从模仿学习到奖励微调的GFT方法，利用无偏群体优势和动态系数校正。",
+          "url": "https://arxiv.org/abs/2604.14258",
+          "score": 7,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
           "title": "Seeing Through Experts Eyes A Foundational Vision Language Model Trained on Radiologists Gaze and Reasoning",
-          "summary": "提出基于放射科医生注视和推理数据训练的基础视觉语言模型，用于胸部X光解读。",
+          "summary": "提出基于放射科医生注视和推理训练的基础视觉语言模型，用于胸部X光解读。",
           "url": "https://arxiv.org/abs/2604.14316",
           "score": 7,
           "sources": [
@@ -170,7 +118,7 @@
         },
         {
           "title": "Equifinality in Mixture of Experts: Routing Topology Does Not Determine Language Modeling Quality",
-          "summary": "研究专家混合模型中的等效性，表明路由拓扑不决定语言建模质量。",
+          "summary": "研究表明混合专家模型中的路由拓扑并不决定语言建模质量。",
           "url": "https://arxiv.org/abs/2604.14419",
           "score": 7,
           "sources": [
@@ -182,9 +130,9 @@
           "focusTopics": []
         },
         {
-          "title": "HUOZIIME: An On-Device LLM-enhanced Input Method for Deep Personalization",
-          "summary": "提出HUOZIIME，一个用于深度个性化的设备端LLM增强输入法。",
-          "url": "https://arxiv.org/abs/2604.14159",
+          "title": "How to Fine-Tune a Reasoning Model? A Teacher-Student Cooperation Framework to Synthesize Student-Consistent SFT Data",
+          "summary": "提出师生合作框架，用于合成学生一致的SFT数据以微调推理模型。",
+          "url": "https://arxiv.org/abs/2604.14164",
           "score": 7,
           "sources": [
             {
@@ -196,7 +144,7 @@
         },
         {
           "title": "NuHF Claw: A Risk Constrained Cognitive Agent Framework for Human Centered Procedure Support in Digital Nuclear Control Rooms",
-          "summary": "提出用于核电站数字化控制室人机交互的风险约束认知智能体框架。",
+          "summary": "提出用于数字化核控制室人机交互的风险约束认知智能体框架。",
           "url": "https://arxiv.org/abs/2604.14160",
           "score": 6.5,
           "sources": [
@@ -209,7 +157,7 @@
         },
         {
           "title": "Interpretable and Explainable Surrogate Modeling for Simulations: A State-of-the-Art Survey and Perspectives on Explainable AI for Decision-Making",
-          "summary": "关于可解释和可解释的仿真代理建模的综述，聚焦于决策的XAI。",
+          "summary": "关于可解释代理建模用于仿真决策的现状调查与展望。",
           "url": "https://arxiv.org/abs/2604.14240",
           "score": 6.5,
           "sources": [
@@ -222,7 +170,7 @@
         },
         {
           "title": "Mistake gating leads to energy and memory efficient continual learning",
-          "summary": "研究错误门控机制，以实现更节能和内存高效的持续学习。",
+          "summary": "提出错误门控机制，实现能量和内存高效的持续学习。",
           "url": "https://arxiv.org/abs/2604.14336",
           "score": 6.5,
           "sources": [
@@ -235,7 +183,7 @@
         },
         {
           "title": "MemGround: Long-Term Memory Evaluation Kit for Large Language Models in Gamified Scenarios",
-          "summary": "提出MemGround，一个用于游戏化场景中大语言模型长期记忆评估的工具包。",
+          "summary": "提出MemGround，一个用于游戏化场景中LLM长期记忆评估的工具包。",
           "url": "https://arxiv.org/abs/2604.14158",
           "score": 6.5,
           "sources": [
@@ -247,8 +195,21 @@
           "focusTopics": []
         },
         {
+          "title": "HUOZIIME: An On-Device LLM-enhanced Input Method for Deep Personalization",
+          "summary": "提出HUOZIIME，一种用于深度个性化的设备端LLM增强输入法。",
+          "url": "https://arxiv.org/abs/2604.14159",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
           "title": "Can Large Language Models Detect Methodological Flaws? Evidence from Gesture Recognition for UAV-Based Rescue Operation Based on Deep Learning",
-          "summary": "研究大语言模型检测方法论缺陷的能力，以无人机救援手势识别为例。",
+          "summary": "研究大型语言模型检测方法论缺陷的能力，以无人机救援手势识别为例。",
           "url": "https://arxiv.org/abs/2604.14161",
           "score": 6.5,
           "sources": [
@@ -261,7 +222,7 @@
         },
         {
           "title": "SeaAlert: Critical Information Extraction From Maritime Distress Communications with Large Language Models",
-          "summary": "提出SeaAlert，利用大语言模型从海上遇险通信中提取关键信息。",
+          "summary": "提出SeaAlert系统，利用大型语言模型从海上遇险通信中提取关键信息。",
           "url": "https://arxiv.org/abs/2604.14163",
           "score": 6.5,
           "sources": [
@@ -274,7 +235,7 @@
         },
         {
           "title": "EviSearch: A Human in the Loop System for Extracting and Auditing Clinical Evidence for Systematic Reviews",
-          "summary": "提出EviSearch，一个用于系统评价中临床证据提取和审计的人机协同多智能体系统。",
+          "summary": "提出EviSearch，一个用于提取和审核系统评价临床证据的人机协同系统。",
           "url": "https://arxiv.org/abs/2604.14165",
           "score": 6.5,
           "sources": [
@@ -300,7 +261,7 @@
         },
         {
           "title": "Fun-TSG: A Function-Driven Multivariate Time Series Generator with Variable-Level Anomaly Labeling",
-          "summary": "提出一种函数驱动的多元时间序列生成器，用于带变量级异常标签的异常检测评估。",
+          "summary": "提出一种函数驱动的多变量时间序列生成器，用于异常检测方法的可靠评估。",
           "url": "https://arxiv.org/abs/2604.14221",
           "score": 6,
           "sources": [
@@ -313,7 +274,7 @@
         },
         {
           "title": "Formalizing Kantian Ethics: Formula of the Universal Law Logic (FULL)",
-          "summary": "研究将康德伦理学形式化，以构建人工道德智能体。",
+          "summary": "提出形式化康德伦理学的通用法则逻辑，用于构建人工道德智能体。",
           "url": "https://arxiv.org/abs/2604.14254",
           "score": 6,
           "sources": [
@@ -339,7 +300,7 @@
         },
         {
           "title": "Chinese Essay Rhetoric Recognition Using LoRA, In-context Learning and Model Ensemble",
-          "summary": "研究使用LoRA、上下文学习和模型集成进行中文作文修辞识别。",
+          "summary": "使用LoRA、上下文学习和模型集成进行中文作文修辞识别。",
           "url": "https://arxiv.org/abs/2604.14167",
           "score": 6,
           "sources": [
@@ -357,8 +318,21 @@
       "title": "Engineering & Resources",
       "items": [
         {
+          "title": "New ways to create personalized images in the Gemini app",
+          "summary": "谷歌Gemini应用推出新的个性化图像创建功能。",
+          "url": "https://blog.google/innovation-and-ai/products/gemini-app/personal-intelligence-nano-banana/",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "Google AI Blog"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
           "title": "llm-anthropic 0.25",
-          "summary": "llm-anthropic工具发布0.25版本，支持Claude 3.7模型。",
+          "summary": "llm-anthropic工具发布0.25版本，支持新模型并修复错误。",
           "url": "https://simonwillison.net/2026/Apr/16/llm-anthropic/#atom-everything",
           "score": 5.5,
           "sources": [
@@ -370,8 +344,21 @@
           "focusTopics": []
         },
         {
+          "title": "With max thinking Opus 4.7 is quite impressive, with a real sense of style\n\nIn two prompts: \"impleme",
+          "summary": "用户分享对Anthropic Opus 4.7模型在深度思考模式下风格表现的评价。",
+          "url": "https://bsky.app/profile/emollick.bsky.social/post/3mjnuzt5jvs2k",
+          "score": 5.5,
+          "sources": [
+            {
+              "name": "Bluesky:emollick.bsky.social"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
           "title": "Qwen3.6-35B-A3B on my laptop drew me a better pelican than Claude Opus 4.7",
-          "summary": "个人博客分享Qwen3.6-35B-A3B在本地绘图测试中优于Claude Opus 4.7的观察。",
+          "summary": "作者分享Qwen3.6模型在本地设备上绘图性能优于Claude Opus的体验。",
           "url": "https://simonwillison.net/2026/Apr/16/qwen-beats-opus/#atom-everything",
           "score": 5,
           "sources": [
@@ -381,9 +368,22 @@
           ],
           "tags": [],
           "focusTopics": []
+        },
+        {
+          "title": "I was told by Anthropic that they are looking at ways of fixing this, which is good.",
+          "summary": "用户透露Anthropic正在研究修复某个问题（具体未说明）。",
+          "url": "https://bsky.app/profile/emollick.bsky.social/post/3mjnt4ldvxs2k",
+          "score": 5,
+          "sources": [
+            {
+              "name": "Bluesky:emollick.bsky.social"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
         }
       ]
     }
   ],
-  "aiSummary": "谷歌在Chrome浏览器推出AI探索模式，增强网页交互体验。Anthropic发布Claude Opus 4.7模型，在性能与安全方面进行升级。同时，AI编码初创公司Factory估值达15亿美元，显示企业级AI工具市场持续火热。"
+  "aiSummary": "今日AI快报：谷歌在Chrome浏览器中推出[AI探索模式](#item-blog-google-products-and-platforms-products-search-ai-mode-c)，同时其Gemini应用新增[个性化图像创建功能](#item-blog-google-innovation-and-ai-products-gemini-app-personal-i)。融资方面，两家AI初创公司表现亮眼：专注于企业AI编码的[Factory估值达15亿美元](#item-techcrunch-com-2026-04-16-factory-hits-1-5b-valuation-to-bui)，而致力于软件故障自动修复的[Resolve AI也达到同等估值](#item-forbes-com-sites-sofiachierchio-2026-04-16-this-15-billion-a)。研究领域，新论文涉及[LLM的压缩与结构化缩减](#item-arxiv-org-abs-2604-14156)以及[模拟人类认知的调度方法](#item-arxiv-org-abs-2604-14178)。工具更新有[llm-anthropic发布0.25版本](#item-simonwillison-net-2026-Apr-16-llm-anthropic)。观点讨论中，用户对比了[Qwen与Claude Opus的绘图能力](#item-simonwillison-net-2026-Apr-16-qwen-beats-opus)，并提及[Anthropic正着手修复某些问题](#item-bsky-app-profile-emollick-bsky-social-post-3mjnt4ldvxs2k)。"
 }

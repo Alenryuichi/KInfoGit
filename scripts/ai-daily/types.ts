@@ -7,6 +7,7 @@ export interface RawNewsItem {
   sourceName: string         // e.g. "ArXiv", "Tavily", "Bluesky"
   sourceType: 'rss' | 'search' | 'social' | 'horizon'
   publishedAt: string        // ISO date or date string
+  priorScore?: number        // 0-1 normalized community signal (e.g. HN score/10); undefined for non-signal sources
 }
 
 export interface ScoredItem extends RawNewsItem {

@@ -24,7 +24,7 @@ if (fs.existsSync(envPath)) {
   }
 }
 
-import { AI_DAILY_DIR } from './config'
+import { AI_DAILY_DIR, getTodayInShanghai } from './config'
 import { fetchRssItems } from './sources/rss-feeds'
 import { fetchSearchItems } from './sources/search'
 import { fetchSocialItems } from './sources/social'
@@ -73,7 +73,7 @@ async function main() {
   if (dailyBrief) console.log('🤖 Daily brief generated')
 
   // ─── Build DailyDigest output ───────────────────────────
-  const today = new Date().toISOString().slice(0, 10)
+  const today = getTodayInShanghai()
   const digest = buildDigest(today, filtered, dailyBrief)
 
   // ─── Write output ───────────────────────────────────────

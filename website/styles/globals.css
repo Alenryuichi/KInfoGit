@@ -476,6 +476,11 @@ html {
   background: rgba(56, 139, 253, 0.3);
 }
 
+/* Linear Track Timeline */
+.track-fill-height {
+  transition: height 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
 /* Anchor link positioning for mobile */
 @media (max-width: 640px) {
   .anchor-link {
@@ -492,4 +497,77 @@ html {
 /* Table cell nowrap for header */
 .markdown-body th {
   white-space: nowrap;
+}
+
+/* ─── AI Daily Highlight Animation: The Bracket Lock ───────────── */
+@keyframes bracket-fade {
+  0% { opacity: 0; transform: scale(1.1) translateX(-10px); }
+  15% { opacity: 1; transform: scale(1) translateX(0); }
+  80% { opacity: 1; transform: scale(1) translateX(0); }
+  100% { opacity: 0; transform: scale(1) translateX(0); }
+}
+
+@keyframes bracket-fade-right {
+  0% { opacity: 0; transform: scale(1.1) translateX(10px); }
+  15% { opacity: 1; transform: scale(1) translateX(0); }
+  80% { opacity: 1; transform: scale(1) translateX(0); }
+  100% { opacity: 0; transform: scale(1) translateX(0); }
+}
+
+@keyframes track-flash {
+  0% { height: 0; opacity: 0; }
+  15% { height: 100%; opacity: 1; }
+  80% { height: 100%; opacity: 1; }
+  100% { height: 0; opacity: 0; }
+}
+
+.target-bracket-lock {
+  position: relative;
+  border-radius: 0.75rem;
+}
+
+.target-bracket-lock .track-fill-height {
+  animation: track-flash 2.5s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+/* On small screens, adjust positioning slightly so it doesn't cause overflow */
+.target-bracket-lock::before {
+  content: '>> {';
+  position: absolute;
+  top: 32px;
+  left: -32px;
+  transform: translateY(-50%);
+  color: #f97316;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: bold;
+  font-size: 18px;
+  text-shadow: 0 0 10px #f97316;
+  animation: bracket-fade 2.5s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+  pointer-events: none;
+}
+
+.target-bracket-lock::after {
+  content: '}';
+  position: absolute;
+  top: 32px;
+  right: 0px;
+  transform: translateY(-50%);
+  color: #f97316;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: bold;
+  font-size: 18px;
+  text-shadow: 0 0 10px #f97316;
+  animation: bracket-fade-right 2.5s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+  pointer-events: none;
+}
+
+@media (min-width: 640px) {
+  .target-bracket-lock::before {
+    left: -50px;
+    font-size: 24px;
+  }
+  .target-bracket-lock::after {
+    right: -10px;
+    font-size: 24px;
+  }
 }

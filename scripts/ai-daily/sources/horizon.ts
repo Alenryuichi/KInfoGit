@@ -2,6 +2,7 @@
 
 import fs from 'fs'
 import path from 'path'
+import { getTodayInShanghai } from '../config'
 import type { RawNewsItem } from '../types'
 
 /**
@@ -9,7 +10,7 @@ import type { RawNewsItem } from '../types'
  * Horizon provides HN-sourced tech news with scores.
  */
 export function fetchHorizonItems(projectRoot: string): RawNewsItem[] {
-  const today = new Date().toISOString().slice(0, 10)
+  const today = getTodayInShanghai()
   const summariesDir = path.join(projectRoot, 'tools', 'horizon', 'repo', 'data', 'summaries')
   const filePath = path.join(summariesDir, `horizon-${today}-en.md`)
 
@@ -41,6 +42,8 @@ function parseHorizonMarkdown(content: string): RawNewsItem[] {
 
   function flushItem() {
     if (currentTitle && currentUrl) {
+      // priorScore: 0-1 normalized from HN ⭐️ x/10; clamped for safety
+      const prior = Math.max(0, Math.min(1, currentScore / 10))
       items.push({
         title: currentTitle,
         url: currentUrl,
@@ -48,6 +51,7 @@ function parseHorizonMarkdown(content: string): RawNewsItem[] {
         sourceName: `HN (${currentScore.toFixed(1)})`,
         sourceType: 'horizon',
         publishedAt: new Date().toISOString(),
+        priorScore: prior,
       })
     }
     currentTitle = ''

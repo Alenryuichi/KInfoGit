@@ -64,12 +64,92 @@ export const getStaticProps: GetStaticProps<AiDailyDetailProps> = async ({ param
   return { props: { digest, prevDate: prev, nextDate: next, allDates, allFocusTopics } }
 }
 
+// ─── Anchor Helpers ────────────────────────────────────────
+
+/** Generate a stable anchor id from a news item's URL */
+function itemAnchorId(item: NewsItem): string {
+  try {
+    const u = new URL(item.url)
+    const slug = (u.hostname + u.pathname)
+      .replace(/^www\./, '')
+      .replace(/[^a-zA-Z0-9]+/g, '-')
+      .replace(/(^-|-$)/g, '')
+      .slice(0, 60)
+    return `item-${slug}`
+  } catch {
+    return `item-${item.title.slice(0, 30).replace(/[^a-zA-Z0-9]+/g, '-').toLowerCase()}`
+  }
+}
+
+/** Render brief text with inline anchor links from DeepSeek Markdown output */
+function BriefWithLinks({ text }: { text: string }) {
+  // Split the text by markdown links: [text](#anchor)
+  const parts = text.split(/(\[[^\]]+\]\(#[^\)]+\))/g)
+
+  return (
+    <p className="text-sm text-gray-300 leading-relaxed">
+      {parts.map((part, i) => {
+        const match = part.match(/^\[([^\]]+)\]\((#[^\)]+)\)$/)
+        if (match) {
+          return (
+            <a
+              key={i}
+              href={match[2]}
+              onClick={(e) => {
+                e.preventDefault()
+                const targetId = match[2].slice(1)
+                const target = document.getElementById(targetId)
+                if (target) {
+                  // Smooth scroll to target, accounting for header offset
+                  const offset = 120
+                  const top = target.getBoundingClientRect().top + window.scrollY - offset
+                  window.scrollTo({ top, behavior: 'smooth' })
+                  
+                  // Trigger highlight animation reliably
+                  if (target.classList && typeof target.classList.remove === 'function') {
+                    target.classList.remove('target-bracket-lock')
+                  }
+                  
+                  if ((target as any)._bracketTimer) clearTimeout((target as any)._bracketTimer)
+                  
+                  // Force browser to paint a frame without the class to restart CSS animations
+                  requestAnimationFrame(() => {
+                    requestAnimationFrame(() => {
+                      if (target && target.classList && typeof target.classList.add === 'function') {
+                        target.classList.add('target-bracket-lock')
+                      }
+                      
+                      // Bracket and track CSS animations completely finish at 2.5s
+                      (target as any)._bracketTimer = setTimeout(() => {
+                        if (target && target.classList && typeof target.classList.remove === 'function') {
+                          target.classList.remove('target-bracket-lock')
+                        }
+                      }, 2500)
+                    })
+                  })
+                  
+                  // Update URL without jumping
+                  window.history.pushState(null, '', match[2])
+                }
+              }}
+              className="text-emerald-400 hover:text-emerald-300 underline decoration-emerald-500/30 underline-offset-2 hover:decoration-emerald-400/60 transition-colors"
+            >
+              {match[1]}
+            </a>
+          )
+        }
+        return <span key={i}>{part}</span>
+      })}
+    </p>
+  )
+}
+
 // ─── Score Color ────────────────────────────────────────────
 
-function scoreColor(score: number): { text: string, bg: string } {
-  if (score >= 8) return { text: 'text-emerald-400', bg: 'bg-emerald-400/10' }
-  if (score >= 7) return { text: 'text-yellow-400', bg: 'bg-yellow-400/10' }
-  return { text: 'text-blue-400', bg: 'bg-blue-400/10' }
+function scoreColor(score: number): { text: string, bg: string, track: string, hoverBg: string } {
+  if (score >= 8) return { text: 'text-emerald-400', bg: 'bg-emerald-400/10', track: 'from-emerald-400 to-emerald-600 shadow-[0_0_12px_rgba(52,211,153,0.8)]', hoverBg: 'hover:bg-emerald-500/5' }
+  if (score >= 7) return { text: 'text-yellow-400', bg: 'bg-yellow-400/10', track: 'from-yellow-400 to-yellow-600 shadow-[0_0_12px_rgba(250,204,21,0.8)]', hoverBg: 'hover:bg-yellow-500/5' }
+  return { text: 'text-blue-400', bg: 'bg-blue-400/10', track: 'from-blue-400 to-blue-600 shadow-[0_0_12px_rgba(96,165,250,0.8)]', hoverBg: 'hover:bg-blue-500/5' }
 }
 
 // ─── News Item Component ────────────────────────────────────
@@ -80,17 +160,19 @@ function NewsItemCard({ item, index }: { item: NewsItem, index: number }) {
     .join(' · ')
     
   const sColor = scoreColor(item.score)
+  const anchorId = itemAnchorId(item)
 
   return (
     <motion.div 
+      id={anchorId}
       initial={{ opacity: 0, y: 10 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.4, delay: index * 0.1 }}
-      className="group relative"
+      className={`group relative scroll-mt-24 transition-all duration-500 rounded-xl p-4 -mx-4 ${sColor.hoverBg}`}
     >
-      {/* Hover dot indicator */}
-      <div className="absolute -left-[21px] top-2 w-1.5 h-1.5 rounded-full bg-gray-700 group-hover:bg-blue-400 transition-colors hidden sm:block"></div>
+      {/* Linear Track Timeline */}
+      <div className={`absolute left-[-5px] top-0 w-[2px] h-0 group-hover:h-full bg-gradient-to-b ${sColor.track} track-fill-height hidden sm:block`}></div>
       
       <div className="flex items-start gap-3 mb-2">
         {/* Score Badge */}
@@ -330,9 +412,7 @@ export default function AiDailyDetail({ digest, prevDate, nextDate, allDates, al
               <div className="text-[10px] font-mono text-emerald-400 uppercase tracking-[0.15em] mb-2">
                 ++ Daily.Brief ++
               </div>
-              <p className="text-sm text-gray-300 leading-relaxed">
-                {digest.aiSummary}
-              </p>
+              <BriefWithLinks text={digest.aiSummary} />
             </motion.div>
           )}
 

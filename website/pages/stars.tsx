@@ -178,11 +178,11 @@ export default function StarsList({ dates, latestDigest, tagStats, highlights }:
                   {highlights.map((hl, i) => {
                     const type = hl.item.type
                     const url = type === 'github' ? hl.item.url : type === 'bluesky' ? hl.item.url : type === 'youtube' ? hl.item.url : hl.item.url
-                    const title = type === 'github' ? hl.item.repo : type === 'bluesky' ? hl.item.content.slice(0, 50) + '...' : type === 'youtube' ? hl.item.title : hl.item.title
+                    const title = type === 'github' ? hl.item.repo : type === 'bluesky' ? hl.item.content.slice(0, 50) + '...' : type === 'youtube' ? hl.item.title : (hl.item as any).title
                     const stats = type === 'github' ? `★ ${(hl.item.stargazersCount / 1000).toFixed(1)}k` : type === 'bluesky' ? `❤️ ${hl.item.likeCount}` : type === 'youtube' ? `👁 ${(hl.item.viewCount / 1000).toFixed(1)}k` : ''
                     const leaderCount = type === 'github' ? (hl.item.starredBy?.split(',').length || 1) : 1
                     
-                    const description = type === 'github' ? hl.item.description : type === 'bluesky' ? hl.item.content : type === 'youtube' ? hl.item.description : hl.item.summary
+                    const description = type === 'github' ? hl.item.description : type === 'bluesky' ? hl.item.content : type === 'youtube' ? hl.item.description : (hl.item as any).summary
                     
                     return (
                       <div key={i} className="group flex flex-col">

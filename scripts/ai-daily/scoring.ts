@@ -1,49 +1,147 @@
 // AI Daily — DeepSeek unified scoring, classification, and filtering
 
-import { DEEPSEEK_API_URL, DEEPSEEK_MODEL, SCORING_BATCH_SIZE } from './config'
+import {
+  DEEPSEEK_API_URL,
+  DEEPSEEK_MODEL,
+  SCORING_BATCH_SIZE,
+  AI_FALLBACK_KEYWORDS,
+  MAX_RETRY_DEPTH,
+  getTodayInShanghai,
+} from './config'
 import type { RawNewsItem, ScoredItem } from './types'
+
+// ─── Runtime counters (reset each scoreItems() call) ───────
+interface RunStats {
+  totalLlmBatches: number
+  failedBatches: number
+  halveRetries: number
+  keywordFallbacks: number
+  hnWeighted: number
+}
+
+function freshStats(): RunStats {
+  return { totalLlmBatches: 0, failedBatches: 0, halveRetries: 0, keywordFallbacks: 0, hnWeighted: 0 }
+}
 
 // ─── Unified Scoring ──────────────────────────────────────
 
 /**
  * Score, classify, and filter all items in one DeepSeek call.
- * Splits into batches if > SCORING_BATCH_SIZE items.
- * Falls back to defaults on API failure.
+ * Splits into batches of SCORING_BATCH_SIZE. On JSON failure, halves and
+ * retries recursively; single-item failures fall back to keyword matching.
  */
 export async function scoreItems(items: RawNewsItem[]): Promise<ScoredItem[]> {
   if (items.length === 0) return []
 
   const apiKey = process.env.DEEPSEEK_API_KEY
   if (!apiKey) {
-    console.warn('[scoring] DEEPSEEK_API_KEY not set, using defaults')
-    return items.map(defaultScore)
+    console.warn('[scoring] DEEPSEEK_API_KEY not set, using keyword fallback for all items')
+    return items.map(keywordFallback)
   }
 
-  // Split into batches if needed
-  if (items.length > SCORING_BATCH_SIZE) {
-    const batches: RawNewsItem[][] = []
-    for (let i = 0; i < items.length; i += SCORING_BATCH_SIZE) {
-      batches.push(items.slice(i, i + SCORING_BATCH_SIZE))
-    }
-    console.log(`[scoring] Splitting ${items.length} items into ${batches.length} batches`)
+  const stats = freshStats()
 
-    const results: ScoredItem[] = []
-    for (const batch of batches) {
-      const scored = await scoreBatch(apiKey, batch)
-      results.push(...scored)
-    }
-    return results
+  // Split into batches of SCORING_BATCH_SIZE
+  const batches: RawNewsItem[][] = []
+  for (let i = 0; i < items.length; i += SCORING_BATCH_SIZE) {
+    batches.push(items.slice(i, i + SCORING_BATCH_SIZE))
+  }
+  if (batches.length > 1) {
+    console.log(`[scoring] Splitting ${items.length} items into ${batches.length} batches of ≤${SCORING_BATCH_SIZE}`)
   }
 
-  return scoreBatch(apiKey, items)
+  const results: ScoredItem[] = []
+  for (const batch of batches) {
+    const scored = await tryScoreBatch(apiKey, batch, 0, stats)
+    results.push(...scored)
+  }
+
+  const relevant = results.filter(s => s.aiRelevant).length
+  console.log(
+    `[scoring] done: ${relevant}/${results.length} AI-relevant | ` +
+    `batches=${stats.totalLlmBatches} (failed=${stats.failedBatches}, halveRetries=${stats.halveRetries}) | ` +
+    `keywordFallback=${stats.keywordFallbacks} | hnWeighted=${stats.hnWeighted}`
+  )
+  return results
 }
 
-async function scoreBatch(apiKey: string, items: RawNewsItem[]): Promise<ScoredItem[]> {
+/**
+ * Call DeepSeek for a batch; on failure halve-and-retry recursively.
+ * When a single item fails or depth exceeds MAX_RETRY_DEPTH, falls back to
+ * keyword-based scoring so the pipeline never poisons results with blanket
+ * "aiRelevant=true, score=5" defaults.
+ */
+async function tryScoreBatch(
+  apiKey: string,
+  items: RawNewsItem[],
+  depth: number,
+  stats: RunStats,
+): Promise<ScoredItem[]> {
+  if (items.length === 0) return []
+
+  stats.totalLlmBatches += 1
+  const parsed = await callDeepSeek(apiKey, items)
+
+  if (parsed) {
+    // Map LLM output back to items; fill holes with keyword fallback
+    return items.map((item, i) => {
+      const s = parsed.find(p => p.index === i + 1)
+      if (!s) {
+        stats.keywordFallbacks += 1
+        return keywordFallback(item)
+      }
+      return finalizeScored(item, s, stats)
+    })
+  }
+
+  // Parse failed
+  stats.failedBatches += 1
+
+  if (items.length === 1 || depth >= MAX_RETRY_DEPTH) {
+    console.warn(
+      `[scoring] giving up on batch of ${items.length} at depth ${depth}, using keyword fallback`
+    )
+    stats.keywordFallbacks += items.length
+    return items.map(keywordFallback)
+  }
+
+  // Halve and retry
+  stats.halveRetries += 1
+  const mid = Math.ceil(items.length / 2)
+  console.warn(`[scoring] batch of ${items.length} failed at depth ${depth}, halving into ${mid} + ${items.length - mid}`)
+  const left = await tryScoreBatch(apiKey, items.slice(0, mid), depth + 1, stats)
+  const right = await tryScoreBatch(apiKey, items.slice(mid), depth + 1, stats)
+  return [...left, ...right]
+}
+
+interface LlmScoreEntry {
+  index: number
+  score: number
+  category: string
+  aiRelevant: boolean
+  oneLiner: string
+}
+
+/**
+ * Call DeepSeek once for the given batch and return the parsed results array.
+ * Returns null on any failure (network, non-2xx, empty, JSON parse, bad shape).
+ */
+async function callDeepSeek(apiKey: string, items: RawNewsItem[]): Promise<LlmScoreEntry[] | null> {
   const itemList = items
-    .map((item, i) => `${i + 1}. [${item.sourceName}] ${item.title}\n   URL: ${item.url}\n   ${item.summary.slice(0, 150)}`)
+    .map((item, i) => {
+      const lines = [
+        `${i + 1}. [${item.sourceName}] ${item.title}`,
+        `   URL: ${item.url}`,
+        `   ${item.summary.slice(0, 150)}`,
+      ]
+      if (item.priorScore != null) {
+        lines.push(`   Community signal (HN): ${(item.priorScore * 10).toFixed(1)}/10`)
+      }
+      return lines.join('\n')
+    })
     .join('\n')
 
-  const today = new Date().toISOString().slice(0, 10)
+  const today = getTodayInShanghai()
 
   const prompt = `今天是 ${today}。以下是采集到的科技资讯列表。请为每条进行评分、分类和过滤。
 
@@ -51,6 +149,8 @@ async function scoreBatch(apiKey: string, items: RawNewsItem[]): Promise<ScoredI
 - 时效性：是否为今日（或昨日晚间）发布的新内容。常青页面、工具合集、"Best X Tools"指南类文章、网站首页、GitHub 仓库主页等不具有时效性。
 - 影响力：对 AI/ML 行业的影响程度
 - AI 相关度：与人工智能/机器学习的直接相关程度
+
+注意：部分条目附带 "Community signal (HN)" 行，这是 Hacker News 社区给出的分数，可作为辅助参考（高分代表社区关注度高），但不要把它直接当作你的评分，你仍需要独立判断内容质量。
 
 分类（四选一）:
 - breaking: 重大发布、融资、政策、里程碑
@@ -74,14 +174,15 @@ aiRelevant 判断（必须同时满足两个条件才为 true）:
 新闻列表:
 ${itemList}
 
-返回纯 JSON 数组（与输入一一对应），每个元素:
-- index: 序号（从1开始）
-- score: 0-10 的浮点数
-- category: "breaking" | "research" | "release" | "insight"
-- aiRelevant: true/false
-- oneLiner: 一句话中文摘要（不超过 50 字）
+返回一个 JSON 对象（根级），形如：
+{
+  "results": [
+    { "index": 1, "score": 8.5, "category": "research", "aiRelevant": true, "oneLiner": "一句话中文摘要" },
+    ...
+  ]
+}
 
-只返回 JSON 数组，不要其他文字。`
+results 数组必须与输入一一对应（按 index 升序）。oneLiner 不超过 50 字。只返回该 JSON 对象，不要包含任何其他文字或 Markdown 代码块。`
 
   try {
     const res = await fetch(DEEPSEEK_API_URL, {
@@ -93,68 +194,112 @@ ${itemList}
       body: JSON.stringify({
         model: DEEPSEEK_MODEL,
         messages: [
-          { role: 'system', content: '你是一个 AI 领域新闻编辑。只返回纯 JSON 数组，不要任何其他文字。' },
+          { role: 'system', content: '你是一个 AI 领域新闻编辑。严格按用户要求返回一个 JSON 对象，包含 results 数组字段，不要任何其他文字或代码块。' },
           { role: 'user', content: prompt },
         ],
         temperature: 0.2,
         max_tokens: 4096,
+        response_format: { type: 'json_object' },
       }),
       signal: AbortSignal.timeout(60_000),
     })
 
     if (!res.ok) {
       console.warn(`[scoring] DeepSeek API returned ${res.status}`)
-      return items.map(defaultScore)
+      return null
     }
 
     const data = await res.json()
     const content = data?.choices?.[0]?.message?.content?.trim()
-    if (!content) return items.map(defaultScore)
+    if (!content) return null
 
-    // Parse — handle possible code fences
+    // Primary: JSON mode should return a clean JSON object.
+    // Fallback: strip ```json fences if the model ignored the instruction.
     let jsonStr = content
     const fenceMatch = jsonStr.match(/```(?:json)?\s*\n?([\s\S]*?)```/)
     if (fenceMatch) jsonStr = fenceMatch[1].trim()
 
-    const parsed = JSON.parse(jsonStr) as Array<{
-      index: number
-      score: number
-      category: string
-      aiRelevant: boolean
-      oneLiner: string
-    }>
+    let parsed: unknown
+    try {
+      parsed = JSON.parse(jsonStr)
+    } catch {
+      return null
+    }
 
-    if (!Array.isArray(parsed)) return items.map(defaultScore)
+    // Accept { results: [...] } (preferred) or a bare array (legacy tolerance)
+    let resultsArr: unknown
+    if (Array.isArray(parsed)) {
+      resultsArr = parsed
+    } else if (parsed && typeof parsed === 'object' && 'results' in parsed) {
+      resultsArr = (parsed as { results: unknown }).results
+    } else {
+      return null
+    }
+    if (!Array.isArray(resultsArr)) return null
 
-    // Map scores back to items by index
-    const scored: ScoredItem[] = items.map((item, i) => {
-      const s = parsed.find(p => p.index === i + 1)
-      if (!s) return defaultScore(item)
+    // Best-effort validation of entry shape
+    const entries: LlmScoreEntry[] = []
+    for (const raw of resultsArr) {
+      if (!raw || typeof raw !== 'object') continue
+      const r = raw as Record<string, unknown>
+      if (typeof r.index !== 'number' || typeof r.score !== 'number') continue
+      entries.push({
+        index: r.index,
+        score: r.score,
+        category: typeof r.category === 'string' ? r.category : 'insight',
+        aiRelevant: typeof r.aiRelevant === 'boolean' ? r.aiRelevant : true,
+        oneLiner: typeof r.oneLiner === 'string' ? r.oneLiner : '',
+      })
+    }
 
-      return {
-        ...item,
-        score: Math.min(10, Math.max(0, s.score)),
-        category: validateCategory(s.category),
-        aiRelevant: s.aiRelevant ?? true,
-        oneLiner: s.oneLiner ?? item.summary.slice(0, 50),
-      }
-    })
-
-    const relevant = scored.filter(s => s.aiRelevant).length
-    console.log(`[scoring] ${relevant}/${scored.length} items AI-relevant`)
-    return scored
+    return entries.length > 0 ? entries : null
   } catch (err) {
-    console.warn(`[scoring] DeepSeek failed: ${err}`)
-    return items.map(defaultScore)
+    console.warn(`[scoring] DeepSeek call failed: ${err}`)
+    return null
   }
 }
 
-function defaultScore(item: RawNewsItem): ScoredItem {
+/**
+ * Combine an item with its LLM score entry; fuse HN priorScore if present.
+ * final = 0.85 * llmScore + 0.15 * (priorScore * 10), clamped to [0, 10].
+ */
+function finalizeScored(item: RawNewsItem, s: LlmScoreEntry, stats: RunStats): ScoredItem {
+  let finalScore = Math.min(10, Math.max(0, s.score))
+  if (item.priorScore != null) {
+    const hn = Math.min(10, Math.max(0, item.priorScore * 10))
+    finalScore = Math.min(10, Math.max(0, 0.85 * finalScore + 0.15 * hn))
+    stats.hnWeighted += 1
+  }
+  return {
+    ...item,
+    score: finalScore,
+    category: validateCategory(s.category),
+    aiRelevant: s.aiRelevant,
+    oneLiner: s.oneLiner || item.summary.slice(0, 50),
+  }
+}
+
+/**
+ * Keyword-based fallback used when the LLM scoring completely fails
+ * (after halve-and-retry). This replaces the old blanket defaultScore
+ * that marked everything aiRelevant=true and let garbage into the digest.
+ *
+ * Strategy: word-boundary match AI_FALLBACK_KEYWORDS against title+summary.
+ * If any keyword hits, mark aiRelevant=true with a neutral score 5 and
+ * safer 'insight' category; otherwise drop it from the digest.
+ */
+export function keywordFallback(item: RawNewsItem): ScoredItem {
+  const hay = `${item.title} ${item.summary}`.toLowerCase()
+  const aiRelevant = AI_FALLBACK_KEYWORDS.some(kw => {
+    const escaped = kw.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+    const re = new RegExp(`(^|[^a-z0-9])${escaped}([^a-z0-9]|$)`, 'i')
+    return re.test(hay)
+  })
   return {
     ...item,
     score: 5,
-    category: 'breaking',
-    aiRelevant: true,
+    category: 'insight',
+    aiRelevant,
     oneLiner: item.summary.slice(0, 50),
   }
 }
@@ -163,10 +308,25 @@ function validateCategory(cat: string): ScoredItem['category'] {
   const valid = ['breaking', 'research', 'release', 'insight'] as const
   return valid.includes(cat as typeof valid[number])
     ? (cat as ScoredItem['category'])
-    : 'breaking'
+    : 'insight'
 }
 
 // ─── Daily Brief Generation ───────────────────────────────
+
+/** Generate a stable anchor id from a news item's URL (sync with frontend) */
+function generateItemId(item: { url: string; title: string }): string {
+  try {
+    const u = new URL(item.url)
+    const slug = (u.hostname + u.pathname)
+      .replace(/^www\./, '')
+      .replace(/[^a-zA-Z0-9]+/g, '-')
+      .replace(/(^-|-$)/g, '')
+      .slice(0, 60)
+    return `item-${slug}`
+  } catch {
+    return `item-${item.title.slice(0, 30).replace(/[^a-zA-Z0-9]+/g, '-').toLowerCase()}`
+  }
+}
 
 /**
  * Generate a 2-3 sentence Chinese daily brief from top-scored items.
@@ -177,11 +337,26 @@ export async function generateDailyBrief(items: ScoredItem[]): Promise<string | 
   const apiKey = process.env.DEEPSEEK_API_KEY
   if (!apiKey) return null
 
-  const topItems = items
-    .sort((a, b) => b.score - a.score)
-    .slice(0, 8)
-    .map(i => `- [${i.score.toFixed(1)}] ${i.title}: ${i.oneLiner}`)
-    .join('\n')
+  // Build structured input: group by category, top 3 per group
+  const sectionLabels: Record<string, string> = {
+    breaking: '重大发布',
+    research: '研究论文',
+    release: '工具更新',
+    insight: '观点洞察',
+  }
+  const byCategory: Record<string, ScoredItem[]> = {}
+  for (const item of items) {
+    ;(byCategory[item.category] ??= []).push(item)
+  }
+  const sections: string[] = []
+  for (const [cat, label] of Object.entries(sectionLabels)) {
+    const group = byCategory[cat]
+    if (!group?.length) continue
+    group.sort((a, b) => b.score - a.score)
+    const lines = group.slice(0, 3).map(i => `  - [id: ${generateItemId(i)}] ${i.title}: ${i.oneLiner}`)
+    sections.push(`【${label}】(${group.length} 条)\n${lines.join('\n')}`)
+  }
+  const structuredInput = sections.join('\n\n')
 
   try {
     const res = await fetch(DEEPSEEK_API_URL, {
@@ -194,7 +369,7 @@ export async function generateDailyBrief(items: ScoredItem[]): Promise<string | 
         model: DEEPSEEK_MODEL,
         messages: [
           { role: 'system', content: '你是一个 AI 领域新闻编辑。生成简洁的中文当日快报。只返回纯文本。' },
-          { role: 'user', content: `以下是今天最重要的 AI 新闻：\n\n${topItems}\n\n请生成 2-3 句中文当日快报，概述今天 AI 领域最重要的动态，引用具体事件。只返回纯文本。` },
+          { role: 'user', content: `以下是今日 AI Daily 各板块摘要：\n\n${structuredInput}\n\n请生成 3-4 句中文当日快报，须覆盖所有板块。在提及具体事件时，请务必使用 Markdown 链接格式将其链接到对应的 id，例如：[谷歌在Chrome推出AI探索模式](#item-xxx)。只返回纯文本。` },
         ],
         temperature: 0.5,
         max_tokens: 512,
