@@ -1,6 +1,6 @@
 # ROADMAP — AI Daily / Code / Stars
 
-> Last updated: **2026-04-17** — _本次变更：Stars P0 全部关闭（空 URL 验证无问题 → 降级护栏；YouTube topic filter 管线打通 + 历史 30 条 backfill）；**P1 "Co-Starred 视图" 落地并双端接入**_
+> Last updated: **2026-04-17** — _本次变更：Stars P0 全部关闭（空 URL 验证无问题 → 降级护栏；YouTube topic filter 管线打通 + 历史 30 条 backfill）；**P1 "Co-Starred 视图" 落地并双端接入**；**P1 "Stars 打分" 落地，历史 21 条 backfill 分布 2–8/10**_
 >
 > 本文档只覆盖站点上三个**持续更新型内容板块**（AI Daily、Code、Stars）的演进规划。
 > 简历、博客、Work 等静态内容演进请见各自的 openspec change；构建/部署流程见 `docs/guides/DEPLOYMENT_GUIDE.md`。
@@ -122,7 +122,7 @@
 
 #### P1 — 信号质量
 
-- 📐 **Stars 打分**：现在所有 star 同等展示，但"Karpathy star 一个 1k star 的新 agent repo" 明显比 "Karpathy star 一个经典 ML 教材" 信号强。引入 DeepSeek 对 star 做相关性/新鲜度打分，列表按分数排序。
+- ✅ **Stars 打分**（2026-04-17 落地）：`fetch-stars.ts` 的 DeepSeek prompt 扩展为输出 `score 0-10` + `scoreReason`，采用三维 rubric（freshness / relevance / concreteness）。`StarredRepo` interface 加 `score + scoreReason`；`/stars/[date]` GitHub 卡片加 `▲ N/10` badge（tooltip = scoreReason）+ **Sort: Score / Time 切换**（默认 Score）；`CoStarredBlock` 按 `maxScore` 做次级排序并展示 badge。历史 21 条已 backfill，分布：2–3/10 (7 条 noise) · 5–7/10 (12 条合格) · 8/10 (2 条顶级 MemPalace + gemma-tuner-multimodal)。新抓取的 star 自动打分，已有记录缺 score 时走统一 backfill 分支。
 - ✅ **"今天谁被多人 star" 视图**（2026-04-17 落地）：新增 `computeCoStarredRepos` / `getCoStarredForDate`（`website/lib/social-feeds.ts`）+ `CoStarredBlock` 组件（accent/compact 双形态）。`/stars/[date]` 加顶部 accent 卡片（7 天滚动窗口 + ×2/×3 阈值切换），`/stars/weekly/[week]` 把 Cross-Refs 从右列 compact 升格为主列 accent，覆盖完整 ISO 周。当前数据 window=W15 仅 1 条（`mattmireles/gemma-tuner-multimodal`，simonw + minimaxir 共同 star）；关注人增多后自然会更有信号。
 
 #### P2 — 关注列表维护 & 数据护栏
@@ -137,6 +137,7 @@
 - YouTube 抓取 quota（每日 API 调用 < 100 单位）
 - Weekly digest 生成成功率
 - **Tag 覆盖率**：star / bluesky / youtube 三源各自 "有 ≥1 tag 的条目占比"（4/17 基线：youtube 25/30 ≈ 83%，bluesky / star 待测），目标各源 ≥ 70%
+- **Star score 分布**（4/17 基线 n=21）：2–3 (7) · 5–7 (12) · 8 (2)，中位数 6。监测 `score≥7` 占比（当前 ≈ 38%），目标稳定在 30–50%（过低说明 prompt 过严；过高说明 prompt 放水）
 
 ---
 
