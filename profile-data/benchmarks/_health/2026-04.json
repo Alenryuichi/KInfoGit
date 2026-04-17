@@ -44,5 +44,60 @@
     "auxiliaryFallback": [],
     "refusedWrite": false,
     "summary": "ok"
+  },
+  {
+    "runAt": "2026-04-17T13:40:20.393Z",
+    "weekRelative": "2026-04-17",
+    "sources": [
+      {
+        "name": "arena",
+        "count": 50,
+        "previousCount": 50,
+        "status": "ok"
+      },
+      {
+        "name": "aider",
+        "count": 30,
+        "previousCount": 30,
+        "ageDays": 31.569680474537037,
+        "status": "ok"
+      },
+      {
+        "name": "sweBench",
+        "count": 30,
+        "previousCount": 30,
+        "status": "ok"
+      },
+      {
+        "name": "bigCodeBench",
+        "count": 30,
+        "previousCount": 30,
+        "ageDays": 366.56968047453705,
+        "status": "stale",
+        "note": "upstream unchanged for 367 days — treating as dead, consider removing from config"
+      },
+      {
+        "name": "evalPlus",
+        "count": 30,
+        "previousCount": 30,
+        "ageDays": 477.56968047453705,
+        "status": "stale",
+        "note": "upstream unchanged for 478 days — treating as dead, consider removing from config"
+      },
+      {
+        "name": "liveCodeBench",
+        "count": 28,
+        "previousCount": 28,
+        "status": "ok"
+      }
+    ],
+    "criticalEmpty": [],
+    "auxiliaryFallback": [
+      "bigCodeBench",
+      "evalPlus"
+    ],
+    "auxiliaryStale": [],
+    "refusedWrite": false,
+    "summary": "ok with fallback: bigCodeBench, evalPlus using previous rows"
   }
 ]

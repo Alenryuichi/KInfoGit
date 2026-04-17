@@ -28,7 +28,13 @@ export interface SourceOutcome {
   name: string
   count: number                 // rows returned this run
   previousCount: number | null  // rows in the previous snapshot, if any
-  status: 'ok' | 'empty' | 'thin' | 'fetch-error'
+  /**
+   * Age of the upstream data, in days. Only set when the caller has a
+   * reliable Last-Modified / publish-date signal for this source.
+   * Undefined means "unknown" — treated as fresh for decision-making.
+   */
+  ageDays?: number
+  status: 'ok' | 'empty' | 'thin' | 'stale' | 'fetch-error'
   note?: string                 // extra context for a UI tooltip or log
 }
 
@@ -40,6 +46,8 @@ export interface HealthReport {
   criticalEmpty: string[]
   /** Auxiliary sources where we fell back to the previous snapshot's rows. */
   auxiliaryFallback: string[]
+  /** Auxiliary sources that returned data but the data itself is >staleHardDays old. */
+  auxiliaryStale: string[]
   /** If true, this run REFUSED to overwrite latest.json. */
   refusedWrite: boolean
   /** Human-readable summary for the run's last console line. */
@@ -55,6 +63,13 @@ export interface EvaluateArgs {
   current: Record<string, number>
   /** Previous snapshot's row counts, keyed by source name. Pass {} if none. */
   previous: Record<string, number>
+  /**
+   * Upstream data age (days) keyed by source name. Optional per-source —
+   * only include sources for which a trustworthy age signal exists
+   * (HTTP Last-Modified, explicit publishedAt field, etc). Missing or
+   * undefined values are treated as "age unknown → skip age check".
+   */
+  ages?: Record<string, number | undefined>
   /** Source names considered critical. Caller decides. */
   criticalSources: string[]
   /**
@@ -62,6 +77,17 @@ export interface EvaluateArgs {
    * source is flagged "thin" (shrunk sharply but not empty). Default 0.5.
    */
   thinDropFraction?: number
+  /**
+   * Age thresholds for non-critical sources. A source older than
+   * staleSoftDays is flagged "stale" (still surfaced, but annotated).
+   * A source older than staleHardDays is treated as effectively empty,
+   * triggering auxiliaryFallback. Ignored for critical sources — if
+   * Arena hasn't updated in 45 days that's news, not a bug.
+   *
+   * Defaults: soft=60d, hard=180d (half a year).
+   */
+  staleSoftDays?: number
+  staleHardDays?: number
 }
 
 /**
@@ -70,19 +96,26 @@ export interface EvaluateArgs {
  *
  * Decision rule (intentionally simple):
  *   - refusedWrite := every critical source returned 0 rows.
- *   - auxiliaryFallback := auxiliary sources that returned 0 AND had >0 last time.
+ *   - auxiliaryFallback := auxiliary sources that returned 0 AND had >0 last time,
+ *     OR auxiliary sources older than staleHardDays (treated as dead upstream).
+ *   - auxiliaryStale   := auxiliary sources older than staleSoftDays but not yet hard.
  */
 export function evaluate(args: EvaluateArgs): HealthReport {
   const thinDropFraction = args.thinDropFraction ?? 0.5
+  const staleSoftDays = args.staleSoftDays ?? 60
+  const staleHardDays = args.staleHardDays ?? 180
   const criticalSet = new Set(args.criticalSources)
+  const ages = args.ages ?? {}
 
   const sources: SourceOutcome[] = []
   const criticalEmpty: string[] = []
   const auxiliaryFallback: string[] = []
+  const auxiliaryStale: string[] = []
 
   for (const [name, count] of Object.entries(args.current)) {
     const prev = args.previous[name] ?? null
     const isCritical = criticalSet.has(name)
+    const age = ages[name]
 
     let status: SourceOutcome['status']
     let note: string | undefined
@@ -98,6 +131,16 @@ export function evaluate(args: EvaluateArgs): HealthReport {
       } else {
         note = 'no data this run and no previous data either'
       }
+    } else if (!isCritical && age !== undefined && age >= staleHardDays) {
+      // Upstream hasn't moved in >staleHardDays. Treat as dead source:
+      // reuse previous rows (they're the same anyway) and flag loudly.
+      status = 'stale'
+      auxiliaryFallback.push(name)
+      note = `upstream unchanged for ${Math.round(age)} days — treating as dead, consider removing from config`
+    } else if (!isCritical && age !== undefined && age >= staleSoftDays) {
+      status = 'stale'
+      auxiliaryStale.push(name)
+      note = `upstream unchanged for ${Math.round(age)} days`
     } else if (prev !== null && prev > 0 && count < prev * (1 - thinDropFraction)) {
       status = 'thin'
       note = `returned ${count} rows, down from ${prev} — possible scrape breakage`
@@ -105,7 +148,7 @@ export function evaluate(args: EvaluateArgs): HealthReport {
       status = 'ok'
     }
 
-    sources.push({ name, count, previousCount: prev, status, note })
+    sources.push({ name, count, previousCount: prev, ageDays: age, status, note })
   }
 
   const refusedWrite =
@@ -118,7 +161,9 @@ export function evaluate(args: EvaluateArgs): HealthReport {
   } else if (criticalEmpty.length > 0) {
     summary = `partial: ${criticalEmpty.length} critical source(s) empty (${criticalEmpty.join(', ')})`
   } else if (auxiliaryFallback.length > 0) {
-    summary = `ok with fallback: ${auxiliaryFallback.join(', ')} used previous rows`
+    summary = `ok with fallback: ${auxiliaryFallback.join(', ')} using previous rows`
+  } else if (auxiliaryStale.length > 0) {
+    summary = `ok but stale: ${auxiliaryStale.join(', ')} upstream not updating`
   } else {
     const thin = sources.filter(s => s.status === 'thin')
     summary = thin.length > 0
@@ -132,6 +177,7 @@ export function evaluate(args: EvaluateArgs): HealthReport {
     sources,
     criticalEmpty,
     auxiliaryFallback,
+    auxiliaryStale,
     refusedWrite,
     summary,
   }

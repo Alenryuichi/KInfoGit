@@ -118,13 +118,17 @@ async function main() {
   // Sources should already filter by bounds internally, but a belt-and-
   // braces pass here guarantees no dated item leaks in (e.g. if an API
   // starts returning timezone-shifted timestamps after a schema change).
-  // Items without a parseable publishedAt are kept — Tavily/Bailian
-  // search results don't carry reliable dates, and the LLM summarizer
-  // is the last line of defense for those.
+  // An item is kept if EITHER:
+  //   (a) its publishedAt parses cleanly AND falls inside the window, or
+  //   (b) its publishedAt is missing or unparseable.
+  // Case (b) is a deliberate choice: Tavily/Bailian search results don't
+  // carry reliable dates, and the LLM summarizer is the last line of
+  // defense for those. This policy is documented so future-me doesn't
+  // mistake the NaN fallthrough for a bug.
   const inBounds = (iso: string | undefined | null): boolean => {
-    if (!iso) return true
-    const t = new Date(iso).getTime()
-    if (isNaN(t)) return true
+    if (!iso) return true                           // no date → allow (see policy above)
+    const t = Date.parse(iso)
+    if (isNaN(t)) return true                       // unparseable → allow
     return t >= bounds.start.getTime() && t < bounds.end.getTime()
   }
   const leakFilter = <T extends { publishedAt?: string }>(arr: T[], label: string): T[] => {
@@ -167,6 +171,19 @@ async function main() {
     changelogEntries: boundedChangelogEntries,
   }
   const summary = await summarizeWeekly(rawData)
+
+  // Normalize publishedAt on LLM-shaped blog entries. DeepSeek often
+  // rewrites our ISO dates into bare "YYYY-MM-DD" or other formats when
+  // transcribing them — harmless for humans, but callers downstream
+  // (frontend sorting, staleness calc) expect full ISO 8601. Date.parse
+  // accepts both, so this is a one-liner. Unparseable strings are left
+  // alone to preserve the LLM's original output (better than silently
+  // emptying them).
+  for (const blog of summary.blogs) {
+    if (!blog.publishedAt) continue
+    const t = Date.parse(blog.publishedAt)
+    if (!isNaN(t)) blog.publishedAt = new Date(t).toISOString()
+  }
 
   // Post-process: strip fabricated URLs that weren't in raw data
   const { allUrls } = collectUrlsFromRaw(rawData)

@@ -67,6 +67,23 @@ function extractDate(itemXml: string): string {
   return raw
 }
 
+/**
+ * Normalize a feed date string to ISO 8601.
+ * Input formats seen in the wild:
+ *   - RFC 2822:   "Wed, 15 Apr 2026 00:00:00 GMT"   (RSS pubDate)
+ *   - ISO 8601:   "2026-04-15T12:00:00Z"            (Atom published/updated)
+ *   - Bare date:  "2026-04-15"
+ * Returns '' for anything unparseable — callers treat empty as "drop".
+ * Node/V8's Date accepts both RFC 2822 and ISO, so this is a single-pass
+ * conversion. We avoid any external date library.
+ */
+function normalizeDate(raw: string): string {
+  if (!raw) return ''
+  const t = Date.parse(raw)
+  if (isNaN(t)) return ''
+  return new Date(t).toISOString()
+}
+
 async function fetchFeed(feed: RssFeedConfig, bounds: WeekBounds): Promise<RssArticle[]> {
   const res = await fetch(feed.url, {
     headers: { 'User-Agent': 'KInfoGit-Code-Weekly' },
@@ -96,8 +113,9 @@ async function fetchFeed(feed: RssFeedConfig, bounds: WeekBounds): Promise<RssAr
 
     // Filter strictly into the target week. Items with an unparseable
     // date are dropped (used to be kept — that leaked stale content).
-    if (!dateStr) continue
-    const pub = new Date(dateStr).getTime()
+    const iso = normalizeDate(dateStr)
+    if (!iso) continue
+    const pub = Date.parse(iso)
     if (isNaN(pub)) continue
     if (pub < bounds.start.getTime() || pub >= bounds.end.getTime()) continue
 
@@ -105,7 +123,7 @@ async function fetchFeed(feed: RssFeedConfig, bounds: WeekBounds): Promise<RssAr
       company: feed.company,
       title,
       url: link,
-      publishedAt: dateStr,
+      publishedAt: iso,
       summary: description.replace(/<[^>]*>/g, '').slice(0, 500),
       tags: feed.tags || [],
     })

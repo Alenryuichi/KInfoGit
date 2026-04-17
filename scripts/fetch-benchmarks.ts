@@ -158,8 +158,22 @@ async function main() {
 
   // ─── Health check: decide whether the snapshot is safe to persist ─
   const today = new Date().toISOString().slice(0, 10)
+  const runAtInstant = new Date()
+
+  // Compute upstream ages (days) for sources that expose a trustworthy
+  // Last-Modified / publish-date signal. Undefined = "unknown, skip age
+  // check". We deliberately don't fabricate ages for Arena/LiveCodeBench
+  // (their formal publish date is embedded in the data itself; the HTTP
+  // Last-Modified we'd get is the CDN timestamp, not the data's truth).
+  const ageInDays = (dateStr: string | undefined): number | undefined => {
+    if (!dateStr) return undefined
+    const t = new Date(dateStr + 'T00:00:00Z').getTime()
+    if (isNaN(t)) return undefined
+    return (runAtInstant.getTime() - t) / 86400_000
+  }
+
   const health = evaluateHealth({
-    runAt: new Date().toISOString(),
+    runAt: runAtInstant.toISOString(),
     weekRelative: today,
     current: {
       arena: arenaRaw.length,
@@ -177,6 +191,15 @@ async function main() {
       evalPlus: previous?.evalPlus?.length ?? 0,
       liveCodeBench: previous?.liveCodeBench?.length ?? 0,
     },
+    // Only sources with a real Last-Modified signal get an age. Aider's
+    // upstream cadence is genuinely slow (monthly+), so its age is a
+    // true staleness signal — but it's a critical source, so the stale
+    // branch won't trigger anyway (only auxiliaries enter it).
+    ages: {
+      aider: ageInDays(aiderDate),
+      bigCodeBench: ageInDays(bcbDate),
+      evalPlus: ageInDays(epDate),
+    },
     // Arena and Aider are the two sources that actually drive the
     // `/code/benchmarks` page above-the-fold. If either is empty we've
     // still got something to show, but if BOTH are empty the page is
@@ -187,7 +210,8 @@ async function main() {
   console.log(`\n🩺 Health: ${health.summary}`)
   for (const src of health.sources) {
     if (src.status !== 'ok') {
-      console.log(`   - ${src.name}: ${src.status}${src.note ? ` (${src.note})` : ''}`)
+      const ageTag = src.ageDays !== undefined ? ` [age=${Math.round(src.ageDays)}d]` : ''
+      console.log(`   - ${src.name}: ${src.status}${ageTag}${src.note ? ` (${src.note})` : ''}`)
     }
   }
 
@@ -202,10 +226,19 @@ async function main() {
     return
   }
 
-  // ─── Fallback for failed auxiliary sources ──────────────────────
-  // When an auxiliary source returned 0 but had data last time, we reuse
-  // the previous rows so the page doesn't lose entire sections. Mark
-  // the snapshot so the frontend can display a "stale" badge if desired.
+  // ─── Fallback for failed or dead auxiliary sources ──────────────
+  // auxiliaryFallback covers two cases:
+  //   (a) source returned 0 rows this run but had data last time
+  //       (transient breakage — reuse previous rows so the section
+  //       doesn't disappear from the page);
+  //   (b) source has been upstream-dead for >staleHardDays (180d)
+  //       (effectively permanent — we'd be displaying stale rows
+  //       either way; this just bookkeeps it in the health log so
+  //       we have 30 days of data before physically removing the
+  //       source from config).
+  // BigCodeBench (last updated 2025-04-16) and EvalPlus (last updated
+  // 2024-12-26) currently live in bucket (b). If they keep landing in
+  // `stale` for the next 30d of runs, remove them from the fetch list.
   const fbSet = new Set(health.auxiliaryFallback)
   const sweFinal  = fbSet.has('sweBench')      && previous ? previous.sweBench      : sweRaw
   const bcbFinal  = fbSet.has('bigCodeBench')  && previous ? previous.bigCodeBench  : bcbRaw
