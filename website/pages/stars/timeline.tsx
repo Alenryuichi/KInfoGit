@@ -12,6 +12,7 @@ import { RepoCard } from '@/components/stars/RepoCard'
 import { BlueskyPostCard } from '@/components/stars/BlueskyPostCard'
 import { BlogPostCard } from '@/components/stars/BlogPostCard'
 import { YouTubeVideoCard } from '@/components/stars/YouTubeVideoCard'
+import { XPostCard } from '@/components/stars/XPostCard'
 
 interface TimelineProps {
   items: TimelineFeedItem[]
@@ -24,11 +25,12 @@ export const getStaticProps: GetStaticProps<TimelineProps> = async () => {
   return { props: { items, personMap } }
 }
 
-type SourceKey = 'all' | 'github' | 'bluesky' | 'blog' | 'youtube'
+type SourceKey = 'all' | 'github' | 'bluesky' | 'x' | 'blog' | 'youtube'
 
 function ItemCard({ item, personMap }: { item: FeedItem; personMap: Record<string, string> }) {
   if (item.type === 'github') return <RepoCard star={item} personMap={personMap} />
   if (item.type === 'bluesky') return <BlueskyPostCard post={item} personMap={personMap} />
+  if (item.type === 'x') return <XPostCard post={item} personMap={personMap} />
   if (item.type === 'blog') return <BlogPostCard post={item} />
   if (item.type === 'youtube') return <YouTubeVideoCard video={item} />
   return null
@@ -83,6 +85,7 @@ export default function Timeline({ items, personMap }: TimelineProps) {
                 { key: 'all' as SourceKey, label: '[*All]' },
                 { key: 'github' as SourceKey, label: 'GitHub' },
                 { key: 'bluesky' as SourceKey, label: 'Bluesky' },
+                { key: 'x' as SourceKey, label: 'X' },
                 { key: 'youtube' as SourceKey, label: 'YouTube' },
                 { key: 'blog' as SourceKey, label: 'Blog' },
               ]).map(({ key, label }) => (

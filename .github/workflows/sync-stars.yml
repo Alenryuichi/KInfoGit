@@ -47,6 +47,13 @@ jobs:
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
         run: npx tsx scripts/fetch-blogs.ts
 
+      - name: Fetch X signals
+        env:
+          TAVILY_API_KEY: ${{ secrets.TAVILY_API_KEY }}
+          EXA_API_KEY: ${{ secrets.EXA_API_KEY }}
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+        run: npx tsx scripts/fetch-x-signals.ts
+
       - name: Fetch YouTube videos
         env:
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
@@ -115,6 +122,13 @@ jobs:
               date=$(basename "$f" .json)
               count=$(grep -c '"videoId"' "$f" || echo 0)
               echo "- **${date}**: ${count} videos" >> $GITHUB_STEP_SUMMARY
+            done
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "### X Signals" >> $GITHUB_STEP_SUMMARY
+            ls -1 profile-data/x-signals/*.json 2>/dev/null | while read f; do
+              date=$(basename "$f" .json)
+              count=$(grep -c '"type"' "$f" || echo 0)
+              echo "- **${date}**: ${count} signals" >> $GITHUB_STEP_SUMMARY
             done
             echo "" >> $GITHUB_STEP_SUMMARY
             echo "### Weekly Digests" >> $GITHUB_STEP_SUMMARY

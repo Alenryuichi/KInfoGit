@@ -21,43 +21,125 @@
         "tooling"
       ],
       "type": "github"
-    },
-    {
-      "repo": "DWarez/kernels_bench",
-      "url": "https://github.com/DWarez/kernels_bench",
-      "description": "",
-      "language": "Python",
-      "stargazersCount": 9,
-      "starredBy": "sayakpaul",
-      "highlights": "This project appears to benchmark computational kernels, likely focusing on performance comparisons of core operations in Python. It provides a framework for evaluating execution speed and efficiency across different implementations or hardware configurations.",
-      "worthReading": "For developers working on performance-critical applications, it offers insights into optimizing computational kernels and understanding performance trade-offs.",
-      "topics": [],
-      "tags": [
-        "evaluation",
-        "tooling"
-      ],
-      "type": "github"
-    },
-    {
-      "repo": "vllm-project/tpu-inference",
-      "url": "https://github.com/vllm-project/tpu-inference",
-      "description": "TPU inference for vLLM, with unified JAX and PyTorch support.",
-      "language": "Python",
-      "stargazersCount": 290,
-      "starredBy": "sayakpaul",
-      "highlights": "Enables high-performance TPU inference for vLLM, offering unified support for both JAX and PyTorch backends. This allows efficient large language model serving on Google's specialized hardware.",
-      "worthReading": "It addresses a key infrastructure gap by bringing vLLM's optimized serving capabilities to TPU hardware, which is valuable for production deployments requiring scale.",
-      "topics": [],
-      "tags": [
-        "infra",
-        "deployment"
-      ],
-      "type": "github"
     }
   ],
   "posts": [],
   "videos": [],
   "blogs": [],
+  "xPosts": [
+    {
+      "type": "x",
+      "id": "1793854085633913255",
+      "url": "https://x.com/RisingSayak/status/1793854085633913255",
+      "author": {
+        "handle": "sayakpaul",
+        "displayName": "Sayak Paul",
+        "avatar": "https://avatars.githubusercontent.com/sayakpaul"
+      },
+      "content": "Had a nice time chatting about the state of diffusion models and some text-to-image data shenanigans at",
+      "createdAt": "2026-04-16T11:15:25.570Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Sayak Paul discusses the current state of diffusion models and text-to-image data issues.",
+      "worthReading": "Provides insight into ongoing discussions about diffusion model development and data challenges.",
+      "tags": [
+        "multi-modal"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2030950429505495179",
+      "url": "https://x.com/RisingSayak/status/2030950429505495179",
+      "author": {
+        "handle": "sayakpaul",
+        "displayName": "Sayak Paul",
+        "avatar": "https://avatars.githubusercontent.com/sayakpaul"
+      },
+      "content": "Details:",
+      "createdAt": "2026-04-16T11:15:25.570Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "A brief post by Sayak Paul sharing unspecified details.",
+      "worthReading": "Indicates active engagement on technical topics, though content is minimal.",
+      "tags": []
+    },
+    {
+      "type": "x",
+      "id": "2039600999875387538",
+      "url": "https://x.com/RisingSayak/status/2039600999875387538",
+      "author": {
+        "handle": "sayakpaul",
+        "displayName": "Sayak Paul",
+        "avatar": "https://avatars.githubusercontent.com/sayakpaul"
+      },
+      "content": "Giving a talk here is by far the most fulfilling experience of my life!",
+      "createdAt": "2026-04-16T11:15:25.570Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Sayak Paul expresses that giving a talk was an extremely fulfilling personal experience.",
+      "worthReading": "Shows personal enthusiasm for public speaking and knowledge sharing in the AI community.",
+      "tags": []
+    },
+    {
+      "type": "x",
+      "id": "1793854085633913255",
+      "url": "https://x.com/RisingSayak/status/1793854085633913255",
+      "author": {
+        "handle": "sayakpaul",
+        "displayName": "Sayak Paul",
+        "avatar": "https://avatars.githubusercontent.com/sayakpaul"
+      },
+      "content": "Had a nice time chatting about the state of diffusion models and some text-to-image data shenanigans at",
+      "createdAt": "2026-04-16T11:15:25.570Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Sayak Paul discusses the current state of diffusion models and text-to-image data issues.",
+      "worthReading": "Provides insight into ongoing discussions about diffusion model development and data challenges.",
+      "tags": [
+        "multi-modal"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2030950429505495179",
+      "url": "https://x.com/RisingSayak/status/2030950429505495179",
+      "author": {
+        "handle": "sayakpaul",
+        "displayName": "Sayak Paul",
+        "avatar": "https://avatars.githubusercontent.com/sayakpaul"
+      },
+      "content": "Details:",
+      "createdAt": "2026-04-16T11:15:25.570Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "A brief post by Sayak Paul sharing unspecified details.",
+      "worthReading": "Indicates active engagement on technical topics, though content is minimal.",
+      "tags": []
+    },
+    {
+      "type": "x",
+      "id": "2039600999875387538",
+      "url": "https://x.com/RisingSayak/status/2039600999875387538",
+      "author": {
+        "handle": "sayakpaul",
+        "displayName": "Sayak Paul",
+        "avatar": "https://avatars.githubusercontent.com/sayakpaul"
+      },
+      "content": "Giving a talk here is by far the most fulfilling experience of my life!",
+      "createdAt": "2026-04-16T11:15:25.570Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Sayak Paul expresses that giving a talk was an extremely fulfilling personal experience.",
+      "worthReading": "Shows personal enthusiasm for public speaking and knowledge sharing in the AI community.",
+      "tags": []
+    }
+  ],
   "dailyCounts": [
     0,
     0,
@@ -85,10 +167,10 @@
     0,
     0,
     0,
-    1,
-    1,
-    1,
+    4,
+    3,
+    0,
     0
   ],
-  "interestSummary": "Their recent focus is on practical tools for model deployment and performance, specifically around inference memory estimation for Hugging Face models and TPU inference benchmarking for vLLM."
+  "interestSummary": "Sayak Paul is focused on diffusion models and text-to-image generation, including discussions on their current state and related data practices. He is also engaged with tools for estimating model resource requirements."
 }

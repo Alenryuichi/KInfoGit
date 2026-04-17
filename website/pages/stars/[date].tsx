@@ -234,6 +234,66 @@ function ItemCard({ item, personMap }: { item: FeedItem; personMap: Record<strin
         </div>
       </div>
     )
+  } else if (item.type === 'x') {
+    return (
+      <div className="group mb-12">
+        <div className="flex flex-col sm:flex-row sm:items-start gap-4">
+          <div className="text-gray-300 w-16 shrink-0 flex items-center gap-2 mt-1">
+            <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+            </svg>
+            <span className="text-[10px]">X</span>
+          </div>
+          <div className="flex-1">
+            <div className="flex items-center gap-3 mb-2">
+              {item.author.avatar ? (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img src={item.author.avatar} alt={item.author.handle} className="w-5 h-5 rounded-full border border-white/10" />
+              ) : (
+                <div className="w-5 h-5 rounded-full bg-gray-700 border border-gray-600 flex items-center justify-center text-[10px] text-gray-300 font-bold uppercase">
+                  {item.author.handle.charAt(0)}
+                </div>
+              )}
+              {personMap[`x:${item.author.handle}`] ? (
+                <Link href={`/stars/people/${personMap[`x:${item.author.handle}`]}/`} className="text-base font-bold text-gray-200 group-hover:text-gray-100 transition-colors font-sans">
+                  {item.author.displayName || item.author.handle}
+                </Link>
+              ) : (
+                <a href={item.url} target="_blank" rel="noopener noreferrer" className="text-base font-bold text-gray-200 group-hover:text-gray-100 transition-colors font-sans">
+                  {item.author.displayName || item.author.handle}
+                </a>
+              )}
+              <span className="text-[10px] text-gray-500 hidden sm:inline">
+                @{item.author.handle}
+              </span>
+            </div>
+            <a href={item.url} target="_blank" rel="noopener noreferrer" className="block text-sm text-gray-300 mb-3 font-sans leading-relaxed hover:text-gray-200 transition-colors whitespace-pre-wrap">
+              {item.content}
+            </a>
+            <div className="text-[10px] text-gray-600 flex flex-wrap gap-x-4 gap-y-2 uppercase tracking-widest items-center">
+              {item.likeCount > 0 && <span>❤️ {item.likeCount} Likes</span>}
+              {item.retweetCount > 0 && <span>🔄 {item.retweetCount} Retweets</span>}
+              {(item.likeCount > 0 || item.retweetCount > 0) && <span>|</span>}
+              <span className="flex gap-2">
+                {item.tags?.map(t => {
+                  const meta = STAR_TOPIC_META[t]
+                  if (meta) {
+                    const colorPrefix = meta.color.split(' ')[0]
+                    return <span key={t} className={colorPrefix}>[{meta.label}]</span>
+                  }
+                  return <span key={t} className="text-gray-500">[{t}]</span>
+                })}
+              </span>
+            </div>
+            {item.highlights && (
+              <div className="mt-3 text-xs text-gray-400 border-l border-gray-500/30 pl-4 py-1 italic font-serif">
+                "DeepSeek Summary: {item.highlights}"
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
+    )
   }
   return null
 }
@@ -288,7 +348,7 @@ function TopicFilter({
 
 // --- Source Filter (Terminal Style) ---
 
-type SourceKey = 'all' | 'github' | 'bluesky' | 'blog' | 'youtube'
+type SourceKey = 'all' | 'github' | 'bluesky' | 'x' | 'blog' | 'youtube'
 
 function SourceFilter({
   activeSource,
@@ -301,6 +361,7 @@ function SourceFilter({
     { key: 'all', label: '[*All]' },
     { key: 'github', label: 'GitHub' },
     { key: 'bluesky', label: 'Bluesky' },
+    { key: 'x', label: 'X' },
     { key: 'blog', label: 'Blogs' },
     { key: 'youtube', label: 'YouTube' },
   ]
@@ -387,12 +448,14 @@ export default function StarsDetail({ daily, prevDate, nextDate, allTags, person
   // Count items by type
   const githubCount = daily.items.filter(item => item.type === 'github').length
   const blueskyCount = daily.items.filter(item => item.type === 'bluesky').length
+  const xCount = daily.items.filter(item => item.type === 'x').length
   const blogCount = daily.items.filter(item => item.type === 'blog').length
   const youtubeCount = daily.items.filter(item => item.type === 'youtube').length
 
   const sourceLabels = []
   if (githubCount > 0) sourceLabels.push('GitHub')
   if (blueskyCount > 0) sourceLabels.push('Bluesky')
+  if (xCount > 0) sourceLabels.push('X')
   if (youtubeCount > 0) sourceLabels.push('YouTube')
   if (blogCount > 0) sourceLabels.push('Blogs')
 
@@ -455,7 +518,7 @@ export default function StarsDetail({ daily, prevDate, nextDate, allTags, person
             )}
 
             {/* Source Filter */}
-            {[githubCount, blueskyCount, blogCount, youtubeCount].filter(c => c > 0).length >= 2 && (
+            {[githubCount, blueskyCount, xCount, blogCount, youtubeCount].filter(c => c > 0).length >= 2 && (
               <SourceFilter
                 activeSource={activeSource}
                 onSelect={setActiveSource}

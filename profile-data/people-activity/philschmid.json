@@ -1,94 +1,89 @@
 {
   "id": "philschmid",
-  "stars": [
-    {
-      "repo": "millionco/claude-doctor",
-      "url": "https://github.com/millionco/claude-doctor",
-      "description": "Diagnose your Claude Code sessions",
-      "language": "TypeScript",
-      "stargazersCount": 198,
-      "starredBy": "philschmid",
-      "highlights": "This project provides diagnostic tools for Claude Code sessions, helping developers identify issues and optimize their interactions with Claude's coding capabilities. It offers session analysis and debugging features specifically tailored for Claude's code generation workflows.",
-      "worthReading": "It addresses a practical need for developers working with Claude's coding features, providing insights that can improve productivity and code quality.",
-      "topics": [
-        "claude",
-        "code",
-        "doctor"
-      ],
-      "tags": [
-        "tooling",
-        "evaluation"
-      ],
-      "type": "github"
-    },
-    {
-      "repo": "ashwwwin/automation-mcp",
-      "url": "https://github.com/ashwwwin/automation-mcp",
-      "description": "Control your Mac with detailed mouse, keyboard, screen, and window management capabilities.",
-      "language": "TypeScript",
-      "stargazersCount": 386,
-      "starredBy": "philschmid",
-      "highlights": "This project implements a Model Context Protocol (MCP) server that enables LLMs to control macOS systems through detailed mouse, keyboard, screen, and window management capabilities. It provides granular automation tools for desktop interaction, bridging AI systems with physical computer control.",
-      "worthReading": "It demonstrates practical LLM-to-system integration for automation workflows, offering a concrete example of how AI can directly manipulate desktop environments beyond simple API calls.",
-      "topics": [
-        "mcp",
-        "mcp-server"
-      ],
-      "tags": [
-        "agent",
-        "tooling"
-      ],
-      "type": "github"
-    },
-    {
-      "repo": "omaclaren/pi-markdown-preview",
-      "url": "https://github.com/omaclaren/pi-markdown-preview",
-      "description": "Rendered markdown + LaTeX preview for pi",
-      "language": "TypeScript",
-      "stargazersCount": 39,
-      "starredBy": "philschmid",
-      "highlights": "This project provides a markdown and LaTeX preview tool specifically designed for the Raspberry Pi platform, enabling real-time rendering of technical documentation with mathematical notation. It offers a lightweight solution for developers working with technical content on resource-constrained devices.",
-      "worthReading": "It demonstrates practical TypeScript implementation for embedded systems and addresses the specific needs of Raspberry Pi users who require markdown with mathematical formula support.",
-      "topics": [],
-      "tags": [
-        "tooling"
-      ],
-      "type": "github"
-    },
-    {
-      "repo": "nicobailon/pi-subagents",
-      "url": "https://github.com/nicobailon/pi-subagents",
-      "description": "Pi extension for async subagent delegation with truncation, artifacts, and session sharing",
-      "language": "TypeScript",
-      "stargazersCount": 796,
-      "starredBy": "philschmid",
-      "highlights": "This TypeScript project extends the Pi framework to enable asynchronous subagent delegation with features like truncation, artifact management, and session sharing. It provides a structured approach to distributing AI agent workloads while maintaining context and resource efficiency.",
-      "worthReading": "With nearly 800 stars, it demonstrates practical implementation of agent delegation patterns that could benefit developers building complex AI agent systems.",
-      "topics": [],
-      "tags": [
-        "agent",
-        "deployment",
-        "tooling"
-      ],
-      "type": "github"
-    },
-    {
-      "repo": "espennilsen/pi",
-      "url": "https://github.com/espennilsen/pi",
-      "description": "",
-      "language": "TypeScript",
-      "stargazersCount": 91,
-      "starredBy": "philschmid",
-      "highlights": "The espennilsen/pi repository appears to be a TypeScript project focused on mathematical or computational implementations, likely related to Pi calculations or mathematical constants. With 91 stars, it demonstrates community interest in numerical computation or algorithm optimization.",
-      "worthReading": "It's worth exploring for developers interested in mathematical algorithms, TypeScript implementations of computational methods, or educational code examples for numerical computing.",
-      "topics": [],
-      "tags": [],
-      "type": "github"
-    }
-  ],
+  "stars": [],
   "posts": [],
   "videos": [],
   "blogs": [],
+  "xPosts": [
+    {
+      "type": "x",
+      "id": "2041532361330819500",
+      "url": "https://x.com/_philschmid/status/2041532361330819500",
+      "author": {
+        "handle": "philschmid",
+        "displayName": "Philipp Schmid",
+        "avatar": "https://avatars.githubusercontent.com/philschmid"
+      },
+      "content": "How to use Gemma 4 with the Gemini API and Google AI Studio. www.philschmid.de.",
+      "createdAt": "2026-04-16T11:15:37.343Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "A technical guide on integrating Gemma 4 with Google's Gemini API and AI Studio platform.",
+      "worthReading": "Provides practical instructions for developers working with Google's latest AI models and tools.",
+      "tags": [
+        "llm",
+        "tooling"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2007441805357326581",
+      "url": "https://x.com/_philschmid/status/2007441805357326581",
+      "author": {
+        "handle": "philschmid",
+        "displayName": "Philipp Schmid",
+        "avatar": "https://avatars.githubusercontent.com/philschmid"
+      },
+      "content": "Random thought. We are going to be so much faster at creating and building.",
+      "createdAt": "2026-04-16T11:15:37.343Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "An optimistic reflection on the accelerating pace of innovation and development capabilities.",
+      "worthReading": "Captures the mindset of rapid progress in technology creation.",
+      "tags": []
+    },
+    {
+      "type": "x",
+      "id": "2041532361330819500",
+      "url": "https://x.com/_philschmid/status/2041532361330819500",
+      "author": {
+        "handle": "philschmid",
+        "displayName": "Philipp Schmid",
+        "avatar": "https://avatars.githubusercontent.com/philschmid"
+      },
+      "content": "How to use Gemma 4 with the Gemini API and Google AI Studio. www.philschmid.de.",
+      "createdAt": "2026-04-16T11:15:37.343Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "A technical guide on integrating Gemma 4 with Google's Gemini API and AI Studio platform.",
+      "worthReading": "Provides practical instructions for developers working with Google's latest AI models and tools.",
+      "tags": [
+        "llm",
+        "tooling"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2007441805357326581",
+      "url": "https://x.com/_philschmid/status/2007441805357326581",
+      "author": {
+        "handle": "philschmid",
+        "displayName": "Philipp Schmid",
+        "avatar": "https://avatars.githubusercontent.com/philschmid"
+      },
+      "content": "Random thought. We are going to be so much faster at creating and building.",
+      "createdAt": "2026-04-16T11:15:37.343Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "An optimistic reflection on the accelerating pace of innovation and development capabilities.",
+      "worthReading": "Captures the mindset of rapid progress in technology creation.",
+      "tags": []
+    }
+  ],
   "dailyCounts": [
     0,
     0,
@@ -116,10 +111,10 @@
     0,
     0,
     0,
+    2,
+    2,
     0,
-    1,
-    4,
     0
   ],
-  "interestSummary": "They are focused on AI agent deployment and tool integration, particularly exploring the Pi AI ecosystem and Claude-related debugging tools."
+  "interestSummary": "Their recent focus is on practical implementation of the Gemma 4 model using Google's tools, specifically the Gemini API and Google AI Studio. They also express a broader interest in the accelerating pace of technological creation and development."
 }

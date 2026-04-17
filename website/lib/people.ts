@@ -1,6 +1,6 @@
 import fs from 'fs'
 import path from 'path'
-import type { StarredRepo, BlueskyPost, YouTubeVideo, BlogPost } from './social-feeds'
+import type { StarredRepo, BlueskyPost, YouTubeVideo, BlogPost, XPost } from './social-feeds'
 
 // --- Types ---
 
@@ -12,6 +12,7 @@ export interface Person {
   bluesky?: string
   youtubeChannel?: string
   blogAuthor?: string
+  x?: string
   avatar?: string
 }
 
@@ -27,6 +28,7 @@ export interface PersonActivity {
   posts: BlueskyPost[]
   videos: YouTubeVideo[]
   blogs: BlogPost[]
+  xPosts?: XPost[]
   dailyCounts: number[]
   interestSummary: string
 }
@@ -90,7 +92,7 @@ export function getAllPeople(): PersonSummary[] {
   return people.map(person => {
     const activity = loadPersonActivity(person.id)
     const activityCount = activity
-      ? activity.stars.length + activity.posts.length + (activity.videos?.length || 0) + (activity.blogs?.length || 0)
+      ? activity.stars.length + activity.posts.length + (activity.videos?.length || 0) + (activity.blogs?.length || 0) + (activity.xPosts?.length || 0)
       : 0
 
     // Compute latest activity timestamp across all sources
@@ -100,6 +102,7 @@ export function getAllPeople(): PersonSummary[] {
         ...activity.posts.map(p => p.createdAt),
         ...activity.videos.map(v => v.publishedAt),
         ...activity.blogs.map(b => b.publishedAt),
+        ...(activity.xPosts || []).map(x => x.createdAt),
       ].filter(Boolean)
       if (timestamps.length > 0) {
         timestamps.sort((a, b) => b.localeCompare(a))
@@ -113,6 +116,7 @@ export function getAllPeople(): PersonSummary[] {
     if (person.bluesky) platformCount++
     if (person.youtubeChannel) platformCount++
     if (person.blogAuthor) platformCount++
+    if (person.x) platformCount++
 
     return { ...person, activityCount, latestActivityAt, platformCount }
   })
@@ -152,6 +156,9 @@ export function getHandleToPersonMap(): Record<string, string> {
     }
     if (person.bluesky) {
       map[`bluesky:${person.bluesky}`] = person.id
+    }
+    if (person.x) {
+      map[`x:${person.x}`] = person.id
     }
   }
 

@@ -3,31 +3,11 @@ import path from 'path'
 
 // --- Config ---
 
-// X/Twitter accounts of AI leaders to monitor
-// Only confirmed active accounts — verify at https://x.com/{handle}
-// NOTE: X API v2 requires X_API_KEY in environment
-const X_HANDLES = [
-  // Extremely active
-  'karpathy',                    // Andrej Karpathy — AI educator, ex-Tesla/OpenAI
-  'ylecun',                      // Yann LeCun — Meta Chief AI Scientist, Turing Award
-  'hardmaru',                    // David Ha — Sakana AI CEO, ex-Google Brain
-  'jacksonw27',                  // Jackson Wambugu — AI safety researcher
-  // Very active
-  'jonathanvmey',                // Jonathan Mey — AI researcher
-  'jaimenpulse',                 // Jaimen Pulse — AI/ML thought leader
-  'RohanPaul_AI',                // Rohan Paul — AI researcher
-  // Active AI researchers & builders
-  'ylecun',                      // Yann LeCun — Meta Chief AI Scientist
-  'goodfellow_ian',              // Ian Goodfellow — GAN creator, AI safety
-  'jacksonw27',                  // Jackson Wambugh — Research labs
-  'fchollet',                    // François Chollet — Keras creator
-  'EmollickEmily',               // Emily Mollick (if active on X)
-  // Additional AI leaders (verify handles on x.com)
-]
-
 const OUTPUT_DIR = path.join(__dirname, '..', 'profile-data', 'x-signals')
-const X_API_KEY = process.env.X_API_KEY || ''
-const X_API_URL = 'https://api.twitter.com/2'
+const PEOPLE_JSON_PATH = path.join(__dirname, '..', 'profile-data', 'people.json')
+
+const TAVILY_API_KEY = process.env.TAVILY_API_KEY || ''
+const EXA_API_KEY = process.env.EXA_API_KEY || ''
 const DEEPSEEK_API_KEY = process.env.DEEPSEEK_API_KEY || ''
 const DEEPSEEK_API_URL = 'https://api.deepseek.com/chat/completions'
 
@@ -38,40 +18,30 @@ const VALID_TAGS = [
 
 // --- Types ---
 
-interface XAuthor {
-  handle: string
-  displayName: string
-  avatar: string | null
-}
-
-interface XPostData {
+interface Person {
   id: string
-  text: string
-  author_id: string
-  created_at: string
-  public_metrics: {
-    like_count: number
-    reply_count: number
-    retweet_count: number
-  }
+  name: string
+  x?: string
+  avatar?: string
 }
 
-interface XPostRawData {
-  data?: XPostData[]
-  includes?: {
-    users?: Array<{
-      id: string
-      username: string
-      name: string
-      profile_image_url?: string
-    }>
-  }
+interface RawSignal {
+  title: string
+  url: string
+  content: string
+  source: 'tavily' | 'exa'
+  publishedDate?: string
 }
 
 interface XPost {
+  type: 'x'
   id: string
   url: string
-  author: XAuthor
+  author: {
+    handle: string
+    displayName: string
+    avatar: string | null
+  }
   content: string
   createdAt: string
   likeCount: number
@@ -87,113 +57,133 @@ interface DailyXPosts {
   posts: XPost[]
 }
 
-// --- X API ---
+// --- Tavily Search ---
 
-async function fetchUserPosts(handle: string, limit: number = 30): Promise<XPost[]> {
-  if (!X_API_KEY) {
-    console.warn(`⚠️  X_API_KEY not set, skipping ${handle}`)
-    return []
-  }
+async function searchTavily(query: string): Promise<RawSignal[]> {
+  if (!TAVILY_API_KEY) return []
 
   try {
-    // Get user ID from handle
-    const userUrl = `${X_API_URL}/users/by/username/${encodeURIComponent(handle)}`
-    const userRes = await fetch(userUrl, {
-      headers: {
-        'Authorization': `Bearer ${X_API_KEY}`,
-        'User-Agent': 'KInfoGit-X-Fetcher',
-      },
+    const res = await fetch('https://api.tavily.com/search', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        api_key: TAVILY_API_KEY,
+        query,
+        search_depth: 'basic',
+        max_results: 5,
+        include_answer: false,
+        days: 7,
+        include_domains: ['x.com', 'twitter.com'],
+      }),
     })
 
-    if (!userRes.ok) {
-      if (userRes.status === 403) {
-        console.warn(`⚠️  Rate limited for user ${handle}, skipping.`)
-      } else {
-        console.warn(`⚠️  X API error getting user ${handle}: ${userRes.status} ${userRes.statusText}`)
-      }
+    if (!res.ok) {
+      console.warn(`  ⚠️  Tavily HTTP ${res.status}`)
       return []
     }
 
-    const userData = await userRes.json()
-    const userId = userData.data?.id
-
-    if (!userId) {
-      console.warn(`⚠️  Could not find user ID for ${handle}`)
-      return []
+    const data = await res.json() as {
+      results: Array<{ title: string; url: string; content: string; score: number }>
     }
 
-    // Get user's posts
-    const postsUrl = `${X_API_URL}/users/${userId}/tweets?max_results=${Math.min(limit, 100)}&tweet.fields=created_at,public_metrics&expansions=author_id&user.fields=username,name,profile_image_url`
-
-    const postsRes = await fetch(postsUrl, {
-      headers: {
-        'Authorization': `Bearer ${X_API_KEY}`,
-        'User-Agent': 'KInfoGit-X-Fetcher',
-      },
-    })
-
-    if (!postsRes.ok) {
-      console.warn(`⚠️  X API error fetching posts for ${handle}: ${postsRes.status}`)
-      return []
-    }
-
-    const rawData = await postsRes.json() as XPostRawData
-    const posts = rawData.data || []
-    const users = rawData.includes?.users || []
-
-    // Filter posts from last 7 days
-    const sevenDaysAgo = new Date()
-    sevenDaysAgo.setDate(sevenDaysAgo.getDate() - 7)
-
-    const recentPosts = posts.filter(post => {
-      const postDate = new Date(post.created_at)
-      return postDate >= sevenDaysAgo
-    })
-
-    // Map to XPost format
-    return recentPosts.map(post => {
-      const author = users.find(u => u.id === post.author_id)
-      return {
-        id: post.id,
-        url: `https://x.com/${handle}/status/${post.id}`,
-        author: {
-          handle: author?.username || handle,
-          displayName: author?.name || handle,
-          avatar: author?.profile_image_url || null,
-        },
-        content: post.text,
-        createdAt: post.created_at,
-        likeCount: post.public_metrics.like_count,
-        replyCount: post.public_metrics.reply_count,
-        retweetCount: post.public_metrics.retweet_count,
-        highlights: '',
-        worthReading: '',
-        tags: [],
-      }
-    })
+    return (data.results || [])
+      .filter(r => r.score > 0.4)
+      .map(r => ({
+        title: r.title,
+        url: r.url,
+        content: r.content.slice(0, 1000),
+        source: 'tavily' as const,
+      }))
   } catch (err) {
-    console.error(`❌ Failed to fetch posts for ${handle}:`, err)
+    console.warn('  ⚠️  Tavily error:', err)
     return []
   }
 }
 
-// --- DeepSeek API ---
+// --- Exa Search ---
 
-async function generateCommentary(post: XPost): Promise<{ highlights: string; worthReading: string; tags: string[] }> {
-  if (!DEEPSEEK_API_KEY) {
-    return { highlights: '', worthReading: '', tags: [] }
+async function searchExa(query: string): Promise<RawSignal[]> {
+  if (!EXA_API_KEY) return []
+
+  const startDate = new Date(Date.now() - 7 * 86400000).toISOString()
+
+  try {
+    const res = await fetch('https://api.exa.ai/search', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'x-api-key': EXA_API_KEY,
+      },
+      body: JSON.stringify({
+        query,
+        numResults: 5,
+        type: 'auto',
+        contents: { text: { maxCharacters: 500 } },
+        startPublishedDate: startDate,
+        includeDomains: ['x.com', 'twitter.com'],
+      }),
+    })
+
+    if (!res.ok) {
+      console.warn(`  ⚠️  Exa HTTP ${res.status}`)
+      return []
+    }
+
+    const data = await res.json() as {
+      results: Array<{ title: string; url: string; text?: string; publishedDate?: string }>
+    }
+
+    return (data.results || []).map(r => ({
+      title: r.title || '',
+      url: r.url,
+      content: (r.text || '').slice(0, 1000),
+      source: 'exa' as const,
+      publishedDate: r.publishedDate,
+    }))
+  } catch (err) {
+    console.warn('  ⚠️  Exa error:', err)
+    return []
   }
+}
 
-  const prompt = `You are a technical reviewer. Given an X post about AI/tech, provide:
-1. "highlights": Core insight or key takeaway (2-3 sentences, concise)
-2. "worthReading": Why it's worth exploring (1-2 sentences)
-3. "tags": Pick 1-3 tags from this EXACT list that best describe the post: ${VALID_TAGS.join(', ')}. Return an empty array if none fit.
+// --- DeepSeek: Structure raw signals into XPosts ---
 
-Post Author: ${post.author.displayName} (@${post.author.handle})
-Content: ${post.content}
-Engagement: ${post.likeCount} likes, ${post.retweetCount} retweets
+async function structureSignals(
+  person: Person,
+  signals: RawSignal[]
+): Promise<XPost[]> {
+  if (!DEEPSEEK_API_KEY || signals.length === 0) return []
 
-Respond in JSON format: {"highlights": "...", "worthReading": "...", "tags": ["..."]}`
+  const signalText = signals.map((s, i) =>
+    `[${i + 1}] Source: ${s.source}\n    URL: ${s.url}\n    Title: ${s.title}\n    Content: ${s.content.slice(0, 400)}`
+  ).join('\n\n')
+
+  const prompt = `You are a technical intelligence analyst. Given search results about ${person.name} (X handle: @${person.x}) from X/Twitter, extract their actual tweets/posts.
+
+SEARCH RESULTS:
+${signalText}
+
+INSTRUCTIONS:
+1. Identify distinct tweets/posts by ${person.name} from the search results
+2. Skip profile pages, reply pages, or content not actually posted by this person
+3. Skip results that are clearly about someone else or generic pages
+4. For each tweet found, extract the content and any context
+
+Respond in JSON format:
+{
+  "posts": [
+    {
+      "url": "the x.com URL of the tweet",
+      "content": "the tweet text (reconstruct from search snippet if needed)",
+      "estimatedDate": "ISO date string if determinable, or empty string",
+      "highlights": "core insight or takeaway (1-2 sentences)",
+      "worthReading": "why it matters (1 sentence)",
+      "tags": ["pick 1-3 from: ${VALID_TAGS.join(', ')}"]
+    }
+  ]
+}
+
+If no actual tweets by this person are found, return {"posts": []}.`
 
   try {
     const res = await fetch(DEEPSEEK_API_URL, {
@@ -205,144 +195,157 @@ Respond in JSON format: {"highlights": "...", "worthReading": "...", "tags": [".
       body: JSON.stringify({
         model: 'deepseek-chat',
         messages: [{ role: 'user', content: prompt }],
-        temperature: 0.7,
-        max_tokens: 300,
+        temperature: 0.5,
+        max_tokens: 1000,
         response_format: { type: 'json_object' },
       }),
     })
 
     if (!res.ok) {
-      console.warn(`⚠️  DeepSeek API error for ${post.author.handle}: ${res.status}`)
-      return { highlights: '', worthReading: '', tags: [] }
+      console.warn(`  ⚠️  DeepSeek error: ${res.status}`)
+      return []
     }
 
     const data = await res.json()
     const content = data.choices?.[0]?.message?.content || ''
     const parsed = JSON.parse(content)
-    const rawTags: string[] = Array.isArray(parsed.tags) ? parsed.tags : []
-    const validTags = rawTags.filter((t: string) => (VALID_TAGS as readonly string[]).includes(t))
-    return {
-      highlights: parsed.highlights || '',
-      worthReading: parsed.worthReading || '',
-      tags: validTags,
-    }
+
+    const posts: XPost[] = (parsed.posts || []).map((p: any) => {
+      const statusMatch = (p.url || '').match(/status\/(\d+)/)
+      const id = statusMatch ? statusMatch[1] : `sig-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`
+
+      const rawTags: string[] = Array.isArray(p.tags) ? p.tags : []
+      const validTags = rawTags.filter((t: string) => (VALID_TAGS as readonly string[]).includes(t))
+
+      return {
+        type: 'x' as const,
+        id,
+        url: p.url || `https://x.com/${person.x}`,
+        author: {
+          handle: person.x || person.id,
+          displayName: person.name,
+          avatar: person.avatar || null,
+        },
+        content: p.content || '',
+        createdAt: p.estimatedDate || new Date().toISOString(),
+        likeCount: 0,
+        replyCount: 0,
+        retweetCount: 0,
+        highlights: p.highlights || '',
+        worthReading: p.worthReading || '',
+        tags: validTags,
+      }
+    })
+
+    return posts
   } catch (err) {
-    console.error(`❌ DeepSeek error for ${post.author.handle}:`, err)
-    return { highlights: '', worthReading: '', tags: [] }
+    console.error('  ❌ DeepSeek error:', err)
+    return []
   }
+}
+
+// --- Deduplication ---
+
+function deduplicatePosts(posts: XPost[]): XPost[] {
+  const seen = new Set<string>()
+  return posts.filter(p => {
+    const key = p.id.startsWith('sig-') ? p.url : p.id
+    if (seen.has(key)) return false
+    seen.add(key)
+    return true
+  })
 }
 
 // --- Main ---
 
 async function main() {
-  console.log('🐦 Fetching X posts from AI leaders...')
+  console.log('🐦 Fetching X signals via Tavily + Exa search engines...')
 
-  if (!X_API_KEY) {
-    console.warn('⚠️  X_API_KEY not set. Set environment variable to enable X signals fetching.')
-    console.warn('    For now, creating empty output directory.')
+  if (!TAVILY_API_KEY && !EXA_API_KEY) {
+    console.warn('⚠️  Neither TAVILY_API_KEY nor EXA_API_KEY set. Skipping.')
     fs.mkdirSync(OUTPUT_DIR, { recursive: true })
     return
   }
 
-  fs.mkdirSync(OUTPUT_DIR, { recursive: true })
+  console.log(`  Engines: ${TAVILY_API_KEY ? '✅ Tavily' : '❌ Tavily'} | ${EXA_API_KEY ? '✅ Exa' : '❌ Exa'} | ${DEEPSEEK_API_KEY ? '✅ DeepSeek' : '❌ DeepSeek'}`)
 
-  // Fetch all posts from all handles
-  const allPosts: { postData: XPost; createdAt: string }[] = []
-
-  for (const handle of X_HANDLES) {
-    console.log(`  📥 Fetching posts for ${handle}...`)
-    const posts = await fetchUserPosts(handle)
-    console.log(`     Found ${posts.length} recent posts`)
-    for (const post of posts) {
-      allPosts.push({
-        postData: post,
-        createdAt: post.createdAt,
-      })
-    }
-  }
-
-  // Keep posts from the last 7 days
-  const now = new Date()
-  const cutoff = new Date(now)
-  cutoff.setDate(cutoff.getDate() - 7)
-  const cutoffDate = cutoff.toISOString().split('T')[0]
-
-  const recentPosts = allPosts.filter(item => item.createdAt.split('T')[0] >= cutoffDate)
-
-  if (recentPosts.length === 0) {
-    console.log(`No posts found in the last 7 days (since ${cutoffDate}). Done.`)
+  // Load people with X handles from people.json
+  if (!fs.existsSync(PEOPLE_JSON_PATH)) {
+    console.warn('⚠️  people.json not found. Skipping.')
     return
   }
 
-  console.log(`  📅 Found ${recentPosts.length} posts in the last 7 days`)
+  const allPeople = JSON.parse(fs.readFileSync(PEOPLE_JSON_PATH, 'utf-8')) as Person[]
+  const xPeople = allPeople.filter(p => p.x)
 
-  // Group by date
-  const byDate = new Map<string, XPost[]>()
-  for (const item of recentPosts) {
-    const date = item.createdAt.split('T')[0]
-    if (!byDate.has(date)) byDate.set(date, [])
-    byDate.get(date)!.push(item.postData)
+  if (xPeople.length === 0) {
+    console.log('  No people with X handles found in people.json.')
+    return
   }
 
-  // Process each date
-  for (const [date, posts] of byDate) {
-    const filePath = path.join(OUTPUT_DIR, `${date}.json`)
+  console.log(`  📋 Found ${xPeople.length} people with X handles`)
 
-    // Merge with existing data if present
-    let existingPosts: XPost[] = []
-    if (fs.existsSync(filePath)) {
-      try {
-        const existing = JSON.parse(fs.readFileSync(filePath, 'utf-8')) as DailyXPosts
-        existingPosts = existing.posts
-      } catch {
-        // Ignore parse errors
-      }
-    }
+  fs.mkdirSync(OUTPUT_DIR, { recursive: true })
 
-    // Deduplicate by id (same post)
-    const existingIds = new Set(existingPosts.map(p => p.id))
-    const newPosts = posts.filter(p => !existingIds.has(p.id))
+  const today = new Date().toISOString().split('T')[0]
+  const allPosts: XPost[] = []
 
-    if (newPosts.length === 0 && existingPosts.length > 0) {
-      const needsBackfill = DEEPSEEK_API_KEY && existingPosts.some(p => !p.tags || p.tags.length === 0)
-      if (!needsBackfill) {
-        console.log(`  📄 ${date}: No new posts (${existingPosts.length} existing)`)
-        continue
-      }
-      console.log(`  📄 ${date}: No new posts, but backfilling tags for ${existingPosts.filter(p => !p.tags || p.tags.length === 0).length} posts`)
-    }
+  for (const person of xPeople) {
+    console.log(`  🔍 @${person.x} (${person.name})...`)
 
-    // Extract tags for new posts
-    if (DEEPSEEK_API_KEY) {
-      console.log(`  🏷️  Extracting tags for ${newPosts.length} posts on ${date}...`)
-      for (const post of newPosts) {
-        const commentary = await generateCommentary(post)
-        post.highlights = commentary.highlights
-        post.worthReading = commentary.worthReading
-        post.tags = commentary.tags
-      }
-    }
+    // Dual engine search in parallel
+    const [tavilyResults, exaResults] = await Promise.allSettled([
+      searchTavily(person.name),
+      searchExa(`${person.name} AI`),
+    ])
 
-    // Backfill tags for existing posts
-    if (DEEPSEEK_API_KEY) {
-      for (const post of existingPosts) {
-        if (!post.tags || post.tags.length === 0) {
-          const commentary = await generateCommentary(post)
-          post.highlights = commentary.highlights
-          post.worthReading = commentary.worthReading
-          post.tags = commentary.tags
-        }
-      }
-    }
+    const tavilySignals = tavilyResults.status === 'fulfilled' ? tavilyResults.value : []
+    const exaSignals = exaResults.status === 'fulfilled' ? exaResults.value : []
+    const signals: RawSignal[] = [...tavilySignals, ...exaSignals]
 
-    const allDayPosts = [...existingPosts, ...newPosts]
-    const dailyData: DailyXPosts = { date, posts: allDayPosts }
+    console.log(`     Tavily: ${tavilySignals.length} | Exa: ${exaSignals.length}`)
 
-    fs.writeFileSync(filePath, JSON.stringify(dailyData, null, 2) + '\n')
-    console.log(`  ✅ ${date}: ${allDayPosts.length} posts (${newPosts.length} new)`)
+    if (signals.length === 0) continue
+
+    // Structure via DeepSeek
+    const posts = await structureSignals(person, signals)
+    console.log(`     → ${posts.length} posts extracted`)
+    allPosts.push(...posts)
+
+    // Rate limit courtesy
+    await new Promise(r => setTimeout(r, 300))
   }
 
-  console.log('🎉 Done!')
+  // Deduplicate
+  const uniquePosts = deduplicatePosts(allPosts)
+  console.log(`\n  📊 Total: ${uniquePosts.length} unique posts (from ${allPosts.length} raw)`)
+
+  if (uniquePosts.length === 0) {
+    console.log('  No posts extracted. Done.')
+    return
+  }
+
+  // Save to date-stamped file, merging with existing
+  const outputPath = path.join(OUTPUT_DIR, `${today}.json`)
+
+  let existingPosts: XPost[] = []
+  if (fs.existsSync(outputPath)) {
+    try {
+      const existing = JSON.parse(fs.readFileSync(outputPath, 'utf-8'))
+      existingPosts = existing.posts || []
+    } catch { /* ignore */ }
+  }
+
+  const mergedPosts = deduplicatePosts([...uniquePosts, ...existingPosts])
+
+  const dailyData: DailyXPosts = { date: today, posts: mergedPosts }
+  fs.writeFileSync(outputPath, JSON.stringify(dailyData, null, 2) + '\n')
+
+  console.log(`  💾 Saved ${mergedPosts.length} posts to x-signals/${today}.json`)
+  console.log('🎉 X signals fetch complete!')
 }
 
-main().catch(console.error)
+main().catch(err => {
+  console.error('❌ fetch-x-signals failed:', err)
+  // Don't exit with error — allow pipeline to continue
+})

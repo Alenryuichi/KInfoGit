@@ -2,11 +2,12 @@ import Head from 'next/head'
 import Link from 'next/link'
 import type { GetStaticProps, GetStaticPaths } from 'next'
 import { getAllPersonIds, getPersonByHandle, type PersonDetail } from '@/lib/people'
-import type { StarredRepo, BlueskyPost, YouTubeVideo, BlogPost, FeedItem } from '@/lib/social-feeds'
+import type { StarredRepo, BlueskyPost, YouTubeVideo, BlogPost, XPost, FeedItem } from '@/lib/social-feeds'
 import { RepoCard } from '@/components/stars/RepoCard'
 import { BlueskyPostCard } from '@/components/stars/BlueskyPostCard'
 import { YouTubeVideoCard } from '@/components/stars/YouTubeVideoCard'
 import { BlogPostCard } from '@/components/stars/BlogPostCard'
+import { XPostCard } from '@/components/stars/XPostCard'
 import { PlatformBadge } from '@/components/stars/PlatformBadge'
 import { ActivitySparkline } from '@/components/stars/ActivitySparkline'
 
@@ -40,9 +41,10 @@ export default function PersonPage({ person }: PersonPageProps) {
     ...activity.posts.map(p => ({ ...p, type: 'bluesky' as const })),
     ...(activity.videos || []).map(v => ({ ...v, type: 'youtube' as const })),
     ...(activity.blogs || []).map(b => ({ ...b, type: 'blog' as const })),
+    ...(activity.xPosts || []).map(x => ({ ...x, type: 'x' as const })),
   ]
 
-  const totalActivity = activity.stars.length + activity.posts.length + (activity.videos?.length || 0) + (activity.blogs?.length || 0)
+  const totalActivity = activity.stars.length + activity.posts.length + (activity.videos?.length || 0) + (activity.blogs?.length || 0) + (activity.xPosts?.length || 0)
 
   return (
     <>
@@ -90,6 +92,9 @@ export default function PersonPage({ person }: PersonPageProps) {
                 {person.bluesky && (
                   <PlatformBadge platform="bluesky" handle={person.bluesky} />
                 )}
+                {person.x && (
+                  <PlatformBadge platform="x" handle={person.x} />
+                )}
               </div>
             </div>
           </div>
@@ -118,6 +123,7 @@ export default function PersonPage({ person }: PersonPageProps) {
                     activity.posts.length > 0 && `${activity.posts.length} posts`,
                     (activity.videos?.length || 0) > 0 && `${activity.videos.length} videos`,
                     (activity.blogs?.length || 0) > 0 && `${activity.blogs.length} blogs`,
+                    (activity.xPosts?.length || 0) > 0 && `${activity.xPosts!.length} x-posts`,
                   ].filter(Boolean).join(' · ') || 'No activity'}
                 </span>
               </div>
@@ -145,6 +151,8 @@ export default function PersonPage({ person }: PersonPageProps) {
                   return <YouTubeVideoCard key={`youtube-${idx}`} video={item as YouTubeVideo} />
                 } else if (item.type === 'blog') {
                   return <BlogPostCard key={`blog-${idx}`} post={item as BlogPost} />
+                } else if (item.type === 'x') {
+                  return <XPostCard key={`x-${idx}`} post={item as XPost} />
                 }
                 return null
               })}
@@ -157,6 +165,7 @@ export default function PersonPage({ person }: PersonPageProps) {
             {activity.posts.length > 0 && <span>{activity.posts.length} posts · </span>}
             {(activity.videos?.length || 0) > 0 && <span>{activity.videos.length} videos · </span>}
             {(activity.blogs?.length || 0) > 0 && <span>{activity.blogs.length} blogs · </span>}
+            {(activity.xPosts?.length || 0) > 0 && <span>{activity.xPosts!.length} x-posts · </span>}
             All time
           </div>
         </div>

@@ -1,237 +1,88 @@
 {
   "date": "2026-04-17",
-  "itemCount": 29,
+  "itemCount": 28,
   "sections": [
     {
       "id": "headlines",
       "title": "Headlines & Launches",
       "items": [
         {
-          "title": "Anthropic releases Claude Opus 4.7 with adaptive thinking and updated tokenizer.",
-          "summary": "Anthropic released Claude Opus 4.7, introducing adaptive thinking capabilities that allow the model to dynamically adjust its thinking effort based on query complexity, and an updated tokenizer that improves text processing but increases token counts by 1.0–1.35× depending on content. This update matters because adaptive thinking enhances efficiency and user experience by automating thinking budgets, while the tokenizer changes impact API costs and performance, reflecting ongoing tradeoffs in AI model optimization for real-world applications. Notably, Claude Opus 4.7 no longer includes a human-readable reasoning token summary in outputs by default, requiring users to add \"display\": \"summarized\" to retrieve it, and the tokenizer update may lead to higher token usage for the same input text.",
-          "url": "https://www.anthropic.com/news/claude-opus-4-7",
+          "title": "A new way to explore the web with AI Mode in Chrome",
+          "summary": "谷歌宣布在Chrome浏览器中推出新的AI探索模式。",
+          "url": "https://blog.google/products-and-platforms/products/search/ai-mode-chrome/",
+          "score": 8.5,
+          "sources": [
+            {
+              "name": "Google AI Blog"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "Anthropic releases Claude Opus 4.7: How to try it, benchmarks, safety - Mashable",
+          "summary": "媒体报道Anthropic发布Claude Opus 4.7模型，包含基准测试和安全信息。",
+          "url": "https://mashable.com/article/anthropic-releases-claude-opus-4-7",
+          "score": 8.5,
+          "sources": [
+            {
+              "name": "mashable.com"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "Anthropic Releases Claude Opus 4.7 to Remind Everyone How Great Mythos Is - Gizmodo",
+          "summary": "媒体报道Anthropic发布Claude Opus 4.7，强调其对Mythos模型的改进。",
+          "url": "https://gizmodo.com/anthropic-releases-claude-opus-4-7-to-remind-everyone-how-great-mythos-is-2000747469",
+          "score": 8.5,
+          "sources": [
+            {
+              "name": "gizmodo.com"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "New ways to create personalized images in the Gemini app",
+          "summary": "谷歌Gemini应用推出新的个性化图像创建功能。",
+          "url": "https://blog.google/innovation-and-ai/products/gemini-app/personal-intelligence-nano-banana/",
           "score": 8,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "meetpateltech"
+              "name": "Google AI Blog"
             }
           ],
-          "tags": [
-            "AI-Models",
-            "Claude",
-            "Natural-Language-Processing",
-            "API-Development",
-            "Machine-Learning"
-          ],
-          "focusTopics": [
-            "planning"
-          ],
-          "background": "Adaptive thinking is a feature in AI systems that adjusts response time based on query complexity, replacing manual thinking token budgets in models like Claude. Tokenization is the process of converting text into numerical sequences for language models, where updates can affect token counts and model performance. API performance tradeoffs in machine learning involve balancing accuracy and generalization, similar to the bias-variance tradeoff in supervised learning.",
-          "discussion": "Community comments reveal mixed sentiment, with users expressing confusion over adaptive thinking and concerns about API changes, such as increased token usage and stricter cybersecurity filters that block valid work. Some users report switching to alternatives like Codex due to performance issues in previous versions."
+          "tags": [],
+          "focusTopics": []
         },
         {
-          "title": "Qwen3.6-35B-A3B open-weight AI model for agentic coding now publicly available",
-          "summary": "The Qwen team has publicly released Qwen3.6-35B-A3B, an open-weight AI model specifically designed for agentic coding tasks, which has already been quantized to a 20.9GB GGUF format by Unsloth for efficient local deployment. This release provides developers and organizations with a powerful, locally-deployable coding agent that can be customized for sensitive sectors like banking and healthcare where data privacy restrictions prevent the use of public cloud models, filling a gap largely overlooked by Western AI companies. The model features 35 billion parameters and supports thinking mode through vLLM/SGLang OpenAI API compatibility, with community members noting it outperformed Opus 4.7 in creative coding tasks like generating images of pelicans riding bicycles.",
-          "url": "https://qwen.ai/blog?id=qwen3.6-35b-a3b",
+          "title": "Factory hits $1.5B valuation to build AI coding for enterprises - TechCrunch",
+          "summary": "报道AI编码初创公司Factory获得15亿美元估值，专注于企业工程。",
+          "url": "https://techcrunch.com/2026/04/16/factory-hits-1-5b-valuation-to-build-ai-coding-for-enterprises/",
           "score": 8,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "cmitsakis"
+              "name": "techcrunch.com"
             }
           ],
-          "tags": [
-            "AI",
-            "Open Source",
-            "Machine Learning",
-            "Coding Agents",
-            "Large Language Models"
-          ],
-          "focusTopics": [],
-          "background": "Agentic coding refers to AI systems that can autonomously perform complex programming tasks beyond simple code completion, such as framework migrations and adapting to new development stacks. Open-weight models share the trained parameters (weights and biases) of neural networks under licenses that allow others to fine-tune and adapt them, though often with restrictions on commercial use. The Qwen series is developed by Alibaba's research team and has faced recent organizational changes including team departures.",
-          "discussion": "Community members expressed relief that the Qwen team continues to publish open weights despite recent organizational challenges, with practical applications highlighted for custom agents in regulated industries. Technical discussions focused on the model's quantization by Unsloth, its performance comparisons, and its distinct embedding characteristics compared to other base models."
+          "tags": [],
+          "focusTopics": []
         },
         {
-          "title": "Article analyzes societal impact of large language models through historical comparisons.",
-          "summary": "An article by Kyle Kingsbury (aphyr) examines the societal implications of large language models (LLMs), comparing their adoption to historical technological shifts like automobiles and discussing potential negative consequences such as job displacement and ethical concerns. It was published recently, with a high score of 8.0/10 for its insightful analysis. This matters because it highlights how LLMs could disrupt traditional skills like reading and writing, potentially leading to widespread job loss in white-collar sectors and raising ethical issues about fairness and control. The comparison to past technologies helps contextualize the rapid adoption and societal risks, informing policymakers and the public about navigating AI integration. The article specifically references the adoption curve of technologies like automobiles, noting that LLMs' impact may mirror historical disruptions with accelerated timelines. It also touches on the alignment of LLMs with elite interests, suggesting that negative societal effects could be viewed as positives by those in control.",
-          "url": "https://aphyr.com/posts/420-the-future-of-everything-is-lies-i-guess-where-do-we-go-from-here",
-          "score": 8,
+          "title": "This $1.5 Billion AI Startup Steps In When Software Breaks - Forbes",
+          "summary": "报道估值15亿美元的AI初创公司Resolve AI，专注于软件故障修复。",
+          "url": "https://www.forbes.com/sites/sofiachierchio/2026/04/16/this-15-billion-ai-startup-steps-in-when-software-breaks/",
+          "score": 7.5,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "aphyr"
+              "name": "forbes.com"
             }
           ],
-          "tags": [
-            "AI Ethics",
-            "Societal Impact",
-            "Technology Adoption",
-            "Future of Work",
-            "LLMs"
-          ],
-          "focusTopics": [],
-          "background": "Large language models (LLMs) are AI systems like GPT-4 and Llama 2 that generate human-like text based on vast datasets, emerging in the early 2020s. They have profound impacts on AI, industry, and society, with adoption rates speeding up similar to past technologies like smartphones. AI ethics addresses issues such as job displacement, fairness, and privacy, with projections of significant white-collar job loss due to AI advancements.",
-          "discussion": "Community comments express diverse viewpoints: Animats agrees that core skills like reading and writing are threatened, noting this is a historical anomaly; lukev finds the automobile comparison apt and supports constrained LLM use with mitigation; yubblegum fears irreversible adoption aligned with elite control and population reduction; AdamH12113 draws parallels to technological templates limiting personal agency."
-        },
-        {
-          "title": "Hospital in Pakistan caught reusing syringes, causing child HIV outbreak",
-          "summary": "A hospital in Pakistan was found reusing syringes, which led to an outbreak of HIV among children, highlighting systemic failures in healthcare safety protocols. The incident was captured on video showing medical staff contaminating medication vials through improper injection practices. This incident exposes critical gaps in infection control in healthcare settings, particularly in developing countries where resource constraints may compromise patient safety. It underscores the urgent need for better medical waste management, staff training, and regulatory oversight to prevent similar outbreaks that endanger vulnerable populations like children. The reuse involved contaminating medication vials when injecting into cannula tubes, not direct flesh injections, which spread HIV through shared equipment. A report cited in comments indicates syringe reuse may be widespread, with rates as high as 38% in some regions, suggesting this is not an isolated case.",
-          "url": "https://www.bbc.com/news/articles/clyrd818gd2o",
-          "score": 8,
-          "sources": [
-            {
-              "name": "hackernews",
-              "meta": "flykespice"
-            }
-          ],
-          "tags": [
-            "public-health",
-            "healthcare-safety",
-            "medical-ethics",
-            "developing-countries",
-            "HIV"
-          ],
-          "focusTopics": [],
-          "background": "HIV (Human Immunodeficiency Virus) is a virus that attacks the immune system and can lead to AIDS if untreated, often transmitted through blood contact like shared needles. Disposable syringes are standard in modern healthcare to prevent cross-contamination, but in resource-limited settings, cost and supply issues may lead to unsafe reuse. Proper sterilization of reusable equipment requires strict protocols that are often lacking in underfunded facilities.",
-          "discussion": "Comments express shock at the hospital's actions, with some noting that syringe reuse is a known cause of HIV transmission. Others provide technical analysis, explaining that contamination occurred via cannula tubes rather than direct injections, and cite statistics suggesting the practice is widespread in developing countries. Sentiment ranges from outrage to calls for systemic reforms over punitive measures."
-        },
-        {
-          "title": "OpenAI promotes Codex for general-purpose tasks beyond coding",
-          "summary": "OpenAI is promoting its Codex AI model for a wide range of applications beyond software development, including terminal tasks and GUI interactions, as highlighted in recent discussions and content. This expansion sparks debate on its novelty, usability, and security implications. This matters because it signals a shift in AI models from specialized coding tools to general-purpose assistants, potentially transforming human-computer interaction by making technology more accessible to non-developers. It could accelerate adoption of AI in everyday tasks but raises concerns about security and competition with existing tools like Claude. Codex is described as producing production-ready code with surgical precision and deep codebase understanding, but latency issues can hinder workflow efficiency. The model is being integrated into terminal and GUI versions, aiming to reduce the need for juggling multiple applications.",
-          "url": "https://openai.com/index/codex-for-almost-everything/",
-          "score": 7,
-          "sources": [
-            {
-              "name": "hackernews",
-              "meta": "mikeevans"
-            }
-          ],
-          "tags": [
-            "AI",
-            "OpenAI",
-            "Codex",
-            "Human-Computer Interaction",
-            "Software Development"
-          ],
-          "focusTopics": [],
-          "background": "Codex is an AI model developed by OpenAI, based on large language model technology, originally designed for coding tasks such as code generation and understanding. Human-Computer Interaction (HCI) refers to the study and design of how humans interact with computers, with AI advancements like natural language processing enhancing user experiences. Large language models, including Codex, process vast amounts of data to generate human-like text, but this raises data privacy and cybersecurity risks, as outlined in resources like OWASP's guidelines for LLM security.",
-          "discussion": "The community discussion shows mixed sentiment, with some users skeptical about Codex's novelty, noting it may be catching up to existing tools like Claude, while others are enthusiastic about its potential to simplify tasks for non-developers. Concerns include security risks from giving Codex control over computers and apps, and debates over whether hiding code from coders improves productivity or misrepresents the technology."
-        },
-        {
-          "title": "Cloudflare launches an AI platform as an inference layer for agents",
-          "summary": "Cloudflare introduced its AI platform, designed as an inference layer specifically for AI agents, enabling scalable deployment and integration of AI models. This platform leverages Cloudflare's global network to provide serverless AI inference with a pay-for-what-you-use pricing model. This matters because it addresses a key bottleneck in AI agent deployment by offering a scalable, edge-based inference solution, potentially reducing costs and latency for developers. It positions Cloudflare to compete in the growing AI infrastructure market, which is crucial for enabling real-time, adaptive AI applications. The platform includes features like AI Gateway and Vectorize, but some users note inconsistencies in model availability between Workers AI and other Cloudflare AI endpoints. It operates on a serverless architecture, eliminating the need for GPU management, but scalability for specialized models like LORAs remains a challenge.",
-          "url": "https://blog.cloudflare.com/ai-platform/",
-          "score": 7,
-          "sources": [
-            {
-              "name": "hackernews",
-              "meta": "nikitoci"
-            }
-          ],
-          "tags": [
-            "AI",
-            "Cloud Computing",
-            "Inference",
-            "Scalability",
-            "Agents"
-          ],
-          "focusTopics": [
-            "memory"
-          ],
-          "background": "An inference layer in AI systems handles the execution of trained models to make predictions or generate outputs, often optimized for efficiency and scalability. AI agents are autonomous systems that use AI models to perform tasks, typically structured with hierarchical architectures separating planning from execution. Cloudflare Workers AI is a serverless platform that runs AI models on Cloudflare's global edge network, providing low-latency inference without infrastructure management.",
-          "discussion": "Community comments show mixed sentiment, with some users praising the platform's utility and tools like D2, while others express confusion over model inconsistencies and concerns about scalability for specialized deployments. A key discussion point is the need for a governance layer to manage agent authorizations and actions."
-        },
-        {
-          "title": "The 'Passive Income' trap misled a generation of entrepreneurs",
-          "summary": "An article critiques the 'passive income' trend as a misleading trap that has negatively impacted a generation of entrepreneurs by promoting unrealistic expectations and diverting focus from sustainable business practices. It highlights how this trend has led many to chase quick schemes instead of building real skills or careers. This matters because it exposes a widespread issue in entrepreneurship and tech culture, where hype-driven schemes can waste time and resources, potentially stifling innovation and economic growth. It encourages a shift towards more realistic and sustainable business models, benefiting aspiring entrepreneurs and the broader ecosystem. The article notes that the trap is not entirely new, with comparisons to historical schemes like real estate or pyramid sales, and it references Tim Ferriss' 'The 4-Hour Workweek' as an early example of similar ideas. However, it argues that the modern digital age has amplified this trend through influencers and online courses.",
-          "url": "https://www.joanwestenberg.com/the-passive-income-trap-ate-a-generation-of-entrepreneurs/",
-          "score": 7,
-          "sources": [
-            {
-              "name": "hackernews",
-              "meta": "devonnull"
-            }
-          ],
-          "tags": [
-            "entrepreneurship",
-            "passive-income",
-            "business-critique",
-            "tech-culture",
-            "productivity"
-          ],
-          "focusTopics": [
-            "memory",
-            "reflection"
-          ],
-          "background": "Passive income refers to earnings generated with minimal ongoing effort, often promoted through online courses, drop-shipping, or affiliate marketing. The concept gained popularity in entrepreneurship circles, driven by influencers and self-help culture, promising financial freedom and lifestyle flexibility. This trend intersects with broader movements like productivity culture, where efficiency is prioritized over traditional work ethics.",
-          "discussion": "Community comments show mixed sentiment, with some agreeing the article highlights a real problem, while others argue it's not new and misdiagnoses the issue. Key viewpoints include comparisons to historical schemes, debates on the novelty of the trap, and discussions on related trends like productivity culture and self-help books."
-        },
-        {
-          "title": "AI cybersecurity differs fundamentally from proof-of-work systems",
-          "summary": "The article argues that AI cybersecurity is not analogous to proof-of-work systems due to fundamental asymmetries between attackers and defenders, where attackers need only find one exploitable vulnerability while defenders must identify and patch all potential issues. This conceptual analysis challenges the comparison between these two domains, highlighting the unique dynamics of AI-powered security. This distinction matters because it affects how organizations approach AI security investments and strategies, recognizing that traditional cryptographic analogies may not apply to the asymmetric nature of modern cyber threats. Understanding these differences helps security teams develop more effective defense mechanisms that account for the inherent advantages attackers have in AI-powered environments. The article specifically notes that defenders not only need to discover vulnerabilities but also deploy patches, which takes time and can be reverse-engineered by attackers once available. Additionally, the discussion references practical considerations like model capabilities, with comments mentioning GPT 120B OSS availability and comparisons between freely available versus restricted models like Mythos.",
-          "url": "https://antirez.com/news/163",
-          "score": 7,
-          "sources": [
-            {
-              "name": "hackernews",
-              "meta": "surprisetalk"
-            }
-          ],
-          "tags": [
-            "AI Security",
-            "Cybersecurity",
-            "Proof-of-Work",
-            "Machine Learning",
-            "Systems Analysis"
-          ],
-          "focusTopics": [],
-          "background": "Proof-of-work is a cryptographic consensus mechanism used in blockchain systems like Bitcoin, where participants must solve computationally intensive puzzles to validate transactions and secure the network. In cybersecurity, AI and machine learning are increasingly used to detect threats, analyze vulnerabilities, and automate defense responses, but this creates new asymmetries where attackers can leverage the same technologies with different constraints. The cybersecurity asymmetry problem refers to the imbalance where attackers need only find one weakness to succeed, while defenders must protect against all possible attacks.",
-          "discussion": "Community comments show mixed perspectives, with some users emphasizing practical aspects like model capabilities and testing availability, while others question the value of the analogy itself. Notable viewpoints include discussions about whether \"better\" models necessarily improve security outcomes, comparisons between different search strategies for vulnerability discovery, and skepticism about whether AI fundamentally changes traditional security dynamics beyond human capabilities."
-        },
-        {
-          "title": "Official Clojure Documentary page launches with video, shownotes, and links",
-          "summary": "The official Clojure documentary page has been released, featuring a full-length video, shownotes, and links that trace the language's origins and impact. It includes interviews with key figures like Rich Hickey, Alex Miller, and Stuart Halloway, and was announced with a trailer in April 2026. This documentary matters because it preserves and shares Clojure's history and values, fostering community engagement and attracting new developers to its functional programming paradigm. It highlights Clojure's influence on modern software, such as its role in powering major fintech companies like NuBank, which can inspire broader adoption and innovation. The documentary is available on the official Clojure website and includes community resources like watch parties, such as one scheduled in Melbourne in April 2026. It focuses on Clojure's unconventional origins and its impact on software thinking, but does not cover recent technical advancements like borkdude, as noted in community feedback.",
-          "url": "https://clojure.org/about/documentary",
-          "score": 6,
-          "sources": [
-            {
-              "name": "hackernews",
-              "meta": "adityaathalye"
-            }
-          ],
-          "tags": [
-            "Clojure",
-            "Programming Languages",
-            "Documentary",
-            "Software Development",
-            "Community"
-          ],
-          "focusTopics": [],
-          "background": "Clojure is a dynamic, functional dialect of Lisp that runs on the Java Virtual Machine (JVM), created by Rich Hickey in the mid-2000s. It emphasizes immutability, functional programming, and explicit state management to facilitate robust concurrent programs. The language has been ported to other platforms like .NET and has a strong community focused on values-driven development. Datomic, a database associated with Clojure, is known for its innovative approach to data management and was used by companies like NuBank.",
-          "discussion": "Community comments express nostalgia and interest, with users sharing personal experiences using Clojure in startups and its early adoption on AWS Lambda. Discussions highlight Clojure's relevance in modern contexts, such as its use by NuBank and the impact of Datomic, while some question its current utility compared to newer languages in the era of agentic coding."
-        },
-        {
-          "title": "Newly unsealed records reveal Amazon's alleged price-fixing tactics in California lawsuit",
-          "summary": "Newly unsealed court records in a California lawsuit have revealed allegations that Amazon engaged in price-fixing tactics, as claimed by the California Attorney General. The records, part of a case that is nearly four years old, include heavily censored filings from 2022 and recent submissions. This matters because it highlights ongoing antitrust scrutiny of Amazon's business practices, which could impact e-commerce competition and consumer prices. If proven, such tactics could lead to significant legal penalties and set precedents for how large tech platforms regulate seller pricing. The allegations center on Amazon requiring sellers on its platform not to offer lower prices elsewhere online, with penalties like relegation to less visible sections. The records are heavily censored, limiting public insight, and the case involves a request for a preliminary injunction despite its age.",
-          "url": "https://www.theguardian.com/us-news/ng-interactive/2026/apr/16/amazon-price-fixing-california-lawsuit",
-          "score": 6,
-          "sources": [
-            {
-              "name": "hackernews",
-              "meta": "kmfrk"
-            }
-          ],
-          "tags": [
-            "antitrust",
-            "amazon",
-            "legal",
-            "business",
-            "ecommerce"
-          ],
-          "focusTopics": [],
-          "background": "Price fixing is an agreement between businesses to set prices instead of competing independently, and it is treated as a serious antitrust violation under U.S. law. Antitrust enforcement in the U.S. involves civil and criminal actions by agencies like the FTC and DOJ, as well as private lawsuits. Court records can be sealed for privacy or security reasons and require a legal motion to unseal, which involves demonstrating a need for access.",
-          "discussion": "Community comments express skepticism about the novelty of the revelations, noting the case's age and heavily censored filings. Some suggest alternative legal approaches like RICO statutes, while others discuss tactics sellers use to hide discounts from Amazon's crawlers. There is also debate on whether Amazon's policies could be legal if openly stated, and suggestions for settlement to avoid broader legal action."
+          "tags": [],
+          "focusTopics": []
         }
       ]
     },
@@ -240,367 +91,264 @@
       "title": "Research & Innovation",
       "items": [
         {
-          "title": "Prism: Symbolic Superoptimization of Tensor Programs Introduces sGraph and Two-Level Search",
-          "summary": "Researchers have developed Prism, the first symbolic superoptimizer for tensor programs, which uses a novel sGraph representation to compactly encode program families and a two-level search approach to optimize ML workloads efficiently. In evaluations on five common LLM workloads, Prism achieved up to 2.2x speedup over existing superoptimizers and 4.9x over compiler-based methods, while reducing optimization time by up to 3.4x. This breakthrough matters because it represents a paradigm shift in tensor program optimization, potentially significantly improving the efficiency of ML workloads and hardware acceleration by bridging rigorous exhaustive search with scalability. It could lead to faster model training and inference, benefiting industries reliant on large-scale AI applications. Prism's key technical details include the sGraph representation, which symbolically encodes execution parameters to handle large program classes, and a two-level search that constructs symbolic graphs and instantiates them into concrete implementations. It employs symbolic reasoning over operator semantics, algebraic identities, and hardware constraints to prune suboptimal regions, along with techniques like e-graph rewriting for equivalence verification and auto-tuning for parameter instantiation.",
-          "url": "https://arxiv.org/abs/2604.15272v1",
-          "score": 9,
+          "title": "GFT: From Imitation to Reward Fine-Tuning with Unbiased Group Advantages and Dynamic Coefficient Rectification",
+          "summary": "提出从模仿学习到奖励微调的GFT方法，用于大语言模型的后训练。",
+          "url": "https://arxiv.org/abs/2604.14258",
+          "score": 7.5,
           "sources": [
             {
-              "name": "rss",
-              "meta": "ArXiv AI Papers"
+              "name": "ArXiv cs.AI"
             }
           ],
-          "tags": [
-            "machine-learning",
-            "compiler-optimization",
-            "tensor-programs",
-            "superoptimization",
-            "hardware-acceleration"
-          ],
-          "focusTopics": [
-            "planning"
-          ],
-          "background": "Tensor programs are computational graphs used in machine learning to represent operations on multi-dimensional arrays (tensors), commonly optimized by compilers or superoptimizers for performance on hardware like GPUs. Superoptimization is a technique that searches for the most efficient program implementation from a vast space of possibilities, often used to maximize speed or reduce resource usage in ML workloads. Traditional approaches can be limited by scalability or lack of symbolic reasoning, making Prism's novel methods significant for advancing optimization in this field."
+          "tags": [],
+          "focusTopics": []
         },
         {
-          "title": "Cloning is as Hard as Learning for Stabilizer States",
-          "summary": "This research proves that for n-qubit stabilizer states, the optimal sample complexity of cloning is Θ(n), establishing that cloning is as hard as learning for this important structured class of quantum states. The work uses representation-theoretic tools in the Abelian State Hidden Subgroup framework and a structured version of the random purification channel to connect stabilizer state cloning to sample amplification problems in classical learning theory. This represents a major theoretical breakthrough in quantum information theory, providing a more fine-grained perspective on No-Cloning theorems and establishing fundamental connections between quantum foundations, learning theory, and cryptography. The results have significant implications for quantum cryptography protocols and quantum learning algorithms that rely on stabilizer states, as they reveal fundamental limitations on what can be efficiently cloned versus learned. The research specifically addresses stabilizer states, which are an important structured class of quantum states widely used in quantum error correction and quantum computing. The Θ(n) sample complexity means the number of copies needed scales linearly with the number of qubits, matching the known learning complexity for these states.",
-          "url": "https://arxiv.org/abs/2604.15269v1",
-          "score": 9,
+          "title": "Compressed-Sensing-Guided, Inference-Aware Structured Reduction for Large Language Models",
+          "summary": "提出压缩感知引导、推理感知的结构化缩减方法，用于大语言模型压缩。",
+          "url": "https://arxiv.org/abs/2604.14156",
+          "score": 7.5,
           "sources": [
             {
-              "name": "rss",
-              "meta": "ArXiv AI Papers"
+              "name": "ArXiv cs.CL"
             }
           ],
-          "tags": [
-            "quantum-information",
-            "stabilizer-states",
-            "quantum-cloning",
-            "quantum-learning",
-            "sample-complexity"
-          ],
-          "focusTopics": [],
-          "background": "The no-cloning theorem is a fundamental principle in quantum mechanics stating that an arbitrary unknown quantum state cannot be perfectly copied. Stabilizer states are a special class of quantum states that can be described using the stabilizer formalism, which makes them mathematically tractable and practically important for quantum error correction and fault-tolerant quantum computing. In quantum learning theory, researchers study how efficiently quantum states can be learned from measurements, with structured classes like stabilizer states often allowing more efficient learning algorithms than general quantum state tomography."
+          "tags": [],
+          "focusTopics": []
         },
         {
-          "title": "Transformer neural network implemented in HyperCard on 1989 Macintosh hardware",
-          "summary": "A developer successfully trained a complete transformer neural network with 1,216 parameters in HyperCard on a 1989 Macintosh, using the HyperTalk scripting language to implement embeddings, positional encoding, self-attention, backpropagation, and gradient descent. The model learned the bit-reversal permutation task through pure attention mechanisms, achieving up to 100% accuracy after training. This project demonstrates that core AI concepts like attention and backpropagation are fundamentally mathematical rather than hardware-dependent, challenging the modern narrative that AI progress requires massive computational resources. It highlights how algorithmic efficiency can extract meaningful results from extremely limited hardware, connecting contemporary AI techniques with historical computing traditions. The implementation runs entirely within HyperCard's native environment without external dependencies, storing the trained model's 1,216 parameters in hidden fields that persist when the stack is saved and reopened. The project includes both a pre-trained stack (step 1,000) and a Python/NumPy reference implementation for validation, with compatibility ranging from System 7 through Mac OS 9.",
-          "url": "https://github.com/SeanFDZ/macmind",
-          "score": 8,
+          "title": "How to Fine-Tune a Reasoning Model? A Teacher-Student Cooperation Framework to Synthesize Student-Consistent SFT Data",
+          "summary": "提出师生合作框架，用于合成学生一致的SFT数据以微调推理模型。",
+          "url": "https://arxiv.org/abs/2604.14164",
+          "score": 7.5,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "hammer32"
+              "name": "ArXiv cs.CL"
             }
           ],
-          "tags": [
-            "neural-networks",
-            "vintage-computing",
-            "transformer",
-            "HyperCard",
-            "AI-implementation"
-          ],
-          "focusTopics": [],
-          "background": "HyperCard was a hypermedia application developed by Apple in 1987 that used HyperTalk as its scripting language, allowing users to create interactive stacks with buttons, fields, and cards. The bit-reversal permutation is a mathematical operation crucial to the Fast Fourier Transform (FFT) algorithm, which is fundamental to signal processing, quantum mechanics, and wave analysis. Transformer neural networks, introduced in 2017, use self-attention mechanisms to process sequential data, with positional encoding providing information about token order in the input sequence.",
-          "discussion": "Community members expressed admiration for the technical achievement, noting how it demonstrates that AI progress involves algorithmic cleverness beyond just hardware scaling. Some comments highlighted the nostalgic connection to HyperCard programming and early computing, while others discussed technical limitations like 32-bit addressing constraints and inquired about implementation details."
+          "tags": [],
+          "focusTopics": []
         },
         {
-          "title": "OpenAI's Codex Analyzes Samsung TV Firmware to Identify Security Vulnerabilities",
-          "summary": "A researcher demonstrated using OpenAI's Codex to analyze the source code of Samsung TV firmware, specifically the KantS2 platform, and successfully identified security vulnerabilities in the device. This demonstration highlights Codex's ability to assist in security research by parsing complex embedded system code. This matters because it showcases how AI tools like Codex can accelerate vulnerability discovery in firmware and embedded systems, potentially lowering the barrier for security researchers and increasing the pace of identifying flaws in consumer electronics. It also sparks debate about the role of AI in security, especially regarding closed-source versus open-source software defenses. The analysis relied on providing Codex with access to the full firmware source code, which was crucial for identifying vulnerabilities; without source code access, its effectiveness might be limited. The demonstration focused on a specific Samsung TV model using the KantS2 platform, and the vulnerabilities were identified in a controlled research environment without actual exploitation.",
-          "url": "https://blog.calif.io/p/codex-hacked-a-samsung-tv",
-          "score": 8,
-          "sources": [
-            {
-              "name": "hackernews",
-              "meta": "campuscodi"
-            }
-          ],
-          "tags": [
-            "AI-assisted-security",
-            "vulnerability-research",
-            "firmware-analysis",
-            "Codex",
-            "hacker-news"
-          ],
-          "focusTopics": [],
-          "background": "OpenAI's Codex is an AI model designed for code generation and analysis, and its security-focused variant, Codex Security, is in research preview to autonomously find and validate vulnerabilities in codebases. Firmware is low-level software embedded in devices like TVs, and analyzing it for security flaws traditionally requires deep expertise in reverse engineering and embedded systems. The KantS2 platform is Samsung's internal name for the Smart TV firmware used in certain models, and such firmware often contains vulnerabilities that can be exploited if not properly secured.",
-          "discussion": "Community comments show mixed sentiment, with some users praising Codex's practical applications in hacking-like scenarios, such as accessing routers or Bluetooth devices, while others emphasize that its effectiveness depends heavily on source code access. Discussions also touch on debates about closed-source security and desires for simpler TV functionality."
-        },
-        {
-          "title": "MM-WebAgent: Hierarchical Multimodal Agent Improves Webpage Generation",
-          "summary": "Researchers introduced MM-WebAgent, a hierarchical multimodal web agent framework that coordinates AIGC tools through planning and self-reflection to generate webpages with improved style consistency and coherence. The team also created a benchmark and evaluation protocol for multimodal webpage generation, with experiments showing MM-WebAgent outperforms existing baselines. This addresses a critical challenge in automated webpage generation where isolated use of AIGC tools often results in inconsistent visual styles and poor overall coherence. By improving multimodal element integration, MM-WebAgent could accelerate web development workflows and enable more sophisticated AI-assisted design systems. The framework employs hierarchical planning to optimize global layout and local content generation simultaneously, with iterative self-reflection mechanisms to enhance coherence. Experimental results show particular improvements in multimodal element generation and integration compared to code-generation and agent-based baselines.",
-          "url": "https://arxiv.org/abs/2604.15309v1",
-          "score": 8,
-          "sources": [
-            {
-              "name": "rss",
-              "meta": "ArXiv AI Papers"
-            }
-          ],
-          "tags": [
-            "AI",
-            "Web Development",
-            "Multimodal Agents",
-            "UI/UX",
-            "AIGC"
-          ],
-          "focusTopics": [
-            "planning",
-            "reflection"
-          ],
-          "background": "Artificial Intelligence Generated Content (AIGC) tools enable automated creation of images, videos, and visual elements for webpage design, representing a flexible paradigm for modern UI/UX development. However, directly integrating these tools often leads to style inconsistency as elements are generated independently without coordination. Multimodal agents combine different types of data (text, images, layout) to create more coherent outputs."
-        },
-        {
-          "title": "LLM Generalization Study: Shortest Path Reveals Spatial Transfer Success but Length Scaling Failure",
-          "summary": "Researchers created a controlled synthetic environment using shortest-path planning to study systematic generalization in language models, finding models show strong spatial transfer to unseen maps but consistently fail under length scaling due to recursive instability. The study analyzed how training data, reinforcement learning, and inference-time strategies influence these outcomes. This research matters because it provides a clean experimental framework to disentangle factors affecting LLM generalization, revealing specific limitations in handling longer-horizon problems despite spatial adaptability. The findings help advance understanding of systematic reasoning in AI and guide development of more robust models for complex sequential tasks. The study specifically identified that data coverage sets capability limits, reinforcement learning improves training stability but doesn't expand those limits, and inference-time scaling enhances performance but cannot rescue length-scaling failures. The recursive instability under length scaling represents a fundamental challenge for systematic generalization.",
-          "url": "https://arxiv.org/abs/2604.15306v1",
-          "score": 8,
-          "sources": [
-            {
-              "name": "rss",
-              "meta": "ArXiv AI Papers"
-            }
-          ],
-          "tags": [
-            "LLM Generalization",
-            "Systematic Reasoning",
-            "AI Research",
-            "Shortest Path",
-            "Machine Learning"
-          ],
-          "focusTopics": [
-            "memory",
-            "planning"
-          ],
-          "background": "Systematic generalization refers to the ability of AI models to apply learned rules to novel situations in a structured way, which is crucial for reliable problem-solving. Shortest-path planning is a canonical composable sequential optimization problem where an agent must find the most efficient route between points. Language models' ability to handle such tasks systematically remains debated, with performance influenced by multiple interacting factors including training paradigms and inference strategies."
-        },
-        {
-          "title": "Study Reveals LLMs and VLMs Struggle with Viewpoint Rotation Understanding Without Visual Inputs",
-          "summary": "Researchers published a paper investigating whether LLMs and VLMs can understand viewpoint rotation from text-only inputs, finding they perform poorly on a new VRU dataset while humans achieve 100% accuracy. The study used layer-wise probing and head-wise causal intervention to reveal that models encode viewpoint information but struggle to bind it with corresponding observations, leading to hallucinations in final layers. This research addresses a critical gap in understanding spatial intelligence in language models without visual inputs, revealing foundational limitations in current LLMs and VLMs. The findings have implications for model architecture and training, suggesting that improving spatial reasoning capabilities may require new approaches beyond current text-based training paradigms. The researchers created a new VRU (Viewpoint Rotation Understanding) dataset and task where models must infer final viewpoints and predict observations from textual descriptions of viewpoint rotations over multiple steps. Selective fine-tuning of key attention heads identified through causal intervention improved VRU performance while avoiding catastrophic forgetting of generic abilities.",
-          "url": "https://arxiv.org/abs/2604.15294v1",
-          "score": 8,
-          "sources": [
-            {
-              "name": "rss",
-              "meta": "ArXiv AI Papers"
-            }
-          ],
-          "tags": [
-            "LLM",
-            "Spatial Intelligence",
-            "Interpretability",
-            "AI Research",
-            "Natural Language Understanding"
-          ],
-          "focusTopics": [
-            "planning"
-          ],
-          "background": "Spatial intelligence refers to the ability to understand, reason about, and manipulate spatial relationships and configurations. LLMs (Large Language Models) are AI models trained primarily on text data to understand and generate human language, while VLMs (Vision-Language Models) combine visual and linguistic understanding. Viewpoint rotation understanding involves mentally rotating one's perspective in a described environment to determine what would be visible from a new position."
-        },
-        {
-          "title": "AD4AD: Benchmarking Visual Anomaly Detection Models for Safer Autonomous Driving",
-          "summary": "Researchers benchmarked eight state-of-the-art visual anomaly detection models on the AnoVox dataset, evaluating their performance across four backbone architectures including MobileNet and DeiT-Tiny. The study found that Tiny-Dinomaly achieved the best accuracy-efficiency trade-off for edge deployment, matching full-scale localization performance with lower memory costs. This benchmarking addresses a critical safety gap in autonomous driving by enabling systems to detect anomalous objects not seen during training, which can prevent accidents caused by unexpected road conditions. It contributes to safer deployment of autonomous vehicles by providing actionable insights for real-time anomaly detection in safety-critical applications. The models produce pixel-level anomaly maps that highlight specific regions of concern without prior assumptions about hazards, and the evaluation used the largest synthetic dataset for anomaly detection in autonomous driving, AnoVox. The study focused on transferability to road scenes and efficiency for edge deployment, with Tiny-Dinomaly showing superior performance in lightweight settings.",
-          "url": "https://arxiv.org/abs/2604.15291v1",
-          "score": 8,
-          "sources": [
-            {
-              "name": "rss",
-              "meta": "ArXiv AI Papers"
-            }
-          ],
-          "tags": [
-            "autonomous-driving",
-            "anomaly-detection",
-            "computer-vision",
-            "machine-learning",
-            "safety"
-          ],
-          "focusTopics": [
-            "memory"
-          ],
-          "background": "Visual anomaly detection (VAD) is a computer vision technique that identifies objects or events deviating from normal patterns in training data, crucial for autonomous systems to handle unforeseen scenarios. In autonomous driving, VAD helps detect atypical obstacles like unexpected debris or animals, enhancing safety by alerting drivers or triggering evasive actions. The AnoVox dataset is a synthetic resource designed for benchmarking VAD models in driving contexts, providing diverse anomalous scenarios for robust evaluation."
-        },
-        {
-          "title": "Study Reveals Why Vision-Language Models Fail at Human Emotion Recognition",
-          "summary": "A paper published on arXiv investigates why vision-language models (VLMs) struggle with human emotion recognition, identifying long-tailed data bias and dynamic facial expression challenges as key vulnerabilities. It proposes alternative sampling strategies and a multi-stage context enrichment method to address these issues. This research is significant because it addresses a critical gap in AI-human interaction, where accurate emotion recognition is essential for applications like healthcare, education, and customer service. Improving VLMs' emotion understanding could enhance multimodal AI systems' ability to engage naturally with humans. The study finds that VLMs collapse rare emotions into common categories due to long-tailed data bias from web-scale pre-training, and they fail to capture micro-expressions lasting 0.25-0.5 seconds due to sparse temporal sampling. The proposed multi-stage context enrichment strategy uses natural language summaries of intermediate frames to preserve emotional trajectories without overwhelming memory constraints.",
-          "url": "https://arxiv.org/abs/2604.15280v1",
-          "score": 8,
-          "sources": [
-            {
-              "name": "rss",
-              "meta": "ArXiv AI Papers"
-            }
-          ],
-          "tags": [
-            "Computer Vision",
-            "Natural Language Processing",
-            "Multimodal AI",
-            "Emotion Recognition",
-            "Machine Learning"
-          ],
-          "focusTopics": [
-            "memory"
-          ],
-          "background": "Vision-language models (VLMs) are AI systems that process both visual and textual data, enabling tasks like image captioning and visual question answering. They are typically pre-trained on large-scale datasets from the web, which can introduce biases. Emotion recognition involves interpreting facial expressions, often requiring analysis of dynamic sequences to detect subtle changes like micro-expressions."
-        },
-        {
-          "title": "SegWithU: Single-Forward-Pass Uncertainty Estimation for Medical Image Segmentation",
-          "summary": "Researchers introduced SegWithU, a post-hoc framework that adds a lightweight uncertainty head to frozen segmentation models, modeling uncertainty as perturbation energy in a compact probe space using rank-1 posterior probes. The method achieved strong performance across ACDC, BraTS2024, and LiTS datasets with AUROC/AURC scores of 0.9838/2.4885, 0.9946/0.2660, and 0.9925/0.8193 respectively while preserving segmentation quality. This matters because it provides an efficient single-forward-pass solution for uncertainty estimation in medical image segmentation, addressing a critical need for clinical applications where computational efficiency and reliability are essential. The method offers both calibration and ranking capabilities, enabling better error detection and selective prediction in medical AI systems. SegWithU produces two voxel-wise uncertainty maps: a calibration-oriented map for probability tempering and a ranking-oriented map for error detection and selective prediction. The framework taps intermediate backbone features and requires only a single forward pass, making it computationally efficient compared to methods requiring repeated inference.",
-          "url": "https://arxiv.org/abs/2604.15271v1",
-          "score": 8,
-          "sources": [
-            {
-              "name": "rss",
-              "meta": "ArXiv AI Papers"
-            }
-          ],
-          "tags": [
-            "medical-image-segmentation",
-            "uncertainty-estimation",
-            "deep-learning",
-            "computer-vision",
-            "healthcare-ai"
-          ],
-          "focusTopics": [],
-          "background": "Medical image segmentation involves automatically identifying and delineating anatomical structures or regions of interest in medical images, which is crucial for diagnosis, treatment planning, and monitoring. Uncertainty estimation in segmentation models helps quantify the reliability of predictions, which is particularly important in clinical settings where incorrect segmentations could lead to misdiagnosis or inappropriate treatment. Traditional uncertainty methods often require multiple forward passes or make restrictive assumptions about feature spaces, limiting their practical deployment in time-sensitive medical applications."
-        },
-        {
-          "title": "CoopEval: Benchmarking Cooperation Mechanisms and LLM Agents in Social Dilemmas",
-          "summary": "A research paper introduced CoopEval, a benchmark for evaluating cooperation-sustaining mechanisms and LLM agents in social dilemmas, finding that stronger reasoning capabilities correlate with less cooperative behavior. The study tested four game-theoretic mechanisms, with contracting and mediation proving most effective in achieving cooperative outcomes between capable LLM models. This matters because it addresses a critical safety concern in AI, as LLM agents with advanced reasoning may behave less cooperatively in multi-agent interactions, potentially leading to harmful outcomes. The findings can guide the development of safer multi-agent systems by identifying effective mechanisms to sustain cooperation, impacting fields like AI safety and autonomous decision-making. The experiments showed that recent LLM models consistently defect in single-shot social dilemmas, regardless of reasoning being enabled. Additionally, repetition-induced cooperation deteriorates drastically when co-players vary, while contracting and mediation become more effective under evolutionary pressures to maximize individual payoffs.",
-          "url": "https://arxiv.org/abs/2604.15267v1",
-          "score": 8,
-          "sources": [
-            {
-              "name": "rss",
-              "meta": "ArXiv AI Papers"
-            }
-          ],
-          "tags": [
-            "AI Safety",
-            "Multi-Agent Systems",
-            "Game Theory",
-            "LLM Benchmarking",
-            "Social Dilemmas"
-          ],
-          "focusTopics": [
-            "multi-agent",
-            "planning"
-          ],
-          "background": "Social dilemmas, such as the prisoner's dilemma and public goods games, are scenarios where individual incentives conflict with group benefits, often leading to suboptimal outcomes like defection. LLM agents are AI systems based on large language models that can interact and make decisions in multi-agent environments. Game-theoretic mechanisms, like reputation systems or contracts, are strategies designed to encourage cooperative behavior among rational agents by altering incentives or decision-making processes."
-        },
-        {
-          "title": "New Framework Analyzes Stability and Generalization in Looped Transformers",
-          "summary": "A research paper introduced a fixed-point framework to analyze looped transformers, proving theoretical limitations on stability and generalization, and empirically validated it across chess, sudoku, and prefix-sum tasks. It also proposed internal recall, a novel variant that outperforms standard recall in some cases when combined with outer normalization. This work addresses a critical gap in understanding how looped transformers can scale compute at test time without overfitting, which is essential for developing more efficient and robust AI models that handle complex problems. It provides theoretical insights and practical guidelines for designing architectures that generalize better to harder tasks, impacting areas like reasoning and algorithmic learning. The framework analyzes stability along three axes: reachability, input-dependence, and geometry, showing that looped networks without recall have countable fixed points and cannot achieve strong input-dependence. Empirical results demonstrate that downstream performance aligns with the framework's predictions across different tasks and configurations.",
-          "url": "https://arxiv.org/abs/2604.15259v1",
-          "score": 8,
-          "sources": [
-            {
-              "name": "rss",
-              "meta": "ArXiv AI Papers"
-            }
-          ],
-          "tags": [
-            "transformers",
-            "deep-learning-theory",
-            "neural-architecture",
-            "generalization",
-            "fixed-point-analysis"
-          ],
-          "focusTopics": [
-            "planning"
-          ],
-          "background": "Looped transformers are neural architectures that iterate computations at test time to allocate more processing to harder problems, aiming to improve efficiency and scalability. Fixed-point analysis is a mathematical approach used to study the convergence and stability of iterative systems, such as those in deep learning. Recall mechanisms in transformers refer to components that retain and reuse information across iterations to enhance memory and generalization."
-        },
-        {
-          "title": "SpecGuard introduces verification-aware speculative decoding for multi-step reasoning.",
-          "summary": "Researchers proposed SpecGuard, a verification-aware speculative decoding framework that uses model-internal attention and log-probability signals for step-level verification to prevent error propagation in multi-step reasoning. Experiments show it improves accuracy by 3.6% and reduces latency by ~11% compared to prior methods. This matters because it addresses key limitations in speculative decoding, such as error propagation and reliance on external models, potentially enhancing efficiency and generalizability in LLM inference for complex reasoning tasks. It could lead to faster and more accurate AI applications in areas like code generation or scientific analysis. SpecGuard samples multiple draft candidates per step and validates them using an ensemble of two lightweight internal signals: an attention-based grounding score and a log-probability-based confidence score. It selectively recomputes steps with the target model only when verification fails, optimizing compute allocation.",
-          "url": "https://arxiv.org/abs/2604.15244v1",
-          "score": 8,
-          "sources": [
-            {
-              "name": "rss",
-              "meta": "ArXiv AI Papers"
-            }
-          ],
-          "tags": [
-            "LLM Inference",
-            "Speculative Decoding",
-            "Multi-Step Reasoning",
-            "Model Optimization",
-            "Verification Methods"
-          ],
-          "focusTopics": [
-            "planning"
-          ],
-          "background": "Speculative decoding is a technique to accelerate large language model inference by having a lightweight draft model propose outputs that a stronger target model verifies, reducing latency. However, traditional speculative decoding is token-centric, which can allow errors to propagate across steps in multi-step reasoning tasks, limiting accuracy and efficiency. Prior approaches often used external reward models for verification, but this adds latency, computational overhead, and reduces generalizability across different tasks."
-        },
-        {
-          "title": "Muon Optimizer Outperforms AdamW for MLPs on Tabular Data",
-          "summary": "A benchmarking study evaluated multiple optimizers for training MLP-based models on tabular datasets and found that the Muon optimizer consistently outperforms the widely-used AdamW optimizer. The study also identified exponential moving average of model weights as an effective enhancement technique that improves AdamW's performance on vanilla MLPs. This matters because AdamW has been the default optimizer for tabular deep learning despite limited systematic evaluation, and Muon's consistent superiority could lead to better model performance for practitioners working with tabular data. The findings provide evidence-based guidance for optimizer selection in an area where architecture design has received more attention than training optimization. The benchmarking was conducted on multiple tabular datasets using a shared experiment protocol, and while Muon consistently outperformed AdamW, it comes with associated training efficiency overhead that practitioners need to consider. The exponential moving average technique was found to be effective for improving AdamW on vanilla MLPs, though its effect was less consistent across different model variants.",
-          "url": "https://arxiv.org/abs/2604.15297v1",
+          "title": "Simulating Human Cognition: Heartbeat-Driven Autonomous Thinking Activity Scheduling for LLM-based AI systems",
+          "summary": "提出基于心跳驱动的自主思维活动调度方法，用于模拟LLM智能体的人类认知。",
+          "url": "https://arxiv.org/abs/2604.14178",
           "score": 7,
           "sources": [
             {
-              "name": "rss",
-              "meta": "ArXiv AI Papers"
+              "name": "ArXiv cs.AI"
             }
           ],
-          "tags": [
-            "deep-learning",
-            "optimization",
-            "tabular-data",
-            "benchmarking",
-            "machine-learning"
-          ],
-          "focusTopics": [
-            "memory"
-          ],
-          "background": "MLP (Multi-Layer Perceptron) is a fundamental neural network architecture commonly used as a backbone in deep learning models for tabular data, which refers to structured data organized in rows and columns like spreadsheets or databases. AdamW is an optimization algorithm that extends the popular Adam optimizer with weight decay regularization to prevent overfitting and improve generalization. Optimizers are algorithms that adjust model parameters during training to minimize loss functions, and their choice can significantly impact model performance and training efficiency."
+          "tags": [],
+          "focusTopics": []
         },
         {
-          "title": "ORCA framework enables post-training interpretability for SVMs with truncated orthogonal polynomial kernels",
-          "summary": "Researchers have developed ORCA (Orthogonal Representation Contribution Analysis), a novel post-training interpretability framework for Support Vector Machines using truncated orthogonal polynomial kernels that quantifies model structure through Orthogonal Kernel Contribution indices without requiring retraining or surrogate models. This addresses a critical gap in explainable AI by providing mathematically rigorous interpretability for kernel-based SVMs, enabling practitioners to understand model complexity beyond predictive accuracy and supporting better model diagnostics and trust in real-world applications. The framework leverages the finite-dimensional reproducing kernel Hilbert space of truncated orthogonal polynomial kernels to exactly expand the decision function in intrinsic coordinates, producing indices that quantify contributions across interaction orders, polynomial degrees, marginal effects, and pairwise contributions.",
-          "url": "https://arxiv.org/abs/2604.15285v1",
+          "title": "Seeing Through Experts Eyes A Foundational Vision Language Model Trained on Radiologists Gaze and Reasoning",
+          "summary": "提出基于放射科医生注视和推理数据训练的基础视觉语言模型，用于胸部X光解读。",
+          "url": "https://arxiv.org/abs/2604.14316",
           "score": 7,
           "sources": [
             {
-              "name": "rss",
-              "meta": "ArXiv AI Papers"
+              "name": "ArXiv cs.AI"
             }
           ],
-          "tags": [
-            "machine-learning",
-            "interpretability",
-            "support-vector-machines",
-            "kernel-methods",
-            "explainable-ai"
-          ],
-          "focusTopics": [
-            "memory"
-          ],
-          "background": "Support Vector Machines are powerful machine learning models that use kernel functions to transform data into higher-dimensional spaces where linear separation is possible. Truncated orthogonal polynomial kernels are specific kernel types that create finite-dimensional feature spaces with orthogonal basis functions. Interpretability in machine learning refers to techniques that help humans understand how models make decisions, which is particularly challenging for complex kernel methods where decision boundaries are not easily visualized."
+          "tags": [],
+          "focusTopics": []
         },
         {
-          "title": "Benchmark Study Compares Classical and Quantum-Oriented Node Embeddings for Graph Neural Networks",
-          "summary": "A controlled benchmark study was conducted, comparing classical and quantum-oriented node embeddings for graph classification across multiple datasets, revealing that performance patterns are dataset-dependent. The study evaluated two classical baselines alongside quantum-oriented alternatives, including a circuit-defined variational embedding and quantum-inspired embeddings, under a unified pipeline with consistent training and testing conditions. This study addresses a gap in empirical evaluation by providing a reproducible benchmark, helping researchers and practitioners select appropriate embeddings based on dataset characteristics, which can improve the efficiency and accuracy of graph neural networks in applications like drug discovery or social network analysis. It highlights the trade-offs between inductive bias and trainability, guiding the adoption of quantum-oriented methods in graph learning. The experiments were conducted on five TU datasets and QM9 converted to classification via target binning, showing that quantum-oriented embeddings yield consistent gains on structure-driven benchmarks, while classical baselines perform well on social graphs with limited node attributes. All variants were trained with the same backbone, stratified splits, identical optimization, early stopping, and consistent metrics to ensure fair comparison.",
-          "url": "https://arxiv.org/abs/2604.15273v1",
+          "title": "Credo: Declarative Control of LLM Pipelines via Beliefs and Policies",
+          "summary": "提出Credo框架，通过信念和政策对LLM流程进行声明式控制。",
+          "url": "https://arxiv.org/abs/2604.14401",
           "score": 7,
           "sources": [
             {
-              "name": "rss",
-              "meta": "ArXiv AI Papers"
+              "name": "ArXiv cs.AI"
             }
           ],
-          "tags": [
-            "Graph Neural Networks",
-            "Node Embeddings",
-            "Quantum Machine Learning",
-            "Benchmarking",
-            "Graph Classification"
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "Equifinality in Mixture of Experts: Routing Topology Does Not Determine Language Modeling Quality",
+          "summary": "研究专家混合模型中的等效性，表明路由拓扑不决定语言建模质量。",
+          "url": "https://arxiv.org/abs/2604.14419",
+          "score": 7,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
           ],
-          "focusTopics": [],
-          "background": "Node embeddings are vector representations of nodes in a graph that serve as input features for graph neural networks, enabling tasks like classification or link prediction. Graph neural networks are machine learning models designed to process graph-structured data, commonly used in fields such as chemistry, social networks, and recommendation systems. Quantum-oriented embeddings incorporate concepts from quantum computing, such as variational circuits or linear-algebraic constructions, to potentially enhance representation learning in graphs."
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "HUOZIIME: An On-Device LLM-enhanced Input Method for Deep Personalization",
+          "summary": "提出HUOZIIME，一个用于深度个性化的设备端LLM增强输入法。",
+          "url": "https://arxiv.org/abs/2604.14159",
+          "score": 7,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "NuHF Claw: A Risk Constrained Cognitive Agent Framework for Human Centered Procedure Support in Digital Nuclear Control Rooms",
+          "summary": "提出用于核电站数字化控制室人机交互的风险约束认知智能体框架。",
+          "url": "https://arxiv.org/abs/2604.14160",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "Interpretable and Explainable Surrogate Modeling for Simulations: A State-of-the-Art Survey and Perspectives on Explainable AI for Decision-Making",
+          "summary": "关于可解释和可解释的仿真代理建模的综述，聚焦于决策的XAI。",
+          "url": "https://arxiv.org/abs/2604.14240",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "Mistake gating leads to energy and memory efficient continual learning",
+          "summary": "研究错误门控机制，以实现更节能和内存高效的持续学习。",
+          "url": "https://arxiv.org/abs/2604.14336",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "MemGround: Long-Term Memory Evaluation Kit for Large Language Models in Gamified Scenarios",
+          "summary": "提出MemGround，一个用于游戏化场景中大语言模型长期记忆评估的工具包。",
+          "url": "https://arxiv.org/abs/2604.14158",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "Can Large Language Models Detect Methodological Flaws? Evidence from Gesture Recognition for UAV-Based Rescue Operation Based on Deep Learning",
+          "summary": "研究大语言模型检测方法论缺陷的能力，以无人机救援手势识别为例。",
+          "url": "https://arxiv.org/abs/2604.14161",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "SeaAlert: Critical Information Extraction From Maritime Distress Communications with Large Language Models",
+          "summary": "提出SeaAlert，利用大语言模型从海上遇险通信中提取关键信息。",
+          "url": "https://arxiv.org/abs/2604.14163",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "EviSearch: A Human in the Loop System for Extracting and Auditing Clinical Evidence for Systematic Reviews",
+          "summary": "提出EviSearch，一个用于系统评价中临床证据提取和审计的人机协同多智能体系统。",
+          "url": "https://arxiv.org/abs/2604.14165",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "Hierarchical Retrieval Augmented Generation for Adversarial Technique Annotation in Cyber Threat Intelligence Text",
+          "summary": "提出用于网络威胁情报文本中对抗技术注释的分层检索增强生成方法。",
+          "url": "https://arxiv.org/abs/2604.14166",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "Fun-TSG: A Function-Driven Multivariate Time Series Generator with Variable-Level Anomaly Labeling",
+          "summary": "提出一种函数驱动的多元时间序列生成器，用于带变量级异常标签的异常检测评估。",
+          "url": "https://arxiv.org/abs/2604.14221",
+          "score": 6,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "Formalizing Kantian Ethics: Formula of the Universal Law Logic (FULL)",
+          "summary": "研究将康德伦理学形式化，以构建人工道德智能体。",
+          "url": "https://arxiv.org/abs/2604.14254",
+          "score": 6,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "Decoupling Scores and Text: The Politeness Principle in Peer Review",
+          "summary": "研究同行评审中的礼貌原则，探讨分数与评论文本的解耦。",
+          "url": "https://arxiv.org/abs/2604.14162",
+          "score": 6,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "Chinese Essay Rhetoric Recognition Using LoRA, In-context Learning and Model Ensemble",
+          "summary": "研究使用LoRA、上下文学习和模型集成进行中文作文修辞识别。",
+          "url": "https://arxiv.org/abs/2604.14167",
+          "score": 6,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
         }
       ]
     },
@@ -609,73 +357,33 @@
       "title": "Engineering & Resources",
       "items": [
         {
-          "title": "Study Diagnoses LLM Judge Reliability with Transitivity Analysis and Conformal Prediction Sets",
-          "summary": "A study introduced a diagnostic toolkit that uses transitivity analysis and conformal prediction sets to assess the per-instance reliability of LLM-as-judge frameworks in NLG evaluation, applied to SummEval. It revealed widespread inconsistencies, with 33-67% of documents showing at least one directed 3-cycle, and provided reliability indicators via prediction set widths. This matters because LLM-as-judge frameworks are increasingly used for automatic NLG evaluation, but their reliability at the instance level is poorly understood, risking biased or inconsistent assessments in AI applications. The toolkit offers practical tools with theoretical guarantees to improve evaluation methodologies, potentially enhancing trust and accuracy in AI systems. The study found that aggregate violation rates were low (0.8-4.1%), but per-input inconsistencies were high, with prediction set widths showing strong correlation with reliability (r_s = +0.576). Across four judges and criteria, relevance was judged most reliably (avg. set size ≈ 3.0), while fluency and consistency remained unreliable (avg. set size ≈ 4.9).",
-          "url": "https://arxiv.org/abs/2604.15302v1",
-          "score": 8,
+          "title": "llm-anthropic 0.25",
+          "summary": "llm-anthropic工具发布0.25版本，支持Claude 3.7模型。",
+          "url": "https://simonwillison.net/2026/Apr/16/llm-anthropic/#atom-everything",
+          "score": 5.5,
           "sources": [
             {
-              "name": "rss",
-              "meta": "ArXiv AI Papers"
+              "name": "Simon Willison"
             }
           ],
-          "tags": [
-            "LLM Evaluation",
-            "Conformal Prediction",
-            "NLG",
-            "AI Reliability",
-            "Statistical Methods"
-          ],
-          "focusTopics": [],
-          "background": "LLM-as-judge frameworks use large language models to automatically evaluate natural language generation outputs, such as summaries or translations, by scoring them on criteria like relevance and coherence. Conformal prediction is a statistical method that provides uncertainty estimates with theoretical coverage guarantees, often used to assess model reliability. Transitivity analysis checks for logical consistency in pairwise comparisons, where violations indicate unreliable judgments."
+          "tags": [],
+          "focusTopics": []
         },
         {
-          "title": "Google launches Android CLI tool to build apps 3x faster with AI agents",
-          "summary": "Google introduced the Android CLI tool on April 2026, which claims to build Android apps three times faster by integrating with any AI agent or tool of the developer's choice. The tool standardizes core development workflows and provides an entry point to official Android tools and skills. This significantly boosts developer productivity by reducing build times, which is crucial for faster iteration and deployment in competitive mobile app markets. It represents a shift toward agent-first development workflows, aligning with broader industry trends of AI integration in software development tools. The tool collects usage data such as commands and flags by default to improve performance, but this can be disabled using the --no-metrics flag. It provides the same feature set as Android Studio but through a command-line interface, enabling integration with various AI agents and LLMs.",
-          "url": "https://android-developers.googleblog.com/2026/04/build-android-apps-3x-faster-using-any-agent.html",
-          "score": 7,
+          "title": "Qwen3.6-35B-A3B on my laptop drew me a better pelican than Claude Opus 4.7",
+          "summary": "个人博客分享Qwen3.6-35B-A3B在本地绘图测试中优于Claude Opus 4.7的观察。",
+          "url": "https://simonwillison.net/2026/Apr/16/qwen-beats-opus/#atom-everything",
+          "score": 5,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "ingve"
+              "name": "Simon Willison"
             }
           ],
-          "tags": [
-            "android-development",
-            "cli-tools",
-            "ai-agents",
-            "developer-productivity",
-            "google"
-          ],
-          "focusTopics": [],
-          "background": "The Android CLI is a command-line interface tool that allows developers to build Android applications using standardized workflows, complementing traditional IDEs like Android Studio. AI agents in software development are automated systems that assist with coding tasks, leveraging algorithms and models to enhance efficiency. Developer productivity tools aim to streamline workflows through automation, code management, and integration platforms, with many recent tools incorporating AI capabilities.",
-          "discussion": "Community discussion shows mixed sentiment, with some praising the tool for enabling flexible development and fulfilling long-standing developer needs, while others express privacy concerns over data collection and desire for cross-platform equivalents like for Apple ecosystems. Questions also arise about integration with specific AI agents like Claude and the potential impact on app development practices."
-        },
-        {
-          "title": "Cloudflare launches Artifacts: Git-based versioned storage for agent workflows",
-          "summary": "Cloudflare has introduced Artifacts, a versioned storage system that uses Git for managing agent workflows, and open-sourced ArtifactFS, a filesystem driver that enables lazy file hydration through blobless Git clones. The system allows developers to bootstrap repositories from existing Git sources and efficiently handle large repositories by fetching only metadata during initialization. This matters because it addresses specific pain points in agent workflow development, such as high costs and rate limits when creating numerous repositories or branches on platforms like GitHub, while providing efficient file management for large-scale projects. It represents a convergence of version control and storage systems tailored for emerging autonomous agent architectures. ArtifactFS performs blobless clones, fetching only file trees and references without file contents, which reduces sandbox startup time and resource usage. However, usage costs are noted to be significantly higher than alternatives like S3, making operation batching crucial for cost efficiency.",
-          "url": "https://blog.cloudflare.com/artifacts-git-for-agents-beta/",
-          "score": 7,
-          "sources": [
-            {
-              "name": "hackernews",
-              "meta": "jgrahamc"
-            }
-          ],
-          "tags": [
-            "version-control",
-            "cloudflare",
-            "git",
-            "storage-systems",
-            "developer-tools"
-          ],
-          "focusTopics": [
-            "memory"
-          ],
-          "background": "Git is a widely-used distributed version control system that tracks changes in source code, while agent workflows refer to automated processes where AI agents perform tasks, often requiring versioning for reproducibility and collaboration. Traditional Git-based storage can be inefficient for large repositories due to full file downloads, and platforms like GitHub impose limits on repository creation that can hinder scalable agent deployments.",
-          "discussion": "Community sentiment is mixed, with some praising technical innovations like blobless clones and repository bootstrapping, while others question the target market and cost-effectiveness. Key viewpoints include appreciation for ArtifactFS's lazy hydration feature, concerns about high costs compared to S3, and debates over whether the tool addresses a niche or broader need in agent development."
+          "tags": [],
+          "focusTopics": []
         }
       ]
     }
-  ]
+  ],
+  "aiSummary": "谷歌在Chrome浏览器推出AI探索模式，增强网页交互体验。Anthropic发布Claude Opus 4.7模型，在性能与安全方面进行升级。同时，AI编码初创公司Factory估值达15亿美元，显示企业级AI工具市场持续火热。"
 }

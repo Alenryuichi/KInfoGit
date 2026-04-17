@@ -120,70 +120,6 @@
         "tooling"
       ],
       "type": "bluesky"
-    },
-    {
-      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mjkfkgva5c2d",
-      "url": "https://bsky.app/profile/simonwillison.net/post/3mjkfkgva5c2d",
-      "author": {
-        "handle": "simonwillison.net",
-        "displayName": "Simon Willison",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
-      },
-      "content": "The example prompt for Google's new Gemini Flash TTS text-to-speed model is a lot simonwillison.net/2026/Apr/15/...",
-      "createdAt": "2026-04-15T17:16:36.177Z",
-      "likeCount": 60,
-      "replyCount": 9,
-      "repostCount": 7,
-      "highlights": "",
-      "worthReading": "",
-      "tags": [
-        "llm",
-        "multi-modal"
-      ],
-      "type": "bluesky"
-    },
-    {
-      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mjl5u4uq6s2r",
-      "url": "https://bsky.app/profile/simonwillison.net/post/3mjl5u4uq6s2r",
-      "author": {
-        "handle": "simonwillison.net",
-        "displayName": "Simon Willison",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
-      },
-      "content": "A claude.ai feature I really like is you can tell it to \"clone x/y from GitHub\" and it can then answer questions about a repo, or use snippets of code from that repo to help build new artifacts - used that just now to solve a minor friction simonwillison.net/2026/Apr/16/...",
-      "createdAt": "2026-04-16T00:31:31.023Z",
-      "likeCount": 34,
-      "replyCount": 3,
-      "repostCount": 0,
-      "highlights": "",
-      "worthReading": "",
-      "tags": [
-        "llm",
-        "tooling"
-      ],
-      "type": "bluesky"
-    },
-    {
-      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mjmwls7yek2h",
-      "url": "https://bsky.app/profile/simonwillison.net/post/3mjmwls7yek2h",
-      "author": {
-        "handle": "simonwillison.net",
-        "displayName": "Simon Willison",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
-      },
-      "content": "Shocking result on my pelican benchmark this morning, I got a better pelican from a 21GB local Qwen3.6-35B-A3B running on my laptop than I did from the new Opus 4.7!\n\nsimonwillison.net/2026/Apr/16/...\n\nQwen on the left, Opus on the right",
-      "createdAt": "2026-04-16T17:26:54.703Z",
-      "likeCount": 120,
-      "replyCount": 12,
-      "repostCount": 11,
-      "highlights": "",
-      "worthReading": "",
-      "tags": [
-        "llm",
-        "evaluation",
-        "deployment"
-      ],
-      "type": "bluesky"
     }
   ],
   "videos": [],
@@ -207,16 +143,90 @@
       "highlights": "Meta's Muse Spark represents their first major model release in about a year, following Llama 4. Unlike previous models, Muse Spark is a hosted service rather than open weights, indicating a shift in Meta's AI deployment strategy.",
       "worthReading": "The post provides timely analysis of Meta's strategic pivot in AI model distribution and highlights new tools available through meta.ai chat that developers and researchers should explore.",
       "type": "blog"
+    }
+  ],
+  "xPosts": [
+    {
+      "type": "x",
+      "id": "1555626060384911360",
+      "url": "https://x.com/simonw/status/1555626060384911360",
+      "author": {
+        "handle": "simonw",
+        "displayName": "Simon Willison",
+        "avatar": "https://avatars.githubusercontent.com/simonw"
+      },
+      "content": "Screenshot from a video game where a team of raccoons go on a heist",
+      "createdAt": "2026-04-16T11:13:29.936Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Simon Willison shares an AI-generated image prompt result showing creative multi-modal AI capabilities.",
+      "worthReading": "Demonstrates AI's creative potential beyond text generation.",
+      "tags": [
+        "multi-modal"
+      ]
     },
     {
-      "title": "Qwen3.6-35B-A3B on my laptop drew me a better pelican than Claude Opus 4.7",
-      "url": "https://simonwillison.net/2026/Apr/16/qwen-beats-opus/#atom-entries",
-      "author": "Simon Willison",
-      "publishedAt": "2026-04-16T17:16:52+00:00",
-      "summary": "<p>For anyone who has been (inadvisably) taking my <a href=\"https://simonwillison.net/tags/pelican-riding-a-bicycle/\">pelican riding a bicycle benchmark</a> seriously as a robust way to test models, here are pelicans from this morning's two big model releases - <a...",
-      "highlights": "The post demonstrates that the Qwen3.6-35B-A3B model, running locally on a laptop, generated a more accurate or aesthetically pleasing image of a pelican riding a bicycle compared to the larger, cloud-based Claude Opus 4.7 model. This highlights the rapid progress in open-source, locally runnable AI models that can now compete with or surpass leading proprietary models in specific creative tasks.",
-      "worthReading": "It offers a tangible, visual comparison of recent model capabilities, challenging assumptions about the necessity of large, cloud-based models for creative AI tasks and showcasing the practical potential of local AI deployment.",
-      "type": "blog"
+      "type": "x",
+      "id": "1970147806225854531",
+      "url": "https://x.com/simonw/status/1970147806225854531",
+      "author": {
+        "handle": "simonw",
+        "displayName": "Simon Willison",
+        "avatar": "https://avatars.githubusercontent.com/simonw"
+      },
+      "content": "It's interesting how 'better at code' has become the defining goal of almost every AI lab over the...",
+      "createdAt": "2026-04-16T11:13:29.936Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Willison observes the AI industry's intense focus on improving coding capabilities as a primary benchmark for progress.",
+      "worthReading": "Highlights a key trend in AI development priorities.",
+      "tags": [
+        "agent",
+        "evaluation"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "1555626060384911360",
+      "url": "https://x.com/simonw/status/1555626060384911360",
+      "author": {
+        "handle": "simonw",
+        "displayName": "Simon Willison",
+        "avatar": "https://avatars.githubusercontent.com/simonw"
+      },
+      "content": "Screenshot from a video game where a team of raccoons go on a heist",
+      "createdAt": "2026-04-16T11:13:29.936Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Simon Willison shares an AI-generated image prompt result showing creative multi-modal AI capabilities.",
+      "worthReading": "Demonstrates AI's creative potential beyond text generation.",
+      "tags": [
+        "multi-modal"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "1970147806225854531",
+      "url": "https://x.com/simonw/status/1970147806225854531",
+      "author": {
+        "handle": "simonw",
+        "displayName": "Simon Willison",
+        "avatar": "https://avatars.githubusercontent.com/simonw"
+      },
+      "content": "It's interesting how 'better at code' has become the defining goal of almost every AI lab over the...",
+      "createdAt": "2026-04-16T11:13:29.936Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Willison observes the AI industry's intense focus on improving coding capabilities as a primary benchmark for progress.",
+      "worthReading": "Highlights a key trend in AI development priorities.",
+      "tags": [
+        "agent",
+        "evaluation"
+      ]
     }
   ],
   "dailyCounts": [
@@ -246,10 +256,10 @@
     0,
     0,
     0,
-    0,
-    1,
     2,
+    2,
+    0,
     0
   ],
-  "interestSummary": "Simon Willison is currently focused on testing and benchmarking various AI models, particularly multimodal and local LLMs, while also exploring new AI tools and libraries for memory systems and document processing."
+  "interestSummary": "Simon Willison is focused on evaluating and experimenting with cutting-edge AI models and tools, particularly multimodal systems, memory architectures, and developer-focused applications. His recent activity shows a strong interest in AI safety discourse, model benchmarking, and practical libraries for working with AI and data formats like PDFs."
 }

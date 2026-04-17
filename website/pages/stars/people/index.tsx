@@ -42,7 +42,7 @@ export default function PeopleIndex({ people }: PeopleIndexProps) {
     <>
       <Head>
         <title>People — Stars — Kylin Miao</title>
-        <meta name="description" content={`Directory of ${people.length} tracked AI leaders with cross-platform activity from GitHub and Bluesky.`} />
+        <meta name="description" content={`Directory of ${people.length} tracked AI leaders with cross-platform activity from GitHub, Bluesky, X, and YouTube.`} />
       </Head>
 
       <div className="min-h-screen bg-[#050505] text-white relative font-mono">
@@ -63,7 +63,7 @@ export default function PeopleIndex({ people }: PeopleIndexProps) {
             </div>
             <h1 className="text-4xl font-bold tracking-tight text-white mb-6 font-sans">Active Targets</h1>
             <div className="text-xs text-gray-500 border-l-2 border-orange-500/30 pl-4 py-1.5 bg-orange-500/5">
-              Tracking {people.length} high-value entities across GitHub, Bluesky, YouTube, and RSS.
+              Tracking {people.length} high-value entities across GitHub, Bluesky, X, YouTube, and RSS.
               <br />
               <span className="text-gray-600">Sorted by DeepSeek_Heuristic_Engine v2.1 — composite signal strength.</span>
             </div>
@@ -87,6 +87,7 @@ export default function PeopleIndex({ people }: PeopleIndexProps) {
               const platforms = []
               if (person.github) platforms.push({ id: 'GH', color: 'bg-gray-800 text-gray-400' })
               if (person.bluesky) platforms.push({ id: 'BSKY', color: 'bg-blue-900/30 text-blue-400' })
+              if (person.x) platforms.push({ id: 'X', color: 'bg-gray-800 text-gray-300' })
               if (person.youtubeChannel) platforms.push({ id: 'YT', color: 'bg-red-900/30 text-red-400' })
               if (person.blogAuthor) platforms.push({ id: 'BLOG', color: 'bg-emerald-900/30 text-emerald-400' })
 

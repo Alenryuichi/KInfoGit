@@ -411,155 +411,174 @@
         "infra"
       ],
       "type": "bluesky"
-    },
-    {
-      "uri": "at://did:plc:flxq4uyjfotciovpw3x3fxnu/app.bsky.feed.post/3mjknv6macs24",
-      "url": "https://bsky.app/profile/emollick.bsky.social/post/3mjknv6macs24",
-      "author": {
-        "handle": "emollick.bsky.social",
-        "displayName": "Ethan Mollick",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:flxq4uyjfotciovpw3x3fxnu/bafkreigq63ljumc43yx5eoxchrq75d72irea6ddcceedwmdttxebyowc3q"
-      },
-      "content": "Instead of the gold standard, we can, as a thought experiment, imagine an inference standard of exchange, the FLOP. (As opposed to tokens, this accounts for AI ability)\n\nWith some AI help, I figure $1 buys roughly 10^17 managed-LLM inference FLOPs\n\nSo that $4 coffee would cost half an exaFLOP, choom",
-      "createdAt": "2026-04-15T19:45:46.528Z",
-      "likeCount": 27,
-      "replyCount": 3,
-      "repostCount": 0,
-      "highlights": "",
-      "worthReading": "",
-      "tags": [
-        "llm",
-        "infra"
-      ],
-      "type": "bluesky"
-    },
-    {
-      "uri": "at://did:plc:flxq4uyjfotciovpw3x3fxnu/app.bsky.feed.post/3mjkf7wy6g224",
-      "url": "https://bsky.app/profile/emollick.bsky.social/post/3mjkf7wy6g224",
-      "author": {
-        "handle": "emollick.bsky.social",
-        "displayName": "Ethan Mollick",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:flxq4uyjfotciovpw3x3fxnu/bafkreigq63ljumc43yx5eoxchrq75d72irea6ddcceedwmdttxebyowc3q"
-      },
-      "content": "This is becoming a pattern in AI that makes talking about capabilities challenging.\n\nFirst, there are overstated claims (like the flubbed Erdos problems that were announced last year), then minor wins (AI helps with discovery) then breakthroughs. \n\nThe first stage feels like (& often is) hype, but…",
-      "createdAt": "2026-04-15T17:10:43.950Z",
-      "likeCount": 63,
-      "replyCount": 7,
-      "repostCount": 7,
-      "highlights": "",
-      "worthReading": "",
-      "tags": [
-        "evaluation"
-      ],
-      "type": "bluesky"
-    },
-    {
-      "uri": "at://did:plc:flxq4uyjfotciovpw3x3fxnu/app.bsky.feed.post/3mjn7p6kfqk2k",
-      "url": "https://bsky.app/profile/emollick.bsky.social/post/3mjn7p6kfqk2k",
-      "author": {
-        "handle": "emollick.bsky.social",
-        "displayName": "Ethan Mollick",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:flxq4uyjfotciovpw3x3fxnu/bafkreigq63ljumc43yx5eoxchrq75d72irea6ddcceedwmdttxebyowc3q"
-      },
-      "content": "I think the adaptive thinking requirement in the new Claude Opus 4.7 is bad in the ways that all AI effort routers are bad, but magnified by the fact that there is no manual override like in ChatGPT.\n\nIt regularly decides that non-math/code stuff is \"low effort\" & produces worse results.",
-      "createdAt": "2026-04-16T20:09:51.971Z",
-      "likeCount": 46,
-      "replyCount": 1,
-      "repostCount": 3,
-      "highlights": "",
-      "worthReading": "",
-      "tags": [
-        "llm",
-        "evaluation"
-      ],
-      "type": "bluesky"
-    },
-    {
-      "uri": "at://did:plc:flxq4uyjfotciovpw3x3fxnu/app.bsky.feed.post/3mjn64oh34k2k",
-      "url": "https://bsky.app/profile/emollick.bsky.social/post/3mjn64oh34k2k",
-      "author": {
-        "handle": "emollick.bsky.social",
-        "displayName": "Ethan Mollick",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:flxq4uyjfotciovpw3x3fxnu/bafkreigq63ljumc43yx5eoxchrq75d72irea6ddcceedwmdttxebyowc3q"
-      },
-      "content": "I have found that asking for a sestina regularly triggers Opus 4.7's safety guardrails.\n\nThe forbidden poetic form!",
-      "createdAt": "2026-04-16T19:41:37.361Z",
-      "likeCount": 55,
-      "replyCount": 7,
-      "repostCount": 3,
-      "highlights": "",
-      "worthReading": "",
-      "tags": [
-        "safety",
-        "llm"
-      ],
-      "type": "bluesky"
-    },
-    {
-      "uri": "at://did:plc:flxq4uyjfotciovpw3x3fxnu/app.bsky.feed.post/3mjmpufvxu22d",
-      "url": "https://bsky.app/profile/emollick.bsky.social/post/3mjmpufvxu22d",
-      "author": {
-        "handle": "emollick.bsky.social",
-        "displayName": "Ethan Mollick",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:flxq4uyjfotciovpw3x3fxnu/bafkreigq63ljumc43yx5eoxchrq75d72irea6ddcceedwmdttxebyowc3q"
-      },
-      "content": "Claude remains irreducibly Claude, across many generations. If you know, you know.\n\n(The fact that models have distinct personalities that are consistent across generations is technically interesting, it also makes it easy to use new releases when they come along, because they feel very similar).",
-      "createdAt": "2026-04-16T15:26:27.592Z",
-      "likeCount": 56,
-      "replyCount": 5,
-      "repostCount": 3,
-      "highlights": "",
-      "worthReading": "",
-      "tags": [
-        "llm",
-        "evaluation"
-      ],
-      "type": "bluesky"
-    },
-    {
-      "uri": "at://did:plc:flxq4uyjfotciovpw3x3fxnu/app.bsky.feed.post/3mjnuzt5jvs2k",
-      "url": "https://bsky.app/profile/emollick.bsky.social/post/3mjnuzt5jvs2k",
-      "author": {
-        "handle": "emollick.bsky.social",
-        "displayName": "Ethan Mollick",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:flxq4uyjfotciovpw3x3fxnu/bafkreigq63ljumc43yx5eoxchrq75d72irea6ddcceedwmdttxebyowc3q"
-      },
-      "content": "With max thinking Opus 4.7 is quite impressive, with a real sense of style\n\nIn two prompts: \"implement the Tower of Babel, in 3D, in as sophisticated and visually interesting a way as possible. It should be interactive\" and then \"make it better.\" \n\nPlay: tower-of-babel-1776392618.netlify.app",
-      "createdAt": "2026-04-17T02:31:37.692Z",
-      "likeCount": 46,
-      "replyCount": 3,
-      "repostCount": 6,
-      "highlights": "",
-      "worthReading": "",
-      "tags": [
-        "llm",
-        "multi-modal"
-      ],
-      "type": "bluesky"
-    },
-    {
-      "uri": "at://did:plc:flxq4uyjfotciovpw3x3fxnu/app.bsky.feed.post/3mjnt4ldvxs2k",
-      "url": "https://bsky.app/profile/emollick.bsky.social/post/3mjnt4ldvxs2k",
-      "author": {
-        "handle": "emollick.bsky.social",
-        "displayName": "Ethan Mollick",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:flxq4uyjfotciovpw3x3fxnu/bafkreigq63ljumc43yx5eoxchrq75d72irea6ddcceedwmdttxebyowc3q"
-      },
-      "content": "I was told by Anthropic that they are looking at ways of fixing this, which is good.",
-      "createdAt": "2026-04-17T01:57:22.692Z",
-      "likeCount": 41,
-      "replyCount": 2,
-      "repostCount": 1,
-      "highlights": "",
-      "worthReading": "",
-      "tags": [
-        "safety"
-      ],
-      "type": "bluesky"
     }
   ],
   "videos": [],
   "blogs": [],
+  "xPosts": [
+    {
+      "type": "x",
+      "id": "1983879487390728248",
+      "url": "https://x.com/emollick/status/1983879487390728248",
+      "author": {
+        "handle": "emollick",
+        "displayName": "Ethan Mollick",
+        "avatar": null
+      },
+      "content": "In discussions of AI and jobs, we put too much emphasis on the technology and not enough on...",
+      "createdAt": "2026-04-16T11:15:55.436Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Critiques the overemphasis on AI technology itself in job discussions, suggesting other factors are being overlooked.",
+      "worthReading": "Offers a nuanced perspective on the AI-jobs debate beyond just technological capabilities.",
+      "tags": [
+        "deployment"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2026285200531955745",
+      "url": "https://x.com/emollick/status/2026285200531955745",
+      "author": {
+        "handle": "emollick",
+        "displayName": "Ethan Mollick",
+        "avatar": null
+      },
+      "content": "As stories about AI increasingly become stories of either catastrophe or salvation,...",
+      "createdAt": "2026-04-16T11:15:55.436Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Observes that AI narratives are polarizing into extremes of doom or utopia, missing more balanced discussions.",
+      "worthReading": "Highlights the problematic binary framing in public discourse about AI's impact.",
+      "tags": [
+        "safety"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "1923134492115365905",
+      "url": "https://x.com/emollick/status/1923134492115365905",
+      "author": {
+        "handle": "emollick",
+        "displayName": "Ethan Mollick",
+        "avatar": null
+      },
+      "content": "As someone involved in academic research on AI, it is notable to me that most of the key...",
+      "createdAt": "2026-04-16T11:15:55.436Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Notes from an academic research perspective that key developments in AI are happening outside traditional academic institutions.",
+      "worthReading": "Provides insight into the shifting landscape of AI innovation away from academia.",
+      "tags": [
+        "evaluation"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2020713378319417626",
+      "url": "https://x.com/emollick/status/2020713378319417626",
+      "author": {
+        "handle": "emollick",
+        "displayName": "Ethan Mollick",
+        "avatar": null
+      },
+      "content": "So much work is going into faking continual learning and memory for AIs,...",
+      "createdAt": "2026-04-16T11:15:55.436Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Comments on the significant engineering effort being devoted to simulating continuous learning and memory capabilities in AI systems.",
+      "worthReading": "Reveals current technical challenges in achieving true continual learning in AI models.",
+      "tags": [
+        "llm",
+        "tooling"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "1983879487390728248",
+      "url": "https://x.com/emollick/status/1983879487390728248",
+      "author": {
+        "handle": "emollick",
+        "displayName": "Ethan Mollick",
+        "avatar": null
+      },
+      "content": "In discussions of AI and jobs, we put too much emphasis on the technology and not enough on...",
+      "createdAt": "2026-04-16T11:15:55.436Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Critiques the overemphasis on AI technology itself in job discussions, suggesting other factors are being overlooked.",
+      "worthReading": "Offers a nuanced perspective on the AI-jobs debate beyond just technological capabilities.",
+      "tags": [
+        "deployment"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2026285200531955745",
+      "url": "https://x.com/emollick/status/2026285200531955745",
+      "author": {
+        "handle": "emollick",
+        "displayName": "Ethan Mollick",
+        "avatar": null
+      },
+      "content": "As stories about AI increasingly become stories of either catastrophe or salvation,...",
+      "createdAt": "2026-04-16T11:15:55.436Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Observes that AI narratives are polarizing into extremes of doom or utopia, missing more balanced discussions.",
+      "worthReading": "Highlights the problematic binary framing in public discourse about AI's impact.",
+      "tags": [
+        "safety"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "1923134492115365905",
+      "url": "https://x.com/emollick/status/1923134492115365905",
+      "author": {
+        "handle": "emollick",
+        "displayName": "Ethan Mollick",
+        "avatar": null
+      },
+      "content": "As someone involved in academic research on AI, it is notable to me that most of the key...",
+      "createdAt": "2026-04-16T11:15:55.436Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Notes from an academic research perspective that key developments in AI are happening outside traditional academic institutions.",
+      "worthReading": "Provides insight into the shifting landscape of AI innovation away from academia.",
+      "tags": [
+        "evaluation"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2020713378319417626",
+      "url": "https://x.com/emollick/status/2020713378319417626",
+      "author": {
+        "handle": "emollick",
+        "displayName": "Ethan Mollick",
+        "avatar": null
+      },
+      "content": "So much work is going into faking continual learning and memory for AIs,...",
+      "createdAt": "2026-04-16T11:15:55.436Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Comments on the significant engineering effort being devoted to simulating continuous learning and memory capabilities in AI systems.",
+      "worthReading": "Reveals current technical challenges in achieving true continual learning in AI models.",
+      "tags": [
+        "llm",
+        "tooling"
+      ]
+    }
+  ],
   "dailyCounts": [
     0,
     0,
@@ -587,10 +606,10 @@
     2,
     2,
     3,
-    3,
-    2,
-    3,
-    2
+    7,
+    4,
+    0,
+    0
   ],
-  "interestSummary": "Ethan Mollick is focused on analyzing frontier AI models like Claude Mythos, particularly their cybersecurity implications and societal impacts, while also tracking AI's evolving role in education and creative industries."
+  "interestSummary": "Ethan Mollick's recent focus is on analyzing the capabilities and societal risks of frontier AI models, particularly Anthropic's Claude Mythos, with a strong emphasis on cybersecurity threats and the concentrated power of leading AI labs. He is also observing the impact of AI on creative industries, education, and public discourse, noting shifts toward style over substance and the practical challenges of AI integration."
 }
