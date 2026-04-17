@@ -42,6 +42,11 @@
 - [开发指南](./development-guide.md)
   开发环境设置、命令使用和常见问题解决
 
+### 模块诊断记录
+
+- [Stars 模块问题诊断报告（2026-04-17）](./stars-module-audit-2026-04-17.md)
+  `/stars/`、`/stars/{date}/`、`/stars/people/{handle}/`、Weekly Digest、RSS Feed 的一次完整问题盘点，按 A–H 分组、按 P0/P1/P2 排优先级。未含修复。
+
 ### 技术细节文档
 
 - **API 接口**: 无（纯静态站点）
@@ -263,7 +268,7 @@ just validate-json          # 验证 JSON 文件
 
 ## 🐛 已知问题
 
-目前无已知重大问题。
+- **Stars 模块**：列表页缺 X 入口、People 详情页无时间排序/筛选、`personMap` 前缀协议不一致、RSS 未覆盖 X/YouTube/Blog 等。详见 [Stars 模块问题诊断报告（2026-04-17）](./stars-module-audit-2026-04-17.md)。
 
 ---
 
