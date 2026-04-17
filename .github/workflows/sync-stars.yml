@@ -136,6 +136,13 @@ jobs:
               week=$(basename "$f" .json)
               echo "- **${week}**: digest generated" >> $GITHUB_STEP_SUMMARY
             done
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "### AI Daily" >> $GITHUB_STEP_SUMMARY
+            ls -1 profile-data/ai-daily/*.json 2>/dev/null | tail -3 | while read f; do
+              date=$(basename "$f" .json)
+              count=$(grep -o '"itemCount"' "$f" | head -1 && grep -o '"itemCount": [0-9]*' "$f" | head -1 | grep -o '[0-9]*$' || echo 0)
+              echo "- **${date}**: AI daily digest" >> $GITHUB_STEP_SUMMARY
+            done
           else
             echo "📭 No new content this week" >> $GITHUB_STEP_SUMMARY
           fi

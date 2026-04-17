@@ -52,8 +52,8 @@ export default function AiDailyList({ dates }: AiDailyListProps) {
                     AI <span className="font-serif italic font-light text-white/60">Daily</span>
                 </h1>
                 <p className="text-gray-400 font-mono text-xs sm:text-sm max-w-lg border-l-2 border-blue-500/30 pl-4 py-1.5 bg-blue-500/5 leading-relaxed">
-                    Curated intelligence sourced from HN, ArXiv, HF Papers, and RSS.<br/>
-                    Powered by Horizon + DeepSeek.
+                    Curated intelligence sourced from ArXiv, Tavily, Exa, HN, Bluesky, and RSS.<br/>
+                    Timeliness-filtered &amp; scored by DeepSeek.
                 </p>
             </motion.div>
 

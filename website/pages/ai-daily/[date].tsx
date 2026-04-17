@@ -319,6 +319,23 @@ export default function AiDailyDetail({ digest, prevDate, nextDate, allDates, al
             </div>
           </motion.div>
 
+          {/* AI Summary */}
+          {digest.aiSummary && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.5, delay: 0.15 }}
+              className="mb-12 border-l-2 border-emerald-500/50 pl-4 py-3 bg-emerald-500/5"
+            >
+              <div className="text-[10px] font-mono text-emerald-400 uppercase tracking-[0.15em] mb-2">
+                ++ Daily.Brief ++
+              </div>
+              <p className="text-sm text-gray-300 leading-relaxed">
+                {digest.aiSummary}
+              </p>
+            </motion.div>
+          )}
+
           {/* Focus Topic Filter */}
           {allFocusTopics.length > 0 && (
             <motion.div
@@ -351,7 +368,7 @@ export default function AiDailyDetail({ digest, prevDate, nextDate, allDates, al
           {/* Footer stats */}
           <div className="pt-8 mt-16 border-t border-white/[0.06] text-[10px] sm:text-xs font-mono text-gray-600 flex flex-col sm:flex-row justify-between items-center gap-4">
             <div>[STATS] {digest.itemCount} items · {uniqueSources.size} sources · Score &gt;= 6.0</div>
-            <div className="text-blue-500/50">Powered by Horizon + DeepSeek</div>
+            <div className="text-blue-500/50">Powered by Tavily + Exa + RSS + DeepSeek</div>
           </div>
           
         </div>

@@ -30,6 +30,7 @@ export interface DailyDigest {
   date: string
   itemCount: number
   sections: DigestSection[]
+  aiSummary?: string | null
 }
 
 export interface DailyDigestSummary {
