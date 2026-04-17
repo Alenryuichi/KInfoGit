@@ -29,7 +29,7 @@ const PROJECT_ROOT = path.resolve(__dirname, '..', '..')
 let anchorCache: ScoringAnchor[] | null = null
 
 // ─── Runtime counters (reset each scoreItems() call) ───────
-interface RunStats {
+export interface RunStats {
   totalLlmBatches: number
   failedBatches: number
   halveRetries: number
@@ -41,20 +41,29 @@ function freshStats(): RunStats {
   return { totalLlmBatches: 0, failedBatches: 0, halveRetries: 0, keywordFallbacks: 0, hnWeighted: 0 }
 }
 
+export interface ScoreItemsResult {
+  items: ScoredItem[]
+  stats: RunStats
+  anchors: ScoringAnchor[]
+}
+
 // ─── Unified Scoring ──────────────────────────────────────
 
 /**
  * Score, classify, and filter all items in one DeepSeek call.
  * Splits into batches of SCORING_BATCH_SIZE. On JSON failure, halves and
  * retries recursively; single-item failures fall back to keyword matching.
+ * Returns both the scored items and the run stats for observability.
  */
-export async function scoreItems(items: RawNewsItem[]): Promise<ScoredItem[]> {
-  if (items.length === 0) return []
+export async function scoreItems(items: RawNewsItem[]): Promise<ScoreItemsResult> {
+  if (items.length === 0) return { items: [], stats: freshStats(), anchors: [] }
 
   const apiKey = process.env.DEEPSEEK_API_KEY
   if (!apiKey) {
     console.warn('[scoring] DEEPSEEK_API_KEY not set, using keyword fallback for all items')
-    return items.map(keywordFallback)
+    const stats = freshStats()
+    stats.keywordFallbacks = items.length
+    return { items: items.map(keywordFallback), stats, anchors: [] }
   }
 
   const stats = freshStats()
@@ -87,7 +96,7 @@ export async function scoreItems(items: RawNewsItem[]): Promise<ScoredItem[]> {
     `batches=${stats.totalLlmBatches} (failed=${stats.failedBatches}, halveRetries=${stats.halveRetries}) | ` +
     `keywordFallback=${stats.keywordFallbacks} | hnWeighted=${stats.hnWeighted}`
   )
-  return results
+  return { items: results, stats, anchors: anchorCache ?? [] }
 }
 
 /**

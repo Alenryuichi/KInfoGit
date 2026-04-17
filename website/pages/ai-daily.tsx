@@ -55,6 +55,11 @@ export default function AiDailyList({ dates }: AiDailyListProps) {
                     Curated intelligence sourced from ArXiv, Tavily, Exa, HN, Bluesky, and RSS.<br/>
                     Timeliness-filtered &amp; scored by DeepSeek.
                 </p>
+                <div className="mt-4">
+                    <Link href="/ai-daily/metrics" className="font-mono text-[10px] uppercase tracking-[0.2em] text-emerald-400 hover:text-emerald-300 border border-emerald-500/30 bg-emerald-500/5 hover:bg-emerald-500/10 rounded px-2 py-1">
+                        [Metrics →]
+                    </Link>
+                </div>
             </motion.div>
 
             {/* List - The Hacker Terminal Variant */}

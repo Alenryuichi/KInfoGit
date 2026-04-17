@@ -30,10 +30,13 @@ import { fetchSearchItems } from './sources/search'
 import { fetchSocialItems } from './sources/social'
 import { fetchHorizonItems } from './sources/horizon'
 import { scoreItems, generateDailyBrief } from './scoring'
+import { MetricsCollector, computeOutputStats } from './metrics'
 import type { RawNewsItem, ScoredItem, DailyDigest, NewsItem, DigestSection } from './types'
 
 async function main() {
   console.log('📰 AI Daily — starting multi-source collection\n')
+
+  const metrics = new MetricsCollector()
 
   // ─── Parallel source collection ─────────────────────────
   const [rssResult, searchResult] = await Promise.allSettled([
@@ -52,12 +55,20 @@ async function main() {
   const allRaw: RawNewsItem[] = [...rssItems, ...searchItems, ...socialItems, ...horizonItems]
   console.log(`\n📊 Raw items: RSS=${rssItems.length} Search=${searchItems.length} Social=${socialItems.length} Horizon=${horizonItems.length} Total=${allRaw.length}`)
 
+  metrics.recordSources({
+    rss: rssItems.length,
+    search: searchItems.length,
+    social: socialItems.length,
+    horizon: horizonItems.length,
+  })
+
   // ─── Deduplication: URL normalization, then title similarity ──
   const dedupedByUrl = deduplicateByUrl(allRaw)
   const deduped = deduplicateBySimilarTitle(dedupedByUrl)
   const urlDropped = allRaw.length - dedupedByUrl.length
   const titleDropped = dedupedByUrl.length - deduped.length
   console.log(`🔗 After dedup: ${deduped.length} unique items (url=${urlDropped} title=${titleDropped} dropped)`)
+  metrics.recordDedup({ urlDropped, titleDropped })
 
   if (deduped.length === 0) {
     console.log('\n⚠️ No items collected, skipping output')
@@ -65,7 +76,18 @@ async function main() {
   }
 
   // ─── DeepSeek unified scoring ───────────────────────────
-  const scored = await scoreItems(deduped)
+  const { items: scored, stats, anchors } = await scoreItems(deduped)
+  metrics.recordScoring({
+    batches: stats.totalLlmBatches,
+    failed: stats.failedBatches,
+    halveRetries: stats.halveRetries,
+    keywordFallback: stats.keywordFallbacks,
+    hnWeighted: stats.hnWeighted,
+  })
+  metrics.recordAnchors({
+    loaded: anchors.length,
+    bands: anchors.map(a => a.band),
+  })
 
   // Filter out non-AI items
   const filtered = scored.filter(s => s.aiRelevant)
@@ -87,6 +109,14 @@ async function main() {
 
   const outputPath = path.join(outputDir, `${today}.json`)
   fs.writeFileSync(outputPath, JSON.stringify(digest, null, 2) + '\n', 'utf-8')
+
+  // ─── Persist run metrics ────────────────────────────────
+  // Build per-section scored items for avg/max/count breakdown
+  const sectionScored: Record<string, Array<{ score: number }>> = {}
+  for (const s of digest.sections) {
+    sectionScored[s.id] = s.items.map(i => ({ score: i.score }))
+  }
+  metrics.finalize(today, computeOutputStats(sectionScored), projectRoot)
 
   // ─── Summary ────────────────────────────────────────────
   console.log(`\n📊 Summary:`)
