@@ -25,7 +25,25 @@ export const TAVILY_QUERIES = [
 ]
 
 export const EXA_QUERY = 'artificial intelligence news'
-export const EXA_DOMAINS = ['techcrunch.com', 'theverge.com', 'arstechnica.com', 'venturebeat.com']
+/**
+ * Exa domain allowlist — authoritative AI / tech outlets that consistently
+ * produce original reporting (not aggregators or rewrite mills). Exa's
+ * neural search is already precision-oriented, so a broader allowlist
+ * mostly improves recall without degrading signal quality.
+ *
+ * Organized by tier (the order matters only for human readability):
+ * - Tier 1 general tech: techcrunch, theverge, arstechnica, venturebeat
+ * - Tier 1 business/industry: wired, theinformation, wsj, bloomberg
+ * - AI-specific trade press: semafor (AI vertical), decoder, axios
+ * - Research-adjacent: mit.edu (Tech Review), nature, science
+ */
+export const EXA_DOMAINS = [
+  'techcrunch.com', 'theverge.com', 'arstechnica.com', 'venturebeat.com',
+  'wired.com', 'theinformation.com', 'bloomberg.com', 'wsj.com',
+  'semafor.com', 'axios.com',
+  'technologyreview.com', 'nature.com', 'science.org',
+]
+export const EXA_NUM_RESULTS = 10
 
 // ─── Social Signal Thresholds ─────────────────────────────
 

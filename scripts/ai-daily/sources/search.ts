@@ -1,6 +1,6 @@
 // AI Daily — search engine sources (Tavily + Exa)
 
-import { TAVILY_QUERIES, EXA_QUERY, EXA_DOMAINS } from '../config'
+import { TAVILY_QUERIES, EXA_QUERY, EXA_DOMAINS, EXA_NUM_RESULTS } from '../config'
 import type { RawNewsItem } from '../types'
 
 const TAVILY_API_URL = 'https://api.tavily.com/search'
@@ -168,7 +168,7 @@ async function fetchExaItems(): Promise<RawNewsItem[]> {
       },
       body: JSON.stringify({
         query: EXA_QUERY,
-        numResults: 5,
+        numResults: EXA_NUM_RESULTS,
         type: 'auto',
         contents: { text: { maxCharacters: 500 } },
         startPublishedDate: startDate.toISOString(),
@@ -186,7 +186,13 @@ async function fetchExaItems(): Promise<RawNewsItem[]> {
       results: Array<{ title: string; url: string; text: string; publishedDate?: string }>
     }
 
-    const items = (data.results ?? []).map(r => ({
+    const rawItems = data.results ?? []
+    const filtered = rawItems.filter(r => !isExcludedUrl(r.url))
+    if (rawItems.length !== filtered.length) {
+      console.log(`[search] Exa: filtered ${rawItems.length - filtered.length} evergreen URLs`)
+    }
+
+    const items = filtered.map(r => ({
       title: r.title ?? '',
       url: r.url,
       summary: (r.text ?? '').slice(0, 500),
