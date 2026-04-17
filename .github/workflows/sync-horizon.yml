@@ -2,8 +2,9 @@ name: Sync AI Daily (Horizon)
 
 on:
   schedule:
-    # Every day UTC 02:00 (Beijing 10:00)
-    - cron: '0 2 * * *'
+    # Every day UTC 00:00 (Beijing 08:00) — runs before sync-ai-daily
+    # so HN community signals are ready when ai-daily fuses them at 09:00.
+    - cron: '0 0 * * *'
   workflow_dispatch:
 
 env:

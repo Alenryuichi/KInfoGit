@@ -547,21 +547,21 @@ const components: Components = {
 
   img({ src, alt, ...props }) {
     return (
-      <span className="block my-10">
+      <figure className="m-0 flex flex-col items-center justify-center w-full">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={src}
           alt={alt || ''}
-          className="rounded-xl border border-white/[0.08] w-full shadow-lg shadow-black/20"
+          className="!m-0 rounded-xl border border-white/[0.08] w-full sm:w-[85%] max-w-3xl shadow-[0_8px_30px_rgb(0,0,0,0.4)]"
           loading="lazy"
           {...props}
         />
         {alt && alt !== src && (
-          <span className="block mt-3 text-center text-sm text-gray-500">
+          <figcaption className="block mt-3 text-center text-[13px] text-gray-500 max-w-[80%] leading-relaxed">
             {alt}
-          </span>
+          </figcaption>
         )}
-      </span>
+      </figure>
     )
   },
 
@@ -573,6 +573,26 @@ const components: Components = {
         <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-white/[0.15]" />
       </div>
     )
+  },
+
+  p({ children, ...props }) {
+    // If the paragraph contains an image, swap <p> for <div> to avoid HTML validation errors
+    // and margin-collapse issues with block elements inside inline paragraphs.
+    const childrenArray = Children.toArray(children)
+    const hasImage = childrenArray.some(
+      (child) => isValidElement(child) && (child.type === 'img' || child.props?.node?.tagName === 'img')
+    )
+    
+    if (hasImage) {
+      const isOnlyImage = childrenArray.length === 1
+      if (isOnlyImage) {
+        return <div className="!my-6 flex flex-col items-center justify-center w-full gap-4">{children}</div>
+      }
+      // Mixed content (text + image inline)
+      return <div className="!mt-0 !mb-4 leading-[1.7] text-gray-300" {...props}>{children}</div>
+    }
+
+    return <p className="!mt-0 !mb-4 leading-[1.7] text-gray-300" {...props}>{children}</p>
   },
 
   input({ type, checked, ...props }) {
@@ -619,23 +639,26 @@ const components: Components = {
 export function MarkdownRenderer({ content, className = '' }: MarkdownRendererProps) {
   return (
     <div
-      className={`markdown-body w-full max-w-none
+      className={`markdown-body linear-docs w-full max-w-none
         prose prose-invert
         antialiased selection:bg-purple-500/30 selection:text-purple-200
-        text-white/60 leading-[1.8] font-light
-        prose-p:my-6
+        text-gray-300 leading-[1.7] font-normal
+        [&>p]:!mt-0 [&>p]:!mb-3 [&_li>p]:!m-0
         prose-strong:text-white/90 prose-strong:font-medium
         prose-headings:text-white/90 prose-headings:font-medium prose-headings:tracking-tight
         prose-h1:text-3xl prose-h1:mt-0 prose-h1:mb-8
         prose-h2:text-2xl prose-h2:mt-16 prose-h2:mb-6 prose-h2:pb-3 prose-h2:border-b prose-h2:border-white/5
         prose-h3:text-xl prose-h3:mt-12 prose-h3:mb-4
         prose-h4:text-lg prose-h4:mt-8 prose-h4:mb-2 prose-h4:text-white/80
-        prose-ul:my-6 prose-ul:list-disc prose-ul:pl-6 prose-ul:marker:text-white/20
-        prose-ol:my-6 prose-ol:list-decimal prose-ol:pl-6 prose-ol:marker:text-white/20
-        prose-li:my-2 prose-li:leading-[1.8]
+        prose-ul:my-6 prose-ul:list-disc prose-ul:pl-6 prose-ul:marker:text-gray-500
+        prose-ol:my-6 prose-ol:pl-6
+        prose-li:my-2 prose-li:leading-[1.7]
         prose-a:text-blue-400 prose-a:font-normal prose-a:no-underline hover:prose-a:text-blue-300
         prose-a:transition-colors
-        prose-img:rounded-xl prose-img:border prose-img:border-white/5 prose-img:shadow-[0_20px_40px_-20px_rgba(0,0,0,0.8)] prose-img:my-12
+        [&_img]:!m-0
+        [&_code]:before:!content-none [&_code]:after:!content-none
+        [&_blockquote]:!quotes-none
+        [&_table]:!m-0
         [&>*:first-child]:mt-0
         ${className}`}
     >

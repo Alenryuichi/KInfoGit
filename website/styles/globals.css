@@ -571,3 +571,73 @@ html {
     font-size: 24px;
   }
 }
+
+/* ─── Linear Docs Typography: Multi-level numbered lists & headings ───────────── */
+.linear-docs {
+  counter-reset: h2-counter;
+}
+
+.linear-docs h2 {
+  counter-reset: h3-counter;
+}
+
+.linear-docs h3 {
+  counter-reset: h4-counter;
+}
+
+.linear-docs h2::before {
+  counter-increment: h2-counter;
+  content: counter(h2-counter) ". ";
+  color: #6b7280; /* text-gray-500 */
+  font-family: 'JetBrains Mono', monospace;
+  margin-right: 0.5rem;
+  font-weight: 500;
+}
+
+.linear-docs h3::before {
+  counter-increment: h3-counter;
+  content: counter(h2-counter) "." counter(h3-counter) " ";
+  color: #6b7280;
+  font-family: 'JetBrains Mono', monospace;
+  margin-right: 0.5rem;
+  font-weight: 500;
+}
+
+.linear-docs h4::before {
+  counter-increment: h4-counter;
+  content: counter(h2-counter) "." counter(h3-counter) "." counter(h4-counter) " ";
+  color: #6b7280;
+  font-family: 'JetBrains Mono', monospace;
+  margin-right: 0.5rem;
+  font-weight: 500;
+}
+
+.linear-docs ol {
+  list-style-type: none !important;
+  counter-reset: item;
+}
+
+.linear-docs ol > li {
+  position: relative;
+  counter-increment: item;
+}
+
+.linear-docs ol > li::before {
+  content: counters(item, ".") ". ";
+  position: absolute;
+  left: -2.5rem;
+  width: 2.25rem;
+  text-align: right;
+  color: #6b7280; /* text-gray-500 */
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.85em;
+  font-weight: 500;
+  line-height: 2.3; /* align with leading-loose */
+}
+
+/* Special handling for nested ol to avoid overlapping */
+.linear-docs ol ol {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+

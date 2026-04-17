@@ -52,9 +52,12 @@ async function main() {
   const allRaw: RawNewsItem[] = [...rssItems, ...searchItems, ...socialItems, ...horizonItems]
   console.log(`\n📊 Raw items: RSS=${rssItems.length} Search=${searchItems.length} Social=${socialItems.length} Horizon=${horizonItems.length} Total=${allRaw.length}`)
 
-  // ─── Deduplication by URL ───────────────────────────────
-  const deduped = deduplicateByUrl(allRaw)
-  console.log(`🔗 After dedup: ${deduped.length} unique items`)
+  // ─── Deduplication: URL normalization, then title similarity ──
+  const dedupedByUrl = deduplicateByUrl(allRaw)
+  const deduped = deduplicateBySimilarTitle(dedupedByUrl)
+  const urlDropped = allRaw.length - dedupedByUrl.length
+  const titleDropped = dedupedByUrl.length - deduped.length
+  console.log(`🔗 After dedup: ${deduped.length} unique items (url=${urlDropped} title=${titleDropped} dropped)`)
 
   if (deduped.length === 0) {
     console.log('\n⚠️ No items collected, skipping output')
@@ -119,6 +122,78 @@ function normalizeUrl(url: string): string {
   } catch {
     return url.toLowerCase()
   }
+}
+
+/**
+ * Second-pass dedup: same story reported by different outlets (e.g.
+ * "Claude Opus 4.7 launched" on mashable.com and gizmodo.com) share a
+ * normalized title token set but have different URLs, so the URL-based
+ * pass above misses them. We compute Jaccard similarity on the bag of
+ * normalized content words and drop later items whose similarity to
+ * any kept item exceeds JACCARD_THRESHOLD.
+ *
+ * Keeps the first-seen item (source order = RSS → Search → Social →
+ * Horizon), which is usually the more authoritative feed.
+ */
+const JACCARD_THRESHOLD = 0.7
+const TITLE_STOPWORDS = new Set<string>([
+  'a', 'an', 'the', 'and', 'or', 'but', 'is', 'are', 'was', 'were', 'be',
+  'been', 'to', 'of', 'in', 'on', 'for', 'with', 'by', 'as', 'at', 'from',
+  'that', 'this', 'it', 'its', 'how', 'what', 'why', 'when', 'where',
+  'new', 'now', 'will', 'can', 'has', 'have', 'had', 'do', 'does', 'did',
+])
+
+function tokenizeTitle(title: string): Set<string> {
+  const tokens = title
+    .toLowerCase()
+    .replace(/[^\p{L}\p{N}\s-]/gu, ' ')     // keep letters, digits, hyphens
+    .split(/\s+/)
+    .map(t => t.trim())
+    .filter(t => t.length >= 3 && !TITLE_STOPWORDS.has(t))
+  return new Set(tokens)
+}
+
+function jaccard(a: Set<string>, b: Set<string>): number {
+  if (a.size === 0 || b.size === 0) return 0
+  let intersect = 0
+  for (const t of a) if (b.has(t)) intersect += 1
+  const union = a.size + b.size - intersect
+  return union === 0 ? 0 : intersect / union
+}
+
+function deduplicateBySimilarTitle(items: RawNewsItem[]): RawNewsItem[] {
+  const kept: RawNewsItem[] = []
+  const keptTokens: Set<string>[] = []
+  let droppedExamples = 0
+
+  for (const item of items) {
+    const tokens = tokenizeTitle(item.title)
+    // Very short titles (after stopword removal) can't be reliably matched
+    if (tokens.size < 3) {
+      kept.push(item)
+      keptTokens.push(tokens)
+      continue
+    }
+
+    let dup = false
+    for (let i = 0; i < keptTokens.length; i += 1) {
+      const sim = jaccard(tokens, keptTokens[i])
+      if (sim >= JACCARD_THRESHOLD) {
+        if (droppedExamples < 3) {
+          console.log(`  [dedup] sim=${sim.toFixed(2)} dropped "${item.title.slice(0, 60)}" (kept: "${kept[i].title.slice(0, 60)}")`)
+          droppedExamples += 1
+        }
+        dup = true
+        break
+      }
+    }
+    if (!dup) {
+      kept.push(item)
+      keptTokens.push(tokens)
+    }
+  }
+
+  return kept
 }
 
 function buildDigest(date: string, items: ScoredItem[], dailyBrief: string | null): DailyDigest {
