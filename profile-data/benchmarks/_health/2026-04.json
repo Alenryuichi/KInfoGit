@@ -99,5 +99,41 @@
     "auxiliaryStale": [],
     "refusedWrite": false,
     "summary": "ok with fallback: bigCodeBench, evalPlus using previous rows"
+  },
+  {
+    "runAt": "2026-04-17T14:07:16.305Z",
+    "weekRelative": "2026-04-17",
+    "sources": [
+      {
+        "name": "arena",
+        "count": 50,
+        "previousCount": 50,
+        "status": "ok"
+      },
+      {
+        "name": "aider",
+        "count": 30,
+        "previousCount": 30,
+        "ageDays": 31.588383159722223,
+        "status": "ok"
+      },
+      {
+        "name": "sweBench",
+        "count": 30,
+        "previousCount": 30,
+        "status": "ok"
+      },
+      {
+        "name": "liveCodeBench",
+        "count": 28,
+        "previousCount": 28,
+        "status": "ok"
+      }
+    ],
+    "criticalEmpty": [],
+    "auxiliaryFallback": [],
+    "auxiliaryStale": [],
+    "refusedWrite": false,
+    "summary": "ok"
   }
 ]
