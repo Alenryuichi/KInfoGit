@@ -1,6 +1,6 @@
 # ROADMAP — AI Daily / Code / Stars
 
-> Last updated: **2026-04-17** — _本次变更：Stars P0 全部关闭（空 URL 验证无问题 → 降级护栏；YouTube topic filter 管线打通 + 历史 30 条 backfill）_
+> Last updated: **2026-04-17** — _本次变更：Stars P0 全部关闭（空 URL 验证无问题 → 降级护栏；YouTube topic filter 管线打通 + 历史 30 条 backfill）；**P1 "Co-Starred 视图" 落地并双端接入**_
 >
 > 本文档只覆盖站点上三个**持续更新型内容板块**（AI Daily、Code、Stars）的演进规划。
 > 简历、博客、Work 等静态内容演进请见各自的 openspec change；构建/部署流程见 `docs/guides/DEPLOYMENT_GUIDE.md`。
@@ -98,12 +98,12 @@
 
 ### 现状 (2026-04-17)
 
-- ✅ Daily feed 页 `/stars/[date]`（star / bluesky / youtube 三类卡片混排）
+- ✅ Daily feed 页 `/stars/[date]`（star / bluesky / youtube 三类卡片混排 + **Co-Starred 7 天滚动窗口 signal 卡片**，4/17 上线）
 - ✅ 人物 profile 页（每个关注对象独立页面 + 历史数据）
 - ✅ Topic filter（按 AI subdomain 过滤，**4/17 起覆盖 star + bluesky + youtube + x 全源**）
 - ✅ RSS feed（用户可订阅 `/stars/rss.xml`）
 - ✅ Blog-style digest RSS
-- ✅ Weekly digest `/stars/weekly/YYYY-WXX/`（已落地 → 见 `stars-weekly-digest` change）
+- ✅ Weekly digest `/stars/weekly/YYYY-WXX/`（已落地 → 见 `stars-weekly-digest` change；**4/17 起 Co-Starred 视图升格为主列 accent 卡片**）
 - ✅ YouTube feed 集成（`stars-youtube-feed`）
 - ✅ Bluesky posts 已稳定抓取
 - ✅ Pagefind 全文搜索已覆盖 stars 条目
@@ -123,7 +123,7 @@
 #### P1 — 信号质量
 
 - 📐 **Stars 打分**：现在所有 star 同等展示，但"Karpathy star 一个 1k star 的新 agent repo" 明显比 "Karpathy star 一个经典 ML 教材" 信号强。引入 DeepSeek 对 star 做相关性/新鲜度打分，列表按分数排序。
-- 🚧 **"今天谁被多人 star" 视图**（P0 关闭后晋升）：同一个 repo 被 N 个 AI leader 同时 star 是非常强的信号。**底层数据 `detectCrossReferences` 已在 `generate-weekly-digest.ts` 算出**，weekly digest 的 `crossReferences` 字段也在写入，只是前端 `/stars/[date]` 和 `/stars/weekly/[week]` 没把它拎到顶部。做一个"本周被 ≥ 3 人共同 star"的专属卡片块。
+- ✅ **"今天谁被多人 star" 视图**（2026-04-17 落地）：新增 `computeCoStarredRepos` / `getCoStarredForDate`（`website/lib/social-feeds.ts`）+ `CoStarredBlock` 组件（accent/compact 双形态）。`/stars/[date]` 加顶部 accent 卡片（7 天滚动窗口 + ×2/×3 阈值切换），`/stars/weekly/[week]` 把 Cross-Refs 从右列 compact 升格为主列 accent，覆盖完整 ISO 周。当前数据 window=W15 仅 1 条（`mattmireles/gemma-tuner-multimodal`，simonw + minimaxir 共同 star）；关注人增多后自然会更有信号。
 
 #### P2 — 关注列表维护 & 数据护栏
 

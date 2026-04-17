@@ -618,7 +618,127 @@ export function getTagStats(): TagStat[] {
   return stats.sort((a, b) => b.count - a.count)
 }
 
-// --- Top Highlights ---
+// --- Co-Starred Repos (≥N people independently starred the same repo) ---
+
+export interface CoStarredRepo {
+  repo: string
+  url: string
+  description: string
+  language: string | null
+  stargazersCount: number
+  tags: string[]
+  starredBy: string[]      // distinct handles, sorted
+  count: number            // starredBy.length
+  firstDate: string        // earliest YYYY-MM-DD observed in window
+  latestDate: string       // latest YYYY-MM-DD observed in window
+}
+
+/**
+ * Aggregate repos that were starred by ≥ minCount distinct people across a
+ * date window. Used by both `/stars/[date]` (rolling 7d window ending at the
+ * given date) and `/stars/weekly/[week]` (the fixed 7-day ISO week).
+ *
+ * Complexity: O(days × stars-per-day). Called at build time only.
+ */
+export function computeCoStarredRepos(
+  dates: string[],
+  minCount: number = 2
+): CoStarredRepo[] {
+  const repoMap = new Map<string, {
+    url: string
+    description: string
+    language: string | null
+    stargazersCount: number
+    tags: Set<string>
+    starredBy: Set<string>
+    firstDate: string
+    latestDate: string
+  }>()
+
+  for (const date of dates) {
+    const stars = loadGitHubStars(date)
+    for (const star of stars) {
+      if (!repoMap.has(star.repo)) {
+        repoMap.set(star.repo, {
+          url: star.url,
+          description: star.description || '',
+          language: star.language ?? null,
+          stargazersCount: star.stargazersCount || 0,
+          tags: new Set<string>(),
+          starredBy: new Set<string>(),
+          firstDate: date,
+          latestDate: date,
+        })
+      }
+      const entry = repoMap.get(star.repo)!
+      // starredBy on disk is a single handle string per record — but be
+      // defensive in case a writer ever emits comma-separated values.
+      const handles = (star.starredBy || '').split(',').map((h: string) => h.trim()).filter(Boolean)
+      for (const handle of handles) {
+        entry.starredBy.add(handle)
+      }
+      for (const tag of star.tags ?? []) entry.tags.add(tag)
+      // keep largest known star count (may differ across days)
+      if ((star.stargazersCount || 0) > entry.stargazersCount) {
+        entry.stargazersCount = star.stargazersCount
+      }
+      if (date < entry.firstDate) entry.firstDate = date
+      if (date > entry.latestDate) entry.latestDate = date
+    }
+  }
+
+  const result: CoStarredRepo[] = []
+  repoMap.forEach((e, repo) => {
+    if (e.starredBy.size < minCount) return
+    const tagsArr: string[] = []
+    e.tags.forEach(t => tagsArr.push(t))
+    tagsArr.sort()
+    const starredByArr: string[] = []
+    e.starredBy.forEach(h => starredByArr.push(h))
+    starredByArr.sort()
+    result.push({
+      repo,
+      url: e.url,
+      description: e.description,
+      language: e.language,
+      stargazersCount: e.stargazersCount,
+      tags: tagsArr,
+      starredBy: starredByArr,
+      count: starredByArr.length,
+      firstDate: e.firstDate,
+      latestDate: e.latestDate,
+    })
+  })
+
+  // Sort by: count desc, then stargazersCount desc, then latestDate desc
+  return result.sort((a, b) => {
+    if (b.count !== a.count) return b.count - a.count
+    if (b.stargazersCount !== a.stargazersCount) return b.stargazersCount - a.stargazersCount
+    return b.latestDate.localeCompare(a.latestDate)
+  })
+}
+
+/**
+ * Get co-starred repos within the rolling [date - (lookbackDays-1), date] window.
+ * Used by the daily page to highlight "repos starred by multiple leaders this week".
+ */
+export function getCoStarredForDate(
+  date: string,
+  lookbackDays: number = 7,
+  minCount: number = 2
+): CoStarredRepo[] {
+  const end = new Date(date + 'T00:00:00Z')
+  const dates: string[] = []
+  for (let i = 0; i < lookbackDays; i++) {
+    const d = new Date(end)
+    d.setUTCDate(end.getUTCDate() - i)
+    const yyyy = d.getUTCFullYear()
+    const mm = (d.getUTCMonth() + 1).toString().padStart(2, '0')
+    const dd = d.getUTCDate().toString().padStart(2, '0')
+    dates.push(`${yyyy}-${mm}-${dd}`)
+  }
+  return computeCoStarredRepos(dates, minCount)
+}
 
 function getItemEngagement(item: FeedItem): number {
   if (item.type === 'github') return item.stargazersCount

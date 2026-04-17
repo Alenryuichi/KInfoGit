@@ -6,12 +6,15 @@ import {
   getAllFeedDates,
   getFeedByDate,
   getAdjacentDates,
+  getCoStarredForDate,
   type DailyFeed,
   type FeedItem,
+  type CoStarredRepo,
 } from '@/lib/social-feeds'
 import { getHandleToPersonMap } from '@/lib/people'
 import { Github, MessageSquare, Youtube, FileText } from 'lucide-react'
 import { STAR_TOPIC_META } from '@/lib/tag-metadata'
+import CoStarredBlock from '@/components/stars/CoStarredBlock'
 
 // --- Types ---
 
@@ -22,6 +25,7 @@ interface StarsDetailProps {
   allDates: string[]
   allTags: string[]
   personMap: Record<string, string>
+  coStarred: CoStarredRepo[]
 }
 
 // --- Data Loading ---
@@ -42,6 +46,7 @@ export const getStaticProps: GetStaticProps<StarsDetailProps> = async ({ params 
   const { prev, next } = getAdjacentDates(date)
   const allDates = getAllFeedDates().map(d => d.date)
   const personMap = getHandleToPersonMap()
+  const coStarred = getCoStarredForDate(date, 7, 2)
 
   const tagSet = new Set<string>()
   for (const item of daily.items) {
@@ -52,7 +57,7 @@ export const getStaticProps: GetStaticProps<StarsDetailProps> = async ({ params 
   }
   const allTags = Array.from(tagSet).sort()
 
-  return { props: { daily, prevDate: prev, nextDate: next, allDates, allTags, personMap } }
+  return { props: { daily, prevDate: prev, nextDate: next, allDates, allTags, personMap, coStarred } }
 }
 
 // --- Polymorphic Item Card (Terminal Style) ---
@@ -433,7 +438,7 @@ function DateNav({
 
 // --- Page ---
 
-export default function StarsDetail({ daily, prevDate, nextDate, allTags, personMap }: StarsDetailProps) {
+export default function StarsDetail({ daily, prevDate, nextDate, allTags, personMap, coStarred }: StarsDetailProps) {
   const [activeTopic, setActiveTopic] = useState<string | null>(null)
   const [activeSource, setActiveSource] = useState<SourceKey>('all')
 
@@ -504,6 +509,19 @@ export default function StarsDetail({ daily, prevDate, nextDate, allTags, person
                 {daily.summary}
               </div>
             </div>
+          )}
+
+          {/* Co-Starred Signal (rolling 7-day window ending on this date) */}
+          {coStarred.length > 0 && (
+            <CoStarredBlock
+              repos={coStarred}
+              personMap={personMap}
+              title="Co-Starred · Last 7 days"
+              subtitle={`Repos independently starred by multiple AI leaders in the week ending ${daily.date}. Stronger signal = more overlap.`}
+              filterCounts={[2, 3]}
+              variant="accent"
+              limit={5}
+            />
           )}
 
           {/* Filters */}

@@ -6,8 +6,12 @@ import {
   getWeeklyDigestByWeek,
   getAdjacentWeeks,
   getAllFeedDates,
+  computeCoStarredRepos,
   type WeeklyDigest,
+  type CoStarredRepo,
 } from '@/lib/social-feeds'
+import { getHandleToPersonMap } from '@/lib/people'
+import CoStarredBlock from '@/components/stars/CoStarredBlock'
 
 // --- Types ---
 
@@ -16,6 +20,8 @@ interface WeeklyDigestPageProps {
   prevWeek: string | null
   nextWeek: string | null
   dailyDatesInRange: string[]
+  coStarred: CoStarredRepo[]
+  personMap: Record<string, string>
 }
 
 // --- Data Loading ---
@@ -40,12 +46,29 @@ export const getStaticProps: GetStaticProps<WeeklyDigestPageProps> = async ({ pa
     d => d >= digest.dateRange.start && d <= digest.dateRange.end
   )
 
+  // Build the full 7-day window (including empty days) so co-star aggregation
+  // is not biased by gaps.
+  const windowDates: string[] = []
+  const start = new Date(digest.dateRange.start + 'T00:00:00Z')
+  for (let i = 0; i < 7; i++) {
+    const d = new Date(start)
+    d.setUTCDate(start.getUTCDate() + i)
+    const yyyy = d.getUTCFullYear()
+    const mm = (d.getUTCMonth() + 1).toString().padStart(2, '0')
+    const dd = d.getUTCDate().toString().padStart(2, '0')
+    windowDates.push(`${yyyy}-${mm}-${dd}`)
+  }
+  const coStarred = computeCoStarredRepos(windowDates, 2)
+  const personMap = getHandleToPersonMap()
+
   return {
     props: {
       digest,
       prevWeek: prev,
       nextWeek: next,
       dailyDatesInRange,
+      coStarred,
+      personMap,
     },
   }
 }
@@ -57,6 +80,8 @@ export default function WeeklyDigestPage({
   prevWeek,
   nextWeek,
   dailyDatesInRange,
+  coStarred,
+  personMap,
 }: WeeklyDigestPageProps) {
   const weekNum = digest.week.split('-W')[1]
   const startDate = new Date(digest.dateRange.start + 'T00:00:00')
@@ -134,6 +159,18 @@ export default function WeeklyDigestPage({
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-6">
             {/* Left Column (3/5) */}
             <div className="lg:col-span-3 space-y-6">
+              {/* Co-Starred Signal (promoted to top of main column) */}
+              {coStarred.length > 0 && (
+                <CoStarredBlock
+                  repos={coStarred}
+                  personMap={personMap}
+                  title="Co-Starred This Week"
+                  subtitle="Repos independently starred by multiple AI leaders — the strongest cross-person signal in the weekly feed."
+                  filterCounts={[2, 3]}
+                  variant="accent"
+                />
+              )}
+
               {/* Overview Card */}
               {digest.overview && (
                 <div className="bg-white/[0.02] border border-white/[0.06] rounded-xl p-6">
@@ -225,32 +262,7 @@ export default function WeeklyDigestPage({
                 </div>
               )}
 
-              {/* Cross-References Card */}
-              {digest.crossReferences.length > 0 && (
-                <div className="bg-white/[0.02] border border-white/[0.06] rounded-xl p-6">
-                  <div className="flex items-center gap-2 mb-4">
-                    <div className="w-1.5 h-4 bg-yellow-500 rounded-full" />
-                    <h2 className="text-sm font-bold text-white uppercase tracking-wide">Cross-Refs</h2>
-                  </div>
-                  <div className="space-y-3 text-xs">
-                    {digest.crossReferences.map(cr => (
-                      <div key={cr.repo} className="flex justify-between items-start py-2 border-b border-white/5">
-                        <a
-                          href={cr.url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-gray-200 hover:text-orange-400 transition-colors"
-                        >
-                          {cr.repo}
-                        </a>
-                        <span className="text-gray-600 font-mono text-[10px] whitespace-nowrap ml-2">
-                          ×{cr.starredBy.length}
-                        </span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              )}
+              {/* Cross-References Card (promoted to accent block in main column above) */}
 
               {/* Daily Logs Card */}
               {dailyDatesInRange.length > 0 && (
