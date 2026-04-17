@@ -82,6 +82,24 @@ export interface BlogPost {
   tags: string[]
 }
 
+/**
+ * Items imported from AI Daily's `coding-agents` focus-topic pool.
+ * These are typically GitHub-trending repos, MCP servers, memory-layer
+ * tools, Claude Code skills, etc — signal that Code Weekly's own sources
+ * (GitHub Releases of 10 tracked editors, company RSS, Tavily/Bailian)
+ * don't reach. Optional for backward compatibility with weeks written
+ * before this field existed.
+ */
+export interface EcosystemItem {
+  title: string
+  url: string
+  summary: string
+  score: number
+  source: string
+  publishedAt: string
+  secondaryTopics: string[]
+}
+
 export interface CodeWeekly {
   week: string
   dateRange: string
@@ -89,6 +107,7 @@ export interface CodeWeekly {
   editors: EditorUpdate[]
   benchmarks: BenchmarkData
   blogs: BlogPost[]
+  ecosystem?: EcosystemItem[]
   weekSummary: string
 }
 

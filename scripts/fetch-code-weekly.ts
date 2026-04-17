@@ -33,6 +33,7 @@ import { fetchAiderLeaderboard } from './code-weekly/sources/aider-leaderboard'
 import { fetchSweBench } from './code-weekly/sources/swe-bench'
 import { fetchLiveCodeBench } from './code-weekly/sources/livecodebench'
 import { fetchChangelogEntries } from './code-weekly/sources/changelog-page'
+import { ingestAiDailyEcosystem } from './code-weekly/sources/ai-daily-ingest'
 import { summarizeWeekly, collectUrlsFromRaw } from './code-weekly/summarizer'
 
 // ─── Main ──────────────────────────────────────────────────
@@ -214,6 +215,22 @@ async function main() {
     category: categoryMap.get(e.name) || e.category,
   }))
 
+  // ─── Ecosystem layer: AI Daily coding-agents cross-over ─
+  // Harvest high-signal `coding-agents` items from AI Daily digests
+  // that already ran this week. The dedup set is seeded with every URL
+  // we're already surfacing (editor sourceUrl + blog url) so we never
+  // repeat an item the user just read three cards up.
+  const projectRoot = path.join(__dirname, '..')
+  const usedUrls = new Set<string>()
+  for (const e of mergedEditors) {
+    if (e.sourceUrl) usedUrls.add(e.sourceUrl)
+  }
+  for (const b of summary.blogs) {
+    if (b.url) usedUrls.add(b.url)
+  }
+  // ingestAiDailyEcosystem is sync + fail-soft → safe to call unconditionally
+  const ecosystem = ingestAiDailyEcosystem(projectRoot, bounds, { excludeUrls: usedUrls })
+
   // Build final output
   const output = {
     week,
@@ -228,6 +245,7 @@ async function main() {
       notable: '',
     },
     blogs: summary.blogs,
+    ecosystem,
     weekSummary: summary.weekSummary,
   }
 
@@ -245,6 +263,7 @@ async function main() {
   console.log(`\n📊 Summary:`)
   console.log(`  Editors tracked: ${output.editors.length}`)
   console.log(`  Blog articles: ${output.blogs.length}`)
+  console.log(`  Ecosystem items (AI Daily cross-over): ${output.ecosystem.length}`)
   console.log(`  Week summary: ${output.weekSummary.slice(0, 80)}...`)
 }
 

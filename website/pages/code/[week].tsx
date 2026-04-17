@@ -10,6 +10,7 @@ import {
 import { EditorCard } from '@/components/code-weekly/EditorCard'
 import { ArenaRankingTable, AiderLeaderboardTable, SweBenchTable, LiveCodeBenchTable } from '@/components/code-weekly/BenchmarkTable'
 import { BlogCard } from '@/components/code-weekly/BlogCard'
+import { EcosystemCard } from '@/components/code-weekly/EcosystemCard'
 
 // ─── Types ─────────────────────────────────────────────────
 
@@ -214,6 +215,33 @@ export default function CodeWeekDetail({ data, prevWeek, nextWeek, allWeeks }: C
                   </div>
                 )}
               </div>
+
+              {/* Coding Agents Ecosystem — items that surface via AI Daily's
+                  coding-agents focus topic. Section renders only when there's
+                  at least one item, so legacy weeks (no ecosystem field) stay
+                  visually identical to how they shipped. */}
+              {data.ecosystem && data.ecosystem.length > 0 && (
+                <div>
+                  <div className="flex items-center justify-between gap-3 mb-2">
+                    <div className="flex items-center gap-3">
+                      <div className="w-1.5 h-5 bg-blue-400 rounded-full"></div>
+                      <h2 className="text-lg font-bold text-white tracking-wide">Coding Agents Ecosystem</h2>
+                    </div>
+                    <span className="text-[10px] font-mono text-gray-500 uppercase tracking-widest">
+                      via AI Daily
+                    </span>
+                  </div>
+                  <p className="text-xs text-gray-600 mb-6 leading-relaxed">
+                    High-signal items tagged <span className="font-mono text-blue-400/70">coding-agents</span> by the
+                    AI Daily pipeline this week — repos, tools, and writeups beyond the 10 tracked editors.
+                  </p>
+                  <div className="grid sm:grid-cols-2 gap-4">
+                    {data.ecosystem.map((item, i) => (
+                      <EcosystemCard key={`${item.url}-${i}`} item={item} />
+                    ))}
+                  </div>
+                </div>
+              )}
 
             </div>
 
