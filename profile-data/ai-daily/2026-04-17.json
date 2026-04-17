@@ -1,49 +1,29 @@
 {
   "date": "2026-04-17",
-  "itemCount": 33,
+  "itemCount": 55,
   "sections": [
     {
       "id": "headlines",
       "title": "Headlines & Launches",
       "items": [
         {
-          "title": "Factory hits $1.5B valuation to build AI coding for enterprises - TechCrunch",
-          "summary": "AI编码初创公司Factory以15亿美元估值融资，专注企业工程AI代理",
-          "url": "https://techcrunch.com/2026/04/16/factory-hits-1-5b-valuation-to-build-ai-coding-for-enterprises/",
-          "score": 7.5,
-          "sources": [
-            {
-              "name": "techcrunch.com"
-            }
-          ],
-          "tags": [
-            "ai-startup",
-            "funding",
-            "enterprise-ai",
-            "coding-agents"
-          ],
-          "focusTopics": [
-            "multi-agent"
-          ]
-        },
-        {
-          "title": "Mark Zuckerberg Dives Into AI to Build a Zuckbot - Bloomberg.com",
-          "summary": "马克·扎克伯格正在训练AI代理处理部分CEO职责，Meta深入探索AI助手应用",
-          "url": "https://www.bloomberg.com/news/newsletters/2026-04-16/mark-zuckerberg-is-training-an-ai-agent-to-handle-some-ceo-duties",
-          "score": 7.5,
+          "title": "OpenAI Takes on Google With New AI Model Aimed at Drug Discovery",
+          "summary": "OpenAI推出针对药物发现的新AI模型，与谷歌展开竞争",
+          "url": "https://www.bloomberg.com/news/articles/2026-04-16/openai-takes-on-google-with-new-ai-model-aimed-at-drug-discovery",
+          "score": 8,
           "sources": [
             {
               "name": "bloomberg.com"
             }
           ],
           "tags": [
-            "ai-agent",
-            "meta",
-            "ceo-tasks",
-            "automation"
+            "openai",
+            "drug-discovery",
+            "biotech-ai",
+            "google-competition"
           ],
           "focusTopics": [
-            "multi-agent"
+            "model-release"
           ]
         }
       ]
@@ -53,8 +33,48 @@
       "title": "Research & Innovation",
       "items": [
         {
+          "title": "GFT: From Imitation to Reward Fine-Tuning with Unbiased Group Advantages and Dynamic Coefficient Rectification",
+          "summary": "提出GFT方法，从模仿学习到奖励微调，使用无偏群体优势和动态系数校正优化LLM后训练。",
+          "url": "https://arxiv.org/abs/2604.14258",
+          "score": 8,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "post-training",
+            "fine-tuning",
+            "rlhf",
+            "llm-optimization"
+          ],
+          "focusTopics": [
+            "post-training"
+          ]
+        },
+        {
+          "title": "Credo: Declarative Control of LLM Pipelines via Beliefs and Policies",
+          "summary": "提出Credo框架，通过信念和政策声明式控制LLM管道，适用于长生命周期、有状态的决策系统。",
+          "url": "https://arxiv.org/abs/2604.14401",
+          "score": 8,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "llm",
+            "agentic-ai",
+            "declarative-control",
+            "pipeline"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
           "title": "Simulating Human Cognition: Heartbeat-Driven Autonomous Thinking Activity Scheduling for LLM-based AI systems",
-          "summary": "提出心跳驱动的自主思维活动调度方法，用于模拟基于LLM的AI系统的人类认知过程",
+          "summary": "提出基于心跳驱动的自主思维活动调度方法，用于模拟人类认知，优化LLM系统的推理和工具使用。",
           "url": "https://arxiv.org/abs/2604.14178",
           "score": 7.5,
           "sources": [
@@ -69,13 +89,14 @@
             "scheduling"
           ],
           "focusTopics": [
-            "self-evolution"
+            "agent-harness",
+            "planning"
           ]
         },
         {
-          "title": "GFT: From Imitation to Reward Fine-Tuning with Unbiased Group Advantages and Dynamic Coefficient Rectification",
-          "summary": "提出GFT方法，从模仿学习到奖励微调，使用无偏群体优势和动态系数校正",
-          "url": "https://arxiv.org/abs/2604.14258",
+          "title": "Seeing Through Experts Eyes A Foundational Vision Language Model Trained on Radiologists Gaze and Reasoning",
+          "summary": "提出基于放射科医生注视和推理训练的基础视觉语言模型，用于自动化胸部X光解读。",
+          "url": "https://arxiv.org/abs/2604.14316",
           "score": 7.5,
           "sources": [
             {
@@ -83,57 +104,35 @@
             }
           ],
           "tags": [
-            "fine-tuning",
-            "reinforcement-learning",
-            "llm-training",
-            "reward-optimization"
-          ],
-          "focusTopics": [
-            "self-evolution"
-          ]
-        },
-        {
-          "title": "Credo: Declarative Control of LLM Pipelines via Beliefs and Policies",
-          "summary": "提出Credo框架，通过信念和政策声明式控制LLM管道，用于长期状态决策系统",
-          "url": "https://arxiv.org/abs/2604.14401",
-          "score": 7.5,
-          "sources": [
-            {
-              "name": "ArXiv cs.AI"
-            }
-          ],
-          "tags": [
-            "llm-pipelines",
-            "declarative-control",
-            "agentic-ai",
-            "decision-making"
-          ],
-          "focusTopics": [
-            "multi-agent"
-          ]
-        },
-        {
-          "title": "Compressed-Sensing-Guided, Inference-Aware Structured Reduction for Large Language Models",
-          "summary": "提出压缩感知引导、推理感知的结构化缩减方法，用于大型语言模型参数优化",
-          "url": "https://arxiv.org/abs/2604.14156",
-          "score": 7.5,
-          "sources": [
-            {
-              "name": "ArXiv cs.CL"
-            }
-          ],
-          "tags": [
-            "model-compression",
-            "large-language-models",
-            "inference-efficiency",
-            "structured-reduction"
+            "vision-language-model",
+            "medical-ai",
+            "gaze-tracking",
+            "chest-xray"
           ],
           "focusTopics": []
         },
         {
-          "title": "SeaAlert: Critical Information Extraction From Maritime Distress Communications with Large Language Models",
-          "summary": "利用大语言模型从海事遇险通信中提取关键信息的研究论文",
-          "url": "https://arxiv.org/abs/2604.14163",
+          "title": "Equifinality in Mixture of Experts: Routing Topology Does Not Determine Language Modeling Quality",
+          "summary": "研究发现稀疏专家混合模型的路由拓扑结构并不决定语言建模质量，存在等效性现象。",
+          "url": "https://arxiv.org/abs/2604.14419",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "moe",
+            "language-modeling",
+            "routing",
+            "architecture"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "MemGround: Long-Term Memory Evaluation Kit for Large Language Models in Gamified Scenarios",
+          "summary": "推出MemGround评估套件，在游戏化场景中动态评估大型语言模型的长期记忆能力。",
+          "url": "https://arxiv.org/abs/2604.14158",
           "score": 7.5,
           "sources": [
             {
@@ -142,15 +141,38 @@
           ],
           "tags": [
             "llm",
-            "information-extraction",
-            "safety-critical",
-            "maritime"
+            "memory-evaluation",
+            "gamified-scenarios",
+            "benchmark"
           ],
-          "focusTopics": []
+          "focusTopics": [
+            "context-engineering",
+            "evals"
+          ]
+        },
+        {
+          "title": "How to Fine-Tune a Reasoning Model? A Teacher-Student Cooperation Framework to Synthesize Student-Consistent SFT Data",
+          "summary": "提出师生合作框架，通过合成学生一致的数据来微调推理模型",
+          "url": "https://arxiv.org/abs/2604.14164",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "reasoning-models",
+            "fine-tuning",
+            "synthetic-data",
+            "teacher-student"
+          ],
+          "focusTopics": [
+            "post-training"
+          ]
         },
         {
           "title": "NuHF Claw: A Risk Constrained Cognitive Agent Framework for Human Centered Procedure Support in Digital Nuclear Control Rooms",
-          "summary": "提出NuHF Claw框架，用于核电站数字控制室中基于认知代理的人类中心程序支持，具有风险约束",
+          "summary": "提出NuHF Claw框架，用于核电站数字化控制室中的人本程序支持，是一种风险约束的认知代理系统。",
           "url": "https://arxiv.org/abs/2604.14160",
           "score": 7,
           "sources": [
@@ -164,29 +186,13 @@
             "risk-management",
             "nuclear-safety"
           ],
-          "focusTopics": []
-        },
-        {
-          "title": "Seeing Through Experts Eyes A Foundational Vision Language Model Trained on Radiologists Gaze and Reasoning",
-          "summary": "提出基于放射科医生注视和推理训练的基础视觉语言模型，用于胸部X光片解读",
-          "url": "https://arxiv.org/abs/2604.14316",
-          "score": 7,
-          "sources": [
-            {
-              "name": "ArXiv cs.AI"
-            }
-          ],
-          "tags": [
-            "vision-language-model",
-            "medical-ai",
-            "gaze-tracking",
-            "radiology"
-          ],
-          "focusTopics": []
+          "focusTopics": [
+            "agent-harness"
+          ]
         },
         {
           "title": "Mistake gating leads to energy and memory efficient continual learning",
-          "summary": "提出错误门控机制，实现能量和内存高效的持续学习，受生物突触可塑性启发",
+          "summary": "提出错误门控机制，实现能量和内存高效的持续学习，模拟动物更新内部模型的代谢成本。",
           "url": "https://arxiv.org/abs/2604.14336",
           "score": 7,
           "sources": [
@@ -197,35 +203,15 @@
           "tags": [
             "continual-learning",
             "energy-efficiency",
-            "memory-efficiency",
-            "synaptic-plasticity"
-          ],
-          "focusTopics": [
+            "synaptic-plasticity",
             "memory"
-          ]
-        },
-        {
-          "title": "Equifinality in Mixture of Experts: Routing Topology Does Not Determine Language Modeling Quality",
-          "summary": "研究混合专家模型中的等效性，发现路由拓扑不决定语言建模质量",
-          "url": "https://arxiv.org/abs/2604.14419",
-          "score": 7,
-          "sources": [
-            {
-              "name": "ArXiv cs.AI"
-            }
-          ],
-          "tags": [
-            "mixture-of-experts",
-            "routing-topology",
-            "language-modeling",
-            "sparse-models"
           ],
           "focusTopics": []
         },
         {
-          "title": "MemGround: Long-Term Memory Evaluation Kit for Large Language Models in Gamified Scenarios",
-          "summary": "提出MemGround，用于游戏化场景中大型语言模型长期记忆评估的工具包",
-          "url": "https://arxiv.org/abs/2604.14158",
+          "title": "Compressed-Sensing-Guided, Inference-Aware Structured Reduction for Large Language Models",
+          "summary": "提出压缩感知引导、推理感知的结构化缩减方法，用于减少大型语言模型的参数量。",
+          "url": "https://arxiv.org/abs/2604.14156",
           "score": 7,
           "sources": [
             {
@@ -233,19 +219,17 @@
             }
           ],
           "tags": [
-            "long-term-memory",
-            "llm-evaluation",
-            "gamified-scenarios",
-            "memory-testing"
+            "llm-compression",
+            "structured-reduction",
+            "inference",
+            "model-efficiency"
           ],
-          "focusTopics": [
-            "memory"
-          ]
+          "focusTopics": []
         },
         {
-          "title": "How to Fine-Tune a Reasoning Model? A Teacher-Student Cooperation Framework to Synthesize Student-Consistent SFT Data",
-          "summary": "提出师生合作框架，为推理模型生成一致的微调数据",
-          "url": "https://arxiv.org/abs/2604.14164",
+          "title": "SeaAlert: Critical Information Extraction From Maritime Distress Communications with Large Language Models",
+          "summary": "使用大语言模型从海事遇险通信中提取关键信息的研究论文",
+          "url": "https://arxiv.org/abs/2604.14163",
           "score": 7,
           "sources": [
             {
@@ -253,16 +237,16 @@
             }
           ],
           "tags": [
-            "reasoning",
-            "fine-tuning",
-            "synthetic-data",
-            "teacher-student"
+            "llm",
+            "information-extraction",
+            "maritime-safety",
+            "nlp"
           ],
           "focusTopics": []
         },
         {
           "title": "EviSearch: A Human in the Loop System for Extracting and Auditing Clinical Evidence for Systematic Reviews",
-          "summary": "用于系统评价中临床证据提取与审核的多智能体系统",
+          "summary": "多智能体系统EviSearch，用于提取和审核系统评价中的临床证据",
           "url": "https://arxiv.org/abs/2604.14165",
           "score": 7,
           "sources": [
@@ -272,17 +256,17 @@
           ],
           "tags": [
             "multi-agent",
-            "evidence-extraction",
-            "clinical",
-            "systematic-review"
+            "clinical-evidence",
+            "systematic-reviews",
+            "healthcare-ai"
           ],
           "focusTopics": [
-            "multi-agent"
+            "agent-harness"
           ]
         },
         {
           "title": "Hierarchical Retrieval Augmented Generation for Adversarial Technique Annotation in Cyber Threat Intelligence Text",
-          "summary": "使用分层检索增强生成技术标注网络威胁情报文本中的对抗技术",
+          "summary": "分层检索增强生成方法，用于网络威胁情报文本中的对抗技术标注",
           "url": "https://arxiv.org/abs/2604.14166",
           "score": 7,
           "sources": [
@@ -297,12 +281,47 @@
             "mitre-attack"
           ],
           "focusTopics": [
-            "memory"
+            "context-engineering"
           ]
         },
         {
+          "title": "AI for climate: from technological solutions to relational accountability",
+          "summary": "Nature期刊文章探讨AI在气候行动中的应用，从技术方案到关系问责",
+          "url": "https://www.nature.com/articles/s44168-026-00376-0",
+          "score": 7,
+          "sources": [
+            {
+              "name": "nature.com"
+            }
+          ],
+          "tags": [
+            "ai-climate",
+            "environmental-ai",
+            "sustainability"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "z-lab/dflash",
+          "summary": "DFlash：用于闪存推测解码的块扩散方法，提升LLM推理效率",
+          "url": "https://github.com/z-lab/dflash",
+          "score": 6.8025,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+285★)"
+            }
+          ],
+          "tags": [
+            "llm",
+            "inference",
+            "speculative-decoding",
+            "diffusion"
+          ],
+          "focusTopics": []
+        },
+        {
           "title": "Fun-TSG: A Function-Driven Multivariate Time Series Generator with Variable-Level Anomaly Labeling",
-          "summary": "提出Fun-TSG，一种函数驱动的多变量时间序列生成器，具有变量级异常标注功能",
+          "summary": "提出Fun-TSG，一种函数驱动的多变量时间序列生成器，具有变量级异常标注功能。",
           "url": "https://arxiv.org/abs/2604.14221",
           "score": 6.5,
           "sources": [
@@ -320,7 +339,7 @@
         },
         {
           "title": "Formalizing Kantian Ethics: Formula of the Universal Law Logic (FULL)",
-          "summary": "形式化康德伦理学，提出普遍法则逻辑公式，用于构建人工道德代理",
+          "summary": "形式化康德伦理学，提出普遍法则逻辑（FULL），用于构建人工道德代理以理解道德推理。",
           "url": "https://arxiv.org/abs/2604.14254",
           "score": 6.5,
           "sources": [
@@ -330,15 +349,15 @@
           ],
           "tags": [
             "machine-ethics",
-            "moral-agents",
             "formal-logic",
-            "philosophy"
+            "moral-agents",
+            "kantian-ethics"
           ],
           "focusTopics": []
         },
         {
           "title": "HUOZIIME: An On-Device LLM-enhanced Input Method for Deep Personalization",
-          "summary": "提出HUOZIIME，一种设备端LLM增强的输入法，支持深度个性化文本输入",
+          "summary": "提出HUOZIIME，一种基于设备端LLM增强的输入法，支持深度个性化文本输入。",
           "url": "https://arxiv.org/abs/2604.14159",
           "score": 6.5,
           "sources": [
@@ -347,36 +366,16 @@
             }
           ],
           "tags": [
-            "on-device-ai",
+            "on-device-llm",
             "input-method",
             "personalization",
-            "mobile-ime"
+            "mobile"
           ],
           "focusTopics": []
         },
         {
-          "title": "Can Large Language Models Detect Methodological Flaws? Evidence from Gesture Recognition for UAV-Based Rescue Operation Based on Deep Learning",
-          "summary": "研究大型语言模型检测方法学缺陷的能力，基于无人机救援中深度学习手势识别的证据",
-          "url": "https://arxiv.org/abs/2604.14161",
-          "score": 6.5,
-          "sources": [
-            {
-              "name": "ArXiv cs.CL"
-            }
-          ],
-          "tags": [
-            "methodological-flaws",
-            "llm-evaluation",
-            "gesture-recognition",
-            "uav-rescue"
-          ],
-          "focusTopics": [
-            "reflection"
-          ]
-        },
-        {
           "title": "Chinese Essay Rhetoric Recognition Using LoRA, In-context Learning and Model Ensemble",
-          "summary": "结合LoRA、上下文学习和模型集成进行中文作文修辞识别的研究",
+          "summary": "使用LoRA、上下文学习和模型集成进行中文作文修辞识别的研究",
           "url": "https://arxiv.org/abs/2604.14167",
           "score": 6.5,
           "sources": [
@@ -385,16 +384,16 @@
             }
           ],
           "tags": [
-            "nlp",
             "lora",
             "in-context-learning",
-            "essay-scoring"
+            "essay-scoring",
+            "chinese-nlp"
           ],
           "focusTopics": []
         },
         {
           "title": "Interpretable and Explainable Surrogate Modeling for Simulations: A State-of-the-Art Survey and Perspectives on Explainable AI for Decision-Making",
-          "summary": "关于可解释和可解释的仿真代理建模的综述，探讨可解释AI在决策中的应用前景",
+          "summary": "综述可解释和可解释的代理建模技术，用于复杂系统仿真，聚焦于决策支持的XAI。",
           "url": "https://arxiv.org/abs/2604.14240",
           "score": 6,
           "sources": [
@@ -405,16 +404,36 @@
           "tags": [
             "explainable-ai",
             "surrogate-modeling",
-            "decision-making",
+            "simulation",
             "survey"
           ],
           "focusTopics": []
         },
         {
-          "title": "Decoupling Scores and Text: The Politeness Principle in Peer Review",
-          "summary": "研究同行评审中的礼貌原则，探讨分数与文本解耦对作者解读反馈的影响",
-          "url": "https://arxiv.org/abs/2604.14162",
+          "title": "Can Large Language Models Detect Methodological Flaws? Evidence from Gesture Recognition for UAV-Based Rescue Operation Based on Deep Learning",
+          "summary": "研究大型语言模型能否检测方法论缺陷，以基于深度学习的无人机救援手势识别为例。",
+          "url": "https://arxiv.org/abs/2604.14161",
           "score": 6,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "llm-evaluation",
+            "methodological-flaws",
+            "gesture-recognition",
+            "uav"
+          ],
+          "focusTopics": [
+            "evals"
+          ]
+        },
+        {
+          "title": "Decoupling Scores and Text: The Politeness Principle in Peer Review",
+          "summary": "研究同行评审中的礼貌原则，探讨分数与文本反馈的解耦现象及其对作者的影响。",
+          "url": "https://arxiv.org/abs/2604.14162",
+          "score": 5.5,
           "sources": [
             {
               "name": "ArXiv cs.CL"
@@ -423,26 +442,8 @@
           "tags": [
             "peer-review",
             "politeness-principle",
-            "feedback-interpretation",
-            "academic-ai"
-          ],
-          "focusTopics": []
-        },
-        {
-          "title": "AI for climate: from technological solutions to relational accountability",
-          "summary": "Nature子刊论文探讨AI在气候行动中从技术解决方案到关系问责的转变",
-          "url": "https://www.nature.com/articles/s44168-026-00376-0",
-          "score": 6,
-          "sources": [
-            {
-              "name": "nature.com"
-            }
-          ],
-          "tags": [
-            "ai-climate",
-            "sustainability",
-            "accountability",
-            "environmental-ai"
+            "nlp",
+            "academic-communication"
           ],
           "focusTopics": []
         }
@@ -453,46 +454,281 @@
       "title": "Engineering & Resources",
       "items": [
         {
-          "title": "Anthropic releases Claude Opus 4.7: How to try it, benchmarks, safety - Mashable",
-          "summary": "Anthropic发布Claude Opus 4.7模型，介绍其功能、基准测试和安全性",
-          "url": "https://mashable.com/article/anthropic-releases-claude-opus-4-7",
+          "title": "Donchitos/Claude-Code-Game-Studios",
+          "summary": "Donchitos/Claude-Code-Game-Studios：将Claude Code转变为完整游戏开发工作室，含49个AI代理和72个工作流技能",
+          "url": "https://github.com/Donchitos/Claude-Code-Game-Studios",
+          "score": 9.149999999999999,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+1107★)"
+            }
+          ],
+          "tags": [
+            "claude-code",
+            "game-development",
+            "multi-agent"
+          ],
+          "focusTopics": [
+            "coding-agents",
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "obra/superpowers",
+          "summary": "obra/superpowers：有效的代理技能框架和软件开发方法论",
+          "url": "https://github.com/obra/superpowers",
+          "score": 8.725,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+2058★)"
+            }
+          ],
+          "tags": [
+            "agentic-framework",
+            "software-methodology",
+            "skills"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "[AINews] Anthropic Claude Opus 4.7 - literally one step better than 4.6 in every dimension",
+          "summary": "Anthropic发布Claude Opus 4.7模型，在各方面相比4.6均有提升",
+          "url": "https://www.latent.space/p/ainews-anthropic-claude-opus-47-literally",
           "score": 8.5,
           "sources": [
             {
-              "name": "mashable.com"
+              "name": "Latent Space"
             }
           ],
           "tags": [
             "claude",
+            "anthropic",
             "model-release",
-            "benchmarks",
-            "safety"
+            "sota"
+          ],
+          "focusTopics": [
+            "model-release"
+          ]
+        },
+        {
+          "title": "lsdefine/GenericAgent",
+          "summary": "lsdefine/GenericAgent：自进化代理，从3.3K行种子生长技能树，实现全系统控制且减少6倍token消耗",
+          "url": "https://github.com/lsdefine/GenericAgent",
+          "score": 8.497,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+848★)"
+            }
+          ],
+          "tags": [
+            "self-evolving",
+            "skill-tree",
+            "token-efficiency"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "thedotmack/claude-mem",
+          "summary": "Claude Mem：Claude Code插件，自动记录并压缩编码会话内容",
+          "url": "https://github.com/thedotmack/claude-mem",
+          "score": 8.3,
+          "sources": [
+            {
+              "name": "GitHub trending:typescript (+2269★)"
+            }
+          ],
+          "tags": [
+            "claude-code",
+            "session-recording",
+            "memory-compression",
+            "coding-assistant"
+          ],
+          "focusTopics": [
+            "coding-agents",
+            "context-engineering"
+          ]
+        },
+        {
+          "title": "BasedHardware/omi",
+          "summary": "BasedHardware/omi：能看屏幕、听对话并指导用户的AI系统",
+          "url": "https://github.com/BasedHardware/omi",
+          "score": 8.0315,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+821★)"
+            }
+          ],
+          "tags": [
+            "screen-ai",
+            "multimodal",
+            "assistant"
+          ],
+          "focusTopics": [
+            "tool-use"
+          ]
+        },
+        {
+          "title": "EvoMap/evolver",
+          "summary": "EvoMap/evolver：基于GEP的AI代理自进化引擎，采用基因组进化协议",
+          "url": "https://github.com/EvoMap/evolver",
+          "score": 7.925,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+750★)"
+            }
+          ],
+          "tags": [
+            "ai-agents",
+            "self-evolution",
+            "genome-protocol"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "Lordog/dive-into-llms",
+          "summary": "Lordog/dive-into-llms：《动手学大模型》系列编程实践教程",
+          "url": "https://github.com/Lordog/dive-into-llms",
+          "score": 7.7985,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+949★)"
+            }
+          ],
+          "tags": [
+            "llm-tutorial",
+            "hands-on",
+            "educational"
           ],
           "focusTopics": []
         },
         {
+          "title": "openai/openai-agents-python",
+          "summary": "OpenAI发布轻量级多智能体工作流框架Python版",
+          "url": "https://github.com/openai/openai-agents-python",
+          "score": 7.736,
+          "sources": [
+            {
+              "name": "GitHub trending:python (+624★)"
+            }
+          ],
+          "tags": [
+            "multi-agent",
+            "workflow",
+            "openai",
+            "framework"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "anthropics/skills",
+          "summary": "Anthropic公开Agent Skills仓库，提供智能体技能开发资源",
+          "url": "https://github.com/anthropics/skills",
+          "score": 7.5195,
+          "sources": [
+            {
+              "name": "GitHub trending:python (+763★)"
+            }
+          ],
+          "tags": [
+            "agent-skills",
+            "anthropic",
+            "tool-use",
+            "open-source"
+          ],
+          "focusTopics": [
+            "agent-harness",
+            "tool-use"
+          ]
+        },
+        {
           "title": "A new way to explore the web with AI Mode in Chrome",
-          "summary": "谷歌宣布在Chrome浏览器中推出AI模式，提供新的网页探索方式",
+          "summary": "谷歌在Chrome浏览器中推出AI模式，提供新的网页探索方式",
           "url": "https://blog.google/products-and-platforms/products/search/ai-mode-chrome/",
-          "score": 8,
+          "score": 7.5,
           "sources": [
             {
               "name": "Google AI Blog"
             }
           ],
           "tags": [
-            "browser-ai",
-            "google",
-            "product-launch",
-            "web-search"
+            "chrome",
+            "ai-browser",
+            "google-ai",
+            "web-navigation"
           ],
           "focusTopics": []
         },
         {
+          "title": "google/magika",
+          "summary": "Google发布Magika：基于AI的快速准确文件内容类型检测工具",
+          "url": "https://github.com/google/magika",
+          "score": 7.3735,
+          "sources": [
+            {
+              "name": "GitHub trending:python (+949★)"
+            }
+          ],
+          "tags": [
+            "file-detection",
+            "ai-tools",
+            "google",
+            "security"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "anomalyco/opencode",
+          "summary": "OpenCode：开源编码智能体项目",
+          "url": "https://github.com/anomalyco/opencode",
+          "score": 7.3125,
+          "sources": [
+            {
+              "name": "GitHub trending:typescript (+625★)"
+            }
+          ],
+          "tags": [
+            "coding-agent",
+            "open-source",
+            "ai-programming",
+            "developer-tools"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "topoteretes/cognee",
+          "summary": "Cognee：6行代码实现AI智能体记忆的知识引擎",
+          "url": "https://github.com/topoteretes/cognee",
+          "score": 7.1355,
+          "sources": [
+            {
+              "name": "GitHub trending:python (+507★)"
+            }
+          ],
+          "tags": [
+            "agent-memory",
+            "knowledge-engine",
+            "rag",
+            "open-source"
+          ],
+          "focusTopics": [
+            "context-engineering"
+          ]
+        },
+        {
           "title": "New ways to create personalized images in the Gemini app",
-          "summary": "谷歌Gemini应用推出个性化图像生成新功能",
+          "summary": "Gemini应用推出新功能，可根据个人数据创建个性化图像",
           "url": "https://blog.google/innovation-and-ai/products/gemini-app/personal-intelligence-nano-banana/",
-          "score": 7.5,
+          "score": 7,
           "sources": [
             {
               "name": "Google AI Blog"
@@ -500,33 +736,15 @@
           ],
           "tags": [
             "gemini",
+            "personalized-ai",
             "image-generation",
-            "personalization",
-            "google-ai"
-          ],
-          "focusTopics": []
-        },
-        {
-          "title": "Anthropic Releases Claude Opus 4.7 to Remind Everyone How Great Mythos Is - Gizmodo",
-          "summary": "Anthropic发布Claude Opus 4.7，强调其对Mythos模型的改进",
-          "url": "https://gizmodo.com/anthropic-releases-claude-opus-4-7-to-remind-everyone-how-great-mythos-is-2000747469",
-          "score": 7.5,
-          "sources": [
-            {
-              "name": "gizmodo.com"
-            }
-          ],
-          "tags": [
-            "claude",
-            "anthropic",
-            "model-update",
-            "ai-news"
+            "google"
           ],
           "focusTopics": []
         },
         {
           "title": "AI economics for the common good | Nature Machine Intelligence",
-          "summary": "《自然·机器智能》期刊文章探讨AI经济学与公共利益",
+          "summary": "《自然·机器智能》文章探讨AI经济学如何服务于公共利益",
           "url": "https://www.nature.com/articles/s42256-026-01212-0",
           "score": 7,
           "sources": [
@@ -536,17 +754,213 @@
           ],
           "tags": [
             "ai-economics",
+            "social-impact",
             "policy",
-            "ethics",
-            "research-paper"
+            "nature-journal"
           ],
           "focusTopics": []
         },
         {
-          "title": "llm-anthropic 0.25",
-          "summary": "llm-anthropic工具发布0.25版本，支持Claude 3.7模型",
-          "url": "https://simonwillison.net/2026/Apr/16/llm-anthropic/#atom-everything",
+          "title": "vercel-labs/open-agents",
+          "summary": "Vercel Labs发布开源云智能体构建模板",
+          "url": "https://github.com/vercel-labs/open-agents",
+          "score": 6.715,
+          "sources": [
+            {
+              "name": "GitHub trending:typescript (+510★)"
+            }
+          ],
+          "tags": [
+            "cloud-agents",
+            "open-source",
+            "vercel",
+            "template"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "SimoneAvogadro/android-reverse-engineering-skill",
+          "summary": "SimoneAvogadro/android-reverse-engineering-skill：Claude Code技能，支持Android应用逆向工程",
+          "url": "https://github.com/SimoneAvogadro/android-reverse-engineering-skill",
+          "score": 6.5125,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+375★)"
+            }
+          ],
+          "tags": [
+            "claude-code",
+            "reverse-engineering",
+            "android"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "The Pulse: ‘Tokenmaxxing’ as a weird new trend",
+          "summary": "讨论'tokenmaxxing'趋势及编码AI代理补贴可能结束等话题",
+          "url": "https://newsletter.pragmaticengineer.com/p/the-pulse-tokenmaxxing-as-a-weird",
           "score": 6.5,
+          "sources": [
+            {
+              "name": "Pragmatic Engineer"
+            }
+          ],
+          "tags": [
+            "ai-trends",
+            "token-optimization",
+            "coding-agents",
+            "industry-analysis"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "AI Threatens 'Jobs With Dignity,' Says Nobel-Winning Economist",
+          "summary": "诺贝尔经济学奖得主警告AI可能威胁'有尊严的工作'",
+          "url": "https://www.bloomberg.com/news/articles/2026-04-16/ai-threatens-jobs-with-dignity-nobel-laureate-economist-says",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "bloomberg.com"
+            }
+          ],
+          "tags": [
+            "ai-impact",
+            "labor-economics",
+            "nobel-laureate",
+            "future-of-work"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "With max thinking Opus 4.7 is quite impressive, with a real sense of style\n\nIn two prompts: \"impleme",
+          "summary": "Bluesky用户分享Claude Opus 4.7在最大思考模式下风格化的使用体验",
+          "url": "https://bsky.app/profile/emollick.bsky.social/post/3mjnuzt5jvs2k",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "Bluesky:emollick.bsky.social"
+            }
+          ],
+          "tags": [
+            "claude-opus",
+            "ai-style",
+            "user-experience"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "microsoft/apm",
+          "summary": "微软发布Agent Package Manager，简化智能体包管理",
+          "url": "https://github.com/microsoft/apm",
+          "score": 6.4945,
+          "sources": [
+            {
+              "name": "GitHub trending:python (+363★)"
+            }
+          ],
+          "tags": [
+            "agent-management",
+            "package-manager",
+            "microsoft",
+            "developer-tools"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "openai/openai-agents-js",
+          "summary": "OpenAI发布多智能体工作流框架JavaScript版，支持语音智能体",
+          "url": "https://github.com/openai/openai-agents-js",
+          "score": 6.429,
+          "sources": [
+            {
+              "name": "GitHub trending:typescript (+36★)"
+            }
+          ],
+          "tags": [
+            "multi-agent",
+            "workflow",
+            "openai",
+            "voice-agents",
+            "javascript"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "ChromeDevTools/chrome-devtools-mcp",
+          "summary": "Chrome DevTools MCP：为编码智能体提供浏览器开发工具集成",
+          "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+          "score": 6.3655,
+          "sources": [
+            {
+              "name": "GitHub trending:typescript (+277★)"
+            }
+          ],
+          "tags": [
+            "coding-agents",
+            "chrome-devtools",
+            "mcp",
+            "developer-tools"
+          ],
+          "focusTopics": [
+            "coding-agents",
+            "tool-use"
+          ]
+        },
+        {
+          "title": "Tracer-Cloud/opensre",
+          "summary": "Tracer-Cloud/opensre：构建自有AI SRE代理的开源工具包",
+          "url": "https://github.com/Tracer-Cloud/opensre",
+          "score": 6.2005,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+167★)"
+            }
+          ],
+          "tags": [
+            "sre",
+            "ai-operations",
+            "devops"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "czlonkowski/n8n-mcp",
+          "summary": "n8n MCP：为Claude等编码智能体构建n8n工作流的工具",
+          "url": "https://github.com/czlonkowski/n8n-mcp",
+          "score": 6.091,
+          "sources": [
+            {
+              "name": "GitHub trending:typescript (+94★)"
+            }
+          ],
+          "tags": [
+            "mcp",
+            "n8n",
+            "workflow-automation",
+            "coding-agents"
+          ],
+          "focusTopics": [
+            "coding-agents",
+            "tool-use"
+          ]
+        },
+        {
+          "title": "llm-anthropic 0.25",
+          "summary": "llm-anthropic 0.25版本发布，支持Claude 4.7模型并修复bug",
+          "url": "https://simonwillison.net/2026/Apr/16/llm-anthropic/#atom-everything",
+          "score": 6,
           "sources": [
             {
               "name": "Simon Willison"
@@ -554,31 +968,47 @@
           ],
           "tags": [
             "llm-tools",
-            "anthropic",
-            "claude",
-            "python-library"
+            "anthropic-api",
+            "python-library",
+            "simon-willison"
           ],
-          "focusTopics": [
-            "tool-use"
-          ]
+          "focusTopics": []
         },
         {
-          "title": "Making AI operational in constrained public sector environments",
-          "summary": "MIT Technology Review探讨AI在资源受限的公共部门环境中的实际部署挑战与策略",
-          "url": "https://www.technologyreview.com/2026/04/16/1135216/making-ai-operational-in-constrained-public-sector-environments/",
-          "score": 6.5,
+          "title": "I was told by Anthropic that they are looking at ways of fixing this, which is good.",
+          "summary": "Bluesky用户转述Anthropic正在研究修复某个问题的消息",
+          "url": "https://bsky.app/profile/emollick.bsky.social/post/3mjnt4ldvxs2k",
+          "score": 6,
           "sources": [
             {
-              "name": "technologyreview.com"
+              "name": "Bluesky:emollick.bsky.social"
             }
           ],
           "tags": [
-            "ai-deployment",
-            "public-sector",
-            "operational-ai",
-            "constraints"
+            "anthropic",
+            "bug-fix",
+            "community-update"
           ],
           "focusTopics": []
+        },
+        {
+          "title": "lukilabs/craft-agents-oss",
+          "summary": "lukilabs/craft-agents-oss：开源AI代理构建工具包",
+          "url": "https://github.com/lukilabs/craft-agents-oss",
+          "score": 5.685499999999999,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+107★)"
+            }
+          ],
+          "tags": [
+            "open-source",
+            "ai-agents",
+            "toolkit"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
         },
         {
           "title": "Qwen3.6-35B-A3B on my laptop drew me a better pelican than Claude Opus 4.7",
@@ -591,55 +1021,53 @@
             }
           ],
           "tags": [
+            "qwen",
             "image-generation",
-            "benchmark",
-            "local-llm",
-            "qwen"
+            "benchmark-comparison",
+            "local-ai"
           ],
           "focusTopics": []
         },
         {
-          "title": "With max thinking Opus 4.7 is quite impressive, with a real sense of style\n\nIn two prompts: \"impleme",
-          "summary": "Bluesky用户分享Claude Opus 4.7在创意任务中展现出色风格与思维深度的个人观察",
-          "url": "https://bsky.app/profile/emollick.bsky.social/post/3mjnuzt5jvs2k",
-          "score": 5.5,
+          "title": "getmaxun/maxun",
+          "summary": "Maxun：开源无代码平台，用于网页抓取、搜索和AI数据提取",
+          "url": "https://github.com/getmaxun/maxun",
+          "score": 5.226,
           "sources": [
             {
-              "name": "Bluesky:emollick.bsky.social"
+              "name": "GitHub trending:typescript (+84★)"
             }
           ],
           "tags": [
-            "claude-opus",
-            "creative-ai",
-            "reasoning",
-            "user-experience"
+            "web-scraping",
+            "no-code",
+            "data-extraction",
+            "open-source"
           ],
-          "focusTopics": [
-            "planning"
-          ]
+          "focusTopics": []
         },
         {
-          "title": "I was told by Anthropic that they are looking at ways of fixing this, which is good.",
-          "summary": "Bluesky用户透露Anthropic正在研究修复Claude模型中的特定问题",
-          "url": "https://bsky.app/profile/emollick.bsky.social/post/3mjnt4ldvxs2k",
-          "score": 5,
+          "title": "sirmalloc/ccstatusline",
+          "summary": "CCStatusline：Claude Code CLI的高度可定制状态栏工具",
+          "url": "https://github.com/sirmalloc/ccstatusline",
+          "score": 4.8715,
           "sources": [
             {
-              "name": "Bluesky:emollick.bsky.social"
+              "name": "GitHub trending:typescript (+131★)"
             }
           ],
           "tags": [
-            "anthropic",
-            "model-fixes",
-            "user-feedback",
-            "llm-improvement"
+            "claude-code",
+            "cli-tools",
+            "statusline",
+            "developer-tools"
           ],
           "focusTopics": [
-            "reflection"
+            "coding-agents"
           ]
         }
       ]
     }
   ],
-  "aiSummary": "今日AI领域动态：企业AI编码平台[Factory估值达15亿美元](#item-techcrunch-com-2026-04-16-factory-hits-1-5b-valuation-to-bui)，同时[扎克伯格正训练AI代理分担CEO职责](#item-bloomberg-com-news-newsletters-2026-04-16-mark-zuckerberg-is)。研究方面，新论文提出[心跳驱动的LLM认知模拟](#item-arxiv-org-abs-2604-14178)及[声明式控制LLM管道的Credo框架](#item-arxiv-org-abs-2604-14401)。工具更新包括[Anthropic发布Claude Opus 4.7](#item-mashable-com-article-anthropic-releases-claude-opus-4-7)和[谷歌为Chrome推出AI探索模式](#item-blog-google-products-and-platforms-products-search-ai-mode-c)。观点聚焦于[AI经济学如何服务公共利益](#item-nature-com-articles-s42256-026-01212-0)及[公共部门部署AI的挑战](#item-technologyreview-com-2026-04-16-1135216-making-ai-operationa)。"
+  "aiSummary": "今日AI领域，OpenAI推出针对药物发现的新AI模型[OpenAI Takes on Google With New AI Model Aimed at Drug Discovery](#item-bloomberg-com-news-articles-2026-04-16-openai-takes-on-googl)，正式与谷歌在该领域展开竞争。研究方面，新方法频出，例如通过信念和政策声明式控制LLM管道的[Credo框架](#item-arxiv-org-abs-2604-14401)，以及模拟人类认知的[心跳驱动自主思维调度方法](#item-arxiv-org-abs-2604-14178)。工具生态持续活跃，Anthropic发布了在各方面均有提升的[Claude Opus 4.7模型](#item-latent-space-p-ainews-anthropic-claude-opus-47-literally)，同时出现了将Claude Code转变为游戏开发工作室的[AI代理项目](#item-github-com-Donchitos-Claude-Code-Game-Studios)。观点与讨论聚焦于AI的社会影响，诺贝尔经济学奖得主警告[AI可能威胁‘有尊严的工作’](#item-bloomberg-com-news-articles-2026-04-16-ai-threatens-jobs-wit)，而《自然·机器智能》则探讨了[AI经济学如何服务于公共利益](#item-nature-com-articles-s42256-026-01212-0)。"
 }
