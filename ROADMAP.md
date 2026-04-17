@@ -66,6 +66,7 @@
 - ✅ GitHub Actions 工作流（周报每周一次 + 评测每天一次）
 - ✅ 主导航 "Code" tab
 - ✅ 两次历史迭代：`2026-04-13-code-weekly-more-editors`（覆盖更多编辑器）、`2026-04-13-code-weekly-visualization`（加图表）
+- 🪦 **2026-04-17 retired BigCodeBench (frozen 366d) and EvalPlus (frozen 478d) from live pipeline**. 两源 upstream 已事实死亡，再继续抓只是每天把死快照在 health log 里过一遍。数据以 `bigCodeBenchRetiredAt` / `evalPlusRetiredAt` 字段冻结在 `profile-data/benchmarks/latest.json` 作为历史存档；source 文件保留供未来复活或他人复用，但已从 `fetch-benchmarks.ts` 的 import 移除。前端 `/code/benchmarks` 本来就未渲染这两源，用户无感。
 
 ### 近期路线 (4-6 周)
 

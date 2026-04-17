@@ -1,5 +1,17 @@
 // EvalPlus — HumanEval+ & MBPP+ benchmark data
 // Source: https://evalplus.github.io/
+//
+// ⚠️ RETIRED 2026-04-17 — kept for historical reference only.
+// Upstream `results.json` was last updated 2024-12-26 (478 days frozen
+// as of retirement). We removed the import from `scripts/fetch-benchmarks.ts`
+// so the live pipeline no longer calls this file; the data we already
+// collected lives in `profile-data/benchmarks/latest.json` under
+// `evalPlus` + `evalPlusRetiredAt` as a frozen archive.
+//
+// Do NOT delete this file — the scraping logic is non-trivial and may
+// be useful if upstream ever resurrects, or if another project wants
+// to reuse it. If EvalPlus starts updating again, re-add the import
+// in fetch-benchmarks.ts and drop the `evalPlusRetiredAt` field.
 
 const DATA_URL = 'https://evalplus.github.io/results.json'
 const UA = 'KInfoGit-Code-Weekly'

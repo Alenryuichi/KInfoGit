@@ -25,10 +25,20 @@ import { BENCHMARKS_DIR, BENCHMARKS_HISTORY_DIR, BENCHMARKS_HEALTH_DIR } from '.
 import { fetchArenaRankings, fetchArenaPublishDate, type ArenaEntry } from './code-weekly/sources/arena-rankings'
 import { fetchAiderLeaderboard, type AiderEntry } from './code-weekly/sources/aider-leaderboard'
 import { fetchSweBench } from './code-weekly/sources/swe-bench'
-import { fetchBigCodeBench } from './code-weekly/sources/bigcodebench'
-import { fetchEvalPlus } from './code-weekly/sources/evalplus'
 import { fetchLiveCodeBench } from './code-weekly/sources/livecodebench'
 import { evaluate as evaluateHealth, appendHealthRecord } from './code-weekly/benchmarks-health'
+// NOTE: BigCodeBench and EvalPlus were retired from the live pipeline on
+// 2026-04-17. Upstream data had been frozen for 366d (BigCodeBench,
+// last updated 2025-04-16) and 478d (EvalPlus, last updated 2024-12-26)
+// respectively, meaning they provide no ongoing signal — we were just
+// round-tripping a dead snapshot through our health log every day.
+// The source files `scripts/code-weekly/sources/bigcodebench.ts` and
+// `…/evalplus.ts` are kept for historical reference (in case upstream
+// ever resurrects or another project wants the scraping logic), but
+// we no longer import them here. The data already collected stays in
+// `profile-data/benchmarks/latest.json` as a frozen archive with
+// `bigCodeBenchRetiredAt` / `evalPlusRetiredAt` markers; future runs
+// won't overwrite those fields.
 
 // ─── Types ─────────────────────────────────────────────────
 
@@ -39,10 +49,15 @@ interface BenchmarkSnapshot {
   aiderLastUpdated?: string
   sweBench: Array<{ model: string; resolved: number; org?: string }>
   sweBenchLastUpdated?: string
-  bigCodeBench: Array<{ model: string; passRate: number; completeRate: number; size?: number }>
+  // ─── Retired sources (kept as frozen archive, never overwritten) ─
+  // See top-of-file note. These are carried over from the previous
+  // snapshot verbatim so the archive in latest.json stays intact.
+  bigCodeBench?: Array<{ model: string; passRate: number; completeRate: number; size?: number }>
   bigCodeBenchLastUpdated?: string
-  evalPlus: Array<{ model: string; humanEvalPlus: number; mbppPlus: number; average: number; size?: number }>
+  bigCodeBenchRetiredAt?: string
+  evalPlus?: Array<{ model: string; humanEvalPlus: number; mbppPlus: number; average: number; size?: number }>
   evalPlusLastUpdated?: string
+  evalPlusRetiredAt?: string
   liveCodeBench: Array<{ model: string; passRate: number; easy?: number; medium?: number; hard?: number }>
   liveCodeBenchLastUpdated?: string
   notable: string
@@ -122,38 +137,29 @@ async function main() {
 
   const previous = loadPreviousSnapshot(benchDir)
 
-  // Fetch all 6 benchmarks + dates in parallel
+  // Fetch all live benchmarks + dates in parallel.
+  // BigCodeBench & EvalPlus were retired 2026-04-17 (see top-of-file note)
+  // — their last snapshot lives in latest.json as a frozen archive.
   console.log('📡 Fetching benchmark data...')
-  const [arenaR, aiderR, sweR, bcbR, epR, lcbR, dateR,
-    aiderDateR, bcbDateR, epDateR] = await Promise.allSettled([
+  const [arenaR, aiderR, sweR, lcbR, dateR, aiderDateR] = await Promise.allSettled([
     fetchArenaRankings(),
     fetchAiderLeaderboard(),
     fetchSweBench(),
-    fetchBigCodeBench(),
-    fetchEvalPlus(),
     fetchLiveCodeBench(),
     fetchArenaPublishDate(),
     fetchLastModified('https://aider.chat/docs/leaderboards/'),
-    fetchLastModified('https://bigcode-bench.github.io/results.json'),
-    fetchLastModified('https://evalplus.github.io/results.json'),
   ])
 
   const arenaRaw = arenaR.status === 'fulfilled' ? arenaR.value : []
   const aiderRaw = aiderR.status === 'fulfilled' ? aiderR.value : []
   const sweRaw = sweR.status === 'fulfilled' ? sweR.value : []
-  const bcbRaw = bcbR.status === 'fulfilled' ? bcbR.value : []
-  const epRaw = epR.status === 'fulfilled' ? epR.value : []
   const lcbRaw = lcbR.status === 'fulfilled' ? lcbR.value : []
   const arenaDate = dateR.status === 'fulfilled' ? dateR.value : undefined
   const aiderDate = aiderDateR.status === 'fulfilled' ? aiderDateR.value : undefined
-  const bcbDate = bcbDateR.status === 'fulfilled' ? bcbDateR.value : undefined
-  const epDate = epDateR.status === 'fulfilled' ? epDateR.value : undefined
 
   console.log(`  Arena Coding:    ${arenaRaw.length} models${arenaDate ? ` (${arenaDate})` : ''}`)
   console.log(`  Aider:           ${aiderRaw.length} models${aiderDate ? ` (${aiderDate})` : ''}`)
   console.log(`  SWE-bench:       ${sweRaw.length} models`)
-  console.log(`  BigCodeBench:    ${bcbRaw.length} models${bcbDate ? ` (${bcbDate})` : ''}`)
-  console.log(`  EvalPlus:        ${epRaw.length} models${epDate ? ` (${epDate})` : ''}`)
   console.log(`  LiveCodeBench:   ${lcbRaw.length} models`)
 
   // ─── Health check: decide whether the snapshot is safe to persist ─
@@ -179,16 +185,12 @@ async function main() {
       arena: arenaRaw.length,
       aider: aiderRaw.length,
       sweBench: sweRaw.length,
-      bigCodeBench: bcbRaw.length,
-      evalPlus: epRaw.length,
       liveCodeBench: lcbRaw.length,
     },
     previous: {
       arena: previous?.arenaRanking?.length ?? 0,
       aider: previous?.aiderLeaderboard?.length ?? 0,
       sweBench: previous?.sweBench?.length ?? 0,
-      bigCodeBench: previous?.bigCodeBench?.length ?? 0,
-      evalPlus: previous?.evalPlus?.length ?? 0,
       liveCodeBench: previous?.liveCodeBench?.length ?? 0,
     },
     // Only sources with a real Last-Modified signal get an age. Aider's
@@ -197,8 +199,6 @@ async function main() {
     // branch won't trigger anyway (only auxiliaries enter it).
     ages: {
       aider: ageInDays(aiderDate),
-      bigCodeBench: ageInDays(bcbDate),
-      evalPlus: ageInDays(epDate),
     },
     // Arena and Aider are the two sources that actually drive the
     // `/code/benchmarks` page above-the-fold. If either is empty we've
@@ -226,23 +226,17 @@ async function main() {
     return
   }
 
-  // ─── Fallback for failed or dead auxiliary sources ──────────────
-  // auxiliaryFallback covers two cases:
-  //   (a) source returned 0 rows this run but had data last time
-  //       (transient breakage — reuse previous rows so the section
-  //       doesn't disappear from the page);
-  //   (b) source has been upstream-dead for >staleHardDays (180d)
-  //       (effectively permanent — we'd be displaying stale rows
-  //       either way; this just bookkeeps it in the health log so
-  //       we have 30 days of data before physically removing the
-  //       source from config).
-  // BigCodeBench (last updated 2025-04-16) and EvalPlus (last updated
-  // 2024-12-26) currently live in bucket (b). If they keep landing in
-  // `stale` for the next 30d of runs, remove them from the fetch list.
+  // ─── Fallback for failed auxiliary sources ─────────────────────
+  // auxiliaryFallback covers: source returned 0 rows this run but had
+  // data last time (transient breakage — reuse previous rows so the
+  // section doesn't disappear from the page).
+  //
+  // Historical note: this also used to catch sources that were >180d
+  // stale upstream. BigCodeBench (frozen 366d) and EvalPlus (frozen
+  // 478d) lived in that bucket for 30+ days before we formally retired
+  // them on 2026-04-17 — see top-of-file note.
   const fbSet = new Set(health.auxiliaryFallback)
   const sweFinal  = fbSet.has('sweBench')      && previous ? previous.sweBench      : sweRaw
-  const bcbFinal  = fbSet.has('bigCodeBench')  && previous ? previous.bigCodeBench  : bcbRaw
-  const epFinal   = fbSet.has('evalPlus')      && previous ? previous.evalPlus      : epRaw
   const lcbFinal  = fbSet.has('liveCodeBench') && previous ? previous.liveCodeBench : lcbRaw
 
   // Calculate deltas for Arena & Aider (only run when we have fresh data)
@@ -269,10 +263,17 @@ async function main() {
     aiderLastUpdated: aiderDate,
     sweBench: sweFinal,
     sweBenchLastUpdated: undefined, // SWE-bench date is embedded in data, not HTTP header
-    bigCodeBench: bcbFinal,
-    bigCodeBenchLastUpdated: bcbDate,
-    evalPlus: epFinal,
-    evalPlusLastUpdated: epDate,
+    // ─── Retired archive: carry forward verbatim, never recompute ──
+    // These fields represent the last known state before retirement
+    // (2026-04-17). `bigCodeBenchRetiredAt` / `evalPlusRetiredAt` are
+    // seeded in latest.json itself; we just preserve them here so any
+    // downstream consumer reading the snapshot sees the full picture.
+    bigCodeBench: previous?.bigCodeBench,
+    bigCodeBenchLastUpdated: previous?.bigCodeBenchLastUpdated,
+    bigCodeBenchRetiredAt: previous?.bigCodeBenchRetiredAt ?? '2026-04-17',
+    evalPlus: previous?.evalPlus,
+    evalPlusLastUpdated: previous?.evalPlusLastUpdated,
+    evalPlusRetiredAt: previous?.evalPlusRetiredAt ?? '2026-04-17',
     liveCodeBench: lcbFinal,
     liveCodeBenchLastUpdated: undefined,
     notable: notableChanges.join('; ') || 'No significant changes',

@@ -1,5 +1,17 @@
 // BigCodeBench — hard practical coding benchmark data
 // Source: https://bigcode-bench.github.io/
+//
+// ⚠️ RETIRED 2026-04-17 — kept for historical reference only.
+// Upstream `results.json` was last updated 2025-04-16 (366 days frozen
+// as of retirement). We removed the import from `scripts/fetch-benchmarks.ts`
+// so the live pipeline no longer calls this file; the data we already
+// collected lives in `profile-data/benchmarks/latest.json` under
+// `bigCodeBench` + `bigCodeBenchRetiredAt` as a frozen archive.
+//
+// Do NOT delete this file — the scraping logic is non-trivial and may
+// be useful if upstream ever resurrects, or if another project wants
+// to reuse it. If BigCodeBench starts updating again, re-add the import
+// in fetch-benchmarks.ts and drop the `bigCodeBenchRetiredAt` field.
 
 const DATA_URL = 'https://bigcode-bench.github.io/results.json'
 const UA = 'KInfoGit-Code-Weekly'
