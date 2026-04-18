@@ -14,6 +14,9 @@
       "url": "https://www.youtube.com/watch?v=TCH_1BHY58I",
       "highlights": "This video demonstrates building a multilayer perceptron (MLP) for character-level language modeling, covering essential ML fundamentals like training, hyperparameter tuning, and evaluation. It provides practical insights into handling train/dev/test splits and diagnosing under/overfitting in neural networks.",
       "worthReading": "It's worth watching for hands-on implementation of MLPs with clear explanations of core machine learning concepts, making it accessible for both beginners and practitioners looking to solidify their understanding.",
+      "tags": [
+        "evaluation"
+      ],
       "type": "youtube"
     },
     {
@@ -27,6 +30,10 @@
       "url": "https://www.youtube.com/watch?v=P6sfmUTpUmc",
       "highlights": "This video examines the statistical challenges in training deep neural networks, focusing on how improperly scaled activations and gradients can cause instability. It introduces Batch Normalization as a key technique to stabilize training by normalizing layer inputs.",
       "worthReading": "Worth watching for its practical insights into diagnosing and fixing common deep learning training issues, presented by an expert with clear visualizations of internal network behavior.",
+      "tags": [
+        "fine-tuning",
+        "evaluation"
+      ],
       "type": "youtube"
     },
     {
@@ -40,6 +47,10 @@
       "url": "https://www.youtube.com/watch?v=q8SA3rM6ckI",
       "highlights": "This video demonstrates manual backpropagation through a complete 2-layer MLP with BatchNorm, covering gradients from cross entropy loss through embedding tables. It builds intuitive understanding of gradient flow at the tensor level, beyond scalar implementations like micrograd, while reinforcing core deep learning concepts.",
       "worthReading": "Essential viewing for developers wanting to move beyond autograd black boxes and truly understand gradient computation in neural networks, presented by one of the field's most effective educators.",
+      "tags": [
+        "agent",
+        "llm"
+      ],
       "type": "youtube"
     },
     {
@@ -53,6 +64,10 @@
       "url": "https://www.youtube.com/watch?v=t3YJ5hKiMQ0",
       "highlights": "This video demonstrates how to evolve a simple 2-layer MLP into a deeper, tree-like neural network architecture that resembles DeepMind's WaveNet (2016). It shows the practical implementation process using PyTorch's torch.nn module while explaining the underlying mechanics of deep learning development.",
       "worthReading": "It's worth watching because it provides a clear, hands-on walkthrough of building a complex neural network from simpler components, offering valuable insights into both PyTorch fundamentals and the architectural thinking behind influential models like WaveNet.",
+      "tags": [
+        "agent",
+        "llm"
+      ],
       "type": "youtube"
     },
     {
@@ -66,6 +81,10 @@
       "url": "https://www.youtube.com/watch?v=kCc8FmEb1nY",
       "highlights": "This video provides a hands-on coding tutorial where Andrej Karpathy builds a GPT model from scratch, implementing the transformer architecture described in 'Attention is All You Need' and connecting it to real-world applications like GPT-2/3 and ChatGPT. It demonstrates the practical implementation of autoregressive language modeling while showing GitHub Copilot (itself a GPT model) assisting in writing the code, creating a meta-learning experience.",
       "worthReading": "It's worth watching because it demystifies complex AI concepts through clear, practical coding examples and connects theoretical papers to real implementations, making advanced transformer architectures accessible to developers and enthusiasts.",
+      "tags": [
+        "llm",
+        "fine-tuning"
+      ],
       "type": "youtube"
     },
     {
@@ -79,6 +98,10 @@
       "url": "https://www.youtube.com/watch?v=zjkBMFhNj_g",
       "highlights": "This talk demystifies Large Language Models (LLMs) by explaining them as a new computing paradigm analogous to operating systems, where models like ChatGPT serve as the core technical component. It covers their fundamental workings, future trajectory, and unique security challenges in an accessible way for general audiences.",
       "worthReading": "Andrej Karpathy provides a clear, foundational understanding of LLMs from one of the field's leading educators, making complex concepts accessible while addressing practical implications and security considerations that remain highly relevant.",
+      "tags": [
+        "llm",
+        "safety"
+      ],
       "type": "youtube"
     },
     {
@@ -92,6 +115,10 @@
       "url": "https://www.youtube.com/watch?v=zduSFxRajkE",
       "highlights": "The video explains that tokenizers are a separate, crucial component in LLMs, using Byte Pair Encoding to translate between text and tokens. It demonstrates building the GPT tokenizer from scratch, highlighting its distinct training process and core encode/decode functions.",
       "worthReading": "Worth watching to understand a fundamental yet often overlooked part of how LLMs process text, presented clearly by an expert in the field.",
+      "tags": [
+        "llm",
+        "tooling"
+      ],
       "type": "youtube"
     },
     {
@@ -105,6 +132,10 @@
       "url": "https://www.youtube.com/watch?v=l8pRSuU81PU",
       "highlights": "This video provides a comprehensive, hands-on walkthrough of reproducing the GPT-2 (124M) model from scratch, covering network architecture, training optimization, and hyperparameter tuning based on original papers. It demonstrates the full training pipeline with practical implementation details and concludes with generated text samples to evaluate model performance.",
       "worthReading": "Worth watching for its educational value in understanding transformer-based language model implementation and training optimization, presented by a renowned AI educator with clear, practical demonstrations.",
+      "tags": [
+        "llm",
+        "fine-tuning"
+      ],
       "type": "youtube"
     },
     {
@@ -118,6 +149,11 @@
       "url": "https://www.youtube.com/watch?v=7xTGNNLPyMI",
       "highlights": "This video provides a comprehensive overview of how Large Language Models like ChatGPT are developed, covering the full training stack from data collection to deployment. It also offers practical mental models for understanding their 'psychology' and optimizing their use in real-world applications.",
       "worthReading": "Worth watching because Andrej Karpathy, a leading AI researcher, delivers an accessible yet thorough explanation that bridges technical depth with practical application insights, making complex LLM concepts understandable for general audiences.",
+      "tags": [
+        "llm",
+        "fine-tuning",
+        "deployment"
+      ],
       "type": "youtube"
     },
     {
@@ -131,6 +167,11 @@
       "url": "https://www.youtube.com/watch?v=EWvNQjAaOHw",
       "highlights": "The video provides a practical, example-driven walkthrough of how to effectively use Large Language Models in daily life, covering everything from basic interactions to understanding pricing tiers and model selection. It demystifies the growing LLM ecosystem by showing concrete applications and explaining when to use different models.",
       "worthReading": "Andrej Karpathy's expertise and clear teaching style make complex AI concepts accessible, offering actionable insights for both beginners and experienced users looking to optimize their LLM usage.",
+      "tags": [
+        "llm",
+        "agent",
+        "tooling"
+      ],
       "type": "youtube"
     }
   ],
@@ -265,6 +306,69 @@
         "agent",
         "tooling"
       ]
+    },
+    {
+      "type": "x",
+      "id": "2002118205729562949",
+      "url": "https://x.com/karpathy/status/2002118205729562949",
+      "author": {
+        "handle": "karpathy",
+        "displayName": "Andrej Karpathy",
+        "avatar": "https://avatars.githubusercontent.com/karpathy"
+      },
+      "content": "LLMs are emerging as a new kind of intelligence, simultaneously a lot smarter than I expected and a lot dumber than I expected. In any case they",
+      "createdAt": "2026-04-18T04:01:00.260Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "LLMs represent a novel form of intelligence that defies simple categorization, exhibiting surprising capabilities alongside significant limitations.",
+      "worthReading": "Captures the nuanced, paradoxical nature of current LLM capabilities in a concise observation.",
+      "tags": [
+        "llm",
+        "evaluation"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2015883857489522876",
+      "url": "https://x.com/karpathy/status/2015883857489522876",
+      "author": {
+        "handle": "karpathy",
+        "displayName": "Andrej Karpathy",
+        "avatar": "https://avatars.githubusercontent.com/karpathy"
+      },
+      "content": "A few random notes from claude coding quite a bit last few weeks. Coding workflow. Given the latest lift in LLM",
+      "createdAt": "2026-04-18T04:01:00.260Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Shares practical insights and observations from extensive recent experience using Claude for coding, focusing on workflow improvements.",
+      "worthReading": "Provides firsthand experience on integrating LLMs into real-world coding practices.",
+      "tags": [
+        "llm",
+        "tooling"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2031135152349524125",
+      "url": "https://x.com/karpathy/status/2031135152349524125",
+      "author": {
+        "handle": "karpathy",
+        "displayName": "Andrej Karpathy",
+        "avatar": "https://avatars.githubusercontent.com/karpathy"
+      },
+      "content": "Three days ago I left autoresearch tuning nanochat for ~2 days on depth=12 model.",
+      "createdAt": "2026-04-18T04:01:00.260Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Describes an experiment with automated research (autoresearch) for fine-tuning a model called 'nanochat' over an extended period.",
+      "worthReading": "Demonstrates practical application of automated AI research and fine-tuning techniques.",
+      "tags": [
+        "agent",
+        "fine-tuning"
+      ]
     }
   ],
   "dailyCounts": [
@@ -293,11 +397,11 @@
     0,
     0,
     0,
-    0,
     3,
     3,
     0,
-    0
+    0,
+    3
   ],
-  "interestSummary": "Andrej Karpathy is currently focused on building personal knowledge bases using LLMs and is actively experimenting with and tuning small language models like nanochat through automated research. He is also reflecting on the surprising and contradictory capabilities of emerging LLM intelligence."
+  "interestSummary": "He is focused on building personal knowledge bases using LLMs and is actively experimenting with and tuning small language models like nanochat. His recent work also involves evaluating LLM capabilities and integrating them into coding workflows."
 }

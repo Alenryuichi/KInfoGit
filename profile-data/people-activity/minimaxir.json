@@ -16,6 +16,8 @@
         "multi-modal",
         "deployment"
       ],
+      "score": 7,
+      "scoreReason": "Strong relevance for multimodal fine-tuning on Apple Silicon (frontier AI), good concreteness with specific technical implementation, moderate freshness with decent star count but not yet established",
       "type": "github"
     },
     {
@@ -37,6 +39,8 @@
       "tags": [
         "tooling"
       ],
+      "score": 2,
+      "scoreReason": "Freshness: 1 (established chess library with modest star growth, not AI-focused), Relevance: 0 (chess library unrelated to frontier AI topics), Concreteness: 1 (concrete chess implementation but not AI innovation)",
       "type": "github"
     }
   ],
@@ -193,6 +197,81 @@
       "highlights": "A tweet with significant views (468) but no visible text content in the provided snippet.",
       "worthReading": "Suggests the post garnered attention, but the subject matter is unclear.",
       "tags": []
+    },
+    {
+      "type": "x",
+      "id": "1943173189372399719",
+      "url": "https://twitter.com/minimaxir/status/1943173189372399719",
+      "author": {
+        "handle": "minimaxir",
+        "displayName": "Max Woolf",
+        "avatar": "https://avatars.githubusercontent.com/minimaxir"
+      },
+      "content": "Impressive model based on a few minutes of playing, but disappointing to see no mention at all of a model card, red teaming, yesterday's incident,",
+      "createdAt": "2026-04-18T04:03:08.087Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Critiques a new AI model for lacking transparency documentation (model card) and safety testing (red teaming), while acknowledging its technical performance.",
+      "worthReading": "Highlights the ongoing tension between rapid AI development and responsible practices like documentation and safety evaluation.",
+      "tags": [
+        "safety",
+        "evaluation"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2029982443026223510",
+      "url": "https://x.com/minimaxir/status/2029982443026223510",
+      "author": {
+        "handle": "minimaxir",
+        "displayName": "Max Woolf",
+        "avatar": "https://avatars.githubusercontent.com/minimaxir"
+      },
+      "content": "me irl",
+      "createdAt": "2026-03-06",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "A personal, casual post indicating activity on the platform.",
+      "worthReading": "Shows the user's presence and engagement on the platform.",
+      "tags": []
+    },
+    {
+      "type": "x",
+      "id": "1825584262311186616",
+      "url": "https://x.com/minimaxir/status/1825584262311186616",
+      "author": {
+        "handle": "minimaxir",
+        "displayName": "Max Woolf",
+        "avatar": "https://avatars.githubusercontent.com/minimaxir"
+      },
+      "content": "",
+      "createdAt": "2026-04-18T04:03:08.087Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "A post with engagement (likes) but no text content visible in the snippet.",
+      "worthReading": "Indicates user activity, though the specific content or topic is not captured.",
+      "tags": []
+    },
+    {
+      "type": "x",
+      "id": "2019510645180494156",
+      "url": "https://x.com/minimaxir/status/2019510645180494156",
+      "author": {
+        "handle": "minimaxir",
+        "displayName": "Max Woolf",
+        "avatar": "https://avatars.githubusercontent.com/minimaxir"
+      },
+      "content": "",
+      "createdAt": "2026-04-18T04:03:08.087Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "A post with views but no text content visible in the snippet.",
+      "worthReading": "Indicates user activity, though the specific content or topic is not captured.",
+      "tags": []
     }
   ],
   "dailyCounts": [
@@ -214,7 +293,6 @@
     0,
     0,
     0,
-    0,
     1,
     0,
     1,
@@ -225,7 +303,8 @@
     4,
     4,
     0,
-    0
+    0,
+    4
   ],
-  "interestSummary": "Max Woolf's recent activity shows a strong interest in AI model fine-tuning and development tools, particularly for multimodal applications on Apple Silicon, and a parallel interest in chess engine programming. His social media posts also indicate a focus on responsible AI development practices, specifically emphasizing model documentation and safety testing."
+  "interestSummary": "Max Woolf is currently focused on multimodal AI fine-tuning, particularly on Apple Silicon, and has a technical interest in chess engine development. His social media activity also shows a strong concern for AI safety practices, transparency, and responsible model releases."
 }

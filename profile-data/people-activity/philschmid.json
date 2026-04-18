@@ -1,6 +1,101 @@
 {
   "id": "philschmid",
-  "stars": [],
+  "stars": [
+    {
+      "repo": "millionco/claude-doctor",
+      "url": "https://github.com/millionco/claude-doctor",
+      "description": "Diagnose your Claude Code sessions",
+      "language": "TypeScript",
+      "stargazersCount": 198,
+      "starredBy": "philschmid",
+      "highlights": "This project provides diagnostic tools for Claude Code sessions, helping developers identify issues and optimize their interactions with Claude's coding capabilities. It offers session analysis and debugging features specifically tailored for Claude's code generation workflows.",
+      "worthReading": "It addresses a practical need for developers working with Claude's coding features, providing insights that can improve productivity and code quality.",
+      "topics": [
+        "claude",
+        "code",
+        "doctor"
+      ],
+      "tags": [
+        "tooling",
+        "evaluation"
+      ],
+      "score": 6,
+      "scoreReason": "Freshness: moderate (young repo with rising traction, 198 stars); Relevance: high (AI dev tooling for Claude Code sessions); Concreteness: moderate (concrete diagnostic tool but somewhat narrow scope)",
+      "type": "github"
+    },
+    {
+      "repo": "ashwwwin/automation-mcp",
+      "url": "https://github.com/ashwwwin/automation-mcp",
+      "description": "Control your Mac with detailed mouse, keyboard, screen, and window management capabilities.",
+      "language": "TypeScript",
+      "stargazersCount": 386,
+      "starredBy": "philschmid",
+      "highlights": "This project implements a Model Context Protocol (MCP) server that enables LLMs to control macOS systems through detailed mouse, keyboard, screen, and window management capabilities. It provides granular automation tools for desktop interaction, bridging AI systems with physical computer control.",
+      "worthReading": "It demonstrates practical LLM-to-system integration for automation workflows, offering a concrete example of how AI can directly manipulate desktop environments beyond simple API calls.",
+      "topics": [
+        "mcp",
+        "mcp-server"
+      ],
+      "tags": [
+        "agent",
+        "tooling"
+      ],
+      "score": 7,
+      "scoreReason": "Freshness: Young repo with moderate stars gaining traction (386 stars). Relevance: Directly addresses frontier AI (MCP server for agent control). Concreteness: Concrete implementation for Mac automation with specific capabilities.",
+      "type": "github"
+    },
+    {
+      "repo": "omaclaren/pi-markdown-preview",
+      "url": "https://github.com/omaclaren/pi-markdown-preview",
+      "description": "Rendered markdown + LaTeX preview for pi",
+      "language": "TypeScript",
+      "stargazersCount": 39,
+      "starredBy": "philschmid",
+      "highlights": "This project provides a markdown and LaTeX preview tool specifically designed for the Raspberry Pi platform, enabling real-time rendering of technical documentation with mathematical notation. It offers a lightweight solution for developers working with technical content on resource-constrained devices.",
+      "worthReading": "It demonstrates practical TypeScript implementation for embedded systems and addresses the specific needs of Raspberry Pi users who require markdown with mathematical formula support.",
+      "topics": [],
+      "tags": [
+        "tooling"
+      ],
+      "score": 2,
+      "scoreReason": "Low relevance (markdown/LaTeX preview tool, not frontier AI) and low freshness (39 stars with no indication of recent traction), though concrete in implementation.",
+      "type": "github"
+    },
+    {
+      "repo": "nicobailon/pi-subagents",
+      "url": "https://github.com/nicobailon/pi-subagents",
+      "description": "Pi extension for async subagent delegation with truncation, artifacts, and session sharing",
+      "language": "TypeScript",
+      "stargazersCount": 796,
+      "starredBy": "philschmid",
+      "highlights": "This TypeScript project extends the Pi framework to enable asynchronous subagent delegation with features like truncation, artifact management, and session sharing. It provides a structured approach to distributing AI agent workloads while maintaining context and resource efficiency.",
+      "worthReading": "With nearly 800 stars, it demonstrates practical implementation of agent delegation patterns that could benefit developers building complex AI agent systems.",
+      "topics": [],
+      "tags": [
+        "agent",
+        "deployment",
+        "tooling"
+      ],
+      "score": 7,
+      "scoreReason": "Freshness: Young repo with moderate stars gaining traction; Relevance: Directly addresses frontier AI (agent delegation/LLM infra); Concreteness: Describes specific technical features (truncation, artifacts, session sharing)",
+      "type": "github"
+    },
+    {
+      "repo": "espennilsen/pi",
+      "url": "https://github.com/espennilsen/pi",
+      "description": "",
+      "language": "TypeScript",
+      "stargazersCount": 91,
+      "starredBy": "philschmid",
+      "highlights": "The espennilsen/pi repository appears to be a TypeScript project focused on mathematical or computational implementations, likely related to Pi calculations or mathematical constants. With 91 stars, it demonstrates community interest in numerical computation or algorithm optimization.",
+      "worthReading": "It's worth exploring for developers interested in mathematical algorithms, TypeScript implementations of computational methods, or educational code examples for numerical computing.",
+      "topics": [],
+      "tags": [],
+      "score": 2,
+      "scoreReason": "Repository lacks description and topics, making relevance and concreteness unverifiable; moderate freshness from recent star gain but insufficient information for higher scoring.",
+      "type": "github"
+    }
+  ],
   "posts": [],
   "videos": [],
   "blogs": [],
@@ -82,6 +177,48 @@
       "highlights": "An optimistic reflection on the accelerating pace of innovation and development capabilities.",
       "worthReading": "Captures the mindset of rapid progress in technology creation.",
       "tags": []
+    },
+    {
+      "type": "x",
+      "id": "2036089130933752231",
+      "url": "https://x.com/_philschmid/status/2036089130933752231",
+      "author": {
+        "handle": "philschmid",
+        "displayName": "Philipp Schmid",
+        "avatar": "https://avatars.githubusercontent.com/philschmid"
+      },
+      "content": "Vibe-coding in Google AI Studio: my tips to prompt better and create amazing apps. dev.to.",
+      "createdAt": "2026-04-18T04:04:03.796Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Shares practical tips for improving prompting and app development using Google AI Studio.",
+      "worthReading": "Offers actionable advice for developers working with AI tools.",
+      "tags": [
+        "llm",
+        "tooling"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2037924497563505058",
+      "url": "https://x.com/_philschmid/status/2037924497563505058",
+      "author": {
+        "handle": "philschmid",
+        "displayName": "Philipp Schmid",
+        "avatar": "https://avatars.githubusercontent.com/philschmid"
+      },
+      "content": "I read three technical reports from Moonshot AI's Kimi K2.5 paper, Cursor's Composer 2 report and blog post, and Chroma's Context-1 write-up",
+      "createdAt": "2026-04-18T04:04:03.796Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Engages with recent technical AI research and development reports from multiple companies.",
+      "worthReading": "Shows awareness of cutting-edge AI research and tooling developments.",
+      "tags": [
+        "llm",
+        "tooling"
+      ]
     }
   ],
   "dailyCounts": [
@@ -110,11 +247,11 @@
     0,
     0,
     0,
-    0,
     2,
-    2,
+    3,
+    4,
     0,
-    0
+    2
   ],
-  "interestSummary": "Their recent focus is on practical implementation of the Gemma 4 model using Google's tools, specifically the Gemini API and Google AI Studio. They also express a broader interest in the accelerating pace of technological creation and development."
+  "interestSummary": "Philipp Schmid's recent focus is on exploring new AI models and developer tools, particularly Google's Gemma 4 and various AI coding assistants, while also sharing practical deployment guides and insights from technical AI research."
 }

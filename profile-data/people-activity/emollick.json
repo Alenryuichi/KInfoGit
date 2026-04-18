@@ -411,6 +411,193 @@
         "infra"
       ],
       "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:flxq4uyjfotciovpw3x3fxnu/app.bsky.feed.post/3mjknv6macs24",
+      "url": "https://bsky.app/profile/emollick.bsky.social/post/3mjknv6macs24",
+      "author": {
+        "handle": "emollick.bsky.social",
+        "displayName": "Ethan Mollick",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:flxq4uyjfotciovpw3x3fxnu/bafkreigq63ljumc43yx5eoxchrq75d72irea6ddcceedwmdttxebyowc3q"
+      },
+      "content": "Instead of the gold standard, we can, as a thought experiment, imagine an inference standard of exchange, the FLOP. (As opposed to tokens, this accounts for AI ability)\n\nWith some AI help, I figure $1 buys roughly 10^17 managed-LLM inference FLOPs\n\nSo that $4 coffee would cost half an exaFLOP, choom",
+      "createdAt": "2026-04-15T19:45:46.528Z",
+      "likeCount": 27,
+      "replyCount": 3,
+      "repostCount": 0,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [
+        "llm",
+        "infra"
+      ],
+      "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:flxq4uyjfotciovpw3x3fxnu/app.bsky.feed.post/3mjkf7wy6g224",
+      "url": "https://bsky.app/profile/emollick.bsky.social/post/3mjkf7wy6g224",
+      "author": {
+        "handle": "emollick.bsky.social",
+        "displayName": "Ethan Mollick",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:flxq4uyjfotciovpw3x3fxnu/bafkreigq63ljumc43yx5eoxchrq75d72irea6ddcceedwmdttxebyowc3q"
+      },
+      "content": "This is becoming a pattern in AI that makes talking about capabilities challenging.\n\nFirst, there are overstated claims (like the flubbed Erdos problems that were announced last year), then minor wins (AI helps with discovery) then breakthroughs. \n\nThe first stage feels like (& often is) hype, but…",
+      "createdAt": "2026-04-15T17:10:43.950Z",
+      "likeCount": 63,
+      "replyCount": 7,
+      "repostCount": 7,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [
+        "evaluation"
+      ],
+      "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:flxq4uyjfotciovpw3x3fxnu/app.bsky.feed.post/3mjn7p6kfqk2k",
+      "url": "https://bsky.app/profile/emollick.bsky.social/post/3mjn7p6kfqk2k",
+      "author": {
+        "handle": "emollick.bsky.social",
+        "displayName": "Ethan Mollick",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:flxq4uyjfotciovpw3x3fxnu/bafkreigq63ljumc43yx5eoxchrq75d72irea6ddcceedwmdttxebyowc3q"
+      },
+      "content": "I think the adaptive thinking requirement in the new Claude Opus 4.7 is bad in the ways that all AI effort routers are bad, but magnified by the fact that there is no manual override like in ChatGPT.\n\nIt regularly decides that non-math/code stuff is \"low effort\" & produces worse results.",
+      "createdAt": "2026-04-16T20:09:51.971Z",
+      "likeCount": 46,
+      "replyCount": 1,
+      "repostCount": 3,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [
+        "llm",
+        "evaluation"
+      ],
+      "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:flxq4uyjfotciovpw3x3fxnu/app.bsky.feed.post/3mjn64oh34k2k",
+      "url": "https://bsky.app/profile/emollick.bsky.social/post/3mjn64oh34k2k",
+      "author": {
+        "handle": "emollick.bsky.social",
+        "displayName": "Ethan Mollick",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:flxq4uyjfotciovpw3x3fxnu/bafkreigq63ljumc43yx5eoxchrq75d72irea6ddcceedwmdttxebyowc3q"
+      },
+      "content": "I have found that asking for a sestina regularly triggers Opus 4.7's safety guardrails.\n\nThe forbidden poetic form!",
+      "createdAt": "2026-04-16T19:41:37.361Z",
+      "likeCount": 55,
+      "replyCount": 7,
+      "repostCount": 3,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [
+        "safety",
+        "llm"
+      ],
+      "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:flxq4uyjfotciovpw3x3fxnu/app.bsky.feed.post/3mjmpufvxu22d",
+      "url": "https://bsky.app/profile/emollick.bsky.social/post/3mjmpufvxu22d",
+      "author": {
+        "handle": "emollick.bsky.social",
+        "displayName": "Ethan Mollick",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:flxq4uyjfotciovpw3x3fxnu/bafkreigq63ljumc43yx5eoxchrq75d72irea6ddcceedwmdttxebyowc3q"
+      },
+      "content": "Claude remains irreducibly Claude, across many generations. If you know, you know.\n\n(The fact that models have distinct personalities that are consistent across generations is technically interesting, it also makes it easy to use new releases when they come along, because they feel very similar).",
+      "createdAt": "2026-04-16T15:26:27.592Z",
+      "likeCount": 56,
+      "replyCount": 5,
+      "repostCount": 3,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [
+        "llm",
+        "evaluation"
+      ],
+      "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:flxq4uyjfotciovpw3x3fxnu/app.bsky.feed.post/3mjnuzt5jvs2k",
+      "url": "https://bsky.app/profile/emollick.bsky.social/post/3mjnuzt5jvs2k",
+      "author": {
+        "handle": "emollick.bsky.social",
+        "displayName": "Ethan Mollick",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:flxq4uyjfotciovpw3x3fxnu/bafkreigq63ljumc43yx5eoxchrq75d72irea6ddcceedwmdttxebyowc3q"
+      },
+      "content": "With max thinking Opus 4.7 is quite impressive, with a real sense of style\n\nIn two prompts: \"implement the Tower of Babel, in 3D, in as sophisticated and visually interesting a way as possible. It should be interactive\" and then \"make it better.\" \n\nPlay: tower-of-babel-1776392618.netlify.app",
+      "createdAt": "2026-04-17T02:31:37.692Z",
+      "likeCount": 46,
+      "replyCount": 3,
+      "repostCount": 6,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [
+        "llm",
+        "multi-modal"
+      ],
+      "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:flxq4uyjfotciovpw3x3fxnu/app.bsky.feed.post/3mjnt4ldvxs2k",
+      "url": "https://bsky.app/profile/emollick.bsky.social/post/3mjnt4ldvxs2k",
+      "author": {
+        "handle": "emollick.bsky.social",
+        "displayName": "Ethan Mollick",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:flxq4uyjfotciovpw3x3fxnu/bafkreigq63ljumc43yx5eoxchrq75d72irea6ddcceedwmdttxebyowc3q"
+      },
+      "content": "I was told by Anthropic that they are looking at ways of fixing this, which is good.",
+      "createdAt": "2026-04-17T01:57:22.692Z",
+      "likeCount": 41,
+      "replyCount": 2,
+      "repostCount": 1,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [
+        "safety"
+      ],
+      "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:flxq4uyjfotciovpw3x3fxnu/app.bsky.feed.post/3mjp54naxi22k",
+      "url": "https://bsky.app/profile/emollick.bsky.social/post/3mjp54naxi22k",
+      "author": {
+        "handle": "emollick.bsky.social",
+        "displayName": "Ethan Mollick",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:flxq4uyjfotciovpw3x3fxnu/bafkreigq63ljumc43yx5eoxchrq75d72irea6ddcceedwmdttxebyowc3q"
+      },
+      "content": "I'll give Anthropic credit for moving quickly. Opus 4.7 Adaptive Thinking now triggers thinking much more often, including for the tasks it failed at yesterday. That also means it is doing a lot more web search.\n\nSo far, a large improvement in output quality on non-coding tasks.",
+      "createdAt": "2026-04-17T14:29:01.848Z",
+      "likeCount": 66,
+      "replyCount": 3,
+      "repostCount": 0,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [
+        "llm",
+        "evaluation"
+      ],
+      "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:flxq4uyjfotciovpw3x3fxnu/app.bsky.feed.post/3mjqcavsqyc2k",
+      "url": "https://bsky.app/profile/emollick.bsky.social/post/3mjqcavsqyc2k",
+      "author": {
+        "handle": "emollick.bsky.social",
+        "displayName": "Ethan Mollick",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:flxq4uyjfotciovpw3x3fxnu/bafkreigq63ljumc43yx5eoxchrq75d72irea6ddcceedwmdttxebyowc3q"
+      },
+      "content": "A major lesson to take away from Opus 4.7 is that, while there is a lot of arguments about implementation and personality, models keep improving measurably on economically important tasks with each release (which are accelerating, it has been two months since Opus 4.6), with no signs of slowdown",
+      "createdAt": "2026-04-18T01:33:33.485Z",
+      "likeCount": 65,
+      "replyCount": 5,
+      "repostCount": 3,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [
+        "llm",
+        "evaluation"
+      ],
+      "type": "bluesky"
     }
   ],
   "videos": [],
@@ -577,10 +764,112 @@
         "llm",
         "tooling"
       ]
+    },
+    {
+      "type": "x",
+      "id": "2026285200531955745",
+      "url": "https://x.com/emollick/status/2026285200531955745",
+      "author": {
+        "handle": "emollick",
+        "displayName": "Ethan Mollick",
+        "avatar": null
+      },
+      "content": "As stories about AI increasingly become stories of either catastrophe or salvation,",
+      "createdAt": "2026-04-18T04:04:26.677Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Observes that AI narratives are polarized between extreme optimism and pessimism.",
+      "worthReading": "Highlights the binary framing in public discourse about AI's impact.",
+      "tags": [
+        "safety"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2011523783467958585",
+      "url": "https://x.com/emollick/status/2011523783467958585",
+      "author": {
+        "handle": "emollick",
+        "displayName": "Ethan Mollick",
+        "avatar": null
+      },
+      "content": "Teaching an experimental class for MBAs on 'vibefounding,' the students have four days to come up and",
+      "createdAt": "2026-04-18T04:04:26.677Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Describes an experimental MBA course focused on rapid startup ideation and development.",
+      "worthReading": "Shows innovative educational approaches integrating entrepreneurship with AI-era concepts.",
+      "tags": [
+        "deployment"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2026350291537334672",
+      "url": "https://x.com/emollick/status/2026350291537334672",
+      "author": {
+        "handle": "emollick",
+        "displayName": "Ethan Mollick",
+        "avatar": null
+      },
+      "content": "I guarantee that any industry expert, with a little time and effort, can make a better (or at least more focused) skill than the default",
+      "createdAt": "2026-04-18T04:04:26.677Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Asserts that domain experts can create more effective, tailored AI skills than generic defaults.",
+      "worthReading": "Emphasizes the value of specialized knowledge in customizing AI tools.",
+      "tags": [
+        "fine-tuning",
+        "tooling"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2021638881158857204",
+      "url": "https://x.com/emollick/status/2021638881158857204",
+      "author": {
+        "handle": "emollick",
+        "displayName": "Ethan Mollick",
+        "avatar": null
+      },
+      "content": "I pointed Claude Cowork at a set of 107 documents (PPTs, Word docs, Excel) that were initially",
+      "createdAt": "2026-04-18T04:04:26.677Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Shares a practical experiment using Claude Cowork to process a large collection of mixed-format documents.",
+      "worthReading": "Demonstrates real-world application of AI for document analysis and synthesis.",
+      "tags": [
+        "rag",
+        "tooling"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "1964447221853966775",
+      "url": "https://x.com/emollick/status/1964447221853966775",
+      "author": {
+        "handle": "emollick",
+        "displayName": "Ethan Mollick",
+        "avatar": null
+      },
+      "content": "We are starting to see some nuanced discussions of what it means to work with advanced AI In this",
+      "createdAt": "2026-04-18T04:04:26.677Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Notes emerging, more sophisticated conversations about human-AI collaboration.",
+      "worthReading": "Points to evolving understanding of AI integration in professional and creative work.",
+      "tags": [
+        "agent",
+        "deployment"
+      ]
     }
   ],
   "dailyCounts": [
-    0,
     0,
     0,
     0,
@@ -607,9 +896,10 @@
     2,
     3,
     7,
-    4,
-    0,
-    0
+    6,
+    3,
+    3,
+    6
   ],
-  "interestSummary": "Ethan Mollick's recent focus is on analyzing the capabilities and societal risks of frontier AI models, particularly Anthropic's Claude Mythos, with a strong emphasis on cybersecurity threats and the concentrated power of leading AI labs. He is also observing the impact of AI on creative industries, education, and public discourse, noting shifts toward style over substance and the practical challenges of AI integration."
+  "interestSummary": "Ethan Mollick is intensely focused on analyzing frontier AI models like Claude's Mythos release, particularly their advanced capabilities, cybersecurity implications, and societal impact. His recent commentary also covers AI's influence on education, writing style, and the evolving dynamics within the AI industry and research landscape."
 }

@@ -20,6 +20,8 @@
       "tags": [
         "tooling"
       ],
+      "score": 5,
+      "scoreReason": "Moderate freshness (established repo with visualization focus), high relevance (deep learning tooling), moderate concreteness (visualization library but not frontier AI)",
       "type": "github"
     }
   ],
@@ -190,10 +192,93 @@
       "tags": [
         "infra"
       ]
+    },
+    {
+      "type": "x",
+      "id": "1716181162354442450",
+      "url": "https://x.com/StasBekman/status/1716181162354442450",
+      "author": {
+        "handle": "stas00",
+        "displayName": "Stas Bekman",
+        "avatar": "https://avatars.githubusercontent.com/stas00"
+      },
+      "content": "I have been compiling LLM/VLM training logbooks/chronicles. This is the one of the best sources to...",
+      "createdAt": "2026-04-18T04:03:40.405Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Stas Bekman is compiling training logbooks/chronicles for LLMs and VLMs, which he considers a valuable resource.",
+      "worthReading": "Provides insight into practical documentation and tracking of AI model training processes.",
+      "tags": [
+        "llm",
+        "evaluation"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "1875242682689450060",
+      "url": "https://x.com/StasBekman/status/1875242682689450060",
+      "author": {
+        "handle": "stas00",
+        "displayName": "Stas Bekman",
+        "avatar": "https://avatars.githubusercontent.com/stas00"
+      },
+      "content": "The @PyTorch team are working on a new super important tool: https://t.co/rnfpDuvgOI",
+      "createdAt": "2026-04-18T04:03:40.405Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Highlights the PyTorch team's development of a new important tool, likely related to machine learning infrastructure.",
+      "worthReading": "Shows engagement with core ML tooling developments and community updates.",
+      "tags": [
+        "tooling",
+        "infra"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2014578754782409106",
+      "url": "https://x.com/StasBekman/status/2014578754782409106",
+      "author": {
+        "handle": "stas00",
+        "displayName": "Stas Bekman",
+        "avatar": "https://avatars.githubusercontent.com/stas00"
+      },
+      "content": "Thanks to an awesome contribution from @omarnomad The Machine Learning Engineering Open book now can...",
+      "createdAt": "2026-04-18T04:03:40.405Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Acknowledges a contribution to the Machine Learning Engineering Open book, indicating community collaboration on educational resources.",
+      "worthReading": "Demonstrates support for open knowledge sharing in ML engineering.",
+      "tags": [
+        "tooling",
+        "deployment"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "1991318358453821818",
+      "url": "https://x.com/StasBekman/status/1991318358453821818",
+      "author": {
+        "handle": "stas00",
+        "displayName": "Stas Bekman",
+        "avatar": "https://avatars.githubusercontent.com/stas00"
+      },
+      "content": "To remind - this is the memory saving you get when enabling TiledMLP :) Left: normal memory...",
+      "createdAt": "2026-04-18T04:03:40.405Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Discusses memory savings achieved by enabling TiledMLP, a technical optimization for ML models.",
+      "worthReading": "Offers practical insight into memory efficiency techniques for ML systems.",
+      "tags": [
+        "infra",
+        "tooling"
+      ]
     }
   ],
   "dailyCounts": [
-    0,
     0,
     0,
     0,
@@ -223,8 +308,7 @@
     4,
     0,
     0,
-    0,
-    0
+    4
   ],
-  "interestSummary": "Stas Bekman is currently focused on deep learning optimization tools and libraries, specifically exploring and troubleshooting frameworks like Microsoft DeepSpeed's ZeRO++ and Flash Attention 4 (FA4), while also contributing to open educational resources for machine learning engineering."
+  "interestSummary": "Stas Bekman is currently focused on deep learning training technologies, specifically exploring and troubleshooting frameworks like DeepSpeed's ZeRO++ and PyTorch's Flash Attention 4. He is also curating resources on LLM/VLM training and contributing to open educational materials on machine learning engineering."
 }

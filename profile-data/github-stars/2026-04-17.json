@@ -1,0 +1,62 @@
+{
+  "date": "2026-04-17",
+  "stars": [
+    {
+      "repo": "smol-machines/smolvm",
+      "url": "https://github.com/smol-machines/smolvm",
+      "description": "Tool to build & run portable, lightweight, self-contained virtual machines.",
+      "language": "Rust",
+      "stargazersCount": 1013,
+      "starredBy": "simonw",
+      "highlights": "Enables creation of portable, lightweight virtual machines optimized for container-like workloads with minimal overhead. Built in Rust for performance and safety, it provides a self-contained runtime environment ideal for deployment scenarios.",
+      "worthReading": "It addresses infrastructure efficiency challenges in AI/ML deployment by offering a streamlined virtualization solution that could optimize resource usage for model serving and tool execution.",
+      "topics": [
+        "containers",
+        "crun",
+        "libkrun",
+        "microvm",
+        "rust",
+        "virtual-machine"
+      ],
+      "tags": [
+        "infra",
+        "deployment"
+      ],
+      "score": 6,
+      "scoreReason": "Moderate freshness with growing traction, strong relevance to AI infrastructure/deployment needs, and high concreteness as a working tool."
+    },
+    {
+      "repo": "tarekziade/loopsleuth",
+      "url": "https://github.com/tarekziade/loopsleuth",
+      "description": "Quadratic complexity detection",
+      "language": "Rust",
+      "stargazersCount": 6,
+      "starredBy": "pcuenca",
+      "highlights": "Loopsleuth is a Rust tool that detects quadratic complexity patterns in code, helping developers identify performance bottlenecks before they cause issues. It provides static analysis to catch inefficient nested loops and similar patterns that can degrade application performance.",
+      "worthReading": "This tool addresses a common but often overlooked performance problem in software development, making it valuable for optimizing code efficiency across various domains.",
+      "topics": [],
+      "tags": [
+        "tooling"
+      ],
+      "score": 4,
+      "scoreReason": "Moderate relevance to AI tooling but low freshness with only 6 stars and no clear AI frontier focus beyond general development utilities."
+    },
+    {
+      "repo": "huggingface/hf-hub",
+      "url": "https://github.com/huggingface/hf-hub",
+      "description": "Rust client for the huggingface hub aiming for minimal subset of features over `huggingface-hub` python package",
+      "language": "Rust",
+      "stargazersCount": 285,
+      "starredBy": "sayakpaul",
+      "highlights": "Provides a Rust client for the Hugging Face Hub, offering a minimal subset of features compared to the Python package. Enables Rust developers to interact with Hugging Face's model repository and datasets efficiently.",
+      "worthReading": "It addresses the growing need for Rust tooling in the AI ecosystem, making Hugging Face resources accessible to Rust developers working on performance-critical applications.",
+      "topics": [],
+      "tags": [
+        "tooling",
+        "infra"
+      ],
+      "score": 6,
+      "scoreReason": "Moderate freshness with rising traction in Rust AI tooling, high relevance for AI infrastructure, and good concreteness as a functional Rust client."
+    }
+  ]
+}

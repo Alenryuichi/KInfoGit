@@ -16,6 +16,8 @@
         "multi-modal",
         "deployment"
       ],
+      "score": 8,
+      "scoreReason": "High freshness (multimodal fine-tuning on Apple Silicon is novel and gaining traction), high relevance (frontier AI tooling for multimodal LLMs), high concreteness (specific implementation with PyTorch and Metal Performance Shaders)",
       "type": "github"
     },
     {
@@ -39,6 +41,8 @@
         "llm",
         "tooling"
       ],
+      "score": 8,
+      "scoreReason": "High relevance as frontier AI memory system with concrete benchmark claims, moderate freshness due to Simonw's recent star despite high existing star count, strong concreteness with specific performance claims.",
       "type": "github"
     },
     {
@@ -54,6 +58,33 @@
       "tags": [
         "tooling"
       ],
+      "score": 3,
+      "scoreReason": "Freshness: 2 (young repo with moderate stars but not rapid growth), Relevance: 1 (PDF library is general utility, not frontier AI), Concreteness: 0 (vague description lacking concrete AI artifact or benchmark)",
+      "type": "github"
+    },
+    {
+      "repo": "smol-machines/smolvm",
+      "url": "https://github.com/smol-machines/smolvm",
+      "description": "Tool to build & run portable, lightweight, self-contained virtual machines.",
+      "language": "Rust",
+      "stargazersCount": 1013,
+      "starredBy": "simonw",
+      "highlights": "Enables creation of portable, lightweight virtual machines optimized for container-like workloads with minimal overhead. Built in Rust for performance and safety, it provides a self-contained runtime environment ideal for deployment scenarios.",
+      "worthReading": "It addresses infrastructure efficiency challenges in AI/ML deployment by offering a streamlined virtualization solution that could optimize resource usage for model serving and tool execution.",
+      "topics": [
+        "containers",
+        "crun",
+        "libkrun",
+        "microvm",
+        "rust",
+        "virtual-machine"
+      ],
+      "tags": [
+        "infra",
+        "deployment"
+      ],
+      "score": 6,
+      "scoreReason": "Moderate freshness with growing traction, strong relevance to AI infrastructure/deployment needs, and high concreteness as a working tool.",
       "type": "github"
     }
   ],
@@ -120,6 +151,91 @@
         "tooling"
       ],
       "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mjkfkgva5c2d",
+      "url": "https://bsky.app/profile/simonwillison.net/post/3mjkfkgva5c2d",
+      "author": {
+        "handle": "simonwillison.net",
+        "displayName": "Simon Willison",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
+      },
+      "content": "The example prompt for Google's new Gemini Flash TTS text-to-speed model is a lot simonwillison.net/2026/Apr/15/...",
+      "createdAt": "2026-04-15T17:16:36.177Z",
+      "likeCount": 60,
+      "replyCount": 9,
+      "repostCount": 7,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [
+        "llm",
+        "multi-modal"
+      ],
+      "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mjl5u4uq6s2r",
+      "url": "https://bsky.app/profile/simonwillison.net/post/3mjl5u4uq6s2r",
+      "author": {
+        "handle": "simonwillison.net",
+        "displayName": "Simon Willison",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
+      },
+      "content": "A claude.ai feature I really like is you can tell it to \"clone x/y from GitHub\" and it can then answer questions about a repo, or use snippets of code from that repo to help build new artifacts - used that just now to solve a minor friction simonwillison.net/2026/Apr/16/...",
+      "createdAt": "2026-04-16T00:31:31.023Z",
+      "likeCount": 34,
+      "replyCount": 3,
+      "repostCount": 0,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [
+        "llm",
+        "tooling"
+      ],
+      "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mjmwls7yek2h",
+      "url": "https://bsky.app/profile/simonwillison.net/post/3mjmwls7yek2h",
+      "author": {
+        "handle": "simonwillison.net",
+        "displayName": "Simon Willison",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
+      },
+      "content": "Shocking result on my pelican benchmark this morning, I got a better pelican from a 21GB local Qwen3.6-35B-A3B running on my laptop than I did from the new Opus 4.7!\n\nsimonwillison.net/2026/Apr/16/...\n\nQwen on the left, Opus on the right",
+      "createdAt": "2026-04-16T17:26:54.703Z",
+      "likeCount": 120,
+      "replyCount": 12,
+      "repostCount": 11,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [
+        "llm",
+        "evaluation",
+        "deployment"
+      ],
+      "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mjq57sww3226",
+      "url": "https://bsky.app/profile/simonwillison.net/post/3mjq57sww3226",
+      "author": {
+        "handle": "simonwillison.net",
+        "displayName": "Simon Willison",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
+      },
+      "content": "Join us at PyCon US 2026 in Long Beach—we have new AI and security tracks this year simonwillison.net/2026/Apr/17/...",
+      "createdAt": "2026-04-18T00:03:28.212Z",
+      "likeCount": 17,
+      "replyCount": 3,
+      "repostCount": 3,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [
+        "agent",
+        "safety"
+      ],
+      "type": "bluesky"
     }
   ],
   "videos": [],
@@ -142,6 +258,26 @@
       "summary": "<p>Meta <a href=\"https://ai.meta.com/blog/introducing-muse-spark-msl/\">announced Muse Spark</a> today, their first model release since Llama 4 <a href=\"https://simonwillison.net/2025/Apr/5/llama-4-notes/\">almost exactly a year ago</a>. It's hosted, not open weights, and the API is currently \"a...",
       "highlights": "Meta's Muse Spark represents their first major model release in about a year, following Llama 4. Unlike previous models, Muse Spark is a hosted service rather than open weights, indicating a shift in Meta's AI deployment strategy.",
       "worthReading": "The post provides timely analysis of Meta's strategic pivot in AI model distribution and highlights new tools available through meta.ai chat that developers and researchers should explore.",
+      "type": "blog"
+    },
+    {
+      "title": "Qwen3.6-35B-A3B on my laptop drew me a better pelican than Claude Opus 4.7",
+      "url": "https://simonwillison.net/2026/Apr/16/qwen-beats-opus/#atom-entries",
+      "author": "Simon Willison",
+      "publishedAt": "2026-04-16T17:16:52+00:00",
+      "summary": "<p>For anyone who has been (inadvisably) taking my <a href=\"https://simonwillison.net/tags/pelican-riding-a-bicycle/\">pelican riding a bicycle benchmark</a> seriously as a robust way to test models, here are pelicans from this morning's two big model releases - <a...",
+      "highlights": "The post demonstrates that the Qwen3.6-35B-A3B model, running locally on a laptop, generated a more accurate or aesthetically pleasing image of a pelican riding a bicycle compared to the larger, cloud-based Claude Opus 4.7 model. This highlights the rapid progress in open-source, locally runnable AI models that can now compete with or surpass leading proprietary models in specific creative tasks.",
+      "worthReading": "It offers a tangible, visual comparison of recent model capabilities, challenging assumptions about the necessity of large, cloud-based models for creative AI tasks and showcasing the practical potential of local AI deployment.",
+      "type": "blog"
+    },
+    {
+      "title": "Join us at PyCon US 2026 in Long Beach - we have new AI and security tracks this year",
+      "url": "https://simonwillison.net/2026/Apr/17/pycon-us-2026/#atom-entries",
+      "author": "Simon Willison",
+      "publishedAt": "2026-04-17T23:59:03+00:00",
+      "summary": "<p>This year's <a href=\"https://us.pycon.org/2026/\">PyCon US</a> is coming up next month from May 13th to May 19th, with the core conference talks from Friday 15th to Sunday 17th and tutorial and sprint days either side. It's in Long Beach, California this year, the first time PyCon US has come to...",
+      "highlights": "PyCon US 2026 introduces dedicated AI and security tracks, reflecting Python's growing role in these critical domains. The conference expands beyond traditional Python development to address emerging technical challenges and opportunities.",
+      "worthReading": "It provides timely information about new AI-focused conference tracks for Python developers interested in staying current with industry trends.",
       "type": "blog"
     }
   ],
@@ -227,10 +363,91 @@
         "agent",
         "evaluation"
       ]
+    },
+    {
+      "type": "x",
+      "id": "1639691902357483520",
+      "url": "https://x.com/simonw/status/1639691902357483520",
+      "author": {
+        "handle": "simonw",
+        "displayName": "Simon Willison",
+        "avatar": "https://avatars.githubusercontent.com/simonw"
+      },
+      "content": "If you're just starting to learn software engineering right now but you're considering dropping it",
+      "createdAt": "2026-04-18T04:01:17.594Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Addresses challenges for beginners in software engineering, suggesting persistence despite difficulties.",
+      "worthReading": "Provides encouragement and perspective for new developers facing learning curves.",
+      "tags": [
+        "tooling"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "1976989054240800798",
+      "url": "https://x.com/simonw/status/1976989054240800798",
+      "author": {
+        "handle": "simonw",
+        "displayName": "Simon Willison",
+        "avatar": "https://avatars.githubusercontent.com/simonw"
+      },
+      "content": "I'm beginning to suspect that a key skill in working effectively with coding agents is developing an intuition for when you don't need to",
+      "createdAt": "2026-04-18T04:01:17.594Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Highlights the importance of discernment in using AI coding agents, focusing on when not to rely on them.",
+      "worthReading": "Offers practical insight into optimizing human-AI collaboration in coding workflows.",
+      "tags": [
+        "agent"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2008298185962512763",
+      "url": "https://x.com/simonw/status/2008298185962512763",
+      "author": {
+        "handle": "simonw",
+        "displayName": "Simon Willison",
+        "avatar": "https://avatars.githubusercontent.com/simonw"
+      },
+      "content": "This seems like a good bet to me - coding agents make it no longer remotely excusable to skip out on",
+      "createdAt": "2026-04-18T04:01:17.594Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Argues that AI coding agents reduce excuses for avoiding certain development tasks, emphasizing accountability.",
+      "worthReading": "Encourages leveraging AI tools to improve software engineering practices and responsibility.",
+      "tags": [
+        "agent",
+        "tooling"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "1970147806225854531",
+      "url": "https://x.com/simonw/status/1970147806225854531",
+      "author": {
+        "handle": "simonw",
+        "displayName": "Simon Willison",
+        "avatar": "https://avatars.githubusercontent.com/simonw"
+      },
+      "content": "It's interesting how 'better at code' has become the defining goal of almost every AI lab over the",
+      "createdAt": "2026-04-18T04:01:17.594Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Observes the trend in AI research prioritizing code generation and improvement as a primary objective.",
+      "worthReading": "Reflects on the direction of AI development and its focus on programming capabilities.",
+      "tags": [
+        "agent",
+        "llm"
+      ]
     }
   ],
   "dailyCounts": [
-    0,
     0,
     0,
     0,
@@ -257,9 +474,10 @@
     0,
     0,
     2,
+    3,
     2,
-    0,
-    0
+    1,
+    5
   ],
-  "interestSummary": "Simon Willison is focused on evaluating and experimenting with cutting-edge AI models and tools, particularly multimodal systems, memory architectures, and developer-focused applications. His recent activity shows a strong interest in AI safety discourse, model benchmarking, and practical libraries for working with AI and data formats like PDFs."
+  "interestSummary": "Simon Willison is currently focused on evaluating and experimenting with the latest AI models and tools, particularly through his \"pelican\" benchmark and analysis of new releases from Anthropic, Meta, and Google. His interests also include practical AI applications for coding, memory systems, and developer tools, as well as promoting AI and security discussions at events like PyCon."
 }

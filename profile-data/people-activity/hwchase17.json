@@ -4,6 +4,92 @@
   "posts": [],
   "videos": [],
   "blogs": [],
+  "xPosts": [
+    {
+      "type": "x",
+      "id": "2021261552222158955",
+      "url": "https://x.com/hwchase17/status/2021261552222158955",
+      "author": {
+        "handle": "hwchase17",
+        "displayName": "Harrison Chase",
+        "avatar": "https://avatars.githubusercontent.com/hwchase17"
+      },
+      "content": "TL;DR: More and more agents need a workspace: a computer where they can run code, install packages, and access files. Sandboxes provide this",
+      "createdAt": "2026-04-18T04:01:37.441Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Agents increasingly require dedicated workspaces with computational resources and file access, which sandbox environments can provide.",
+      "worthReading": "It highlights the growing infrastructure needs for running AI agents effectively.",
+      "tags": [
+        "agent",
+        "infra"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2011814697889316930",
+      "url": "https://x.com/hwchase17/status/2011814697889316930",
+      "author": {
+        "handle": "hwchase17",
+        "displayName": "Harrison Chase",
+        "avatar": "https://avatars.githubusercontent.com/hwchase17"
+      },
+      "content": "We launched LangSmith Agent Builder this week as a no-code way to build agents. A key part of Agent builder is it's memory system.",
+      "createdAt": "2026-04-18T04:01:37.441Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "LangSmith Agent Builder offers a no-code platform for agent creation, with memory systems being a crucial component.",
+      "worthReading": "It announces a significant tool that simplifies agent development for non-technical users.",
+      "tags": [
+        "agent",
+        "tooling"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2013641863123870133",
+      "url": "https://x.com/hwchase17/status/2013641863123870133",
+      "author": {
+        "handle": "hwchase17",
+        "displayName": "Harrison Chase",
+        "avatar": "https://avatars.githubusercontent.com/hwchase17"
+      },
+      "content": "When building agents, you need to iterate on production data much more than when building traditional software. You need to iterate on how",
+      "createdAt": "2026-04-18T04:01:37.441Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Agent development requires more iterative testing with real production data compared to traditional software development.",
+      "worthReading": "It emphasizes the unique development lifecycle and testing requirements for AI agents.",
+      "tags": [
+        "agent",
+        "deployment"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2027094058330656814",
+      "url": "https://x.com/hwchase17/status/2027094058330656814",
+      "author": {
+        "handle": "hwchase17",
+        "displayName": "Harrison Chase",
+        "avatar": "https://avatars.githubusercontent.com/hwchase17"
+      },
+      "content": "Traditional Application Performance Monitoring (APM) tools focus on metrics like latency, traffic, errors, and saturation. They track HTTP",
+      "createdAt": "2026-04-18T04:01:37.442Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Standard APM tools measure conventional performance indicators but may not fully address the monitoring needs of AI agents.",
+      "worthReading": "It suggests a gap in existing monitoring solutions for the specific requirements of agent-based systems.",
+      "tags": [
+        "agent",
+        "evaluation"
+      ]
+    }
+  ],
   "dailyCounts": [
     0,
     0,
@@ -34,7 +120,7 @@
     0,
     0,
     0,
-    0
+    4
   ],
-  "interestSummary": ""
+  "interestSummary": "Harrison Chase is focused on the development and infrastructure for AI agents, emphasizing the need for dedicated workspaces and sandboxes. He is also promoting LangSmith's new Agent Builder tool and discussing the unique requirements for monitoring and iterating on agent-based applications."
 }

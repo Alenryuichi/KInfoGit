@@ -181,7 +181,9 @@
       "repostCount": 0,
       "highlights": "",
       "worthReading": "",
-      "tags": [],
+      "tags": [
+        "deployment"
+      ],
       "type": "bluesky"
     },
     {
@@ -201,6 +203,90 @@
       "worthReading": "",
       "tags": [
         "fine-tuning",
+        "evaluation"
+      ],
+      "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:brkj2yocng7vtggmyujy4khq/app.bsky.feed.post/3mjkjrlibv22k",
+      "url": "https://bsky.app/profile/natolambert.bsky.social/post/3mjkjrlibv22k",
+      "author": {
+        "handle": "natolambert.bsky.social",
+        "displayName": "Nathan Lambert",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:brkj2yocng7vtggmyujy4khq/bafkreibrwiekumktnfukcbrl2w7emcft4icv2zlt6vxnorfwmwlwlzepqm"
+      },
+      "content": "I spent some time trying to distill all the complex factors impacting open models -- economics, capabilities, distribution, policy, etc. -- into a clear list of beliefs. Here they are in full.\nwww.interconnects.ai/p/my-bets-on...",
+      "createdAt": "2026-04-15T18:32:10.844Z",
+      "likeCount": 24,
+      "replyCount": 1,
+      "repostCount": 4,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [
+        "llm",
+        "deployment"
+      ],
+      "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:brkj2yocng7vtggmyujy4khq/app.bsky.feed.post/3mjn7igj4ft2y",
+      "url": "https://bsky.app/profile/natolambert.bsky.social/post/3mjn7igj4ft2y",
+      "author": {
+        "handle": "natolambert.bsky.social",
+        "displayName": "Nathan Lambert",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:brkj2yocng7vtggmyujy4khq/bafkreibrwiekumktnfukcbrl2w7emcft4icv2zlt6vxnorfwmwlwlzepqm"
+      },
+      "content": "New video! Talking through my 10+ open model pieces from early 2026 and how they fit together. They're all trying to figure out where open models go next.\nwww.youtube.com/watch?v=hKIX...",
+      "createdAt": "2026-04-16T20:06:04.540Z",
+      "likeCount": 6,
+      "replyCount": 1,
+      "repostCount": 2,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [
+        "llm",
+        "evaluation"
+      ],
+      "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:brkj2yocng7vtggmyujy4khq/app.bsky.feed.post/3mjmnlzo7wk22",
+      "url": "https://bsky.app/profile/natolambert.bsky.social/post/3mjmnlzo7wk22",
+      "author": {
+        "handle": "natolambert.bsky.social",
+        "displayName": "Nathan Lambert",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:brkj2yocng7vtggmyujy4khq/bafkreibrwiekumktnfukcbrl2w7emcft4icv2zlt6vxnorfwmwlwlzepqm"
+      },
+      "content": "Opus 4.7 has a new tokenizer. \nThis means it's also a new base model.\nGlory days of pretraining still very much going.",
+      "createdAt": "2026-04-16T14:45:58.821Z",
+      "likeCount": 78,
+      "replyCount": 4,
+      "repostCount": 4,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [
+        "llm",
+        "fine-tuning"
+      ],
+      "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:brkj2yocng7vtggmyujy4khq/app.bsky.feed.post/3mjmnl5b45h2r",
+      "url": "https://bsky.app/profile/natolambert.bsky.social/post/3mjmnl5b45h2r",
+      "author": {
+        "handle": "natolambert.bsky.social",
+        "displayName": "Nathan Lambert",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:brkj2yocng7vtggmyujy4khq/bafkreibrwiekumktnfukcbrl2w7emcft4icv2zlt6vxnorfwmwlwlzepqm"
+      },
+      "content": "The current pace of token-efficient reasoning improvements across minor Claude Opus/GPT model versions is pretty wild. All signs point to this continuing.\n\n4.6 to 4.7 could've been presented as a fairly large model bump in the past with this plot.",
+      "createdAt": "2026-04-16T14:45:29.030Z",
+      "likeCount": 24,
+      "replyCount": 0,
+      "repostCount": 4,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [
+        "llm",
         "evaluation"
       ],
       "type": "bluesky"
@@ -237,10 +323,19 @@
       "highlights": "The post offers a personal update on Nathan Lambert's multifaceted contributions to AI/ML, including the ATOM Report for technical insights, a post-training course for practical education, and his book for broader dissemination of knowledge. It highlights the importance of bridging research, education, and community engagement in advancing the field.",
       "worthReading": "It provides a concise overview of current projects from an active researcher, useful for those interested in AI/ML trends, educational resources, or community contributions.",
       "type": "blog"
+    },
+    {
+      "title": "My bets on open models, mid-2026",
+      "url": "https://www.interconnects.ai/p/my-bets-on-open-models-mid-2026",
+      "author": "Nathan Lambert",
+      "publishedAt": "Wed, 15 Apr 2026 18:20:00 GMT",
+      "summary": "What I expect to come next and why, focused on the open-closed gap.",
+      "highlights": "The author predicts that by mid-2026, the gap between open and closed AI models will significantly narrow, with open models achieving performance parity in key areas. This shift is expected to be driven by advancements in training efficiency, data curation, and collaborative development within the open-source community.",
+      "worthReading": "It offers a forward-looking perspective on the evolving AI landscape, grounded in technical trends, making it valuable for developers, researchers, and anyone interested in the future of accessible AI technology.",
+      "type": "blog"
     }
   ],
   "dailyCounts": [
-    0,
     0,
     0,
     0,
@@ -267,9 +362,10 @@
     1,
     0,
     2,
-    0,
+    1,
+    3,
     0,
     0
   ],
-  "interestSummary": "Nathan Lambert is focused on the release and promotion of his upcoming book on Reinforcement Learning from Human Feedback, while also analyzing trends in open model adoption and expressing concern for the future sustainability of the open AI ecosystem."
+  "interestSummary": "Nathan Lambert is focused on the development, adoption, and economic challenges of open-source AI models, while also finalizing and promoting his upcoming book and companion course on Reinforcement Learning from Human Feedback."
 }

@@ -20,6 +20,62 @@
         "deployment",
         "tooling"
       ],
+      "score": 7,
+      "scoreReason": "Freshness: Young repo (903 stars) gaining traction with recent star from notable AI leader; Relevance: Directly addresses practical LLM infrastructure (model memory estimation); Concreteness: Concrete CLI tool with specific functionality for Hugging Face models.",
+      "type": "github"
+    },
+    {
+      "repo": "DWarez/kernels_bench",
+      "url": "https://github.com/DWarez/kernels_bench",
+      "description": "",
+      "language": "Python",
+      "stargazersCount": 9,
+      "starredBy": "sayakpaul",
+      "highlights": "This project appears to benchmark computational kernels, likely focusing on performance comparisons of core operations in Python. It provides a framework for evaluating execution speed and efficiency across different implementations or hardware configurations.",
+      "worthReading": "For developers working on performance-critical applications, it offers insights into optimizing computational kernels and understanding performance trade-offs.",
+      "topics": [],
+      "tags": [
+        "evaluation",
+        "tooling"
+      ],
+      "score": 2,
+      "scoreReason": "Low freshness (9 stars, no description suggests minimal traction), moderate relevance (Python kernels could relate to AI but unclear), low concreteness (no description or topics makes assessment impossible).",
+      "type": "github"
+    },
+    {
+      "repo": "vllm-project/tpu-inference",
+      "url": "https://github.com/vllm-project/tpu-inference",
+      "description": "TPU inference for vLLM, with unified JAX and PyTorch support.",
+      "language": "Python",
+      "stargazersCount": 290,
+      "starredBy": "sayakpaul",
+      "highlights": "Enables high-performance TPU inference for vLLM, offering unified support for both JAX and PyTorch backends. This allows efficient large language model serving on Google's specialized hardware.",
+      "worthReading": "It addresses a key infrastructure gap by bringing vLLM's optimized serving capabilities to TPU hardware, which is valuable for production deployments requiring scale.",
+      "topics": [],
+      "tags": [
+        "infra",
+        "deployment"
+      ],
+      "score": 7,
+      "scoreReason": "High relevance for frontier AI (TPU inference for vLLM), moderate freshness (young repo gaining traction at 290 stars), good concreteness (unified JAX/PyTorch support for concrete implementation)",
+      "type": "github"
+    },
+    {
+      "repo": "huggingface/hf-hub",
+      "url": "https://github.com/huggingface/hf-hub",
+      "description": "Rust client for the huggingface hub aiming for minimal subset of features over `huggingface-hub` python package",
+      "language": "Rust",
+      "stargazersCount": 285,
+      "starredBy": "sayakpaul",
+      "highlights": "Provides a Rust client for the Hugging Face Hub, offering a minimal subset of features compared to the Python package. Enables Rust developers to interact with Hugging Face's model repository and datasets efficiently.",
+      "worthReading": "It addresses the growing need for Rust tooling in the AI ecosystem, making Hugging Face resources accessible to Rust developers working on performance-critical applications.",
+      "topics": [],
+      "tags": [
+        "tooling",
+        "infra"
+      ],
+      "score": 6,
+      "scoreReason": "Moderate freshness with rising traction in Rust AI tooling, high relevance for AI infrastructure, and good concreteness as a functional Rust client.",
       "type": "github"
     }
   ],
@@ -138,6 +194,27 @@
       "highlights": "Sayak Paul expresses that giving a talk was an extremely fulfilling personal experience.",
       "worthReading": "Shows personal enthusiasm for public speaking and knowledge sharing in the AI community.",
       "tags": []
+    },
+    {
+      "type": "x",
+      "id": "2044802837146943750",
+      "url": "https://x.com/RisingSayak/status/2044802837146943750",
+      "author": {
+        "handle": "sayakpaul",
+        "displayName": "Sayak Paul",
+        "avatar": "https://avatars.githubusercontent.com/sayakpaul"
+      },
+      "content": "Working at Hugging Face over the past 3.5+ years has allowed me to identify what technical areas truly interest me! In turn, that has allowed me to directly",
+      "createdAt": "2026-04-18T04:03:52.433Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Reflection on career growth at Hugging Face helping identify genuine technical interests and enabling direct application of those interests.",
+      "worthReading": "Provides insight into professional development and technical focus areas of a Hugging Face engineer.",
+      "tags": [
+        "infra",
+        "tooling"
+      ]
     }
   ],
   "dailyCounts": [
@@ -166,11 +243,11 @@
     0,
     0,
     0,
-    0,
     4,
-    3,
-    0,
-    0
+    4,
+    1,
+    1,
+    1
   ],
-  "interestSummary": "Sayak Paul is focused on diffusion models and text-to-image generation, including discussions on their current state and related data practices. He is also engaged with tools for estimating model resource requirements."
+  "interestSummary": "Sayak Paul's recent focus is on diffusion models and text-to-image generation, alongside a strong technical interest in efficient model inference, tooling for the Hugging Face ecosystem, and exploring TPU support for vLLM."
 }

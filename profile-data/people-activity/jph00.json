@@ -15,6 +15,8 @@
         "llm",
         "tooling"
       ],
+      "score": 6,
+      "scoreReason": "Freshness: high (young repo with low star count gaining traction from notable AI leader jph00). Relevance: moderate (educational neural network implementation bridging concepts, but not cutting-edge frontier AI). Concreteness: moderate (concrete educational artifact but not novel benchmark or approach).",
       "type": "github"
     }
   ],
@@ -31,6 +33,10 @@
       "url": "https://www.youtube.com/watch?v=e9tL_Eg3fpM",
       "highlights": "The video discusses Fast.ai's evolution into Answer.ai and introduces 'Dialogue Engineering' as a novel approach to coding with AI. It emphasizes moving beyond traditional prompt engineering to more interactive, conversational methods that enhance AI-assisted development.",
       "worthReading": "This video is worth watching for developers interested in cutting-edge AI coding techniques, as it offers insights from industry leaders on practical applications and future directions of AI in software development.",
+      "tags": [
+        "agent",
+        "llm"
+      ],
       "type": "youtube"
     },
     {
@@ -44,6 +50,10 @@
       "url": "https://www.youtube.com/watch?v=YKeXxj4geRo",
       "highlights": "The video introduces a novel, unexpected approach to combining AI with coding that differs from conventional methods, promising a fresh perspective on problem-solving with code. It also offers preview access to a new tool developed by the creators, suggesting practical applications of this innovative methodology.",
       "worthReading": "It's worth watching because it presents a groundbreaking AI-coding integration from a respected educator in the field, Jeremy Howard, and provides exclusive early access to a new tool that could enhance coding practices.",
+      "tags": [
+        "agent",
+        "tooling"
+      ],
       "type": "youtube"
     },
     {
@@ -57,6 +67,9 @@
       "url": "https://www.youtube.com/watch?v=EtZ4pEzPMcc",
       "highlights": "MonsterUI is a Python library that enables rapid development of professional web applications by integrating modern UI frameworks like Tailwind and DaisyUI with minimal code. It demonstrates creating responsive layouts and dynamic components through live coding examples, requiring zero configuration for immediate productivity.",
       "worthReading": "This video is valuable for Python developers seeking to build polished web interfaces quickly, as it showcases practical implementations that reduce development time while maintaining high-quality UI standards.",
+      "tags": [
+        "tooling"
+      ],
       "type": "youtube"
     },
     {
@@ -70,6 +83,9 @@
       "url": "https://www.youtube.com/watch?v=LDklFaxssFE",
       "highlights": "Sarah Pan demonstrates that teenagers can master complex GPU programming from scratch, creating efficient AI systems without relying on high-level frameworks. Her work highlights the accessibility of low-level hardware optimization for AI development, challenging assumptions about expertise requirements in the field.",
       "worthReading": "This video showcases exceptional youth talent in AI while providing practical insights into GPU programming fundamentals that even experienced developers can learn from.",
+      "tags": [
+        "infra"
+      ],
       "type": "youtube"
     },
     {
@@ -83,6 +99,9 @@
       "url": "https://www.youtube.com/watch?v=m-GOZSi2R_Q",
       "highlights": "Solveit is an AI platform that enables users to solve complex problems by leveraging machine learning models without extensive coding. The video demonstrates practical applications, such as automating data analysis and generating insights from unstructured data, showcasing its accessibility for non-experts.",
       "worthReading": "It's worth watching to see real-world examples of how Solveit simplifies AI implementation, making advanced technology accessible for practical problem-solving in various domains.",
+      "tags": [
+        "tooling"
+      ],
       "type": "youtube"
     },
     {
@@ -96,6 +115,10 @@
       "url": "https://www.youtube.com/watch?v=bxDDLMe6KuU",
       "highlights": "The Solveit platform addresses a key limitation of current AI code generation tools: while LLMs can quickly produce working code, they often create complex solutions that users don't understand, making modification and maintenance difficult. Solveit takes a different approach by focusing on generating understandable, maintainable code that users can actually work with and modify when needed.",
       "worthReading": "This video is worth watching because it presents a practical solution to a real problem developers face with AI-generated code, and Jeremy Howard's clear explanation makes complex technical concepts accessible to both technical and non-technical audiences.",
+      "tags": [
+        "llm",
+        "tooling"
+      ],
       "type": "youtube"
     },
     {
@@ -109,6 +132,11 @@
       "url": "https://www.youtube.com/watch?v=WJS2YDZO-vc",
       "highlights": "The video critiques the trend of prioritizing AI-generated code volume over software craftsmanship, warning that excessive reliance on AI coding tools may undermine long-term system maintainability and understanding. Chris Lattner draws from his experience creating foundational systems like LLVM and Swift to emphasize the importance of building durable, comprehensible software rather than chasing metrics like lines of code produced.",
       "worthReading": "This discussion offers a rare perspective from one of the most influential figures in modern programming language design, challenging the prevailing hype around AI coding tools with practical wisdom about sustainable software development.",
+      "tags": [
+        "agent",
+        "llm",
+        "tooling"
+      ],
       "type": "youtube"
     },
     {
@@ -122,6 +150,10 @@
       "url": "https://www.youtube.com/watch?v=U5akUYqCqnA",
       "highlights": "The video demonstrates a practical workflow for understanding complex machine learning papers using LLMs, specifically applying it to Yann LeCun's LeJEPA paper. It shows how to set context, request summaries and explanations, explore source code repositories, and build interactive demos to develop intuition for the paper's concepts.",
       "worthReading": "It's worth watching for researchers and practitioners who want to efficiently grasp dense academic papers, as it provides a concrete, tool-assisted methodology that can be applied to other technical literature.",
+      "tags": [
+        "llm",
+        "tooling"
+      ],
       "type": "youtube"
     },
     {
@@ -135,6 +167,10 @@
       "url": "https://www.youtube.com/watch?v=zIqLuuyxgE4",
       "highlights": "Jeremy Howard demonstrates a novel LLM-assisted reading method that goes beyond traditional approaches by creating contextual handoff notes between chapters and actively engaging with content through skepticism and personal application. He shows how AI can enhance deep reading by enabling continuity tracking, counterexample exploration, and practical implementation of book principles in real-world scenarios like his startup.",
       "worthReading": "This video offers a groundbreaking approach to knowledge consumption that leverages modern AI tools to transform passive reading into an interactive, personalized learning experience with practical applications.",
+      "tags": [
+        "llm",
+        "rag"
+      ],
       "type": "youtube"
     },
     {
@@ -148,10 +184,57 @@
       "url": "https://www.youtube.com/watch?v=LrFbxIvsipw",
       "highlights": "Jeremy Howard discusses the democratization of AI through PyTorch, emphasizing how accessible tools are enabling more developers to build and deploy models. He highlights the importance of practical applications over theoretical complexity, with insights into fast.ai's educational approach.",
       "worthReading": "The interview offers valuable perspectives from a leading AI educator on making machine learning more approachable, directly relevant for developers interested in practical implementation.",
+      "tags": [
+        "llm",
+        "tooling"
+      ],
       "type": "youtube"
     }
   ],
   "blogs": [],
+  "xPosts": [
+    {
+      "type": "x",
+      "id": "1943444549696917714",
+      "url": "https://x.com/jeremyphoward/status/1943444549696917714",
+      "author": {
+        "handle": "jeremyphoward",
+        "displayName": "Jeremy Howard",
+        "avatar": "https://avatars.githubusercontent.com/jph00"
+      },
+      "content": "Here's a complete unedited video of asking Grok for its views on the Israel/Palestine situation. It first searches twitter for what Elon thinks.",
+      "createdAt": "2026-04-18T04:01:59.968Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Demonstrates how Grok AI agent searches Twitter for Elon Musk's opinions before forming its own views on geopolitical issues.",
+      "worthReading": "Shows real-world behavior of AI agents in controversial topic analysis.",
+      "tags": [
+        "agent",
+        "llm"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "1969152436519514202",
+      "url": "https://x.com/jeremyphoward/status/1969152436519514202",
+      "author": {
+        "handle": "jeremyphoward",
+        "displayName": "Jeremy Howard",
+        "avatar": "https://avatars.githubusercontent.com/jph00"
+      },
+      "content": "Here's what I would prefer to see:",
+      "createdAt": "2026-04-18T04:01:59.968Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Jeremy Howard expresses his preference for a particular approach or outcome, though the full context is truncated.",
+      "worthReading": "Provides insight into Howard's perspective on AI development or application.",
+      "tags": [
+        "llm"
+      ]
+    }
+  ],
   "dailyCounts": [
     0,
     0,
@@ -180,9 +263,9 @@
     0,
     0,
     0,
-    0,
     1,
-    0
+    0,
+    2
   ],
-  "interestSummary": "Based on recent activity, Jeremy Howard is focused on educational resources for neural networks, specifically showing interest in a project that builds foundational understanding from micrograd to tinygrad."
+  "interestSummary": "Based on recent activity, Jeremy Howard is focused on AI model development and education, as indicated by his interest in a neural networks learning resource, and is critically examining the behavior and alignment of large language models."
 }
