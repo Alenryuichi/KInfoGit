@@ -1,106 +1,152 @@
 {
   "date": "2026-04-19",
-  "itemCount": 10,
+  "itemCount": 35,
   "sections": [
-    {
-      "id": "headlines",
-      "title": "Headlines & Launches",
-      "items": [
-        {
-          "title": "Analysis of Japan's railway success highlights land use, privatization, and urban planning.",
-          "summary": "An article analyzes why Japan has such efficient railways, emphasizing factors like liberal land use regulations, privatization of railways, and integrated urban planning that encourages densification around stations. This analysis matters because it offers lessons for other countries struggling with inefficient public transport, showing how policy and planning can create sustainable, high-ridership systems that reduce car dependency and boost urban connectivity. The article notes that Japan's railway companies often act as city-shaping entities, building neighborhoods alongside rail lines, and strict parking regulations further discourage car use, though some community comments point out factual errors in the analysis.",
-          "url": "https://worksinprogress.co/issue/why-japan-has-such-good-railways/",
-          "score": 7,
-          "sources": [
-            {
-              "name": "hackernews",
-              "meta": "RickJWagner"
-            }
-          ],
-          "tags": [
-            "urban-planning",
-            "transportation",
-            "public-policy",
-            "infrastructure",
-            "japan"
-          ],
-          "focusTopics": [
-            "memory",
-            "planning"
-          ],
-          "background": "Japan's railway system, including the famous Shinkansen (bullet train), is renowned for its punctuality, efficiency, and extensive network. Privatization in the 1980s split the national railway into regional companies, fostering competition and innovation. Urban planning in Japan often integrates transit-oriented development, where dense housing and commercial areas are built around stations to maximize ridership and accessibility.",
-          "discussion": "Community discussion includes praise for Japan's zoning system and railway companies' city-shaping role, but also criticism pointing out factual mistakes in the article, with some users comparing it to other systems like Switzerland's."
-        },
-        {
-          "title": "Amiga Graphics Archive showcases retro graphics with community discussions",
-          "summary": "The Amiga Graphics Archive has been launched at https://amiga.lychesis.net/, featuring a collection of Amiga graphics that has sparked nostalgic and technical discussions in the retro-computing community. The archive includes comparisons of different Amiga graphics chipsets and resolutions, such as the 1280×960 2-color mode available on some models. This matters because it preserves important digital heritage from the Amiga era, which was known for pioneering graphics capabilities that influenced later computer systems. The archive serves as a valuable resource for retro-computing enthusiasts, historians, and artists interested in vintage computer graphics styles and techniques. The archive specifically documents the Amiga Advanced Graphics Architecture (AGA) chipset introduced in 1992, which was the third-generation Amiga graphics system. It also highlights technical debates in the community, such as whether the Amiga should be considered a 16-bit or 32-bit machine based on its architecture.",
-          "url": "https://amiga.lychesis.net/",
-          "score": 6,
-          "sources": [
-            {
-              "name": "hackernews",
-              "meta": "sph"
-            }
-          ],
-          "tags": [
-            "retro-computing",
-            "graphics",
-            "Amiga",
-            "digital-archives",
-            "community-discussion"
-          ],
-          "focusTopics": [],
-          "background": "The Amiga was a series of personal computers produced by Commodore in the 1980s and early 1990s, renowned for their advanced graphics and multimedia capabilities. Amiga graphics chipsets evolved through several generations, with AGA being the final major iteration that supported higher resolutions and more colors. Retro-computing involves preserving and using historic computer hardware and software, often through emulation or physical restoration projects.",
-          "discussion": "Community discussions include technical debates about whether the Amiga should be classified as 16-bit or 32-bit, with users citing its 32-bit address space and registers. Members also share related projects like DeluxePaint-style LoRAs for AI image generation and links to previous discussions about the archive. Some users express nostalgia for the unique Amiga graphic style seen in games like Ruff n Tumble."
-        }
-      ]
-    },
     {
       "id": "research",
       "title": "Research & Innovation",
       "items": [
         {
-          "title": "NIST scientists develop tunable lasers for any wavelength",
-          "summary": "NIST scientists have created a technology that enables lasers to be tuned to any wavelength by stacking specialized materials onto silicon wafers, as announced in April 2026. This breakthrough allows for precise control over laser output across a broad range of wavelengths. This advancement is significant because it could revolutionize fields like quantum computing, photonics, and telecommunications by providing versatile, compact laser sources. It enables applications such as ion trapping for quantum computers and high-speed data transmission, aligning with trends toward miniaturized and efficient photonic technologies. The technology uses microresonators for nonlinear wavelength conversion, allowing efficient tuning without moving parts, as detailed in NIST's research on laser-wavelength conversion. However, practical deployment may depend on factors like cost and scalability for mass production.",
-          "url": "https://www.nist.gov/news-events/news/2026/04/any-color-you-nist-scientists-create-any-wavelength-lasers-tiny-circuits",
-          "score": 8,
+          "title": "lsdefine/GenericAgent",
+          "summary": "自进化代理从3300行种子代码生长技能树，实现全系统控制且减少6倍token消耗",
+          "url": "https://github.com/lsdefine/GenericAgent",
+          "score": 8.389,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "rbanffy"
+              "name": "GitHub trending:python (+776★)"
             }
           ],
           "tags": [
-            "laser-technology",
-            "quantum-computing",
-            "photonics",
-            "scientific-research",
-            "telecommunications"
+            "self-evolving-agents",
+            "skill-tree",
+            "token-efficiency",
+            "system-control"
           ],
-          "focusTopics": [],
-          "background": "Tunable lasers are devices whose output wavelengths can be adjusted, making them essential for applications like telecommunications and medical diagnostics. Photonics involves using light particles (photons) for information processing, with quantum photonics leveraging quantum properties for computing. NIST has previously worked on miniaturized techniques for generating precise laser wavelengths using ring microresonators.",
-          "discussion": "Community comments highlight diverse applications, including ion trapping for quantum computing, potential use in photonic computing, concerns about nuclear proliferation risks via AVLIS/SILEX, and speculation on high-speed data transmission capabilities. Overall, sentiment is positive with excitement about the technology's broad impact, though some note cost and feasibility considerations."
+          "focusTopics": [
+            "agent-harness",
+            "planning"
+          ]
         },
         {
-          "title": "Simon Willison analyzes system prompt changes between Claude Opus 4.6 and 4.7 using Git history method",
-          "summary": "Simon Willison published a technical analysis on April 18, 2026, comparing the system prompts of Claude Opus 4.7 (released April 16, 2026) and Opus 4.6 (released February 5, 2026). He used Claude Code to extract Anthropic's published system prompts, created a Git repository with fake commit dates representing publication dates, and highlighted key differences through a git diff. This analysis matters because it demonstrates a novel method for tracking AI model evolution through system prompt changes, offering transparency into how Anthropic refines its models' behavior and safety protocols. It reveals how major AI labs iteratively improve user experience, safety measures, and tool integration, which can influence developer practices and user expectations across the AI industry. Key changes include rebranding 'developer platform' to 'Claude Platform', adding Claude in Powerpoint to the tools list, expanding child safety instructions with a new <critical_child_safety_instructions> tag, making Claude less pushy about continuing conversations, and introducing a new <acting_vs_clarifying> section that prioritizes acting with tools over asking users for clarification. The analysis also notes the integration of a tool_search mechanism for checking available capabilities.",
-          "url": "https://simonwillison.net/2026/Apr/18/opus-system-prompt/#atom-everything",
-          "score": 6,
+          "title": "Claude system prompts as a git timeline",
+          "summary": "将Claude系统提示作为Git时间线进行研究，追踪其演变过程。",
+          "url": "https://simonwillison.net/2026/Apr/18/extract-system-prompts/#atom-everything",
+          "score": 7.5,
           "sources": [
             {
-              "name": "rss",
-              "meta": "Simon Willison"
+              "name": "Simon Willison"
             }
           ],
           "tags": [
-            "AI",
-            "Claude",
-            "System Prompts",
-            "Version Tracking",
-            "Technical Analysis"
+            "claude",
+            "system-prompt",
+            "git-timeline"
           ],
-          "focusTopics": [],
-          "background": "System prompts are instructions that guide how AI models, particularly large language models (LLMs), interpret and respond to user inputs, playing a crucial role in shaping model behavior and safety. Anthropic is notable for publicly publishing the system prompts for its Claude models, providing a rare window into AI development practices. Git is a version control system commonly used in software development to track changes in code over time, and applying it to system prompts offers a structured way to analyze AI model evolution."
+          "focusTopics": []
+        },
+        {
+          "title": "AI Augmented Confocal Laser Endomicroscopy for Rapid ... - Nature",
+          "summary": "AI增强共聚焦激光内窥镜技术，实现快速医学成像诊断。",
+          "url": "https://www.nature.com/articles/s41746-026-02651-0",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "nature.com"
+            }
+          ],
+          "tags": [
+            "medical-ai",
+            "endoscopy",
+            "imaging"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Anonymous request-token comparisons from Opus 4.6 and Opus 4.7",
+          "summary": "匿名比较Claude Opus 4.6和4.7的请求令牌性能，提供基准数据。",
+          "url": "https://tokens.billchambers.me/leaderboard",
+          "score": 7.213,
+          "sources": [
+            {
+              "name": "HN (421)"
+            }
+          ],
+          "tags": [
+            "claude",
+            "token-comparison",
+            "benchmark"
+          ],
+          "focusTopics": [
+            "evals"
+          ]
+        },
+        {
+          "title": "An implemented AI-driven digital twin architecture for proactive ...",
+          "summary": "提出并实现AI驱动的数字孪生架构，用于主动系统管理。",
+          "url": "https://www.nature.com/articles/s41598-026-46719-z",
+          "score": 7,
+          "sources": [
+            {
+              "name": "nature.com"
+            }
+          ],
+          "tags": [
+            "digital-twin",
+            "ai-architecture",
+            "proactive-systems"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Development of an artificial neural network–based egress model ...",
+          "summary": "开发基于人工神经网络的疏散模型，用于安全应急规划。",
+          "url": "https://www.nature.com/articles/s41598-026-46060-5",
+          "score": 7,
+          "sources": [
+            {
+              "name": "nature.com"
+            }
+          ],
+          "tags": [
+            "neural-network",
+            "egress-model",
+            "safety"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Design and laboratory verification of an AI-driven plant protection ...",
+          "summary": "设计和实验室验证AI驱动的植物保护系统，应用于农业领域。",
+          "url": "https://www.nature.com/articles/s41598-026-49199-3",
+          "score": 6.8,
+          "sources": [
+            {
+              "name": "nature.com"
+            }
+          ],
+          "tags": [
+            "agricultural-ai",
+            "plant-protection",
+            "lab-verification"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Zero-Copy GPU Inference from WebAssembly on Apple Silicon",
+          "summary": "在Apple Silicon上通过WebAssembly实现零拷贝GPU推理",
+          "url": "https://abacusnoir.com/2026/04/18/zero-copy-gpu-inference-from-webassembly-on-apple-silicon/",
+          "score": 5.558,
+          "sources": [
+            {
+              "name": "HN (11)"
+            }
+          ],
+          "tags": [
+            "gpu-inference",
+            "webassembly",
+            "apple-silicon"
+          ],
+          "focusTopics": []
         }
       ]
     },
@@ -109,140 +155,518 @@
       "title": "Engineering & Resources",
       "items": [
         {
-          "title": "Anonymous comparison reveals token usage differences between Claude Opus 4.6 and 4.7",
-          "summary": "An anonymous token comparison tool has analyzed request patterns between Claude Opus 4.6 and 4.7, revealing differences in token consumption and cost efficiency. The analysis shows that while Opus 4.7 may produce fewer output tokens, its overall cost structure differs from the previous version. This comparison matters because token usage directly impacts operational costs for developers and businesses using Claude models, and understanding these differences helps users make informed decisions about which model version to deploy. As AI models become more sophisticated, balancing performance improvements against cost efficiency becomes increasingly important for practical applications. The comparison specifically isolates tokenizer changes by counting tokens in prompts through an API, but doesn't account for potential differences in output quality or task completion efficiency. Some community analysis suggests Opus 4.7 may consume rate limits faster despite potentially lower token costs, indicating a more complex trade-off than simple token counting reveals.",
-          "url": "https://tokens.billchambers.me/leaderboard",
-          "score": 7,
+          "title": "EvoMap/evolver",
+          "summary": "EvoMap推出基于基因组进化协议的自进化AI代理引擎，实现代理自主进化",
+          "url": "https://github.com/EvoMap/evolver",
+          "score": 8.469999999999999,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "anabranch"
+              "name": "GitHub trending:all (+1131★)"
             }
           ],
           "tags": [
-            "AI Models",
-            "Cost Analysis",
-            "Claude Opus",
-            "Token Usage",
-            "Community Discussion"
-          ],
-          "focusTopics": [],
-          "background": "Claude Opus is Anthropic's most advanced AI model series, with versions like 4.6 and 4.7 offering improvements in areas like coding, tool use, and instruction following. Token usage refers to how AI models process text in chunks called tokens, with costs typically calculated per token for both input (prompts) and output (responses). The context window determines how many tokens a model can process in a single request, with Claude Opus supporting up to 1 million tokens.",
-          "discussion": "Community members express mixed views, with some noting that Opus 4.7 appears slightly cheaper than 4.6 in total cost but consumes rate limits faster, while others question the comparison's usefulness without considering output quality. Several users report that the performance improvement from 4.6 to 4.7 isn't very noticeable, leading some to consider sticking with older versions for better cost-effectiveness."
-        },
-        {
-          "title": "Electromechanical angle computer analyzed in B-52 bomber's star tracker system",
-          "summary": "A detailed technical analysis reveals the electromechanical angle computer used in the B-52 bomber's star tracker navigation system, which performed trigonometric calculations through mechanical components rather than digital electronics. This system was developed in the early 1960s to automate celestial navigation for the bomber. This analysis matters because it showcases a sophisticated electromechanical computing solution from an era when digital computers were unsuitable for aviation applications, highlighting engineering ingenuity in military navigation technology. It provides historical context for understanding the evolution from analog to digital navigation systems in aerospace. The angle computer performed spiral search patterns covering ±4° in bearing and ±2.5° in altitude to locate stars, with the system having declination limits of +90° to -47° and altitude limits down to -6°. It could automatically switch between Northern and Southern hemispheres despite having different latitude and declination ranges.",
-          "url": "https://www.righto.com/2026/04/B-52-star-tracker-angle-computer.html",
-          "score": 7,
-          "sources": [
-            {
-              "name": "hackernews",
-              "meta": "NelsonMinar"
-            }
-          ],
-          "tags": [
-            "electromechanical-computing",
-            "aviation-history",
-            "military-technology",
-            "retrocomputing",
-            "navigation-systems"
-          ],
-          "focusTopics": [],
-          "background": "Star trackers are navigation devices that use celestial observations to determine position and orientation, often combined with inertial navigation systems (INS) to compensate for INS drift errors. Electromechanical analog computers use physical phenomena like electrical and mechanical quantities to perform computations, differing from digital computers that process discrete values. The B-52 bomber required precise navigation for long-range missions, leading to the development of automated celestial navigation systems in the Cold War era.",
-          "discussion": "Community comments express admiration for the engineering ingenuity, with users noting historical connections to naval fire control systems and appreciating specific technical details like the spiral search pattern. Some commenters contrast this electromechanical technology with modern computing work, expressing both inspiration and nostalgia for such historical engineering achievements."
-        },
-        {
-          "title": "Hacker News critiques Claude Design's limitations and role in design workflows",
-          "summary": "A Hacker News discussion emerged critiquing Claude Design, an AI-powered design tool by Anthropic Labs, for its practical limitations as a tool compared to established platforms like Figma. Users highlighted issues such as high usage caps and inefficiency in handling complex design systems. This matters because it reflects broader debates about AI's role in professional design workflows, questioning whether tools like Claude Design can replace or augment traditional design software. The discussion impacts designers and developers evaluating AI tools for productivity and collaboration in an evolving industry. Claude Design allows users to create designs and prototypes through conversation with Claude, but comments note it quickly consumes usage limits and struggles with complex tasks like recreating detailed design systems. The tool is positioned as AI-native, contrasting with Figma's AI-assisted approach.",
-          "url": "https://samhenri.gold/blog/20260418-claude-design/",
-          "score": 6,
-          "sources": [
-            {
-              "name": "hackernews",
-              "meta": "cdrnsf"
-            }
-          ],
-          "tags": [
-            "AI Tools",
-            "Design Systems",
-            "Developer Tools",
-            "UI/UX",
-            "Workflow Automation"
+            "ai-agents",
+            "self-evolution",
+            "genome-evolution",
+            "open-source"
           ],
           "focusTopics": [
-            "multi-agent",
-            "reflection"
-          ],
-          "background": "Claude Design is an AI-powered design tool introduced by Anthropic Labs that enables users to generate designs, prototypes, and presentations via conversational prompts. Figma is a widely-used collaborative design platform that recently added AI features, while AI-native tools like Claude Design are built from the ground up with AI integration. Design workflow automation involves using software to streamline and automate repetitive tasks in the design process, often incorporating AI for efficiency.",
-          "discussion": "The community expressed mixed sentiments, with some users criticizing Claude Design as impractical due to usage limits and inefficiency for complex projects, while others debated its role in simplifying design workflows compared to Figma. Key viewpoints include concerns about tool viability for professional use and discussions on whether AI can handle the complexity of established design systems."
+            "agent-harness"
+          ]
         },
         {
-          "title": "User migrates from DigitalOcean to Hetzner for cost savings",
-          "summary": "A user shared their experience migrating infrastructure from DigitalOcean to Hetzner, achieving significant cost reductions. The migration was reportedly assisted by an AI tool like Claude Code, which helped handle complex setups involving multiple sites and outdated libraries. This highlights the growing trend of cost optimization in cloud infrastructure, as users seek alternatives to major providers like DigitalOcean and AWS for better pricing. It underscores the increasing mobility between cloud providers, facilitated by AI tools that simplify complex migrations. The migration involved moving servers with diverse sites, languages, and databases like MySQL and Redis, showcasing the practical challenges of such transitions. However, the approach may lack redundancy features like load balancers, raising concerns about single points of failure and maintenance overhead.",
-          "url": "https://isayeter.com/posts/digitalocean-to-hetzner-migration/",
-          "score": 6,
+          "title": "thedotmack/claude-mem",
+          "summary": "Claude Code插件自动记录编码会话内容，使用AI压缩并存储为长期记忆",
+          "url": "https://github.com/thedotmack/claude-mem",
+          "score": 8.3,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "yusufusta"
+              "name": "GitHub trending:typescript (+1033★)"
             }
           ],
           "tags": [
-            "cloud-migration",
-            "cost-optimization",
-            "infrastructure",
-            "Hetzner",
-            "DigitalOcean"
+            "claude-code",
+            "memory-system",
+            "coding-sessions",
+            "context-compression"
           ],
-          "focusTopics": [],
-          "background": "DigitalOcean and Hetzner are both cloud hosting providers, but they differ in their service offerings. DigitalOcean provides managed services like databases and Kubernetes, while Hetzner focuses on cost-effective computing resources without such managed options. Cloud migration strategies, such as lift-and-shift, involve moving applications to new infrastructure with minimal changes.",
-          "discussion": "Community comments show mixed sentiments, with some users sharing similar cost-saving migrations to Hetzner and praising AI tools for simplifying complex tasks. Others express concerns about redundancy and maintenance, suggesting alternatives like Kubernetes for high availability, while one user criticizes the reliance on AI for migration reporting."
+          "focusTopics": [
+            "coding-agents",
+            "context-engineering"
+          ]
         },
         {
-          "title": "Kdenlive's 2026 annual update highlights features and community feedback.",
-          "summary": "Kdenlive released its 2026 annual update report, detailing incremental improvements in features and performance based on user feedback. The report emphasizes community-driven development and usability enhancements. This update matters because it showcases the ongoing evolution of open-source video editing software, making professional tools more accessible and fostering a collaborative ecosystem. It impacts users seeking free, capable alternatives to proprietary editors like DaVinci Resolve. Kdenlive is based on the MLT Framework and supports multiple platforms including Linux, Windows, and macOS. However, some users report performance regressions in large projects and occasional crashes, indicating areas for further optimization.",
-          "url": "https://kdenlive.org/news/2026/state-2026/",
-          "score": 6,
+          "title": "openai/openai-agents-python",
+          "summary": "OpenAI发布轻量级多智能体工作流框架openai-agents-python",
+          "url": "https://github.com/openai/openai-agents-python",
+          "score": 7.93,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "f_r_d"
+              "name": "GitHub trending:all (+470★)"
+            }
+          ],
+          "tags": [
+            "multi-agent",
+            "openai",
+            "workflow-framework"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "Changes in the system prompt between Claude Opus 4.6 and 4.7",
+          "summary": "分析Claude Opus 4.6到4.7版本间系统提示的变化，揭示Anthropic的透明度实践。",
+          "url": "https://simonwillison.net/2026/Apr/18/opus-system-prompt/#atom-everything",
+          "score": 7.8,
+          "sources": [
+            {
+              "name": "Simon Willison"
+            }
+          ],
+          "tags": [
+            "claude",
+            "system-prompt",
+            "release-notes"
+          ],
+          "focusTopics": [
+            "model-release"
+          ]
+        },
+        {
+          "title": "BasedHardware/omi",
+          "summary": "BasedHardware发布Omi AI助手，可观察屏幕、听取对话并提供指导",
+          "url": "https://github.com/BasedHardware/omi",
+          "score": 7.7135,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+609★)"
+            }
+          ],
+          "tags": [
+            "ai-assistant",
+            "multimodal",
+            "screen-analysis"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "What xAI and OpenAI Should Buy Next - The Information",
+          "summary": "分析xAI和OpenAI未来可能的收购目标，探讨AI行业并购趋势。",
+          "url": "https://www.theinformation.com/newsletters/the-weekend/xai-openai-buy-next",
+          "score": 7.2,
+          "sources": [
+            {
+              "name": "theinformation.com"
+            }
+          ],
+          "tags": [
+            "ai-acquisitions",
+            "industry-analysis",
+            "openai"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "ChromeDevTools/chrome-devtools-mcp",
+          "summary": "Chrome DevTools 推出 MCP 协议支持，为 AI 编程助手提供浏览器调试工具集成。",
+          "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+          "score": 7.1805,
+          "sources": [
+            {
+              "name": "GitHub trending:typescript (+367★)"
+            }
+          ],
+          "tags": [
+            "chrome-devtools",
+            "mcp",
+            "coding-agents",
+            "developer-tools"
+          ],
+          "focusTopics": [
+            "coding-agents",
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "Tracer-Cloud/opensre",
+          "summary": "开源工具包帮助构建AI驱动的站点可靠性工程代理",
+          "url": "https://github.com/Tracer-Cloud/opensre",
+          "score": 7.065,
+          "sources": [
+            {
+              "name": "GitHub trending:python (+460★)"
+            }
+          ],
+          "tags": [
+            "ai-sre",
+            "site-reliability",
+            "agent-framework",
+            "devops"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "google/magika",
+          "summary": "Google发布基于AI的快速准确文件内容类型检测工具",
+          "url": "https://github.com/google/magika",
+          "score": 6.9375,
+          "sources": [
+            {
+              "name": "GitHub trending:python (+545★)"
+            }
+          ],
+          "tags": [
+            "google",
+            "file-detection",
+            "ai-tools",
+            "content-analysis"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Pro-Trump AI influencers are flooding social media. | The Verge",
+          "summary": "报道支持特朗普的AI影响者泛滥社交媒体现象，分析AI在政治传播中的应用。",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/914668/pro-trump-ai-influencers-are-flooding-social-media",
+          "score": 6.8,
+          "sources": [
+            {
+              "name": "theverge.com"
+            }
+          ],
+          "tags": [
+            "ai-influencers",
+            "social-media",
+            "political-ai"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "thunderbird/thunderbolt",
+          "summary": "Thunderbird推出Thunderbolt开源AI平台，支持模型选择和数据控制",
+          "url": "https://github.com/thunderbird/thunderbolt",
+          "score": 6.7905,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+447★)"
             }
           ],
           "tags": [
             "open-source",
-            "video-editing",
-            "software-update",
-            "community-discussion"
+            "ai-platform",
+            "data-privacy"
           ],
-          "focusTopics": [],
-          "background": "Kdenlive is a free and open-source non-linear video editor developed by the KDE community, known for its support of various audio and video formats and advanced editing features. It competes with other open-source editors like OpenShot and Shotcut, as well as proprietary software, in the growing market for accessible video production tools. The annual state report is a tradition to update users on progress and gather feedback.",
-          "discussion": "Community sentiment is mixed, with some users praising Kdenlive for balancing capability and usability compared to basic editors like iMovie and complex ones like DaVinci Resolve, while others criticize its UI/UX and stability issues. Discussions highlight its role in a FOSS media stack with tools like OBS and Audacity, but note ongoing challenges with performance and crashes."
+          "focusTopics": [
+            "model-release"
+          ]
         },
         {
-          "title": "Illustrated tutorial on orders in category theory released, but criticized for errors and style.",
-          "summary": "An illustrated tutorial titled 'Category Theory Illustrated – Orders' was published online, explaining orders in category theory with examples and Hasse diagrams. However, community feedback revealed technical errors, such as an invalid JavaScript comparator, and criticism of the writing style, including overuse of parentheses. This matters because it highlights the challenges in creating accessible educational content for abstract mathematical topics like category theory, which is increasingly relevant in programming and computer science. The mixed reception underscores the importance of accuracy and clarity in tutorials to avoid misleading learners and foster deeper understanding. The tutorial covers preorders, partial orders, and linear orders using Hasse diagrams, but contains a flawed JavaScript example where a comparator returns booleans instead of the expected numeric values, leading to incorrect sorting. Additionally, the writing style is criticized for being overly parenthetical and unclear, which may hinder comprehension for beginners.",
-          "url": "https://abuseofnotation.github.io/category-theory-illustrated/04_order/",
-          "score": 6,
+          "title": "Show HN: Remoroo – Trying to fix memory in long-running coding agents",
+          "summary": "Remoroo工具解决长运行编码代理的记忆问题",
+          "url": "https://www.remoroo.com",
+          "score": 6.711,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "boris_m"
+              "name": "HN (27)"
             }
           ],
           "tags": [
-            "category-theory",
-            "mathematics",
-            "programming",
-            "education",
-            "tutorial"
+            "coding-agents",
+            "memory-systems",
+            "ai-tools"
           ],
-          "focusTopics": [],
-          "background": "Category theory is a branch of mathematics that studies abstract structures and relationships between objects, often applied in computer science for functional programming and type theory. Orders, such as preorders and partial orders, are fundamental concepts in category theory that describe hierarchical or comparative relationships, commonly visualized using Hasse diagrams. Posetal categories, or thin categories, are categories where each hom-set has at most one morphism, corresponding to preordered sets, making them a key example in learning category theory.",
-          "discussion": "Community discussion is mixed, with some users pointing out technical errors like the invalid JavaScript comparator and criticizing the writing style for excessive parentheses. Others recommend alternative resources like Tom Leinster's 'Basic Category Theory' for a more orthodox approach, while some note the challenge of making abstract mathematics seem relevant to daily practice."
+          "focusTopics": [
+            "coding-agents",
+            "context-engineering"
+          ]
+        },
+        {
+          "title": "dimensionalOS/dimos",
+          "summary": "DimensionalOS是面向物理空间的智能体操作系统，支持人形机器人、四足机器人等硬件平台的自然语言控制",
+          "url": "https://github.com/dimensionalOS/dimos",
+          "score": 6.6899999999999995,
+          "sources": [
+            {
+              "name": "GitHub trending:python (+40★)"
+            }
+          ],
+          "tags": [
+            "agentic-os",
+            "robotics",
+            "physical-space",
+            "natural-language-control"
+          ],
+          "focusTopics": [
+            "agent-harness",
+            "tool-use"
+          ]
+        },
+        {
+          "title": "SimoneAvogadro/android-reverse-engineering-skill",
+          "summary": "Claude Code技能支持Android应用逆向工程，扩展AI编程助手能力",
+          "url": "https://github.com/SimoneAvogadro/android-reverse-engineering-skill",
+          "score": 6.5545,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+403★)"
+            }
+          ],
+          "tags": [
+            "claude-code",
+            "android-reverse-engineering",
+            "ai-coding",
+            "mobile-security"
+          ],
+          "focusTopics": [
+            "coding-agents",
+            "tool-use"
+          ]
+        },
+        {
+          "title": "[AINews] The Two Sides of OpenClaw",
+          "summary": "反思本周OpenClaw开源项目的两面性，探讨其社区影响与技术发展。",
+          "url": "https://www.latent.space/p/ainews-the-two-sides-of-openclaw",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "Latent Space"
+            }
+          ],
+          "tags": [
+            "open-source",
+            "ai-community",
+            "reflection"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Beauty Industry Uses AI to Help Consumers - Bloomberg News",
+          "summary": "美容行业利用AI技术帮助消费者选择产品，展示AI在消费领域的应用。",
+          "url": "https://www.bloomberg.com/news/articles/2026-04-18/beauty-industry-use-ai-to-help-consumers-video",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "bloomberg.com"
+            }
+          ],
+          "tags": [
+            "ai-consumer",
+            "beauty-industry",
+            "retail-ai"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Fission-AI/OpenSpec",
+          "summary": "Fission-AI 发布 OpenSpec，为 AI 编程助手提供规范驱动开发框架。",
+          "url": "https://github.com/Fission-AI/OpenSpec",
+          "score": 6.3285,
+          "sources": [
+            {
+              "name": "GitHub trending:typescript (+139★)"
+            }
+          ],
+          "tags": [
+            "spec-driven-development",
+            "ai-coding",
+            "open-source",
+            "developer-tools"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "koala73/worldmonitor",
+          "summary": "WorldMonitor 提供实时全球情报仪表板，集成 AI 新闻聚合和地缘政治监控。",
+          "url": "https://github.com/koala73/worldmonitor",
+          "score": 6.240499999999999,
+          "sources": [
+            {
+              "name": "GitHub trending:typescript (+307★)"
+            }
+          ],
+          "tags": [
+            "ai-news",
+            "geopolitical-monitoring",
+            "dashboard",
+            "real-time"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Thoughts and feelings around Claude Design",
+          "summary": "对Claude Design功能的用户体验分析和思考",
+          "url": "https://samhenri.gold/blog/20260418-claude-design/",
+          "score": 6.191,
+          "sources": [
+            {
+              "name": "HN (222)"
+            }
+          ],
+          "tags": [
+            "claude",
+            "ai-design",
+            "user-experience"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "Adding a new content type to my blog-to-newsletter tool",
+          "summary": "在博客转通讯工具中添加新内容类型的示例，展示代理工程模式应用。",
+          "url": "https://simonwillison.net/guides/agentic-engineering-patterns/adding-a-new-content-type/#atom-everything",
+          "score": 6,
+          "sources": [
+            {
+              "name": "Simon Willison"
+            }
+          ],
+          "tags": [
+            "agentic-engineering",
+            "blog-tools",
+            "content-management"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "AI4Finance-Foundation/FinRL-Trading",
+          "summary": "AI原生模块化基础设施FinRL-X，专为量化交易设计",
+          "url": "https://github.com/AI4Finance-Foundation/FinRL-Trading",
+          "score": 5.797999999999999,
+          "sources": [
+            {
+              "name": "GitHub trending:python (+12★)"
+            }
+          ],
+          "tags": [
+            "quantitative-trading",
+            "finrl",
+            "ai-finance",
+            "trading-infrastructure"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "lukilabs/craft-agents-oss",
+          "summary": "lukilabs 开源 craft-agents-oss，提供 AI 代理开发框架。",
+          "url": "https://github.com/lukilabs/craft-agents-oss",
+          "score": 5.733499999999999,
+          "sources": [
+            {
+              "name": "GitHub trending:typescript (+139★)"
+            }
+          ],
+          "tags": [
+            "agent-framework",
+            "open-source",
+            "typescript",
+            "ai-agents"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "unslothai/unsloth",
+          "summary": "Unsloth Studio提供Web界面，用于本地训练和运行Gemma 4、Qwen3.5等开源模型",
+          "url": "https://github.com/unslothai/unsloth",
+          "score": 5.696,
+          "sources": [
+            {
+              "name": "GitHub trending:python (+114★)"
+            }
+          ],
+          "tags": [
+            "model-training",
+            "web-ui",
+            "open-models",
+            "local-inference"
+          ],
+          "focusTopics": [
+            "post-training"
+          ]
+        },
+        {
+          "title": "deepseek-ai/DeepGEMM",
+          "summary": "DeepSeek发布高效FP8 GEMM计算内核，优化AI模型推理性能",
+          "url": "https://github.com/deepseek-ai/DeepGEMM",
+          "score": 5.5714999999999995,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+31★)"
+            }
+          ],
+          "tags": [
+            "deepseek",
+            "gemm-kernels",
+            "fp8",
+            "inference-optimization"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "bitwarden/ai-plugins",
+          "summary": "Bitwarden 推出 AI 插件市场，为密码管理器集成 AI 功能。",
+          "url": "https://github.com/bitwarden/ai-plugins",
+          "score": 5.106,
+          "sources": [
+            {
+              "name": "GitHub trending:typescript (+4★)"
+            }
+          ],
+          "tags": [
+            "ai-plugins",
+            "password-manager",
+            "marketplace",
+            "integration"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "College instructor turns to typewriters to curb AI-written work",
+          "summary": "大学教师使用打字机遏制AI生成作业并教授人生课程",
+          "url": "https://sentinelcolorado.com/uncategorized/a-college-instructor-turns-to-typewriters-to-curb-ai-written-work-and-teach-life-lessons/",
+          "score": 5.059,
+          "sources": [
+            {
+              "name": "HN (128)"
+            }
+          ],
+          "tags": [
+            "ai-education",
+            "academic-integrity",
+            "pedagogy"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "assistant-ui/assistant-ui",
+          "summary": "TypeScript/React库用于构建AI聊天界面，简化开发流程",
+          "url": "https://github.com/assistant-ui/assistant-ui",
+          "score": 4.6975,
+          "sources": [
+            {
+              "name": "GitHub trending:typescript (+15★)"
+            }
+          ],
+          "tags": [
+            "typescript",
+            "react",
+            "chat-ui",
+            "ai-frontend"
+          ],
+          "focusTopics": []
         }
       ]
     }
-  ]
+  ],
+  "aiSummary": "今日AI领域动态聚焦于智能体进化与开源生态。研究方面，[lsdefine/GenericAgent](#item-github-com-lsdefine-GenericAgent) 提出自进化代理可大幅降低token消耗，而[对Claude系统提示的Git时间线分析](#item-simonwillison-net-2026-Apr-18-extract-system-prompts) 揭示了模型提示的演变路径。工具更新中，[OpenAI发布了轻量级多智能体框架](#item-github-com-openai-openai-agents-python)，同时[EvoMap的进化引擎](#item-github-com-EvoMap-evolver) 推动了代理自主进化能力。观点板块关注行业并购与AI社会影响，[分析指出xAI与OpenAI可能展开新收购](#item-theinformation-com-newsletters-the-weekend-xai-openai-buy-ne)，而[政治AI影响者泛滥现象](#item-theverge-com-ai-artificial-intelligence-914668-pro-trump-ai-) 引发对技术应用的反思。"
 }
