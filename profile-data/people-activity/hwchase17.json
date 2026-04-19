@@ -88,6 +88,72 @@
         "agent",
         "evaluation"
       ]
+    },
+    {
+      "type": "x",
+      "id": "2010044779225329688",
+      "url": "https://x.com/hwchase17/status/2010044779225329688",
+      "author": {
+        "handle": "hwchase17",
+        "displayName": "Harrison Chase",
+        "avatar": "https://avatars.githubusercontent.com/hwchase17"
+      },
+      "content": "This means that operations you would do on code in the software world, you now do on traces in the agent world. Debugging, testing, profiling",
+      "createdAt": "2026-04-19T04:07:50.200Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Harrison Chase draws parallels between software engineering practices and agent development, emphasizing that debugging, testing, and profiling now apply to agent traces rather than just code.",
+      "worthReading": "It highlights the evolution of development practices in AI agent engineering, showing how traditional software concepts are being adapted.",
+      "tags": [
+        "agent",
+        "evaluation",
+        "tooling"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2021261552222158955",
+      "url": "https://x.com/hwchase17/status/2021261552222158955",
+      "author": {
+        "handle": "hwchase17",
+        "displayName": "Harrison Chase",
+        "avatar": "https://avatars.githubusercontent.com/hwchase17"
+      },
+      "content": "TL;DR: More and more agents need a workspace: a computer where they can run code, install packages, and access files. Sandboxes provide this",
+      "createdAt": "2026-04-19T04:07:50.200Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Harrison Chase discusses the growing need for agent workspaces—sandboxed environments where agents can execute code, manage dependencies, and interact with files—as essential infrastructure for advanced AI systems.",
+      "worthReading": "This tweet addresses a critical infrastructure requirement for deploying functional AI agents in production environments.",
+      "tags": [
+        "agent",
+        "infra",
+        "deployment"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2027094058330656814",
+      "url": "https://x.com/hwchase17/status/2027094058330656814",
+      "author": {
+        "handle": "hwchase17",
+        "displayName": "Harrison Chase",
+        "avatar": "https://avatars.githubusercontent.com/hwchase17"
+      },
+      "content": "When you ship traditional software to production, you have a good sense of what to expect. Users click buttons, fill out forms,",
+      "createdAt": "2026-04-19T04:07:50.200Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Harrison Chase contrasts the predictable nature of traditional software deployment with the uncertainties of AI agent deployment, implying that agent behavior is less deterministic.",
+      "worthReading": "It underscores the unique challenges in deploying AI agents compared to conventional software, highlighting the need for new deployment strategies.",
+      "tags": [
+        "agent",
+        "deployment",
+        "evaluation"
+      ]
     }
   ],
   "dailyCounts": [
@@ -119,8 +185,8 @@
     0,
     0,
     0,
-    0,
-    4
+    4,
+    3
   ],
-  "interestSummary": "Harrison Chase is focused on the development and infrastructure for AI agents, emphasizing the need for dedicated workspaces and sandboxes. He is also promoting LangSmith's new Agent Builder tool and discussing the unique requirements for monitoring and iterating on agent-based applications."
+  "interestSummary": "Harrison Chase is focused on the development and production deployment of AI agents, emphasizing the need for specialized tools like sandboxed workspaces, memory systems, and trace-based iteration and monitoring."
 }

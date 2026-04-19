@@ -236,6 +236,27 @@
         "safety"
       ],
       "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mjsntbnqe22z",
+      "url": "https://bsky.app/profile/simonwillison.net/post/3mjsntbnqe22z",
+      "author": {
+        "handle": "simonwillison.net",
+        "displayName": "Simon Willison",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
+      },
+      "content": "Since Anthropic publish their system prompts we can generate a diff between Claude Opus 4.6 and 4.7 - here are my notes on what's changed simonwillison.net/2026/Apr/18/...",
+      "createdAt": "2026-04-19T00:06:00.520Z",
+      "likeCount": 75,
+      "replyCount": 7,
+      "repostCount": 7,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [
+        "llm",
+        "evaluation"
+      ],
+      "type": "bluesky"
     }
   ],
   "videos": [],
@@ -278,6 +299,16 @@
       "summary": "<p>This year's <a href=\"https://us.pycon.org/2026/\">PyCon US</a> is coming up next month from May 13th to May 19th, with the core conference talks from Friday 15th to Sunday 17th and tutorial and sprint days either side. It's in Long Beach, California this year, the first time PyCon US has come to...",
       "highlights": "PyCon US 2026 introduces dedicated AI and security tracks, reflecting Python's growing role in these critical domains. The conference expands beyond traditional Python development to address emerging technical challenges and opportunities.",
       "worthReading": "It provides timely information about new AI-focused conference tracks for Python developers interested in staying current with industry trends.",
+      "type": "blog"
+    },
+    {
+      "title": "Changes in the system prompt between Claude Opus 4.6 and 4.7",
+      "url": "https://simonwillison.net/2026/Apr/18/opus-system-prompt/#atom-entries",
+      "author": "Simon Willison",
+      "publishedAt": "2026-04-18T23:59:40+00:00",
+      "summary": "<p>Anthropic are the only major AI lab to <a href=\"https://platform.claude.com/docs/en/release-notes/system-prompts\">publish the system prompts</a> for their user-facing chat systems. Their system prompt archive now dates all the way back to Claude 3 in July 2024 and it's always interesting to see...",
+      "highlights": "Anthropic uniquely publishes system prompts for their Claude models, providing transparency into AI development. The archive now includes prompts dating back to Claude 3 in July 2024, allowing for tracking of how these foundational instructions evolve.",
+      "worthReading": "It offers rare insight into how AI companies shape model behavior through system prompts, which is valuable for understanding AI development practices and transparency.",
       "type": "blog"
     }
   ],
@@ -445,10 +476,71 @@
         "agent",
         "llm"
       ]
+    },
+    {
+      "type": "x",
+      "id": "1970147806225854531",
+      "url": "https://x.com/simonw/status/1970147806225854531",
+      "author": {
+        "handle": "simonw",
+        "displayName": "Simon Willison",
+        "avatar": "https://avatars.githubusercontent.com/simonw"
+      },
+      "content": "It's interesting how \"better at code\" has become the defining goal of almost every AI lab over the past year.",
+      "createdAt": "2026-04-19T04:07:34.139Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Observes that AI research has shifted focus toward improving coding capabilities as a primary objective across major labs.",
+      "worthReading": "Highlights a key trend in AI development priorities that reflects industry direction.",
+      "tags": [
+        "llm",
+        "evaluation"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "1931090610724995303",
+      "url": "https://x.com/simonw/status/1931090610724995303",
+      "author": {
+        "handle": "simonw",
+        "displayName": "Simon Willison",
+        "avatar": "https://avatars.githubusercontent.com/simonw"
+      },
+      "content": "The last year six months in LLMs, illustrated by pelicans on bicycles. I've published video, slides and a detailed annotated transcript from my talk at this week's conference.",
+      "createdAt": "2026-04-19T04:07:34.139Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Summarizes recent LLM progress with a creative metaphor and shares comprehensive materials from a conference presentation.",
+      "worthReading": "Provides accessible insights into LLM advancements through engaging presentation materials.",
+      "tags": [
+        "llm",
+        "evaluation"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "1555626060384911360",
+      "url": "https://x.com/simonw/status/1555626060384911360",
+      "author": {
+        "handle": "simonw",
+        "displayName": "Simon Willison",
+        "avatar": "https://avatars.githubusercontent.com/simonw"
+      },
+      "content": "Screenshot from a video game where a team of raccoons go on a heist.",
+      "createdAt": "2026-04-19T04:07:34.139Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Shares an AI-generated image depicting raccoons in a heist scenario within a futuristic video game setting.",
+      "worthReading": "Demonstrates creative AI image generation capabilities through an imaginative prompt.",
+      "tags": [
+        "multi-modal"
+      ]
     }
   ],
   "dailyCounts": [
-    0,
     0,
     0,
     0,
@@ -477,7 +569,8 @@
     3,
     2,
     1,
-    5
+    5,
+    4
   ],
-  "interestSummary": "Simon Willison is currently focused on evaluating and experimenting with the latest AI models and tools, particularly through his \"pelican\" benchmark and analysis of new releases from Anthropic, Meta, and Google. His interests also include practical AI applications for coding, memory systems, and developer tools, as well as promoting AI and security discussions at events like PyCon."
+  "interestSummary": "Simon Willison is intensely focused on tracking and experimenting with the latest AI models, tools, and benchmarks, particularly around multimodal capabilities, coding agents, and local model performance. His interests also include AI memory systems, developer tools, and analyzing the evolution and security implications of new model releases."
 }
