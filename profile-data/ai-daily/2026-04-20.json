@@ -1,57 +1,102 @@
 {
   "date": "2026-04-20",
-  "itemCount": 7,
+  "itemCount": 31,
   "sections": [
     {
       "id": "headlines",
       "title": "Headlines & Launches",
       "items": [
         {
-          "title": "Analysis of system prompt changes between Claude Opus 4.6 and 4.7",
-          "summary": "An analysis reveals specific changes in the system prompt between Claude Opus versions 4.6 and 4.7, including adjustments like a new <acting_vs_clarifying> section that encourages the AI to make reasonable attempts when details are unspecified, and instructions to keep responses concise and focused. This matters because system prompt changes directly influence AI behavior, affecting how users interact with Claude Opus in areas like decision-making, response style, and handling of sensitive topics, which can impact developer workflows and user experience in the competitive LLM landscape. Key details include the addition of a section on eating disorders, which reflects efforts to address harmful behaviors, and the emphasis on concise responses, though some users report this may reduce helpful disclaimers or learning opportunities in technical contexts.",
-          "url": "https://simonwillison.net/2026/Apr/18/opus-system-prompt/",
-          "score": 7,
+          "title": "AI startup Cursor in talks to raise $2 billion funding round at valuation of over $50 billion - CNBC",
+          "summary": "AI编程助手Cursor洽谈20亿美元融资，估值超500亿美元",
+          "url": "https://www.cnbc.com/2026/04/19/cursor-ai-2-billion-funding-round.html",
+          "score": 8.8,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "pretext"
+              "name": "cnbc.com"
             }
           ],
           "tags": [
-            "AI",
-            "Claude",
-            "System Prompt",
-            "LLM Updates"
+            "cursor",
+            "funding",
+            "ai-coding",
+            "startup"
           ],
           "focusTopics": [
-            "memory"
-          ],
-          "background": "System prompts are special instructions provided to large language models (LLMs) like Claude Opus to define their role, behavior, and response characteristics before user interactions begin. Claude Opus is a high-performance AI model by Anthropic, with versions 4.6 and 4.7 representing iterative updates that include changes to the underlying system prompt to refine AI outputs. Understanding these prompts is crucial for developers and users to optimize model performance and anticipate behavior shifts in applications.",
-          "discussion": "Community comments show mixed sentiments: some users prefer the new proactive approach in 4.7 for minor details, while others favor 4.6's upfront clarification to avoid errors. Concerns include potential decision fatigue from too many options in 4.7 and skepticism about incrementally adding sections for every 'bad' behavior, with debates on whether concise responses reduce educational value in technical projects."
+            "coding-agents"
+          ]
         },
         {
-          "title": "AI-driven RAM shortage may persist for years due to supply constraints.",
-          "summary": "A potential multi-year RAM shortage is emerging, driven by surging AI demand and supply chain bottlenecks, with major manufacturers like Samsung, SK Hynix, and Micron prioritizing high-bandwidth memory (HBM) over DRAM for consumer electronics. This shortage could last 3-4 years, impacting hardware availability and software development practices. This shortage could significantly increase hardware costs, delay tech product launches, and force software developers to prioritize memory efficiency, potentially reshaping industry standards and consumer access to technology. It highlights how AI's rapid growth is straining global supply chains, with broader implications for gaming, corporate IT, and innovation. HBM production consumes 20% of wafer capacity but yields only 8% of bits, creating a 4x manufacturing bottleneck compared to standard memory chips, while Google's TurboQuant optimization reduces memory usage for KV caches but may not fully offset demand. The shortage is exacerbated by supply chain disruptions from the COVID-19 pandemic and limited capacity expansion by key manufacturers.",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/914672/the-ram-shortage-could-last-years",
+          "title": "Google in Talks With Marvell to Build New AI Chips for Inference",
+          "summary": "谷歌与Marvell洽谈合作开发新型AI推理芯片",
+          "url": "https://www.theinformation.com/articles/google-talks-marvell-build-new-ai-chips-inference",
           "score": 7,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "omer_k"
+              "name": "theinformation.com"
             }
           ],
           "tags": [
-            "hardware",
-            "AI",
-            "supply-chain",
-            "software-engineering",
-            "market-trends"
+            "google",
+            "ai-chips",
+            "inference",
+            "hardware"
           ],
-          "focusTopics": [
-            "memory"
+          "focusTopics": []
+        },
+        {
+          "title": "The NSA reportedly has access to Anthropic's Mythos despite being ...",
+          "summary": "报道称NSA可访问Anthropic的Mythos模型，尽管其被列为供应链风险",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/914748/the-nsa-reportedly-has-access-to-anthropics-mythos-despite-being-labeled-a-supply-chain-risk",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "theverge.com"
+            }
           ],
-          "background": "RAM (Random Access Memory) is a type of computer memory used for temporary data storage, essential for running applications and AI models. High-bandwidth memory (HBM) is a specialized RAM type optimized for AI workloads, offering faster data transfer but requiring more complex manufacturing. The current shortage stems from increased AI demand, supply chain issues, and manufacturers shifting focus from DRAM to HBM, as seen in past shortages like the 2016-2017 DRAM crisis.",
-          "discussion": "Community comments express diverse views, with some users arguing that sustained high demand indicates a stable market rather than a shortage, while others highlight manufacturing constraints and AI's capital crunch as exacerbating factors. Optimistic perspectives suggest the shortage could drive more memory-efficient software development, and discussions note Google's TurboQuant as a potential mitigation, though skepticism remains about its impact on overall demand."
+          "tags": [
+            "anthropic",
+            "mythos",
+            "security",
+            "government-access"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Uber’s Anthropic AI push hits a wall",
+          "summary": "Uber与Anthropic的AI合作计划遇到障碍",
+          "url": "https://finance.yahoo.com/sectors/technology/articles/ubers-anthropic-ai-push-hits-223109852.html",
+          "score": 5.7139999999999995,
+          "sources": [
+            {
+              "name": "HN (63)"
+            }
+          ],
+          "tags": [
+            "uber",
+            "anthropic",
+            "ai-partnership",
+            "business-strategy"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Ex-CEO, ex-CFO of bankrupt AI company charged with fraud",
+          "summary": "破产AI公司前CEO和CFO因欺诈指控被起诉",
+          "url": "https://www.reuters.com/legal/government/ex-ceo-ex-cfo-bankrupt-ai-company-charged-with-fraud-2026-04-17/",
+          "score": 5.351999999999999,
+          "sources": [
+            {
+              "name": "HN (84)"
+            }
+          ],
+          "tags": [
+            "ai-company",
+            "fraud",
+            "legal",
+            "business"
+          ],
+          "focusTopics": []
         }
       ]
     },
@@ -60,28 +105,135 @@
       "title": "Research & Innovation",
       "items": [
         {
-          "title": "SPEAKE(a)R: 2017 Research Shows Speakers Can Be Exploited as Microphones for Eavesdropping",
-          "summary": "In 2017, researchers published a paper titled 'SPEAKE(a)R: Turn Speakers to Microphones for Fun and Profit' at the USENIX WOOT conference, demonstrating how malware can covertly reconfigure headphone jacks to turn speakers or headphones into microphones for unauthorized audio capture. This software-based attack exploits the reversible nature of audio transducers, allowing eavesdropping even when standard microphones are disabled or absent. This vulnerability highlights a significant hardware-level security risk in common computing devices, as it bypasses traditional privacy controls like muting or disabling microphones, potentially affecting billions of users with headphones or speakers. It underscores the need for improved hardware and software safeguards against acoustic side-channel attacks in an era of increasing cyber-espionage threats. The attack works by reprogramming the audio output jack to function as an input, leveraging the fact that speakers and microphones both use electromagnetic induction in a coil and magnet system. A key limitation is that it requires malware installation on the target device, and the audio quality may be lower than dedicated microphones, but it remains effective for capturing conversations.",
-          "url": "https://www.usenix.org/system/files/conference/woot17/woot17-paper-guri.pdf",
-          "score": 7,
+          "title": "AI-driven hybrid framework for enhanced pest detection and ... - Nature",
+          "summary": "Nature发表AI驱动的混合框架研究，用于增强害虫检测，具有农业应用潜力。",
+          "url": "https://www.nature.com/articles/s41598-026-47987-5",
+          "score": 8,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "Eridanus2"
+              "name": "nature.com"
             }
           ],
           "tags": [
-            "security",
-            "hardware",
-            "acoustics",
-            "privacy",
-            "research"
+            "ai-agriculture",
+            "computer-vision",
+            "pest-detection",
+            "hybrid-framework"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Social and emotional learning in artificial agents | Scientific Reports",
+          "summary": "Scientific Reports论文研究人工代理的社会与情感学习能力",
+          "url": "https://www.nature.com/articles/s41598-026-48309-5",
+          "score": 7.8,
+          "sources": [
+            {
+              "name": "nature.com"
+            }
+          ],
+          "tags": [
+            "artificial-agents",
+            "social-learning",
+            "emotional-intelligence",
+            "research-paper"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Feasibility of implementing a multicultural curriculum through ...",
+          "summary": "Nature研究探讨通过AI实施多元文化课程的可行性，基于教育科学专家视角。",
+          "url": "https://www.nature.com/articles/s41598-026-48953-x",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "nature.com"
+            }
+          ],
+          "tags": [
+            "ai-education",
+            "multicultural-curriculum",
+            "educational-science",
+            "feasibility-study"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Accuracy assessment of an artificial intelligence model in predicting ...",
+          "summary": "Nature论文评估AI模型在预测任务中的准确性表现",
+          "url": "https://www.nature.com/articles/s41598-026-48202-1",
+          "score": 7.2,
+          "sources": [
+            {
+              "name": "nature.com"
+            }
+          ],
+          "tags": [
+            "ai-model",
+            "accuracy-assessment",
+            "research-paper"
           ],
           "focusTopics": [
-            "memory"
+            "evals"
+          ]
+        },
+        {
+          "title": "Prove you are a robot: CAPTCHAs for agents",
+          "summary": "探讨为AI代理设计CAPTCHA验证机制的研究，涉及AI安全与身份验证",
+          "url": "https://browser-use.com/posts/prove-you-are-a-robot",
+          "score": 6.501,
+          "sources": [
+            {
+              "name": "HN (42)"
+            }
           ],
-          "background": "Speakers and microphones are both transducers that convert between electrical signals and sound waves, relying on similar electromagnetic principles where a coil moves within a magnetic field. In cybersecurity, acoustic side-channel attacks exploit sound emissions from hardware, such as keystrokes or device operations, to extract sensitive information. The SPEAKE(a)R research builds on this by showing how output devices can be repurposed for input, creating a new vector for espionage.",
-          "discussion": "Community comments highlight practical and historical uses of speaker-to-microphone conversion, such as using headphones as microphones in audio recording (e.g., for rap music or kick drums) and in firmware like iPod Linux. Overall sentiment is supportive, with users noting the technical feasibility based on electromagnetic reversibility and sharing anecdotes that align with the paper's findings."
+          "tags": [
+            "ai-security",
+            "captcha",
+            "agent-authentication",
+            "human-ai-interaction"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "jingyaogong/minimind",
+          "summary": "2小时内从零训练64M参数GPT模型，展示高效小参数模型训练方法",
+          "url": "https://github.com/jingyaogong/minimind",
+          "score": 6.100999999999999,
+          "sources": [
+            {
+              "name": "GitHub trending:python (+214★)"
+            }
+          ],
+          "tags": [
+            "gpt-training",
+            "small-models",
+            "efficient-training",
+            "llm-research"
+          ],
+          "focusTopics": [
+            "model-release"
+          ]
+        },
+        {
+          "title": "Scientific datasets are riddled with copy-paste errors",
+          "summary": "研究发现科学数据集中普遍存在复制粘贴错误，影响AI训练数据质量",
+          "url": "https://www.sciencedetective.org/scientific-datasets-are-riddled-with-copy-paste-errors/",
+          "score": 5.186999999999999,
+          "sources": [
+            {
+              "name": "HN (29)"
+            }
+          ],
+          "tags": [
+            "data-quality",
+            "scientific-datasets",
+            "data-errors",
+            "ai-training"
+          ],
+          "focusTopics": []
         }
       ]
     },
@@ -90,99 +242,378 @@
       "title": "Engineering & Resources",
       "items": [
         {
-          "title": "Vercel confirms April 2026 security breach via compromised third-party AI tool's OAuth app",
-          "summary": "Vercel confirmed a significant security breach in April 2026, originating from a compromised Google Workspace OAuth app of a third-party AI tool, with hackers claiming to sell stolen data. The company published indicators of compromise (IOCs) to aid community investigation. This incident highlights the growing risks of supply chain attacks through third-party AI integrations, affecting a major cloud platform used by many developers and organizations. It underscores the need for better security practices in OAuth app management and could impact trust in cloud infrastructure diversity. The breach involved a broader compromise of the third-party AI tool's OAuth app, potentially affecting hundreds of users across multiple organizations. Vercel's initial communication was criticized for lacking specific actionable advice, such as how customers should review environment variables for exposure.",
-          "url": "https://www.bleepingcomputer.com/news/security/vercel-confirms-breach-as-hackers-claim-to-be-selling-stolen-data/",
-          "score": 8,
+          "title": "Donchitos/Claude-Code-Game-Studios",
+          "summary": "将Claude Code转变为完整游戏开发工作室，包含49个AI代理和72个工作流技能",
+          "url": "https://github.com/Donchitos/Claude-Code-Game-Studios",
+          "score": 8.790999999999999,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "colesantiago"
+              "name": "GitHub trending:all (+704★)"
             }
           ],
           "tags": [
-            "security",
-            "cloud-computing",
-            "data-breach",
-            "incident-response",
-            "oauth"
-          ],
-          "focusTopics": [],
-          "background": "Vercel is a frontend cloud platform that provides deployment, serverless compute, and integrations for applications, including AI tools. Google Workspace OAuth apps allow third-party applications to access user data with permissions, which can pose security risks if not properly managed. Third-party AI tools are increasingly integrated into platforms like Vercel, introducing vulnerabilities through supply chain attacks.",
-          "discussion": "Community comments expressed frustration with Vercel's vague initial response, noting a lack of specific guidance on assessing impact. Some users highlighted broader concerns about web infrastructure homogeneity increasing incident blast radius, while others sympathized with the response team but criticized the communication as insufficient for customer protection."
-        },
-        {
-          "title": "Article categorizes seven foundational programming language paradigms influencing modern design.",
-          "summary": "An article published in 2022 by madhadron categorizes seven foundational programming language paradigms—Algol, Lisp, ML, Smalltalk, Forth, APL, and Prolog—as 'ur-languages' that have shaped modern language evolution. The community discussion provides corrections, such as reclassifying Ruby as object-oriented rather than Algol, and extensions like adding proof-oriented languages via Curry-Howard correspondence. This taxonomy helps developers understand the historical and conceptual roots of modern programming languages, enabling better language selection and design decisions by highlighting core paradigms rather than superficial syntax. It fosters deeper appreciation of software engineering principles and encourages exploration beyond mainstream tools, impacting education and industry practices. The article defines 'ur-languages' as foundational paradigms that introduced key concepts like structured control flow (Algol) or symbolic computation (Lisp), with community feedback noting Ruby's object-oriented nature and suggesting additions like proof-oriented languages (e.g., Lean). Limitations include the taxonomy being opinion-based and not exhaustive, as seen in discussions about missing paradigms.",
-          "url": "https://madhadron.com/programming/seven_ur_languages.html",
-          "score": 7,
-          "sources": [
-            {
-              "name": "hackernews",
-              "meta": "helloplanets"
-            }
-          ],
-          "tags": [
-            "programming-languages",
-            "language-paradigms",
-            "computer-science",
-            "software-engineering",
-            "history"
+            "ai-agents",
+            "game-development",
+            "claude-code",
+            "workflow-automation"
           ],
           "focusTopics": [
-            "memory"
-          ],
-          "background": "Programming paradigms are high-level styles for structuring code, such as imperative (focusing on how to execute) or declarative (focusing on what to execute), with languages often supporting multiple paradigms. Foundational paradigms like object-oriented (Smalltalk) or functional (ML) have influenced modern languages like Python or Haskell, shaping software development practices. Understanding these paradigms helps in comparing languages and choosing appropriate tools for projects.",
-          "discussion": "Community comments show a mix of agreement and constructive criticism, with users providing corrections (e.g., Ruby's classification as object-oriented), extensions (e.g., adding proof-oriented languages), and practical examples (e.g., educational implementations). Overall sentiment is positive, valuing the taxonomy while offering nuanced insights to refine it."
+            "coding-agents",
+            "agent-harness"
+          ]
         },
         {
-          "title": "Notion leaks email addresses of all editors on public pages",
-          "summary": "Notion has exposed the email addresses, names, and profile photos of all users who have edited any public page, as documented in its official help section, and the company has acknowledged the issue while stating it is working on a fix. This vulnerability has been reported by the community and confirmed by a Notion representative, Max, who noted it is not a quick fix. This matters because Notion is a widely used productivity and collaboration tool, and such a data leak poses significant security and privacy risks for millions of users, potentially leading to spam, phishing, or identity theft. It highlights broader concerns about how tech companies handle personal data in collaborative platforms, especially as Notion expands into AI-driven features. The leak occurs through webpage metadata when a Notion page is published to the web, and Notion warns users about this during the publishing process, but the exposure is still considered problematic. Notion is exploring solutions such as removing personal identifiable information from public endpoints or implementing an email proxy similar to GitHub's system for public commits.",
-          "url": "https://twitter.com/weezerOSINT/status/2045849358462222720",
-          "score": 7,
+          "title": "openai/openai-agents-python",
+          "summary": "OpenAI发布轻量级多智能体工作流Python框架",
+          "url": "https://github.com/openai/openai-agents-python",
+          "score": 8.353,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "Tiberium"
+              "name": "GitHub trending:all (+752★)"
             }
           ],
           "tags": [
-            "security",
-            "privacy",
-            "notion",
-            "data-leak",
-            "community-discussion"
+            "multi-agent",
+            "openai",
+            "python-framework",
+            "workflow-orchestration"
           ],
           "focusTopics": [
-            "multi-agent"
-          ],
-          "background": "Notion is a popular all-in-one workspace tool that allows users to create notes, databases, and collaborative pages, often used for personal and team projects. Public pages in Notion can be shared online, enabling broader access, but this feature inadvertently exposes editor details in the page's metadata. Data leaks like this can compromise user privacy and security, especially in tools that blend personal and professional use.",
-          "discussion": "Community comments reveal mixed sentiments, with users noting the issue has existed for at least five years and criticizing Notion's shift toward AI marketing. A Notion representative acknowledged the problem and explained that a fix is complex, not a quick solution, while some users shared personal experiences of being deanonymized through this vulnerability."
+            "agent-harness"
+          ]
         },
         {
-          "title": "Headless services gain momentum for personal AI integration, with Salesforce launching Headless 360.",
-          "summary": "Industry leaders Matt Webb and Marc Benioff advocate for headless services, with Salesforce announcing Headless 360 on April 19, 2026, which exposes its platforms via APIs, MCP, and CLI for direct AI agent access. This trend is seen as a shift from GUIs to APIs for better user and AI experiences. This matters because it could revolutionize how personal AIs interact with services, making integrations faster and more reliable, while potentially disrupting SaaS pricing models that rely on per-user fees. It signals a broader move towards API-first economies, enhancing automation and AI agent capabilities across industries. Salesforce Headless 360 includes APIs, MCP (Model Context Protocol), and CLI access, enabling AI agents to handle data and workflows directly without a browser. However, this shift may challenge existing SaaS pricing schemes and requires robust API infrastructure to ensure security and performance.",
-          "url": "https://simonwillison.net/2026/Apr/19/headless-everything/#atom-everything",
-          "score": 7,
+          "title": "thunderbird/thunderbolt",
+          "summary": "Thunderbird开源AI控制框架，支持模型选择和数据自主",
+          "url": "https://github.com/thunderbird/thunderbolt",
+          "score": 7.842499999999999,
           "sources": [
             {
-              "name": "rss",
-              "meta": "Simon Willison"
+              "name": "GitHub trending:all (+695★)"
             }
           ],
           "tags": [
-            "AI",
-            "APIs",
-            "Headless Services",
-            "Future Trends",
-            "Personal AI"
+            "ai-framework",
+            "open-source",
+            "data-privacy",
+            "vendor-lockin"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "Claude Token Counter, now with model comparisons",
+          "summary": "Simon Willison发布Claude Token Counter工具更新，新增模型比较功能",
+          "url": "https://simonwillison.net/2026/Apr/20/claude-token-counts/#atom-everything",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "Simon Willison"
+            }
+          ],
+          "tags": [
+            "claude",
+            "token-counter",
+            "model-comparison",
+            "developer-tools"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "EvoMap/evolver",
+          "summary": "基于基因组进化协议的自进化AI代理引擎开源项目",
+          "url": "https://github.com/EvoMap/evolver",
+          "score": 7.1655,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+527★)"
+            }
+          ],
+          "tags": [
+            "ai-agents",
+            "self-evolution",
+            "genome-protocol",
+            "open-source"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "HKUDS/DeepTutor",
+          "summary": "DeepTutor：基于代理的个性化学习助手，提供自适应教育支持",
+          "url": "https://github.com/HKUDS/DeepTutor",
+          "score": 7.0485,
+          "sources": [
+            {
+              "name": "GitHub trending:python (+449★)"
+            }
+          ],
+          "tags": [
+            "ai-tutor",
+            "personalized-learning",
+            "education-ai",
+            "agent-framework"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "BasedHardware/omi",
+          "summary": "基于硬件AI系统，可观察屏幕、听取对话并提供指导",
+          "url": "https://github.com/BasedHardware/omi",
+          "score": 6.9775,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+685★)"
+            }
+          ],
+          "tags": [
+            "screen-ai",
+            "conversation-analysis",
+            "hardware-ai",
+            "assistive-technology"
           ],
           "focusTopics": [
             "tool-use"
+          ]
+        },
+        {
+          "title": "badlogic/pi-mono",
+          "summary": "AI代理工具包：包含编码代理CLI、统一LLM API、TUI和Web UI库、Slack机器人、vLLM pods",
+          "url": "https://github.com/badlogic/pi-mono",
+          "score": 6.6835,
+          "sources": [
+            {
+              "name": "GitHub trending:typescript (+319★)"
+            }
           ],
-          "background": "Headless services, in this context, refer to software or platforms that operate without a graphical user interface (GUI), instead exposing functionality through APIs, command-line interfaces (CLI), or protocols like MCP for direct integration. The Model Context Protocol (MCP) is an open-source standard that connects AI applications to external data sources and tools, facilitating interoperability. This trend builds on the early 2010s wave of API-first services, now revived for AI-driven automation and personal assistants."
+          "tags": [
+            "ai-toolkit",
+            "coding-agent",
+            "llm-api",
+            "multi-interface"
+          ],
+          "focusTopics": [
+            "coding-agents",
+            "tool-use"
+          ]
+        },
+        {
+          "title": "lsdefine/GenericAgent",
+          "summary": "自进化代理系统，从3.3K行种子代码生长技能树，实现全系统控制且减少6倍token消耗",
+          "url": "https://github.com/lsdefine/GenericAgent",
+          "score": 6.57,
+          "sources": [
+            {
+              "name": "GitHub trending:python (+300★)"
+            }
+          ],
+          "tags": [
+            "self-evolving-agents",
+            "skill-tree",
+            "token-efficiency",
+            "system-control"
+          ],
+          "focusTopics": [
+            "agent-harness",
+            "planning"
+          ]
+        },
+        {
+          "title": "Changes in the system prompt between Claude Opus 4.6 and 4.7",
+          "summary": "分析Claude Opus 4.6到4.7版本系统提示词的具体变化",
+          "url": "https://simonwillison.net/2026/Apr/18/opus-system-prompt/",
+          "score": 6.55,
+          "sources": [
+            {
+              "name": "HN (200)"
+            }
+          ],
+          "tags": [
+            "llm",
+            "claude",
+            "prompt-engineering",
+            "model-analysis"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "The RAM shortage could last years",
+          "summary": "AI需求激增可能导致RAM短缺持续数年，影响AI硬件供应链",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/914672/the-ram-shortage-could-last-years",
+          "score": 6.5200000000000005,
+          "sources": [
+            {
+              "name": "HN (190)"
+            }
+          ],
+          "tags": [
+            "ai-hardware",
+            "ram-shortage",
+            "supply-chain",
+            "infrastructure"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Show HN: TRELLIS.2 image-to-3D running on Mac Silicon – no Nvidia GPU needed",
+          "summary": "微软TRELLIS.2图像转3D模型移植到苹果芯片，无需NVIDIA GPU",
+          "url": "https://github.com/shivampkumar/trellis-mac",
+          "score": 6.432,
+          "sources": [
+            {
+              "name": "HN (19)"
+            }
+          ],
+          "tags": [
+            "image-to-3d",
+            "apple-silicon",
+            "model-porting",
+            "computer-vision"
+          ],
+          "focusTopics": [
+            "model-release"
+          ]
+        },
+        {
+          "title": "bytedance/deer-flow",
+          "summary": "字节跳动开源长视野SuperAgent框架，支持研究、编码和创作，集成沙箱、记忆、工具和子代理",
+          "url": "https://github.com/bytedance/deer-flow",
+          "score": 6.235,
+          "sources": [
+            {
+              "name": "GitHub trending:python (+190★)"
+            }
+          ],
+          "tags": [
+            "superagent",
+            "long-horizon",
+            "multi-agent",
+            "open-source"
+          ],
+          "focusTopics": [
+            "agent-harness",
+            "planning"
+          ]
+        },
+        {
+          "title": "Show HN: A working reference implementation of context engineering",
+          "summary": "上下文工程的工作参考实现开源项目，涉及RAG和技能系统",
+          "url": "https://github.com/outcomeops/context-engineering",
+          "score": 6.013,
+          "sources": [
+            {
+              "name": "HN (21)"
+            }
+          ],
+          "tags": [
+            "context-engineering",
+            "rag",
+            "skills-system",
+            "open-source"
+          ],
+          "focusTopics": [
+            "context-engineering"
+          ]
+        },
+        {
+          "title": "Headless everything for personal AI",
+          "summary": "Matt Webb探讨个人AI的headless架构理念，强调去中心化设计",
+          "url": "https://simonwillison.net/2026/Apr/19/headless-everything/#atom-everything",
+          "score": 6,
+          "sources": [
+            {
+              "name": "Simon Willison"
+            }
+          ],
+          "tags": [
+            "personal-ai",
+            "headless-architecture",
+            "decentralization"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Show HN: Prompt-to-Excalidraw demo with Gemma 4 E2B in the browser (3.1GB)",
+          "summary": "基于Gemma 4 E2B模型的浏览器端提示词转Excalidraw绘图演示",
+          "url": "https://teamchong.github.io/turboquant-wasm/draw.html",
+          "score": 5.794999999999999,
+          "sources": [
+            {
+              "name": "HN (90)"
+            }
+          ],
+          "tags": [
+            "multimodal-ai",
+            "browser-ai",
+            "gemma",
+            "drawing-generation"
+          ],
+          "focusTopics": [
+            "model-release"
+          ]
+        },
+        {
+          "title": "koala73/worldmonitor",
+          "summary": "AI驱动的实时全球情报仪表板，集成新闻聚合、地缘政治监控和基础设施追踪",
+          "url": "https://github.com/koala73/worldmonitor",
+          "score": 5.6145,
+          "sources": [
+            {
+              "name": "GitHub trending:typescript (+343★)"
+            }
+          ],
+          "tags": [
+            "ai-dashboard",
+            "real-time-intelligence",
+            "news-aggregation",
+            "geopolitical-ai"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "onlook-dev/onlook",
+          "summary": "面向设计师的开源AI优先设计工具，可视化构建、样式化和编辑React应用",
+          "url": "https://github.com/onlook-dev/onlook",
+          "score": 5.5985,
+          "sources": [
+            {
+              "name": "GitHub trending:typescript (+49★)"
+            }
+          ],
+          "tags": [
+            "ai-design-tool",
+            "react-development",
+            "visual-editing",
+            "open-source"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "The Bromine Chokepoint",
+          "summary": "中东冲突可能影响溴元素供应，进而威胁全球内存芯片生产",
+          "url": "https://warontherocks.com/cogs-of-war/the-bromine-chokepoint-how-strife-in-the-middle-east-could-halt-production-of-the-worlds-memory-chips/",
+          "score": 5.125,
+          "sources": [
+            {
+              "name": "HN (150)"
+            }
+          ],
+          "tags": [
+            "semiconductors",
+            "supply-chain",
+            "geopolitics",
+            "memory-chips"
+          ],
+          "focusTopics": []
         }
       ]
     }
-  ]
+  ],
+  "aiSummary": "今日AI领域动态：融资与芯片合作成焦点，**AI编程助手[Cursor洽谈20亿美元融资，估值超500亿美元](#item-cnbc-com-2026-04-19-cursor-ai-2-billion-funding-round-html)**，同时**[谷歌与Marvell洽谈合作开发新型AI推理芯片](#item-theinformation-com-articles-google-talks-marvell-build-new-a)**。研究方面，**《Nature》发表[AI驱动的混合框架用于增强害虫检测](#item-nature-com-articles-s41598-026-47987-5)**，而**《Scientific Reports》论文则探索[人工代理的社会与情感学习能力](#item-nature-com-articles-s41598-026-48309-5)**。工具更新活跃，**OpenAI发布了[轻量级多智能体工作流Python框架](#item-github-com-openai-openai-agents-python)**，另有项目将**[Claude Code转变为完整游戏开发工作室](#item-github-com-Donchitos-Claude-Code-Game-Studios)**。观点洞察指出，**AI需求激增可能导致[RAM短缺持续数年](#item-theverge-com-ai-artificial-intelligence-914672-the-ram-short)**，并有分析探讨了**[Claude Opus系统提示词的具体版本变化](#item-simonwillison-net-2026-Apr-18-opus-system-prompt)**。"
 }
