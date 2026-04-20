@@ -598,6 +598,49 @@
         "evaluation"
       ],
       "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:flxq4uyjfotciovpw3x3fxnu/app.bsky.feed.post/3mjui6u2tf22k",
+      "url": "https://bsky.app/profile/emollick.bsky.social/post/3mjui6u2tf22k",
+      "author": {
+        "handle": "emollick.bsky.social",
+        "displayName": "Ethan Mollick",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:flxq4uyjfotciovpw3x3fxnu/bafkreigq63ljumc43yx5eoxchrq75d72irea6ddcceedwmdttxebyowc3q"
+      },
+      "content": "The continuing gap between the capabilities of Gemini Pro 3.1 (very good model) and the capabilities of the Gemini app/website is odd. The model can do what Claude/GPT can do, but there is a minimal harness for tools (file creation, research etc), no auditable CoT/actions, manual canvas, etc.\n1/",
+      "createdAt": "2026-04-19T17:30:25.949Z",
+      "likeCount": 64,
+      "replyCount": 7,
+      "repostCount": 4,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [
+        "llm",
+        "tooling",
+        "deployment"
+      ],
+      "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:flxq4uyjfotciovpw3x3fxnu/app.bsky.feed.post/3mjvgqrczdc2k",
+      "url": "https://bsky.app/profile/emollick.bsky.social/post/3mjvgqrczdc2k",
+      "author": {
+        "handle": "emollick.bsky.social",
+        "displayName": "Ethan Mollick",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:flxq4uyjfotciovpw3x3fxnu/bafkreigq63ljumc43yx5eoxchrq75d72irea6ddcceedwmdttxebyowc3q"
+      },
+      "content": "The imaginary optimal selfish scenario for OpenAI, in retrospect, was to keep Reasoners a secret, skip releasing o1 and o1-preview, and release o3 as GPT-5\n\nThere would have been no Deep Seek moment, other labs may not have discovered Reasoners quickly, and OpenAI's lead would have been hard to beat",
+      "createdAt": "2026-04-20T02:37:19.306Z",
+      "likeCount": 14,
+      "replyCount": 4,
+      "repostCount": 0,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [
+        "llm",
+        "deployment"
+      ],
+      "type": "bluesky"
     }
   ],
   "videos": [],
@@ -949,10 +992,93 @@
       "tags": [
         "deployment"
       ]
+    },
+    {
+      "type": "x",
+      "id": "2044880350237626844",
+      "url": "https://x.com/emollick/status/2044880350237626844",
+      "author": {
+        "handle": "emollick",
+        "displayName": "Ethan Mollick",
+        "avatar": null
+      },
+      "content": "On the plus side with Opus 4.7, if it does decide to think it produces BY FAR the best",
+      "createdAt": "2026-04-20T04:12:53.632Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Ethan Mollick comments on the performance of Opus 4.7, suggesting that when it engages in reasoning, it significantly outperforms other models.",
+      "worthReading": "It provides insight into the comparative evaluation of a specific AI model's reasoning capabilities.",
+      "tags": [
+        "llm",
+        "evaluation"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2026285200531955745",
+      "url": "https://x.com/emollick/status/2026285200531955745",
+      "author": {
+        "handle": "emollick",
+        "displayName": "Ethan Mollick",
+        "avatar": null
+      },
+      "content": "As stories about AI increasingly become stories of either catastrophe or salvation,",
+      "createdAt": "2026-04-20T04:12:53.632Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Mollick observes the polarized narrative framing of AI in public discourse, often reduced to extremes of doom or utopia.",
+      "worthReading": "It highlights a critical perspective on how AI progress and risks are communicated and perceived.",
+      "tags": [
+        "safety",
+        "deployment"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2011523783467958585",
+      "url": "https://x.com/emollick/status/2011523783467958585",
+      "author": {
+        "handle": "emollick",
+        "displayName": "Ethan Mollick",
+        "avatar": null
+      },
+      "content": "Teaching an experimental class for MBAs on 'vibefounding,' the students have four days to come up and",
+      "createdAt": "2026-04-20T04:12:53.632Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Mollick is conducting an experimental MBA course on 'vibefounding,' a rapid, vibe-based startup ideation process with a tight deadline.",
+      "worthReading": "It showcases innovative, hands-on educational approaches to entrepreneurship and AI in a business school context.",
+      "tags": [
+        "deployment"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2021638881158857204",
+      "url": "https://x.com/emollick/status/2021638881158857204",
+      "author": {
+        "handle": "emollick",
+        "displayName": "Ethan Mollick",
+        "avatar": null
+      },
+      "content": "I pointed Claude Cowork at a set of 107 documents (PPTs, Word docs, Excel) that were initially",
+      "createdAt": "2026-04-20T04:12:53.632Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Mollick is testing Claude Cowork's capability to process and analyze a large, mixed-format document set (107 files).",
+      "worthReading": "It demonstrates a practical application of AI agents for handling complex, real-world document analysis tasks.",
+      "tags": [
+        "agent",
+        "rag",
+        "tooling"
+      ]
     }
   ],
   "dailyCounts": [
-    0,
     0,
     0,
     0,
@@ -981,7 +1107,8 @@
     3,
     3,
     6,
-    4
+    5,
+    5
   ],
-  "interestSummary": "Ethan Mollick's recent focus is on analyzing advanced AI models like Claude Mythos, particularly their cybersecurity implications, societal trust, and impact on creative industries. He is also observing the competitive landscape of frontier AI labs and considering AI's influence on education and writing style."
+  "interestSummary": "Ethan Mollick's recent focus is on analyzing frontier AI models, particularly their emergent capabilities and risks in cybersecurity, while also examining AI's impact on creativity, writing style, and education. He is tracking the competitive landscape of leading AI labs and the societal adaptation to these technologies."
 }

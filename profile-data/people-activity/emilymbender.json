@@ -174,7 +174,10 @@
       "repostCount": 8,
       "highlights": "",
       "worthReading": "",
-      "tags": [],
+      "tags": [
+        "llm",
+        "safety"
+      ],
       "type": "bluesky"
     },
     {
@@ -367,7 +370,9 @@
       "repostCount": 5,
       "highlights": "",
       "worthReading": "",
-      "tags": [],
+      "tags": [
+        "safety"
+      ],
       "type": "bluesky"
     },
     {
@@ -403,6 +408,44 @@
       "likeCount": 34,
       "replyCount": 3,
       "repostCount": 3,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [],
+      "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:aeug3w4mdhnc2wv73hmrh36v/app.bsky.feed.post/3mjusl775cs25",
+      "url": "https://bsky.app/profile/emilymbender.bsky.social/post/3mjusl775cs25",
+      "author": {
+        "handle": "emilymbender.bsky.social",
+        "displayName": "Emily M. Bender",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:aeug3w4mdhnc2wv73hmrh36v/bafkreifvwtyrccviqr6ugi43apd3qe3rldsmzmeh6fudcwmgzgrjt4afku"
+      },
+      "content": "I am forever saying that if refusal isn't a live option in any decision making process about \"AI\", then no ethical practice is possible.  You've got to be able to stop if the thing is unacceptable.",
+      "createdAt": "2026-04-19T20:36:17.695Z",
+      "likeCount": 282,
+      "replyCount": 1,
+      "repostCount": 86,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [
+        "safety"
+      ],
+      "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:aeug3w4mdhnc2wv73hmrh36v/app.bsky.feed.post/3mjtz4oqx3c25",
+      "url": "https://bsky.app/profile/emilymbender.bsky.social/post/3mjtz4oqx3c25",
+      "author": {
+        "handle": "emilymbender.bsky.social",
+        "displayName": "Emily M. Bender",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:aeug3w4mdhnc2wv73hmrh36v/bafkreifvwtyrccviqr6ugi43apd3qe3rldsmzmeh6fudcwmgzgrjt4afku"
+      },
+      "content": "Join us tomorrow!",
+      "createdAt": "2026-04-19T13:00:47.145Z",
+      "likeCount": 12,
+      "replyCount": 0,
+      "repostCount": 1,
       "highlights": "",
       "worthReading": "",
       "tags": [],
@@ -499,10 +542,72 @@
         "evaluation",
         "deployment"
       ]
+    },
+    {
+      "type": "x",
+      "id": "1852336263732551982",
+      "url": "https://x.com/emilymbender/status/1852336263732551982",
+      "author": {
+        "handle": "emilymbender",
+        "displayName": "Emily M. Bender",
+        "avatar": null
+      },
+      "content": "EMILY M. BENDER: Yeah. And so passive, like, oops, the moon, the moon went further away. It's like no, actually, you made some decisions.",
+      "createdAt": "2026-04-20T04:13:07.229Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Critiques the passive framing of AI outcomes, emphasizing that human decisions drive technological consequences rather than inevitable natural processes.",
+      "worthReading": "It highlights the importance of accountability in AI development by rejecting deterministic narratives.",
+      "tags": [
+        "safety",
+        "evaluation"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "1491834518705033218",
+      "url": "https://x.com/emilymbender/status/1491834518705033218",
+      "author": {
+        "handle": "emilymbender",
+        "displayName": "Emily M. Bender",
+        "avatar": null
+      },
+      "content": "Image is of the 1990s Microsoft writing assistant character Clippy with its eyebrows raised positioned in.",
+      "createdAt": "2022-02-10",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Uses the nostalgic Clippy character to comment on contemporary AI assistants, suggesting parallels in hype or limitations.",
+      "worthReading": "It provides a cultural critique of AI tooling by drawing historical comparisons.",
+      "tags": [
+        "tooling",
+        "llm"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "1592992259926286336",
+      "url": "https://x.com/emilymbender/status/1592992259926286336",
+      "author": {
+        "handle": "emilymbender",
+        "displayName": "Emily M. Bender",
+        "avatar": null
+      },
+      "content": "Facebook (sorry: Meta) AI: Check out our 'AI' that lets you access all of humanity's knowledge.",
+      "createdAt": "2022-11-16",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Satirizes Meta's grandiose AI claims by mocking the idea that a single system can encapsulate all human knowledge.",
+      "worthReading": "It underscores skepticism toward overhyped AI capabilities and marketing narratives.",
+      "tags": [
+        "llm",
+        "evaluation"
+      ]
     }
   ],
   "dailyCounts": [
-    0,
     0,
     0,
     0,
@@ -531,7 +636,8 @@
     4,
     5,
     1,
-    0
+    2,
+    3
   ],
-  "interestSummary": "Emily M. Bender's recent focus is critically analyzing the societal and ethical impacts of AI, particularly opposing the uncritical deployment of LLMs in education and media while advocating for policy interventions. She actively promotes public discourse through her podcast and events, emphasizing the value of humanities and linguistics in understanding these issues."
+  "interestSummary": "Emily M. Bender is actively focused on critiquing AI hype and its societal impacts, particularly emphasizing ethical concerns, labor exploitation, and resisting the dehumanizing integration of generative AI in education and creative fields. She is also promoting related public discussions through events and her podcast, Mystery AI Hype Theater 3000."
 }

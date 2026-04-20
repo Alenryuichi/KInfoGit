@@ -257,6 +257,48 @@
         "evaluation"
       ],
       "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mjvho5z2xc2t",
+      "url": "https://bsky.app/profile/simonwillison.net/post/3mjvho5z2xc2t",
+      "author": {
+        "handle": "simonwillison.net",
+        "displayName": "Simon Willison",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
+      },
+      "content": "New TIL on fetching data from a Datasette instance into Google Sheets using importdata(), named custom functions or Google Apps Script til.simonwillison.net/google-sheet...",
+      "createdAt": "2026-04-20T02:53:45.690Z",
+      "likeCount": 16,
+      "replyCount": 0,
+      "repostCount": 1,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [
+        "tooling",
+        "deployment"
+      ],
+      "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mjvb2hinfc2q",
+      "url": "https://bsky.app/profile/simonwillison.net/post/3mjvb2hinfc2q",
+      "author": {
+        "handle": "simonwillison.net",
+        "displayName": "Simon Willison",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
+      },
+      "content": "I upgraded my Claude token counter tool to compare different models and Opus 4.7 appears to use 1.46x times the tokens for text and up to 3x the tokens for images - it's priced the same as Opus 4.6 on a per-token basis so this is actually a pretty big price bump simonwillison.net/2026/Apr/20/...",
+      "createdAt": "2026-04-20T00:55:22.095Z",
+      "likeCount": 91,
+      "replyCount": 8,
+      "repostCount": 15,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [
+        "llm",
+        "evaluation"
+      ],
+      "type": "bluesky"
     }
   ],
   "videos": [],
@@ -538,10 +580,30 @@
       "tags": [
         "multi-modal"
       ]
+    },
+    {
+      "type": "x",
+      "id": "2021280918204228082",
+      "url": "https://x.com/simonw/status/2021280918204228082",
+      "author": {
+        "handle": "simonw",
+        "displayName": "Simon Willison",
+        "avatar": "https://avatars.githubusercontent.com/simonw"
+      },
+      "content": "I built two new tools to help coding agents demonstrate their work beyond just running",
+      "createdAt": "2026-04-20T04:10:09.476Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Simon Willison developed new tools to improve how coding agents showcase their work processes and outputs.",
+      "worthReading": "It demonstrates practical innovation in AI tooling for better transparency and debugging of agent behavior.",
+      "tags": [
+        "agent",
+        "tooling"
+      ]
     }
   ],
   "dailyCounts": [
-    0,
     0,
     0,
     0,
@@ -570,7 +632,8 @@
     2,
     1,
     5,
-    4
+    4,
+    3
   ],
-  "interestSummary": "Simon Willison is intensely focused on tracking and experimenting with the latest AI models, tools, and benchmarks, particularly around multimodal capabilities, coding agents, and local model performance. His interests also include AI memory systems, developer tools, and analyzing the evolution and security implications of new model releases."
+  "interestSummary": "Simon Willison is intensely focused on tracking and experimenting with the latest AI models, tools, and benchmarks, with a particular interest in their coding capabilities, multimodal features, and local/accessible deployment. His recent activity also highlights his analysis of AI security practices, model comparisons, and the evolving developer workflow with coding agents."
 }

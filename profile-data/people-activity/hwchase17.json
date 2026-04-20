@@ -154,6 +154,71 @@
         "deployment",
         "evaluation"
       ]
+    },
+    {
+      "type": "x",
+      "id": "2010044779225329688",
+      "url": "https://x.com/hwchase17/status/2010044779225329688",
+      "author": {
+        "handle": "hwchase17",
+        "displayName": "Harrison Chase",
+        "avatar": "https://avatars.githubusercontent.com/hwchase17"
+      },
+      "content": "This means that operations you would do on code in the software world, you now do on traces in the agent world. Debugging, testing, profiling",
+      "createdAt": "2026-04-20T04:10:22.844Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Drawing parallels between software engineering practices and agent operations, emphasizing trace-based debugging, testing, and profiling.",
+      "worthReading": "It highlights the evolution of development practices in AI agent systems.",
+      "tags": [
+        "agent",
+        "evaluation",
+        "tooling"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2021261552222158955",
+      "url": "https://x.com/hwchase17/status/2021261552222158955",
+      "author": {
+        "handle": "hwchase17",
+        "displayName": "Harrison Chase",
+        "avatar": "https://avatars.githubusercontent.com/hwchase17"
+      },
+      "content": "TL;DR: More and more agents need a workspace: a computer where they can run code, install packages, and access files. Sandboxes provide this",
+      "createdAt": "2026-04-20T04:10:22.844Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Advocating for agent workspaces or sandboxes as essential infrastructure for running code, managing dependencies, and accessing files.",
+      "worthReading": "It addresses a critical infrastructure need for scalable and secure AI agent deployment.",
+      "tags": [
+        "agent",
+        "infra",
+        "deployment"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2041682886722728368",
+      "url": "https://x.com/hwchase17/status/2041682886722728368",
+      "author": {
+        "handle": "hwchase17",
+        "displayName": "Harrison Chase",
+        "avatar": "https://avatars.githubusercontent.com/hwchase17"
+      },
+      "content": "RT @samecrowder: as always, it's an exciting time to be working at LangChain!",
+      "createdAt": "2026-04-20T04:10:22.844Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Retweeting a positive sentiment about working at LangChain, indicating endorsement of the message.",
+      "worthReading": "It reflects the ongoing enthusiasm and momentum within the LangChain ecosystem.",
+      "tags": [
+        "agent",
+        "tooling"
+      ]
     }
   ],
   "dailyCounts": [
@@ -184,9 +249,9 @@
     0,
     0,
     0,
-    0,
     4,
+    3,
     3
   ],
-  "interestSummary": "Harrison Chase is focused on the development and production deployment of AI agents, emphasizing the need for specialized tools like sandboxed workspaces, memory systems, and trace-based iteration and monitoring."
+  "interestSummary": "Harrison Chase is focused on the development and iteration of AI agents, emphasizing the need for sandboxed workspaces and specialized tools like LangSmith for building, debugging, and monitoring agents in production."
 }
