@@ -1,194 +1,123 @@
 {
   "date": "2026-04-21",
-  "itemCount": 16,
+  "itemCount": 55,
   "sections": [
     {
       "id": "headlines",
       "title": "Headlines & Launches",
       "items": [
         {
-          "title": "John Ternus to become Apple CEO, Tim Cook transitions to executive chairman",
-          "summary": "Apple announced that John Ternus will become the company's CEO, while Tim Cook will transition to the role of executive chairman, marking a significant leadership change. This announcement was made in April 2026, as detailed in Apple's official newsroom release. This leadership shift is significant because it could influence Apple's future direction in hardware, software, and strategic initiatives, potentially impacting product innovation and company culture. As one of the world's most influential tech companies, changes at the top may affect industry trends and consumer experiences globally. John Ternus is known for his expertise in hardware, having led key product developments at Apple, while Tim Cook's background in logistics and operations helped scale the company globally. The transition suggests a focus on maintaining Apple's hardware excellence while potentially addressing software improvements, as noted in community discussions.",
-          "url": "https://www.apple.com/newsroom/2026/04/tim-cook-to-become-apple-executive-chairman-john-ternus-to-become-apple-ceo/",
-          "score": 9,
+          "title": "Exclusive | Adobe Unveils Agents for Businesses Amid Threat of AI Disruption - WSJ",
+          "summary": "Adobe推出面向企业的AI代理以应对AI颠覆威胁",
+          "url": "https://www.wsj.com/cio-journal/adobe-unveils-agents-for-businesses-amid-threat-of-ai-disruption-d3cf479c",
+          "score": 8.3,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "schappim"
+              "name": "wsj.com"
             }
           ],
           "tags": [
-            "Apple",
-            "Leadership",
-            "Tech Industry",
-            "Hardware",
-            "Software"
-          ],
-          "focusTopics": [],
-          "background": "Apple is a leading technology company known for products like the iPhone, Mac, and iPad, with Tim Cook serving as CEO since 2011 after Steve Jobs. Executive chairman is a senior role often involving strategic oversight and board leadership, while the CEO handles day-to-day operations and major business decisions.",
-          "discussion": "Community comments express optimism that John Ternus's hardware expertise could lead to improvements in Apple's software, which some users criticize as declining in quality. There is also appreciation for Tim Cook's legacy in scaling Apple globally, with hopes that the leadership change will bring positive shifts in company direction and policy."
-        },
-        {
-          "title": "EU mandates replaceable batteries in phones and tablets from 2027",
-          "summary": "The European Union will require all phones and tablets sold in the EU to have replaceable batteries starting in 2027, as part of a regulatory push to enhance consumer rights and environmental sustainability. This mandate is a key development in the broader right-to-repair movement, aiming to reduce electronic waste and extend device lifespans. This regulation could significantly impact the consumer electronics industry by forcing manufacturers to redesign devices, potentially increasing costs but also promoting longer product lifecycles and reducing e-waste. It aligns with global sustainability trends and empowers consumers with more repair options, challenging current industry practices that often prioritize sealed designs. The mandate includes an exemption for batteries that can maintain over 80% capacity after 1,000 cycles, similar to Apple's recent implementations, which may affect low-cost phones more significantly. However, it does not standardize battery sizes or connectors, leaving potential compatibility issues for long-term replacements, as noted in community discussions.",
-          "url": "https://www.theolivepress.es/spain-news/2026/04/20/eu-to-force-replaceable-batteries-in-phones-and-tablets-from-2027/",
-          "score": 8,
-          "sources": [
-            {
-              "name": "hackernews",
-              "meta": "ramonga"
-            }
-          ],
-          "tags": [
-            "regulatory-policy",
-            "consumer-electronics",
-            "sustainability",
-            "hardware-design",
-            "right-to-repair"
+            "adobe",
+            "business-agents",
+            "ai-disruption",
+            "enterprise-ai"
           ],
           "focusTopics": [
-            "memory"
-          ],
-          "background": "The right-to-repair movement advocates for legal rights to maintain and repair devices, addressing obstacles like restricted access to parts and tools that create repair monopolies. In the EU, electronic products must comply with various directives such as RoHS, LVD, and RED for safety and environmental standards, with CE marking indicating conformity. Replaceable battery designs involve trade-offs in thermal management and reliability, as highlighted in hardware standards discussions.",
-          "discussion": "Community comments show mixed sentiments: some users praise the benefits of replaceable batteries for convenience and data security, while others question the need for regulation, noting that many batteries are already replaceable with tools and software updates drive obsolescence more. Concerns include the lack of battery standardization and potential downsides of over-regulation, with suggestions for broader industry-wide standards."
+            "agent-harness"
+          ]
         },
         {
-          "title": "Atlassian enables default data collection for AI training, with broken opt-out mechanisms and acquisition rumors.",
-          "summary": "Atlassian has enabled default data collection from all customer content, including Confluence pages and Jira tickets, for AI training, with reports that the opt-out setting is not visible on instances, and rumors suggest Anthropic may be in talks to acquire Atlassian for its data. This move raises significant privacy and ethical concerns in enterprise software, as it affects millions of users who rely on Atlassian products for sensitive business data, potentially setting a precedent for other SaaS companies to adopt similar default data collection practices. The data collection includes all in-app content, not just metadata, and the opt-out mechanism is reportedly broken, with the disabling setting not rendering on instances, while rumors link this to potential acquisition interest from Anthropic, an AI company focused on safety.",
-          "url": "https://letsdatascience.com/news/atlassian-enables-default-data-collection-to-train-ai-f71343d8",
-          "score": 8,
+          "title": "Amazon to Invest an Additional $5 Billion in Anthropic - Bloomberg",
+          "summary": "亚马逊追加投资50亿美元深化与Anthropic的AI合作伙伴关系",
+          "url": "https://www.bloomberg.com/news/articles/2026-04-20/amazon-to-invest-an-additional-5-billion-in-anthropic",
+          "score": 8.2,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "kevcampb"
+              "name": "bloomberg.com"
             }
           ],
           "tags": [
-            "data-privacy",
-            "enterprise-software",
-            "ai-ethics",
-            "saas",
-            "atlassian"
+            "investment",
+            "anthropic",
+            "amazon",
+            "ai-funding"
           ],
-          "focusTopics": [],
-          "background": "Atlassian is a leading provider of enterprise software tools like Jira and Confluence, used for project management and collaboration. Data collection for AI training involves using customer data to improve machine learning models, often under opt-out models where processing is permitted by default unless users object. Anthropic is an AI company known for developing the Claude language models and emphasizing AI safety, which could make Atlassian's data valuable for training purposes.",
-          "discussion": "Community comments express frustration with Atlassian's product quality and data practices, highlighting broken opt-out mechanisms and intentional friction, with some users noting similar defaults in other companies like GitHub and Figma, while others discuss data poisoning efforts and acquisition rumors."
+          "focusTopics": []
         },
         {
-          "title": "Alibaba releases Qwen3.6-Max-Preview, a powerful AI model topping coding benchmarks.",
-          "summary": "Alibaba released Qwen3.6-Max-Preview, its most powerful AI model to date, which has topped six major coding benchmarks and shows improvements in world knowledge and instruction following over its predecessor. The model features a 256k token context window and scores 52 on the Artificial Analysis Intelligence Index, placing it well above average among comparable models. This release intensifies competition in the AI model space, particularly in coding and reasoning tasks, challenging established players like OpenAI and Anthropic. It matters for developers and enterprises seeking high-performance, cost-effective alternatives for applications in natural language processing and software development. Qwen3.6-Max-Preview is a proprietary, cloud-only model with pricing at $1.3 per million input tokens and $7.8 per million output tokens, making it more expensive than some competitors like Kimi. It scores 65.4 on Terminal-Bench 2.0 and 57.3 on SWE-Bench Pro, slightly lower than Kimi's 66.8 and 58.6, indicating varied strengths across benchmarks.",
-          "url": "https://qwen.ai/blog?id=qwen3.6-max-preview",
-          "score": 7,
+          "title": "Sergey Brin said Google needs to catch up to Anthropic on AI coding agents. | The Verge",
+          "summary": "谢尔盖·布林表示谷歌需要在AI编码代理方面追赶Anthropic",
+          "url": "https://www.theverge.com/tech/914996/sergey-brin-said-google-needs-to-catch-up-to-anthropic-on-ai-coding-agents",
+          "score": 8.1,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "mfiguiere"
+              "name": "theverge.com"
             }
           ],
           "tags": [
-            "AI",
-            "Machine Learning",
-            "Open Source",
-            "Model Comparison",
-            "Community Discussion"
+            "google",
+            "anthropic",
+            "coding-agents",
+            "competition"
           ],
           "focusTopics": [
-            "memory",
-            "planning"
-          ],
-          "background": "Qwen is a series of large language models developed by Alibaba, known for their open-source releases and strong performance in tasks like coding and reasoning. Benchmarks such as SWE-Bench Pro and Terminal-Bench 2.0 are used to evaluate AI models on software engineering and terminal-based tasks, respectively, helping compare capabilities across different models. The AI model ecosystem includes both open-source and proprietary models, with ongoing debates about accessibility, cost, and performance trade-offs.",
-          "discussion": "Community comments highlight diverse viewpoints, including skepticism about benchmark comparisons versus real-world performance, concerns over the proprietary nature of Qwen3.6-Max-Preview contrasting with previous open-source releases, and detailed cost and performance comparisons with competitors like Kimi. Some users emphasize the importance of open weights for accessibility, while others discuss practical challenges in self-hosting models."
+            "coding-agents"
+          ]
         },
         {
-          "title": "OpenAI's ad partner sells ChatGPT ad placements based on prompt relevance",
-          "summary": "OpenAI's ad partner, reportedly StackAdapt, is selling ChatGPT ad placements that target users based on the relevance of their prompts, as revealed in a leaked deck. This approach involves using conversational context to serve ads, raising concerns about privacy and advertising integration. This matters because it signals a shift towards more intrusive, context-aware advertising in AI chatbots, potentially compromising user privacy and trust. It could set a precedent for how AI platforms monetize interactions, affecting both free and paid users in the broader digital advertising ecosystem. Ads are contextual placements that appear below ChatGPT responses, clearly labeled as sponsored, and do not show in Temporary Chats or when logged out. However, this targeting method may conflict with OpenAI's earlier assurances that ads wouldn't access prompt data, sparking questions about transparency and security.",
+          "title": "Singapore Urges Banks to Fix Security Gaps as Mythos AI Fears Spread to Asia - Bloomberg",
+          "summary": "新加坡敦促银行修复安全漏洞，因Mythos AI担忧蔓延至亚洲",
+          "url": "https://www.bloomberg.com/news/articles/2026-04-20/singapore-urges-banks-to-fix-security-gaps-amid-mythos-ai-fears?srnd=phx-economics-v2",
+          "score": 7.2,
+          "sources": [
+            {
+              "name": "bloomberg.com"
+            }
+          ],
+          "tags": [
+            "cybersecurity",
+            "banking",
+            "singapore",
+            "ai-safety"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "OpenAI ad partner now selling ChatGPT ad placements based on “prompt relevance”",
+          "summary": "OpenAI广告合作伙伴基于提示相关性销售ChatGPT广告位，涉及AI商业化。",
           "url": "https://www.adweek.com/media/exclusive-leaked-deck-reveals-stackadapts-playbook-for-chatgpt-ads/",
-          "score": 7,
+          "score": 6.433,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "jlark77777"
+              "name": "HN (161)"
             }
           ],
           "tags": [
-            "AI Ethics",
-            "Advertising",
-            "Privacy",
-            "OpenAI",
-            "ChatGPT"
+            "chatgpt",
+            "advertising",
+            "openai",
+            "prompt-relevance",
+            "commercialization"
           ],
-          "focusTopics": [],
-          "background": "ChatGPT ads launched in February 2026 as contextual placements based on conversational intent, similar to premium display ads but integrated into the chat interface. OpenAI partners with third-party ad tech companies like StackAdapt to manage these placements, leveraging AI models for targeting. This model differs from traditional search ads by using broader conversational cues rather than specific keywords.",
-          "discussion": "Community comments express skepticism and concern, with users questioning whether this violates earlier privacy assurances, likening it to potential securities fraud. Others worry about a race to the bottom in ad quality and the security risks of partnering with third parties, while some hope ads remain excluded from paid ChatGPT plans."
+          "focusTopics": []
         },
         {
-          "title": "EU age verification app source code published, hacked in 2 minutes",
-          "summary": "The European Commission published the source code for its privacy-focused age verification app, and security researchers bypassed its protections in under two minutes on April 16, 2026, revealing multiple security vulnerabilities. The app's GitHub repository carried warnings that the code was not suitable for real-world use, even as Commission President Ursula von der Leyen declared it 'technically ready.' This incident highlights significant security flaws in a government-backed app designed to protect minors online, potentially undermining public trust in digital identity systems and exposing sensitive biometric data. It raises concerns about the implementation of eIDAS regulations and the rush to deploy age verification technologies without adequate security testing. The vulnerabilities included developers forgetting to delete locally stored images in failed scenarios and allowing attackers to remove PinEnc/PinIV values from the shared_prefs file, though accessing this file requires root access on Android devices. The app uses zero-knowledge proofs to avoid disclosing user identity, but flaws could compromise this privacy-focused design.",
-          "url": "https://www.politico.eu/article/eu-brussels-launched-age-checking-app-hackers-say-took-them-2-minutes-break-it/",
-          "score": 7,
+          "title": "AI Nuclear Power Developer Fermi Slides on CEO’s Abrupt Exit - Bloomberg",
+          "summary": "AI核能开发商Fermi因CEO突然离职股价大跌",
+          "url": "https://www.bloomberg.com/news/articles/2026-04-20/ai-nuclear-power-developer-fermi-slumps-after-abrupt-exit-of-ceo?srnd=homepage-europe",
+          "score": 5.5,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "axbyte"
+              "name": "bloomberg.com"
             }
           ],
           "tags": [
-            "security",
-            "privacy",
-            "government-tech",
-            "mobile-apps",
-            "vulnerability"
+            "nuclear-power",
+            "ai-energy",
+            "leadership",
+            "stock"
           ],
-          "focusTopics": [],
-          "background": "The EU age verification app is part of the eIDAS (electronic identification and trust services) framework, aiming to allow users to prove they are adults to websites without revealing their identity, using zero-knowledge proofs. Age verification systems are increasingly mandated for online platforms to protect minors, but they often face criticism for privacy and security flaws, as seen in this open-source implementation.",
-          "discussion": "Community comments clarify that the app was not officially launched but its source code was published for review, with some noting this is a standard practice for open-source projects. Discussions correct misinformation about the app's status and provide context on eIDAS implementation, while also debating the severity of vulnerabilities, such as whether root access is required for certain exploits."
-        },
-        {
-          "title": "Growing AI Resistance Movement Sparks Debate on Model Poisoning Ethics",
-          "summary": "A Hacker News discussion with 295 points and 290 comments explores the growing anti-AI movement, specifically focusing on model poisoning as a form of resistance against AI companies' data collection practices. The conversation examines both the technical feasibility of poisoning AI training data and the ethical implications of such actions. This discussion matters because it highlights a significant cultural shift in technology communities, where some activists are moving from 'information wants to be free' to actively resisting AI data collection. The debate over model poisoning raises critical questions about data ownership, corporate responsibility, and the ethics of technological resistance in an AI-dominated landscape. Model poisoning involves manipulating training data to introduce vulnerabilities, biases, or backdoors into AI models, potentially compromising their security and performance. According to OWASP's LLM04:2025 framework, data poisoning can occur during pre-training, fine-tuning, or embedding phases and may lead to degraded model performance, biased outputs, or exploitation of downstream systems.",
-          "url": "https://stephvee.ca/blog/artificial%20intelligence/ai-resistance-is-growing/",
-          "score": 7,
-          "sources": [
-            {
-              "name": "hackernews",
-              "meta": "speckx"
-            }
-          ],
-          "tags": [
-            "AI Ethics",
-            "Machine Learning",
-            "Community Discussion",
-            "Technology Resistance",
-            "Model Poisoning"
-          ],
-          "focusTopics": [],
-          "background": "Model poisoning is a type of AI cyberattack that targets the training data of large language models (LLMs). It differs from data poisoning in how attackers choose to compromise the model's parameters (weights and biases). As AI systems become more integrated into critical domains like healthcare, where poisoning attacks can have life-or-death consequences, understanding these vulnerabilities becomes increasingly important for both security professionals and ethical activists.",
-          "discussion": "The Hacker News discussion reveals diverse viewpoints, with some participants viewing model poisoning as a legitimate form of resistance against unethical data collection, while others consider it misguided or ineffective. Notable comments include historical comparisons to earlier technology resistance movements, skepticism about the practical impact of poisoning given existing clean training data, and observations about the cultural shift from 'information wants to be free' to active resistance against AI systems."
-        },
-        {
-          "title": "Analysis argues F-35 fighter jet is ill-suited for modern protracted conflicts",
-          "summary": "A recent analysis argues that the F-35 fighter jet, while technologically advanced as a 'masterpiece,' is fundamentally mismatched for modern protracted conflicts that favor scalable, replaceable systems over expensive, complex platforms. The article specifically points to conflicts like Ukraine's drone war and naval engagements in the Red Sea as examples where mass-producible systems have proven more effective. This critique matters because it challenges the foundational assumptions of modern military procurement and force design, suggesting that investing in fewer, more capable systems may leave nations vulnerable in prolonged conflicts where attrition and industrial capacity become decisive factors. The debate has significant implications for defense budgets, industrial policy, and strategic planning as nations prepare for potential large-scale conflicts. The analysis acknowledges that the F-35 has performed superbly in specific engagements like recent operations against Iran, demonstrating its effectiveness in the kind of high-intensity, short-duration conflicts it was originally designed for. However, the authors maintain that these successes don't address the fundamental mismatch with protracted warfare scenarios where systems need to be produced at scale and replaced when lost.",
-          "url": "https://warontherocks.com/cogs-of-war/the-f-35-is-a-masterpiece-built-for-the-wrong-war/",
-          "score": 6,
-          "sources": [
-            {
-              "name": "hackernews",
-              "meta": "anjel"
-            }
-          ],
-          "tags": [
-            "military-technology",
-            "defense-policy",
-            "geopolitics",
-            "industrial-capacity",
-            "systems-design"
-          ],
-          "focusTopics": [
-            "planning",
-            "reflection"
-          ],
-          "background": "The F-35 Lightning II is a fifth-generation multirole stealth fighter developed by Lockheed Martin, representing one of the most advanced and expensive military aircraft programs in history with unit costs exceeding $80 million. Protracted warfare refers to prolonged military conflicts characterized by attrition and endurance, with historical roots in Mao Zedong's 'On Protracted War' which emphasized long-term struggle and gradual escalation. Modern defense discussions increasingly focus on scalable systems that can be mass-produced and rapidly replaced, contrasting with 'masterpiece' platforms like the F-35 that prioritize technological superiority over quantity and replaceability.",
-          "discussion": "Community discussion reveals divided opinions, with some commenters defending the F-35's proven combat effectiveness and pointing to its successful performance in recent conflicts, while others support the article's argument about scalability concerns in protracted warfare. Several commenters note the tension between technological superiority and industrial capacity, with debates about whether the U.S. military-industrial complex can adequately support sustained conflicts with current procurement strategies."
+          "focusTopics": []
         }
       ]
     },
@@ -197,54 +126,428 @@
       "title": "Research & Innovation",
       "items": [
         {
-          "title": "Kimi K2.6 achieves top-tier open-source coding performance in benchmarks.",
-          "summary": "Kimi K2.6 is an open-source AI model that demonstrates top-tier performance in coding reasoning benchmarks, comparable to recent state-of-the-art models like Gemini 3.1 Pro Preview. It shows significant improvement over its predecessor, Kimi K2 Thinking, and excels in one-shot coding reasoning tasks. This advancement matters because it pushes the boundaries of open-source AI for coding, offering a high-performance alternative to proprietary models and fostering innovation in software development tools. It could democratize access to advanced coding assistance, benefiting developers and researchers globally. Kimi K2.6 supports a 256K long context and Tool Calling, enabling complex engineering tasks like downloading and deploying models locally. However, open-weight models like this may still face challenges with longer contexts in agentic tests, as noted in community discussions.",
-          "url": "https://www.kimi.com/blog/kimi-k2-6",
+          "title": "Why Fine-Tuning Encourages Hallucinations and How to Fix It",
+          "summary": "研究微调如何导致幻觉并提出解决方案",
+          "url": "https://arxiv.org/abs/2604.15574",
+          "score": 8.2,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "llm",
+            "fine-tuning",
+            "hallucination",
+            "research"
+          ],
+          "focusTopics": [
+            "post-training"
+          ]
+        },
+        {
+          "title": "A multi-agent framework combining large language models with medical flowcharts for self-triage - Nature",
+          "summary": "结合LLM与医疗流程图的多代理框架用于自我分诊",
+          "url": "https://www.nature.com/articles/s44360-026-00112-2",
           "score": 8,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "meetpateltech"
+              "name": "nature.com"
             }
           ],
           "tags": [
-            "open-source",
-            "AI-models",
-            "coding-assistants",
-            "benchmarks",
-            "machine-learning"
+            "multi-agent",
+            "medical-ai",
+            "self-triage",
+            "healthcare"
           ],
           "focusTopics": [
-            "planning",
-            "tool-use"
-          ],
-          "background": "Kimi is an AI chatbot based on the Moonshot model, first released in November 2023 with support for 128,000 tokens of lossless context, making it a pioneer in long-context AI. Coding reasoning benchmarks evaluate AI models on tasks like code generation and software engineering, with state-of-the-art models such as Claude Sonnet and Gemini leading the field. Open-source models like Kimi K2.6 aim to provide accessible alternatives to these proprietary systems.",
-          "discussion": "Community sentiment is mixed but generally positive, with users praising Kimi K2.6's benchmark performance and creativity, while others note practical usage experiences vary compared to models like Qwen 3.6. Some comments highlight geopolitical irony, with China advancing open-source AI while the US focuses on proprietary models."
+            "agent-harness"
+          ]
         },
         {
-          "title": "Quantum computers pose minimal threat to 128-bit symmetric keys due to Grover's algorithm limitations",
-          "summary": "Filippo Valsorda's technical analysis explains why quantum computers using Grover's algorithm cannot practically break 128-bit symmetric keys, as the algorithm only provides a quadratic speedup that remains computationally infeasible. The article clarifies that quantum computers primarily threaten asymmetric cryptography like RSA and ECC, not symmetric algorithms like AES. This clarification addresses widespread misconceptions in cybersecurity planning, helping organizations avoid unnecessary panic migrations to 256-bit symmetric keys while focusing resources on actual quantum vulnerabilities in asymmetric cryptography. It provides practical guidance for long-term cryptographic strategy in the quantum computing era. Grover's algorithm reduces the effective security of symmetric keys from 2^n to 2^(n/2), meaning 128-bit keys retain 64 bits of quantum security, which remains computationally prohibitive given current and foreseeable quantum hardware limitations. The analysis emphasizes that practical considerations like key rotation and implementation security often matter more than theoretical quantum attacks on symmetric cryptography.",
-          "url": "https://words.filippo.io/128-bits/",
+          "title": "LLMs Corrupt Your Documents When You Delegate",
+          "summary": "研究LLM在委托工作时如何破坏文档完整性",
+          "url": "https://arxiv.org/abs/2604.15597",
+          "score": 7.9,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "llm",
+            "delegation",
+            "document-corruption",
+            "knowledge-work"
+          ],
+          "focusTopics": [
+            "tool-use"
+          ]
+        },
+        {
+          "title": "DeepER-Med: Advancing Deep Evidence-Based Research in Medicine Through Agentic AI",
+          "summary": "提出DeepER-Med，通过智能体AI推进医学深度循证研究，强调临床AI的可信度和透明度。",
+          "url": "https://arxiv.org/abs/2604.15456",
+          "score": 7.8,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "medical-ai",
+            "agentic-ai",
+            "trustworthy-ai",
+            "clinical-adoption"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "LLM attribution analysis across different fine-tuning strategies and model scales for automated code compliance",
+          "summary": "分析不同微调策略和模型规模对代码合规性LLM归因的影响",
+          "url": "https://arxiv.org/abs/2604.15589",
+          "score": 7.8,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "llm",
+            "fine-tuning",
+            "code-compliance",
+            "attribution-analysis"
+          ],
+          "focusTopics": [
+            "post-training"
+          ]
+        },
+        {
+          "title": "🔬 Training Transformers to solve 95% failure rate of Cancer Trials — Ron Alfa & Daniel Bear, Noetik",
+          "summary": "使用Transformer解决癌症临床试验95%失败率问题",
+          "url": "https://www.latent.space/p/noetik",
+          "score": 7.7,
+          "sources": [
+            {
+              "name": "Latent Space"
+            }
+          ],
+          "tags": [
+            "transformer",
+            "cancer-trials",
+            "medical-ai",
+            "matching-problem"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Subliminal Transfer of Unsafe Behaviors in AI Agent Distillation",
+          "summary": "研究AI智能体蒸馏中不安全行为的潜意识传递，探讨语言模型语义特质传输风险。",
+          "url": "https://arxiv.org/abs/2604.15559",
+          "score": 7.6,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "ai-safety",
+            "agent-distillation",
+            "subliminal-learning",
+            "risk-analysis"
+          ],
+          "focusTopics": [
+            "post-training"
+          ]
+        },
+        {
+          "title": "DALM: A Domain-Algebraic Language Model via Three-Phase Structured Generation",
+          "summary": "提出通过三阶段结构化生成的领域代数语言模型DALM",
+          "url": "https://arxiv.org/abs/2604.15593",
+          "score": 7.6,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "domain-specific",
+            "structured-generation",
+            "language-model",
+            "knowledge-compression"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "GIST: Multimodal Knowledge Extraction and Spatial Grounding via Intelligent Semantic Topology",
+          "summary": "提出GIST，通过智能语义拓扑实现多模态知识提取和空间定位，用于复杂环境导航。",
+          "url": "https://arxiv.org/abs/2604.15495",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "multimodal-ai",
+            "spatial-grounding",
+            "knowledge-extraction",
+            "robotics"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Structured Abductive-Deductive-Inductive Reasoning for LLMs via Algebraic Invariants",
+          "summary": "提出通过代数不变量实现大语言模型的结构化溯因-演绎-归纳推理，改进逻辑推理能力。",
+          "url": "https://arxiv.org/abs/2604.15727",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "llm-reasoning",
+            "logical-reasoning",
+            "algebraic-invariants",
+            "structured-ai"
+          ],
+          "focusTopics": [
+            "planning"
+          ]
+        },
+        {
+          "title": "\"Excuse me, may I say something...\" CoLabScience, A Proactive AI Assistant for Biomedical Discovery and LLM-Expert Collaborations",
+          "summary": "提出主动式AI助手促进生物医学发现与LLM-专家协作",
+          "url": "https://arxiv.org/abs/2604.15588",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "ai-assistant",
+            "biomedical",
+            "scientific-workflow",
+            "collaboration"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "Bilevel Optimization of Agent Skills via Monte Carlo Tree Search",
+          "summary": "通过蒙特卡洛树搜索进行智能体技能的双层优化，提升指令、工具和资源的集合效能。",
+          "url": "https://arxiv.org/abs/2604.15709",
+          "score": 7.4,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "agent-skills",
+            "monte-carlo-tree-search",
+            "optimization",
+            "ai-agents"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "PolicyBank: Evolving Policy Understanding for LLM Agents",
+          "summary": "提出PolicyBank，演化大语言模型智能体的策略理解，确保符合组织授权约束。",
+          "url": "https://arxiv.org/abs/2604.15505",
+          "score": 7.4,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "llm-agents",
+            "policy-understanding",
+            "authorization",
+            "organizational-ai"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "LACE: Lattice Attention for Cross-thread Exploration",
+          "summary": "提出LACE，一种用于跨线程探索的格点注意力机制，改进大语言模型的推理能力。",
+          "url": "https://arxiv.org/abs/2604.15529",
+          "score": 7.3,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "llm-reasoning",
+            "attention-mechanism",
+            "parallel-computation",
+            "research"
+          ],
+          "focusTopics": [
+            "planning"
+          ]
+        },
+        {
+          "title": "Think Multilingual, Not Harder: A Data-Efficient Framework for Teaching Reasoning Models to Code-Switch",
+          "summary": "提出数据高效框架，教推理模型进行语码转换，提升多语言环境下的推理能力。",
+          "url": "https://arxiv.org/abs/2604.15490",
+          "score": 7.3,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "multilingual-ai",
+            "reasoning-models",
+            "code-switching",
+            "data-efficiency"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "LLM Reasoning Is Latent, Not the Chain of Thought",
+          "summary": "立场论文认为大语言模型推理应作为潜在状态研究，而非思维链，挑战现有范式。",
+          "url": "https://arxiv.org/abs/2604.15726",
+          "score": 7.2,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "llm-reasoning",
+            "latent-state",
+            "position-paper",
+            "cognitive-science"
+          ],
+          "focusTopics": [
+            "planning"
+          ]
+        },
+        {
+          "title": "The World Leaks the Future: Harness Evolution for Future Prediction Agents",
+          "summary": "提出利用演化方法进行未来预测智能体研究，处理结果未知前的决策问题。",
+          "url": "https://arxiv.org/abs/2604.15719",
+          "score": 7.1,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "future-prediction",
+            "evolutionary-methods",
+            "decision-making",
+            "ai-agents"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Preregistered Belief Revision Contracts",
+          "summary": "研究预注册信念修订合约，用于多智能体系统中的消息交换和信念更新。",
+          "url": "https://arxiv.org/abs/2604.15558",
           "score": 7,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "hasheddan"
+              "name": "ArXiv cs.AI"
             }
           ],
           "tags": [
-            "quantum-computing",
-            "cryptography",
-            "cybersecurity",
-            "algorithms",
-            "technical-analysis"
+            "multi-agent-systems",
+            "belief-revision",
+            "contracts",
+            "deliberative-ai"
           ],
           "focusTopics": [
-            "memory",
-            "planning"
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "Applied Explainability for Large Language Models: A Comparative Study",
+          "summary": "对大语言模型的应用可解释性进行对比研究，分析不同方法在NLP任务中的表现。",
+          "url": "https://arxiv.org/abs/2604.15371",
+          "score": 7,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
           ],
-          "background": "Symmetric cryptography uses the same key for encryption and decryption, with AES being the most common standard using 128-bit or 256-bit keys. Grover's algorithm is a quantum search algorithm that provides a quadratic speedup for unstructured search problems, potentially reducing the security of symmetric keys but not breaking them practically. Quantum computers are known to threaten asymmetric cryptography through Shor's algorithm, which can efficiently solve integer factorization and discrete logarithm problems that underpin RSA and ECC.",
-          "discussion": "Community members praised the article's clarity while discussing practical implications, with some questioning if Grover's algorithm represents the ultimate quantum limit and others suggesting key rotation as a mitigation strategy. Comments also revealed confusion about quantum computing's current capabilities versus theoretical threats, with one user noting the discrepancy between factorization of small numbers like 15 and claims about breaking cryptography."
+          "tags": [
+            "llm-explainability",
+            "comparative-study",
+            "nlp",
+            "ai-transparency"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Consistency Analysis of Sentiment Predictions using Syntactic & Semantic Context Assessment Summarization (SSAS)",
+          "summary": "使用句法和语义上下文评估摘要进行情感预测一致性分析，提升企业级LLM应用可靠性。",
+          "url": "https://arxiv.org/abs/2604.15547",
+          "score": 6.9,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "llm-consistency",
+            "sentiment-analysis",
+            "enterprise-ai",
+            "reliability"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Brain Score Tracks Shared Properties of Languages: Evidence from Many Natural Languages and Structured Sequences",
+          "summary": "研究脑分数追踪语言的共享属性，基于多种自然语言和结构化序列提供证据。",
+          "url": "https://arxiv.org/abs/2604.15503",
+          "score": 6.8,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "language-models",
+            "cognitive-linguistics",
+            "neural-networks",
+            "brain-science"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Even 'uncensored' models can't say what they want",
+          "summary": "研究发现即使'无审查'AI模型也无法自由表达，涉及模型对齐问题。",
+          "url": "https://morgin.ai/articles/even-uncensored-models-cant-say-what-they-want.html",
+          "score": 5.3759999999999994,
+          "sources": [
+            {
+              "name": "HN (92)"
+            }
+          ],
+          "tags": [
+            "uncensored-models",
+            "alignment",
+            "ai-safety",
+            "model-behavior"
+          ],
+          "focusTopics": [
+            "post-training"
+          ]
         }
       ]
     },
@@ -253,137 +556,517 @@
       "title": "Engineering & Resources",
       "items": [
         {
-          "title": "Deezer reports 44% of daily song uploads are AI-generated, highlighting fraud and detection challenges.",
-          "summary": "Deezer announced that 44% of songs uploaded to its platform daily are AI-generated, with discussions focusing on fraud detection methods and implications for the music industry. The company detects and demonetizes a significant portion of these uploads due to fraudulent streaming patterns. This trend signals a rapid shift in content creation, posing challenges for copyright enforcement, artist compensation, and platform integrity in the music streaming ecosystem. It underscores the need for robust detection tools to combat fraud and maintain trust among users and creators. Deezer uses detection algorithms to identify AI-generated tracks, with about 85% of streams from such uploads flagged as fraudulent and demonetized. However, some creators use scripts to clean audio and bypass detection, indicating ongoing technical challenges in accurately distinguishing AI content.",
-          "url": "https://techcrunch.com/2026/04/20/deezer-says-44-of-songs-uploaded-to-its-platform-daily-are-ai-generated/",
-          "score": 8,
+          "title": "Qwen3.6-Max-Preview: Smarter, Sharper, Still Evolving",
+          "summary": "Qwen3.6-Max-Preview发布，更智能、更精准且持续进化",
+          "url": "https://qwen.ai/blog?id=qwen3.6-max-preview",
+          "score": 8.98,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "FiddlerClamp"
+              "name": "HN (531)"
             }
           ],
           "tags": [
-            "AI-generated-content",
-            "music-industry",
-            "fraud-detection",
-            "digital-media",
-            "ethics"
-          ],
-          "focusTopics": [],
-          "background": "Deezer is a French music streaming service founded in 2007, offering a vast library of music, podcasts, and radio stations. AI-generated music uses algorithms to create audio tracks, often for purposes like passive income schemes, leading to concerns over fraud and copyright issues. Major platforms like Spotify and Apple Music have updated policies since 2024 to address AI content, with detection methods including spectral analysis and watermarking.",
-          "discussion": "Community comments express concerns about fraud, with users noting that many AI-generated tracks are used for revenue scams rather than artistic purposes. Discussions highlight technical detection methods, such as looking for compression artifacts, and ethical implications for human creators, including fears of devaluing traditional music production."
-        },
-        {
-          "title": "Kimi releases vendor verifier tool to test inference provider accuracy",
-          "summary": "Kimi has open-sourced the Kimi Vendor Verifier (KVV) project alongside the release of their K2.6 model, designed to help users verify the accuracy of inference implementations for Kimi's open-source models. The tool specifically evaluates the quality of Kimi API tool calls from different vendors, allowing users to compare accuracy differences among various providers. This matters because it addresses a critical pain point in the AI inference ecosystem where providers may deliver inconsistent or suboptimal performance, potentially affecting model outputs and user applications. By providing standardized verification from the model creator, it creates transparency and pressure for providers to maintain accurate implementations, benefiting developers who rely on third-party inference services. The verifier focuses on testing tool call accuracy, which is particularly important for agentic applications where models need to reliably execute specific functions. However, the tool primarily addresses accidental performance issues rather than malicious behavior, as providers could potentially detect when they're being tested and temporarily improve performance.",
-          "url": "https://www.kimi.com/blog/kimi-vendor-verifier",
-          "score": 7,
-          "sources": [
-            {
-              "name": "hackernews",
-              "meta": "Alifatisk"
-            }
-          ],
-          "tags": [
-            "AI Inference",
-            "Model Verification",
-            "Cloud Providers",
-            "Benchmarking"
+            "qwen",
+            "llm",
+            "model-update",
+            "benchmark"
           ],
           "focusTopics": [
-            "reflection"
-          ],
-          "background": "AI inference providers are third-party services that host and run AI models, allowing developers to use models without managing the underlying infrastructure. These providers can implement models differently, using various quantization levels (compression techniques that reduce model size but may affect accuracy) and serving stacks. Benchmarking tools help evaluate provider performance, but model-specific verification from the creator adds another layer of reliability assurance. Kimi is an AI company that develops open-source language models like the K2 series.",
-          "discussion": "Community comments are generally positive about the tool's potential to pressure providers to fix issues, with specific examples like AWS Bedrock having defects that cause tool calls to fail silently. Some users note limitations, such as providers potentially gaming the tests like in the Volkswagen emissions scandal, and warn about OpenRouter providers not specifying quantization levels. There's also discussion about Kimi model performance, with K2.6 being praised as a new open-source leader."
+            "model-release",
+            "evals"
+          ]
         },
         {
-          "title": "WebUSB Extension for Firefox Enables Cross-Platform Hardware Access",
-          "summary": "A WebUSB extension for Firefox has been developed, allowing users to access USB devices from web applications on Firefox, which previously only supported this feature in Chromium-based browsers. This extension sparks discussion on its practical applications, security implications, and Mozilla's decision not to natively implement WebUSB. This matters because it expands hardware accessibility in Firefox, reducing reliance on Chrome for cross-platform USB applications and fostering competition in browser ecosystems. It could impact developers and users by enabling more versatile web-based tools for devices like GrapheneOS, ESPHome, and custom hardware, while raising security debates about browser-level USB access. The extension works by providing WebUSB API support in Firefox through a workaround, as Mozilla has not natively implemented the standard due to security concerns. Notably, WebUSB requires explicit user permission for device access and uses descriptors for origin checking, but its security depends on browser sandboxing and extension integrity.",
-          "url": "https://github.com/ArcaneNibble/awawausb",
+          "title": "Kimi K2.6: Advancing open-source coding",
+          "summary": "Kimi K2.6发布，推进开源编码能力",
+          "url": "https://www.kimi.com/blog/kimi-k2-6",
+          "score": 8.725,
+          "sources": [
+            {
+              "name": "HN (567)"
+            }
+          ],
+          "tags": [
+            "kimi",
+            "open-source",
+            "coding",
+            "llm"
+          ],
+          "focusTopics": [
+            "coding-agents",
+            "model-release"
+          ]
+        },
+        {
+          "title": "openai/openai-agents-python",
+          "summary": "OpenAI发布轻量级多智能体工作流框架Python库",
+          "url": "https://github.com/openai/openai-agents-python",
+          "score": 8.5825,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+905★)"
+            }
+          ],
+          "tags": [
+            "multi-agent",
+            "openai",
+            "workflow"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "[AINews] Moonshot Kimi K2.6: the world's leading Open Model refreshes to catch up to Opus 4.6 (ahead of DeepSeek v4?)",
+          "summary": "月之暗面Kimi K2.6发布，世界领先开源模型更新追赶Opus 4.6",
+          "url": "https://www.latent.space/p/ainews-moonshot-kimi-k26-the-worlds",
+          "score": 8.5,
+          "sources": [
+            {
+              "name": "Latent Space"
+            }
+          ],
+          "tags": [
+            "open-model",
+            "kimi",
+            "model-release",
+            "benchmark"
+          ],
+          "focusTopics": [
+            "model-release"
+          ]
+        },
+        {
+          "title": "Atlassian enables default data collection to train AI",
+          "summary": "Atlassian默认启用数据收集以训练AI模型",
+          "url": "https://letsdatascience.com/news/atlassian-enables-default-data-collection-to-train-ai-f71343d8",
+          "score": 7.869,
+          "sources": [
+            {
+              "name": "HN (498)"
+            }
+          ],
+          "tags": [
+            "data-collection",
+            "training-data",
+            "enterprise-ai",
+            "privacy"
+          ],
+          "focusTopics": [
+            "post-training"
+          ]
+        },
+        {
+          "title": "Chinese tech workers are starting to train their AI doubles",
+          "summary": "中国科技工作者开始训练AI替身并引发反弹的现状分析",
+          "url": "https://www.technologyreview.com/2026/04/20/1136149/chinese-tech-workers-ai-colleagues/",
+          "score": 7.8,
+          "sources": [
+            {
+              "name": "technologyreview.com"
+            }
+          ],
+          "tags": [
+            "ai-doubles",
+            "workforce",
+            "china",
+            "automation"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Coding Agents Are Reshaping the App Store - MacStories",
+          "summary": "编码代理正在重塑App Store，2026年第一季度应用发布量增长60%",
+          "url": "https://www.macstories.net/linked/coding-agents-are-reshaping-the-app-store/",
+          "score": 7.6,
+          "sources": [
+            {
+              "name": "macstories.net"
+            }
+          ],
+          "tags": [
+            "coding-agents",
+            "app-store",
+            "developer-tools",
+            "ai-impact"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "Reading today's open-closed performance gap",
+          "summary": "分析当前开源与闭源AI模型的性能差距及其未来变化",
+          "url": "https://www.interconnects.ai/p/reading-todays-open-closed-performance",
+          "score": 7.4,
+          "sources": [
+            {
+              "name": "Interconnects"
+            }
+          ],
+          "tags": [
+            "open-closed-gap",
+            "performance-evaluation",
+            "ai-models",
+            "analysis"
+          ],
+          "focusTopics": [
+            "evals"
+          ]
+        },
+        {
+          "title": "How to Ground a Korean AI Agent in Real Demographics with Synthetic Personas",
+          "summary": "介绍如何使用合成人物角色为韩国AI代理提供真实人口统计基础",
+          "url": "https://huggingface.co/blog/nvidia/build-korean-agents-with-nemotron-personas",
+          "score": 7.3,
+          "sources": [
+            {
+              "name": "Hugging Face"
+            }
+          ],
+          "tags": [
+            "ai-agent",
+            "synthetic-personas",
+            "demographics",
+            "korean"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "Deezer says 44% of songs uploaded to its platform daily are AI-generated",
+          "summary": "Deezer报告称其平台每日上传歌曲中44%为AI生成，反映AI音乐创作普及度。",
+          "url": "https://techcrunch.com/2026/04/20/deezer-says-44-of-songs-uploaded-to-its-platform-daily-are-ai-generated/",
+          "score": 7.242,
+          "sources": [
+            {
+              "name": "HN (289)"
+            }
+          ],
+          "tags": [
+            "ai-music",
+            "content-generation",
+            "music-industry",
+            "generative-ai"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Deezer says AI song uploads have nearly overtaken human music | The Verge",
+          "summary": "Deezer报告AI生成歌曲上传量已接近超越人类音乐创作",
+          "url": "https://www.theverge.com/entertainment/915027/deezer-ai-music-daily-uploads",
           "score": 7,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "tuananh"
+              "name": "theverge.com"
             }
           ],
           "tags": [
-            "WebUSB",
-            "Firefox",
-            "Hardware Integration",
-            "Browser Extensions",
-            "Security"
+            "ai-music",
+            "content-generation",
+            "entertainment",
+            "deezer"
           ],
-          "focusTopics": [],
-          "background": "WebUSB is a JavaScript API specification that allows web applications to securely access USB devices, standardized by the Web Platform Incubator Community Group and supported in Chromium-based browsers since Chrome 61. It enables cross-platform hardware integration without platform-specific drivers, but has been controversial due to potential security risks from browser extensions and device access. Mozilla has historically resisted native implementation, citing security concerns, leading to community-developed extensions like this one.",
-          "discussion": "Community comments show mixed sentiment, with users appreciating WebUSB for enabling cross-platform apps like GrapheneOS flashing and hardware utilities without native installations, while others express security concerns and frustration with Mozilla's refusal to implement it natively. Key viewpoints include support for its utility in projects like ESPHome and Meshtastic, debates over security measures like WebUSB descriptors, and criticism of browser fragmentation forcing Chrome use."
+          "focusTopics": []
         },
         {
-          "title": "ggsql alpha release introduces SQL-like syntax for Grammar of Graphics visualizations.",
-          "summary": "Posit released ggsql in alpha, a tool that extends SQL with a VISUALIZE clause to create charts directly from queries using Grammar of Graphics principles. It provides interfaces like a CLI, REST API, and Python bindings, supporting backends such as DuckDB and PostgreSQL. This bridges SQL databases and data visualization, enabling SQL specialists to generate visualizations without switching to languages like R or Python, potentially streamlining workflows in data analysis. It aligns with trends toward declarative and integrated tools for data science. ggsql uses a pluggable architecture with multiple data readers and visualization writers, outputting charts via Altair in Python. It is currently in alpha, with limitations such as support for only a few backends and being a new domain-specific language that may face adoption challenges.",
-          "url": "https://opensource.posit.co/blog/2026-04-20_ggsql_alpha_release/",
-          "score": 6,
+          "title": "Tech CEOs Think AI Will Let Them Be Everywhere at Once - WIRED",
+          "summary": "科技CEO认为AI将让他们能够同时出现在多个地方",
+          "url": "https://www.wired.com/story/tech-ceos-using-ai-to-be-everywhere-at-once/",
+          "score": 6.8,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "thomasp85"
+              "name": "wired.com"
             }
           ],
           "tags": [
-            "data-visualization",
-            "sql",
-            "grammar-of-graphics",
+            "tech-ceos",
+            "ai-adoption",
+            "business-strategy",
+            "leadership"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "thunderbird/thunderbolt",
+          "summary": "Thunderbolt：用户可控的AI平台，支持自定义模型和数据所有权",
+          "url": "https://github.com/thunderbird/thunderbolt",
+          "score": 6.5375,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+675★)"
+            }
+          ],
+          "tags": [
+            "ai-platform",
             "open-source",
-            "data-science"
+            "privacy"
           ],
-          "focusTopics": [],
-          "background": "The Grammar of Graphics is a framework for describing visualizations through components like scales and coordinates, popularized by tools like ggplot2 in R and Vega-Lite. SQL is a standard language for querying relational databases, widely used in data analysis but traditionally separate from visualization tools.",
-          "discussion": "Community comments show mixed sentiment, with skepticism about ggsql's necessity compared to existing solutions like ggplot2 and dbplyr, questioning the value of another DSL. Some users appreciate the concept for its SQL-like interface and potential in LLM-friendly applications, but concerns about practical benefits dominate."
+          "focusTopics": []
         },
         {
-          "title": "SQL functions in Google Sheets to fetch data from Datasette",
-          "summary": "Simon Willison published a guide on April 20, 2026, detailing three methods to fetch data from Datasette into Google Sheets: using the importdata() function, creating a named function wrapper, or employing Google Apps Script for API token handling. He also provided an example spreadsheet demonstrating these techniques. This integration simplifies data workflows by enabling users to directly query and import live data from Datasette's APIs into spreadsheets, enhancing accessibility for non-technical users and streamlining data analysis. It bridges the gap between database exploration tools and everyday spreadsheet applications, fostering more dynamic and automated reporting. The importdata() function can fetch CSV or TSV data from public URLs but does not support sending HTTP headers like API tokens; for authenticated requests, Google Apps Script is required to handle tokens securely. The guide includes practical examples and links to a shared Google Sheets document for hands-on testing.",
-          "url": "https://simonwillison.net/2026/Apr/20/datasette-sql/#atom-everything",
-          "score": 6,
+          "title": "DOJ Signals Antitrust Shift on Media Deals as AI Alters Industry",
+          "summary": "美国司法部因AI改变行业而调整媒体并购反垄断政策信号",
+          "url": "https://www.bloomberg.com/news/articles/2026-04-20/doj-signals-antitrust-shift-on-media-deals-as-ai-alters-industry",
+          "score": 6.5,
           "sources": [
             {
-              "name": "rss",
-              "meta": "Simon Willison"
+              "name": "bloomberg.com"
             }
           ],
           "tags": [
-            "datasette",
-            "google-sheets",
-            "sql",
-            "data-integration",
-            "spreadsheets"
+            "antitrust",
+            "media",
+            "policy",
+            "ai-regulation"
           ],
-          "focusTopics": [],
-          "background": "Datasette is an open-source tool for exploring and publishing data, transforming SQLite databases into interactive websites and JSON APIs, created by Simon Willison. Google Sheets' importdata() function imports data from web-hosted CSV, TSV, or TXT files into spreadsheets, but it has limitations with authentication. Google Apps Script is a scripting platform for automating tasks in Google Workspace, often used to handle API calls with tokens for secure data access."
+          "focusTopics": []
         },
         {
-          "title": "Claude Token Counter tool upgraded with model comparison feature",
-          "summary": "Simon Willison upgraded his Claude Token Counter tool to add model comparison functionality, allowing users to compare token counts across different Claude models including Opus 4.7, Opus 4.6, Sonnet 4.6, and Haiku 4.5. The tool revealed that Opus 4.7 uses an updated tokenizer that increases token counts by 1.46x for text and up to 3.01x for high-resolution images compared to Opus 4.6. This matters because token counts directly impact API costs for developers using Claude models, and the updated tokenizer in Opus 4.7 means the same input can be significantly more expensive despite identical per-token pricing. The tool provides practical cost estimation capabilities that help developers optimize their usage and understand the financial implications of upgrading to newer model versions. The token counter uses Anthropic's token counting API which accepts any Claude model ID, and testing showed Opus 4.7's token inflation varies by content type: 1.46x for text, 1.08x for PDFs, and up to 3.01x for high-resolution images (though this is primarily due to improved image resolution support). The tool also handles image inputs and reveals that Opus 4.7 can process images up to 2,576 pixels on the long edge, more than three times the resolution of prior models.",
-          "url": "https://simonwillison.net/2026/Apr/20/claude-token-counts/#atom-everything",
-          "score": 6,
+          "title": "HKUDS/RAG-Anything",
+          "summary": "香港大学团队发布RAG-Anything，一个一体化RAG框架，支持多种数据源和检索方法。",
+          "url": "https://github.com/HKUDS/RAG-Anything",
+          "score": 6.4875,
           "sources": [
             {
-              "name": "rss",
-              "meta": "Simon Willison"
+              "name": "GitHub trending:python (+245★)"
             }
           ],
           "tags": [
-            "AI",
-            "Claude",
-            "tokenization",
-            "developer-tools",
-            "Anthropic"
+            "rag",
+            "framework",
+            "open-source",
+            "retrieval"
           ],
-          "focusTopics": [],
-          "background": "Tokenization is the process where text is broken down into smaller units called tokens that language models can process, and token counts determine API pricing for services like Claude. Claude models from Anthropic include different versions like Opus, Sonnet, and Haiku, each with varying capabilities and pricing structures. The Claude token counting API is a free service that allows developers to estimate token usage before sending requests, helping with cost management and optimization."
+          "focusTopics": [
+            "context-engineering"
+          ]
+        },
+        {
+          "title": "zilliztech/claude-context",
+          "summary": "Zilliz发布Claude上下文工具，通过MCP实现代码搜索，为编码代理提供完整代码库上下文。",
+          "url": "https://github.com/zilliztech/claude-context",
+          "score": 6.486,
+          "sources": [
+            {
+              "name": "GitHub trending:typescript (+74★)"
+            }
+          ],
+          "tags": [
+            "claude-code",
+            "mcp",
+            "code-search",
+            "coding-agents"
+          ],
+          "focusTopics": [
+            "coding-agents",
+            "context-engineering"
+          ]
+        },
+        {
+          "title": "mnfst/manifest",
+          "summary": "Manifest项目提供智能模型路由，为个人AI代理优化成本，可节省高达70%。",
+          "url": "https://github.com/mnfst/manifest",
+          "score": 6.378499999999999,
+          "sources": [
+            {
+              "name": "GitHub trending:typescript (+399★)"
+            }
+          ],
+          "tags": [
+            "ai-agents",
+            "cost-optimization",
+            "model-routing",
+            "typescript"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "Bureaucratic Silences: What the Canadian AI Register Reveals, Omits, and Obscures",
+          "summary": "分析加拿大AI注册表的透明度，揭示其披露、遗漏和模糊的内容，讨论AI治理问题。",
+          "url": "https://arxiv.org/abs/2604.15514",
+          "score": 6.2,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "ai-governance",
+            "transparency",
+            "policy-analysis",
+            "canada"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "kyegomez/swarms",
+          "summary": "Swarms：企业级生产就绪的多智能体编排框架",
+          "url": "https://github.com/kyegomez/swarms",
+          "score": 6.031000000000001,
+          "sources": [
+            {
+              "name": "GitHub trending:python (+54★)"
+            }
+          ],
+          "tags": [
+            "multi-agent",
+            "orchestration",
+            "enterprise"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "sansan0/TrendRadar",
+          "summary": "TrendRadar：AI驱动的公众意见和趋势监控工具，支持多平台聚合和智能警报",
+          "url": "https://github.com/sansan0/TrendRadar",
+          "score": 6.005999999999999,
+          "sources": [
+            {
+              "name": "GitHub trending:python (+604★)"
+            }
+          ],
+          "tags": [
+            "trend-analysis",
+            "monitoring",
+            "ai-tools"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "The Fermi Paradox Exposes Limits of the AI Energy Boom - Bloomberg",
+          "summary": "费米悖论观点文章探讨AI能源繁荣的局限性",
+          "url": "https://www.bloomberg.com/opinion/articles/2026-04-20/the-fermi-paradox-exposes-limits-of-the-ai-energy-boom",
+          "score": 6,
+          "sources": [
+            {
+              "name": "bloomberg.com"
+            }
+          ],
+          "tags": [
+            "energy",
+            "sustainability",
+            "ai-infrastructure",
+            "opinion"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Kimi vendor verifier – verify accuracy of inference providers",
+          "summary": "Kimi发布供应商验证器，用于检查推理服务提供商的准确性。",
+          "url": "https://www.kimi.com/blog/kimi-vendor-verifier",
+          "score": 5.992999999999999,
+          "sources": [
+            {
+              "name": "HN (156)"
+            }
+          ],
+          "tags": [
+            "kimi",
+            "inference-verification",
+            "ai-providers",
+            "quality-assurance"
+          ],
+          "focusTopics": [
+            "evals"
+          ]
+        },
+        {
+          "title": "Allbirds' Move to AI Has Echoes of the Dot-Com Frenzy - Bloomberg",
+          "summary": "Allbirds转向AI战略引发对互联网泡沫时期的回忆分析",
+          "url": "https://www.bloomberg.com/news/newsletters/2026-04-20/allbirds-pivot-to-ai-stirs-memory-of-dot-com-boom-and-bust",
+          "score": 5.8,
+          "sources": [
+            {
+              "name": "bloomberg.com"
+            }
+          ],
+          "tags": [
+            "ai-strategy",
+            "retail",
+            "business-transformation",
+            "trends"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "deepseek-ai/DeepGEMM",
+          "summary": "DeepSeek发布DeepGEMM：干净高效的FP8 GEMM内核，支持细粒度缩放",
+          "url": "https://github.com/deepseek-ai/DeepGEMM",
+          "score": 5.2635,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+109★)"
+            }
+          ],
+          "tags": [
+            "deepseek",
+            "gpu-kernels",
+            "performance"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Soul Player C64 – A real transformer running on a 1 MHz Commodore 64",
+          "summary": "在1 MHz Commodore 64上运行的真实Transformer模型Soul Player发布。",
+          "url": "https://github.com/gizmo64k/soulplayer-c64",
+          "score": 4.891,
+          "sources": [
+            {
+              "name": "HN (72)"
+            }
+          ],
+          "tags": [
+            "transformer",
+            "commodore-64",
+            "retro-computing",
+            "ai-on-edge"
+          ],
+          "focusTopics": [
+            "model-release"
+          ]
+        },
+        {
+          "title": "alexzhang13/rlm",
+          "summary": "RLM：递归语言模型的通用即插即用推理库，支持多种沙箱",
+          "url": "https://github.com/alexzhang13/rlm",
+          "score": 4.729,
+          "sources": [
+            {
+              "name": "GitHub trending:python (+36★)"
+            }
+          ],
+          "tags": [
+            "recursive-models",
+            "inference",
+            "library"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "koala73/worldmonitor",
+          "summary": "WorldMonitor：AI驱动的实时全球情报仪表板，聚合新闻和地缘政治监控",
+          "url": "https://github.com/koala73/worldmonitor",
+          "score": 4.724,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+316★)"
+            }
+          ],
+          "tags": [
+            "ai-monitoring",
+            "geopolitical",
+            "dashboard"
+          ],
+          "focusTopics": []
         }
       ]
     }
-  ]
+  ],
+  "aiSummary": "今日AI领域动态活跃：企业层面，[Adobe推出面向企业的AI代理以应对AI颠覆威胁](#item-wsj-com-cio-journal-adobe-unveils-agents-for-businesses-amid)，同时[亚马逊追加投资50亿美元深化与Anthropic的AI合作伙伴关系](#item-bloomberg-com-news-articles-2026-04-20-amazon-to-invest-an-a)。研究领域关注模型可靠性，[一项研究探讨了微调如何导致幻觉并提出解决方案](#item-arxiv-org-abs-2604-15574)。工具更新方面，[通义千问发布Qwen3.6-Max-Preview模型](#item-qwen-ai-blog)，而[OpenAI则发布了轻量级多智能体工作流框架Python库](#item-github-com-openai-openai-agents-python)。观点洞察指出，[编码代理正在重塑App Store生态](#item-macstories-net-linked-coding-agents-are-reshaping-the-app-st)，同时[中国科技工作者训练AI替身的现象也引发讨论](#item-technologyreview-com-2026-04-20-1136149-chinese-tech-workers)。"
 }
