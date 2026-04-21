@@ -176,6 +176,27 @@
         "evaluation"
       ],
       "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:oogxmzmgauh5ug2tfe5vc7wm/app.bsky.feed.post/3mjwp234hqs2k",
+      "url": "https://bsky.app/profile/beenwrekt.bsky.social/post/3mjwp234hqs2k",
+      "author": {
+        "handle": "beenwrekt.bsky.social",
+        "displayName": "Ben Recht",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:oogxmzmgauh5ug2tfe5vc7wm/bafkreigi5u3fn2porezvfmnxunm7zynzebk43tsrzvzeplciswiazdyqqe"
+      },
+      "content": "Identifying the elements of a theory of engineering architecture.",
+      "createdAt": "2026-04-20T14:38:21.240Z",
+      "likeCount": 5,
+      "replyCount": 0,
+      "repostCount": 1,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [
+        "infra",
+        "deployment"
+      ],
+      "type": "bluesky"
     }
   ],
   "videos": [],
@@ -458,10 +479,69 @@
       "tags": [
         "infra"
       ]
+    },
+    {
+      "type": "x",
+      "id": "1927382200397251064",
+      "url": "https://x.com/beenwrekt/status/1927382200397251064",
+      "author": {
+        "handle": "beenwrekt",
+        "displayName": "Ben Recht",
+        "avatar": null
+      },
+      "content": "I weigh in on the Trump administration's newfound obsession with Gold Standard Science and reproducibility.",
+      "createdAt": "2026-04-21T04:11:53.316Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Commentary on political focus on scientific standards and reproducibility.",
+      "worthReading": "Provides perspective on intersection of politics and scientific methodology.",
+      "tags": [
+        "evaluation"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2014360939563520146",
+      "url": "https://x.com/beenwrekt/status/2014360939563520146",
+      "author": {
+        "handle": "beenwrekt",
+        "displayName": "Ben Recht",
+        "avatar": null
+      },
+      "content": "For the first time in almost a decade, I'm teaching a class on learning and control.",
+      "createdAt": "2026-04-21T04:11:53.316Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Announcement of teaching return to learning and control course after long hiatus.",
+      "worthReading": "Shows ongoing academic engagement and knowledge sharing in ML/control theory.",
+      "tags": [
+        "agent"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "1995878181635850668",
+      "url": "https://x.com/beenwrekt/status/1995878181635850668",
+      "author": {
+        "handle": "beenwrekt",
+        "displayName": "Ben Recht",
+        "avatar": null
+      },
+      "content": "With more equations than usual, I explain how policy gradient gives you a framework to randomly search for",
+      "createdAt": "2026-04-21T04:11:53.316Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Technical explanation of policy gradient methods as structured random search frameworks.",
+      "worthReading": "Offers technical insight into reinforcement learning optimization approaches.",
+      "tags": [
+        "agent"
+      ]
     }
   ],
   "dailyCounts": [
-    0,
     0,
     0,
     0,
@@ -490,7 +570,8 @@
     1,
     3,
     2,
+    4,
     3
   ],
-  "interestSummary": "Ben Recht's recent focus is on the theoretical and practical limits of simulation and prediction in AI, particularly critiquing current trends in large-scale machine learning. He is also teaching and writing about learning, control theory, and the importance of rigorous scientific replication in ML."
+  "interestSummary": "Ben Recht's recent focus is on the theory and practice of simulation, prediction, and control, critically examining their application in AI and machine learning. He is also actively teaching and writing about learning and control, replication in science, and the limitations of current AI approaches like large language models."
 }

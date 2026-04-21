@@ -42,6 +42,30 @@
       "score": 2,
       "scoreReason": "Freshness: 1 (established chess library with modest star growth, not AI-focused), Relevance: 0 (chess library unrelated to frontier AI topics), Concreteness: 1 (concrete chess implementation but not AI innovation)",
       "type": "github"
+    },
+    {
+      "repo": "vega/vega",
+      "url": "https://github.com/vega/vega",
+      "description": "A visualization grammar.",
+      "language": "JavaScript",
+      "stargazersCount": 11846,
+      "starredBy": "minimaxir",
+      "highlights": "Vega provides a declarative visualization grammar for creating interactive graphics through JSON specifications. It enables data-driven visualizations that work across multiple rendering targets (SVG, Canvas) with a consistent API.",
+      "worthReading": "It's a foundational visualization framework used in many data science and AI workflows, offering a structured approach to creating complex visualizations programmatically.",
+      "topics": [
+        "canvas",
+        "d3",
+        "svg",
+        "vega",
+        "visualization",
+        "visualization-grammar"
+      ],
+      "tags": [
+        "tooling"
+      ],
+      "score": 5,
+      "scoreReason": "Moderate relevance for AI tooling and good concreteness, but limited freshness as an established visualization library rather than cutting-edge AI development.",
+      "type": "github"
     }
   ],
   "posts": [],
@@ -347,6 +371,60 @@
       "highlights": "A tweet with no visible text content, only like metrics.",
       "worthReading": "Shows audience interaction but no textual information.",
       "tags": []
+    },
+    {
+      "type": "x",
+      "id": "2029982443026223510",
+      "url": "https://x.com/minimaxir/status/2029982443026223510",
+      "author": {
+        "handle": "minimaxir",
+        "displayName": "Max Woolf",
+        "avatar": "https://avatars.githubusercontent.com/minimaxir"
+      },
+      "content": "me irl",
+      "createdAt": "2025-03-06",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "A personal, casual tweet expressing a relatable moment or feeling.",
+      "worthReading": "Shows the personal side of the technical expert.",
+      "tags": []
+    },
+    {
+      "type": "x",
+      "id": "1825584262311186616",
+      "url": "https://x.com/minimaxir/status/1825584262311186616",
+      "author": {
+        "handle": "minimaxir",
+        "displayName": "Max Woolf",
+        "avatar": "https://avatars.githubusercontent.com/minimaxir"
+      },
+      "content": "",
+      "createdAt": "2026-04-21T04:09:44.424Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "A tweet with engagement (19 likes) but no visible text content in the provided snippet.",
+      "worthReading": "Indicates audience interaction but lacks substantive technical content.",
+      "tags": []
+    },
+    {
+      "type": "x",
+      "id": "2019510645180494156",
+      "url": "https://x.com/minimaxir/status/2019510645180494156",
+      "author": {
+        "handle": "minimaxir",
+        "displayName": "Max Woolf",
+        "avatar": "https://avatars.githubusercontent.com/minimaxir"
+      },
+      "content": "",
+      "createdAt": "2026-04-21T04:09:44.424Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "A tweet with views (468) but no visible text content in the provided snippet.",
+      "worthReading": "Shows content reach but lacks visible technical insight.",
+      "tags": []
     }
   ],
   "dailyCounts": [
@@ -365,7 +443,6 @@
     0,
     0,
     0,
-    0,
     1,
     0,
     1,
@@ -379,7 +456,8 @@
     0,
     4,
     1,
+    4,
     3
   ],
-  "interestSummary": "Max Woolf's recent activity shows a strong interest in AI model fine-tuning on Apple Silicon and Rust-based chess libraries. He is also critically engaged with AI model releases, emphasizing the importance of documentation and safety practices like model cards and red teaming."
+  "interestSummary": "Max Woolf's recent activity shows a strong interest in AI model fine-tuning, particularly multimodal models on Apple Silicon, and chess programming in Rust. He is also critically engaged with AI model releases, emphasizing the importance of documentation and safety practices."
 }

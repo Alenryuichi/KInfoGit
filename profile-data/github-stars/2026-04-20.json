@@ -1,0 +1,64 @@
+{
+  "date": "2026-04-20",
+  "stars": [
+    {
+      "repo": "chrislgarry/Apollo-11",
+      "url": "https://github.com/chrislgarry/Apollo-11",
+      "description": "Original Apollo 11 Guidance Computer (AGC) source code for the command and lunar modules.",
+      "language": "Assembly",
+      "stargazersCount": 67442,
+      "starredBy": "simonw",
+      "highlights": "This repository contains the original Apollo 11 Guidance Computer source code, providing authentic historical documentation of the software that landed humans on the moon. It offers a rare look at 1960s-era assembly programming for mission-critical aerospace systems.",
+      "worthReading": "It's a fascinating piece of computing history that demonstrates how complex real-time systems were engineered with extreme constraints, offering insights into foundational software engineering practices.",
+      "topics": [
+        "agc",
+        "apollo",
+        "hacktoberfest",
+        "nasa"
+      ],
+      "tags": [],
+      "score": 3,
+      "scoreReason": "Low relevance to frontier AI topics despite moderate freshness from recent starring, with high concreteness as specific historical artifact."
+    },
+    {
+      "repo": "browser-use/browser-harness",
+      "url": "https://github.com/browser-use/browser-harness",
+      "description": "Self-healing browser harness that enables LLMs to complete any task.",
+      "language": "Python",
+      "stargazersCount": 3716,
+      "starredBy": "thomwolf",
+      "highlights": "A self-healing browser harness that enables LLMs to autonomously complete web-based tasks with built-in error recovery. It provides robust automation capabilities for AI agents interacting with dynamic web environments.",
+      "worthReading": "It addresses a critical pain point in agent workflows by making browser interactions more reliable and resilient to common web automation failures.",
+      "topics": [],
+      "tags": [
+        "agent",
+        "tooling"
+      ],
+      "score": 7,
+      "scoreReason": "Good freshness with moderate traction, high relevance to agent tooling, and concrete implementation of self-healing browser automation."
+    },
+    {
+      "repo": "vega/vega",
+      "url": "https://github.com/vega/vega",
+      "description": "A visualization grammar.",
+      "language": "JavaScript",
+      "stargazersCount": 11846,
+      "starredBy": "minimaxir",
+      "highlights": "Vega provides a declarative visualization grammar for creating interactive graphics through JSON specifications. It enables data-driven visualizations that work across multiple rendering targets (SVG, Canvas) with a consistent API.",
+      "worthReading": "It's a foundational visualization framework used in many data science and AI workflows, offering a structured approach to creating complex visualizations programmatically.",
+      "topics": [
+        "canvas",
+        "d3",
+        "svg",
+        "vega",
+        "visualization",
+        "visualization-grammar"
+      ],
+      "tags": [
+        "tooling"
+      ],
+      "score": 5,
+      "scoreReason": "Moderate relevance for AI tooling and good concreteness, but limited freshness as an established visualization library rather than cutting-edge AI development."
+    }
+  ]
+}

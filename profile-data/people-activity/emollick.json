@@ -641,6 +641,48 @@
         "deployment"
       ],
       "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:flxq4uyjfotciovpw3x3fxnu/app.bsky.feed.post/3mjxktl2ou22r",
+      "url": "https://bsky.app/profile/emollick.bsky.social/post/3mjxktl2ou22r",
+      "author": {
+        "handle": "emollick.bsky.social",
+        "displayName": "Ethan Mollick",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:flxq4uyjfotciovpw3x3fxnu/bafkreigq63ljumc43yx5eoxchrq75d72irea6ddcceedwmdttxebyowc3q"
+      },
+      "content": "Classic study gave 146 economist teams the same dataset & got wildly different answers\n\nNew paper reruns it with agentic AI. Claude Code & Codex land near the human median but with far tighter dispersion & no extremes\n\nThis suggests that agentic AI is now useful for doing scalable economics research",
+      "createdAt": "2026-04-20T22:55:47.848Z",
+      "likeCount": 54,
+      "replyCount": 4,
+      "repostCount": 10,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [
+        "agent",
+        "evaluation"
+      ],
+      "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:flxq4uyjfotciovpw3x3fxnu/app.bsky.feed.post/3mjxvx67lrs2r",
+      "url": "https://bsky.app/profile/emollick.bsky.social/post/3mjxvx67lrs2r",
+      "author": {
+        "handle": "emollick.bsky.social",
+        "displayName": "Ethan Mollick",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:flxq4uyjfotciovpw3x3fxnu/bafkreigq63ljumc43yx5eoxchrq75d72irea6ddcceedwmdttxebyowc3q"
+      },
+      "content": "Kimi 2.6 Thinking seems very good for an open weights model, but many rough edges compared to closed SoTA. The gap remains.\n\nThe Lem Test resulted in a 74 page thinking trace... and an okay-ish answer.\n\nIt did an okay TiKZ unicorn, an adequate twigl shader for a neogothic city in the waves, etc.",
+      "createdAt": "2026-04-21T02:14:39.754Z",
+      "likeCount": 21,
+      "replyCount": 1,
+      "repostCount": 1,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [
+        "llm",
+        "evaluation"
+      ],
+      "type": "bluesky"
     }
   ],
   "videos": [],
@@ -1076,10 +1118,93 @@
         "rag",
         "tooling"
       ]
+    },
+    {
+      "type": "x",
+      "id": "2021647765739364429",
+      "url": "https://x.com/emollick/status/2021647765739364429",
+      "author": {
+        "handle": "emollick",
+        "displayName": "Ethan Mollick",
+        "avatar": null
+      },
+      "content": "It's a weird time to post about AI because a lot of people are vastly underestimating what AI can do & how many large-scale impacts on work are inevitable with today's models… …while a lot of other people underestimate the real world problems involved in getting value from AI.",
+      "createdAt": "2026-04-21T04:11:10.364Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Highlights the dual challenge in AI discourse: many underestimate AI's capabilities and inevitable work impacts, while others overlook the practical difficulties in extracting real-world value from AI.",
+      "worthReading": "Provides a balanced perspective on current AI debates, acknowledging both transformative potential and implementation challenges.",
+      "tags": [
+        "deployment",
+        "evaluation"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2026751796832776270",
+      "url": "https://x.com/emollick/status/2026751796832776270",
+      "author": {
+        "handle": "emollick",
+        "displayName": "Ethan Mollick",
+        "avatar": null
+      },
+      "content": "AI is actually pretty good at ideas as well. https://t.co/S2DL7obVk1",
+      "createdAt": "2026-04-21T04:11:10.364Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Counters the common notion that AI is only for execution by asserting that AI demonstrates strong capability in generating ideas.",
+      "worthReading": "Challenges conventional wisdom about AI's creative limitations and suggests broader applications.",
+      "tags": [
+        "llm",
+        "evaluation"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2026285200531955745",
+      "url": "https://x.com/emollick/status/2026285200531955745",
+      "author": {
+        "handle": "emollick",
+        "displayName": "Ethan Mollick",
+        "avatar": null
+      },
+      "content": "As stories about AI increasingly become stories of either catastrophe or salvation,",
+      "createdAt": "2026-04-21T04:11:10.364Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Observes the polarization in AI narratives, which tend to frame AI as either apocalyptic threat or utopian solution.",
+      "worthReading": "Critiques the binary, sensationalist framing that dominates public discourse about artificial intelligence.",
+      "tags": [
+        "safety",
+        "evaluation"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2020713378319417626",
+      "url": "https://x.com/emollick/status/2020713378319417626",
+      "author": {
+        "handle": "emollick",
+        "displayName": "Ethan Mollick",
+        "avatar": null
+      },
+      "content": "So much work is going into faking continual learning and memory for AIs,",
+      "createdAt": "2026-04-21T04:11:10.364Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Points out significant engineering effort being devoted to simulating continuous learning and memory capabilities in AI systems, rather than achieving true, inherent functionality.",
+      "worthReading": "Reveals a key technical challenge and potential limitation in current AI development approaches.",
+      "tags": [
+        "llm",
+        "infra"
+      ]
     }
   ],
   "dailyCounts": [
-    0,
     0,
     0,
     0,
@@ -1108,7 +1233,8 @@
     3,
     6,
     5,
+    6,
     5
   ],
-  "interestSummary": "Ethan Mollick's recent focus is on analyzing frontier AI models, particularly their emergent capabilities and risks in cybersecurity, while also examining AI's impact on creativity, writing style, and education. He is tracking the competitive landscape of leading AI labs and the societal adaptation to these technologies."
+  "interestSummary": "Ethan Mollick is intensely focused on analyzing the capabilities and societal risks of frontier AI models, particularly concerning cybersecurity and their impact on writing and education. He is also tracking industry adoption and the evolving public perception of AI."
 }

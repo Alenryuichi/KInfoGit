@@ -86,6 +86,43 @@
       "score": 6,
       "scoreReason": "Moderate freshness with growing traction, strong relevance to AI infrastructure/deployment needs, and high concreteness as a working tool.",
       "type": "github"
+    },
+    {
+      "repo": "chrislgarry/Apollo-11",
+      "url": "https://github.com/chrislgarry/Apollo-11",
+      "description": "Original Apollo 11 Guidance Computer (AGC) source code for the command and lunar modules.",
+      "language": "Assembly",
+      "stargazersCount": 67442,
+      "starredBy": "simonw",
+      "highlights": "This repository contains the original Apollo 11 Guidance Computer source code, providing authentic historical documentation of the software that landed humans on the moon. It offers a rare look at 1960s-era assembly programming for mission-critical aerospace systems.",
+      "worthReading": "It's a fascinating piece of computing history that demonstrates how complex real-time systems were engineered with extreme constraints, offering insights into foundational software engineering practices.",
+      "topics": [
+        "agc",
+        "apollo",
+        "hacktoberfest",
+        "nasa"
+      ],
+      "tags": [],
+      "score": 3,
+      "scoreReason": "Low relevance to frontier AI topics despite moderate freshness from recent starring, with high concreteness as specific historical artifact.",
+      "type": "github"
+    },
+    {
+      "repo": "scosman/pelicans_riding_bicycles",
+      "url": "https://github.com/scosman/pelicans_riding_bicycles",
+      "description": "This is a collection of the best SVG images of pelicans riding bicycles.",
+      "language": null,
+      "stargazersCount": 72,
+      "starredBy": "simonw",
+      "highlights": "This repository is a curated collection of SVG images depicting pelicans riding bicycles, offering a whimsical and creative visual dataset. It serves as a unique resource for artistic inspiration or testing image processing tools with unconventional imagery.",
+      "worthReading": "It showcases creative AI applications in generating or curating novel visual content, potentially useful for testing multi-modal models or as a fun, offbeat dataset.",
+      "topics": [],
+      "tags": [
+        "multi-modal"
+      ],
+      "score": 3,
+      "scoreReason": "Low freshness (established but niche), moderate relevance (multi-modal dataset), and high concreteness (specific SVG collection).",
+      "type": "github"
     }
   ],
   "posts": [
@@ -601,10 +638,92 @@
         "agent",
         "tooling"
       ]
+    },
+    {
+      "type": "x",
+      "id": "1952830887671861407",
+      "url": "https://x.com/simonw/status/1952830887671861407",
+      "author": {
+        "handle": "simonw",
+        "displayName": "Simon Willison",
+        "avatar": "https://avatars.githubusercontent.com/simonw"
+      },
+      "content": "Here's the concluding section of my write-up of the new OpenAI open weights models - they're",
+      "createdAt": "2026-04-21T04:07:46.170Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Simon Willison shares concluding thoughts on OpenAI's new open weights models in his write-up.",
+      "worthReading": "Provides insight into expert analysis of emerging open weight AI models.",
+      "tags": [
+        "llm",
+        "evaluation"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "1976989054240800798",
+      "url": "https://x.com/simonw/status/1976989054240800798",
+      "author": {
+        "handle": "simonw",
+        "displayName": "Simon Willison",
+        "avatar": "https://avatars.githubusercontent.com/simonw"
+      },
+      "content": "I'm beginning to suspect that a key skill in working effectively with coding agents is developing an intuition for when you don't need to",
+      "createdAt": "2026-04-21T04:07:46.170Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Suggests that effective use of coding agents requires knowing when not to use them.",
+      "worthReading": "Offers practical advice for developers integrating AI coding assistants.",
+      "tags": [
+        "agent",
+        "tooling"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "1975570458683834729",
+      "url": "https://x.com/simonw/status/1975570458683834729",
+      "author": {
+        "handle": "simonw",
+        "displayName": "Simon Willison",
+        "avatar": "https://avatars.githubusercontent.com/simonw"
+      },
+      "content": "Vibe coding is irresponsibly building software through dice rolls, not caring what code is produced",
+      "createdAt": "2026-04-21T04:07:46.170Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Critiques 'vibe coding' as irresponsible software development through random generation.",
+      "worthReading": "Highlights concerns about quality and responsibility in AI-assisted coding practices.",
+      "tags": [
+        "agent",
+        "safety"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "1639691902357483520",
+      "url": "https://x.com/simonw/status/1639691902357483520",
+      "author": {
+        "handle": "simonw",
+        "displayName": "Simon Willison",
+        "avatar": "https://avatars.githubusercontent.com/simonw"
+      },
+      "content": "If you're just starting to learn software engineering right now but you're considering dropping it",
+      "createdAt": "2026-04-21T04:07:46.170Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Addresses beginners in software engineering who might be considering quitting.",
+      "worthReading": "Provides perspective for new developers in the current AI-influenced landscape.",
+      "tags": [
+        "tooling"
+      ]
     }
   ],
   "dailyCounts": [
-    0,
     0,
     0,
     0,
@@ -633,7 +752,8 @@
     1,
     5,
     4,
-    3
+    4,
+    5
   ],
-  "interestSummary": "Simon Willison is intensely focused on tracking and experimenting with the latest AI models, tools, and benchmarks, with a particular interest in their coding capabilities, multimodal features, and local/accessible deployment. His recent activity also highlights his analysis of AI security practices, model comparisons, and the evolving developer workflow with coding agents."
+  "interestSummary": "Simon Willison is intensely focused on tracking and experimenting with the latest AI models and tools, particularly through benchmarking, prompt engineering, and analyzing model updates. His interests also include quirky AI-generated imagery like pelicans on bicycles and practical applications of AI for coding and data analysis."
 }

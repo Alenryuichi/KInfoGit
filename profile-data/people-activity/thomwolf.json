@@ -1,6 +1,25 @@
 {
   "id": "thomwolf",
-  "stars": [],
+  "stars": [
+    {
+      "repo": "browser-use/browser-harness",
+      "url": "https://github.com/browser-use/browser-harness",
+      "description": "Self-healing browser harness that enables LLMs to complete any task.",
+      "language": "Python",
+      "stargazersCount": 3716,
+      "starredBy": "thomwolf",
+      "highlights": "A self-healing browser harness that enables LLMs to autonomously complete web-based tasks with built-in error recovery. It provides robust automation capabilities for AI agents interacting with dynamic web environments.",
+      "worthReading": "It addresses a critical pain point in agent workflows by making browser interactions more reliable and resilient to common web automation failures.",
+      "topics": [],
+      "tags": [
+        "agent",
+        "tooling"
+      ],
+      "score": 7,
+      "scoreReason": "Good freshness with moderate traction, high relevance to agent tooling, and concrete implementation of self-healing browser automation.",
+      "type": "github"
+    }
+  ],
   "posts": [],
   "videos": [],
   "blogs": [],
@@ -33,8 +52,8 @@
     0,
     0,
     0,
-    0,
+    1,
     0
   ],
-  "interestSummary": ""
+  "interestSummary": "Thomas Wolf is focused on AI agents and automation, particularly tools that enable large language models to interact with and complete tasks in web browsers."
 }

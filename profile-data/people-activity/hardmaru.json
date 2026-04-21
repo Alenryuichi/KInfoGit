@@ -64,6 +64,47 @@
         "multi-modal"
       ],
       "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:7chsbgw6o6oh5oiglpgc3467/app.bsky.feed.post/3mjwrfrcqu22m",
+      "url": "https://bsky.app/profile/hardmaru.bsky.social/post/3mjwrfrcqu22m",
+      "author": {
+        "handle": "hardmaru.bsky.social",
+        "displayName": "hardmaru",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:7chsbgw6o6oh5oiglpgc3467/bafkreicpq2lhscgzahbyspqimfvb5y34acedy2xqsjiykptgvr2dk2tyga"
+      },
+      "content": "Getting LLMs to simulate “true” randomness or generate diverse outputs is surprisingly difficult. We found a simple prompting trick that solves this by having the model generate and manipulate a random string. To be presented at #ICLR2026 this week!\n\nBlog: pub.sakana.ai/ssot",
+      "createdAt": "2026-04-20T15:20:41.096Z",
+      "likeCount": 20,
+      "replyCount": 1,
+      "repostCount": 5,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [
+        "llm",
+        "evaluation"
+      ],
+      "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:7chsbgw6o6oh5oiglpgc3467/app.bsky.feed.post/3mjwkg4d7wc2g",
+      "url": "https://bsky.app/profile/hardmaru.bsky.social/post/3mjwkg4d7wc2g",
+      "author": {
+        "handle": "hardmaru.bsky.social",
+        "displayName": "hardmaru",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:7chsbgw6o6oh5oiglpgc3467/bafkreicpq2lhscgzahbyspqimfvb5y34acedy2xqsjiykptgvr2dk2tyga"
+      },
+      "content": "I am very proud of our team for releasing EDINET-Bench, and it is fantastic to see a Japanese financial dataset recognized at #ICLR2026 this week. We need more diverse, non-English datasets to evaluate models in the real world.\n\nPaper: openreview.net/forum?id=Dxn...",
+      "createdAt": "2026-04-20T13:15:36.418Z",
+      "likeCount": 15,
+      "replyCount": 1,
+      "repostCount": 2,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [
+        "evaluation"
+      ],
+      "type": "bluesky"
     }
   ],
   "videos": [],
@@ -108,10 +149,29 @@
       "tags": [
         "evaluation"
       ]
+    },
+    {
+      "type": "x",
+      "id": "2037027105989681417",
+      "url": "https://x.com/wolfejosh/status/2037027105989681417",
+      "author": {
+        "handle": "hardmaru",
+        "displayName": "David Ha",
+        "avatar": null
+      },
+      "content": "David Ha @hardmaru and team are super practical scientifically research driven geniuses . And this is amazing to see ‍ ‍",
+      "createdAt": "2026-04-21T04:09:19.226Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "A third party praises David Ha and his team as practical, scientifically research-driven geniuses, indicating recognition of their work's quality and impact.",
+      "worthReading": "It provides external validation of David Ha's team's approach and achievements in their field.",
+      "tags": [
+        "evaluation"
+      ]
     }
   ],
   "dailyCounts": [
-    0,
     0,
     0,
     0,
@@ -140,7 +200,8 @@
     0,
     0,
     1,
-    0
+    2,
+    1
   ],
-  "interestSummary": "David Ha's recent focus is on innovative AI research, particularly world models that simulate computer interfaces and interactive multi-agent neural cellular automata, while also scaling Sakana AI's engineering team in Tokyo."
+  "interestSummary": "David Ha's recent focus is on innovative AI research, including world models that simulate computer interfaces, multi-agent neural cellular automata, and methods for improving LLM diversity and randomness. He is also scaling Sakana AI's R&D infrastructure and advocating for diverse, non-English datasets in AI evaluation."
 }

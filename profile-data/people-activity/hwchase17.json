@@ -219,6 +219,89 @@
         "agent",
         "tooling"
       ]
+    },
+    {
+      "type": "x",
+      "id": "1975603633791377920",
+      "url": "https://x.com/hwchase17/status/1975603633791377920",
+      "author": {
+        "handle": "hwchase17",
+        "displayName": "Harrison Chase",
+        "avatar": "https://avatars.githubusercontent.com/hwchase17"
+      },
+      "content": "I am not excited about visual workflow builders 1. Not simple enough for the average user",
+      "createdAt": "2026-04-21T04:08:05.275Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Harrison Chase expresses skepticism about visual workflow builders, arguing they are not sufficiently simple for average users.",
+      "worthReading": "It reveals his perspective on usability barriers in current AI development tools.",
+      "tags": [
+        "tooling"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2011814697889316930",
+      "url": "https://x.com/hwchase17/status/2011814697889316930",
+      "author": {
+        "handle": "hwchase17",
+        "displayName": "Harrison Chase",
+        "avatar": "https://avatars.githubusercontent.com/hwchase17"
+      },
+      "content": "We launched LangSmith Agent Builder this week as a no-code way to build agents. A key part of Agent builder is it's memory system.",
+      "createdAt": "2026-04-21T04:08:05.275Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Announces the launch of LangSmith Agent Builder, a no-code platform for building agents, emphasizing its memory system as a core feature.",
+      "worthReading": "Highlights LangChain's product direction toward making agent development more accessible.",
+      "tags": [
+        "agent",
+        "tooling"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2013641863123870133",
+      "url": "https://x.com/hwchase17/status/2013641863123870133",
+      "author": {
+        "handle": "hwchase17",
+        "displayName": "Harrison Chase",
+        "avatar": "https://avatars.githubusercontent.com/hwchase17"
+      },
+      "content": "When building agents, you need to iterate on production data much more than when building traditional software. You need to iterate on how",
+      "createdAt": "2026-04-21T04:08:05.275Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Notes that developing agents requires more iteration on production data compared to traditional software, stressing the importance of iterative development processes.",
+      "worthReading": "It underscores a key difference in development practices for AI agents versus conventional software.",
+      "tags": [
+        "agent",
+        "deployment"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2021261552222158955",
+      "url": "https://x.com/hwchase17/status/2021261552222158955",
+      "author": {
+        "handle": "hwchase17",
+        "displayName": "Harrison Chase",
+        "avatar": "https://avatars.githubusercontent.com/hwchase17"
+      },
+      "content": "TL;DR: More and more agents need a workspace: a computer where they can run code, install packages, and access files. Sandboxes provide this",
+      "createdAt": "2026-04-21T04:08:05.275Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Summarizes that agents increasingly require a workspace with capabilities like code execution and file access, which sandboxes can offer.",
+      "worthReading": "Points to infrastructure needs for advanced AI agent functionality.",
+      "tags": [
+        "agent",
+        "infra"
+      ]
     }
   ],
   "dailyCounts": [
@@ -248,10 +331,10 @@
     0,
     0,
     0,
-    0,
     4,
     3,
-    3
+    3,
+    4
   ],
-  "interestSummary": "Harrison Chase is focused on the development and iteration of AI agents, emphasizing the need for sandboxed workspaces and specialized tools like LangSmith for building, debugging, and monitoring agents in production."
+  "interestSummary": "Harrison Chase is focused on the development and deployment of AI agents, emphasizing the need for sandboxed workspaces and specialized tools like LangSmith for building, monitoring, and iterating on agents using production trace data."
 }
