@@ -62,6 +62,27 @@ export const getStaticProps: GetStaticProps<StarsDetailProps> = async ({ params 
 
 // --- Polymorphic Item Card (Terminal Style) ---
 
+/**
+ * Truncate a string around `max` chars, preferring the nearest whitespace /
+ * sentence boundary so we don't chop words in half. Falls back to hard slice
+ * if no good boundary exists within the window.
+ */
+function smartTruncate(str: string, max: number): string {
+  if (!str) return ''
+  if (str.length <= max) return str
+  const window = str.slice(0, max + 40)
+  // Look for a paragraph / sentence / whitespace boundary near `max`.
+  const boundaryRe = /[\s。！？.!?\n]/g
+  let lastBoundary = -1
+  let m: RegExpExecArray | null
+  while ((m = boundaryRe.exec(window)) !== null) {
+    if (m.index >= max) { lastBoundary = m.index; break }
+    lastBoundary = m.index
+  }
+  const cut = lastBoundary > max * 0.6 ? lastBoundary : max
+  return str.slice(0, cut).trimEnd() + '…'
+}
+
 function ItemCard({ item, personMap }: { item: FeedItem; personMap: Record<string, string> }) {
   if (item.type === 'github') {
     return (
@@ -100,7 +121,7 @@ function ItemCard({ item, personMap }: { item: FeedItem; personMap: Record<strin
                 Starred by 
                 {item.starredBy.split(',').map((s, idx, arr) => {
                   const trimmed = s.trim()
-                  const p = personMap[trimmed.toLowerCase()]
+                  const p = personMap[`github:${trimmed.toLowerCase()}`]
                   return (
                     <span key={trimmed}>
                       {p ? (
@@ -154,8 +175,8 @@ function ItemCard({ item, personMap }: { item: FeedItem; personMap: Record<strin
                   {item.author.handle.charAt(0)}
                 </div>
               )}
-              {personMap[item.author.handle.toLowerCase()] ? (
-                <Link href={`/stars/people/${personMap[item.author.handle.toLowerCase()]}`} className="text-base font-bold text-gray-200 group-hover:text-blue-400 transition-colors font-sans">
+              {personMap[`bluesky:${item.author.handle.toLowerCase()}`] ? (
+                <Link href={`/stars/people/${personMap[`bluesky:${item.author.handle.toLowerCase()}`]}`} className="text-base font-bold text-gray-200 group-hover:text-blue-400 transition-colors font-sans">
                   {item.author.displayName || item.author.handle}
                 </Link>
               ) : (
@@ -208,12 +229,27 @@ function ItemCard({ item, personMap }: { item: FeedItem; personMap: Record<strin
               </a>
             </div>
             <p className="text-sm text-gray-300 mb-3 font-sans leading-relaxed">
-              {item.description.slice(0, 150)}...
+              {smartTruncate(item.description, 200)}
             </p>
             <div className="text-[10px] text-gray-600 flex flex-wrap gap-x-4 gap-y-2 uppercase tracking-widest items-center">
               <span>👁 {(item.viewCount / 1000).toFixed(1)}k Views</span>
               <span>|</span>
               <span>{item.channelTitle}</span>
+              {item.tags && item.tags.length > 0 && (
+                <>
+                  <span>|</span>
+                  <span className="flex gap-2">
+                    {item.tags.map(t => {
+                      const meta = STAR_TOPIC_META[t]
+                      if (meta) {
+                        const colorPrefix = meta.color.split(' ')[0]
+                        return <span key={t} className={colorPrefix}>[{meta.label}]</span>
+                      }
+                      return <span key={t} className="text-gray-500">[{t}]</span>
+                    })}
+                  </span>
+                </>
+              )}
             </div>
             {item.highlights && (
               <div className="mt-3 text-xs text-gray-400 border-l border-red-500/30 pl-4 py-1 italic font-serif">
@@ -273,8 +309,8 @@ function ItemCard({ item, personMap }: { item: FeedItem; personMap: Record<strin
                   {item.author.handle.charAt(0)}
                 </div>
               )}
-              {personMap[`x:${item.author.handle}`] ? (
-                <Link href={`/stars/people/${personMap[`x:${item.author.handle}`]}/`} className="text-base font-bold text-gray-200 group-hover:text-gray-100 transition-colors font-sans">
+              {personMap[`x:${item.author.handle.toLowerCase()}`] ? (
+                <Link href={`/stars/people/${personMap[`x:${item.author.handle.toLowerCase()}`]}/`} className="text-base font-bold text-gray-200 group-hover:text-gray-100 transition-colors font-sans">
                   {item.author.displayName || item.author.handle}
                 </Link>
               ) : (
@@ -482,13 +518,32 @@ export default function StarsDetail({ daily, prevDate, nextDate, allTags, person
   // Apply composed filters (topic + source)
   const filteredItems = daily.items.filter(item => {
     if (activeSource !== 'all' && item.type !== activeSource) return false
-    if (activeTopic && !('tags' in item ? (item.tags ?? []) : []).includes(activeTopic)) return false
+    if (activeTopic) {
+      const tags = 'tags' in item ? (item.tags ?? []) : []
+      // Items without any topic signal (e.g. blog posts today) stay visible
+      // under any topic so that selecting a topic doesn't silently hide an
+      // entire source.
+      if (tags.length > 0 && !tags.includes(activeTopic)) return false
+    }
     return true
   })
 
   // Sort items. In 'score' mode, GitHub items are ordered by DeepSeek score desc
   // (with stargazersCount as tiebreaker), then non-github items follow. In
-  // 'time' mode, the original feed order (chronological per ingestion) is kept.
+  // 'time' mode, items are sorted by a normalized timestamp desc; items with no
+  // timestamp sink to the bottom while keeping original ingestion order.
+  const getSortTime = (item: FeedItem): string => {
+    if (item.type === 'bluesky') return item.createdAt || ''
+    if (item.type === 'x') return item.createdAt || ''
+    if (item.type === 'youtube') return item.publishedAt || ''
+    if (item.type === 'blog') return item.publishedAt || ''
+    // GitHub stars on this page all belong to `daily.date`, so use that as a
+    // day-level proxy (noon UTC) rather than `starredAt`, which may be missing
+    // on historical JSON files.
+    if (item.type === 'github') return `${daily.date}T12:00:00Z`
+    return ''
+  }
+
   const sortedItems = sortMode === 'score'
     ? [...filteredItems].sort((a, b) => {
         const isGhA = a.type === 'github'
@@ -502,7 +557,16 @@ export default function StarsDetail({ daily, prevDate, nextDate, allTags, person
         if (isGhA !== isGhB) return isGhA ? -1 : 1
         return 0
       })
-    : filteredItems
+    : [...filteredItems]
+        .map((item, idx) => ({ item, idx, t: getSortTime(item) }))
+        .sort((a, b) => {
+          if (!a.t && !b.t) return a.idx - b.idx
+          if (!a.t) return 1
+          if (!b.t) return -1
+          if (a.t !== b.t) return b.t.localeCompare(a.t)
+          return a.idx - b.idx
+        })
+        .map(x => x.item)
 
   return (
     <>
@@ -576,8 +640,9 @@ export default function StarsDetail({ daily, prevDate, nextDate, allTags, person
               />
             )}
 
-            {/* Sort Mode — only meaningful when GitHub items are in view */}
-            {githubCount > 0 && (activeSource === 'all' || activeSource === 'github') && (
+            {/* Sort Mode — Score prioritizes GitHub items by DeepSeek score;
+                Time sorts all sources by their normalized timestamp. */}
+            {sortedItems.length > 1 && (
               <div className="flex flex-wrap items-center gap-4 text-[10px] uppercase tracking-widest">
                 <span className="text-gray-600">sort --by=</span>
                 <div className="flex flex-wrap gap-2">

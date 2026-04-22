@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
 import type { GetStaticProps, GetStaticPaths } from 'next'
@@ -13,6 +14,17 @@ import { ActivitySparkline } from '@/components/stars/ActivitySparkline'
 
 interface PersonPageProps {
   person: PersonDetail
+}
+
+type SourceKey = 'all' | 'github' | 'bluesky' | 'x' | 'youtube' | 'blog'
+
+const SOURCE_LABELS: Record<SourceKey, string> = {
+  all: '[*All]',
+  github: 'GitHub',
+  bluesky: 'Bluesky',
+  x: 'X',
+  youtube: 'YouTube',
+  blog: 'Blog',
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
@@ -34,23 +46,72 @@ export const getStaticProps: GetStaticProps<PersonPageProps> = async ({ params }
 
 export default function PersonPage({ person }: PersonPageProps) {
   const { activity } = person
+  const [sourceFilter, setSourceFilter] = useState<SourceKey>('all')
+
+  const starsCount = activity.stars?.length || 0
+  const postsCount = activity.posts?.length || 0
+  const videosCount = activity.videos?.length || 0
+  const blogsCount = activity.blogs?.length || 0
+  const xPostsCount = activity.xPosts?.length || 0
 
   // Merge all activity into a chronological list
   const allItems: FeedItem[] = [
-    ...activity.stars.map(s => ({ ...s, type: 'github' as const })),
-    ...activity.posts.map(p => ({ ...p, type: 'bluesky' as const })),
+    ...(activity.stars || []).map(s => ({ ...s, type: 'github' as const })),
+    ...(activity.posts || []).map(p => ({ ...p, type: 'bluesky' as const })),
     ...(activity.videos || []).map(v => ({ ...v, type: 'youtube' as const })),
     ...(activity.blogs || []).map(b => ({ ...b, type: 'blog' as const })),
     ...(activity.xPosts || []).map(x => ({ ...x, type: 'x' as const })),
   ]
 
-  const totalActivity = activity.stars.length + activity.posts.length + (activity.videos?.length || 0) + (activity.blogs?.length || 0) + (activity.xPosts?.length || 0)
+  // Normalize a sortable timestamp per item; missing values sink to the bottom.
+  // GitHub stars only have day-level precision via `starredAt`, so pin them to
+  // noon UTC of that day — keeps them close to (not above) same-day timestamped
+  // items from other sources.
+  const getSortTime = (item: FeedItem): string => {
+    if (item.type === 'bluesky') return item.createdAt || ''
+    if (item.type === 'x') return item.createdAt || ''
+    if (item.type === 'youtube') return item.publishedAt || ''
+    if (item.type === 'blog') return item.publishedAt || ''
+    if (item.type === 'github') return item.starredAt ? `${item.starredAt}T12:00:00Z` : ''
+    return ''
+  }
+
+  // Stable sort: items with a time come first (desc), timeless items keep
+  // their original order at the tail.
+  const sortedItems = [...allItems]
+    .map((item, idx) => ({ item, idx, t: getSortTime(item) }))
+    .sort((a, b) => {
+      if (!a.t && !b.t) return a.idx - b.idx
+      if (!a.t) return 1
+      if (!b.t) return -1
+      if (a.t !== b.t) return b.t.localeCompare(a.t)
+      return a.idx - b.idx
+    })
+    .map(x => x.item)
+
+  // Apply source filter
+  const filteredItems = sourceFilter === 'all'
+    ? sortedItems
+    : sortedItems.filter(item => item.type === sourceFilter)
+
+  const totalActivity = starsCount + postsCount + videosCount + blogsCount + xPostsCount
+
+  // Only show filter buttons for source types the person actually has (≥2 types)
+  const availableSources: SourceKey[] = (['github', 'bluesky', 'x', 'youtube', 'blog'] as const).filter(src => {
+    if (src === 'github') return starsCount > 0
+    if (src === 'bluesky') return postsCount > 0
+    if (src === 'x') return xPostsCount > 0
+    if (src === 'youtube') return videosCount > 0
+    if (src === 'blog') return blogsCount > 0
+    return false
+  })
+  const showFilter = availableSources.length >= 2
 
   return (
     <>
       <Head>
         <title>{person.name} — Stars — Kylin Miao</title>
-        <meta name="description" content={`${person.name}'s recent activity: ${activity.stars.length} stars, ${activity.posts.length} posts, ${activity.videos?.length || 0} videos, ${activity.blogs?.length || 0} blogs.`} />
+        <meta name="description" content={`${person.name}'s recent activity: ${starsCount} stars, ${postsCount} posts, ${videosCount} videos, ${blogsCount} blogs, ${xPostsCount} x-posts.`} />
       </Head>
 
       <div className="min-h-screen bg-black text-white relative">
@@ -70,6 +131,7 @@ export default function PersonPage({ person }: PersonPageProps) {
           {/* Profile header */}
           <div className="flex items-start gap-4 mb-8">
             {person.avatar ? (
+              // eslint-disable-next-line @next/next/no-img-element
               <img
                 src={person.avatar}
                 alt={person.name}
@@ -119,11 +181,11 @@ export default function PersonPage({ person }: PersonPageProps) {
                 <span className="text-sm font-semibold text-gray-300">Recent Activity</span>
                 <span className="text-xs text-gray-500">
                   {[
-                    activity.stars.length > 0 && `${activity.stars.length} stars`,
-                    activity.posts.length > 0 && `${activity.posts.length} posts`,
-                    (activity.videos?.length || 0) > 0 && `${activity.videos.length} videos`,
-                    (activity.blogs?.length || 0) > 0 && `${activity.blogs.length} blogs`,
-                    (activity.xPosts?.length || 0) > 0 && `${activity.xPosts!.length} x-posts`,
+                    starsCount > 0 && `${starsCount} stars`,
+                    postsCount > 0 && `${postsCount} posts`,
+                    videosCount > 0 && `${videosCount} videos`,
+                    blogsCount > 0 && `${blogsCount} blogs`,
+                    xPostsCount > 0 && `${xPostsCount} x-posts`,
                   ].filter(Boolean).join(' · ') || 'No activity'}
                 </span>
               </div>
@@ -141,31 +203,59 @@ export default function PersonPage({ person }: PersonPageProps) {
           {/* Activity items */}
           {allItems.length > 0 && (
             <div>
-              <h2 className="text-lg font-semibold text-gray-200 mb-4">Recent Activity</h2>
-              {allItems.map((item, idx) => {
-                if (item.type === 'github') {
-                  return <RepoCard key={`github-${idx}`} star={item as StarredRepo} />
-                } else if (item.type === 'bluesky') {
-                  return <BlueskyPostCard key={`bluesky-${idx}`} post={item as BlueskyPost} />
-                } else if (item.type === 'youtube') {
-                  return <YouTubeVideoCard key={`youtube-${idx}`} video={item as YouTubeVideo} />
-                } else if (item.type === 'blog') {
-                  return <BlogPostCard key={`blog-${idx}`} post={item as BlogPost} />
-                } else if (item.type === 'x') {
-                  return <XPostCard key={`x-${idx}`} post={item as XPost} />
-                }
-                return null
-              })}
+              <div className="flex items-center justify-between mb-4 gap-4 flex-wrap">
+                <h2 className="text-lg font-semibold text-gray-200">Recent Activity</h2>
+                {showFilter && (
+                  <div className="flex flex-wrap items-center gap-2 text-[10px] uppercase tracking-widest font-mono">
+                    <span className="text-gray-600">grep SOURCE=</span>
+                    {(['all', ...availableSources] as SourceKey[]).map(src => {
+                      const isActive = sourceFilter === src
+                      return (
+                        <button
+                          key={src}
+                          onClick={() => setSourceFilter(src)}
+                          className={`px-2 py-0.5 rounded transition-colors border ${
+                            isActive
+                              ? 'bg-white/10 text-white border-white/20'
+                              : 'text-gray-500 hover:text-white border-transparent'
+                          }`}
+                        >
+                          {SOURCE_LABELS[src]}
+                        </button>
+                      )
+                    })}
+                  </div>
+                )}
+              </div>
+
+              {filteredItems.length === 0 ? (
+                <p className="text-gray-500 text-sm font-mono py-8">No {sourceFilter} content for this person.</p>
+              ) : (
+                filteredItems.map((item, idx) => {
+                  if (item.type === 'github') {
+                    return <RepoCard key={`github-${idx}`} star={item as StarredRepo} />
+                  } else if (item.type === 'bluesky') {
+                    return <BlueskyPostCard key={`bluesky-${idx}`} post={item as BlueskyPost} />
+                  } else if (item.type === 'youtube') {
+                    return <YouTubeVideoCard key={`youtube-${idx}`} video={item as YouTubeVideo} />
+                  } else if (item.type === 'blog') {
+                    return <BlogPostCard key={`blog-${idx}`} post={item as BlogPost} />
+                  } else if (item.type === 'x') {
+                    return <XPostCard key={`x-${idx}`} post={item as XPost} />
+                  }
+                  return null
+                })
+              )}
             </div>
           )}
 
           {/* Footer stats */}
           <div className="pt-6 border-t border-white/[0.06] text-xs text-gray-500 mt-8">
-            {activity.stars.length > 0 && <span>{activity.stars.length} repos · </span>}
-            {activity.posts.length > 0 && <span>{activity.posts.length} posts · </span>}
-            {(activity.videos?.length || 0) > 0 && <span>{activity.videos.length} videos · </span>}
-            {(activity.blogs?.length || 0) > 0 && <span>{activity.blogs.length} blogs · </span>}
-            {(activity.xPosts?.length || 0) > 0 && <span>{activity.xPosts!.length} x-posts · </span>}
+            {starsCount > 0 && <span>{starsCount} repos · </span>}
+            {postsCount > 0 && <span>{postsCount} posts · </span>}
+            {videosCount > 0 && <span>{videosCount} videos · </span>}
+            {blogsCount > 0 && <span>{blogsCount} blogs · </span>}
+            {xPostsCount > 0 && <span>{xPostsCount} x-posts · </span>}
             All time
           </div>
         </div>

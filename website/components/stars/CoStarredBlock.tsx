@@ -77,7 +77,7 @@ export default function CoStarredBlock({
               </div>
               <div className="text-[10px] text-gray-500 mt-1 flex flex-wrap gap-x-2">
                 {repo.starredBy.map(handle => {
-                  const slug = personMap[handle.toLowerCase()]
+                  const slug = personMap[`github:${handle.toLowerCase()}`]
                   return slug ? (
                     <Link
                       key={handle}
@@ -182,7 +182,7 @@ export default function CoStarredBlock({
                 <div className="flex flex-wrap gap-2 text-gray-500">
                   <span className="text-gray-600">by:</span>
                   {repo.starredBy.map(handle => {
-                    const slug = personMap[handle.toLowerCase()]
+                    const slug = personMap[`github:${handle.toLowerCase()}`]
                     return slug ? (
                       <Link
                         key={handle}

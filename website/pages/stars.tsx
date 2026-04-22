@@ -16,6 +16,15 @@ import {
 } from '@/lib/social-feeds'
 import { Github, MessageSquare, Youtube, FileText } from 'lucide-react'
 
+// Local X/Twitter icon (lucide does not ship one; uses same path as [date].tsx)
+function XIcon({ className = '' }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+    </svg>
+  )
+}
+
 interface StarsListProps {
   dates: DailyFeedSummary[]
   latestDigest: WeeklyDigest | null
@@ -62,6 +71,7 @@ export default function StarsList({ dates, latestDigest, tagStats, highlights }:
   const hasSources = {
     github: dates.some(d => d.githubCount > 0),
     bluesky: dates.some(d => d.blueskyCount > 0),
+    x: dates.some(d => d.xCount > 0),
     youtube: dates.some(d => d.youtubeCount > 0),
     blog: dates.some(d => d.blogCount > 0),
   }
@@ -72,6 +82,7 @@ export default function StarsList({ dates, latestDigest, tagStats, highlights }:
     : dates.filter(d => {
         if (sourceFilter === 'github') return d.githubCount > 0
         if (sourceFilter === 'bluesky') return d.blueskyCount > 0
+        if (sourceFilter === 'x') return d.xCount > 0
         if (sourceFilter === 'youtube') return d.youtubeCount > 0
         if (sourceFilter === 'blog') return d.blogCount > 0
         return true
@@ -81,7 +92,7 @@ export default function StarsList({ dates, latestDigest, tagStats, highlights }:
     <>
       <Head>
         <title>Stars — Kylin Miao</title>
-        <meta name="description" content="Recently starred GitHub repos and Bluesky posts from AI leaders with AI-powered highlights." />
+        <meta name="description" content="Recently starred GitHub repos, Bluesky/X posts, YouTube videos and blog articles from AI leaders with AI-powered highlights." />
         <link rel="alternate" type="application/rss+xml" title="Stars & Posts — Kylin Miao" href="/stars/feed.xml" />
       </Head>
 
@@ -102,7 +113,7 @@ export default function StarsList({ dates, latestDigest, tagStats, highlights }:
               </div>
               <h1 className="text-4xl font-bold tracking-tight text-white mb-4 font-sans">Stars / Feed</h1>
               <div className="text-xs text-gray-500 mb-6 leading-relaxed">
-                  [STATUS] Monitoring 50+ AI leaders across GitHub, Bluesky, YouTube, Blog RSS.<br/>
+                  [STATUS] Monitoring 50+ AI leaders across GitHub, Bluesky, X, YouTube, Blog RSS.<br/>
                   [ENGINE] Summarization powered by DeepSeek.
               </div>
               
@@ -129,9 +140,9 @@ export default function StarsList({ dates, latestDigest, tagStats, highlights }:
           >
               <span className="text-gray-600">grep SOURCE=</span>
               <div className="flex flex-wrap gap-2">
-                {(['all', 'github', 'bluesky', 'youtube', 'blog'] as const).map(source => {
+                {(['all', 'github', 'bluesky', 'x', 'youtube', 'blog'] as const).map(source => {
                   if (source !== 'all' && !hasSources[source]) return null
-                  const labels: Record<string, string> = { all: '[*All]', github: 'GitHub', bluesky: 'Bluesky', youtube: 'YouTube', blog: 'Blog' }
+                  const labels: Record<string, string> = { all: '[*All]', github: 'GitHub', bluesky: 'Bluesky', x: 'X', youtube: 'YouTube', blog: 'Blog' }
                   const isActive = sourceFilter === source
                   return (
                     <button
@@ -177,18 +188,45 @@ export default function StarsList({ dates, latestDigest, tagStats, highlights }:
                 <div className="space-y-3 mt-3 pr-2">
                   {highlights.map((hl, i) => {
                     const type = hl.item.type
-                    const url = type === 'github' ? hl.item.url : type === 'bluesky' ? hl.item.url : type === 'youtube' ? hl.item.url : hl.item.url
-                    const title = type === 'github' ? hl.item.repo : type === 'bluesky' ? hl.item.content.slice(0, 50) + '...' : type === 'youtube' ? hl.item.title : (hl.item as any).title
-                    const stats = type === 'github' ? `★ ${(hl.item.stargazersCount / 1000).toFixed(1)}k` : type === 'bluesky' ? `❤️ ${hl.item.likeCount}` : type === 'youtube' ? `👁 ${(hl.item.viewCount / 1000).toFixed(1)}k` : ''
+                    const url = hl.item.url
+                    const title =
+                      type === 'github'
+                        ? hl.item.repo
+                        : type === 'bluesky'
+                        ? hl.item.content.slice(0, 50) + '...'
+                        : type === 'x'
+                        ? hl.item.content.slice(0, 50) + '...'
+                        : type === 'youtube'
+                        ? hl.item.title
+                        : (hl.item as any).title
+                    const stats =
+                      type === 'github'
+                        ? `★ ${(hl.item.stargazersCount / 1000).toFixed(1)}k`
+                        : type === 'bluesky'
+                        ? `❤️ ${hl.item.likeCount}`
+                        : type === 'x'
+                        ? `❤️ ${hl.item.likeCount}`
+                        : type === 'youtube'
+                        ? `👁 ${(hl.item.viewCount / 1000).toFixed(1)}k`
+                        : ''
                     const leaderCount = type === 'github' ? (hl.item.starredBy?.split(',').length || 1) : 1
-                    
-                    const description = type === 'github' ? hl.item.description : type === 'bluesky' ? hl.item.content : type === 'youtube' ? hl.item.description : (hl.item as any).summary
-                    
+
+                    const description =
+                      type === 'github'
+                        ? hl.item.description
+                        : type === 'bluesky'
+                        ? hl.item.content
+                        : type === 'x'
+                        ? hl.item.content
+                        : type === 'youtube'
+                        ? hl.item.description
+                        : (hl.item as any).summary
+
                     return (
                       <div key={i} className="group flex flex-col">
                           <div className="flex sm:items-center flex-col sm:flex-row gap-1 sm:gap-2">
-                              <span className={`${type === 'github' ? 'text-gray-500' : type === 'bluesky' ? 'text-blue-400' : type === 'youtube' ? 'text-red-400' : 'text-emerald-400'} w-6 shrink-0 flex justify-center`} title={type}>
-                                  {type === 'github' ? <Github className="w-4 h-4" /> : type === 'bluesky' ? <MessageSquare className="w-4 h-4" /> : type === 'youtube' ? <Youtube className="w-4 h-4" /> : <FileText className="w-4 h-4" />}
+                              <span className={`${type === 'github' ? 'text-gray-500' : type === 'bluesky' ? 'text-blue-400' : type === 'x' ? 'text-gray-300' : type === 'youtube' ? 'text-red-400' : 'text-emerald-400'} w-6 shrink-0 flex justify-center`} title={type}>
+                                  {type === 'github' ? <Github className="w-4 h-4" /> : type === 'bluesky' ? <MessageSquare className="w-4 h-4" /> : type === 'x' ? <XIcon className="w-4 h-4" /> : type === 'youtube' ? <Youtube className="w-4 h-4" /> : <FileText className="w-4 h-4" />}
                               </span>
                               <a href={url} target="_blank" rel="noopener noreferrer" className="text-gray-200 group-hover:text-orange-400 cursor-pointer transition-colors truncate max-w-sm sm:max-w-md">
                                   {title}
@@ -255,6 +293,7 @@ export default function StarsList({ dates, latestDigest, tagStats, highlights }:
                           <div className={`flex-1 flex flex-wrap gap-4 text-xs transition-colors ${isLatest ? 'text-gray-400' : 'text-gray-500'}`}>
                               {item.githubCount > 0 && <span className="flex items-center gap-1.5"><Github className="w-3.5 h-3.5" /> {item.githubCount}</span>}
                               {item.blueskyCount > 0 && <span className="flex items-center gap-1.5"><MessageSquare className="w-3.5 h-3.5" /> {item.blueskyCount}</span>}
+                              {item.xCount > 0 && <span className="flex items-center gap-1.5"><XIcon className="w-3.5 h-3.5" /> {item.xCount}</span>}
                               {item.youtubeCount > 0 && <span className="flex items-center gap-1.5"><Youtube className="w-3.5 h-3.5" /> {item.youtubeCount}</span>}
                               {item.blogCount > 0 && <span className="flex items-center gap-1.5"><FileText className="w-3.5 h-3.5" /> {item.blogCount}</span>}
                           </div>

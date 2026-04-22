@@ -17,6 +17,12 @@ export interface StarredRepo {
   tags: string[]
   score: number          // 0–10, 0 = not yet scored
   scoreReason: string
+  /**
+   * Ingestion date (YYYY-MM-DD) of the daily feed file this star came from.
+   * Populated by `generate-people-data.ts` as a day-level proxy for true
+   * GitHub `starred_at`. Older JSON files may lack this field.
+   */
+  starredAt?: string
 }
 
 export interface BlueskyPost {
@@ -62,6 +68,12 @@ export interface BlogPost {
   summary: string
   highlights: string
   worthReading: string
+  /**
+   * Optional topic tags. Not yet populated by existing ingestion scripts; the
+   * UI treats missing tags as "blog does not participate in topic filtering"
+   * rather than "blog has zero matching topics".
+   */
+  tags?: string[]
 }
 
 export interface XPost {

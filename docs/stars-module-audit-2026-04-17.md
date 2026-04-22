@@ -4,8 +4,47 @@
 - 触发背景：用户反馈
   1. `http://localhost:3001/stars/` 每日行不包含 X 的内容
   2. `http://localhost:3001/stars/people/karpathy/` 内容未按时间排序，且不支持筛选
-- 本文件只做诊断，**不含修复**。修复动作另行规划。
+- 本文件是**诊断 + 进度追踪**（最初只做诊断，后续在 2026-04-21 逐项修复）。
 - 相关代码基准：`master` 分支 `HEAD`（2026-04-17 的快照）。
+
+---
+
+## 进度追踪
+
+### 2026-04-21 · 第一轮修复（已合并到 master）
+
+| 项目 | 状态 | 主要改动文件 |
+|---|---|---|
+| C3 · personMap 前缀协议对齐 | ✅ | `lib/people.ts`、`pages/stars/[date].tsx`、`components/stars/{RepoCard,BlueskyPostCard,XPostCard,CoStarredBlock}.tsx` |
+| B1 · `/stars/` 列表补全 X 入口 | ✅ | `pages/stars.tsx` |
+| B2 · Top Signals 对 X 的 title/icon 错位 | ✅ | `pages/stars.tsx` |
+| H1 · stars 主列表 meta description / STATUS 文案陈旧 | ✅ | `pages/stars.tsx` |
+| C5 · `PersonActivity.xPosts?` 可选性收敛 | ✅ | `lib/people.ts`（归一化 + 改成必填） |
+| C1 · People 详情页按时间倒序 | ✅ | `lib/social-feeds.ts`（StarredRepo.starredAt?）、`scripts/generate-people-data.ts`（回填 starredAt）、`pages/stars/people/[handle].tsx`（getSortTime + 稳定排序） |
+| C2 · People 详情页加 Source 筛选 UI | ✅ | `pages/stars/people/[handle].tsx` |
+| A2 · `/stars/{date}` Time 模式真实按时间排序 | ✅ | `pages/stars/[date].tsx` |
+| A3 · YouTube 卡片补 tag 渲染 | ✅ | `pages/stars/[date].tsx` |
+| A4 · Blog 增加可选 tags + Topic 过滤不再误伤 blog | ✅ | `lib/social-feeds.ts`、`pages/stars/[date].tsx` |
+| A5 · YouTube description 按词边界智能截断 | ✅ | `pages/stars/[date].tsx`（新增 `smartTruncate`） |
+| A6 · Topic×Source 空态提示 | ✅（随 A4 间接解决） | `pages/stars/[date].tsx` |
+| F1 · RSS feed 扩展覆盖 X / YouTube / Blog | ✅ | `scripts/generate-stars-rss.ts`（整体重写） |
+
+**数据回填提醒**：`StarredRepo.starredAt` 是本轮新增字段，现有 `profile-data/people-activity/*.json` 需重跑
+`npx tsx scripts/generate-people-data.ts` 才会写入。未回填前 stars 会稳定沉到列表尾部（不会乱序）。
+
+### 仍未处理（未来单独排期）
+
+| 项目 | 原因 |
+|---|---|
+| B3 · TagCloud 对 X 可视化 | 非阻塞，UI 微调 |
+| C4 · `PersonActivity.stars` 真实 `starred_at`（秒级精度） | 需抓取脚本支持 GitHub `Accept: application/vnd.github.star+json` 并回填历史数据 |
+| C6 · `getHandleToPersonMap` 覆盖 YouTube/Blog 作者 | key 空间差异大（channelTitle vs displayName），需要更谨慎的匹配策略 |
+| D2 · Timeline 分组 key 使用 `sortTime` 跨日对齐 | UX 影响需再评估 |
+| E1 · Weekly Digest schema 扩展覆盖 X/YouTube/Blog | 需重构 digest 生成脚本 + AI prompt |
+| E2 · "当前周排除" 依赖时间 | 当前行为合理 |
+| F2 · RSS `MAX_ITEMS` 改为 item 粒度 | 低收益 |
+| G2 · `getTopHighlights` engagement 口径不均衡 | 需要体验调参 |
+| G3 · `process.cwd()` 双路径兜底重复 | 纯重构 |
 
 ---
 

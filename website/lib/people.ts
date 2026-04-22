@@ -28,7 +28,7 @@ export interface PersonActivity {
   posts: BlueskyPost[]
   videos: YouTubeVideo[]
   blogs: BlogPost[]
-  xPosts?: XPost[]
+  xPosts: XPost[]
   dailyCounts: number[]
   interestSummary: string
 }
@@ -78,7 +78,19 @@ function loadPersonActivity(id: string): PersonActivity | null {
 
   try {
     const content = fs.readFileSync(filePath, 'utf-8')
-    return JSON.parse(content) as PersonActivity
+    const raw = JSON.parse(content) as Partial<PersonActivity>
+    return {
+      id: raw.id ?? id,
+      stars: raw.stars ?? [],
+      posts: raw.posts ?? [],
+      videos: raw.videos ?? [],
+      blogs: raw.blogs ?? [],
+      xPosts: raw.xPosts ?? [],
+      dailyCounts: Array.isArray(raw.dailyCounts) && raw.dailyCounts.length > 0
+        ? raw.dailyCounts
+        : new Array(30).fill(0),
+      interestSummary: raw.interestSummary ?? '',
+    }
   } catch {
     return null
   }
@@ -92,16 +104,16 @@ export function getAllPeople(): PersonSummary[] {
   return people.map(person => {
     const activity = loadPersonActivity(person.id)
     const activityCount = activity
-      ? activity.stars.length + activity.posts.length + (activity.videos?.length || 0) + (activity.blogs?.length || 0) + (activity.xPosts?.length || 0)
+      ? (activity.stars?.length || 0) + (activity.posts?.length || 0) + (activity.videos?.length || 0) + (activity.blogs?.length || 0) + (activity.xPosts?.length || 0)
       : 0
 
     // Compute latest activity timestamp across all sources
     let latestActivityAt: string | null = null
     if (activity) {
       const timestamps: string[] = [
-        ...activity.posts.map(p => p.createdAt),
-        ...activity.videos.map(v => v.publishedAt),
-        ...activity.blogs.map(b => b.publishedAt),
+        ...(activity.posts || []).map(p => p.createdAt),
+        ...(activity.videos || []).map(v => v.publishedAt),
+        ...(activity.blogs || []).map(b => b.publishedAt),
         ...(activity.xPosts || []).map(x => x.createdAt),
       ].filter(Boolean)
       if (timestamps.length > 0) {
@@ -134,6 +146,7 @@ export function getPersonByHandle(handle: string): PersonDetail | null {
     posts: [],
     videos: [],
     blogs: [],
+    xPosts: [],
     dailyCounts: new Array(30).fill(0),
     interestSummary: '',
   }
@@ -152,13 +165,13 @@ export function getHandleToPersonMap(): Record<string, string> {
 
   for (const person of people) {
     if (person.github) {
-      map[`github:${person.github}`] = person.id
+      map[`github:${person.github.toLowerCase()}`] = person.id
     }
     if (person.bluesky) {
-      map[`bluesky:${person.bluesky}`] = person.id
+      map[`bluesky:${person.bluesky.toLowerCase()}`] = person.id
     }
     if (person.x) {
-      map[`x:${person.x}`] = person.id
+      map[`x:${person.x.toLowerCase()}`] = person.id
     }
   }
 

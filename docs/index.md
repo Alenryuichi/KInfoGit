@@ -268,7 +268,8 @@ just validate-json          # 验证 JSON 文件
 
 ## 🐛 已知问题
 
-- **Stars 模块**：列表页缺 X 入口、People 详情页无时间排序/筛选、`personMap` 前缀协议不一致、RSS 未覆盖 X/YouTube/Blog 等。详见 [Stars 模块问题诊断报告（2026-04-17）](./stars-module-audit-2026-04-17.md)。
+- **Stars 模块**：~~列表页缺 X 入口、People 详情页无时间排序/筛选、`personMap` 前缀协议不一致、RSS 未覆盖 X/YouTube/Blog 等~~。
+  **2026-04-21 已完成第一轮修复**：P0 + 部分 P1（共 13 项），详见 [Stars 模块问题诊断报告](./stars-module-audit-2026-04-17.md#进度追踪)。仍有若干 P2 项（TagCloud/真实 starred_at/Weekly Digest schema 扩展等）待后续排期。
 
 ---
 

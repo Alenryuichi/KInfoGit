@@ -3,14 +3,19 @@ import path from 'path'
 
 // --- Config ---
 
-const GITHUB_STARS_DIR = path.join(__dirname, '..', 'profile-data', 'github-stars')
-const BLUESKY_POSTS_DIR = path.join(__dirname, '..', 'profile-data', 'bluesky-posts')
-const SUMMARIES_DIR = path.join(__dirname, '..', 'profile-data', 'daily-summaries')
+const PROFILE_DATA_DIR = path.join(__dirname, '..', 'profile-data')
+const GITHUB_STARS_DIR = path.join(PROFILE_DATA_DIR, 'github-stars')
+const BLUESKY_POSTS_DIR = path.join(PROFILE_DATA_DIR, 'bluesky-posts')
+const X_SIGNALS_DIR = path.join(PROFILE_DATA_DIR, 'x-signals')
+const YOUTUBE_VIDEOS_DIR = path.join(PROFILE_DATA_DIR, 'youtube-videos')
+const BLOG_POSTS_DIR = path.join(PROFILE_DATA_DIR, 'blog-posts')
+const SUMMARIES_DIR = path.join(PROFILE_DATA_DIR, 'daily-summaries')
 const OUTPUT_PATH = path.join(__dirname, '..', 'website', 'public', 'stars', 'feed.xml')
 
 const SITE_URL = 'https://kylinmiao.me'
 const FEED_TITLE = 'Stars & Posts — Kylin Miao'
-const FEED_DESCRIPTION = 'Daily curated GitHub starred repos and Bluesky posts from AI leaders with AI-powered summaries.'
+const FEED_DESCRIPTION =
+  'Daily curated GitHub starred repos, Bluesky/X posts, YouTube videos and blog articles from AI leaders with AI-powered summaries.'
 const MAX_ITEMS = 30
 
 // --- XML Helpers ---
@@ -32,10 +37,18 @@ function toRFC822Date(dateStr: string): string {
 
 // --- Data Reading ---
 
+const SOURCE_DIRS = [
+  GITHUB_STARS_DIR,
+  BLUESKY_POSTS_DIR,
+  X_SIGNALS_DIR,
+  YOUTUBE_VIDEOS_DIR,
+  BLOG_POSTS_DIR,
+]
+
 function collectAllDates(): string[] {
   const dates = new Set<string>()
 
-  for (const dir of [GITHUB_STARS_DIR, BLUESKY_POSTS_DIR]) {
+  for (const dir of SOURCE_DIRS) {
     if (!fs.existsSync(dir)) continue
     for (const file of fs.readdirSync(dir)) {
       const match = file.match(/^(\d{4}-\d{2}-\d{2})\.json$/)
@@ -53,46 +66,89 @@ interface StarData {
   language: string | null
 }
 
-interface PostData {
+interface SocialPostData {
   author: { handle: string; displayName: string }
   content: string
   url: string
 }
 
-function loadGitHubStars(date: string): StarData[] {
-  const filePath = path.join(GITHUB_STARS_DIR, `${date}.json`)
-  if (!fs.existsSync(filePath)) return []
+interface VideoData {
+  title: string
+  channelTitle: string
+  url: string
+}
 
+interface BlogData {
+  title: string
+  author: string
+  url: string
+  summary: string
+}
+
+function loadJsonArray<T>(filePath: string, key: string, mapper: (raw: any) => T): T[] {
+  if (!fs.existsSync(filePath)) return []
   try {
     const data = JSON.parse(fs.readFileSync(filePath, 'utf-8'))
-    return (data.stars || []).map((s: any) => ({
-      repo: s.repo,
-      url: s.url,
-      description: s.description || '',
-      language: s.language,
-    }))
+    return ((data?.[key] as any[]) || []).map(mapper)
   } catch {
     return []
   }
 }
 
-function loadBlueskyPosts(date: string): PostData[] {
-  const filePath = path.join(BLUESKY_POSTS_DIR, `${date}.json`)
-  if (!fs.existsSync(filePath)) return []
+function loadGitHubStars(date: string): StarData[] {
+  return loadJsonArray<StarData>(path.join(GITHUB_STARS_DIR, `${date}.json`), 'stars', s => ({
+    repo: s.repo,
+    url: s.url,
+    description: s.description || '',
+    language: s.language ?? null,
+  }))
+}
 
-  try {
-    const data = JSON.parse(fs.readFileSync(filePath, 'utf-8'))
-    return (data.posts || []).map((p: any) => ({
+function loadBlueskyPosts(date: string): SocialPostData[] {
+  return loadJsonArray<SocialPostData>(
+    path.join(BLUESKY_POSTS_DIR, `${date}.json`),
+    'posts',
+    p => ({
       author: {
-        handle: p.author.handle,
-        displayName: p.author.displayName,
+        handle: p.author?.handle ?? '',
+        displayName: p.author?.displayName ?? '',
       },
-      content: p.content,
-      url: p.url,
-    }))
-  } catch {
-    return []
-  }
+      content: p.content ?? '',
+      url: p.url ?? '',
+    })
+  )
+}
+
+function loadXPosts(date: string): SocialPostData[] {
+  return loadJsonArray<SocialPostData>(
+    path.join(X_SIGNALS_DIR, `${date}.json`),
+    'posts',
+    p => ({
+      author: {
+        handle: p.author?.handle ?? '',
+        displayName: p.author?.displayName ?? '',
+      },
+      content: p.content ?? '',
+      url: p.url ?? '',
+    })
+  )
+}
+
+function loadYouTubeVideos(date: string): VideoData[] {
+  return loadJsonArray<VideoData>(path.join(YOUTUBE_VIDEOS_DIR, `${date}.json`), 'videos', v => ({
+    title: v.title ?? '',
+    channelTitle: v.channelTitle ?? '',
+    url: v.url ?? '',
+  }))
+}
+
+function loadBlogPosts(date: string): BlogData[] {
+  return loadJsonArray<BlogData>(path.join(BLOG_POSTS_DIR, `${date}.json`), 'posts', b => ({
+    title: b.title ?? '',
+    author: b.author ?? '',
+    url: b.url ?? '',
+    summary: b.summary ?? '',
+  }))
 }
 
 function loadSummary(date: string): string {
@@ -109,10 +165,17 @@ function loadSummary(date: string): string {
 
 // --- RSS Item Generation ---
 
+function truncate(str: string, max: number): string {
+  return str.length > max ? str.slice(0, max) + '...' : str
+}
+
 function buildItemDescription(
   summary: string,
   stars: StarData[],
-  posts: PostData[],
+  bsky: SocialPostData[],
+  x: SocialPostData[],
+  videos: VideoData[],
+  blogs: BlogData[]
 ): string {
   const parts: string[] = []
 
@@ -131,14 +194,39 @@ function buildItemDescription(
     parts.push('')
   }
 
-  if (posts.length > 0) {
+  if (bsky.length > 0) {
     parts.push('Bluesky Posts:')
-    for (const post of posts) {
-      const excerpt = post.content.length > 150
-        ? post.content.slice(0, 150) + '...'
-        : post.content
+    for (const post of bsky) {
       const name = post.author.displayName || post.author.handle
-      parts.push(`* ${name}: ${excerpt}`)
+      parts.push(`* ${name}: ${truncate(post.content, 150)}`)
+    }
+    parts.push('')
+  }
+
+  if (x.length > 0) {
+    parts.push('X Posts:')
+    for (const post of x) {
+      const name = post.author.displayName || post.author.handle
+      parts.push(`* ${name}: ${truncate(post.content, 150)}`)
+    }
+    parts.push('')
+  }
+
+  if (videos.length > 0) {
+    parts.push('YouTube Videos:')
+    for (const video of videos) {
+      const channel = video.channelTitle ? ` (${video.channelTitle})` : ''
+      parts.push(`* ${video.title}${channel}`)
+    }
+    parts.push('')
+  }
+
+  if (blogs.length > 0) {
+    parts.push('Blog Articles:')
+    for (const blog of blogs) {
+      const author = blog.author ? ` — ${blog.author}` : ''
+      const summary = blog.summary ? `: ${truncate(blog.summary, 150)}` : ''
+      parts.push(`* ${blog.title}${author}${summary}`)
     }
   }
 
@@ -147,12 +235,23 @@ function buildItemDescription(
 
 function buildItem(date: string): string | null {
   const stars = loadGitHubStars(date)
-  const posts = loadBlueskyPosts(date)
+  const bsky = loadBlueskyPosts(date)
+  const x = loadXPosts(date)
+  const videos = loadYouTubeVideos(date)
+  const blogs = loadBlogPosts(date)
 
-  if (stars.length === 0 && posts.length === 0) return null
+  if (
+    stars.length === 0 &&
+    bsky.length === 0 &&
+    x.length === 0 &&
+    videos.length === 0 &&
+    blogs.length === 0
+  ) {
+    return null
+  }
 
   const summary = loadSummary(date)
-  const description = buildItemDescription(summary, stars, posts)
+  const description = buildItemDescription(summary, stars, bsky, x, videos, blogs)
   const title = `Stars & Posts — ${date}`
   const link = `${SITE_URL}/stars/${date}/`
   const pubDate = toRFC822Date(date)

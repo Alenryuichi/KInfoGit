@@ -38,6 +38,8 @@ interface StarredRepo {
   highlights: string
   worthReading: string
   topics: string[]
+  /** Ingestion date (YYYY-MM-DD) — day-level proxy for GitHub starred_at. */
+  starredAt?: string
 }
 
 interface BlueskyPost {
@@ -310,7 +312,9 @@ async function main() {
     // Collect stars
     if (person.github) {
       for (const [date, stars] of allStarsByDate) {
-        const matched = stars.filter(s => s.starredBy === person.github)
+        const matched = stars
+          .filter(s => s.starredBy === person.github)
+          .map(s => ({ ...s, starredAt: date }))
         personStars.push(...matched)
         const dayIndex = dates.indexOf(date)
         if (dayIndex >= 0) {

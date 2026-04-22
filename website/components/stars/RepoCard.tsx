@@ -31,7 +31,7 @@ interface RepoCardProps {
 }
 
 export function RepoCard({ star, personMap }: RepoCardProps) {
-  const personId = personMap?.[`github:${star.starredBy}`]
+  const personId = personMap?.[`github:${(star.starredBy || '').toLowerCase()}`]
 
   return (
     <div className="py-5 border-b border-white/[0.04] last:border-0">

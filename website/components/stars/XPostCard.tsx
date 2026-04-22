@@ -16,7 +16,7 @@ export function XPostCard({ post, personMap }: XPostCardProps) {
     minute: '2-digit',
   })
 
-  const personId = personMap?.[`x:${post.author.handle}`]
+  const personId = personMap?.[`x:${post.author.handle.toLowerCase()}`]
 
   return (
     <div className="py-5 border-b border-white/[0.04] last:border-0">
