@@ -1,10 +1,11 @@
 # STARS 模块问题诊断报告
 
-- 归档日期：2026-04-17
+- 归档日期：2026-04-17（诊断）· 2026-04-22（结案）
+- **状态：已结案 · 21/24（88%）**
 - 触发背景：用户反馈
   1. `http://localhost:3001/stars/` 每日行不包含 X 的内容
   2. `http://localhost:3001/stars/people/karpathy/` 内容未按时间排序，且不支持筛选
-- 本文件是**诊断 + 进度追踪**（最初只做诊断，后续逐项修复）。
+- 本文件是**诊断 + 进度追踪 + 结案存档**，保留完整执行历史。
 - 相关代码基准：`master` 分支 `HEAD`（2026-04-17 的快照）。
 
 ---
@@ -260,3 +261,36 @@ const allItems: FeedItem[] = [
 - 从 UI 层能低风险快速收敛的一组：**C3（前缀协议）+ B1（列表 X 入口）+ C1（人物页排序）+ C2（人物页筛选）** 可一并修复，立刻覆盖用户当前看到的两个问题。
 - `F1`（RSS 覆盖 X/YouTube/Blog）与 `E1`（Weekly Digest 扩展）涉及脚本/数据 schema 变更，建议独立任务。
 - `C4`（给 `PersonActivity.stars` 补时间字段）是 `C1` 彻底解决的前置，评估是"折中（只排有 `createdAt`/`publishedAt` 的 4 类，stars 用当前合成字段）"还是"正根（数据层补 `starredAt`）"。
+
+---
+
+## 结案（2026-04-22）
+
+**状态：已结案 · 21/24（88%）** — 诊断的 24 项问题已闭合到实用最优解。
+
+### 覆盖回顾
+
+| 优先级 | 完成 | 说明 |
+|---|---|---|
+| **P0** | 4/4 | 用户反馈直接对应的两个问题（stars 主列表缺 X、人物详情未排序且无筛选）完全修复 |
+| **P1** | 5/5 | 数据完整性/一致性全部对齐（RSS/Weekly Digest 全源覆盖、Top Signals 归一化、时间排序真实化） |
+| **P2** | 12/15 | 打磨项绝大多数完成；剩余 3 项为"行为合理/低收益"的故意搁置 |
+
+### 最终搁置（非遗漏）
+
+- **D2** · Timeline 分组 key 跨日对齐：当前按 `YYYY-MM-DD` 分组在 UI 上自然易读；按 `sortTime` 会导致凌晨帖跨日飘移，UX 反而更糟。
+- **E2** · "当前 ISO 周排除"依赖时间：Build 缓存期间短暂缺席"最新完整周"是可接受的权衡，改动会引入更复杂的边界判定。
+- **F2** · RSS `MAX_ITEMS = 30` 基于日期粒度：实际跨平台爆发日挤出的概率极低，收益不足以换测试复杂度。
+
+### 代码层沉淀
+
+- 路径解析：`website/lib/profile-data-paths.ts` 单一 `resolveProfileDataPath()` helper 取代 8 个文件里 15 处 double-cwd 兜底（G3 / `daba927`）
+- person 映射：`getHandleToPersonMap` 现覆盖 5 个 source（github / bluesky / x / youtube / blog），前缀协议在 `[date].tsx` / `timeline.tsx` / `weekly/[week].tsx` 与 5 个 Card 组件中全部一致（C3 + C6）
+- Schema 扩展：`StarredRepo.starredAt` ISO-8601 秒级 + 回填（C4）、`WeeklyDigest` 新增 `notableVideos` / `notableBlogs` / `notableXPosts`（E1）
+- 数据生成：`generate-stars-rss.ts` / `generate-weekly-digest.ts` 按新 schema 重写，带 URL post-validation + fallback（F1 + E1）
+
+### 提交轨迹
+
+`7787072 → ffef289 → d42eb24 → 204dc95 → 8a3a505 → d342acd → 93d1ccb → 6057d9c → 5d56dfa → f7bf946 → 9962a52 → daba927 → 1672740 → 83f4e22 → c52039f`
+
+未来若有新反馈或 stars 模块回归问题，优先在本文档增补新节（`### 2026-XX-XX · 第 N 轮`），保留累积历史。
