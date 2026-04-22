@@ -764,6 +764,10 @@ export function getCoStarredForDate(
   return computeCoStarredRepos(dates, minCount)
 }
 
+/**
+ * Raw engagement per source (scale varies wildly between sources — only used
+ * for display and per-source normalization below).
+ */
 function getItemEngagement(item: FeedItem): number {
   if (item.type === 'github') return item.stargazersCount
   if (item.type === 'bluesky') return item.likeCount + item.repostCount
@@ -773,14 +777,40 @@ function getItemEngagement(item: FeedItem): number {
   return 0
 }
 
+/**
+ * Days between two YYYY-MM-DD strings (a - b). Missing or malformed inputs
+ * degrade gracefully to a large positive number.
+ */
+function daysBetween(a: string, b: string): number {
+  const da = new Date(`${a}T00:00:00Z`).getTime()
+  const db = new Date(`${b}T00:00:00Z`).getTime()
+  if (isNaN(da) || isNaN(db)) return 999
+  return Math.round((da - db) / 86_400_000)
+}
+
 export interface HighlightItem {
   item: FeedItem
   date: string
   engagement: number
 }
 
+/**
+ * Pick the top-N items across all feeds, normalized per source so that
+ * no single high-volume source (GitHub stargazers, YouTube views) can
+ * monopolise the list. Scoring:
+ *
+ *   composite = log1p(raw) / log1p(max_in_source)    ∈ [0, 1]
+ *              + recency_boost                       (+0.20 if ≤3d, +0.10 if ≤7d)
+ *              + type_floor                          (blog: +0.05 — blogs otherwise
+ *                                                     struggle because highlights==10
+ *                                                     is a constant)
+ *
+ * Per-source grouping ensures each source contributes at least `minPerSource`
+ * items to the final list (when available), so Bluesky/X don't disappear.
+ */
 export function getTopHighlights(limit: number = 5): HighlightItem[] {
   const dates = getAllFeedDates()
+  const newestDate = dates[0]?.date ?? ''
   const all: HighlightItem[] = []
 
   for (const { date } of dates) {
@@ -792,7 +822,70 @@ export function getTopHighlights(limit: number = 5): HighlightItem[] {
     }
   }
 
-  return all.sort((a, b) => b.engagement - a.engagement).slice(0, limit)
+  if (all.length === 0) return []
+
+  // Compute per-source max (raw) for normalization
+  const maxBySource = new Map<FeedItem['type'], number>()
+  for (const h of all) {
+    const t = h.item.type
+    const prev = maxBySource.get(t) ?? 0
+    if (h.engagement > prev) maxBySource.set(t, h.engagement)
+  }
+
+  const score = (h: HighlightItem): number => {
+    const max = maxBySource.get(h.item.type) ?? 1
+    const normalized = max > 0 ? Math.log1p(h.engagement) / Math.log1p(max) : 0
+    const ageDays = newestDate ? daysBetween(newestDate, h.date) : 999
+    const recency = ageDays <= 3 ? 0.20 : ageDays <= 7 ? 0.10 : 0
+    const typeFloor = h.item.type === 'blog' ? 0.05 : 0
+    return normalized + recency + typeFloor
+  }
+
+  // Group by source, keep each source's internal ranking (desc by score)
+  const bySource = new Map<FeedItem['type'], HighlightItem[]>()
+  for (const h of all) {
+    const list = bySource.get(h.item.type) ?? []
+    list.push(h)
+    bySource.set(h.item.type, list)
+  }
+  bySource.forEach(list => list.sort((a, b) => score(b) - score(a)))
+
+  // Reservation pass: guarantee at least `minPerSource` slots per active source
+  // so tiny-scale sources (Blog, X early days) don't get crushed.
+  const minPerSource = 1
+  const reserved: HighlightItem[] = []
+  const leftover: HighlightItem[] = []
+  bySource.forEach(list => {
+    reserved.push(...list.slice(0, minPerSource))
+    leftover.push(...list.slice(minPerSource))
+  })
+
+  // Fill remaining slots by global composite score
+  leftover.sort((a, b) => score(b) - score(a))
+  reserved.sort((a, b) => score(b) - score(a))
+
+  const picked = [
+    ...reserved.slice(0, limit),
+    ...leftover.slice(0, Math.max(0, limit - reserved.length)),
+  ]
+
+  // Final output: sort by composite desc, dedupe defensively, cap to limit
+  const seen = new Set<string>()
+  const out: HighlightItem[] = []
+  for (const h of picked.sort((a, b) => score(b) - score(a))) {
+    const key = `${h.item.type}:${h.date}:${
+      h.item.type === 'github' ? h.item.repo :
+      h.item.type === 'bluesky' ? h.item.uri :
+      h.item.type === 'x' ? h.item.id :
+      h.item.type === 'youtube' ? h.item.videoId :
+      h.item.type === 'blog' ? h.item.url : ''
+    }`
+    if (seen.has(key)) continue
+    seen.add(key)
+    out.push(h)
+    if (out.length >= limit) break
+  }
+  return out
 }
 
 // --- All Feed Items (for timeline) ---
