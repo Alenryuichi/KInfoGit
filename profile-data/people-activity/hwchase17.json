@@ -302,6 +302,71 @@
         "agent",
         "infra"
       ]
+    },
+    {
+      "type": "x",
+      "id": "2034297125417460044",
+      "url": "https://x.com/hwchase17/status/2034297125417460044",
+      "author": {
+        "handle": "hwchase17",
+        "displayName": "Harrison Chase",
+        "avatar": "https://avatars.githubusercontent.com/hwchase17"
+      },
+      "content": "Open Models, Open Runtime, Open Harness - Building your own AI agent with LangChain and",
+      "createdAt": "2026-04-22T04:06:33.316Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Discusses building AI agents using open-source models, runtime, and harness tools like LangChain.",
+      "worthReading": "Shows practical approach to creating customizable AI agents with open-source infrastructure.",
+      "tags": [
+        "agent",
+        "llm",
+        "tooling"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2013641863123870133",
+      "url": "https://x.com/hwchase17/status/2013641863123870133",
+      "author": {
+        "handle": "hwchase17",
+        "displayName": "Harrison Chase",
+        "avatar": "https://avatars.githubusercontent.com/hwchase17"
+      },
+      "content": "Visibility is the easiest piece. The hard part is analyzing and understanding what you're observing. I've spoken to teams recording 100k+",
+      "createdAt": "2026-04-22T04:06:33.316Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Emphasizes that data collection is simple compared to the challenge of meaningful analysis and interpretation of observations.",
+      "worthReading": "Highlights a critical gap in AI/ML workflows between data gathering and actionable insights.",
+      "tags": [
+        "evaluation",
+        "infra"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2021261552222158955",
+      "url": "https://x.com/hwchase17/status/2021261552222158955",
+      "author": {
+        "handle": "hwchase17",
+        "displayName": "Harrison Chase",
+        "avatar": "https://avatars.githubusercontent.com/hwchase17"
+      },
+      "content": "TL;DR: More and more agents need a workspace: a computer where they can run code, install packages, and access files. Sandboxes provide this",
+      "createdAt": "2026-04-22T04:06:33.316Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Argues that AI agents require dedicated workspaces or sandboxes to execute code, manage dependencies, and handle files securely.",
+      "worthReading": "Identifies a growing infrastructure need for scalable and safe AI agent deployment.",
+      "tags": [
+        "agent",
+        "infra",
+        "deployment"
+      ]
     }
   ],
   "dailyCounts": [
@@ -330,11 +395,11 @@
     0,
     0,
     0,
-    0,
     4,
     3,
     3,
-    4
+    4,
+    3
   ],
-  "interestSummary": "Harrison Chase is focused on the development and deployment of AI agents, emphasizing the need for sandboxed workspaces and specialized tools like LangSmith for building, monitoring, and iterating on agents using production trace data."
+  "interestSummary": "Harrison Chase is focused on the development and operational needs of AI agents, emphasizing the importance of sandboxed workspaces and specialized tools like LangSmith for building, debugging, and monitoring agents in production."
 }

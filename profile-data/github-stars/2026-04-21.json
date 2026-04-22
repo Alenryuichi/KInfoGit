@@ -41,6 +41,59 @@
       ],
       "score": 3,
       "scoreReason": "Low freshness (established but niche), moderate relevance (multi-modal dataset), and high concreteness (specific SVG collection)."
+    },
+    {
+      "repo": "google-labs-code/design.md",
+      "url": "https://github.com/google-labs-code/design.md",
+      "description": "A format specification for describing a visual identity to coding agents. DESIGN.md gives agents a persistent, structured understanding of a design system.",
+      "language": "TypeScript",
+      "stargazersCount": 1059,
+      "starredBy": "simonw",
+      "highlights": "A format specification for describing visual identity to coding agents, enabling persistent, structured understanding of design systems. It provides agents with consistent design context across coding tasks.",
+      "worthReading": "It addresses the emerging need for AI agents to maintain design consistency in code generation, making it valuable for teams implementing AI-assisted development workflows.",
+      "topics": [],
+      "tags": [
+        "agent",
+        "tooling"
+      ],
+      "score": 7,
+      "scoreReason": "Good freshness with moderate traction, high relevance to agent tooling, and concrete specification format."
+    },
+    {
+      "repo": "huggingface/ml-intern",
+      "url": "https://github.com/huggingface/ml-intern",
+      "description": "🤗 ml-intern: an open-source ML engineer that reads papers, trains models, and ships ML models",
+      "language": "Python",
+      "stargazersCount": 688,
+      "starredBy": "pcuenca",
+      "highlights": "An open-source ML engineer that automates the end-to-end ML pipeline from reading research papers to training and deploying models. It aims to reduce manual effort in implementing and operationalizing machine learning research.",
+      "worthReading": "It represents an ambitious attempt to automate complex ML workflows, potentially saving significant engineering time for practitioners implementing cutting-edge research.",
+      "topics": [],
+      "tags": [
+        "agent",
+        "llm",
+        "tooling"
+      ],
+      "score": 7,
+      "scoreReason": "Strong relevance to frontier AI (agent automation) and concrete implementation, with moderate freshness as a rising repository gaining traction."
+    },
+    {
+      "repo": "huggingface/ml-intern",
+      "url": "https://github.com/huggingface/ml-intern",
+      "description": "🤗 ml-intern: an open-source ML engineer that reads papers, trains models, and ships ML models",
+      "language": "Python",
+      "stargazersCount": 688,
+      "starredBy": "cfahlgren1",
+      "highlights": "An open-source ML engineer that automates the end-to-end ML workflow from reading research papers to training and deploying models. It aims to reduce manual effort in implementing and operationalizing machine learning research.",
+      "worthReading": "It represents an ambitious attempt to automate core ML engineering tasks, potentially accelerating research-to-production pipelines for practitioners.",
+      "topics": [],
+      "tags": [
+        "agent",
+        "llm",
+        "tooling"
+      ],
+      "score": 7,
+      "scoreReason": "Strong freshness with rising traction, high relevance to AI automation trends, and concrete implementation focus."
     }
   ]
 }
