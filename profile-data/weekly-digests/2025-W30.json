@@ -1,0 +1,32 @@
+{
+  "week": "2025-W30",
+  "dateRange": {
+    "start": "2025-07-21",
+    "end": "2025-07-27"
+  },
+  "overview": "This week's AI news digest covers a relatively quiet period with only one significant piece of content from the specified sources. The week of July 21-27, 2025, saw minimal activity across GitHub repositories, Bluesky posts, X (Twitter) discussions, and blog articles, with just one notable video emerging from AI content creator Yannic Kilcher. This single-source week highlights a potential lull in major announcements or releases from AI leaders, though the video that did surface addresses an important technical consideration for large language model performance.\n\nThe week's sole content contribution comes from Yannic Kilcher's YouTube channel, where he analyzed a research paper titled \"Context Rot: How Increasing Input Tokens Impacts LLM Performance.\" This video, which garnered over 32,000 views, examines how expanding context windows in large language models can paradoxically degrade performance rather than improve it—a phenomenon the researchers term \"context rot.\" The paper, published by researchers at Chroma, challenges the common assumption that LLMs process context uniformly regardless of length.\n\nGiven the absence of other content sources this week, there are no cross-source patterns or multi-platform discussions to analyze. The single video stands alone as the week's primary contribution to AI discourse, focusing on a technical limitation that could have significant implications for how developers and researchers approach context window expansion in future LLM architectures. This quiet week may reflect a period of consolidation or preparation for upcoming announcements in the AI community.",
+  "trendingTopics": [],
+  "notableRepos": [],
+  "notableVideos": [
+    {
+      "title": "Context Rot: How Increasing Input Tokens Impacts LLM Performance (Paper Analysis)",
+      "url": "https://www.youtube.com/watch?v=hpC4qjWu_aY",
+      "channelTitle": "Yannic Kilcher",
+      "views": 32545,
+      "description": "This video matters because it analyzes important research showing how expanding context windows in LLMs can degrade performance—a counterintuitive finding that challenges common assumptions about LLM architecture and has implications for future model development."
+    }
+  ],
+  "notableBlogs": [],
+  "notableXPosts": [],
+  "keyDiscussions": [],
+  "crossReferences": [],
+  "stats": {
+    "totalRepos": 0,
+    "totalPosts": 0,
+    "uniqueAuthors": 1,
+    "daysWithContent": 1,
+    "totalXPosts": 0,
+    "totalVideos": 1,
+    "totalBlogs": 0
+  }
+}
