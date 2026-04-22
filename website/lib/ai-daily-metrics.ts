@@ -6,6 +6,7 @@
 
 import fs from 'fs'
 import path from 'path'
+import { resolveProfileDataPath } from './profile-data-paths'
 
 // Controlled vocabulary — must stay in sync with scripts/ai-daily/config.ts
 // FOCUS_TOPICS. Duplicated here rather than imported to keep the website/
@@ -61,13 +62,7 @@ export interface RunRecord {
 }
 
 function getMetaDir(): string {
-  // Match the double-path fallback from lib/ai-daily.ts to handle both
-  // dev (cwd=website/) and build contexts (cwd=repo root).
-  const a = path.join(process.cwd(), '..', 'profile-data', 'ai-daily', '_meta')
-  if (fs.existsSync(a)) return a
-  const b = path.join(process.cwd(), 'profile-data', 'ai-daily', '_meta')
-  if (fs.existsSync(b)) return b
-  return a
+  return resolveProfileDataPath('ai-daily', '_meta')
 }
 
 /**
@@ -212,11 +207,7 @@ export interface TopicHealthRow {
 }
 
 function getDigestDir(): string {
-  const a = path.join(process.cwd(), '..', 'profile-data', 'ai-daily')
-  if (fs.existsSync(a)) return a
-  const b = path.join(process.cwd(), 'profile-data', 'ai-daily')
-  if (fs.existsSync(b)) return b
-  return a
+  return resolveProfileDataPath('ai-daily')
 }
 
 interface RawDigestItem {

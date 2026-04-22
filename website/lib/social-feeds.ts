@@ -205,61 +205,34 @@ export interface DailyFeedSummary {
 
 // --- Data Directories ---
 
-const GITHUB_STARS_DIR = path.join(process.cwd(), '..', 'profile-data', 'github-stars')
-const BLUESKY_POSTS_DIR = path.join(process.cwd(), '..', 'profile-data', 'bluesky-posts')
-const SUMMARIES_DIR = path.join(process.cwd(), '..', 'profile-data', 'daily-summaries')
-const WEEKLY_DIGESTS_DIR = path.join(process.cwd(), '..', 'profile-data', 'weekly-digests')
-const BLOG_POSTS_DIR = path.join(process.cwd(), '..', 'profile-data', 'blog-posts')
-const YOUTUBE_VIDEOS_DIR = path.join(process.cwd(), '..', 'profile-data', 'youtube-videos')
-const X_SIGNALS_DIR = path.join(process.cwd(), '..', 'profile-data', 'x-signals')
+import { resolveProfileDataPath } from './profile-data-paths'
 
 function getGitHubDir(): string {
-  if (fs.existsSync(GITHUB_STARS_DIR)) return GITHUB_STARS_DIR
-  const alt = path.join(process.cwd(), 'profile-data', 'github-stars')
-  if (fs.existsSync(alt)) return alt
-  return GITHUB_STARS_DIR
+  return resolveProfileDataPath('github-stars')
 }
 
 function getBlueskyDir(): string {
-  if (fs.existsSync(BLUESKY_POSTS_DIR)) return BLUESKY_POSTS_DIR
-  const alt = path.join(process.cwd(), 'profile-data', 'bluesky-posts')
-  if (fs.existsSync(alt)) return alt
-  return BLUESKY_POSTS_DIR
+  return resolveProfileDataPath('bluesky-posts')
 }
 
 function getSummariesDir(): string {
-  if (fs.existsSync(SUMMARIES_DIR)) return SUMMARIES_DIR
-  const alt = path.join(process.cwd(), 'profile-data', 'daily-summaries')
-  if (fs.existsSync(alt)) return alt
-  return SUMMARIES_DIR
+  return resolveProfileDataPath('daily-summaries')
 }
 
 function getWeeklyDigestsDir(): string {
-  if (fs.existsSync(WEEKLY_DIGESTS_DIR)) return WEEKLY_DIGESTS_DIR
-  const alt = path.join(process.cwd(), 'profile-data', 'weekly-digests')
-  if (fs.existsSync(alt)) return alt
-  return WEEKLY_DIGESTS_DIR
+  return resolveProfileDataPath('weekly-digests')
 }
 
 function getBlogPostsDir(): string {
-  if (fs.existsSync(BLOG_POSTS_DIR)) return BLOG_POSTS_DIR
-  const alt = path.join(process.cwd(), 'profile-data', 'blog-posts')
-  if (fs.existsSync(alt)) return alt
-  return BLOG_POSTS_DIR
+  return resolveProfileDataPath('blog-posts')
 }
 
 function getYouTubeDir(): string {
-  if (fs.existsSync(YOUTUBE_VIDEOS_DIR)) return YOUTUBE_VIDEOS_DIR
-  const alt = path.join(process.cwd(), 'profile-data', 'youtube-videos')
-  if (fs.existsSync(alt)) return alt
-  return YOUTUBE_VIDEOS_DIR
+  return resolveProfileDataPath('youtube-videos')
 }
 
 function getXSignalsDir(): string {
-  if (fs.existsSync(X_SIGNALS_DIR)) return X_SIGNALS_DIR
-  const alt = path.join(process.cwd(), 'profile-data', 'x-signals')
-  if (fs.existsSync(alt)) return alt
-  return X_SIGNALS_DIR
+  return resolveProfileDataPath('x-signals')
 }
 
 // --- Helper Functions ---

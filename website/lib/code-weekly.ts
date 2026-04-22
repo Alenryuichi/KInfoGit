@@ -120,21 +120,14 @@ export interface CodeWeeklySummary {
 
 // ─── Data Directory ────────────────────────────────────────
 
-const CODE_WEEKLY_DIR = path.join(process.cwd(), '..', 'profile-data', 'code-weekly')
-const BENCHMARKS_DIR = path.join(process.cwd(), '..', 'profile-data', 'benchmarks')
+import { resolveProfileDataPath } from './profile-data-paths'
 
 function getCodeWeeklyDir(): string {
-  if (fs.existsSync(CODE_WEEKLY_DIR)) return CODE_WEEKLY_DIR
-  const alt = path.join(process.cwd(), 'profile-data', 'code-weekly')
-  if (fs.existsSync(alt)) return alt
-  return CODE_WEEKLY_DIR
+  return resolveProfileDataPath('code-weekly')
 }
 
 function getBenchmarksDir(): string {
-  if (fs.existsSync(BENCHMARKS_DIR)) return BENCHMARKS_DIR
-  const alt = path.join(process.cwd(), 'profile-data', 'benchmarks')
-  if (fs.existsSync(alt)) return alt
-  return BENCHMARKS_DIR
+  return resolveProfileDataPath('benchmarks')
 }
 
 // ─── Org Trend (Borda Count) Types ────────────────────────

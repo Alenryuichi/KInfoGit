@@ -56,14 +56,10 @@ export interface DailyDigestSummary {
 
 // --- Data Directory ---
 
-const AI_DAILY_DIR = path.join(process.cwd(), '..', 'profile-data', 'ai-daily')
+import { resolveProfileDataPath } from './profile-data-paths'
 
 function getDataDir(): string {
-  // Handle both dev (website/) and build contexts
-  if (fs.existsSync(AI_DAILY_DIR)) return AI_DAILY_DIR
-  const alt = path.join(process.cwd(), 'profile-data', 'ai-daily')
-  if (fs.existsSync(alt)) return alt
-  return AI_DAILY_DIR
+  return resolveProfileDataPath('ai-daily')
 }
 
 // --- Public API ---

@@ -86,13 +86,10 @@ export interface StarsTrendSeries {
 
 // ─── Data Directory ────────────────────────────────────────
 
-const SPECS_DIR = path.join(process.cwd(), '..', 'profile-data', 'specs')
+import { resolveProfileDataPath } from './profile-data-paths'
 
 function getSpecsDir(): string {
-  if (fs.existsSync(SPECS_DIR)) return SPECS_DIR
-  const alt = path.join(process.cwd(), 'profile-data', 'specs')
-  if (fs.existsSync(alt)) return alt
-  return SPECS_DIR
+  return resolveProfileDataPath('specs')
 }
 
 // ─── Public API ────────────────────────────────────────────

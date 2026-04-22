@@ -1,9 +1,10 @@
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
+import { resolveProfileDataPath } from './profile-data-paths'
 
-// Get the profile data directory path
-const profileDataDir = path.join(process.cwd(), '..', 'profile-data')
+// Get the profile data directory path (double-cwd fallback via helper)
+const profileDataDir = resolveProfileDataPath()
 
 // Personal info types
 export interface PersonalInfo {

@@ -39,21 +39,14 @@ export interface PersonDetail extends Person {
 
 // --- Data Directories ---
 
-const PEOPLE_JSON_PATH = path.join(process.cwd(), '..', 'profile-data', 'people.json')
-const PEOPLE_ACTIVITY_DIR = path.join(process.cwd(), '..', 'profile-data', 'people-activity')
+import { resolveProfileDataPath } from './profile-data-paths'
 
 function getPeopleJsonPath(): string {
-  if (fs.existsSync(PEOPLE_JSON_PATH)) return PEOPLE_JSON_PATH
-  const alt = path.join(process.cwd(), 'profile-data', 'people.json')
-  if (fs.existsSync(alt)) return alt
-  return PEOPLE_JSON_PATH
+  return resolveProfileDataPath('people.json')
 }
 
 function getPeopleActivityDir(): string {
-  if (fs.existsSync(PEOPLE_ACTIVITY_DIR)) return PEOPLE_ACTIVITY_DIR
-  const alt = path.join(process.cwd(), 'profile-data', 'people-activity')
-  if (fs.existsSync(alt)) return alt
-  return PEOPLE_ACTIVITY_DIR
+  return resolveProfileDataPath('people-activity')
 }
 
 // --- Helper Functions ---

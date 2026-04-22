@@ -27,14 +27,10 @@ export interface DailyStarsSummary {
 
 // --- Data Directory ---
 
-const STARS_DIR = path.join(process.cwd(), '..', 'profile-data', 'github-stars')
+import { resolveProfileDataPath } from './profile-data-paths'
 
 function getDataDir(): string {
-  // Handle both dev (website/) and build contexts
-  if (fs.existsSync(STARS_DIR)) return STARS_DIR
-  const alt = path.join(process.cwd(), 'profile-data', 'github-stars')
-  if (fs.existsSync(alt)) return alt
-  return STARS_DIR
+  return resolveProfileDataPath('github-stars')
 }
 
 // --- Public API ---
