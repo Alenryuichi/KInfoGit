@@ -11,8 +11,8 @@
 
 ## 进度追踪
 
-> **累计状态：15 / 24 项完成（62%）**
-> 按优先级：**P0 4/4 · P1 5/5 · P2 6/15**（P2 项中多数是"需大改造"或"低 ROI"，已在下表单独归类）
+> **累计状态：19 / 24 项完成（79%）**
+> 按优先级：**P0 4/4 · P1 5/5 · P2 10/15**（P2 项中多数是"需大改造"或"低 ROI"，已在下表单独归类）
 
 ### 2026-04-21 · 第一轮（P0 + 部分 P1/P2，13 项）
 
@@ -43,12 +43,21 @@
 
 **E1 数据回填**：20 个 weekly digest JSON 用 `--force` 全部重生（`93d1ccb`），含新字段 + 校验后的真实 URL。
 
+### 2026-04-22 · 第三轮（P2 打磨 + 核查闭合，4 项）
+
+| 项目 | 状态 | 主要改动文件 | commit |
+|---|---|---|---|
+| B3 · TagCloud 对 X 可视化 + 可点击跳转 | ✅ | `pages/stars.tsx`（用 `<TagCloud>` 替换 `ACTIVE_VECTORS` 纯文本行）、`pages/stars/[date].tsx` + `pages/stars/people/[handle].tsx`（URL query `?topic=&source=` 水化初始过滤态）、`components/stars/TagCloud.tsx`（原有组件正式接入） | `5d56dfa` |
+| C4 · `PersonActivity.stars` 秒级 `starred_at` | ✅ | `scripts/fetch-stars.ts`（保留 API 返回的 ISO-8601 `starredAt` + 存量记录 `repo::starredBy` 键回填循环）、`scripts/generate-people-data.ts`（只在缺失时用文件日期兜底，不覆盖秒级）、`lib/social-feeds.ts`（StarredRepo.starredAt 注释升级为"秒级优先"）、`pages/stars/{people/[handle],[date]}.tsx`（`getSortTime` 检测 `'T'` 决定是否走 noon-UTC fallback） | `5d56dfa` + `f7bf946`（数据）|
+| D1 · Card 组件 `personMap` key 前缀一致性复查 | ✅（核查后无漏项）| `RepoCard` L34、`BlueskyPostCard` L19、`XPostCard` L19、`CoStarredBlock` L80/L185、`[date].tsx` L125/L179/L313 全部使用 `github:`/`bluesky:`/`x:` 前缀。C3 首轮已彻底覆盖，本轮仅复核。 | — |
+| H2 · RSS `<description>` 文案同步（随 F1 顺带） | ✅ | `scripts/generate-stars-rss.ts` L17-18 已含 "GitHub starred repos, Bluesky/X posts, YouTube videos and blog articles"。 | — |
+
+**C4 数据回填**：`fetch-stars.ts` 回填 2026-04-15..21 共 20 条 `starredAt` 到 `profile-data/github-stars/*.json`，再由 `generate-people-data.ts` 传播到 42 个 people-activity 档案（`f7bf946`）。
+
 ### 仍未处理（ROI 较低 / 需要更大改造，单独排期）
 
 | 项目 | 原因 |
 |---|---|
-| B3 · TagCloud 对 X 可视化 | 非阻塞，UI 微调 |
-| C4 · `PersonActivity.stars` 真实秒级 `starred_at` | 需抓取脚本支持 `Accept: application/vnd.github.star+json` 并回填历史数据 |
 | C6 · `getHandleToPersonMap` 覆盖 YouTube/Blog 作者 | key 空间差异大（channelTitle vs displayName），需要更谨慎的匹配策略 |
 | D2 · Timeline 分组 key 使用 `sortTime` 跨日对齐 | UX 影响需再评估 |
 | E2 · "当前周排除" 依赖时间 | 当前行为合理 |
