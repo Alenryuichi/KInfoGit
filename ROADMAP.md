@@ -31,7 +31,7 @@
 
 - ✅ **v2 词表观察期**（2026-04-17 → 04-22，6 天数据已闭环）：7d 命中分布为 agent-harness=78 / coding-agents=52 / model-release=19 / context-engineering=post-training=17 / evals=16 / planning≈14 / tool-use≈13。**全部 ≥13 条 / 30d → 无 "dead" topic**；原 ROADMAP 担心 `planning` 为 0 的判断不成立（实际是 v2 切换当日 legacy item 未重打而已）。`post-training` 与 `model-release` 的合并讨论**推迟**——两者虽常共现但语义独立，拆开更利于搜索与归档。
 - ✅ **OpenAI RSS 403 → 隐性选方案 (b)**（接受现状）：`rss-feeds.ts` L39 Mozilla UA 硬上 OpenAI 源仍 403，但近一周 `OpenAI News` 条目 0；Exa allowlist（`openai.com` 域）在 4/21–4/22 `2026-04-22.json` 里稳定覆盖 GPT-Image-2 发布、Latent Space 的 AINews OpenAI 专题等 4+ 条。**不再尝试 TLS fingerprint 方案**，保留 RSS 源作为"未来若解封即生效"的占位。
-- 📐 **`RunRecord.sources` schema 补 `github` 字段**：`ai-daily-metrics.ts` L35–40 schema 未声明 `github`，但实际 `_meta/2026-04.json` 每日都写入（`github: 14–30`）。Topic Health dashboard 渲染"源分布"时 GitHub 列被静默忽略。改 1 行即可修复，但涉及前端渲染校对，放 P0。
+- ✅ **`RunRecord.sources` schema 补 `github` 字段**（2026-04-22 落地）：`ai-daily-metrics.ts` schema 新增 `github?: number`；`/ai-daily/metrics` 的 `SourceStackChart` 把 github 纳入 stack 累加、新增 violet 色段 + 图例；anomaly 规则保持"rss+search 双 0 告警"不变并加注释说明 github/horizon 作为窄源不纳入告警阈值。
 
 #### P1 — 内容质量与发现力
 
