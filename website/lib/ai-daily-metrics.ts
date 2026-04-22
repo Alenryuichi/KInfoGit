@@ -37,6 +37,7 @@ export interface RunRecord {
     search?: number
     social?: number
     horizon?: number
+    github?: number
   }
   dedup?: {
     urlDropped?: number
@@ -163,6 +164,10 @@ export function findAnomalies(records: RunRecord[]): AnomalyAlert[] {
     if ((r.scoring?.failed ?? 0) >= 3) reasons.push(`${r.scoring?.failed} failed batches`)
     if ((r.scoring?.keywordFallback ?? 0) >= 5) reasons.push(`${r.scoring?.keywordFallback} keyword fallbacks`)
     if ((r.sources?.rss ?? 0) === 0 && (r.sources?.search ?? 0) === 0) {
+      // Intentionally only check rss + search here — they're the broad
+      // cross-domain sources. github/horizon are narrow vertical feeds
+      // that can legitimately be 0 on a slow day (e.g. holidays) without
+      // indicating a pipeline problem.
       reasons.push('no RSS or search items')
     }
     if (reasons.length > 0) {

@@ -135,7 +135,7 @@ function LineChart({ records }: { records: RunRecord[] }) {
 }
 
 /**
- * Stacked bar chart: per-date source contributions (rss/search/social/horizon).
+ * Stacked bar chart: per-date source contributions (rss/search/social/horizon/github).
  */
 function SourceStackChart({ records }: { records: RunRecord[] }) {
   const width = 720
@@ -150,7 +150,7 @@ function SourceStackChart({ records }: { records: RunRecord[] }) {
 
   const totals = records.map(r => {
     const s = r.sources ?? {}
-    return (s.rss ?? 0) + (s.search ?? 0) + (s.social ?? 0) + (s.horizon ?? 0)
+    return (s.rss ?? 0) + (s.search ?? 0) + (s.social ?? 0) + (s.horizon ?? 0) + (s.github ?? 0)
   })
   const maxTotal = Math.max(...totals, 1)
   const barW = innerW / records.length * 0.7
@@ -161,6 +161,7 @@ function SourceStackChart({ records }: { records: RunRecord[] }) {
     search: '#34d399',    // green
     social: '#fbbf24',    // amber
     horizon: '#f472b6',   // pink
+    github: '#a78bfa',    // violet
   }
 
   return (
@@ -172,6 +173,7 @@ function SourceStackChart({ records }: { records: RunRecord[] }) {
           { key: 'search' as const, v: s.search ?? 0 },
           { key: 'social' as const, v: s.social ?? 0 },
           { key: 'horizon' as const, v: s.horizon ?? 0 },
+          { key: 'github' as const, v: s.github ?? 0 },
         ]
         const x = pad.left + i * (barW + gap) + gap / 2
         let yOffset = pad.top + innerH
@@ -317,6 +319,7 @@ export default function AiDailyMetrics({ records, kpis, anomalies, topicHealth }
                     <span className="text-emerald-400">■ search</span>
                     <span className="text-amber-400">■ social</span>
                     <span className="text-pink-400">■ horizon</span>
+                    <span className="text-violet-400">■ github</span>
                   </div>
                 </div>
               </section>
