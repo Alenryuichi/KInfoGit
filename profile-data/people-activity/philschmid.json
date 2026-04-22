@@ -21,8 +21,8 @@
       ],
       "score": 6,
       "scoreReason": "Freshness: moderate (young repo with rising traction, 198 stars); Relevance: high (AI dev tooling for Claude Code sessions); Concreteness: moderate (concrete diagnostic tool but somewhat narrow scope)",
-      "type": "github",
-      "starredAt": "2026-04-15"
+      "starredAt": "2026-04-15T18:52:17Z",
+      "type": "github"
     },
     {
       "repo": "ashwwwin/automation-mcp",
@@ -43,8 +43,8 @@
       ],
       "score": 7,
       "scoreReason": "Freshness: Young repo with moderate stars gaining traction (386 stars). Relevance: Directly addresses frontier AI (MCP server for agent control). Concreteness: Concrete implementation for Mac automation with specific capabilities.",
-      "type": "github",
-      "starredAt": "2026-04-16"
+      "starredAt": "2026-04-16T18:09:26Z",
+      "type": "github"
     },
     {
       "repo": "omaclaren/pi-markdown-preview",
@@ -61,8 +61,8 @@
       ],
       "score": 2,
       "scoreReason": "Low relevance (markdown/LaTeX preview tool, not frontier AI) and low freshness (39 stars with no indication of recent traction), though concrete in implementation.",
-      "type": "github",
-      "starredAt": "2026-04-16"
+      "starredAt": "2026-04-16T13:17:11Z",
+      "type": "github"
     },
     {
       "repo": "nicobailon/pi-subagents",
@@ -81,8 +81,8 @@
       ],
       "score": 7,
       "scoreReason": "Freshness: Young repo with moderate stars gaining traction; Relevance: Directly addresses frontier AI (agent delegation/LLM infra); Concreteness: Describes specific technical features (truncation, artifacts, session sharing)",
-      "type": "github",
-      "starredAt": "2026-04-16"
+      "starredAt": "2026-04-16T13:06:50Z",
+      "type": "github"
     },
     {
       "repo": "espennilsen/pi",
@@ -94,11 +94,14 @@
       "highlights": "The espennilsen/pi repository appears to be a TypeScript project focused on mathematical or computational implementations, likely related to Pi calculations or mathematical constants. With 91 stars, it demonstrates community interest in numerical computation or algorithm optimization.",
       "worthReading": "It's worth exploring for developers interested in mathematical algorithms, TypeScript implementations of computational methods, or educational code examples for numerical computing.",
       "topics": [],
-      "tags": [],
+      "tags": [
+        "agent",
+        "tooling"
+      ],
       "score": 2,
       "scoreReason": "Repository lacks description and topics, making relevance and concreteness unverifiable; moderate freshness from recent star gain but insufficient information for higher scoring.",
-      "type": "github",
-      "starredAt": "2026-04-16"
+      "starredAt": "2026-04-16T13:05:21Z",
+      "type": "github"
     }
   ],
   "posts": [],
@@ -456,5 +459,5 @@
     3,
     1
   ],
-  "interestSummary": "Philipp Schmid is focused on exploring and implementing cutting-edge AI models and developer tools, particularly around Google's Gemma 4 and the Gemini API, while also tracking major AI research and development reports from leading companies."
+  "interestSummary": "Philipp Schmid is currently focused on AI development and deployment, with interests in Gemma 4, vibe-coding, and improving productivity through tools like Claude Doctor and Mac automation. He is also actively reading and sharing insights on technical reports from Moonshot AI, Cursor, and Chroma."
 }

@@ -16,7 +16,8 @@
         "tooling"
       ],
       "score": 6,
-      "scoreReason": "Freshness: high (young repo with low star count gaining traction from notable AI leader jph00). Relevance: moderate (educational neural network implementation bridging concepts, but not cutting-edge frontier AI). Concreteness: moderate (concrete educational artifact but not novel benchmark or approach)."
+      "scoreReason": "Freshness: high (young repo with low star count gaining traction from notable AI leader jph00). Relevance: moderate (educational neural network implementation bridging concepts, but not cutting-edge frontier AI). Concreteness: moderate (concrete educational artifact but not novel benchmark or approach).",
+      "starredAt": "2026-04-16T16:37:21Z"
     },
     {
       "repo": "vllm-project/tpu-inference",
@@ -33,7 +34,8 @@
         "deployment"
       ],
       "score": 7,
-      "scoreReason": "High relevance for frontier AI (TPU inference for vLLM), moderate freshness (young repo gaining traction at 290 stars), good concreteness (unified JAX/PyTorch support for concrete implementation)"
+      "scoreReason": "High relevance for frontier AI (TPU inference for vLLM), moderate freshness (young repo gaining traction at 290 stars), good concreteness (unified JAX/PyTorch support for concrete implementation)",
+      "starredAt": "2026-04-16T10:23:54Z"
     },
     {
       "repo": "ashwwwin/automation-mcp",
@@ -53,7 +55,8 @@
         "tooling"
       ],
       "score": 7,
-      "scoreReason": "Freshness: Young repo with moderate stars gaining traction (386 stars). Relevance: Directly addresses frontier AI (MCP server for agent control). Concreteness: Concrete implementation for Mac automation with specific capabilities."
+      "scoreReason": "Freshness: Young repo with moderate stars gaining traction (386 stars). Relevance: Directly addresses frontier AI (MCP server for agent control). Concreteness: Concrete implementation for Mac automation with specific capabilities.",
+      "starredAt": "2026-04-16T18:09:26Z"
     },
     {
       "repo": "omaclaren/pi-markdown-preview",
@@ -69,7 +72,8 @@
         "tooling"
       ],
       "score": 2,
-      "scoreReason": "Low relevance (markdown/LaTeX preview tool, not frontier AI) and low freshness (39 stars with no indication of recent traction), though concrete in implementation."
+      "scoreReason": "Low relevance (markdown/LaTeX preview tool, not frontier AI) and low freshness (39 stars with no indication of recent traction), though concrete in implementation.",
+      "starredAt": "2026-04-16T13:17:11Z"
     },
     {
       "repo": "nicobailon/pi-subagents",
@@ -87,7 +91,8 @@
         "tooling"
       ],
       "score": 7,
-      "scoreReason": "Freshness: Young repo with moderate stars gaining traction; Relevance: Directly addresses frontier AI (agent delegation/LLM infra); Concreteness: Describes specific technical features (truncation, artifacts, session sharing)"
+      "scoreReason": "Freshness: Young repo with moderate stars gaining traction; Relevance: Directly addresses frontier AI (agent delegation/LLM infra); Concreteness: Describes specific technical features (truncation, artifacts, session sharing)",
+      "starredAt": "2026-04-16T13:06:50Z"
     },
     {
       "repo": "espennilsen/pi",
@@ -99,9 +104,13 @@
       "highlights": "The espennilsen/pi repository appears to be a TypeScript project focused on mathematical or computational implementations, likely related to Pi calculations or mathematical constants. With 91 stars, it demonstrates community interest in numerical computation or algorithm optimization.",
       "worthReading": "It's worth exploring for developers interested in mathematical algorithms, TypeScript implementations of computational methods, or educational code examples for numerical computing.",
       "topics": [],
-      "tags": [],
+      "tags": [
+        "agent",
+        "tooling"
+      ],
       "score": 2,
-      "scoreReason": "Repository lacks description and topics, making relevance and concreteness unverifiable; moderate freshness from recent star gain but insufficient information for higher scoring."
+      "scoreReason": "Repository lacks description and topics, making relevance and concreteness unverifiable; moderate freshness from recent star gain but insufficient information for higher scoring.",
+      "starredAt": "2026-04-16T13:05:21Z"
     }
   ]
 }
