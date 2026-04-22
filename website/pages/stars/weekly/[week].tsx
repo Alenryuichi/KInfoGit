@@ -141,18 +141,23 @@ export default function WeeklyDigestPage({
           </div>
 
           {/* Stats Row */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
+          <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-3 mb-6">
             {[
               { value: digest.stats.totalRepos, label: 'Repos' },
-              { value: digest.stats.totalPosts, label: 'Posts' },
+              { value: digest.stats.totalPosts, label: 'Bsky' },
+              { value: digest.stats.totalXPosts ?? 0, label: 'X' },
+              { value: digest.stats.totalVideos ?? 0, label: 'Videos' },
+              { value: digest.stats.totalBlogs ?? 0, label: 'Blogs' },
               { value: digest.stats.uniqueAuthors, label: 'Authors' },
               { value: digest.stats.daysWithContent, label: 'Days' },
-            ].map(s => (
-              <div key={s.label} className="bg-white/[0.03] border border-white/[0.06] rounded-xl p-4 text-center">
-                <div className="text-2xl sm:text-3xl font-bold text-white font-display">{s.value}</div>
-                <div className="text-[10px] font-mono text-gray-500 uppercase tracking-widest mt-1">{s.label}</div>
-              </div>
-            ))}
+            ]
+              .filter(s => s.value > 0 || s.label === 'Days' || s.label === 'Authors')
+              .map(s => (
+                <div key={s.label} className="bg-white/[0.03] border border-white/[0.06] rounded-xl p-4 text-center">
+                  <div className="text-2xl sm:text-3xl font-bold text-white font-display">{s.value}</div>
+                  <div className="text-[10px] font-mono text-gray-500 uppercase tracking-widest mt-1">{s.label}</div>
+                </div>
+              ))}
           </div>
 
           {/* Bento Grid */}
@@ -221,6 +226,103 @@ export default function WeeklyDigestPage({
                 </div>
               )}
 
+              {/* Notable Videos Card */}
+              {digest.notableVideos && digest.notableVideos.length > 0 && (
+                <div className="bg-white/[0.02] border border-white/[0.06] rounded-xl p-6">
+                  <div className="flex items-center gap-2 mb-4">
+                    <div className="w-1.5 h-4 bg-red-500 rounded-full" />
+                    <h2 className="text-sm font-bold text-white uppercase tracking-wide">Notable Videos</h2>
+                  </div>
+                  <div className="space-y-4">
+                    {digest.notableVideos.map(video => (
+                      <div key={video.url} className="flex items-start gap-4 p-3 rounded-lg bg-white/[0.02] hover:bg-white/[0.04] transition-colors">
+                        <div className="flex-1 min-w-0">
+                          <a
+                            href={video.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-gray-100 font-semibold hover:text-red-400 transition-colors text-sm"
+                          >
+                            {video.title}
+                            <svg className="inline-block w-3 h-3 ml-1 -mt-0.5 opacity-30" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                              <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                            </svg>
+                          </a>
+                          <p className="text-gray-500 text-xs mt-1">{video.description}</p>
+                          <p className="text-[10px] font-mono text-gray-600 mt-2">{video.channelTitle}</p>
+                        </div>
+                        <span className="text-xs font-mono text-red-400/70 whitespace-nowrap">
+                          👁 {video.views >= 1000 ? (video.views / 1000).toFixed(1) + 'k' : video.views}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* Notable Blogs Card */}
+              {digest.notableBlogs && digest.notableBlogs.length > 0 && (
+                <div className="bg-white/[0.02] border border-white/[0.06] rounded-xl p-6">
+                  <div className="flex items-center gap-2 mb-4">
+                    <div className="w-1.5 h-4 bg-emerald-500 rounded-full" />
+                    <h2 className="text-sm font-bold text-white uppercase tracking-wide">Notable Blogs</h2>
+                  </div>
+                  <div className="space-y-4">
+                    {digest.notableBlogs.map(blog => (
+                      <div key={blog.url} className="flex items-start gap-4 p-3 rounded-lg bg-white/[0.02] hover:bg-white/[0.04] transition-colors">
+                        <div className="flex-1 min-w-0">
+                          <a
+                            href={blog.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-gray-100 font-semibold hover:text-emerald-400 transition-colors text-sm"
+                          >
+                            {blog.title}
+                            <svg className="inline-block w-3 h-3 ml-1 -mt-0.5 opacity-30" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                              <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                            </svg>
+                          </a>
+                          <p className="text-gray-500 text-xs mt-1">{blog.summary}</p>
+                          <p className="text-[10px] font-mono text-gray-600 mt-2">— {blog.author}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* Notable X Posts Card */}
+              {digest.notableXPosts && digest.notableXPosts.length > 0 && (
+                <div className="bg-white/[0.02] border border-white/[0.06] rounded-xl p-6">
+                  <div className="flex items-center gap-2 mb-4">
+                    <div className="w-1.5 h-4 bg-gray-400 rounded-full" />
+                    <h2 className="text-sm font-bold text-white uppercase tracking-wide">Notable X Posts</h2>
+                  </div>
+                  <div className="space-y-4">
+                    {digest.notableXPosts.map((post, idx) => (
+                      <div key={post.url || idx} className="flex items-start gap-4 p-3 rounded-lg bg-white/[0.02] hover:bg-white/[0.04] transition-colors">
+                        <div className="flex-1 min-w-0">
+                          <a
+                            href={post.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-gray-100 text-sm hover:text-gray-300 transition-colors block"
+                          >
+                            &ldquo;{post.content}&rdquo;
+                          </a>
+                          <p className="text-[10px] font-mono text-gray-500 mt-2">{post.author}</p>
+                        </div>
+                        {post.likes > 0 && (
+                          <span className="text-xs font-mono text-gray-400/70 whitespace-nowrap">
+                            ❤ {post.likes >= 1000 ? (post.likes / 1000).toFixed(1) + 'k' : post.likes}
+                          </span>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
             </div>
 
             {/* Right Column (2/5) */}
@@ -236,7 +338,18 @@ export default function WeeklyDigestPage({
                     {digest.keyDiscussions.map((disc, idx) => (
                       <div key={idx} className="border-l-2 border-blue-500/30 pl-4 py-1">
                         <p className="text-gray-200 font-serif italic text-sm">&ldquo;{disc.title}&rdquo;</p>
-                        <p className="text-[10px] font-mono text-blue-400 mt-1">@{disc.author}</p>
+                        <div className="flex items-center gap-2 mt-1">
+                          <p className={`text-[10px] font-mono ${disc.source === 'x' ? 'text-gray-300' : 'text-blue-400'}`}>@{disc.author}</p>
+                          {disc.source && (
+                            <span className={`text-[9px] px-1.5 py-0.5 rounded font-mono uppercase tracking-widest ${
+                              disc.source === 'x'
+                                ? 'bg-gray-500/20 text-gray-300'
+                                : 'bg-blue-500/20 text-blue-300'
+                            }`}>
+                              {disc.source === 'x' ? 'X' : 'Bsky'}
+                            </span>
+                          )}
+                        </div>
                         <p className="text-gray-500 text-xs mt-2">{disc.summary}</p>
                       </div>
                     ))}
@@ -296,7 +409,14 @@ export default function WeeklyDigestPage({
           {/* Footer */}
           <div className="mt-12 pt-6 border-t border-white/[0.06] flex flex-col sm:flex-row items-center justify-between gap-4 text-[10px] sm:text-xs font-mono text-gray-600">
             <div>
-              {digest.stats.totalRepos} repos · {digest.stats.totalPosts} posts · {digest.stats.daysWithContent} days
+              {[
+                digest.stats.totalRepos > 0 && `${digest.stats.totalRepos} repos`,
+                digest.stats.totalPosts > 0 && `${digest.stats.totalPosts} bluesky`,
+                (digest.stats.totalXPosts ?? 0) > 0 && `${digest.stats.totalXPosts} x`,
+                (digest.stats.totalVideos ?? 0) > 0 && `${digest.stats.totalVideos} videos`,
+                (digest.stats.totalBlogs ?? 0) > 0 && `${digest.stats.totalBlogs} blogs`,
+                `${digest.stats.daysWithContent} days`,
+              ].filter(Boolean).join(' · ')}
             </div>
             <div className="text-purple-500/50">Powered by DeepSeek</div>
           </div>

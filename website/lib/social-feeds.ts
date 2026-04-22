@@ -114,13 +114,56 @@ export interface WeeklyDigest {
     description: string
     starredBy: string[]
   }>
-  keyDiscussions: Array<{ title: string; summary: string; author: string }>
+  /**
+   * Optional: top YouTube videos of the week. Added by E1 extension;
+   * older digest JSON files predate this and may omit it.
+   */
+  notableVideos?: Array<{
+    title: string
+    url: string
+    channelTitle: string
+    views: number
+    description: string
+  }>
+  /**
+   * Optional: notable blog articles of the week.
+   */
+  notableBlogs?: Array<{
+    title: string
+    url: string
+    author: string
+    summary: string
+  }>
+  /**
+   * Optional: notable X posts of the week. AI-selected for impact.
+   */
+  notableXPosts?: Array<{
+    url: string
+    author: string
+    content: string
+    likes: number
+  }>
+  /**
+   * Key discussions surfaced across Bluesky AND X. The `source` field is
+   * optional to stay compatible with legacy digests (which were
+   * Bluesky-only).
+   */
+  keyDiscussions: Array<{
+    title: string
+    summary: string
+    author: string
+    source?: 'bluesky' | 'x'
+  }>
   crossReferences: Array<{ repo: string; starredBy: string[]; url: string }>
   stats: {
     totalRepos: number
-    totalPosts: number
+    totalPosts: number            // Bluesky only, kept for backward compat
     uniqueAuthors: number
     daysWithContent: number
+    /** Optional extended stats from E1. */
+    totalXPosts?: number
+    totalVideos?: number
+    totalBlogs?: number
   }
 }
 
