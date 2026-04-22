@@ -18,7 +18,8 @@
       ],
       "score": 7,
       "scoreReason": "Strong relevance for multimodal fine-tuning on Apple Silicon (frontier AI), good concreteness with specific technical implementation, moderate freshness with decent star count but not yet established",
-      "type": "github"
+      "type": "github",
+      "starredAt": "2026-04-07"
     },
     {
       "repo": "prawnydagrate/rschess",
@@ -41,31 +42,8 @@
       ],
       "score": 2,
       "scoreReason": "Freshness: 1 (established chess library with modest star growth, not AI-focused), Relevance: 0 (chess library unrelated to frontier AI topics), Concreteness: 1 (concrete chess implementation but not AI innovation)",
-      "type": "github"
-    },
-    {
-      "repo": "vega/vega",
-      "url": "https://github.com/vega/vega",
-      "description": "A visualization grammar.",
-      "language": "JavaScript",
-      "stargazersCount": 11846,
-      "starredBy": "minimaxir",
-      "highlights": "Vega provides a declarative visualization grammar for creating interactive graphics through JSON specifications. It enables data-driven visualizations that work across multiple rendering targets (SVG, Canvas) with a consistent API.",
-      "worthReading": "It's a foundational visualization framework used in many data science and AI workflows, offering a structured approach to creating complex visualizations programmatically.",
-      "topics": [
-        "canvas",
-        "d3",
-        "svg",
-        "vega",
-        "visualization",
-        "visualization-grammar"
-      ],
-      "tags": [
-        "tooling"
-      ],
-      "score": 5,
-      "scoreReason": "Moderate relevance for AI tooling and good concreteness, but limited freshness as an established visualization library rather than cutting-edge AI development.",
-      "type": "github"
+      "type": "github",
+      "starredAt": "2026-04-09"
     }
   ],
   "posts": [],
@@ -221,210 +199,6 @@
       "highlights": "A tweet with significant views (468) but no visible text content in the provided snippet.",
       "worthReading": "Suggests the post garnered attention, but the subject matter is unclear.",
       "tags": []
-    },
-    {
-      "type": "x",
-      "id": "1943173189372399719",
-      "url": "https://twitter.com/minimaxir/status/1943173189372399719",
-      "author": {
-        "handle": "minimaxir",
-        "displayName": "Max Woolf",
-        "avatar": "https://avatars.githubusercontent.com/minimaxir"
-      },
-      "content": "Impressive model based on a few minutes of playing, but disappointing to see no mention at all of a model card, red teaming, yesterday's incident,",
-      "createdAt": "2026-04-18T04:03:08.087Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Critiques a new AI model for lacking transparency documentation (model card) and safety testing (red teaming), while acknowledging its technical performance.",
-      "worthReading": "Highlights the ongoing tension between rapid AI development and responsible practices like documentation and safety evaluation.",
-      "tags": [
-        "safety",
-        "evaluation"
-      ]
-    },
-    {
-      "type": "x",
-      "id": "2029982443026223510",
-      "url": "https://x.com/minimaxir/status/2029982443026223510",
-      "author": {
-        "handle": "minimaxir",
-        "displayName": "Max Woolf",
-        "avatar": "https://avatars.githubusercontent.com/minimaxir"
-      },
-      "content": "me irl",
-      "createdAt": "2026-03-06",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "A personal, casual post indicating activity on the platform.",
-      "worthReading": "Shows the user's presence and engagement on the platform.",
-      "tags": []
-    },
-    {
-      "type": "x",
-      "id": "1825584262311186616",
-      "url": "https://x.com/minimaxir/status/1825584262311186616",
-      "author": {
-        "handle": "minimaxir",
-        "displayName": "Max Woolf",
-        "avatar": "https://avatars.githubusercontent.com/minimaxir"
-      },
-      "content": "",
-      "createdAt": "2026-04-18T04:03:08.087Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "A post with engagement (likes) but no text content visible in the snippet.",
-      "worthReading": "Indicates user activity, though the specific content or topic is not captured.",
-      "tags": []
-    },
-    {
-      "type": "x",
-      "id": "2019510645180494156",
-      "url": "https://x.com/minimaxir/status/2019510645180494156",
-      "author": {
-        "handle": "minimaxir",
-        "displayName": "Max Woolf",
-        "avatar": "https://avatars.githubusercontent.com/minimaxir"
-      },
-      "content": "",
-      "createdAt": "2026-04-18T04:03:08.087Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "A post with views but no text content visible in the snippet.",
-      "worthReading": "Indicates user activity, though the specific content or topic is not captured.",
-      "tags": []
-    },
-    {
-      "type": "x",
-      "id": "1600258754993262594",
-      "url": "https://x.com/minimaxir/status/1600258754993262594",
-      "author": {
-        "handle": "minimaxir",
-        "displayName": "Max Woolf",
-        "avatar": "https://avatars.githubusercontent.com/minimaxir"
-      },
-      "content": "congrats to OpenAI on winning the Turing Test",
-      "createdAt": "2026-04-19T04:09:12.479Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Max Woolf congratulates OpenAI for achieving a milestone in AI development, referencing the Turing Test as a benchmark for machine intelligence.",
-      "worthReading": "Shows recognition of significant AI achievements from a data science perspective.",
-      "tags": [
-        "llm",
-        "evaluation"
-      ]
-    },
-    {
-      "type": "x",
-      "id": "1641885820734046209",
-      "url": "https://x.com/minimaxir/status/1641885820734046209",
-      "author": {
-        "handle": "minimaxir",
-        "displayName": "Max Woolf",
-        "avatar": "https://avatars.githubusercontent.com/minimaxir"
-      },
-      "content": "LOL",
-      "createdAt": "2026-04-20T04:11:46.061Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "A short, humorous tweet expressing amusement.",
-      "worthReading": "Shows the user's casual, engaging communication style.",
-      "tags": []
-    },
-    {
-      "type": "x",
-      "id": "2019510645180494156",
-      "url": "https://x.com/minimaxir/status/2019510645180494156",
-      "author": {
-        "handle": "minimaxir",
-        "displayName": "Max Woolf",
-        "avatar": "https://avatars.githubusercontent.com/minimaxir"
-      },
-      "content": "",
-      "createdAt": "2026-04-20T04:11:46.061Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "A tweet with no visible text content, only view metrics.",
-      "worthReading": "Indicates engagement but lacks substantive content for analysis.",
-      "tags": []
-    },
-    {
-      "type": "x",
-      "id": "1825584262311186616",
-      "url": "https://x.com/minimaxir/status/1825584262311186616",
-      "author": {
-        "handle": "minimaxir",
-        "displayName": "Max Woolf",
-        "avatar": "https://avatars.githubusercontent.com/minimaxir"
-      },
-      "content": "",
-      "createdAt": "2026-04-20T04:11:46.061Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "A tweet with no visible text content, only like metrics.",
-      "worthReading": "Shows audience interaction but no textual information.",
-      "tags": []
-    },
-    {
-      "type": "x",
-      "id": "2029982443026223510",
-      "url": "https://x.com/minimaxir/status/2029982443026223510",
-      "author": {
-        "handle": "minimaxir",
-        "displayName": "Max Woolf",
-        "avatar": "https://avatars.githubusercontent.com/minimaxir"
-      },
-      "content": "me irl",
-      "createdAt": "2025-03-06",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "A personal, casual tweet expressing a relatable moment or feeling.",
-      "worthReading": "Shows the personal side of the technical expert.",
-      "tags": []
-    },
-    {
-      "type": "x",
-      "id": "1825584262311186616",
-      "url": "https://x.com/minimaxir/status/1825584262311186616",
-      "author": {
-        "handle": "minimaxir",
-        "displayName": "Max Woolf",
-        "avatar": "https://avatars.githubusercontent.com/minimaxir"
-      },
-      "content": "",
-      "createdAt": "2026-04-21T04:09:44.424Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "A tweet with engagement (19 likes) but no visible text content in the provided snippet.",
-      "worthReading": "Indicates audience interaction but lacks substantive technical content.",
-      "tags": []
-    },
-    {
-      "type": "x",
-      "id": "2019510645180494156",
-      "url": "https://x.com/minimaxir/status/2019510645180494156",
-      "author": {
-        "handle": "minimaxir",
-        "displayName": "Max Woolf",
-        "avatar": "https://avatars.githubusercontent.com/minimaxir"
-      },
-      "content": "",
-      "createdAt": "2026-04-21T04:09:44.424Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "A tweet with views (468) but no visible text content in the provided snippet.",
-      "worthReading": "Shows content reach but lacks visible technical insight.",
-      "tags": []
     }
   ],
   "dailyCounts": [
@@ -454,10 +228,10 @@
     4,
     0,
     0,
-    4,
-    1,
-    4,
-    3
+    0,
+    0,
+    0,
+    0
   ],
-  "interestSummary": "Max Woolf's recent activity shows a strong interest in AI model fine-tuning, particularly multimodal models on Apple Silicon, and chess programming in Rust. He is also critically engaged with AI model releases, emphasizing the importance of documentation and safety practices."
+  "interestSummary": ""
 }

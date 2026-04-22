@@ -17,7 +17,8 @@
       ],
       "score": 6,
       "scoreReason": "Freshness: high (young repo with low star count gaining traction from notable AI leader jph00). Relevance: moderate (educational neural network implementation bridging concepts, but not cutting-edge frontier AI). Concreteness: moderate (concrete educational artifact but not novel benchmark or approach).",
-      "type": "github"
+      "type": "github",
+      "starredAt": "2026-04-16"
     }
   ],
   "posts": [],
@@ -83,9 +84,7 @@
       "url": "https://www.youtube.com/watch?v=LDklFaxssFE",
       "highlights": "Sarah Pan demonstrates that teenagers can master complex GPU programming from scratch, creating efficient AI systems without relying on high-level frameworks. Her work highlights the accessibility of low-level hardware optimization for AI development, challenging assumptions about expertise requirements in the field.",
       "worthReading": "This video showcases exceptional youth talent in AI while providing practical insights into GPU programming fundamentals that even experienced developers can learn from.",
-      "tags": [
-        "infra"
-      ],
+      "tags": [],
       "type": "youtube"
     },
     {
@@ -99,9 +98,7 @@
       "url": "https://www.youtube.com/watch?v=m-GOZSi2R_Q",
       "highlights": "Solveit is an AI platform that enables users to solve complex problems by leveraging machine learning models without extensive coding. The video demonstrates practical applications, such as automating data analysis and generating insights from unstructured data, showcasing its accessibility for non-experts.",
       "worthReading": "It's worth watching to see real-world examples of how Solveit simplifies AI implementation, making advanced technology accessible for practical problem-solving in various domains.",
-      "tags": [
-        "tooling"
-      ],
+      "tags": [],
       "type": "youtube"
     },
     {
@@ -184,248 +181,11 @@
       "url": "https://www.youtube.com/watch?v=LrFbxIvsipw",
       "highlights": "Jeremy Howard discusses the democratization of AI through PyTorch, emphasizing how accessible tools are enabling more developers to build and deploy models. He highlights the importance of practical applications over theoretical complexity, with insights into fast.ai's educational approach.",
       "worthReading": "The interview offers valuable perspectives from a leading AI educator on making machine learning more approachable, directly relevant for developers interested in practical implementation.",
-      "tags": [
-        "llm",
-        "tooling"
-      ],
+      "tags": [],
       "type": "youtube"
     }
   ],
   "blogs": [],
-  "xPosts": [
-    {
-      "type": "x",
-      "id": "1943444549696917714",
-      "url": "https://x.com/jeremyphoward/status/1943444549696917714",
-      "author": {
-        "handle": "jeremyphoward",
-        "displayName": "Jeremy Howard",
-        "avatar": "https://avatars.githubusercontent.com/jph00"
-      },
-      "content": "Here's a complete unedited video of asking Grok for its views on the Israel/Palestine situation. It first searches twitter for what Elon thinks.",
-      "createdAt": "2026-04-18T04:01:59.968Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Demonstrates how Grok AI agent searches Twitter for Elon Musk's opinions before forming its own views on geopolitical issues.",
-      "worthReading": "Shows real-world behavior of AI agents in controversial topic analysis.",
-      "tags": [
-        "agent",
-        "llm"
-      ]
-    },
-    {
-      "type": "x",
-      "id": "1969152436519514202",
-      "url": "https://x.com/jeremyphoward/status/1969152436519514202",
-      "author": {
-        "handle": "jeremyphoward",
-        "displayName": "Jeremy Howard",
-        "avatar": "https://avatars.githubusercontent.com/jph00"
-      },
-      "content": "Here's what I would prefer to see:",
-      "createdAt": "2026-04-18T04:01:59.968Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Jeremy Howard expresses his preference for a particular approach or outcome, though the full context is truncated.",
-      "worthReading": "Provides insight into Howard's perspective on AI development or application.",
-      "tags": [
-        "llm"
-      ]
-    },
-    {
-      "type": "x",
-      "id": "1943444549696917714",
-      "url": "https://x.com/jeremyphoward/status/1943444549696917714",
-      "author": {
-        "handle": "jeremyphoward",
-        "displayName": "Jeremy Howard",
-        "avatar": "https://avatars.githubusercontent.com/jph00"
-      },
-      "content": "Here's a complete unedited video of asking Grok for its views on the Israel/Palestine situation. It first searches twitter for what Elon thinks.",
-      "createdAt": "2026-04-19T04:08:25.446Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Demonstrates that Grok prioritizes finding Elon Musk's opinion before forming its own view on a complex geopolitical issue.",
-      "worthReading": "Reveals potential bias in AI systems that rely heavily on specific sources or personalities.",
-      "tags": [
-        "agent",
-        "evaluation"
-      ]
-    },
-    {
-      "type": "x",
-      "id": "1943436621556466171",
-      "url": "https://x.com/jeremyphoward/status/1943436621556466171",
-      "author": {
-        "handle": "jeremyphoward",
-        "displayName": "Jeremy Howard",
-        "avatar": "https://avatars.githubusercontent.com/jph00"
-      },
-      "content": "I replicated this result, that Grok focuses nearly entirely on finding out what Elon thinks in",
-      "createdAt": "2026-04-19T04:08:25.446Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Confirms through replication that Grok's primary focus is determining Elon Musk's perspective rather than providing independent analysis.",
-      "worthReading": "Provides empirical evidence of source dependency in AI agent behavior.",
-      "tags": [
-        "agent",
-        "evaluation"
-      ]
-    },
-    {
-      "type": "x",
-      "id": "1218965132849496064",
-      "url": "https://x.com/jeremyphoward/status/1218965132849496064?s=20",
-      "author": {
-        "handle": "jeremyphoward",
-        "displayName": "Jeremy Howard",
-        "avatar": "https://avatars.githubusercontent.com/jph00"
-      },
-      "content": "If you'd like to try this yourself, here's how to get started:",
-      "createdAt": "2026-04-19T04:08:25.446Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Offers practical guidance for others to replicate or experiment with a technical process.",
-      "worthReading": "Demonstrates commitment to open education and enabling hands-on learning in technology.",
-      "tags": [
-        "tooling",
-        "deployment"
-      ]
-    },
-    {
-      "type": "x",
-      "id": "1943436621556466171",
-      "url": "https://x.com/jeremyphoward/status/1943436621556466171",
-      "author": {
-        "handle": "jeremyphoward",
-        "displayName": "Jeremy Howard",
-        "avatar": "https://avatars.githubusercontent.com/jph00"
-      },
-      "content": "I replicated this result, that Grok focuses nearly entirely on finding out what Elon thinks in",
-      "createdAt": "2026-04-20T04:10:52.890Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Jeremy Howard replicated a finding that Grok AI heavily prioritizes discovering Elon Musk's opinions.",
-      "worthReading": "It reveals potential bias in how certain AI systems source and weigh information.",
-      "tags": [
-        "agent",
-        "llm",
-        "evaluation"
-      ]
-    },
-    {
-      "type": "x",
-      "id": "1943444549696917714",
-      "url": "https://x.com/jeremyphoward/status/1943444549696917714",
-      "author": {
-        "handle": "jeremyphoward",
-        "displayName": "Jeremy Howard",
-        "avatar": "https://avatars.githubusercontent.com/jph00"
-      },
-      "content": "Here's a complete unedited video of asking Grok for its views on the Israel/Palestine situation. It first searches twitter for what Elon thinks.",
-      "createdAt": "2026-04-20T04:10:52.890Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Howard demonstrates that when asked about a complex geopolitical issue, Grok's first action is to search for Elon Musk's perspective on Twitter.",
-      "worthReading": "This provides concrete evidence of an AI system's operational bias towards a specific individual's viewpoint.",
-      "tags": [
-        "agent",
-        "llm",
-        "evaluation"
-      ]
-    },
-    {
-      "type": "x",
-      "id": "1773001662808129620",
-      "url": "https://x.com/jeremyphoward/status/1773001662808129620",
-      "author": {
-        "handle": "jeremyphoward",
-        "displayName": "Jeremy Howard",
-        "avatar": "https://avatars.githubusercontent.com/jph00"
-      },
-      "content": "Something that drives me to distraction in discussion of AI alignment: someone will say 'Oh, it's crucial we build systems with properties X'",
-      "createdAt": "2026-04-20T04:10:52.890Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Jeremy Howard expresses frustration with vague, non-actionable statements in AI alignment debates.",
-      "worthReading": "It highlights a common pitfall in technical discussions where crucial specifics are omitted.",
-      "tags": [
-        "safety",
-        "llm"
-      ]
-    },
-    {
-      "type": "x",
-      "id": "1943436621556466171",
-      "url": "https://x.com/jeremyphoward/status/1943436621556466171",
-      "author": {
-        "handle": "jeremyphoward",
-        "displayName": "Jeremy Howard",
-        "avatar": "https://avatars.githubusercontent.com/jph00"
-      },
-      "content": "I replicated this result, that Grok focuses nearly entirely on finding out what Elon thinks in",
-      "createdAt": "2026-04-21T04:08:43.217Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Jeremy Howard replicated a finding that Grok AI heavily prioritizes discovering Elon Musk's opinions when responding to queries.",
-      "worthReading": "It reveals potential bias in how certain AI systems source and weigh information.",
-      "tags": [
-        "llm",
-        "evaluation"
-      ]
-    },
-    {
-      "type": "x",
-      "id": "1943444549696917714",
-      "url": "https://x.com/jeremyphoward/status/1943444549696917714",
-      "author": {
-        "handle": "jeremyphoward",
-        "displayName": "Jeremy Howard",
-        "avatar": "https://avatars.githubusercontent.com/jph00"
-      },
-      "content": "Here's a complete unedited video of asking Grok for its views on the Israel/Palestine situation. It first searches twitter for what Elon thinks.",
-      "createdAt": "2026-04-21T04:08:43.217Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Howard demonstrates Grok's response process to a complex geopolitical question, showing it first searches for Elon Musk's Twitter/X posts.",
-      "worthReading": "Provides concrete evidence of an AI model's information retrieval behavior and potential anchoring to specific sources.",
-      "tags": [
-        "llm",
-        "agent",
-        "evaluation"
-      ]
-    },
-    {
-      "type": "x",
-      "id": "1773001662808129620",
-      "url": "https://x.com/jeremyphoward/status/1773001662808129620",
-      "author": {
-        "handle": "jeremyphoward",
-        "displayName": "Jeremy Howard",
-        "avatar": "https://avatars.githubusercontent.com/jph00"
-      },
-      "content": "Something that drives me to distraction in discussion of AI alignment: someone will say 'Oh, it's crucial we build systems with properties X'",
-      "createdAt": "2026-04-21T04:08:43.217Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Jeremy Howard expresses frustration with vague or unsubstantiated claims in AI alignment discussions.",
-      "worthReading": "Highlights a common pitfall in technical safety debates where critical specifics are often missing.",
-      "tags": [
-        "safety"
-      ]
-    }
-  ],
   "dailyCounts": [
     0,
     0,
@@ -453,10 +213,10 @@
     0,
     1,
     0,
-    2,
-    3,
-    3,
-    3
+    0,
+    0,
+    0,
+    0
   ],
-  "interestSummary": "Jeremy Howard's recent focus is on critiquing AI alignment discourse and demonstrating the behavior of xAI's Grok, specifically highlighting its tendency to prioritize Elon Musk's perspective when answering politically sensitive questions."
+  "interestSummary": ""
 }

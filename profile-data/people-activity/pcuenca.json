@@ -16,29 +16,11 @@
         "vae",
         "vq-vae"
       ],
-      "tags": [
-        "multi-modal"
-      ],
+      "tags": [],
       "score": 3,
       "scoreReason": "Low freshness (old repo with no recent activity), high relevance (VQ-VAE is foundational for modern generative AI), moderate concreteness (specific implementation but not novel approach).",
-      "type": "github"
-    },
-    {
-      "repo": "tarekziade/loopsleuth",
-      "url": "https://github.com/tarekziade/loopsleuth",
-      "description": "Quadratic complexity detection",
-      "language": "Rust",
-      "stargazersCount": 6,
-      "starredBy": "pcuenca",
-      "highlights": "Loopsleuth is a Rust tool that detects quadratic complexity patterns in code, helping developers identify performance bottlenecks before they cause issues. It provides static analysis to catch inefficient nested loops and similar patterns that can degrade application performance.",
-      "worthReading": "This tool addresses a common but often overlooked performance problem in software development, making it valuable for optimizing code efficiency across various domains.",
-      "topics": [],
-      "tags": [
-        "tooling"
-      ],
-      "score": 4,
-      "scoreReason": "Moderate relevance to AI tooling but low freshness with only 6 stars and no clear AI frontier focus beyond general development utilities.",
-      "type": "github"
+      "type": "github",
+      "starredAt": "2026-04-15"
     }
   ],
   "posts": [],
@@ -70,11 +52,11 @@
     0,
     1,
     0,
-    1,
+    0,
     0,
     0,
     0,
     0
   ],
-  "interestSummary": "Based on their recent GitHub activity, Pedro Cuenca is currently interested in PyTorch implementations of vector quantization models for generative AI and tools for analyzing algorithmic complexity."
+  "interestSummary": ""
 }

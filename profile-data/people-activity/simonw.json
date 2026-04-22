@@ -18,7 +18,8 @@
       ],
       "score": 8,
       "scoreReason": "High freshness (multimodal fine-tuning on Apple Silicon is novel and gaining traction), high relevance (frontier AI tooling for multimodal LLMs), high concreteness (specific implementation with PyTorch and Metal Performance Shaders)",
-      "type": "github"
+      "type": "github",
+      "starredAt": "2026-04-07"
     },
     {
       "repo": "MemPalace/mempalace",
@@ -43,7 +44,8 @@
       ],
       "score": 8,
       "scoreReason": "High relevance as frontier AI memory system with concrete benchmark claims, moderate freshness due to Simonw's recent star despite high existing star count, strong concreteness with specific performance claims.",
-      "type": "github"
+      "type": "github",
+      "starredAt": "2026-04-07"
     },
     {
       "repo": "jsoma/natural-pdf",
@@ -60,69 +62,8 @@
       ],
       "score": 3,
       "scoreReason": "Freshness: 2 (young repo with moderate stars but not rapid growth), Relevance: 1 (PDF library is general utility, not frontier AI), Concreteness: 0 (vague description lacking concrete AI artifact or benchmark)",
-      "type": "github"
-    },
-    {
-      "repo": "smol-machines/smolvm",
-      "url": "https://github.com/smol-machines/smolvm",
-      "description": "Tool to build & run portable, lightweight, self-contained virtual machines.",
-      "language": "Rust",
-      "stargazersCount": 1013,
-      "starredBy": "simonw",
-      "highlights": "Enables creation of portable, lightweight virtual machines optimized for container-like workloads with minimal overhead. Built in Rust for performance and safety, it provides a self-contained runtime environment ideal for deployment scenarios.",
-      "worthReading": "It addresses infrastructure efficiency challenges in AI/ML deployment by offering a streamlined virtualization solution that could optimize resource usage for model serving and tool execution.",
-      "topics": [
-        "containers",
-        "crun",
-        "libkrun",
-        "microvm",
-        "rust",
-        "virtual-machine"
-      ],
-      "tags": [
-        "infra",
-        "deployment"
-      ],
-      "score": 6,
-      "scoreReason": "Moderate freshness with growing traction, strong relevance to AI infrastructure/deployment needs, and high concreteness as a working tool.",
-      "type": "github"
-    },
-    {
-      "repo": "chrislgarry/Apollo-11",
-      "url": "https://github.com/chrislgarry/Apollo-11",
-      "description": "Original Apollo 11 Guidance Computer (AGC) source code for the command and lunar modules.",
-      "language": "Assembly",
-      "stargazersCount": 67442,
-      "starredBy": "simonw",
-      "highlights": "This repository contains the original Apollo 11 Guidance Computer source code, providing authentic historical documentation of the software that landed humans on the moon. It offers a rare look at 1960s-era assembly programming for mission-critical aerospace systems.",
-      "worthReading": "It's a fascinating piece of computing history that demonstrates how complex real-time systems were engineered with extreme constraints, offering insights into foundational software engineering practices.",
-      "topics": [
-        "agc",
-        "apollo",
-        "hacktoberfest",
-        "nasa"
-      ],
-      "tags": [],
-      "score": 3,
-      "scoreReason": "Low relevance to frontier AI topics despite moderate freshness from recent starring, with high concreteness as specific historical artifact.",
-      "type": "github"
-    },
-    {
-      "repo": "scosman/pelicans_riding_bicycles",
-      "url": "https://github.com/scosman/pelicans_riding_bicycles",
-      "description": "This is a collection of the best SVG images of pelicans riding bicycles.",
-      "language": null,
-      "stargazersCount": 72,
-      "starredBy": "simonw",
-      "highlights": "This repository is a curated collection of SVG images depicting pelicans riding bicycles, offering a whimsical and creative visual dataset. It serves as a unique resource for artistic inspiration or testing image processing tools with unconventional imagery.",
-      "worthReading": "It showcases creative AI applications in generating or curating novel visual content, potentially useful for testing multi-modal models or as a fun, offbeat dataset.",
-      "topics": [],
-      "tags": [
-        "multi-modal"
-      ],
-      "score": 3,
-      "scoreReason": "Low freshness (established but niche), moderate relevance (multi-modal dataset), and high concreteness (specific SVG collection).",
-      "type": "github"
+      "type": "github",
+      "starredAt": "2026-04-09"
     }
   ],
   "posts": [
@@ -252,90 +193,6 @@
         "deployment"
       ],
       "type": "bluesky"
-    },
-    {
-      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mjq57sww3226",
-      "url": "https://bsky.app/profile/simonwillison.net/post/3mjq57sww3226",
-      "author": {
-        "handle": "simonwillison.net",
-        "displayName": "Simon Willison",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
-      },
-      "content": "Join us at PyCon US 2026 in Long Beach—we have new AI and security tracks this year simonwillison.net/2026/Apr/17/...",
-      "createdAt": "2026-04-18T00:03:28.212Z",
-      "likeCount": 17,
-      "replyCount": 3,
-      "repostCount": 3,
-      "highlights": "",
-      "worthReading": "",
-      "tags": [
-        "agent",
-        "safety"
-      ],
-      "type": "bluesky"
-    },
-    {
-      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mjsntbnqe22z",
-      "url": "https://bsky.app/profile/simonwillison.net/post/3mjsntbnqe22z",
-      "author": {
-        "handle": "simonwillison.net",
-        "displayName": "Simon Willison",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
-      },
-      "content": "Since Anthropic publish their system prompts we can generate a diff between Claude Opus 4.6 and 4.7 - here are my notes on what's changed simonwillison.net/2026/Apr/18/...",
-      "createdAt": "2026-04-19T00:06:00.520Z",
-      "likeCount": 75,
-      "replyCount": 7,
-      "repostCount": 7,
-      "highlights": "",
-      "worthReading": "",
-      "tags": [
-        "llm",
-        "evaluation"
-      ],
-      "type": "bluesky"
-    },
-    {
-      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mjvho5z2xc2t",
-      "url": "https://bsky.app/profile/simonwillison.net/post/3mjvho5z2xc2t",
-      "author": {
-        "handle": "simonwillison.net",
-        "displayName": "Simon Willison",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
-      },
-      "content": "New TIL on fetching data from a Datasette instance into Google Sheets using importdata(), named custom functions or Google Apps Script til.simonwillison.net/google-sheet...",
-      "createdAt": "2026-04-20T02:53:45.690Z",
-      "likeCount": 16,
-      "replyCount": 0,
-      "repostCount": 1,
-      "highlights": "",
-      "worthReading": "",
-      "tags": [
-        "tooling",
-        "deployment"
-      ],
-      "type": "bluesky"
-    },
-    {
-      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mjvb2hinfc2q",
-      "url": "https://bsky.app/profile/simonwillison.net/post/3mjvb2hinfc2q",
-      "author": {
-        "handle": "simonwillison.net",
-        "displayName": "Simon Willison",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
-      },
-      "content": "I upgraded my Claude token counter tool to compare different models and Opus 4.7 appears to use 1.46x times the tokens for text and up to 3x the tokens for images - it's priced the same as Opus 4.6 on a per-token basis so this is actually a pretty big price bump simonwillison.net/2026/Apr/20/...",
-      "createdAt": "2026-04-20T00:55:22.095Z",
-      "likeCount": 91,
-      "replyCount": 8,
-      "repostCount": 15,
-      "highlights": "",
-      "worthReading": "",
-      "tags": [
-        "llm",
-        "evaluation"
-      ],
-      "type": "bluesky"
     }
   ],
   "videos": [],
@@ -368,26 +225,6 @@
       "summary": "<p>For anyone who has been (inadvisably) taking my <a href=\"https://simonwillison.net/tags/pelican-riding-a-bicycle/\">pelican riding a bicycle benchmark</a> seriously as a robust way to test models, here are pelicans from this morning's two big model releases - <a...",
       "highlights": "The post demonstrates that the Qwen3.6-35B-A3B model, running locally on a laptop, generated a more accurate or aesthetically pleasing image of a pelican riding a bicycle compared to the larger, cloud-based Claude Opus 4.7 model. This highlights the rapid progress in open-source, locally runnable AI models that can now compete with or surpass leading proprietary models in specific creative tasks.",
       "worthReading": "It offers a tangible, visual comparison of recent model capabilities, challenging assumptions about the necessity of large, cloud-based models for creative AI tasks and showcasing the practical potential of local AI deployment.",
-      "type": "blog"
-    },
-    {
-      "title": "Join us at PyCon US 2026 in Long Beach - we have new AI and security tracks this year",
-      "url": "https://simonwillison.net/2026/Apr/17/pycon-us-2026/#atom-entries",
-      "author": "Simon Willison",
-      "publishedAt": "2026-04-17T23:59:03+00:00",
-      "summary": "<p>This year's <a href=\"https://us.pycon.org/2026/\">PyCon US</a> is coming up next month from May 13th to May 19th, with the core conference talks from Friday 15th to Sunday 17th and tutorial and sprint days either side. It's in Long Beach, California this year, the first time PyCon US has come to...",
-      "highlights": "PyCon US 2026 introduces dedicated AI and security tracks, reflecting Python's growing role in these critical domains. The conference expands beyond traditional Python development to address emerging technical challenges and opportunities.",
-      "worthReading": "It provides timely information about new AI-focused conference tracks for Python developers interested in staying current with industry trends.",
-      "type": "blog"
-    },
-    {
-      "title": "Changes in the system prompt between Claude Opus 4.6 and 4.7",
-      "url": "https://simonwillison.net/2026/Apr/18/opus-system-prompt/#atom-entries",
-      "author": "Simon Willison",
-      "publishedAt": "2026-04-18T23:59:40+00:00",
-      "summary": "<p>Anthropic are the only major AI lab to <a href=\"https://platform.claude.com/docs/en/release-notes/system-prompts\">publish the system prompts</a> for their user-facing chat systems. Their system prompt archive now dates all the way back to Claude 3 in July 2024 and it's always interesting to see...",
-      "highlights": "Anthropic uniquely publishes system prompts for their Claude models, providing transparency into AI development. The archive now includes prompts dating back to Claude 3 in July 2024, allowing for tracking of how these foundational instructions evolve.",
-      "worthReading": "It offers rare insight into how AI companies shape model behavior through system prompts, which is valuable for understanding AI development practices and transparency.",
       "type": "blog"
     }
   ],
@@ -473,254 +310,6 @@
         "agent",
         "evaluation"
       ]
-    },
-    {
-      "type": "x",
-      "id": "1639691902357483520",
-      "url": "https://x.com/simonw/status/1639691902357483520",
-      "author": {
-        "handle": "simonw",
-        "displayName": "Simon Willison",
-        "avatar": "https://avatars.githubusercontent.com/simonw"
-      },
-      "content": "If you're just starting to learn software engineering right now but you're considering dropping it",
-      "createdAt": "2026-04-18T04:01:17.594Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Addresses challenges for beginners in software engineering, suggesting persistence despite difficulties.",
-      "worthReading": "Provides encouragement and perspective for new developers facing learning curves.",
-      "tags": [
-        "tooling"
-      ]
-    },
-    {
-      "type": "x",
-      "id": "1976989054240800798",
-      "url": "https://x.com/simonw/status/1976989054240800798",
-      "author": {
-        "handle": "simonw",
-        "displayName": "Simon Willison",
-        "avatar": "https://avatars.githubusercontent.com/simonw"
-      },
-      "content": "I'm beginning to suspect that a key skill in working effectively with coding agents is developing an intuition for when you don't need to",
-      "createdAt": "2026-04-18T04:01:17.594Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Highlights the importance of discernment in using AI coding agents, focusing on when not to rely on them.",
-      "worthReading": "Offers practical insight into optimizing human-AI collaboration in coding workflows.",
-      "tags": [
-        "agent"
-      ]
-    },
-    {
-      "type": "x",
-      "id": "2008298185962512763",
-      "url": "https://x.com/simonw/status/2008298185962512763",
-      "author": {
-        "handle": "simonw",
-        "displayName": "Simon Willison",
-        "avatar": "https://avatars.githubusercontent.com/simonw"
-      },
-      "content": "This seems like a good bet to me - coding agents make it no longer remotely excusable to skip out on",
-      "createdAt": "2026-04-18T04:01:17.594Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Argues that AI coding agents reduce excuses for avoiding certain development tasks, emphasizing accountability.",
-      "worthReading": "Encourages leveraging AI tools to improve software engineering practices and responsibility.",
-      "tags": [
-        "agent",
-        "tooling"
-      ]
-    },
-    {
-      "type": "x",
-      "id": "1970147806225854531",
-      "url": "https://x.com/simonw/status/1970147806225854531",
-      "author": {
-        "handle": "simonw",
-        "displayName": "Simon Willison",
-        "avatar": "https://avatars.githubusercontent.com/simonw"
-      },
-      "content": "It's interesting how 'better at code' has become the defining goal of almost every AI lab over the",
-      "createdAt": "2026-04-18T04:01:17.594Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Observes the trend in AI research prioritizing code generation and improvement as a primary objective.",
-      "worthReading": "Reflects on the direction of AI development and its focus on programming capabilities.",
-      "tags": [
-        "agent",
-        "llm"
-      ]
-    },
-    {
-      "type": "x",
-      "id": "1970147806225854531",
-      "url": "https://x.com/simonw/status/1970147806225854531",
-      "author": {
-        "handle": "simonw",
-        "displayName": "Simon Willison",
-        "avatar": "https://avatars.githubusercontent.com/simonw"
-      },
-      "content": "It's interesting how \"better at code\" has become the defining goal of almost every AI lab over the past year.",
-      "createdAt": "2026-04-19T04:07:34.139Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Observes that AI research has shifted focus toward improving coding capabilities as a primary objective across major labs.",
-      "worthReading": "Highlights a key trend in AI development priorities that reflects industry direction.",
-      "tags": [
-        "llm",
-        "evaluation"
-      ]
-    },
-    {
-      "type": "x",
-      "id": "1931090610724995303",
-      "url": "https://x.com/simonw/status/1931090610724995303",
-      "author": {
-        "handle": "simonw",
-        "displayName": "Simon Willison",
-        "avatar": "https://avatars.githubusercontent.com/simonw"
-      },
-      "content": "The last year six months in LLMs, illustrated by pelicans on bicycles. I've published video, slides and a detailed annotated transcript from my talk at this week's conference.",
-      "createdAt": "2026-04-19T04:07:34.139Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Summarizes recent LLM progress with a creative metaphor and shares comprehensive materials from a conference presentation.",
-      "worthReading": "Provides accessible insights into LLM advancements through engaging presentation materials.",
-      "tags": [
-        "llm",
-        "evaluation"
-      ]
-    },
-    {
-      "type": "x",
-      "id": "1555626060384911360",
-      "url": "https://x.com/simonw/status/1555626060384911360",
-      "author": {
-        "handle": "simonw",
-        "displayName": "Simon Willison",
-        "avatar": "https://avatars.githubusercontent.com/simonw"
-      },
-      "content": "Screenshot from a video game where a team of raccoons go on a heist.",
-      "createdAt": "2026-04-19T04:07:34.139Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Shares an AI-generated image depicting raccoons in a heist scenario within a futuristic video game setting.",
-      "worthReading": "Demonstrates creative AI image generation capabilities through an imaginative prompt.",
-      "tags": [
-        "multi-modal"
-      ]
-    },
-    {
-      "type": "x",
-      "id": "2021280918204228082",
-      "url": "https://x.com/simonw/status/2021280918204228082",
-      "author": {
-        "handle": "simonw",
-        "displayName": "Simon Willison",
-        "avatar": "https://avatars.githubusercontent.com/simonw"
-      },
-      "content": "I built two new tools to help coding agents demonstrate their work beyond just running",
-      "createdAt": "2026-04-20T04:10:09.476Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Simon Willison developed new tools to improve how coding agents showcase their work processes and outputs.",
-      "worthReading": "It demonstrates practical innovation in AI tooling for better transparency and debugging of agent behavior.",
-      "tags": [
-        "agent",
-        "tooling"
-      ]
-    },
-    {
-      "type": "x",
-      "id": "1952830887671861407",
-      "url": "https://x.com/simonw/status/1952830887671861407",
-      "author": {
-        "handle": "simonw",
-        "displayName": "Simon Willison",
-        "avatar": "https://avatars.githubusercontent.com/simonw"
-      },
-      "content": "Here's the concluding section of my write-up of the new OpenAI open weights models - they're",
-      "createdAt": "2026-04-21T04:07:46.170Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Simon Willison shares concluding thoughts on OpenAI's new open weights models in his write-up.",
-      "worthReading": "Provides insight into expert analysis of emerging open weight AI models.",
-      "tags": [
-        "llm",
-        "evaluation"
-      ]
-    },
-    {
-      "type": "x",
-      "id": "1976989054240800798",
-      "url": "https://x.com/simonw/status/1976989054240800798",
-      "author": {
-        "handle": "simonw",
-        "displayName": "Simon Willison",
-        "avatar": "https://avatars.githubusercontent.com/simonw"
-      },
-      "content": "I'm beginning to suspect that a key skill in working effectively with coding agents is developing an intuition for when you don't need to",
-      "createdAt": "2026-04-21T04:07:46.170Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Suggests that effective use of coding agents requires knowing when not to use them.",
-      "worthReading": "Offers practical advice for developers integrating AI coding assistants.",
-      "tags": [
-        "agent",
-        "tooling"
-      ]
-    },
-    {
-      "type": "x",
-      "id": "1975570458683834729",
-      "url": "https://x.com/simonw/status/1975570458683834729",
-      "author": {
-        "handle": "simonw",
-        "displayName": "Simon Willison",
-        "avatar": "https://avatars.githubusercontent.com/simonw"
-      },
-      "content": "Vibe coding is irresponsibly building software through dice rolls, not caring what code is produced",
-      "createdAt": "2026-04-21T04:07:46.170Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Critiques 'vibe coding' as irresponsible software development through random generation.",
-      "worthReading": "Highlights concerns about quality and responsibility in AI-assisted coding practices.",
-      "tags": [
-        "agent",
-        "safety"
-      ]
-    },
-    {
-      "type": "x",
-      "id": "1639691902357483520",
-      "url": "https://x.com/simonw/status/1639691902357483520",
-      "author": {
-        "handle": "simonw",
-        "displayName": "Simon Willison",
-        "avatar": "https://avatars.githubusercontent.com/simonw"
-      },
-      "content": "If you're just starting to learn software engineering right now but you're considering dropping it",
-      "createdAt": "2026-04-21T04:07:46.170Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Addresses beginners in software engineering who might be considering quitting.",
-      "worthReading": "Provides perspective for new developers in the current AI-influenced landscape.",
-      "tags": [
-        "tooling"
-      ]
     }
   ],
   "dailyCounts": [
@@ -749,11 +338,11 @@
     2,
     3,
     2,
-    1,
-    5,
-    4,
-    4,
-    5
+    0,
+    0,
+    0,
+    0,
+    0
   ],
-  "interestSummary": "Simon Willison is intensely focused on tracking and experimenting with the latest AI models and tools, particularly through benchmarking, prompt engineering, and analyzing model updates. His interests also include quirky AI-generated imagery like pelicans on bicycles and practical applications of AI for coding and data analysis."
+  "interestSummary": ""
 }
