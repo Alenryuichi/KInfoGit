@@ -11,8 +11,8 @@
 
 ## 进度追踪
 
-> **累计状态：20 / 24 项完成（83%）**
-> 按优先级：**P0 4/4 · P1 5/5 · P2 11/15**（P2 项中多数是"需大改造"或"低 ROI"，已在下表单独归类）
+> **累计状态：21 / 24 项完成（88%）**
+> 按优先级：**P0 4/4 · P1 5/5 · P2 12/15**（剩余 3 项均为"行为本身合理"或"低收益"，非阻塞）
 
 ### 2026-04-21 · 第一轮（P0 + 部分 P1/P2，13 项）
 
@@ -52,14 +52,14 @@
 | D1 · Card 组件 `personMap` key 前缀一致性复查 | ✅（核查后无漏项）| `RepoCard` L34、`BlueskyPostCard` L19、`XPostCard` L19、`CoStarredBlock` L80/L185、`[date].tsx` L125/L179/L313 全部使用 `github:`/`bluesky:`/`x:` 前缀。C3 首轮已彻底覆盖，本轮仅复核。 | — |
 | H2 · RSS `<description>` 文案同步（随 F1 顺带） | ✅ | `scripts/generate-stars-rss.ts` L17-18 已含 "GitHub starred repos, Bluesky/X posts, YouTube videos and blog articles"。 | — |
 | G3 · `resolveProfileDataPath()` 统一双路径兜底 | ✅ | 新增 `website/lib/profile-data-paths.ts`；`github-stars/ai-daily/ai-daily-metrics/code-weekly/people/spec-tracker/social-feeds/data` 8 个 lib 文件共 15 个 getter 合并成单一 helper | `daba927` |
+| C6 · `getHandleToPersonMap` 覆盖 YouTube/Blog 作者 | ✅ | `lib/people.ts`（加 `youtube:`/`blog:` 前缀映射，利用上游数据与 people.json 同形式的 displayName）、`pages/stars/[date].tsx` + `pages/stars/weekly/[week].tsx`（channelTitle / author 渲染为 Link）、`pages/stars/timeline.tsx`（给 YouTubeVideoCard/BlogPostCard 传 personMap）、`YouTubeVideoCard.tsx`（拆解 wrapper anchor 避免嵌套）、`BlogPostCard.tsx`（author → Link） | `83f4e22` |
 
 **C4 数据回填**：`fetch-stars.ts` 回填 2026-04-15..21 共 20 条 `starredAt` 到 `profile-data/github-stars/*.json`，再由 `generate-people-data.ts` 传播到 42 个 people-activity 档案（`f7bf946`）。
 
-### 仍未处理（ROI 较低 / 需要更大改造，单独排期）
+### 仍未处理（ROI 较低 / 单独排期）
 
 | 项目 | 原因 |
 |---|---|
-| C6 · `getHandleToPersonMap` 覆盖 YouTube/Blog 作者 | key 空间差异大（channelTitle vs displayName），需要更谨慎的匹配策略 |
 | D2 · Timeline 分组 key 使用 `sortTime` 跨日对齐 | UX 影响需再评估 |
 | E2 · "当前周排除" 依赖时间 | 当前行为合理 |
 | F2 · RSS `MAX_ITEMS` 改为 item 粒度 | 低收益 |
