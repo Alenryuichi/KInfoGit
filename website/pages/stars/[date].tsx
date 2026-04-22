@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { useRouter } from 'next/router'
 import type { GetStaticProps, GetStaticPaths } from 'next'
 import {
   getAllFeedDates,
@@ -489,9 +490,25 @@ function DateNav({
 // --- Page ---
 
 export default function StarsDetail({ daily, prevDate, nextDate, allTags, personMap, coStarred }: StarsDetailProps) {
+  const router = useRouter()
   const [activeTopic, setActiveTopic] = useState<string | null>(null)
   const [activeSource, setActiveSource] = useState<SourceKey>('all')
   const [sortMode, setSortMode] = useState<'score' | 'time'>('score')
+
+  // Read initial filter state from URL query (?topic=xxx&source=yyy).
+  // Runs once after hydration when router.query becomes populated.
+  useEffect(() => {
+    if (!router.isReady) return
+    const q = router.query
+    if (typeof q.topic === 'string' && STAR_TOPIC_META[q.topic]) {
+      setActiveTopic(q.topic)
+    }
+    if (typeof q.source === 'string' &&
+        ['github', 'bluesky', 'x', 'youtube', 'blog'].includes(q.source)) {
+      setActiveSource(q.source as SourceKey)
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [router.isReady])
 
   const d = new Date(daily.date + 'T00:00:00')
   const formatted = d.toLocaleDateString('en-US', {
@@ -537,10 +554,14 @@ export default function StarsDetail({ daily, prevDate, nextDate, allTags, person
     if (item.type === 'x') return item.createdAt || ''
     if (item.type === 'youtube') return item.publishedAt || ''
     if (item.type === 'blog') return item.publishedAt || ''
-    // GitHub stars on this page all belong to `daily.date`, so use that as a
-    // day-level proxy (noon UTC) rather than `starredAt`, which may be missing
-    // on historical JSON files.
-    if (item.type === 'github') return `${daily.date}T12:00:00Z`
+    // GitHub: prefer the real starred_at timestamp (new fetcher populates it
+    // with seconds) so multiple stars on the same day sort correctly. Fall
+    // back to the daily-file date at noon UTC for legacy records without a
+    // timestamp.
+    if (item.type === 'github') {
+      if (item.starredAt && item.starredAt.includes('T')) return item.starredAt
+      return `${daily.date}T12:00:00Z`
+    }
     return ''
   }
 

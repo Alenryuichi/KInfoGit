@@ -15,6 +15,7 @@ import {
   type HighlightItem,
 } from '@/lib/social-feeds'
 import { Github, MessageSquare, Youtube, FileText } from 'lucide-react'
+import { TagCloud } from '@/components/stars/TagCloud'
 
 // Local X/Twitter icon (lucide does not ship one; uses same path as [date].tsx)
 function XIcon({ className = '' }: { className?: string }) {
@@ -162,7 +163,7 @@ export default function StarsList({ dates, latestDigest, tagStats, highlights }:
           </motion.div>
 
           {/* System Variables (Trending) */}
-          {sourceFilter === 'all' && tagStats.length > 0 && (
+          {sourceFilter === 'all' && tagStats.length > 0 && dates.length > 0 && (
             <motion.div 
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -170,8 +171,8 @@ export default function StarsList({ dates, latestDigest, tagStats, highlights }:
               className="mb-8 font-mono text-[10px] sm:text-xs"
             >
                 <div className="text-gray-500 uppercase tracking-widest mb-2 border-b border-white/10 pb-2">++ Runtime_Variables ++</div>
-                <div className="flex flex-col gap-2 text-gray-400 mt-4">
-                    <div><span className="text-orange-400">ACTIVE_VECTORS</span>=[{tagStats.slice(0, 5).map(t => `"${t.tag} (${t.count})"`).join(', ')}]</div>
+                <div className="mt-4">
+                  <TagCloud tagStats={tagStats} latestDate={dates[0].date} />
                 </div>
             </motion.div>
           )}

@@ -64,15 +64,20 @@ export default function PersonPage({ person }: PersonPageProps) {
   ]
 
   // Normalize a sortable timestamp per item; missing values sink to the bottom.
-  // GitHub stars only have day-level precision via `starredAt`, so pin them to
-  // noon UTC of that day — keeps them close to (not above) same-day timestamped
-  // items from other sources.
+  // GitHub stars can have either:
+  //   - Full ISO timestamp  "2026-04-16T09:37:52Z"  (new fetcher path)
+  //   - Day-only YYYY-MM-DD "2026-04-16"            (legacy / generated fallback)
+  // We detect by looking for 'T'; day-only values get pinned to noon UTC so
+  // they sort near — but not above — same-day items with real timestamps.
   const getSortTime = (item: FeedItem): string => {
     if (item.type === 'bluesky') return item.createdAt || ''
     if (item.type === 'x') return item.createdAt || ''
     if (item.type === 'youtube') return item.publishedAt || ''
     if (item.type === 'blog') return item.publishedAt || ''
-    if (item.type === 'github') return item.starredAt ? `${item.starredAt}T12:00:00Z` : ''
+    if (item.type === 'github') {
+      if (!item.starredAt) return ''
+      return item.starredAt.includes('T') ? item.starredAt : `${item.starredAt}T12:00:00Z`
+    }
     return ''
   }
 

@@ -64,6 +64,18 @@ interface StarredRepo {
   language: string | null
   stargazersCount: number
   starredBy: string
+  /**
+   * True starred_at timestamp from GitHub API (ISO 8601 with seconds,
+   * e.g. "2026-04-16T09:37:52Z"). Requires the `application/vnd.github.v3.star+json`
+   * Accept header, which we already send in fetchUserStars.
+   *
+   * generate-people-data.ts also fills this field — but only with day-level
+   * precision ("YYYY-MM-DD") — for records whose star fetcher didn't preserve
+   * it (legacy JSON, non-GitHub-API ingestion). Consumers should treat any
+   * string starting with "YYYY-MM-DDT" as a full timestamp and the rest as
+   * day-level.
+   */
+  starredAt: string
   highlights: string
   worthReading: string
   topics: string[]
@@ -234,6 +246,7 @@ async function main() {
       language: item.repo.language,
       stargazersCount: item.repo.stargazers_count,
       starredBy: item.user,
+      starredAt: item.starredAt,
       highlights: '',
       worthReading: '',
       topics: item.repo.topics || [],
@@ -262,18 +275,42 @@ async function main() {
     const existingKeys = new Set(existingStars.map(s => `${s.repo}::${s.starredBy}`))
     const newStars = stars.filter(s => !existingKeys.has(`${s.repo}::${s.starredBy}`))
 
+    // Build a lookup from the freshly fetched stars so we can backfill the
+    // real GitHub `starred_at` timestamp onto existing records that predate
+    // C4 (the E1 follow-up that started persisting this field).
+    const starredAtByKey = new Map<string, string>()
+    for (const s of stars) {
+      starredAtByKey.set(`${s.repo}::${s.starredBy}`, s.starredAt)
+    }
+    let starredAtBackfilled = 0
+    for (const star of existingStars) {
+      if (star.starredAt && star.starredAt.includes('T')) continue
+      const fresh = starredAtByKey.get(`${star.repo}::${star.starredBy}`)
+      if (fresh) {
+        star.starredAt = fresh
+        starredAtBackfilled++
+      }
+    }
+
     if (newStars.length === 0 && existingStars.length > 0) {
-      // Check if any existing stars need backfill (commentary / tags / score)
-      const needsBackfill = DEEPSEEK_API_KEY && existingStars.some(s =>
-        (!s.highlights && !s.worthReading) ||
-        !s.tags || s.tags.length === 0 ||
-        !s.score || s.score === 0
-      )
+      // Check if any existing stars need backfill (commentary / tags / score /
+      // starredAt timestamp).
+      const needsBackfill =
+        starredAtBackfilled > 0 ||
+        (DEEPSEEK_API_KEY && existingStars.some(s =>
+          (!s.highlights && !s.worthReading) ||
+          !s.tags || s.tags.length === 0 ||
+          !s.score || s.score === 0
+        ))
       if (!needsBackfill) {
         console.log(`  📄 ${date}: No new stars (${existingStars.length} existing)`)
         continue
       }
-      console.log(`  📄 ${date}: No new stars, backfilling commentary/tags/score for existing`)
+      const reasons = [
+        starredAtBackfilled > 0 && `${starredAtBackfilled} starredAt`,
+        DEEPSEEK_API_KEY && 'commentary/tags/score',
+      ].filter(Boolean).join(' + ')
+      console.log(`  📄 ${date}: No new stars, backfilling ${reasons} for existing`)
     }
 
     // Generate AI commentary for new stars

@@ -314,7 +314,9 @@ async function main() {
       for (const [date, stars] of allStarsByDate) {
         const matched = stars
           .filter(s => s.starredBy === person.github)
-          .map(s => ({ ...s, starredAt: date }))
+          // Preserve any real ISO starredAt from the fetcher; only fall back
+          // to the ingestion day when the record has no timestamp at all.
+          .map(s => ({ ...s, starredAt: s.starredAt || date }))
         personStars.push(...matched)
         const dayIndex = dates.indexOf(date)
         if (dayIndex >= 0) {

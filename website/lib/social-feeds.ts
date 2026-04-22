@@ -18,9 +18,14 @@ export interface StarredRepo {
   score: number          // 0–10, 0 = not yet scored
   scoreReason: string
   /**
-   * Ingestion date (YYYY-MM-DD) of the daily feed file this star came from.
-   * Populated by `generate-people-data.ts` as a day-level proxy for true
-   * GitHub `starred_at`. Older JSON files may lack this field.
+   * True `starred_at` timestamp (ISO 8601) when available — e.g.
+   * `"2026-04-16T09:37:52Z"`. Captured by `scripts/fetch-stars.ts` via the
+   * `application/vnd.github.v3.star+json` Accept header.
+   *
+   * Falls back to day-level `"YYYY-MM-DD"` for records populated by
+   * `scripts/generate-people-data.ts` from legacy JSON files where the
+   * ingester didn't preserve the timestamp. Consumers should treat any
+   * string containing `'T'` as a full timestamp and the rest as day-level.
    */
   starredAt?: string
 }
