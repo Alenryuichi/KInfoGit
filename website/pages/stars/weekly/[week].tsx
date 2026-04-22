@@ -249,7 +249,18 @@ export default function WeeklyDigestPage({
                             </svg>
                           </a>
                           <p className="text-gray-500 text-xs mt-1">{video.description}</p>
-                          <p className="text-[10px] font-mono text-gray-600 mt-2">{video.channelTitle}</p>
+                          <p className="text-[10px] font-mono text-gray-600 mt-2">
+                            {personMap[`youtube:${video.channelTitle.toLowerCase()}`] ? (
+                              <Link
+                                href={`/stars/people/${personMap[`youtube:${video.channelTitle.toLowerCase()}`]}/`}
+                                className="hover:text-red-400 transition-colors"
+                              >
+                                {video.channelTitle}
+                              </Link>
+                            ) : (
+                              video.channelTitle
+                            )}
+                          </p>
                         </div>
                         <span className="text-xs font-mono text-red-400/70 whitespace-nowrap">
                           👁 {video.views >= 1000 ? (video.views / 1000).toFixed(1) + 'k' : video.views}
@@ -283,7 +294,18 @@ export default function WeeklyDigestPage({
                             </svg>
                           </a>
                           <p className="text-gray-500 text-xs mt-1">{blog.summary}</p>
-                          <p className="text-[10px] font-mono text-gray-600 mt-2">— {blog.author}</p>
+                          <p className="text-[10px] font-mono text-gray-600 mt-2">
+                            — {personMap[`blog:${blog.author.toLowerCase()}`] ? (
+                              <Link
+                                href={`/stars/people/${personMap[`blog:${blog.author.toLowerCase()}`]}/`}
+                                className="hover:text-emerald-400 transition-colors"
+                              >
+                                {blog.author}
+                              </Link>
+                            ) : (
+                              blog.author
+                            )}
+                          </p>
                         </div>
                       </div>
                     ))}

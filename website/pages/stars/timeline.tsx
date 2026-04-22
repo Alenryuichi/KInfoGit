@@ -31,8 +31,8 @@ function ItemCard({ item, personMap }: { item: FeedItem; personMap: Record<strin
   if (item.type === 'github') return <RepoCard star={item} personMap={personMap} />
   if (item.type === 'bluesky') return <BlueskyPostCard post={item} personMap={personMap} />
   if (item.type === 'x') return <XPostCard post={item} personMap={personMap} />
-  if (item.type === 'blog') return <BlogPostCard post={item} />
-  if (item.type === 'youtube') return <YouTubeVideoCard video={item} />
+  if (item.type === 'blog') return <BlogPostCard post={item} personMap={personMap} />
+  if (item.type === 'youtube') return <YouTubeVideoCard video={item} personMap={personMap} />
   return null
 }
 

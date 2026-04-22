@@ -166,6 +166,16 @@ export function getHandleToPersonMap(): Record<string, string> {
     if (person.x) {
       map[`x:${person.x.toLowerCase()}`] = person.id
     }
+    // YouTube channelTitle and Blog author are free-form display names
+    // (e.g. "Andrej Karpathy", "Simon Willison"). Upstream data sources
+    // use the same display form as people.json, so we can key on the
+    // lowercased string directly without needing a fuzzy matcher.
+    if (person.youtubeChannel) {
+      map[`youtube:${person.youtubeChannel.toLowerCase()}`] = person.id
+    }
+    if (person.blogAuthor) {
+      map[`blog:${person.blogAuthor.toLowerCase()}`] = person.id
+    }
   }
 
   return map

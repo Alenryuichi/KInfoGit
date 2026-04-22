@@ -1,10 +1,14 @@
+import Link from 'next/link'
 import type { BlogPost } from '@/lib/social-feeds'
 
 interface BlogPostCardProps {
   post: BlogPost
+  personMap?: Record<string, string>
 }
 
-export function BlogPostCard({ post }: BlogPostCardProps) {
+export function BlogPostCard({ post, personMap }: BlogPostCardProps) {
+  const personId = personMap?.[`blog:${post.author.toLowerCase()}`]
+
   return (
     <div className="py-5 border-b border-white/[0.04] last:border-0">
       {/* Title + Author */}
@@ -21,7 +25,16 @@ export function BlogPostCard({ post }: BlogPostCardProps) {
           </svg>
         </a>
         <p className="text-xs text-gray-500 mt-1">
-          <span className="text-gray-400">{post.author}</span>
+          {personId ? (
+            <Link
+              href={`/stars/people/${personId}/`}
+              className="text-gray-400 hover:text-emerald-400 transition-colors"
+            >
+              {post.author}
+            </Link>
+          ) : (
+            <span className="text-gray-400">{post.author}</span>
+          )}
           {post.publishedAt && (
             <>
               <span className="mx-1.5">·</span>

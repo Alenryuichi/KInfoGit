@@ -235,7 +235,16 @@ function ItemCard({ item, personMap }: { item: FeedItem; personMap: Record<strin
             <div className="text-[10px] text-gray-600 flex flex-wrap gap-x-4 gap-y-2 uppercase tracking-widest items-center">
               <span>👁 {(item.viewCount / 1000).toFixed(1)}k Views</span>
               <span>|</span>
-              <span>{item.channelTitle}</span>
+              {personMap[`youtube:${item.channelTitle.toLowerCase()}`] ? (
+                <Link
+                  href={`/stars/people/${personMap[`youtube:${item.channelTitle.toLowerCase()}`]}/`}
+                  className="text-gray-400 hover:text-red-400 transition-colors"
+                >
+                  {item.channelTitle}
+                </Link>
+              ) : (
+                <span>{item.channelTitle}</span>
+              )}
               {item.tags && item.tags.length > 0 && (
                 <>
                   <span>|</span>
@@ -279,7 +288,16 @@ function ItemCard({ item, personMap }: { item: FeedItem; personMap: Record<strin
               {item.summary}
             </p>
             <div className="text-[10px] text-gray-600 flex flex-wrap gap-x-4 gap-y-2 uppercase tracking-widest items-center">
-              <span>By {item.author}</span>
+              <span>By {personMap[`blog:${item.author.toLowerCase()}`] ? (
+                <Link
+                  href={`/stars/people/${personMap[`blog:${item.author.toLowerCase()}`]}/`}
+                  className="text-gray-400 hover:text-emerald-400 transition-colors"
+                >
+                  {item.author}
+                </Link>
+              ) : (
+                item.author
+              )}</span>
             </div>
             {item.highlights && (
               <div className="mt-3 text-xs text-gray-400 border-l border-emerald-500/30 pl-4 py-1 italic font-serif">
