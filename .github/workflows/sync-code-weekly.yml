@@ -23,6 +23,7 @@ env:
 
 permissions:
   contents: write
+  issues: write
 
 jobs:
   code-weekly:
@@ -98,6 +99,121 @@ jobs:
       - name: Fetch Benchmarks
         run: npx tsx scripts/fetch-benchmarks.ts
 
+      - name: Evaluate benchmarks alert
+        id: alert
+        # Reads the latest health record, updates the consecutive-run
+        # streak state, and emits a single-line AlertDecision JSON to
+        # stdout. Always exits 0 so the commit step below still runs
+        # for normal green days. The subsequent steps decide whether to
+        # open an Issue or fail the workflow based on `severity`.
+        run: |
+          DECISION=$(npx tsx scripts/code-weekly/benchmarks-alert.ts 2>/dev/null | tail -n 1)
+          echo "decision=$DECISION" >> $GITHUB_OUTPUT
+          SEVERITY=$(echo "$DECISION" | jq -r '.severity')
+          SHOULD_OPEN=$(echo "$DECISION" | jq -r '.shouldOpenIssue')
+          SHOULD_FAIL=$(echo "$DECISION" | jq -r '.shouldFailWorkflow')
+          TITLE=$(echo "$DECISION" | jq -r '.title')
+          BODY=$(echo "$DECISION" | jq -r '.body')
+          LABELS=$(echo "$DECISION" | jq -r '.labels | join(",")')
+          echo "severity=$SEVERITY" >> $GITHUB_OUTPUT
+          echo "should_open=$SHOULD_OPEN" >> $GITHUB_OUTPUT
+          echo "should_fail=$SHOULD_FAIL" >> $GITHUB_OUTPUT
+          echo "title=$TITLE" >> $GITHUB_OUTPUT
+          echo "labels=$LABELS" >> $GITHUB_OUTPUT
+          # Multi-line body: use heredoc-style output
+          {
+            echo "body<<EOF_BODY"
+            echo "$BODY"
+            echo "EOF_BODY"
+          } >> $GITHUB_OUTPUT
+
+      - name: Open or update benchmarks alert issue
+        if: steps.alert.outputs.should_open == 'true'
+        uses: actions/github-script@v7
+        env:
+          ALERT_TITLE: ${{ steps.alert.outputs.title }}
+          ALERT_BODY: ${{ steps.alert.outputs.body }}
+          ALERT_LABELS: ${{ steps.alert.outputs.labels }}
+          ALERT_SEVERITY: ${{ steps.alert.outputs.severity }}
+        with:
+          script: |
+            const title = process.env.ALERT_TITLE
+            const body = process.env.ALERT_BODY
+            const labels = process.env.ALERT_LABELS.split(',').filter(Boolean)
+            const severity = process.env.ALERT_SEVERITY
+
+            // De-dup by the base label `benchmarks-alert`: if an open
+            // issue already exists, add a comment with the new report
+            // instead of opening a duplicate. The severity-specific
+            // label (critical/warning/watch) is re-synced each time so
+            // the latest status is always visible on the issue card.
+            const { data: existing } = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open',
+              labels: 'benchmarks-alert',
+              per_page: 5,
+            })
+
+            if (existing.length > 0) {
+              const issue = existing[0]
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: issue.number,
+                body: `### Update — ${new Date().toISOString()}\n\n${body}`,
+              })
+              // Re-sync labels so the severity reflects the latest run.
+              await github.rest.issues.setLabels({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: issue.number,
+                labels,
+              })
+              core.info(`Appended comment to existing issue #${issue.number} (severity=${severity})`)
+            } else {
+              const created = await github.rest.issues.create({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                title,
+                body,
+                labels,
+              })
+              core.info(`Opened new issue #${created.data.number} (severity=${severity})`)
+            }
+
+      - name: Auto-close stale alert issue on green run
+        if: steps.alert.outputs.severity == 'ok'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            // When the latest run is fully green, close any lingering
+            // `benchmarks-alert` issues with a resolution comment so the
+            // issue list reflects current state. A future red run will
+            // open a fresh issue rather than re-opening this one.
+            const { data: open } = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open',
+              labels: 'benchmarks-alert',
+              per_page: 10,
+            })
+            for (const issue of open) {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: issue.number,
+                body: `✅ Auto-closed: latest benchmarks run is green at ${new Date().toISOString()}.`,
+              })
+              await github.rest.issues.update({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: issue.number,
+                state: 'closed',
+              })
+              core.info(`Auto-closed issue #${issue.number}`)
+            }
+
       - name: Check for changes
         id: check_changes
         run: |
@@ -115,3 +231,9 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git commit -m "chore: sync benchmark data"
           git push
+
+      - name: Fail workflow on critical alert
+        if: steps.alert.outputs.should_fail == 'true'
+        run: |
+          echo "::error title=Benchmarks critical alert::${{ steps.alert.outputs.title }}"
+          exit 1
