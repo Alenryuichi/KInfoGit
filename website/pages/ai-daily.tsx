@@ -87,7 +87,7 @@ export default function AiDailyList({ dates, latestWeekly }: AiDailyListProps) {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="mb-4 relative z-10"
+              className="mb-0 relative z-10"
             >
                 <div className="flex items-center gap-3 mb-4">
                     <span className="relative flex h-3 w-3">
@@ -121,7 +121,7 @@ export default function AiDailyList({ dates, latestWeekly }: AiDailyListProps) {
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: 0.2 }}
-                className="relative z-10 mt-2 mb-6"
+                className="relative z-10 mt-4 mb-0"
               >
                 <Link
                   href={`/ai-daily/weekly/${latestWeekly.week}/`}
@@ -178,7 +178,7 @@ export default function AiDailyList({ dates, latestWeekly }: AiDailyListProps) {
             )}
 
             {/* List - The Hacker Terminal Variant */}
-            <div className="space-y-3 font-mono text-sm mt-6 relative z-10">
+            <div className="space-y-3 font-mono text-sm mt-4 relative z-10">
                 {/* Table Header */}
                 {dates.length > 0 && (
                   <div className="flex text-[10px] text-gray-600 uppercase tracking-widest border-b border-white/10 pb-2 mb-4 hidden sm:flex">
