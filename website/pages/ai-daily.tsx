@@ -127,10 +127,6 @@ export default function AiDailyList({ dates, latestWeekly }: AiDailyListProps) {
                   href={`/ai-daily/weekly/${latestWeekly.week}/`}
                   className="group block border border-dashed border-blue-500/40 hover:border-blue-400/80 bg-blue-500/[0.02] hover:bg-blue-500/[0.05] rounded-xl p-5 transition-all relative overflow-hidden"
                 >
-                  {/* Decorative corner markers */}
-                  <div className="absolute top-0 left-0 w-3 h-3 border-t border-l border-blue-400/50"></div>
-                  <div className="absolute bottom-0 right-0 w-3 h-3 border-b border-r border-blue-400/50"></div>
-                  
                   {/* Top Row */}
                   <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-4">
                     <div className="flex items-center gap-3">
