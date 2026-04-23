@@ -7,10 +7,13 @@ import {
   computeKpis,
   findAnomalies,
   computeTopicHealth,
+  computeTopicDiscovery,
   type RunRecord,
   type MetricsKpis,
   type AnomalyAlert,
   type TopicHealthRow,
+  type TopicDiscoveryResult,
+  type TopicCandidate,
 } from '@/lib/ai-daily-metrics'
 
 // ─── Types ────────────────────────────────────────────────
@@ -20,6 +23,7 @@ interface MetricsPageProps {
   kpis: MetricsKpis
   anomalies: AnomalyAlert[]
   topicHealth: TopicHealthRow[]
+  topicDiscovery: TopicDiscoveryResult
 }
 
 // ─── Data Loading ─────────────────────────────────────────
@@ -29,7 +33,8 @@ export const getStaticProps: GetStaticProps<MetricsPageProps> = async () => {
   const kpis = computeKpis(records, 7)
   const anomalies = findAnomalies(records)
   const topicHealth = computeTopicHealth()
-  return { props: { records, kpis, anomalies, topicHealth } }
+  const topicDiscovery = computeTopicDiscovery()
+  return { props: { records, kpis, anomalies, topicHealth, topicDiscovery } }
 }
 
 // ─── Chart primitives (zero external deps) ──────────────────
@@ -221,7 +226,7 @@ function SourceStackChart({ records }: { records: RunRecord[] }) {
 
 // ─── Page ─────────────────────────────────────────────────
 
-export default function AiDailyMetrics({ records, kpis, anomalies, topicHealth }: MetricsPageProps) {
+export default function AiDailyMetrics({ records, kpis, anomalies, topicHealth, topicDiscovery }: MetricsPageProps) {
   const hasData = records.length > 0
 
   return (
@@ -335,6 +340,22 @@ export default function AiDailyMetrics({ records, kpis, anomalies, topicHealth }
                   <code className="text-blue-400">FOCUS_TOPICS</code>.
                 </p>
                 <TopicHealthTable rows={topicHealth} />
+              </section>
+
+              {/* Topic Discovery (v3) */}
+              <section className="mb-12">
+                <h2 className="text-xs font-mono text-gray-500 uppercase tracking-[0.2em] mb-2">
+                  Topic Discovery (v3) — last 30 days
+                </h2>
+                <p className="text-xs text-gray-500 font-mono mb-4 leading-relaxed">
+                  Unsupervised frequency scan of free-form <code className="text-blue-400">item.tags[]</code>{' '}
+                  (not <code className="text-blue-400">focusTopics</code>). Entries already in the controlled
+                  vocabulary or in the entity blacklist (openai / cursor / meta / …) are excluded.
+                  Candidates listed below are signal for the next{' '}
+                  <code className="text-blue-400">FOCUS_TOPICS</code> update — review at weekly cadence,
+                  promote manually in <code className="text-blue-400">scripts/ai-daily/config.ts</code>.
+                </p>
+                <TopicDiscoveryPanel discovery={topicDiscovery} />
               </section>
 
               {/* Anomalies */}
@@ -525,6 +546,109 @@ function TopicHealthTable({ rows }: { rows: TopicHealthRow[] }) {
           </React.Fragment>
         )
       })}
+    </div>
+  )
+}
+
+// ─── Topic Discovery Panel ─────────────────────────────────
+
+function TopicDiscoveryPanel({ discovery }: { discovery: TopicDiscoveryResult }) {
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <CandidateBucket
+        title="Rising"
+        glyph="🚀"
+        accent="text-emerald-400"
+        border="border-emerald-500/30"
+        description="heavy recent-week signal"
+        candidates={discovery.rising}
+      />
+      <CandidateBucket
+        title="Persistent"
+        glyph="📈"
+        accent="text-blue-400"
+        border="border-blue-500/30"
+        description="steady across 30 days"
+        candidates={discovery.persistent}
+      />
+      <CandidateBucket
+        title="Sporadic"
+        glyph="💫"
+        accent="text-gray-400"
+        border="border-gray-600/40"
+        description="low-medium frequency, watch"
+        candidates={discovery.sporadic}
+      />
+    </div>
+  )
+}
+
+function CandidateBucket({
+  title,
+  glyph,
+  accent,
+  border,
+  description,
+  candidates,
+}: {
+  title: string
+  glyph: string
+  accent: string
+  border: string
+  description: string
+  candidates: TopicCandidate[]
+}) {
+  return (
+    <div className={`border ${border} rounded-lg bg-gray-900/20 flex flex-col`}>
+      <div className="p-3 border-b border-gray-800 flex items-baseline justify-between">
+        <div>
+          <span className="mr-2">{glyph}</span>
+          <span className={`font-mono text-sm uppercase tracking-wider ${accent}`}>{title}</span>
+        </div>
+        <span className="text-[10px] font-mono text-gray-600">{description}</span>
+      </div>
+      {candidates.length === 0 ? (
+        <div className="p-4 text-xs font-mono text-gray-600 italic">
+          No candidates in this tier yet.
+        </div>
+      ) : (
+        <ul className="divide-y divide-gray-800">
+          {candidates.map(c => (
+            <li key={c.tag} className="p-3 space-y-1.5">
+              {/* tag + counts row */}
+              <div className="flex items-center gap-2">
+                <code className={`font-mono text-xs ${accent} truncate`}>{c.tag}</code>
+                <div className="flex-1" />
+                <span
+                  className="font-mono text-[10px] text-gray-400 tabular-nums shrink-0"
+                  title={`7d / 14d / 30d hit counts · ${Math.round(c.coverage30d * 30)} of 30 days`}
+                >
+                  <span className="text-white">{c.hits7d}</span>
+                  <span className="text-gray-600 mx-0.5">/</span>
+                  <span>{c.hits14d}</span>
+                  <span className="text-gray-600 mx-0.5">/</span>
+                  <span>{c.hits30d}</span>
+                </span>
+              </div>
+              {/* first example as evidence */}
+              {c.recentExamples.length > 0 && (
+                <div className="text-[10px] font-mono text-gray-500 flex gap-2 truncate">
+                  <Link
+                    href={`/ai-daily/${c.recentExamples[0].date}`}
+                    className="text-gray-600 hover:text-blue-400 shrink-0"
+                  >
+                    {c.recentExamples[0].date}
+                  </Link>
+                  <span className="text-amber-400/70 shrink-0">
+                    {c.recentExamples[0].score.toFixed(1)}
+                  </span>
+                  <span className="truncate">{c.recentExamples[0].title}</span>
+                </div>
+              )}
+            </li>
+          ))}
+        </ul>
+      )}
     </div>
   )
 }

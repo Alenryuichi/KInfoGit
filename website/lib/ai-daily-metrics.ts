@@ -26,6 +26,25 @@ export const LEGACY_TOPIC_VOCAB = [
 export type TopicName = typeof TOPIC_VOCAB[number]
 export type LegacyTopicName = typeof LEGACY_TOPIC_VOCAB[number]
 
+// Topic Discovery — hardcoded blacklist of entity tags.
+//
+// Companies / products / model brands should NEVER be promoted into
+// focusTopics because focusTopics anchor *themes* ("coding-agents",
+// "tool-use"), not entities. A lab shipping a feature is caused by a
+// theme, not a theme itself. This list is small and visible; extend
+// it in-place when a new vendor blows up. If it grows past ~30 entries
+// we'll factor it out into its own file.
+export const ENTITY_TAG_BLACKLIST = new Set<string>([
+  // AI labs / model orgs
+  'openai', 'anthropic', 'google', 'deepmind', 'meta',
+  'microsoft', 'xai', 'mistral', 'cohere', 'databricks',
+  // products / tools (nouns, not themes)
+  'claude', 'chatgpt', 'gemini', 'grok', 'cursor',
+  'copilot', 'claude-code', 'windsurf', 'aider',
+  // orgs / non-AI companies that appear a lot but aren't topics
+  'spacex', 'nvidia', 'apple', 'amazon',
+])
+
 // NOTE: schema kept loose (all fields optional) so a legacy record
 // missing a newer field doesn't blow up rendering.
 export interface RunRecord {
@@ -366,4 +385,185 @@ function emptyRow(topic: string, isLegacy: boolean): TopicHealthRow {
     status: isLegacy ? 'legacy' : 'dead',
     isLegacy,
   }
+}
+
+// ─── Topic Discovery (v3) ─────────────────────────────────
+//
+// Reverse direction of Topic Health:
+//   - Topic Health:    "are our controlled-vocab anchors still firing?"
+//   - Topic Discovery: "which free-form tags are rising past the vocab?"
+//
+// Scans `item.tags[]` (the LLM-generated free annotation) — NOT
+// `item.focusTopics[]` (the controlled vocabulary, already covered by
+// Topic Health). Filters out vocab anchors and a hardcoded entity
+// blacklist, then classifies each surviving tag into one of three
+// buckets so an editor can scan at a weekly cadence and decide whether
+// to promote anything into FOCUS_TOPICS.
+//
+// This is READ-ONLY and human-facing. It does NOT mutate vocab, does
+// NOT open PRs, does NOT persist discovery state across runs. The 7/14/30
+// hit counts already encode acceleration; week-over-week diff would
+// require snapshotting and isn't worth it for a human-in-the-loop panel.
+
+export interface TopicCandidate {
+  tag: string
+  hits7d: number
+  hits14d: number
+  hits30d: number
+  /** Fraction of days in the last 30d window that had at least one hit. */
+  coverage30d: number
+  classification: 'rising' | 'persistent' | 'sporadic'
+  /** up to 3 recent example items, newest first. */
+  recentExamples: TopicExample[]
+}
+
+export interface TopicDiscoveryResult {
+  /** Tags hot in the last week relative to 30d total — promote candidates. */
+  rising: TopicCandidate[]
+  /** Tags steady over 30d with broad day coverage — strong real themes. */
+  persistent: TopicCandidate[]
+  /** Tags with some frequency (>=3) that fit neither rising nor persistent. */
+  sporadic: TopicCandidate[]
+}
+
+/** Max entries shown per bucket — the long tail is noise. */
+const DISCOVERY_BUCKET_CAP = 10
+
+/** Minimum total hits required to even appear in the dashboard. */
+const DISCOVERY_MIN_HITS_30D = 3
+
+/**
+ * Scan 30 days of per-day digest files for free-form tag frequencies,
+ * filter out controlled vocabulary and entity names, and classify the
+ * survivors into rising / persistent / sporadic buckets.
+ *
+ * Runs only at build time. Returns a fully-serializable result safe to
+ * pass to a Next.js page via getStaticProps.
+ */
+export function computeTopicDiscovery(): TopicDiscoveryResult {
+  const emptyResult: TopicDiscoveryResult = { rising: [], persistent: [], sporadic: [] }
+
+  const dir = getDigestDir()
+  if (!fs.existsSync(dir)) return emptyResult
+
+  const keys7 = recentDateKeys(7)
+  const keys14 = recentDateKeys(14)
+  const keys30 = recentDateKeys(30)
+
+  const vocabSet = new Set<string>([...TOPIC_VOCAB, ...LEGACY_TOPIC_VOCAB])
+
+  // Per-tag counters. We also track a Set of dates for coverage30d.
+  const hits: Record<string, { d7: number; d14: number; d30: number; daysSeen: Set<string> }> = {}
+  const examples: Record<string, TopicExample[]> = {}
+
+  let files: string[] = []
+  try {
+    files = fs.readdirSync(dir).filter(f => /^\d{4}-\d{2}-\d{2}\.json$/.test(f))
+  } catch {
+    return emptyResult
+  }
+
+  // Read newest-first so example arrays end up newest-first naturally.
+  files.sort().reverse()
+
+  for (const file of files) {
+    const date = file.replace(/\.json$/, '')
+    if (!keys30.has(date)) continue
+
+    let digest: RawDigestFile
+    try {
+      digest = JSON.parse(fs.readFileSync(path.join(dir, file), 'utf-8')) as RawDigestFile
+    } catch {
+      continue
+    }
+
+    for (const section of digest.sections ?? []) {
+      for (const item of section.items ?? []) {
+        // Free-form tags live under `tags`, not `focusTopics`. The raw
+        // schema in RawDigestItem only declared focusTopics — access
+        // `.tags` via an untyped lookup to keep backwards compat with
+        // older files that might omit it.
+        const rawTags = (item as { tags?: unknown }).tags
+        if (!Array.isArray(rawTags)) continue
+
+        for (const rawT of rawTags) {
+          if (typeof rawT !== 'string') continue
+          // Normalize: lowercase, trim, and collapse internal whitespace
+          // into dashes so "machine learning" and "machine-learning"
+          // merge into a single candidate. The LLM is inconsistent about
+          // this even within the same digest; we pay the merge cost once
+          // here rather than forcing the prompt to enforce it.
+          const tag = rawT.toLowerCase().trim().replace(/\s+/g, '-')
+          if (!tag) continue
+          if (vocabSet.has(tag)) continue
+          if (ENTITY_TAG_BLACKLIST.has(tag)) continue
+
+          if (!hits[tag]) {
+            hits[tag] = { d7: 0, d14: 0, d30: 0, daysSeen: new Set() }
+            examples[tag] = []
+          }
+          const bucket = hits[tag]
+          if (keys7.has(date)) bucket.d7 += 1
+          if (keys14.has(date)) bucket.d14 += 1
+          bucket.d30 += 1
+          bucket.daysSeen.add(date)
+
+          const exArr = examples[tag]
+          if (exArr.length < 3) {
+            exArr.push({
+              date,
+              title: typeof item.title === 'string' ? item.title : '',
+              score: typeof item.score === 'number' ? item.score : 0,
+            })
+          }
+        }
+      }
+    }
+  }
+
+  // Build candidate list for every tag meeting minimum threshold.
+  const candidates: TopicCandidate[] = []
+  for (const [tag, h] of Object.entries(hits)) {
+    if (h.d30 < DISCOVERY_MIN_HITS_30D) continue
+
+    const coverage30d = Math.round((h.daysSeen.size / 30) * 100) / 100
+
+    // Classification order matters: rising wins over persistent when both
+    // would fire (rare — requires heavy recent week AND broad coverage).
+    let classification: TopicCandidate['classification']
+    if (h.d7 >= 5 && h.d7 >= h.d30 * 0.4) {
+      classification = 'rising'
+    } else if (h.d30 >= 10 && coverage30d >= 0.3) {
+      classification = 'persistent'
+    } else {
+      classification = 'sporadic'
+    }
+
+    candidates.push({
+      tag,
+      hits7d: h.d7,
+      hits14d: h.d14,
+      hits30d: h.d30,
+      coverage30d,
+      classification,
+      recentExamples: examples[tag],
+    })
+  }
+
+  // Split by bucket, sort each by hits30d DESC, cap at DISCOVERY_BUCKET_CAP.
+  const cmpHits30 = (a: TopicCandidate, b: TopicCandidate) => b.hits30d - a.hits30d
+  const rising = candidates
+    .filter(c => c.classification === 'rising')
+    .sort(cmpHits30)
+    .slice(0, DISCOVERY_BUCKET_CAP)
+  const persistent = candidates
+    .filter(c => c.classification === 'persistent')
+    .sort(cmpHits30)
+    .slice(0, DISCOVERY_BUCKET_CAP)
+  const sporadic = candidates
+    .filter(c => c.classification === 'sporadic')
+    .sort(cmpHits30)
+    .slice(0, DISCOVERY_BUCKET_CAP)
+
+  return { rising, persistent, sporadic }
 }
