@@ -57,6 +57,7 @@ export interface RunRecord {
     social?: number
     horizon?: number
     github?: number
+    reddit?: number
   }
   dedup?: {
     urlDropped?: number

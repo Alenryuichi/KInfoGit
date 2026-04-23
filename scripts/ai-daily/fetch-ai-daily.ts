@@ -30,6 +30,7 @@ import { fetchSearchItems } from './sources/search'
 import { fetchSocialItems } from './sources/social'
 import { fetchHorizonItems } from './sources/hn'
 import { fetchGithubTrendingItems } from './sources/github-trending'
+import { fetchRedditItems } from './sources/reddit'
 import { scoreItems, generateDailyBrief } from './scoring'
 import { MetricsCollector, computeOutputStats } from './metrics'
 import type { RawNewsItem, ScoredItem, DailyDigest, NewsItem, DigestSection } from './types'
@@ -40,26 +41,29 @@ async function main() {
   const metrics = new MetricsCollector()
 
   // ─── Parallel source collection ─────────────────────────
-  const [rssResult, searchResult, githubResult, horizonResult] = await Promise.allSettled([
+  const [rssResult, searchResult, githubResult, horizonResult, redditResult] = await Promise.allSettled([
     fetchRssItems(),
     fetchSearchItems(),
     fetchGithubTrendingItems(),
     fetchHorizonItems(projectRoot),
+    fetchRedditItems(),
   ])
 
   const rssItems = rssResult.status === 'fulfilled' ? rssResult.value : []
   const searchItems = searchResult.status === 'fulfilled' ? searchResult.value : []
   const githubItems = githubResult.status === 'fulfilled' ? githubResult.value : []
   const horizonItems = horizonResult.status === 'fulfilled' ? horizonResult.value : []
+  const redditItems = redditResult.status === 'fulfilled' ? redditResult.value : []
   const socialItems = fetchSocialItems(projectRoot)
 
   if (rssResult.status === 'rejected') console.error('❌ RSS failed:', rssResult.reason)
   if (searchResult.status === 'rejected') console.error('❌ Search failed:', searchResult.reason)
   if (githubResult.status === 'rejected') console.error('❌ GitHub failed:', githubResult.reason)
   if (horizonResult.status === 'rejected') console.error('❌ HN failed:', horizonResult.reason)
+  if (redditResult.status === 'rejected') console.error('❌ Reddit failed:', redditResult.reason)
 
-  const allRaw: RawNewsItem[] = [...rssItems, ...searchItems, ...socialItems, ...horizonItems, ...githubItems]
-  console.log(`\n📊 Raw items: RSS=${rssItems.length} Search=${searchItems.length} Social=${socialItems.length} Horizon=${horizonItems.length} GitHub=${githubItems.length} Total=${allRaw.length}`)
+  const allRaw: RawNewsItem[] = [...rssItems, ...searchItems, ...socialItems, ...horizonItems, ...githubItems, ...redditItems]
+  console.log(`\n📊 Raw items: RSS=${rssItems.length} Search=${searchItems.length} Social=${socialItems.length} Horizon=${horizonItems.length} GitHub=${githubItems.length} Reddit=${redditItems.length} Total=${allRaw.length}`)
 
   metrics.recordSources({
     rss: rssItems.length,
@@ -67,6 +71,7 @@ async function main() {
     social: socialItems.length,
     horizon: horizonItems.length,
     github: githubItems.length,
+    reddit: redditItems.length,
   })
 
   // ─── Deduplication: URL normalization, then title similarity ──

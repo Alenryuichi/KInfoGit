@@ -12,7 +12,7 @@ export interface RssFeedConfig {
  * Curated AI RSS feeds. Selection philosophy:
  *
  *   - ArXiv cs.AI / cs.CL → research firehose (high volume, filtered by scoring)
- *   - Google AI Blog, Hugging Face → lab/platform official product news
+ *   - Google AI Blog, DeepMind, Hugging Face → lab/platform official product news
  *   - Simon Willison → high-signal independent commentary
  *   - OpenAI News → frontier lab product announcements (Anthropic does NOT
  *     publish an RSS feed as of 2026-04; we rely on Exa allowlist instead)
@@ -21,8 +21,11 @@ export interface RssFeedConfig {
  *   - Pragmatic Engineer → eng-leadership lens on AI tooling adoption
  *
  * Feed health notes:
- *   - Anthropic has no public RSS. /rss.xml, /feed.xml, /news/rss.xml all 404
- *     (verified 2026-04-17). If they ship one later, add it here.
+ *   - Anthropic has no public RSS. /rss.xml, /feed.xml, /news/rss.xml,
+ *     /atom.xml all 404 (verified 2026-04-17 and 2026-04-23). If they
+ *     ship one later, add it here.
+ *   - DeepMind RSS added 2026-04-23. Cadence ~5-7 days, clean summaries,
+ *     standard RSS 2.0 format. Returns 200 OK on deepmind.google/blog/rss.xml.
  *   - OpenAI feed blocks non-browser User-Agents. The fetcher in
  *     sources/rss-feeds.ts sends a Mozilla UA specifically to reach it.
  *   - Substack feeds (Latent Space, Pragmatic Engineer, Interconnects) deliver
@@ -36,6 +39,7 @@ export const RSS_FEEDS: RssFeedConfig[] = [
   // Lab / platform official
   { name: 'OpenAI News',       url: 'https://openai.com/news/rss',                       category: 'release' },
   { name: 'Google AI Blog',    url: 'https://blog.google/technology/ai/rss/',            category: 'breaking' },
+  { name: 'DeepMind',          url: 'https://deepmind.google/blog/rss.xml',              category: 'release' },
   { name: 'Hugging Face',      url: 'https://huggingface.co/blog/feed.xml',              category: 'release' },
 
   // Technical long-form (practitioner voices)
