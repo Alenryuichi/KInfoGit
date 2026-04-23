@@ -31,6 +31,7 @@ import { fetchSocialItems } from './sources/social'
 import { fetchHorizonItems } from './sources/hn'
 import { fetchGithubTrendingItems } from './sources/github-trending'
 import { fetchRedditItems } from './sources/reddit'
+import { fetchCoStarredItems } from './sources/stars-co-starred'
 import { scoreItems, generateDailyBrief } from './scoring'
 import { MetricsCollector, computeOutputStats } from './metrics'
 import type { RawNewsItem, ScoredItem, DailyDigest, NewsItem, DigestSection } from './types'
@@ -41,12 +42,13 @@ async function main() {
   const metrics = new MetricsCollector()
 
   // ─── Parallel source collection ─────────────────────────
-  const [rssResult, searchResult, githubResult, horizonResult, redditResult] = await Promise.allSettled([
+  const [rssResult, searchResult, githubResult, horizonResult, redditResult, coStarredResult] = await Promise.allSettled([
     fetchRssItems(),
     fetchSearchItems(),
     fetchGithubTrendingItems(),
     fetchHorizonItems(projectRoot),
     fetchRedditItems(),
+    fetchCoStarredItems(projectRoot),
   ])
 
   const rssItems = rssResult.status === 'fulfilled' ? rssResult.value : []
@@ -54,6 +56,7 @@ async function main() {
   const githubItems = githubResult.status === 'fulfilled' ? githubResult.value : []
   const horizonItems = horizonResult.status === 'fulfilled' ? horizonResult.value : []
   const redditItems = redditResult.status === 'fulfilled' ? redditResult.value : []
+  const coStarredItems = coStarredResult.status === 'fulfilled' ? coStarredResult.value : []
   const socialItems = fetchSocialItems(projectRoot)
 
   if (rssResult.status === 'rejected') console.error('❌ RSS failed:', rssResult.reason)
@@ -61,9 +64,10 @@ async function main() {
   if (githubResult.status === 'rejected') console.error('❌ GitHub failed:', githubResult.reason)
   if (horizonResult.status === 'rejected') console.error('❌ HN failed:', horizonResult.reason)
   if (redditResult.status === 'rejected') console.error('❌ Reddit failed:', redditResult.reason)
+  if (coStarredResult.status === 'rejected') console.error('❌ Co-Starred failed:', coStarredResult.reason)
 
-  const allRaw: RawNewsItem[] = [...rssItems, ...searchItems, ...socialItems, ...horizonItems, ...githubItems, ...redditItems]
-  console.log(`\n📊 Raw items: RSS=${rssItems.length} Search=${searchItems.length} Social=${socialItems.length} Horizon=${horizonItems.length} GitHub=${githubItems.length} Reddit=${redditItems.length} Total=${allRaw.length}`)
+  const allRaw: RawNewsItem[] = [...rssItems, ...searchItems, ...socialItems, ...horizonItems, ...githubItems, ...redditItems, ...coStarredItems]
+  console.log(`\n📊 Raw items: RSS=${rssItems.length} Search=${searchItems.length} Social=${socialItems.length} Horizon=${horizonItems.length} GitHub=${githubItems.length} Reddit=${redditItems.length} CoStarred=${coStarredItems.length} Total=${allRaw.length}`)
 
   metrics.recordSources({
     rss: rssItems.length,
@@ -72,6 +76,7 @@ async function main() {
     horizon: horizonItems.length,
     github: githubItems.length,
     reddit: redditItems.length,
+    coStarred: coStarredItems.length,
   })
 
   // ─── Deduplication: URL normalization, then title similarity ──

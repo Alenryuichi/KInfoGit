@@ -155,7 +155,7 @@ function SourceStackChart({ records }: { records: RunRecord[] }) {
 
   const totals = records.map(r => {
     const s = r.sources ?? {}
-    return (s.rss ?? 0) + (s.search ?? 0) + (s.social ?? 0) + (s.horizon ?? 0) + (s.github ?? 0) + (s.reddit ?? 0)
+    return (s.rss ?? 0) + (s.search ?? 0) + (s.social ?? 0) + (s.horizon ?? 0) + (s.github ?? 0) + (s.reddit ?? 0) + (s.coStarred ?? 0)
   })
   const maxTotal = Math.max(...totals, 1)
   const barW = innerW / records.length * 0.7
@@ -168,6 +168,7 @@ function SourceStackChart({ records }: { records: RunRecord[] }) {
     horizon: '#f472b6',   // pink
     github: '#a78bfa',    // violet
     reddit: '#2dd4bf',    // teal (Reddit added 2026-04-23)
+    coStarred: '#a3e635', // lime (Co-Starred added 2026-04-23)
   }
 
   return (
@@ -181,6 +182,7 @@ function SourceStackChart({ records }: { records: RunRecord[] }) {
           { key: 'horizon' as const, v: s.horizon ?? 0 },
           { key: 'github' as const, v: s.github ?? 0 },
           { key: 'reddit' as const, v: s.reddit ?? 0 },
+          { key: 'coStarred' as const, v: s.coStarred ?? 0 },
         ]
         const x = pad.left + i * (barW + gap) + gap / 2
         let yOffset = pad.top + innerH
@@ -328,6 +330,7 @@ export default function AiDailyMetrics({ records, kpis, anomalies, topicHealth, 
                     <span className="text-pink-400">■ horizon</span>
                     <span className="text-violet-400">■ github</span>
                     <span className="text-teal-400">■ reddit</span>
+                    <span className="text-lime-400">■ co-starred</span>
                   </div>
                 </div>
               </section>

@@ -58,6 +58,7 @@ export interface RunRecord {
     horizon?: number
     github?: number
     reddit?: number
+    coStarred?: number
   }
   dedup?: {
     urlDropped?: number
