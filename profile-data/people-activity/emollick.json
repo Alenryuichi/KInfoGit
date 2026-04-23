@@ -744,6 +744,89 @@
         "llm"
       ],
       "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:flxq4uyjfotciovpw3x3fxnu/app.bsky.feed.post/3mk4cyh2sns2d",
+      "url": "https://bsky.app/profile/emollick.bsky.social/post/3mk4cyh2sns2d",
+      "author": {
+        "handle": "emollick.bsky.social",
+        "displayName": "Ethan Mollick",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:flxq4uyjfotciovpw3x3fxnu/bafkreigq63ljumc43yx5eoxchrq75d72irea6ddcceedwmdttxebyowc3q"
+      },
+      "content": "GPT imagegen 2: \"Show me a photo taken of pages 113-114 from the books\":\n\"Eldritch Horrors as Pets: A Guide\"\n\"How Womblenauts Work\"\n\"Photographs of the People of New York Who Look Like Birds\". \n\"Cakes shaped like fish shaped like cakes\"",
+      "createdAt": "2026-04-22T20:18:40.184Z",
+      "likeCount": 50,
+      "replyCount": 4,
+      "repostCount": 4,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [
+        "llm",
+        "multi-modal"
+      ],
+      "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:flxq4uyjfotciovpw3x3fxnu/app.bsky.feed.post/3mk3tyytwwc2g",
+      "url": "https://bsky.app/profile/emollick.bsky.social/post/3mk3tyytwwc2g",
+      "author": {
+        "handle": "emollick.bsky.social",
+        "displayName": "Ethan Mollick",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:flxq4uyjfotciovpw3x3fxnu/bafkreigq63ljumc43yx5eoxchrq75d72irea6ddcceedwmdttxebyowc3q"
+      },
+      "content": "Every system that was regulated, either explicitly or implicitly, by the fact that they were effortful for humans (letters of recommendation, government filings, essays, or, as this paper finds, lawsuits) will break under a wave of AI.",
+      "createdAt": "2026-04-22T15:50:32.707Z",
+      "likeCount": 684,
+      "replyCount": 17,
+      "repostCount": 165,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [
+        "deployment",
+        "safety"
+      ],
+      "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:flxq4uyjfotciovpw3x3fxnu/app.bsky.feed.post/3mk3prnwoi22h",
+      "url": "https://bsky.app/profile/emollick.bsky.social/post/3mk3prnwoi22h",
+      "author": {
+        "handle": "emollick.bsky.social",
+        "displayName": "Ethan Mollick",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:flxq4uyjfotciovpw3x3fxnu/bafkreigq63ljumc43yx5eoxchrq75d72irea6ddcceedwmdttxebyowc3q"
+      },
+      "content": "This wasn't the case with previous image generators, but the LLM you select has a huge effect on GPT-imagegen-2  output. GPT-5.4 Thinking and GPT-5.4 Pro will produce much better images, especially for complex things.\n\nThis is, of course, not intuitive or explained anywhere.",
+      "createdAt": "2026-04-22T14:34:51.417Z",
+      "likeCount": 24,
+      "replyCount": 2,
+      "repostCount": 4,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [
+        "llm",
+        "multi-modal"
+      ],
+      "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:flxq4uyjfotciovpw3x3fxnu/app.bsky.feed.post/3mk54n75jj22r",
+      "url": "https://bsky.app/profile/emollick.bsky.social/post/3mk54n75jj22r",
+      "author": {
+        "handle": "emollick.bsky.social",
+        "displayName": "Ethan Mollick",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:flxq4uyjfotciovpw3x3fxnu/bafkreigq63ljumc43yx5eoxchrq75d72irea6ddcceedwmdttxebyowc3q"
+      },
+      "content": "GPT-imagegen-2: \"a gallery of shoes, where each shoe is under a painting & is styled matched to that painting: Starry Night, The Bathers, The Girl with the Pearl Earring, The Bayeux Tapestry, Klint's Grupp Svanen nr 17, Kandinsky's Swinging, The Garden of Earthly Delights\"\n\n\"now the full outfits\"",
+      "createdAt": "2026-04-23T03:57:40.073Z",
+      "likeCount": 4,
+      "replyCount": 1,
+      "repostCount": 1,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [
+        "multi-modal"
+      ],
+      "type": "bluesky"
     }
   ],
   "videos": [],
@@ -1323,10 +1406,111 @@
       "tags": [
         "evaluation"
       ]
+    },
+    {
+      "type": "x",
+      "id": "2021638881158857204",
+      "url": "https://x.com/emollick/status/2021638881158857204",
+      "author": {
+        "handle": "emollick",
+        "displayName": "Ethan Mollick",
+        "avatar": null
+      },
+      "content": "I pointed Claude Cowork at a set of 107 documents (PPTs, Word docs, Excel) that were initially...",
+      "createdAt": "2026-04-23T04:10:45.061Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Testing Claude Cowork's ability to process and analyze a large collection of mixed-format documents (107 PPTs, Word docs, Excel files).",
+      "worthReading": "Shows practical application of AI for document analysis and workflow automation.",
+      "tags": [
+        "agent",
+        "tooling"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2046728271849550331",
+      "url": "https://x.com/emollick/status/2046728271849550331",
+      "author": {
+        "handle": "emollick",
+        "displayName": "Ethan Mollick",
+        "avatar": null
+      },
+      "content": "My most popular AI post was a bunch of made-up 'graphs' four years ago.",
+      "createdAt": "2026-04-23T04:10:45.061Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Reflecting on how early, speculative AI content (including fabricated visualizations) gained significant traction compared to current, more substantive discussions.",
+      "worthReading": "Highlights the evolution of public discourse around AI from hype to nuanced analysis.",
+      "tags": [
+        "evaluation"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "1964447221853966775",
+      "url": "https://x.com/emollick/status/1964447221853966775",
+      "author": {
+        "handle": "emollick",
+        "displayName": "Ethan Mollick",
+        "avatar": null
+      },
+      "content": "We are starting to see some nuanced discussions of what it means to work with advanced AI...",
+      "createdAt": "2026-04-23T04:10:45.061Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Observing a shift towards more sophisticated and detailed conversations about the practical implications and challenges of collaborating with powerful AI systems.",
+      "worthReading": "Marks progress in moving beyond basic AI hype to deeper operational and ethical considerations.",
+      "tags": [
+        "deployment",
+        "safety"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2011523783467958585",
+      "url": "https://x.com/emollick/status/2011523783467958585",
+      "author": {
+        "handle": "emollick",
+        "displayName": "Ethan Mollick",
+        "avatar": null
+      },
+      "content": "Teaching an experimental class for MBAs on 'vibefounding,' the students have four days to come up and...",
+      "createdAt": "2026-04-23T04:10:45.061Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Running a hands-on MBA course focused on 'vibefounding'—rapid, vibe-driven startup ideation and validation within a tight four-day timeframe.",
+      "worthReading": "Demonstrates innovative, experiential education applying entrepreneurial principles under extreme constraints.",
+      "tags": [
+        "deployment"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2046362044786458648",
+      "url": "https://x.com/emollick/status/2046362044786458648",
+      "author": {
+        "handle": "emollick",
+        "displayName": "Ethan Mollick",
+        "avatar": null
+      },
+      "content": "Classic study gave 146 economist teams the same dataset & got wildly different answers...",
+      "createdAt": "2026-04-23T04:10:45.061Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Citing research showing significant variability in conclusions drawn by different expert teams analyzing identical data, underscoring subjectivity in analysis.",
+      "worthReading": "Illustrates fundamental challenges in data interpretation and the limits of objective analysis even among experts.",
+      "tags": [
+        "evaluation"
+      ]
     }
   ],
   "dailyCounts": [
-    0,
     0,
     0,
     0,
@@ -1355,7 +1539,8 @@
     5,
     6,
     7,
-    4
+    7,
+    6
   ],
-  "interestSummary": "Ethan Mollick is closely tracking frontier AI model developments, particularly Anthropic's Claude Mythos, analyzing its capabilities, security implications, and distinct stylistic flaws. He is also exploring AI's impact on education, writing style, game industry adaptation, and public perception, while experimenting with AI in his MBA teaching."
+  "interestSummary": "Ethan Mollick's recent focus is on analyzing the capabilities and societal impact of frontier AI models, particularly concerning cybersecurity risks and the competitive landscape among leading labs. He is also examining AI's influence on creative industries, education, and writing style, while tracking practical AI tool development and public perception."
 }

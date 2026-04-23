@@ -1,0 +1,53 @@
+{
+  "date": "2026-04-22",
+  "stars": [
+    {
+      "repo": "idesis-gmbh/GitHubExperiments",
+      "url": "https://github.com/idesis-gmbh/GitHubExperiments",
+      "description": " Experiments with GitHub event data ",
+      "language": "Python",
+      "stargazersCount": 9,
+      "starredBy": "simonw",
+      "starredAt": "2026-04-22T20:01:18Z",
+      "highlights": "This repository demonstrates practical data warehousing techniques for GitHub event data using modern tools like DuckDB and dbt. It provides concrete examples of dimensional modeling and star schema implementation for analyzing GitHub activity patterns.",
+      "worthReading": "It offers a real-world example of data engineering applied to GitHub analytics, which could inform similar projects analyzing developer activity or platform metrics.",
+      "topics": [
+        "data-warehouse",
+        "dbt",
+        "dimensional-modeling",
+        "duckdb",
+        "rill",
+        "star-schema"
+      ],
+      "tags": [],
+      "score": 3,
+      "scoreReason": "Low freshness (small repo with minimal traction), moderate relevance (data engineering rather than frontier AI), and good concreteness (specific implementation)."
+    },
+    {
+      "repo": "jundot/omlx",
+      "url": "https://github.com/jundot/omlx",
+      "description": "LLM inference server with continuous batching & SSD caching for Apple Silicon — managed from the macOS menu bar",
+      "language": "Python",
+      "stargazersCount": 11105,
+      "starredBy": "pcuenca",
+      "starredAt": "2026-04-22T14:56:20Z",
+      "highlights": "OMLX is an LLM inference server optimized for Apple Silicon with continuous batching and SSD caching for efficient memory management. It features a macOS menu bar interface for easy server management and supports OpenAI API compatibility for seamless integration.",
+      "worthReading": "It addresses the specific need for efficient LLM inference on Apple hardware with practical optimizations that developers can immediately use.",
+      "topics": [
+        "apple-silicon",
+        "inference-server",
+        "llm",
+        "macos",
+        "mlx",
+        "openai-api"
+      ],
+      "tags": [
+        "llm",
+        "infra",
+        "deployment"
+      ],
+      "score": 7,
+      "scoreReason": "Strong relevance to LLM infrastructure and deployment, good concreteness with specific optimizations, but moderate freshness given established star count."
+    }
+  ]
+}

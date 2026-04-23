@@ -615,10 +615,97 @@
         "llm",
         "tooling"
       ]
+    },
+    {
+      "type": "x",
+      "id": "1716181162354442450",
+      "url": "https://x.com/StasBekman/status/1716181162354442450",
+      "author": {
+        "handle": "stas00",
+        "displayName": "Stas Bekman",
+        "avatar": "https://avatars.githubusercontent.com/stas00"
+      },
+      "content": "I have been compiling LLM/VLM training logbooks/chronicles. This is the one of the best sources to...",
+      "createdAt": "2026-04-23T04:09:50.770Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Stas Bekman is compiling training logbooks/chronicles for LLMs and VLMs, suggesting he's documenting best practices and insights from model training processes.",
+      "worthReading": "Provides valuable documentation of real-world LLM/VLM training experiences that could help others optimize their training workflows.",
+      "tags": [
+        "llm",
+        "multi-modal",
+        "tooling"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2014578754782409106",
+      "url": "https://x.com/StasBekman/status/2014578754782409106",
+      "author": {
+        "handle": "stas00",
+        "displayName": "Stas Bekman",
+        "avatar": "https://avatars.githubusercontent.com/stas00"
+      },
+      "content": "Thanks to an awesome contribution from @omarnomad The Machine Learning Engineering Open book now can...",
+      "createdAt": "2026-04-23T04:09:50.770Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Stas Bekman acknowledges a contributor to the Machine Learning Engineering Open book, indicating his involvement in creating educational resources for ML engineering.",
+      "worthReading": "Shows collaboration in creating open educational resources for the ML community.",
+      "tags": [
+        "tooling",
+        "deployment",
+        "infra"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "1991318358453821818",
+      "url": "https://x.com/StasBekman/status/1991318358453821818",
+      "author": {
+        "handle": "stas00",
+        "displayName": "Stas Bekman",
+        "avatar": "https://avatars.githubusercontent.com/stas00"
+      },
+      "content": "To remind - this is the memory saving you get when enabling TiledMLP :) Left: normal memory...",
+      "createdAt": "2026-04-23T04:09:50.770Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Stas Bekman demonstrates memory savings achieved by enabling TiledMLP, showing practical optimization techniques for ML systems.",
+      "worthReading": "Provides concrete evidence of memory optimization techniques that can help scale ML models more efficiently.",
+      "tags": [
+        "infra",
+        "tooling",
+        "deployment"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "1915977608233423146",
+      "url": "https://x.com/StasBekman/status/1915977608233423146",
+      "author": {
+        "handle": "stas00",
+        "displayName": "Stas Bekman",
+        "avatar": "https://avatars.githubusercontent.com/stas00"
+      },
+      "content": "Modern art. Artist: PyTorch memory profiler Model: Llama-8B The piece on the left is the...",
+      "createdAt": "2026-04-23T04:09:50.770Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Stas Bekman humorously compares PyTorch memory profiling visualizations to modern art while working with Llama-8B model.",
+      "worthReading": "Offers a creative perspective on debugging and optimizing large language models through memory profiling.",
+      "tags": [
+        "llm",
+        "tooling",
+        "infra"
+      ]
     }
   ],
   "dailyCounts": [
-    0,
     0,
     0,
     0,
@@ -647,7 +734,8 @@
     4,
     4,
     4,
+    4,
     4
   ],
-  "interestSummary": "Stas Bekman is currently focused on large language model and vision-language model training optimization, with particular attention to DeepSpeed ZeRO++, Flash Attention 4, and PyTorch tooling, as well as compiling training logbooks and contributing to machine learning engineering resources."
+  "interestSummary": "Stas Bekman is currently focused on the practical challenges and tools for large-scale model training, including DeepSpeed ZeRO++, PyTorch development, and Flash Attention 4. He is also compiling resources on LLM/VLM training and sharing insights on hardware performance and machine learning engineering."
 }

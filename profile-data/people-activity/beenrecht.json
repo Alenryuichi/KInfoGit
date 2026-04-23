@@ -197,6 +197,27 @@
         "deployment"
       ],
       "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:oogxmzmgauh5ug2tfe5vc7wm/app.bsky.feed.post/3mk3phkjzas2m",
+      "url": "https://bsky.app/profile/beenwrekt.bsky.social/post/3mk3phkjzas2m",
+      "author": {
+        "handle": "beenwrekt.bsky.social",
+        "displayName": "Ben Recht",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:oogxmzmgauh5ug2tfe5vc7wm/bafkreigi5u3fn2porezvfmnxunm7zynzebk43tsrzvzeplciswiazdyqqe"
+      },
+      "content": "Building a theory of the architecture of organizing machines and people.",
+      "createdAt": "2026-04-22T14:29:12.312Z",
+      "likeCount": 14,
+      "replyCount": 0,
+      "repostCount": 2,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [
+        "agent",
+        "infra"
+      ],
+      "type": "bluesky"
     }
   ],
   "videos": [],
@@ -619,6 +640,67 @@
       "tags": [
         "infra"
       ]
+    },
+    {
+      "type": "x",
+      "id": "1841846986351509513",
+      "url": "https://x.com/beenwrekt/status/1841846986351509513",
+      "author": {
+        "handle": "beenwrekt",
+        "displayName": "Ben Recht",
+        "avatar": null
+      },
+      "content": "In the first applications lecture of the semester, we build a general framework for generating the real",
+      "createdAt": "2026-04-23T04:11:45.187Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Teaching a framework for inverse problems in applications lecture. Focus on generating real-world solutions from data.",
+      "worthReading": "Shows Recht's pedagogical approach to applied optimization and machine learning.",
+      "tags": [
+        "evaluation"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2014360939563520146",
+      "url": "https://x.com/beenwrekt/status/2014360939563520146",
+      "author": {
+        "handle": "beenwrekt",
+        "displayName": "Ben Recht",
+        "avatar": null
+      },
+      "content": "For the first time in almost a decade, I'm teaching a class on learning and control.",
+      "createdAt": "2026-04-23T04:11:45.187Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Returning to teaching a course on learning and control after nearly ten years. Indicates renewed focus on this intersection.",
+      "worthReading": "Highlights Recht's expertise and ongoing commitment to the intersection of learning theory and control systems.",
+      "tags": [
+        "evaluation"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "1986456299081769208",
+      "url": "https://x.com/beenwrekt/status/1986456299081769208",
+      "author": {
+        "handle": "beenwrekt",
+        "displayName": "Ben Recht",
+        "avatar": null
+      },
+      "content": "Everyone knows actions are fundamentally different than predictions, but it's hard to write this",
+      "createdAt": "2026-04-23T04:11:45.187Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Acknowledges the conceptual gap between prediction and action in AI/ML systems. Suggests this distinction is important but challenging to formalize.",
+      "worthReading": "Touches on a core philosophical and practical challenge in deploying machine learning models for decision-making.",
+      "tags": [
+        "agent",
+        "deployment"
+      ]
     }
   ],
   "dailyCounts": [
@@ -634,7 +716,6 @@
     0,
     0,
     0,
-    0,
     2,
     2,
     0,
@@ -651,7 +732,8 @@
     2,
     4,
     3,
-    4
+    5,
+    3
   ],
-  "interestSummary": "Ben Recht is focused on the intersection of simulation, control theory, and machine learning, particularly in relation to prediction, uncertainty quantification, and the replication crisis in science and ML. He is also actively teaching a class on learning and control after nearly a decade, and engaging with critiques of AI enthusiasm and \"silicon sampling.\""
+  "interestSummary": "Ben Recht's recent focus is on critically examining the foundations and hype of modern AI, particularly through the lenses of simulation, prediction, and control theory. He is also actively teaching and writing about learning and control, replication in science, and the engineering architecture of complex systems."
 }

@@ -61,6 +61,33 @@
       "scoreReason": "Strong relevance to frontier AI (agent automation) and concrete implementation, with moderate freshness as a rising repository gaining traction.",
       "starredAt": "2026-04-21T16:54:46Z",
       "type": "github"
+    },
+    {
+      "repo": "jundot/omlx",
+      "url": "https://github.com/jundot/omlx",
+      "description": "LLM inference server with continuous batching & SSD caching for Apple Silicon — managed from the macOS menu bar",
+      "language": "Python",
+      "stargazersCount": 11105,
+      "starredBy": "pcuenca",
+      "starredAt": "2026-04-22T14:56:20Z",
+      "highlights": "OMLX is an LLM inference server optimized for Apple Silicon with continuous batching and SSD caching for efficient memory management. It features a macOS menu bar interface for easy server management and supports OpenAI API compatibility for seamless integration.",
+      "worthReading": "It addresses the specific need for efficient LLM inference on Apple hardware with practical optimizations that developers can immediately use.",
+      "topics": [
+        "apple-silicon",
+        "inference-server",
+        "llm",
+        "macos",
+        "mlx",
+        "openai-api"
+      ],
+      "tags": [
+        "llm",
+        "infra",
+        "deployment"
+      ],
+      "score": 7,
+      "scoreReason": "Strong relevance to LLM infrastructure and deployment, good concreteness with specific optimizations, but moderate freshness given established star count.",
+      "type": "github"
     }
   ],
   "posts": [],
@@ -88,15 +115,15 @@
     0,
     0,
     0,
-    0,
     1,
     0,
     1,
     0,
     0,
     0,
+    1,
     1,
     0
   ],
-  "interestSummary": "Pedro Cuenca's recent interests focus on generative models, specifically VQ-VAE implementations, and machine learning engineering tooling, including complexity detection and an open-source ML agent."
+  "interestSummary": "Pedro Cuenca's recent activity shows a strong focus on machine learning infrastructure and research, particularly around efficient model training, inference optimization, and novel architectures like VQ-VAE."
 }

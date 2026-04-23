@@ -367,6 +367,49 @@
         "infra",
         "deployment"
       ]
+    },
+    {
+      "type": "x",
+      "id": "2010044779225329688",
+      "url": "https://x.com/hwchase17/status/2010044779225329688",
+      "author": {
+        "handle": "hwchase17",
+        "displayName": "Harrison Chase",
+        "avatar": "https://avatars.githubusercontent.com/hwchase17"
+      },
+      "content": "This means that operations you would do on code in the software world, you now do on traces in the agent world. Debugging, testing, profiling",
+      "createdAt": "2026-04-23T04:07:35.077Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Harrison Chase draws a parallel between software engineering practices and agent development, emphasizing the importance of traces for debugging, testing, and profiling in the agent world.",
+      "worthReading": "It provides a foundational analogy for understanding the operational shift required when building and maintaining AI agents.",
+      "tags": [
+        "agent",
+        "tooling",
+        "evaluation"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2009732201269588479",
+      "url": "https://x.com/hwchase17/status/2009732201269588479",
+      "author": {
+        "handle": "hwchase17",
+        "displayName": "Harrison Chase",
+        "avatar": "https://avatars.githubusercontent.com/hwchase17"
+      },
+      "content": "traces matter!",
+      "createdAt": "2026-04-23T04:07:35.077Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Harrison Chase succinctly emphasizes the critical importance of traces in the development and operation of AI agent systems.",
+      "worthReading": "It captures a core, actionable principle for engineers working on observable and debuggable agent systems.",
+      "tags": [
+        "agent",
+        "tooling"
+      ]
     }
   ],
   "dailyCounts": [
@@ -394,12 +437,12 @@
     0,
     0,
     0,
-    0,
     4,
     3,
     3,
     4,
-    3
+    3,
+    2
   ],
-  "interestSummary": "Harrison Chase is focused on advancing AI agent development, particularly through LangChain's new no-code Agent Builder with integrated memory systems, and emphasizing the need for sandboxed workspaces where agents can run code and access files, as well as the importance of iterating on production traces rather than traditional code."
+  "interestSummary": "Harrison Chase is focused on the development and deployment of AI agents, emphasizing the need for sandboxed workspaces and specialized tools like LangSmith for building, monitoring, and iterating on agents in production."
 }

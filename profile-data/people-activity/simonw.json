@@ -148,6 +148,55 @@
       "scoreReason": "Good freshness with moderate traction, high relevance to agent tooling, and concrete specification format.",
       "starredAt": "2026-04-21T17:43:27Z",
       "type": "github"
+    },
+    {
+      "repo": "idesis-gmbh/GitHubExperiments",
+      "url": "https://github.com/idesis-gmbh/GitHubExperiments",
+      "description": " Experiments with GitHub event data ",
+      "language": "Python",
+      "stargazersCount": 9,
+      "starredBy": "simonw",
+      "starredAt": "2026-04-22T20:01:18Z",
+      "highlights": "This repository demonstrates practical data warehousing techniques for GitHub event data using modern tools like DuckDB and dbt. It provides concrete examples of dimensional modeling and star schema implementation for analyzing GitHub activity patterns.",
+      "worthReading": "It offers a real-world example of data engineering applied to GitHub analytics, which could inform similar projects analyzing developer activity or platform metrics.",
+      "topics": [
+        "data-warehouse",
+        "dbt",
+        "dimensional-modeling",
+        "duckdb",
+        "rill",
+        "star-schema"
+      ],
+      "tags": [],
+      "score": 3,
+      "scoreReason": "Low freshness (small repo with minimal traction), moderate relevance (data engineering rather than frontier AI), and good concreteness (specific implementation).",
+      "type": "github"
+    },
+    {
+      "repo": "run-llama/liteparse",
+      "url": "https://github.com/run-llama/liteparse",
+      "description": "A fast, helpful, and open-source document parser",
+      "language": "TypeScript",
+      "stargazersCount": 4528,
+      "starredBy": "simonw",
+      "starredAt": "2026-04-23T03:00:15Z",
+      "highlights": "Liteparse is a fast, open-source document parser that efficiently extracts text from PDFs and images using OCR. It provides a helpful API for developers needing reliable document processing with TypeScript support.",
+      "worthReading": "It's worth exploring because it offers a practical, production-ready solution for document parsing that's gaining traction among developers, and being starred by Simon Willison suggests it addresses real-world needs.",
+      "topics": [
+        "document-ocr",
+        "document-processing",
+        "ocr",
+        "ocr-recognition",
+        "pdf",
+        "pdf-parser",
+        "text-extraction"
+      ],
+      "tags": [
+        "tooling"
+      ],
+      "score": 5,
+      "scoreReason": "Moderate freshness with growing stars, good relevance as AI tooling, and high concreteness as a working library.",
+      "type": "github"
     }
   ],
   "posts": [
@@ -421,6 +470,27 @@
       "worthReading": "",
       "tags": [
         "deployment"
+      ],
+      "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mk3xe6ii2c2z",
+      "url": "https://bsky.app/profile/simonwillison.net/post/3mk3xe6ii2c2z",
+      "author": {
+        "handle": "simonwillison.net",
+        "displayName": "Simon Willison",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
+      },
+      "content": "The new Qwen3.6-27B just gave me definitely the best pelican riding a bicycle I've had from a 16.8GB model file! simonwillison.net/2026/Apr/22/...",
+      "createdAt": "2026-04-22T16:50:28.949Z",
+      "likeCount": 137,
+      "replyCount": 6,
+      "repostCount": 6,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [
+        "llm",
+        "multi-modal"
       ],
       "type": "bluesky"
     }
@@ -870,10 +940,51 @@
         "agent",
         "tooling"
       ]
+    },
+    {
+      "type": "x",
+      "id": "1976989054240800798",
+      "url": "https://x.com/simonw/status/1976989054240800798",
+      "author": {
+        "handle": "simonw",
+        "displayName": "Simon Willison",
+        "avatar": "https://avatars.githubusercontent.com/simonw"
+      },
+      "content": "I'm beginning to suspect that a key skill in working effectively with coding agents is developing an intuition for when you don't need to",
+      "createdAt": "2026-04-23T04:07:23.879Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Working with coding agents requires developing intuition about when not to use them, suggesting efficiency comes from selective application rather than constant reliance.",
+      "worthReading": "It highlights a nuanced skill for developers using AI coding assistants, moving beyond simple automation to strategic decision-making.",
+      "tags": [
+        "agent",
+        "tooling"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "1975570458683834729",
+      "url": "https://x.com/simonw/status/1975570458683834729",
+      "author": {
+        "handle": "simonw",
+        "displayName": "Simon Willison",
+        "avatar": "https://avatars.githubusercontent.com/simonw"
+      },
+      "content": "Vibe coding is irresponsibly building software through dice rolls, not caring what code is produced",
+      "createdAt": "2026-04-23T04:07:23.879Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Criticizes 'vibe coding' as irresponsible software development that relies on random outcomes without concern for code quality or correctness.",
+      "worthReading": "This tweet warns against careless AI-assisted coding practices that prioritize speed over responsible engineering.",
+      "tags": [
+        "agent",
+        "safety"
+      ]
     }
   ],
   "dailyCounts": [
-    0,
     0,
     0,
     0,
@@ -902,7 +1013,8 @@
     4,
     4,
     8,
+    5,
     3
   ],
-  "interestSummary": "Simon Willison is currently focused on testing and comparing the latest AI models (especially Claude Opus 4.7 and Gemini Flash TTS), exploring local model performance and coding agent workflows, while also experimenting with creative benchmarks like generating pelican images and engaging with AI memory systems and lightweight virtual machine tools."
+  "interestSummary": "Simon Willison is intensely focused on evaluating and experimenting with the latest AI models and tools, particularly through creative benchmarks like generating images of \"pelicans riding bicycles.\" His recent activity also shows deep interest in AI coding agents, model pricing and capabilities, and parsing or working with documents and data."
 }
