@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
-import { BookOpen, ExternalLink, Activity, RadioReceiver, GitCommit } from 'lucide-react'
+import { ExternalLink, RadioReceiver, GitCommit } from 'lucide-react'
 
 export interface ReadingIssue {
   id: number
@@ -36,6 +36,8 @@ export function ReadingList({ initialIssues = [], className = '' }: ReadingListP
   const [mounted, setMounted] = useState(false)
   
   useEffect(() => {
+    // SSR/CSR hydration gate for time-based rendering
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setMounted(true)
   }, [])
 

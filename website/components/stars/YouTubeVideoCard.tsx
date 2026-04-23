@@ -32,6 +32,7 @@ export function YouTubeVideoCard({ video, personMap }: YouTubeVideoCardProps) {
             rel="noopener noreferrer"
             className="flex-shrink-0 w-40 sm:w-48 aspect-video rounded-lg overflow-hidden bg-white/[0.04] group"
           >
+            {/* eslint-disable-next-line @next/next/no-img-element -- external YouTube i.ytimg.com thumbnail */}
             <img
               src={video.thumbnail}
               alt={video.title}

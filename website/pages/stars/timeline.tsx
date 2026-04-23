@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useMemo, useState } from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
 import type { GetStaticProps } from 'next'
@@ -46,8 +46,15 @@ export default function Timeline({ items, personMap }: TimelineProps) {
 
   const visible = filtered.slice(0, visibleCount)
 
-  // Group by date for date separators
-  let lastDate = ''
+  // Pre-compute date separators (avoid mutating outer var during render)
+  const visibleWithDateFlag = useMemo(
+    () =>
+      visible.map((tItem, idx) => ({
+        tItem,
+        showDate: idx === 0 || tItem.date !== visible[idx - 1].date,
+      })),
+    [visible]
+  )
 
   return (
     <>
@@ -106,10 +113,7 @@ export default function Timeline({ items, personMap }: TimelineProps) {
 
           {/* Timeline items */}
           <div>
-            {visible.map((tItem, idx) => {
-              const showDate = tItem.date !== lastDate
-              lastDate = tItem.date
-
+            {visibleWithDateFlag.map(({ tItem, showDate }, idx) => {
               const d = new Date(tItem.date + 'T00:00:00')
               const formatted = d.toLocaleDateString('en-US', {
                 weekday: 'short',

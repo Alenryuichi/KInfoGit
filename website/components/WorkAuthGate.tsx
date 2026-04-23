@@ -40,6 +40,7 @@ export function WorkAuthGate({
         }
       })
     } else {
+      // eslint-disable-next-line react-hooks/set-state-in-effect -- sync fallback when no stored password
       setAutoChecking(false)
     }
   }, [encryptedPayload, onDecrypted])

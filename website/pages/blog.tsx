@@ -305,9 +305,9 @@ export default function BlogPage({ posts }: BlogPageProps) {
                     Handpicked <span className="font-serif italic font-light text-white/70">Insights</span>
                 </h1>
                 <div className="font-mono text-xs text-white/30 pb-1.5 flex items-center gap-2">
-                  <span className="text-purple-500/50">/*</span>
+                  <span className="text-purple-500/50">{'/*'}</span>
                   Question <span className="text-white/20">·</span> Reason <span className="text-white/20">·</span> Document
-                  <span className="text-purple-500/50">*/</span>
+                  <span className="text-purple-500/50">{'*/'}</span>
                 </div>
               </div>
             </motion.div>

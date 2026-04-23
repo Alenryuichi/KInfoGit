@@ -99,6 +99,8 @@ export function GitHubActivity({ className = '', initialRepos = [], initialPRs =
   const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
+    // SSR/CSR hydration gate for time-based rendering
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setMounted(true)
   }, [])
 

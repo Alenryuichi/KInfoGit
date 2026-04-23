@@ -262,7 +262,7 @@ function loadGitHubStars(date: string): StarredRepo[] {
     const content = fs.readFileSync(filePath, 'utf-8')
     const data = JSON.parse(content)
     // Ensure all items have type: 'github'
-    return (data.stars || []).map((star: any) => ({
+    return (data.stars || []).map((star: Record<string, unknown>) => ({
       ...star,
       type: 'github' as const,
       tags: star.tags ?? [],
@@ -284,7 +284,7 @@ function loadBlueskyPosts(date: string): BlueskyPost[] {
     const content = fs.readFileSync(filePath, 'utf-8')
     const data = JSON.parse(content)
     // Ensure all items have type: 'bluesky'
-    return (data.posts || []).map((post: any) => ({
+    return (data.posts || []).map((post: Record<string, unknown>) => ({
       ...post,
       type: 'bluesky' as const,
       tags: post.tags ?? [],
@@ -303,7 +303,7 @@ function loadBlogPosts(date: string): BlogPost[] {
   try {
     const content = fs.readFileSync(filePath, 'utf-8')
     const data = JSON.parse(content)
-    return (data.posts || []).map((post: any) => ({
+    return (data.posts || []).map((post: Record<string, unknown>) => ({
       ...post,
       type: 'blog' as const,
     }))
@@ -321,7 +321,7 @@ function loadYouTubeVideos(date: string): YouTubeVideo[] {
   try {
     const content = fs.readFileSync(filePath, 'utf-8')
     const data = JSON.parse(content)
-    return (data.videos || []).map((video: any) => ({
+    return (data.videos || []).map((video: Record<string, unknown>) => ({
       ...video,
       type: 'youtube' as const,
       tags: video.tags ?? [],
@@ -341,7 +341,7 @@ function loadXSignals(date: string): XPost[] {
     const content = fs.readFileSync(filePath, 'utf-8')
     const data = JSON.parse(content)
     // Ensure all items have type: 'x'
-    return (data.posts || []).map((post: any) => ({
+    return (data.posts || []).map((post: Record<string, unknown>) => ({
       ...post,
       type: 'x' as const,
       tags: post.tags ?? [],

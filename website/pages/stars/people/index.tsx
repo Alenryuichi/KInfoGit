@@ -2,7 +2,6 @@ import Head from 'next/head'
 import Link from 'next/link'
 import type { GetStaticProps } from 'next'
 import { getAllPeople, type PersonSummary } from '@/lib/people'
-import { Github, MessageSquare, Youtube, FileText } from 'lucide-react'
 
 interface PeopleIndexProps {
   people: PersonSummary[]

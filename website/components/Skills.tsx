@@ -102,6 +102,8 @@ export function Skills() {
   const [mounted, setMounted] = React.useState(false)
 
   useEffect(() => {
+    // SSR/CSR hydration gate to avoid framer-motion SSR mismatch
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setMounted(true)
   }, [])
 

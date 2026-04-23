@@ -151,7 +151,7 @@ function ItemCard({ item, personMap }: { item: FeedItem; personMap: Record<strin
             </div>
             {item.highlights && (
               <div className="mt-3 text-xs text-gray-400 border-l border-white/10 pl-4 py-1 italic font-serif">
-                "{item.highlights}"
+                &ldquo;{item.highlights}&rdquo;
               </div>
             )}
           </div>
@@ -208,7 +208,7 @@ function ItemCard({ item, personMap }: { item: FeedItem; personMap: Record<strin
             </div>
             {item.highlights && (
               <div className="mt-3 text-xs text-gray-400 border-l border-blue-500/30 pl-4 py-1 italic font-serif">
-                "DeepSeek Summary: {item.highlights}"
+                &ldquo;DeepSeek Summary: {item.highlights}&rdquo;
               </div>
             )}
           </div>
@@ -263,7 +263,7 @@ function ItemCard({ item, personMap }: { item: FeedItem; personMap: Record<strin
             </div>
             {item.highlights && (
               <div className="mt-3 text-xs text-gray-400 border-l border-red-500/30 pl-4 py-1 italic font-serif">
-                "{item.highlights}"
+                &ldquo;{item.highlights}&rdquo;
               </div>
             )}
           </div>
@@ -301,7 +301,7 @@ function ItemCard({ item, personMap }: { item: FeedItem; personMap: Record<strin
             </div>
             {item.highlights && (
               <div className="mt-3 text-xs text-gray-400 border-l border-emerald-500/30 pl-4 py-1 italic font-serif">
-                "{item.highlights}"
+                &ldquo;{item.highlights}&rdquo;
               </div>
             )}
           </div>
@@ -361,7 +361,7 @@ function ItemCard({ item, personMap }: { item: FeedItem; personMap: Record<strin
             </div>
             {item.highlights && (
               <div className="mt-3 text-xs text-gray-400 border-l border-gray-500/30 pl-4 py-1 italic font-serif">
-                "DeepSeek Summary: {item.highlights}"
+                &ldquo;DeepSeek Summary: {item.highlights}&rdquo;
               </div>
             )}
           </div>
@@ -465,11 +465,9 @@ function SourceFilter({
 // --- Date Navigation (Terminal Style) ---
 
 function DateNav({
-  currentDate,
   prevDate,
   nextDate,
 }: {
-  currentDate: string
   prevDate: string | null
   nextDate: string | null
 }) {
@@ -621,7 +619,7 @@ export default function StarsDetail({ daily, prevDate, nextDate, allTags, person
         <div className="max-w-4xl mx-auto px-6 pt-24 pb-32 relative z-10">
           
           {/* Top Date Nav */}
-          <DateNav currentDate={daily.date} prevDate={prevDate} nextDate={nextDate} />
+          <DateNav prevDate={prevDate} nextDate={nextDate} />
 
           {/* Terminal Header */}
           <div className="mb-12">

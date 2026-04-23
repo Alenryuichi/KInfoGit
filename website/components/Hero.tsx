@@ -1,5 +1,4 @@
 import { useEffect } from 'react'
-import { motion } from 'framer-motion'
 import { Github, Linkedin, Mail, ArrowRight, Users } from 'lucide-react'
 import { animateHeroEntrance } from '@/utils/animations'
 import Link from 'next/link'

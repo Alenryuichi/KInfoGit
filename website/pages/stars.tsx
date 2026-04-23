@@ -13,6 +13,7 @@ import {
   type WeeklyDigest,
   type TagStat,
   type HighlightItem,
+  type BlogPost,
 } from '@/lib/social-feeds'
 import { Github, MessageSquare, Youtube, FileText } from 'lucide-react'
 import { TagCloud } from '@/components/stars/TagCloud'
@@ -199,7 +200,7 @@ export default function StarsList({ dates, latestDigest, tagStats, highlights }:
                         ? hl.item.content.slice(0, 50) + '...'
                         : type === 'youtube'
                         ? hl.item.title
-                        : (hl.item as any).title
+                        : (hl.item as BlogPost).title
                     const stats =
                       type === 'github'
                         ? `★ ${(hl.item.stargazersCount / 1000).toFixed(1)}k`
@@ -221,7 +222,7 @@ export default function StarsList({ dates, latestDigest, tagStats, highlights }:
                         ? hl.item.content
                         : type === 'youtube'
                         ? hl.item.description
-                        : (hl.item as any).summary
+                        : (hl.item as BlogPost).summary
 
                     return (
                       <div key={i} className="group flex flex-col">

@@ -13,6 +13,7 @@ export function PersonCard({ person }: PersonCardProps) {
     >
       <div className="flex items-center gap-3 mb-3">
         {person.avatar ? (
+          // eslint-disable-next-line @next/next/no-img-element -- external GitHub/X avatar, small icon
           <img
             src={person.avatar}
             alt={person.name}

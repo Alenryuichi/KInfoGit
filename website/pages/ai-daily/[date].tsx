@@ -111,7 +111,7 @@ function BriefWithLinks({ text }: { text: string }) {
               onClick={(e) => {
                 e.preventDefault()
                 const targetId = match[2].slice(1)
-                const target = document.getElementById(targetId)
+                const target = document.getElementById(targetId) as (HTMLElement & { _bracketTimer?: ReturnType<typeof setTimeout> }) | null
                 if (target) {
                   // Smooth scroll to target, accounting for header offset
                   const offset = 120
@@ -123,7 +123,7 @@ function BriefWithLinks({ text }: { text: string }) {
                     target.classList.remove('target-bracket-lock')
                   }
                   
-                  if ((target as any)._bracketTimer) clearTimeout((target as any)._bracketTimer)
+                  if (target._bracketTimer) clearTimeout(target._bracketTimer)
                   
                   // Force browser to paint a frame without the class to restart CSS animations
                   requestAnimationFrame(() => {
@@ -133,7 +133,7 @@ function BriefWithLinks({ text }: { text: string }) {
                       }
                       
                       // Bracket and track CSS animations completely finish at 2.5s
-                      (target as any)._bracketTimer = setTimeout(() => {
+                      target._bracketTimer = setTimeout(() => {
                         if (target && target.classList && typeof target.classList.remove === 'function') {
                           target.classList.remove('target-bracket-lock')
                         }
@@ -315,15 +315,11 @@ function SectionBlock({ section, filterTopic }: { section: DigestSection; filter
 // ─── Date Navigation ────────────────────────────────────────
 
 function DateNav({
-  currentDate,
   prevDate,
   nextDate,
-  allDates,
 }: {
-  currentDate: string
   prevDate: string | null
   nextDate: string | null
-  allDates: string[]
 }) {
   return (
     <div className="flex items-center justify-between mb-12 text-xs font-mono text-gray-500 border-b border-white/5 pb-4">
@@ -359,7 +355,7 @@ function DateNav({
 
 // ─── Page ───────────────────────────────────────────────────
 
-export default function AiDailyDetail({ digest, prevDate, nextDate, allDates, allFocusTopics, minScore }: AiDailyDetailProps) {
+export default function AiDailyDetail({ digest, prevDate, nextDate, allFocusTopics, minScore }: AiDailyDetailProps) {
   const [activeTopic, setActiveTopic] = useState<string | null>(null)
 
   const d = new Date(digest.date + 'T00:00:00')
@@ -389,10 +385,8 @@ export default function AiDailyDetail({ digest, prevDate, nextDate, allDates, al
           
           {/* Top Date nav */}
           <DateNav
-            currentDate={digest.date}
             prevDate={prevDate}
             nextDate={nextDate}
-            allDates={allDates}
           />
 
           {/* Header */}

@@ -7,8 +7,20 @@ interface FeaturedProjectsProps {
   projects: Project[]
 }
 
+interface ProjectProcessMetric {
+    label: string
+    value: string
+    percent: number
+}
+
+interface ProjectProcessData {
+    pid: string
+    metrics: ProjectProcessMetric[]
+    logs: string[]
+}
+
 function getProjectProcessData(id: string) {
-    const data: Record<string, any> = {
+    const data: Record<string, ProjectProcessData> = {
         'betaline': {
             pid: '00001',
             metrics: [
@@ -167,7 +179,7 @@ export function FeaturedProjects({ projects }: FeaturedProjectsProps) {
 
                       {/* Hardcore TUI Metrics */}
                       <div className="space-y-2.5 font-mono text-[0.6rem] mb-4">
-                          {processData.metrics.map((m: any, i: number) => (
+                          {processData.metrics.map((m, i) => (
                               <div key={i} className="flex items-center justify-between">
                                   <span className="text-white/50 w-20 truncate">{m.label}</span>
                                   {renderTuiBar(m.percent)}

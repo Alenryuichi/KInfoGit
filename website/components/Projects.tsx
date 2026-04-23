@@ -7,9 +7,23 @@ interface ProjectsProps {
 	projects: Project[]
 }
 
+interface ProjectProcessMetric {
+    label: string
+    value: string
+    percent: number
+}
+
+interface ProjectProcessData {
+    pid: string
+    mem: string
+    env: string
+    metrics: ProjectProcessMetric[]
+    logs: string[]
+}
+
 // 辅助函数：根据项目 ID 映射硬核监控数据和日志
 function getProjectProcessData(id: string) {
-    const data: Record<string, any> = {
+    const data: Record<string, ProjectProcessData> = {
         'betaline': {
             pid: '00001',
             mem: '32MB',
@@ -170,7 +184,7 @@ function ProjectCard({ project }: { project: Project }) {
 
                 {/* Hardcore TUI Metrics */}
                 <div className="space-y-3 font-mono text-[0.65rem] mb-6">
-                    {processData.metrics.map((m: any, i: number) => (
+                    {processData.metrics.map((m, i) => (
                         <div key={i} className="flex items-center justify-between">
                             <span className="text-white/50 w-24 truncate">{m.label}</span>
                             {renderTuiBar(m.percent)}
