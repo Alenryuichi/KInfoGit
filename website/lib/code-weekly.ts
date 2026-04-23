@@ -317,3 +317,172 @@ export function getOrgTrendData(): OrgTrendSeries[] {
 
   return allSeries.slice(0, TOP_N_ORGS)
 }
+
+// ─── Editor Diff Matrix ────────────────────────────────────
+//
+// Build-time composition for the "Week-over-Week Overview" section on
+// /code/[week]. Turns two EditorUpdate[] arrays (current + optional
+// previous) into a compact matrix for scan-level cross-editor reading.
+//
+// This is all deterministic / keyword-match based — no LLM. See
+// openspec/changes/archive/YYYY-MM-DD-code-weekly-editor-diff/design.md
+// for the rationale on why we intentionally avoid LLM scoring here.
+
+export type EditorTheme = 'release' | 'feature' | 'fix' | 'perf' | 'policy' | 'integration'
+
+export type EditorWowDelta =
+  | 'first'         // this week has activity, last week had 0 → ✨ first-time
+  | 'silent'        // this week has 0, last week had activity → ⚠ silent
+  | 'accelerating'  // delta ≥ +2 → ↑
+  | 'slowing'       // delta ≤ −2 → ↓
+  | 'steady'        // small fluctuation → →
+  | 'unknown'       // no previous-week record at all
+
+export interface EditorDiffRow {
+  name: string
+  category: 'ide' | 'cli'
+  version?: string
+  /** 0 = silent, 5 = heavy. See computeActivityDots for composition. */
+  activityDots: 0 | 1 | 2 | 3 | 4 | 5
+  /** Themes matched from highlights + aiSummary keyword scan. */
+  themes: EditorTheme[]
+  wow: EditorWowDelta
+}
+
+export interface EditorDiffMatrix {
+  ide: EditorDiffRow[]
+  cli: EditorDiffRow[]
+  /** True when previous-week data was available for WoW computation. */
+  hasPrevious: boolean
+}
+
+/**
+ * Declaration order here is the render order of theme chips in the UI.
+ * CN + EN keywords; case-insensitive matching on .toLowerCase() of input.
+ */
+const THEME_KEYWORDS: Record<EditorTheme, string[]> = {
+  release:     ['release', 'launch', 'announce', 'ga', '发布', '推出', '宣布', '上线'],
+  feature:     ['feature', ' new ', 'introduce', 'add support', '新增', '引入', '新功能', '新增功能'],
+  fix:         ['fix', 'bug', 'patch', 'issue', '修复', '问题', '错误', '补丁'],
+  perf:        ['performance', 'speed', 'memory', 'cpu', 'faster', '性能', '速度', '内存', '优化'],
+  policy:      ['policy', 'privacy', 'training data', 'opt-out', 'opt out', '政策', '隐私', '训练', '数据隐私'],
+  integration: ['integration', 'provider', 'mcp', 'plugin', 'self-host', 'integrate', '集成', '支持', '插件', '提供商'],
+}
+
+/** Stub summary emitted by the pipeline when an editor has no real updates. */
+const STUB_AI_SUMMARY = '本周暂无重大更新'
+
+/**
+ * Visible text an editor update contributes to theme keyword scanning.
+ * Intentionally combines highlights + aiSummary so a summary that only
+ * mentions a theme (not a highlight) still gets counted.
+ */
+function scanText(editor: EditorUpdate): string {
+  const parts: string[] = []
+  for (const h of editor.highlights) parts.push(h)
+  if (editor.aiSummary) parts.push(editor.aiSummary)
+  return parts.join(' ').toLowerCase()
+}
+
+/**
+ * Classify themes by keyword hit. A theme is included if ANY of its
+ * keywords match; duplicates across keywords don't add weight (this is
+ * a set of labels, not a score).
+ */
+export function classifyThemes(editor: EditorUpdate): EditorTheme[] {
+  const text = scanText(editor)
+  if (!text) return []
+  const hit: EditorTheme[] = []
+  for (const [theme, keywords] of Object.entries(THEME_KEYWORDS) as Array<[EditorTheme, string[]]>) {
+    if (keywords.some(k => text.includes(k.toLowerCase()))) {
+      hit.push(theme)
+    }
+  }
+  return hit
+}
+
+/**
+ * Compose 0-5 activity dots from highlights count + version presence +
+ * stub-summary detection. See design.md for the exact table.
+ */
+export function computeActivityDots(editor: EditorUpdate): EditorDiffRow['activityDots'] {
+  // Defensive clamp: if the pipeline emitted the stub summary, we
+  // treat the editor as silent even if highlights has stray content.
+  if (editor.aiSummary === STUB_AI_SUMMARY) return 0
+
+  const n = editor.highlights.length
+  let base: 0 | 1 | 2 | 3 | 4 | 5
+  if (n === 0) base = 0
+  else if (n <= 1) base = 1
+  else if (n === 2) base = 2
+  else if (n === 3) base = 3
+  else if (n === 4) base = 4
+  else base = 5
+
+  // Version presence bumps by +1, capped at 5.
+  if (editor.version && editor.version.trim().length > 0) {
+    const bumped = Math.min(5, base + 1)
+    return bumped as EditorDiffRow['activityDots']
+  }
+  return base
+}
+
+/**
+ * Decide WoW delta kind. Both inputs may be undefined; if previous is
+ * missing, return 'unknown' so the UI can render "—".
+ */
+export function computeWow(
+  current: EditorUpdate,
+  previous: EditorUpdate | undefined,
+): EditorWowDelta {
+  if (!previous) return 'unknown'
+
+  const curN = current.highlights.length
+  const prevN = previous.highlights.length
+
+  // First-time / silent transitions take priority over delta size.
+  if (curN >= 2 && prevN === 0) return 'first'
+  if (curN === 0 && prevN >= 2) return 'silent'
+
+  const delta = curN - prevN
+  if (delta >= 2) return 'accelerating'
+  if (delta <= -2) return 'slowing'
+  return 'steady'
+}
+
+/**
+ * Build the full diff matrix. Iterates the current-week editor list,
+ * looks up each editor by name in the previous week (if provided), and
+ * groups results into ide / cli buckets sorted by activityDots DESC,
+ * name ASC.
+ */
+export function computeEditorDiffMatrix(
+  current: EditorUpdate[],
+  previous?: EditorUpdate[],
+): EditorDiffMatrix {
+  const prevByName = new Map<string, EditorUpdate>()
+  if (previous) {
+    for (const e of previous) prevByName.set(e.name, e)
+  }
+
+  const rows: EditorDiffRow[] = current.map(editor => ({
+    name: editor.name,
+    category: editor.category,
+    version: editor.version,
+    activityDots: computeActivityDots(editor),
+    themes: classifyThemes(editor),
+    wow: computeWow(editor, prevByName.get(editor.name)),
+  }))
+
+  // Split into ide / cli buckets, sort each.
+  const ide = rows.filter(r => r.category === 'ide')
+  const cli = rows.filter(r => r.category === 'cli')
+  const sortRows = (arr: EditorDiffRow[]) =>
+    arr.sort((a, b) => b.activityDots - a.activityDots || a.name.localeCompare(b.name))
+
+  return {
+    ide: sortRows(ide),
+    cli: sortRows(cli),
+    hasPrevious: Boolean(previous && previous.length > 0),
+  }
+}

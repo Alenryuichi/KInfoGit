@@ -5,9 +5,12 @@ import {
   getAllCodeWeeks,
   getCodeWeekByWeek,
   getAdjacentWeeks,
+  computeEditorDiffMatrix,
   type CodeWeekly,
+  type EditorDiffMatrix as EditorDiffMatrixData,
 } from '@/lib/code-weekly'
 import { EditorCard } from '@/components/code-weekly/EditorCard'
+import { EditorDiffMatrix } from '@/components/code-weekly/EditorDiffMatrix'
 import { ArenaRankingTable, AiderLeaderboardTable, SweBenchTable, LiveCodeBenchTable } from '@/components/code-weekly/BenchmarkTable'
 import { BlogCard } from '@/components/code-weekly/BlogCard'
 import { EcosystemCard } from '@/components/code-weekly/EcosystemCard'
@@ -19,6 +22,7 @@ interface CodeWeekDetailProps {
   prevWeek: string | null
   nextWeek: string | null
   allWeeks: string[]
+  editorDiffMatrix: EditorDiffMatrixData
 }
 
 // ─── Data Loading ──────────────────────────────────────────
@@ -39,7 +43,24 @@ export const getStaticProps: GetStaticProps<CodeWeekDetailProps> = async ({ para
   const { prev, next } = getAdjacentWeeks(week)
   const allWeeks = getAllCodeWeeks().map(w => w.week)
 
-  return { props: { data, prevWeek: prev, nextWeek: next, allWeeks } }
+  // Load previous-week editors for WoW diff. If no previous week exists
+  // (earliest week in dataset), matrix falls back to wow='unknown' for
+  // every row, rendered as "—" in the UI.
+  const prevWeekData = prev ? getCodeWeekByWeek(prev) : null
+  const editorDiffMatrix = computeEditorDiffMatrix(
+    data.editors,
+    prevWeekData?.editors,
+  )
+
+  return {
+    props: {
+      data,
+      prevWeek: prev,
+      nextWeek: next,
+      allWeeks,
+      editorDiffMatrix,
+    },
+  }
 }
 
 // ─── Week Navigation ───────────────────────────────────────
@@ -104,7 +125,7 @@ function WeekNav({
 
 // ─── Page ──────────────────────────────────────────────────
 
-export default function CodeWeekDetail({ data, prevWeek, nextWeek, allWeeks }: CodeWeekDetailProps) {
+export default function CodeWeekDetail({ data, prevWeek, nextWeek, allWeeks, editorDiffMatrix }: CodeWeekDetailProps) {
   const ideEditors = data.editors.filter(e => e.category === 'ide')
   const cliEditors = data.editors.filter(e => e.category === 'cli')
 
@@ -162,7 +183,17 @@ export default function CodeWeekDetail({ data, prevWeek, nextWeek, allWeeks }: C
                   <div className="w-1.5 h-5 bg-emerald-500 rounded-full"></div>
                   <h2 className="text-lg font-bold text-white tracking-wide">Editor Updates</h2>
                 </div>
-                
+
+                {/* Week-over-Week Overview matrix — compact scan view above the card grid */}
+                {data.editors.length > 0 && (
+                  <div className="mb-8">
+                    <h3 className="text-xs font-mono text-gray-500 uppercase tracking-[0.2em] mb-3">
+                      Week-over-Week Overview
+                    </h3>
+                    <EditorDiffMatrix matrix={editorDiffMatrix} />
+                  </div>
+                )}
+
                 <div className="space-y-8">
                   {/* IDE Group */}
                   {ideEditors.length > 0 && (
