@@ -1,0 +1,302 @@
+{
+  "week": "2026-W16",
+  "dateRange": {
+    "start": "2026-04-13",
+    "end": "2026-04-19"
+  },
+  "overview": "This week in AI was defined by the convergence of agent frameworks, model releases, and memory innovations. The standout story was the explosion of open-source agent harnesses, led by obra/superpowers and Donchitos/Claude-Code-Game-Studios, which both topped GitHub trending. These projects signal a shift toward reusable, skill-based agent architectures. Meanwhile, Anthropic's Claude Opus 4.7 release and OpenAI's GPT-Rosalind for drug discovery drove model-release coverage, with Opus 4.7 showing incremental improvements that sparked detailed tokenizer cost analysis and system prompt comparisons. The coding-agents topic saw Cursor's massive $50B valuation talk, underscoring the commercial momentum behind AI-assisted development tools.\n\nCross-topic patterns emerged as memory and context engineering became critical across agent harnesses and coding tools. Projects like claude-mem and Remoroo directly addressed the long-running agent memory problem, while research papers like MemGround provided evaluation kits for long-term memory. This focus on persistent context reflects a maturing understanding that agent utility hinges on statefulness. Additionally, tool-use frameworks like LangAlpha and Anthropic's skills repository standardized how agents interact with external tools, bridging the gap between harness and practical deployment.\n\nPlanning and reasoning saw notable research advances, with FM-Agent formalizing verification of LLM-generated code and Triadic Suffix Tokenization improving numerical reasoning. These papers, while academic, hint at the next frontier for coding agents. Post-training techniques also gained traction, with a teacher-student framework for fine-tuning reasoning models and GFT's reward-tuning approach, indicating that the community is moving beyond basic RLHF.\n\nOverall, the week was characterized by a pragmatic shift: open-source ecosystems are catching up to proprietary offerings, memory is the new frontier, and agent frameworks are becoming production-ready. The buzz around Claude Opus 4.7 and GPT-Rosalind shows that frontier models continue to drive headlines, but the real story lies in the infrastructure being built around them.",
+  "topStoriesByTopic": [
+    {
+      "topic": "coding-agents",
+      "topicLabel": "Coding Agents",
+      "stories": [
+        {
+          "title": "Donchitos/Claude-Code-Game-Studios",
+          "url": "https://github.com/Donchitos/Claude-Code-Game-Studios",
+          "oneLiner": "Transforms Claude Code into a full game studio with 49 AI agents and 72 workflow skills.",
+          "score": 9.1,
+          "sources": [
+            "GitHub"
+          ]
+        },
+        {
+          "title": "Sources: Cursor in talks to raise $2B+ at $50B valuation as enterprise growth surges | TechCrunch",
+          "url": "https://techcrunch.com/2026/04/17/sources-cursor-in-talks-to-raise-2b-at-50b-valuation-as-enterprise-growth-surges/",
+          "oneLiner": "Cursor's eye-popping valuation reflects the explosive enterprise demand for AI coding assistants.",
+          "score": 8,
+          "sources": [
+            "TechCrunch"
+          ]
+        },
+        {
+          "title": "anomalyco/opencode",
+          "url": "https://github.com/anomalyco/opencode",
+          "oneLiner": "Open-source coding agent that rivals proprietary assistants, democratizing AI pair programming.",
+          "score": 7.5,
+          "sources": [
+            "GitHub"
+          ]
+        }
+      ]
+    },
+    {
+      "topic": "agent-harness",
+      "topicLabel": "Agent Harness",
+      "stories": [
+        {
+          "title": "obra/superpowers",
+          "url": "https://github.com/obra/superpowers",
+          "oneLiner": "A framework that turns agent skills into a reusable methodology, boosting developer productivity.",
+          "score": 8.7,
+          "sources": [
+            "GitHub"
+          ]
+        },
+        {
+          "title": "lsdefine/GenericAgent",
+          "url": "https://github.com/lsdefine/GenericAgent",
+          "oneLiner": "Self-evolving agent that grows a skill tree from seeds, slashing token usage by 6x.",
+          "score": 8.5,
+          "sources": [
+            "GitHub"
+          ]
+        },
+        {
+          "title": "Credo: Declarative Control of LLM Pipelines via Beliefs and Policies",
+          "url": "https://arxiv.org/abs/2604.14401",
+          "oneLiner": "Academic framework for long-lived, stateful AI decision systems using beliefs and policies.",
+          "score": 8,
+          "sources": [
+            "ArXiv"
+          ]
+        }
+      ]
+    },
+    {
+      "topic": "planning",
+      "topicLabel": "Planning",
+      "stories": [
+        {
+          "title": "FM-Agent: Scaling Formal Verification of LLM-Generated Code via Hoare-Style Reasoning",
+          "url": "https://arxiv.org/abs/2604.11556v1",
+          "oneLiner": "Brings formal verification to LLM code generation, a critical step for reliable AI coding.",
+          "score": 9,
+          "sources": [
+            "ArXiv"
+          ]
+        },
+        {
+          "title": "Triadic Suffix Tokenization (TST) improves LLM numerical reasoning by partitioning digits into three-digit triads with magnitude markers",
+          "url": "https://arxiv.org/abs/2604.11582v1",
+          "oneLiner": "Simple tokenization tweak that significantly boosts LLM performance on math tasks.",
+          "score": 8,
+          "sources": [
+            "ArXiv"
+          ]
+        }
+      ]
+    },
+    {
+      "topic": "tool-use",
+      "topicLabel": "Tool Use",
+      "stories": [
+        {
+          "title": "LangAlpha: Open-source agent harness optimizes MCP tools for financial data with persistent workspaces",
+          "url": "https://github.com/ginlix-ai/langalpha",
+          "oneLiner": "Reduces context bloat by auto-generating typed Python modules from MCP schemas.",
+          "score": 8,
+          "sources": [
+            "GitHub",
+            "Hacker News"
+          ]
+        },
+        {
+          "title": "IBM's VAKRA Benchmark Analyzes AI Agent Reasoning, Tool Use, and Failures",
+          "url": "https://huggingface.co/blog/ibm-research/vakra-benchmark-analysis",
+          "oneLiner": "New benchmark systematically evaluates how agents reason and use tools, highlighting failure modes.",
+          "score": 8,
+          "sources": [
+            "Hugging Face"
+          ]
+        },
+        {
+          "title": "anthropics/skills",
+          "url": "https://github.com/anthropics/skills",
+          "oneLiner": "Anthropic open-sources agent skill templates, standardizing how agents interact with tools.",
+          "score": 7.5,
+          "sources": [
+            "GitHub"
+          ]
+        }
+      ]
+    },
+    {
+      "topic": "context-engineering",
+      "topicLabel": "Context Engineering",
+      "stories": [
+        {
+          "title": "thedotmack/claude-mem",
+          "url": "https://github.com/thedotmack/claude-mem",
+          "oneLiner": "Plugin that auto-captures and compresses coding session context, solving the memory problem for agents.",
+          "score": 8.5,
+          "sources": [
+            "GitHub"
+          ]
+        },
+        {
+          "title": "Measuring Claude 4.7's tokenizer costs",
+          "url": "https://www.claudecodecamp.com/p/i-measured-claude-4-7-s-new-tokenizer-here-s-what-it-costs-you",
+          "oneLiner": "Deep dive into the cost implications of Claude 4.7's new tokenizer, vital for budgeting.",
+          "score": 7.9,
+          "sources": [
+            "HN"
+          ]
+        },
+        {
+          "title": "MemGround: Long-Term Memory Evaluation Kit for Large Language Models in Gamified Scenarios",
+          "url": "https://arxiv.org/abs/2604.14158",
+          "oneLiner": "Gamified evaluation for LLM long-term memory, addressing a key gap in agent reliability.",
+          "score": 7.5,
+          "sources": [
+            "ArXiv"
+          ]
+        }
+      ]
+    },
+    {
+      "topic": "model-release",
+      "topicLabel": "Model Release",
+      "stories": [
+        {
+          "title": "OpenAI introduces GPT-Rosalind, its drug discovery AI - pharmaphorum",
+          "url": "https://pharmaphorum.com/news/openai-introduces-gpt-rosalind-its-drug-discovery-ai",
+          "oneLiner": "OpenAI enters drug discovery with a specialized model, challenging Google's AlphaFold ecosystem.",
+          "score": 8.8,
+          "sources": [
+            "pharmaphorum"
+          ]
+        },
+        {
+          "title": "[AINews] Anthropic Claude Opus 4.7 - literally one step better than 4.6 in every dimension [Latent Space]",
+          "url": "https://www.latent.space/p/ainews-anthropic-claude-opus-47-literally",
+          "oneLiner": "Claude Opus 4.7 delivers broad but modest improvements, setting a new baseline for frontier models.",
+          "score": 8.5,
+          "sources": [
+            "Latent Space"
+          ]
+        }
+      ]
+    },
+    {
+      "topic": "evals",
+      "topicLabel": "Evals",
+      "stories": [
+        {
+          "title": "Anonymous request-token comparisons from Opus 4.6 and Opus 4.7",
+          "url": "https://tokens.billchambers.me/leaderboard",
+          "oneLiner": "Community-driven benchmark comparing token usage across Claude versions, aiding cost optimization.",
+          "score": 7.2,
+          "sources": [
+            "HN"
+          ]
+        },
+        {
+          "title": "Can Large Language Models Detect Methodological Flaws? Evidence from Gesture Recognition for UAV-Based Rescue Operation Based on Deep Learning",
+          "url": "https://arxiv.org/abs/2604.14161",
+          "oneLiner": "Tests LLMs' ability to spot research flaws, with implications for automated peer review.",
+          "score": 6.7,
+          "sources": [
+            "ArXiv"
+          ]
+        }
+      ]
+    },
+    {
+      "topic": "post-training",
+      "topicLabel": "Post-Training",
+      "stories": [
+        {
+          "title": "How to Fine-Tune a Reasoning Model? A Teacher-Student Cooperation Framework to Synthesize Student-Consistent SFT Data",
+          "url": "https://arxiv.org/abs/2604.14164",
+          "oneLiner": "Novel teacher-student framework for generating consistent SFT data, improving reasoning model fine-tuning.",
+          "score": 8.2,
+          "sources": [
+            "ArXiv"
+          ]
+        },
+        {
+          "title": "GFT: From Imitation to Reward Fine-Tuning with Unbiased Group Advantages and Dynamic Coefficient Rectification",
+          "url": "https://arxiv.org/abs/2604.14258",
+          "oneLiner": "New post-training method that combines imitation learning with unbiased reward tuning for better LLMs.",
+          "score": 8,
+          "sources": [
+            "ArXiv"
+          ]
+        }
+      ]
+    }
+  ],
+  "trendingTopics": [
+    {
+      "topic": "Open-Source Agent Frameworks Go Mainstream",
+      "description": "Multiple high-scoring GitHub repos (superpowers, GenericAgent, OpenCode) provide production-ready agent harnesses, signaling a shift from proprietary to open-source agent infrastructure."
+    },
+    {
+      "topic": "Memory and Context as the New Bottleneck",
+      "description": "Projects like claude-mem, Remoroo, and MemGround highlight that long-running agents need persistent memory, a challenge being tackled across coding-agents, context-engineering, and evals."
+    },
+    {
+      "topic": "Frontier Models Specialize for Vertical Markets",
+      "description": "OpenAI's GPT-Rosalind for drug discovery and Anthropic's Claude Opus 4.7 show that model releases are increasingly targeting specific domains, not just general improvements."
+    },
+    {
+      "topic": "Post-Training Innovation Accelerates",
+      "description": "New fine-tuning frameworks (teacher-student, GFT) and reasoning-focused papers indicate that post-training is becoming a distinct research area with practical impact."
+    }
+  ],
+  "keyReads": [
+    {
+      "title": "obra/superpowers",
+      "url": "https://github.com/obra/superpowers",
+      "summary": "A comprehensive framework for building agent skills and methodologies, with 2058+ GitHub stars.",
+      "why": "Represents a paradigm shift in how developers approach agent construction, moving from ad-hoc scripts to structured, reusable skills."
+    },
+    {
+      "title": "FM-Agent: Scaling Formal Verification of LLM-Generated Code via Hoare-Style Reasoning",
+      "url": "https://arxiv.org/abs/2604.11556v1",
+      "summary": "A novel framework that uses LLMs to automatically generate function-level specifications and formal proofs.",
+      "why": "Bridges the gap between AI code generation and software reliability, a must-read for anyone concerned about correctness."
+    },
+    {
+      "title": "Measuring Claude 4.7's tokenizer costs",
+      "url": "https://www.claudecodecamp.com/p/i-measured-claude-4-7-s-new-tokenizer-here-s-what-it-costs-you",
+      "summary": "Empirical analysis of the cost impact of Claude 4.7's new tokenizer, with real-world usage data.",
+      "why": "Essential for developers and enterprises budgeting for AI usage, revealing hidden cost changes in model updates."
+    },
+    {
+      "title": "Credo: Declarative Control of LLM Pipelines via Beliefs and Policies",
+      "url": "https://arxiv.org/abs/2604.14401",
+      "summary": "Academic paper proposing a declarative framework for controlling LLM pipelines in long-lived, stateful systems.",
+      "why": "Offers a principled approach to agent control that could influence future agent harness design."
+    }
+  ],
+  "stats": {
+    "totalItems": 169,
+    "uniqueTopics": 8,
+    "daysWithContent": 7,
+    "topicCounts": {
+      "memory": 33,
+      "reflection": 8,
+      "planning": 18,
+      "multi-agent": 7,
+      "tool-use": 11,
+      "self-evolution": 1,
+      "model-release": 6,
+      "post-training": 3,
+      "agent-harness": 25,
+      "context-engineering": 8,
+      "evals": 4,
+      "coding-agents": 18
+    }
+  }
+}

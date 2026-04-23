@@ -1,6 +1,6 @@
 # ROADMAP — AI Daily / Code / Stars
 
-> Last updated: **2026-04-22** — _本次变更：**Stars 21/24 诊断闭环**（归档 `docs/stars-module-audit-2026-04-17.md`，新增 TagCloud / 秒级 starredAt / YouTube+Blog person-link / Top Signals 归一化 / Weekly digest 扩 X+YouTube+Blog / RSS 扩全 5 源 / `resolveProfileDataPath()` 路径 helper 等 13 项能力）；**Code 跨板块打通**（`ai-daily-ingest.ts` 把 coding-agents 话题注入 Code 周报生态卡片）；**Code 周报时间窗收口**（`getWeekBoundsInShanghai()` 硬边界 + 二次 leakFilter）；**Benchmark 健康检查**（`benchmarks-health.ts` 落地，critical 源全空 refuseWrite + 历史月度 log）；**AI Daily v2 词表 6 天观察数据落位**（planning/tool-use 虽最低但 ≥13 命中，均健康）_
+> Last updated: **2026-04-22** — _本次变更：**AI Daily Weekly Digest 首发**（`scripts/generate-ai-daily-weekly-digest.ts` + `website/lib/ai-daily-weekly.ts` + `/ai-daily/weekly/[week]` 详情页 + 列表页 banner + CI step；W16 首跑 169 items / 8 topics / 0 URL 幻觉）；**Lint 全清**（随 Weekly 落地一并清掉 43 个历史遗留 lint 问题——5 处 `any` → `Record<string, unknown>` / 具名 interface，10 处 unescaped quotes → `&ldquo;/&rdquo;`，4 处 `setState in effect` 加 disable 注释，`<img>` × 3 加 `no-img-element` disable 注释（外部 CDN 头像/缩略图），2 处 DateNav 未用参数删除，`timeline.tsx` 的 `lastDate` reassign 改用 `visible[idx-1]` 对比，`pages/blog.tsx` 的 `{'/*'}` / `{'*/'}` 转义，lucide unused imports 清理等）；**Stars 21/24 诊断闭环**（归档 `docs/stars-module-audit-2026-04-17.md`，新增 TagCloud / 秒级 starredAt / YouTube+Blog person-link / Top Signals 归一化 / Weekly digest 扩 X+YouTube+Blog / RSS 扩全 5 源 / `resolveProfileDataPath()` 路径 helper 等 13 项能力）；**Code 跨板块打通**（`ai-daily-ingest.ts` 把 coding-agents 话题注入 Code 周报生态卡片）；**Code 周报时间窗收口**（`getWeekBoundsInShanghai()` 硬边界 + 二次 leakFilter）；**Benchmark 健康检查**（`benchmarks-health.ts` 落地，critical 源全空 refuseWrite + 历史月度 log）；**AI Daily v2 词表 6 天观察数据落位**（planning/tool-use 虽最低但 ≥13 命中，均健康）_
 >
 > 本文档只覆盖站点上三个**持续更新型内容板块**（AI Daily、Code、Stars）的演进规划。
 > 简历、博客、Work 等静态内容演进请见各自的 openspec change；构建/部署流程见 `docs/guides/DEPLOYMENT_GUIDE.md`。
@@ -36,7 +36,7 @@
 #### P1 — 内容质量与发现力
 
 - 📐 **Topic discovery 面板**（Topic Health v3）：扫所有 item 的自由 tags → 按频次聚类 → 展示 "Top 10 frequent unsorted tags this week"，人工决定哪个晋升为 focusTopic。目标是形成**自动提示"该加什么主题"**的闭环，不再靠肉眼翻数据。
-- 📐 **Weekly digest for AI Daily**：参考 stars-weekly-digest 模式（`scripts/generate-weekly-digest.ts` 已是成熟模板——5 源 + URL post-validation + `loadVideosInRange` 跨文件过滤），周末生成 `/ai-daily/weekly/YYYY-WXX/`，用 DeepSeek 写出"本周 3 条最值得关注"。比 7 条日报堆在一起的信息密度高得多。复用率预估 60-70%。
+- ✅ **Weekly digest for AI Daily**（2026-04-22 落地）：`scripts/generate-ai-daily-weekly-digest.ts`（320 行）参考 stars-weekly-digest 模式实现——读 `profile-data/ai-daily/YYYY-MM-DD.json` 7 天文件 → `MIN_SCORE_WEEKLY=6.0` + URL canonical 去重（同 URL 留高分）→ 按 `focusTopic` v2 8 项词表分桶（`PER_TOPIC_TOP=8`）→ DeepSeek 生成 `overview`/`topStoriesByTopic`/`trendingTopics`/`keyReads` → URL post-validation 护栏（`isRealUrl` + whitelist + by-title 回填）。数据层 `website/lib/ai-daily-weekly.ts`（5 函数）+ 详情页 `website/pages/ai-daily/weekly/[week].tsx`（Bento Grid：Stats 条 / Top Stories by Topic / Key Reads / Trending / Topic Spread / Daily Logs）+ 列表页 banner（`website/pages/ai-daily.tsx` 顶部虚线蓝框入口卡片）。CI `sync-ai-daily.yml` 新增 "Generate AI Daily weekly digest" step 跟 daily 同跑并一起 commit。首跑 W16：169 items / 8 v2 topics / 20 stories / 4 trends / 4 key reads / URL 0 次幻觉。W15 仅 2 天数据自动跳过（`MIN_DAYS_WITH_CONTENT=4` 门槛）。
 - 💡 **真正的中文/英文分流**：现在 `translations` 字段已经存在，但列表页仍混排。可考虑给用户一个开关，或者双列展示。优先级不高。
 
 #### P2 — 内容扩展

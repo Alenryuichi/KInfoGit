@@ -40,10 +40,15 @@ jobs:
           EXA_API_KEY: ${{ secrets.EXA_API_KEY }}
         run: npx tsx scripts/ai-daily/fetch-ai-daily.ts
 
+      - name: Generate AI Daily weekly digest
+        env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+        run: npx tsx scripts/generate-ai-daily-weekly-digest.ts
+
       - name: Check for changes
         id: check_changes
         run: |
-          git add profile-data/ai-daily/
+          git add profile-data/ai-daily/ profile-data/ai-daily-weekly/
           if git diff --staged --quiet; then
             echo "has_changes=false" >> $GITHUB_OUTPUT
           else
@@ -55,7 +60,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git commit -m "data(ai-daily): automated daily digest [skip ci]"
+          git commit -m "data(ai-daily): automated daily + weekly digest [skip ci]"
           git push
 
       - name: Summary
@@ -64,6 +69,12 @@ jobs:
           echo "" >> $GITHUB_STEP_SUMMARY
           if [ "${{ steps.check_changes.outputs.has_changes }}" = "true" ]; then
             echo "✅ New digest generated and committed" >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "### AI Daily Weeklies" >> $GITHUB_STEP_SUMMARY
+            ls -1 profile-data/ai-daily-weekly/*.json 2>/dev/null | tail -4 | while read f; do
+              week=$(basename "$f" .json)
+              echo "- **${week}**: weekly digest generated" >> $GITHUB_STEP_SUMMARY
+            done
           else
             echo "📭 No new content today" >> $GITHUB_STEP_SUMMARY
           fi
