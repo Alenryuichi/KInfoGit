@@ -4,8 +4,70 @@
     <title>Stars &amp; Posts — Kylin Miao</title>
     <link>https://kylinmiao.me/stars/</link>
     <description>Daily curated GitHub starred repos, Bluesky/X posts, YouTube videos and blog articles from AI leaders with AI-powered summaries.</description>
-    <lastBuildDate>Thu, 23 Apr 2026 04:12:03 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 24 Apr 2026 04:09:37 GMT</lastBuildDate>
     <atom:link href="https://kylinmiao.me/stars/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Stars &amp; Posts — 2026-04-24</title>
+      <link>https://kylinmiao.me/stars/2026-04-24/</link>
+      <guid isPermaLink="true">https://kylinmiao.me/stars/2026-04-24/</guid>
+      <pubDate>Fri, 24 Apr 2026 12:00:00 GMT</pubDate>
+      <description>Today&apos;s AI discourse was anchored by the release of **DeepSeek v4 Pro**, with Ethan Mollick adding it to his playable gallery and teasing its capabilities against a single-prompt challenge—having models build a 10,000-year procedurally generated harbor town simulation. Meanwhile, **Sakana Fugu** is gaining traction as a dynamic model orchestrator, with hardmaru noting its internal use for research to intelligently combine open and closed models per task. On the research front, Marc Lanctot issued a pointed public message to ICLR participants, hinting at ongoing tensions or critiques within the community. The overarching theme is a shift toward *model orchestration and agentic workflows*, moving beyond single-model benchmarks to evaluate how systems flexibly compose and execute complex, long-horizon tasks.
+
+Bluesky Posts:
+* Marc Lanctot: Dear @iclr-conf.bsky.social participants
+* hardmaru: We’ve been using Sakana Fugu internally for our own research and coding. Instead of relying on a single model, it dynamically orchestrates the best co...
+* Ethan Mollick: And here is DeepSeek v4 Pro. Added to the playable gallery as well
+* Ethan Mollick: I had a range of AI models &quot;build me a procedurally generated 3D simulation showing the evolution of a harbor town from 3000 BCE to 3000 AD&quot; in one pr...
+
+X Posts:
+* Andrej Karpathy: My most amusing interaction was where the model (I think I was given some earlier version with a
+* Andrej Karpathy: Three days ago I left autoresearch tuning nanochat for ~2 days on depth=12 model.
+* Andrej Karpathy: The hottest new programming language is English
+* Andrej Karpathy: I&apos;m being accused of overhyping the [site everyone heard too much about today already].
+* Simon Willison: Vibe coding is irresponsibly building software through dice rolls, not caring what code is produced
+* Simon Willison: I&apos;m beginning to suspect that a key skill in working effectively with coding agents is developing an intuition for when you don&apos;t need to
+* Harrison Chase: TL;DR: More and more agents need a workspace: a computer where they can run code, install packages, and access files. Sandboxes provide this
+* Harrison Chase: In the hot path as the agent is running. The agent can decided to (or the user can prompt it to) update its memory as it is working on the core
+* Harrison Chase: traces matter!
+* Harrison Chase: Agent harnesses are becoming the dominant way to build agents, and they are not going anywhere. These harnesses are intimately tied to agent
+* Jim Fan: I&apos;ve been a bit quiet on X recently. The past year has been a transformational experience.
+* Jim Fan: We are living in a timeline where a non-US company is keeping the original mission of OpenAI alive - truly
+* Jim Fan: It gives me a lot of comfort knowing that we are the last generation without advanced robots everywhere.
+* Jeremy Howard: Here&apos;s what I would prefer to see:
+* Jeremy Howard: I have some big news about FastHTML and @AnthropicAI Claude 4 :)
+* Soumith Chintala: reading &quot;AI News&quot; (previously Smol Talk) is probably the highest-leverage 45 mins
+* Francois Chollet: I think it&apos;s clear that for many smaller companies that invested in deep learning, it turned out
+* Francois Chollet: One of the biggest misconceptions people have about intelligence is seeing it as some kind of unbounded scalar stat, like height.
+* Francois Chollet: Some personal news -- I&apos;m leaving Google to go start a new company with a friend.
+* Yann LeCun: It seems to me that before &apos;urgently figuring out how to control AI systems much smarter than us&apos; we need
+* Yann LeCun: An A.I. Pioneer Warns the Tech &apos;Herd&apos; Is Marching Into a Dead End. www.nytimes.com.
+* Yann LeCun: The emergence of superintelligence is not going to be an event. We don&apos;t have anything close to a
+* Fei-Fei Li: Very excited to share @theworldlabs &apos;s latest research work RTFM!! It&apos;s a real-time, ...
+* Clem Delangue: Kimi K2.6 is a standout open-source model.
+* Clem Delangue: We&apos;re facing an LLM bubble, not a broader AI bubble.
+* Max Woolf: me irl
+* Sasha Rush: ⛏️
+* Stas Bekman: I have been compiling LLM/VLM training logbooks/chronicles. This is the one of the best sources to ...
+* Stas Bekman: Thanks to an awesome contribution from @omarnomad The Machine Learning Engineering Open book now can ...
+* Stas Bekman: If you were holding off to try @MSFTDeepSpeed ZeRO++ it looks like deepspeed@master should ...
+* Stas Bekman: Modern art. Artist: PyTorch memory profiler Model: Llama-8B The piece on the left is the ...
+* Sayak Paul: Working at Hugging Face over the past 3.5+ years has allowed me to identify what technical areas truly interest me! In turn, that has allowed me to di...
+* Sayak Paul: My presentation at the @PyTorch Conf EU is now live. It&apos;s an exciting piece given its emphasis on how we make Diffusers play quite well w/ `torch.comp...
+* Sayak Paul: RT @RisingSayak: We&apos;re shipping an elaborate guide on how to profile diffusion pipelines in Diffusers to set them
+* Philipp Schmid: Guide: ReAct agent from scratch with Gemini 2.5 and LangGraph | Gemini API | Google AI for Developers. ai.google.dev.
+* Ethan Mollick: AI is actually pretty good at ideas as well.
+* Ethan Mollick: Its a weird time to post about AI because a lot of people are vastly underestimating what AI can do &amp; how many large-scale impacts on work are inevita...
+* Ethan Mollick: So much work is going into faking continual learning and memory for AIs,
+* Ethan Mollick: My most popular AI post was a bunch of made-up &apos;graphs&apos; four years ago.
+* Emily M. Bender: Image is of the 1990s Microsoft writing assistant character Clippy with its eyebrows raised positioned in.
+* Naomi Saphra: what a perfect space for scientific discourse! I&apos;ll start off with a few images of myself
+* Naomi Saphra: Life update: I&apos;m starting as faculty at Boston University in 2026! BU ...
+* Angela Zhou: #throwback to the beginnings of a beautiful friendship =D @ansonmount @HellOnWheelsAMC #HellonWheels #onlocation.
+* Ben Recht: I weigh in on the Trump administration&apos;s newfound obsession with Gold Standard Science and reproducibility.
+* Ben Recht: For the first time in almost a decade, I&apos;m teaching a class on learning and control.
+* Ben Recht: With more equations than usual, I explain how policy gradient gives you a framework to randomly search for
+* Ben Recht: Fully open machine learning requires not only GPU access but a community commitment to openness.</description>
+    </item>
     <item>
       <title>Stars &amp; Posts — 2026-04-23</title>
       <link>https://kylinmiao.me/stars/2026-04-23/</link>
@@ -15,10 +77,29 @@
 
 GitHub Repos:
 * run-llama/liteparse — A fast, helpful, and open-source document parser [TypeScript]
+* severo/pelias-vagrant — Create a VirtualBox machine with Pelias geocoder [Shell]
 
 Bluesky Posts:
 * Thomas Dietterich: The latest form of phishing
 * Ethan Mollick: GPT-imagegen-2: &quot;a gallery of shoes, where each shoe is under a painting &amp; is styled matched to that painting: Starry Night, The Bathers, The Girl wit...
+* Simon Willison: I vibe coded a web UI to LiteParse by LlamaIndex, a neat open source library for extracting text from annoying layouts PDFs simonw.github.io/liteparse...
+* Simon Willison: GPT-5.5 is out but not yet in the OpenAI API - but in the ongoing battle with Anthropic over OpenClaw OpenAI made their Codex tool&apos;s private backend A...
+* Mark Riedl: I&apos;ve heard it from middle-schoolers too. There is hope
+* Marc Lanctot: Ok, look at the time--- it&apos;s April 23rd!!!
+
+THE DAY YOU WILL POST ALL YOUR PHOTOS AND VIDEOS OF PAPERS, PRESENTATIONS, AND SOCIALS HAPPENING AT @iclr-...
+* Nathan Lambert: Some thoughts on why I don’t think banning Chinese models over distillation is worth it. 
+
+open.substack.com/pub/natolamb...
+* Nathan Lambert: Great podcast from someone building LLMs within China, on how the model building is done and thought about there. podcasts.apple.com/us/podcast/a...
+* Yoshua Bengio: I’m in Madrid this week for the first in-person meeting of the United Nations Independent International Scientific Panel on AI.
+I&apos;m thrilled to be par...
+* Ethan Mollick: Among all the model release furor, important to note that people don’t need to switch providers or declare a winner every time a new model is released...
+* Ethan Mollick: Here’s my view on GPT-5.5, which I have been testing for a couple of weeks.
+
+It conducted not-bad social science research on its own, developed a nove...
+* angela zhou: I just submitted a paper that it took me three years to expand from the original conf submission and it feels like I wrenched another being out of my ...
+* Ben Recht: Assembling a reading list for a class on the theory of engineering architecture.
 
 X Posts:
 * Andrej Karpathy: Image post about training large deep neural networks
@@ -71,7 +152,11 @@ X Posts:
 * Angela Zhou: #throwback coz it&apos;s finally the day again!!! #HellOnWheels back on AMC 9/8c tonight!
 * Ben Recht: In the first applications lecture of the semester, we build a general framework for generating the real
 * Ben Recht: For the first time in almost a decade, I&apos;m teaching a class on learning and control.
-* Ben Recht: Everyone knows actions are fundamentally different than predictions, but it&apos;s hard to write this</description>
+* Ben Recht: Everyone knows actions are fundamentally different than predictions, but it&apos;s hard to write this
+
+Blog Articles:
+* Extract PDF text in your browser with LiteParse for the web — Simon Willison: &lt;p&gt;LlamaIndex have a most excellent open source project called &lt;a href=&quot;https://github.com/run-llama/liteparse&quot;&gt;LiteParse&lt;/a&gt;, which provides a Node.j...
+* A pelican for GPT-5.5 via the semi-official Codex backdoor API — Simon Willison: &lt;p&gt;&lt;a href=&quot;https://openai.com/index/introducing-gpt-5-5/&quot;&gt;GPT-5.5 is out&lt;/a&gt;. It&apos;s available in OpenAI Codex and is rolling out to paid ChatGPT subsc...</description>
     </item>
     <item>
       <title>Stars &amp; Posts — 2026-04-22</title>
@@ -1054,14 +1139,6 @@ www.cbc.ca/news/science...
       <pubDate>Fri, 17 Oct 2025 12:00:00 GMT</pubDate>
       <description>YouTube Videos:
 * A Tour of the Solveit Platform (Jeremy Howard)</description>
-    </item>
-    <item>
-      <title>Stars &amp; Posts — 2025-10-11</title>
-      <link>https://kylinmiao.me/stars/2025-10-11/</link>
-      <guid isPermaLink="true">https://kylinmiao.me/stars/2025-10-11/</guid>
-      <pubDate>Sat, 11 Oct 2025 12:00:00 GMT</pubDate>
-      <description>YouTube Videos:
-* [Paper Analysis] On the Theoretical Limitations of Embedding-Based Retrieval (Warning: Rant) (Yannic Kilcher)</description>
     </item>
   </channel>
 </rss>

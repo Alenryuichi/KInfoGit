@@ -1,0 +1,23 @@
+{
+  "date": "2026-04-23",
+  "posts": [
+    {
+      "title": "Extract PDF text in your browser with LiteParse for the web",
+      "url": "https://simonwillison.net/2026/Apr/23/liteparse-for-the-web/#atom-entries",
+      "author": "Simon Willison",
+      "publishedAt": "2026-04-23T21:54:24+00:00",
+      "summary": "<p>LlamaIndex have a most excellent open source project called <a href=\"https://github.com/run-llama/liteparse\">LiteParse</a>, which provides a Node.js CLI tool for extracting text from PDFs. I got a version of LiteParse working entirely in the browser, using most of the same libraries that...",
+      "highlights": "LiteParse is a Node.js CLI tool for extracting text from PDFs, and this post shows how to run it entirely in the browser using the same libraries. The key insight is that many server-side tools can be adapted for client-side execution, enabling new interactive applications without backend dependencies.",
+      "worthReading": "It demonstrates a practical approach to porting a server-side tool to the browser, which is valuable for developers looking to build offline-capable or low-latency PDF processing features."
+    },
+    {
+      "title": "A pelican for GPT-5.5 via the semi-official Codex backdoor API",
+      "url": "https://simonwillison.net/2026/Apr/23/gpt-5-5/#atom-entries",
+      "author": "Simon Willison",
+      "publishedAt": "2026-04-23T19:59:47+00:00",
+      "summary": "<p><a href=\"https://openai.com/index/introducing-gpt-5-5/\">GPT-5.5 is out</a>. It's available in OpenAI Codex and is rolling out to paid ChatGPT subscribers. I've had some preview access and found it to be a fast, effective and highly capable model. As is usually the case these days, it's hard to...",
+      "highlights": "GPT-5.5 is now available via OpenAI Codex and rolling out to paid ChatGPT users. The author finds it fast, effective, and highly capable, with improvements in coding and reasoning tasks.",
+      "worthReading": "Simon Willison provides early hands-on impressions of GPT-5.5, highlighting its performance and the novel 'Codex backdoor' access method, which is valuable for developers tracking OpenAI's latest model capabilities."
+    }
+  ]
+}

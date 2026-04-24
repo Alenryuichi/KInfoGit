@@ -410,6 +410,93 @@
         "agent",
         "tooling"
       ]
+    },
+    {
+      "type": "x",
+      "id": "2021261552222158955",
+      "url": "https://x.com/hwchase17/status/2021261552222158955",
+      "author": {
+        "handle": "hwchase17",
+        "displayName": "Harrison Chase",
+        "avatar": "https://avatars.githubusercontent.com/hwchase17"
+      },
+      "content": "TL;DR: More and more agents need a workspace: a computer where they can run code, install packages, and access files. Sandboxes provide this",
+      "createdAt": "2026-04-24T04:07:55.138Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Agents require sandboxed workspaces for code execution and file access.",
+      "worthReading": "Highlights a key infrastructure need for agent deployment.",
+      "tags": [
+        "agent",
+        "infra",
+        "deployment"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2040467997022884194",
+      "url": "https://x.com/hwchase17/status/2040467997022884194",
+      "author": {
+        "handle": "hwchase17",
+        "displayName": "Harrison Chase",
+        "avatar": "https://avatars.githubusercontent.com/hwchase17"
+      },
+      "content": "In the hot path as the agent is running. The agent can decided to (or the user can prompt it to) update its memory as it is working on the core",
+      "createdAt": "2026-04-24T04:07:55.138Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Agents can update memory during execution, either autonomously or via user prompt.",
+      "worthReading": "Illustrates dynamic memory management in agent loops.",
+      "tags": [
+        "agent",
+        "llm"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2009732201269588479",
+      "url": "https://x.com/hwchase17/status/2009732201269588479",
+      "author": {
+        "handle": "hwchase17",
+        "displayName": "Harrison Chase",
+        "avatar": "https://avatars.githubusercontent.com/hwchase17"
+      },
+      "content": "traces matter!",
+      "createdAt": "2026-04-24T04:07:55.138Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Emphasizes the importance of tracing for agent observability.",
+      "worthReading": "Tracing is critical for debugging and improving agent performance.",
+      "tags": [
+        "agent",
+        "evaluation",
+        "tooling"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2042978500567609738",
+      "url": "https://x.com/hwchase17/status/2042978500567609738",
+      "author": {
+        "handle": "hwchase17",
+        "displayName": "Harrison Chase",
+        "avatar": "https://avatars.githubusercontent.com/hwchase17"
+      },
+      "content": "Agent harnesses are becoming the dominant way to build agents, and they are not going anywhere. These harnesses are intimately tied to agent",
+      "createdAt": "2026-04-24T04:07:55.138Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Agent harnesses are the emerging standard for agent construction.",
+      "worthReading": "Signals a paradigm shift from frameworks to harnesses.",
+      "tags": [
+        "agent",
+        "tooling",
+        "deployment"
+      ]
     }
   ],
   "dailyCounts": [
@@ -436,13 +523,13 @@
     0,
     0,
     0,
-    0,
     4,
     3,
     3,
     4,
     3,
-    2
+    2,
+    4
   ],
-  "interestSummary": "Harrison Chase is focused on the development and deployment of AI agents, emphasizing the need for sandboxed workspaces and specialized tools like LangSmith for building, monitoring, and iterating on agents in production."
+  "interestSummary": "Harrison Chase is focused on advancing agent development through workspaces (sandboxes) for code execution and file access, as well as emphasizing the need for production data iteration and trace-based operations for debugging and testing agents. He also highlights LangChain's new no-code Agent Builder with its memory system."
 }

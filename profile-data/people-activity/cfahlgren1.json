@@ -36,6 +36,31 @@
       "scoreReason": "Strong freshness with rising traction, high relevance to AI automation trends, and concrete implementation focus.",
       "starredAt": "2026-04-21T15:35:01Z",
       "type": "github"
+    },
+    {
+      "repo": "severo/pelias-vagrant",
+      "url": "https://github.com/severo/pelias-vagrant",
+      "description": "Create a VirtualBox machine with Pelias geocoder",
+      "language": "Shell",
+      "stargazersCount": 2,
+      "starredBy": "cfahlgren1",
+      "starredAt": "2026-04-23T13:44:35Z",
+      "highlights": "Pelias is an open-source geocoder that uses OpenStreetMap data. This Vagrant setup provides a quick way to run Pelias locally in a VirtualBox machine, simplifying deployment for development or testing.",
+      "worthReading": "For AI leaders interested in location-based AI applications or geospatial data pipelines, this repo offers a straightforward way to experiment with a production-grade geocoder.",
+      "topics": [
+        "docker",
+        "geocoder",
+        "pelias",
+        "vagrant",
+        "virtualbox"
+      ],
+      "tags": [
+        "infra",
+        "tooling"
+      ],
+      "score": 3,
+      "scoreReason": "Freshness is low (2 stars, no recent traction), relevance is moderate (geocoding is niche for AI), concreteness is high (working Vagrant setup), yielding a score of 3.",
+      "type": "github"
     }
   ],
   "posts": [],
@@ -53,7 +78,6 @@
     0,
     0,
     0,
-    0,
     1,
     0,
     0,
@@ -71,7 +95,8 @@
     0,
     1,
     0,
+    1,
     0
   ],
-  "interestSummary": "Caleb Fahlgren is focused on tools for managing and contributing to Hugging Face datasets, as well as open-source automation for the machine learning workflow."
+  "interestSummary": "Caleb Fahlgren appears focused on integrating machine learning workflows with Hugging Face infrastructure, specifically around data collection and model deployment, while also exploring geocoding tools."
 }
