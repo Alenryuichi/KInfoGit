@@ -1,186 +1,68 @@
 {
   "date": "2026-04-24",
-  "itemCount": 14,
+  "itemCount": 80,
   "sections": [
     {
       "id": "headlines",
       "title": "Headlines & Launches",
       "items": [
         {
-          "title": "Anthropic Details Claude Code Caching Bug",
-          "summary": "Anthropic published a postmortem on April 23, 2026, revealing that a caching bug introduced on March 26 caused Claude to appear forgetful and repetitive by clearing older thinking every turn instead of once per idle session. The fix was deployed on April 10. This bug affected many users of Claude Sonnet 4.6 and Opus 4.6, causing a noticeable quality regression that undermined trust in the model's reliability. Anthropic's transparent postmortem sets a positive example for accountability in AI development. The bug occurred when clearing older thinking from sessions idle over an hour; a logic error caused the clearing to repeat on every subsequent turn. The issue affected Sonnet 4.6 and Opus 4.6, and was fixed on April 10, 2026.",
-          "url": "https://www.anthropic.com/engineering/april-23-postmortem",
-          "score": 8,
+          "title": "GPT-5.5",
+          "summary": "OpenAI正式发布GPT-5.5模型。",
+          "url": "https://openai.com/index/introducing-gpt-5-5/",
+          "score": 9.575,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "mfiguiere"
+              "name": "HN (1074)"
             }
           ],
           "tags": [
-            "AI",
-            "Claude",
-            "bug",
-            "transparency",
-            "LLM"
-          ],
-          "focusTopics": [],
-          "background": "Claude Code is Anthropic's agentic coding tool that helps developers understand codebases, edit files, and run commands. Prompt caching is used to reduce latency and cost by reusing previously computed context. A bug in cache management can cause excessive token usage and perceived forgetfulness.",
-          "discussion": "Community comments show mixed reactions: some appreciate the transparency and find the explanation plausible, while others express frustration over the lack of prior transparency and the impact on their work. Some users also note that other models like GPT-5.4 have performed well recently, suggesting competitive pressure."
-        },
-        {
-          "title": "Honker: Postgres NOTIFY/LISTEN for SQLite",
-          "summary": "Honker is a new SQLite extension that adds Postgres-style NOTIFY/LISTEN semantics to SQLite, enabling cross-process push-style event delivery with single-digit millisecond latency without requiring an external broker or daemon. This fills a significant gap for SQLite-based applications that need event-driven patterns like pub/sub, task queues, and real-time updates, allowing developers to avoid polling and external message brokers while keeping SQLite's simplicity. Honker works by monitoring SQLite's WAL file for changes, replacing polling intervals with event notifications, and supports durable pub/sub, task queues, event streams, and a scheduler. It uses stat-based polling as a cross-platform fallback, as noted in community discussion.",
-          "url": "https://github.com/russellromney/honker",
-          "score": 8,
-          "sources": [
-            {
-              "name": "hackernews",
-              "meta": "russellthehippo"
-            }
-          ],
-          "tags": [
-            "SQLite",
-            "event-driven",
-            "database",
-            "open source",
-            "real-time"
-          ],
-          "focusTopics": [],
-          "background": "PostgreSQL's NOTIFY/LISTEN allows database clients to send and receive asynchronous notifications without polling. SQLite lacks this feature because it is an embedded database without a server process. Honker bridges this gap by leveraging SQLite's Write-Ahead Log (WAL) to detect changes and notify listeners across processes.",
-          "discussion": "The community response is positive, with users expressing interest in using Honker for queues and schedulers in SQLite-backed apps. Technical discussion includes suggestions for using inotify or kqueue instead of polling, and concerns about WAL checkpoint behavior. The author acknowledges that stat polling is the only universally reliable method."
-        },
-        {
-          "title": "Soldier Charged with Insider Trading via Prediction Markets",
-          "summary": "A U.S. soldier has been charged with using classified government information to profit from prediction market bets, marking one of the first cases linking national security secrets to prediction market trading. This case highlights the growing intersection of national security, insider trading laws, and unregulated prediction markets, potentially setting a precedent for how classified information misuse is prosecuted in financial contexts. The soldier faces charges including unlawful use of confidential government information, theft of nonpublic information, commodities fraud, and wire fraud. The indictment does not specify which prediction market platform was used.",
-          "url": "https://www.justice.gov/usao-sdny/pr/us-soldier-charged-using-classified-information-profit-prediction-market-bets?bm-verify=AAQAAAAN_____y6To7sZYZ502biZwIHXlr-7zXZUqV4H0xLTfW__wDA3SjNLqifXRaQwsikyuz6IJknyuL8xfVYRkesxcDk5V10m-HoXl2K93f17rygBphL77WVFoQ_XvlmUo922IwM_DQ66137X6wWMtpdHslcEjpJG7KbBmUw9Su4kDENpDt_yv2spThQZehgv-X1Adk5U2VHfp41co2s_QJGjRj4y0KmL1mhSCyVaE7MC1LHG0mtP-xYmD0xBOQwn6PlHkPiP5Nt46h5ZIjLGXgCZDEVD42i7rIEM379DKLPUPX0PDNmOAwFSuTqcTDVnT_UUV8vxpHLRMb7rUxPxKUPcIB23iZTRJddWDDtPHMXadpwv67xr-f1sKDLZT9NgHCO4iuC2EthmAt0",
-          "score": 7,
-          "sources": [
-            {
-              "name": "hackernews",
-              "meta": "paulpauper"
-            }
-          ],
-          "tags": [
-            "national security",
-            "prediction markets",
-            "insider trading",
-            "legal",
-            "ethics"
-          ],
-          "focusTopics": [],
-          "background": "Prediction markets are platforms where participants trade contracts based on the outcome of future events, such as elections or economic indicators. Insider trading in these markets is a gray area, as they are not fully regulated like traditional securities markets. The case raises questions about whether existing insider trading laws apply to prediction markets and how to prevent national security leaks through such platforms.",
-          "discussion": "Commenters expressed cynicism about selective enforcement, with some suggesting the charges are for show while powerful insiders escape scrutiny. Others debated whether the case is about insider trading or simply leaking classified information, and questioned the regulation of prediction markets."
-        },
-        {
-          "title": "Palantir Employees Question Their Role",
-          "summary": "A Wired article reports that Palantir employees are increasingly questioning the ethical implications of their work, with internal posts expressing concerns about the company's impact and external scrutiny intensifying. This internal debate highlights growing tensions in the tech industry over defense contracting and ethical responsibilities, potentially affecting Palantir's talent retention and public perception. One employee's post about the difficulty of selling software outside the US received over 50 '+1' emojis, indicating widespread concern. Another worker noted the personal impact of these debates.",
-          "url": "https://www.wired.com/story/palantir-employees-are-starting-to-wonder-if-theyre-the-bad-guys/",
-          "score": 7,
-          "sources": [
-            {
-              "name": "hackernews",
-              "meta": "pavel_lishin"
-            }
-          ],
-          "tags": [
-            "ethics",
-            "defense contracting",
-            "tech industry",
-            "Palantir",
-            "community discussion"
-          ],
-          "focusTopics": [],
-          "background": "Palantir is a US defense contractor known for its data analytics software used by intelligence and military agencies. The company has long faced ethical scrutiny over its work with ICE and other government clients.",
-          "discussion": "Commenters note that Palantir employees should recognize they work for a defense contractor, with some referencing internal conflicts and external political campaigns. One comment recommends the book 'Careless People' for insights into self-justification in tech."
-        },
-        {
-          "title": "GitHub Multi-Service Outage Sparks Reliability Debate",
-          "summary": "GitHub experienced a multi-service incident affecting multiple services, as reported on their status page. The outage prompted community discussion about reliability and self-hosting alternatives. This incident highlights ongoing concerns about centralized platform reliability, especially for developers who depend on GitHub for source code and CI/CD. It may accelerate interest in self-hosted alternatives like Forgejo and SourceHut. According to a community comment, GitHub's overall uptime was reported at 88.15%, with the best individual component at 99.78% (two nines). The status page showed all green despite users being unable to access static pages.",
-          "url": "https://www.githubstatus.com/incidents/myrbk7jvvs6p",
-          "score": 7,
-          "sources": [
-            {
-              "name": "hackernews",
-              "meta": "bwannasek"
-            }
-          ],
-          "tags": [
-            "GitHub",
-            "outage",
-            "self-hosting",
-            "uptime",
-            "incident"
-          ],
-          "focusTopics": [],
-          "background": "GitHub is a widely used platform for version control and collaboration, hosting millions of repositories and providing CI/CD via GitHub Actions. Uptime is critical for developers who rely on it for daily work. Self-hosting alternatives like Forgejo and SourceHut offer more control but require maintenance.",
-          "discussion": "Community members expressed frustration with GitHub's reliability, with one user noting they had moved to a self-hosted Forgejo instance. Another pointed out that SourceHut was also down, possibly due to increased traffic from users seeking alternatives. Some questioned the accuracy of GitHub's status page."
-        },
-        {
-          "title": "French Agency Confirms Breach, Hacker Offers to Sell Data",
-          "summary": "A French government agency has confirmed a data breach that exposed personal information of citizens, and a hacker is now offering to sell the stolen data. This breach highlights ongoing vulnerabilities in government data protection, affecting citizens' privacy and trust, and underscores the need for stronger security measures. The stolen data may include full names, dates and places of birth, mailing and email addresses, and phone numbers, though the number of affected citizens is undisclosed.",
-          "url": "https://www.bleepingcomputer.com/news/security/french-govt-agency-confirms-breach-as-hacker-offers-to-sell-data/",
-          "score": 7,
-          "sources": [
-            {
-              "name": "hackernews",
-              "meta": "robtherobber"
-            }
-          ],
-          "tags": [
-            "security",
-            "data breach",
-            "privacy",
-            "government"
-          ],
-          "focusTopics": [],
-          "background": "Data breaches at government agencies have become increasingly common, with attackers often selling stolen personal information on dark web forums. Such breaches can lead to identity theft and fraud, and repeated incidents erode public trust in institutions.",
-          "discussion": "Commenters expressed frustration and resignation, noting that similar data has been leaked multiple times before, and criticized the lack of meaningful consequences for agencies. Some argued for moving beyond traditional data protection to focus on identity verification systems."
-        },
-        {
-          "title": "Arch Linux Releases Bit-for-Bit Reproducible Docker Image",
-          "summary": "Arch Linux now offers a bit-for-bit reproducible Docker image under a new 'repro' tag, ensuring that every build produces an identical digest. This enhances trust and security for container users, as it allows anyone to independently verify that the image has not been tampered with, addressing a critical need in supply chain security. To achieve reproducibility, the pacman keys have been stripped from the image, meaning pacman is not usable out of the box in this image. The image's digest can be verified using tools like diffoci.",
-          "url": "https://antiz.fr/blog/archlinux-now-has-a-reproducible-docker-image/",
-          "score": 7,
-          "sources": [
-            {
-              "name": "hackernews",
-              "meta": "maxloh"
-            }
-          ],
-          "tags": [
-            "Arch Linux",
-            "Docker",
-            "reproducible builds",
-            "container security"
+            "gpt-5.5",
+            "openai",
+            "model-release"
           ],
           "focusTopics": [
-            "reflection"
-          ],
-          "background": "Reproducible builds ensure that compiling the same source code with the same environment always yields identical binaries. This prevents attacks where malicious code is inserted into distributed binaries without altering the source code. Arch Linux's move brings this guarantee to its Docker images, following similar efforts by other distributions.",
-          "discussion": "The community largely welcomes this improvement, with users noting that reproducible images provide a 'boring win' that prevents subtle debugging issues. Some debate whether mutable systems like Arch can outperform declarative systems like NixOS in the long run."
+            "model-release"
+          ]
         },
         {
-          "title": "Why Rising US Wealth Hasn't Made Americans Happier",
-          "summary": "Derek Thompson's article analyzes why rising GDP and wealth in America have not translated into increased happiness, particularly noting a sharp drop in well-being around 2020. This matters because it challenges the assumption that economic growth automatically improves societal well-being, highlighting the importance of social connections and post-COVID recovery. The article notes that while incomes are up, inflation and housing costs have eroded purchasing power, and social isolation post-2020 has severely impacted happiness.",
-          "url": "https://www.derekthompson.org/p/if-americas-so-rich-howd-it-get-so",
-          "score": 7,
+          "title": "OpenAI releases GPT-5.5, bringing company one step closer to an AI 'superapp'",
+          "summary": "OpenAI发布GPT-5.5，向AI超级应用迈进。",
+          "url": "https://techcrunch.com/2026/04/23/openai-chatgpt-gpt-5-5-ai-model-superapp/",
+          "score": 9.5,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "momentmaker"
+              "name": "techcrunch.com"
             }
           ],
           "tags": [
-            "economics",
-            "sociology",
-            "happiness",
-            "COVID-19",
-            "inequality"
+            "gpt-5.5",
+            "openai",
+            "model-release"
           ],
-          "focusTopics": [],
-          "background": "The US has seen rising GDP and wealth over decades, yet happiness metrics have stagnated or declined. The COVID-19 pandemic disrupted social lives and economic stability, exacerbating existing trends of inequality and social fragmentation.",
-          "discussion": "Commenters largely agree with the article's premise, sharing personal experiences of financial strain and social disconnection. Some note that inflation and housing costs offset income gains, while others emphasize the role of social relationships in happiness."
+          "focusTopics": [
+            "model-release"
+          ]
+        },
+        {
+          "title": "OpenAI's GPT-5.5 is here, and it's no potato: narrowly beats Anthropic's Claude Mythos Preview on Terminal-Bench 2.0",
+          "summary": "OpenAI发布GPT-5.5，在Terminal-Bench 2.0上险胜Claude Mythos。",
+          "url": "https://venturebeat.com/technology/openais-gpt-5-5-is-here-and-its-no-potato-narrowly-beats-anthropics-claude-mythos-preview-on-terminal-bench-2-0",
+          "score": 9,
+          "sources": [
+            {
+              "name": "venturebeat.com"
+            }
+          ],
+          "tags": [
+            "gpt-5.5",
+            "benchmark",
+            "model-release"
+          ],
+          "focusTopics": [
+            "model-release",
+            "evals"
+          ]
         }
       ]
     },
@@ -189,25 +71,418 @@
       "title": "Research & Innovation",
       "items": [
         {
-          "title": "Writing a C Compiler in Zig: Abandoned Project",
-          "summary": "A developer documented their attempt to write a C compiler in the Zig programming language, but eventually quit due to frustrations with low-level language features. This project highlights the challenges of compiler development in low-level languages and sparks discussion about Zig's suitability for such tasks, as well as its potential to reduce reliance on Clang/LLVM for C compilation. The author's repository, named 'paella', includes a writeup detailing the frustrations that led to abandonment. The project was not completed, but it demonstrates a practical attempt at building a C compiler from scratch in Zig.",
-          "url": "https://ar-ms.me/thoughts/c-compiler-1-zig/",
-          "score": 6,
+          "title": "Qwen 3.6 27B Makes Huge Gains in Agency on Artificial Analysis - Ties with Sonnet 4.6",
+          "summary": "Qwen 3.6 27B 在 Agentic Index 上追平 Sonnet 4.6。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1strodp/qwen_36_27b_makes_huge_gains_in_agency_on/",
+          "score": 8.5,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "tosh"
+              "name": "Reddit r/LocalLLaMA"
             }
           ],
           "tags": [
-            "compiler",
-            "Zig",
-            "C",
-            "programming languages"
+            "qwen",
+            "benchmark",
+            "agentic"
           ],
-          "focusTopics": [],
-          "background": "Zig is a general-purpose systems programming language designed as an improvement to C, emphasizing safety and performance. Writing a C compiler is a complex task that involves parsing, semantic analysis, and code generation, often requiring deep understanding of both the source and target languages.",
-          "discussion": "Commenters noted the author's frustration with low-level features and debated whether compilers need low-level languages. Some pointed out that Zig already has a C compiler built-in, while others saw potential for reducing reliance on Clang/LLVM."
+          "focusTopics": [
+            "evals",
+            "model-release"
+          ]
+        },
+        {
+          "title": "TTKV: Temporal-Tiered KV Cache for Long-Context LLM Inference",
+          "summary": "提出TTKV，一种用于长上下文LLM推理的分层KV缓存方法。",
+          "url": "https://arxiv.org/abs/2604.19769",
+          "score": 8,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "llm",
+            "kv-cache",
+            "long-context"
+          ],
+          "focusTopics": [
+            "context-engineering"
+          ]
+        },
+        {
+          "title": "We benchmarked 18 LLMs on OCR (7k+ calls) — cheaper/old models oftentimes win. Full dataset + framework open-sourced. [R]",
+          "summary": "基准测试18个LLM的OCR能力，发现便宜/旧模型常胜，开源数据集和框架。",
+          "url": "https://www.reddit.com/r/MachineLearning/comments/1st9v81/we_benchmarked_18_llms_on_ocr_7k_calls_cheaperold/",
+          "score": 8,
+          "sources": [
+            {
+              "name": "Reddit r/MachineLearning"
+            }
+          ],
+          "tags": [
+            "benchmark",
+            "ocr",
+            "open-source"
+          ],
+          "focusTopics": [
+            "evals"
+          ]
+        },
+        {
+          "title": "ARES: Adaptive Red-Teaming and End-to-End Repair of Policy-Reward System",
+          "summary": "提出自适应红队与端到端修复策略-奖励系统的框架。",
+          "url": "https://arxiv.org/abs/2604.18789",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "rlhf",
+            "alignment",
+            "red-teaming"
+          ],
+          "focusTopics": [
+            "post-training"
+          ]
+        },
+        {
+          "title": "Human-Guided Harm Recovery for Computer Use Agents",
+          "summary": "提出人机协作恢复机制，防止计算机使用代理造成危害。",
+          "url": "https://arxiv.org/abs/2604.18847",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "agent",
+            "safety",
+            "human-in-the-loop"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "Do Hallucination Neurons Generalize? Evidence from Cross-Domain Transfer in LLMs",
+          "summary": "发现幻觉神经元在跨领域迁移中具有泛化性。",
+          "url": "https://arxiv.org/abs/2604.19765",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "llm",
+            "hallucination",
+            "interpretability"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "OThink-SRR1: Search, Refine and Reasoning with Reinforced Learning for Large Language Models",
+          "summary": "提出结合搜索、精炼与强化学习的RAG推理框架。",
+          "url": "https://arxiv.org/abs/2604.19766",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "rag",
+            "reinforcement-learning",
+            "reasoning"
+          ],
+          "focusTopics": [
+            "planning",
+            "post-training"
+          ]
+        },
+        {
+          "title": "Cognis: Context-Aware Memory for Conversational AI Agents",
+          "summary": "Cognis：为对话AI代理提供上下文感知记忆系统。",
+          "url": "https://arxiv.org/abs/2604.19771",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "llm",
+            "memory",
+            "conversational-ai"
+          ],
+          "focusTopics": [
+            "context-engineering"
+          ]
+        },
+        {
+          "title": "Researchers Uncover 10 In-the-Wild Indirect Prompt Injection Attacks - Infosecurity Magazine",
+          "summary": "研究人员发现10种针对AI代理的间接提示注入攻击。",
+          "url": "https://www.infosecurity-magazine.com/news/researchers-10-wild-indirect/",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "infosecurity-magazine.com"
+            }
+          ],
+          "tags": [
+            "prompt-injection",
+            "security",
+            "ai-agents"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "AI scientists produce results without reasoning scientifically",
+          "summary": "研究发现AI科学家产出结果但缺乏科学推理过程。",
+          "url": "https://arxiv.org/abs/2604.18805",
+          "score": 7,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "llm",
+            "scientific-reasoning"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Can We Locate and Prevent Stereotypes in LLMs?",
+          "summary": "研究LLM中刻板印象的定位与预防方法。",
+          "url": "https://arxiv.org/abs/2604.19764",
+          "score": 7,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "llm",
+            "bias",
+            "fairness"
+          ],
+          "focusTopics": [
+            "post-training"
+          ]
+        },
+        {
+          "title": "Towards a societal AI alignment benchmark for evaluating human ...",
+          "summary": "提出面向社会的AI对齐基准，用于评估人类价值观对齐。",
+          "url": "https://www.nature.com/articles/s41599-026-07255-3",
+          "score": 7,
+          "sources": [
+            {
+              "name": "nature.com"
+            }
+          ],
+          "tags": [
+            "ai-alignment",
+            "benchmark",
+            "safety"
+          ],
+          "focusTopics": [
+            "evals"
+          ]
+        },
+        {
+          "title": "Beyond One Output: Visualizing and Comparing Distributions of Language Model Generations",
+          "summary": "提出可视化语言模型生成分布的方法，超越单输出评估。",
+          "url": "https://arxiv.org/abs/2604.18724",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "llm",
+            "visualization",
+            "evaluation"
+          ],
+          "focusTopics": [
+            "evals"
+          ]
+        },
+        {
+          "title": "How Adversarial Environments Mislead Agentic AI?",
+          "summary": "研究对抗环境如何误导工具集成型AI代理。",
+          "url": "https://arxiv.org/abs/2604.18874",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "agent",
+            "adversarial",
+            "tool-use"
+          ],
+          "focusTopics": [
+            "tool-use"
+          ]
+        },
+        {
+          "title": "Saying More Than They Know: A Framework for Quantifying Epistemic-Rhetorical Miscalibration in Large Language Models",
+          "summary": "量化LLM中认知-修辞失调的框架。",
+          "url": "https://arxiv.org/abs/2604.19768",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "llm",
+            "calibration",
+            "rhetoric"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "From Natural Language to Executable Narsese: A Neuro-Symbolic Benchmark and Pipeline for Reasoning with NARS",
+          "summary": "构建神经符号基准与流水线，将自然语言转换为可执行逻辑。",
+          "url": "https://arxiv.org/abs/2604.18873",
+          "score": 6,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "neuro-symbolic",
+            "reasoning",
+            "benchmark"
+          ],
+          "focusTopics": [
+            "planning"
+          ]
+        },
+        {
+          "title": "CoAuthorAI: A Human in the Loop System For Scientific Book Writing",
+          "summary": "CoAuthorAI：人机协同的科学书籍写作系统。",
+          "url": "https://arxiv.org/abs/2604.19772",
+          "score": 6,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "llm",
+            "writing",
+            "human-in-the-loop"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "New Conversational AI Leverages Trusted Medical Protocols to Guide Users on When to Seek Care - Bioengineer.org",
+          "summary": "新对话AI利用医疗协议指导用户何时就医。",
+          "url": "https://bioengineer.org/new-conversational-ai-leverages-trusted-medical-protocols-to-guide-users-on-when-to-seek-care/",
+          "score": 6,
+          "sources": [
+            {
+              "name": "bioengineer.org"
+            }
+          ],
+          "tags": [
+            "healthcare",
+            "conversational-ai"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "8 inputs → 58 body params: putting a body-model forward pass inside the training loss [P]",
+          "summary": "小MLP从8个输入预测58个人体参数，将前向传播嵌入训练损失。",
+          "url": "https://www.reddit.com/r/MachineLearning/comments/1stbdah/8_inputs_58_body_params_putting_a_bodymodel/",
+          "score": 6,
+          "sources": [
+            {
+              "name": "Reddit r/MachineLearning"
+            }
+          ],
+          "tags": [
+            "mlp",
+            "body-model",
+            "computer-vision"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Formally Verified Patent Analysis via Dependent Type Theory: Machine-Checkable Certificates from a Hybrid AI + Lean 4 Pipeline",
+          "summary": "结合AI与Lean 4实现形式化验证的专利分析框架。",
+          "url": "https://arxiv.org/abs/2604.18882",
+          "score": 5.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "formal-verification",
+            "patent-analysis"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "PR-CAD: Progressive Refinement for Unified Controllable and Faithful Text-to-CAD Generation with Large Language Models",
+          "summary": "PR-CAD：基于LLM的渐进式可控文本到CAD生成。",
+          "url": "https://arxiv.org/abs/2604.19773",
+          "score": 5.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "llm",
+            "cad",
+            "generation"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "On Solving the Multiple Variable Gapped Longest Common Subsequence Problem",
+          "summary": "研究多变量间隙最长公共子序列问题的求解方法。",
+          "url": "https://arxiv.org/abs/2604.18645",
+          "score": 5,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "algorithm",
+            "sequence-analysis"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Error-free Training for MedMNIST Datasets",
+          "summary": "提出MedMNIST数据集的无错误训练方法。",
+          "url": "https://arxiv.org/abs/2604.18916",
+          "score": 4.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "medical-imaging",
+            "training"
+          ],
+          "focusTopics": []
         }
       ]
     },
@@ -216,121 +491,973 @@
       "title": "Engineering & Resources",
       "items": [
         {
-          "title": "OpenAI Announces GPT-5.5 Coding Model",
-          "summary": "OpenAI has announced GPT-5.5, a new frontier coding model, with a gradual rollout starting today for Pro and Enterprise users, followed by Plus users. GPT-5.5 scores 82% on CyberGym, a key cybersecurity benchmark, making it a significant competitor to Anthropic's gated Mythos model, and reigniting debates about developer dependency on AI coding tools. The model is available through ChatGPT and Codex, but API access is not yet provided; however, a backdoor via the Codex API reportedly already offers GPT-5.5 access.",
-          "url": "https://openai.com/index/introducing-gpt-5-5/",
+          "title": "A pelican for GPT-5.5 via the semi-official Codex backdoor API",
+          "summary": "OpenAI发布GPT-5.5，通过Codex API可用。",
+          "url": "https://simonwillison.net/2026/Apr/23/gpt-5-5/#atom-everything",
           "score": 9,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "rd"
+              "name": "Simon Willison"
             }
           ],
           "tags": [
-            "AI",
-            "LLM",
-            "OpenAI",
+            "openai",
+            "gpt-5.5",
+            "model-release"
+          ],
+          "focusTopics": [
+            "model-release"
+          ]
+        },
+        {
+          "title": "OpenAI says its new GPT-5.5 model is more efficient and better at coding",
+          "summary": "OpenAI称GPT-5.5更高效且编码能力更强。",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/917612/openai-gpt-5-5-chatgpt",
+          "score": 9,
+          "sources": [
+            {
+              "name": "theverge.com"
+            }
+          ],
+          "tags": [
+            "gpt-5.5",
             "coding",
-            "GPT-5.5"
+            "efficiency"
           ],
-          "focusTopics": [],
-          "background": "GPT-5.5 is the latest iteration of OpenAI's large language model, specialized for coding tasks. Frontier coding models like GPT-5.5 and Anthropic's Mythos are increasingly used by developers for code generation and debugging, raising concerns about over-reliance and loss of fundamental skills.",
-          "discussion": "Community comments express both excitement and unease: some users compare losing access to GPT-5.5 to 'having a limb amputated,' highlighting dependency concerns, while others praise OpenAI for being more open than Anthropic by releasing a high-scoring model without gating."
+          "focusTopics": [
+            "model-release"
+          ]
         },
         {
-          "title": "Bitwarden CLI Compromised in Checkmarx Supply Chain Attack",
-          "summary": "The Bitwarden CLI was compromised in an ongoing Checkmarx supply chain campaign, with malicious code injected into version 2026.4.0 of the @bitwarden/cli npm package via a poisoned CI/CD pipeline. This attack affects a widely-used password manager CLI, potentially exposing credentials and secrets of users who downloaded the malicious version, and highlights the growing risk of supply chain attacks on open-source ecosystems. The malicious code was embedded in the file bw1.js within the compromised package, and only version 2026.4.0 is affected; users who installed this version should rotate credentials immediately.",
-          "url": "https://socket.dev/blog/bitwarden-cli-compromised",
-          "score": 9,
+          "title": "zilliztech/claude-context",
+          "summary": "代码搜索 MCP 工具，让 Claude Code 将整个代码库作为上下文。",
+          "url": "https://github.com/zilliztech/claude-context",
+          "score": 8.725,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "tosh"
+              "name": "GitHub trending:all (+1011★)"
             }
           ],
           "tags": [
-            "supply chain attack",
-            "security",
-            "Bitwarden",
-            "npm",
-            "open source"
+            "mcp",
+            "code-search",
+            "context-engineering"
           ],
-          "focusTopics": [],
-          "background": "Bitwarden CLI is a command-line tool for accessing and managing Bitwarden vaults, commonly used by developers and system administrators. Supply chain attacks target the software build and distribution process to inject malicious code into legitimate packages, as seen in this campaign attributed to Checkmarx.",
-          "discussion": "Community comments suggest setting a minimum release age in npm (e.g., min-release-age=7) to avoid freshly published malicious versions, pinning dependencies instead of using version ranges, and considering Rust-based alternatives like rbw to reduce trust in the npm dependency tree."
+          "focusTopics": [
+            "context-engineering",
+            "coding-agents"
+          ]
         },
         {
-          "title": "MeshCore team splits over trademark and AI code",
-          "summary": "The MeshCore development team has split following a trademark dispute and controversy over a core contributor using AI-generated code (Claude Code) without disclosure. The split was announced on the MeshCore blog on April 23, 2026. This incident highlights growing tensions in open-source governance around trademark enforcement and the ethical use of AI-generated code. It may affect trust and collaboration in the mesh networking community and beyond. Andy Kirby, a core contributor, extensively used Claude Code to build major ecosystem components without disclosing it, leading to a split. The trademark dispute also played a role, with some community members criticizing overly strict trademark rules similar to Meshtastic.",
-          "url": "https://blog.meshcore.io/2026/04/23/the-split",
-          "score": 8,
+          "title": "Tencent Releases Hy3 preview - Open Source 295B 21B Active MoE",
+          "summary": "腾讯发布Hy3 preview，开源295B参数21B活跃的MoE模型。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1stk2mz/tencent_releases_hy3_preview_open_source_295b_21b/",
+          "score": 8.5,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "wielebny"
+              "name": "Reddit r/LocalLLaMA"
             }
           ],
           "tags": [
             "open-source",
-            "mesh networking",
-            "AI-generated code",
-            "trademark",
-            "governance"
+            "moe",
+            "tencent"
           ],
           "focusTopics": [
-            "multi-agent"
-          ],
-          "background": "MeshCore is an open-source, LoRa-based mesh networking protocol for off-grid text communication, often compared to Meshtastic. AI-generated code in open source has become a contentious issue, with debates about transparency, quality, and ethics. Trademark disputes are also common in open-source projects, sometimes leading to forks or splits.",
-          "discussion": "Community comments express mixed reactions: some criticize the trademark enforcement as draconian, others are suspicious of undisclosed AI-generated code, and a few point to alternative projects like Reticulum. There is also skepticism about the hype around mesh networking for emergency scenarios."
+            "model-release"
+          ]
         },
         {
-          "title": "Tailscale Cofounder Proposes Building a Simpler Cloud",
-          "summary": "David Crawshaw, a cofounder of Tailscale, published a blog post arguing that current cloud and Kubernetes are fundamentally flawed and proposes building a simpler, more efficient cloud from scratch. This critique from a prominent infrastructure figure challenges the industry's direction, potentially influencing how developers and companies approach cloud architecture and container orchestration. The post highlights that VMs are tied to CPU/memory rather than actual work, and that Kubernetes introduces unnecessary complexity. Crawshaw advocates for a new cloud model that focuses on simplicity and efficiency.",
-          "url": "https://crawshaw.io/blog/building-a-cloud",
+          "title": "OpenAI Debuts ChatGPT for Clinicians Free Access - Let's Data Science",
+          "summary": "OpenAI推出ChatGPT临床版免费访问，并发布HealthBench专业基准。",
+          "url": "https://letsdatascience.com/news/openai-debuts-chatgpt-for-clinicians-free-access-c588eebe",
           "score": 8,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "bumbledraven"
+              "name": "letsdatascience.com"
             }
           ],
           "tags": [
-            "cloud computing",
-            "kubernetes",
-            "infrastructure",
-            "devops",
-            "tailscale"
+            "llm",
+            "healthcare",
+            "benchmark"
           ],
           "focusTopics": [
-            "memory",
-            "multi-agent",
-            "reflection"
-          ],
-          "background": "Tailscale is a company that provides a zero-configuration mesh VPN service, known for its simplicity. Kubernetes is a popular container orchestration platform that has been criticized for its complexity. The author's background lends credibility to the critique.",
-          "discussion": "The community comments largely agree with the critique, with users sharing experiences of Kubernetes incidents and the pain of VM abstraction. Some express skepticism about the feasibility of building a simpler cloud at scale."
+            "evals"
+          ]
         },
         {
-          "title": "LiteParse for the Web: PDF Text Extraction in Browser",
-          "summary": "Simon Willison adapted LlamaIndex's LiteParse to run entirely in the browser, enabling PDF text extraction using spatial text parsing heuristics without AI. A live demo is available at https://simonw.github.io/liteparse/. This demonstrates a practical, non-AI approach to PDF text extraction that runs client-side, preserving privacy and reducing server costs. It also showcases how existing CLI tools can be ported to the browser using libraries like PDF.js and Tesseract.js. LiteParse uses spatial text parsing heuristics to handle multi-column layouts and extract text in a sensible order, falling back to Tesseract OCR for image-based PDFs. The browser version supports optional OCR and page screenshot rendering, and all processing stays local.",
-          "url": "https://simonwillison.net/2026/Apr/23/liteparse-for-the-web/#atom-everything",
+          "title": "Ling-2.6-1T Will Be Open Weights",
+          "summary": "Ling-2.6-1T模型将开放权重，1万亿参数50B活跃参数，承诺开源。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1strnh2/ling261t_will_be_open_weights/",
+          "score": 8,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "open-source",
+            "large-model",
+            "moe"
+          ],
+          "focusTopics": [
+            "model-release"
+          ]
+        },
+        {
+          "title": "anomalyco/opencode",
+          "summary": "OpenCode 是一个开源编码 agent，支持自主编程。",
+          "url": "https://github.com/anomalyco/opencode",
+          "score": 7.79,
+          "sources": [
+            {
+              "name": "GitHub trending:typescript (+660★)"
+            }
+          ],
+          "tags": [
+            "coding-agent",
+            "open-source"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "An update on recent Claude Code quality reports",
+          "summary": "Anthropic发布Claude Code质量报告更新。",
+          "url": "https://simonwillison.net/2026/Apr/24/recent-claude-code-quality-reports/#atom-everything",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "Simon Willison"
+            }
+          ],
+          "tags": [
+            "claude",
+            "code",
+            "quality"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "Deepseek has released DeepEP V2 and TileKernels.",
+          "summary": "DeepSeek发布DeepEP V2和TileKernels，优化MoE通信和内核。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1ste9zs/deepseek_has_released_deepep_v2_and_tilekernels/",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "deepseek",
+            "moe",
+            "open-source",
+            "kernel"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "huggingface/ml-intern",
+          "summary": "Hugging Face 开源 ML 工程师，可读论文、训练模型并部署。",
+          "url": "https://github.com/huggingface/ml-intern",
+          "score": 7.455,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+720★)"
+            }
+          ],
+          "tags": [
+            "open-source",
+            "mlops",
+            "automation"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "Alishahryar1/free-claude-code",
+          "summary": "免费使用 Claude Code 的工具，支持终端、VSCode 和 Discord。",
+          "url": "https://github.com/Alishahryar1/free-claude-code",
+          "score": 7.45,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+1962★)"
+            }
+          ],
+          "tags": [
+            "claude-code",
+            "free",
+            "coding-agent"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "AIDC-AI/Pixelle-Video",
+          "summary": "AI 全自动短视频生成引擎，快速制作视频内容。",
+          "url": "https://github.com/AIDC-AI/Pixelle-Video",
+          "score": 7.438000000000001,
+          "sources": [
+            {
+              "name": "GitHub trending:python (+992★)"
+            }
+          ],
+          "tags": [
+            "video-generation",
+            "automation",
+            "ai"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "vercel-labs/skills",
+          "summary": "Vercel 发布 Skills，一个开放 agent 技能工具。",
+          "url": "https://github.com/vercel-labs/skills",
+          "score": 7.245,
+          "sources": [
+            {
+              "name": "GitHub trending:typescript (+580★)"
+            }
+          ],
+          "tags": [
+            "agent-skills",
+            "developer-tools"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "KeygraphHQ/shannon",
+          "summary": "Shannon Lite 是一个自主 AI 渗透测试工具，用于 Web 安全。",
+          "url": "https://github.com/KeygraphHQ/shannon",
+          "score": 7.0165,
+          "sources": [
+            {
+              "name": "GitHub trending:typescript (+711★)"
+            }
+          ],
+          "tags": [
+            "ai-security",
+            "pentesting",
+            "autonomous"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "The Pulse: AI token spending out of control – what’s next?",
+          "summary": "分析AI token支出失控趋势及行业影响。",
+          "url": "https://newsletter.pragmaticengineer.com/p/the-pulse-ai-token-spending-out-of",
           "score": 7,
           "sources": [
             {
-              "name": "rss",
-              "meta": "Simon Willison"
+              "name": "Pragmatic Engineer"
             }
           ],
           "tags": [
-            "PDF parsing",
-            "browser",
-            "open source",
-            "text extraction",
-            "JavaScript"
+            "ai",
+            "token",
+            "cost"
           ],
-          "focusTopics": [],
-          "background": "LiteParse is an open-source PDF parsing tool from LlamaIndex, originally a Node.js CLI. It relies on PDF.js for PDF rendering and Tesseract.js for OCR, both of which have browser-compatible versions. Spatial text parsing uses heuristics to infer reading order from layout features like columns and text blocks, without machine learning."
+          "focusTopics": []
+        },
+        {
+          "title": "Google Introduces Unique AI Agent Identities in New Gemini Enterprise Platform - Infosecurity Magazine",
+          "summary": "Google在Gemini Enterprise中引入独特AI代理身份。",
+          "url": "https://www.infosecurity-magazine.com/news/google-ai-agent-identities-gemini/",
+          "score": 7,
+          "sources": [
+            {
+              "name": "infosecurity-magazine.com"
+            }
+          ],
+          "tags": [
+            "ai-agents",
+            "enterprise",
+            "gemini"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "Anthropic’s Mythos breach was humiliating | The Verge",
+          "summary": "Anthropic的Mythos数据泄露事件引发羞辱。",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/917644/anthropic-claude-mythos-breach-humiliation",
+          "score": 7,
+          "sources": [
+            {
+              "name": "theverge.com"
+            }
+          ],
+          "tags": [
+            "anthropic",
+            "security",
+            "breach"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "US gov memo on “adversarial distillation” - are we heading toward tighter controls on open models?",
+          "summary": "美国政府备忘录关注对抗性蒸馏，可能收紧开源模型。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1stmx00/us_gov_memo_on_adversarial_distillation_are_we/",
+          "score": 7,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "policy",
+            "open-source",
+            "distillation"
+          ],
+          "focusTopics": [
+            "post-training"
+          ]
+        },
+        {
+          "title": "Been using PI Coding Agent with local Qwen3.6 35b for a while now and its actually insane",
+          "summary": "用户分享使用PI Coding Agent搭配本地Qwen3.6 35b模型的真实体验，效果出乎意料地好。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1stjwg5/been_using_pi_coding_agent_with_local_qwen36_35b/",
+          "score": 7,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "local-llm",
+            "coding-agent",
+            "qwen"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "mattmireles/gemma-tuner-multimodal",
+          "summary": "Gemma Tuner Multimodal：在Apple Silicon上微调Gemma多模态模型。",
+          "url": "https://github.com/mattmireles/gemma-tuner-multimodal",
+          "score": 7,
+          "sources": [
+            {
+              "name": "Co-Starred"
+            }
+          ],
+          "tags": [
+            "fine-tuning",
+            "gemma",
+            "multimodal",
+            "apple-silicon"
+          ],
+          "focusTopics": [
+            "model-release"
+          ]
+        },
+        {
+          "title": "TorchTPU: Running PyTorch Natively on TPUs at Google Scale",
+          "summary": "Google发布TorchTPU，原生在TPU上运行PyTorch。",
+          "url": "https://developers.googleblog.com/torchtpu-running-pytorch-natively-on-tpus-at-google-scale/",
+          "score": 6.947,
+          "sources": [
+            {
+              "name": "HN (49)"
+            }
+          ],
+          "tags": [
+            "pytorch",
+            "tpu",
+            "google"
+          ],
+          "focusTopics": [
+            "model-release"
+          ]
+        },
+        {
+          "title": "mksglu/context-mode",
+          "summary": "上下文窗口优化工具，减少 AI 编码代理 98% 的 token 消耗。",
+          "url": "https://github.com/mksglu/context-mode",
+          "score": 6.732,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+238★)"
+            }
+          ],
+          "tags": [
+            "context-window",
+            "optimization",
+            "coding-agent"
+          ],
+          "focusTopics": [
+            "context-engineering"
+          ]
+        },
+        {
+          "title": "SAP and Google Cloud Join Forces to Revolutionize AI-Driven Marketing - wwd.com",
+          "summary": "SAP与Google Cloud合作，用Gemini Enterprise驱动AI营销。",
+          "url": "https://wwd.com/sourcing-journal/industry-news/sap-google-cloud-join-forces-on-ai-driven-marketing-1238927165/",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "wwd.com"
+            }
+          ],
+          "tags": [
+            "enterprise",
+            "multi-agent",
+            "gemini"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "OpenSimula — open implementation of Simula-style mechanism design for synthetic data (in AfterImage) [P]",
+          "summary": "OpenSimula：开源实现Simula机制设计用于合成数据生成。",
+          "url": "https://www.reddit.com/r/MachineLearning/comments/1sti4mx/opensimula_open_implementation_of_simulastyle/",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "Reddit r/MachineLearning"
+            }
+          ],
+          "tags": [
+            "synthetic-data",
+            "open-source",
+            "python"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "HKUDS/RAG-Anything",
+          "summary": "一站式 RAG 框架，简化检索增强生成应用构建。",
+          "url": "https://github.com/HKUDS/RAG-Anything",
+          "score": 6.409999999999999,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+590★)"
+            }
+          ],
+          "tags": [
+            "rag",
+            "framework",
+            "open-source"
+          ],
+          "focusTopics": [
+            "context-engineering"
+          ]
+        },
+        {
+          "title": "badlogic/pi-mono",
+          "summary": "Pi-mono 是一个 AI agent 工具包，含编码 agent CLI。",
+          "url": "https://github.com/badlogic/pi-mono",
+          "score": 6.191,
+          "sources": [
+            {
+              "name": "GitHub trending:typescript (+444★)"
+            }
+          ],
+          "tags": [
+            "agent-toolkit",
+            "cli"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "cline/cline",
+          "summary": "自主编码代理，可在 IDE 中创建文件、执行命令、使用浏览器。",
+          "url": "https://github.com/cline/cline",
+          "score": 6.1345,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+123★)"
+            }
+          ],
+          "tags": [
+            "coding-agent",
+            "autonomous",
+            "ide"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "[AINews] Tasteful Tokenmaxxing",
+          "summary": "AI领导者关于token使用的讨论总结。",
+          "url": "https://www.latent.space/p/ainews-tasteful-tokenmaxxing",
+          "score": 6,
+          "sources": [
+            {
+              "name": "Latent Space"
+            }
+          ],
+          "tags": [
+            "llm",
+            "token",
+            "discussion"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Era computer raises $11M to build a software platform for AI gadgets - TechCrunch",
+          "summary": "Era Computer融资1100万美元，构建AI小工具软件平台。",
+          "url": "https://techcrunch.com/2026/04/23/era-computer-raises-11m-to-build-a-software-platform-for-ai-gadgets/",
+          "score": 6,
+          "sources": [
+            {
+              "name": "techcrunch.com"
+            }
+          ],
+          "tags": [
+            "ai-gadgets",
+            "funding"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Bret Taylor's Sierra buys YC-backed AI startup Fragment | TechCrunch",
+          "summary": "Bret Taylor的Sierra收购YC支持的AI初创Fragment。",
+          "url": "https://techcrunch.com/2026/04/23/bret-taylors-sierra-buys-yc-backed-ai-startup-fragment/",
+          "score": 6,
+          "sources": [
+            {
+              "name": "techcrunch.com"
+            }
+          ],
+          "tags": [
+            "acquisition",
+            "ai-startup"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "An Overnight Stack for Qwen3.6–27B: 85 TPS, 125K Context, Vision — on One RTX 3090 | by Wasif Basharat | Apr, 2026",
+          "summary": "一篇教程展示如何在单张 RTX 3090 上运行 Qwen 3.6 27B。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1stjx29/an_overnight_stack_for_qwen3627b_85_tps_125k/",
+          "score": 6,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "qwen",
+            "deployment",
+            "tutorial"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Why are we actually sampling reasoning and output the same way?",
+          "summary": "讨论推理和输出采样方式是否应不同，涉及多语言推理问题。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1stoiu3/why_are_we_actually_sampling_reasoning_and_output/",
+          "score": 6,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "reasoning",
+            "sampling",
+            "multilingual"
+          ],
+          "focusTopics": [
+            "planning"
+          ]
+        },
+        {
+          "title": "Built a normalizer so WER stops penalizing formatting differences in STT evals! [P]",
+          "summary": "构建归一化器解决WER在STT评估中因格式差异导致的惩罚问题。",
+          "url": "https://www.reddit.com/r/MachineLearning/comments/1stmn7h/built_a_normalizer_so_wer_stops_penalizing/",
+          "score": 6,
+          "sources": [
+            {
+              "name": "Reddit r/MachineLearning"
+            }
+          ],
+          "tags": [
+            "stt",
+            "wer",
+            "normalization"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "crewAIInc/crewAI",
+          "summary": "编排角色扮演自主 AI 代理的框架，促进协作智能。",
+          "url": "https://github.com/crewAIInc/crewAI",
+          "score": 5.747,
+          "sources": [
+            {
+              "name": "GitHub trending:python (+148★)"
+            }
+          ],
+          "tags": [
+            "multi-agent",
+            "framework",
+            "collaboration"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "Show HN: Agent Vault – Open-source credential proxy and vault for agents",
+          "summary": "Agent Vault：开源AI代理凭证代理和保险库。",
+          "url": "https://github.com/Infisical/agent-vault",
+          "score": 5.728999999999999,
+          "sources": [
+            {
+              "name": "HN (68)"
+            }
+          ],
+          "tags": [
+            "agent",
+            "security",
+            "open-source"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "Rilian Raises $17.5 Million for AI-Native Security Orchestration - SecurityWeek",
+          "summary": "Rilian融资1750万美元，用于AI原生安全编排。",
+          "url": "https://www.securityweek.com/rilian-raises-17-5-million-for-ai-native-security-orchestration/",
+          "score": 5.5,
+          "sources": [
+            {
+              "name": "securityweek.com"
+            }
+          ],
+          "tags": [
+            "security",
+            "funding",
+            "ai-agents"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Meet Noscroll, an AI bot that does your doomscrolling for you | TechCrunch",
+          "summary": "AI机器人Noscroll帮你自动刷社交媒体，替代无意识滚动。",
+          "url": "https://techcrunch.com/2026/04/23/meet-noscroll-an-ai-bot-that-does-your-doomscrolling-for-you/",
+          "score": 5.5,
+          "sources": [
+            {
+              "name": "techcrunch.com"
+            }
+          ],
+          "tags": [
+            "ai-agent",
+            "social-media",
+            "automation"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Qwen 3.6 27B is a BEAST",
+          "summary": "用户盛赞 Qwen 3.6 27B 在笔记本上的表现。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1steip4/qwen_36_27b_is_a_beast/",
+          "score": 5.5,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "qwen",
+            "local-llm",
+            "experience"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "microsoft/ai-agents-for-beginners",
+          "summary": "微软推出的 AI Agent 入门教程，共 12 课。",
+          "url": "https://github.com/microsoft/ai-agents-for-beginners",
+          "score": 5.412,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+208★)"
+            }
+          ],
+          "tags": [
+            "tutorial",
+            "ai-agents",
+            "beginners"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "phodal/routa",
+          "summary": "Routa 是一个工作区优先的多 agent 协调平台。",
+          "url": "https://github.com/phodal/routa",
+          "score": 5.1285,
+          "sources": [
+            {
+              "name": "GitHub trending:typescript (+19★)"
+            }
+          ],
+          "tags": [
+            "multi-agent",
+            "coordination"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "coreyhaines31/marketingskills",
+          "summary": "为 Claude Code 和 AI 代理提供营销技能，包括 CRO、SEO 等。",
+          "url": "https://github.com/coreyhaines31/marketingskills",
+          "score": 5.1025,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+285★)"
+            }
+          ],
+          "tags": [
+            "marketing",
+            "claude-code",
+            "skills"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "AIE Europe Debrief + Agent Labs Thesis: Unsupervised Learning x Latent Space Crossover Special (2026)",
+          "summary": "AIE Europe回顾与Agent Labs观点，非今日新闻。",
+          "url": "https://www.latent.space/p/unsupervised-learning-2026",
+          "score": 5,
+          "sources": [
+            {
+              "name": "Latent Space"
+            }
+          ],
+          "tags": [
+            "agents",
+            "conference"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "Extract PDF text in your browser with LiteParse for the web",
+          "summary": "LlamaIndex发布LiteParse，浏览器端PDF文本提取。",
+          "url": "https://simonwillison.net/2026/Apr/23/liteparse-for-the-web/#atom-everything",
+          "score": 5,
+          "sources": [
+            {
+              "name": "Simon Willison"
+            }
+          ],
+          "tags": [
+            "pdf",
+            "llamaindex",
+            "open-source"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Fere AI Raises $1.3M to Put a Self-Improving Trading Agent in Everyone's Hands - GlobeNewswire",
+          "summary": "Fere AI融资130万美元，开发自改进交易代理。",
+          "url": "https://www.globenewswire.com/news-release/2026/04/23/3279629/0/en/fere-ai-raises-1-3m-to-put-a-self-improving-trading-agent-in-everyone-s-hands.html",
+          "score": 5,
+          "sources": [
+            {
+              "name": "globenewswire.com"
+            }
+          ],
+          "tags": [
+            "trading-agent",
+            "funding"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Compared QWEN 3.6 35B with QWEN 3.6 27B for coding primitives",
+          "summary": "用户对比 Qwen 3.6 35B 与 27B 的编码性能。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1styxdy/compared_qwen_36_35b_with_qwen_36_27b_for_coding/",
+          "score": 5,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "qwen",
+            "coding",
+            "comparison"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Are there actually people here that get real productivity out of models fitting in 32-64GB RAM, or is that just playing around with little genuine usefulness?",
+          "summary": "社区讨论32-64GB内存运行模型的实际生产力价值，用户分享使用场景。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1stq2v7/are_there_actually_people_here_that_get_real/",
+          "score": 5,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "local-llm",
+            "hardware",
+            "productivity"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Qwen-3.6-27B, llamacpp, speculative decoding - appreciation post",
+          "summary": "用户实验Qwen-3.6-27B配合推测解码的性能提升。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1stcer1/qwen3627b_llamacpp_speculative_decoding/",
+          "score": 5,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "qwen",
+            "speculative-decoding",
+            "local-llm"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Optimizing Transformer model size & inference beyond FP16 + ONNX (pruning/graph opt didn’t help much) [P]",
+          "summary": "用户寻求Transformer模型大小和推理优化建议，尝试剪枝等效果不佳。",
+          "url": "https://www.reddit.com/r/MachineLearning/comments/1stfk9y/optimizing_transformer_model_size_inference/",
+          "score": 5,
+          "sources": [
+            {
+              "name": "Reddit r/MachineLearning"
+            }
+          ],
+          "tags": [
+            "transformer",
+            "optimization",
+            "inference"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "onyx-dot-app/onyx",
+          "summary": "开源 AI 平台，支持多 LLM 的聊天和高级功能。",
+          "url": "https://github.com/onyx-dot-app/onyx",
+          "score": 4.9944999999999995,
+          "sources": [
+            {
+              "name": "GitHub trending:python (+213★)"
+            }
+          ],
+          "tags": [
+            "ai-chat",
+            "open-source",
+            "multi-llm"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Anil-matcha/Open-Generative-AI",
+          "summary": "开源无审查 AI 图像视频生成平台，含 200+ 模型。",
+          "url": "https://github.com/Anil-matcha/Open-Generative-AI",
+          "score": 4.724,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+316★)"
+            }
+          ],
+          "tags": [
+            "image-generation",
+            "video-generation",
+            "open-source"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Qwen 3.6 27b IQ4_XS - 22 tp/s on RTX 5060TI 16b, 24k ctx",
+          "summary": "用户分享Qwen 3.6 27B在RTX 5060Ti上的推理速度测试结果。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1su0il5/qwen_36_27b_iq4_xs_22_tps_on_rtx_5060ti_16b_24k/",
+          "score": 4,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "qwen",
+            "benchmark",
+            "local-llm"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "First time fine-tuning, need a sanity check — 3B or 7B for multi-task reasoning? [D]",
+          "summary": "新手寻求微调建议，3B vs 7B用于多任务推理。",
+          "url": "https://www.reddit.com/r/MachineLearning/comments/1stdytn/first_time_finetuning_need_a_sanity_check_3b_or/",
+          "score": 4,
+          "sources": [
+            {
+              "name": "Reddit r/MachineLearning"
+            }
+          ],
+          "tags": [
+            "fine-tuning",
+            "reasoning",
+            "advice"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "microsoft/onnxruntime",
+          "summary": "跨平台高性能 ML 推理和训练加速器 ONNX Runtime。",
+          "url": "https://github.com/microsoft/onnxruntime",
+          "score": 3.4735,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+49★)"
+            }
+          ],
+          "tags": [
+            "onnx",
+            "inference",
+            "training"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "This isn’t X this is Y needs to die",
+          "summary": "Reddit 讨论模型重复输出固定短语的问题。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1su07zn/this_isnt_x_this_is_y_needs_to_die/",
+          "score": 3,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "llm",
+            "behavior"
+          ],
+          "focusTopics": []
         }
       ]
     }
-  ]
+  ],
+  "aiSummary": "今日AI领域迎来重磅发布，OpenAI正式推出[GPT-5.5](#item-openai-com-index-introducing-gpt-5-5)模型，其在Terminal-Bench 2.0上险胜Anthropic的Claude Mythos，向超级应用迈进；研究方面，[Qwen 3.6 27B](#item-reddit-com-r-LocalLLaMA-comments-1strodp-qwen-36-27b-makes-h)在Agentic Index上追平Sonnet 4.6，同时有论文提出用于长上下文推理的[TTKV分层缓存方法](#item-arxiv-org-abs-2604-19769)；工具更新上，[GPT-5.5已通过Codex API可用](#item-simonwillison-net-2026-Apr-23-gpt-5-5)，并新增[代码搜索MCP工具](#item-github-com-zilliztech-claude-context)让Claude Code处理整个代码库；观点方面，分析指出[AI token支出失控](#item-newsletter-pragmaticengineer-com-p-the-pulse-ai-token-spendi)趋势，而[Anthropic的Mythos数据泄露](#item-theverge-com-ai-artificial-intelligence-917644-anthropic-cla)引发行业反思，美国政府备忘录关注[对抗性蒸馏](#item-reddit-com-r-LocalLLaMA-comments-1stmx00-us-gov-memo-on-adve)可能收紧开源模型管控。"
 }
