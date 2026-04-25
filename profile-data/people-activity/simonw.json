@@ -536,6 +536,84 @@
         "deployment"
       ],
       "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mkb5frxhf22k",
+      "url": "https://bsky.app/profile/simonwillison.net/post/3mkb5frxhf22k",
+      "author": {
+        "handle": "simonwillison.net",
+        "displayName": "Simon Willison",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
+      },
+      "content": "I had no idea The Wind in the Willows was this much of a banger",
+      "createdAt": "2026-04-24T18:22:04.061Z",
+      "likeCount": 28,
+      "replyCount": 7,
+      "repostCount": 2,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [],
+      "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mkarjdp4ys2j",
+      "url": "https://bsky.app/profile/simonwillison.net/post/3mkarjdp4ys2j",
+      "author": {
+        "handle": "simonwillison.net",
+        "displayName": "Simon Willison",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
+      },
+      "content": "OK this piece by @reckless.bsky.social about why AI is unpopular among most people (anyone who's not inflicted with \"software brain\") is just solid gold from start to finish",
+      "createdAt": "2026-04-24T14:49:18.419Z",
+      "likeCount": 109,
+      "replyCount": 4,
+      "repostCount": 15,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [],
+      "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mk7ud6p4f22n",
+      "url": "https://bsky.app/profile/simonwillison.net/post/3mk7ud6p4f22n",
+      "author": {
+        "handle": "simonwillison.net",
+        "displayName": "Simon Willison",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
+      },
+      "content": "DeepSeek V4 just dropped - two models, Flash and Pro, both benchmarking well, decent pelicans and prices that put them both as the cheapest in their respective categories by a solid margin simonwillison.net/2026/Apr/24/...",
+      "createdAt": "2026-04-24T06:06:53.336Z",
+      "likeCount": 127,
+      "replyCount": 8,
+      "repostCount": 13,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [
+        "llm",
+        "evaluation",
+        "deployment"
+      ],
+      "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mk7nmiht422n",
+      "url": "https://bsky.app/profile/simonwillison.net/post/3mk7nmiht422n",
+      "author": {
+        "handle": "simonwillison.net",
+        "displayName": "Simon Willison",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
+      },
+      "content": "This week's edition of my email newsletter features 4 pelicans riding bicycles, 1 possum on an e-scooter, up to 5 raccoons with ham radios hiding in crowds, 5 blog posts, 8 links, 3 quotes and a new chapter of my Agentic Engineering Patterns guide simonw.substack.com/p/gpt-55-cha...",
+      "createdAt": "2026-04-24T04:06:49.384Z",
+      "likeCount": 40,
+      "replyCount": 4,
+      "repostCount": 2,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [
+        "agent"
+      ],
+      "type": "bluesky"
     }
   ],
   "videos": [],
@@ -628,6 +706,16 @@
       "summary": "<p><a href=\"https://openai.com/index/introducing-gpt-5-5/\">GPT-5.5 is out</a>. It's available in OpenAI Codex and is rolling out to paid ChatGPT subscribers. I've had some preview access and found it to be a fast, effective and highly capable model. As is usually the case these days, it's hard to...",
       "highlights": "GPT-5.5 is now available via OpenAI Codex and rolling out to paid ChatGPT users. The author finds it fast, effective, and highly capable, with improvements in coding and reasoning tasks.",
       "worthReading": "Simon Willison provides early hands-on impressions of GPT-5.5, highlighting its performance and the novel 'Codex backdoor' access method, which is valuable for developers tracking OpenAI's latest model capabilities.",
+      "type": "blog"
+    },
+    {
+      "title": "DeepSeek V4 - almost on the frontier, a fraction of the price",
+      "url": "https://simonwillison.net/2026/Apr/24/deepseek-v4/#atom-entries",
+      "author": "Simon Willison",
+      "publishedAt": "2026-04-24T06:01:04+00:00",
+      "summary": "<p>Chinese AI lab DeepSeek's last model release was V3.2 (and V3.2 Speciale) <a href=\"https://simonwillison.net/2025/Dec/1/deepseek-v32/\">last December</a>. They just dropped the first of their hotly anticipated V4 series in the shape of two preview models, <a...",
+      "highlights": "DeepSeek V4 preview models achieve near-frontier performance at a fraction of the cost, challenging the pricing strategies of leading AI labs. The release signals a major shift towards cost-efficient AI development, making advanced models more accessible.",
+      "worthReading": "For those tracking AI economics and model performance trade-offs, this post offers a clear analysis of how DeepSeek's pricing and capabilities compare to competitors, highlighting a potential trend in the industry.",
       "type": "blog"
     }
   ],
@@ -1087,10 +1175,51 @@
         "agent",
         "tooling"
       ]
+    },
+    {
+      "type": "x",
+      "id": "1976989054240800798",
+      "url": "https://x.com/simonw/status/1976989054240800798",
+      "author": {
+        "handle": "simonw",
+        "displayName": "Simon Willison",
+        "avatar": "https://avatars.githubusercontent.com/simonw"
+      },
+      "content": "I'm beginning to suspect that a key skill in working effectively with coding agents is developing an intuition for when you don't need to",
+      "createdAt": "2026-04-25T04:01:04.122Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Simon suggests that a key skill with coding agents is knowing when to step back.",
+      "worthReading": "Highlights a nuanced skill for effective human-AI collaboration in coding.",
+      "tags": [
+        "agent",
+        "tooling"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "1975570458683834729",
+      "url": "https://x.com/simonw/status/1975570458683834729",
+      "author": {
+        "handle": "simonw",
+        "displayName": "Simon Willison",
+        "avatar": "https://avatars.githubusercontent.com/simonw"
+      },
+      "content": "Vibe coding is irresponsibly building software through dice rolls, not caring what code is produced",
+      "createdAt": "2026-04-25T04:01:04.122Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Simon defines 'vibe coding' as irresponsible software development.",
+      "worthReading": "Critiques a trend in AI-assisted coding that prioritizes speed over quality.",
+      "tags": [
+        "agent",
+        "evaluation"
+      ]
     }
   ],
   "dailyCounts": [
-    0,
     0,
     0,
     0,
@@ -1119,7 +1248,8 @@
     8,
     5,
     5,
+    6,
     2
   ],
-  "interestSummary": "Simon Willison is deeply engaged in evaluating and documenting the latest AI models (Anthropic's Opus, Google's Gemini, Meta's Muse, Qwen) and their capabilities, with a particular focus on coding agents, image generation, and multimodal features. He maintains a playful but rigorous benchmarking approach using \"pelicans riding bicycles\" to compare model outputs, while also exploring practical tools like document parsing, fine-tuning, and Google Sheets integrations."
+  "interestSummary": "Simon Willison is actively exploring and benchmarking the latest AI models (Gemma, Qwen, Claude Opus) for code, image generation, and memory systems, while also building practical tools like document parsers and integrating AI with Google Sheets and Datasette. He maintains a playful focus on generative image quality through his \"pelican riding a bicycle\" benchmark, and closely follows Anthropic's pricing and feature changes."
 }

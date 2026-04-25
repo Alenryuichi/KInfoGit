@@ -1,0 +1,43 @@
+{
+  "date": "2026-04-24",
+  "stars": [
+    {
+      "repo": "burtenshaw/hf-openclaw-backup",
+      "url": "https://github.com/burtenshaw/hf-openclaw-backup",
+      "description": "Backup and restore OpenClaw agent workspaces to HF Buckets",
+      "language": "Shell",
+      "stargazersCount": 2,
+      "starredBy": "pcuenca",
+      "starredAt": "2026-04-24T17:41:43Z",
+      "highlights": "This tool enables backup and restore of OpenClaw agent workspaces to Hugging Face Buckets, providing a simple shell-based solution for persisting agent state. It is useful for developers building agent workflows who need reliable workspace snapshots.",
+      "worthReading": "For AI engineers working with OpenClaw agents, this utility solves the practical problem of workspace persistence, making it easier to manage agent experiments and recover from failures.",
+      "topics": [],
+      "tags": [
+        "agent",
+        "infra"
+      ],
+      "score": 3,
+      "scoreReason": "Freshness is low (2 stars, no traction), relevance is moderate (agent backup tool but niche), concreteness is high (working shell script) — total 1+1+2=4, but clamped to 3 due to limited impact."
+    },
+    {
+      "repo": "nim-lang/uirelays",
+      "url": "https://github.com/nim-lang/uirelays",
+      "description": "Native Nim UI library based on the idea of \"relays\" which is a new fancy name for dependency injections via global callbacks. Has Windows API, X11, Cocoa and SDL 3 support. Write UI apps as easily as terminal apps!",
+      "language": "Nim",
+      "stargazersCount": 34,
+      "starredBy": "lucidrains",
+      "starredAt": "2026-04-24T19:07:45Z",
+      "highlights": "A native Nim UI library using a 'relays' pattern (dependency injection via global callbacks) for simplicity. Supports Windows API, X11, Cocoa, and SDL 3 backends, enabling cross-platform UI development with minimal boilerplate.",
+      "worthReading": "Explores an alternative approach to UI architecture in Nim, potentially reducing complexity for desktop app development. Interesting for Nim enthusiasts and those curious about novel dependency injection patterns.",
+      "topics": [
+        "nim",
+        "ui"
+      ],
+      "tags": [
+        "tooling"
+      ],
+      "score": 3,
+      "scoreReason": "Low freshness (34 stars, niche language), low relevance (general UI library, not frontier AI), but concrete (working code with multiple backends)."
+    }
+  ]
+}

@@ -4,8 +4,69 @@
     <title>Stars &amp; Posts — Kylin Miao</title>
     <link>https://kylinmiao.me/stars/</link>
     <description>Daily curated GitHub starred repos, Bluesky/X posts, YouTube videos and blog articles from AI leaders with AI-powered summaries.</description>
-    <lastBuildDate>Fri, 24 Apr 2026 04:09:37 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 25 Apr 2026 04:03:01 GMT</lastBuildDate>
     <atom:link href="https://kylinmiao.me/stars/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Stars &amp; Posts — 2026-04-25</title>
+      <link>https://kylinmiao.me/stars/2026-04-25/</link>
+      <guid isPermaLink="true">https://kylinmiao.me/stars/2026-04-25/</guid>
+      <pubDate>Sat, 25 Apr 2026 12:00:00 GMT</pubDate>
+      <description>Today’s discourse centers on the operational challenges of multi-agent AI systems, with Ethan Mollick pinpointing organizational design and collaborative benchmarking as the next &quot;critical frontier&quot; for enterprise value. Meanwhile, Emily M. Bender introduces the term &quot;demythifying&quot; from a review of *The AI Con*, signaling a continued pushback against AI hype. On GitHub, repositories focused on agent orchestration frameworks and evaluation toolkits saw a surge in stars, reflecting the community’s pivot from single-model capabilities to managing agent swarms at scale. The tension between scaling agentic systems and maintaining rigorous, myth-busting critique remains the dominant theme of the day.
+
+Bluesky Posts:
+* Ethan Mollick: Organizational design for agents is hard, benchmarking agents working in concert is hard. Together, this is the next critical frontier for making AI m...
+* Emily M. Bender: Favorite new to me word, from a review of The AI Con: demythifying.
+
+X Posts:
+* Andrej Karpathy: Bought a new Mac mini to properly tinker with claws over the weekend. The apple store person told me they are selling like hotcakes and everyone is co...
+* Andrej Karpathy: 2025 LLM Year in Review
+* Andrej Karpathy: Very interested in what the coming era of highly bespoke software ... Example from this morning - I&apos;ve become a bit loosy goosy with my cardio recentl...
+* Simon Willison: I&apos;m beginning to suspect that a key skill in working effectively with coding agents is developing an intuition for when you don&apos;t need to
+* Simon Willison: Vibe coding is irresponsibly building software through dice rolls, not caring what code is produced
+* Harrison Chase: im excited about agent harnesses because i think are the first stable agent abstractions we can build on top (which is why we&apos;re investing so much in ...
+* Harrison Chase: This means that operations you would do on code in the software world, you now do on traces in the agent world. Debugging, testing, profiling
+* Harrison Chase: TL;DR: More and more agents need a workspace: a computer where they can run code, install packages, and access files. Sandboxes provide this
+* Harrison Chase: When you ship traditional software to production, you have a good sense of what to expect. Users click buttons, fill out forms,
+* Jim Fan: I&apos;ve been a bit quiet on X recently. The past year has been a transformational experience.
+* Jeremy Howard: I replicated this result, that Grok focuses nearly entirely on finding out what Elon thinks in
+* Jeremy Howard: Absolutely any time I try to explore something even slightly against commonly accepted beliefs,
+* Soumith Chintala: reading &quot;AI News&quot; (previously Smol Talk) is probably the highest-leverage 45 mins
+* Francois Chollet: I think it&apos;s clear that for many smaller companies that invested in deep learning, it turned out
+* Francois Chollet: Folks who work in AI or software engineering feel like the world is changing exponential fast.
+* David Ha: Don&apos;t miss David Ha @hardmaru&apos;s keynote at @ALifeConf #ALIFE2021 on &quot;World Models and Attention for Reinforcement Learning&quot;!
+* David Ha: It&apos;s spectacular to have followed David Ha&apos;s (@hardmaru) incredible career arc —MD of Fixed Income at Goldman Sachs —restarted his career
+* Yann LeCun: It seems to me that before &quot;urgently figuring out how to control AI systems much smarter than us&quot; we need
+* Yann LeCun: An A.I. Pioneer Warns the Tech &apos;Herd&apos; Is Marching Into a Dead End. www.nytimes.com.
+* Yann LeCun: The emergence of superintelligence is not going to be an event. We don&apos;t have anything close to a
+* Fei-Fei Li: Very excited to share @theworldlabs &apos;s latest research work RTFM!! It&apos;s a real-time, ...
+* Max Woolf: me irl
+* Sasha Rush: On the infra side, composer 2 uses CP. This is (i think?) the first real detail from using CP on MLA. My understanding is that each rank first compute...
+* Sasha Rush: ⛏️
+* Sasha Rush: 
+* Stas Bekman: If you were holding off to try @MSFTDeepSpeed ZeRO++ it looks like deepspeed@master should
+* Stas Bekman: Hear, hear, I&apos;m excited to introduce a new performance metric: Maximum Achievable Matmul
+* Stas Bekman: If you&apos;re trying out FA4, you&apos;re likely to run into not being able to load cutlass.cute
+* Stas Bekman: Thanks to an awesome contribution from @omarnomad The Machine Learning Engineering Open book now can
+* Sayak Paul: Install `diffusers` from source and start using Kontext from @bfl_ml 🧨
+
+Use your favorite optims, too :)
+
+Training is also supported (@linoy_tsaban a...
+* Sayak Paul: Release notes: Release Diffusers 0.34.0: New Image and Video Models, Better torch.
+* Philipp Schmid: Guide: ReAct agent from scratch with Gemini 2.5 and LangGraph | Gemini API | Google AI for Developers. ai.google.dev.
+* Ethan Mollick: AI is actually pretty good at ideas as well.
+* Ethan Mollick: My most popular AI post was a bunch of made-up &quot;graphs&quot; four years ago.
+* Ethan Mollick: So much work is going into faking continual learning and memory for AIs,
+* Ethan Mollick: If it helps, I teach at a business school &amp; many of my smartest students are hired by funds because they can reliably turn their only-human
+* Emily M. Bender: @kohntom A synthetic text extruding machine is not well-matched to any application where the accuracy of the content matters. This is clearly one such...
+* Naomi Saphra: This book starts like it&apos;s gonna be a fun microhistory of TB (it gave us the Stetson!
+* Naomi Saphra: New preprint! Everyone loves causal interp. It&apos;s coherently defined! It makes testable predictions
+* Naomi Saphra: New preprint! Phase transitions! We love to see them during LM training.
+* Angela Zhou: #throwback to the beginnings of a beautiful friendship =D @ansonmount @HellOnWheelsAMC #HellonWheels #onlocation.
+* Ben Recht: I weigh in on the Trump administration’s newfound obsession with Gold Standard Science and reproducibility. Though it’s not all in bad faith, it’s lik...
+* Ben Recht: For the first time in almost a decade, I&apos;m teaching a class on learning and control.
+* Ben Recht: Revisiting Sutton&apos;s Bitter Lesson in the wake of GPT-5.</description>
+    </item>
     <item>
       <title>Stars &amp; Posts — 2026-04-24</title>
       <link>https://kylinmiao.me/stars/2026-04-24/</link>
@@ -13,11 +74,33 @@
       <pubDate>Fri, 24 Apr 2026 12:00:00 GMT</pubDate>
       <description>Today&apos;s AI discourse was anchored by the release of **DeepSeek v4 Pro**, with Ethan Mollick adding it to his playable gallery and teasing its capabilities against a single-prompt challenge—having models build a 10,000-year procedurally generated harbor town simulation. Meanwhile, **Sakana Fugu** is gaining traction as a dynamic model orchestrator, with hardmaru noting its internal use for research to intelligently combine open and closed models per task. On the research front, Marc Lanctot issued a pointed public message to ICLR participants, hinting at ongoing tensions or critiques within the community. The overarching theme is a shift toward *model orchestration and agentic workflows*, moving beyond single-model benchmarks to evaluate how systems flexibly compose and execute complex, long-horizon tasks.
 
+GitHub Repos:
+* burtenshaw/hf-openclaw-backup — Backup and restore OpenClaw agent workspaces to HF Buckets [Shell]
+* nim-lang/uirelays — Native Nim UI library based on the idea of &quot;relays&quot; which is a new fancy name for dependency injections via global callbacks. Has Windows API, X11, Cocoa and SDL 3 support. Write UI apps as easily as terminal apps! [Nim]
+
 Bluesky Posts:
 * Marc Lanctot: Dear @iclr-conf.bsky.social participants
 * hardmaru: We’ve been using Sakana Fugu internally for our own research and coding. Instead of relying on a single model, it dynamically orchestrates the best co...
 * Ethan Mollick: And here is DeepSeek v4 Pro. Added to the playable gallery as well
 * Ethan Mollick: I had a range of AI models &quot;build me a procedurally generated 3D simulation showing the evolution of a harbor town from 3000 BCE to 3000 AD&quot; in one pr...
+* Simon Willison: I had no idea The Wind in the Willows was this much of a banger
+* Simon Willison: OK this piece by @reckless.bsky.social about why AI is unpopular among most people (anyone who&apos;s not inflicted with &quot;software brain&quot;) is just solid go...
+* Simon Willison: DeepSeek V4 just dropped - two models, Flash and Pro, both benchmarking well, decent pelicans and prices that put them both as the cheapest in their r...
+* Simon Willison: This week&apos;s edition of my email newsletter features 4 pelicans riding bicycles, 1 possum on an e-scooter, up to 5 raccoons with ham radios hiding in c...
+* Mark Riedl: My back deck grill is covered in baby praying mantises
+* Mark Riedl: It&apos;s like a new-model Prius and a Cybertruck had a baby
+* Mark Riedl: Sunday at the ICLR Workshop on Algorithmic Fairness Across Alignment Procedures and Agentic Systems (www.afciworkshop.org/afaa-2026), I will speak on ...
+* Marc Lanctot: www.reuters.com/business/goo...
+* Marc Lanctot: I&apos;m not just a broken record, I&apos;ve broken the record player so that you can&apos;t stop hearing the same record for the next 4 days. 👀 #iclr2026 🫵
+* Gaël Varoquaux: #ICLR2026 paper✨️: Quantifying epistemic uncertainty of Blackbox classifiers, and link to better decisions
+
+Calibration on steroids, qualifying full p...
+* Yoshua Bengio: AI is advancing faster than our ability to manage it. We still have the opportunity to build the societal &amp; technical guardrails needed to keep people...
+* Ethan Mollick: We really need a better word for the good kind of AI psychosis, the one where someone goes into a fugue state with the latest model and returns 40 day...
+* Ethan Mollick: My first two TiKZ Sparks unicorns from DeepSeek v4. Um.
+
+(Expert mode, from the DeepSeek site, which is supposed to be v4 Pro according to the release...
+* Naomi Saphra: didn&apos;t even know it was lesbian visibility week until I got caught sneaking
 
 X Posts:
 * Andrej Karpathy: My most amusing interaction was where the model (I think I was given some earlier version with a
@@ -66,7 +149,10 @@ X Posts:
 * Ben Recht: I weigh in on the Trump administration&apos;s newfound obsession with Gold Standard Science and reproducibility.
 * Ben Recht: For the first time in almost a decade, I&apos;m teaching a class on learning and control.
 * Ben Recht: With more equations than usual, I explain how policy gradient gives you a framework to randomly search for
-* Ben Recht: Fully open machine learning requires not only GPU access but a community commitment to openness.</description>
+* Ben Recht: Fully open machine learning requires not only GPU access but a community commitment to openness.
+
+Blog Articles:
+* DeepSeek V4 - almost on the frontier, a fraction of the price — Simon Willison: &lt;p&gt;Chinese AI lab DeepSeek&apos;s last model release was V3.2 (and V3.2 Speciale) &lt;a href=&quot;https://simonwillison.net/2025/Dec/1/deepseek-v32/&quot;&gt;last Decembe...</description>
     </item>
     <item>
       <title>Stars &amp; Posts — 2026-04-23</title>
@@ -1131,14 +1217,6 @@ www.cbc.ca/news/science...
       <pubDate>Sun, 19 Oct 2025 12:00:00 GMT</pubDate>
       <description>YouTube Videos:
 * [Video Response] What Cloudflare&apos;s code mode misses about MCP and tool calling (Yannic Kilcher)</description>
-    </item>
-    <item>
-      <title>Stars &amp; Posts — 2025-10-17</title>
-      <link>https://kylinmiao.me/stars/2025-10-17/</link>
-      <guid isPermaLink="true">https://kylinmiao.me/stars/2025-10-17/</guid>
-      <pubDate>Fri, 17 Oct 2025 12:00:00 GMT</pubDate>
-      <description>YouTube Videos:
-* A Tour of the Solveit Platform (Jeremy Howard)</description>
     </item>
   </channel>
 </rss>

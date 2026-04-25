@@ -315,6 +315,65 @@
       "tags": [
         "tooling"
       ]
+    },
+    {
+      "type": "x",
+      "id": "2036834073369596295",
+      "url": "https://x.com/srush_nlp/status/2036834073369596295",
+      "author": {
+        "handle": "srush_io",
+        "displayName": "Sasha Rush",
+        "avatar": "https://avatars.githubusercontent.com/srush"
+      },
+      "content": "On the infra side, composer 2 uses CP. This is (i think?) the first real detail from using CP on MLA. My understanding is that each rank first computes the compressed KVs, all gather this compressed latents. while the all gather is in flight, compute the Q proj",
+      "createdAt": "2026-04-25T04:02:02.426Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Sasha discusses infrastructure details of composer 2 using CP (context parallelism) on MLA, describing the process of computing compressed KVs and all-gathering latents.",
+      "worthReading": "Provides insight into advanced parallelism techniques for large language model inference.",
+      "tags": [
+        "infra",
+        "llm"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2036577232592969943",
+      "url": "https://x.com/srush_nlp/status/2036577232592969943",
+      "author": {
+        "handle": "srush_io",
+        "displayName": "Sasha Rush",
+        "avatar": "https://avatars.githubusercontent.com/srush"
+      },
+      "content": "⛏️",
+      "createdAt": "2026-04-25T04:02:02.426Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "A single pickaxe emoji, possibly indicating a mining or digging metaphor.",
+      "worthReading": "Minimal content, but may signal a new project or finding.",
+      "tags": [
+        "llm"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2036833494777921874",
+      "url": "https://x.com/srush_nlp/status/2036833494777921874",
+      "author": {
+        "handle": "srush_io",
+        "displayName": "Sasha Rush",
+        "avatar": "https://avatars.githubusercontent.com/srush"
+      },
+      "content": "",
+      "createdAt": "2026-04-25T04:02:02.426Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "No text content available from search snippet.",
+      "worthReading": "Incomplete data; unable to determine significance.",
+      "tags": []
     }
   ],
   "dailyCounts": [
@@ -332,7 +391,6 @@
     0,
     0,
     0,
-    0,
     1,
     0,
     0,
@@ -347,7 +405,8 @@
     2,
     3,
     1,
-    1
+    1,
+    3
   ],
-  "interestSummary": "Sasha Rush recently joined Cursor, an ambitious AI coding team, and is actively engaging with the ML community through bets on Transformer technology, while also showing interest in running JAX on the web via WebGPU and Wasm."
+  "interestSummary": "Sasha Rush recently joined Cursor, an ambitious AI coding team, and is actively engaged with web-based ML tooling, as shown by starring a JAX-in-JavaScript library. They are also continuing their focus on Transformer architecture debates, having established a long bet with Jonathan Frankle."
 }

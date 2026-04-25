@@ -425,6 +425,50 @@
         "tooling",
         "deployment"
       ]
+    },
+    {
+      "type": "x",
+      "id": "1938267936378208655",
+      "url": "https://x.com/RisingSayak/status/1938267936378208655",
+      "author": {
+        "handle": "sayakpaul",
+        "displayName": "Sayak Paul",
+        "avatar": "https://avatars.githubusercontent.com/sayakpaul"
+      },
+      "content": "Install `diffusers` from source and start using Kontext from @bfl_ml 🧨\n\nUse your favorite optims, too :)\n\nTraining is also supported (@linoy_tsaban and yours truly) 🤗",
+      "createdAt": "2026-04-25T04:02:18.447Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Announces support for Kontext from Black Forest Labs in diffusers, with training support.",
+      "worthReading": "Shows integration of new video model into Hugging Face diffusers, enabling training and optimization.",
+      "tags": [
+        "multi-modal",
+        "fine-tuning",
+        "deployment"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "1937703345197842917",
+      "url": "https://x.com/RisingSayak/status/1937703345197842917",
+      "author": {
+        "handle": "sayakpaul",
+        "displayName": "Sayak Paul",
+        "avatar": "https://avatars.githubusercontent.com/sayakpaul"
+      },
+      "content": "Release notes: Release Diffusers 0.34.0: New Image and Video Models, Better torch.",
+      "createdAt": "2025-06-24",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Announces Diffusers 0.34.0 release with new image and video models and torch improvements.",
+      "worthReading": "Highlights key updates in the popular diffusers library for generative AI.",
+      "tags": [
+        "multi-modal",
+        "deployment",
+        "infra"
+      ]
     }
   ],
   "dailyCounts": [
@@ -446,7 +490,6 @@
     0,
     0,
     0,
-    0,
     4,
     4,
     1,
@@ -457,7 +500,8 @@
     1,
     1,
     2,
-    3
+    3,
+    2
   ],
-  "interestSummary": "Sayak Paul is focused on advancing diffusion models and text-to-image data, while also exploring infrastructure for Hugging Face models, including inference memory estimation, TPU inference, and Rust-based hub clients."
+  "interestSummary": "Sayak Paul is focused on optimizing and deploying Hugging Face models, particularly diffusion models, with recent interests in inference memory estimation, Rust-based hub clients, and TPU inference for vLLM."
 }

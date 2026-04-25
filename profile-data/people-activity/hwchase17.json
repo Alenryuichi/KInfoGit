@@ -497,10 +497,96 @@
         "tooling",
         "deployment"
       ]
+    },
+    {
+      "type": "x",
+      "id": "2042612328701812789",
+      "url": "https://x.com/hwchase17/status/2042612328701812789",
+      "author": {
+        "handle": "hwchase17",
+        "displayName": "Harrison Chase",
+        "avatar": "https://avatars.githubusercontent.com/hwchase17"
+      },
+      "content": "im excited about agent harnesses because i think are the first stable agent abstractions we can build on top (which is why we're investing so much in deepagents) we always wanted to run llms in a loop and have them call tools (remember autoGPT? that's all that was) but the",
+      "createdAt": "2026-04-25T04:01:12.645Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Agent harnesses provide stable abstractions for building agent loops with tool calling, a key evolution from early attempts like AutoGPT.",
+      "worthReading": "It captures a pivotal shift in agent architecture from ad-hoc loops to structured harnesses.",
+      "tags": [
+        "agent",
+        "infra",
+        "tooling"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2010044779225329688",
+      "url": "https://x.com/hwchase17/status/2010044779225329688",
+      "author": {
+        "handle": "hwchase17",
+        "displayName": "Harrison Chase",
+        "avatar": "https://avatars.githubusercontent.com/hwchase17"
+      },
+      "content": "This means that operations you would do on code in the software world, you now do on traces in the agent world. Debugging, testing, profiling",
+      "createdAt": "2026-04-25T04:01:12.645Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Traces in agent systems replace code as the primary artifact for debugging, testing, and profiling.",
+      "worthReading": "It highlights a paradigm shift in how we maintain and improve agent behavior.",
+      "tags": [
+        "evaluation",
+        "deployment",
+        "agent"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2021261552222158955",
+      "url": "https://x.com/hwchase17/status/2021261552222158955",
+      "author": {
+        "handle": "hwchase17",
+        "displayName": "Harrison Chase",
+        "avatar": "https://avatars.githubusercontent.com/hwchase17"
+      },
+      "content": "TL;DR: More and more agents need a workspace: a computer where they can run code, install packages, and access files. Sandboxes provide this",
+      "createdAt": "2026-04-25T04:01:12.645Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Agents require sandboxed workspaces to execute code and access resources safely.",
+      "worthReading": "It underscores the growing need for secure execution environments in agent systems.",
+      "tags": [
+        "infra",
+        "safety",
+        "agent"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2027094058330656814",
+      "url": "https://x.com/hwchase17/status/2027094058330656814",
+      "author": {
+        "handle": "hwchase17",
+        "displayName": "Harrison Chase",
+        "avatar": "https://avatars.githubusercontent.com/hwchase17"
+      },
+      "content": "When you ship traditional software to production, you have a good sense of what to expect. Users click buttons, fill out forms,",
+      "createdAt": "2026-04-25T04:01:12.645Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Traditional software deployment has predictable user interactions, unlike agent systems.",
+      "worthReading": "It contrasts the predictability of traditional software with the emergent behavior of agents.",
+      "tags": [
+        "deployment",
+        "agent"
+      ]
     }
   ],
   "dailyCounts": [
-    0,
     0,
     0,
     0,
@@ -529,7 +615,8 @@
     4,
     3,
     2,
+    4,
     4
   ],
-  "interestSummary": "Harrison Chase is focused on advancing agent development through workspaces (sandboxes) for code execution and file access, as well as emphasizing the need for production data iteration and trace-based operations for debugging and testing agents. He also highlights LangChain's new no-code Agent Builder with its memory system."
+  "interestSummary": "Harrison Chase's recent focus is on the development and operational needs of AI agents, emphasizing the importance of sandboxed workspaces for code execution and the necessity of iterating on production traces rather than traditional code for debugging and testing. He also highlights LangChain's new no-code Agent Builder, which features an integrated memory system."
 }

@@ -1,7 +1,29 @@
 {
   "id": "gaelvaroquaux",
   "stars": [],
-  "posts": [],
+  "posts": [
+    {
+      "uri": "at://did:plc:czhakxbnmpx42leuleosjint/app.bsky.feed.post/3mk7vgtsogk2r",
+      "url": "https://bsky.app/profile/gaelvaroquaux.bsky.social/post/3mk7vgtsogk2r",
+      "author": {
+        "handle": "gaelvaroquaux.bsky.social",
+        "displayName": "Gaël Varoquaux",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:czhakxbnmpx42leuleosjint/bafkreiffdmbnptkl6yllumrxobh3afnlj4qh7jj4pvble2urfuvpnd4vda"
+      },
+      "content": "#ICLR2026 paper✨️: Quantifying epistemic uncertainty of Blackbox classifiers, and link to better decisions\n\nCalibration on steroids, qualifying full prediction uncertainty with no need for Bayes, and tuning individual decisions 👇",
+      "createdAt": "2026-04-24T06:26:49.861Z",
+      "likeCount": 22,
+      "replyCount": 1,
+      "repostCount": 2,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [
+        "evaluation",
+        "safety"
+      ],
+      "type": "bluesky"
+    }
+  ],
   "videos": [],
   "blogs": [],
   "dailyCounts": [
@@ -33,8 +55,8 @@
     0,
     0,
     0,
-    0,
+    1,
     0
   ],
-  "interestSummary": ""
+  "interestSummary": "Gael Varoquaux is currently focused on advancing uncertainty quantification in machine learning, specifically developing methods to measure epistemic uncertainty in blackbox classifiers for improved decision-making, as highlighted by his recent ICLR 2026 paper."
 }
