@@ -1,140 +1,264 @@
 {
   "date": "2026-04-25",
-  "itemCount": 14,
+  "itemCount": 83,
   "sections": [
     {
       "id": "headlines",
       "title": "Headlines & Launches",
       "items": [
         {
+          "title": "DeepSeek unveils next-gen AI model as Huawei vows ‘full support’ with new chips - South China Morning Post",
+          "summary": "DeepSeek发布下一代开源模型V4，华为提供芯片支持。",
+          "url": "https://www.scmp.com/tech/big-tech/article/3351239/deepseek-releases-next-gen-ai-model-world-leading-efficiency",
+          "score": 10,
+          "sources": [
+            {
+              "name": "scmp.com"
+            }
+          ],
+          "tags": [
+            "deepseek",
+            "open-source",
+            "model-release"
+          ],
+          "focusTopics": [
+            "model-release"
+          ]
+        },
+        {
+          "title": "DeepSeek-V4 arrives with near state-of-the-art intelligence at fraction of the cost of Opus 4.7, GPT-5.5",
+          "summary": "DeepSeek-V4以极低成本实现接近顶尖模型的智能。",
+          "url": "https://venturebeat.com/technology/deepseek-v4-arrives-with-near-state-of-the-art-intelligence-at-1-6th-the-cost-of-opus-4-7-gpt-5-5",
+          "score": 10,
+          "sources": [
+            {
+              "name": "venturebeat.com"
+            }
+          ],
+          "tags": [
+            "deepseek",
+            "cost-efficiency",
+            "benchmark"
+          ],
+          "focusTopics": [
+            "model-release"
+          ]
+        },
+        {
+          "title": "DeepSeek v4",
+          "summary": "DeepSeek V4在HN上获得高分关注。",
+          "url": "https://api-docs.deepseek.com/",
+          "score": 10,
+          "sources": [
+            {
+              "name": "HN (1807)"
+            }
+          ],
+          "tags": [
+            "deepseek",
+            "community"
+          ],
+          "focusTopics": [
+            "model-release"
+          ]
+        },
+        {
+          "title": "DeepSeek V4 - almost on the frontier, a fraction of the price",
+          "summary": "DeepSeek发布V4预览版，接近前沿且价格低廉。",
+          "url": "https://simonwillison.net/2026/Apr/24/deepseek-v4/#atom-everything",
+          "score": 9.5,
+          "sources": [
+            {
+              "name": "Simon Willison"
+            }
+          ],
+          "tags": [
+            "deepseek",
+            "open-source",
+            "frontier-model"
+          ],
+          "focusTopics": [
+            "model-release"
+          ]
+        },
+        {
+          "title": "China's DeepSeek releases preview of long-awaited V4 model as AI race intensifies - CNBC",
+          "summary": "DeepSeek发布V4预览版，AI竞赛加剧。",
+          "url": "https://www.cnbc.com/2026/04/24/deepseek-v4-llm-preview-open-source-ai-competition-china.html",
+          "score": 9.5,
+          "sources": [
+            {
+              "name": "cnbc.com"
+            }
+          ],
+          "tags": [
+            "deepseek",
+            "open-source",
+            "china-ai"
+          ],
+          "focusTopics": [
+            "model-release"
+          ]
+        },
+        {
+          "title": "DeepSeek previews new AI model that 'closes the gap' with frontier models",
+          "summary": "DeepSeek预览新模型，缩小与前沿模型的差距。",
+          "url": "https://techcrunch.com/2026/04/24/deepseek-previews-new-ai-model-that-closes-the-gap-with-frontier-models/",
+          "score": 9.5,
+          "sources": [
+            {
+              "name": "techcrunch.com"
+            }
+          ],
+          "tags": [
+            "deepseek",
+            "model-preview"
+          ],
+          "focusTopics": [
+            "model-release"
+          ]
+        },
+        {
           "title": "Google plans to invest up to $40B in Anthropic",
-          "summary": "Google has committed to invest up to $40 billion in Anthropic, the companies confirmed on April 24, 2026, marking one of the largest corporate investments in an AI startup. This massive investment signals Google's strategic bet on AI infrastructure and capacity, potentially reshaping the competitive landscape among AI model providers and cloud vendors. The investment follows Anthropic's recent deal to purchase multiple gigawatts of next-generation TPU capacity from Google and Broadcom, and comes amid reports that Anthropic was becoming severely capacity constrained.",
+          "summary": "谷歌计划向Anthropic投资高达400亿美元，为AI领域重大融资。",
           "url": "https://www.bloomberg.com/news/articles/2026-04-24/google-plans-to-invest-up-to-40-billion-in-anthropic",
+          "score": 9.02,
+          "sources": [
+            {
+              "name": "HN (315)"
+            }
+          ],
+          "tags": [
+            "investment",
+            "anthropic",
+            "google"
+          ],
+          "focusTopics": [
+            "model-release"
+          ]
+        },
+        {
+          "title": "OpenAI Launches GPT-5.5 as Its Most Advanced AI Model Yet - MLQ.ai",
+          "summary": "OpenAI发布GPT-5.5，号称最先进AI模型。",
+          "url": "https://mlq.ai/news/openai-launches-gpt-55-as-its-most-advanced-ai-model-yet/",
           "score": 9,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "elffjs"
+              "name": "mlq.ai"
             }
           ],
           "tags": [
-            "AI",
-            "investment",
-            "Anthropic",
-            "Google",
-            "cloud computing"
-          ],
-          "focusTopics": [],
-          "background": "Anthropic is an AI safety and research company founded in 2021, known for developing the Claude series of large language models. Google has been a previous investor in Anthropic, and this new commitment deepens their partnership as tech giants race to secure AI compute resources and talent.",
-          "discussion": "Community comments highlight concerns about capacity constraints at Anthropic, with some viewing the deal as a form of vendor financing. Others question the commoditization of foundation models and whether such large investments are justified, while a developer notes the immense revenue potential from Claude models."
-        },
-        {
-          "title": "Why People Hate AI Despite High Usage",
-          "summary": "Nilay Patel published an essay and video titled 'The people do not yearn for automation,' introducing the concept of 'software brain' to explain why AI is unpopular with the general public even as ChatGPT usage skyrockets. This analysis highlights a fundamental disconnect between tech industry assumptions and public sentiment, which could influence how companies design and market AI products. It also sparks debate on whether automation should be the default goal for all human activities. Patel argues that people with 'software brain' see the world as something to be automated, but regular people do not yearn for automation and feel flattened by AI. He cites the failure of smart home automation to attract mainstream interest as a parallel example.",
-          "url": "https://simonwillison.net/2026/Apr/24/the-people-do-not-yearn-for-automation/#atom-everything",
-          "score": 8,
-          "sources": [
-            {
-              "name": "rss",
-              "meta": "Simon Willison"
-            }
-          ],
-          "tags": [
-            "AI",
-            "societal impact",
-            "automation",
-            "commentary"
-          ],
-          "focusTopics": [],
-          "background": "The term 'software brain' describes a mindset that models everything in terms of algorithms, databases, and loops, common among tech professionals. This perspective drives the push to add AI to every product, despite polling showing that many users, especially Gen Z, dislike AI. The essay contrasts this with the broader human experience that cannot be captured in a database.",
-          "discussion": "The essay has been widely shared and discussed, with many commentators agreeing with Patel's framing. Some note that the 'software brain' concept resonates with their own experiences in tech, while others debate whether automation can ever be truly aligned with human desires."
-        },
-        {
-          "title": "Honker brings PostgreSQL NOTIFY/LISTEN to SQLite",
-          "summary": "Honker is a Rust-based SQLite extension that implements PostgreSQL-style NOTIFY/LISTEN semantics, enabling queue and stream operations directly in SQLite. It provides Python bindings and over 20 custom SQL functions for enqueuing, claiming, and subscribing to messages. This extension brings robust, transactional message queue capabilities to SQLite, a lightweight embedded database, making it suitable for applications that need simple, reliable inter-process communication without external message brokers. It fills a gap for developers who want PostgreSQL-like queue semantics in a self-contained environment. Honker requires SQLite's WAL mode and uses a 1ms stat poll on the .db-wal file for near-real-time notifications without full SQL queries. It implements the transactional outbox pattern, ensuring messages are only enqueued if the enclosing transaction commits.",
-          "url": "https://simonwillison.net/2026/Apr/24/honker/#atom-everything",
-          "score": 8,
-          "sources": [
-            {
-              "name": "rss",
-              "meta": "Simon Willison"
-            }
-          ],
-          "tags": [
-            "SQLite",
-            "Rust",
-            "message queue",
-            "database",
-            "Python"
-          ],
-          "focusTopics": [],
-          "background": "PostgreSQL's NOTIFY/LISTEN mechanism allows database clients to send and receive asynchronous notifications on named channels, often used for real-time updates and inter-process communication. SQLite, while powerful, lacks built-in pub/sub capabilities, so extensions like Honker fill that gap. The transactional outbox pattern ensures data consistency by deferring message publication until the associated database transaction commits."
-        },
-        {
-          "title": "Overthinking, Scope Creep, and Structural Diffing Sabotage Projects",
-          "summary": "Kevin Lynagh published a reflective article on how overthinking, scope creep, and perfectionism hinder project completion, highlighting the value of iterative progress over perfect design. This piece resonates with many engineers and project managers, offering a counterpoint to perfectionism and encouraging faster, smaller releases that compound improvements over time. The article references 'structural diffing' as a metaphor for over-analyzing changes, and community comments cite Obama's 'Better is good' and a CEO's preference for shorter projects.",
-          "url": "https://kevinlynagh.com/newsletter/2026_04_overthinking/",
-          "score": 7,
-          "sources": [
-            {
-              "name": "hackernews",
-              "meta": "alcazar"
-            }
-          ],
-          "tags": [
-            "project management",
-            "software engineering",
-            "scope creep",
-            "productivity"
+            "openai",
+            "gpt-5.5",
+            "frontier-model"
           ],
           "focusTopics": [
-            "memory"
-          ],
-          "background": "Structural diffing is a technique that compares code by parsing it into syntax trees, enabling more precise change detection. Overthinking and scope creep are common pitfalls in software engineering where excessive analysis or feature expansion delays delivery.",
-          "discussion": "Commenters share personal experiences, with one noting the difficulty of PhD research due to scope creep, and another endorsing the 'Better is good' philosophy. A CEO's quote about rarely regretting shorter projects also receives support."
+            "model-release"
+          ]
         },
         {
-          "title": "SDL Now Supports DOS",
-          "summary": "SDL, the cross-platform multimedia library, has merged a pull request adding support for the DOS operating system, enabling developers to build SDL-based applications that run natively on DOS. This support revives game development for legacy DOS systems, allowing retro enthusiasts to create or port modern SDL games to vintage hardware, and it strengthens SDL's position as a truly universal multimedia layer. The pull request was merged into the SDL repository on GitHub, and the community notes that DOSBox itself is built on SDL, creating a recursive possibility. The implementation likely targets 386+ systems and may work with compilers like Turbo C and FreeBASIC.",
-          "url": "https://github.com/libsdl-org/SDL/pull/15377",
-          "score": 7,
+          "title": "Google to invest up to $40B in Anthropic in cash and compute",
+          "summary": "谷歌拟向Anthropic投资高达400亿美元现金和算力。",
+          "url": "https://techcrunch.com/2026/04/24/google-to-invest-up-to-40b-in-anthropic-in-cash-and-compute/",
+          "score": 9,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "Jayschwa"
+              "name": "techcrunch.com"
             }
           ],
           "tags": [
-            "SDL",
-            "DOS",
-            "retrocomputing",
-            "game development",
-            "open source"
+            "google",
+            "anthropic",
+            "investment"
           ],
-          "focusTopics": [],
-          "background": "SDL (Simple DirectMedia Layer) is a widely-used open-source library that provides low-level access to audio, keyboard, mouse, joystick, and graphics hardware via OpenGL, Vulkan, Metal, or Direct3D. It is not a game engine but a foundation for building games and multimedia applications across many platforms. DOS (Disk Operating System) was the dominant operating system for IBM PC compatibles from 1981 to 1995, and remains relevant in retrocomputing circles.",
-          "discussion": "The community is enthusiastic, with comments joking about SDL for UEFI next and noting the irony that DOSBox, which emulates DOS, is itself built on SDL. Developers are curious about compatibility with FreeBASIC and Turbo C, and there is cautious optimism about maintenance burden."
+          "focusTopics": []
         },
         {
-          "title": "2009 Argument for Web Apps Over Desktop Apps",
-          "summary": "Patrick McKenzie published a blog post in 2009 arguing that web applications are superior to desktop applications for commercial software development, citing easier updates, better piracy protection, and simpler onboarding. This historical perspective remains relevant as it highlights enduring trade-offs between web and desktop development, and the community discussion notes how Electron later blurred the lines by enabling web technologies on desktop. The post emphasizes that desktop apps face a multi-step conversion funnel (download, install, trust), while web apps reduce friction. It also notes that desktop apps are easier to pirate and harder to update.",
-          "url": "https://www.kalzumeus.com/2009/09/05/desktop-aps-versus-web-apps/",
+          "title": "Cohere acquires, merges with Germany-based startup to create a 'transatlantic AI powerhouse' | TechCrunch",
+          "summary": "Cohere收购德国初创公司，打造跨大西洋AI巨头。",
+          "url": "https://techcrunch.com/2026/04/24/cohere-acquires-merges-with-german-based-startup-to-create-a-transatlantic-ai-powerhouse/",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "techcrunch.com"
+            }
+          ],
+          "tags": [
+            "cohere",
+            "acquisition",
+            "merger"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "BAND launches with $17 million to connect AI agents - ynetnews",
+          "summary": "BAND获1700万美元种子轮融资，构建AI代理通信基础设施。",
+          "url": "https://www.ynetnews.com/business/article/hkkpu5utbe",
+          "score": 7,
+          "sources": [
+            {
+              "name": "ynetnews.com"
+            }
+          ],
+          "tags": [
+            "ai-agents",
+            "infrastructure",
+            "funding"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "ComfyUI hits $500M valuation as creators seek more control over AI-generated media | TechCrunch",
+          "summary": "ComfyUI估值达5亿美元，创作者寻求对AI生成媒体更多控制。",
+          "url": "https://techcrunch.com/2026/04/24/comfyui-hits-500m-valuation-as-creators-seek-more-control-over-ai-generated-media/",
+          "score": 7,
+          "sources": [
+            {
+              "name": "techcrunch.com"
+            }
+          ],
+          "tags": [
+            "comfyui",
+            "valuation",
+            "ai-media"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Copperhelm Raises $7 Million for Agentic Cloud Security Platform - SecurityWeek",
+          "summary": "Copperhelm获700万美元融资，打造代理化云安全平台。",
+          "url": "https://www.securityweek.com/copperhelm-raises-7-million-for-agentic-cloud-security-platform/",
           "score": 6,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "claxo"
+              "name": "securityweek.com"
             }
           ],
           "tags": [
-            "web apps",
-            "desktop apps",
-            "software development",
-            "historical perspective"
+            "ai-security",
+            "funding",
+            "agents"
           ],
-          "focusTopics": [],
-          "background": "In 2009, web apps were gaining popularity but many commercial applications were still distributed as native desktop installers. The Electron framework, which allows building desktop apps with web technologies, was released in 2013 and later became widely used for apps like Visual Studio Code and Slack.",
-          "discussion": "Commenters note the article's age (2009) and how Electron changed the landscape, making desktop apps easier to build with web tech. Some argue desktop apps remain relevant for open-source and hobby projects, while others question the original conversion funnel argument."
+          "focusTopics": []
+        },
+        {
+          "title": "Two college kids raise a $5.1 million pre-seed to build an AI social network in iMessage | TechCrunch",
+          "summary": "两名大学生获510万美元种子轮，在iMessage中构建AI社交网络。",
+          "url": "https://techcrunch.com/2026/04/24/two-college-kids-raise-a-5-1-million-pre-seed-to-build-an-ai-social-network-in-imessage/",
+          "score": 5,
+          "sources": [
+            {
+              "name": "techcrunch.com"
+            }
+          ],
+          "tags": [
+            "ai-social",
+            "funding",
+            "imessage"
+          ],
+          "focusTopics": []
         }
       ]
     },
@@ -143,115 +267,372 @@
       "title": "Research & Innovation",
       "items": [
         {
-          "title": "DeepSeek V4: Open-Source Frontier Model on Huawei Chips",
-          "summary": "DeepSeek released V4, a fully open-source Mixture-of-Experts (MoE) model family including V4-Pro (1.6T parameters, 49B activated) and V4-Flash (284B parameters, 13B activated), supporting 1M token context length and running entirely on Huawei Ascend chips without CUDA dependency. This breaks NVIDIA's CUDA monopoly by providing a competitive AI stack on Chinese hardware, while offering frontier-level performance at extremely low cost, challenging both closed-source leaders and the US chip dominance. The models use novel attention mechanisms including token-wise compression and DeepSeek Sparse Attention (DSA), and implement deterministic kernels with minimal overhead. V4-Flash is notably faster and cheaper than V4-Pro while performing similarly on many tasks.",
-          "url": "https://api-docs.deepseek.com/",
-          "score": 10,
+          "title": "The Tool-Overuse Illusion: Why Does LLM Prefer External Tools over Internal Knowledge?",
+          "summary": "研究LLM为何偏好外部工具而非内部知识，揭示工具过度使用幻觉。",
+          "url": "https://arxiv.org/abs/2604.19749",
+          "score": 7,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "impact_sy"
+              "name": "ArXiv cs.AI"
             }
           ],
           "tags": [
-            "AI",
-            "open-source",
-            "DeepSeek",
-            "LLM",
-            "Huawei"
-          ],
-          "focusTopics": [],
-          "background": "Mixture-of-Experts (MoE) is an architecture that activates only a subset of parameters per token, enabling large total parameters with efficient inference. CUDA is NVIDIA's proprietary parallel computing platform, creating vendor lock-in for AI workloads. Huawei's Ascend chips are Chinese-made AI accelerators that aim to reduce dependence on NVIDIA hardware.",
-          "discussion": "The community praised the open-source nature, excellent documentation, and low pricing, with many highlighting the significance of zero CUDA dependency. Some users discussed the model's mathematical reasoning capabilities and noted that DeepSeek guarantees determinism at temperature 0, a rare feature. Others pointed out that V4-Flash is the more practical model due to its speed and cost."
-        },
-        {
-          "title": "A Scientific Theory of Deep Learning Is on the Horizon",
-          "summary": "A new survey paper on arXiv outlines research directions and open problems aimed at establishing a scientific theory of deep learning, synthesizing current theoretical efforts and highlighting key challenges. This work could help move deep learning from an empirical art to a principled science, enabling better understanding of model behavior, reliability, and limitations—critical for safety-critical applications. The paper includes a comprehensive set of open problems covering topics like generalization, optimization, and representation learning, but acknowledges that current theory still cannot guide optimal network design.",
-          "url": "https://arxiv.org/abs/2604.21691",
-          "score": 8,
-          "sources": [
-            {
-              "name": "hackernews",
-              "meta": "jamie-simon"
-            }
-          ],
-          "tags": [
-            "deep learning",
-            "theory",
-            "research",
-            "open problems",
-            "machine learning"
-          ],
-          "focusTopics": [],
-          "background": "Deep learning has achieved remarkable empirical success but lacks a rigorous theoretical foundation. A scientific theory would explain why deep networks generalize, how they learn, and when they fail, potentially leading to more reliable and interpretable AI systems.",
-          "discussion": "Commenters expressed both optimism and skepticism: some praised the open problems list as comprehensive, while others argued that a true theory must also account for the role of data, not just architecture. The title was criticized as overly ambitious."
-        },
-        {
-          "title": "Matz Unveils Spinel: Experimental AOT Compiler for Ruby",
-          "summary": "Yukihiro 'Matz' Matsumoto presented Spinel, an experimental ahead-of-time (AOT) native compiler for Ruby, at RubyKaigi 2026 with a successful live demo. Built with assistance from Claude AI in about a month, Spinel compiles Ruby source code into standalone native executables via whole-program type inference and optimized C code generation. Spinel demonstrates that Ruby can achieve significant performance improvements—up to 11.6x geometric mean speedup—through AOT compilation, potentially opening new use cases for Ruby in performance-critical domains. As it is created by Ruby's creator, it carries substantial weight and could influence the future direction of Ruby tooling. Spinel is self-hosting: its compiler backend is written in Ruby and compiles itself into a native binary. However, it currently lacks support for eval, metaprogramming (send, method_missing, define_method), threads, and non-UTF-8/ASCII encodings, limiting its applicability to a subset of Ruby programs.",
-          "url": "https://github.com/matz/spinel",
-          "score": 8,
-          "sources": [
-            {
-              "name": "hackernews",
-              "meta": "dluan"
-            }
-          ],
-          "tags": [
-            "Ruby",
-            "AOT Compiler",
-            "Matz",
-            "RubyKaigi",
-            "AI-assisted development"
-          ],
-          "focusTopics": [],
-          "background": "Ruby is a dynamic, interpreted language known for its expressiveness but often criticized for performance. Ahead-of-time (AOT) compilation translates source code into native machine code before execution, potentially offering speedups over interpretation. Spinel is an experimental project that explores this approach for Ruby, similar to tools like Crystal or Sorbet but focused on compilation rather than type checking.",
-          "discussion": "The community is excited but cautious: many praise the achievement and Matz's involvement, while noting severe limitations like no eval or metaprogramming. Some question the maintainability of the 21k-line AI-generated codegen file, and others hope for future integration with MRI to allow compiled gems to interact with standard Ruby."
-        },
-        {
-          "title": "OpenAI Releases GPT-5.5 and GPT-5.5 Pro in API",
-          "summary": "OpenAI has released GPT-5.5 and GPT-5.5 Pro models via its API, offering improved performance and new capabilities for developers. This release marks a significant update to OpenAI's model lineup, potentially impacting AI application development and competition with other leading models like Claude Opus 4.7. GPT-5.5 achieved a perfect 25/25 score on a SQL benchmark, but user feedback on real-world tasks is mixed, with some reporting poor performance on WordPress plugin benchmarks and issues with following instructions.",
-          "url": "https://developers.openai.com/api/docs/changelog",
-          "score": 8,
-          "sources": [
-            {
-              "name": "hackernews",
-              "meta": "arabicalories"
-            }
-          ],
-          "tags": [
-            "OpenAI",
-            "GPT-5.5",
-            "AI models",
-            "API release",
-            "LLM"
-          ],
-          "focusTopics": [],
-          "background": "OpenAI's GPT series has been a leading family of large language models. The release of GPT-5.5 and GPT-5.5 Pro continues the trend of incremental improvements, offering developers more options for various use cases.",
-          "discussion": "Community reactions are mixed: some users praise GPT-5.5's benchmark performance and coding capabilities, while others report disappointing results on specific tasks and express concerns about potential astroturfing by OpenAI supporters."
-        },
-        {
-          "title": "Bluesky For You Feed Runs on Gaming PC with SQLite",
-          "summary": "A guest post on the AT Protocol blog reveals that the For You feed on Bluesky, serving 72,000 users, is powered by a single Go process using SQLite on a gaming PC in the developer's living room. The feed uses like-based collaborative filtering to recommend posts. This demonstrates that a custom feed for a major social network can be served from consumer hardware at very low cost, challenging assumptions about scalability and infrastructure. It highlights the flexibility of Bluesky's AT Protocol, which allows anyone to run their own feed algorithm. The Go server consumes the Bluesky firehose and stores 90 days of data in SQLite, currently using about 419GB of storage. Public traffic is routed through a $7/month VPS on OVH via Tailscale, with total monthly costs at $30.",
-          "url": "https://simonwillison.net/2026/Apr/24/serving-the-for-you-feed/#atom-everything",
-          "score": 8,
-          "sources": [
-            {
-              "name": "rss",
-              "meta": "Simon Willison"
-            }
-          ],
-          "tags": [
-            "Bluesky",
-            "AT Protocol",
-            "custom feed",
-            "Go",
-            "SQLite"
+            "llm",
+            "tool-use",
+            "reasoning"
           ],
           "focusTopics": [
-            "memory"
+            "tool-use"
+          ]
+        },
+        {
+          "title": "TRACES: Tagging Reasoning Steps for Adaptive Cost-Efficient Early-Stopping",
+          "summary": "提出TRACES方法，通过标记推理步骤实现自适应成本高效早停。",
+          "url": "https://arxiv.org/abs/2604.21057",
+          "score": 7,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
           ],
-          "background": "Bluesky is a decentralized social network built on the AT Protocol, which allows users to create custom feed generators that can use any algorithm to recommend posts. The For You feed is one such custom feed, using collaborative filtering based on likes to suggest content. The AT Protocol firehose provides a real-time stream of all events on the network, enabling feed generators to stay synchronized."
+          "tags": [
+            "reasoning",
+            "efficiency",
+            "early-stopping"
+          ],
+          "focusTopics": [
+            "planning"
+          ]
+        },
+        {
+          "title": "ThermoQA: A Three-Tier Benchmark for Evaluating Thermodynamic Reasoning in Large Language Models",
+          "summary": "提出ThermoQA基准，评估LLM在工程热力学中的推理能力。",
+          "url": "https://arxiv.org/abs/2604.19758",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "benchmark",
+            "reasoning",
+            "stem"
+          ],
+          "focusTopics": [
+            "evals"
+          ]
+        },
+        {
+          "title": "From Actions to Understanding: Conformal Interpretability of Temporal Concepts in LLM Agents",
+          "summary": "提出LLM代理中时间概念的可解释性方法，从行动到理解。",
+          "url": "https://arxiv.org/abs/2604.19775",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "llm-agents",
+            "interpretability",
+            "temporal-reasoning"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "There Will Be a Scientific Theory of Deep Learning",
+          "summary": "论文提出深度学习将拥有科学理论，探讨理论基础。",
+          "url": "https://arxiv.org/abs/2604.21691",
+          "score": 6.343,
+          "sources": [
+            {
+              "name": "HN (131)"
+            }
+          ],
+          "tags": [
+            "deep-learning",
+            "theory"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Different Language Models Learn Similar Number Representations",
+          "summary": "不同语言模型学习相似的数值表示",
+          "url": "https://arxiv.org/abs/2604.20817",
+          "score": 6.22,
+          "sources": [
+            {
+              "name": "HN (90)"
+            }
+          ],
+          "tags": [
+            "llm",
+            "representation",
+            "interpretability"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "TIPSv2: Advancing Vision-Language Pretraining with Enhanced Patch-Text Alignment",
+          "summary": "TIPSv2：增强视觉语言预训练的补丁-文本对齐",
+          "url": "https://gdm-tipsv2.github.io/",
+          "score": 6.013,
+          "sources": [
+            {
+              "name": "HN (21)"
+            }
+          ],
+          "tags": [
+            "vision-language",
+            "pretraining",
+            "multimodal"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Algorithm Selection with Zero Domain Knowledge via Text Embeddings",
+          "summary": "利用文本嵌入实现零领域知识的算法选择方法。",
+          "url": "https://arxiv.org/abs/2604.19753",
+          "score": 6,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "algorithm-selection",
+            "embeddings",
+            "meta-learning"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "EvoForest: A Novel Machine-Learning Paradigm via Open-Ended Evolution of Computational Graphs",
+          "summary": "通过计算图的开放式进化提出新型机器学习范式EvoForest。",
+          "url": "https://arxiv.org/abs/2604.19761",
+          "score": 6,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "machine-learning",
+            "evolutionary",
+            "computational-graphs"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Beyond Pixels: Introspective and Interactive Grounding for Visualization Agents",
+          "summary": "提出内省与交互式接地方法，提升可视化代理的准确性。",
+          "url": "https://arxiv.org/abs/2604.21134",
+          "score": 6,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "vlm",
+            "visualization",
+            "agent"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "Explainable AML Triage with LLMs: Evidence Retrieval and Counterfactual Checks",
+          "summary": "利用LLM进行反洗钱交易监控的可解释分诊，包括证据检索与反事实检查。",
+          "url": "https://arxiv.org/abs/2604.19755",
+          "score": 5.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "llm",
+            "finance",
+            "explainability"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "AITP: Traffic Accident Responsibility Allocation via Multimodal Large Language Models",
+          "summary": "利用多模态大语言模型进行交通事故责任分配。",
+          "url": "https://arxiv.org/abs/2604.20878",
+          "score": 5.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "multimodal",
+            "traffic",
+            "responsibility-allocation"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Gemma 4 and Qwen 3.6 with q8_0 and q4_0 KV cache: KL divergence results",
+          "summary": "Gemma 4和Qwen 3.6的KL散度结果对比。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1suh3sz/gemma_4_and_qwen_36_with_q8_0_and_q4_0_kv_cache/",
+          "score": 5.5,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "benchmark",
+            "kl-divergence",
+            "quantization"
+          ],
+          "focusTopics": [
+            "evals"
+          ]
+        },
+        {
+          "title": "Inference Headroom Ratio: A Diagnostic and Control Framework for Inference Stability Under Constraint",
+          "summary": "提出推理净空比作为约束下推理稳定性的诊断与控制框架。",
+          "url": "https://arxiv.org/abs/2604.19760",
+          "score": 5,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "inference",
+            "stability",
+            "diagnostics"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Hierarchical Policy Optimization for Simultaneous Translation of Unbounded Speech",
+          "summary": "提出分层策略优化用于无界语音的同声传译。",
+          "url": "https://arxiv.org/abs/2604.21045",
+          "score": 5,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "speech-translation",
+            "simultaneous",
+            "policy-optimization"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "DWTSumm: Discrete Wavelet Transform for Document Summarization",
+          "summary": "利用离散小波变换改进长文档摘要。",
+          "url": "https://arxiv.org/abs/2604.21070",
+          "score": 5,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "summarization",
+            "wavelet",
+            "long-document"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Serialisation Strategy Matters: How FHIR Data Format Affects LLM Medication Reconciliation",
+          "summary": "研究FHIR数据格式如何影响LLM在药物重整任务中的表现。",
+          "url": "https://arxiv.org/abs/2604.21076",
+          "score": 5,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "llm",
+            "healthcare",
+            "data-format"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Weighting What Matters: Boosting Sample Efficiency in Medical Report Generation via Token Reweighting",
+          "summary": "提出通过token重加权提升医学报告生成中的样本效率。",
+          "url": "https://arxiv.org/abs/2604.21082",
+          "score": 5,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "vlm",
+            "medical-imaging",
+            "sample-efficiency"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Exploring Data Augmentation and Resampling Strategies for Transformer-Based Models to Address Class Imbalance in AI Scoring of Scientific Explanations in NGSS Classroom",
+          "summary": "探索数据增强与重采样策略以解决AI评分中的类别不平衡问题。",
+          "url": "https://arxiv.org/abs/2604.19754",
+          "score": 4.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "data-augmentation",
+            "education",
+            "classification"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "AFRILANGTUTOR: Advancing Language Tutoring and Culture Education in Low-Resource Languages with Large Language Models",
+          "summary": "利用LLM推进低资源语言的语言辅导与文化教育。",
+          "url": "https://arxiv.org/abs/2604.20996",
+          "score": 4.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "low-resource",
+            "language-learning",
+            "llm"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Automated Detection of Dosing Errors in Clinical Trial Narratives: A Multi-Modal Feature Engineering Approach with LightGBM",
+          "summary": "使用多模态特征工程与LightGBM自动检测临床试验中的剂量错误。",
+          "url": "https://arxiv.org/abs/2604.19759",
+          "score": 4,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "healthcare",
+            "clinical-trials",
+            "lightgbm"
+          ],
+          "focusTopics": []
         }
       ]
     },
@@ -260,72 +641,874 @@
       "title": "Engineering & Resources",
       "items": [
         {
-          "title": "Rodecaster Duo Audio Interface Has SSH Enabled by Default",
-          "summary": "A security researcher discovered that the Rodecaster Duo audio interface ships with SSH enabled by default, allowing easy access to its firmware via a simple connection. This security oversight could allow attackers to remotely access and modify the device's firmware, posing risks to user privacy and device integrity. It also highlights broader concerns about IoT device security and the need for default secure configurations. The firmware image is a simple tarball with a hash, making it easy to inspect and modify. The researcher used AI-assisted tools to quickly analyze and exploit the SSH access.",
-          "url": "https://hhh.hn/rodecaster-duo-fw/",
-          "score": 8,
+          "title": "huggingface/ml-intern",
+          "summary": "HuggingFace 发布开源 ML 工程师项目，可自动读论文、训练和部署模型。",
+          "url": "https://github.com/huggingface/ml-intern",
+          "score": 9.575,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "hhh"
+              "name": "GitHub trending:all (+2985★)"
             }
           ],
           "tags": [
-            "security",
-            "IoT",
-            "firmware",
-            "audio",
-            "hacking"
+            "open-source",
+            "ml-engineer",
+            "automation"
           ],
-          "focusTopics": [],
-          "background": "SSH (Secure Shell) is a network protocol for secure remote login and command execution. Many consumer IoT devices often have insecure default settings, such as default passwords or open ports, which can be exploited. The Rodecaster Duo is a popular audio interface for streamers and podcasters.",
-          "discussion": "Commenters expressed surprise that SSH is enabled by default, with some praising the openness of the firmware (tarball + hash) and hoping Rode doesn't lock it down. Others noted how AI-assisted hacking has made such analysis accessible to non-experts."
+          "focusTopics": [
+            "agent-harness"
+          ]
         },
         {
-          "title": "User Cancels Claude Over Token Issues, Quality Decline",
-          "summary": "A user publicly cancelled their Claude subscription, citing sudden token spikes, declining code quality, and poor customer support, sparking a community discussion with 747 points and 444 comments. This highlights growing concerns about vendor lock-in and reliability of proprietary AI tools, especially for developers who depend on them for coding. It underscores the risk of building workflows on opaque, subscription-based AI services that can change without notice. The user reported that Claude generated code with missing requirements, duplicate code, and unnecessary data wrangling, along with tests that fake passing. Another user noted Claude Sonnet used 100% of session limit and 53 minutes of thinking only to return an API error about exceeding the 32000 output token maximum.",
+          "title": "Three reasons why DeepSeek’s new model matters | MIT Technology Review",
+          "summary": "MIT分析DeepSeek V4为何重要。",
+          "url": "https://www.technologyreview.com/2026/04/24/1136422/why-deepseeks-v4-matters/",
+          "score": 8.5,
+          "sources": [
+            {
+              "name": "technologyreview.com"
+            }
+          ],
+          "tags": [
+            "deepseek",
+            "analysis"
+          ],
+          "focusTopics": [
+            "model-release"
+          ]
+        },
+        {
+          "title": "I cancelled Claude: Token issues, declining quality, and poor support",
+          "summary": "用户批评Claude存在token问题、质量下降和客服差，引发社区共鸣。",
           "url": "https://nickyreinert.de/en/2026/2026-04-24-claude-critics/",
-          "score": 8,
+          "score": 8.3,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "y42"
+              "name": "HN (773)"
             }
           ],
           "tags": [
-            "AI",
-            "Claude",
-            "LLM",
-            "software engineering",
-            "vendor lock-in"
+            "claude",
+            "user-experience",
+            "llm"
           ],
-          "focusTopics": [],
-          "background": "Claude is a large language model (LLM) developed by Anthropic, used for coding assistance and other tasks. Token limits restrict how much text the model can process or generate in a single interaction. Vendor lock-in occurs when users become dependent on a proprietary service, making it difficult to switch providers.",
-          "discussion": "Commenters shared similar frustrations: one noted that Claude's generated code often misses requirements and includes unnecessary complexity, while another warned about dependency on proprietary, non-transparent AI products. Some users reported a cognitive decline in Claude over recent months, with benchmarks showing reduced ability to track complex pointer loops."
+          "focusTopics": []
         },
         {
-          "title": "Anthropic Postmortem: Three Bugs in Claude Code Harness",
-          "summary": "Anthropic published a postmortem detailing three bugs in the Claude Code harness that caused perceived quality degradation over the past two months, including a thinking-clearing bug that made Claude seem forgetful and repetitive. This postmortem validates user complaints about Claude Code quality and highlights the complexity of building reliable agentic systems, where harness bugs can significantly impact user experience even when the underlying models are unchanged. The most notable bug, introduced on March 26, cleared Claude's older thinking from sessions idle for over an hour but then erroneously cleared thinking every turn for the rest of the session, causing forgetfulness. The other two bugs are also described in the postmortem.",
-          "url": "https://simonwillison.net/2026/Apr/24/recent-claude-code-quality-reports/#atom-everything",
-          "score": 8,
+          "title": "OpenAI releases GPT-5.5 and GPT-5.5 Pro in the API",
+          "summary": "OpenAI在API中发布GPT-5.5和GPT-5.5 Pro，重大模型更新。",
+          "url": "https://developers.openai.com/api/docs/changelog",
+          "score": 8.289,
           "sources": [
             {
-              "name": "rss",
-              "meta": "Simon Willison"
+              "name": "HN (213)"
             }
           ],
           "tags": [
-            "Claude Code",
-            "AI tools",
-            "postmortem",
-            "bug analysis",
-            "Anthropic"
+            "openai",
+            "gpt-5.5",
+            "api"
           ],
-          "focusTopics": [],
-          "background": "Claude Code is an AI coding agent that runs in a terminal harness, managing context and thinking tokens. The harness is the software layer that orchestrates the model's interactions, and bugs in it can cause issues like memory loss or repetitive behavior, independent of the model itself.",
-          "discussion": "The Hacker News discussion (linked in the article) likely includes reactions from developers who experienced the quality issues, with many expressing relief that the root cause was identified and appreciation for Anthropic's transparency."
+          "focusTopics": [
+            "model-release"
+          ]
+        },
+        {
+          "title": "Tested Deepseek v4 flash with some large code change evals. It absolutely kills with too use accuracy!",
+          "summary": "用户测试DeepSeek V4 Flash在大型代码变更评估中工具调用准确率极高。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1suhdki/tested_deepseek_v4_flash_with_some_large_code/",
+          "score": 8,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "deepseek",
+            "tool-use",
+            "code-eval"
+          ],
+          "focusTopics": [
+            "tool-use"
+          ]
+        },
+        {
+          "title": "DharmaOCR: Open-Source Specialized SLM (3B) + Cost–Performance Benchmark against LLMs and other open-sourced models [R]",
+          "summary": "开源DharmaOCR，3B参数SLM，附带成本-性能基准测试。",
+          "url": "https://www.reddit.com/r/MachineLearning/comments/1sun6wt/dharmaocr_opensource_specialized_slm_3b/",
+          "score": 8,
+          "sources": [
+            {
+              "name": "Reddit r/MachineLearning"
+            }
+          ],
+          "tags": [
+            "ocr",
+            "open-source",
+            "slm"
+          ],
+          "focusTopics": [
+            "model-release"
+          ]
+        },
+        {
+          "title": "zilliztech/claude-context",
+          "summary": "Zilliz 发布 Claude Context，为 Claude Code 提供代码搜索 MCP 工具。",
+          "url": "https://github.com/zilliztech/claude-context",
+          "score": 7.859,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+706★)"
+            }
+          ],
+          "tags": [
+            "mcp",
+            "code-search",
+            "claude"
+          ],
+          "focusTopics": [
+            "coding-agents",
+            "context-engineering"
+          ]
+        },
+        {
+          "title": "DeepSeek-v4 has a comical 384K max output capability",
+          "summary": "DeepSeek V4支持384K最大输出，用户测试生成了单页HTML操作系统。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1su9iio/deepseekv4_has_a_comical_384k_max_output/",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "deepseek",
+            "long-context",
+            "output-length"
+          ],
+          "focusTopics": [
+            "context-engineering"
+          ]
+        },
+        {
+          "title": "mattmireles/gemma-tuner-multimodal",
+          "summary": "Gemma Tuner Multimodal：在Apple Silicon上微调Gemma 4/3n，支持多模态。",
+          "url": "https://github.com/mattmireles/gemma-tuner-multimodal",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "Co-Starred"
+            }
+          ],
+          "tags": [
+            "fine-tuning",
+            "multimodal",
+            "apple-silicon"
+          ],
+          "focusTopics": [
+            "post-training"
+          ]
+        },
+        {
+          "title": "Anil-matcha/Open-Generative-AI",
+          "summary": "开源无限制 AI 图像视频生成工作室，替代多个商业工具。",
+          "url": "https://github.com/Anil-matcha/Open-Generative-AI",
+          "score": 7.213,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+842★)"
+            }
+          ],
+          "tags": [
+            "image-generation",
+            "video-generation",
+            "open-source"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Show HN: Browser Harness – Gives LLM freedom to complete any browser task",
+          "summary": "Browser Harness：让LLM自由完成浏览器任务的开源工具",
+          "url": "https://github.com/browser-use/browser-harness",
+          "score": 7.037,
+          "sources": [
+            {
+              "name": "HN (79)"
+            }
+          ],
+          "tags": [
+            "llm",
+            "browser-automation",
+            "open-source"
+          ],
+          "focusTopics": [
+            "tool-use"
+          ]
+        },
+        {
+          "title": "[AINews] GPT 5.5 and OpenAI Codex Superapp",
+          "summary": "AI新闻简报：GPT-5.5和OpenAI Codex超级应用。",
+          "url": "https://www.latent.space/p/ainews-gpt-55-and-openai-codex-superapp",
+          "score": 7,
+          "sources": [
+            {
+              "name": "Latent Space"
+            }
+          ],
+          "tags": [
+            "gpt-5.5",
+            "codex",
+            "openai"
+          ],
+          "focusTopics": [
+            "model-release",
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "Qwen3.6 27B's surprising KV cache quantization test results (Turbo3/4 vs F16 vs Q8 vs Q4)",
+          "summary": "Qwen3.6 27B的KV缓存量化测试结果令人惊讶，Turbo3/4表现良好。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1suur3s/qwen36_27bs_surprising_kv_cache_quantization_test/",
+          "score": 7,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "qwen",
+            "kv-cache",
+            "quantization"
+          ],
+          "focusTopics": [
+            "context-engineering"
+          ]
+        },
+        {
+          "title": "[New Optimizer] 🌹 Rose: low VRAM, easy to use, great results, Apache 2.0 [P]",
+          "summary": "发布新PyTorch优化器Rose，低显存、易用、Apache 2.0许可。",
+          "url": "https://www.reddit.com/r/MachineLearning/comments/1sucjwp/new_optimizer_rose_low_vram_easy_to_use_great/",
+          "score": 7,
+          "sources": [
+            {
+              "name": "Reddit r/MachineLearning"
+            }
+          ],
+          "tags": [
+            "optimizer",
+            "pytorch",
+            "open-source"
+          ],
+          "focusTopics": [
+            "post-training"
+          ]
+        },
+        {
+          "title": "code-yeongyu/oh-my-openagent",
+          "summary": "oh-my-openagent：最佳agent harness，前身为oh-my-opencode。",
+          "url": "https://github.com/code-yeongyu/oh-my-openagent",
+          "score": 6.7695,
+          "sources": [
+            {
+              "name": "GitHub trending:typescript (+263★)"
+            }
+          ],
+          "tags": [
+            "agent-harness",
+            "open-source"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "Alishahryar1/free-claude-code",
+          "summary": "免费使用Claude Code的工具（非官方）",
+          "url": "https://github.com/Alishahryar1/free-claude-code",
+          "score": 6.6,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+2638★)"
+            }
+          ],
+          "tags": [
+            "claude",
+            "ai-coding",
+            "open-source"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "llm 0.31",
+          "summary": "llm工具发布0.31版，支持GPT-5.5等新模型。",
+          "url": "https://simonwillison.net/2026/Apr/24/llm/#atom-everything",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "Simon Willison"
+            }
+          ],
+          "tags": [
+            "llm",
+            "cli-tool",
+            "open-source"
+          ],
+          "focusTopics": [
+            "model-release"
+          ]
+        },
+        {
+          "title": "The feds join Elon Musk's attempt to stop new AI regulations in ...",
+          "summary": "联邦政府加入马斯克阻止科罗拉多州AI新规的行动。",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/918492/the-feds-join-elon-musks-attempt-to-stop-new-ai-regulations-in-colorado",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "theverge.com"
+            }
+          ],
+          "tags": [
+            "regulation",
+            "policy"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "We're open-sourcing the first publicly available blood detection model: dataset, weights, and CLI [P] [R]",
+          "summary": "开源首个血液检测模型BloodshotNet，用于信任与安全。",
+          "url": "https://www.reddit.com/r/MachineLearning/comments/1sui6je/were_opensourcing_the_first_publicly_available/",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "Reddit r/MachineLearning"
+            }
+          ],
+          "tags": [
+            "computer-vision",
+            "open-source",
+            "trust-safety"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "CC-Canary: Detect early signs of regressions in Claude Code",
+          "summary": "CC-Canary：检测Claude Code回归的早期信号工具",
+          "url": "https://github.com/delta-hq/cc-canary",
+          "score": 6.492,
+          "sources": [
+            {
+              "name": "HN (39)"
+            }
+          ],
+          "tags": [
+            "ai-coding",
+            "claude",
+            "regression-testing"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "openai/skills",
+          "summary": "OpenAI 发布 Codex 的 Skills 目录。",
+          "url": "https://github.com/openai/skills",
+          "score": 6.483,
+          "sources": [
+            {
+              "name": "GitHub trending:python (+72★)"
+            }
+          ],
+          "tags": [
+            "openai",
+            "codex",
+            "skills"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "deepseek-ai/DeepEP",
+          "summary": "DeepSeek 发布高效专家并行通信库 DeepEP。",
+          "url": "https://github.com/deepseek-ai/DeepEP",
+          "score": 6.453,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+52★)"
+            }
+          ],
+          "tags": [
+            "deepseek",
+            "communication-library",
+            "moe"
+          ],
+          "focusTopics": [
+            "model-release"
+          ]
+        },
+        {
+          "title": "kirodotdev/Kiro",
+          "summary": "Kiro 是一款 Agentic IDE，从原型到生产全程辅助。",
+          "url": "https://github.com/kirodotdev/Kiro",
+          "score": 6.4065,
+          "sources": [
+            {
+              "name": "GitHub trending:typescript (+21★)"
+            }
+          ],
+          "tags": [
+            "ide",
+            "agent",
+            "coding"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "Tracer-Cloud/opensre",
+          "summary": "开源 AI SRE Agent 工具包，用于构建运维代理。",
+          "url": "https://github.com/Tracer-Cloud/opensre",
+          "score": 6.3205,
+          "sources": [
+            {
+              "name": "GitHub trending:python (+247★)"
+            }
+          ],
+          "tags": [
+            "sre",
+            "agent",
+            "open-source"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "unslothai/unsloth",
+          "summary": "Unsloth 推出 Web UI，支持本地训练和运行开源模型。",
+          "url": "https://github.com/unslothai/unsloth",
+          "score": 6.2605,
+          "sources": [
+            {
+              "name": "GitHub trending:python (+207★)"
+            }
+          ],
+          "tags": [
+            "fine-tuning",
+            "web-ui",
+            "open-source"
+          ],
+          "focusTopics": [
+            "post-training"
+          ]
+        },
+        {
+          "title": "KeygraphHQ/shannon",
+          "summary": "Shannon Lite：自主AI渗透测试工具，分析源码并执行攻击。",
+          "url": "https://github.com/KeygraphHQ/shannon",
+          "score": 6.2035,
+          "sources": [
+            {
+              "name": "GitHub trending:typescript (+169★)"
+            }
+          ],
+          "tags": [
+            "ai-security",
+            "pentesting",
+            "open-source"
+          ],
+          "focusTopics": [
+            "tool-use"
+          ]
+        },
+        {
+          "title": "AIDC-AI/Pixelle-Video",
+          "summary": "AI 全自动短视频引擎，可自动生成视频。",
+          "url": "https://github.com/AIDC-AI/Pixelle-Video",
+          "score": 6.052999999999999,
+          "sources": [
+            {
+              "name": "GitHub trending:python (+352★)"
+            }
+          ],
+          "tags": [
+            "video-generation",
+            "automation",
+            "ai-tools"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "It's a big one",
+          "summary": "本周AI新闻汇总：GPT-5.5、ChatGPT图像、Qwen等。",
+          "url": "https://simonwillison.net/2026/Apr/24/weekly/#atom-everything",
+          "score": 6,
+          "sources": [
+            {
+              "name": "Simon Willison"
+            }
+          ],
+          "tags": [
+            "newsletter",
+            "gpt-5.5",
+            "qwen"
+          ],
+          "focusTopics": [
+            "model-release"
+          ]
+        },
+        {
+          "title": "Meta's loss is Thinking Machines' gain | TechCrunch",
+          "summary": "Meta的损失成为Thinking Machines的收益。",
+          "url": "https://techcrunch.com/2026/04/24/metas-loss-is-thinking-machines-gain/",
+          "score": 6,
+          "sources": [
+            {
+              "name": "techcrunch.com"
+            }
+          ],
+          "tags": [
+            "meta",
+            "talent",
+            "startup"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Anthropic admits to have made hosted models more stupid, proving the importance of open weight, local models",
+          "summary": "Anthropic承认降低Claude Code推理努力度，引发本地模型讨论。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1suef7t/anthropic_admits_to_have_made_hosted_models_more/",
+          "score": 6,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "claude",
+            "reasoning",
+            "local-llm"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "Opinion: Qwen 3.6 27b Beats Sonnet 4.6 on Feature Planning",
+          "summary": "观点：Qwen 3.6 27B在功能规划上超越Sonnet 4.6。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1supft2/opinion_qwen_36_27b_beats_sonnet_46_on_feature/",
+          "score": 6,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "qwen",
+            "planning",
+            "comparison"
+          ],
+          "focusTopics": [
+            "planning"
+          ]
+        },
+        {
+          "title": "google-labs-code/stitch-skills",
+          "summary": "Google发布Stitch Skills库，用于MCP服务器的Agent技能。",
+          "url": "https://github.com/google-labs-code/stitch-skills",
+          "score": 5.63,
+          "sources": [
+            {
+              "name": "GitHub trending:typescript (+70★)"
+            }
+          ],
+          "tags": [
+            "agent-framework",
+            "mcp",
+            "skills"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "Infor launches new AI orchestration tools as research highlights scaling challenges - Robotics & Automation News",
+          "summary": "Infor推出AI编排工具，研究揭示扩展挑战。",
+          "url": "https://roboticsandautomationnews.com/2026/04/24/infor-launches-new-ai-orchestration-tools-as-research-highlights-scaling-challenges/100959/",
+          "score": 5.5,
+          "sources": [
+            {
+              "name": "roboticsandautomationnews.com"
+            }
+          ],
+          "tags": [
+            "ai-orchestration",
+            "enterprise"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "The pope moves to police AI - Axios",
+          "summary": "教皇推动监管人工智能。",
+          "url": "https://www.axios.com/2026/04/24/catholics-pope-vatican-artificial-intelligence",
+          "score": 5.5,
+          "sources": [
+            {
+              "name": "axios.com"
+            }
+          ],
+          "tags": [
+            "ai-ethics",
+            "regulation",
+            "vatican"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "koala73/worldmonitor",
+          "summary": "AI 驱动的实时全球情报仪表盘，聚合新闻和监控。",
+          "url": "https://github.com/koala73/worldmonitor",
+          "score": 5.478,
+          "sources": [
+            {
+              "name": "GitHub trending:typescript (+252★)"
+            }
+          ],
+          "tags": [
+            "ai",
+            "dashboard",
+            "geopolitics"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "google/adk-samples",
+          "summary": "Google 发布 ADK 示例 Agent 集合。",
+          "url": "https://github.com/google/adk-samples",
+          "score": 5.13,
+          "sources": [
+            {
+              "name": "GitHub trending:python (+20★)"
+            }
+          ],
+          "tags": [
+            "google",
+            "agent-sdk",
+            "samples"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "AI to Learn 2.0: A Deliverable-Oriented Governance Framework and Maturity Rubric for Opaque AI in Learning-Intensive Domains",
+          "summary": "提出面向AI学习场景的可交付治理框架与成熟度评估标准。",
+          "url": "https://arxiv.org/abs/2604.19751",
+          "score": 5,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "governance",
+            "education",
+            "generative-ai"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "The people do not yearn for automation",
+          "summary": "评论文章：人们并不渴望自动化。",
+          "url": "https://simonwillison.net/2026/Apr/24/the-people-do-not-yearn-for-automation/#atom-everything",
+          "score": 5,
+          "sources": [
+            {
+              "name": "Simon Willison"
+            }
+          ],
+          "tags": [
+            "automation",
+            "ai-backlash",
+            "opinion"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "AMA Announcement: Nous Research, The Opensource Lab Behind Hermes Agent (Wednesday, 8AM-11AM PST)",
+          "summary": "Nous Research将在r/LocalLLaMA举办AMA，讨论Hermes Agent。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1suw9on/ama_announcement_nous_research_the_opensource_lab/",
+          "score": 5,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "ama",
+            "community",
+            "agent"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Qwen3.6-35B-A3B - even in VRAM limited scenarios it can be better to use bigger quants than you'd expect!",
+          "summary": "用户分享Qwen3.6-35B-A3B在VRAM受限场景下的量化经验。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1sutct2/qwen3635ba3b_even_in_vram_limited_scenarios_it/",
+          "score": 5,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "qwen",
+            "quantization",
+            "local-llm"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "DS4-Flash vs Qwen3.6",
+          "summary": "Reddit用户讨论DS4-Flash与Qwen3.6的对比。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1sub71w/ds4flash_vs_qwen36/",
+          "score": 5,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "deepseek",
+            "qwen",
+            "comparison"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Shubhamsaboo/awesome-llm-apps",
+          "summary": "100+ AI Agent 和 RAG 应用合集，可克隆运行。",
+          "url": "https://github.com/Shubhamsaboo/awesome-llm-apps",
+          "score": 4.5245,
+          "sources": [
+            {
+              "name": "GitHub trending:python (+183★)"
+            }
+          ],
+          "tags": [
+            "agent",
+            "rag",
+            "collection"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "vas3k/TaxHacker",
+          "summary": "自托管 AI 会计应用，用 LLM 分析收据和交易。",
+          "url": "https://github.com/vas3k/TaxHacker",
+          "score": 4.2845,
+          "sources": [
+            {
+              "name": "GitHub trending:typescript (+23★)"
+            }
+          ],
+          "tags": [
+            "llm",
+            "accounting",
+            "self-hosted"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "My coding agent commited suicide lol",
+          "summary": "用户分享编码agent自杀的趣事，因杀死自身进程。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1suxa96/my_coding_agent_commited_suicide_lol/",
+          "score": 4,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "coding-agent",
+            "anecdote"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "Mitigating hallucination [P]",
+          "summary": "提出轻量级方法缓解幻觉，但非正式论文。",
+          "url": "https://www.reddit.com/r/MachineLearning/comments/1sug8uc/mitigating_hallucination_p/",
+          "score": 4,
+          "sources": [
+            {
+              "name": "Reddit r/MachineLearning"
+            }
+          ],
+          "tags": [
+            "hallucination",
+            "mitigation"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "ThinkInAIXYZ/deepchat",
+          "summary": "DeepChat：连接AI到个人世界的智能助手。",
+          "url": "https://github.com/ThinkInAIXYZ/deepchat",
+          "score": 3.421,
+          "sources": [
+            {
+              "name": "GitHub trending:typescript (+14★)"
+            }
+          ],
+          "tags": [
+            "ai-assistant",
+            "chat"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "I just had a little ghost in the shell moment...",
+          "summary": "用户分享Qwen3.6-35B-A3B幻觉上下文已满的趣事。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1sulutq/i_just_had_a_little_ghost_in_the_shell_moment/",
+          "score": 3,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "hallucination",
+            "qwen",
+            "anecdote"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Nanochat vs Llama for training from scratch? [P]",
+          "summary": "讨论从零训练模型时Nanochat与Llama的选择。",
+          "url": "https://www.reddit.com/r/MachineLearning/comments/1su5i3z/nanochat_vs_llama_for_training_from_scratch_p/",
+          "score": 3,
+          "sources": [
+            {
+              "name": "Reddit r/MachineLearning"
+            }
+          ],
+          "tags": [
+            "training",
+            "llama",
+            "nanochat"
+          ],
+          "focusTopics": []
         }
       ]
     }
-  ]
+  ],
+  "aiSummary": "今日AI领域迎来多项重磅动态：**[DeepSeek发布下一代开源模型V4](#item-scmp-com-tech-big-tech-article-3351239-deepseek-releases-nex)**，以极低成本实现接近顶尖模型性能，华为宣布提供芯片支持；**[OpenAI在API中发布GPT-5.5和GPT-5.5 Pro](#item-developers-openai-com-api-docs-changelog)**，带来重大模型更新。研究方面，**[新论文揭示LLM存在工具过度使用幻觉](#item-arxiv-org-abs-2604-19749)**，并提出了**[TRACES方法实现自适应成本高效早停](#item-arxiv-org-abs-2604-21057)**。工具领域，**[HuggingFace发布开源ML工程师项目](#item-github-com-huggingface-ml-intern)**，可自动完成论文阅读与模型部署，同时**[DharmaOCR开源3B参数SLM](#item-reddit-com-r-MachineLearning-comments-1sun6wt-dharmaocr-open)**并附带成本性能基准。观点方面，**[MIT分析DeepSeek V4为何重要](#item-technologyreview-com-2026-04-24-1136422-why-deepseeks-v4-mat)**，而**[用户批评Claude存在质量下降和token问题](#item-nickyreinert-de-en-2026-2026-04-24-claude-critics)**引发社区热议。"
 }
