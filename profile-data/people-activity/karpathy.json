@@ -840,6 +840,89 @@
       "tags": [
         "tooling"
       ]
+    },
+    {
+      "type": "x",
+      "id": "1990855382756164013",
+      "url": "https://x.com/karpathy/status/1990855382756164013",
+      "author": {
+        "handle": "karpathy",
+        "displayName": "Andrej Karpathy",
+        "avatar": "https://avatars.githubusercontent.com/karpathy"
+      },
+      "content": "My most amusing interaction was where the model (I think I was given some earlier version with a ...)",
+      "createdAt": "2026-04-26T04:11:46.643Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Karpathy shares a humorous anecdote about an early model interaction.",
+      "worthReading": "Insight into early model behavior and user experience.",
+      "tags": [
+        "llm"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2031135152349524125",
+      "url": "https://x.com/karpathy/status/2031135152349524125",
+      "author": {
+        "handle": "karpathy",
+        "displayName": "Andrej Karpathy",
+        "avatar": "https://avatars.githubusercontent.com/karpathy"
+      },
+      "content": "Three days ago I left autoresearch tuning nanochat for ~2 days on depth=12 model.",
+      "createdAt": "2026-04-26T04:11:46.643Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Karpathy describes running an auto-research experiment tuning a small chat model.",
+      "worthReading": "Shows practical application of autonomous research in LLM tuning.",
+      "tags": [
+        "agent",
+        "fine-tuning"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2002118205729562949",
+      "url": "https://x.com/karpathy/status/2002118205729562949",
+      "author": {
+        "handle": "karpathy",
+        "displayName": "Andrej Karpathy",
+        "avatar": "https://avatars.githubusercontent.com/karpathy"
+      },
+      "content": "By training LLMs against automatically verifiable rewards across a number of environments (e.g. think math/code puzzles), the LLMs spontaneously develop strategies that look like \"reasoning\" to humans - they learn to break down problem solving into intermediate calculations and they learn a number of probl",
+      "createdAt": "2026-04-26T04:11:46.643Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Karpathy explains how training with verifiable rewards leads to emergent reasoning-like strategies.",
+      "worthReading": "Key insight into how reasoning emerges from reward-based training.",
+      "tags": [
+        "llm",
+        "evaluation"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "1921368644069765486",
+      "url": "https://x.com/karpathy/status/1921368644069765486",
+      "author": {
+        "handle": "karpathy",
+        "displayName": "Andrej Karpathy",
+        "avatar": "https://avatars.githubusercontent.com/karpathy"
+      },
+      "content": "We're missing (at least one) major paradigm for LLM learning. Not sure what to call it,",
+      "createdAt": "2026-04-26T04:11:46.643Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Karpathy identifies a gap in current LLM learning paradigms.",
+      "worthReading": "Provocative thought on future directions for LLM training.",
+      "tags": [
+        "llm",
+        "infra"
+      ]
     }
   ],
   "dailyCounts": [
@@ -860,7 +943,6 @@
     0,
     0,
     0,
-    0,
     3,
     3,
     0,
@@ -872,7 +954,8 @@
     3,
     3,
     4,
-    3
+    3,
+    4
   ],
-  "interestSummary": "Andrej Karpathy is deeply focused on using LLMs to build personal knowledge bases and exploring their dual nature as both surprisingly smart and dumb, while actively tuning models like nanochat and experimenting with LLM-assisted coding workflows."
+  "interestSummary": "Andrej Karpathy is deeply focused on using LLMs to build personal knowledge bases and exploring their capabilities as a new form of intelligence, while also actively tuning and experimenting with smaller models like nanochat and reflecting on the evolving coding workflow with LLMs."
 }

@@ -584,10 +584,71 @@
         "deployment",
         "agent"
       ]
+    },
+    {
+      "type": "x",
+      "id": "2042612328701812789",
+      "url": "https://x.com/hwchase17/status/2042612328701812789",
+      "author": {
+        "handle": "hwchase17",
+        "displayName": "Harrison Chase",
+        "avatar": "https://avatars.githubusercontent.com/hwchase17"
+      },
+      "content": "im excited about agent harnesses because i think are the first stable agent abstractions we can build on top (which is why we're investing so much in deepagents) we always wanted to run llms in a loop and have them call tools (remember autoGPT? that's all that was) but the",
+      "createdAt": "2026-04-26T04:11:57.138Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Harrison Chase expresses excitement about agent harnesses as stable abstractions for building agent systems, and mentions investing in deepagents.",
+      "worthReading": "It shows the thinking behind LangChain's focus on agent harnesses as a foundational layer.",
+      "tags": [
+        "agent",
+        "tooling"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2021261552222158955",
+      "url": "https://x.com/hwchase17/status/2021261552222158955",
+      "author": {
+        "handle": "hwchase17",
+        "displayName": "Harrison Chase",
+        "avatar": "https://avatars.githubusercontent.com/hwchase17"
+      },
+      "content": "TL;DR: More and more agents need a workspace: a computer where they can run code, install packages, and access files. Sandboxes provide this",
+      "createdAt": "2026-04-26T04:11:57.138Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Harrison Chase notes that agents require a workspace (sandbox) to execute code and access files.",
+      "worthReading": "It highlights a key infrastructure need for agent deployment.",
+      "tags": [
+        "infra",
+        "deployment"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2041682886722728368",
+      "url": "https://x.com/hwchase17/status/2041682886722728368",
+      "author": {
+        "handle": "hwchase17",
+        "displayName": "Harrison Chase",
+        "avatar": "https://avatars.githubusercontent.com/hwchase17"
+      },
+      "content": "as always, it's an exciting time to be working at LangChain!",
+      "createdAt": "2026-04-26T04:11:57.138Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Harrison Chase retweets a positive sentiment about working at LangChain.",
+      "worthReading": "Reflects enthusiasm for the company's trajectory.",
+      "tags": [
+        "tooling"
+      ]
     }
   ],
   "dailyCounts": [
-    0,
     0,
     0,
     0,
@@ -616,7 +677,8 @@
     3,
     2,
     4,
-    4
+    4,
+    3
   ],
-  "interestSummary": "Harrison Chase's recent focus is on the development and operational needs of AI agents, emphasizing the importance of sandboxed workspaces for code execution and the necessity of iterating on production traces rather than traditional code for debugging and testing. He also highlights LangChain's new no-code Agent Builder, which features an integrated memory system."
+  "interestSummary": "Harrison Chase is focused on advancing agent development, emphasizing the need for agent workspaces like sandboxes and the importance of iterating on production traces rather than code, as highlighted by LangSmith Agent Builder's no-code memory system."
 }

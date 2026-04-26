@@ -570,7 +570,10 @@
       "repostCount": 15,
       "highlights": "",
       "worthReading": "",
-      "tags": [],
+      "tags": [
+        "deployment",
+        "evaluation"
+      ],
       "type": "bluesky"
     },
     {
@@ -612,6 +615,26 @@
       "worthReading": "",
       "tags": [
         "agent"
+      ],
+      "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mkdikalmcs2u",
+      "url": "https://bsky.app/profile/simonwillison.net/post/3mkdikalmcs2u",
+      "author": {
+        "handle": "simonwillison.net",
+        "displayName": "Simon Willison",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
+      },
+      "content": "I think ChatGPT Images 2.0 deciding to add a \"WHY ARE YOU LIKE THIS\" sign to the background of this image is the first time I've felt a glimpse of AGI simonwillison.net/2026/Apr/25/...",
+      "createdAt": "2026-04-25T16:46:44.256Z",
+      "likeCount": 214,
+      "replyCount": 14,
+      "repostCount": 20,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [
+        "multi-modal"
       ],
       "type": "bluesky"
     }
@@ -1217,10 +1240,30 @@
         "agent",
         "evaluation"
       ]
+    },
+    {
+      "type": "x",
+      "id": "1970147806225854531",
+      "url": "https://x.com/simonw/status/1970147806225854531",
+      "author": {
+        "handle": "simonw",
+        "displayName": "Simon Willison",
+        "avatar": "https://avatars.githubusercontent.com/simonw"
+      },
+      "content": "It's interesting how \"better at code\" has become the defining goal of almost every AI lab over the",
+      "createdAt": "2026-04-26T04:11:50.099Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Simon Willison observes that improving code generation has become the primary objective for AI labs.",
+      "worthReading": "Reflects a key trend in AI development priorities.",
+      "tags": [
+        "llm",
+        "evaluation"
+      ]
     }
   ],
   "dailyCounts": [
-    0,
     0,
     0,
     0,
@@ -1249,7 +1292,8 @@
     5,
     5,
     6,
-    2
+    3,
+    1
   ],
-  "interestSummary": "Simon Willison is actively exploring and benchmarking the latest AI models (Gemma, Qwen, Claude Opus) for code, image generation, and memory systems, while also building practical tools like document parsers and integrating AI with Google Sheets and Datasette. He maintains a playful focus on generative image quality through his \"pelican riding a bicycle\" benchmark, and closely follows Anthropic's pricing and feature changes."
+  "interestSummary": "Simon Willison is deeply engaged in evaluating and comparing the latest AI models (Claude Opus 4.7, Gemini Flash TTS, Qwen3.6) and their coding capabilities, while also exploring practical tools for document parsing (LiteParse, natural-pdf), AI memory systems, and fine-tuning multimodal models on Apple Silicon. His recent activity also reflects a playful, creative focus on using image generation models for a \"pelicans riding bicycles\" benchmark, alongside serious analysis of AI pricing and security developments."
 }

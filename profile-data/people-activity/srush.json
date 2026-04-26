@@ -374,6 +374,27 @@
       "highlights": "No text content available from search snippet.",
       "worthReading": "Incomplete data; unable to determine significance.",
       "tags": []
+    },
+    {
+      "type": "x",
+      "id": "2036834073369596295",
+      "url": "https://x.com/srush_nlp/status/2036834073369596295",
+      "author": {
+        "handle": "srush_io",
+        "displayName": "Sasha Rush",
+        "avatar": "https://avatars.githubusercontent.com/srush"
+      },
+      "content": "On the infra side, composer 2 uses CP. This is (i think?) the first real detail from using CP on MLA. My understanding is that each rank",
+      "createdAt": "2026-04-26T04:12:48.678Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Sasha Rush discusses infrastructure details about composer 2 using CP (context parallelism) on MLA (multi-head latent attention).",
+      "worthReading": "Provides insight into practical deployment of advanced parallelism techniques for large language models.",
+      "tags": [
+        "infra",
+        "llm"
+      ]
     }
   ],
   "dailyCounts": [
@@ -390,7 +411,6 @@
     0,
     0,
     0,
-    0,
     1,
     0,
     0,
@@ -406,7 +426,8 @@
     3,
     1,
     1,
-    3
+    3,
+    1
   ],
-  "interestSummary": "Sasha Rush recently joined Cursor, an ambitious AI coding team, and is actively engaged with web-based ML tooling, as shown by starring a JAX-in-JavaScript library. They are also continuing their focus on Transformer architecture debates, having established a long bet with Jonathan Frankle."
+  "interestSummary": "Sasha Rush recently joined Cursor, an ambitious AI team, and is engaged in a public wager with Jonathan Frankle regarding Transformers, while also showing interest in running JAX in JavaScript via WebGPU and Wasm."
 }
