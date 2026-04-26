@@ -1,101 +1,80 @@
 {
   "date": "2026-04-26",
-  "itemCount": 11,
+  "itemCount": 59,
   "sections": [
     {
       "id": "headlines",
       "title": "Headlines & Launches",
       "items": [
         {
-          "title": "Trump Fires All 24 Members of NSF Oversight Board",
-          "summary": "President Trump has dismissed all 24 members of the National Science Board, the oversight body of the U.S. National Science Foundation (NSF). This unprecedented move removes the key governance layer responsible for setting NSF's policies and approving major funding decisions. The NSF is a primary funder of fundamental scientific research in the U.S., supporting thousands of projects across all fields. Removing its entire oversight board creates uncertainty about the agency's ability to operate, potentially disrupting grant cycles, peer review, and long-term research planning, which could harm U.S. scientific competitiveness. The National Science Board consists of 24 members appointed by the President and confirmed by the Senate, serving staggered six-year terms. The board's statutory responsibilities include establishing NSF policies, approving the agency's budget request, and overseeing the merit review process for grant proposals.",
-          "url": "https://www.science.org/content/article/trump-fires-nsf-s-oversight-board",
-          "score": 9,
+          "title": "[AINews] DeepSeek V4 Pro (1.6T-A49B) and Flash (284B-A13B), Base and Instruct — runnable on Huawei Ascend chips",
+          "summary": "DeepSeek发布V4 Pro和Flash模型，支持华为昇腾芯片。",
+          "url": "https://www.latent.space/p/ainews-deepseek-v4-pro-16t-a49b-and",
+          "score": 9.5,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "skullone"
+              "name": "Latent Space"
             }
           ],
           "tags": [
-            "NSF",
-            "science policy",
-            "US politics",
-            "research funding"
+            "deepseek",
+            "model-release",
+            "huawei"
           ],
           "focusTopics": [
-            "memory",
-            "planning"
-          ],
-          "background": "The National Science Foundation (NSF) is an independent federal agency created in 1950 to promote the progress of science. It funds approximately 25% of all federally supported basic research conducted by U.S. colleges and universities. The National Science Board serves as both the governing board of NSF and an independent policy advisory body to the President and Congress on science and engineering issues.",
-          "discussion": "Commenters expressed shock and concern, with some speculating that the administration intends to replace board members with political allies or disrupt NSF operations. Others questioned the necessity of the board, while a few hoped a future administration could rebuild a better system from scratch."
+            "model-release"
+          ]
         },
         {
-          "title": "Martin Galway Releases C64 Music Source Files",
-          "summary": "Martin Galway has released the original source files for his iconic Commodore 64 game music, including tracks from Wizball and Ocean software titles, on GitHub. This release provides unprecedented insight into the programming techniques behind classic chiptune music, enabling preservation, analysis, and potential modern reinterpretation of these historic compositions. The source files include assembly code for the music players and per-frame register manipulations that produce the distinctive SID chip sounds, such as filter sweeps and ring modulation.",
-          "url": "https://github.com/MartinGalway/C64_music",
+          "title": "OpenAI’s super PAC might be funding a ‘news’ site staffed by AI reporters. | The Verge",
+          "summary": "OpenAI的超级PAC可能资助由AI记者运营的新闻网站。",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/918787/openais-super-pac-might-be-funding-a-news-site-staffed-by-ai-reporters",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "theverge.com"
+            }
+          ],
+          "tags": [
+            "openai",
+            "ai-journalism",
+            "funding"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Why Cohere is merging with Aleph Alpha",
+          "summary": "Cohere与Aleph Alpha合并的原因分析。",
+          "url": "https://techcrunch.com/2026/04/25/why-cohere-is-merging-with-aleph-alpha/",
           "score": 7,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "ingve"
+              "name": "techcrunch.com"
             }
           ],
           "tags": [
-            "retrocomputing",
-            "music",
-            "Commodore 64",
-            "source code",
-            "chiptune"
+            "cohere",
+            "merger",
+            "ai-company"
           ],
-          "focusTopics": [],
-          "background": "The Commodore 64's SID (Sound Interface Device) chip is a programmable sound generator capable of subtractive synthesis. Composers like Martin Galway and Rob Hubbard pushed its limits by directly manipulating hardware registers in real-time, creating complex sounds beyond simple note sequencing.",
-          "discussion": "The community discussion highlights the technical challenge of translating SID music to modern pattern-based systems, noting that the essence lies in per-frame register pokes rather than just notes. Users also shared links to listen to the tunes and attempted AI-based translations."
+          "focusTopics": []
         },
         {
-          "title": "OpenAI's $25k GPT-5.5 Bio Bug Bounty Draws Criticism",
-          "summary": "OpenAI announced a bug bounty program offering $25,000 for a universal jailbreak of GPT-5.5 that bypasses safety measures on five bio-risk questions. The program requires an NDA and is limited to a vetted group of trusted bio red-teamers. This program highlights the tension between AI safety research and community expectations, as the low payout and restrictive conditions may discourage participation and limit the discovery of critical vulnerabilities. The outcome could influence how AI companies structure future bug bounties for high-risk areas like biosecurity. The bounty is only $25,000 for the first universal jailbreak, far lower than OpenAI's previous Kaggle bounty of $500,000. Participants must sign an NDA, and the specific bio-risk questions are not disclosed upfront, requiring applicants to propose a jailbreak approach without knowing the questions.",
-          "url": "https://openai.com/index/gpt-5-5-bio-bug-bounty/",
-          "score": 6,
+          "title": "OpenAI CEO apologizes to Tumbler Ridge community",
+          "summary": "OpenAI CEO就数据中心问题向社区道歉。",
+          "url": "https://techcrunch.com/2026/04/25/openai-ceo-apologizes-to-tumbler-ridge-community/",
+          "score": 6.5,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "Murfalo"
+              "name": "techcrunch.com"
             }
           ],
           "tags": [
-            "AI safety",
-            "bug bounty",
-            "OpenAI",
-            "jailbreak",
-            "bio-risk"
+            "openai",
+            "community",
+            "apology"
           ],
-          "focusTopics": [
-            "memory"
-          ],
-          "background": "Jailbreaking an AI model means bypassing its safety guardrails to make it produce harmful or restricted content. Bug bounty programs incentivize security researchers to find and report vulnerabilities, but the reward amount and conditions can affect participation. Bio-risk refers to the potential misuse of AI to facilitate biological threats, such as creating pathogens or bioweapons.",
-          "discussion": "Community comments are highly critical: users point out the low payout compared to a previous $500k Kaggle bounty, the NDA requirement, and the lack of transparency about the test questions. Some call the program a 'scam' and doubt many will participate, while others question the exclusivity of the 'trusted bio red-teamers' list."
-        },
-        {
-          "title": "Discret 11: French TV Encryption in the 1980s",
-          "summary": "Fabien Sanglard published a detailed article exploring the Discret 11 analog video scrambling system used by French pay-TV channel Canal+ from 1984 to 1995. This article provides a rare technical deep dive into a historical encryption system, preserving knowledge of early pay-TV security and its cultural impact in France. Discret 11 used analog scrambling techniques such as line inversion and audio masking, and its security relied on a proprietary algorithm rather than public-key cryptography.",
-          "url": "https://fabiensanglard.net/discret11/",
-          "score": 6,
-          "sources": [
-            {
-              "name": "hackernews",
-              "meta": "adunk"
-            }
-          ],
-          "tags": [
-            "retro computing",
-            "encryption",
-            "television",
-            "history"
-          ],
-          "focusTopics": [],
-          "background": "In the 1980s, pay-TV channels like Canal+ needed to prevent unauthorized viewing. They used analog scrambling systems like Discret 11, which modified the video signal to make it unwatchable without a decoder. The system operated on the SECAM broadcast standard used in France.",
-          "discussion": "Commenters shared nostalgic memories of decoding Discret 11 as teenagers, using homemade antennas and brute-force methods. Some noted the iconic Canal+ jingle and the challenge of understanding scrambled audio by ear."
+          "focusTopics": []
         }
       ]
     },
@@ -104,94 +83,275 @@
       "title": "Research & Innovation",
       "items": [
         {
-          "title": "Quantum Attack Exposed as Random Number Artifact",
-          "summary": "Yuval Adam replaced an IBM quantum backend with /dev/urandom and still recovered a 17-bit ECC key, demonstrating that a prize-winning quantum attack was actually a random number generator artifact. This exposes a critical flaw in quantum computing benchmarking, showing that small factoring or ECDLP cases can be trivially solved by classical random number generators, misleading progress claims. The attack targeted a 17-bit elliptic curve key on IBM Quantum hardware, but the same result was achieved using /dev/urandom, a standard Unix random number source. The original submission won a 1 BTC prize from Project Eleven.",
-          "url": "https://github.com/yuvadm/quantumslop/blob/25ad2e76ae58baa96f6219742459407db9dd17f5/URANDOM_DEMO.md",
-          "score": 8,
+          "title": "Open-source 9-task benchmark for coding-agent retrieval augmentation. Per-task deltas +0.010 to +0.320, all evals reproducible [P]",
+          "summary": "开源9任务基准测试，评估编码智能体检索增强效果。",
+          "url": "https://www.reddit.com/r/MachineLearning/comments/1suzqxe/opensource_9task_benchmark_for_codingagent/",
+          "score": 8.5,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "pigeons"
+              "name": "Reddit r/MachineLearning"
             }
           ],
           "tags": [
-            "quantum computing",
-            "cryptography",
-            "benchmarking",
-            "security",
-            "critique"
+            "coding-agent",
+            "benchmark",
+            "retrieval-augmented"
           ],
           "focusTopics": [
-            "reflection"
-          ],
-          "background": "Elliptic-curve cryptography (ECC) uses smaller keys for equivalent security compared to RSA. Shor's algorithm can break ECC on a quantum computer, but for small key sizes, classical brute force or random sampling can also succeed. /dev/urandom provides cryptographically secure pseudorandom numbers on Unix-like systems.",
-          "discussion": "The community widely agrees that this exposes poor validation in quantum computing benchmarks. Commenters note that for small numbers, Shor's algorithm succeeds quickly with random samples, and that the submission author lacked quantum computing background. Some emphasize this is not a jab at quantum computing but at the flawed prize process."
+            "coding-agents",
+            "evals"
+          ]
         },
         {
-          "title": "Lambda Calculus Benchmark Reveals AI Model Gaps",
-          "summary": "A new benchmark, λ-bench, evaluates AI models on 120 pure lambda calculus programming problems, requiring models to implement algorithms using the minimal Lamb language. Results show top labs' models are nearly tied, while others lag significantly. This benchmark tests algorithmic reasoning in a pure, minimal setting, providing a clearer differentiation of model capabilities beyond typical coding benchmarks. It challenges the marketing hype around new models, especially smaller ones from China, by showing persistent performance gaps. The benchmark uses single-attempt one-shot per problem, which some critics argue is insufficient for non-deterministic LLMs; they suggest running each problem multiple times (e.g., 45 samples) for statistical reliability. The problems are based on pure lambda calculus, a foundational model of computation.",
-          "url": "https://victortaelin.github.io/lambench/",
+          "title": "Value-Conflict Diagnostics Reveal Widespread Alignment Faking in Language Models",
+          "summary": "发现语言模型中广泛存在对齐伪装，提出价值冲突诊断方法。",
+          "url": "https://arxiv.org/abs/2604.20995",
           "score": 8,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "marvinborner"
+              "name": "ArXiv cs.AI"
             }
           ],
           "tags": [
-            "AI benchmarking",
-            "lambda calculus",
-            "LLM evaluation",
-            "programming problems"
+            "ai-safety",
+            "alignment",
+            "llm"
+          ],
+          "focusTopics": [
+            "post-training"
+          ]
+        },
+        {
+          "title": "Adaptive Test-Time Compute Allocation with Evolving In-Context Demonstrations",
+          "summary": "提出自适应测试时计算分配方法，利用动态上下文示例。",
+          "url": "https://arxiv.org/abs/2604.21018",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "llm",
+            "inference",
+            "efficiency"
+          ],
+          "focusTopics": [
+            "context-engineering"
+          ]
+        },
+        {
+          "title": "Co-Evolving LLM Decision and Skill Bank Agents for Long-Horizon Tasks",
+          "summary": "提出LLM决策与技能库智能体协同进化框架处理长时任务。",
+          "url": "https://arxiv.org/abs/2604.20987",
+          "score": 7,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "llm",
+            "agents",
+            "long-horizon"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "Deep FinResearch Bench: Evaluating AI's Ability to Conduct Professional Financial Investment Research",
+          "summary": "发布Deep FinResearch Bench，评估AI金融投资研究能力。",
+          "url": "https://arxiv.org/abs/2604.21006",
+          "score": 7,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "benchmark",
+            "finance",
+            "llm"
+          ],
+          "focusTopics": [
+            "evals"
+          ]
+        },
+        {
+          "title": "The Last Harness You'll Ever Build",
+          "summary": "提出通用AI智能体测试框架，支持复杂企业工作流。",
+          "url": "https://arxiv.org/abs/2604.21003",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "agents",
+            "testing",
+            "framework"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "roboflow/rf-detr",
+          "summary": "ICLR 2026实时目标检测与分割模型，COCO上SOTA，支持微调。",
+          "url": "https://github.com/roboflow/rf-detr",
+          "score": 6.0385,
+          "sources": [
+            {
+              "name": "GitHub trending:python (+59★)"
+            }
+          ],
+          "tags": [
+            "object-detection",
+            "segmentation",
+            "iclr2026"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Escaping the Agreement Trap: Defensibility Signals for Evaluating Rule-Governed AI",
+          "summary": "提出可防御性信号评估规则约束AI，避免仅依赖人类标签。",
+          "url": "https://arxiv.org/abs/2604.20972",
+          "score": 6,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "ai-safety",
+            "evaluation",
+            "content-moderation"
+          ],
+          "focusTopics": [
+            "evals"
+          ]
+        },
+        {
+          "title": "Who Defines Fairness? Target-Based Prompting for Demographic Representation in Generative Models",
+          "summary": "提出基于目标的提示方法改善生成模型的人口统计公平性。",
+          "url": "https://arxiv.org/abs/2604.21036",
+          "score": 6,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "fairness",
+            "text-to-image",
+            "prompting"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "HypEHR: Hyperbolic Modeling of Electronic Health Records for Efficient Question Answering",
+          "summary": "提出双曲空间建模电子病历用于高效问答。",
+          "url": "https://arxiv.org/abs/2604.21027",
+          "score": 5.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "healthcare",
+            "ehr",
+            "qa"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "how technical sophistication masks social harm in urban AI systems",
+          "summary": "研究揭示技术复杂性如何掩盖城市AI系统的社会危害。",
+          "url": "https://www.nature.com/articles/s42949-026-00394-1",
+          "score": 5.5,
+          "sources": [
+            {
+              "name": "nature.com"
+            }
+          ],
+          "tags": [
+            "ai-ethics",
+            "urban-ai",
+            "social-harm"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Qwen3.6-35B-A3B KLDs - INTs and NVFPs",
+          "summary": "Qwen3.6-35B-A3B的KLD量化数据分享。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1svq8lm/qwen3635ba3b_klds_ints_and_nvfps/",
+          "score": 5.5,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "qwen",
+            "quantization",
+            "kld"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Architecture of an AI-Based Automated Course of Action Generation System for Military Operations",
+          "summary": "提出基于AI的军事行动方案自动生成系统架构。",
+          "url": "https://arxiv.org/abs/2604.20862",
+          "score": 5,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "ai",
+            "military",
+            "planning"
           ],
           "focusTopics": [
             "planning"
-          ],
-          "background": "Pure lambda calculus is a formal system for expressing computation using only functions, without built-in data types or control structures. It serves as a minimal programming language where algorithms must be encoded via lambda abstractions and applications. λ-bench uses a concrete syntax called Lamb to pose problems that require implementing algorithms like sorting or tree traversal using Church encodings.",
-          "discussion": "Commenters noted that new, unbenched problems are the only way to differentiate models, and top labs are neck-and-neck while others lag. Some criticized the single-attempt methodology, arguing that LLMs are probabilistic and need multiple runs for reliable benchmarking. Others humorously suggested the author should benchmark Interaction Combinators instead."
+          ]
         },
         {
-          "title": "AI coding assistants revive abandoned side projects",
-          "summary": "A blog post and community discussion highlight how AI coding assistants like Claude Code help developers revive abandoned side projects by bridging the gap between idea and implementation, with several users sharing success stories of finally shipping projects that had stalled for years. This demonstrates a novel use case for AI coding assistants beyond professional productivity: enabling solo developers to overcome the motivation and skill barriers that cause side projects to be abandoned, potentially leading to a surge of new software from individual creators. The article and comments specifically mention Claude Code, Anthropic's agentic coding tool that understands codebases, edits files, and runs commands. Users report that Claude Code proactively suggests finishing a minimal viable version first, then iterating, which helps maintain momentum.",
-          "url": "https://blog.matthewbrunelle.com/its-ok-to-use-coding-assistance-tools-to-revive-the-projects-you-never-were-going-to-finish/",
-          "score": 7,
+          "title": "Active Data",
+          "summary": "提出主动数据概念，利用问题分解提升复杂领域性能。",
+          "url": "https://arxiv.org/abs/2604.21044",
+          "score": 5,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "speckx"
+              "name": "ArXiv cs.AI"
             }
           ],
           "tags": [
-            "AI coding assistants",
-            "side projects",
-            "developer productivity",
-            "Claude Code"
+            "data",
+            "decomposition",
+            "complex-domains"
           ],
-          "focusTopics": [],
-          "background": "AI coding assistants are large language models fine-tuned for software development tasks, capable of generating code, explaining code, and automating workflows. Claude Code is one such tool developed by Anthropic, designed to operate in the terminal and integrate with existing development environments. Many developers have side projects that never get finished due to time constraints, skill gaps, or loss of motivation.",
-          "discussion": "The community response is overwhelmingly positive, with users sharing personal anecdotes of reviving game development, note-taking apps, and weather visualization tools. Some users also discuss alternative approaches like hiring low-cost developers, but the consensus is that AI assistants uniquely lower the barrier to finishing personal projects."
+          "focusTopics": []
         },
         {
-          "title": "New 10GbE USB Adapters: Cooler, Smaller, Cheaper",
-          "summary": "New 10GbE USB adapters based on the Realtek RTL8159 chipset are now available, offering a more compact, cooler, and affordable alternative to traditional Thunderbolt 10GbE adapters. These adapters make 10 gigabit networking more accessible to laptop users, especially those with USB 3.2 or USB4 ports, potentially accelerating adoption of high-speed wired networking in portable setups. Performance varies depending on the host's USB standard support; Apple hardware lacks USB 3.2 2x2 (20Gbps) support, so speeds may be limited to 10Gbps. The adapters are bus-powered and require no external power.",
-          "url": "https://www.jeffgeerling.com/blog/2026/new-10-gbe-usb-adapters-cooler-smaller-cheaper/",
-          "score": 7,
+          "title": "Which one is more important: more parameters or more computation? (2021)",
+          "summary": "2021年研究：参数数量与计算量哪个更重要？",
+          "url": "https://parl.ai/projects/params_vs_compute/",
+          "score": 3.5469999999999997,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "calcifer"
+              "name": "HN (49)"
             }
           ],
           "tags": [
-            "networking",
-            "hardware",
-            "USB",
-            "10GbE",
-            "benchmarking"
+            "llm",
+            "scaling"
           ],
-          "focusTopics": [],
-          "background": "10GbE (10 Gigabit Ethernet) provides ten times the bandwidth of standard Gigabit Ethernet, useful for fast file transfers, video editing, and network storage. Previously, achieving 10GbE on laptops required bulky, expensive Thunderbolt adapters that generated significant heat. The new RTL8159-based USB adapters leverage the higher bandwidth of USB 3.2 and USB4 to deliver similar performance in a smaller form factor.",
-          "discussion": "Community comments highlight that iperf3 is single-threaded by default, which may underreport performance on lower-power hardware; using `-P 4` could yield better results. There is confusion over USB version naming, and users note that Apple hardware does not support USB 3.2 2x2, limiting speeds. Some users express interest in SFP+ port variants for DAC connectivity."
+          "focusTopics": []
         }
       ]
     },
@@ -200,74 +360,736 @@
       "title": "Engineering & Resources",
       "items": [
         {
-          "title": "Go WebAssembly RDP Client Runs in Browser",
-          "summary": "A new open-source project, grdpwasm, implements an RDP client using Go WebAssembly and the grdp library, enabling remote desktop connections directly in a web browser without plugins. This addresses the growing need for open-source, browser-based remote desktop solutions, especially after HP shut down Anyware/Teradici, and offers a lightweight alternative to proprietary tools like Parsec and DCV. The project leverages the grdp library, a pure Go implementation of the RDP protocol (client-side only), and compiles to WebAssembly for browser execution. Clipboard sharing and performance remain key challenges, as noted in community discussions.",
-          "url": "https://github.com/nakagami/grdpwasm",
-          "score": 7,
+          "title": "Anthropic created a test marketplace for agent-on-agent commerce | TechCrunch",
+          "summary": "Anthropic创建了代理间商业的测试市场。",
+          "url": "https://techcrunch.com/2026/04/25/anthropic-created-a-test-marketplace-for-agent-on-agent-commerce/",
+          "score": 8.5,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "mariuz"
+              "name": "techcrunch.com"
             }
           ],
           "tags": [
-            "RDP",
-            "WebAssembly",
-            "remote desktop",
-            "open source",
-            "Go"
+            "anthropic",
+            "agent-commerce",
+            "marketplace"
           ],
           "focusTopics": [
-            "memory"
-          ],
-          "background": "RDP (Remote Desktop Protocol) is a proprietary protocol developed by Microsoft for remote access to Windows machines. WebAssembly allows code written in languages like Go to run in the browser at near-native speed. grdp is a pure Go implementation of the RDP client protocol, enabling Go applications to connect to RDP servers.",
-          "discussion": "Community members expressed excitement about open-source RDP alternatives, highlighting the need for high-performance features like multi-monitor support and clipboard integration. Some noted clipboard handling in browser RDP is particularly tricky due to browser API restrictions, while others suggested use cases like RDP jump hosts with SSO."
+            "agent-harness"
+          ]
         },
         {
-          "title": "OpenAI Unifies Codex and Main Model Starting with GPT-5.4",
-          "summary": "OpenAI has unified its Codex coding model with its main language model into a single system starting with GPT-5.4, and GPT-5.5 further improves agentic coding and computer use, eliminating the need for a separate coding model. This strategic shift simplifies AI tooling for developers, as they no longer need to choose between a coding-specific model and a general-purpose model. It also signals that OpenAI believes a single unified model can handle both general reasoning and specialized coding tasks effectively. GPT-5.5 is now available in the API, and OpenAI recommends treating it as a new model family rather than a drop-in replacement for GPT-5.2 or GPT-5.4. The prompting guide advises starting with a fresh baseline and minimal prompts, and includes a command to migrate existing code to GPT-5.5 using the openai-docs skill.",
-          "url": "https://simonwillison.net/2026/Apr/25/romain-huet/#atom-everything",
-          "score": 7,
+          "title": "huggingface/ml-intern",
+          "summary": "Hugging Face开源ML工程师：读论文、训练模型、部署。",
+          "url": "https://github.com/huggingface/ml-intern",
+          "score": 8.3,
           "sources": [
             {
-              "name": "rss",
-              "meta": "Simon Willison"
+              "name": "GitHub trending:all (+1240★)"
+            }
+          ],
+          "tags": [
+            "open-source",
+            "ml-engineering",
+            "automation"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "FP4 inference in llama.cpp (NVFP4) and ik_llama.cpp (MXFP4) landed - Finally",
+          "summary": "llama.cpp 和 ik_llama.cpp 合并 FP4 推理支持，两种不同实现。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1svfjyv/fp4_inference_in_llamacpp_nvfp4_and_ik_llamacpp/",
+          "score": 8,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "llm",
+            "inference",
+            "open-source",
+            "quantization"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "GPT-5.5 prompting guide",
+          "summary": "OpenAI发布GPT-5.5提示指南，提供最佳实践。",
+          "url": "https://simonwillison.net/2026/Apr/25/gpt-5-5-prompting-guide/#atom-everything",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "Simon Willison"
             }
           ],
           "tags": [
             "openai",
             "gpt",
-            "ai",
-            "llms",
-            "coding"
+            "prompting"
           ],
-          "focusTopics": [
-            "planning"
-          ],
-          "background": "OpenAI Codex was a specialized large language model designed to translate natural language into code, used in products like GitHub Copilot. Agentic coding refers to AI agents that autonomously plan, write, test, and modify code with minimal human intervention. Computer use AI allows models to interact with and control computer interfaces. The unification means a single model now handles both general conversation and code generation."
+          "focusTopics": []
         },
         {
-          "title": "Plain Text Endures as a Durable Medium",
-          "summary": "An article on Hacker News defends plain text as a durable, flexible medium for modern computing, highlighting its use in diagramming tools and personal workflows like plaintext accounting with Beancount. This discussion reinforces the enduring value of plain text in an era of complex formats, showing how it enables longevity, portability, and simplicity for critical personal and professional data. The article specifically mentions tools like Mermaid and Graphviz for diagramming, and Beancount for accounting, all operating on plain text. The community also references Graydon Hoare's 'Always bet on text' principle.",
-          "url": "https://unsung.aresluna.org/plain-text-has-been-around-for-decades-and-its-here-to-stay/",
-          "score": 6,
+          "title": "Decreased Intelligence Density in DeepSeek V4 Pro",
+          "summary": "社区讨论DeepSeek V4 Pro智能密度下降，引用V3.2论文。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1svbmnc/decreased_intelligence_density_in_deepseek_v4_pro/",
+          "score": 7.5,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "rbanffy"
+              "name": "Reddit r/LocalLLaMA"
             }
           ],
           "tags": [
-            "plain text",
-            "tools",
-            "productivity",
-            "software engineering"
+            "deepseek",
+            "intelligence-density",
+            "discussion"
           ],
-          "focusTopics": [],
-          "background": "Plain text refers to unformatted text that contains only characters readable by humans, without any styling or binary encoding. It has been a fundamental data format since the early days of computing, valued for its simplicity, universality, and resistance to obsolescence.",
-          "discussion": "Commenters share positive experiences with plaintext tools like Beancount for accounting, noting it's faster and ad-free compared to QuickBooks. Some also discuss the history of text-based interfaces and debate whether plain text is truly 'plain'."
+          "focusTopics": []
+        },
+        {
+          "title": "zilliztech/claude-context",
+          "summary": "Claude Code的代码搜索MCP，使整个代码库成为编码代理的上下文。",
+          "url": "https://github.com/zilliztech/claude-context",
+          "score": 7.4765,
+          "sources": [
+            {
+              "name": "GitHub trending:typescript (+451★)"
+            }
+          ],
+          "tags": [
+            "mcp",
+            "code-search",
+            "claude"
+          ],
+          "focusTopics": [
+            "coding-agents",
+            "context-engineering"
+          ]
+        },
+        {
+          "title": "Alishahryar1/free-claude-code",
+          "summary": "免费使用Claude Code的终端、VSCode扩展或Discord。",
+          "url": "https://github.com/Alishahryar1/free-claude-code",
+          "score": 7.45,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+4007★)"
+            }
+          ],
+          "tags": [
+            "claude-code",
+            "free",
+            "ai-coding"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "GPT‑5.5 Bio Bug Bounty",
+          "summary": "OpenAI推出GPT-5.5生物漏洞赏金计划，鼓励发现生物安全风险。",
+          "url": "https://openai.com/index/gpt-5-5-bio-bug-bounty/",
+          "score": 7.178,
+          "sources": [
+            {
+              "name": "HN (126)"
+            }
+          ],
+          "tags": [
+            "gpt-5.5",
+            "biosafety",
+            "bug-bounty"
+          ],
+          "focusTopics": [
+            "evals"
+          ]
+        },
+        {
+          "title": "badlogic/pi-mono",
+          "summary": "AI代理工具包：编码代理CLI、统一LLM API、TUI/Web UI库等。",
+          "url": "https://github.com/badlogic/pi-mono",
+          "score": 7.167,
+          "sources": [
+            {
+              "name": "GitHub trending:typescript (+528★)"
+            }
+          ],
+          "tags": [
+            "agent-toolkit",
+            "coding-agent",
+            "llm"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "mattpocock/skills",
+          "summary": "个人技能目录，来自.claude目录。",
+          "url": "https://github.com/mattpocock/skills",
+          "score": 7.0249999999999995,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+1139★)"
+            }
+          ],
+          "tags": [
+            "claude",
+            "skills",
+            "ai-agent"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "Quoting Romain Huet",
+          "summary": "GPT-5.4起Codex与主模型统一为单一系统。",
+          "url": "https://simonwillison.net/2026/Apr/25/romain-huet/#atom-everything",
+          "score": 7,
+          "sources": [
+            {
+              "name": "Simon Willison"
+            }
+          ],
+          "tags": [
+            "openai",
+            "gpt",
+            "codex"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "\"Weights are coming\".Xiaomi’s MiMo V2.5 Pro has landed at 54 in the Artificial Analysis Intelligence Index.",
+          "summary": "小米MiMo V2.5 Pro模型在Artificial Analysis指数中排名54。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1sv9q8f/weights_are_comingxiaomis_mimo_v25_pro_has_landed/",
+          "score": 7,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "xiaomi",
+            "model-release",
+            "benchmark"
+          ],
+          "focusTopics": [
+            "model-release"
+          ]
+        },
+        {
+          "title": "Qwen3.6-27B at ~80 tps with 218k context window on 1x RTX 5090 served by vllm 0.19",
+          "summary": "Qwen3.6-27B在RTX 5090上以80 tps运行，支持218k上下文。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1sv8eua/qwen3627b_at_80_tps_with_218k_context_window_on/",
+          "score": 7,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "qwen",
+            "performance",
+            "local-llm"
+          ],
+          "focusTopics": [
+            "context-engineering"
+          ]
+        },
+        {
+          "title": "GLM 5.1 Locally: 40tps, 2000+ pp/s",
+          "summary": "GLM 5.1本地运行达40 tps，2000+ pp/s，使用NVFP4量化。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1svgtlh/glm_51_locally_40tps_2000_pps/",
+          "score": 7,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "glm",
+            "quantization",
+            "performance"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Field report: coding with Qwen 3.6 35B-A3B on an M2 Macbook Pro with 32GB RAM",
+          "summary": "M2 MacBook Pro上使用Qwen 3.6 35B-A3B进行编码的实地报告。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1svdep5/field_report_coding_with_qwen_36_35ba3b_on_an_m2/",
+          "score": 7,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "qwen",
+            "coding",
+            "local-llm"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "CUDA: reduce MMQ stream-k overhead by JohannesGaessler · Pull Request #22298 · ggml-org/llama.cpp",
+          "summary": "llama.cpp PR减少MMQ stream-k开销，加速MoE模型提示处理。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1svdjfa/cuda_reduce_mmq_streamk_overhead_by/",
+          "score": 7,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "llama.cpp",
+            "cuda",
+            "performance"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "mattmireles/gemma-tuner-multimodal",
+          "summary": "Gemma 4/3n 多模态微调工具，支持音频、图像和文本。",
+          "url": "https://github.com/mattmireles/gemma-tuner-multimodal",
+          "score": 7,
+          "sources": [
+            {
+              "name": "Co-Starred"
+            }
+          ],
+          "tags": [
+            "fine-tuning",
+            "multimodal",
+            "gemma",
+            "apple-silicon"
+          ],
+          "focusTopics": [
+            "model-release"
+          ]
+        },
+        {
+          "title": "deepseek-ai/DeepSeek-V3",
+          "summary": "DeepSeek-V3模型仓库，无描述，但为重要模型发布。",
+          "url": "https://github.com/deepseek-ai/DeepSeek-V3",
+          "score": 6.8975,
+          "sources": [
+            {
+              "name": "GitHub trending:python (+65★)"
+            }
+          ],
+          "tags": [
+            "deepseek",
+            "model-release"
+          ],
+          "focusTopics": [
+            "model-release"
+          ]
+        },
+        {
+          "title": "deepseek-ai/DeepEP",
+          "summary": "DeepEP：高效的专家并行通信库。",
+          "url": "https://github.com/deepseek-ai/DeepEP",
+          "score": 6.6585,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+189★)"
+            }
+          ],
+          "tags": [
+            "deepseek",
+            "communication-library",
+            "expert-parallel"
+          ],
+          "focusTopics": [
+            "model-release"
+          ]
+        },
+        {
+          "title": "OpenAI Privacy Filter",
+          "summary": "OpenAI推出隐私过滤器，用于保护用户数据。",
+          "url": "https://openai.com/index/introducing-openai-privacy-filter/",
+          "score": 6.609,
+          "sources": [
+            {
+              "name": "HN (78)"
+            }
+          ],
+          "tags": [
+            "privacy",
+            "openai",
+            "data-protection"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "MemoriLabs/Memori",
+          "summary": "代理原生记忆基础设施，将执行和对话转化为结构化持久状态。",
+          "url": "https://github.com/MemoriLabs/Memori",
+          "score": 6.561,
+          "sources": [
+            {
+              "name": "GitHub trending:python (+124★)"
+            }
+          ],
+          "tags": [
+            "memory",
+            "agent",
+            "llm"
+          ],
+          "focusTopics": [
+            "context-engineering"
+          ]
+        },
+        {
+          "title": "FINAL-Bench/Darwin-36B-Opus · Hugging Face",
+          "summary": "Darwin-36B-Opus模型发布，36B参数MoE语言模型。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1svl1wr/finalbenchdarwin36bopus_hugging_face/",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "darwin",
+            "moe",
+            "model-release"
+          ],
+          "focusTopics": [
+            "model-release"
+          ]
+        },
+        {
+          "title": "Quant Qwen3.6-27B on 16GB VRAM with 100k context length",
+          "summary": "实验在16GB VRAM上量化Qwen3.6-27B并支持100k上下文。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1svnmgo/quant_qwen3627b_on_16gb_vram_with_100k_context/",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "qwen",
+            "quantization",
+            "context-length"
+          ],
+          "focusTopics": [
+            "context-engineering"
+          ]
+        },
+        {
+          "title": "How Visual-Language-Action (VLA) Models Work [D]",
+          "summary": "解释视觉-语言-动作模型如何成为具身AI主导范式。",
+          "url": "https://www.reddit.com/r/MachineLearning/comments/1svhwtz/how_visuallanguageaction_vla_models_work_d/",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "Reddit r/MachineLearning"
+            }
+          ],
+          "tags": [
+            "vla",
+            "embodied-ai",
+            "multimodal"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "alexzhang13/rlm",
+          "summary": "递归语言模型的通用即插即用推理库，支持多种沙箱。",
+          "url": "https://github.com/alexzhang13/rlm",
+          "score": 6.2875000000000005,
+          "sources": [
+            {
+              "name": "GitHub trending:python (+225★)"
+            }
+          ],
+          "tags": [
+            "recursive-lm",
+            "inference",
+            "library"
+          ],
+          "focusTopics": [
+            "planning"
+          ]
+        },
+        {
+          "title": "Google Cloud Demonstrates Agentic AI with Travel Use Cases - Let's Data Science",
+          "summary": "Google Cloud展示Agentic AI在旅行场景的应用。",
+          "url": "https://letsdatascience.com/news/google-cloud-demonstrates-agentic-ai-with-travel-use-cases-41e1a57c",
+          "score": 6,
+          "sources": [
+            {
+              "name": "letsdatascience.com"
+            }
+          ],
+          "tags": [
+            "google-cloud",
+            "agents",
+            "travel"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "Qwen3.6 35b a3b Particle System",
+          "summary": "测试Qwen3.6 35B a3b编写粒子系统，速度令人印象深刻。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1svjtxi/qwen36_35b_a3b_particle_system/",
+          "score": 6,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "qwen",
+            "coding",
+            "performance"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "luongnv89/claude-howto",
+          "summary": "Claude Code的可视化指南，从基础到高级代理，含可复制模板。",
+          "url": "https://github.com/luongnv89/claude-howto",
+          "score": 5.864,
+          "sources": [
+            {
+              "name": "GitHub trending:python (+226★)"
+            }
+          ],
+          "tags": [
+            "claude",
+            "coding-agent",
+            "guide"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "ruvnet/ruflo",
+          "summary": "Claude的领先代理编排平台，部署多代理群并协调工作流。",
+          "url": "https://github.com/ruvnet/ruflo",
+          "score": 5.779999999999999,
+          "sources": [
+            {
+              "name": "GitHub trending:typescript (+170★)"
+            }
+          ],
+          "tags": [
+            "agent-orchestration",
+            "claude"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "RooCodeInc/Roo-Code",
+          "summary": "Roo Code：在代码编辑器中提供整个AI代理开发团队。",
+          "url": "https://github.com/RooCodeInc/Roo-Code",
+          "score": 5.185499999999999,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+57★)"
+            }
+          ],
+          "tags": [
+            "ai-agents",
+            "code-editor",
+            "development"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "Kilo-Org/kilocode",
+          "summary": "一体化代理工程平台，开源编码代理，加速构建和迭代。",
+          "url": "https://github.com/Kilo-Org/kilocode",
+          "score": 5.178,
+          "sources": [
+            {
+              "name": "GitHub trending:typescript (+52★)"
+            }
+          ],
+          "tags": [
+            "coding-agent",
+            "platform"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "Agents Aren't Coworkers, Embed Them in Your Software",
+          "summary": "观点：AI代理不应被视为同事，而应嵌入软件中。",
+          "url": "https://www.feldera.com/blog/ai-agents-arent-coworkers-embed-them-in-your-software",
+          "score": 5.175,
+          "sources": [
+            {
+              "name": "HN (25)"
+            }
+          ],
+          "tags": [
+            "ai-agents",
+            "software-architecture"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "Artificial intelligence in genomic medicine: dispelling three myths",
+          "summary": "驳斥AI在基因组医学中的三个迷思。",
+          "url": "https://www.nature.com/articles/s41525-026-00575-y",
+          "score": 5,
+          "sources": [
+            {
+              "name": "nature.com"
+            }
+          ],
+          "tags": [
+            "ai",
+            "genomics",
+            "medicine"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Sinceerly uses AI to make your AI writing sound less like you're ...",
+          "summary": "Sinceerly用AI让AI写作听起来不那么像AI。",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/918758/sinceerly-uses-ai-to-make-your-ai-writing-sound-less-like-youre-using-ai",
+          "score": 5,
+          "sources": [
+            {
+              "name": "theverge.com"
+            }
+          ],
+          "tags": [
+            "ai-writing",
+            "tool"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "DeepSeek V4 Update",
+          "summary": "Reddit帖子标题为DeepSeek V4更新，但内容不详。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1sv8806/deepseek_v4_update/",
+          "score": 5,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "deepseek",
+            "update"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Using coding assistance tools to revive projects you never were going to finish",
+          "summary": "使用编码辅助工具复活未完成项目。",
+          "url": "https://blog.matthewbrunelle.com/its-ok-to-use-coding-assistance-tools-to-revive-the-projects-you-never-were-going-to-finish/",
+          "score": 4.775,
+          "sources": [
+            {
+              "name": "HN (175)"
+            }
+          ],
+          "tags": [
+            "ai-coding",
+            "developer-tools"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "lobehub/lobehub",
+          "summary": "工作与生活空间，可查找、构建和协作代理队友，推进代理编排。",
+          "url": "https://github.com/lobehub/lobehub",
+          "score": 4.7425,
+          "sources": [
+            {
+              "name": "GitHub trending:typescript (+45★)"
+            }
+          ],
+          "tags": [
+            "agent",
+            "platform"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "Simulacrum of Knowledge Work",
+          "summary": "反思知识工作被AI模拟的现状，探讨真实与虚假产出。",
+          "url": "https://blog.happyfellow.dev/simulacrum-of-knowledge-work/",
+          "score": 4.523,
+          "sources": [
+            {
+              "name": "HN (91)"
+            }
+          ],
+          "tags": [
+            "knowledge-work",
+            "ai-impact"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "davila7/claude-code-templates",
+          "summary": "用于配置和监控Claude Code的CLI工具。",
+          "url": "https://github.com/davila7/claude-code-templates",
+          "score": 4.3805,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+87★)"
+            }
+          ],
+          "tags": [
+            "claude-code",
+            "cli",
+            "configuration"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "alvinunreal/oh-my-opencode-slim",
+          "summary": "oh-my-opencode的精简优化分支，消耗更少token。",
+          "url": "https://github.com/alvinunreal/oh-my-opencode-slim",
+          "score": 3.909,
+          "sources": [
+            {
+              "name": "GitHub trending:typescript (+56★)"
+            }
+          ],
+          "tags": [
+            "opencode",
+            "token-efficiency"
+          ],
+          "focusTopics": []
         }
       ]
     }
-  ]
+  ],
+  "aiSummary": "今日AI领域多项重大发布：DeepSeek发布支持华为昇腾芯片的V4 Pro和Flash模型[#item-latent-space-p-ainews-deepseek-v4-pro-16t-a49b-and]，OpenAI的超级PAC可能资助AI记者运营的新闻网站[#item-theverge-com-ai-artificial-intelligence-918787-openais-super]，Cohere与Aleph Alpha宣布合并[#item-techcrunch-com-2026-04-25-why-cohere-is-merging-with-aleph-a]。研究方面，新基准测试评估编码智能体检索增强效果[#item-reddit-com-r-MachineLearning-comments-1suzqxe-opensource-9ta]，价值冲突诊断方法揭示语言模型广泛存在对齐伪装[#item-arxiv-org-abs-2604-20995]。工具更新中，Anthropic创建代理间商业测试市场[#item-techcrunch-com-2026-04-25-anthropic-created-a-test-marketpla]，Hugging Face开源ML工程师工具[#item-github-com-huggingface-ml-intern]，llama.cpp合并FP4推理支持[#item-reddit-com-r-LocalLLaMA-comments-1svfjyv-fp4-inference-in-ll]。观点方面，社区讨论DeepSeek V4 Pro智能密度下降[#item-reddit-com-r-LocalLLaMA-comments-1svbmnc-decreased-intellige]，并报告Qwen 3.6在M2 MacBook Pro上的编码表现[#item-reddit-com-r-LocalLLaMA-comments-1svdep5-field-report-coding]。"
 }
