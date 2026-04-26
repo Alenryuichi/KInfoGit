@@ -1,0 +1,273 @@
+{
+  "date": "2026-04-26",
+  "itemCount": 11,
+  "sections": [
+    {
+      "id": "headlines",
+      "title": "Headlines & Launches",
+      "items": [
+        {
+          "title": "Trump Fires All 24 Members of NSF Oversight Board",
+          "summary": "President Trump has dismissed all 24 members of the National Science Board, the oversight body of the U.S. National Science Foundation (NSF). This unprecedented move removes the key governance layer responsible for setting NSF's policies and approving major funding decisions. The NSF is a primary funder of fundamental scientific research in the U.S., supporting thousands of projects across all fields. Removing its entire oversight board creates uncertainty about the agency's ability to operate, potentially disrupting grant cycles, peer review, and long-term research planning, which could harm U.S. scientific competitiveness. The National Science Board consists of 24 members appointed by the President and confirmed by the Senate, serving staggered six-year terms. The board's statutory responsibilities include establishing NSF policies, approving the agency's budget request, and overseeing the merit review process for grant proposals.",
+          "url": "https://www.science.org/content/article/trump-fires-nsf-s-oversight-board",
+          "score": 9,
+          "sources": [
+            {
+              "name": "hackernews",
+              "meta": "skullone"
+            }
+          ],
+          "tags": [
+            "NSF",
+            "science policy",
+            "US politics",
+            "research funding"
+          ],
+          "focusTopics": [
+            "memory",
+            "planning"
+          ],
+          "background": "The National Science Foundation (NSF) is an independent federal agency created in 1950 to promote the progress of science. It funds approximately 25% of all federally supported basic research conducted by U.S. colleges and universities. The National Science Board serves as both the governing board of NSF and an independent policy advisory body to the President and Congress on science and engineering issues.",
+          "discussion": "Commenters expressed shock and concern, with some speculating that the administration intends to replace board members with political allies or disrupt NSF operations. Others questioned the necessity of the board, while a few hoped a future administration could rebuild a better system from scratch."
+        },
+        {
+          "title": "Martin Galway Releases C64 Music Source Files",
+          "summary": "Martin Galway has released the original source files for his iconic Commodore 64 game music, including tracks from Wizball and Ocean software titles, on GitHub. This release provides unprecedented insight into the programming techniques behind classic chiptune music, enabling preservation, analysis, and potential modern reinterpretation of these historic compositions. The source files include assembly code for the music players and per-frame register manipulations that produce the distinctive SID chip sounds, such as filter sweeps and ring modulation.",
+          "url": "https://github.com/MartinGalway/C64_music",
+          "score": 7,
+          "sources": [
+            {
+              "name": "hackernews",
+              "meta": "ingve"
+            }
+          ],
+          "tags": [
+            "retrocomputing",
+            "music",
+            "Commodore 64",
+            "source code",
+            "chiptune"
+          ],
+          "focusTopics": [],
+          "background": "The Commodore 64's SID (Sound Interface Device) chip is a programmable sound generator capable of subtractive synthesis. Composers like Martin Galway and Rob Hubbard pushed its limits by directly manipulating hardware registers in real-time, creating complex sounds beyond simple note sequencing.",
+          "discussion": "The community discussion highlights the technical challenge of translating SID music to modern pattern-based systems, noting that the essence lies in per-frame register pokes rather than just notes. Users also shared links to listen to the tunes and attempted AI-based translations."
+        },
+        {
+          "title": "OpenAI's $25k GPT-5.5 Bio Bug Bounty Draws Criticism",
+          "summary": "OpenAI announced a bug bounty program offering $25,000 for a universal jailbreak of GPT-5.5 that bypasses safety measures on five bio-risk questions. The program requires an NDA and is limited to a vetted group of trusted bio red-teamers. This program highlights the tension between AI safety research and community expectations, as the low payout and restrictive conditions may discourage participation and limit the discovery of critical vulnerabilities. The outcome could influence how AI companies structure future bug bounties for high-risk areas like biosecurity. The bounty is only $25,000 for the first universal jailbreak, far lower than OpenAI's previous Kaggle bounty of $500,000. Participants must sign an NDA, and the specific bio-risk questions are not disclosed upfront, requiring applicants to propose a jailbreak approach without knowing the questions.",
+          "url": "https://openai.com/index/gpt-5-5-bio-bug-bounty/",
+          "score": 6,
+          "sources": [
+            {
+              "name": "hackernews",
+              "meta": "Murfalo"
+            }
+          ],
+          "tags": [
+            "AI safety",
+            "bug bounty",
+            "OpenAI",
+            "jailbreak",
+            "bio-risk"
+          ],
+          "focusTopics": [
+            "memory"
+          ],
+          "background": "Jailbreaking an AI model means bypassing its safety guardrails to make it produce harmful or restricted content. Bug bounty programs incentivize security researchers to find and report vulnerabilities, but the reward amount and conditions can affect participation. Bio-risk refers to the potential misuse of AI to facilitate biological threats, such as creating pathogens or bioweapons.",
+          "discussion": "Community comments are highly critical: users point out the low payout compared to a previous $500k Kaggle bounty, the NDA requirement, and the lack of transparency about the test questions. Some call the program a 'scam' and doubt many will participate, while others question the exclusivity of the 'trusted bio red-teamers' list."
+        },
+        {
+          "title": "Discret 11: French TV Encryption in the 1980s",
+          "summary": "Fabien Sanglard published a detailed article exploring the Discret 11 analog video scrambling system used by French pay-TV channel Canal+ from 1984 to 1995. This article provides a rare technical deep dive into a historical encryption system, preserving knowledge of early pay-TV security and its cultural impact in France. Discret 11 used analog scrambling techniques such as line inversion and audio masking, and its security relied on a proprietary algorithm rather than public-key cryptography.",
+          "url": "https://fabiensanglard.net/discret11/",
+          "score": 6,
+          "sources": [
+            {
+              "name": "hackernews",
+              "meta": "adunk"
+            }
+          ],
+          "tags": [
+            "retro computing",
+            "encryption",
+            "television",
+            "history"
+          ],
+          "focusTopics": [],
+          "background": "In the 1980s, pay-TV channels like Canal+ needed to prevent unauthorized viewing. They used analog scrambling systems like Discret 11, which modified the video signal to make it unwatchable without a decoder. The system operated on the SECAM broadcast standard used in France.",
+          "discussion": "Commenters shared nostalgic memories of decoding Discret 11 as teenagers, using homemade antennas and brute-force methods. Some noted the iconic Canal+ jingle and the challenge of understanding scrambled audio by ear."
+        }
+      ]
+    },
+    {
+      "id": "research",
+      "title": "Research & Innovation",
+      "items": [
+        {
+          "title": "Quantum Attack Exposed as Random Number Artifact",
+          "summary": "Yuval Adam replaced an IBM quantum backend with /dev/urandom and still recovered a 17-bit ECC key, demonstrating that a prize-winning quantum attack was actually a random number generator artifact. This exposes a critical flaw in quantum computing benchmarking, showing that small factoring or ECDLP cases can be trivially solved by classical random number generators, misleading progress claims. The attack targeted a 17-bit elliptic curve key on IBM Quantum hardware, but the same result was achieved using /dev/urandom, a standard Unix random number source. The original submission won a 1 BTC prize from Project Eleven.",
+          "url": "https://github.com/yuvadm/quantumslop/blob/25ad2e76ae58baa96f6219742459407db9dd17f5/URANDOM_DEMO.md",
+          "score": 8,
+          "sources": [
+            {
+              "name": "hackernews",
+              "meta": "pigeons"
+            }
+          ],
+          "tags": [
+            "quantum computing",
+            "cryptography",
+            "benchmarking",
+            "security",
+            "critique"
+          ],
+          "focusTopics": [
+            "reflection"
+          ],
+          "background": "Elliptic-curve cryptography (ECC) uses smaller keys for equivalent security compared to RSA. Shor's algorithm can break ECC on a quantum computer, but for small key sizes, classical brute force or random sampling can also succeed. /dev/urandom provides cryptographically secure pseudorandom numbers on Unix-like systems.",
+          "discussion": "The community widely agrees that this exposes poor validation in quantum computing benchmarks. Commenters note that for small numbers, Shor's algorithm succeeds quickly with random samples, and that the submission author lacked quantum computing background. Some emphasize this is not a jab at quantum computing but at the flawed prize process."
+        },
+        {
+          "title": "Lambda Calculus Benchmark Reveals AI Model Gaps",
+          "summary": "A new benchmark, λ-bench, evaluates AI models on 120 pure lambda calculus programming problems, requiring models to implement algorithms using the minimal Lamb language. Results show top labs' models are nearly tied, while others lag significantly. This benchmark tests algorithmic reasoning in a pure, minimal setting, providing a clearer differentiation of model capabilities beyond typical coding benchmarks. It challenges the marketing hype around new models, especially smaller ones from China, by showing persistent performance gaps. The benchmark uses single-attempt one-shot per problem, which some critics argue is insufficient for non-deterministic LLMs; they suggest running each problem multiple times (e.g., 45 samples) for statistical reliability. The problems are based on pure lambda calculus, a foundational model of computation.",
+          "url": "https://victortaelin.github.io/lambench/",
+          "score": 8,
+          "sources": [
+            {
+              "name": "hackernews",
+              "meta": "marvinborner"
+            }
+          ],
+          "tags": [
+            "AI benchmarking",
+            "lambda calculus",
+            "LLM evaluation",
+            "programming problems"
+          ],
+          "focusTopics": [
+            "planning"
+          ],
+          "background": "Pure lambda calculus is a formal system for expressing computation using only functions, without built-in data types or control structures. It serves as a minimal programming language where algorithms must be encoded via lambda abstractions and applications. λ-bench uses a concrete syntax called Lamb to pose problems that require implementing algorithms like sorting or tree traversal using Church encodings.",
+          "discussion": "Commenters noted that new, unbenched problems are the only way to differentiate models, and top labs are neck-and-neck while others lag. Some criticized the single-attempt methodology, arguing that LLMs are probabilistic and need multiple runs for reliable benchmarking. Others humorously suggested the author should benchmark Interaction Combinators instead."
+        },
+        {
+          "title": "AI coding assistants revive abandoned side projects",
+          "summary": "A blog post and community discussion highlight how AI coding assistants like Claude Code help developers revive abandoned side projects by bridging the gap between idea and implementation, with several users sharing success stories of finally shipping projects that had stalled for years. This demonstrates a novel use case for AI coding assistants beyond professional productivity: enabling solo developers to overcome the motivation and skill barriers that cause side projects to be abandoned, potentially leading to a surge of new software from individual creators. The article and comments specifically mention Claude Code, Anthropic's agentic coding tool that understands codebases, edits files, and runs commands. Users report that Claude Code proactively suggests finishing a minimal viable version first, then iterating, which helps maintain momentum.",
+          "url": "https://blog.matthewbrunelle.com/its-ok-to-use-coding-assistance-tools-to-revive-the-projects-you-never-were-going-to-finish/",
+          "score": 7,
+          "sources": [
+            {
+              "name": "hackernews",
+              "meta": "speckx"
+            }
+          ],
+          "tags": [
+            "AI coding assistants",
+            "side projects",
+            "developer productivity",
+            "Claude Code"
+          ],
+          "focusTopics": [],
+          "background": "AI coding assistants are large language models fine-tuned for software development tasks, capable of generating code, explaining code, and automating workflows. Claude Code is one such tool developed by Anthropic, designed to operate in the terminal and integrate with existing development environments. Many developers have side projects that never get finished due to time constraints, skill gaps, or loss of motivation.",
+          "discussion": "The community response is overwhelmingly positive, with users sharing personal anecdotes of reviving game development, note-taking apps, and weather visualization tools. Some users also discuss alternative approaches like hiring low-cost developers, but the consensus is that AI assistants uniquely lower the barrier to finishing personal projects."
+        },
+        {
+          "title": "New 10GbE USB Adapters: Cooler, Smaller, Cheaper",
+          "summary": "New 10GbE USB adapters based on the Realtek RTL8159 chipset are now available, offering a more compact, cooler, and affordable alternative to traditional Thunderbolt 10GbE adapters. These adapters make 10 gigabit networking more accessible to laptop users, especially those with USB 3.2 or USB4 ports, potentially accelerating adoption of high-speed wired networking in portable setups. Performance varies depending on the host's USB standard support; Apple hardware lacks USB 3.2 2x2 (20Gbps) support, so speeds may be limited to 10Gbps. The adapters are bus-powered and require no external power.",
+          "url": "https://www.jeffgeerling.com/blog/2026/new-10-gbe-usb-adapters-cooler-smaller-cheaper/",
+          "score": 7,
+          "sources": [
+            {
+              "name": "hackernews",
+              "meta": "calcifer"
+            }
+          ],
+          "tags": [
+            "networking",
+            "hardware",
+            "USB",
+            "10GbE",
+            "benchmarking"
+          ],
+          "focusTopics": [],
+          "background": "10GbE (10 Gigabit Ethernet) provides ten times the bandwidth of standard Gigabit Ethernet, useful for fast file transfers, video editing, and network storage. Previously, achieving 10GbE on laptops required bulky, expensive Thunderbolt adapters that generated significant heat. The new RTL8159-based USB adapters leverage the higher bandwidth of USB 3.2 and USB4 to deliver similar performance in a smaller form factor.",
+          "discussion": "Community comments highlight that iperf3 is single-threaded by default, which may underreport performance on lower-power hardware; using `-P 4` could yield better results. There is confusion over USB version naming, and users note that Apple hardware does not support USB 3.2 2x2, limiting speeds. Some users express interest in SFP+ port variants for DAC connectivity."
+        }
+      ]
+    },
+    {
+      "id": "engineering",
+      "title": "Engineering & Resources",
+      "items": [
+        {
+          "title": "Go WebAssembly RDP Client Runs in Browser",
+          "summary": "A new open-source project, grdpwasm, implements an RDP client using Go WebAssembly and the grdp library, enabling remote desktop connections directly in a web browser without plugins. This addresses the growing need for open-source, browser-based remote desktop solutions, especially after HP shut down Anyware/Teradici, and offers a lightweight alternative to proprietary tools like Parsec and DCV. The project leverages the grdp library, a pure Go implementation of the RDP protocol (client-side only), and compiles to WebAssembly for browser execution. Clipboard sharing and performance remain key challenges, as noted in community discussions.",
+          "url": "https://github.com/nakagami/grdpwasm",
+          "score": 7,
+          "sources": [
+            {
+              "name": "hackernews",
+              "meta": "mariuz"
+            }
+          ],
+          "tags": [
+            "RDP",
+            "WebAssembly",
+            "remote desktop",
+            "open source",
+            "Go"
+          ],
+          "focusTopics": [
+            "memory"
+          ],
+          "background": "RDP (Remote Desktop Protocol) is a proprietary protocol developed by Microsoft for remote access to Windows machines. WebAssembly allows code written in languages like Go to run in the browser at near-native speed. grdp is a pure Go implementation of the RDP client protocol, enabling Go applications to connect to RDP servers.",
+          "discussion": "Community members expressed excitement about open-source RDP alternatives, highlighting the need for high-performance features like multi-monitor support and clipboard integration. Some noted clipboard handling in browser RDP is particularly tricky due to browser API restrictions, while others suggested use cases like RDP jump hosts with SSO."
+        },
+        {
+          "title": "OpenAI Unifies Codex and Main Model Starting with GPT-5.4",
+          "summary": "OpenAI has unified its Codex coding model with its main language model into a single system starting with GPT-5.4, and GPT-5.5 further improves agentic coding and computer use, eliminating the need for a separate coding model. This strategic shift simplifies AI tooling for developers, as they no longer need to choose between a coding-specific model and a general-purpose model. It also signals that OpenAI believes a single unified model can handle both general reasoning and specialized coding tasks effectively. GPT-5.5 is now available in the API, and OpenAI recommends treating it as a new model family rather than a drop-in replacement for GPT-5.2 or GPT-5.4. The prompting guide advises starting with a fresh baseline and minimal prompts, and includes a command to migrate existing code to GPT-5.5 using the openai-docs skill.",
+          "url": "https://simonwillison.net/2026/Apr/25/romain-huet/#atom-everything",
+          "score": 7,
+          "sources": [
+            {
+              "name": "rss",
+              "meta": "Simon Willison"
+            }
+          ],
+          "tags": [
+            "openai",
+            "gpt",
+            "ai",
+            "llms",
+            "coding"
+          ],
+          "focusTopics": [
+            "planning"
+          ],
+          "background": "OpenAI Codex was a specialized large language model designed to translate natural language into code, used in products like GitHub Copilot. Agentic coding refers to AI agents that autonomously plan, write, test, and modify code with minimal human intervention. Computer use AI allows models to interact with and control computer interfaces. The unification means a single model now handles both general conversation and code generation."
+        },
+        {
+          "title": "Plain Text Endures as a Durable Medium",
+          "summary": "An article on Hacker News defends plain text as a durable, flexible medium for modern computing, highlighting its use in diagramming tools and personal workflows like plaintext accounting with Beancount. This discussion reinforces the enduring value of plain text in an era of complex formats, showing how it enables longevity, portability, and simplicity for critical personal and professional data. The article specifically mentions tools like Mermaid and Graphviz for diagramming, and Beancount for accounting, all operating on plain text. The community also references Graydon Hoare's 'Always bet on text' principle.",
+          "url": "https://unsung.aresluna.org/plain-text-has-been-around-for-decades-and-its-here-to-stay/",
+          "score": 6,
+          "sources": [
+            {
+              "name": "hackernews",
+              "meta": "rbanffy"
+            }
+          ],
+          "tags": [
+            "plain text",
+            "tools",
+            "productivity",
+            "software engineering"
+          ],
+          "focusTopics": [],
+          "background": "Plain text refers to unformatted text that contains only characters readable by humans, without any styling or binary encoding. It has been a fundamental data format since the early days of computing, valued for its simplicity, universality, and resistance to obsolescence.",
+          "discussion": "Commenters share positive experiences with plaintext tools like Beancount for accounting, noting it's faster and ad-free compared to QuickBooks. Some also discuss the history of text-based interfaces and debate whether plain text is truly 'plain'."
+        }
+      ]
+    }
+  ]
+}
