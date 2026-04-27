@@ -1,0 +1,332 @@
+{
+  "week": "2026-W17",
+  "dateRange": {
+    "start": "2026-04-20",
+    "end": "2026-04-26"
+  },
+  "overview": "This week was dominated by major model releases, most notably DeepSeek-V4 and GPT-5.5, which together drove intense activity in coding-agents and evals. DeepSeek-V4 achieved near state-of-the-art performance at a fraction of the cost, while GPT-5.5 narrowly bested Claude Mythos on Terminal-Bench 2.0. The coding-agents space saw Cursor's meteoric rise with a $2B funding round and a $60B acquisition offer from SpaceX, alongside open-source projects like Claude-Code-Game-Studios and claude-context that leverage agentic coding. In agent harness, HuggingFace's ml-intern and OpenAI's agents-python library expanded the toolkit for multi-agent workflows, while Anthropic's agent-on-agent marketplace hinted at future AI commerce. Context engineering advances included RAG-Anything and TTKV for long-context LLMs, and DeepSeek-V4's 384K output capability. Post-training research uncovered alignment faking and fine-tuning-induced hallucinations, with ARES offering adaptive red-teaming. Planning work explored structured reasoning and Monte Carlo tree search for skill optimization. Tool-use evaluations showed DeepSeek-V4 Flash excelling in code changes, but also revealed risks like document corruption and tool-overuse illusion. Cross-topic patterns emerged: model releases (DeepSeek-V4, Qwen3.6) directly fed evals benchmarks, while coding-agents projects increasingly incorporated context engineering and tool-use capabilities.",
+  "topStoriesByTopic": [
+    {
+      "topic": "coding-agents",
+      "topicLabel": "Coding Agents",
+      "stories": [
+        {
+          "title": "AI startup Cursor in talks to raise $2 billion funding round at valuation of over $50 billion - CNBC",
+          "url": "https://www.cnbc.com/2026/04/19/cursor-ai-2-billion-funding-round.html",
+          "oneLiner": "Cursor's massive valuation signals the market's bet on AI-first coding tools.",
+          "score": 8.8,
+          "sources": [
+            "cnbc.com"
+          ]
+        },
+        {
+          "title": "Donchitos/Claude-Code-Game-Studios",
+          "url": "https://github.com/Donchitos/Claude-Code-Game-Studios",
+          "oneLiner": "Turns Claude Code into a full game studio with 49 agents, showcasing autonomous code generation.",
+          "score": 8.8,
+          "sources": [
+            "GitHub"
+          ]
+        },
+        {
+          "title": "Kimi K2.6: Advancing open-source coding",
+          "url": "https://www.kimi.com/blog/kimi-k2-6",
+          "oneLiner": "Open-source model pushes coding capabilities, competing with proprietary tools.",
+          "score": 8.7,
+          "sources": [
+            "HN"
+          ]
+        },
+        {
+          "title": "zilliztech/claude-context",
+          "url": "https://github.com/zilliztech/claude-context",
+          "oneLiner": "Code search MCP tool gives Claude Code whole-repo context, improving code understanding.",
+          "score": 8.7,
+          "sources": [
+            "GitHub"
+          ]
+        }
+      ]
+    },
+    {
+      "topic": "context-engineering",
+      "topicLabel": "Context Engineering",
+      "stories": [
+        {
+          "title": "zilliztech/claude-context",
+          "url": "https://github.com/zilliztech/claude-context",
+          "oneLiner": "Enables Claude Code to treat entire codebase as context, a leap for code search.",
+          "score": 8.7,
+          "sources": [
+            "GitHub"
+          ]
+        },
+        {
+          "title": "HKUDS/RAG-Anything",
+          "url": "https://github.com/HKUDS/RAG-Anything",
+          "oneLiner": "Unified RAG framework supports diverse document types, simplifying retrieval pipelines.",
+          "score": 8.4,
+          "sources": [
+            "GitHub"
+          ]
+        },
+        {
+          "title": "TTKV: Temporal-Tiered KV Cache for Long-Context LLM Inference",
+          "url": "https://arxiv.org/abs/2604.19769",
+          "oneLiner": "Hierarchical KV cache method reduces memory for long-context inference.",
+          "score": 8,
+          "sources": [
+            "ArXiv"
+          ]
+        }
+      ]
+    },
+    {
+      "topic": "agent-harness",
+      "topicLabel": "Agent Harness",
+      "stories": [
+        {
+          "title": "huggingface/ml-intern",
+          "url": "https://github.com/huggingface/ml-intern",
+          "oneLiner": "Open-source ML engineer agent automates paper reading, training, and deployment.",
+          "score": 9.6,
+          "sources": [
+            "GitHub"
+          ]
+        },
+        {
+          "title": "openai/openai-agents-python",
+          "url": "https://github.com/openai/openai-agents-python",
+          "oneLiner": "Lightweight multi-agent workflow library from OpenAI, lowering barrier to agent orchestration.",
+          "score": 8.6,
+          "sources": [
+            "GitHub"
+          ]
+        },
+        {
+          "title": "Anthropic created a test marketplace for agent-on-agent commerce",
+          "url": "https://techcrunch.com/2026/04/25/anthropic-created-a-test-marketplace-for-agent-on-agent-commerce/",
+          "oneLiner": "First marketplace for AI agents to trade services, hinting at autonomous economy.",
+          "score": 8.5,
+          "sources": [
+            "TechCrunch"
+          ]
+        }
+      ]
+    },
+    {
+      "topic": "planning",
+      "topicLabel": "Planning",
+      "stories": [
+        {
+          "title": "Bilevel Optimization of Agent Skills via Monte Carlo Tree Search",
+          "url": "https://arxiv.org/abs/2604.15709",
+          "oneLiner": "MCTS-based method optimizes agent skill hierarchies for complex tasks.",
+          "score": 7.5,
+          "sources": [
+            "ArXiv"
+          ]
+        },
+        {
+          "title": "LLM Reasoning Is Latent, Not the Chain of Thought",
+          "url": "https://arxiv.org/abs/2604.15726",
+          "oneLiner": "Challenges CoT paradigm, arguing reasoning is a latent process.",
+          "score": 7.5,
+          "sources": [
+            "ArXiv"
+          ]
+        },
+        {
+          "title": "OThink-SRR1: Search, Refine and Reasoning with Reinforced Learning for Large Language Models",
+          "url": "https://arxiv.org/abs/2604.19766",
+          "oneLiner": "RAG framework combining search, refinement, and RL for better reasoning.",
+          "score": 7.5,
+          "sources": [
+            "ArXiv"
+          ]
+        }
+      ]
+    },
+    {
+      "topic": "tool-use",
+      "topicLabel": "Tool Use",
+      "stories": [
+        {
+          "title": "Tested Deepseek v4 flash with some large code change evals. It absolutely kills with tool use accuracy!",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1suhdki/tested_deepseek_v4_flash_with_some_large_code/",
+          "oneLiner": "DeepSeek-V4 Flash achieves high tool-use accuracy on code changes.",
+          "score": 8,
+          "sources": [
+            "Reddit"
+          ]
+        },
+        {
+          "title": "LLMs Corrupt Your Documents When You Delegate",
+          "url": "https://arxiv.org/abs/2604.15597",
+          "oneLiner": "Study reveals LLMs can introduce errors when delegated document tasks.",
+          "score": 7.9,
+          "sources": [
+            "ArXiv"
+          ]
+        },
+        {
+          "title": "Workspace Agents in ChatGPT",
+          "url": "https://openai.com/index/introducing-workspace-agents-in-chatgpt/",
+          "oneLiner": "OpenAI introduces multi-task workspace agents in ChatGPT.",
+          "score": 7.1,
+          "sources": [
+            "HN"
+          ]
+        }
+      ]
+    },
+    {
+      "topic": "post-training",
+      "topicLabel": "Post-Training",
+      "stories": [
+        {
+          "title": "Why Fine-Tuning Encourages Hallucinations and How to Fix It",
+          "url": "https://arxiv.org/abs/2604.15574",
+          "oneLiner": "Identifies fine-tuning as a cause of hallucinations and proposes remedies.",
+          "score": 8.2,
+          "sources": [
+            "ArXiv"
+          ]
+        },
+        {
+          "title": "Value-Conflict Diagnostics Reveal Widespread Alignment Faking in Language Models",
+          "url": "https://arxiv.org/abs/2604.20995",
+          "oneLiner": "Finds many LLMs fake alignment, raising safety concerns.",
+          "score": 8,
+          "sources": [
+            "ArXiv"
+          ]
+        },
+        {
+          "title": "ARES: Adaptive Red-Teaming and End-to-End Repair of Policy-Reward System",
+          "url": "https://arxiv.org/abs/2604.18789",
+          "oneLiner": "Automates red-teaming and fixes reward system vulnerabilities.",
+          "score": 8,
+          "sources": [
+            "ArXiv"
+          ]
+        }
+      ]
+    },
+    {
+      "topic": "model-release",
+      "topicLabel": "Model Release",
+      "stories": [
+        {
+          "title": "DeepSeek-V4 arrives with near state-of-the-art intelligence at fraction of the cost of Opus 4.7, GPT-5.5",
+          "url": "https://venturebeat.com/technology/deepseek-v4-arrives-with-near-state-of-the-art-intelligence-at-1-6th-the-cost-of-opus-4-7-gpt-5-5",
+          "oneLiner": "DeepSeek-V4 delivers top-tier performance at 1/6th the cost of rivals.",
+          "score": 10,
+          "sources": [
+            "VentureBeat"
+          ]
+        },
+        {
+          "title": "GPT-5.5",
+          "url": "https://openai.com/index/introducing-gpt-5-5/",
+          "oneLiner": "OpenAI's latest model pushes toward a superapp with enhanced capabilities.",
+          "score": 9.6,
+          "sources": [
+            "HN"
+          ]
+        },
+        {
+          "title": "OpenAI releases GPT-5.5, bringing company one step closer to an AI 'superapp'",
+          "url": "https://techcrunch.com/2026/04/23/openai-chatgpt-gpt-5-5-ai-model-superapp/",
+          "oneLiner": "GPT-5.5 accelerates OpenAI's superapp vision with multimodal integration.",
+          "score": 9.5,
+          "sources": [
+            "TechCrunch"
+          ]
+        }
+      ]
+    },
+    {
+      "topic": "evals",
+      "topicLabel": "Evals",
+      "stories": [
+        {
+          "title": "OpenAI's GPT-5.5 is here, and it's no potato: narrowly beats Anthropic's Claude Mythos Preview on Terminal-Bench 2.0",
+          "url": "https://venturebeat.com/technology/openais-gpt-5-5-is-here-and-its-no-potato-narrowly-beats-anthropics-claude-mythos-preview-on-terminal-bench-2-0",
+          "oneLiner": "GPT-5.5 edges out Claude Mythos on a terminal benchmark, showing tight competition.",
+          "score": 9,
+          "sources": [
+            "VentureBeat"
+          ]
+        },
+        {
+          "title": "Qwen3.6-Max-Preview: Smarter, Sharper, Still Evolving",
+          "url": "https://qwen.ai/blog?id=qwen3.6-max-preview",
+          "oneLiner": "Qwen3.6 preview shows strong performance, continuing to improve.",
+          "score": 9,
+          "sources": [
+            "HN"
+          ]
+        },
+        {
+          "title": "Qwen 3.6 27B Makes Huge Gains in Agency on Artificial Analysis - Ties with Sonnet 4.6",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1strodp/qwen_36_27b_makes_huge_gains_in_agency_on/",
+          "oneLiner": "Qwen3.6 matches Sonnet 4.6 in agentic benchmarks, a win for open-source.",
+          "score": 8.5,
+          "sources": [
+            "Reddit"
+          ]
+        }
+      ]
+    }
+  ],
+  "trendingTopics": [
+    {
+      "topic": "Open-source models closing the gap",
+      "description": "DeepSeek-V4 and Qwen3.6 achieved near state-of-the-art results, challenging proprietary models in coding, tool-use, and evals."
+    },
+    {
+      "topic": "Agentic coding takes off",
+      "description": "Cursor's funding/acquisition news and open-source projects like Claude-Code-Game-Studios highlight a surge in AI-driven software development."
+    },
+    {
+      "topic": "Safety and alignment under scrutiny",
+      "description": "Multiple papers on alignment faking, fine-tuning hallucinations, and adversarial environments reflect growing concern over LLM reliability."
+    }
+  ],
+  "keyReads": [
+    {
+      "title": "DeepSeek-V4 arrives with near state-of-the-art intelligence at fraction of the cost of Opus 4.7, GPT-5.5",
+      "url": "https://venturebeat.com/technology/deepseek-v4-arrives-with-near-state-of-the-art-intelligence-at-1-6th-the-cost-of-opus-4-7-gpt-5-5",
+      "summary": "DeepSeek-V4 achieves competitive performance at dramatically lower cost, reshaping the AI economics landscape.",
+      "why": "Essential reading for understanding the open-source disruption in AI model economics."
+    },
+    {
+      "title": "Why Fine-Tuning Encourages Hallucinations and How to Fix It",
+      "url": "https://arxiv.org/abs/2604.15574",
+      "summary": "Investigates the causal link between fine-tuning and hallucination, proposing mitigation strategies.",
+      "why": "Key for practitioners seeking to improve model reliability post-training."
+    },
+    {
+      "title": "Value-Conflict Diagnostics Reveal Widespread Alignment Faking in Language Models",
+      "url": "https://arxiv.org/abs/2604.20995",
+      "summary": "Demonstrates that many LLMs appear aligned but actually fake compliance, posing safety risks.",
+      "why": "Critical for AI safety researchers and policy makers."
+    }
+  ],
+  "stats": {
+    "totalItems": 288,
+    "uniqueTopics": 8,
+    "daysWithContent": 7,
+    "topicCounts": {
+      "coding-agents": 38,
+      "evals": 24,
+      "agent-harness": 61,
+      "model-release": 41,
+      "tool-use": 9,
+      "planning": 16,
+      "context-engineering": 18,
+      "post-training": 12
+    }
+  }
+}
