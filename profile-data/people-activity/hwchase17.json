@@ -646,10 +646,70 @@
       "tags": [
         "tooling"
       ]
+    },
+    {
+      "type": "x",
+      "id": "2041682886722728368",
+      "url": "https://x.com/hwchase17/status/2041682886722728368",
+      "author": {
+        "handle": "hwchase17",
+        "displayName": "Harrison Chase",
+        "avatar": "https://avatars.githubusercontent.com/hwchase17"
+      },
+      "content": "RT @samecrowder: as always, it's an exciting time to be working at LangChain!",
+      "createdAt": "2026-04-27T04:16:34.291Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Harrison Chase retweeted a message about working at LangChain being exciting.",
+      "worthReading": "Shows enthusiasm for LangChain's work.",
+      "tags": [
+        "tooling"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2021261552222158955",
+      "url": "https://x.com/hwchase17/status/2021261552222158955",
+      "author": {
+        "handle": "hwchase17",
+        "displayName": "Harrison Chase",
+        "avatar": "https://avatars.githubusercontent.com/hwchase17"
+      },
+      "content": "TL;DR: More and more agents need a workspace: a computer where they can run code, install packages, and access files. Sandboxes provide this",
+      "createdAt": "2026-04-27T04:16:34.291Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Agents require sandboxed workspaces to run code and access files.",
+      "worthReading": "Highlights a key infrastructure need for AI agents.",
+      "tags": [
+        "agent",
+        "infra"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2009732201269588479",
+      "url": "https://x.com/hwchase17/status/2009732201269588479",
+      "author": {
+        "handle": "hwchase17",
+        "displayName": "Harrison Chase",
+        "avatar": "https://avatars.githubusercontent.com/hwchase17"
+      },
+      "content": "traces matter!",
+      "createdAt": "2026-04-27T04:16:34.291Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Harrison emphasizes the importance of traces for debugging and monitoring.",
+      "worthReading": "Underlines the value of observability in AI systems.",
+      "tags": [
+        "evaluation"
+      ]
     }
   ],
   "dailyCounts": [
-    0,
     0,
     0,
     0,
@@ -678,7 +738,8 @@
     2,
     4,
     4,
+    3,
     3
   ],
-  "interestSummary": "Harrison Chase is focused on advancing agent development, emphasizing the need for agent workspaces like sandboxes and the importance of iterating on production traces rather than code, as highlighted by LangSmith Agent Builder's no-code memory system."
+  "interestSummary": "Harrison Chase is focused on the development and operational needs of AI agents, particularly emphasizing the importance of sandboxed workspaces for code execution and the necessity of iterating on production traces for debugging and testing, as highlighted by LangChain's new Agent Builder tool."
 }
