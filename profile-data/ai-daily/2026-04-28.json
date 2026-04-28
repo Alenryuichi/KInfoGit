@@ -1,191 +1,261 @@
 {
   "date": "2026-04-28",
-  "itemCount": 18,
+  "itemCount": 68,
   "sections": [
     {
       "id": "headlines",
       "title": "Headlines & Launches",
       "items": [
         {
-          "title": "Mercor breach leaks 4TB of voice samples and ID scans",
-          "summary": "A breach at AI staffing firm Mercor leaked 4TB of data, including voice samples and ID document scans from 40,000 contractors, creating a deepfake-ready dataset. This breach uniquely combines voice biometrics with identity documents, enabling sophisticated fraud such as banking voiceprint bypass and video call impersonation, and highlights the risks of collecting biometric data. The data was posted by the Lapsus$ hacking group on their leak site earlier this month, and ORAVYS is offering free analysis of the first three suspect samples for affected contractors.",
-          "url": "https://app.oravys.com/blog/mercor-breach-2026",
+          "title": "Microsoft and OpenAI end their exclusive and revenue-sharing deal",
+          "summary": "微软与OpenAI终止独家及收入分成协议。",
+          "url": "https://www.bloomberg.com/news/articles/2026-04-27/microsoft-to-stop-sharing-revenue-with-main-ai-partner-openai",
+          "score": 9.575,
+          "sources": [
+            {
+              "name": "HN (747)"
+            }
+          ],
+          "tags": [
+            "openai",
+            "microsoft",
+            "partnership"
+          ],
+          "focusTopics": [
+            "model-release"
+          ]
+        },
+        {
+          "title": "Microsoft and OpenAI's famed AGI agreement is dead - The Verge",
+          "summary": "微软与OpenAI的AGI协议终止，合作关系重新谈判。",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/918981/openai-microsoft-renegotiate-contract",
+          "score": 9.5,
+          "sources": [
+            {
+              "name": "theverge.com"
+            }
+          ],
+          "tags": [
+            "openai",
+            "microsoft",
+            "agi",
+            "partnership"
+          ],
+          "focusTopics": [
+            "model-release"
+          ]
+        },
+        {
+          "title": "OpenAI Breaks Free of Microsoft AI Exclusivity Pact - Bloomberg",
+          "summary": "OpenAI打破与微软的AI独家协议，重获自由。",
+          "url": "https://www.bloomberg.com/news/newsletters/2026-04-27/openai-breaks-free-of-microsoft-ai-exclusivity-pact",
+          "score": 9.5,
+          "sources": [
+            {
+              "name": "bloomberg.com"
+            }
+          ],
+          "tags": [
+            "openai",
+            "microsoft",
+            "exclusivity"
+          ],
+          "focusTopics": [
+            "model-release"
+          ]
+        },
+        {
+          "title": "DeepMind's David Silver just raised $1.1B to build an AI that learns without human data",
+          "summary": "DeepMind David Silver融资11亿美元构建无人类数据学习AI。",
+          "url": "https://techcrunch.com/2026/04/27/deepminds-david-silver-just-raised-1-1b-to-build-an-ai-that-learns-without-human-data/",
           "score": 9,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "Oravys"
+              "name": "techcrunch.com"
             }
           ],
           "tags": [
-            "security",
-            "data breach",
-            "AI",
-            "biometrics",
-            "deepfake"
+            "funding",
+            "deepmind",
+            "unsupervised-learning"
           ],
-          "focusTopics": [],
-          "background": "Voice deepfakes can be created from just three seconds of audio, and are increasingly used in fraud. Biometric data like voiceprints and ID scans are considered \"forever passwords\" because they cannot be changed after a breach.",
-          "discussion": "Commenters noted the irony of sending voice samples to another AI company for verification, and emphasized the need for data minimization (\"Datensparsamkeit\"). Some also pointed out that biometrics should be treated as \"forever passwords\" due to their irreversibility."
+          "focusTopics": [
+            "model-release"
+          ]
         },
         {
-          "title": "China Blocks Meta's $2B Acquisition of AI Startup Manus",
-          "summary": "China's commerce ministry blocked Meta's $2 billion acquisition of AI startup Manus, citing export control and national security laws, despite Manus being headquartered in Singapore. This marks the first time China has blocked a foreign acquisition of an AI startup under its new export control regime, signaling escalating tech nationalism and potential precedent for future cross-border AI deals. Manus was founded in China, relocated to Singapore after a $75 million Benchmark-led round in May 2025, and its co-founders are under investigation for violating export control laws. The deal had already closed, raising questions about unwinding the transaction.",
-          "url": "https://www.cnbc.com/2026/04/27/meta-manus-china-blocks-acquisition-ai-startup.html",
-          "score": 8,
+          "title": "We have a jury. | The Verge",
+          "summary": "马斯克与奥特曼就OpenAI未来展开法庭对决。",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/919424/we-have-a-jury",
+          "score": 9,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "yakkomajuri"
+              "name": "theverge.com"
             }
           ],
           "tags": [
-            "AI",
-            "geopolitics",
+            "openai",
+            "lawsuit",
+            "governance"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Musk and Altman face off in trial that will determine OpenAI's future - Ars Technica",
+          "summary": "马斯克与奥特曼对簿公堂，决定OpenAI未来走向。",
+          "url": "https://arstechnica.com/tech-policy/2026/04/musk-and-altman-face-off-in-trial-that-will-determine-openais-future/",
+          "score": 9,
+          "sources": [
+            {
+              "name": "arstechnica.com"
+            }
+          ],
+          "tags": [
+            "openai",
+            "lawsuit",
+            "governance"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Bloomberg Tech: OpenAI Drops Deal with Microsoft - Bloomberg",
+          "summary": "彭博播客报道OpenAI与微软分道扬镳。",
+          "url": "https://www.bloomberg.com/news/audio/2026-04-27/bloomberg-tech-openai-drops-deal-with-microsoft-podcast",
+          "score": 9,
+          "sources": [
+            {
+              "name": "bloomberg.com"
+            }
+          ],
+          "tags": [
+            "openai",
+            "microsoft",
+            "podcast"
+          ],
+          "focusTopics": [
+            "model-release"
+          ]
+        },
+        {
+          "title": "Elon Musk and Sam Altman are going to court over OpenAI's future",
+          "summary": "马斯克与奥特曼就OpenAI未来对簿公堂。",
+          "url": "https://www.technologyreview.com/2026/04/27/1136466/elon-musk-and-sam-altman-are-going-to-court-over-openais-future/",
+          "score": 9,
+          "sources": [
+            {
+              "name": "technologyreview.com"
+            }
+          ],
+          "tags": [
+            "openai",
+            "lawsuit",
+            "governance"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "4TB of voice samples just stolen from 40k AI contractors at Mercor",
+          "summary": "AI承包商Mercor泄露4TB语音样本和身份证扫描件。",
+          "url": "https://app.oravys.com/blog/mercor-breach-2026",
+          "score": 8.958,
+          "sources": [
+            {
+              "name": "HN (436)"
+            }
+          ],
+          "tags": [
+            "data-breach",
+            "privacy",
+            "ai-contractors"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "China blocks Meta's acquisition of AI startup Manus",
+          "summary": "中国阻止Meta收购AI初创公司Manus，涉及国家监管与AI竞争。",
+          "url": "https://www.cnbc.com/2026/04/27/meta-manus-china-blocks-acquisition-ai-startup.html",
+          "score": 8.546999999999999,
+          "sources": [
+            {
+              "name": "HN (299)"
+            }
+          ],
+          "tags": [
             "acquisition",
             "regulation",
-            "Meta"
+            "china"
           ],
-          "focusTopics": [],
-          "background": "China's export control law includes a catch-all clause (Article 12) that allows the government to block transfers of technology deemed critical to national security. The move parallels the US approach to TikTok, asserting jurisdiction over Chinese-origin algorithms even when companies relocate abroad.",
-          "discussion": "Commenters noted the irony of China using the same national security arguments as the US, and debated whether this breaks Singapore's 'fig leaf' status for Chinese tech firms. Some argued the founders were not 'hostaged' but investigated for ignoring clear regulatory signals."
+          "focusTopics": []
         },
         {
-          "title": "Super ZSNES Revives Classic Emulator with GPU Acceleration",
-          "summary": "The original developers of ZSNES have released Super ZSNES, a completely rewritten SNES emulator that offloads processing to the GPU for enhanced performance and accuracy. This marks a significant shift in SNES emulation by leveraging modern GPU hardware, potentially enabling higher resolutions, uncompressed audio, and per-game enhancements that were previously impossible on CPU-based emulators. Super ZSNES supports per-game enhancements and uncompressed audio replacements, and the developers have rewritten the emulator from scratch rather than patching the original codebase.",
-          "url": "https://zsnes.com/",
-          "score": 8,
+          "title": "Meta’s $2 billion Manus acquisition blocked by China.",
+          "summary": "Meta 20 亿美元收购 Manus 被中国发改委阻止",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1swy9ap/metas_2_billion_manus_acquisition_blocked_by_china/",
+          "score": 8.5,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "haunter"
+              "name": "Reddit r/LocalLLaMA"
             }
           ],
           "tags": [
-            "emulation",
-            "retro gaming",
-            "GPU computing",
-            "SNES"
+            "acquisition",
+            "regulation",
+            "meta"
           ],
-          "focusTopics": [
-            "memory"
-          ],
-          "background": "ZSNES was one of the earliest and most popular SNES emulators, first released in the late 1990s. Traditional emulators rely on CPU-based cycle-accurate emulation, which can be computationally expensive. GPU-powered emulation offloads graphics rendering to the graphics card, allowing for higher resolutions and more accurate visual effects.",
-          "discussion": "Community members expressed nostalgia for the original ZSNES and excitement about the GPU-powered rewrite. Some commenters discussed technical details, such as how the PPU emulation could be further optimized by capturing register state per pixel and rendering on the GPU. Others highlighted the potential for uncompressed audio samples, noting efforts to track down original samples used by composer Nobuo Uematsu."
+          "focusTopics": []
         },
         {
-          "title": "GitHub Copilot Moves to Usage-Based Billing",
-          "summary": "GitHub announced that Copilot will transition to usage-based billing starting June 1, 2025, replacing the previous flat-rate model with AI Credits that are consumed per request based on model multipliers. This change significantly raises costs for heavy users, especially those relying on powerful models like Claude Opus, and reflects a broader industry shift toward usage-based AI pricing, potentially driving developers to explore cheaper alternatives. Copilot Pro and Pro+ subscriptions now include $10 and $39 in monthly AI Credits respectively, but model multipliers range from 1x for GPT-4o mini to 27x for Claude Opus, meaning a single Opus request could cost up to $5 in credits.",
+          "title": "GitHub Copilot is moving to usage-based billing",
+          "summary": "GitHub Copilot将改为按用量计费。",
           "url": "https://github.blog/news-insights/company-news/github-copilot-is-moving-to-usage-based-billing/",
+          "score": 8.3,
+          "sources": [
+            {
+              "name": "HN (541)"
+            }
+          ],
+          "tags": [
+            "github-copilot",
+            "billing",
+            "ai-coding"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "EU tells Google to open up AI on Android; Google says that's \"unwarranted intervention\" - Ars Technica",
+          "summary": "欧盟要求谷歌开放安卓AI助手市场，谷歌称其过度干预。",
+          "url": "https://arstechnica.com/ai/2026/04/europe-could-force-google-to-open-android-to-other-ai-assistants/",
           "score": 8,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "frizlab"
+              "name": "arstechnica.com"
             }
           ],
           "tags": [
-            "GitHub Copilot",
-            "pricing",
-            "AI tools",
-            "developer tools",
-            "billing"
+            "regulation",
+            "android",
+            "ai-assistant"
           ],
-          "focusTopics": [],
-          "background": "GitHub Copilot is an AI-powered code completion and chat tool integrated into IDEs. Previously, it offered unlimited requests under a flat monthly fee, but the new model ties usage directly to token consumption, similar to API pricing from model providers like OpenAI and Anthropic.",
-          "discussion": "Community comments express widespread frustration, with users noting that the new pricing effectively eliminates the value of the subscription for heavy users, who previously could get hundreds of dollars worth of usage for $10. Some point out that the model multipliers make it cheaper to use API providers directly, and many are considering switching to alternatives like DeepSeek or OpenRouter."
+          "focusTopics": []
         },
         {
-          "title": "The Lost Art of Staring at Walls",
-          "summary": "An essay argues that constant smartphone use has eliminated valuable moments of disattention, such as staring at walls, which are essential for mental rest and creativity. This resonates deeply in modern tech culture, highlighting a widespread loss of mental downtime and sparking debate on the value of unstructured thinking versus constant stimulation. The essay, titled \"Men who stare at walls,\" received high engagement with 424 points and 199 comments, indicating strong interest in the topic of attention and disattention.",
-          "url": "https://www.alexselimov.com/posts/men_who_stare_at_walls/",
-          "score": 7,
+          "title": "Announcing our partnership with the Republic of Korea",
+          "summary": "DeepMind与韩国合作加速前沿AI科学突破。",
+          "url": "https://deepmind.google/blog/announcing-our-partnership-with-the-republic-of-korea/",
+          "score": 6.5,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "aselimov3"
+              "name": "DeepMind"
             }
           ],
           "tags": [
-            "attention",
-            "meditation",
-            "technology",
-            "mental health",
-            "productivity"
+            "partnership",
+            "deepmind",
+            "korea"
           ],
-          "focusTopics": [],
-          "background": "In an age of constant smartphone notifications and social media feeds, people rarely experience true mental downtime. Disattention refers to moments when the mind is free to wander without external input, which can foster creativity and reflection.",
-          "discussion": "Commenters largely agree that smartphones steal disattention, with some comparing wall-staring to meditation. One user notes that meditation is like mental training, while wall-staring offers a simpler form of mental rest."
-        },
-        {
-          "title": "The Woes of Sanitizing SVGs",
-          "summary": "A detailed blog post by a TurboWarp developer chronicles the ongoing challenges of sanitizing SVGs in Scratch from 2019 to 2026, revealing persistent HTTP leak vulnerabilities via CSS features like @import, url(), and image-set(). This matters because SVG sanitization is a widespread web security problem; the article demonstrates that custom sanitization pipelines are fragile and recommends Content Security Policy (CSP) as the only reliable defense, which has practical implications for any site allowing user-uploaded SVGs. The author notes that TurboWarp avoided the 2026 HTTP leaks by deleting CSS sanitization code entirely, reducing package size by 400KB. The article also references Cloudflare's svg-hush project and the HTML Sanitizer API's limited SVG support.",
-          "url": "https://muffin.ink/blog/scratch-svg-sanitization/",
-          "score": 7,
-          "sources": [
-            {
-              "name": "hackernews",
-              "meta": "varun_ch"
-            }
-          ],
-          "tags": [
-            "security",
-            "SVG",
-            "CSP",
-            "web development",
-            "sanitization"
-          ],
-          "focusTopics": [
-            "memory"
-          ],
-          "background": "SVG (Scalable Vector Graphics) files can contain JavaScript, CSS, and external references, making them a vector for XSS and HTTP leak attacks. Sanitization attempts to strip dangerous content, but attackers continually find bypasses. Content Security Policy (CSP) is a browser security mechanism that restricts resource loading, effectively mitigating such leaks.",
-          "discussion": "Commenters largely agree that CSP is the only reliable fix, with simonw highlighting that CSP can be set via HTML meta tags. andybak suggests supporting only a safe SVG subset, while philo23 wishes for a sandbox attribute for inline SVGs. evilpie notes the HTML Sanitizer API's default SVG allowlist but its lack of CSS sanitization."
-        },
-        {
-          "title": "Interactive test explores blue-green boundary",
-          "summary": "A new interactive website, ismy.blue, lets users find where they personally draw the line between blue and green by adjusting a color slider, then compares their result to the population average. This experiment highlights how color perception varies among individuals and may be influenced by language and culture, sparking public discussion on linguistic relativity and the subjective nature of color categorization. The test presents a series of color swatches ranging from blue to green, and users classify each as either blue or green; the site then estimates their boundary point and shows how it compares to others.",
-          "url": "https://ismy.blue/",
-          "score": 6,
-          "sources": [
-            {
-              "name": "hackernews",
-              "meta": "theogravity"
-            }
-          ],
-          "tags": [
-            "color perception",
-            "linguistics",
-            "interactive",
-            "psychology",
-            "visual perception"
-          ],
-          "focusTopics": [
-            "memory"
-          ],
-          "background": "Color perception is not universal; different languages have different color categories. For example, some languages lack a separate word for blue or green, which can affect how speakers perceive and categorize colors. This phenomenon is studied under linguistic relativity, also known as the Sapir-Whorf hypothesis.",
-          "discussion": "Commenters shared personal anecdotes about color disagreements and noted that colors like turquoise or teal have their own names, making the binary blue/green choice feel forced. Some also pointed out a potential anchoring effect in the test's design."
-        },
-        {
-          "title": "Google Meet Speech Translation Rolls Out to Mobile",
-          "summary": "Google Meet's speech translation feature, which provides real-time voice translation with voice imitation, is now rolling out to mobile devices, supporting English, Spanish, French, German, Portuguese, and Italian. This rollout brings a sci-fi-like real-time translation experience to mobile users, potentially breaking language barriers in meetings on the go. However, the feature is still in early alpha, so reliability and language coverage remain limited. The feature translates speech with a short delay and outputs text in the user's preferred language using a voice that roughly imitates the original speaker. It was tested successfully between two laptops but failed between an iPhone and iPad, indicating cross-platform issues.",
-          "url": "https://simonwillison.net/2026/Apr/27/speech-translation-in-google-meet-is-now-rolling-out-to-mobile-d/#atom-everything",
-          "score": 6,
-          "sources": [
-            {
-              "name": "rss",
-              "meta": "Simon Willison"
-            }
-          ],
-          "tags": [
-            "Google Meet",
-            "speech translation",
-            "mobile",
-            "AI"
-          ],
-          "focusTopics": [
-            "memory"
-          ],
-          "background": "Google Meet's speech translation was first introduced as a limited alpha for businesses and later became generally available for select Workspace plans in early 2026. The feature uses AI to provide real-time voice dubbing, allowing participants to hear translations in a synthetic voice that mimics the original speaker. The mobile rollout extends this capability to smartphones and tablets."
+          "focusTopics": []
         }
       ]
     },
@@ -194,95 +264,441 @@
       "title": "Research & Innovation",
       "items": [
         {
-          "title": "Microsoft and OpenAI End Exclusive Revenue-Sharing Deal",
-          "summary": "Microsoft and OpenAI have terminated their exclusive revenue-sharing agreement, allowing OpenAI to use other cloud providers such as AWS and potentially Google TPUs. The deal, which previously required OpenAI to run exclusively on Azure, ended on April 27, 2026. This marks a major shift in the AI industry, ending one of the most influential partnerships between a cloud provider and an AI lab. It could intensify competition among cloud providers (Azure, AWS, Google Cloud) and give OpenAI more flexibility to optimize costs and performance. Microsoft's stake in OpenAI has reportedly dropped from 49% to 27% over time. The termination also removes a clause that would nullify Microsoft's IP rights if AGI were achieved, and OpenAI is now free to use Google's newly launched Gen 8 TPUs.",
-          "url": "https://www.bloomberg.com/news/articles/2026-04-27/microsoft-to-stop-sharing-revenue-with-main-ai-partner-openai",
-          "score": 9,
-          "sources": [
-            {
-              "name": "hackernews",
-              "meta": "helsinkiandrew"
-            }
-          ],
-          "tags": [
-            "AI",
-            "Microsoft",
-            "OpenAI",
-            "Cloud Computing",
-            "Partnership"
-          ],
-          "focusTopics": [],
-          "background": "Microsoft and OpenAI had a long-standing exclusive partnership where OpenAI's models ran exclusively on Azure, and Microsoft shared revenue. This deal was seen as a key competitive advantage for Azure in the AI cloud market. The change allows OpenAI to diversify its cloud infrastructure and potentially reduce costs.",
-          "discussion": "Commenters are divided: some see Google as the biggest winner, as OpenAI may now adopt TPUs, while others question why Microsoft agreed to such a friendly deal. There is speculation that Microsoft realized the exclusive arrangement was hindering OpenAI's competitiveness against rivals like Anthropic."
-        },
-        {
-          "title": "FDA Approves First Gene Therapy for Genetic Hearing Loss",
-          "summary": "The FDA has approved the first-ever gene therapy for genetic hearing loss, targeting mutations in the OTOF gene that cause congenital deafness. This marks a historic milestone in treating a form of inherited hearing loss with a one-time therapy. This approval opens the door to treating a previously incurable form of deafness, offering hope to patients with OTOF mutations. It also paves the way for gene therapies targeting other genetic causes of hearing loss, potentially benefiting millions worldwide. The therapy is specifically for patients with biallelic mutations in the OTOF gene, which accounts for a small percentage of congenital hearing loss cases. It involves delivering a functional copy of the OTOF gene via an adeno-associated virus (AAV) vector directly into the inner ear.",
-          "url": "https://www.fda.gov/news-events/press-announcements/fda-approves-first-ever-gene-therapy-treatment-genetic-hearing-loss-under-national-priority-voucher",
-          "score": 9,
-          "sources": [
-            {
-              "name": "hackernews",
-              "meta": "JeanKage"
-            }
-          ],
-          "tags": [
-            "gene therapy",
-            "FDA approval",
-            "hearing loss",
-            "medical breakthrough",
-            "biotechnology"
-          ],
-          "focusTopics": [],
-          "background": "Genetic hearing loss affects about 1 in 500 newborns, with OTOF mutations causing a form of nonsyndromic recessive deafness (DFNB9). Otoferlin, the protein encoded by OTOF, is essential for synaptic transmission in inner hair cells; its absence leads to severe-to-profound hearing loss. Gene therapy aims to restore otoferlin production by delivering a healthy copy of the gene.",
-          "discussion": "Community comments express strong support, with many sharing personal stories of hearing loss and hope for future treatments. Some note that while this therapy targets a small population, it represents a crucial step for broader gene therapy applications. Others highlight the need for treatments for other genetic causes, such as GJB2 mutations."
-        },
-        {
-          "title": "Open-source agent Dirac tops TerminalBench with Gemini-3-flash-preview",
-          "summary": "Dirac, an open-source CLI agent, achieved a score of 65.2% on TerminalBench 2.0 using Gemini-3-flash-preview, surpassing Google's official agent (47.8%) and the previous top closed-source model Junie CLI (64.3%). The author claims no cheating mechanisms were used and the run was fully compliant with leaderboard rules. This result demonstrates that an open-source agent can outperform proprietary ones, highlighting the importance of the agent harness (the orchestration layer) over the underlying model. It also validates novel techniques like hash-anchored edits and AST-based context fetching, which could significantly reduce API costs and improve code quality. Dirac employs hash-anchored edits for precise file modifications, uses the language's AST to selectively fetch relevant context (avoiding large file reads), and batches all operations for efficiency. The author has open-sourced the full agent on GitHub and submitted a PR to the leaderboard, but it has not been merged due to maintainer backlog.",
-          "url": "https://github.com/dirac-run/dirac",
+          "title": "Microsoft Presents \"TRELLIS.2\": An Open-Source, 4b-Parameter, Image-To-3D Model Producing Up To 1536³ PBR Textured Assets, Built On Native 3D VAES With 16× Spatial Compression, Delivering Efficient, Scalable, High-Fidelity Asset Generation.",
+          "summary": "微软开源40亿参数图像转3D模型TRELLIS.2，高保真生成。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1sxf2u0/microsoft_presents_trellis2_an_opensource/",
           "score": 8,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "GodelNumbering"
+              "name": "Reddit r/LocalLLaMA"
             }
           ],
           "tags": [
-            "AI agents",
-            "open source",
-            "benchmarking",
-            "terminal automation",
-            "Gemini"
-          ],
-          "focusTopics": [
-            "multi-agent"
-          ],
-          "background": "TerminalBench 2.0 is a benchmark for evaluating AI agents on real-world terminal tasks like compiling code and setting up servers. The agent harness refers to the system that orchestrates the model's interactions with the environment, including tool use, context management, and edit strategies. Hash-anchored edits use stable line hashes to target edits precisely, avoiding errors from line-number mismatches. AST (Abstract Syntax Tree) is a tree representation of source code structure, used here to fetch only relevant code segments into the model's context.",
-          "discussion": "Commenters praised Dirac's novel techniques, especially hash-anchored edits and AST-based context fetching, and noted the significant impact of the harness on performance. Some raised concerns about potential overfitting to Gemini-3-flash-preview and suggested benchmarking other models. One user questioned telemetry data collection, but the author clarified it is minimal and opt-out."
-        },
-        {
-          "title": "Microsoft Open-Sources VibeVoice with Speaker Diarization",
-          "summary": "Microsoft released VibeVoice, an MIT-licensed speech-to-text model that unifies transcription, speaker diarization, and timestamping in a single inference pass. Simon Willison demonstrated running it on a Mac using mlx-audio and a 4-bit quantized MLX model, transcribing an hour of audio in under 9 minutes. VibeVoice makes high-quality, speaker-aware transcription accessible to developers and researchers, reducing the need for complex multi-model pipelines. Its MIT license and easy one-liner setup lower the barrier for integrating advanced speech recognition into applications. The model supports up to one hour of audio per inference, with a default max token limit of 8192 (about 25 minutes) that can be increased via --max-tokens. The 4-bit quantized MLX version is 5.71GB, while the full model is 17.3GB; peak memory usage was observed at 61.5GB during prefill on a 128GB M5 Max MacBook Pro.",
-          "url": "https://simonwillison.net/2026/Apr/27/vibevoice/#atom-everything",
-          "score": 8,
-          "sources": [
-            {
-              "name": "rss",
-              "meta": "Simon Willison"
-            }
-          ],
-          "tags": [
-            "speech-to-text",
+            "3d-generation",
             "open-source",
-            "machine learning",
-            "Microsoft",
-            "audio processing"
+            "microsoft"
           ],
           "focusTopics": [
-            "memory"
+            "model-release"
+          ]
+        },
+        {
+          "title": "Outcome Rewards Do Not Guarantee Verifiable or Causally Important Reasoning",
+          "summary": "证明基于结果的奖励不能保证可验证或因果重要的推理。",
+          "url": "https://arxiv.org/abs/2604.22074",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
           ],
-          "background": "Traditional speech-to-text pipelines often separate transcription, diarization, and timestamping into different models, increasing complexity and latency. VibeVoice follows the Whisper-style architecture but adds built-in speaker diarization, outputting structured JSON with speaker IDs and timestamps. MLX is Apple's machine learning framework for Apple Silicon, and mlx-audio is a library that enables efficient audio model inference on Macs."
+          "tags": [
+            "rlvr",
+            "reasoning",
+            "chain-of-thought"
+          ],
+          "focusTopics": [
+            "post-training"
+          ]
+        },
+        {
+          "title": "Memanto: Typed Semantic Memory with Information-Theoretic Retrieval for Long-Horizon Agents",
+          "summary": "提出带类型语义记忆和信息论检索的长时域智能体。",
+          "url": "https://arxiv.org/abs/2604.22085",
+          "score": 7,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "agent",
+            "memory",
+            "long-horizon"
+          ],
+          "focusTopics": [
+            "context-engineering",
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "AI framework autonomously outperforms human-designed R&D baselines",
+          "summary": "新AI框架自主优化训练数据、架构和算法，超越人类基线。",
+          "url": "https://venturebeat.com/orchestration/new-ai-framework-autonomously-optimizes-training-data-architectures-and-algorithms-outperforming-human-baselines",
+          "score": 7,
+          "sources": [
+            {
+              "name": "venturebeat.com"
+            }
+          ],
+          "tags": [
+            "automl",
+            "optimization",
+            "framework"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Qwen3 4B outperforms cloud agents on code tasks—with Mahoraga research [R]",
+          "summary": "Qwen3 4B在代码任务上超越云agent，Mahoraga研究。",
+          "url": "https://www.reddit.com/r/MachineLearning/comments/1sxhpnn/qwen3_4b_outperforms_cloud_agents_on_code/",
+          "score": 7,
+          "sources": [
+            {
+              "name": "Reddit r/MachineLearning"
+            }
+          ],
+          "tags": [
+            "qwen",
+            "code-agents",
+            "open-source"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "Math Takes Two: A test for emergent mathematical reasoning in communication",
+          "summary": "提出测试LLM在对话中涌现数学推理能力的基准。",
+          "url": "https://arxiv.org/abs/2604.21935",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "llm",
+            "reasoning",
+            "benchmark"
+          ],
+          "focusTopics": [
+            "evals"
+          ]
+        },
+        {
+          "title": "MolClaw: An Autonomous Agent with Hierarchical Skills for Drug Molecule Evaluation, Screening, and Optimization",
+          "summary": "提出具有分层技能的自主智能体用于药物分子评估与优化。",
+          "url": "https://arxiv.org/abs/2604.21937",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "agent",
+            "drug-discovery",
+            "hierarchical-skills"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "Emergent Strategic Reasoning Risks in AI: A Taxonomy-Driven Evaluation Framework",
+          "summary": "提出AI战略推理风险的分类评估框架。",
+          "url": "https://arxiv.org/abs/2604.22119",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "llm",
+            "reasoning",
+            "risk",
+            "evaluation"
+          ],
+          "focusTopics": [
+            "evals"
+          ]
+        },
+        {
+          "title": "When Does LLM Self-Correction Help? A Control-Theoretic Markov Diagnostic and Verify-First Intervention",
+          "summary": "用控制论诊断LLM自我纠正何时有效并提出先验证策略。",
+          "url": "https://arxiv.org/abs/2604.22273",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "llm",
+            "self-correction",
+            "control-theory"
+          ],
+          "focusTopics": [
+            "planning"
+          ]
+        },
+        {
+          "title": "Source-Modality Monitoring in Vision-Language Models",
+          "summary": "定义并研究视觉语言模型中的源模态监控能力。",
+          "url": "https://arxiv.org/abs/2604.22038",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "multimodal",
+            "vision-language",
+            "monitoring"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Incentivizing Neuro-symbolic Language-based Reasoning in VLMs via Reinforcement Learning",
+          "summary": "通过强化学习激励VLM中的神经符号语言推理。",
+          "url": "https://arxiv.org/abs/2604.22062",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "reinforcement-learning",
+            "vlm",
+            "neuro-symbolic"
+          ],
+          "focusTopics": [
+            "post-training"
+          ]
+        },
+        {
+          "title": "The 4B class of 2026 (benchmark)",
+          "summary": "4B 参数模型基准测试，对比不同模型性能",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1sxch39/the_4b_class_of_2026_benchmark/",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "benchmark",
+            "small-models"
+          ],
+          "focusTopics": [
+            "evals"
+          ]
+        },
+        {
+          "title": "An Artifact-based Agent Framework for Adaptive and Reproducible Medical Image Processing",
+          "summary": "提出基于工件的智能体框架用于自适应医学图像处理。",
+          "url": "https://arxiv.org/abs/2604.21936",
+          "score": 6,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "agent",
+            "medical-imaging",
+            "framework"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "Read the Paper, Write the Code: Agentic Reproduction of Social-Science Results",
+          "summary": "使用LLM智能体复现社会科学研究结果。",
+          "url": "https://arxiv.org/abs/2604.21965",
+          "score": 6,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "llm",
+            "agent",
+            "social-science"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "Sound Agentic Science Requires Adversarial Experiments",
+          "summary": "强调科学智能体需要对抗性实验来验证可靠性。",
+          "url": "https://arxiv.org/abs/2604.22080",
+          "score": 6,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "agent",
+            "adversarial",
+            "science"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "Introducing Background Temperature to Characterise Hidden Randomness in Large Language Models",
+          "summary": "引入背景温度概念刻画LLM中隐藏的随机性。",
+          "url": "https://arxiv.org/abs/2604.22411",
+          "score": 6,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "llm",
+            "randomness",
+            "temperature"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Shared Lexical Task Representations Explain Behavioral Variability In LLMs",
+          "summary": "发现共享词汇任务表征解释LLM行为变异性。",
+          "url": "https://arxiv.org/abs/2604.22027",
+          "score": 6,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "llm",
+            "behavior",
+            "representation"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Lightweight Retrieval-Augmented Generation and Large Language Model-Based Modeling for Scalable Patient-Trial Matching",
+          "summary": "提出轻量级RAG和LLM用于可扩展的患者-试验匹配。",
+          "url": "https://arxiv.org/abs/2604.22061",
+          "score": 6,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "rag",
+            "llm",
+            "healthcare"
+          ],
+          "focusTopics": [
+            "context-engineering"
+          ]
+        },
+        {
+          "title": "Where Should LoRA Go? Component-Type Placement in Hybrid Language Models",
+          "summary": "研究LoRA在混合语言模型中的组件类型放置。",
+          "url": "https://arxiv.org/abs/2604.22127",
+          "score": 6,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "lora",
+            "hybrid-models",
+            "fine-tuning"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "When Cow Urine Cures Constipation on YouTube: Limits of LLMs in Detecting Culture-specific Health Misinformation",
+          "summary": "研究LLM检测文化特定健康错误信息的局限性。",
+          "url": "https://arxiv.org/abs/2604.22002",
+          "score": 5.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "llm",
+            "misinformation",
+            "health"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "An End-to-End Ukrainian RAG for Local Deployment. Optimized Hybrid Search and Lightweight Generation",
+          "summary": "为乌克兰语本地部署优化的端到端RAG系统。",
+          "url": "https://arxiv.org/abs/2604.22095",
+          "score": 5.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "rag",
+            "ukrainian",
+            "local-deployment"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Knowledge-driven Augmentation and Retrieval for Integrative Temporal Adaptation",
+          "summary": "知识驱动的增强与检索用于整合时间适应。",
+          "url": "https://arxiv.org/abs/2604.22098",
+          "score": 5.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "temporal-adaptation",
+            "retrieval",
+            "knowledge-augmentation"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Optimal Question Selection from a Large Question Bank for Clinical Field Recovery in Conversational Psychiatric Intake",
+          "summary": "研究如何从大量题库中为精神科对话选择最优问题。",
+          "url": "https://arxiv.org/abs/2604.22067",
+          "score": 5,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "clinical",
+            "question-selection",
+            "nlp"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Adaptive Ultrasound Imaging with Physics-Informed NV-Raw2Insights-US AI",
+          "summary": "物理信息驱动的自适应超声成像AI模型。",
+          "url": "https://huggingface.co/blog/nvidia/raw2insights-adaptive-ultrasound-imaging",
+          "score": 5,
+          "sources": [
+            {
+              "name": "Hugging Face"
+            }
+          ],
+          "tags": [
+            "ultrasound",
+            "physics-informed",
+            "medical-ai"
+          ],
+          "focusTopics": []
         }
       ]
     },
@@ -291,139 +707,553 @@
       "title": "Engineering & Resources",
       "items": [
         {
-          "title": "pgBackRest Maintainer Ends 13-Year Project",
-          "summary": "The maintainer of pgBackRest, a popular open-source PostgreSQL backup tool, announced the end of its maintenance after 13 years, citing lack of financial support following Crunchy Data's acquisition. This discontinuation leaves many PostgreSQL users without a widely-adopted backup solution, highlighting the fragility of open-source projects dependent on corporate sponsorship and raising concerns about sustainability. pgBackRest supported full, differential, and incremental backups, as well as point-in-time recovery (PITR) via WAL archiving. The project had over 3,800 GitHub stars and was used in many production environments.",
-          "url": "https://github.com/pgbackrest/pgbackrest",
-          "score": 8,
+          "title": "mattpocock/skills",
+          "summary": "面向工程师的AI技能集，来自Claude Code配置。",
+          "url": "https://github.com/mattpocock/skills",
+          "score": 8.3,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "c0l0"
+              "name": "GitHub trending:all (+5645★)"
             }
           ],
           "tags": [
-            "PostgreSQL",
-            "open-source",
-            "backup",
-            "maintenance",
-            "community"
+            "ai-coding",
+            "skills",
+            "claude-code"
           ],
           "focusTopics": [
-            "memory"
-          ],
-          "background": "pgBackRest is an open-source backup and restore tool designed specifically for PostgreSQL databases. It provides efficient backup strategies and WAL archiving for point-in-time recovery. The project was initially sponsored by Crunchy Data, but after the company's acquisition, the new owners did not prioritize continued funding.",
-          "discussion": "The community expressed sadness and concern, with many users acknowledging the maintainer's dedication. Some pointed out that the loss of corporate sponsorship after an acquisition highlights the risk of relying on a single company. Others suggested that a for-profit company could step in to support the project."
+            "coding-agents"
+          ]
         },
         {
-          "title": "Lean vs. Agda, Coq, Isabelle: Tradeoffs in Proof Assistants",
-          "summary": "A blog post and Hacker News discussion compare Lean with other proof assistants like Agda, Coq, and Isabelle/HOL, highlighting tradeoffs in functional programming and theorem proving. This comparison helps programmers and mathematicians choose the right tool for formal verification, as Lean's growing community and decent-all-around capabilities challenge established tools. The author argues that Lean's main strength is being decent at everything rather than best at any single aspect, while some commenters note that Lean's proof object representation differs from the author's description.",
-          "url": "https://lawrencecpaulson.github.io//2026/04/23/Why_not_Lean.html",
-          "score": 8,
+          "title": "microsoft/VibeVoice",
+          "summary": "微软开源前沿语音AI VibeVoice。",
+          "url": "https://github.com/microsoft/VibeVoice",
+          "score": 7.935499999999999,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "ibobev"
+              "name": "GitHub trending:all (+757★)"
             }
           ],
           "tags": [
-            "Lean",
-            "proof assistants",
-            "functional programming",
-            "theorem proving",
-            "Agda"
+            "voice-ai",
+            "open-source",
+            "microsoft"
           ],
-          "focusTopics": [],
-          "background": "Proof assistants like Lean, Agda, Coq, and Isabelle/HOL are software tools that help users write and verify mathematical proofs and correct programs. They are based on type theory or higher-order logic and are used in both academia and industry for formal verification.",
-          "discussion": "Commenters shared mixed opinions: some praised Lean's functional programming book and community, while others from Agda and Coq backgrounds found Lean clunky or less powerful in tactics. A key correction noted that Lean does not retain massive proof objects as the author claimed."
+          "focusTopics": [
+            "model-release"
+          ]
         },
         {
-          "title": "Supreme Court Reviews Geofence Warrants for Cell Data",
-          "summary": "The US Supreme Court heard oral arguments on April 27, 2026, in a case examining whether geofence warrants that compel tech companies to hand over cell location data violate Fourth Amendment privacy protections. This case could set a major precedent for digital privacy, affecting how law enforcement accesses location data from companies like Google, Apple, and Uber, and potentially reshaping the balance between surveillance and privacy rights. Google stopped responding to geofence warrants last year by storing location data on-device instead of in the cloud, but other companies like Apple, Lyft, and Snapchat still receive such requests. The justices appeared divided, with some questioning whether users can simply disable location services to avoid surveillance.",
-          "url": "https://www.nytimes.com/2026/04/27/us/politics/supreme-court-cell-data-geofence.html",
-          "score": 8,
+          "title": "Alishahryar1/free-claude-code",
+          "summary": "免费使用Claude Code的终端/VSCode扩展。",
+          "url": "https://github.com/Alishahryar1/free-claude-code",
+          "score": 7.875,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "unethical_ban"
+              "name": "GitHub trending:all (+2949★)"
+            }
+          ],
+          "tags": [
+            "claude-code",
+            "free",
+            "vscode"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "Show HN: OSS Agent I built topped the TerminalBench on Gemini-3-flash-preview",
+          "summary": "开源Agent在TerminalBench上超越谷歌官方模型。",
+          "url": "https://github.com/dirac-run/dirac",
+          "score": 7.7059999999999995,
+          "sources": [
+            {
+              "name": "HN (302)"
+            }
+          ],
+          "tags": [
+            "open-source",
+            "agent",
+            "benchmark"
+          ],
+          "focusTopics": [
+            "coding-agents",
+            "evals"
+          ]
+        },
+        {
+          "title": "Tracking the history of the now-deceased OpenAI Microsoft AGI clause",
+          "summary": "追踪微软与OpenAI已失效的AGI条款历史。",
+          "url": "https://simonwillison.net/2026/Apr/27/now-deceased-agi-clause/#atom-everything",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "Simon Willison"
+            }
+          ],
+          "tags": [
+            "openai",
+            "microsoft",
+            "agi"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Luce DFlash: Qwen3.6-27B at up to 2x throughput on a single RTX 3090",
+          "summary": "Luce DFlash: Qwen3.6-27B 在单张 RTX 3090 上实现 2 倍吞吐量",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1sx8uok/luce_dflash_qwen3627b_at_up_to_2x_throughput_on_a/",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "speculative-decoding",
+            "qwen",
+            "inference"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "mattmireles/gemma-tuner-multimodal",
+          "summary": "Gemma Tuner Multimodal：在Apple Silicon上微调Gemma多模态模型。",
+          "url": "https://github.com/mattmireles/gemma-tuner-multimodal",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "Co-Starred"
+            }
+          ],
+          "tags": [
+            "gemma",
+            "fine-tuning",
+            "multimodal",
+            "apple-silicon"
+          ],
+          "focusTopics": [
+            "post-training"
+          ]
+        },
+        {
+          "title": "abhigyanpatwari/GitNexus",
+          "summary": "GitNexus：零服务器代码智能引擎，客户端知识图谱。",
+          "url": "https://github.com/abhigyanpatwari/GitNexus",
+          "score": 7.45,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+1102★)"
+            }
+          ],
+          "tags": [
+            "code-intelligence",
+            "knowledge-graph"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "badlogic/pi-mono",
+          "summary": "AI代理工具包，含编码CLI、统一LLM API等。",
+          "url": "https://github.com/badlogic/pi-mono",
+          "score": 7.4110000000000005,
+          "sources": [
+            {
+              "name": "GitHub trending:typescript (+974★)"
+            }
+          ],
+          "tags": [
+            "agents",
+            "toolkit",
+            "cli"
+          ],
+          "focusTopics": [
+            "coding-agents",
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "gastownhall/beads",
+          "summary": "Beads：为编程agent提供内存升级。",
+          "url": "https://github.com/gastownhall/beads",
+          "score": 7.122,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+498★)"
+            }
+          ],
+          "tags": [
+            "coding-agent",
+            "memory",
+            "context"
+          ],
+          "focusTopics": [
+            "context-engineering",
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "Join the new AI Agents Vibe Coding Course from Google and Kaggle",
+          "summary": "Google与Kaggle推出AI Agents Vibe Coding课程。",
+          "url": "https://blog.google/innovation-and-ai/technology/developers-tools/kaggle-genai-intensive-course-vibe-coding-june-2026/",
+          "score": 7,
+          "sources": [
+            {
+              "name": "Google AI Blog"
+            }
+          ],
+          "tags": [
+            "ai-agents",
+            "vibe-coding",
+            "education"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "microsoft/VibeVoice",
+          "summary": "微软开源Whisper风格音频模型VibeVoice。",
+          "url": "https://simonwillison.net/2026/Apr/27/vibevoice/#atom-everything",
+          "score": 7,
+          "sources": [
+            {
+              "name": "Simon Willison"
+            }
+          ],
+          "tags": [
+            "audio",
+            "whisper",
+            "open-source"
+          ],
+          "focusTopics": [
+            "model-release"
+          ]
+        },
+        {
+          "title": "Skymizer Taiwan Inc. Unveils Breakthrough Architecture Enabling Ultra-Large LLM Inference on a Single Card",
+          "summary": "Skymizer 发布新架构，单卡可运行 700B 参数模型",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1sx2vxp/skymizer_taiwan_inc_unveils_breakthrough/",
+          "score": 7,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "inference",
+            "hardware",
+            "architecture"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "huggingface/ml-intern",
+          "summary": "Hugging Face ml-intern：开源ML工程师，自动读论文、训练模型。",
+          "url": "https://github.com/huggingface/ml-intern",
+          "score": 7,
+          "sources": [
+            {
+              "name": "Co-Starred"
+            }
+          ],
+          "tags": [
+            "open-source",
+            "automation",
+            "mlops"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "Got OpenAI's privacy filter model running on-device via ExecuTorch",
+          "summary": "通过 ExecuTorch 在设备上运行 OpenAI 隐私过滤模型",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1sx5771/got_openais_privacy_filter_model_running_ondevice/",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
             }
           ],
           "tags": [
             "privacy",
-            "supreme court",
-            "geofence",
-            "fourth amendment",
-            "surveillance"
+            "on-device",
+            "executorch"
           ],
-          "focusTopics": [],
-          "background": "A geofence warrant is a search warrant that requires a tech company to identify all devices within a specific geographic area during a certain time window. Unlike traditional warrants targeting a specific suspect, geofence warrants sweep up data from innocent bystanders, raising Fourth Amendment concerns about unreasonable searches. The Supreme Court previously ruled in Carpenter v. United States (2018) that accessing historical cell-site location data requires a warrant.",
-          "discussion": "Commenters noted Google's shift to on-device location storage as a positive privacy move, but expressed concern that other companies still comply with geofence warrants. Some debated whether sharing data with third parties inherently waives privacy, while others drew analogies to police reviewing security camera footage. Skepticism was voiced about Justice Kavanaugh's apparent predetermined stance."
+          "focusTopics": []
         },
         {
-          "title": "Easyduino: Open Source PCB Devboards for KiCad",
-          "summary": "Easyduino is a GitHub repository that provides open-source KiCad PCB designs for popular devboards like Arduino Uno and ESP32, serving as learning resources and templates for custom hardware projects. This resource lowers the barrier for hobbyists and engineers to learn PCB design by offering proven, open-source layouts that can be directly used or modified, fostering innovation in open-source hardware. The designs are created in KiCad, a free and open-source EDA tool, and include both schematic and layout files. Users can adapt these templates to add custom features while maintaining standard form factors.",
-          "url": "https://github.com/Hanqaqa/Easyduino",
-          "score": 7,
+          "title": "Three limitations I keep hitting with retrieval-augmented generation in production and I'm running out of ideas [D]",
+          "summary": "Reddit讨论：生产RAG系统的三个局限性。",
+          "url": "https://www.reddit.com/r/MachineLearning/comments/1swxx1v/three_limitations_i_keep_hitting_with/",
+          "score": 6.5,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "Hanqaqa"
+              "name": "Reddit r/MachineLearning"
             }
           ],
           "tags": [
-            "KiCad",
-            "PCB Design",
-            "Open Source Hardware",
-            "Arduino",
-            "Devboards"
+            "rag",
+            "production",
+            "limitations"
           ],
-          "focusTopics": [],
-          "background": "KiCad is a popular open-source software suite for electronic design automation (EDA), used for creating schematics and printed circuit board (PCB) layouts. Arduino and ESP32 devboards are widely used in prototyping and IoT projects, but their proprietary designs are not always available for modification. Easyduino fills this gap by providing open-source alternatives that can be freely studied and customized.",
-          "discussion": "The community response is highly positive, with users praising Easyduino as an amazing resource for learning PCB design. Comments highlight its educational value, especially for beginners who don't know what they don't know, and suggest it can serve as a template for custom projects. One user also asks for advice on introducing PCB design to kids aged 9-13."
+          "focusTopics": [
+            "context-engineering"
+          ]
         },
         {
-          "title": "macOS 27 to Enforce TLS 1.2, Deprecate AFP",
-          "summary": "macOS 27 will require a minimum of TLS 1.2 for network connections and deprecate the Apple Filing Protocol (AFP), affecting Time Machine backups over AFP and legacy networking setups. This change improves security by enforcing modern encryption standards and pushes users to migrate from AFP to SMB, aligning with industry trends and reducing legacy protocol maintenance. Time Machine backups using AFP will need to switch to SMB; Apple's Time Capsule hardware has been unsupported since 2018. TLS 1.1 and earlier are already considered insecure and deprecated by major platforms.",
-          "url": "https://eclecticlight.co/2026/04/23/networking-changes-coming-in-macos-27/",
-          "score": 7,
+          "title": "TauricResearch/TradingAgents",
+          "summary": "TradingAgents：多智能体LLM金融交易框架。",
+          "url": "https://github.com/TauricResearch/TradingAgents",
+          "score": 6.322,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "pvtmert"
+              "name": "GitHub trending:all (+248★)"
             }
           ],
           "tags": [
-            "macOS",
-            "networking",
-            "TLS",
-            "AFP",
-            "Time Machine"
+            "multi-agent",
+            "finance",
+            "trading"
           ],
-          "focusTopics": [],
-          "background": "AFP is a proprietary network protocol for file services on macOS, while SMB is the modern cross-platform standard. TLS 1.2 is a cryptographic protocol that ensures secure data transmission; older versions have known vulnerabilities. Apple has been gradually phasing out AFP in favor of SMB since macOS 10.9 Mavericks.",
-          "discussion": "Commenters noted that Time Machine animations have become buggy, and some users still rely on AFP for NAS backups. One user built a Samba 4 setup for Time Capsule to enable SMB support. The TLS 1.2 requirement was widely seen as overdue."
+          "focusTopics": [
+            "agent-harness"
+          ]
         },
         {
-          "title": "Quarkdown: Programmable Markdown Superset Aims to Succeed LaTeX",
-          "summary": "Quarkdown is a new open-source, programmable Markdown superset that extends Markdown with features like variables, loops, and conditional logic, positioning itself as a potential successor to LaTeX for document typesetting. This matters because it offers a more accessible yet powerful alternative to LaTeX for creating complex documents, potentially lowering the barrier for researchers and writers who need advanced typesetting without the steep learning curve of LaTeX. Quarkdown is built on a custom evaluation model and supports generating PDF, HTML, and other formats, but it currently lacks a fixed-point layout iteration mechanism like Typst's context, which may limit its suitability for complex page layout tasks.",
-          "url": "https://quarkdown.com/",
+          "title": "Physical AI that Moves the World — Qasar Younis & Peter Ludwig, Applied Intuition",
+          "summary": "Applied Intuition将AI应用于采矿、无人机等物理世界。",
+          "url": "https://www.latent.space/p/appliedintuition",
           "score": 6,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "amai"
+              "name": "Latent Space"
             }
           ],
           "tags": [
-            "markdown",
-            "documentation",
-            "programming languages",
-            "tools"
+            "physical-ai",
+            "robotics",
+            "autonomous-vehicles"
           ],
-          "focusTopics": [],
-          "background": "Markdown is a lightweight markup language designed for easy readability and writing, but it lacks native support for complex formatting and programmability. LaTeX is a powerful typesetting system widely used in academia, but it has a steep learning curve. Quarkdown aims to bridge this gap by adding programmable features to Markdown while maintaining its simplicity.",
-          "discussion": "The community discussion is active with 85 comments, including the author engaging with users. Some commenters express concern that adding complexity undermines Markdown's simplicity, while others compare Quarkdown to existing tools like Pandoc, Quarto, and Typst, noting that the race for a LaTeX successor is still open."
+          "focusTopics": []
+        },
+        {
+          "title": "GBNF grammar tweak for faster Qwen3.6 35B-A3B and Qwen3.6 27B",
+          "summary": "GBNF 语法优化提升 Qwen3.6 模型推理速度",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1sx7w55/gbnf_grammar_tweak_for_faster_qwen36_35ba3b_and/",
+          "score": 6,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "qwen",
+            "inference",
+            "optimization"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "INT8 quantization gives me better accuracy than FP16 ! [D]",
+          "summary": "Reddit讨论：INT8量化比FP16精度更高。",
+          "url": "https://www.reddit.com/r/MachineLearning/comments/1sx35es/int8_quantization_gives_me_better_accuracy_than/",
+          "score": 6,
+          "sources": [
+            {
+              "name": "Reddit r/MachineLearning"
+            }
+          ],
+          "tags": [
+            "quantization",
+            "deep-learning"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "RooCodeInc/Roo-Code",
+          "summary": "在代码编辑器中提供AI代理开发团队。",
+          "url": "https://github.com/RooCodeInc/Roo-Code",
+          "score": 5.611999999999999,
+          "sources": [
+            {
+              "name": "GitHub trending:typescript (+58★)"
+            }
+          ],
+          "tags": [
+            "coding-agent",
+            "ide",
+            "ai"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "Rethinking Publication: A Certification Framework for AI-Enabled Research",
+          "summary": "提出AI辅助研究的认证框架。",
+          "url": "https://arxiv.org/abs/2604.22026",
+          "score": 5.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "ai-research",
+            "certification",
+            "framework"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Speech translation in Google Meet is now rolling out to mobile devices",
+          "summary": "Google Meet语音翻译功能向移动设备推出。",
+          "url": "https://simonwillison.net/2026/Apr/27/speech-translation-in-google-meet-is-now-rolling-out-to-mobile-d/#atom-everything",
+          "score": 5.5,
+          "sources": [
+            {
+              "name": "Simon Willison"
+            }
+          ],
+          "tags": [
+            "speech-translation",
+            "google-meet",
+            "mobile"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "ruvnet/ruflo",
+          "summary": "Claude的多智能体编排平台，支持自主工作流。",
+          "url": "https://github.com/ruvnet/ruflo",
+          "score": 5.367,
+          "sources": [
+            {
+              "name": "GitHub trending:typescript (+178★)"
+            }
+          ],
+          "tags": [
+            "agents",
+            "orchestration",
+            "claude"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "davila7/claude-code-templates",
+          "summary": "Claude Code模板的CLI工具，用于配置和监控。",
+          "url": "https://github.com/davila7/claude-code-templates",
+          "score": 5.3309999999999995,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+154★)"
+            }
+          ],
+          "tags": [
+            "claude-code",
+            "cli",
+            "templates"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "openai/openai-cs-agents-demo",
+          "summary": "OpenAI Agents SDK实现的客服用例演示。",
+          "url": "https://github.com/openai/openai-cs-agents-demo",
+          "score": 5.183999999999999,
+          "sources": [
+            {
+              "name": "GitHub trending:python (+56★)"
+            }
+          ],
+          "tags": [
+            "agents",
+            "openai",
+            "sdk"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "The AI-powered R&D department: how agentic AI is supercharging engineering velocity - The Manufacturer",
+          "summary": "探讨AI代理如何加速工程研发效率。",
+          "url": "https://www.themanufacturer.com/articles/the-ai-powered-rd-department-how-agentic-ai-is-supercharging-engineering-velocity/",
+          "score": 5,
+          "sources": [
+            {
+              "name": "themanufacturer.com"
+            }
+          ],
+          "tags": [
+            "agentic-ai",
+            "engineering",
+            "productivity"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "“The Abstraction Fallacy: Why AI Can Simulate But Not Instantiate Consciousness.” | The Verge",
+          "summary": "文章探讨AI模拟意识与实例化意识的区别。",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/919395/the-abstraction-fallacy-why-ai-can-simulate-but-not-instantiate-consciousness",
+          "score": 5,
+          "sources": [
+            {
+              "name": "theverge.com"
+            }
+          ],
+          "tags": [
+            "consciousness",
+            "philosophy"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "End-2-end tutorial on fine-tuning, the whole journey",
+          "summary": "端到端微调教程，以 wildfire 检测为例",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1sxgq6l/end2end_tutorial_on_finetuning_the_whole_journey/",
+          "score": 5,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "fine-tuning",
+            "tutorial"
+          ],
+          "focusTopics": [
+            "post-training"
+          ]
+        },
+        {
+          "title": "Talkie: a 13B vintage language model from 1930",
+          "summary": "Talkie：一个13B参数的1930年代风格语言模型。",
+          "url": "https://talkie-lm.com/introducing-talkie",
+          "score": 1.919,
+          "sources": [
+            {
+              "name": "HN (73)"
+            }
+          ],
+          "tags": [
+            "llm",
+            "retro",
+            "language-model"
+          ],
+          "focusTopics": []
         }
       ]
     }
-  ]
+  ],
+  "aiSummary": "今日AI领域迎来重大变动，[微软与OpenAI终止独家及收入分成协议](#item-bloomberg-com-news-articles-2026-04-27-microsoft-to-stop-sha)，双方著名的AGI协议也随之失效，OpenAI重获自由。在研究方面，[微软开源了40亿参数的图像转3D模型TRELLIS.2](#item-reddit-com-r-LocalLLaMA-comments-1sxf2u0-microsoft-presents-)，同时新论文指出基于结果的奖励无法保证可验证推理。工具更新上，[微软开源了前沿语音AI VibeVoice](#item-github-com-microsoft-VibeVoice)，并有项目提供免费使用Claude Code的途径。观点洞察中，业界正[追踪已失效的AGI条款历史](#item-simonwillison-net-2026-Apr-27-now-deceased-agi-clause)，并讨论生产级RAG系统的局限性，以及AI在物理世界中的应用。"
 }
