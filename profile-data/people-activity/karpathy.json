@@ -1007,6 +1007,70 @@
         "tooling",
         "deployment"
       ]
+    },
+    {
+      "type": "x",
+      "id": "2024987174077432126",
+      "url": "https://x.com/karpathy/status/2024987174077432126",
+      "author": {
+        "handle": "karpathy",
+        "displayName": "Andrej Karpathy",
+        "avatar": "https://avatars.githubusercontent.com/karpathy"
+      },
+      "content": "Bought a new Mac mini to properly tinker with claws over the weekend. The apple store person told me they are selling like hotcakes and everyone is confused :) I'm definitely a bit sus'd to run OpenClaw specifically - giving my private data/keys to 400K lines of vibe coded",
+      "createdAt": "2026-04-24T00:00:00Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Karpathy bought a Mac mini to experiment with 'claws' (likely a typo for 'Claude' or an agent framework) and expresses concern about running open-source code with private data.",
+      "worthReading": "Shows Karpathy's hands-on approach to AI agent development and his security concerns with community code.",
+      "tags": [
+        "agent",
+        "tooling"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2024583544157458452",
+      "url": "https://x.com/karpathy/status/2024583544157458452",
+      "author": {
+        "handle": "karpathy",
+        "displayName": "Andrej Karpathy",
+        "avatar": "https://avatars.githubusercontent.com/karpathy"
+      },
+      "content": "Very interested in what the coming era of highly bespoke software might look like. Example from this morning - I've become a bit loosy goosy with my cardio recently so I decided to do a more srs, regimented experiment to try to lower my Resting Heart Rate from 50 -> 45, over https://t.co/EDULdIpWmE",
+      "createdAt": "2026-04-23T00:00:00Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Karpathy envisions a future of highly personalized software, using his own health experiment as an example.",
+      "worthReading": "Highlights Karpathy's interest in AI-driven personalization and self-experimentation.",
+      "tags": [
+        "agent",
+        "tooling"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2002118205729562949",
+      "url": "https://x.com/karpathy/status/2002118205729562949",
+      "author": {
+        "handle": "karpathy",
+        "displayName": "Andrej Karpathy",
+        "avatar": "https://avatars.githubusercontent.com/karpathy"
+      },
+      "content": "By training LLMs against automatically verifiable rewards across a number of environments (e.g. think math/code puzzles), the LLMs spontaneously develop strategies that look like 'reasoning' to humans - they learn to break down problem solving into intermediate calculations and they learn a number of probl",
+      "createdAt": "2026-03-01T00:00:00Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Karpathy explains how training LLMs with verifiable rewards leads to emergent reasoning behaviors.",
+      "worthReading": "Key insight into how reinforcement learning can produce reasoning capabilities in LLMs.",
+      "tags": [
+        "llm",
+        "fine-tuning",
+        "evaluation"
+      ]
     }
   ],
   "dailyCounts": [
@@ -1025,7 +1089,6 @@
     0,
     0,
     0,
-    0,
     3,
     3,
     0,
@@ -1039,7 +1102,8 @@
     4,
     3,
     4,
-    4
+    4,
+    3
   ],
-  "interestSummary": "Andrej Karpathy is deeply focused on using LLMs to build personal knowledge bases and exploring their dual nature as both impressively smart and surprisingly limited. He is also actively experimenting with automated research and tuning of small models like nanochat, and integrating LLMs into his coding workflow."
+  "interestSummary": "Andrej Karpathy is deeply focused on using LLMs to build personal knowledge bases and is actively experimenting with automated tuning of small models like nanochat. He also finds LLMs surprisingly both intelligent and limited, and notes that natural language is becoming a primary coding interface."
 }

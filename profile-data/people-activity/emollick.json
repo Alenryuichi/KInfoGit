@@ -1087,6 +1087,67 @@
         "llm"
       ],
       "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:flxq4uyjfotciovpw3x3fxnu/app.bsky.feed.post/3mkikvta3xs2p",
+      "url": "https://bsky.app/profile/emollick.bsky.social/post/3mkikvta3xs2p",
+      "author": {
+        "handle": "emollick.bsky.social",
+        "displayName": "Ethan Mollick",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:flxq4uyjfotciovpw3x3fxnu/bafkreigq63ljumc43yx5eoxchrq75d72irea6ddcceedwmdttxebyowc3q"
+      },
+      "content": "Very cool analysis of the submissions to a major management journal that shows how much the system of science, built for humans, is under strain as a result of AI. \n\nAI can be used to do better science or it can be used to just do more stuff. The danger is that \"more\" is winning due to incentives.",
+      "createdAt": "2026-04-27T17:12:19.074Z",
+      "likeCount": 49,
+      "replyCount": 3,
+      "repostCount": 17,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [
+        "evaluation"
+      ],
+      "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:flxq4uyjfotciovpw3x3fxnu/app.bsky.feed.post/3mkjgzxhsws2p",
+      "url": "https://bsky.app/profile/emollick.bsky.social/post/3mkjgzxhsws2p",
+      "author": {
+        "handle": "emollick.bsky.social",
+        "displayName": "Ethan Mollick",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:flxq4uyjfotciovpw3x3fxnu/bafkreigq63ljumc43yx5eoxchrq75d72irea6ddcceedwmdttxebyowc3q"
+      },
+      "content": "The new LLM trained only on pre-1931 text is small enough that it can potentially run on device, so, with the right tools, you can get a fully vintage version of Siri, but from the era of Downton Abbey (also a small model).\n\nHere, I asked for it to arrange for sushi delivery in Philadelphia. Hmmm...",
+      "createdAt": "2026-04-28T01:35:42.511Z",
+      "likeCount": 54,
+      "replyCount": 3,
+      "repostCount": 12,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [
+        "llm",
+        "deployment"
+      ],
+      "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:flxq4uyjfotciovpw3x3fxnu/app.bsky.feed.post/3mkjeansnt22p",
+      "url": "https://bsky.app/profile/emollick.bsky.social/post/3mkjeansnt22p",
+      "author": {
+        "handle": "emollick.bsky.social",
+        "displayName": "Ethan Mollick",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:flxq4uyjfotciovpw3x3fxnu/bafkreigq63ljumc43yx5eoxchrq75d72irea6ddcceedwmdttxebyowc3q"
+      },
+      "content": "Here is an AI trained just using text from 1931 or earlier, which leads to a lot of interesting experiments: can the model independently develop later inventions? Can it learn to code from examples alone?\n\nYou can talk to the model here: talkie-lm.com/chat\nDetails here: talkie-lm.com/introducing-...",
+      "createdAt": "2026-04-28T00:45:46.036Z",
+      "likeCount": 95,
+      "replyCount": 11,
+      "repostCount": 15,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [
+        "llm"
+      ],
+      "type": "bluesky"
     }
   ],
   "videos": [],
@@ -2134,10 +2195,90 @@
         "llm",
         "safety"
       ]
+    },
+    {
+      "type": "x",
+      "id": "2048812210839785668",
+      "url": "https://x.com/emollick/status/2048812210839785668",
+      "author": {
+        "handle": "emollick",
+        "displayName": "Ethan Mollick",
+        "avatar": null
+      },
+      "content": "Very cool analysis of the submissions to a major management journal that shows how much the",
+      "createdAt": "2026-04-28T04:19:48.937Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Analysis of management journal submissions reveals significant patterns.",
+      "worthReading": "Provides insight into academic publishing trends in management.",
+      "tags": [
+        "evaluation"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2021638881158857204",
+      "url": "https://x.com/emollick/status/2021638881158857204",
+      "author": {
+        "handle": "emollick",
+        "displayName": "Ethan Mollick",
+        "avatar": null
+      },
+      "content": "I pointed Claude Cowork at a set of 107 documents (PPTs, Word docs, Excel) that were initially",
+      "createdAt": "2026-04-28T04:19:48.937Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Testing Claude Cowork with a large set of documents to see how it handles multi-format data.",
+      "worthReading": "Demonstrates practical use of AI for document analysis.",
+      "tags": [
+        "agent",
+        "tooling"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "1964447221853966775",
+      "url": "https://x.com/emollick/status/1964447221853966775",
+      "author": {
+        "handle": "emollick",
+        "displayName": "Ethan Mollick",
+        "avatar": null
+      },
+      "content": "We are starting to see some nuanced discussions of what it means to work with advanced AI In this",
+      "createdAt": "2026-04-28T04:19:48.937Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Nuanced discussions emerging about working with advanced AI.",
+      "worthReading": "Highlights evolving perspectives on human-AI collaboration.",
+      "tags": [
+        "llm"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2038468659585208561",
+      "url": "https://x.com/emollick/status/2038468659585208561",
+      "author": {
+        "handle": "emollick",
+        "displayName": "Ethan Mollick",
+        "avatar": null
+      },
+      "content": "If it helps, I teach at a business school & many of my smartest students are hired by funds because they can reliably turn their only-human",
+      "createdAt": "2026-04-28T04:19:48.937Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Business school students are hired for their human skills that complement AI.",
+      "worthReading": "Shows the value of uniquely human skills in an AI-driven world.",
+      "tags": [
+        "deployment"
+      ]
     }
   ],
   "dailyCounts": [
-    0,
     0,
     0,
     0,
@@ -2166,7 +2307,8 @@
     8,
     7,
     8,
+    7,
     6
   ],
-  "interestSummary": "Ethan Mollick is closely tracking the capabilities and risks of frontier AI models like Claude Mythos, particularly their cybersecurity implications and the distinctive stylistic \"Claude-y\" quality of AI-generated text. He is also actively exploring AI's impact on education, writing style, and industry adaptation, as seen in his research on game studios and his experimental MBA class on \"vibefounding.\""
+  "interestSummary": "Ethan Mollick is deeply focused on the implications of advanced frontier AI models (particularly Anthropic's Mythos/Claude) for cybersecurity, writing style, and industry adaptation, while also exploring AI's role in education and business through experimental teaching like \"vibefounding.\" He is critically examining how AI capabilities are reshaping trust, job dynamics, and the narrative around both catastrophe and salvation."
 }

@@ -1037,10 +1037,93 @@
       "tags": [
         "tooling"
       ]
+    },
+    {
+      "type": "x",
+      "id": "1750636949612974498",
+      "url": "https://x.com/StasBekman/status/1750636949612974498",
+      "author": {
+        "handle": "stas00",
+        "displayName": "Stas Bekman",
+        "avatar": "https://avatars.githubusercontent.com/stas00"
+      },
+      "content": "If you were holding off to try @MSFTDeepSpeed ZeRO++ it looks like deepspeed@master should",
+      "createdAt": "2026-04-28T04:19:27.187Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Stas notes that DeepSpeed ZeRO++ is now available on master branch, encouraging users to try it.",
+      "worthReading": "Relevant for ML engineers using DeepSpeed for distributed training.",
+      "tags": [
+        "infra",
+        "deployment"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "1821362487151013970",
+      "url": "https://x.com/StasBekman/status/1821362487151013970",
+      "author": {
+        "handle": "stas00",
+        "displayName": "Stas Bekman",
+        "avatar": "https://avatars.githubusercontent.com/stas00"
+      },
+      "content": "Hear, hear, I'm excited to introduce a new performance metric: Maximum Achievable Matmul",
+      "createdAt": "2026-04-28T04:19:27.187Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Stas introduces a new metric called Maximum Achievable Matmul for evaluating performance.",
+      "worthReading": "Important for understanding ML model performance benchmarking.",
+      "tags": [
+        "evaluation",
+        "infra"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2029625103500317066",
+      "url": "https://x.com/StasBekman/status/2029625103500317066",
+      "author": {
+        "handle": "stas00",
+        "displayName": "Stas Bekman",
+        "avatar": "https://avatars.githubusercontent.com/stas00"
+      },
+      "content": "If you're trying out FA4, you're likely to run into not being able to load cutlass.cute",
+      "createdAt": "2026-04-28T04:19:27.187Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Stas warns about a common issue with FA4 involving cutlass.cute loading.",
+      "worthReading": "Useful for developers experimenting with FA4 (Flash Attention 4).",
+      "tags": [
+        "infra",
+        "tooling"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2014578754782409106",
+      "url": "https://x.com/StasBekman/status/2014578754782409106",
+      "author": {
+        "handle": "stas00",
+        "displayName": "Stas Bekman",
+        "avatar": "https://avatars.githubusercontent.com/stas00"
+      },
+      "content": "Thanks to an awesome contribution from @omarnomad The Machine Learning Engineering Open book now can",
+      "createdAt": "2026-04-28T04:19:27.187Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Stas thanks a contributor for enhancing the Machine Learning Engineering Open Book.",
+      "worthReading": "Highlights community contributions to ML educational resources.",
+      "tags": [
+        "llm",
+        "tooling"
+      ]
     }
   ],
   "dailyCounts": [
-    0,
     0,
     0,
     0,
@@ -1069,7 +1152,8 @@
     4,
     4,
     4,
+    4,
     4
   ],
-  "interestSummary": "Stas Bekman is currently focused on advanced deep learning infrastructure, specifically exploring DeepSpeed ZeRO++, FlashAttention 4 (FA4), and PyTorch tooling, while also compiling training logbooks for LLM/VLM models."
+  "interestSummary": "Stas Bekman is focused on optimizing large-scale model training, with recent interests in DeepSpeed ZeRO++, FlashAttention 4, and PyTorch tooling, as well as compiling LLM/VLM training logbooks and updating the Machine Learning Engineering Open Book."
 }

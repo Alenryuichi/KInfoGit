@@ -416,6 +416,27 @@
         "llm",
         "infra"
       ]
+    },
+    {
+      "type": "x",
+      "id": "2036834073369596295",
+      "url": "https://x.com/srush_nlp/status/2036834073369596295",
+      "author": {
+        "handle": "srush_io",
+        "displayName": "Sasha Rush",
+        "avatar": "https://avatars.githubusercontent.com/srush"
+      },
+      "content": "On the infra side, composer 2 uses CP. This is (i think?) the first real detail from using CP on MLA. My understanding is that each rank",
+      "createdAt": "2026-04-28T04:19:19.739Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Sasha Rush discusses infrastructure details about composer 2 using CP (context parallelism) on MLA (Multi-Head Latent Attention), noting it's the first real detail from using CP on MLA.",
+      "worthReading": "Provides insight into cutting-edge infrastructure for large language models, relevant for those working on model parallelism.",
+      "tags": [
+        "infra",
+        "llm"
+      ]
     }
   ],
   "dailyCounts": [
@@ -430,7 +451,6 @@
     0,
     0,
     0,
-    0,
     1,
     0,
     0,
@@ -447,8 +467,9 @@
     1,
     1,
     3,
+    1,
     1,
     1
   ],
-  "interestSummary": "Sasha Rush has recently joined Cursor, an AI-focused startup, and is deeply engaged in advancing machine learning tools, as shown by his interest in running JAX on the web via WebGPU and Wasm, as well as his continued wagers on Transformer architecture longevity."
+  "interestSummary": "Sasha Rush recently joined the Cursor team and is actively engaged in debates about Transformer architectures, while also showing interest in running JAX-based ML models in the browser via WebGPU and Wasm."
 }

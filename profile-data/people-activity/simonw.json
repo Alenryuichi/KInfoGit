@@ -637,6 +637,87 @@
         "multi-modal"
       ],
       "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mkjblmouzc2p",
+      "url": "https://bsky.app/profile/simonwillison.net/post/3mkjblmouzc2p",
+      "author": {
+        "handle": "simonwillison.net",
+        "displayName": "Simon Willison",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
+      },
+      "content": "Love this so much\n\n(Also definitive proof that humans are so much better than machines)",
+      "createdAt": "2026-04-27T23:58:12.738Z",
+      "likeCount": 102,
+      "replyCount": 2,
+      "repostCount": 11,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [],
+      "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mkjb3t2mhk2z",
+      "url": "https://bsky.app/profile/simonwillison.net/post/3mkjb3t2mhk2z",
+      "author": {
+        "handle": "simonwillison.net",
+        "displayName": "Simon Willison",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
+      },
+      "content": "Microsoft's MIT licensed VibeVoice speech-to-text model (think Whisper with speaker diarization) is really good - my notes on running the 5.71GB 4bit MLX conversion on an M5 MacBook, using about 60GB of RAM at peak and transcribing 1hr of audio in ~9 mins simonwillison.net/2026/Apr/27/...",
+      "createdAt": "2026-04-27T23:49:22.542Z",
+      "likeCount": 72,
+      "replyCount": 8,
+      "repostCount": 5,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [
+        "deployment",
+        "tooling"
+      ],
+      "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mkiprvdfv22b",
+      "url": "https://bsky.app/profile/simonwillison.net/post/3mkiprvdfv22b",
+      "author": {
+        "handle": "simonwillison.net",
+        "displayName": "Simon Willison",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
+      },
+      "content": "Today OpenAI announced that \"Revenue share payments from OpenAI to Microsoft continue through 2030, independent of OpenAI’s technology progress\"\n\nThat \"independent of OpenAI’s technology progress\" fragment appears to mean that the weird AGI clause is now deceased simonwillison.net/2026/Apr/27/...",
+      "createdAt": "2026-04-27T18:39:35.772Z",
+      "likeCount": 54,
+      "replyCount": 5,
+      "repostCount": 5,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [
+        "llm",
+        "infra"
+      ],
+      "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mkjl5mwpsk2h",
+      "url": "https://bsky.app/profile/simonwillison.net/post/3mkjl5mwpsk2h",
+      "author": {
+        "handle": "simonwillison.net",
+        "displayName": "Simon Willison",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
+      },
+      "content": "Some notes on talkie, a new \"vintage language model\" from a team including Alec Radford (yes, that Alec Radford) \"trained on 260B tokens of historical pre-1931 English text\" simonwillison.net/2026/Apr/28/...",
+      "createdAt": "2026-04-28T02:49:20.650Z",
+      "likeCount": 20,
+      "replyCount": 2,
+      "repostCount": 3,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [
+        "llm",
+        "fine-tuning"
+      ],
+      "type": "bluesky"
     }
   ],
   "videos": [],
@@ -739,6 +820,16 @@
       "summary": "<p>Chinese AI lab DeepSeek's last model release was V3.2 (and V3.2 Speciale) <a href=\"https://simonwillison.net/2025/Dec/1/deepseek-v32/\">last December</a>. They just dropped the first of their hotly anticipated V4 series in the shape of two preview models, <a...",
       "highlights": "DeepSeek V4 preview models achieve near-frontier performance at a fraction of the cost, challenging the pricing strategies of leading AI labs. The release signals a major shift towards cost-efficient AI development, making advanced models more accessible.",
       "worthReading": "For those tracking AI economics and model performance trade-offs, this post offers a clear analysis of how DeepSeek's pricing and capabilities compare to competitors, highlighting a potential trend in the industry.",
+      "type": "blog"
+    },
+    {
+      "title": "Tracking the history of the now-deceased OpenAI Microsoft AGI clause",
+      "url": "https://simonwillison.net/2026/Apr/27/now-deceased-agi-clause/#atom-entries",
+      "author": "Simon Willison",
+      "publishedAt": "2026-04-27T18:38:17+00:00",
+      "summary": "<p>For many years, Microsoft and OpenAI's relationship has included a weird clause saying that, should AGI be achieved, Microsoft's commercial IP rights to OpenAI's technology would be null and void. That clause appeared to end today. I decided to try and track its expression over time on <a...",
+      "highlights": "The AGI clause in the OpenAI-Microsoft contract, which would void Microsoft's IP rights upon AGI achievement, has been removed, signaling a shift in their partnership. This change may reflect OpenAI's evolving definition of AGI or strategic realignment.",
+      "worthReading": "It offers a fascinating historical tracking of a pivotal contractual clause, shedding light on the evolving relationship between two AI giants and the elusive concept of AGI.",
       "type": "blog"
     }
   ],
@@ -1282,10 +1373,51 @@
         "llm",
         "deployment"
       ]
+    },
+    {
+      "type": "x",
+      "id": "1970147806225854531",
+      "url": "https://x.com/simonw/status/1970147806225854531",
+      "author": {
+        "handle": "simonw",
+        "displayName": "Simon Willison",
+        "avatar": "https://avatars.githubusercontent.com/simonw"
+      },
+      "content": "It's interesting how \"better at code\" has become the defining goal of almost every AI lab over the",
+      "createdAt": "2026-04-28T04:18:29.492Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Simon Willison observes that improving code generation has become the primary objective for AI labs.",
+      "worthReading": "Highlights a key trend in AI development priorities.",
+      "tags": [
+        "llm",
+        "evaluation"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "sig-1777349909492-8r8r24",
+      "url": "https://x.com/simonw/highlights",
+      "author": {
+        "handle": "simonw",
+        "displayName": "Simon Willison",
+        "avatar": "https://avatars.githubusercontent.com/simonw"
+      },
+      "content": "I came up with a somewhat foolish new benchmark for testing image generation models, to exercise the new ChatGPT Images 2.0:",
+      "createdAt": "2026-04-28T04:18:29.492Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Simon Willison created a benchmark for testing image generation models, specifically for ChatGPT Images 2.0.",
+      "worthReading": "Shows creative evaluation of AI image generation capabilities.",
+      "tags": [
+        "multi-modal",
+        "evaluation"
+      ]
     }
   ],
   "dailyCounts": [
-    0,
     0,
     0,
     0,
@@ -1314,7 +1446,8 @@
     6,
     3,
     1,
-    1
+    4,
+    3
   ],
-  "interestSummary": "Simon Willison is deeply engaged in evaluating and comparing the latest AI models (Opus 4.7, Qwen3.6, Gemma 4) for coding and image generation, using a whimsical \"pelicans riding bicycles\" benchmark, while also exploring practical tools for document parsing, memory systems, and AI-assisted software development."
+  "interestSummary": "Simon Willison is deeply engaged in evaluating and comparing the latest AI models (Anthropic, Google, Meta, Qwen) for code generation and image generation, using a whimsical \"pelican riding a bicycle\" benchmark to test their capabilities. He is also actively exploring practical AI-assisted development tools, such as document parsing libraries and code interpreters, while maintaining his interest in open-source projects and developer productivity."
 }
