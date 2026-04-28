@@ -1,0 +1,429 @@
+{
+  "date": "2026-04-28",
+  "itemCount": 18,
+  "sections": [
+    {
+      "id": "headlines",
+      "title": "Headlines & Launches",
+      "items": [
+        {
+          "title": "Mercor breach leaks 4TB of voice samples and ID scans",
+          "summary": "A breach at AI staffing firm Mercor leaked 4TB of data, including voice samples and ID document scans from 40,000 contractors, creating a deepfake-ready dataset. This breach uniquely combines voice biometrics with identity documents, enabling sophisticated fraud such as banking voiceprint bypass and video call impersonation, and highlights the risks of collecting biometric data. The data was posted by the Lapsus$ hacking group on their leak site earlier this month, and ORAVYS is offering free analysis of the first three suspect samples for affected contractors.",
+          "url": "https://app.oravys.com/blog/mercor-breach-2026",
+          "score": 9,
+          "sources": [
+            {
+              "name": "hackernews",
+              "meta": "Oravys"
+            }
+          ],
+          "tags": [
+            "security",
+            "data breach",
+            "AI",
+            "biometrics",
+            "deepfake"
+          ],
+          "focusTopics": [],
+          "background": "Voice deepfakes can be created from just three seconds of audio, and are increasingly used in fraud. Biometric data like voiceprints and ID scans are considered \"forever passwords\" because they cannot be changed after a breach.",
+          "discussion": "Commenters noted the irony of sending voice samples to another AI company for verification, and emphasized the need for data minimization (\"Datensparsamkeit\"). Some also pointed out that biometrics should be treated as \"forever passwords\" due to their irreversibility."
+        },
+        {
+          "title": "China Blocks Meta's $2B Acquisition of AI Startup Manus",
+          "summary": "China's commerce ministry blocked Meta's $2 billion acquisition of AI startup Manus, citing export control and national security laws, despite Manus being headquartered in Singapore. This marks the first time China has blocked a foreign acquisition of an AI startup under its new export control regime, signaling escalating tech nationalism and potential precedent for future cross-border AI deals. Manus was founded in China, relocated to Singapore after a $75 million Benchmark-led round in May 2025, and its co-founders are under investigation for violating export control laws. The deal had already closed, raising questions about unwinding the transaction.",
+          "url": "https://www.cnbc.com/2026/04/27/meta-manus-china-blocks-acquisition-ai-startup.html",
+          "score": 8,
+          "sources": [
+            {
+              "name": "hackernews",
+              "meta": "yakkomajuri"
+            }
+          ],
+          "tags": [
+            "AI",
+            "geopolitics",
+            "acquisition",
+            "regulation",
+            "Meta"
+          ],
+          "focusTopics": [],
+          "background": "China's export control law includes a catch-all clause (Article 12) that allows the government to block transfers of technology deemed critical to national security. The move parallels the US approach to TikTok, asserting jurisdiction over Chinese-origin algorithms even when companies relocate abroad.",
+          "discussion": "Commenters noted the irony of China using the same national security arguments as the US, and debated whether this breaks Singapore's 'fig leaf' status for Chinese tech firms. Some argued the founders were not 'hostaged' but investigated for ignoring clear regulatory signals."
+        },
+        {
+          "title": "Super ZSNES Revives Classic Emulator with GPU Acceleration",
+          "summary": "The original developers of ZSNES have released Super ZSNES, a completely rewritten SNES emulator that offloads processing to the GPU for enhanced performance and accuracy. This marks a significant shift in SNES emulation by leveraging modern GPU hardware, potentially enabling higher resolutions, uncompressed audio, and per-game enhancements that were previously impossible on CPU-based emulators. Super ZSNES supports per-game enhancements and uncompressed audio replacements, and the developers have rewritten the emulator from scratch rather than patching the original codebase.",
+          "url": "https://zsnes.com/",
+          "score": 8,
+          "sources": [
+            {
+              "name": "hackernews",
+              "meta": "haunter"
+            }
+          ],
+          "tags": [
+            "emulation",
+            "retro gaming",
+            "GPU computing",
+            "SNES"
+          ],
+          "focusTopics": [
+            "memory"
+          ],
+          "background": "ZSNES was one of the earliest and most popular SNES emulators, first released in the late 1990s. Traditional emulators rely on CPU-based cycle-accurate emulation, which can be computationally expensive. GPU-powered emulation offloads graphics rendering to the graphics card, allowing for higher resolutions and more accurate visual effects.",
+          "discussion": "Community members expressed nostalgia for the original ZSNES and excitement about the GPU-powered rewrite. Some commenters discussed technical details, such as how the PPU emulation could be further optimized by capturing register state per pixel and rendering on the GPU. Others highlighted the potential for uncompressed audio samples, noting efforts to track down original samples used by composer Nobuo Uematsu."
+        },
+        {
+          "title": "GitHub Copilot Moves to Usage-Based Billing",
+          "summary": "GitHub announced that Copilot will transition to usage-based billing starting June 1, 2025, replacing the previous flat-rate model with AI Credits that are consumed per request based on model multipliers. This change significantly raises costs for heavy users, especially those relying on powerful models like Claude Opus, and reflects a broader industry shift toward usage-based AI pricing, potentially driving developers to explore cheaper alternatives. Copilot Pro and Pro+ subscriptions now include $10 and $39 in monthly AI Credits respectively, but model multipliers range from 1x for GPT-4o mini to 27x for Claude Opus, meaning a single Opus request could cost up to $5 in credits.",
+          "url": "https://github.blog/news-insights/company-news/github-copilot-is-moving-to-usage-based-billing/",
+          "score": 8,
+          "sources": [
+            {
+              "name": "hackernews",
+              "meta": "frizlab"
+            }
+          ],
+          "tags": [
+            "GitHub Copilot",
+            "pricing",
+            "AI tools",
+            "developer tools",
+            "billing"
+          ],
+          "focusTopics": [],
+          "background": "GitHub Copilot is an AI-powered code completion and chat tool integrated into IDEs. Previously, it offered unlimited requests under a flat monthly fee, but the new model ties usage directly to token consumption, similar to API pricing from model providers like OpenAI and Anthropic.",
+          "discussion": "Community comments express widespread frustration, with users noting that the new pricing effectively eliminates the value of the subscription for heavy users, who previously could get hundreds of dollars worth of usage for $10. Some point out that the model multipliers make it cheaper to use API providers directly, and many are considering switching to alternatives like DeepSeek or OpenRouter."
+        },
+        {
+          "title": "The Lost Art of Staring at Walls",
+          "summary": "An essay argues that constant smartphone use has eliminated valuable moments of disattention, such as staring at walls, which are essential for mental rest and creativity. This resonates deeply in modern tech culture, highlighting a widespread loss of mental downtime and sparking debate on the value of unstructured thinking versus constant stimulation. The essay, titled \"Men who stare at walls,\" received high engagement with 424 points and 199 comments, indicating strong interest in the topic of attention and disattention.",
+          "url": "https://www.alexselimov.com/posts/men_who_stare_at_walls/",
+          "score": 7,
+          "sources": [
+            {
+              "name": "hackernews",
+              "meta": "aselimov3"
+            }
+          ],
+          "tags": [
+            "attention",
+            "meditation",
+            "technology",
+            "mental health",
+            "productivity"
+          ],
+          "focusTopics": [],
+          "background": "In an age of constant smartphone notifications and social media feeds, people rarely experience true mental downtime. Disattention refers to moments when the mind is free to wander without external input, which can foster creativity and reflection.",
+          "discussion": "Commenters largely agree that smartphones steal disattention, with some comparing wall-staring to meditation. One user notes that meditation is like mental training, while wall-staring offers a simpler form of mental rest."
+        },
+        {
+          "title": "The Woes of Sanitizing SVGs",
+          "summary": "A detailed blog post by a TurboWarp developer chronicles the ongoing challenges of sanitizing SVGs in Scratch from 2019 to 2026, revealing persistent HTTP leak vulnerabilities via CSS features like @import, url(), and image-set(). This matters because SVG sanitization is a widespread web security problem; the article demonstrates that custom sanitization pipelines are fragile and recommends Content Security Policy (CSP) as the only reliable defense, which has practical implications for any site allowing user-uploaded SVGs. The author notes that TurboWarp avoided the 2026 HTTP leaks by deleting CSS sanitization code entirely, reducing package size by 400KB. The article also references Cloudflare's svg-hush project and the HTML Sanitizer API's limited SVG support.",
+          "url": "https://muffin.ink/blog/scratch-svg-sanitization/",
+          "score": 7,
+          "sources": [
+            {
+              "name": "hackernews",
+              "meta": "varun_ch"
+            }
+          ],
+          "tags": [
+            "security",
+            "SVG",
+            "CSP",
+            "web development",
+            "sanitization"
+          ],
+          "focusTopics": [
+            "memory"
+          ],
+          "background": "SVG (Scalable Vector Graphics) files can contain JavaScript, CSS, and external references, making them a vector for XSS and HTTP leak attacks. Sanitization attempts to strip dangerous content, but attackers continually find bypasses. Content Security Policy (CSP) is a browser security mechanism that restricts resource loading, effectively mitigating such leaks.",
+          "discussion": "Commenters largely agree that CSP is the only reliable fix, with simonw highlighting that CSP can be set via HTML meta tags. andybak suggests supporting only a safe SVG subset, while philo23 wishes for a sandbox attribute for inline SVGs. evilpie notes the HTML Sanitizer API's default SVG allowlist but its lack of CSS sanitization."
+        },
+        {
+          "title": "Interactive test explores blue-green boundary",
+          "summary": "A new interactive website, ismy.blue, lets users find where they personally draw the line between blue and green by adjusting a color slider, then compares their result to the population average. This experiment highlights how color perception varies among individuals and may be influenced by language and culture, sparking public discussion on linguistic relativity and the subjective nature of color categorization. The test presents a series of color swatches ranging from blue to green, and users classify each as either blue or green; the site then estimates their boundary point and shows how it compares to others.",
+          "url": "https://ismy.blue/",
+          "score": 6,
+          "sources": [
+            {
+              "name": "hackernews",
+              "meta": "theogravity"
+            }
+          ],
+          "tags": [
+            "color perception",
+            "linguistics",
+            "interactive",
+            "psychology",
+            "visual perception"
+          ],
+          "focusTopics": [
+            "memory"
+          ],
+          "background": "Color perception is not universal; different languages have different color categories. For example, some languages lack a separate word for blue or green, which can affect how speakers perceive and categorize colors. This phenomenon is studied under linguistic relativity, also known as the Sapir-Whorf hypothesis.",
+          "discussion": "Commenters shared personal anecdotes about color disagreements and noted that colors like turquoise or teal have their own names, making the binary blue/green choice feel forced. Some also pointed out a potential anchoring effect in the test's design."
+        },
+        {
+          "title": "Google Meet Speech Translation Rolls Out to Mobile",
+          "summary": "Google Meet's speech translation feature, which provides real-time voice translation with voice imitation, is now rolling out to mobile devices, supporting English, Spanish, French, German, Portuguese, and Italian. This rollout brings a sci-fi-like real-time translation experience to mobile users, potentially breaking language barriers in meetings on the go. However, the feature is still in early alpha, so reliability and language coverage remain limited. The feature translates speech with a short delay and outputs text in the user's preferred language using a voice that roughly imitates the original speaker. It was tested successfully between two laptops but failed between an iPhone and iPad, indicating cross-platform issues.",
+          "url": "https://simonwillison.net/2026/Apr/27/speech-translation-in-google-meet-is-now-rolling-out-to-mobile-d/#atom-everything",
+          "score": 6,
+          "sources": [
+            {
+              "name": "rss",
+              "meta": "Simon Willison"
+            }
+          ],
+          "tags": [
+            "Google Meet",
+            "speech translation",
+            "mobile",
+            "AI"
+          ],
+          "focusTopics": [
+            "memory"
+          ],
+          "background": "Google Meet's speech translation was first introduced as a limited alpha for businesses and later became generally available for select Workspace plans in early 2026. The feature uses AI to provide real-time voice dubbing, allowing participants to hear translations in a synthetic voice that mimics the original speaker. The mobile rollout extends this capability to smartphones and tablets."
+        }
+      ]
+    },
+    {
+      "id": "research",
+      "title": "Research & Innovation",
+      "items": [
+        {
+          "title": "Microsoft and OpenAI End Exclusive Revenue-Sharing Deal",
+          "summary": "Microsoft and OpenAI have terminated their exclusive revenue-sharing agreement, allowing OpenAI to use other cloud providers such as AWS and potentially Google TPUs. The deal, which previously required OpenAI to run exclusively on Azure, ended on April 27, 2026. This marks a major shift in the AI industry, ending one of the most influential partnerships between a cloud provider and an AI lab. It could intensify competition among cloud providers (Azure, AWS, Google Cloud) and give OpenAI more flexibility to optimize costs and performance. Microsoft's stake in OpenAI has reportedly dropped from 49% to 27% over time. The termination also removes a clause that would nullify Microsoft's IP rights if AGI were achieved, and OpenAI is now free to use Google's newly launched Gen 8 TPUs.",
+          "url": "https://www.bloomberg.com/news/articles/2026-04-27/microsoft-to-stop-sharing-revenue-with-main-ai-partner-openai",
+          "score": 9,
+          "sources": [
+            {
+              "name": "hackernews",
+              "meta": "helsinkiandrew"
+            }
+          ],
+          "tags": [
+            "AI",
+            "Microsoft",
+            "OpenAI",
+            "Cloud Computing",
+            "Partnership"
+          ],
+          "focusTopics": [],
+          "background": "Microsoft and OpenAI had a long-standing exclusive partnership where OpenAI's models ran exclusively on Azure, and Microsoft shared revenue. This deal was seen as a key competitive advantage for Azure in the AI cloud market. The change allows OpenAI to diversify its cloud infrastructure and potentially reduce costs.",
+          "discussion": "Commenters are divided: some see Google as the biggest winner, as OpenAI may now adopt TPUs, while others question why Microsoft agreed to such a friendly deal. There is speculation that Microsoft realized the exclusive arrangement was hindering OpenAI's competitiveness against rivals like Anthropic."
+        },
+        {
+          "title": "FDA Approves First Gene Therapy for Genetic Hearing Loss",
+          "summary": "The FDA has approved the first-ever gene therapy for genetic hearing loss, targeting mutations in the OTOF gene that cause congenital deafness. This marks a historic milestone in treating a form of inherited hearing loss with a one-time therapy. This approval opens the door to treating a previously incurable form of deafness, offering hope to patients with OTOF mutations. It also paves the way for gene therapies targeting other genetic causes of hearing loss, potentially benefiting millions worldwide. The therapy is specifically for patients with biallelic mutations in the OTOF gene, which accounts for a small percentage of congenital hearing loss cases. It involves delivering a functional copy of the OTOF gene via an adeno-associated virus (AAV) vector directly into the inner ear.",
+          "url": "https://www.fda.gov/news-events/press-announcements/fda-approves-first-ever-gene-therapy-treatment-genetic-hearing-loss-under-national-priority-voucher",
+          "score": 9,
+          "sources": [
+            {
+              "name": "hackernews",
+              "meta": "JeanKage"
+            }
+          ],
+          "tags": [
+            "gene therapy",
+            "FDA approval",
+            "hearing loss",
+            "medical breakthrough",
+            "biotechnology"
+          ],
+          "focusTopics": [],
+          "background": "Genetic hearing loss affects about 1 in 500 newborns, with OTOF mutations causing a form of nonsyndromic recessive deafness (DFNB9). Otoferlin, the protein encoded by OTOF, is essential for synaptic transmission in inner hair cells; its absence leads to severe-to-profound hearing loss. Gene therapy aims to restore otoferlin production by delivering a healthy copy of the gene.",
+          "discussion": "Community comments express strong support, with many sharing personal stories of hearing loss and hope for future treatments. Some note that while this therapy targets a small population, it represents a crucial step for broader gene therapy applications. Others highlight the need for treatments for other genetic causes, such as GJB2 mutations."
+        },
+        {
+          "title": "Open-source agent Dirac tops TerminalBench with Gemini-3-flash-preview",
+          "summary": "Dirac, an open-source CLI agent, achieved a score of 65.2% on TerminalBench 2.0 using Gemini-3-flash-preview, surpassing Google's official agent (47.8%) and the previous top closed-source model Junie CLI (64.3%). The author claims no cheating mechanisms were used and the run was fully compliant with leaderboard rules. This result demonstrates that an open-source agent can outperform proprietary ones, highlighting the importance of the agent harness (the orchestration layer) over the underlying model. It also validates novel techniques like hash-anchored edits and AST-based context fetching, which could significantly reduce API costs and improve code quality. Dirac employs hash-anchored edits for precise file modifications, uses the language's AST to selectively fetch relevant context (avoiding large file reads), and batches all operations for efficiency. The author has open-sourced the full agent on GitHub and submitted a PR to the leaderboard, but it has not been merged due to maintainer backlog.",
+          "url": "https://github.com/dirac-run/dirac",
+          "score": 8,
+          "sources": [
+            {
+              "name": "hackernews",
+              "meta": "GodelNumbering"
+            }
+          ],
+          "tags": [
+            "AI agents",
+            "open source",
+            "benchmarking",
+            "terminal automation",
+            "Gemini"
+          ],
+          "focusTopics": [
+            "multi-agent"
+          ],
+          "background": "TerminalBench 2.0 is a benchmark for evaluating AI agents on real-world terminal tasks like compiling code and setting up servers. The agent harness refers to the system that orchestrates the model's interactions with the environment, including tool use, context management, and edit strategies. Hash-anchored edits use stable line hashes to target edits precisely, avoiding errors from line-number mismatches. AST (Abstract Syntax Tree) is a tree representation of source code structure, used here to fetch only relevant code segments into the model's context.",
+          "discussion": "Commenters praised Dirac's novel techniques, especially hash-anchored edits and AST-based context fetching, and noted the significant impact of the harness on performance. Some raised concerns about potential overfitting to Gemini-3-flash-preview and suggested benchmarking other models. One user questioned telemetry data collection, but the author clarified it is minimal and opt-out."
+        },
+        {
+          "title": "Microsoft Open-Sources VibeVoice with Speaker Diarization",
+          "summary": "Microsoft released VibeVoice, an MIT-licensed speech-to-text model that unifies transcription, speaker diarization, and timestamping in a single inference pass. Simon Willison demonstrated running it on a Mac using mlx-audio and a 4-bit quantized MLX model, transcribing an hour of audio in under 9 minutes. VibeVoice makes high-quality, speaker-aware transcription accessible to developers and researchers, reducing the need for complex multi-model pipelines. Its MIT license and easy one-liner setup lower the barrier for integrating advanced speech recognition into applications. The model supports up to one hour of audio per inference, with a default max token limit of 8192 (about 25 minutes) that can be increased via --max-tokens. The 4-bit quantized MLX version is 5.71GB, while the full model is 17.3GB; peak memory usage was observed at 61.5GB during prefill on a 128GB M5 Max MacBook Pro.",
+          "url": "https://simonwillison.net/2026/Apr/27/vibevoice/#atom-everything",
+          "score": 8,
+          "sources": [
+            {
+              "name": "rss",
+              "meta": "Simon Willison"
+            }
+          ],
+          "tags": [
+            "speech-to-text",
+            "open-source",
+            "machine learning",
+            "Microsoft",
+            "audio processing"
+          ],
+          "focusTopics": [
+            "memory"
+          ],
+          "background": "Traditional speech-to-text pipelines often separate transcription, diarization, and timestamping into different models, increasing complexity and latency. VibeVoice follows the Whisper-style architecture but adds built-in speaker diarization, outputting structured JSON with speaker IDs and timestamps. MLX is Apple's machine learning framework for Apple Silicon, and mlx-audio is a library that enables efficient audio model inference on Macs."
+        }
+      ]
+    },
+    {
+      "id": "engineering",
+      "title": "Engineering & Resources",
+      "items": [
+        {
+          "title": "pgBackRest Maintainer Ends 13-Year Project",
+          "summary": "The maintainer of pgBackRest, a popular open-source PostgreSQL backup tool, announced the end of its maintenance after 13 years, citing lack of financial support following Crunchy Data's acquisition. This discontinuation leaves many PostgreSQL users without a widely-adopted backup solution, highlighting the fragility of open-source projects dependent on corporate sponsorship and raising concerns about sustainability. pgBackRest supported full, differential, and incremental backups, as well as point-in-time recovery (PITR) via WAL archiving. The project had over 3,800 GitHub stars and was used in many production environments.",
+          "url": "https://github.com/pgbackrest/pgbackrest",
+          "score": 8,
+          "sources": [
+            {
+              "name": "hackernews",
+              "meta": "c0l0"
+            }
+          ],
+          "tags": [
+            "PostgreSQL",
+            "open-source",
+            "backup",
+            "maintenance",
+            "community"
+          ],
+          "focusTopics": [
+            "memory"
+          ],
+          "background": "pgBackRest is an open-source backup and restore tool designed specifically for PostgreSQL databases. It provides efficient backup strategies and WAL archiving for point-in-time recovery. The project was initially sponsored by Crunchy Data, but after the company's acquisition, the new owners did not prioritize continued funding.",
+          "discussion": "The community expressed sadness and concern, with many users acknowledging the maintainer's dedication. Some pointed out that the loss of corporate sponsorship after an acquisition highlights the risk of relying on a single company. Others suggested that a for-profit company could step in to support the project."
+        },
+        {
+          "title": "Lean vs. Agda, Coq, Isabelle: Tradeoffs in Proof Assistants",
+          "summary": "A blog post and Hacker News discussion compare Lean with other proof assistants like Agda, Coq, and Isabelle/HOL, highlighting tradeoffs in functional programming and theorem proving. This comparison helps programmers and mathematicians choose the right tool for formal verification, as Lean's growing community and decent-all-around capabilities challenge established tools. The author argues that Lean's main strength is being decent at everything rather than best at any single aspect, while some commenters note that Lean's proof object representation differs from the author's description.",
+          "url": "https://lawrencecpaulson.github.io//2026/04/23/Why_not_Lean.html",
+          "score": 8,
+          "sources": [
+            {
+              "name": "hackernews",
+              "meta": "ibobev"
+            }
+          ],
+          "tags": [
+            "Lean",
+            "proof assistants",
+            "functional programming",
+            "theorem proving",
+            "Agda"
+          ],
+          "focusTopics": [],
+          "background": "Proof assistants like Lean, Agda, Coq, and Isabelle/HOL are software tools that help users write and verify mathematical proofs and correct programs. They are based on type theory or higher-order logic and are used in both academia and industry for formal verification.",
+          "discussion": "Commenters shared mixed opinions: some praised Lean's functional programming book and community, while others from Agda and Coq backgrounds found Lean clunky or less powerful in tactics. A key correction noted that Lean does not retain massive proof objects as the author claimed."
+        },
+        {
+          "title": "Supreme Court Reviews Geofence Warrants for Cell Data",
+          "summary": "The US Supreme Court heard oral arguments on April 27, 2026, in a case examining whether geofence warrants that compel tech companies to hand over cell location data violate Fourth Amendment privacy protections. This case could set a major precedent for digital privacy, affecting how law enforcement accesses location data from companies like Google, Apple, and Uber, and potentially reshaping the balance between surveillance and privacy rights. Google stopped responding to geofence warrants last year by storing location data on-device instead of in the cloud, but other companies like Apple, Lyft, and Snapchat still receive such requests. The justices appeared divided, with some questioning whether users can simply disable location services to avoid surveillance.",
+          "url": "https://www.nytimes.com/2026/04/27/us/politics/supreme-court-cell-data-geofence.html",
+          "score": 8,
+          "sources": [
+            {
+              "name": "hackernews",
+              "meta": "unethical_ban"
+            }
+          ],
+          "tags": [
+            "privacy",
+            "supreme court",
+            "geofence",
+            "fourth amendment",
+            "surveillance"
+          ],
+          "focusTopics": [],
+          "background": "A geofence warrant is a search warrant that requires a tech company to identify all devices within a specific geographic area during a certain time window. Unlike traditional warrants targeting a specific suspect, geofence warrants sweep up data from innocent bystanders, raising Fourth Amendment concerns about unreasonable searches. The Supreme Court previously ruled in Carpenter v. United States (2018) that accessing historical cell-site location data requires a warrant.",
+          "discussion": "Commenters noted Google's shift to on-device location storage as a positive privacy move, but expressed concern that other companies still comply with geofence warrants. Some debated whether sharing data with third parties inherently waives privacy, while others drew analogies to police reviewing security camera footage. Skepticism was voiced about Justice Kavanaugh's apparent predetermined stance."
+        },
+        {
+          "title": "Easyduino: Open Source PCB Devboards for KiCad",
+          "summary": "Easyduino is a GitHub repository that provides open-source KiCad PCB designs for popular devboards like Arduino Uno and ESP32, serving as learning resources and templates for custom hardware projects. This resource lowers the barrier for hobbyists and engineers to learn PCB design by offering proven, open-source layouts that can be directly used or modified, fostering innovation in open-source hardware. The designs are created in KiCad, a free and open-source EDA tool, and include both schematic and layout files. Users can adapt these templates to add custom features while maintaining standard form factors.",
+          "url": "https://github.com/Hanqaqa/Easyduino",
+          "score": 7,
+          "sources": [
+            {
+              "name": "hackernews",
+              "meta": "Hanqaqa"
+            }
+          ],
+          "tags": [
+            "KiCad",
+            "PCB Design",
+            "Open Source Hardware",
+            "Arduino",
+            "Devboards"
+          ],
+          "focusTopics": [],
+          "background": "KiCad is a popular open-source software suite for electronic design automation (EDA), used for creating schematics and printed circuit board (PCB) layouts. Arduino and ESP32 devboards are widely used in prototyping and IoT projects, but their proprietary designs are not always available for modification. Easyduino fills this gap by providing open-source alternatives that can be freely studied and customized.",
+          "discussion": "The community response is highly positive, with users praising Easyduino as an amazing resource for learning PCB design. Comments highlight its educational value, especially for beginners who don't know what they don't know, and suggest it can serve as a template for custom projects. One user also asks for advice on introducing PCB design to kids aged 9-13."
+        },
+        {
+          "title": "macOS 27 to Enforce TLS 1.2, Deprecate AFP",
+          "summary": "macOS 27 will require a minimum of TLS 1.2 for network connections and deprecate the Apple Filing Protocol (AFP), affecting Time Machine backups over AFP and legacy networking setups. This change improves security by enforcing modern encryption standards and pushes users to migrate from AFP to SMB, aligning with industry trends and reducing legacy protocol maintenance. Time Machine backups using AFP will need to switch to SMB; Apple's Time Capsule hardware has been unsupported since 2018. TLS 1.1 and earlier are already considered insecure and deprecated by major platforms.",
+          "url": "https://eclecticlight.co/2026/04/23/networking-changes-coming-in-macos-27/",
+          "score": 7,
+          "sources": [
+            {
+              "name": "hackernews",
+              "meta": "pvtmert"
+            }
+          ],
+          "tags": [
+            "macOS",
+            "networking",
+            "TLS",
+            "AFP",
+            "Time Machine"
+          ],
+          "focusTopics": [],
+          "background": "AFP is a proprietary network protocol for file services on macOS, while SMB is the modern cross-platform standard. TLS 1.2 is a cryptographic protocol that ensures secure data transmission; older versions have known vulnerabilities. Apple has been gradually phasing out AFP in favor of SMB since macOS 10.9 Mavericks.",
+          "discussion": "Commenters noted that Time Machine animations have become buggy, and some users still rely on AFP for NAS backups. One user built a Samba 4 setup for Time Capsule to enable SMB support. The TLS 1.2 requirement was widely seen as overdue."
+        },
+        {
+          "title": "Quarkdown: Programmable Markdown Superset Aims to Succeed LaTeX",
+          "summary": "Quarkdown is a new open-source, programmable Markdown superset that extends Markdown with features like variables, loops, and conditional logic, positioning itself as a potential successor to LaTeX for document typesetting. This matters because it offers a more accessible yet powerful alternative to LaTeX for creating complex documents, potentially lowering the barrier for researchers and writers who need advanced typesetting without the steep learning curve of LaTeX. Quarkdown is built on a custom evaluation model and supports generating PDF, HTML, and other formats, but it currently lacks a fixed-point layout iteration mechanism like Typst's context, which may limit its suitability for complex page layout tasks.",
+          "url": "https://quarkdown.com/",
+          "score": 6,
+          "sources": [
+            {
+              "name": "hackernews",
+              "meta": "amai"
+            }
+          ],
+          "tags": [
+            "markdown",
+            "documentation",
+            "programming languages",
+            "tools"
+          ],
+          "focusTopics": [],
+          "background": "Markdown is a lightweight markup language designed for easy readability and writing, but it lacks native support for complex formatting and programmability. LaTeX is a powerful typesetting system widely used in academia, but it has a steep learning curve. Quarkdown aims to bridge this gap by adding programmable features to Markdown while maintaining its simplicity.",
+          "discussion": "The community discussion is active with 85 comments, including the author engaging with users. Some commenters express concern that adding complexity undermines Markdown's simplicity, while others compare Quarkdown to existing tools like Pandoc, Quarto, and Typst, noting that the race for a LaTeX successor is still open."
+        }
+      ]
+    }
+  ]
+}
