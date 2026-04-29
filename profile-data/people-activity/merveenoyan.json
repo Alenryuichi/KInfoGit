@@ -20,13 +20,31 @@
       "scoreReason": "Freshness: 2 (established OpenAI repo with fresh angle), Relevance: 3 (AI agent infrastructure), Concreteness: 1 (description is somewhat concrete but lacks implementation details)",
       "type": "github",
       "starredAt": "2026-04-10"
+    },
+    {
+      "repo": "Deep-unlearning/smol-audio",
+      "url": "https://github.com/Deep-unlearning/smol-audio",
+      "description": "Practical, Colab-friendly notebooks for fine-tuning and running audio AI models",
+      "language": "Jupyter Notebook",
+      "stargazersCount": 240,
+      "starredBy": "merveenoyan",
+      "starredAt": "2026-04-28T12:59:49Z",
+      "highlights": "Smol-audio provides practical, Colab-friendly notebooks for fine-tuning and running audio AI models, making advanced audio AI accessible without heavy infrastructure. It focuses on hands-on experimentation with state-of-the-art audio models.",
+      "worthReading": "It's worth exploring for its low-barrier entry to audio AI fine-tuning, ideal for practitioners wanting to quickly experiment with audio models in a familiar notebook environment.",
+      "topics": [],
+      "tags": [
+        "fine-tuning",
+        "tooling"
+      ],
+      "score": 5,
+      "scoreReason": "Freshness is moderate (240 stars, rising but not explosive), relevance is decent (audio AI fine-tuning is niche but within AI tooling), and concreteness is high (working notebooks).",
+      "type": "github"
     }
   ],
   "posts": [],
   "videos": [],
   "blogs": [],
   "dailyCounts": [
-    0,
     0,
     0,
     0,
@@ -55,7 +73,8 @@
     0,
     0,
     0,
+    1,
     0
   ],
-  "interestSummary": "Merve Noyan has recently shown interest in autonomous coding agents and workflow management, specifically exploring tools like Symphony that isolate and automate project implementation runs."
+  "interestSummary": "Merve Noyan has recently shown interest in autonomous coding agent orchestration and practical audio AI model fine-tuning, reflecting a focus on developer tooling and multimodal AI applications."
 }

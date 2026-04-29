@@ -1071,6 +1071,72 @@
         "fine-tuning",
         "evaluation"
       ]
+    },
+    {
+      "type": "x",
+      "id": "1937902205765607626",
+      "url": "https://x.com/karpathy/status/1937902205765607626",
+      "author": {
+        "handle": "karpathy",
+        "displayName": "Andrej Karpathy",
+        "avatar": "https://avatars.githubusercontent.com/karpathy"
+      },
+      "content": "+1 for \"context engineering\" over \"prompt engineering\". When in every industrial-strength LLM app, context engineering is the delicate art and science of filling the context window",
+      "createdAt": "2026-04-29T04:15:55.457Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Advocates for 'context engineering' as a more accurate term than 'prompt engineering' for industrial LLM applications.",
+      "worthReading": "Reframes how we think about optimizing LLM inputs in production.",
+      "tags": [
+        "llm",
+        "deployment",
+        "tooling"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2039805659525644595",
+      "url": "https://x.com/karpathy/status/2039805659525644595",
+      "author": {
+        "handle": "karpathy",
+        "displayName": "Andrej Karpathy",
+        "avatar": "https://avatars.githubusercontent.com/karpathy"
+      },
+      "content": "LLM Knowledge Bases\n\nSomething I'm finding very useful recently: using LLMs to build personal knowledge bases for various topics of research interest. In this way, a large fraction of my recent token throughput is going less into manipulating code, and more into manipulating",
+      "createdAt": "2026-04-29T04:15:55.457Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Using LLMs to create personal knowledge bases for research, shifting focus from code to knowledge manipulation.",
+      "worthReading": "Demonstrates a practical, personal use case for LLMs beyond coding.",
+      "tags": [
+        "llm",
+        "rag",
+        "tooling"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2002118205729562949",
+      "url": "https://x.com/karpathy/status/2002118205729562949",
+      "author": {
+        "handle": "karpathy",
+        "displayName": "Andrej Karpathy",
+        "avatar": "https://avatars.githubusercontent.com/karpathy"
+      },
+      "content": "2025 LLM Year in Review\n\nBy training LLMs against automatically verifiable rewards across a number of environments (e.g. think math/code puzzles), the LLMs spontaneously develop strategies that look like \"reasoning\" to humans - they learn to break down problem solving into intermediate calculations and they learn a number of probl",
+      "createdAt": "2026-04-29T04:15:55.457Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "LLMs trained with verifiable rewards develop human-like reasoning strategies, breaking down problems into intermediate steps.",
+      "worthReading": "Highlights a key insight into how LLMs can learn reasoning without explicit instruction.",
+      "tags": [
+        "llm",
+        "evaluation",
+        "fine-tuning"
+      ]
     }
   ],
   "dailyCounts": [
@@ -1088,7 +1154,6 @@
     0,
     0,
     0,
-    0,
     3,
     3,
     0,
@@ -1103,7 +1168,8 @@
     3,
     4,
     4,
+    3,
     3
   ],
-  "interestSummary": "Andrej Karpathy is deeply focused on using LLMs to build personal knowledge bases and is actively experimenting with automated tuning of small models like nanochat. He also finds LLMs surprisingly both intelligent and limited, and notes that natural language is becoming a primary coding interface."
+  "interestSummary": "Andrej Karpathy is deeply focused on using LLMs to build personal knowledge bases for research, while also actively experimenting with model tuning (like nanochat) and reflecting on the surprising strengths and limitations of current LLM intelligence."
 }

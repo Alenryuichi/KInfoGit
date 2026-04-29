@@ -629,6 +629,50 @@
         "llm",
         "infra"
       ]
+    },
+    {
+      "type": "x",
+      "id": "2047015356183789580",
+      "url": "https://x.com/_philschmid/status/2047015356183789580",
+      "author": {
+        "handle": "philschmid",
+        "displayName": "Philipp Schmid",
+        "avatar": "https://avatars.githubusercontent.com/philschmid"
+      },
+      "content": "Gemini Embedding 2 now GA! One embedding model that understand text, images, video, audio, and PDFs!",
+      "createdAt": "2025-04-22T00:00:00Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Gemini Embedding 2 is now generally available, supporting text, image, video, audio, and PDF embeddings in a single model.",
+      "worthReading": "This unified embedding model simplifies multi-modal retrieval and reduces pipeline complexity.",
+      "tags": [
+        "multi-modal",
+        "infra",
+        "rag"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2041906700123357610",
+      "url": "https://x.com/_philschmid/status/2041906700123357610",
+      "author": {
+        "handle": "philschmid",
+        "displayName": "Philipp Schmid",
+        "avatar": "https://avatars.githubusercontent.com/philschmid"
+      },
+      "content": "Excited to introduce the Gemini Interactions API, a unified interface for Gemini models and agents. Starting today with Gemini Deep Research Agent. - Unifies access to models and agents via a single RESTful endpoint. - Access Gemini Deep Research agent via API.",
+      "createdAt": "2026-04-29T04:17:16.913Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Introducing the Gemini Interactions API, a unified RESTful endpoint for models and agents, starting with the Gemini Deep Research Agent.",
+      "worthReading": "This API simplifies access to multiple Gemini capabilities through a single interface.",
+      "tags": [
+        "agent",
+        "infra",
+        "llm"
+      ]
     }
   ],
   "dailyCounts": [
@@ -646,7 +690,6 @@
     0,
     0,
     0,
-    0,
     2,
     3,
     4,
@@ -661,7 +704,8 @@
     1,
     0,
     2,
-    3
+    3,
+    2
   ],
-  "interestSummary": "Philipp Schmid is focused on AI deployment and rapid prototyping, with recent interests in agentic workflows (Claude Code, MCP for Mac automation, Pi subagents), Gemma 4 integration, and staying current with technical reports from leading AI labs."
+  "interestSummary": "Philipp Schmid is focused on AI agent development and deployment, particularly around tools like Claude Code and Google AI Studio, with interests in automation, coding efficiency, and technical reports from cutting-edge AI projects."
 }

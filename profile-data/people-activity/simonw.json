@@ -199,6 +199,46 @@
       "score": 5,
       "scoreReason": "Moderate freshness with growing stars, good relevance as AI tooling, and high concreteness as a working library.",
       "type": "github"
+    },
+    {
+      "repo": "deeleeramone/PyWry",
+      "url": "https://github.com/deeleeramone/PyWry",
+      "description": "PyWry is a cross-platform app factory, rendering engine and UI toolkit for Python that produces native desktop, web, and notebook experiences from a single API.",
+      "language": "Python",
+      "stargazersCount": 36,
+      "starredBy": "simonw",
+      "starredAt": "2026-04-28T16:24:10Z",
+      "highlights": "PyWry is a cross-platform app factory that lets you build native desktop, web, and notebook experiences from a single Python API. It leverages Tauri and WebView2 for rendering, and integrates with Jupyter, Plotly, and MCP servers, making it a versatile tool for creating rich interactive applications.",
+      "worthReading": "It bridges Python desktop development with modern web technologies and AI tooling (e.g., MCP, Claude Code), offering a unique approach to building full-stack AI interfaces.",
+      "topics": [
+        "aggrid",
+        "anywidget",
+        "chat-application",
+        "claude-code",
+        "claude-code-plugin",
+        "claude-skills",
+        "dashboard",
+        "deepagents-langgraph",
+        "desktop",
+        "fullstack",
+        "iframe",
+        "ipython",
+        "ipywidgets",
+        "jupyter-notebook",
+        "mcp",
+        "mcp-server",
+        "plotly",
+        "python",
+        "tauri",
+        "webview2"
+      ],
+      "tags": [
+        "tooling",
+        "deployment"
+      ],
+      "score": 7,
+      "scoreReason": "Freshness is moderate (36 stars, early-stage but rising), relevance is high (ties into AI tooling, MCP, and agent interfaces), and concreteness is strong (working code with multiple integrations).",
+      "type": "github"
     }
   ],
   "posts": [
@@ -717,6 +757,24 @@
         "llm",
         "fine-tuning"
       ],
+      "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mkkpavnduc2s",
+      "url": "https://bsky.app/profile/simonwillison.net/post/3mkkpavnduc2s",
+      "author": {
+        "handle": "simonwillison.net",
+        "displayName": "Simon Willison",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
+      },
+      "content": "I would very much like to see the 2,000 lb stellar sea lion at San Francisco Pier 39, who I believe has now been named \"Chonkers\"\n\nDoes anyone know if he keeps a regular schedule?",
+      "createdAt": "2026-04-28T13:35:25.149Z",
+      "likeCount": 89,
+      "replyCount": 6,
+      "repostCount": 7,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [],
       "type": "bluesky"
     }
   ],
@@ -1415,10 +1473,50 @@
         "multi-modal",
         "evaluation"
       ]
+    },
+    {
+      "type": "x",
+      "id": "1970147806225854531",
+      "url": "https://x.com/simonw/status/1970147806225854531",
+      "author": {
+        "handle": "simonw",
+        "displayName": "Simon Willison",
+        "avatar": "https://avatars.githubusercontent.com/simonw"
+      },
+      "content": "It's interesting how \"better at code\" has become the defining goal of almost every AI lab over the",
+      "createdAt": "2026-04-29T04:15:59.751Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Simon Willison notes that AI labs are increasingly focused on improving code generation as a primary goal.",
+      "worthReading": "Reflects a key trend in AI development priorities.",
+      "tags": [
+        "llm",
+        "tooling"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "952257232380379136",
+      "url": "https://x.com/simonw/status/952257232380379136",
+      "author": {
+        "handle": "simonw",
+        "displayName": "Simon Willison",
+        "avatar": "https://avatars.githubusercontent.com/simonw"
+      },
+      "content": "This may be the best guidance I've seen anywhere on writing a really good commit history.",
+      "createdAt": "2026-04-29T04:15:59.751Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Simon Willison praises guidance on writing good commit history.",
+      "worthReading": "Useful for developers aiming to improve version control practices.",
+      "tags": [
+        "tooling"
+      ]
     }
   ],
   "dailyCounts": [
-    0,
     0,
     0,
     0,
@@ -1447,7 +1545,8 @@
     3,
     1,
     4,
-    3
+    5,
+    2
   ],
-  "interestSummary": "Simon Willison is deeply engaged in evaluating and comparing the latest AI models (Anthropic, Google, Meta, Qwen) for code generation and image generation, using a whimsical \"pelican riding a bicycle\" benchmark to test their capabilities. He is also actively exploring practical AI-assisted development tools, such as document parsing libraries and code interpreters, while maintaining his interest in open-source projects and developer productivity."
+  "interestSummary": "Simon Willison is deeply engaged in evaluating and comparing cutting-edge AI models (Gemma, Claude, Qwen, Gemini) through practical benchmarks like image generation and code analysis, while actively building tools and integrations around document parsing, local model execution, and AI-assisted development workflows."
 }

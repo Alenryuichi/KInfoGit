@@ -787,10 +787,112 @@
         "evaluation",
         "tooling"
       ]
+    },
+    {
+      "type": "x",
+      "id": "2040467997022884194",
+      "url": "https://x.com/hwchase17/status/2040467997022884194",
+      "author": {
+        "handle": "hwchase17",
+        "displayName": "Harrison Chase",
+        "avatar": "https://avatars.githubusercontent.com/hwchase17"
+      },
+      "content": "In the hot path as the agent is running. The agent can decided to (or the user can prompt it to) update its memory as it is working on the core",
+      "createdAt": "2026-04-29T04:16:08.813Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Agent can update memory during execution based on user prompt or self-decision.",
+      "worthReading": "Illustrates how memory can be dynamically managed in agent loops.",
+      "tags": [
+        "agent"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2021261552222158955",
+      "url": "https://x.com/hwchase17/status/2021261552222158955",
+      "author": {
+        "handle": "hwchase17",
+        "displayName": "Harrison Chase",
+        "avatar": "https://avatars.githubusercontent.com/hwchase17"
+      },
+      "content": "TL;DR: More and more agents need a workspace: a computer where they can run code, install packages, and access files. Sandboxes provide this",
+      "createdAt": "2026-04-29T04:16:08.813Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Agents require sandboxed environments to execute code and access files.",
+      "worthReading": "Highlights the growing need for secure execution environments for agents.",
+      "tags": [
+        "agent",
+        "infra"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "1975603633791377920",
+      "url": "https://x.com/hwchase17/status/1975603633791377920",
+      "author": {
+        "handle": "hwchase17",
+        "displayName": "Harrison Chase",
+        "avatar": "https://avatars.githubusercontent.com/hwchase17"
+      },
+      "content": "I am not excited about visual workflow builders 1. Not simple enough for the average user",
+      "createdAt": "2026-04-29T04:16:08.813Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Visual workflow builders are not simple enough for average users.",
+      "worthReading": "Provides a critical perspective on low-code tools for building agents.",
+      "tags": [
+        "tooling",
+        "agent"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2011814697889316930",
+      "url": "https://x.com/hwchase17/status/2011814697889316930",
+      "author": {
+        "handle": "hwchase17",
+        "displayName": "Harrison Chase",
+        "avatar": "https://avatars.githubusercontent.com/hwchase17"
+      },
+      "content": "Memory actually allows for a better agent building experience. Agent building is very iterative - in large part because you don't know what the",
+      "createdAt": "2026-04-29T04:16:08.813Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Memory improves the iterative process of building agents.",
+      "worthReading": "Explains how memory aids in the trial-and-error nature of agent development.",
+      "tags": [
+        "agent"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2013641863123870133",
+      "url": "https://x.com/hwchase17/status/2013641863123870133",
+      "author": {
+        "handle": "hwchase17",
+        "displayName": "Harrison Chase",
+        "avatar": "https://avatars.githubusercontent.com/hwchase17"
+      },
+      "content": "When building agents, you need to iterate on production data much more than when building traditional software. You need to iterate on how",
+      "createdAt": "2026-04-29T04:16:08.813Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Agent development requires more iteration on production data than traditional software.",
+      "worthReading": "Emphasizes the importance of production data in agent refinement.",
+      "tags": [
+        "agent",
+        "evaluation"
+      ]
     }
   ],
   "dailyCounts": [
-    0,
     0,
     0,
     0,
@@ -819,7 +921,8 @@
     4,
     3,
     3,
-    4
+    4,
+    5
   ],
-  "interestSummary": "Harrison Chase is focused on advancing AI agents by emphasizing the need for sandboxed workspaces for code execution and file access, and highlighting LangSmith Agent Builder's no-code agent creation with a key memory system. He also stresses the shift from traditional software monitoring to trace-based debugging and iteration for production agents."
+  "interestSummary": "Harrison Chase is focused on developing and iterating on AI agents, particularly emphasizing the need for agent workspaces with sandboxed environments and the importance of using production data and traces for debugging and testing, as highlighted by the launch of LangSmith Agent Builder."
 }
