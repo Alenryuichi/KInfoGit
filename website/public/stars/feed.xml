@@ -4,8 +4,81 @@
     <title>Stars &amp; Posts — Kylin Miao</title>
     <link>https://kylinmiao.me/stars/</link>
     <description>Daily curated GitHub starred repos, Bluesky/X posts, YouTube videos and blog articles from AI leaders with AI-powered summaries.</description>
-    <lastBuildDate>Wed, 29 Apr 2026 04:17:54 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 30 Apr 2026 04:19:40 GMT</lastBuildDate>
     <atom:link href="https://kylinmiao.me/stars/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Stars &amp; Posts — 2026-04-30</title>
+      <link>https://kylinmiao.me/stars/2026-04-30/</link>
+      <guid isPermaLink="true">https://kylinmiao.me/stars/2026-04-30/</guid>
+      <pubDate>Thu, 30 Apr 2026 12:00:00 GMT</pubDate>
+      <description>Zig&apos;s blanket ban on AI-assisted contributions sparked a key debate today, with Simon Willison noting the project&apos;s rationale—that PR review is about mentoring new contributors, not just code quality—resonating widely. Meanwhile, Nathan Lambert stirred discussion on AGI governance, arguing that Demis Hassabis remains the most trustworthy CEO on the topic, especially given Google&apos;s public-company checks versus the private statuses of Anthropic and OpenAI. On a lighter note, Marc Lanctot shared a joyful reaction to a video, offering a brief respite from the heavier AI governance conversations. Overall, the day&apos;s themes centered on the tension between AI tooling and open-source community growth, alongside ongoing scrutiny of AGI leadership accountability.
+
+Bluesky Posts:
+* Simon Willison: The Zig project&apos;s rationale for their blanket ban on AI-assisted contributions makes a lot of sense to me - for them, time spent reviewing PRs isn&apos;t a...
+* Marc Lanctot: Love this! 😁
+
+www.youtube.com/watch?v=Rjfb...
+* Nathan Lambert: Demis is the only acceptable answer of which CEO do you trust most with AGI 
+
+(doubly so until Anthropic/OpenAI go public, Google being public is a gr...
+
+X Posts:
+* Andrej Karpathy: My most amusing interaction was where the model (I think I was given some earlier version with a
+* Andrej Karpathy: One common issue with personalization in all LLMs is how distracting memory seems to be for the models.
+* Andrej Karpathy: Judging by my tl there is a growing gap in understanding of AI capability. The first issue I think is around
+* Andrej Karpathy: LLMs are emerging as a new kind of intelligence, simultaneously a lot smarter than I expected and a lot dumber than I expected. In any case they
+* Andrej Karpathy: I&apos;m being accused of overhyping the [site everyone heard too much about today already].
+* Simon Willison: It&apos;s interesting how &quot;better at code&quot; has become the defining goal of almost every AI lab over the...
+* Simon Willison: Quitting programming as a career right now because of LLMs would be like quitting carpentry as a...
+* Simon Willison: The last year six months in LLMs, illustrated by pelicans on bicycles. I&apos;ve published video, slides and a detailed annotated transcript from my talk a...
+* Simon Willison: [Image: a stylish image of a 3D computer game, with two raccoons sneaking down a street past a futuristic looking building... Prompt was: &quot;Screenshot ...
+* Harrison Chase: RT @samecrowder: as always, it&apos;s an exciting time to be working at LangChain!
+* Harrison Chase: TL;DR: More and more agents need a workspace: a computer where they can run code, install packages, and access files. Sandboxes provide this
+* Harrison Chase: In the hot path as the agent is running. The agent can decided to (or the user can prompt it to) update its memory as it is working on the core
+* Harrison Chase: traces matter!
+* Jim Fan: Resource constraints are a beautiful thing. Survival instinct in a cut-throat AI competitive land
+* Jim Fan: I&apos;ve been a bit quiet on X recently. The past year has been a transformational experience.
+* Jim Fan: It gives me a lot of comfort knowing that we are the last generation without advanced robots everywhere.
+* Jim Fan: Everyone&apos;s freaking out about vibe coding. In the holiday spirit, allow me to share my anxiety on the wild
+* Jim Fan: The first time I met Jensen was also the first time I met @elonmusk. I was interning at OpenAI that day and
+* Jeremy Howard: Here&apos;s what I would prefer to see:
+* Soumith Chintala: reading &quot;AI News&quot; (previously Smol Talk) is probably the highest-leverage 45 mins
+* Soumith Chintala: I&apos;m giving the opening Keynote at ICML 2024 on Tuesday the 23rd @ 9:30am CEST.
+* Francois Chollet: Folks who work in AI or software engineering feel like the world is changing exponential fast.
+* Francois Chollet: Re-reading an article I wrote in 2017, and I&apos;m finding I could have written it yesterday
+* Yann LeCun: Dario is wrong. He knows absolutely nothing about the effects of technological revolutions on the labor market.
+* Yann LeCun: To qualify as Science a piece of research must be correct and reproducible. To be correct and reproducible,
+* Yann LeCun: It seems to me that before &quot;urgently figuring out how to control AI systems much smarter than us&quot; we need
+* Yann LeCun: The emergence of superintelligence is not going to be an event. We don&apos;t have anything close to a
+* Fei-Fei Li: Very excited to share @theworldlabs &apos;s latest research work RTFM!! It&apos;s a real-time, ...
+* Fei-Fei Li: AI’s next frontier is Spatial Intelligence, a technology that will turn seeing into reasoning, perception into action, and imagination into creation. ...
+* Max Woolf: me irl
+* Max Woolf: No text content extracted, only likes count.
+* Max Woolf: @simonw
+* Sasha Rush: Some personal news: I recently joined Cursor. Cursor is a small, ambitious team, and they&apos;ve created
+* Sasha Rush: Wager established. Jonathan Frankle (@jefrankle) stepped up to my Transformer long bet.
+* Stas Bekman: Classical Jensen math. Unidirectional bandwidth is topped at 450GB/s, and then there comes a protocol overhead of two digit percentage.
+* Stas Bekman: Hear, hear, I&apos;m excited to introduce a new performance metric: Maximum Achievable Matmul
+* Stas Bekman: If you&apos;re trying out FA4, you&apos;re likely to run into not being able to load cutlass.cute
+* Stas Bekman: Thanks to an awesome contribution from @omarnomad The Machine Learning Engineering Open book now can
+* Sayak Paul: Release notes: Release Diffusers 0.34.0: New Image and Video Models, Better torch.
+* Sayak Paul: Had a nice time chatting about the state of diffusion models and some text-to-image data shenanigans at
+* Sayak Paul: Details:
+* Philipp Schmid: How to use Deep Research with the Gemini API. www.philschmid.de.
+* Philipp Schmid: Google DeepMind and Korea Partner to Accelerate Scientific Discovery. deepmind.google.
+* Ethan Mollick: Very cool analysis of the submissions to a major management journal that shows how much the
+* Ethan Mollick: I pointed Claude Cowork at a set of 107 documents (PPTs, Word docs, Excel) that were initially
+* Ethan Mollick: On the plus side with Opus 4.7, if it does decide to think it produces BY FAR the best
+* Ethan Mollick: One thing thing about AI, for better and worse, is that &quot;everything around me is somebody&apos;s life
+* Emily M. Bender: @emilymbender.bsky.social. emilymbender. Feb 10. Image is of the 1990s Microsoft writing assistant character Clippy with its eyebrows raised positione...
+* Emily M. Bender: @parismarx @alexhanna @ctaylsaurus EMILY M. BENDER: Yeah. And so passive, like, oops, the moon, the moon went further away. It&apos;s like no, actually, yo...
+* Naomi Saphra: Life update: I&apos;m starting as faculty at Boston University in 2026! BU ...
+* Naomi Saphra: what a perfect space for scientific discourse! I&apos;ll start off with a few images of myself
+* Naomi Saphra: I work on understanding and improving training for NLP models, with a focus on studying how structures and mechanistic behaviors emerge over the
+* Ben Recht: And awesome to see many Berkeley alums thriving here. @LaurentLessard, @DimitrisPapail, and Shivaram
+* Ben Recht: For the first time in almost a decade, I&apos;m teaching a class on learning and control.
+* Ben Recht: Everyone knows actions are fundamentally different than predictions, but it&apos;s hard to write this</description>
+    </item>
     <item>
       <title>Stars &amp; Posts — 2026-04-29</title>
       <link>https://kylinmiao.me/stars/2026-04-29/</link>
@@ -13,11 +86,36 @@
       <pubDate>Wed, 29 Apr 2026 12:00:00 GMT</pubDate>
       <description>Today&apos;s AI landscape sees a notable pivot from human-led prompt engineering to automated optimization, with hardmaru sharing research that trains an AI to coax the best performance out of other LLMs—a meta-approach that could redefine how we interact with models. Meanwhile, Marc Lanctot offers a nostalgic counterpoint, documenting his complete playthrough of the classic *Dungeons of Dr. Creep* with detailed level breakdowns and videos, reminding us that AI researchers still find value in retro gaming analysis. The juxtaposition of these posts highlights a broader tension: as the field races toward self-improving systems, there&apos;s a parallel appreciation for the human craft of understanding complex systems, whether they be dungeon puzzles or transformer architectures.
 
+GitHub Repos:
+* GliaX/Stethoscope — A research-validated stethoscope whose plans are available Freely and openly. The cost of the entire stethoscope is between $2.5 to $5 to produce [Ruby]
+
 Bluesky Posts:
 * Marc Lanctot: Hello all, I finished another old game: Dungeons of Dr. Creep!
 
 Just like last year, I documented each level in a reddit thread and made a few videos ...
 * hardmaru: For the past few years, humans have been doing “prompt engineering” to coax the best performance out of different LLMs. In this work, we explored what...
+* Simon Willison: I released LLM 0.32a0 this morning, a major backwards-compatible refactor of my LLM Python library and CLI tool for working with language models - the...
+* Mark Riedl: Congratulations to Dr. Gennie Mansi, for successfully defending her PhD thesis. 
+
+Dr. Mansi&apos;s work investigates AI in healthcare; how AI impacts legal...
+* Nathan Lambert: Let’s goooooooooo we are capybara’d up, thanks Qwen, keep the models coming
+* Ethan Mollick: Gemini now can create documents, and it is a nice start, but not up to the frontier yet, as you can see from my &quot;evil buyout of Hogwarts&quot; test.
+
+Power...
+* Ethan Mollick: One reason I don’t think “judgment” is going to be a distinctly human role in working with AI is that the most recent agentic models have gotten quite...
+* Emily M. Bender: Usually, when I get interviewed for a piece on something like &quot;AI consciousness&quot; I am relegated to the skeptics box --- some short paragraph near the ...
+* Emily M. Bender: Mystery AI Hype Theater 3000 Ep 76:
+
+www.buzzsprout.com/admin/212641...
+
+Carmen Maria Machado joins @alexhanna.bsky.social and me to get into the why ...
+* Emily M. Bender: Also available as video on Peertube:
+peertube.dair-institute.org/w/tgEjwXf8ST...
+* Emily M. Bender: Mystery AI Hype Theater 3000 Ep 76:
+
+www.buzzsprout.com/2126417/epis...
+
+Carmen Maria Machado joins @alexhanna.bsky.social and me to get into the why ...
 
 X Posts:
 * Andrej Karpathy: +1 for &quot;context engineering&quot; over &quot;prompt engineering&quot;. When in every industrial-strength LLM app, context engineering is the delicate art and science...
@@ -72,7 +170,10 @@ By training LLMs against automatically verifiable rewards across a number of env
 * Naomi Saphra: Life update: I&apos;m starting as faculty at Boston University in 2026! BU ...
 * Ben Recht: And awesome to see many Berkeley alums thriving here. @LaurentLessard, @DimitrisPapail, and Shivaram
 * Ben Recht: For the first time in almost a decade, I&apos;m teaching a class on learning and control.
-* Ben Recht: Everyone knows actions are fundamentally different than predictions, but it&apos;s hard to write this</description>
+* Ben Recht: Everyone knows actions are fundamentally different than predictions, but it&apos;s hard to write this
+
+Blog Articles:
+* LLM 0.32a0 is a major backwards-compatible refactor — Simon Willison: &lt;p&gt;I just released &lt;a href=&quot;https://llm.datasette.io/en/latest/changelog.html#a0-2026-04-28&quot;&gt;LLM 0.32a0&lt;/a&gt;, an alpha release of my &lt;a href=&quot;https://l...</description>
     </item>
     <item>
       <title>Stars &amp; Posts — 2026-04-28</title>
@@ -1477,14 +1578,6 @@ www.cbc.ca/news/science...
       <pubDate>Sun, 28 Dec 2025 12:00:00 GMT</pubDate>
       <description>YouTube Videos:
 * Traditional Holiday Live Stream (Yannic Kilcher)</description>
-    </item>
-    <item>
-      <title>Stars &amp; Posts — 2025-12-27</title>
-      <link>https://kylinmiao.me/stars/2025-12-27/</link>
-      <guid isPermaLink="true">https://kylinmiao.me/stars/2025-12-27/</guid>
-      <pubDate>Sat, 27 Dec 2025 12:00:00 GMT</pubDate>
-      <description>YouTube Videos:
-* TiDAR: Think in Diffusion, Talk in Autoregression (Paper Analysis) (Yannic Kilcher)</description>
     </item>
   </channel>
 </rss>

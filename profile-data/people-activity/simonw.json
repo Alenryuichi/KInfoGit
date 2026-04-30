@@ -776,6 +776,48 @@
       "worthReading": "",
       "tags": [],
       "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mknsn2l6us2a",
+      "url": "https://bsky.app/profile/simonwillison.net/post/3mknsn2l6us2a",
+      "author": {
+        "handle": "simonwillison.net",
+        "displayName": "Simon Willison",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
+      },
+      "content": "I released LLM 0.32a0 this morning, a major backwards-compatible refactor of my LLM Python library and CLI tool for working with language models - the new changes should help LLM work better with reasoning models and other new frontier capabilities simonwillison.net/2026/Apr/29/...",
+      "createdAt": "2026-04-29T19:13:53.415Z",
+      "likeCount": 51,
+      "replyCount": 5,
+      "repostCount": 3,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [
+        "llm",
+        "deployment",
+        "tooling"
+      ],
+      "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mkohhvx6fs22",
+      "url": "https://bsky.app/profile/simonwillison.net/post/3mkohhvx6fs22",
+      "author": {
+        "handle": "simonwillison.net",
+        "displayName": "Simon Willison",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
+      },
+      "content": "The Zig project's rationale for their blanket ban on AI-assisted contributions makes a lot of sense to me - for them, time spent reviewing PRs isn't about the code, it's about growing new contributors for the future of the project simonwillison.net/2026/Apr/30/...",
+      "createdAt": "2026-04-30T01:26:49.371Z",
+      "likeCount": 75,
+      "replyCount": 5,
+      "repostCount": 7,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [
+        "tooling"
+      ],
+      "type": "bluesky"
     }
   ],
   "videos": [],
@@ -888,6 +930,16 @@
       "summary": "<p>For many years, Microsoft and OpenAI's relationship has included a weird clause saying that, should AGI be achieved, Microsoft's commercial IP rights to OpenAI's technology would be null and void. That clause appeared to end today. I decided to try and track its expression over time on <a...",
       "highlights": "The AGI clause in the OpenAI-Microsoft contract, which would void Microsoft's IP rights upon AGI achievement, has been removed, signaling a shift in their partnership. This change may reflect OpenAI's evolving definition of AGI or strategic realignment.",
       "worthReading": "It offers a fascinating historical tracking of a pivotal contractual clause, shedding light on the evolving relationship between two AI giants and the elusive concept of AGI.",
+      "type": "blog"
+    },
+    {
+      "title": "LLM 0.32a0 is a major backwards-compatible refactor",
+      "url": "https://simonwillison.net/2026/Apr/29/llm/#atom-entries",
+      "author": "Simon Willison",
+      "publishedAt": "2026-04-29T19:01:47+00:00",
+      "summary": "<p>I just released <a href=\"https://llm.datasette.io/en/latest/changelog.html#a0-2026-04-28\">LLM 0.32a0</a>, an alpha release of my <a href=\"https://llm.datasette.io/\">LLM</a> Python library and CLI tool for accessing LLMs, with some consequential changes that I've been working towards for quite a...",
+      "highlights": "LLM 0.32a0 is a major refactor that prioritizes backwards compatibility while introducing significant internal changes for future extensibility. The alpha release aims to stabilize new APIs and data structures, allowing plugin authors to adapt before the stable release.",
+      "worthReading": "If you use or build plugins for the LLM tool, this post details critical architectural shifts that will affect your workflow, making it essential for staying up-to-date with the ecosystem's evolution.",
       "type": "blog"
     }
   ],
@@ -1514,10 +1566,91 @@
       "tags": [
         "tooling"
       ]
+    },
+    {
+      "type": "x",
+      "id": "1970147806225854531",
+      "url": "https://x.com/simonw/status/1970147806225854531",
+      "author": {
+        "handle": "simonw",
+        "displayName": "Simon Willison",
+        "avatar": "https://avatars.githubusercontent.com/simonw"
+      },
+      "content": "It's interesting how \"better at code\" has become the defining goal of almost every AI lab over the...",
+      "createdAt": "2026-04-30T04:17:44.596Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Simon notes that AI labs are overwhelmingly focused on improving code generation capabilities.",
+      "worthReading": "Reflects a key trend in AI development priorities.",
+      "tags": [
+        "llm",
+        "evaluation"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "1940781740978851923",
+      "url": "https://x.com/simonw/status/1940781740978851923",
+      "author": {
+        "handle": "simonw",
+        "displayName": "Simon Willison",
+        "avatar": "https://avatars.githubusercontent.com/simonw"
+      },
+      "content": "Quitting programming as a career right now because of LLMs would be like quitting carpentry as a...",
+      "createdAt": "2026-04-30T04:17:44.596Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Simon argues that leaving programming due to LLMs is premature, comparing it to quitting carpentry due to power tools.",
+      "worthReading": "Provides perspective on AI's impact on software careers.",
+      "tags": [
+        "llm",
+        "safety"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "1931090610724995303",
+      "url": "https://x.com/simonw/status/1931090610724995303",
+      "author": {
+        "handle": "simonw",
+        "displayName": "Simon Willison",
+        "avatar": "https://avatars.githubusercontent.com/simonw"
+      },
+      "content": "The last year six months in LLMs, illustrated by pelicans on bicycles. I've published video, slides and a detailed annotated transcript from my talk at this week's...",
+      "createdAt": "2026-04-30T04:17:44.596Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Simon shared a talk summarizing LLM developments with a pelican-on-bicycle analogy.",
+      "worthReading": "Creative summary of LLM progress over six months.",
+      "tags": [
+        "llm"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "1555626060384911360",
+      "url": "https://x.com/simonw/status/1555626060384911360",
+      "author": {
+        "handle": "simonw",
+        "displayName": "Simon Willison",
+        "avatar": "https://avatars.githubusercontent.com/simonw"
+      },
+      "content": "[Image: a stylish image of a 3D computer game, with two raccoons sneaking down a street past a futuristic looking building... Prompt was: \"Screenshot from a video game where a team of raccoons go on a heist\"]",
+      "createdAt": "2026-04-30T04:17:44.596Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Simon posted an AI-generated image of raccoons on a heist.",
+      "worthReading": "Showcases creative use of AI image generation.",
+      "tags": [
+        "multi-modal"
+      ]
     }
   ],
   "dailyCounts": [
-    0,
     0,
     0,
     0,
@@ -1546,7 +1679,8 @@
     1,
     4,
     5,
-    2
+    3,
+    5
   ],
-  "interestSummary": "Simon Willison is deeply engaged in evaluating and comparing cutting-edge AI models (Gemma, Claude, Qwen, Gemini) through practical benchmarks like image generation and code analysis, while actively building tools and integrations around document parsing, local model execution, and AI-assisted development workflows."
+  "interestSummary": "Simon Willison is deeply focused on evaluating and comparing the latest AI models (Claude, Gemini, Qwen) and their capabilities, particularly around coding, image generation, and tool use, while also exploring practical developer tools like document parsers and local model fine-tuning. He maintains a playful but rigorous approach to benchmarking, using whimsical tests like \"pelicans riding bicycles\" to assess model performance."
 }

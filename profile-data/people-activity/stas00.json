@@ -1204,10 +1204,91 @@
       "tags": [
         "tooling"
       ]
+    },
+    {
+      "type": "x",
+      "id": "2034315810693599349",
+      "url": "https://x.com/StasBekman/status/2034315810693599349",
+      "author": {
+        "handle": "stas00",
+        "displayName": "Stas Bekman",
+        "avatar": "https://avatars.githubusercontent.com/stas00"
+      },
+      "content": "Classical Jensen math. Unidirectional bandwidth is topped at 450GB/s, and then there comes a protocol overhead of two digit percentage.",
+      "createdAt": "2026-04-30T04:18:49.945Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Discusses bandwidth limitations and protocol overhead in computing, referencing Jensen's math.",
+      "worthReading": "Relevant for understanding performance bottlenecks in high-bandwidth systems.",
+      "tags": [
+        "infra"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "1821362487151013970",
+      "url": "https://x.com/StasBekman/status/1821362487151013970",
+      "author": {
+        "handle": "stas00",
+        "displayName": "Stas Bekman",
+        "avatar": "https://avatars.githubusercontent.com/stas00"
+      },
+      "content": "Hear, hear, I'm excited to introduce a new performance metric: Maximum Achievable Matmul",
+      "createdAt": "2026-04-30T04:18:49.945Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Introduces a new performance metric for matrix multiplication, likely for ML workloads.",
+      "worthReading": "Provides insight into performance measurement for ML systems.",
+      "tags": [
+        "infra",
+        "tooling"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2029625103500317066",
+      "url": "https://x.com/StasBekman/status/2029625103500317066",
+      "author": {
+        "handle": "stas00",
+        "displayName": "Stas Bekman",
+        "avatar": "https://avatars.githubusercontent.com/stas00"
+      },
+      "content": "If you're trying out FA4, you're likely to run into not being able to load cutlass.cute",
+      "createdAt": "2026-04-30T04:18:49.945Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Warns about a common issue with Flash Attention 4 and cutlass library loading.",
+      "worthReading": "Useful for developers experimenting with FA4 in ML frameworks.",
+      "tags": [
+        "fine-tuning",
+        "tooling"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2014578754782409106",
+      "url": "https://x.com/StasBekman/status/2014578754782409106",
+      "author": {
+        "handle": "stas00",
+        "displayName": "Stas Bekman",
+        "avatar": "https://avatars.githubusercontent.com/stas00"
+      },
+      "content": "Thanks to an awesome contribution from @omarnomad The Machine Learning Engineering Open book now can",
+      "createdAt": "2026-04-30T04:18:49.945Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Acknowledges a contribution to the Machine Learning Engineering Open Book.",
+      "worthReading": "Highlights community contributions to open-source ML resources.",
+      "tags": [
+        "tooling"
+      ]
     }
   ],
   "dailyCounts": [
-    0,
     0,
     0,
     0,
@@ -1236,7 +1317,8 @@
     4,
     4,
     4,
+    4,
     4
   ],
-  "interestSummary": "Stas Bekman is currently focused on deep learning training optimization, particularly with DeepSpeed ZeRO++, FlashAttention 4, and PyTorch tooling, while also curating LLM/VLM training logbooks and contributing to the Machine Learning Engineering Open Book."
+  "interestSummary": "Stas Bekman is currently focused on large language model and vision-language model training infrastructure, with specific interests in DeepSpeed ZeRO++, FlashAttention 4, PyTorch tooling, and bandwidth optimization for distributed training."
 }

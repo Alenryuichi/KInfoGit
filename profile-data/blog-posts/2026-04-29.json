@@ -1,0 +1,14 @@
+{
+  "date": "2026-04-29",
+  "posts": [
+    {
+      "title": "LLM 0.32a0 is a major backwards-compatible refactor",
+      "url": "https://simonwillison.net/2026/Apr/29/llm/#atom-entries",
+      "author": "Simon Willison",
+      "publishedAt": "2026-04-29T19:01:47+00:00",
+      "summary": "<p>I just released <a href=\"https://llm.datasette.io/en/latest/changelog.html#a0-2026-04-28\">LLM 0.32a0</a>, an alpha release of my <a href=\"https://llm.datasette.io/\">LLM</a> Python library and CLI tool for accessing LLMs, with some consequential changes that I've been working towards for quite a...",
+      "highlights": "LLM 0.32a0 is a major refactor that prioritizes backwards compatibility while introducing significant internal changes for future extensibility. The alpha release aims to stabilize new APIs and data structures, allowing plugin authors to adapt before the stable release.",
+      "worthReading": "If you use or build plugins for the LLM tool, this post details critical architectural shifts that will affect your workflow, making it essential for staying up-to-date with the ecosystem's evolution."
+    }
+  ]
+}
