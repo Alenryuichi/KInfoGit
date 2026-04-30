@@ -1,207 +1,44 @@
 {
   "date": "2026-04-30",
-  "itemCount": 21,
+  "itemCount": 71,
   "sections": [
     {
       "id": "headlines",
       "title": "Headlines & Launches",
       "items": [
         {
-          "title": "Critical Linux Kernel Flaw CVE-2026-31431 Enables Root Access",
-          "summary": "A critical Linux kernel vulnerability, CVE-2026-31431, in the AF_ALG crypto interface allows unprivileged local users to gain root access. Exploit code has been published, and the vulnerability affects kernels built between 2017 and the recent patch. This vulnerability poses a severe threat to nearly all mainstream Linux distributions, as it enables local privilege escalation from an unprivileged user to full root. The high community engagement and active exploits underscore the urgency for administrators to apply mitigations immediately. The vulnerability resides in the AF_ALG socket family, specifically in the algif_aead module. A suggested mitigation is to disable the kernel module algif_aead via a modprobe configuration, though vendors like Red Hat have rated it as moderate severity and deferred fixes.",
-          "url": "https://copy.fail/",
-          "score": 9,
-          "sources": [
-            {
-              "name": "hackernews",
-              "meta": "unsnap_biceps"
-            }
-          ],
-          "tags": [
-            "Linux kernel",
-            "security",
-            "CVE-2026-31431",
-            "AF_ALG",
-            "vulnerability"
-          ],
-          "focusTopics": [],
-          "background": "AF_ALG is a Linux kernel interface that allows userspace programs to access kernel cryptographic operations via sockets. It was added in kernel 2.6.38 and has been criticized for its complexity and large attack surface. The kernel's crypto code is primarily intended for in-kernel use, and AF_ALG exposes it unnecessarily to unprivileged users.",
-          "discussion": "Kernel developer ebiggers expressed frustration, stating that AF_ALG should not exist due to its complexity and unnecessary exposure. Commenter xeeeeeeeeeeenu noted confusion in the disclosure process, as vendors downplay the severity despite active exploits. Others provided practical mitigation scripts and discussed the risk of AI agents running as regular users."
-        },
-        {
-          "title": "Elsevier Fires Third Editor for Citation Cartel Abuse",
-          "summary": "Elsevier has fired a third editor for manipulating citations as part of a citation cartel, continuing its crackdown on corrupt practices in academic publishing. This highlights systemic corruption driven by vanity metrics like the h-index, undermining research integrity and trust in peer review. The editor colluded to inflate citation counts, likely through excessive self-citation or coordinated citation stacking, which artificially boosted impact factors.",
-          "url": "https://www.chrisbrunet.com/p/third-editor-fired-in-elseviers-citation",
+          "title": "Amazon Reports Biggest Cloud Sales Jump Since 2022 on AI Demand (AMZN) - Bloomberg",
+          "summary": "亚马逊云销售因AI需求创2022年以来最大增幅。",
+          "url": "https://www.bloomberg.com/news/articles/2026-04-29/amazon-reports-biggest-cloud-sales-jump-since-2022-on-ai-demand",
           "score": 8,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "RigbyTaro"
+              "name": "bloomberg.com"
             }
           ],
           "tags": [
-            "academic publishing",
-            "citation cartel",
-            "research integrity",
-            "Elsevier",
-            "vanity metrics"
+            "aws",
+            "cloud",
+            "earnings"
           ],
-          "focusTopics": [],
-          "background": "A citation cartel is a group of authors who collude to cite each other's work excessively to inflate metrics. Vanity metrics like the h-index and publication counts are often used in tenure and funding decisions, incentivizing such abuse.",
-          "discussion": "Commenters criticize vanity metrics and call for reform, with some noting that greed led to detection. Others express hope that Elsevier and similar publishers face consequences."
+          "focusTopics": []
         },
         {
-          "title": "Online Age Verification: A Privacy Flashpoint",
-          "summary": "A viral tweet by Glenn Meder sparked a heated debate on online age verification, with over 700 points and 441 comments discussing privacy risks, parental responsibility, and technical solutions. This debate highlights the growing tension between child safety mandates and privacy rights, as governments push for age verification while critics warn of surveillance and identity fraud. Commenters proposed alternatives like RTA headers and anonymous credential systems, but noted that current proposals often lack privacy protections and may fuel ID theft.",
-          "url": "https://x.com/GlennMeder/status/2049088498163216560",
-          "score": 8,
+          "title": "Claude.ai and API Unavailable",
+          "summary": "Claude.ai和API服务不可用。",
+          "url": "https://status.claude.com/incidents/2gf1jpyty350",
+          "score": 4.442,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "Cider9986"
+              "name": "HN (64)"
             }
           ],
           "tags": [
-            "privacy",
-            "age verification",
-            "online safety",
-            "policy",
-            "surveillance"
+            "outage",
+            "claude",
+            "api"
           ],
-          "focusTopics": [],
-          "background": "Age verification systems check a user's age online, often via ID uploads or biometrics. Privacy advocates argue these methods expose sensitive data and enable surveillance, while supporters say they protect minors from harmful content.",
-          "discussion": "The community is deeply divided: some advocate for decentralized solutions like RTA headers, others warn of normalized ID fraud, and a few argue parents should bear full responsibility. A recurring theme is that current verification proposals prioritize surveillance over privacy."
-        },
-        {
-          "title": "FastCGI: 30 years old and still superior for reverse proxies",
-          "summary": "An article argues that FastCGI, despite being 30 years old, remains a better protocol than HTTP for reverse proxy communication due to its multiplexing and efficiency. This matters because many modern web stacks default to HTTP for reverse proxying, but FastCGI offers lower overhead and better performance for server-to-server communication, potentially improving latency and resource usage. FastCGI uses a single persistent connection with multiplexed requests, avoiding HTTP's header overhead and connection setup costs, but it lacks WebSocket support and has limitations in URL encoding.",
-          "url": "https://www.agwa.name/blog/post/fastcgi_is_the_better_protocol_for_reverse_proxies",
-          "score": 7,
-          "sources": [
-            {
-              "name": "hackernews",
-              "meta": "agwa"
-            }
-          ],
-          "tags": [
-            "FastCGI",
-            "reverse proxy",
-            "web protocols",
-            "performance"
-          ],
-          "focusTopics": [],
-          "background": "FastCGI is a protocol that enables a web server to communicate with application processes (e.g., PHP) over a persistent socket, improving on CGI's per-request process spawning. Reverse proxies sit between clients and backend servers, and the choice of protocol affects performance and feature support.",
-          "discussion": "Comments highlight alternatives like Web Application Socket (WAS) and note FastCGI's lossy URL handling (e.g., %2F). Some argue HTTP won historically due to simplicity, while others appreciate FastCGI's efficiency for specific use cases."
-        },
-        {
-          "title": "Why a Developer Prefers Lisp and Scheme Over Haskell",
-          "summary": "A developer published an article explaining why they prefer Lisp and Scheme over Haskell, citing interactive development, macros, and simplicity as key advantages despite Haskell's strong type system. This discussion highlights the enduring trade-offs between dynamic and static typing, and between interactive development and compile-time safety, which are central to programming language design and developer productivity. The article emphasizes Lisp's interactive development environment, where developers can modify code at runtime, and its powerful macro system for metaprogramming, contrasting with Haskell's emphasis on type safety and purity.",
-          "url": "https://jointhefreeworld.org/blog/articles/lisps/why-i-still-reach-for-scheme-instead-of-haskell/index.html",
-          "score": 7,
-          "sources": [
-            {
-              "name": "hackernews",
-              "meta": "jjba23"
-            }
-          ],
-          "tags": [
-            "Lisp",
-            "Scheme",
-            "Haskell",
-            "programming languages",
-            "functional programming"
-          ],
-          "focusTopics": [],
-          "background": "Lisp and Scheme are among the oldest programming languages, known for their minimal syntax and powerful macro systems. Haskell is a modern functional language with a sophisticated type system that catches many errors at compile time. The debate reflects a fundamental tension between flexibility and safety in language design.",
-          "discussion": "Commenters discussed the practicality of interactive debugging and hotfixing in Lisp dialects, with some noting that Common Lisp supports it but Racket may be less straightforward. Others suggested the author would enjoy Clojure, and one commenter noted similarities to a 2012 article."
-        },
-        {
-          "title": "Dutch Government Soft-Launches Open-Source Code Platform",
-          "summary": "The Dutch government soft-launched an open-source code platform at code.overheid.nl to host its own code, moving away from GitHub and promoting transparency. This move strengthens digital sovereignty and public sector transparency, setting an example for other governments to reduce reliance on commercial platforms. The platform is built on GitLab and includes projects like RegelRecht, which encodes Dutch law as YAML for deterministic decision logic.",
-          "url": "https://www.nldigitalgovernment.nl/news/soft-launch-for-government-open-source-code-platform/",
-          "score": 7,
-          "sources": [
-            {
-              "name": "hackernews",
-              "meta": "e12e"
-            }
-          ],
-          "tags": [
-            "open source",
-            "government",
-            "Netherlands",
-            "digital sovereignty",
-            "public sector"
-          ],
-          "focusTopics": [],
-          "background": "Governments worldwide are pursuing digital sovereignty to control their own data and infrastructure. Open-source platforms reduce vendor lock-in and increase transparency. The Netherlands joins Germany (opencode.de) in hosting government code on self-managed infrastructure.",
-          "discussion": "Dutch commenters expressed pride and relief, noting they had long advocated for open source in government. Some discussed practical use cases like RegelRecht, while others compared the initiative to similar efforts in Germany."
-        },
-        {
-          "title": "Maryland Bans Surveillance Pricing in Grocery Stores",
-          "summary": "Maryland has become the first U.S. state to ban surveillance pricing in grocery stores, prohibiting the use of personal data to set individualized prices for essential goods. This legislation sets a precedent for regulating dynamic pricing based on consumer surveillance, potentially influencing other states and protecting consumer privacy in essential goods markets. The law does not allow consumers to sue companies directly; enforcement relies on the Attorney General's office. Critics note that companies could circumvent the ban by raising base prices and offering individualized discounts.",
-          "url": "https://www.theguardian.com/technology/2026/apr/29/maryland-grocery-stores-ban-surveillance-pricing",
-          "score": 7,
-          "sources": [
-            {
-              "name": "hackernews",
-              "meta": "01-_-"
-            }
-          ],
-          "tags": [
-            "privacy",
-            "legislation",
-            "pricing",
-            "consumer rights",
-            "technology policy"
-          ],
-          "focusTopics": [],
-          "background": "Surveillance pricing is a form of dynamic pricing where a consumer's personal data and behavior are used to determine their willingness to pay. The Federal Trade Commission has studied this practice, finding that a wide range of personal data can be used to set individualized prices.",
-          "discussion": "Commenters expressed skepticism about the law's effectiveness, noting that companies could achieve similar outcomes by raising prices for everyone and then offering discounts. Some also pointed out the lack of a private right of action, limiting enforcement."
-        },
-        {
-          "title": "IBM Granite 4.1 LLMs: Architecture and Training Deep Dive",
-          "summary": "IBM released the Granite 4.1 family of dense decoder-only LLMs in three sizes (3B, 8B, 30B), trained on ~15T tokens with multi-stage pre-training and long-context extension up to 512K tokens. This technical overview from IBM and Hugging Face provides valuable insights into building a major open LLM family, influencing how other organizations design their own models. The models are dense decoder-only architectures, trained on ~15T tokens using a multi-stage pre-training pipeline, with long-context extension up to 512K tokens.",
-          "url": "https://huggingface.co/blog/ibm-granite/granite-4-1",
-          "score": 7,
-          "sources": [
-            {
-              "name": "rss",
-              "meta": "Hugging Face Blog"
-            }
-          ],
-          "tags": [
-            "LLM",
-            "IBM",
-            "Hugging Face",
-            "model architecture",
-            "training"
-          ],
-          "focusTopics": [],
-          "background": "Granite 4.1 is a family of open foundation models developed by IBM. Dense decoder-only architectures are common in modern LLMs like GPT-4. Multi-stage pre-training and long-context extension are techniques to improve model performance and handle longer inputs."
-        },
-        {
-          "title": "Germany Overtakes US as World's Largest Ammunition Producer",
-          "summary": "Germany has surpassed the United States to become the world's largest ammunition producer, according to recent reports. This marks a significant shift in global military-industrial dynamics. This change reflects the impact of the war in Ukraine and sanctions on Russia, which have boosted European defense production. It also signals a potential long-term realignment of global arms manufacturing capabilities. Germany's annual ammunition production capacity is estimated at 1.1 million shells, while the US has fallen behind. The shift is partly due to increased European demand and US focus on other military priorities.",
-          "url": "https://prm.ua/en/the-us-is-no-longer-the-leader-germany-has-become-the-largest-ammunition-producer-in-the-world/",
-          "score": 6,
-          "sources": [
-            {
-              "name": "hackernews",
-              "meta": "doener"
-            }
-          ],
-          "tags": [
-            "geopolitics",
-            "defense industry",
-            "manufacturing",
-            "Germany"
-          ],
-          "focusTopics": [
-            "memory"
-          ],
-          "background": "Ammunition production is a key indicator of military industrial capacity. Historically, the US has been the dominant producer, but the war in Ukraine has driven European nations to ramp up production. Germany, as Europe's largest economy, has leveraged its industrial base to expand output.",
-          "discussion": "Commenters noted that Germany's rise is partly due to sanctions on Russia and a shift from civilian to military production. Some expressed concern over Germany supplying ammunition to Israel amid conflicts in Gaza and Lebanon."
+          "focusTopics": []
         }
       ]
     },
@@ -210,70 +47,331 @@
       "title": "Research & Innovation",
       "items": [
         {
-          "title": "DOS 1.0 Source Code Transcribed from Original Printouts",
-          "summary": "The DOS-History project has published a transcription of Tim Paterson's original DOS 1.0 printouts on GitHub, making the source code of 86-DOS 1.00 and early PC-DOS 1.00 kernels available for public analysis. This release allows researchers and enthusiasts to examine the earliest version of the operating system that became MS-DOS, potentially settling long-standing debates about whether CP/M code was included in DOS 1.0. The transcription was performed using OCR on paper printouts, with CRC checks in the margins used for self-error checking. The repository includes 86-DOS 1.00 kernel, various PC-DOS 1.00 pre-release kernels, utilities, and the Microsoft BASIC-86 Compiler runtime library.",
-          "url": "https://github.com/DOS-History/Paterson-Listings",
+          "title": "Why Does Reinforcement Learning Generalize? A Feature-Level Mechanistic Study of Post-Training in Large Language Models",
+          "summary": "从特征层面研究RL后训练为何提升LLM推理泛化能力。",
+          "url": "https://arxiv.org/abs/2604.25011",
           "score": 8,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "s2l"
+              "name": "ArXiv cs.CL"
             }
           ],
           "tags": [
-            "DOS",
-            "open source",
-            "history",
-            "operating systems",
-            "reverse engineering"
+            "llm",
+            "reinforcement-learning",
+            "reasoning"
           ],
-          "focusTopics": [],
-          "background": "MS-DOS was the dominant operating system for IBM PC compatibles in the 1980s. It originated as 86-DOS, created by Tim Paterson at Seattle Computer Products, which Microsoft purchased and adapted for the IBM PC. The original source code was thought lost, but Paterson's printouts were preserved and have now been transcribed.",
-          "discussion": "Community members highlighted the technical achievement of OCR with CRC error-checking, and noted that the availability of assembler code allows full examination of claims about CP/M code inclusion in DOS 1.0. One commenter also recalled a possible connection to the original development machine."
+          "focusTopics": [
+            "post-training"
+          ]
         },
         {
-          "title": "OpenTrafficMap: Low-Cost V2X Traffic Data Collection",
-          "summary": "OpenTrafficMap demonstrates a method to collect vehicle-to-everything (V2X) traffic data using sub-£20 hardware, making V2X data collection accessible to a wider audience. This low-cost approach could democratize traffic monitoring, enabling researchers, hobbyists, and small communities to gather real-time V2X data without expensive equipment, potentially accelerating innovation in traffic safety and efficiency. The project uses affordable hardware (sub-£20) to capture V2X messages like CAM and SPAT, which were previously only accessible with expensive 802.11p equipment. The data is visualized on a map built on OpenStreetMap.",
-          "url": "https://opentrafficmap.org/",
+          "title": "The Power of Power Law: Asymmetry Enables Compositional Reasoning",
+          "summary": "发现幂律分布中的不对称性可增强LLM的组合推理能力。",
+          "url": "https://arxiv.org/abs/2604.22951",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "reasoning",
+            "power-law",
+            "compositional"
+          ],
+          "focusTopics": [
+            "planning"
+          ]
+        },
+        {
+          "title": "Don't Make the LLM Read the Graph: Make the Graph Think",
+          "summary": "让图结构自身推理，而非让LLM读取图，提升多智能体协作。",
+          "url": "https://arxiv.org/abs/2604.23057",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "multi-agent",
+            "belief-graph",
+            "reasoning"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "GAIA-v2-LILT: Multilingual Adaptation of Agent Benchmark beyond Translation",
+          "summary": "GAIA-v2-LILT：超越翻译的多语言代理基准适配。",
+          "url": "https://arxiv.org/abs/2604.24929",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "agent-benchmark",
+            "multilingual",
+            "adaptation"
+          ],
+          "focusTopics": [
+            "evals"
+          ]
+        },
+        {
+          "title": "BenchGuard: Who Guards the Benchmarks? Automated Auditing of LLM Agent Benchmarks",
+          "summary": "提出自动化审计LLM Agent基准测试的方法，确保基准质量。",
+          "url": "https://arxiv.org/abs/2604.24955",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "llm",
+            "benchmark",
+            "agent"
+          ],
+          "focusTopics": [
+            "evals"
+          ]
+        },
+        {
+          "title": "Qwen Introduced FlashQLA",
+          "summary": "Qwen推出FlashQLA，高性能线性注意力内核，2-3倍前向加速。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1syx4sg/qwen_introduced_flashqla/",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "attention",
+            "kernel",
+            "qwen"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "PExA: Parallel Exploration Agent for Complex Text-to-SQL",
+          "summary": "提出并行探索代理PExA，优化Text-to-SQL的延迟与性能权衡。",
+          "url": "https://arxiv.org/abs/2604.22934",
           "score": 7,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "moooo99"
+              "name": "ArXiv cs.AI"
             }
           ],
           "tags": [
-            "V2X",
-            "traffic monitoring",
-            "open source",
-            "IoT",
-            "low-cost hardware"
+            "text-to-sql",
+            "llm-agent",
+            "parallel-exploration"
           ],
-          "focusTopics": [],
-          "background": "V2X communication allows vehicles to exchange information with each other and infrastructure to improve safety and traffic flow. Traditional V2X hardware, such as 802.11p radios, is costly, limiting its use to well-funded projects. OpenTrafficMap aims to lower this barrier by using inexpensive components.",
-          "discussion": "Commenters expressed strong interest in the low-cost approach, noting that 802.11p hardware is typically very expensive. Some pointed out limitations, such as lack of US coverage and missing links for more information, while others praised the modern map design."
+          "focusTopics": [
+            "agent-harness"
+          ]
         },
         {
-          "title": "Cursor Camp: A Creative Mouse-Controlled Game",
-          "summary": "Neal.fun launched Cursor Camp, an interactive web game that uses mouse motion as the primary control scheme, allowing players to navigate a campsite and complete various challenges. This game showcases a novel and intuitive control mechanism that has resonated strongly with the Hacker News community, generating high engagement and positive discussion. It demonstrates how simple, creative ideas can create delightful user experiences on the web. The game includes hidden badges such as 'Cannonball!', 'Treasure Hunter', 'Goal!', and 'S'more Please', which players can discover by performing specific actions. The mouse can 'teleport' when entering doors, and control is sometimes taken away during events like floating downstream.",
-          "url": "https://neal.fun/cursor-camp/",
+          "title": "FormalScience: Scalable Human-in-the-Loop Autoformalisation of Science with Agentic Code Generation in Lean",
+          "summary": "提出FormalScience，用LLM代理在Lean中自动形式化科学推理。",
+          "url": "https://arxiv.org/abs/2604.23002",
+          "score": 7,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "formalization",
+            "lean",
+            "code-generation"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "A Decoupled Human-in-the-Loop System for Controlled Autonomy in Agentic Workflows",
+          "summary": "提出人机协同系统，在代理工作流中实现受控自主。",
+          "url": "https://arxiv.org/abs/2604.23049",
+          "score": 7,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "human-in-the-loop",
+            "agentic-workflow",
+            "autonomy"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "Analytica: Soft Propositional Reasoning for Robust and Scalable LLM-Driven Analysis",
+          "summary": "提出Analytica框架，用软命题推理增强LLM分析鲁棒性。",
+          "url": "https://arxiv.org/abs/2604.23072",
+          "score": 7,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "propositional-reasoning",
+            "llm-agent",
+            "analysis"
+          ],
+          "focusTopics": [
+            "planning"
+          ]
+        },
+        {
+          "title": "Large Language Models Explore by Latent Distilling",
+          "summary": "通过潜在蒸馏让LLM探索多样化响应，提升测试时扩展。",
+          "url": "https://arxiv.org/abs/2604.24927",
+          "score": 7,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "llm",
+            "diversity",
+            "latent-distillation"
+          ],
+          "focusTopics": [
+            "post-training"
+          ]
+        },
+        {
+          "title": "Don\\'t Stop Early: Scalable Enterprise Deep Research with Controlled Information Flow and Evidence-Aware Termination",
+          "summary": "企业级深度研究系统，控制信息流并证据感知终止。",
+          "url": "https://arxiv.org/abs/2604.24978",
+          "score": 7,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "llm",
+            "enterprise",
+            "research"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "AeroJAX: JAX-native CFD, differentiable end-to-end. ~560 FPS at 128x128 on CPU [P]",
+          "summary": "AeroJAX：基于JAX的可微CFD框架，CPU上128x128网格达560 FPS。",
+          "url": "https://www.reddit.com/r/MachineLearning/comments/1sz046n/aerojax_jaxnative_cfd_differentiable_endtoend_560/",
+          "score": 7,
+          "sources": [
+            {
+              "name": "Reddit r/MachineLearning"
+            }
+          ],
+          "tags": [
+            "jax",
+            "cfd",
+            "differentiable-simulation"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "A Systematic Approach for Large Language Models Debugging",
+          "summary": "系统化方法用于LLM调试，提升AI工作流可靠性。",
+          "url": "https://arxiv.org/abs/2604.23027",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "llm-debugging",
+            "systematic-approach"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Friendly chatbots make more mistakes. | The Verge",
+          "summary": "研究发现友好型聊天机器人更容易出错。",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/920341/friendly-chatbots-make-more-mistakes",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "theverge.com"
+            }
+          ],
+          "tags": [
+            "chatbot",
+            "safety",
+            "alignment"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "ADE: Adaptive Dictionary Embeddings -- Scaling Multi-Anchor Representations to Large Language Models",
+          "summary": "提出自适应字典嵌入ADE，扩展多锚点表示到LLM。",
+          "url": "https://arxiv.org/abs/2604.24940",
           "score": 6,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "bpierre"
+              "name": "ArXiv cs.CL"
             }
           ],
           "tags": [
-            "interactive",
-            "game",
-            "web",
-            "creative",
-            "fun"
+            "word-embeddings",
+            "llm",
+            "representation"
           ],
-          "focusTopics": [],
-          "background": "Cursor Camp is a browser-based interactive experience created by Neal.fun, known for other creative web projects. It leverages standard mouse input in a non-standard way, turning simple cursor movement into a game mechanic. The game's charm lies in its simplicity and the joy of discovery.",
-          "discussion": "The Hacker News community reacted with enthusiasm, with users praising the innovative mouse control and the fun of exploration. One user jokingly suggested a class action lawsuit for lost productivity, while another provided a spoiler-free badge guide. Overall sentiment was highly positive, with many expressing joy and gratitude."
+          "focusTopics": []
+        },
+        {
+          "title": "A Survey on LLM-based Conversational User Simulation",
+          "summary": "综述基于LLM的对话用户模拟技术。",
+          "url": "https://arxiv.org/abs/2604.24977",
+          "score": 6,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "llm",
+            "survey",
+            "conversation"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Dynamic Decision Learning: Test-Time Evolution for Abnormality Grounding in Rare Diseases",
+          "summary": "针对罕见病异常定位的动态决策学习方法。",
+          "url": "https://arxiv.org/abs/2604.24972",
+          "score": 5,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "medical",
+            "rare-disease",
+            "decision-learning"
+          ],
+          "focusTopics": []
         }
       ]
     },
@@ -282,209 +380,924 @@
       "title": "Engineering & Resources",
       "items": [
         {
-          "title": "Zed 1.0: Rust-Powered Code Editor Reaches Stable Release",
-          "summary": "Zed 1.0 has been officially released as a stable, high-performance code editor built with Rust and GPU-accelerated rendering, featuring native real-time collaboration and AI integration. Zed 1.0 offers a compelling alternative to established editors like VS Code and Sublime Text, with its speed and modern architecture potentially reshaping developer workflows. The editor is open-source and available on Linux, macOS, and Windows, but its license agreement has raised concerns about data usage rights.",
-          "url": "https://zed.dev/blog/zed-1-0",
-          "score": 8,
+          "title": "microsoft/VibeVoice",
+          "summary": "微软开源的前沿语音AI模型VibeVoice。",
+          "url": "https://github.com/microsoft/VibeVoice",
+          "score": 9.149999999999999,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "salkahfi"
+              "name": "GitHub trending:all (+1690★)"
             }
           ],
           "tags": [
-            "Zed",
-            "code editor",
-            "Rust",
-            "GPU-accelerated",
-            "developer tools"
+            "voice-ai",
+            "open-source",
+            "microsoft"
           ],
           "focusTopics": [
-            "multi-agent"
-          ],
-          "background": "Zed is a code editor written in Rust, a systems programming language known for performance and safety. It uses GPU-accelerated rendering for smooth scrolling and fast UI, and integrates Tree-sitter for syntax highlighting. The editor also supports agentic AI editing and SSH remote development.",
-          "discussion": "Community reactions are mixed: many praise Zed's performance and features, calling it the best modern editor, while others express concerns over the license agreement's data usage clause, which some find restrictive."
+            "model-release"
+          ]
         },
         {
-          "title": "HERMES.md in Git Commits Triggers Billing Bug in Claude Code",
-          "summary": "A bug in Anthropic's Claude Code causes API requests to be routed to extra usage billing when the string 'HERMES.md' appears in recent git commit history, bypassing the user's Max plan subscription. Initially, Anthropic denied compensation, but after community outcry, the company issued full refunds and additional credits to affected users. This bug undermines trust in AI tool billing, especially for flat-rate subscribers who expect predictable costs. It highlights the need for robust billing systems and transparent customer support in AI products. The bug is triggered by the case-sensitive string 'HERMES.md' in commit messages, causing Claude Code to silently switch from Max plan to metered API billing. Affected users were initially told compensation would not be issued for technical errors, but later received full refunds and an extra grant of usage credits equal to their monthly subscription.",
+          "title": "Introducing the IBM Granite 4.1 family of models (3B/8B/30B)",
+          "summary": "IBM发布Granite 4.1系列模型（3B/8B/30B）。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1sz23wn/introducing_the_ibm_granite_41_family_of_models/",
+          "score": 8.5,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "ibm",
+            "granite",
+            "model-release"
+          ],
+          "focusTopics": [
+            "model-release"
+          ]
+        },
+        {
+          "title": "HERMES.md in commit messages causes requests to route to extra usage billing",
+          "summary": "Claude Code中HERMES.md导致额外计费问题。",
           "url": "https://github.com/anthropics/claude-code/issues/53262",
-          "score": 8,
+          "score": 8.3,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "homebrewer"
+              "name": "HN (979)"
             }
           ],
           "tags": [
+            "claude-code",
             "billing",
-            "bug",
-            "Anthropic",
-            "Claude Code",
-            "customer support"
-          ],
-          "focusTopics": [],
-          "background": "Claude Code is an AI coding assistant from Anthropic that offers a 'Claude Max' flat-rate subscription plan. The bug occurs when a git repository's recent commit history contains 'HERMES.md' (a reference to the HERMES project management method), causing the tool to route API requests to extra usage billing instead of using the subscription. This issue was discovered by users and reported on GitHub.",
-          "discussion": "Community comments express strong frustration with Anthropic's initial denial of compensation, calling it a 'crazy policy' and noting that legitimate businesses typically refund for their own technical errors. After Anthropic reversed course and offered refunds plus credits, some users shared similar billing issues they had experienced."
-        },
-        {
-          "title": "Kyoto cherry blossoms bloom earliest in 1,200 years",
-          "summary": "Kyoto's cherry blossoms have reached peak bloom earlier than at any point in the past 1,200 years, based on a long-term dataset of historical records. This unprecedented early bloom provides compelling evidence of climate change, as the shifting dates correlate strongly with rising global temperatures. It highlights the tangible impact of climate change on natural phenomena and ecosystems. The dataset, curated by humans over centuries, shows a clear trend of earlier blooming in recent decades, with the earliest dates occurring in the 21st century. The 2023 peak bloom was recorded on March 25, the earliest in the 1,200-year record.",
-          "url": "https://jivx.com/kyoto-bloom",
-          "score": 8,
-          "sources": [
-            {
-              "name": "hackernews",
-              "meta": "momentmaker"
-            }
-          ],
-          "tags": [
-            "climate change",
-            "data science",
-            "environment",
-            "long-term dataset",
-            "cherry blossoms"
+            "bug"
           ],
           "focusTopics": [
-            "memory"
-          ],
-          "background": "Cherry blossom peak bloom dates in Kyoto have been recorded by Japanese scholars and aristocrats since the 9th century, creating one of the longest continuous phenological datasets in the world. Phenology is the study of cyclic natural events, and such long-term records are rare and valuable for climate research.",
-          "discussion": "Commenters expressed awe at the 1,200-year dataset and concern over the rapid shift in bloom dates. Some shared personal observations of earlier blooming in their own gardens, while others noted the lack of mainstream media coverage on climate change."
+            "coding-agents"
+          ]
         },
         {
-          "title": "We Need a Federation of Forges",
-          "summary": "A blog post on Tangled proposes a federation of forges to replace centralized platforms like GitHub, sparking debate on feasibility and lessons from Mastodon. This proposal addresses growing concerns about centralization in software development, offering a decentralized alternative that could reshape how open-source projects collaborate. The post highlights that while Git is decentralized, the surrounding forge services (issues, pull requests, etc.) are not, and proposes a federated model similar to Mastodon.",
-          "url": "https://blog.tangled.org/federation/",
-          "score": 8,
+          "title": "warpdotdev/warp",
+          "summary": "Warp是一个基于终端的智能开发环境。",
+          "url": "https://github.com/warpdotdev/warp",
+          "score": 8.3,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "icy"
+              "name": "GitHub trending:all (+12822★)"
             }
           ],
           "tags": [
-            "federation",
-            "forge",
-            "open source",
-            "decentralization",
-            "GitHub alternative"
-          ],
-          "focusTopics": [],
-          "background": "A forge is a web platform that hosts software development projects, providing tools like version control, issue tracking, and code review. GitHub is the dominant centralized forge, but concerns about vendor lock-in and control have led to interest in federated alternatives.",
-          "discussion": "Comments express skepticism about federation repeating Mastodon's problems like defederation and political debates, but some see value in competition and bootstrapping. Others suggest richer git repos like Fossil as a simpler solution."
-        },
-        {
-          "title": "LLM 0.32a0 Refactors to Message-Based Architecture",
-          "summary": "LLM 0.32a0, an alpha release of Simon Willison's LLM Python library and CLI tool, refactors the core architecture from a prompt-response model to a message-based, multi-part streaming model while maintaining full backwards compatibility. This refactoring enables LLM to better support modern LLM capabilities such as multi-modal inputs, structured outputs, tool calls, and reasoning, making it a more flexible and future-proof abstraction for the thousands of models accessible through its plugin system. The two key changes are: model inputs can now be represented as a sequence of messages (mimicking the chat completions API pattern), and model responses can be composed of a stream of differently typed parts (e.g., text, images, tool calls).",
-          "url": "https://simonwillison.net/2026/Apr/29/llm/#atom-everything",
-          "score": 8,
-          "sources": [
-            {
-              "name": "rss",
-              "meta": "Simon Willison"
-            }
-          ],
-          "tags": [
-            "LLM",
-            "Python",
-            "open source",
-            "refactoring",
-            "CLI"
+            "ai-coding",
+            "terminal",
+            "developer-tools"
           ],
           "focusTopics": [
-            "planning"
-          ],
-          "background": "LLM is an open-source Python library and CLI tool that provides a unified interface to hundreds of LLMs via plugins. Originally built around a simple prompt-response abstraction, it has since added support for attachments, schemas, and tools, but the underlying architecture could not keep up with the diversity of modern model capabilities."
+            "coding-agents"
+          ]
         },
         {
-          "title": "AI Evaluation Costs Emerge as New Bottleneck",
-          "summary": "A Hugging Face blog post highlights that the cost of evaluating AI models is becoming a significant bottleneck, potentially even surpassing training costs in limiting progress. This shift means that as models grow more capable, the resources required to thoroughly test them could become the primary constraint on development, affecting how quickly and safely new AI systems can be deployed. The blog argues that evaluation costs scale with model capability and complexity, and that current evaluation infrastructure may not keep pace with rapid model improvements.",
+          "title": "obra/superpowers",
+          "summary": "一个智能体技能框架和软件开发方法论。",
+          "url": "https://github.com/obra/superpowers",
+          "score": 8.3,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+1653★)"
+            }
+          ],
+          "tags": [
+            "agent-framework",
+            "skills",
+            "methodology"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "mistralai/Mistral-Medium-3.5-128B · Hugging Face",
+          "summary": "Mistral Medium 3.5 128B模型发布，开放权重但商用需许可。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1sz1qer/mistralaimistralmedium35128b_hugging_face/",
+          "score": 8,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "mistral",
+            "model-release",
+            "open-weights"
+          ],
+          "focusTopics": [
+            "model-release"
+          ]
+        },
+        {
+          "title": "Mistral Medium 3.5 Launched",
+          "summary": "Mistral Medium 3.5发布，开放权重但商用需许可。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1sz2mgw/mistral_medium_35_launched/",
+          "score": 8,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "mistral",
+            "model-release"
+          ],
+          "focusTopics": [
+            "model-release"
+          ]
+        },
+        {
+          "title": "Mistral Médium 3.5 is here",
+          "summary": "Mistral Medium 3.5 128B模型发布。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1sz1y64/mistral_médium_35_is_here/",
+          "score": 8,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "mistral",
+            "model-release"
+          ],
+          "focusTopics": [
+            "model-release"
+          ]
+        },
+        {
+          "title": "Granite Speech 4.1",
+          "summary": "IBM发布Granite Speech 4.1语音模型。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1sz4vy0/granite_speech_41/",
+          "score": 8,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "ibm",
+            "granite",
+            "speech"
+          ],
+          "focusTopics": [
+            "model-release"
+          ]
+        },
+        {
+          "title": "huggingface/ml-intern",
+          "summary": "Hugging Face开源ML Intern：自动读论文、训练模型并部署的ML工程师。",
+          "url": "https://github.com/huggingface/ml-intern",
+          "score": 8,
+          "sources": [
+            {
+              "name": "Co-Starred"
+            }
+          ],
+          "tags": [
+            "open-source",
+            "agent",
+            "ml-engineering"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "mattpocock/skills",
+          "summary": "从Claude目录中提取的实用技能集合。",
+          "url": "https://github.com/mattpocock/skills",
+          "score": 7.875,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+7280★)"
+            }
+          ],
+          "tags": [
+            "ai-coding",
+            "skills",
+            "developer-tools"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "AI evals are becoming the new compute bottleneck",
+          "summary": "AI评估正成为新的计算瓶颈，分析成本与效率问题。",
           "url": "https://huggingface.co/blog/evaleval/eval-costs-bottleneck",
-          "score": 8,
+          "score": 7.5,
           "sources": [
             {
-              "name": "rss",
-              "meta": "Hugging Face Blog"
+              "name": "Hugging Face"
             }
           ],
           "tags": [
-            "AI",
-            "evaluation",
-            "bottleneck",
-            "cost",
-            "Hugging Face"
-          ],
-          "focusTopics": [],
-          "background": "AI evaluation involves testing models on benchmarks and real-world tasks to measure performance, safety, and alignment. As models become more advanced, evaluations require more compute, data, and human oversight, driving up costs."
-        },
-        {
-          "title": "Open-Source 3D-Printed Stethoscope Costs $2.5-$5",
-          "summary": "The GliaX Stethoscope, an open-source, 3D-printed stethoscope, can be produced for $2.5 to $5, aiming to make medical diagnostics more accessible. This dramatically reduces the cost of a critical diagnostic tool, potentially improving healthcare access in low-resource settings and challenging the high prices of commercial stethoscopes. The project is hosted on GitHub and includes design files for 3D printing and assembly; however, community members have questioned its frequency response compared to professional stethoscopes and noted that cheap metal alternatives are available for around $7.",
-          "url": "https://github.com/GliaX/Stethoscope",
-          "score": 7,
-          "sources": [
-            {
-              "name": "hackernews",
-              "meta": "0x54MUR41"
-            }
-          ],
-          "tags": [
-            "open-source",
-            "medical-devices",
-            "3d-printing",
-            "health-tech"
-          ],
-          "focusTopics": [],
-          "background": "Stethoscopes are essential for auscultation, but high-quality models can cost over $100. Open-source hardware and 3D printing enable low-cost production of medical devices, though performance validation remains a challenge.",
-          "discussion": "Comments express skepticism about the stethoscope's frequency response accuracy, with one user pointing out that cheap metal stethoscopes are available for $7, potentially offering better value. Another user shared an inspiring interview with the researcher behind the project."
-        },
-        {
-          "title": "Mistral Releases Medium 3.5, a 128B Dense Model",
-          "summary": "Mistral AI has released Mistral Medium 3.5, a dense 128B parameter model with a 256k context window, designed to handle instruction-following, reasoning, and coding in a single set of weights. This model competes with much larger models while being deployable on consumer hardware like a Mac Studio with 128GB RAM, making advanced AI more accessible for local use and reducing reliance on cloud APIs. The model is a dense 128B architecture, not a mixture-of-experts, which means it requires significant VRAM but offers consistent performance across tasks. At Q4 quantization, it fits in about 70GB VRAM, enabling local deployment on high-end consumer hardware.",
-          "url": "https://mistral.ai/news/vibe-remote-agents-mistral-medium-3-5",
-          "score": 7,
-          "sources": [
-            {
-              "name": "hackernews",
-              "meta": "meetpateltech"
-            }
-          ],
-          "tags": [
-            "AI",
-            "LLM",
-            "Mistral",
-            "open-source",
-            "local deployment"
+            "evals",
+            "compute",
+            "bottleneck"
           ],
           "focusTopics": [
-            "memory",
-            "planning"
-          ],
-          "background": "Mistral AI is a French AI company known for releasing competitive open-weight models. Dense models use all parameters for every inference, unlike mixture-of-experts models that activate only a subset, typically resulting in more predictable performance but higher memory usage. Quantization reduces model precision to lower memory requirements.",
-          "discussion": "Commenters generally welcomed the release, noting that model diversity is beneficial. Some pointed out that while Mistral Medium 3.5 doesn't beat top models, its smaller size enables local deployment. Others compared it favorably to larger models like GLM 5.1 and Kimi K2.5, which require much more VRAM. However, some argued that quantized DeepSeek v4 Flash runs faster on similar hardware, posing competition."
+            "evals"
+          ]
         },
         {
-          "title": "Laws of UX: Aesthetic Posters or Superficial Guide?",
-          "summary": "The Laws of UX website presents a collection of 30 UX design principles as visually appealing posters, but community feedback criticizes it for oversimplifying complex concepts and lacking depth. This resource is widely referenced by designers, yet the criticism highlights a risk of treating heuristic guidelines as rigid rules, which may hinder deeper understanding and innovation in UX and HCI. The site includes principles like 'Cognitive Bias' and 'Choice Overload,' but commenters note that some entries are mislabeled as laws and the presentation prioritizes aesthetics over usability, with 30 text-based laws buried under irrelevant images.",
-          "url": "https://lawsofux.com/",
+          "title": "Now Google Gemini will create spreadsheets, PDFs and other files if you ask. | The Verge",
+          "summary": "Google Gemini新增创建电子表格、PDF等文件功能。",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/920870/now-google-gemini-will-create-spreadsheets-pdfs-and-other-files-if-you-ask",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "theverge.com"
+            }
+          ],
+          "tags": [
+            "gemini",
+            "google",
+            "product-update"
+          ],
+          "focusTopics": [
+            "tool-use"
+          ]
+        },
+        {
+          "title": "Sanctioned Chinese AI Firm SenseTime Releases Image Model Built for Speed | WIRED",
+          "summary": "被制裁的中国AI公司商汤发布快速图像模型。",
+          "url": "https://www.wired.com/story/chinese-ai-giant-sensetime-is-running-its-new-model-on-chinese-chips/",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "wired.com"
+            }
+          ],
+          "tags": [
+            "image-generation",
+            "china",
+            "open-source"
+          ],
+          "focusTopics": [
+            "model-release"
+          ]
+        },
+        {
+          "title": "mattmireles/gemma-tuner-multimodal",
+          "summary": "Gemma Tuner Multimodal：在Apple Silicon上微调Gemma 4/3n的多模态工具。",
+          "url": "https://github.com/mattmireles/gemma-tuner-multimodal",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "Co-Starred"
+            }
+          ],
+          "tags": [
+            "fine-tuning",
+            "gemma",
+            "multimodal"
+          ],
+          "focusTopics": [
+            "post-training"
+          ]
+        },
+        {
+          "title": "Cursor Camp",
+          "summary": "Cursor推出AI编程训练营Cursor Camp。",
+          "url": "https://neal.fun/cursor-camp/",
+          "score": 7.45,
+          "sources": [
+            {
+              "name": "HN (613)"
+            }
+          ],
+          "tags": [
+            "cursor",
+            "ai-coding",
+            "education"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "Granite 4.1 LLMs: How They’re Built",
+          "summary": "IBM发布Granite 4.1 LLM系列，介绍构建方法。",
+          "url": "https://huggingface.co/blog/ibm-granite/granite-4-1",
+          "score": 7,
+          "sources": [
+            {
+              "name": "Hugging Face"
+            }
+          ],
+          "tags": [
+            "llm",
+            "ibm",
+            "granite"
+          ],
+          "focusTopics": [
+            "model-release"
+          ]
+        },
+        {
+          "title": "All the evidence unveiled so far in Musk v. Altman | The Verge",
+          "summary": "马斯克诉奥特曼案中已公开的证据汇总。",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/920775/evidence-exhibits-elon-musk-sam-altman-openai-trial",
+          "score": 7,
+          "sources": [
+            {
+              "name": "theverge.com"
+            }
+          ],
+          "tags": [
+            "legal",
+            "openai",
+            "policy"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Mercor, the $10 Billion AI Startup Recruiting White-Collar Workers to Train AI - Bloomberg",
+          "summary": "估值100亿美元的AI初创公司Mercor招募白领训练AI。",
+          "url": "https://www.bloomberg.com/news/articles/2026-04-29/mercor-the-10-billion-ai-startup-recruiting-white-collar-workers-to-train-ai",
+          "score": 7,
+          "sources": [
+            {
+              "name": "bloomberg.com"
+            }
+          ],
+          "tags": [
+            "data-labeling",
+            "startup",
+            "funding"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "abhigyanpatwari/GitNexus",
+          "summary": "GitNexus是浏览器端代码知识图谱引擎。",
+          "url": "https://github.com/abhigyanpatwari/GitNexus",
+          "score": 6.686,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+774★)"
+            }
+          ],
+          "tags": [
+            "code-intelligence",
+            "knowledge-graph"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "microsoft/playwright-mcp",
+          "summary": "微软Playwright的MCP服务器，用于浏览器自动化。",
+          "url": "https://github.com/microsoft/playwright-mcp",
+          "score": 6.63,
+          "sources": [
+            {
+              "name": "GitHub trending:typescript (+170★)"
+            }
+          ],
+          "tags": [
+            "mcp",
+            "browser-automation",
+            "testing"
+          ],
+          "focusTopics": [
+            "tool-use"
+          ]
+        },
+        {
+          "title": "hugohe3/ppt-master",
+          "summary": "AI从文档生成可编辑PPTX，原生形状非图片。",
+          "url": "https://github.com/hugohe3/ppt-master",
+          "score": 6.571,
+          "sources": [
+            {
+              "name": "GitHub trending:python (+414★)"
+            }
+          ],
+          "tags": [
+            "ai",
+            "presentation",
+            "document-generation"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "1jehuang/jcode",
+          "summary": "JCode是一个编码代理框架。",
+          "url": "https://github.com/1jehuang/jcode",
+          "score": 6.5665000000000004,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+411★)"
+            }
+          ],
+          "tags": [
+            "coding-agent",
+            "framework"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "TauricResearch/TradingAgents",
+          "summary": "多智能体LLM金融交易框架，结合Agent与金融。",
+          "url": "https://github.com/TauricResearch/TradingAgents",
+          "score": 6.529,
+          "sources": [
+            {
+              "name": "GitHub trending:python (+386★)"
+            }
+          ],
+          "tags": [
+            "multi-agent",
+            "finance",
+            "llm"
+          ],
+          "focusTopics": [
+            "agent-harness",
+            "tool-use"
+          ]
+        },
+        {
+          "title": "Fission-AI/OpenSpec",
+          "summary": "AI编程助手的规范驱动开发框架。",
+          "url": "https://github.com/Fission-AI/OpenSpec",
+          "score": 6.505,
+          "sources": [
+            {
+              "name": "GitHub trending:typescript (+370★)"
+            }
+          ],
+          "tags": [
+            "ai-coding",
+            "spec-driven",
+            "developer-tools"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "Building Pi, and what makes self-modifying software so fascinating",
+          "summary": "探讨AI编程的局限，强调人类判断在agent驱动世界中的重要性。",
+          "url": "https://newsletter.pragmaticengineer.com/p/building-pi-and-what-makes-self-modifying",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "Pragmatic Engineer"
+            }
+          ],
+          "tags": [
+            "ai-coding",
+            "agent",
+            "human-judgment"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "An interactive semantic map of the latest 10 million published papers [P]",
+          "summary": "构建了基于最新1000万篇论文的交互式语义地图。",
+          "url": "https://www.reddit.com/r/MachineLearning/comments/1sz14mi/an_interactive_semantic_map_of_the_latest_10/",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "Reddit r/MachineLearning"
+            }
+          ],
+          "tags": [
+            "semantic-map",
+            "visualization",
+            "papers"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "The Zig project's rationale for their firm anti-AI contribution policy",
+          "summary": "Zig项目解释其严格的反AI贡献政策。",
+          "url": "https://simonwillison.net/2026/Apr/30/zig-anti-ai/#atom-everything",
           "score": 6,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "bobbiechen"
+              "name": "Simon Willison"
             }
           ],
           "tags": [
-            "UX",
-            "design",
-            "HCI",
-            "principles"
+            "zig",
+            "policy",
+            "ai"
           ],
-          "focusTopics": [],
-          "background": "The Laws of UX is a collection of design heuristics and cognitive biases commonly referenced in user experience design. While such principles can serve as useful starting points, they are not universal laws and require contextual application. The site's poster format aims to make these concepts memorable, but may sacrifice nuance for visual appeal.",
-          "discussion": "Commenters are divided: some appreciate the aesthetic and see the laws as a helpful checklist, while others argue the entries are superficial, mislabeled, and that the site itself violates its own principles (e.g., choice overload due to 30 laws). One user suggests using AI to bulk-check screens against these laws."
+          "focusTopics": []
+        },
+        {
+          "title": "Inside the AI ad boom at Google and Meta. | The Verge",
+          "summary": "谷歌和Meta的AI广告业务蓬勃发展。",
+          "url": "https://www.theverge.com/tech/920733/inside-the-ai-ad-boom-at-google-and-meta",
+          "score": 6,
+          "sources": [
+            {
+              "name": "theverge.com"
+            }
+          ],
+          "tags": [
+            "advertising",
+            "business"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Free Registration & $20K Prize Pool: 2nd MLC-SLM Challenge 2026 on Multilingual Speech LLMs [N]",
+          "summary": "第二届多语言对话语音语言模型挑战赛2026开放注册，奖金2万美元。",
+          "url": "https://www.reddit.com/r/MachineLearning/comments/1symd9i/free_registration_20k_prize_pool_2nd_mlcslm/",
+          "score": 6,
+          "sources": [
+            {
+              "name": "Reddit r/MachineLearning"
+            }
+          ],
+          "tags": [
+            "challenge",
+            "multilingual",
+            "speech"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "upstash/context7",
+          "summary": "为LLM和AI代码编辑器提供最新代码文档的平台。",
+          "url": "https://github.com/upstash/context7",
+          "score": 5.686999999999999,
+          "sources": [
+            {
+              "name": "GitHub trending:typescript (+108★)"
+            }
+          ],
+          "tags": [
+            "documentation",
+            "llm",
+            "developer-tools"
+          ],
+          "focusTopics": [
+            "context-engineering"
+          ]
+        },
+        {
+          "title": "KellerJordan/modded-nanogpt",
+          "summary": "快速训练NanoGPT（124M）的优化实现。",
+          "url": "https://github.com/KellerJordan/modded-nanogpt",
+          "score": 5.565499999999999,
+          "sources": [
+            {
+              "name": "GitHub trending:python (+27★)"
+            }
+          ],
+          "tags": [
+            "gpt",
+            "training",
+            "optimization"
+          ],
+          "focusTopics": [
+            "post-training"
+          ]
+        },
+        {
+          "title": "ZhuLinsen/daily_stock_analysis",
+          "summary": "LLM驱动的股票分析系统，支持多市场行情和决策仪表盘。",
+          "url": "https://github.com/ZhuLinsen/daily_stock_analysis",
+          "score": 5.5409999999999995,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+294★)"
+            }
+          ],
+          "tags": [
+            "llm",
+            "finance",
+            "agent"
+          ],
+          "focusTopics": [
+            "tool-use"
+          ]
+        },
+        {
+          "title": "LLM 0.32a0 is a major backwards-compatible refactor",
+          "summary": "LLM 0.32a0重大向后兼容重构发布。",
+          "url": "https://simonwillison.net/2026/Apr/29/llm/#atom-everything",
+          "score": 5.5,
+          "sources": [
+            {
+              "name": "Simon Willison"
+            }
+          ],
+          "tags": [
+            "llm",
+            "cli",
+            "refactor"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "AI Risks Will Widen Gap Between Chips, Software: Markets Pulse",
+          "summary": "AI风险将扩大芯片与软件之间的差距。",
+          "url": "https://www.bloomberg.com/news/articles/2026-04-29/ai-risks-will-widen-gap-between-chips-software-markets-pulse?srnd=phx-markets",
+          "score": 5.5,
+          "sources": [
+            {
+              "name": "bloomberg.com"
+            }
+          ],
+          "tags": [
+            "hardware",
+            "risk",
+            "market"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Ramp's Sheets AI Exfiltrates Financials",
+          "summary": "Ramp的AI电子表格工具存在数据泄露风险。",
+          "url": "https://www.promptarmor.com/resources/ramps-sheets-ai-exfiltrates-financials",
+          "score": 5.409,
+          "sources": [
+            {
+              "name": "HN (103)"
+            }
+          ],
+          "tags": [
+            "ai-security",
+            "data-exfiltration",
+            "llm"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "CJackHwang/ds2api",
+          "summary": "将DeepSeek转换为通用API的轻量中间件。",
+          "url": "https://github.com/CJackHwang/ds2api",
+          "score": 5.3725,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+465★)"
+            }
+          ],
+          "tags": [
+            "api",
+            "deepseek",
+            "middleware"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "lukilabs/craft-agents-oss",
+          "summary": "开源Agent构建框架，但缺乏详细描述。",
+          "url": "https://github.com/lukilabs/craft-agents-oss",
+          "score": 5.2645,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+393★)"
+            }
+          ],
+          "tags": [
+            "agent-framework",
+            "open-source"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "I benchmarked Claude Code's caveman plugin against \"be brief.\"",
+          "summary": "作者对比了Claude Code的caveman插件与简单提示词的效果。",
+          "url": "https://www.maxtaylor.me/articles/i-benchmarked-caveman-against-two-words",
+          "score": 5.244,
+          "sources": [
+            {
+              "name": "HN (48)"
+            }
+          ],
+          "tags": [
+            "ai-coding",
+            "llm",
+            "benchmark"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "ExplosiveCoderflome/AI-Novel-Writing-Assistant",
+          "summary": "AI原生长篇小说创作系统，集成Agent和RAG。",
+          "url": "https://github.com/ExplosiveCoderflome/AI-Novel-Writing-Assistant",
+          "score": 5.164499999999999,
+          "sources": [
+            {
+              "name": "GitHub trending:typescript (+43★)"
+            }
+          ],
+          "tags": [
+            "ai-writing",
+            "agent",
+            "rag"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "llm 0.32a1",
+          "summary": "llm工具发布0.32a1版本，修复bug。",
+          "url": "https://simonwillison.net/2026/Apr/29/llm-3/#atom-everything",
+          "score": 5,
+          "sources": [
+            {
+              "name": "Simon Willison"
+            }
+          ],
+          "tags": [
+            "llm",
+            "cli",
+            "release"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "llm 0.32a0",
+          "summary": "llm 0.32a0版本发布公告。",
+          "url": "https://simonwillison.net/2026/Apr/29/llm-2/#atom-everything",
+          "score": 5,
+          "sources": [
+            {
+              "name": "Simon Willison"
+            }
+          ],
+          "tags": [
+            "llm",
+            "cli",
+            "release"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "More Gemini features are coming to Google TV | TechCrunch",
+          "summary": "谷歌TV将集成更多Gemini功能。",
+          "url": "https://techcrunch.com/2026/04/29/more-gemini-features-are-coming-to-google-tv/",
+          "score": 5,
+          "sources": [
+            {
+              "name": "techcrunch.com"
+            }
+          ],
+          "tags": [
+            "gemini",
+            "consumer-ai"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "AMA with Nous Research -- Ask Us Anything!",
+          "summary": "Nous Research AMA，讨论Hermes Agent等。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1sz2y76/ama_with_nous_research_ask_us_anything/",
+          "score": 5,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "ama",
+            "nous-research",
+            "agent"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Building a fully local PDF-to-audiobook workflow with Kokoro 82M, Qwen and llama.cpp",
+          "summary": "构建本地PDF转有声书工作流，使用Kokoro、Qwen等。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1sz8auq/building_a_fully_local_pdftoaudiobook_workflow/",
+          "score": 5,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "local-llm",
+            "tts",
+            "pdf"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Vera: a programming language designed for machines to write",
+          "summary": "Vera是一种专为机器编写代码而设计的编程语言。",
+          "url": "https://github.com/aallan/vera",
+          "score": 4.385,
+          "sources": [
+            {
+              "name": "HN (45)"
+            }
+          ],
+          "tags": [
+            "programming-language",
+            "ai-coding"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "shaxiu/XianyuAutoAgent",
+          "summary": "闲鱼平台AI客服机器人，支持多专家协同。",
+          "url": "https://github.com/shaxiu/XianyuAutoAgent",
+          "score": 4.322,
+          "sources": [
+            {
+              "name": "GitHub trending:python (+48★)"
+            }
+          ],
+          "tags": [
+            "agent",
+            "e-commerce",
+            "customer-service"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "Devs using Qwen 27B seriously, what's your take?",
+          "summary": "开发者讨论Qwen 27B编码体验。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1szajgm/devs_using_qwen_27b_seriously_whats_your_take/",
+          "score": 4,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "qwen",
+            "coding",
+            "local-llm"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "How to Build the Future: Demis Hassabis [video]",
+          "summary": "Demis Hassabis关于如何构建未来的演讲视频。",
+          "url": "https://www.youtube.com/watch?v=JNyuX1zoOgU",
+          "score": 3.661,
+          "sources": [
+            {
+              "name": "HN (87)"
+            }
+          ],
+          "tags": [
+            "ai",
+            "deepmind",
+            "interview"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "How strongly do you believe LLM judges on the for the ML papers?? [D]",
+          "summary": "讨论LLM作为论文评审的可靠性。",
+          "url": "https://www.reddit.com/r/MachineLearning/comments/1sz6uuj/how_strongly_do_you_believe_llm_judges_on_the_for/",
+          "score": 3,
+          "sources": [
+            {
+              "name": "Reddit r/MachineLearning"
+            }
+          ],
+          "tags": [
+            "llm",
+            "review",
+            "discussion"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "deepseek-ai/DeepSeek-V3",
+          "summary": "DeepSeek-V3模型仓库主页，非新发布。",
+          "url": "https://github.com/deepseek-ai/DeepSeek-V3",
+          "score": 1.7555,
+          "sources": [
+            {
+              "name": "GitHub trending:python (+37★)"
+            }
+          ],
+          "tags": [
+            "llm",
+            "deepseek"
+          ],
+          "focusTopics": []
         }
       ]
     }
-  ]
+  ],
+  "aiSummary": "今日AI领域动态密集：**亚马逊云销售因AI需求创2022年以来最大增幅**（[#item-bloomberg-com-news-articles-2026-04-29-amazon-reports-bigges]），而**Claude.ai和API服务突发不可用**（[#item-status-claude-com-incidents-2gf1jpyty350]）。研究方面，两篇论文分别从特征层面揭示RL后训练提升泛化能力的机制，以及幂律分布不对称性增强组合推理能力；微软开源前沿语音模型**VibeVoice**（[#item-github-com-microsoft-VibeVoice]），IBM则发布**Granite 4.1系列模型**（[#item-reddit-com-r-LocalLLaMA-comments-1sz23wn-introducing-the-ibm]）。观点洞察指出，**AI评估正成为新的计算瓶颈**（[#item-huggingface-co-blog-evaleval-eval-costs-bottleneck]），而**马斯克诉奥特曼案**（[#item-theverge-com-ai-artificial-intelligence-920775-evidence-exhi]）已公开多项证据。"
 }
