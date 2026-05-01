@@ -1,0 +1,1280 @@
+{
+  "date": "2026-05-01",
+  "itemCount": 70,
+  "sections": [
+    {
+      "id": "headlines",
+      "title": "Headlines & Launches",
+      "items": [
+        {
+          "title": "Mythos: Why Anthropic’s AI Model Is Sparking Global Alarm - Bloomberg",
+          "summary": "Anthropic的Mythos AI模型引发全球警报，多国关注其潜在风险。",
+          "url": "https://www.bloomberg.com/news/articles/2026-04-30/mythos-why-anthropic-s-ai-model-is-sparking-global-alarm",
+          "score": 8.5,
+          "sources": [
+            {
+              "name": "bloomberg.com"
+            }
+          ],
+          "tags": [
+            "anthropic",
+            "mythos",
+            "ai-safety"
+          ],
+          "focusTopics": [
+            "model-release"
+          ]
+        },
+        {
+          "title": "Anthropic’s Mythos AI Used by NSA to Probe Microsoft Security Vulnerabilities - Bloomberg",
+          "summary": "NSA使用Anthropic的Mythos AI探测微软安全漏洞。",
+          "url": "https://www.bloomberg.com/news/articles/2026-04-30/nsa-testing-anthropic-s-mythos-to-find-flaws-in-microsoft-tech",
+          "score": 8,
+          "sources": [
+            {
+              "name": "bloomberg.com"
+            }
+          ],
+          "tags": [
+            "anthropic",
+            "mythos",
+            "security",
+            "nsa"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Anthropic’s Mythos AI Model Draws Scrutiny From Euro-Area Finance Chiefs - Bloomberg",
+          "summary": "欧元区财政首长将讨论Anthropic的Mythos AI模型引发的担忧。",
+          "url": "https://www.bloomberg.com/news/articles/2026-04-30/euro-area-finance-chiefs-to-discuss-mythos-as-concerns-mount",
+          "score": 8,
+          "sources": [
+            {
+              "name": "bloomberg.com"
+            }
+          ],
+          "tags": [
+            "anthropic",
+            "mythos",
+            "regulation"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Elon Musk testifies that xAI trained Grok on OpenAI models | TechCrunch",
+          "summary": "马斯克作证称xAI使用OpenAI模型训练Grok。",
+          "url": "https://techcrunch.com/2026/04/30/elon-musk-testifies-that-xai-trained-grok-on-openai-models/",
+          "score": 8,
+          "sources": [
+            {
+              "name": "techcrunch.com"
+            }
+          ],
+          "tags": [
+            "elon-musk",
+            "xai",
+            "openai",
+            "grok"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Exclusive: Citi moves into agentic AI - Axios",
+          "summary": "花旗银行推出内部AI平台，让员工创建代理，布局代理AI。",
+          "url": "https://www.axios.com/2026/04/30/exclusive-citi-moves-into-agentic-ai",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "axios.com"
+            }
+          ],
+          "tags": [
+            "enterprise-ai",
+            "agentic-ai",
+            "citi"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "Shai-Hulud Themed Malware Found in the PyTorch Lightning AI Training Library",
+          "summary": "PyTorch Lightning中发现恶意依赖，影响AI训练安全。",
+          "url": "https://semgrep.dev/blog/2026/malicious-dependency-in-pytorch-lightning-used-for-ai-training/",
+          "score": 6.916,
+          "sources": [
+            {
+              "name": "HN (322)"
+            }
+          ],
+          "tags": [
+            "security",
+            "pytorch",
+            "supply-chain"
+          ],
+          "focusTopics": []
+        }
+      ]
+    },
+    {
+      "id": "research",
+      "title": "Research & Innovation",
+      "items": [
+        {
+          "title": "One Word at a Time: Incremental Completion Decomposition Breaks LLM Safety",
+          "summary": "发现逐词增量完成分解可突破LLM安全防线。",
+          "url": "https://arxiv.org/abs/2604.25921",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "llm",
+            "safety",
+            "jailbreak"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "DeepSeek released 'Thinking-with-Visual-Primitives' framework",
+          "summary": "DeepSeek发布'Thinking-with-Visual-Primitives'框架，结合视觉原语推理。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1szwi1d/deepseek_released_thinkingwithvisualprimitives/",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "deepseek",
+            "multimodal",
+            "reasoning"
+          ],
+          "focusTopics": [
+            "planning"
+          ]
+        },
+        {
+          "title": "Evaluating Strategic Reasoning in Forecasting Agents",
+          "summary": "评估预测代理的战略推理能力，提出新基准。",
+          "url": "https://arxiv.org/abs/2604.26106",
+          "score": 7,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "llm",
+            "benchmark",
+            "reasoning"
+          ],
+          "focusTopics": [
+            "evals",
+            "planning"
+          ]
+        },
+        {
+          "title": "DreamProver: Evolving Transferable Lemma Libraries via a Wake-Sleep Theorem-Proving Agent",
+          "summary": "提出DreamProver，通过睡眠-觉醒范式进化引理库。",
+          "url": "https://arxiv.org/abs/2604.26311",
+          "score": 7,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "theorem-proving",
+            "agent",
+            "program-induction"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "Consciousness with the Serial Numbers Filed Off: Measuring Trained Denial in 115 AI Models",
+          "summary": "提出DenialBench基准，测量115个AI模型的意识否认行为。",
+          "url": "https://arxiv.org/abs/2604.25922",
+          "score": 7,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "benchmark",
+            "consciousness",
+            "safety"
+          ],
+          "focusTopics": [
+            "evals"
+          ]
+        },
+        {
+          "title": "SpecTr-GBV: Multi-Draft Block Verification Accelerating Speculative Decoding",
+          "summary": "提出多草稿块验证方法加速推测解码，降低LLM推理延迟。",
+          "url": "https://arxiv.org/abs/2604.25925",
+          "score": 7,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "speculative-decoding",
+            "llm-inference",
+            "efficiency"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "[R] Joint Embedding Variational Bayes (TMLR ’26)",
+          "summary": "提出联合嵌入变分贝叶斯方法，发表于TMLR 2026。",
+          "url": "https://www.reddit.com/r/MachineLearning/comments/1szyjpk/r_joint_embedding_variational_bayes_tmlr_26/",
+          "score": 7,
+          "sources": [
+            {
+              "name": "Reddit r/MachineLearning"
+            }
+          ],
+          "tags": [
+            "variational-bayes",
+            "joint-embedding",
+            "tmlr"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Codebase-scale retrieval using AST-derived graphs + BM25 — reducing LLM context from 100K to 5K tokens [D]",
+          "summary": "用AST图+BM25将代码库检索上下文从100K降至5K token。",
+          "url": "https://www.reddit.com/r/MachineLearning/comments/1t05oe8/codebasescale_retrieval_using_astderived_graphs/",
+          "score": 7,
+          "sources": [
+            {
+              "name": "Reddit r/MachineLearning"
+            }
+          ],
+          "tags": [
+            "rag",
+            "code-retrieval",
+            "ast"
+          ],
+          "focusTopics": [
+            "context-engineering"
+          ]
+        },
+        {
+          "title": "Operating-Layer Controls for Onchain Language-Model Agents Under Real Capital",
+          "summary": "研究链上语言模型代理在真实资本下的操作层控制。",
+          "url": "https://arxiv.org/abs/2604.26091",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "llm-agent",
+            "blockchain",
+            "reliability"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "OMEGA: Optimizing Machine Learning by Evaluating Generated Algorithms",
+          "summary": "提出OMEGA框架，用机器学习自动生成算法。",
+          "url": "https://arxiv.org/abs/2604.26211",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "automl",
+            "meta-learning"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "CogRAG+: Cognitive-Level Guided Diagnosis and Remediation of Memory and Reasoning Deficiencies in Professional Exam QA",
+          "summary": "提出CogRAG+框架，诊断和修复专业考试QA中的记忆与推理缺陷。",
+          "url": "https://arxiv.org/abs/2604.25928",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "rag",
+            "reasoning",
+            "qa"
+          ],
+          "focusTopics": [
+            "context-engineering"
+          ]
+        },
+        {
+          "title": "Hierarchical Multi-Persona Induction from User Behavioral Logs: Learning Evidence-Grounded and Truthful Personas",
+          "summary": "从用户行为日志中学习层次化多角色归纳。",
+          "url": "https://arxiv.org/abs/2604.26120",
+          "score": 6,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "user-modeling",
+            "persona"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Persuadability and LLMs as Legal Decision Tools",
+          "summary": "研究LLM作为法律决策工具的可说服性。",
+          "url": "https://arxiv.org/abs/2604.26233",
+          "score": 6,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "llm",
+            "legal",
+            "safety"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Grounding vs. Compositionality: On the Non-Complementarity of Reasoning in Neuro-Symbolic Systems",
+          "summary": "论证神经符号系统中基础与组合性的非互补性。",
+          "url": "https://arxiv.org/abs/2604.26521",
+          "score": 6,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "neuro-symbolic",
+            "compositionality"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Evaluation Revisited: A Taxonomy of Evaluation Concerns in Natural Language Processing",
+          "summary": "提出NLP评估关注点的分类法，反思现有评估。",
+          "url": "https://arxiv.org/abs/2604.25923",
+          "score": 6,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "nlp",
+            "evaluation",
+            "taxonomy"
+          ],
+          "focusTopics": [
+            "evals"
+          ]
+        },
+        {
+          "title": "MATH-PT: A Math Reasoning Benchmark for European and Brazilian Portuguese",
+          "summary": "发布面向欧洲和巴西葡萄牙语的数学推理基准MATH-PT。",
+          "url": "https://arxiv.org/abs/2604.25926",
+          "score": 6,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "benchmark",
+            "math-reasoning",
+            "multilingual"
+          ],
+          "focusTopics": [
+            "evals"
+          ]
+        },
+        {
+          "title": "LLMs Generate Kitsch",
+          "summary": "研究指出LLM生成内容倾向于媚俗（kitsch）风格。",
+          "url": "https://arxiv.org/abs/2604.25929",
+          "score": 6,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "llm",
+            "creativity",
+            "bias"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Applying Karpathy's autoresearch to a 33M-token public transit dataset (14% improvement, replication notes) [P]",
+          "summary": "将Karpathy的自动研究应用于3300万token公交数据集，提升14%。",
+          "url": "https://www.reddit.com/r/MachineLearning/comments/1t04rrz/applying_karpathys_autoresearch_to_a_33mtoken/",
+          "score": 6,
+          "sources": [
+            {
+              "name": "Reddit r/MachineLearning"
+            }
+          ],
+          "tags": [
+            "autoresearch",
+            "transit",
+            "replication"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Auto-Relational Reasoning",
+          "summary": "研究自动关系推理，提升大模型推理能力。",
+          "url": "https://arxiv.org/abs/2604.26507",
+          "score": 5.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "reasoning",
+            "relational"
+          ],
+          "focusTopics": [
+            "planning"
+          ]
+        },
+        {
+          "title": "Analysing Lightweight Large Language Models for Biomedical Named Entity Recognition on Diverse Ouput Formats",
+          "summary": "分析轻量级LLM在生物医学命名实体识别中的表现。",
+          "url": "https://arxiv.org/abs/2604.25920",
+          "score": 5.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "llm",
+            "biomedical",
+            "ner"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Generative AI-Based Virtual Assistant using Retrieval-Augmented Generation: An evaluation study for bachelor projects",
+          "summary": "评估基于RAG的生成式AI虚拟助手在学士项目中的应用。",
+          "url": "https://arxiv.org/abs/2604.25924",
+          "score": 5,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "rag",
+            "virtual-assistant"
+          ],
+          "focusTopics": [
+            "context-engineering"
+          ]
+        },
+        {
+          "title": "Information Extraction from Electricity Invoices with General-Purpose Large Language Models",
+          "summary": "研究用通用大模型从电费发票中提取信息。",
+          "url": "https://arxiv.org/abs/2604.25927",
+          "score": 5,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "information-extraction",
+            "llm",
+            "document-processing"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Is Attention sink without Positional Encoding unavoidable? [D]",
+          "summary": "探讨无位置编码时注意力汇聚现象。",
+          "url": "https://www.reddit.com/r/MachineLearning/comments/1szqzeq/is_attention_sink_without_positional_encoding/",
+          "score": 5,
+          "sources": [
+            {
+              "name": "Reddit r/MachineLearning"
+            }
+          ],
+          "tags": [
+            "attention",
+            "positional-encoding",
+            "discussion"
+          ],
+          "focusTopics": []
+        }
+      ]
+    },
+    {
+      "id": "engineering",
+      "title": "Engineering & Resources",
+      "items": [
+        {
+          "title": "warpdotdev/warp",
+          "summary": "Warp发布智能开发环境，基于终端但具备AI代理能力。",
+          "url": "https://github.com/warpdotdev/warp",
+          "score": 8.725,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+8399★)"
+            }
+          ],
+          "tags": [
+            "ai-coding",
+            "terminal",
+            "agent"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "microsoft/VibeVoice",
+          "summary": "微软开源前沿语音AI模型VibeVoice。",
+          "url": "https://github.com/microsoft/VibeVoice",
+          "score": 8.5765,
+          "sources": [
+            {
+              "name": "GitHub trending:python (+561★)"
+            }
+          ],
+          "tags": [
+            "voice-ai",
+            "open-source",
+            "microsoft"
+          ],
+          "focusTopics": [
+            "model-release"
+          ]
+        },
+        {
+          "title": "Our evaluation of OpenAI's GPT-5.5 cyber capabilities",
+          "summary": "英国AISI评估OpenAI GPT-5.5网络攻击能力，关注AI安全。",
+          "url": "https://simonwillison.net/2026/Apr/30/gpt-55-cyber-capabilities/#atom-everything",
+          "score": 8,
+          "sources": [
+            {
+              "name": "Simon Willison"
+            }
+          ],
+          "tags": [
+            "gpt-5.5",
+            "cybersecurity",
+            "evaluation"
+          ],
+          "focusTopics": [
+            "evals"
+          ]
+        },
+        {
+          "title": "huggingface/ml-intern",
+          "summary": "开源ML工程师：自动读论文、训练模型并部署。",
+          "url": "https://github.com/huggingface/ml-intern",
+          "score": 8,
+          "sources": [
+            {
+              "name": "Co-Starred"
+            }
+          ],
+          "tags": [
+            "open-source",
+            "automl",
+            "agent"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "TauricResearch/TradingAgents",
+          "summary": "TradingAgents：基于多智能体LLM的金融交易框架开源。",
+          "url": "https://github.com/TauricResearch/TradingAgents",
+          "score": 7.875,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+2023★)"
+            }
+          ],
+          "tags": [
+            "multi-agent",
+            "finance",
+            "llm"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "obra/superpowers",
+          "summary": "Superpowers：一个有效的代理技能框架和软件开发方法论。",
+          "url": "https://github.com/obra/superpowers",
+          "score": 7.875,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+1632★)"
+            }
+          ],
+          "tags": [
+            "agent-framework",
+            "skills",
+            "methodology"
+          ],
+          "focusTopics": [
+            "agent-harness",
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "Enabling a new model for healthcare with AI co-clinician",
+          "summary": "DeepMind探索AI辅助临床医生新模式，推动医疗AI应用。",
+          "url": "https://deepmind.google/blog/ai-co-clinician/",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "DeepMind"
+            }
+          ],
+          "tags": [
+            "healthcare",
+            "ai-assistant",
+            "deepmind"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Google’s Gemini AI assistant is hitting the road in millions of vehicles | TechCrunch",
+          "summary": "谷歌Gemini AI助手将集成到数百万辆汽车中。",
+          "url": "https://techcrunch.com/2026/04/30/googles-gemini-ai-assistant-is-hitting-the-road-in-millions-of-vehicles/",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "techcrunch.com"
+            }
+          ],
+          "tags": [
+            "gemini",
+            "automotive",
+            "google"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "A Hackable ML Compiler Stack in 5,000 Lines of Python [P]",
+          "summary": "用5000行Python实现可破解的ML编译器栈。",
+          "url": "https://www.reddit.com/r/MachineLearning/comments/1t07zff/a_hackable_ml_compiler_stack_in_5000_lines_of/",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "Reddit r/MachineLearning"
+            }
+          ],
+          "tags": [
+            "compiler",
+            "python",
+            "open-source"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "mattmireles/gemma-tuner-multimodal",
+          "summary": "在Apple Silicon上微调Gemma 4/3n多模态模型。",
+          "url": "https://github.com/mattmireles/gemma-tuner-multimodal",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "Co-Starred"
+            }
+          ],
+          "tags": [
+            "gemma",
+            "fine-tuning",
+            "multimodal",
+            "apple-silicon"
+          ],
+          "focusTopics": [
+            "model-release"
+          ]
+        },
+        {
+          "title": "Claude Code refuses requests or charges extra if your commits mention \"OpenClaw\"",
+          "summary": "Claude Code在提交提及OpenClaw时拒绝请求或额外收费。",
+          "url": "https://twitter.com/theo/status/2049645973350363168",
+          "score": 7.45,
+          "sources": [
+            {
+              "name": "HN (952)"
+            }
+          ],
+          "tags": [
+            "claude",
+            "coding-agent",
+            "controversy"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "mattpocock/skills",
+          "summary": "mattpocock发布技能集，来自其.claude目录，用于AI编程。",
+          "url": "https://github.com/mattpocock/skills",
+          "score": 7.45,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+6187★)"
+            }
+          ],
+          "tags": [
+            "skills",
+            "claude",
+            "developer-tools"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "anomalyco/opencode",
+          "summary": "开源编码代理，社区关注度高。",
+          "url": "https://github.com/anomalyco/opencode",
+          "score": 7.353,
+          "sources": [
+            {
+              "name": "GitHub trending:typescript (+652★)"
+            }
+          ],
+          "tags": [
+            "coding-agent",
+            "open-source"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "Codex CLI 0.128.0 adds /goal",
+          "summary": "Codex CLI 0.128.0新增/goal命令，增强AI编程助手功能。",
+          "url": "https://simonwillison.net/2026/Apr/30/codex-goals/#atom-everything",
+          "score": 7,
+          "sources": [
+            {
+              "name": "Simon Willison"
+            }
+          ],
+          "tags": [
+            "codex",
+            "ai-coding",
+            "cli"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "The Pulse: AI load breaks GitHub – why not other vendors?",
+          "summary": "分析AI负载导致GitHub中断，探讨其他供应商为何未受影响。",
+          "url": "https://newsletter.pragmaticengineer.com/p/the-pulse-github-breaks",
+          "score": 7,
+          "sources": [
+            {
+              "name": "Pragmatic Engineer"
+            }
+          ],
+          "tags": [
+            "github",
+            "ai-load",
+            "infrastructure"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Anthropic rolls out its codebase-scanning security tool for businesses. | The Verge",
+          "summary": "Anthropic为企业推出代码库扫描安全工具。",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/921198/anthropic-rolls-out-its-codebase-scanning-security-tool-for-businesses",
+          "score": 7,
+          "sources": [
+            {
+              "name": "theverge.com"
+            }
+          ],
+          "tags": [
+            "security",
+            "code-scanning",
+            "anthropic"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Sarvam AI’s Plan to Break ChatGPT and other Big Tech’s Stranglehold on India - Bloomberg",
+          "summary": "Sarvam AI计划打破ChatGPT等大科技公司在印度的垄断。",
+          "url": "https://www.bloomberg.com/news/newsletters/2026-04-30/sarvam-ai-s-plan-to-break-chatgpt-and-other-big-tech-s-stranglehold-on-india",
+          "score": 7,
+          "sources": [
+            {
+              "name": "bloomberg.com"
+            }
+          ],
+          "tags": [
+            "india",
+            "llm",
+            "startup"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Gemini is rolling out to cars with Google built-in | The Verge",
+          "summary": "Gemini正在向内置谷歌服务的汽车推送升级。",
+          "url": "https://www.theverge.com/tech/921117/google-gemini-ai-assistant-cars-upgrade",
+          "score": 7,
+          "sources": [
+            {
+              "name": "theverge.com"
+            }
+          ],
+          "tags": [
+            "gemini",
+            "automotive",
+            "google"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Qwen-Scope: Official Sparse Autoencoders (SAEs) for Qwen 3.5 models",
+          "summary": "Qwen团队发布Qwen-Scope，为Qwen 3.5系列提供稀疏自编码器。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1szrbub/qwenscope_official_sparse_autoencoders_saes_for/",
+          "score": 7,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "qwen",
+            "sparse-autoencoder",
+            "interpretability"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Long-context coding on RTX 5080 16GB: Qwen3.6-35B-A3B holds 30 t/s at 128K (89 t/s fresh), no quality drop",
+          "summary": "用户测试Qwen3.6-35B-A3B在RTX 5080上长上下文编码，性能良好。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1t07s6x/longcontext_coding_on_rtx_5080_16gb_qwen3635ba3b/",
+          "score": 7,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "local-llm",
+            "long-context",
+            "coding-agent"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "1jehuang/jcode",
+          "summary": "开源编码代理框架，支持多智能体协作。",
+          "url": "https://github.com/1jehuang/jcode",
+          "score": 6.9625,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+675★)"
+            }
+          ],
+          "tags": [
+            "coding-agent",
+            "open-source",
+            "multi-agent"
+          ],
+          "focusTopics": [
+            "coding-agents",
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "Show HN: Pu.sh – a full coding-agent harness in 400 lines of shell",
+          "summary": "仅400行shell实现的完整编码Agent框架。",
+          "url": "https://pu.dev/",
+          "score": 6.585,
+          "sources": [
+            {
+              "name": "HN (70)"
+            }
+          ],
+          "tags": [
+            "coding-agent",
+            "shell",
+            "open-source"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "[AINews] The Inference Inflection",
+          "summary": "分析推理时代的影响，探讨AI推理成本下降带来的变革。",
+          "url": "https://www.latent.space/p/ainews-the-inference-inflection",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "Latent Space"
+            }
+          ],
+          "tags": [
+            "inference",
+            "ai-trends",
+            "analysis"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Clink Launches the World's First Fiat Agentic Payment Skill, Letting Any Merchant Get Paid by AI Agents - markets.businessinsider.com",
+          "summary": "Clink推出首个法币代理支付技能，让商家接受AI代理付款。",
+          "url": "https://markets.businessinsider.com/news/stocks/clink-launches-the-world-s-first-fiat-agentic-payment-skill-letting-any-merchant-get-paid-by-ai-agents-1036085662",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "markets.businessinsider.com"
+            }
+          ],
+          "tags": [
+            "agentic-payment",
+            "fintech",
+            "ai-agents"
+          ],
+          "focusTopics": [
+            "tool-use"
+          ]
+        },
+        {
+          "title": "I built AI agents that play Pokemon Showdown autonomously using free LLM APIs via tool-calling [P]",
+          "summary": "用免费LLM API构建自主玩宝可梦对战的AI代理。",
+          "url": "https://www.reddit.com/r/MachineLearning/comments/1t08j6u/i_built_ai_agents_that_play_pokemon_showdown/",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "Reddit r/MachineLearning"
+            }
+          ],
+          "tags": [
+            "agents",
+            "tool-calling",
+            "pokemon"
+          ],
+          "focusTopics": [
+            "agent-harness",
+            "tool-use"
+          ]
+        },
+        {
+          "title": "OpenAI announces new advanced security for ChatGPT accounts, including a partnership with Yubico | TechCrunch",
+          "summary": "OpenAI宣布与Yubico合作，为ChatGPT账户推出高级安全功能。",
+          "url": "https://techcrunch.com/2026/04/30/openai-announces-new-advanced-security-for-chatgpt-accounts-including-a-partnership-with-yubico/",
+          "score": 6,
+          "sources": [
+            {
+              "name": "techcrunch.com"
+            }
+          ],
+          "tags": [
+            "security",
+            "chatgpt",
+            "openai"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "AMD in-house ryzen 395 box coming in June",
+          "summary": "AMD Ryzen 395 AI PC即将于六月发布。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1t038g7/amd_inhouse_ryzen_395_box_coming_in_june/",
+          "score": 6,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "amd",
+            "hardware",
+            "local-llm"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "PSA: llama-swap released a new grouping feature, matrix, allowing you to fine tune which models can run together",
+          "summary": "llama-swap发布新分组功能matrix，可精细控制模型共存。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1szwjrp/psa_llamaswap_released_a_new_grouping_feature/",
+          "score": 6,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "llama-swap",
+            "tool",
+            "local-llm"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "browserbase/skills",
+          "summary": "Claude Agent SDK集成网页浏览工具。",
+          "url": "https://github.com/browserbase/skills",
+          "score": 5.6285,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+69★)"
+            }
+          ],
+          "tags": [
+            "agent-sdk",
+            "web-browsing",
+            "claude"
+          ],
+          "focusTopics": [
+            "tool-use",
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "We need RSS for sharing abundant vibe-coded apps",
+          "summary": "提议用RSS分享大量vibe-coded应用，促进内容分发。",
+          "url": "https://simonwillison.net/2026/Apr/30/rss-vibe-coded-apps/#atom-everything",
+          "score": 5.5,
+          "sources": [
+            {
+              "name": "Simon Willison"
+            }
+          ],
+          "tags": [
+            "rss",
+            "vibe-coding",
+            "app-sharing"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Meta is running get-rich-quick ads for its AI tools | The Verge",
+          "summary": "Meta为其AI工具投放快速致富广告。",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/915970/meta-manus-ai-ads-website-slop",
+          "score": 5.5,
+          "sources": [
+            {
+              "name": "theverge.com"
+            }
+          ],
+          "tags": [
+            "meta",
+            "advertising",
+            "ai-tools"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "AMD Halo Box (Ryzen 395 128GB) photos",
+          "summary": "AMD Halo Box原型机照片曝光，运行Ubuntu。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1t09hyw/amd_halo_box_ryzen_395_128gb_photos/",
+          "score": 5.5,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "amd",
+            "hardware",
+            "local-llm"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "google/langextract",
+          "summary": "Google开源库，用LLM从非结构化文本提取结构化信息。",
+          "url": "https://github.com/google/langextract",
+          "score": 5.228999999999999,
+          "sources": [
+            {
+              "name": "GitHub trending:python (+86★)"
+            }
+          ],
+          "tags": [
+            "llm",
+            "information-extraction",
+            "python"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Quoting Andrew Kelley",
+          "summary": "引用Andrew Kelley关于AI生成代码检测的讨论。",
+          "url": "https://simonwillison.net/2026/Apr/30/andrew-kelley/#atom-everything",
+          "score": 5,
+          "sources": [
+            {
+              "name": "Simon Willison"
+            }
+          ],
+          "tags": [
+            "ai-code",
+            "detection",
+            "discussion"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "hsliuping/TradingAgents-CN",
+          "summary": "基于多智能体LLM的中文金融交易框架。",
+          "url": "https://github.com/hsliuping/TradingAgents-CN",
+          "score": 4.7935,
+          "sources": [
+            {
+              "name": "GitHub trending:python (+79★)"
+            }
+          ],
+          "tags": [
+            "multi-agent",
+            "finance",
+            "llm"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "lukilabs/craft-agents-oss",
+          "summary": "craft-agents-oss开源，但无描述，可能为代理相关。",
+          "url": "https://github.com/lukilabs/craft-agents-oss",
+          "score": 4.7285,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+319★)"
+            }
+          ],
+          "tags": [
+            "agents",
+            "open-source"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Opus 4.7 knows the real Kelsey",
+          "summary": "Opus 4.7能识别真实身份，引发AI匿名性讨论。",
+          "url": "https://www.theargumentmag.com/p/i-can-never-talk-to-an-ai-anonymously",
+          "score": 4.694,
+          "sources": [
+            {
+              "name": "HN (148)"
+            }
+          ],
+          "tags": [
+            "llm",
+            "privacy",
+            "anthropic"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "iOfficeAI/AionUi",
+          "summary": "开源24/7协同应用，支持多种AI CLI工具。",
+          "url": "https://github.com/iOfficeAI/AionUi",
+          "score": 4.5815,
+          "sources": [
+            {
+              "name": "GitHub trending:typescript (+221★)"
+            }
+          ],
+          "tags": [
+            "ai-cli",
+            "open-source",
+            "collaboration"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "DayuanJiang/next-ai-draw-io",
+          "summary": "集成AI的draw.io图表创建应用。",
+          "url": "https://github.com/DayuanJiang/next-ai-draw-io",
+          "score": 4.0095,
+          "sources": [
+            {
+              "name": "GitHub trending:typescript (+123★)"
+            }
+          ],
+          "tags": [
+            "ai",
+            "diagrams",
+            "nextjs"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "codexu/note-gen",
+          "summary": "跨平台Markdown AI笔记软件。",
+          "url": "https://github.com/codexu/note-gen",
+          "score": 3.7765,
+          "sources": [
+            {
+              "name": "GitHub trending:typescript (+251★)"
+            }
+          ],
+          "tags": [
+            "note-taking",
+            "ai",
+            "markdown"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "chaitin/MonkeyCode",
+          "summary": "AI开发平台，内置云端环境支持多种大模型。",
+          "url": "https://github.com/chaitin/MonkeyCode",
+          "score": 3.436,
+          "sources": [
+            {
+              "name": "GitHub trending:typescript (+24★)"
+            }
+          ],
+          "tags": [
+            "ai-platform",
+            "cloud-ide",
+            "llm"
+          ],
+          "focusTopics": []
+        }
+      ]
+    }
+  ],
+  "aiSummary": "**今日AI快报**：Anthropic的Mythos AI模型引发全球警报，多国关注其潜在风险，并被NSA用于探测微软安全漏洞，欧元区财政首长也将讨论相关担忧（[详情](#item-bloomberg-com-news-articles-2026-04-30-mythos-why-anthropic-)）。研究方面，发现逐词增量完成分解可突破LLM安全防线（[论文](#item-arxiv-org-abs-2604-25921)），DeepSeek发布结合视觉原语推理的框架（[详情](#item-reddit-com-r-LocalLLaMA-comments-1szwi1d-deepseek-released-t)）。工具更新包括微软开源语音AI模型VibeVoice（[项目](#item-github-com-microsoft-VibeVoice)）和Warp发布具备AI代理能力的智能开发环境（[项目](#item-github-com-warpdotdev-warp)）。观点方面，英国AISI评估OpenAI GPT-5.5网络攻击能力（[报告](#item-simonwillison-net-2026-Apr-30-gpt-55-cyber-capabilities)），DeepMind探索AI辅助临床医生新模式（[博客](#item-deepmind-google-blog-ai-co-clinician)）。"
+}

@@ -1,0 +1,46 @@
+[
+  {
+    "date": "2026-05-01",
+    "timestamp": "2026-05-01T01:43:08.945Z",
+    "durationMs": 119573,
+    "sources": {
+      "rss": 27,
+      "search": 13,
+      "social": 0,
+      "horizon": 30,
+      "github": 21,
+      "reddit": 27,
+      "coStarred": 2
+    },
+    "dedup": {
+      "urlDropped": 3,
+      "titleDropped": 0
+    },
+    "scoring": {
+      "batches": 8,
+      "failed": 0,
+      "halveRetries": 0,
+      "keywordFallback": 0,
+      "hnWeighted": 48
+    },
+    "anchors": {
+      "loaded": 4,
+      "bands": [
+        "top",
+        "median",
+        "median",
+        "low"
+      ]
+    },
+    "output": {
+      "itemCount": 70,
+      "avgScore": 6.5,
+      "maxScore": 8.7,
+      "sectionCounts": {
+        "headlines": 6,
+        "research": 23,
+        "engineering": 41
+      }
+    }
+  }
+]
