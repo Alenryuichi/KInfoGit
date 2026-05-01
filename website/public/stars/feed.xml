@@ -4,14 +4,80 @@
     <title>Stars &amp; Posts — Kylin Miao</title>
     <link>https://kylinmiao.me/stars/</link>
     <description>Daily curated GitHub starred repos, Bluesky/X posts, YouTube videos and blog articles from AI leaders with AI-powered summaries.</description>
-    <lastBuildDate>Thu, 30 Apr 2026 04:19:40 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 01 May 2026 04:28:34 GMT</lastBuildDate>
     <atom:link href="https://kylinmiao.me/stars/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Stars &amp; Posts — 2026-05-01</title>
+      <link>https://kylinmiao.me/stars/2026-05-01/</link>
+      <guid isPermaLink="true">https://kylinmiao.me/stars/2026-05-01/</guid>
+      <pubDate>Fri, 01 May 2026 12:00:00 GMT</pubDate>
+      <description>Today’s AI discourse centers on methodological rigor and the responsible communication of research findings, sparked by Ethan Mollick’s reflection on a pre-registered RCT—where he clarified that a 0.3 standard deviation effect, while notable, is a modest outcome that should be framed precisely rather than as a &quot;big result.&quot; Meanwhile, Emily M. Bender shared a lighter but equally significant moment, hinting at an upcoming podcast episode that promises to explore the intersection of fun and critical analysis in AI research. On GitHub, the trending repos lean heavily into tooling for reproducibility and agentic workflows, with several new projects focused on fine-grained evaluation frameworks and open-source alternatives to proprietary model APIs. The overarching theme is a push for transparency and grounded expectations, as the community grapples with both the hype and the hard data behind recent AI advancements.
+
+Bluesky Posts:
+* Ethan Mollick: I deleted this post since I think I was imprecise in the language.
+
+It is an interesting pre-registered RCT, but I should have been clearer that .3 SD...
+* Emily M. Bender: We had SO MUCH FUN!! I&apos;m curious to see what this will sound like as a pod ep.
+
+X Posts:
+* Simon Willison: Our evaluation of OpenAI&apos;s GPT-5.5 cyber capabilities. The UK&apos;s AI Security Institute previously evaluated Claude Mythos: now they&apos;ve evaluated GPT-5....
+* Simon Willison: Never talk about goblins, gremlins, raccoons, trolls, ogres, pigeons, or other animals or creatures unless it is absolutely and unambiguously relevant...
+* Simon Willison: llm 0.31 released: supports GPT-5.5 and adds a verbosity parameter for controlling output detail on OpenAI&apos;s latest models.
+* Simon Willison: llm 0.32a0 alpha: major backwards-compatible refactor. Models can now be prompted with a list of messages, OpenAI Chat Completions style.
+* Simon Willison: DeepSeek V4 - almost on the frontier, a fraction of the price.
+* Harrison Chase: as always, it&apos;s an exciting time to be working at LangChain!
+* Harrison Chase: TL;DR: More and more agents need a workspace: a computer where they can run code, install packages, and access files. Sandboxes provide this
+* Harrison Chase: In the hot path as the agent is running. The agent can decided to (or the user can prompt it to) update its memory as it is working on the core
+* Harrison Chase: traces matter!
+* Jim Fan: The first time I met Jensen was also the first time I met @elonmusk. I was interning at OpenAI that day and
+* Jim Fan: Resource constraints are a beautiful thing. Survival instinct in a cut-throat AI competitive land
+* Jim Fan: I&apos;ve been a bit quiet on X recently. The past year has been a transformational experience.
+* Jim Fan: It gives me a lot of comfort knowing that we are the last generation without advanced robots everywhere.
+* Jim Fan: Everyone&apos;s freaking out about vibe coding. In the holiday spirit, allow me to share my anxiety on the wild
+* Jeremy Howard: Here&apos;s a complete unedited video of asking Grok for its views on the Israel/Palestine situation. It first searches twitter for what Elon thinks.
+* Jeremy Howard: Here&apos;s what I would prefer to see:
+* Soumith Chintala: reading &quot;AI News&quot; (previously Smol Talk) is probably the highest-leverage 45 mins
+* Soumith Chintala: Sometimes we forget that NVIDIA wins because it&apos;s a software company.
+* Soumith Chintala: MacStudio you ask? Apple Engineering&apos;s **actual** time spent on PyTorch support
+* Soumith Chintala: anyone else feel burned out by a new AI breakthrough every week?
+* Francois Chollet: I think it&apos;s clear that for many smaller companies that invested in deep learning, it turned out
+* Francois Chollet: Folks who work in AI or software engineering feel like the world is changing exponential fast.
+* Francois Chollet: To really understand a concept, you have to &apos;invent&apos; it yourself in some capacity.
+* Yann LeCun: To qualify as Science a piece of research must be correct and reproducible. To be correct and reproducible, ...
+* Fei-Fei Li: Very excited to share @theworldlabs &apos;s latest research work RTFM!! It&apos;s a real-time, ...
+* Clem Delangue: Great research on open-source by. : - $4.15B invested in open-source generates $8.8T of value for companies (aka $1 invested in open-source = $2,000 o...
+* Max Woolf: me irl
+* Max Woolf: @simonw
+* Sasha Rush: ⛏️
+* Sasha Rush: No content extracted.
+* Sasha Rush: No content extracted.
+* Stas Bekman: I have been compiling LLM/VLM training logbooks/chronicles. This is the one of the best sources to
+* Stas Bekman: The @PyTorch team are working on a new super important tool: https://t.co/rnfpDuvgOI This
+* Stas Bekman: Thanks to an awesome contribution from @omarnomad The Machine Learning Engineering Open book now can
+* Stas Bekman: If you were holding off to try @MSFTDeepSpeed ZeRO++ it looks like deepspeed@master should
+* Sayak Paul: Working at Hugging Face over the past 3.5+ years has allowed me to identify what technical areas truly interest me! In turn, that has allowed me to di...
+* Philipp Schmid: Every good story has to end, and after 4 incredible years at @huggingface, it&apos;s time for me to start my next adventure. When I joined Hugging Face, we...
+* Ethan Mollick: Very cool analysis of the submissions to a major management journal that shows how much the
+* Ethan Mollick: On the plus side with Opus 4.7, if it does decide to think it produces BY FAR the best
+* Ethan Mollick: One thing thing about AI, for better and worse, is that &apos;everything around me is somebody&apos;s life
+* Ethan Mollick: AI is actually pretty good at ideas as well. https://t.co/AhnzrnkN03
+* Naomi Saphra: I work on understanding and improving training for NLP models, with a focus on studying how structures and mechanistic behaviors emerge over the
+* Naomi Saphra: New preprint! Everyone loves causal interp. It&apos;s coherently defined! It makes testable predictions
+* Naomi Saphra: This book starts like it&apos;s gonna be a fun microhistory of TB (it gave us the Stetson!
+* Angela Zhou: #throwback to the beginnings of a beautiful friendship =D @ansonmount @HellOnWheelsAMC
+* Ben Recht: And awesome to see many Berkeley alums thriving here. @LaurentLessard, @DimitrisPapail, and Shivaram
+* Ben Recht: For the first time in almost a decade, I&apos;m teaching a class on learning and control.
+* Ben Recht: Why does framing decision, design, and discovery as optimization remain so irresistible?</description>
+    </item>
     <item>
       <title>Stars &amp; Posts — 2026-04-30</title>
       <link>https://kylinmiao.me/stars/2026-04-30/</link>
       <guid isPermaLink="true">https://kylinmiao.me/stars/2026-04-30/</guid>
       <pubDate>Thu, 30 Apr 2026 12:00:00 GMT</pubDate>
       <description>Zig&apos;s blanket ban on AI-assisted contributions sparked a key debate today, with Simon Willison noting the project&apos;s rationale—that PR review is about mentoring new contributors, not just code quality—resonating widely. Meanwhile, Nathan Lambert stirred discussion on AGI governance, arguing that Demis Hassabis remains the most trustworthy CEO on the topic, especially given Google&apos;s public-company checks versus the private statuses of Anthropic and OpenAI. On a lighter note, Marc Lanctot shared a joyful reaction to a video, offering a brief respite from the heavier AI governance conversations. Overall, the day&apos;s themes centered on the tension between AI tooling and open-source community growth, alongside ongoing scrutiny of AGI leadership accountability.
+
+GitHub Repos:
+* criterion-rs/criterion.rs [Rust]
 
 Bluesky Posts:
 * Simon Willison: The Zig project&apos;s rationale for their blanket ban on AI-assisted contributions makes a lot of sense to me - for them, time spent reviewing PRs isn&apos;t a...
@@ -21,6 +87,33 @@ www.youtube.com/watch?v=Rjfb...
 * Nathan Lambert: Demis is the only acceptable answer of which CEO do you trust most with AGI 
 
 (doubly so until Anthropic/OpenAI go public, Google being public is a gr...
+* Simon Willison: Saw this white-crowned sparrow having a lot of a sing
+* Mark Riedl: Okay y&apos;all, it&apos;s official.
+
+See you in Atlanta in December.
+* Mark Riedl: Space garbage
+* Mark Riedl: As someone obsessed with whether AI can play D&amp;D, I am going to have fun with the ChatGPT goblin phenomenon for a bit. You can ignore me.
+
+But if you ...
+* Mark Riedl: Designating that most uses of the term &quot;goblin&quot; and &quot;gremlin&quot; are not legitimate while designating most uses of the word &quot;frog&quot; as legitimate is the i...
+* Mark Riedl: Reward your model for being nerdy, get nerdy behavior. 
+
+Train in your own output, pollute your dataset with verbal tics
+
+openai.com/index/where-...
+* Mark Riedl: First rule of goblin club:
+openai.com/index/where-...
+* Margaret Mitchell: Companies may not fully realize why they lean into the narratives they do. But it’s important to reflect on the larger picture of what’s happening, wh...
+* Ethan Mollick: Forget goblins, things GPT-5.5 likes in its fiction: lighthouses, the ocean, maps, bells, clock towers with bells that ring impossible times, Mira Val...
+* Ethan Mollick: &quot;Load bearing,&quot; &quot;I keep coming back to,&quot; &quot;Not just X, but Y&quot; 
+
+A curse of using AI a lot is that you realize how much of the writing around you is jus...
+* Ethan Mollick: It is really interesting that Microsoft and OpenAI have access to the exact same models at the exact same time, and they have done such different thin...
+* Emily M. Bender: Calling all NYC folks! Here is a great opportunity to see @ghostdoc2026.bsky.social -- Sat May 2
+
+
+event.newschool.edu/ghostinthema...
+* angela zhou: A few years back we looked into gerrymandering / computational research for a &quot;fun project&quot; but after reading many articles and a bit of legal comment...
 
 X Posts:
 * Andrej Karpathy: My most amusing interaction was where the model (I think I was given some earlier version with a
@@ -1570,14 +1663,6 @@ www.cbc.ca/news/science...
       <pubDate>Mon, 29 Dec 2025 12:00:00 GMT</pubDate>
       <description>YouTube Videos:
 * Traditional X-Mas Stream (Yannic Kilcher)</description>
-    </item>
-    <item>
-      <title>Stars &amp; Posts — 2025-12-28</title>
-      <link>https://kylinmiao.me/stars/2025-12-28/</link>
-      <guid isPermaLink="true">https://kylinmiao.me/stars/2025-12-28/</guid>
-      <pubDate>Sun, 28 Dec 2025 12:00:00 GMT</pubDate>
-      <description>YouTube Videos:
-* Traditional Holiday Live Stream (Yannic Kilcher)</description>
     </item>
   </channel>
 </rss>

@@ -1,0 +1,27 @@
+{
+  "date": "2026-04-30",
+  "stars": [
+    {
+      "repo": "criterion-rs/criterion.rs",
+      "url": "https://github.com/criterion-rs/criterion.rs",
+      "description": "",
+      "language": "Rust",
+      "stargazersCount": 288,
+      "starredBy": "minimaxir",
+      "starredAt": "2026-04-30T23:22:19Z",
+      "highlights": "Criterion.rs is a powerful benchmarking library for Rust that provides precise performance measurements with statistical analysis. It offers features like customizable benchmarks, regression detection, and detailed HTML reports, making it essential for performance-critical Rust projects.",
+      "worthReading": "For AI engineers working with Rust-based tools or systems, Criterion.rs enables rigorous performance testing, which is crucial for optimizing inference pipelines or data processing components.",
+      "topics": [
+        "benchmarking",
+        "performance-analysis",
+        "performance-testing",
+        "rust"
+      ],
+      "tags": [
+        "evaluation"
+      ],
+      "score": 4,
+      "scoreReason": "Freshness is low (0) as it's an established library with no recent major updates; relevance is moderate (2) as benchmarking is useful for AI infra but not directly frontier AI; concreteness is high (2) as it's a mature, well-documented tool."
+    }
+  ]
+}
