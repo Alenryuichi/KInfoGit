@@ -1313,6 +1313,47 @@
         "evaluation"
       ],
       "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:flxq4uyjfotciovpw3x3fxnu/app.bsky.feed.post/3mks6hfbia22g",
+      "url": "https://bsky.app/profile/emollick.bsky.social/post/3mks6hfbia22g",
+      "author": {
+        "handle": "emollick.bsky.social",
+        "displayName": "Ethan Mollick",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:flxq4uyjfotciovpw3x3fxnu/bafkreigq63ljumc43yx5eoxchrq75d72irea6ddcceedwmdttxebyowc3q"
+      },
+      "content": "New paper (on an old AI model) tests o1 against doctors on medical benchmarks & real ER cases: “across a variety of scenarios and applications, the large language model outperformed both human physicians and older models”\n\nThe high potential of AI suggests an “urgent need for prospective trials.”",
+      "createdAt": "2026-05-01T12:56:07.157Z",
+      "likeCount": 51,
+      "replyCount": 5,
+      "repostCount": 9,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [
+        "llm",
+        "evaluation"
+      ],
+      "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:flxq4uyjfotciovpw3x3fxnu/app.bsky.feed.post/3mktkvi5df22f",
+      "url": "https://bsky.app/profile/emollick.bsky.social/post/3mktkvi5df22f",
+      "author": {
+        "handle": "emollick.bsky.social",
+        "displayName": "Ethan Mollick",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:flxq4uyjfotciovpw3x3fxnu/bafkreigq63ljumc43yx5eoxchrq75d72irea6ddcceedwmdttxebyowc3q"
+      },
+      "content": "I was quoted a couple times in this Atlantic article, but that isn’t (the only) reason I think it is good. It lays out the reasons why we whipsawed from “AI is a bubble” to “there are not enough data centers” in less than six months. Spoiler: its agents. www.theatlantic.com/economy/2026...",
+      "createdAt": "2026-05-02T02:11:24.572Z",
+      "likeCount": 36,
+      "replyCount": 4,
+      "repostCount": 3,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [
+        "agent"
+      ],
+      "type": "bluesky"
     }
   ],
   "videos": [],
@@ -2687,10 +2728,87 @@
       "tags": [
         "llm"
       ]
+    },
+    {
+      "type": "x",
+      "id": "2048812210839785668",
+      "url": "https://x.com/emollick/status/2048812210839785668",
+      "author": {
+        "handle": "emollick",
+        "displayName": "Ethan Mollick",
+        "avatar": null
+      },
+      "content": "Very cool analysis of the submissions to a major management journal that shows how much the",
+      "createdAt": "2026-05-02T04:09:34.743Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Analysis of management journal submissions reveals interesting patterns.",
+      "worthReading": "Provides insight into academic publishing trends.",
+      "tags": []
+    },
+    {
+      "type": "x",
+      "id": "2044880350237626844",
+      "url": "https://x.com/emollick/status/2044880350237626844",
+      "author": {
+        "handle": "emollick",
+        "displayName": "Ethan Mollick",
+        "avatar": null
+      },
+      "content": "On the plus side with Opus 4.7, if it does decide to think it produces BY FAR the best",
+      "createdAt": "2026-05-02T04:09:34.743Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Opus 4.7 produces best results when it decides to think.",
+      "worthReading": "Highlights a key feature of the AI model Opus 4.7.",
+      "tags": [
+        "llm"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "1971366497244348625",
+      "url": "https://x.com/emollick/status/1971366497244348625",
+      "author": {
+        "handle": "emollick",
+        "displayName": "Ethan Mollick",
+        "avatar": null
+      },
+      "content": "After reading it, this does seem like a big deal. Industry experts outlined important, real-world, hard tasks for AI to do.",
+      "createdAt": "2026-05-02T04:09:34.743Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Industry experts identified important real-world tasks for AI.",
+      "worthReading": "Shows practical AI applications being prioritized.",
+      "tags": [
+        "deployment"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "1899267654321",
+      "url": "https://x.com/emollick/status/1899267654321",
+      "author": {
+        "handle": "emollick",
+        "displayName": "Ethan Mollick",
+        "avatar": null
+      },
+      "content": "AI is actually pretty good at ideas as well. https://t.co/AhnzrnkN03",
+      "createdAt": "2026-02-25",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "AI is capable of generating good ideas.",
+      "worthReading": "Challenges the notion that AI only handles routine tasks.",
+      "tags": [
+        "llm"
+      ]
     }
   ],
   "dailyCounts": [
-    0,
     0,
     0,
     0,
@@ -2719,7 +2837,8 @@
     8,
     6,
     7,
+    6,
     5
   ],
-  "interestSummary": "Ethan Mollick is closely tracking frontier AI model capabilities and risks, particularly around Anthropic's Claude Mythos and its potential as a cybersecurity weapon, while also exploring AI's impact on education, writing style, and the game industry. He remains engaged with the practical and philosophical tensions between AI as a tool for creativity versus a source of systemic concern."
+  "interestSummary": "Ethan Mollick is closely tracking frontier AI model developments, particularly Anthropic's Claude Mythos and its cybersecurity implications, while also exploring AI's impact on writing style, education, and the game industry. His recent activity reflects a focus on the tension between AI's growing capabilities and the societal challenges they pose, including job displacement and the need for new approaches to learning and creativity."
 }
