@@ -1,0 +1,894 @@
+{
+  "date": "2026-05-03",
+  "itemCount": 48,
+  "sections": [
+    {
+      "id": "headlines",
+      "title": "Headlines & Launches",
+      "items": [
+        {
+          "title": "Chinese Court Rules Firms Can't Lay Off Workers on AI Grounds",
+          "summary": "中国法院裁定公司不能仅以AI替代为由解雇员工。",
+          "url": "https://www.bloomberg.com/news/articles/2026-05-02/chinese-court-rules-firms-can-t-lay-off-workers-on-ai-grounds",
+          "score": 8,
+          "sources": [
+            {
+              "name": "bloomberg.com"
+            }
+          ],
+          "tags": [
+            "ai-regulation",
+            "labor-law",
+            "china"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "AI-generated actors and scripts are now ineligible for Oscars",
+          "summary": "奥斯卡宣布AI生成的演员和剧本不再具备参评资格。",
+          "url": "https://techcrunch.com/2026/05/02/ai-generated-actors-and-scripts-are-now-ineligible-for-oscars/",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "techcrunch.com"
+            }
+          ],
+          "tags": [
+            "ai-regulation",
+            "entertainment",
+            "oscars"
+          ],
+          "focusTopics": []
+        }
+      ]
+    },
+    {
+      "id": "research",
+      "title": "Research & Innovation",
+      "items": [
+        {
+          "title": "End-to-end autonomous scientific discovery on a real optical platform",
+          "summary": "在真实光学平台上实现端到端自主科学发现。",
+          "url": "https://arxiv.org/abs/2604.27092",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "autonomous-discovery",
+            "optical-platform"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Think it, Run it: Autonomous ML pipeline generation via self-healing multi-agent AI",
+          "summary": "通过自愈多智能体AI自动化端到端机器学习流水线。",
+          "url": "https://arxiv.org/abs/2604.27096",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "multi-agent",
+            "ml-pipeline",
+            "automation"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "Step-level Optimization for Efficient Computer-use Agents",
+          "summary": "提出步骤级优化以实现高效的计算机使用智能体。",
+          "url": "https://arxiv.org/abs/2604.27151",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "computer-use",
+            "agent-optimization",
+            "automation"
+          ],
+          "focusTopics": [
+            "tool-use"
+          ]
+        },
+        {
+          "title": "Refusal in Language Models Is Mediated by a Single Direction",
+          "summary": "研究发现语言模型拒绝行为由单一方向介导。",
+          "url": "https://arxiv.org/abs/2406.11717",
+          "score": 7.0729999999999995,
+          "sources": [
+            {
+              "name": "HN (91)"
+            }
+          ],
+          "tags": [
+            "llm",
+            "alignment",
+            "mechanistic-interpretability"
+          ],
+          "focusTopics": [
+            "post-training"
+          ]
+        },
+        {
+          "title": "When Your LLM Reaches End-of-Life: A Framework for Confident Model Migration in Production Systems",
+          "summary": "提出生产系统中LLM模型迁移的置信框架。",
+          "url": "https://arxiv.org/abs/2604.27082",
+          "score": 7,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "llm",
+            "model-migration",
+            "production"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "I built a transformer in C++17 from scratch — no PyTorch, no BLAS, no dependencies. Trains on CPU. 0.83M params, full analytical backprop, 76 min to val loss 1.64.",
+          "summary": "从零用C++17实现GPT风格Transformer，无依赖，可CPU训练。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1t1x9jv/i_built_a_transformer_in_c17_from_scratch_no/",
+          "score": 7,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "transformer",
+            "cpp",
+            "from-scratch"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "TRUST: A Framework for Decentralized AI Service v.0.1",
+          "summary": "提出去中心化AI服务框架TRUST，用于大推理模型和多智能体系统。",
+          "url": "https://arxiv.org/abs/2604.27132",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "decentralized-ai",
+            "multi-agent",
+            "trust"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "Implemented TurboQuant and results don’t fully match paper",
+          "summary": "复现TurboQuant量化方法，发现结果与论文不完全一致。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1t208qv/implemented_turboquant_and_results_dont_fully/",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "quantization",
+            "reproducibility"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Compositional Meta-Learning for Mitigating Task Heterogeneity in Physics-Informed Neural Networks",
+          "summary": "提出组合元学习缓解物理信息神经网络中的任务异质性。",
+          "url": "https://arxiv.org/abs/2604.26999",
+          "score": 6,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "meta-learning",
+            "pinns",
+            "pde"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Unpacking Vibe Coding: Help-Seeking Processes in Student-AI Interactions While Programming",
+          "summary": "研究学生在编程中与AI交互的求助过程（Vibe Coding）。",
+          "url": "https://arxiv.org/abs/2604.27134",
+          "score": 6,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "ai-education",
+            "vibe-coding",
+            "human-ai-interaction"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "Explainable artificial intelligence models using SHAP enhanced ...",
+          "summary": "使用SHAP增强的CatBoost、Bi-GRU和Tab Transformer的可解释AI模型。",
+          "url": "https://www.nature.com/articles/s41598-026-49961-7",
+          "score": 6,
+          "sources": [
+            {
+              "name": "nature.com"
+            }
+          ],
+          "tags": [
+            "explainable-ai",
+            "shap",
+            "catboost",
+            "bigru",
+            "tab-transformer"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Toy experiment: frozen Pythia-70M can use a forward-derived fast memory for contextual one-shot symbolic recall [D]",
+          "summary": "实验表明冻结的Pythia-70M可利用前向快速记忆进行上下文回忆。",
+          "url": "https://www.reddit.com/r/MachineLearning/comments/1t23wug/toy_experiment_frozen_pythia70m_can_use_a/",
+          "score": 6,
+          "sources": [
+            {
+              "name": "Reddit r/MachineLearning"
+            }
+          ],
+          "tags": [
+            "memory",
+            "context",
+            "toy-experiment"
+          ],
+          "focusTopics": [
+            "context-engineering"
+          ]
+        },
+        {
+          "title": "Binary Spiking Neural Networks as Causal Models",
+          "summary": "对二元脉冲神经网络进行因果分析以解释其行为。",
+          "url": "https://arxiv.org/abs/2604.27007",
+          "score": 5.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "spiking-neural-networks",
+            "causal-analysis"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Economic evaluation of artificial intelligence for cancer detection in ...",
+          "summary": "英国乳腺癌筛查中AI用于癌症检测的经济评估。",
+          "url": "https://www.nature.com/articles/s41416-026-03465-3",
+          "score": 5.5,
+          "sources": [
+            {
+              "name": "nature.com"
+            }
+          ],
+          "tags": [
+            "healthcare",
+            "cancer-detection",
+            "economic-evaluation"
+          ],
+          "focusTopics": []
+        }
+      ]
+    },
+    {
+      "id": "engineering",
+      "title": "Engineering & Resources",
+      "items": [
+        {
+          "title": "TauricResearch/TradingAgents",
+          "summary": "多智能体LLM金融交易框架开源。",
+          "url": "https://github.com/TauricResearch/TradingAgents",
+          "score": 8.3,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+2225★)"
+            }
+          ],
+          "tags": [
+            "multi-agent",
+            "finance",
+            "llm"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "ruvnet/ruflo",
+          "summary": "Claude多智能体编排平台ruflo发布。",
+          "url": "https://github.com/ruvnet/ruflo",
+          "score": 8.3,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+1299★)"
+            }
+          ],
+          "tags": [
+            "agent-orchestration",
+            "claude",
+            "multi-agent"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "VS Code inserting 'Co-Authored-by Copilot' into commits regardless of usage",
+          "summary": "VS Code在提交中自动插入'Co-Authored-by Copilot'引发争议。",
+          "url": "https://github.com/microsoft/vscode/pull/310226",
+          "score": 7.875,
+          "sources": [
+            {
+              "name": "HN (755)"
+            }
+          ],
+          "tags": [
+            "vscode",
+            "copilot",
+            "git",
+            "controversy"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "We are finally there: Qwen3.6-27B + agentic search; 95.7% SimpleQA on a single 3090, fully local",
+          "summary": "Qwen3.6-27B结合代理搜索，在单张3090上实现95.7% SimpleQA。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1t1n6o8/we_are_finally_there_qwen3627b_agentic_search_957/",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "qwen",
+            "agentic-search",
+            "local-llm"
+          ],
+          "focusTopics": [
+            "model-release",
+            "evals"
+          ]
+        },
+        {
+          "title": "Qwen 3.6 wins the benchmarks, but Gemma 4 wins reality. 7 things I learned testing 27B/31B Vision models locally (vLLM / FP8) side by side. Benchmaxing seems real.",
+          "summary": "对比Qwen 3.6与Gemma 4视觉模型，发现基准测试与现实差距。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1t1te8y/qwen_36_wins_the_benchmarks_but_gemma_4_wins/",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "vision-language-model",
+            "benchmark",
+            "comparison"
+          ],
+          "focusTopics": [
+            "evals"
+          ]
+        },
+        {
+          "title": "mattmireles/gemma-tuner-multimodal",
+          "summary": "Gemma Tuner Multimodal：在Apple Silicon上微调Gemma多模态模型。",
+          "url": "https://github.com/mattmireles/gemma-tuner-multimodal",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "Co-Starred"
+            }
+          ],
+          "tags": [
+            "fine-tuning",
+            "gemma",
+            "multimodal",
+            "apple-silicon"
+          ],
+          "focusTopics": [
+            "post-training"
+          ]
+        },
+        {
+          "title": "1jehuang/jcode",
+          "summary": "编码Agent框架jcode发布。",
+          "url": "https://github.com/1jehuang/jcode",
+          "score": 7.098,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+482★)"
+            }
+          ],
+          "tags": [
+            "coding-agent",
+            "framework"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "‘Never f–king guess’: AI agent confesses why it went haywire and deleted company database - New York Post",
+          "summary": "AI智能体失控删除公司数据库，引发安全讨论。",
+          "url": "https://nypost.com/2026/05/02/tech/ai-agent-goes-rogue-deletes-companys-entire-database/",
+          "score": 7,
+          "sources": [
+            {
+              "name": "nypost.com"
+            }
+          ],
+          "tags": [
+            "ai-safety",
+            "agent-failure",
+            "incident"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "[RELEASE] - Finally, my first TTS model is out! 🎙️ Flare-TTS 28M",
+          "summary": "发布首个TTS模型Flare-TTS 28M，轻量级文本转语音模型。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1t1mmnd/release_finally_my_first_tts_model_is_out/",
+          "score": 7,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "tts",
+            "open-source",
+            "small-model"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Kv cache quantization: ignorance, or malice?",
+          "summary": "讨论KV cache量化中的问题，质疑实现是疏忽还是故意。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1t1t4nw/kv_cache_quantization_ignorance_or_malice/",
+          "score": 7,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "kv-cache",
+            "quantization",
+            "context-engineering"
+          ],
+          "focusTopics": [
+            "context-engineering"
+          ]
+        },
+        {
+          "title": "I implemented meta paper [P]",
+          "summary": "实现Meta论文Scaling Test-Time Compute for Agentic Coding。",
+          "url": "https://www.reddit.com/r/MachineLearning/comments/1t1rni9/i_implemented_meta_paper_p/",
+          "score": 7,
+          "sources": [
+            {
+              "name": "Reddit r/MachineLearning"
+            }
+          ],
+          "tags": [
+            "agentic-coding",
+            "test-time-compute",
+            "implementation"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "huggingface/ml-intern",
+          "summary": "Hugging Face开源ML Intern：自动读论文、训练模型并部署。",
+          "url": "https://github.com/huggingface/ml-intern",
+          "score": 7,
+          "sources": [
+            {
+              "name": "Co-Starred"
+            }
+          ],
+          "tags": [
+            "ml-engineer",
+            "automation",
+            "open-source"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "Qwen3.6-27B at 72 tok/s on RTX 3090 on Windows using native vLLM (no WSL, no Docker), portable launcher and installer",
+          "summary": "Qwen3.6-27B在RTX 3090上通过原生vLLM达到72 tok/s。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1t1judm/qwen3627b_at_72_toks_on_rtx_3090_on_windows_using/",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "qwen",
+            "vllm",
+            "windows",
+            "performance"
+          ],
+          "focusTopics": [
+            "model-release"
+          ]
+        },
+        {
+          "title": "Open Design: Use Your Coding Agent as a Design Engine",
+          "summary": "使用编码Agent作为设计引擎的开源项目Open Design。",
+          "url": "https://github.com/nexu-io/open-design",
+          "score": 6.478,
+          "sources": [
+            {
+              "name": "HN (176)"
+            }
+          ],
+          "tags": [
+            "coding-agent",
+            "design",
+            "open-source"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "browserbase/skills",
+          "summary": "Claude Agent SDK新增网页浏览工具。",
+          "url": "https://github.com/browserbase/skills",
+          "score": 6.469,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+346★)"
+            }
+          ],
+          "tags": [
+            "agent-sdk",
+            "web-browsing",
+            "claude"
+          ],
+          "focusTopics": [
+            "tool-use"
+          ]
+        },
+        {
+          "title": "tirth8205/code-review-graph",
+          "summary": "Claude Code本地知识图谱，减少token消耗。",
+          "url": "https://github.com/tirth8205/code-review-graph",
+          "score": 6.361000000000001,
+          "sources": [
+            {
+              "name": "GitHub trending:python (+274★)"
+            }
+          ],
+          "tags": [
+            "knowledge-graph",
+            "claude-code",
+            "code-review"
+          ],
+          "focusTopics": [
+            "context-engineering"
+          ]
+        },
+        {
+          "title": "Q00/ouroboros",
+          "summary": "Agent OS：从提示到规范，简化Agent开发。",
+          "url": "https://github.com/Q00/ouroboros",
+          "score": 6.2965,
+          "sources": [
+            {
+              "name": "GitHub trending:python (+231★)"
+            }
+          ],
+          "tags": [
+            "agent-os",
+            "specification",
+            "framework"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "The agent harness belongs outside the sandbox",
+          "summary": "讨论Agent harness应放在沙箱之外。",
+          "url": "https://www.mendral.com/blog/agent-harness-belongs-outside-sandbox",
+          "score": 6.142,
+          "sources": [
+            {
+              "name": "HN (64)"
+            }
+          ],
+          "tags": [
+            "agent",
+            "security",
+            "sandbox"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "A Dark-Money Campaign Is Paying Influencers to Frame Chinese AI as a Threat",
+          "summary": "报道称有暗钱活动付费影响者将中国AI描绘成威胁。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1t1i4yg/a_darkmoney_campaign_is_paying_influencers_to/",
+          "score": 6,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "ai-politics",
+            "propaganda",
+            "china"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Warpdrv - my open-source Llama.cpp launcher for daily-driving Qwen 35b + 27b on Strix Halo + RTX Pro.",
+          "summary": "开源Llama.cpp启动器Warpdrv，用于本地运行大模型。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1t1w920/warpdrv_my_opensource_llamacpp_launcher_for/",
+          "score": 6,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "llama.cpp",
+            "local-llm",
+            "open-source"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "I BUILT MY FIRST MODEL FROM SCRATCH",
+          "summary": "从零构建40M参数语言模型SHARD，分享训练过程。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1t1z4cp/i_built_my_first_model_from_scratch/",
+          "score": 5.5,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "llm",
+            "training",
+            "small-model"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Looking for feedback on OpenVidya: an open-source AI classroom layer for NCERT/CBSE [R]",
+          "summary": "开源AI课堂层OpenVidya，基于多智能体适应NCERT/CBSE课程。",
+          "url": "https://www.reddit.com/r/MachineLearning/comments/1t1dqwo/looking_for_feedback_on_openvidya_an_opensource/",
+          "score": 5.5,
+          "sources": [
+            {
+              "name": "Reddit r/MachineLearning"
+            }
+          ],
+          "tags": [
+            "education",
+            "multi-agent",
+            "open-source"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Show HN: State of the Art of Coding Models, According to Hacker News Commenters",
+          "summary": "根据HN评论总结的编码模型最新进展。",
+          "url": "https://hnup.date/hn-sota",
+          "score": 5.231999999999999,
+          "sources": [
+            {
+              "name": "HN (44)"
+            }
+          ],
+          "tags": [
+            "coding-models",
+            "community"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "google-research/timesfm",
+          "summary": "Google时间序列基础模型TimesFM。",
+          "url": "https://github.com/google-research/timesfm",
+          "score": 5.230499999999999,
+          "sources": [
+            {
+              "name": "GitHub trending:python (+87★)"
+            }
+          ],
+          "tags": [
+            "time-series",
+            "foundation-model",
+            "forecasting"
+          ],
+          "focusTopics": [
+            "model-release"
+          ]
+        },
+        {
+          "title": "HKUDS/AI-Trader",
+          "summary": "全自动Agent原生交易系统AI-Trader。",
+          "url": "https://github.com/HKUDS/AI-Trader",
+          "score": 5.140499999999999,
+          "sources": [
+            {
+              "name": "GitHub trending:python (+27★)"
+            }
+          ],
+          "tags": [
+            "trading",
+            "agent",
+            "finance"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "[AINews] AI Engineer World's Fair — Autoresearch, Memory, World Models, Tokenmaxxing, Agentic Commerce, and Vertical AI Call for Speakers",
+          "summary": "AI工程师世界博览会征稿，涵盖自动研究、记忆、世界模型等。",
+          "url": "https://www.latent.space/p/ainews-ai-engineer-worlds-fair-autoresearch",
+          "score": 5,
+          "sources": [
+            {
+              "name": "Latent Space"
+            }
+          ],
+          "tags": [
+            "conference",
+            "cfp",
+            "ai-engineering"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Real World Physics-Informed AI Applications [D]",
+          "summary": "讨论物理信息AI在现实世界中的应用案例。",
+          "url": "https://www.reddit.com/r/MachineLearning/comments/1t1lmq0/real_world_physicsinformed_ai_applications_d/",
+          "score": 5,
+          "sources": [
+            {
+              "name": "Reddit r/MachineLearning"
+            }
+          ],
+          "tags": [
+            "physics-informed",
+            "applications"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "I made a visualizer for Hugging Face models",
+          "summary": "Reddit用户分享了一个Hugging Face模型可视化工具hfviewer.com。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1t24y4p/i_made_a_visualizer_for_hugging_face_models/",
+          "score": 4.5,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "visualization",
+            "huggingface",
+            "tool"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "microsoft/qlib",
+          "summary": "微软AI量化投资平台Qlib。",
+          "url": "https://github.com/microsoft/qlib",
+          "score": 4.403,
+          "sources": [
+            {
+              "name": "GitHub trending:python (+102★)"
+            }
+          ],
+          "tags": [
+            "quantitative-finance",
+            "ai-platform"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Tinygrad Driver testing!",
+          "summary": "Tinygrad驱动测试，在Blackwell和M3 Ultra集群上测试MoE速度。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1t24qle/tinygrad_driver_testing/",
+          "score": 4,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "tinygrad",
+            "moe",
+            "benchmark"
+          ],
+          "focusTopics": [
+            "evals"
+          ]
+        },
+        {
+          "title": "Ban phrases on llama.cpp with this script.",
+          "summary": "一个用于llama.cpp的脚本，可禁止特定短语生成。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1t227hk/ban_phrases_on_llamacpp_with_this_script/",
+          "score": 3.5,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "llamacpp",
+            "script",
+            "content-filter"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Qwen3.6-27B vs 35B, I prefer 35B but more people here post about 27B...",
+          "summary": "Reddit用户比较Qwen3.6-27B和35B模型，偏好35B。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1t25ohs/qwen3627b_vs_35b_i_prefer_35b_but_more_people/",
+          "score": 3,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "qwen",
+            "comparison",
+            "discussion"
+          ],
+          "focusTopics": []
+        }
+      ]
+    }
+  ],
+  "aiSummary": "今日AI领域多项重磅动态：中国法院裁定公司不能仅以AI替代为由解雇员工[#item-bloomberg-com-news-articles-2026-05-02-chinese-court-rules-f]，同时奥斯卡宣布AI生成的演员和剧本不再具备参评资格[#item-techcrunch-com-2026-05-02-ai-generated-actors-and-scripts-ar]。研究方面，端到端自主科学发现在真实光学平台上实现[#item-arxiv-org-abs-2604-27092]，多智能体框架TradingAgents开源[#item-github-com-TauricResearch-TradingAgents]。工具更新中，VS Code自动插入“Co-Authored-by Copilot”引发争议[#item-github-com-microsoft-vscode-pull-310226]，而观点洞察指出AI智能体失控删除公司数据库[#item-nypost-com-2026-05-02-tech-ai-agent-goes-rogue-deletes-compa]，并对比了Qwen 3.6与Gemma 4视觉模型在基准测试与现实中的差距[#item-reddit-com-r-LocalLLaMA-comments-1t1te8y-qwen-36-wins-the-be]。"
+}
