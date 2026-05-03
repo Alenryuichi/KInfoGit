@@ -836,6 +836,26 @@
       "worthReading": "",
       "tags": [],
       "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mkv67ast5c2e",
+      "url": "https://bsky.app/profile/simonwillison.net/post/3mkv67ast5c2e",
+      "author": {
+        "handle": "simonwillison.net",
+        "displayName": "Simon Willison",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
+      },
+      "content": "I added a new feature to my blog (built entirely on my phone with Claude code for web) that imports my iNaturalist photos and adds them to my site's overall timeline simonwillison.net/2026/May/2/s...",
+      "createdAt": "2026-05-02T17:29:33.266Z",
+      "likeCount": 48,
+      "replyCount": 6,
+      "repostCount": 0,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [
+        "tooling"
+      ],
+      "type": "bluesky"
     }
   ],
   "videos": [],
@@ -1832,10 +1852,92 @@
         "llm",
         "safety"
       ]
+    },
+    {
+      "type": "x",
+      "id": "2031002164165021868",
+      "url": "https://x.com/simonw/status/2031002164165021868",
+      "author": {
+        "handle": "simonw",
+        "displayName": "Simon Willison",
+        "avatar": "https://avatars.githubusercontent.com/simonw"
+      },
+      "content": "once you attach them to a good coding agent harness at least",
+      "createdAt": "2026-05-03T04:21:15.310Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "LLMs become more effective when integrated into a robust coding agent framework.",
+      "worthReading": "Highlights the importance of tooling around LLMs for practical coding tasks.",
+      "tags": [
+        "agent",
+        "tooling"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "1976989054240800798",
+      "url": "https://x.com/simonw/status/1976989054240800798",
+      "author": {
+        "handle": "simonw",
+        "displayName": "Simon Willison",
+        "avatar": "https://avatars.githubusercontent.com/simonw"
+      },
+      "content": "I'm beginning to suspect that a key skill in working effectively with coding agents is developing an intuition for when you don't need to",
+      "createdAt": "2026-05-03T04:21:15.310Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Effective use of coding agents requires knowing when to rely on them and when not to.",
+      "worthReading": "Emphasizes the human skill of judgment in AI-assisted coding.",
+      "tags": [
+        "agent",
+        "tooling"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "1975570458683834729",
+      "url": "https://x.com/simonw/status/1975570458683834729",
+      "author": {
+        "handle": "simonw",
+        "displayName": "Simon Willison",
+        "avatar": "https://avatars.githubusercontent.com/simonw"
+      },
+      "content": "Vibe coding is irresponsibly building software through dice rolls, not caring what code is produced",
+      "createdAt": "2026-05-03T04:21:15.310Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Criticizes 'vibe coding' as an irresponsible approach to software development.",
+      "worthReading": "Warns against over-reliance on AI without proper oversight.",
+      "tags": [
+        "safety",
+        "deployment"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "952257232380379136",
+      "url": "https://x.com/simonw/status/952257232380379136",
+      "author": {
+        "handle": "simonw",
+        "displayName": "Simon Willison",
+        "avatar": "https://avatars.githubusercontent.com/simonw"
+      },
+      "content": "This may be the best guidance I've seen anywhere on writing a really good commit history.",
+      "createdAt": "2026-05-03T04:21:15.310Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Praises a resource on writing excellent commit messages.",
+      "worthReading": "Reflects Simon's interest in software craftsmanship and best practices.",
+      "tags": [
+        "tooling"
+      ]
     }
   ],
   "dailyCounts": [
-    0,
     0,
     0,
     0,
@@ -1864,7 +1966,8 @@
     3,
     6,
     5,
-    3
+    4,
+    4
   ],
-  "interestSummary": "Simon Willison is deeply focused on evaluating and comparing the latest AI models (like Opus 4.7, Qwen3.6, and Gemini Flash TTS) through creative benchmarks, particularly for image generation and coding, while also exploring open-source tools for document parsing, local model fine-tuning, and building lightweight desktop applications."
+  "interestSummary": "Simon Willison is deeply engaged in evaluating and benchmarking the latest AI models (like Claude Opus 4.7, Qwen3.6, and Gemma 4), with a focus on coding capabilities, image generation (especially his \"pelican on a bicycle\" test), and practical tools like document parsing and memory systems. He is also actively monitoring AI company pricing changes, security research access, and building small web tools to extract text from PDFs."
 }

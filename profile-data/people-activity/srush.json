@@ -587,6 +587,27 @@
       "highlights": "Tweet with a pickaxe emoji, 140 likes.",
       "worthReading": "Possibly a reference to mining or hard work, but context is minimal.",
       "tags": []
+    },
+    {
+      "type": "x",
+      "id": "2036834073369596295",
+      "url": "https://x.com/srush_nlp/status/2036834073369596295",
+      "author": {
+        "handle": "srush_io",
+        "displayName": "Sasha Rush",
+        "avatar": "https://avatars.githubusercontent.com/srush"
+      },
+      "content": "On the infra side, composer 2 uses CP. This is (i think?) the first real detail from using CP on MLA. My understanding is that each rank",
+      "createdAt": "2026-05-03T04:22:09.206Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Sasha Rush discusses infrastructure details about composer 2 using CP (context parallelism) on MLA (multi-head latent attention), noting it may be the first real detail from using CP on MLA.",
+      "worthReading": "Provides insight into cutting-edge LLM infrastructure and parallelism techniques.",
+      "tags": [
+        "infra",
+        "llm"
+      ]
     }
   ],
   "dailyCounts": [
@@ -596,7 +617,6 @@
     0,
     0,
     0,
-    0,
     1,
     0,
     0,
@@ -619,7 +639,8 @@
     0,
     2,
     3,
-    3
+    3,
+    1
   ],
-  "interestSummary": "Sasha Rush has recently joined Cursor, indicating a focus on ambitious AI development and tooling, while also engaging with a bet on Transformer architectures and showing interest in running ML models in the browser via WebGPU and Wasm."
+  "interestSummary": "Sasha Rush recently joined Cursor, an ambitious team, and is actively engaging with AI tooling and model development, as shown by his interest in JAX for the web and a wager on Transformer longevity."
 }

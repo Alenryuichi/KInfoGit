@@ -1119,10 +1119,71 @@
       "tags": [
         "tooling"
       ]
+    },
+    {
+      "type": "x",
+      "id": "2013641863123870133",
+      "url": "https://x.com/hwchase17/status/2013641863123870133",
+      "author": {
+        "handle": "hwchase17",
+        "displayName": "Harrison Chase",
+        "avatar": "https://avatars.githubusercontent.com/hwchase17"
+      },
+      "content": "Visibility is the easiest piece. The hard part is analyzing and understanding what you're observing. I've spoken to teams recording 100k+",
+      "createdAt": "2026-05-03T04:21:22.290Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Visibility is easy, but analyzing observations is hard; teams record 100k+ events.",
+      "worthReading": "Highlights the challenge of turning observability into actionable insights.",
+      "tags": [
+        "evaluation",
+        "infra"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2021261552222158955",
+      "url": "https://x.com/hwchase17/status/2021261552222158955",
+      "author": {
+        "handle": "hwchase17",
+        "displayName": "Harrison Chase",
+        "avatar": "https://avatars.githubusercontent.com/hwchase17"
+      },
+      "content": "TL;DR: More and more agents need a workspace: a computer where they can run code, install packages, and access files. Sandboxes provide this",
+      "createdAt": "2026-05-03T04:21:22.290Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Agents require a sandboxed workspace to run code, install packages, and access files.",
+      "worthReading": "Explains the growing need for sandboxed environments for agent execution.",
+      "tags": [
+        "agent",
+        "infra"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2041682886722728368",
+      "url": "https://x.com/hwchase17/status/2041682886722728368",
+      "author": {
+        "handle": "hwchase17",
+        "displayName": "Harrison Chase",
+        "avatar": "https://avatars.githubusercontent.com/hwchase17"
+      },
+      "content": "as always, it's an exciting time to be working at LangChain!",
+      "createdAt": "2026-05-03T04:21:22.290Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Retweet expressing excitement about working at LangChain.",
+      "worthReading": "Shows positive sentiment about LangChain's trajectory.",
+      "tags": [
+        "tooling"
+      ]
     }
   ],
   "dailyCounts": [
-    0,
     0,
     0,
     0,
@@ -1151,7 +1212,8 @@
     5,
     4,
     4,
+    3,
     3
   ],
-  "interestSummary": "Harrison Chase is focused on advancing AI agent development, particularly emphasizing the need for agent workspaces (sandboxes for code execution) and the importance of production data iteration and trace-based operations for debugging and testing agents, as highlighted by LangSmith's new no-code Agent Builder with integrated memory systems."
+  "interestSummary": "Harrison Chase is focused on advancing AI agent development, particularly emphasizing the need for agent workspaces with sandboxed environments for code execution and the importance of iterating on production data and traces for debugging and testing, as highlighted by the launch of LangSmith Agent Builder with its memory system."
 }
