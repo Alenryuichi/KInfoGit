@@ -1,0 +1,287 @@
+{
+  "week": "2026-W18",
+  "dateRange": {
+    "start": "2026-04-27",
+    "end": "2026-05-03"
+  },
+  "overview": "This week in AI was dominated by a seismic shift in the AI landscape: Microsoft and OpenAI terminated their exclusive and revenue-sharing deal, a story that reverberated across model-release and coding-agents topics. The breakup freed OpenAI to pursue independent partnerships and sparked intense debate about the future of AGI agreements. Meanwhile, the coding-agents space saw explosive growth with Matt Pocock's 'skills' repository and Warp's AI-powered terminal going viral, while a critical bug in Claude Code (HERMES.md) caused unexpected billing surges, highlighting infrastructure fragility. Context engineering emerged as a key concern, with enterprise systems suffering from 'silent failures' due to context decay and orchestration drift, as reported by VentureBeat. Tool use expanded with Google Gemini gaining file creation abilities and Clink launching the first fiat agentic payment skill, signaling a move toward AI agents interacting with real-world financial systems. Evals saw AI outperforming doctors in ER diagnoses and the UK AISI evaluating GPT-5.5's cyber capabilities, while SWE-bench Verified was deprecated by OpenAI, indicating a shift in how frontier coding ability is measured. Post-training research advanced with mechanistic studies of RL generalization and a legal twist in Musk v. Altman revealing xAI distilled OpenAI models. Planning remained a niche but active area, with DeepSeek's visual primitives framework and new reasoning benchmarks.",
+  "topStoriesByTopic": [
+    {
+      "topic": "coding-agents",
+      "topicLabel": "Coding Agents",
+      "stories": [
+        {
+          "title": "mattpocock/skills",
+          "url": "https://github.com/mattpocock/skills",
+          "oneLiner": "Defines a standard for agent skills, enabling reusable and composable AI capabilities.",
+          "score": 9.1,
+          "sources": [
+            "GitHub trending:all (+2519★)"
+          ]
+        },
+        {
+          "title": "GitHub Copilot is moving to usage-based billing",
+          "url": "https://github.blog/news-insights/company-news/github-copilot-is-moving-to-usage-based-billing/",
+          "oneLiner": "Shift to consumption pricing could drive adoption but raises cost predictability concerns.",
+          "score": 8.3,
+          "sources": [
+            "HN (541)"
+          ]
+        },
+        {
+          "title": "HERMES.md in commit messages causes requests to route to extra usage billing",
+          "url": "https://github.com/anthropics/claude-code/issues/53262",
+          "oneLiner": "A subtle bug in Claude Code led to unexpected charges, exposing brittle billing logic.",
+          "score": 8.3,
+          "sources": [
+            "HN (979)"
+          ]
+        }
+      ]
+    },
+    {
+      "topic": "context-engineering",
+      "topicLabel": "Context Engineering",
+      "stories": [
+        {
+          "title": "Enterprises are obsessing over model accuracy while ignoring the infrastructure layer where AI systems actually break.",
+          "url": "https://venturebeat.com/infrastructure/context-decay-orchestration-drift-and-the-rise-of-silent-failures-in-ai-systems",
+          "oneLiner": "Highlights the hidden crisis of context decay and orchestration drift in enterprise AI deployments.",
+          "score": 8,
+          "sources": [
+            "venturebeat.com"
+          ]
+        },
+        {
+          "title": "PFlash: 10x prefill speedup over llama.cpp at 128K on a RTX 3090",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1t0vp3w/pflash_10x_prefill_speedup_over_llamacpp_at_128k/",
+          "oneLiner": "Enables long-context inference on consumer hardware, democratizing large-scale context processing.",
+          "score": 8,
+          "sources": [
+            "Reddit r/LocalLLaMA"
+          ]
+        }
+      ]
+    },
+    {
+      "topic": "agent-harness",
+      "topicLabel": "Agent Harness",
+      "stories": [
+        {
+          "title": "An AI agent deleted our production database. The agent's confession is below",
+          "url": "https://twitter.com/lifeof_jer/status/2048103471019434248",
+          "oneLiner": "Viral incident underscores the urgent need for safety guardrails in autonomous agents.",
+          "score": 8.6,
+          "sources": [
+            "HN (447)"
+          ]
+        },
+        {
+          "title": "ruvnet/ruflo",
+          "url": "https://github.com/ruvnet/ruflo",
+          "oneLiner": "Open-source multi-agent orchestration platform for Claude, enabling complex workflows.",
+          "score": 8.3,
+          "sources": [
+            "GitHub trending:all (+1299★)"
+          ]
+        },
+        {
+          "title": "AWS Cuts AI Agent Setup To 3 API Calls In AgentCore Update",
+          "url": "https://ca.news.yahoo.com/aws-cuts-ai-agent-setup-160824660.html",
+          "oneLiner": "Simplifies agent deployment, lowering the barrier for enterprises to adopt AI agents.",
+          "score": 8,
+          "sources": [
+            "Yahoo News Canada"
+          ]
+        }
+      ]
+    },
+    {
+      "topic": "model-release",
+      "topicLabel": "Model Release",
+      "stories": [
+        {
+          "title": "Microsoft and OpenAI end their exclusive and revenue-sharing deal",
+          "url": "https://www.bloomberg.com/news/articles/2026-04-27/microsoft-to-stop-sharing-revenue-with-main-ai-partner-openai",
+          "oneLiner": "Landmark breakup reshapes AI industry dynamics, freeing OpenAI to pursue new partnerships.",
+          "score": 9.6,
+          "sources": [
+            "HN (747)"
+          ]
+        },
+        {
+          "title": "microsoft/VibeVoice",
+          "url": "https://github.com/microsoft/VibeVoice",
+          "oneLiner": "Microsoft open-sources a state-of-the-art voice AI model, boosting accessibility.",
+          "score": 9.1,
+          "sources": [
+            "GitHub trending:all (+1690★)"
+          ]
+        },
+        {
+          "title": "DeepMind's David Silver just raised $1.1B to build an AI that learns without human data",
+          "url": "https://techcrunch.com/2026/04/27/deepminds-david-silver-just-raised-1-1b-to-build-an-ai-that-learns-without-human-data/",
+          "oneLiner": "Massive funding signals a bet on unsupervised learning as the next AI frontier.",
+          "score": 9,
+          "sources": [
+            "techcrunch.com"
+          ]
+        }
+      ]
+    },
+    {
+      "topic": "evals",
+      "topicLabel": "Evals",
+      "stories": [
+        {
+          "title": "AI outperforms doctors in ER diagnoses | Semafor",
+          "url": "https://www.semafor.com/article/05/01/2026/ai-outperforms-doctors-in-er-diagnoses",
+          "oneLiner": "Landmark study shows AI surpassing human experts in high-stakes medical decision-making.",
+          "score": 8.5,
+          "sources": [
+            "Semafor"
+          ]
+        },
+        {
+          "title": "Our evaluation of OpenAI's GPT-5.5 cyber capabilities",
+          "url": "https://simonwillison.net/2026/Apr/30/gpt-55-cyber-capabilities/#atom-everything",
+          "oneLiner": "UK AISI's assessment reveals GPT-5.5's advanced cyberattack potential, raising safety alarms.",
+          "score": 8,
+          "sources": [
+            "Simon Willison"
+          ]
+        },
+        {
+          "title": "SWE-bench Verified no longer measures frontier coding capabilities",
+          "url": "https://openai.com/index/why-we-no-longer-evaluate-swe-bench-verified/",
+          "oneLiner": "OpenAI drops a key benchmark, signaling the need for more challenging coding evaluations.",
+          "score": 7.5,
+          "sources": [
+            "HN (246)"
+          ]
+        }
+      ]
+    },
+    {
+      "topic": "planning",
+      "topicLabel": "Planning",
+      "stories": [
+        {
+          "title": "The Power of Power Law: Asymmetry Enables Compositional Reasoning",
+          "url": "https://arxiv.org/abs/2604.22951",
+          "oneLiner": "Reveals a fundamental principle that could unlock more robust multi-step reasoning in LLMs.",
+          "score": 7.5,
+          "sources": [
+            "ArXiv cs.AI"
+          ]
+        },
+        {
+          "title": "DeepSeek released 'Thinking-with-Visual-Primitives' framework",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1szwi1d/deepseek_released_thinkingwithvisualprimitives/",
+          "oneLiner": "Combines visual primitives with reasoning, bridging perception and planning.",
+          "score": 7.5,
+          "sources": [
+            "Reddit r/LocalLLaMA"
+          ]
+        }
+      ]
+    },
+    {
+      "topic": "tool-use",
+      "topicLabel": "Tool Use",
+      "stories": [
+        {
+          "title": "Now Google Gemini will create spreadsheets, PDFs and other files if you ask.",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/920870/now-google-gemini-will-create-spreadsheets-pdfs-and-other-files-if-you-ask",
+          "oneLiner": "Gemini gains productivity tools, making it a direct competitor to office suites.",
+          "score": 7.5,
+          "sources": [
+            "The Verge"
+          ]
+        },
+        {
+          "title": "Clink Launches the World's First Fiat Agentic Payment Skill",
+          "url": "https://markets.businessinsider.com/news/stocks/clink-launches-the-world-s-first-fiat-agentic-payment-skill-letting-any-merchant-get-paid-by-ai-agents-1036085662",
+          "oneLiner": "Enables AI agents to make real-world payments, a critical step toward autonomous commerce.",
+          "score": 6.5,
+          "sources": [
+            "markets.businessinsider.com"
+          ]
+        }
+      ]
+    },
+    {
+      "topic": "post-training",
+      "topicLabel": "Post-Training",
+      "stories": [
+        {
+          "title": "Why Does Reinforcement Learning Generalize? A Feature-Level Mechanistic Study of Post-Training in Large Language Models",
+          "url": "https://arxiv.org/abs/2604.25011",
+          "oneLiner": "Provides mechanistic insight into why RL post-training improves reasoning, guiding future alignment.",
+          "score": 8,
+          "sources": [
+            "ArXiv cs.CL"
+          ]
+        },
+        {
+          "title": "Outcome Rewards Do Not Guarantee Verifiable or Causally Important Reasoning",
+          "url": "https://arxiv.org/abs/2604.22074",
+          "oneLiner": "Challenges the foundation of reward-based training, suggesting the need for process supervision.",
+          "score": 7.5,
+          "sources": [
+            "ArXiv cs.CL"
+          ]
+        }
+      ]
+    }
+  ],
+  "trendingTopics": [
+    {
+      "topic": "AI Agent Safety and Reliability",
+      "description": "Multiple incidents (database deletion, billing bugs) and research (evals, benchmarking) highlight growing concerns about deploying autonomous agents in production."
+    },
+    {
+      "topic": "Model Ecosystem Fragmentation",
+      "description": "The Microsoft-OpenAI breakup, along with new open-source releases (VibeVoice, skills), signals a shift away from centralized AI providers toward a multi-model landscape."
+    },
+    {
+      "topic": "Long-Context and Infrastructure Bottlenecks",
+      "description": "Context engineering innovations (PFlash, AST-based retrieval) and the 'silent failures' article underscore that context management is becoming a critical bottleneck."
+    }
+  ],
+  "keyReads": [
+    {
+      "title": "Enterprises are obsessing over model accuracy while ignoring the infrastructure layer where AI systems actually break.",
+      "url": "https://venturebeat.com/infrastructure/context-decay-orchestration-drift-and-the-rise-of-silent-failures-in-ai-systems",
+      "summary": "Explores how context decay and orchestration drift cause silent failures in AI systems, urging a focus on infrastructure over model accuracy.",
+      "why": "Essential reading for anyone deploying AI in production; it reframes the conversation from model performance to system reliability."
+    },
+    {
+      "title": "Why Does Reinforcement Learning Generalize? A Feature-Level Mechanistic Study of Post-Training in Large Language Models",
+      "url": "https://arxiv.org/abs/2604.25011",
+      "summary": "A mechanistic analysis revealing how RL post-training reshapes internal representations to improve reasoning generalization.",
+      "why": "Provides a deeper understanding of why RL fine-tuning works, with implications for alignment and capability enhancement."
+    },
+    {
+      "title": "AI evals are becoming the new compute bottleneck",
+      "url": "https://huggingface.co/blog/evaleval/eval-costs-bottleneck",
+      "summary": "Argues that the cost and complexity of evaluating AI models are becoming a major bottleneck, comparable to training compute.",
+      "why": "Timely analysis that highlights an underappreciated challenge as AI capabilities race ahead of evaluation methodologies."
+    }
+  ],
+  "stats": {
+    "totalItems": 242,
+    "uniqueTopics": 8,
+    "daysWithContent": 7,
+    "topicCounts": {
+      "coding-agents": 37,
+      "agent-harness": 41,
+      "context-engineering": 13,
+      "evals": 22,
+      "model-release": 34,
+      "post-training": 6,
+      "planning": 7,
+      "tool-use": 7
+    }
+  }
+}

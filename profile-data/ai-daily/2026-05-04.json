@@ -1,0 +1,945 @@
+{
+  "date": "2026-05-04",
+  "itemCount": 52,
+  "sections": [
+    {
+      "id": "research",
+      "title": "Research & Innovation",
+      "items": [
+        {
+          "title": "In Harvard study, AI offered more accurate emergency room diagnoses than two human doctors | TechCrunch",
+          "summary": "哈佛研究显示AI在急诊室诊断中比两名人类医生更准确。",
+          "url": "https://techcrunch.com/2026/05/03/in-harvard-study-ai-offered-more-accurate-diagnoses-than-emergency-room-doctors/",
+          "score": 8,
+          "sources": [
+            {
+              "name": "techcrunch.com"
+            }
+          ],
+          "tags": [
+            "healthcare",
+            "diagnosis",
+            "benchmark"
+          ],
+          "focusTopics": [
+            "evals"
+          ]
+        },
+        {
+          "title": "OpenAI's o1 correctly diagnosed 67% of ER patients vs. 50-55% by triage doctors",
+          "summary": "OpenAI o1正确诊断67%急诊患者，优于分诊医生的50-55%。",
+          "url": "https://www.theguardian.com/technology/2026/apr/30/ai-outperforms-doctors-in-harvard-trial-of-emergency-triage-diagnoses",
+          "score": 7.2,
+          "sources": [
+            {
+              "name": "HN (275)"
+            }
+          ],
+          "tags": [
+            "healthcare",
+            "diagnosis",
+            "benchmark"
+          ],
+          "focusTopics": [
+            "evals"
+          ]
+        },
+        {
+          "title": "[Paper on Hummingbird+: low-cost FPGAs for LLM inference] Qwen3-30B-A3B Q4 at 18 t/s token-gen, 24GB, expected $150 mass production cost",
+          "summary": "论文提出Hummingbird+，用低成本FPGA实现LLM推理，Qwen3-30B-A3B Q4达18t/s。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1t2kpzn/paper_on_hummingbird_lowcost_fpgas_for_llm/",
+          "score": 7,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "fpga",
+            "inference",
+            "hardware",
+            "low-cost"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Evolving Deep Learning Optimizers [R]",
+          "summary": "用遗传算法自动发现深度学习优化器。",
+          "url": "https://www.reddit.com/r/MachineLearning/comments/1t2jt4m/evolving_deep_learning_optimizers_r/",
+          "score": 5.5,
+          "sources": [
+            {
+              "name": "Reddit r/MachineLearning"
+            }
+          ],
+          "tags": [
+            "optimizer",
+            "genetic-algorithm"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "I Trained an AI to Beat Final Fight… Here’s What Happened [p]",
+          "summary": "用行为克隆训练AI玩经典街机游戏Final Fight。",
+          "url": "https://www.reddit.com/r/MachineLearning/comments/1t2vfz7/i_trained_an_ai_to_beat_final_fight_heres_what/",
+          "score": 4,
+          "sources": [
+            {
+              "name": "Reddit r/MachineLearning"
+            }
+          ],
+          "tags": [
+            "behavior-cloning",
+            "game-ai"
+          ],
+          "focusTopics": []
+        }
+      ]
+    },
+    {
+      "id": "engineering",
+      "title": "Engineering & Resources",
+      "items": [
+        {
+          "title": "TauricResearch/TradingAgents",
+          "summary": "TradingAgents：基于多智能体LLM的金融交易框架。",
+          "url": "https://github.com/TauricResearch/TradingAgents",
+          "score": 8.725,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+3313★)"
+            }
+          ],
+          "tags": [
+            "multi-agent",
+            "finance",
+            "trading"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "ruvnet/ruflo",
+          "summary": "ruflo：用于Claude的领先Agent编排平台，支持多智能体协同。",
+          "url": "https://github.com/ruvnet/ruflo",
+          "score": 8.3,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+1840★)"
+            }
+          ],
+          "tags": [
+            "agent-orchestration",
+            "multi-agent",
+            "claude"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "huggingface/ml-intern",
+          "summary": "Hugging Face开源ML工程师项目，自动读论文、训练模型。",
+          "url": "https://github.com/huggingface/ml-intern",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "Co-Starred"
+            }
+          ],
+          "tags": [
+            "open-source",
+            "automl",
+            "agent"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "Quoting Anthropic",
+          "summary": "Simon Willison引用Anthropic关于Claude个人指导的研究，涉及谄媚行为检测。",
+          "url": "https://simonwillison.net/2026/May/3/anthropic/#atom-everything",
+          "score": 7,
+          "sources": [
+            {
+              "name": "Simon Willison"
+            }
+          ],
+          "tags": [
+            "anthropic",
+            "sycophancy",
+            "llm"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "mattmireles/gemma-tuner-multimodal",
+          "summary": "Gemma Tuner Multimodal：在Apple Silicon上微调Gemma多模态模型。",
+          "url": "https://github.com/mattmireles/gemma-tuner-multimodal",
+          "score": 7,
+          "sources": [
+            {
+              "name": "Co-Starred"
+            }
+          ],
+          "tags": [
+            "gemma",
+            "fine-tuning",
+            "multimodal"
+          ],
+          "focusTopics": [
+            "post-training"
+          ]
+        },
+        {
+          "title": "browserbase/skills",
+          "summary": "browserbase/skills：带网页浏览工具的Claude Agent SDK。",
+          "url": "https://github.com/browserbase/skills",
+          "score": 6.858,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+322★)"
+            }
+          ],
+          "tags": [
+            "agent-sdk",
+            "web-browsing",
+            "claude"
+          ],
+          "focusTopics": [
+            "tool-use",
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "DeepClaude – Claude Code agent loop with DeepSeek V4 Pro, 17x cheaper",
+          "summary": "DeepClaude：结合DeepSeek V4 Pro的Claude Code代理循环，成本降低17倍。",
+          "url": "https://github.com/aattaran/deepclaude",
+          "score": 6.849,
+          "sources": [
+            {
+              "name": "HN (158)"
+            }
+          ],
+          "tags": [
+            "ai-coding",
+            "agent",
+            "cost-efficiency"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "1jehuang/jcode",
+          "summary": "一个编码Agent框架，用于构建和运行AI编程助手。",
+          "url": "https://github.com/1jehuang/jcode",
+          "score": 6.8365,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+591★)"
+            }
+          ],
+          "tags": [
+            "coding-agent",
+            "framework"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "LearningCircuit/local-deep-research",
+          "summary": "本地深度研究工具，在SimpleQA上达95%准确率，支持多种LLM。",
+          "url": "https://github.com/LearningCircuit/local-deep-research",
+          "score": 6.5895,
+          "sources": [
+            {
+              "name": "GitHub trending:python (+143★)"
+            }
+          ],
+          "tags": [
+            "deep-research",
+            "benchmark",
+            "local-llm"
+          ],
+          "focusTopics": [
+            "evals"
+          ]
+        },
+        {
+          "title": "virattt/dexter",
+          "summary": "用于深度金融研究的自主Agent。",
+          "url": "https://github.com/virattt/dexter",
+          "score": 6.577,
+          "sources": [
+            {
+              "name": "GitHub trending:typescript (+418★)"
+            }
+          ],
+          "tags": [
+            "finance",
+            "autonomous-agent",
+            "research"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "Sam Altman asked GPT-5.5 to plan its own launch party. Its requests were 'beautiful' but 'strange.' - Business Insider",
+          "summary": "Sam Altman让GPT-5.5策划自己的发布派对，结果既美丽又奇怪。",
+          "url": "https://www.businessinsider.com/sam-altman-gpt-5-5-ai-planned-party-2026-5",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "businessinsider.com"
+            }
+          ],
+          "tags": [
+            "openai",
+            "gpt-5.5",
+            "ai-creativity"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Karpathy's MicroGPT running at 50,000 tps on an FPGA",
+          "summary": "Karpathy的MicroGPT在FPGA上以50,000 tps运行，仅4,192参数。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1t28bfj/karpathys_microgpt_running_at_50000_tps_on_an_fpga/",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "fpga",
+            "microgpt",
+            "edge-ai"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Hmbown/DeepSeek-TUI",
+          "summary": "DeepSeek-TUI：终端中运行的DeepSeek模型编码Agent。",
+          "url": "https://github.com/Hmbown/DeepSeek-TUI",
+          "score": 6.4645,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+343★)"
+            }
+          ],
+          "tags": [
+            "coding-agent",
+            "deepseek",
+            "terminal"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "Show HN: Apple's SHARP running in the browser via ONNX runtime web",
+          "summary": "Apple SHARP模型在浏览器中通过ONNX运行时运行。",
+          "url": "https://github.com/bring-shrubbery/ml-sharp-web",
+          "score": 6.421,
+          "sources": [
+            {
+              "name": "HN (157)"
+            }
+          ],
+          "tags": [
+            "3d-gaussian-splatting",
+            "onnx",
+            "browser"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "AIDC-AI/Pixelle-Video",
+          "summary": "Pixelle-Video：AI全自动短视频生成引擎。",
+          "url": "https://github.com/AIDC-AI/Pixelle-Video",
+          "score": 6.270499999999999,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+497★)"
+            }
+          ],
+          "tags": [
+            "video-generation",
+            "ai",
+            "automation"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Big Tech Earnings Show Split Between AI Trade Winners and Losers",
+          "summary": "大型科技公司财报显示AI赢家和输家之间的分化。",
+          "url": "https://www.bloomberg.com/news/articles/2026-05-03/big-tech-earnings-show-split-between-ai-trade-winners-and-losers",
+          "score": 6,
+          "sources": [
+            {
+              "name": "bloomberg.com"
+            }
+          ],
+          "tags": [
+            "earnings",
+            "big-tech",
+            "ai-investment"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Colorado lawmakers introduce new AI rules - Axios Denver",
+          "summary": "科罗拉多州议员提出新的人工智能规则。",
+          "url": "https://www.axios.com/local/denver/2026/05/03/colorado-ai-artificial-intellligence-legislation",
+          "score": 6,
+          "sources": [
+            {
+              "name": "axios.com"
+            }
+          ],
+          "tags": [
+            "regulation",
+            "colorado",
+            "ai-policy"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "A Qwen finetune, that feels VERY human",
+          "summary": "基于Qwen3-32B的微调模型Assistant_Pepe_32B发布，感觉非常人性化。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1t2rhkg/a_qwen_finetune_that_feels_very_human/",
+          "score": 6,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "qwen",
+            "fine-tuning",
+            "open-source"
+          ],
+          "focusTopics": [
+            "model-release"
+          ]
+        },
+        {
+          "title": "Qwen3.6-27B vs Coder-Next",
+          "summary": "用户对比Qwen3.6-27B和Coder-Next模型性能，耗时20小时。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1t2ab5y/qwen3627b_vs_codernext/",
+          "score": 6,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "llm",
+            "benchmark",
+            "comparison"
+          ],
+          "focusTopics": [
+            "evals"
+          ]
+        },
+        {
+          "title": "Gemma 4 E2B runs surprisingly well on my 8GB Android phone, so I built a private voice notes app around it.",
+          "summary": "Gemma 4 E2B在8GB安卓手机上运行良好，用户构建了语音笔记应用。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1t2t1w4/gemma_4_e2b_runs_surprisingly_well_on_my_8gb/",
+          "score": 6,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "gemma",
+            "mobile",
+            "on-device"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "torch-nvenc-compress: GPU NVENC silicon as a PCIe bandwidth multiplier — PCA + pure-ctypes Video Codec SDK wrapper. Parallel-path overlap measured at 67% of theoretical max on a real GEMM + encode workload. [P]",
+          "summary": "torch-nvenc-compress利用GPU NVENC加速PCIe带宽，适用于多GPU推理。",
+          "url": "https://www.reddit.com/r/MachineLearning/comments/1t2zy4h/torchnvenccompress_gpu_nvenc_silicon_as_a_pcie/",
+          "score": 6,
+          "sources": [
+            {
+              "name": "Reddit r/MachineLearning"
+            }
+          ],
+          "tags": [
+            "gpu",
+            "pcie",
+            "compression"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Agentic Coding Is a Trap",
+          "summary": "观点文章：智能体编码是一个陷阱，引发社区讨论。",
+          "url": "https://larsfaye.com/articles/agentic-coding-is-a-trap",
+          "score": 5.869999999999999,
+          "sources": [
+            {
+              "name": "HN (115)"
+            }
+          ],
+          "tags": [
+            "ai-coding",
+            "agent",
+            "critique"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "czlonkowski/n8n-mcp",
+          "summary": "为Claude Desktop等AI工具提供MCP接口以构建n8n工作流。",
+          "url": "https://github.com/czlonkowski/n8n-mcp",
+          "score": 5.523,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+282★)"
+            }
+          ],
+          "tags": [
+            "mcp",
+            "workflow",
+            "claude"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "AI Advances Raise Cybersecurity Concerns for US Banks, Treasury Secretary Warns - Bloomberg",
+          "summary": "美国财长警告AI进步引发银行网络安全担忧。",
+          "url": "https://www.bloomberg.com/news/articles/2026-05-03/banks-in-us-are-working-to-gird-against-ai-attacks-bessent-says",
+          "score": 5.5,
+          "sources": [
+            {
+              "name": "bloomberg.com"
+            }
+          ],
+          "tags": [
+            "cybersecurity",
+            "banks",
+            "regulation"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Palantir's AI Pricing Power - The Information",
+          "summary": "Palantir的AI定价能力分析。",
+          "url": "https://www.theinformation.com/newsletters/the-briefing/palantirs-ai-pricing-power",
+          "score": 5.5,
+          "sources": [
+            {
+              "name": "theinformation.com"
+            }
+          ],
+          "tags": [
+            "palantir",
+            "pricing",
+            "ai-business"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "cocoindex-io/cocoindex",
+          "summary": "为长时程Agent提供增量计算引擎。",
+          "url": "https://github.com/cocoindex-io/cocoindex",
+          "score": 5.3445,
+          "sources": [
+            {
+              "name": "GitHub trending:python (+163★)"
+            }
+          ],
+          "tags": [
+            "agent",
+            "incremental",
+            "engine"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "Text-to-CAD",
+          "summary": "Text-to-CAD：文本生成CAD模型的开源工具。",
+          "url": "https://github.com/earthtojake/text-to-cad",
+          "score": 5.322,
+          "sources": [
+            {
+              "name": "HN (74)"
+            }
+          ],
+          "tags": [
+            "text-to-cad",
+            "generative-ai"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "DataRobot Highlights AI Agent Infrastructure, Governance, and Evolving Workforce Roles - TipRanks",
+          "summary": "DataRobot强调AI代理基础设施、治理和新兴的代理主管角色。",
+          "url": "https://www.tipranks.com/news/private-companies/datarobot-highlights-ai-agent-infrastructure-governance-and-evolving-workforce-roles",
+          "score": 5,
+          "sources": [
+            {
+              "name": "tipranks.com"
+            }
+          ],
+          "tags": [
+            "ai-agents",
+            "governance",
+            "workforce"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "It's not just music, AI is threatening to overtake human podcasters, too.",
+          "summary": "AI不仅威胁音乐，还威胁人类播客。",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/922854/its-not-just-music-ai-is-threating-to-overtake-human-podcasters-too",
+          "score": 5,
+          "sources": [
+            {
+              "name": "theverge.com"
+            }
+          ],
+          "tags": [
+            "podcast",
+            "ai-content",
+            "media"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "One bash permission slipped...",
+          "summary": "用户分享LLM在bash命令生成中出错导致目录混乱的经历。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1t2uk1m/one_bash_permission_slipped/",
+          "score": 5,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "llm",
+            "code-generation",
+            "error"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "AMD Strix Halo refresh with 192gb!",
+          "summary": "AMD Strix Halo下一代产品Gorgon Halo 495 Max内存超128GB。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1t2ywn7/amd_strix_halo_refresh_with_192gb/",
+          "score": 5,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "hardware",
+            "amd",
+            "local-llm"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Pushing a 5-Year-Old 6GB VRAM laptop to Its Limits: Qwen3.6-35B-A3B",
+          "summary": "用户在5年前6GB VRAM笔记本上运行Qwen3.6-35B-A3B模型。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1t2zapy/pushing_a_5yearold_6gb_vram_laptop_to_its_limits/",
+          "score": 5,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "local-llm",
+            "quantization",
+            "hardware"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Mistral Medium 3.5 on AMD Strix Halo",
+          "summary": "Mistral Medium 3.5在AMD Strix Halo上运行缓慢，48k token需过夜。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1t2twu1/mistral_medium_35_on_amd_strix_halo/",
+          "score": 5,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "mistral",
+            "inference",
+            "performance"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Mistral-Medium-3.5-128B-Q3_K_M on 3x3090 (72GB VRAM)",
+          "summary": "Mistral Medium 3.5 Q3在3x3090上本地运行速度实测。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1t32ps4/mistralmedium35128bq3_k_m_on_3x3090_72gb_vram/",
+          "score": 5,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "mistral",
+            "inference",
+            "benchmark"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Does the \"6 months gap\" still hold?",
+          "summary": "讨论AI编程质量在2025年12月是否发生跃升。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1t2gu2h/does_the_6_months_gap_still_hold/",
+          "score": 5,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "ai-coding",
+            "agent",
+            "quality"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "Q00/ouroboros",
+          "summary": "Agent OS，通过规范而非提示来驱动AI代理。",
+          "url": "https://github.com/Q00/ouroboros",
+          "score": 4.827999999999999,
+          "sources": [
+            {
+              "name": "GitHub trending:python (+102★)"
+            }
+          ],
+          "tags": [
+            "agent-os",
+            "specification"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "vas3k/TaxHacker",
+          "summary": "自托管AI会计应用，用LLM分析收据和交易。",
+          "url": "https://github.com/vas3k/TaxHacker",
+          "score": 4.7995,
+          "sources": [
+            {
+              "name": "GitHub trending:typescript (+83★)"
+            }
+          ],
+          "tags": [
+            "accounting",
+            "llm",
+            "self-hosted"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "simstudioai/sim",
+          "summary": "构建、部署和编排AI代理的平台。",
+          "url": "https://github.com/simstudioai/sim",
+          "score": 4.753,
+          "sources": [
+            {
+              "name": "GitHub trending:typescript (+52★)"
+            }
+          ],
+          "tags": [
+            "agent-orchestration",
+            "platform"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "iOfficeAI/AionUi",
+          "summary": "免费开源的24/7协同应用，支持多种AI CLI工具。",
+          "url": "https://github.com/iOfficeAI/AionUi",
+          "score": 4.4615,
+          "sources": [
+            {
+              "name": "GitHub trending:typescript (+141★)"
+            }
+          ],
+          "tags": [
+            "cowork",
+            "open-source",
+            "cli"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "LLMs Are Not a Higher Level of Abstraction",
+          "summary": "观点文章：LLM并非更高层次的抽象。",
+          "url": "https://www.lelanthran.com/chap15/content.html",
+          "score": 4.376,
+          "sources": [
+            {
+              "name": "HN (42)"
+            }
+          ],
+          "tags": [
+            "llm",
+            "abstraction",
+            "opinion"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "conorluddy/ios-simulator-skill",
+          "summary": "为Claude Code提供iOS模拟器技能，优化应用构建。",
+          "url": "https://github.com/conorluddy/ios-simulator-skill",
+          "score": 4.325,
+          "sources": [
+            {
+              "name": "GitHub trending:python (+50★)"
+            }
+          ],
+          "tags": [
+            "ios",
+            "claude-code",
+            "simulator"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "What a time to be alive from 1tk/sec to 20-100tk/sec for huge models",
+          "summary": "用户感叹本地推理速度从1tk/s提升到20-100tk/s。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1t2s7ik/what_a_time_to_be_alive_from_1tksec_to_20100tksec/",
+          "score": 4,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "inference",
+            "performance",
+            "local-llm"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "If you've been waiting to try local AI development, please try it",
+          "summary": "用户分享尝试本地AI开发的经验，鼓励他人尝试。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1t2icy1/if_youve_been_waiting_to_try_local_ai_development/",
+          "score": 4,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "local-llm",
+            "developer-experience"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "First time GPU buyer. Got a RTX 5000 Pro. Was it a bad decision compared to two 3090s?",
+          "summary": "新手GPU买家询问RTX 5000 Pro是否不如两张3090。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1t2slmw/first_time_gpu_buyer_got_a_rtx_5000_pro_was_it_a/",
+          "score": 4,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "hardware",
+            "gpu",
+            "local-llm"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "nexu-io/nexu",
+          "summary": "将Agent桥接到微信、飞书等平台的桌面客户端。",
+          "url": "https://github.com/nexu-io/nexu",
+          "score": 3.8564999999999996,
+          "sources": [
+            {
+              "name": "GitHub trending:typescript (+21★)"
+            }
+          ],
+          "tags": [
+            "agent",
+            "integration",
+            "desktop"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "YILING0013/AI_NovelGenerator",
+          "summary": "使用AI生成多章节长篇小说的工具。",
+          "url": "https://github.com/YILING0013/AI_NovelGenerator",
+          "score": 3.4314999999999998,
+          "sources": [
+            {
+              "name": "GitHub trending:python (+21★)"
+            }
+          ],
+          "tags": [
+            "novel-generation",
+            "llm"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Help with personal MLflow project [P]",
+          "summary": "个人项目：基于LLM的CLI工具探索MLflow日志。",
+          "url": "https://www.reddit.com/r/MachineLearning/comments/1t2vs1o/help_with_personal_mlflow_project_p/",
+          "score": 2.5,
+          "sources": [
+            {
+              "name": "Reddit r/MachineLearning"
+            }
+          ],
+          "tags": [
+            "mlflow",
+            "cli",
+            "llm"
+          ],
+          "focusTopics": []
+        }
+      ]
+    }
+  ],
+  "aiSummary": "今日AI领域动态：研究方面，哈佛大学研究显示AI在急诊室诊断中比两名人类医生更准确，OpenAI的o1模型正确诊断率67%优于人类分诊医生[见哈佛研究](#item-techcrunch-com-2026-05-03-in-harvard-study-ai-offered-more-a)；同时有论文提出低成本FPGA方案实现LLM推理[见Hummingbird+论文](#item-reddit-com-r-LocalLLaMA-comments-1t2kpzn-paper-on-hummingbir)。工具方面，多个开源项目发布，包括多智能体金融交易框架[见TradingAgents](#item-github-com-TauricResearch-TradingAgents)和Claude Agent编排平台[见ruflo](#item-github-com-ruvnet-ruflo)。观点洞察方面，Sam Altman让GPT-5.5策划自身发布派对引发关注[见GPT-5.5策划派对](#item-businessinsider-com-sam-altman-gpt-5-5-ai-planned-party-2026)，同时大型科技公司财报显示AI领域赢家与输家分化明显[见AI财报分化](#item-bloomberg-com-news-articles-2026-05-03-big-tech-earnings-sho)。"
+}
