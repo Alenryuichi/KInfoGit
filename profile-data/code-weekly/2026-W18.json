@@ -1,0 +1,1252 @@
+{
+  "week": "2026-W18",
+  "dateRange": "2026-04-27 — 2026-05-03",
+  "generatedAt": "2026-05-04T05:13:46.905Z",
+  "editors": [
+    {
+      "name": "Cursor",
+      "category": "ide",
+      "version": "",
+      "highlights": [
+        "推出基于 Agents Window 的新界面，支持并行运行多个代理。",
+        "引入平铺布局，可在本地、云端和远程 SSH 中运行代理。",
+        "更可靠的语音听写功能。",
+        "新增文件搜索过滤器，支持更精确的代码范围限定。",
+        "发布 Cursor SDK，允许构建基于 Cursor 运行时的程序化代理。"
+      ],
+      "source": "Releasebot, Cursor Changelog",
+      "sourceUrl": "https://releasebot.io/updates/cursor",
+      "aiSummary": "Cursor 本周发布了重大更新，推出了全新的 Agents Window 界面，支持在平铺布局中并行运行多个代理，并增强了语音听写和文件搜索功能。此外，还发布了 Cursor SDK，允许开发者构建程序化代理，并推出了安全审查功能的 Beta 版。"
+    },
+    {
+      "name": "Windsurf",
+      "category": "ide",
+      "version": "v2.1.32",
+      "highlights": [
+        "Devin 现已集成到终端，所有用户可使用现有订阅。",
+        "新增 Devin Local 代理，比现有 Cascade 代理节省高达 30% 的 Token。",
+        "支持 Claude Opus 4.7 模型。",
+        "修复了切换 Cascade 对话时的崩溃问题。",
+        "修复了 Devin Cloud 会话的认证问题。"
+      ],
+      "source": "Windsurf Changelog",
+      "sourceUrl": "https://windsurf.com/changelog",
+      "aiSummary": "Windsurf 本周将 Devin 代理集成到终端和编辑器中，推出了更高效的 Devin Local 代理，并支持 Claude Opus 4.7 模型。同时修复了多个关键 Bug，提升了稳定性。"
+    },
+    {
+      "name": "Trae",
+      "category": "ide",
+      "version": "v3.5.52",
+      "highlights": [
+        "发布 v3.5.52 热修复版本，修复已知问题。",
+        "v3.5.52 之前的版本为功能发布。"
+      ],
+      "source": "Trae 文档",
+      "sourceUrl": "https://docs.trae.ai/ide/changelog",
+      "aiSummary": "Trae 本周发布了 v3.5.52 热修复版本，主要修复了已知问题，未带来重大功能更新。"
+    },
+    {
+      "name": "Augment",
+      "category": "ide",
+      "version": "0.457.5-beta",
+      "highlights": [
+        "Intent 0.3.4 发布，重构了核心逻辑并优化了新用户设置流程。",
+        "代理在内存压力下更具弹性，不再被中途终止。",
+        "终端标题现在会进行清理，防止凭据泄露。",
+        "支持粘贴图片 (Cmd+V)。",
+        "Shell 工具现在支持 sh，TUI 使用配置的 shell 执行异步命令。"
+      ],
+      "source": "Augment Code Changelog",
+      "sourceUrl": "https://www.augmentcode.com/changelog",
+      "aiSummary": "Augment 本周发布了 Intent 0.3.4 版本，进行了重大重构并优化了新用户体验。同时增强了代理的稳定性、安全性和 Shell 支持，并增加了图片粘贴功能。"
+    },
+    {
+      "name": "Claude Code",
+      "category": "cli",
+      "version": "2.1.126",
+      "highlights": [
+        "本周发布了多个版本，包括 v2.1.126、v2.1.124、v2.1.123 等。",
+        "更新包含更智能的模型选择、项目清理工具和更强的权限处理。",
+        "改进了 OAuth 登录、Windows 和 PowerShell 的兼容性。",
+        "提升了 MCP 和插件工作流的速度。",
+        "新增技能搜索框和更丰富的钩子功能。"
+      ],
+      "source": "npm, Releasebot",
+      "sourceUrl": "https://releasebot.io/updates/anthropic",
+      "aiSummary": "Claude Code 本周发布了多个版本，带来了更智能的模型选择、更强的权限处理以及大量稳定性、UI 和安全性的改进。MCP 和插件工作流的速度也得到了提升。"
+    },
+    {
+      "name": "Gemini CLI",
+      "category": "cli",
+      "version": "v0.41.0-preview.1",
+      "highlights": [
+        "发布 v0.41.0-preview.1 和 v0.40.1 补丁版本。",
+        "v0.41.0-preview.0 新增安全的 .env 加载和 headless 模式下的工作区信任。",
+        "v0.41.0-preview.0 增强 Shell 命令验证并添加核心工具允许列表。",
+        "v0.40.0 正式版发布，捆绑 ripgrep 二进制文件以支持离线。",
+        "v0.40.0 修复了 YOLO 模式被降级的问题。"
+      ],
+      "source": "GitHub Releases",
+      "sourceUrl": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.41.0-preview.1",
+      "aiSummary": "Gemini CLI 本周发布了多个版本，包括 v0.40.0 正式版和 v0.41.0 预览版。新版本增强了安全性、Shell 命令验证，并捆绑了 ripgrep 以支持离线使用。"
+    },
+    {
+      "name": "OpenCode",
+      "category": "cli",
+      "version": "",
+      "highlights": [
+        "修复了选择服务器对话框的布局问题。",
+        "修复了侧边栏项目头像的回退逻辑。",
+        "修复了 WorkspaceAdaptor.create 的类型定义。",
+        "新增 LLM Gateway 作为提供商。"
+      ],
+      "source": "OpenCode Changelog",
+      "sourceUrl": "https://opencode.ai/changelog",
+      "aiSummary": "OpenCode 本周进行了一些小修复和功能增强，包括修复 UI 布局、类型定义，并新增了 LLM Gateway 提供商支持。"
+    },
+    {
+      "name": "Aider",
+      "category": "cli",
+      "version": "",
+      "highlights": [],
+      "source": "",
+      "sourceUrl": "",
+      "aiSummary": "本周暂无重大更新"
+    },
+    {
+      "name": "Copilot",
+      "category": "cli",
+      "version": "",
+      "highlights": [
+        "GitHub Copilot for JetBrains IDE 预览版新增内联代理模式。",
+        "Copilot CLI 新增 Tab 补全功能。",
+        "Copilot CLI 改进了会话和同步工作流。",
+        "即将弃用 GPT-5.2 和 GPT-5.2-Codex 模型。"
+      ],
+      "source": "Releasebot, GitHub Changelog",
+      "sourceUrl": "https://releasebot.io/updates/github",
+      "aiSummary": "GitHub Copilot 本周为 JetBrains IDE 带来了内联代理模式的预览版，并增强了 CLI 的 Tab 补全和会话管理功能。同时宣布了部分模型的弃用计划。"
+    },
+    {
+      "name": "CodeBuddy",
+      "category": "cli",
+      "version": "2.95.0-next",
+      "highlights": [
+        "发布了多个 2.95.0-next 预发布版本。",
+        "腾讯云宣布 CodeBuddy 将于 5 月 15 日起涨价，最高涨幅达 154%。"
+      ],
+      "source": "npm, BigGo Finance",
+      "sourceUrl": "https://finance.biggo.com/news/vQ5Y050BtCxy99G5l4m1",
+      "aiSummary": "CodeBuddy 本周发布了多个预发布版本，但主要新闻是腾讯云宣布其价格将大幅上涨，最高达 154%，反映了 AI 推理需求的激增。"
+    }
+  ],
+  "benchmarks": {
+    "arenaRanking": [
+      {
+        "rank": 1,
+        "model": "Claude Opus 4.7 Thinking",
+        "elo": 1571,
+        "org": "Anthropic",
+        "delta": null
+      },
+      {
+        "rank": 2,
+        "model": "Claude Opus 4.7",
+        "elo": 1561,
+        "org": "Anthropic",
+        "delta": null
+      },
+      {
+        "rank": 3,
+        "model": "Claude Opus 4.6 Thinking",
+        "elo": 1548,
+        "org": "Anthropic",
+        "delta": null
+      },
+      {
+        "rank": 4,
+        "model": "Claude Opus 4.6",
+        "elo": 1543,
+        "org": "Anthropic",
+        "delta": null
+      },
+      {
+        "rank": 5,
+        "model": "GLM 5.1",
+        "elo": 1534,
+        "org": "Z.ai",
+        "delta": null
+      },
+      {
+        "rank": 6,
+        "model": "Claude Sonnet 4.6",
+        "elo": 1527,
+        "org": "Anthropic",
+        "delta": null
+      },
+      {
+        "rank": 7,
+        "model": "Kimi K2.6",
+        "elo": 1526,
+        "org": "Moonshot",
+        "delta": null
+      },
+      {
+        "rank": 8,
+        "model": "Muse Spark",
+        "elo": 1509,
+        "org": "Meta",
+        "delta": null
+      },
+      {
+        "rank": 9,
+        "model": "GPT-5.5 High (codex Harness)",
+        "elo": 1492,
+        "org": "OpenAI",
+        "delta": null
+      },
+      {
+        "rank": 10,
+        "model": "Claude Opus 4.5 20251101 Thinking 32k",
+        "elo": 1491,
+        "org": "Anthropic",
+        "delta": null
+      },
+      {
+        "rank": 11,
+        "model": "Mimo V2.5 Pro",
+        "elo": 1475,
+        "org": "Xiaomi",
+        "delta": null
+      },
+      {
+        "rank": 12,
+        "model": "Qwen3.6 Plus",
+        "elo": 1467,
+        "org": "Alibaba",
+        "delta": null
+      },
+      {
+        "rank": 13,
+        "model": "Claude Opus 4.5 20251101",
+        "elo": 1467,
+        "org": "Anthropic",
+        "delta": null
+      },
+      {
+        "rank": 14,
+        "model": "GPT-5.4 High (codex Harness)",
+        "elo": 1457,
+        "org": "OpenAI",
+        "delta": null
+      },
+      {
+        "rank": 15,
+        "model": "Deepseek V4 Pro Thinking",
+        "elo": 1455,
+        "org": "DeepSeek",
+        "delta": null
+      },
+      {
+        "rank": 16,
+        "model": "Gemini 3.1 Pro Preview",
+        "elo": 1453,
+        "org": "Google",
+        "delta": null
+      },
+      {
+        "rank": 17,
+        "model": "GPT-5.5 (codex Harness)",
+        "elo": 1447,
+        "org": "OpenAI",
+        "delta": null
+      },
+      {
+        "rank": 18,
+        "model": "Mimo V2.5",
+        "elo": 1444,
+        "org": "Xiaomi",
+        "delta": null
+      },
+      {
+        "rank": 19,
+        "model": "GLM 4.7",
+        "elo": 1440,
+        "org": "Z.ai",
+        "delta": null
+      },
+      {
+        "rank": 20,
+        "model": "Gemini 3 Pro",
+        "elo": 1438,
+        "org": "Google",
+        "delta": null
+      },
+      {
+        "rank": 21,
+        "model": "GLM 5",
+        "elo": 1437,
+        "org": "Z.ai",
+        "delta": null
+      },
+      {
+        "rank": 22,
+        "model": "GPT-5.4 Medium (codex Harness)",
+        "elo": 1437,
+        "org": "OpenAI",
+        "delta": null
+      },
+      {
+        "rank": 23,
+        "model": "Gemini 3 Flash",
+        "elo": 1437,
+        "org": "Google",
+        "delta": null
+      },
+      {
+        "rank": 24,
+        "model": "Kimi K2.5 Thinking",
+        "elo": 1430,
+        "org": "Moonshot",
+        "delta": null
+      },
+      {
+        "rank": 25,
+        "model": "Mimo V2 Pro",
+        "elo": 1430,
+        "org": "Xiaomi",
+        "delta": null
+      },
+      {
+        "rank": 26,
+        "model": "Minimax M2.7",
+        "elo": 1411,
+        "org": "MiniMax",
+        "delta": null
+      },
+      {
+        "rank": 27,
+        "model": "Grok 4.3",
+        "elo": 1408,
+        "org": "xAI",
+        "delta": null
+      },
+      {
+        "rank": 28,
+        "model": "Kimi K2.5 Instant",
+        "elo": 1408,
+        "org": "Moonshot",
+        "delta": null
+      },
+      {
+        "rank": 29,
+        "model": "GPT-5.3 Codex (codex Harness)",
+        "elo": 1407,
+        "org": "OpenAI",
+        "delta": null
+      },
+      {
+        "rank": 30,
+        "model": "GPT-5.2",
+        "elo": 1404,
+        "org": "OpenAI",
+        "delta": null
+      },
+      {
+        "rank": 31,
+        "model": "GPT-5.4 Mini High",
+        "elo": 1400,
+        "org": "OpenAI",
+        "delta": null
+      },
+      {
+        "rank": 32,
+        "model": "Grok 4.20 Beta 0309 Reasoning",
+        "elo": 1399,
+        "org": "xAI",
+        "delta": null
+      },
+      {
+        "rank": 33,
+        "model": "GPT-5 Medium",
+        "elo": 1393,
+        "org": "OpenAI",
+        "delta": null
+      },
+      {
+        "rank": 34,
+        "model": "Minimax M2.1 Preview",
+        "elo": 1392,
+        "org": "MiniMax",
+        "delta": null
+      },
+      {
+        "rank": 35,
+        "model": "GPT-5.1 Medium",
+        "elo": 1391,
+        "org": "OpenAI",
+        "delta": null
+      },
+      {
+        "rank": 36,
+        "model": "Gemini 3 Flash (thinking Minimal)",
+        "elo": 1389,
+        "org": "Google",
+        "delta": null
+      },
+      {
+        "rank": 37,
+        "model": "Claude Sonnet 4.5 20250929 Thinking 32k",
+        "elo": 1388,
+        "org": "Anthropic",
+        "delta": null
+      },
+      {
+        "rank": 38,
+        "model": "Qwen3.5 397b A17b",
+        "elo": 1387,
+        "org": "Alibaba",
+        "delta": null
+      },
+      {
+        "rank": 39,
+        "model": "Claude Sonnet 4.5 20250929",
+        "elo": 1386,
+        "org": "Anthropic",
+        "delta": null
+      },
+      {
+        "rank": 40,
+        "model": "Claude Opus 4.1 20250805",
+        "elo": 1385,
+        "org": "Anthropic",
+        "delta": null
+      },
+      {
+        "rank": 41,
+        "model": "Minimax M2.5",
+        "elo": 1383,
+        "org": "MiniMax",
+        "delta": null
+      },
+      {
+        "rank": 42,
+        "model": "Deepseek V3.2 Thinking",
+        "elo": 1368,
+        "org": "DeepSeek",
+        "delta": null
+      },
+      {
+        "rank": 43,
+        "model": "Qwen3.5 122b A10b",
+        "elo": 1363,
+        "org": "Alibaba",
+        "delta": null
+      },
+      {
+        "rank": 44,
+        "model": "GLM 4.6",
+        "elo": 1355,
+        "org": "Z.ai",
+        "delta": null
+      },
+      {
+        "rank": 45,
+        "model": "Qwen3.5 27b",
+        "elo": 1350,
+        "org": "Alibaba",
+        "delta": null
+      },
+      {
+        "rank": 46,
+        "model": "GPT-5.1",
+        "elo": 1339,
+        "org": "OpenAI",
+        "delta": null
+      },
+      {
+        "rank": 47,
+        "model": "Mimo V2 Flash (non Thinking)",
+        "elo": 1337,
+        "org": "Xiaomi",
+        "delta": null
+      },
+      {
+        "rank": 48,
+        "model": "GPT-5.2 Codex",
+        "elo": 1335,
+        "org": "OpenAI",
+        "delta": null
+      },
+      {
+        "rank": 49,
+        "model": "Deepseek V3.2",
+        "elo": 1332,
+        "org": "DeepSeek",
+        "delta": null
+      },
+      {
+        "rank": 50,
+        "model": "Kimi K2 Thinking Turbo",
+        "elo": 1330,
+        "org": "Moonshot",
+        "delta": null
+      }
+    ],
+    "aiderLeaderboard": [
+      {
+        "model": "gpt-5 (high)",
+        "passRate": 88,
+        "delta": null
+      },
+      {
+        "model": "gpt-5 (medium)",
+        "passRate": 86.7,
+        "delta": null
+      },
+      {
+        "model": "o3-pro (high)",
+        "passRate": 84.9,
+        "delta": null
+      },
+      {
+        "model": "gemini-2.5-pro-preview-06-05 (32k think)",
+        "passRate": 83.1,
+        "delta": null
+      },
+      {
+        "model": "o3 (high)",
+        "passRate": 81.3,
+        "delta": null
+      },
+      {
+        "model": "gpt-5 (low)",
+        "passRate": 81.3,
+        "delta": null
+      },
+      {
+        "model": "grok-4 (high)",
+        "passRate": 79.6,
+        "delta": null
+      },
+      {
+        "model": "gemini-2.5-pro-preview-06-05 (default think)",
+        "passRate": 79.1,
+        "delta": null
+      },
+      {
+        "model": "o3 (high) + gpt-4.1",
+        "passRate": 78.2,
+        "delta": null
+      },
+      {
+        "model": "Gemini 2.5 Pro Preview 05-06",
+        "passRate": 76.9,
+        "delta": null
+      },
+      {
+        "model": "o3",
+        "passRate": 76.9,
+        "delta": null
+      },
+      {
+        "model": "DeepSeek-V3.2-Exp (Reasoner)",
+        "passRate": 74.2,
+        "delta": null
+      },
+      {
+        "model": "Gemini 2.5 Pro Preview 03-25",
+        "passRate": 72.9,
+        "delta": null
+      },
+      {
+        "model": "o4-mini (high)",
+        "passRate": 72,
+        "delta": null
+      },
+      {
+        "model": "claude-opus-4-20250514 (32k thinking)",
+        "passRate": 72,
+        "delta": null
+      },
+      {
+        "model": "DeepSeek R1 (0528)",
+        "passRate": 71.4,
+        "delta": null
+      },
+      {
+        "model": "claude-opus-4-20250514 (no think)",
+        "passRate": 70.7,
+        "delta": null
+      },
+      {
+        "model": "DeepSeek-V3.2-Exp (Chat)",
+        "passRate": 70.2,
+        "delta": null
+      },
+      {
+        "model": "claude-3-7-sonnet-20250219 (32k thinking tokens)",
+        "passRate": 64.9,
+        "delta": null
+      },
+      {
+        "model": "DeepSeek R1 + claude-3-5-sonnet-20241022",
+        "passRate": 64,
+        "delta": null
+      },
+      {
+        "model": "o1-2024-12-17 (high)",
+        "passRate": 61.7,
+        "delta": null
+      },
+      {
+        "model": "claude-sonnet-4-20250514 (32k thinking)",
+        "passRate": 61.3,
+        "delta": null
+      },
+      {
+        "model": "o3-mini (high)",
+        "passRate": 60.4,
+        "delta": null
+      },
+      {
+        "model": "claude-3-7-sonnet-20250219 (no thinking)",
+        "passRate": 60.4,
+        "delta": null
+      },
+      {
+        "model": "Qwen3 235B A22B diff, no think, Alibaba API",
+        "passRate": 59.6,
+        "delta": null
+      },
+      {
+        "model": "Kimi K2",
+        "passRate": 59.1,
+        "delta": null
+      },
+      {
+        "model": "DeepSeek R1",
+        "passRate": 56.9,
+        "delta": null
+      },
+      {
+        "model": "claude-sonnet-4-20250514 (no thinking)",
+        "passRate": 56.4,
+        "delta": null
+      },
+      {
+        "model": "DeepSeek V3 (0324)",
+        "passRate": 55.1,
+        "delta": null
+      },
+      {
+        "model": "gemini-2.5-flash-preview-05-20 (24k think)",
+        "passRate": 55.1,
+        "delta": null
+      }
+    ],
+    "sweBench": [
+      {
+        "model": "live-SWE-agent + Claude 4.5 Opus medium (20251101)",
+        "resolved": 79.2,
+        "org": "UIUC"
+      },
+      {
+        "model": "Sonar Foundation Agent + Claude 4.5 Opus",
+        "resolved": 79.2,
+        "org": "Sonar"
+      },
+      {
+        "model": "TRAE + Doubao-Seed-Code",
+        "resolved": 78.8,
+        "org": "ByteDance"
+      },
+      {
+        "model": "live-SWE-agent + Gemini 3 Pro Preview (2025-11-18)",
+        "resolved": 77.4,
+        "org": "UIUC"
+      },
+      {
+        "model": "Atlassian Rovo Dev (2025-09-02)",
+        "resolved": 76.8,
+        "org": "Atlassian"
+      },
+      {
+        "model": "EPAM AI/Run Developer Agent v20250719 + Claude 4 Sonnet",
+        "resolved": 76.8,
+        "org": "EPAM Systems, Inc."
+      },
+      {
+        "model": "mini-SWE-agent + Claude 4.5 Opus (high reasoning)",
+        "resolved": 76.8,
+        "org": "Anthropic"
+      },
+      {
+        "model": "ACoder",
+        "resolved": 76.4,
+        "org": "ACoder"
+      },
+      {
+        "model": "mini-SWE-agent + Gemini 3 Flash (high reasoning)",
+        "resolved": 75.8,
+        "org": "Google DeepMind"
+      },
+      {
+        "model": "mini-SWE-agent + MiniMax M2.5 (high reasoning)",
+        "resolved": 75.8,
+        "org": "Minimax"
+      },
+      {
+        "model": "Warp",
+        "resolved": 75.6,
+        "org": "Warp"
+      },
+      {
+        "model": "mini-SWE-agent + Claude Opus 4.6",
+        "resolved": 75.6,
+        "org": "Anthropic"
+      },
+      {
+        "model": "TRAE + Claude Sonnet 4 + Opus 4 + Sonnet 3.7 + Gemini 2.5 Pro",
+        "resolved": 75.2,
+        "org": "TRAE"
+      },
+      {
+        "model": "Harness AI",
+        "resolved": 74.8,
+        "org": "Harness"
+      },
+      {
+        "model": "Sonar Foundation Agent + Claude 4.5 Sonnet",
+        "resolved": 74.8,
+        "org": "Sonar"
+      },
+      {
+        "model": "Lingxi-v1.5_claude-4-sonnet-20250514",
+        "resolved": 74.6,
+        "org": "Lingxi"
+      },
+      {
+        "model": "JoyCode + Claude 4 Sonnet + GPT-4.1",
+        "resolved": 74.6,
+        "org": "JoyCode"
+      },
+      {
+        "model": "Refact.ai Agent + Claude 4 Sonnet + o4-mini",
+        "resolved": 74.4,
+        "org": "Refact.ai"
+      },
+      {
+        "model": "Prometheus-v1.2.1 + GPT-5",
+        "resolved": 74.4,
+        "org": "EuniAI"
+      },
+      {
+        "model": "mini-SWE-agent + Claude 4.5 Opus medium (20251101)",
+        "resolved": 74.4,
+        "org": "Anthropic"
+      },
+      {
+        "model": "mini-SWE-agent + Gemini 3 Pro Preview (2025-11-18)",
+        "resolved": 74.2,
+        "org": "Google DeepMind"
+      },
+      {
+        "model": "Salesforce AI Research SAGE (OpenHands)",
+        "resolved": 73.8,
+        "org": "Salesforce AI Research"
+      },
+      {
+        "model": "Tools + Claude 4 Opus (2025-05-22)",
+        "resolved": 73.2
+      },
+      {
+        "model": "Salesforce AI Research SAGE (bash-only)",
+        "resolved": 73,
+        "org": "Salesforce AI Research"
+      },
+      {
+        "model": "mini-SWE-agent + GPT-5-2 Codex",
+        "resolved": 72.8,
+        "org": "OpenAI"
+      },
+      {
+        "model": "mini-SWE-agent + GLM-5 (high reasoning)",
+        "resolved": 72.8,
+        "org": "Z-AI"
+      },
+      {
+        "model": "mini-SWE-agent + GPT-5-2 (high reasoning)",
+        "resolved": 72.8,
+        "org": "OpenAI"
+      },
+      {
+        "model": "Tools + Claude 4 Sonnet (2025-05-22)",
+        "resolved": 72.4
+      },
+      {
+        "model": "OpenHands + GPT-5",
+        "resolved": 71.8,
+        "org": "OpenHands"
+      },
+      {
+        "model": "mini-SWE-agent + GPT-5.2 (2025-12-11) (high reasoning)",
+        "resolved": 71.8,
+        "org": "OpenAI"
+      }
+    ],
+    "liveCodeBench": [
+      {
+        "model": "O4-Mini (High)",
+        "passRate": 87.3,
+        "easy": 98.4,
+        "medium": 92.7,
+        "hard": 71.1
+      },
+      {
+        "model": "O3 (High)",
+        "passRate": 84.7,
+        "easy": 99.1,
+        "medium": 89.8,
+        "hard": 66
+      },
+      {
+        "model": "O4-Mini (Medium)",
+        "passRate": 84.5,
+        "easy": 98.8,
+        "medium": 92.2,
+        "hard": 62.9
+      },
+      {
+        "model": "DeepSeek-R1-0528",
+        "passRate": 84.4,
+        "easy": 99.2,
+        "medium": 90.9,
+        "hard": 63.6
+      },
+      {
+        "model": "Gemini-2.5-Pro-06-05",
+        "passRate": 84.3,
+        "easy": 99.1,
+        "medium": 92.2,
+        "hard": 62
+      },
+      {
+        "model": "Gemini-2.5-Pro-05-06",
+        "passRate": 82.7,
+        "easy": 98.8,
+        "medium": 90.6,
+        "hard": 59.4
+      },
+      {
+        "model": "OpenReasoning-Nemotron-32B",
+        "passRate": 81,
+        "easy": 98.6,
+        "medium": 87.5,
+        "hard": 57.5
+      },
+      {
+        "model": "EXAONE-4.0-32B",
+        "passRate": 80.9,
+        "easy": 98.8,
+        "medium": 88.3,
+        "hard": 56.3
+      },
+      {
+        "model": "Qwen3-235B-A22B",
+        "passRate": 80.4,
+        "easy": 99.1,
+        "medium": 88.8,
+        "hard": 54
+      },
+      {
+        "model": "XBai-o4-medium",
+        "passRate": 80.1,
+        "easy": 98.8,
+        "medium": 90.1,
+        "hard": 52
+      },
+      {
+        "model": "OpenCodeReasoning-Nemotron-1.1-32B",
+        "passRate": 78.5,
+        "easy": 98,
+        "medium": 85.7,
+        "hard": 52.8
+      },
+      {
+        "model": "Grok-3-Mini (High)",
+        "passRate": 78.1,
+        "easy": 98.1,
+        "medium": 85.9,
+        "hard": 51.1
+      },
+      {
+        "model": "O3-Mini-2025-01-31 (High)",
+        "passRate": 77.7,
+        "easy": 99.1,
+        "medium": 87.5,
+        "hard": 47.4
+      },
+      {
+        "model": "O4-Mini (Low)",
+        "passRate": 77.4,
+        "easy": 98.1,
+        "medium": 86.2,
+        "hard": 48.9
+      },
+      {
+        "model": "Gemini-2.5-Flash-05-20",
+        "passRate": 76.2,
+        "easy": 99.1,
+        "medium": 82.5,
+        "hard": 48.3
+      },
+      {
+        "model": "O3-Mini-2025-01-31 (Med)",
+        "passRate": 75.4,
+        "easy": 98.8,
+        "medium": 85.1,
+        "hard": 43.1
+      },
+      {
+        "model": "Gemini-2.5-Flash-04-17",
+        "passRate": 75.1,
+        "easy": 98.4,
+        "medium": 81.2,
+        "hard": 46.9
+      },
+      {
+        "model": "O3-Mini-2025-01-31 (Low)",
+        "passRate": 70.6,
+        "easy": 97.8,
+        "medium": 77.5,
+        "hard": 38
+      },
+      {
+        "model": "Claude-Opus-4 (Thinking)",
+        "passRate": 70.4,
+        "easy": 99.1,
+        "medium": 80.4,
+        "hard": 33.1
+      },
+      {
+        "model": "Claude-Sonnet-4 (Thinking)",
+        "passRate": 68.5,
+        "easy": 98.8,
+        "medium": 76,
+        "hard": 32.6
+      },
+      {
+        "model": "Claude-Opus-4",
+        "passRate": 62.4,
+        "easy": 96.3,
+        "medium": 69.2,
+        "hard": 23.7
+      },
+      {
+        "model": "Claude-Sonnet-4",
+        "passRate": 59.4,
+        "easy": 96.3,
+        "medium": 64,
+        "hard": 20.6
+      },
+      {
+        "model": "DeepSeek-V3",
+        "passRate": 49.6,
+        "easy": 83.3,
+        "medium": 53.5,
+        "hard": 14.2
+      },
+      {
+        "model": "Claude-3.5-Sonnet-20241022",
+        "passRate": 48.7,
+        "easy": 92.6,
+        "medium": 44.6,
+        "hard": 12.8
+      },
+      {
+        "model": "GPT-4O-2024-08-06",
+        "passRate": 38.3,
+        "easy": 82.5,
+        "medium": 32.1,
+        "hard": 4.5
+      },
+      {
+        "model": "GPT-4-Turbo-2024-04-09",
+        "passRate": 37.3,
+        "easy": 81.4,
+        "medium": 30.7,
+        "hard": 4
+      },
+      {
+        "model": "GPT-4O-mini-2024-07-18",
+        "passRate": 35.5,
+        "easy": 81.7,
+        "medium": 25.2,
+        "hard": 4.3
+      },
+      {
+        "model": "Claude-3-Haiku",
+        "passRate": 22.5,
+        "easy": 61.1,
+        "medium": 9,
+        "hard": 1.9
+      }
+    ],
+    "notable": ""
+  },
+  "blogs": [
+    {
+      "company": "Cursor",
+      "title": "Team Marketplace Updates",
+      "url": "https://cursor.com/changelog/05-01-26",
+      "publishedAt": "2026-05-01T00:00:00.000Z",
+      "summary": "管理员现在可以在不连接仓库的情况下创建团队市场，并直接在团队市场设置中添加、删除和配置第一方插件的安装行为。",
+      "tags": [
+        "Cursor",
+        "团队市场",
+        "插件管理"
+      ]
+    },
+    {
+      "company": "Cursor",
+      "title": "Cursor Security Review",
+      "url": "https://cursor.com/changelog/04-30-26",
+      "publishedAt": "2026-04-30T00:00:00.000Z",
+      "summary": "Cursor 安全审查功能在 Teams 和 Enterprise 计划中进入 Beta 阶段，可以运行安全审查员和漏洞扫描器两种始终在线的安全代理。",
+      "tags": [
+        "Cursor",
+        "安全审查",
+        "漏洞扫描"
+      ]
+    },
+    {
+      "company": "Cursor",
+      "title": "Build programmatic agents with the Cursor SDK",
+      "url": "https://cursor.com/changelog/sdk-release",
+      "publishedAt": "2026-04-29T00:00:00.000Z",
+      "summary": "Cursor 推出 SDK，允许开发者使用与 Cursor 相同的运行时、工具和模型来构建程序化代理。",
+      "tags": [
+        "Cursor",
+        "SDK",
+        "程序化代理"
+      ]
+    },
+    {
+      "company": "Google AI",
+      "title": "Join the new AI Agents Vibe Coding Course from Google and Kaggle",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/kaggle-genai-intensive-course-vibe-coding-june-2026/",
+      "publishedAt": "2026-04-27T00:00:00.000Z",
+      "summary": "Google 与 Kaggle 合作推出新的 AI 代理 Vibe Coding 课程，旨在教授开发者如何利用 AI 代理进行编程。",
+      "tags": [
+        "Google",
+        "AI 代理",
+        "Vibe Coding",
+        "课程"
+      ]
+    },
+    {
+      "company": "Vercel",
+      "title": "2026 Vercel AI Accelerator recap",
+      "url": "https://vercel.com/blog/2026-vercel-ai-accelerator-recap",
+      "publishedAt": "2026-04-28T00:00:00.000Z",
+      "summary": "Vercel 回顾了 2026 年 AI 加速器项目，39 支团队在演示日向投资者展示了他们的下一代 AI 应用创意。",
+      "tags": [
+        "Vercel",
+        "AI 加速器",
+        "创业"
+      ]
+    }
+  ],
+  "ecosystem": [
+    {
+      "title": "mattpocock/skills",
+      "url": "https://github.com/mattpocock/skills",
+      "summary": "Matt Pocock发布真实工程师的Agent技能集。",
+      "score": 9.149999999999999,
+      "source": "GitHub trending:all (+2519★)",
+      "publishedAt": "2026-04-27",
+      "secondaryTopics": [
+        "agent-harness"
+      ]
+    },
+    {
+      "title": "HERMES.md in commit messages causes requests to route to extra usage billing",
+      "url": "https://github.com/anthropics/claude-code/issues/53262",
+      "summary": "Claude Code中HERMES.md导致额外计费问题。",
+      "score": 8.3,
+      "source": "HN (979)",
+      "publishedAt": "2026-04-30",
+      "secondaryTopics": []
+    },
+    {
+      "title": "warpdotdev/warp",
+      "url": "https://github.com/warpdotdev/warp",
+      "summary": "Warp是一个基于终端的智能开发环境。",
+      "score": 8.3,
+      "source": "GitHub trending:all (+12822★)",
+      "publishedAt": "2026-04-30",
+      "secondaryTopics": []
+    },
+    {
+      "title": "GitHub Copilot is moving to usage-based billing",
+      "url": "https://github.blog/news-insights/company-news/github-copilot-is-moving-to-usage-based-billing",
+      "summary": "GitHub Copilot将改为按用量计费。",
+      "score": 8.3,
+      "source": "HN (541)",
+      "publishedAt": "2026-04-28",
+      "secondaryTopics": []
+    },
+    {
+      "title": "VS Code inserting 'Co-Authored-by Copilot' into commits regardless of usage",
+      "url": "https://github.com/microsoft/vscode/pull/310226",
+      "summary": "VS Code在提交中自动插入'Co-Authored-by Copilot'引发争议。",
+      "score": 7.875,
+      "source": "HN (755)",
+      "publishedAt": "2026-05-03",
+      "secondaryTopics": []
+    },
+    {
+      "title": "obra/superpowers",
+      "url": "https://github.com/obra/superpowers",
+      "summary": "Superpowers：一个有效的代理技能框架和软件开发方法论。",
+      "score": 7.875,
+      "source": "GitHub trending:all (+1632★)",
+      "publishedAt": "2026-05-01",
+      "secondaryTopics": [
+        "agent-harness"
+      ]
+    },
+    {
+      "title": "Show HN: OSS Agent I built topped the TerminalBench on Gemini-3-flash-preview",
+      "url": "https://github.com/dirac-run/dirac",
+      "summary": "开源Agent在TerminalBench上超越谷歌官方模型。",
+      "score": 7.7059999999999995,
+      "source": "HN (302)",
+      "publishedAt": "2026-04-28",
+      "secondaryTopics": [
+        "evals"
+      ]
+    },
+    {
+      "title": "Claude Code refuses requests or charges extra if your commits mention \"OpenClaw\"",
+      "url": "https://twitter.com/theo/status/2049645973350363168",
+      "summary": "Claude Code在提交提及OpenClaw时拒绝请求或额外收费。",
+      "score": 7.45,
+      "source": "HN (952)",
+      "publishedAt": "2026-05-01",
+      "secondaryTopics": []
+    },
+    {
+      "title": "Cursor Camp",
+      "url": "https://neal.fun/cursor-camp",
+      "summary": "Cursor推出AI编程训练营Cursor Camp。",
+      "score": 7.45,
+      "source": "HN (613)",
+      "publishedAt": "2026-04-30",
+      "secondaryTopics": []
+    },
+    {
+      "title": "abhigyanpatwari/GitNexus",
+      "url": "https://github.com/abhigyanpatwari/GitNexus",
+      "summary": "GitNexus：零服务器代码智能引擎，客户端知识图谱。",
+      "score": 7.45,
+      "source": "GitHub trending:all (+1102★)",
+      "publishedAt": "2026-04-28",
+      "secondaryTopics": []
+    },
+    {
+      "title": "Alishahryar1/free-claude-code",
+      "url": "https://github.com/Alishahryar1/free-claude-code",
+      "summary": "免费使用Claude Code的终端/VSCode扩展。",
+      "score": 7.45,
+      "source": "GitHub trending:all (+1701★)",
+      "publishedAt": "2026-04-27",
+      "secondaryTopics": []
+    },
+    {
+      "title": "gastownhall/beads",
+      "url": "https://github.com/gastownhall/beads",
+      "summary": "Beads：为编程agent提供内存升级。",
+      "score": 7.122,
+      "source": "GitHub trending:all (+498★)",
+      "publishedAt": "2026-04-28",
+      "secondaryTopics": [
+        "context-engineering"
+      ]
+    },
+    {
+      "title": "I implemented meta paper [P]",
+      "url": "https://www.reddit.com/r/MachineLearning/comments/1t1rni9/i_implemented_meta_paper_p",
+      "summary": "实现Meta论文Scaling Test-Time Compute for Agentic Coding。",
+      "score": 7,
+      "source": "Reddit r/MachineLearning",
+      "publishedAt": "2026-05-03",
+      "secondaryTopics": []
+    },
+    {
+      "title": "[AINews] Agents for Everything Else: Codex for Knowledge Work, Claude for Creative Work",
+      "url": "https://www.latent.space/p/ainews-agents-for-everything-else",
+      "summary": "探讨编码Agent突破限制，以及Claude在创意工作中的应用。",
+      "score": 7,
+      "source": "Latent Space",
+      "publishedAt": "2026-05-02",
+      "secondaryTopics": []
+    },
+    {
+      "title": "Codex CLI 0.128.0 adds /goal",
+      "url": "https://simonwillison.net/2026/Apr/30/codex-goals",
+      "summary": "Codex CLI 0.128.0新增/goal命令，增强AI编程助手功能。",
+      "score": 7,
+      "source": "Simon Willison",
+      "publishedAt": "2026-05-01",
+      "secondaryTopics": []
+    },
+    {
+      "title": "Long-context coding on RTX 5080 16GB: Qwen3.6-35B-A3B holds 30 t/s at 128K (89 t/s fresh), no quality drop",
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1t07s6x/longcontext_coding_on_rtx_5080_16gb_qwen3635ba3b",
+      "summary": "用户测试Qwen3.6-35B-A3B在RTX 5080上长上下文编码，性能良好。",
+      "score": 7,
+      "source": "Reddit r/LocalLLaMA",
+      "publishedAt": "2026-05-01",
+      "secondaryTopics": []
+    },
+    {
+      "title": "FormalScience: Scalable Human-in-the-Loop Autoformalisation of Science with Agentic Code Generation in Lean",
+      "url": "https://arxiv.org/abs/2604.23002",
+      "summary": "提出FormalScience，用LLM代理在Lean中自动形式化科学推理。",
+      "score": 7,
+      "source": "ArXiv cs.AI",
+      "publishedAt": "2026-04-30",
+      "secondaryTopics": []
+    },
+    {
+      "title": "OpenAI Really Wants Codex to Shut Up About Goblins - WIRED",
+      "url": "https://www.wired.com/story/openai-really-wants-codex-to-shut-up-about-goblins",
+      "summary": "OpenAI试图让Codex避免谈论地精等无关内容。",
+      "score": 7,
+      "source": "wired.com",
+      "publishedAt": "2026-04-29",
+      "secondaryTopics": []
+    },
+    {
+      "title": "Qwen3 4B outperforms cloud agents on code tasks—with Mahoraga research [R]",
+      "url": "https://www.reddit.com/r/MachineLearning/comments/1sxhpnn/qwen3_4b_outperforms_cloud_agents_on_code",
+      "summary": "Qwen3 4B在代码任务上超越云agent，Mahoraga研究。",
+      "score": 7,
+      "source": "Reddit r/MachineLearning",
+      "publishedAt": "2026-04-28",
+      "secondaryTopics": []
+    },
+    {
+      "title": "Join the new AI Agents Vibe Coding Course from Google and Kaggle",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/kaggle-genai-intensive-course-vibe-coding-june-2026",
+      "summary": "Google与Kaggle推出AI Agents Vibe Coding课程。",
+      "score": 7,
+      "source": "Google AI Blog",
+      "publishedAt": "2026-04-28",
+      "secondaryTopics": []
+    }
+  ],
+  "weekSummary": "本周 AI 代码编辑器生态迎来多项重要更新。Cursor 推出了全新的 Agents Window 界面和 SDK，标志着 IDE 向多代理并行协作方向演进。Windsurf 将 Devin 代理深度集成，并推出更高效的 Devin Local 代理。Claude Code 和 Gemini CLI 也发布了多个版本，持续优化稳定性和功能。值得注意的是，腾讯云 CodeBuddy 宣布大幅涨价，反映了 AI 算力成本上升的趋势。整体来看，AI 编程工具正从单线程辅助向多代理、平台化方向快速发展。"
+}
