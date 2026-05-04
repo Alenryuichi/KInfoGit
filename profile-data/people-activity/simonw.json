@@ -856,6 +856,24 @@
         "tooling"
       ],
       "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mkxjblgepc2l",
+      "url": "https://bsky.app/profile/simonwillison.net/post/3mkxjblgepc2l",
+      "author": {
+        "handle": "simonwillison.net",
+        "displayName": "Simon Willison",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
+      },
+      "content": "The AI auto-reply bots from Twitter (fun fact, the software category is genuinely called \"reply guy\" tools) have started showing up on Bluesky now and it really, really sucks",
+      "createdAt": "2026-05-03T15:53:02.138Z",
+      "likeCount": 195,
+      "replyCount": 19,
+      "repostCount": 11,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [],
+      "type": "bluesky"
     }
   ],
   "videos": [],
@@ -1935,10 +1953,70 @@
       "tags": [
         "tooling"
       ]
+    },
+    {
+      "type": "x",
+      "id": "1970147806225854531",
+      "url": "https://x.com/simonw/status/1970147806225854531",
+      "author": {
+        "handle": "simonw",
+        "displayName": "Simon Willison",
+        "avatar": "https://avatars.githubusercontent.com/simonw"
+      },
+      "content": "It's interesting how \"better at code\" has become the defining goal of almost every AI lab over the",
+      "createdAt": "2026-05-04T04:21:01.377Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Simon observes that AI labs are increasingly focused on improving code generation capabilities as a primary objective.",
+      "worthReading": "Reflects a key trend in AI development priorities.",
+      "tags": [
+        "llm",
+        "tooling"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "1931090610724995303",
+      "url": "https://x.com/simonw/status/1931090610724995303",
+      "author": {
+        "handle": "simonw",
+        "displayName": "Simon Willison",
+        "avatar": "https://avatars.githubusercontent.com/simonw"
+      },
+      "content": "I've published video, slides and a detailed annotated transcript from my talk at this week's",
+      "createdAt": "2026-05-04T04:21:01.377Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Simon shares materials from a talk about the last year six months in LLMs, illustrated by pelicans on bicycles.",
+      "worthReading": "Provides a creative and insightful overview of recent LLM developments.",
+      "tags": [
+        "llm"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "952257232380379136",
+      "url": "https://x.com/simonw/status/952257232380379136",
+      "author": {
+        "handle": "simonw",
+        "displayName": "Simon Willison",
+        "avatar": "https://avatars.githubusercontent.com/simonw"
+      },
+      "content": "This may be the best guidance I've seen anywhere on writing a really good commit history.",
+      "createdAt": "2026-05-04T04:21:01.377Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Simon recommends guidance on writing good commit history.",
+      "worthReading": "Useful for developers aiming to improve their version control practices.",
+      "tags": [
+        "tooling"
+      ]
     }
   ],
   "dailyCounts": [
-    0,
     0,
     0,
     4,
@@ -1967,7 +2045,8 @@
     6,
     5,
     4,
-    4
+    5,
+    3
   ],
-  "interestSummary": "Simon Willison is deeply engaged in evaluating and benchmarking the latest AI models (like Claude Opus 4.7, Qwen3.6, and Gemma 4), with a focus on coding capabilities, image generation (especially his \"pelican on a bicycle\" test), and practical tools like document parsing and memory systems. He is also actively monitoring AI company pricing changes, security research access, and building small web tools to extract text from PDFs."
+  "interestSummary": "Simon Willison is deeply engaged in evaluating and comparing cutting-edge AI models (Gemma, Opus, Qwen, Gemini) for code generation and image creation, with a particular focus on running local models, building developer tools like document parsers and UI frameworks, and tracking AI industry pricing and policy changes. He also maintains a playful benchmark involving pelicans riding bicycles as a test of image generation quality."
 }

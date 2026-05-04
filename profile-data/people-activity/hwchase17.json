@@ -1181,10 +1181,94 @@
       "tags": [
         "tooling"
       ]
+    },
+    {
+      "type": "x",
+      "id": "2027094058330656814",
+      "url": "https://x.com/hwchase17/status/2027094058330656814",
+      "author": {
+        "handle": "hwchase17",
+        "displayName": "Harrison Chase",
+        "avatar": "https://avatars.githubusercontent.com/hwchase17"
+      },
+      "content": "A brilliant surgeon without instruments, nurses, or an operating room is almost useless. The skill is real. But without the system around them, it goes nowhere.",
+      "createdAt": "2026-05-04T04:21:09.062Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Skill alone is insufficient without supporting infrastructure.",
+      "worthReading": "Highlights the importance of ecosystem and tooling for AI agents.",
+      "tags": [
+        "infra",
+        "agent",
+        "tooling"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2041682886722728368",
+      "url": "https://x.com/hwchase17/status/2041682886722728368",
+      "author": {
+        "handle": "hwchase17",
+        "displayName": "Harrison Chase",
+        "avatar": "https://avatars.githubusercontent.com/hwchase17"
+      },
+      "content": "RT @samecrowder: as always, it's an exciting time to be working at LangChain!",
+      "createdAt": "2026-05-04T04:21:09.062Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Retweet expressing excitement about working at LangChain.",
+      "worthReading": "Shows enthusiasm for the company's trajectory.",
+      "tags": [
+        "llm"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "1965627909600936210",
+      "url": "https://x.com/hwchase17/status/1965627909600936210",
+      "author": {
+        "handle": "hwchase17",
+        "displayName": "Harrison Chase",
+        "avatar": "https://avatars.githubusercontent.com/hwchase17"
+      },
+      "content": "Christian was a big part of the idea of middleware! He's going to help make langchain and langgraph agents more",
+      "createdAt": "2026-05-04T04:21:09.062Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Acknowledges contribution to middleware concept for LangChain agents.",
+      "worthReading": "Indicates development direction for LangChain and LangGraph.",
+      "tags": [
+        "agent",
+        "infra"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2021261552222158955",
+      "url": "https://x.com/hwchase17/status/2021261552222158955",
+      "author": {
+        "handle": "hwchase17",
+        "displayName": "Harrison Chase",
+        "avatar": "https://avatars.githubusercontent.com/hwchase17"
+      },
+      "content": "TL;DR: More and more agents need a workspace: a computer where they can run code, install packages, and access files. Sandboxes provide this",
+      "createdAt": "2026-05-04T04:21:09.062Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Agents require sandboxed workspaces for code execution.",
+      "worthReading": "Key insight into agent infrastructure needs.",
+      "tags": [
+        "agent",
+        "infra",
+        "tooling"
+      ]
     }
   ],
   "dailyCounts": [
-    0,
     0,
     0,
     0,
@@ -1213,7 +1297,8 @@
     4,
     4,
     3,
-    3
+    3,
+    4
   ],
-  "interestSummary": "Harrison Chase is focused on advancing AI agent development, particularly emphasizing the need for agent workspaces with sandboxed environments for code execution and the importance of iterating on production data and traces for debugging and testing, as highlighted by the launch of LangSmith Agent Builder with its memory system."
+  "interestSummary": "Harrison Chase is focused on advancing AI agent infrastructure, emphasizing the need for sandboxed workspaces and production-data-driven iteration, while promoting LangChain's new no-code Agent Builder and its memory system."
 }

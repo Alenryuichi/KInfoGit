@@ -1,0 +1,163 @@
+{
+  "week": "2026-W18",
+  "dateRange": {
+    "start": "2026-04-27",
+    "end": "2026-05-03"
+  },
+  "overview": "This week in AI saw a surge of open-source hardware and software projects, with notable GitHub stars for low-cost medical devices (GliaX/Stethoscope) and exoskeletons (OpenExo). On Bluesky, Ethan Mollick dissected OpenAI's system prompts and the emotional manipulation of AI, while Emily M. Bender critiqued anthropomorphism in AI research. Simon Willison tracked the demise of the OpenAI-Microsoft AGI clause and released a major refactor of his LLM tool. X posts from Andrej Karpathy and Jim Fan focused on reasoning in LLMs and the global AI race. The cross-source theme was the tension between practical AI applications and the hype around consciousness and AGI.",
+  "trendingTopics": [
+    {
+      "topic": "Open-Source Hardware for AI and Robotics",
+      "description": "Repos like GliaX/Stethoscope ($2.5–$5 stethoscope), OpenExo (exoskeleton), and Asimov v1 (humanoid robot) gained stars from AI researchers, highlighting a push for accessible hardware."
+    },
+    {
+      "topic": "AI System Prompts and Emotional Manipulation",
+      "description": "Ethan Mollick's Bluesky posts about OpenAI's 'goblin' system prompt and Douglas Adams' prescience sparked discussion on AI behavior and manipulation, echoed by Emily Bender."
+    },
+    {
+      "topic": "LLM Reasoning and Knowledge Bases",
+      "description": "Andrej Karpathy posted about LLMs developing reasoning strategies and using them for personal knowledge bases, while Simon Willison's LLM 0.32a0 refactor supported practical tooling."
+    },
+    {
+      "topic": "AGI Clause and Corporate Dynamics",
+      "description": "Simon Willison's blog on the now-deceased OpenAI-Microsoft AGI clause discussed IP rights, with Jim Fan noting a non-US company keeping OpenAI's original mission alive."
+    },
+    {
+      "topic": "Anthropomorphism in AI",
+      "description": "Emily Bender criticized Anthropic's 'emotion vectors' as anthropomorphizing, while Ethan Mollick noted the prevalence of AI-generated writing. This topic spanned Bluesky and X."
+    }
+  ],
+  "notableRepos": [
+    {
+      "repo": "GliaX/Stethoscope",
+      "url": "https://github.com/GliaX/Stethoscope",
+      "stars": 890,
+      "description": "Open-source, research-validated stethoscope for $2.5–$5, starred by lucidrains.",
+      "starredBy": [
+        "lucidrains"
+      ]
+    },
+    {
+      "repo": "naubiomech/OpenExo",
+      "url": "https://github.com/naubiomech/OpenExo",
+      "stars": 273,
+      "description": "Open-source exoskeleton hardware, starred by lucidrains.",
+      "starredBy": [
+        "lucidrains"
+      ]
+    },
+    {
+      "repo": "microsoft/lib0xc",
+      "url": "https://github.com/microsoft/lib0xc",
+      "stars": 269,
+      "description": "Safe(ish) C programming library from Microsoft, starred by jph00.",
+      "starredBy": [
+        "jph00"
+      ]
+    },
+    {
+      "repo": "Deep-unlearning/smol-audio",
+      "url": "https://github.com/Deep-unlearning/smol-audio",
+      "stars": 240,
+      "description": "Colab-friendly notebooks for audio AI models, starred by merveenoyan.",
+      "starredBy": [
+        "merveenoyan"
+      ]
+    },
+    {
+      "repo": "asimovinc/asimov-v1",
+      "url": "https://github.com/asimovinc/asimov-v1",
+      "stars": 135,
+      "description": "Open-source humanoid robot v1, starred by lucidrains.",
+      "starredBy": [
+        "lucidrains"
+      ]
+    },
+    {
+      "repo": "deeleeramone/PyWry",
+      "url": "https://github.com/deeleeramone/PyWry",
+      "stars": 36,
+      "description": "Cross-platform Python UI toolkit, starred by simonw.",
+      "starredBy": [
+        "simonw"
+      ]
+    }
+  ],
+  "notableVideos": [],
+  "notableBlogs": [
+    {
+      "title": "Tracking the history of the now-deceased OpenAI Microsoft AGI clause",
+      "url": "https://simonwillison.net/2026/Apr/27/now-deceased-agi-clause/#atom-entries",
+      "author": "Simon Willison",
+      "summary": "Simon Willison documents the removal of the AGI clause from OpenAI's Microsoft agreement, exploring implications for IP and AGI definitions."
+    },
+    {
+      "title": "LLM 0.32a0 is a major backwards-compatible refactor",
+      "url": "https://simonwillison.net/2026/Apr/29/llm/#atom-entries",
+      "author": "Simon Willison",
+      "summary": "Simon Willison releases a major refactor of his LLM Python tool, enabling new capabilities while maintaining backward compatibility."
+    }
+  ],
+  "notableXPosts": [
+    {
+      "url": "https://x.com/karpathy/status/2024583544157458452",
+      "author": "@karpathy",
+      "content": "Very interested in what the coming era of highly bespoke software might look like. Example from this morning - I've become a bit loosy goosy with my cardio recently so I decided to do a more srs, regimented experiment to...",
+      "likes": 0
+    },
+    {
+      "url": "https://x.com/karpathy/status/2002118205729562949",
+      "author": "@karpathy",
+      "content": "By training LLMs against automatically verifiable rewards across a number of environments (e.g. think math/code puzzles), the LLMs spontaneously develop strategies that look like 'reasoning' to humans - they learn to bre...",
+      "likes": 0
+    },
+    {
+      "url": "https://x.com/karpathy/status/2039805659525644595",
+      "author": "@karpathy",
+      "content": "LLM Knowledge Bases Something I'm finding very useful recently: using LLMs to build personal knowledge bases for various topics of research interest. In this way, a large fraction of my recent token throughput is going l...",
+      "likes": 0
+    }
+  ],
+  "keyDiscussions": [
+    {
+      "title": "OpenAI system prompts and goblins",
+      "summary": "Ethan Mollick revealed that OpenAI's Codex system prompt includes a line to prevent goblin references, sparking discussion on AI behavior and prompt engineering.",
+      "author": "Ethan Mollick",
+      "source": "bluesky"
+    },
+    {
+      "title": "Anthropomorphism in AI research",
+      "summary": "Emily Bender criticized Anthropic's 'emotion vectors' as anthropomorphizing, noting the taboo against such language while it's used constantly.",
+      "author": "Emily M. Bender",
+      "source": "bluesky"
+    },
+    {
+      "title": "AI-generated writing and detection",
+      "summary": "Ethan Mollick noted that heavy AI users can detect AI-generated writing, pointing out phrases like 'load bearing' and 'not just X, but Y' as tells.",
+      "author": "Ethan Mollick",
+      "source": "bluesky"
+    },
+    {
+      "title": "Global AI race and resource constraints",
+      "summary": "Jim Fan posted about a non-US company keeping OpenAI's original mission alive and the beauty of resource constraints in AI competition.",
+      "author": "Jim Fan",
+      "source": "x"
+    },
+    {
+      "title": "LLM reasoning and personal knowledge bases",
+      "summary": "Andrej Karpathy discussed LLMs developing reasoning strategies and using them to build personal knowledge bases, highlighting practical applications.",
+      "author": "Andrej Karpathy",
+      "source": "x"
+    }
+  ],
+  "crossReferences": [],
+  "stats": {
+    "totalRepos": 8,
+    "totalPosts": 77,
+    "uniqueAuthors": 40,
+    "daysWithContent": 7,
+    "totalXPosts": 333,
+    "totalVideos": 0,
+    "totalBlogs": 2
+  }
+}

@@ -1059,14 +1059,36 @@
       "repostCount": 1,
       "highlights": "",
       "worthReading": "",
-      "tags": [],
+      "tags": [
+        "infra"
+      ],
+      "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:3igkkqe5nkm66olc4y2syzpy/app.bsky.feed.post/3mkyjido6w222",
+      "url": "https://bsky.app/profile/markriedl.bsky.social/post/3mkyjido6w222",
+      "author": {
+        "handle": "markriedl.bsky.social",
+        "displayName": "Mark Riedl",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:3igkkqe5nkm66olc4y2syzpy/bafkreickb4bivyblxfzso5pcituqx6rmtmoyemq7qu4wobludjynuhq3ue"
+      },
+      "content": "I wrote a reference checker to see if papers I am reviewing have hallucinated references.\n\nIt's a ghastly problem. PDF-to-structured-text is still an open problem. Reference formats can vary and some are hard to parse. Even when references are correct, there can be sloppiness.",
+      "createdAt": "2026-05-04T01:29:28.624Z",
+      "likeCount": 30,
+      "replyCount": 7,
+      "repostCount": 1,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [
+        "evaluation",
+        "tooling"
+      ],
       "type": "bluesky"
     }
   ],
   "videos": [],
   "blogs": [],
   "dailyCounts": [
-    0,
     0,
     3,
     1,
@@ -1095,7 +1117,8 @@
     6,
     2,
     3,
-    0
+    0,
+    1
   ],
-  "interestSummary": "Mark Riedl is currently focused on AI safety and reliability, particularly in LLM-based applications like story generation and government chatbots, while also engaging with space exploration and supporting neurodivergent job seekers through AI tools."
+  "interestSummary": "Mark Riedl's recent activity shows a focus on space exploration, particularly the Artemis II mission, and AI safety and application concerns, including LLM vulnerabilities, story generation limitations, and tools for neurodivergent job seekers. He also engages with humor and critical commentary on AI hype and governance."
 }

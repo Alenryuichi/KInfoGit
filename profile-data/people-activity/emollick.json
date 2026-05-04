@@ -1356,6 +1356,45 @@
         "agent"
       ],
       "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:flxq4uyjfotciovpw3x3fxnu/app.bsky.feed.post/3mky3ycur322b",
+      "url": "https://bsky.app/profile/emollick.bsky.social/post/3mky3ycur322b",
+      "author": {
+        "handle": "emollick.bsky.social",
+        "displayName": "Ethan Mollick",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:flxq4uyjfotciovpw3x3fxnu/bafkreigq63ljumc43yx5eoxchrq75d72irea6ddcceedwmdttxebyowc3q"
+      },
+      "content": "I am not sure I would agree with all of this post (by a well-known researcher at OpenAI), but the relationship between Anthropic and Claude is quite different than the relationship between other labs and their models. And that shows up in lots of ways, from models to how labs think about the future.",
+      "createdAt": "2026-05-03T21:27:52.274Z",
+      "likeCount": 137,
+      "replyCount": 10,
+      "repostCount": 5,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [
+        "safety",
+        "agent"
+      ],
+      "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:flxq4uyjfotciovpw3x3fxnu/app.bsky.feed.post/3mkxj3qtegs2t",
+      "url": "https://bsky.app/profile/emollick.bsky.social/post/3mkxj3qtegs2t",
+      "author": {
+        "handle": "emollick.bsky.social",
+        "displayName": "Ethan Mollick",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:flxq4uyjfotciovpw3x3fxnu/bafkreigq63ljumc43yx5eoxchrq75d72irea6ddcceedwmdttxebyowc3q"
+      },
+      "content": "The single most accurate science fiction author writing about AI turned out to be… Douglas Adams\n\nHe wrote about AIs that work best when emotionally manipulated & that guilt you in turn. And he understood there was no upper bound on test time compute for hard problem. Also dolphin communication!",
+      "createdAt": "2026-05-03T15:49:46.477Z",
+      "likeCount": 191,
+      "replyCount": 6,
+      "repostCount": 23,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [],
+      "type": "bluesky"
     }
   ],
   "videos": [],
@@ -2887,12 +2926,95 @@
       "highlights": "Profile page, not a tweet.",
       "worthReading": "Not a tweet.",
       "tags": []
+    },
+    {
+      "type": "x",
+      "id": "2030813923469894093",
+      "url": "https://x.com/emollick/status/2030813923469894093",
+      "author": {
+        "handle": "emollick",
+        "displayName": "Ethan Mollick",
+        "avatar": null
+      },
+      "content": "Here is a full implementation of the Chinese Room using a printed copy of GPT-1, in case you have a few spare years and want to actually run",
+      "createdAt": "2026-05-04T04:22:32.375Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Ethan Mollick humorously describes a thought experiment implementation of the Chinese Room using a printed GPT-1, highlighting the impracticality of running it manually.",
+      "worthReading": "It illustrates the philosophical implications of AI and the Chinese Room argument in a tangible way.",
+      "tags": [
+        "llm",
+        "safety"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "1985822277485613496",
+      "url": "https://x.com/emollick/status/1985822277485613496",
+      "author": {
+        "handle": "emollick",
+        "displayName": "Ethan Mollick",
+        "avatar": null
+      },
+      "content": "The fact that no current AI models, often including GPT-5, believe in the existence of",
+      "createdAt": "2026-05-04T04:22:32.375Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Mollick points out that even advanced AI models like GPT-5 do not believe in the existence of something, likely referring to a specific concept or fact.",
+      "worthReading": "It reveals limitations in AI's understanding or training data.",
+      "tags": [
+        "llm",
+        "evaluation"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2020713378319417626",
+      "url": "https://x.com/emollick/status/2020713378319417626",
+      "author": {
+        "handle": "emollick",
+        "displayName": "Ethan Mollick",
+        "avatar": null
+      },
+      "content": "So much work is going into faking continual learning and memory for AIs,",
+      "createdAt": "2026-05-04T04:22:32.375Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Mollick criticizes the focus on simulating continual learning and memory in AI rather than achieving genuine capabilities.",
+      "worthReading": "It highlights a key debate in AI research about authenticity vs. performance.",
+      "tags": [
+        "llm",
+        "fine-tuning"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "1978967636462514180",
+      "url": "https://x.com/emollick/status/1978967636462514180",
+      "author": {
+        "handle": "emollick",
+        "displayName": "Ethan Mollick",
+        "avatar": null
+      },
+      "content": "Talking about the ethics of AI companies or personalities, or discussing the potential of",
+      "createdAt": "2026-05-04T04:22:32.375Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Mollick engages in discussions about AI ethics and the potential of AI technologies.",
+      "worthReading": "It reflects ongoing conversations about responsible AI development.",
+      "tags": [
+        "safety",
+        "deployment"
+      ]
     }
   ],
   "dailyCounts": [
     0,
     0,
-    0,
     4,
     2,
     0,
@@ -2919,7 +3041,8 @@
     7,
     6,
     5,
+    6,
     4
   ],
-  "interestSummary": "Ethan Mollick is deeply focused on the capabilities, risks, and societal implications of frontier AI models, particularly Anthropic's Claude Mythos, while also exploring AI's impact on education, writing style, and creative industries like gaming."
+  "interestSummary": "Ethan Mollick is closely tracking the capabilities and risks of frontier AI models, particularly Anthropic's Claude Mythos, focusing on its cybersecurity implications and the limitations of AI-generated writing. He is also exploring AI's impact on education, writing style, and the gaming industry, while noting a growing public trust in personal AI use despite broader skepticism."
 }

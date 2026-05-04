@@ -4,14 +4,103 @@
     <title>Stars &amp; Posts — Kylin Miao</title>
     <link>https://kylinmiao.me/stars/</link>
     <description>Daily curated GitHub starred repos, Bluesky/X posts, YouTube videos and blog articles from AI leaders with AI-powered summaries.</description>
-    <lastBuildDate>Sun, 03 May 2026 04:23:04 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 04 May 2026 04:23:24 GMT</lastBuildDate>
     <atom:link href="https://kylinmiao.me/stars/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Stars &amp; Posts — 2026-05-04</title>
+      <link>https://kylinmiao.me/stars/2026-05-04/</link>
+      <guid isPermaLink="true">https://kylinmiao.me/stars/2026-05-04/</guid>
+      <pubDate>Mon, 04 May 2026 12:00:00 GMT</pubDate>
+      <description>Today’s discourse centered on the persistent challenge of AI hallucination in academic publishing, with Mark Riedl sharing a new reference checker he built to catch fake citations in papers under review—highlighting that PDF-to-text extraction remains an &quot;open problem&quot; and formats vary wildly. While the technical community grappled with research integrity, a lighter note came from Marc Lanctot, whose Bluesky post went viral for celebrating the Tampa Bay Lightning’s improbable playoff elimination by a team of underdogs, including a Costco employee and a rookie goalie. The juxtaposition underscores a day where AI’s reliability issues and the chaos of sports both demanded attention, though the former remains the more pressing trend for developers and researchers.
+
+Bluesky Posts:
+* Mark Riedl: I wrote a reference checker to see if papers I am reviewing have hallucinated references.
+
+It&apos;s a ghastly problem. PDF-to-structured-text is still an ...
+* Marc Lanctot: The Tampa Bay Lightning literally just got eliminated by a Costco employee, a European, a rookie goalie, and an bunch of  irrelevant players 🤣🤣🤣
+
+O...
+
+X Posts:
+* Andrej Karpathy: The hottest new programming language is English
+* Andrej Karpathy: LLM Knowledge Bases Something I&apos;m finding very useful recently: using LLMs to build personal knowledge bases for various topics of research interest.
+* Simon Willison: It&apos;s interesting how &quot;better at code&quot; has become the defining goal of almost every AI lab over the
+* Simon Willison: I&apos;ve published video, slides and a detailed annotated transcript from my talk at this week&apos;s
+* Simon Willison: This may be the best guidance I&apos;ve seen anywhere on writing a really good commit history.
+* Harrison Chase: A brilliant surgeon without instruments, nurses, or an operating room is almost useless. The skill is real. But without the system around them, it goe...
+* Harrison Chase: RT @samecrowder: as always, it&apos;s an exciting time to be working at LangChain!
+* Harrison Chase: Christian was a big part of the idea of middleware! He&apos;s going to help make langchain and langgraph agents more
+* Harrison Chase: TL;DR: More and more agents need a workspace: a computer where they can run code, install packages, and access files. Sandboxes provide this
+* Jim Fan: Resource constraints are a beautiful thing. Survival instinct in a cut-throat AI competitive land
+* Jim Fan: I&apos;ve been a bit quiet on X recently. The past year has been a transformational experience.
+* Jim Fan: It gives me a lot of comfort knowing that we are the last generation without advanced robots everywhere.
+* Jim Fan: Everyone&apos;s freaking out about vibe coding. In the holiday spirit, allow me to share my anxiety on the wild
+* Jeremy Howard: Here&apos;s a complete unedited video of asking Grok for its views on the Israel/Palestine situation. It first searches twitter for what Elon thinks.
+* Soumith Chintala: reading &quot;AI News&quot; (previously Smol Talk) is probably the highest-leverage 45 mins
+* Soumith Chintala: Sometimes we forget that NVIDIA wins because it&apos;s a software company.
+* Soumith Chintala: Open LLMs need to get organized and co-ordinated about sharing human feedback.
+* Soumith Chintala: MacStudio you ask? Apple Engineering&apos;s **actual** time spent on PyTorch support
+* Francois Chollet: I think it&apos;s clear that for many smaller companies that invested in deep learning, it turned out
+* Francois Chollet: Folks who work in AI or software engineering feel like the world is changing exponential fast.
+* Yann LeCun: Yann LeCun&apos;s $1B Bet Against LLMs
+* Fei-Fei Li: Very excited to share @theworldlabs &apos;s latest research work RTFM!! It&apos;s a real-time, ...
+* Max Woolf: LOL
+* Sasha Rush: #acl2020nlp Lot of threads online about likes and dislikes for the conference. Twitter is fleeting, github is forever. Send issues or PRs: https://git...
+* Sasha Rush: (My last chance to tweet about Yoon Kim as he leaves the lab 😢. Part of an amazing group of students.) Congrats to Yoon on winning this year&apos;s Harvar...
+* Sasha Rush: Congrats to Dr. Yoon Kim 🍾 who zoom defended his dissertation &quot;Deep Latent Variable Model of Natural Language&quot;. Yoon&apos;s research is wonderful, he&apos;s al...
+* Sasha Rush: Composer is a new model we built at Cursor. We used RL to train a big MoE model to be really good at real-world coding, and also very fast. https://cu...
+* Stas Bekman: If you were holding off to try @MSFTDeepSpeed ZeRO++ it looks like deepspeed@master should
+* Stas Bekman: Hear, hear, I&apos;m excited to introduce a new performance metric: Maximum Achievable Matmul
+* Stas Bekman: If you&apos;re trying out FA4, you&apos;re likely to run into not being able to load cutlass.cute
+* Stas Bekman: Thanks to an awesome contribution from @omarnomad The Machine Learning Engineering Open book now can
+* Sayak Paul: Working at Hugging Face over the past 3.5+ years has allowed me to identify what technical areas truly interest me! In turn, that has allowed me to di...
+* Philipp Schmid: I read three technical reports from Moonshot AI&apos;s Kimi K2.5 paper, Cursor&apos;s Composer 2 report and blog post, and Chroma&apos;s Context-1 write-up
+* Philipp Schmid: Random thought. We are going to be so much faster at creating and building.
+* Philipp Schmid: Skills have become one of the most used extension points in agents. They&apos;re flexible, easy to make, and simple to distribute.
+* Ethan Mollick: Here is a full implementation of the Chinese Room using a printed copy of GPT-1, in case you have a few spare years and want to actually run
+* Ethan Mollick: The fact that no current AI models, often including GPT-5, believe in the existence of
+* Ethan Mollick: So much work is going into faking continual learning and memory for AIs,
+* Ethan Mollick: Talking about the ethics of AI companies or personalities, or discussing the potential of
+* Naomi Saphra: I work on understanding and improving training for NLP models, with a focus on studying how structures and mechanistic behaviors emerge over the
+* Naomi Saphra: Naomi Saphra (@nsaphra). 237 likes. New preprint! Everyone loves causal interp. It&apos;s coherently defined! It makes testable predictions
+* Naomi Saphra: Just got a desk reject, post-rebuttals, for a paper being submitted to arxiv &lt;30 min late for
+* Angela Zhou: #throwback to the beginnings of a beautiful friendship =D @ansonmount @HellOnWheelsAMC
+* Ben Recht: For the first time in almost a decade, I&apos;m teaching a class on learning and control.
+* Ben Recht: Building a theory of the architecture of organizing machines and people.
+* Ben Recht: Fully open machine learning requires not only GPU access but a community commitment to openness.</description>
+    </item>
     <item>
       <title>Stars &amp; Posts — 2026-05-03</title>
       <link>https://kylinmiao.me/stars/2026-05-03/</link>
       <guid isPermaLink="true">https://kylinmiao.me/stars/2026-05-03/</guid>
       <pubDate>Sun, 03 May 2026 12:00:00 GMT</pubDate>
-      <description>X Posts:
+      <description>GitHub Repos:
+* alvarobartt/dotfiles — Opinionated Configuration Files [Shell]
+
+Bluesky Posts:
+* Simon Willison: The AI auto-reply bots from Twitter (fun fact, the software category is genuinely called &quot;reply guy&quot; tools) have started showing up on Bluesky now and...
+* Marc Lanctot: Ok so I was wondering where the hockey fans were on Bluesky, so I searched one hashtag, liked a few posts, reposted one...
+
+... and now my &quot;For You&quot; f...
+* Marc Lanctot: In @canadiens.com we trust! #gohabsgo game 7 boys let&apos;s do this
+* Marc Lanctot: This is great! I didn&apos;t even know #AISTATS was happening now and this is the second conference photo I have seen of it already! 
+
+More please! 👍👌🙏
+* hardmaru: If GitHub were built in:
+
+Japan 🇯🇵
+China 🇨🇳
+North Korea 🇰🇵
+The EU 🇪🇺
+* Ethan Mollick: I am not sure I would agree with all of this post (by a well-known researcher at OpenAI), but the relationship between Anthropic and Claude is quite d...
+* Ethan Mollick: The single most accurate science fiction author writing about AI turned out to be… Douglas Adams
+
+He wrote about AIs that work best when emotionally m...
+* Emily M. Bender: Wesleyan Tetris
+* Emily M. Bender: I&apos;m a little late to the dunk-on-Dawkins party (but hey, let&apos;s keep the celebration rolling!) but I finally read his essay (minus the chatbot outputs ...
+* Emily M. Bender: Join us tomorrow!
+
+X Posts:
 * Andrej Karpathy: 2025 LLM Year in Review
 * Andrej Karpathy: LLM Knowledge Bases
 
@@ -1774,14 +1863,6 @@ www.cbc.ca/news/science...
       <pubDate>Fri, 06 Mar 2026 12:00:00 GMT</pubDate>
       <description>YouTube Videos:
 * I BUILT A FULLY AUTOMATIC MANSPLAINER (Yannic Kilcher)</description>
-    </item>
-    <item>
-      <title>Stars &amp; Posts — 2026-02-01</title>
-      <link>https://kylinmiao.me/stars/2026-02-01/</link>
-      <guid isPermaLink="true">https://kylinmiao.me/stars/2026-02-01/</guid>
-      <pubDate>Sun, 01 Feb 2026 12:00:00 GMT</pubDate>
-      <description>YouTube Videos:
-* Jeremy Howard interview at PytorchCon with Anna Tong (Jeremy Howard)</description>
     </item>
   </channel>
 </rss>
