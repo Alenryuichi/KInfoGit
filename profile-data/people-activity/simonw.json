@@ -239,6 +239,43 @@
       "score": 7,
       "scoreReason": "Freshness is moderate (36 stars, early-stage but rising), relevance is high (ties into AI tooling, MCP, and agent interfaces), and concreteness is strong (working code with multiple integrations).",
       "type": "github"
+    },
+    {
+      "repo": "danshapiro/ringdown",
+      "url": "https://github.com/danshapiro/ringdown",
+      "description": "",
+      "language": "Python",
+      "stargazersCount": 19,
+      "starredBy": "simonw",
+      "starredAt": "2026-05-04T18:41:19Z",
+      "highlights": "Ringdown is a lightweight Python tool for recording and replaying HTTP responses, useful for testing and development. It simplifies mocking external APIs by capturing real responses and serving them offline.",
+      "worthReading": "It offers a simple, practical approach to HTTP recording that can speed up development and testing workflows, especially for projects relying on external APIs.",
+      "topics": [],
+      "tags": [
+        "tooling"
+      ],
+      "score": 4,
+      "scoreReason": "Freshness is low (19 stars, no recent activity), relevance is moderate (tooling for AI devs but not frontier), and concreteness is high (working code).",
+      "type": "github"
+    },
+    {
+      "repo": "danshapiro/trycycle",
+      "url": "https://github.com/danshapiro/trycycle",
+      "description": "",
+      "language": "Python",
+      "stargazersCount": 173,
+      "starredBy": "simonw",
+      "starredAt": "2026-05-04T18:12:46Z",
+      "highlights": "Trycycle is a tool that helps developers iterate quickly on AI prompts by automatically generating and testing variations, making it easier to find the best prompt for a given task. It integrates with popular AI models and provides a simple CLI interface for prompt experimentation.",
+      "worthReading": "For developers working with LLMs, Trycycle offers a practical way to systematically improve prompts, saving time and effort in prompt engineering.",
+      "topics": [],
+      "tags": [
+        "tooling",
+        "evaluation"
+      ],
+      "score": 6,
+      "scoreReason": "Freshness is moderate (173 stars, new but not explosive), relevance is high for AI prompt engineering, and concreteness is solid as a working CLI tool.",
+      "type": "github"
     }
   ],
   "posts": [
@@ -872,7 +909,30 @@
       "repostCount": 11,
       "highlights": "",
       "worthReading": "",
-      "tags": [],
+      "tags": [
+        "tooling"
+      ],
+      "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3ml2ugm6pok2x",
+      "url": "https://bsky.app/profile/simonwillison.net/post/3ml2ugm6pok2x",
+      "author": {
+        "handle": "simonwillison.net",
+        "displayName": "Simon Willison",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
+      },
+      "content": "I tried running the same \"Generate an SVG of a pelican riding a bicycle\" prompt against 21 different quantized variants of the same IBM Granite 4.1 3B model - the results weren't as interesting as I had hoped simonwillison.net/2026/May/4/g...",
+      "createdAt": "2026-05-04T23:50:41.082Z",
+      "likeCount": 27,
+      "replyCount": 6,
+      "repostCount": 0,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [
+        "evaluation",
+        "deployment"
+      ],
       "type": "bluesky"
     }
   ],
@@ -2014,10 +2074,71 @@
       "tags": [
         "tooling"
       ]
+    },
+    {
+      "type": "x",
+      "id": "1975570458683834729",
+      "url": "https://x.com/simonw/status/1975570458683834729",
+      "author": {
+        "handle": "simonw",
+        "displayName": "Simon Willison",
+        "avatar": "https://avatars.githubusercontent.com/simonw"
+      },
+      "content": "Vibe coding is irresponsibly building software through dice rolls, not caring what code is produced",
+      "createdAt": "2026-05-05T04:06:18.886Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Simon Willison criticizes 'vibe coding' as building software irresponsibly without regard for code quality.",
+      "worthReading": "It offers a critical perspective on a trendy but potentially dangerous development approach.",
+      "tags": [
+        "safety",
+        "tooling"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "952257232380379136",
+      "url": "https://x.com/simonw/status/952257232380379136",
+      "author": {
+        "handle": "simonw",
+        "displayName": "Simon Willison",
+        "avatar": "https://avatars.githubusercontent.com/simonw"
+      },
+      "content": "This may be the best guidance I've seen anywhere on writing a really good commit history.",
+      "createdAt": "2026-05-05T04:06:18.886Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Simon Willison praises guidance on writing good commit history.",
+      "worthReading": "It highlights best practices for software development and version control.",
+      "tags": [
+        "tooling"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2031002164165021868",
+      "url": "https://x.com/simonw/status/2031002164165021868",
+      "author": {
+        "handle": "simonw",
+        "displayName": "Simon Willison",
+        "avatar": "https://avatars.githubusercontent.com/simonw"
+      },
+      "content": "A short note that the predictions that LLMs would favor 'boring technology' that's once you attach them to a good coding agent harness at least",
+      "createdAt": "2026-05-05T04:06:18.886Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Simon Willison notes that LLMs favor boring technology when attached to a good coding agent harness.",
+      "worthReading": "It provides insight into how LLMs interact with coding tools and technology choices.",
+      "tags": [
+        "agent",
+        "llm"
+      ]
     }
   ],
   "dailyCounts": [
-    0,
     0,
     4,
     1,
@@ -2046,7 +2167,8 @@
     5,
     4,
     5,
+    6,
     3
   ],
-  "interestSummary": "Simon Willison is deeply engaged in evaluating and comparing cutting-edge AI models (Gemma, Opus, Qwen, Gemini) for code generation and image creation, with a particular focus on running local models, building developer tools like document parsers and UI frameworks, and tracking AI industry pricing and policy changes. He also maintains a playful benchmark involving pelicans riding bicycles as a test of image generation quality."
+  "interestSummary": "Simon Willison is deeply engaged in evaluating and comparing the latest AI models (including Gemma, Opus, Qwen, and Muse), with a particular focus on their code generation, image generation (especially his \"pelican on a bicycle\" benchmark), and tool-use capabilities. He is also actively exploring practical AI tools for document parsing, local model execution, and integrating AI with data workflows like Datasette and Google Sheets."
 }
