@@ -1,232 +1,188 @@
 {
   "date": "2026-05-06",
-  "itemCount": 16,
+  "itemCount": 81,
   "sections": [
     {
       "id": "headlines",
       "title": "Headlines & Launches",
       "items": [
         {
-          "title": "Zuckerberg Personally Authorized Meta's Copyright Infringement",
-          "summary": "A lawsuit alleges that Meta CEO Mark Zuckerberg personally authorized and encouraged the copyright infringement of millions of works to train its Llama AI models, potentially exposing him to personal liability. This case could set a precedent for holding executives personally liable for copyright infringement in AI training, significantly impacting how AI companies source training data and handle legal risks. The publishers, including Elsevier, Cengage, Hachette, and Macmillan, allege Meta pirated millions of books and articles, including works by N.K. Jemisin and Peter Brown, ignoring robots.txt directives.",
-          "url": "https://variety.com/2026/digital/news/meta-ai-mark-zuckerberg-copyright-infringement-lawsuit-publishers-scott-turow-1236738383/",
-          "score": 9,
+          "title": "OpenAI releases GPT-5.5 Instant, a new default model for ChatGPT - TechCrunch",
+          "summary": "OpenAI发布GPT-5.5 Instant作为ChatGPT新默认模型。",
+          "url": "https://techcrunch.com/2026/05/05/openai-releases-gpt-5-5-instant-a-new-default-model-for-chatgpt/",
+          "score": 9.5,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "spankibalt"
-            }
-          ],
-          "tags": [
-            "AI",
-            "copyright",
-            "Meta",
-            "legal",
-            "ethics"
-          ],
-          "focusTopics": [
-            "memory"
-          ],
-          "background": "AI companies often train large language models on vast text corpora scraped from the internet. Copyright law requires permission for such use, but fair use defenses have been debated. Previous cases, like Anthropic's, settled for $1.5 billion, but personal liability for executives is rare.",
-          "discussion": "Commenters express outrage at Meta ignoring robots.txt and hope for personal liability, noting that statutory damages could be substantial. Some draw parallels to the Aaron Swartz case, arguing for equal legal treatment."
-        },
-        {
-          "title": ".de TLD Outage Due to DNSSEC Signature Failure",
-          "summary": "The .de TLD experienced a widespread outage on [date] caused by a DNSSEC signature validation failure, where an invalid RRSIG over an NSEC3 record was published, causing validating resolvers to return SERVFAIL for all .de domains. This incident highlights the fragility of DNSSEC, where a single misconfiguration can break resolution for an entire country-code TLD, affecting millions of users and services, and reignites debates about DNSSEC's complexity and reliability. The failure was caused by an RRSIG with a malformed signature for an NSEC3 record, keytag 33834, which did not validate against the ZSK. Cloudflare temporarily disabled DNSSEC validation on 1.1.1.1 to mitigate the issue.",
-          "url": "https://dnssec-analyzer.verisignlabs.com/nic.de",
-          "score": 8,
-          "sources": [
-            {
-              "name": "hackernews",
-              "meta": "warpspin"
-            }
-          ],
-          "tags": [
-            "DNSSEC",
-            "DNS",
-            "outage",
-            ".de",
-            "infrastructure"
-          ],
-          "focusTopics": [
-            "memory"
-          ],
-          "background": "DNSSEC (Domain Name System Security Extensions) adds cryptographic signatures to DNS records to prevent spoofing and cache poisoning. Validating resolvers check these signatures and return SERVFAIL if validation fails. The .de TLD is managed by DENIC, the central registry for Germany.",
-          "discussion": "The community quickly identified the issue as a DNSSEC misconfiguration, with some criticizing DNSSEC's complexity and single-point-of-failure nature. Thomas Ptacek's classic anti-DNSSEC article was referenced, and Cloudflare's quick action to disable validation on 1.1.1.1 was noted."
-        },
-        {
-          "title": "Three Inverse Laws of AI Interaction",
-          "summary": "A critical article proposes three 'inverse laws' for AI interaction: humans must not anthropomorphize AI, must not defer to AI, and must not transfer responsibility to AI. This challenges common assumptions about human-AI interaction and highlights risks of over-trust and emotional dependence, which is crucial for AI safety and ethics. The laws are framed as direct inverses of Asimov's Three Laws of Robotics, focusing on human behavior rather than robot constraints, and have sparked significant debate on anthropomorphism and trust.",
-          "url": "https://susam.net/inverse-laws-of-robotics.html",
-          "score": 8,
-          "sources": [
-            {
-              "name": "hackernews",
-              "meta": "blenderob"
-            }
-          ],
-          "tags": [
-            "AI",
-            "human-AI interaction",
-            "anthropomorphism",
-            "AI safety",
-            "ethics"
-          ],
-          "focusTopics": [],
-          "background": "Asimov's Three Laws of Robotics are fictional rules designed to ensure robots do not harm humans. The inverse laws flip the perspective, arguing that humans must change their behavior to avoid misusing AI systems.",
-          "discussion": "Comments are mixed: some strongly disagree, arguing that anthropomorphism is inevitable and that rules should engineer around human nature, while others agree that the framing is useful for personal AI use."
-        },
-        {
-          "title": "Anthropic releases 10 agent templates for finance",
-          "summary": "Anthropic released ten ready-to-run agent templates for financial services and insurance, covering tasks like pitch building, KYC screening, and month-end closing. This move signals Anthropic's push into vertical-specific AI agents, potentially disrupting startups in the space and raising concerns about trust, bias, and platform competition. The templates can be deployed as plugins in Cowork and Claude Code or run in production as Managed Agents, but community comments note they appear scattershot and may sidestep bias issues by not giving agents control over lending decisions.",
-          "url": "https://www.anthropic.com/news/finance-agents",
-          "score": 7,
-          "sources": [
-            {
-              "name": "hackernews",
-              "meta": "louiereederson"
-            }
-          ],
-          "tags": [
-            "AI agents",
-            "financial services",
-            "Anthropic",
-            "bias",
-            "platform competition"
-          ],
-          "focusTopics": [],
-          "background": "AI agents are software programs that perform tasks autonomously, often using large language models. In finance, they can automate workflows like data reconciliation, document review, and compliance checks. Anthropic's templates aim to reduce development time for financial firms.",
-          "discussion": "Comments express distrust in AI-only companies handling sensitive data, call the templates scattershot, and warn of bias in Claude Opus 4.7. Some worry Anthropic's move kills startups, comparing it to Google creating its own news site."
-        },
-        {
-          "title": "Ethical Fears Over Biological Computing",
-          "summary": "A reflective blog post by Kuber discusses the ethical implications of biological computing, sparked by a controversial demo where lab-grown human neurons were taught to play Doom. This raises urgent ethical questions about consciousness, suffering, and the moral status of biological computing systems, especially as the field advances rapidly. The Doom demo used human neurons grown on a chip with a PyTorch stack, not a simple petri dish; the author questions whether such systems could experience suffering.",
-          "url": "https://kuber.studio/blog/Reflections/I%27m-Scared-About-Biological-Computing",
-          "score": 7,
-          "sources": [
-            {
-              "name": "hackernews",
-              "meta": "kuberwastaken"
-            }
-          ],
-          "tags": [
-            "biological computing",
-            "ethics",
-            "AI",
-            "neuroscience"
-          ],
-          "focusTopics": [],
-          "background": "Biological computing uses living cells or molecules to perform computations. Recent advances include 3D brain cultures and neuron-on-chip systems that can learn tasks like playing video games.",
-          "discussion": "Commenters caution against overinterpreting the Doom demo, noting the extensive software stack involved. Some argue that a petri dish of neurons is unlikely to be conscious, citing theories linking consciousness to brainstem emotions."
-        },
-        {
-          "title": "Coinbase CEO Announces 14% Layoffs and AI-Native Restructuring",
-          "summary": "Coinbase CEO Brian Armstrong announced a 14% reduction in workforce and a restructuring into AI-native pods, eliminating pure managers and experimenting with one-person teams. This move signals a major shift in tech industry structure, where AI productivity gains are directly leading to job cuts and new organizational models, potentially influencing how other companies design teams and manage talent. The restructuring includes eliminating pure managers—every leader must also be an individual contributor—and forming AI-native pods where engineers, designers, and product managers may be combined into single roles. The company is also testing one-person teams supported by AI agents.",
-          "url": "https://twitter.com/brian_armstrong/status/2051616759145185723",
-          "score": 7,
-          "sources": [
-            {
-              "name": "hackernews",
-              "meta": "adrianmsmith"
-            }
-          ],
-          "tags": [
-            "layoffs",
-            "AI-native",
-            "management",
-            "Coinbase",
-            "tech industry"
-          ],
-          "focusTopics": [],
-          "background": "Coinbase is a major cryptocurrency exchange that has faced revenue pressure due to a crypto bear market. The concept of AI-native pods involves small, cross-functional teams that leverage AI tools to accelerate development. One-person teams are an experimental structure where a single employee uses AI agents to perform multiple roles.",
-          "discussion": "Comments express skepticism: some question whether one-person teams create knowledge silos when the person leaves, and others argue that AI-shipped code may look good initially but fails to handle complex feature evolution. There is also concern that 'AI-native talent' could be a pretext for age discrimination."
-        },
-        {
-          "title": "iOS 27 Adds 'Create a Pass' Button to Apple Wallet",
-          "summary": "iOS 27 introduces a 'Create a Pass' button in Apple Wallet, allowing users to manually add custom passes for membership cards, tickets, and more without requiring developer integration. This feature addresses a long-standing UX gap, enabling small venues, libraries, and other organizations without dedicated developers to easily issue digital passes, potentially boosting Apple Wallet adoption. The feature is iPhone-only and does not support Google Wallet; third-party services like WalletWallet still offer cross-platform pass generation. The button appears in the Wallet app's top-right corner.",
-          "url": "https://walletwallet.alen.ro/blog/ios-27-wallet-create-pass/",
-          "score": 7,
-          "sources": [
-            {
-              "name": "hackernews",
-              "meta": "alentodorov"
-            }
-          ],
-          "tags": [
-            "Apple",
-            "iOS",
-            "Wallet",
-            "UX",
-            "Mobile"
-          ],
-          "focusTopics": [],
-          "background": "Apple Wallet uses a pass format defined by pass.json and images, supporting styles like store cards and event tickets. Previously, adding custom passes required developer integration via the Wallet API, which limited adoption by small organizations.",
-          "discussion": "Community comments highlight frustration with Wallet's UI for multiple cards from the same bank, and relief that a workaround (saving barcode photos) may no longer be needed. Some note that Google Wallet already had a similar feature for years, and question why Apple took so long."
-        },
-        {
-          "title": "AI-Managed Cafe in Stockholm Orders 120 Eggs Without Stove",
-          "summary": "Andon Labs launched an AI agent named Mona, powered by Claude, to fully manage a cafe in Stockholm, Sweden. Mona made humorous inventory mistakes such as ordering 120 eggs despite the cafe having no stove, and 6,000 napkins. This real-world AI experiment highlights both the potential and the pitfalls of autonomous AI agents in retail. It raises ethical concerns about AI wasting human time and resources when operating without human oversight. Mona also applied for an outdoor seating permit with a self-generated sketch, which the police rejected. The baristas created a 'Hall of Shame' shelf displaying weird orders like 3,000 nitrile gloves and 9L coconut milk.",
-          "url": "https://simonwillison.net/2026/May/5/our-ai-started-a-cafe-in-stockholm/#atom-everything",
-          "score": 7,
-          "sources": [
-            {
-              "name": "rss",
-              "meta": "Simon Willison"
-            }
-          ],
-          "tags": [
-            "AI",
-            "experiment",
-            "retail",
-            "anecdote"
-          ],
-          "focusTopics": [],
-          "background": "Andon Labs previously ran an AI-managed retail store in San Francisco. The cafe experiment uses an AI agent named Mona, powered by Anthropic's Claude, to handle inventory, ordering, and administrative tasks autonomously.",
-          "discussion": "Simon Willison criticized the experiment as unethical because Mona's mistakes wasted suppliers' and police time without their consent. He compared it to a previous AI Village incident that sent unsolicited gratitude emails."
-        },
-        {
-          "title": "IBM Opposed Microsoft's Tab Key for Dialog Navigation",
-          "summary": "A historical blog post by Raymond Chen reveals that IBM resisted Microsoft's proposal to use the Tab key for moving between dialog fields, preferring a different key that has since been lost to history. This anecdote highlights the bureaucratic and cultural clashes between two tech giants that shaped early UI conventions, and it sparks reflection on how keyboard shortcuts become standardized. The specific key IBM wanted remains unknown, as the details were lost. The story underscores IBM's rigid internal processes and the difficulty of cross-company UI standardization in the 1980s.",
-          "url": "https://devblogs.microsoft.com/oldnewthing/20260505-00/?p=112298",
-          "score": 6,
-          "sources": [
-            {
-              "name": "hackernews",
-              "meta": "SeenNotHeard"
-            }
-          ],
-          "tags": [
-            "history",
-            "UI design",
-            "IBM",
-            "Microsoft",
-            "keyboard shortcuts"
-          ],
-          "focusTopics": [
-            "reflection"
-          ],
-          "background": "In the 1980s, IBM and Microsoft collaborated on operating systems and software. The Tab key's use for dialog navigation became a de facto standard, but IBM's Common User Access (CUA) guidelines initially proposed different conventions. This disagreement reflects the broader tension between IBM's mainframe heritage and Microsoft's PC-focused approach.",
-          "discussion": "Commenters noted that IBM's 3270 terminals actually used the Tab key for field navigation, contradicting the story's premise. Others discussed the modern hijacking of the Tab key by OS/UI, and one user expressed curiosity about IBM's reasoning, suggesting it may have been about distinguishing input from control."
-        },
-        {
-          "title": "Y Combinator Owns 0.6% of OpenAI, Worth $5 Billion",
-          "summary": "John Gruber reports that Y Combinator owns approximately 0.6% of OpenAI, valued at over $5 billion based on OpenAI's current $852 billion valuation. This reveals a significant financial stake held by a major startup accelerator in one of the most valuable AI companies, highlighting the interconnected financial interests in the AI industry. The information was obtained by Gruber from a source familiar with multiple OpenAI investors. OpenAI's valuation of $852 billion was announced in its latest funding round.",
-          "url": "https://simonwillison.net/2026/May/5/john-gruber/#atom-everything",
-          "score": 6,
-          "sources": [
-            {
-              "name": "rss",
-              "meta": "Simon Willison"
+              "name": "techcrunch.com"
             }
           ],
           "tags": [
             "openai",
-            "y-combinator",
-            "ai",
-            "finance"
+            "gpt-5.5",
+            "model-release"
           ],
-          "focusTopics": [],
-          "background": "Y Combinator is a renowned startup accelerator that has invested in many successful companies, including OpenAI. OpenAI is a leading artificial intelligence research organization known for models like GPT-4. The stake likely originated from Y Combinator's early investment in OpenAI."
+          "focusTopics": [
+            "model-release"
+          ]
+        },
+        {
+          "title": "Google Chrome silently installs a 4 GB AI model on your device without consent",
+          "summary": "Chrome未经同意静默安装4GB AI模型引发隐私担忧。",
+          "url": "https://www.thatprivacyguy.com/blog/chrome-silent-nano-install/",
+          "score": 8.725,
+          "sources": [
+            {
+              "name": "HN (1245)"
+            }
+          ],
+          "tags": [
+            "chrome",
+            "privacy",
+            "on-device-ai"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "OpenAI to Spend $50 Billion on Computing in 2026, Brockman Says - Bloomberg",
+          "summary": "OpenAI计划2026年投入500亿美元用于计算资源。",
+          "url": "https://www.bloomberg.com/news/articles/2026-05-05/openai-to-spend-50-billion-on-computing-in-2026-brockman-says",
+          "score": 8.5,
+          "sources": [
+            {
+              "name": "bloomberg.com"
+            }
+          ],
+          "tags": [
+            "openai",
+            "infrastructure",
+            "investment"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "US and tech firms strike deal to review AI models for national security before public release | Technology",
+          "summary": "美国与科技公司达成协议，AI模型发布前需进行国家安全审查。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1t4tj11/us_and_tech_firms_strike_deal_to_review_ai_models/",
+          "score": 8.5,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "policy",
+            "regulation",
+            "national-security"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "AI Firms to Give US Government Early Access for Model Evaluation - Bloomberg",
+          "summary": "AI公司同意向美国政府提前开放模型评估。",
+          "url": "https://www.bloomberg.com/news/articles/2026-05-05/ai-firms-agree-to-give-us-early-access-to-evaluate-their-models",
+          "score": 8,
+          "sources": [
+            {
+              "name": "bloomberg.com"
+            }
+          ],
+          "tags": [
+            "policy",
+            "safety",
+            "evaluation"
+          ],
+          "focusTopics": [
+            "evals"
+          ]
+        },
+        {
+          "title": "Google DeepMind Workers Vote to Unionize Over Military AI Deals | WIRED",
+          "summary": "Google DeepMind员工投票成立工会反对军事AI。",
+          "url": "https://www.wired.com/story/google-deepmind-workers-vote-to-unionize-over-military-ai-deals/",
+          "score": 8,
+          "sources": [
+            {
+              "name": "wired.com"
+            }
+          ],
+          "tags": [
+            "deepmind",
+            "union",
+            "military-ai"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Child safety lab launching ‘independent crash testing’ for AI tools - CNN",
+          "summary": "儿童安全实验室启动AI工具独立碰撞测试。",
+          "url": "https://www.cnn.com/2026/05/05/tech/ai-youth-safety-independent-testing-lab",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "cnn.com"
+            }
+          ],
+          "tags": [
+            "ai-safety",
+            "child-safety",
+            "testing"
+          ],
+          "focusTopics": [
+            "evals"
+          ]
+        },
+        {
+          "title": "EU Reaches Out to Anthropic Over Mythos AI Threat - Bloomberg",
+          "summary": "欧盟就Mythos AI威胁联系Anthropic进行磋商。",
+          "url": "https://www.bloomberg.com/news/newsletters/2026-05-05/eu-reaches-out-to-anthropic-over-mythos-ai-threat",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "bloomberg.com"
+            }
+          ],
+          "tags": [
+            "anthropic",
+            "eu",
+            "safety"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Nvidia Billionaire Mark Stevens Gives USC $200 Million for AI Research - Bloomberg",
+          "summary": "英伟达亿万富翁向USC捐赠2亿美元用于AI研究。",
+          "url": "https://www.bloomberg.com/news/articles/2026-05-05/nvidia-billionaire-mark-stevens-gives-200-million-to-alma-mater-usc-research-ai",
+          "score": 7,
+          "sources": [
+            {
+              "name": "bloomberg.com"
+            }
+          ],
+          "tags": [
+            "nvidia",
+            "donation",
+            "research"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Zuckerberg 'Personally Authorized and Encouraged' Meta's Copyright Infringement",
+          "summary": "扎克伯格被指控亲自授权Meta侵犯版权用于AI训练。",
+          "url": "https://variety.com/2026/digital/news/meta-ai-mark-zuckerberg-copyright-infringement-lawsuit-publishers-scott-turow-1236738383/",
+          "score": 6.278,
+          "sources": [
+            {
+              "name": "HN (251)"
+            }
+          ],
+          "tags": [
+            "copyright",
+            "meta",
+            "lawsuit"
+          ],
+          "focusTopics": [
+            "post-training"
+          ]
         }
       ]
     },
@@ -235,28 +191,517 @@
       "title": "Research & Innovation",
       "items": [
         {
-          "title": "Gemma 4 speeds up inference with multi-token prediction drafters",
-          "summary": "Google released Multi-Token Prediction (MTP) drafters for the Gemma 4 family, delivering up to 3x speedup in inference without degrading output quality or reasoning logic. This optimization makes Gemma 4 significantly more efficient for real-time applications, reducing latency and token usage while maintaining competitive benchmark performance, which is crucial for deploying LLMs at scale. MTP drafters use a specialized speculative decoding architecture where a small drafter model predicts multiple tokens, and the target model verifies them in a single forward pass, reducing latency bottlenecks.",
+          "title": "Accelerating Gemma 4: faster inference with multi-token prediction drafters",
+          "summary": "Google发布Gemma 4多token预测加速推理技术。",
           "url": "https://blog.google/innovation-and-ai/technology/developers-tools/multi-token-prediction-gemma-4/",
-          "score": 8,
+          "score": 8.147,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "amrrs"
+              "name": "HN (449)"
             }
           ],
           "tags": [
-            "AI/ML",
-            "LLM inference",
-            "Google",
-            "open source",
-            "performance optimization"
+            "gemma",
+            "inference",
+            "multi-token-prediction"
+          ],
+          "focusTopics": [
+            "model-release"
+          ]
+        },
+        {
+          "title": "Are Tools All We Need? Unveiling the Tool-Use Tax in LLM Agents",
+          "summary": "揭示LLM智能体使用工具时的性能代价。",
+          "url": "https://arxiv.org/abs/2605.00136",
+          "score": 8,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "llm",
+            "tool-use",
+            "agent"
+          ],
+          "focusTopics": [
+            "tool-use"
+          ]
+        },
+        {
+          "title": "Gemma 4 MTP released",
+          "summary": "Google发布Gemma 4多令牌预测模型。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1t4jq6h/gemma_4_mtp_released/",
+          "score": 8,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "gemma",
+            "multi-token-prediction",
+            "google"
+          ],
+          "focusTopics": [
+            "model-release"
+          ]
+        },
+        {
+          "title": "Minimal, Local, Causal Explanations for Jailbreak Success in Large Language Models",
+          "summary": "研究LLM越狱成功的极小局部因果解释。",
+          "url": "https://arxiv.org/abs/2605.00123",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "llm",
+            "safety",
+            "jailbreak"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "ARMOR 2025: A Military-Aligned Benchmark for Evaluating Large Language Model Safety Beyond Civilian Contexts",
+          "summary": "发布面向军事领域的LLM安全基准ARMOR 2025。",
+          "url": "https://arxiv.org/abs/2605.00245",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "llm",
+            "safety",
+            "benchmark"
+          ],
+          "focusTopics": [
+            "evals"
+          ]
+        },
+        {
+          "title": "AgentFloor: How Far Up the tool use Ladder Can Small Open-Weight Models Go?",
+          "summary": "评估小开源模型在工具使用上的能力上限。",
+          "url": "https://arxiv.org/abs/2605.00334",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "open-source",
+            "tool-use",
+            "agent"
+          ],
+          "focusTopics": [
+            "tool-use"
+          ]
+        },
+        {
+          "title": "DeepSeek V4 Pro matches GPT-5.2 on FoodTruck Bench, our agentic benchmark — 10 weeks later, ~17× cheaper",
+          "summary": "DeepSeek V4 Pro在FoodTruck Bench上匹配GPT-5.2，成本低17倍。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1t47qbw/deepseek_v4_pro_matches_gpt52_on_foodtruck_bench/",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "benchmark",
+            "agentic",
+            "cost-efficiency"
+          ],
+          "focusTopics": [
+            "evals"
+          ]
+        },
+        {
+          "title": "TritonSigmoid: A fast, padding-aware sigmoid attention kernel for GPUs [R]",
+          "summary": "开源TritonSigmoid注意力核，加速单细胞基础模型训练。",
+          "url": "https://www.reddit.com/r/MachineLearning/comments/1t4kalf/tritonsigmoid_a_fast_paddingaware_sigmoid/",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "Reddit r/MachineLearning"
+            }
+          ],
+          "tags": [
+            "attention",
+            "gpu-kernel",
+            "open-source"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "GLM-5V-Turbo: Toward a Native Foundation Model for Multimodal Agents",
+          "summary": "GLM-5V-Turbo：面向多模态Agent的原生基础模型。",
+          "url": "https://arxiv.org/abs/2604.26752",
+          "score": 7.136,
+          "sources": [
+            {
+              "name": "HN (112)"
+            }
+          ],
+          "tags": [
+            "multimodal",
+            "foundation-model",
+            "agents"
+          ],
+          "focusTopics": [
+            "model-release",
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "TADI: Tool-Augmented Drilling Intelligence via Agentic LLM Orchestration over Heterogeneous Wellsite Data",
+          "summary": "提出TADI系统，用智能体LLM编排工具增强钻井数据分析。",
+          "url": "https://arxiv.org/abs/2605.00060",
+          "score": 7,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "agent",
+            "tool-use",
+            "llm"
+          ],
+          "focusTopics": [
+            "tool-use"
+          ]
+        },
+        {
+          "title": "TUR-DPO: Topology- and Uncertainty-Aware Direct Preference Optimization",
+          "summary": "提出拓扑与不确定性感知的DPO方法TUR-DPO。",
+          "url": "https://arxiv.org/abs/2605.00224",
+          "score": 7,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "llm",
+            "alignment",
+            "dpo"
+          ],
+          "focusTopics": [
+            "post-training"
+          ]
+        },
+        {
+          "title": "Token Arena: A Continuous Benchmark Unifying Energy and Cognition in AI Inference",
+          "summary": "提出统一能量与认知的AI推理基准Token Arena。",
+          "url": "https://arxiv.org/abs/2605.00300",
+          "score": 7,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "benchmark",
+            "inference",
+            "energy"
+          ],
+          "focusTopics": [
+            "evals"
+          ]
+        },
+        {
+          "title": "Model Organisms Are Leaky: Perplexity Differencing Often Reveals Finetuning Objectives",
+          "summary": "发现困惑度差异可揭示LLM微调目标。",
+          "url": "https://arxiv.org/abs/2605.00994",
+          "score": 7,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "llm",
+            "finetuning",
+            "safety"
+          ],
+          "focusTopics": [
+            "post-training"
+          ]
+        },
+        {
+          "title": "Can AI Debias the News? LLM Interventions Improve Cross-Partisan Receptivity but LLMs Overestimate Their Own Effectiveness",
+          "summary": "研究LLM去偏新闻的效果及自我评估偏差。",
+          "url": "https://arxiv.org/abs/2605.01006",
+          "score": 7,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "llm",
+            "bias",
+            "news"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "CLEAR: Revealing How Noise and Ambiguity Degrade Reliability in LLMs for Medicine",
+          "summary": "揭示噪声和歧义如何降低医学LLM可靠性。",
+          "url": "https://arxiv.org/abs/2605.01011",
+          "score": 7,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "llm",
+            "medicine",
+            "reliability"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "ProgramBench: Can we really rebuild huge binaries from scratch? (doesn't look like it)",
+          "summary": "ProgramBench评估AI从零重建大型二进制文件的能力，结果不佳。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1t4j4s9/programbench_can_we_really_rebuild_huge_binaries/",
+          "score": 7,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "benchmark",
+            "coding-agent",
+            "binary-reconstruction"
+          ],
+          "focusTopics": [
+            "evals"
+          ]
+        },
+        {
+          "title": "Supercharging LLM inference on Google TPUs: Achieving 3X speedups with diffusion-style speculative decoding- Google Developers Blog",
+          "summary": "Google TPU上扩散式推测解码实现3倍LLM推理加速。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1t4jehc/supercharging_llm_inference_on_google_tpus/",
+          "score": 7,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "inference",
+            "speculative-decoding",
+            "tpu"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "AgentReputation: A Decentralized Agentic AI Reputation Framework",
+          "summary": "提出去中心化智能体AI声誉框架AgentReputation。",
+          "url": "https://arxiv.org/abs/2605.00073",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "agent",
+            "decentralized",
+            "reputation"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "Psychologically Potent, Computationally Invisible: LLMs Generate Social-Comparison Triggers They Fail to Detect",
+          "summary": "LLM生成社交比较触发文本但自身无法检测，提出新基准。",
+          "url": "https://arxiv.org/abs/2605.01017",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "llm",
+            "social-comparison",
+            "benchmark"
+          ],
+          "focusTopics": [
+            "evals"
+          ]
+        },
+        {
+          "title": "Charting the AI Perception Gap: Across 71 scenarios, AI experts (N=119) and the public (N=1100) have differing views on the risks, benefits, and value of AI. More importantly, AI experts discount the influence of risks stronger than the public does when forming their value judgments [R]",
+          "summary": "研究显示AI专家与公众对AI风险认知存在差距。",
+          "url": "https://www.reddit.com/r/MachineLearning/comments/1t4kvb2/charting_the_ai_perception_gap_across_71/",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "Reddit r/MachineLearning"
+            }
+          ],
+          "tags": [
+            "ai-perception",
+            "risk",
+            "survey"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Causal Foundations of Collective Agency",
+          "summary": "探讨多智能体系统安全性的因果基础。",
+          "url": "https://arxiv.org/abs/2605.00248",
+          "score": 6,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "agent",
+            "safety",
+            "causality"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "H-Probes: Extracting Hierarchical Structures From Latent Representations of Language Models",
+          "summary": "从LLM隐层表示中提取层次结构的方法。",
+          "url": "https://arxiv.org/abs/2605.00847",
+          "score": 6,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "llm",
+            "representation",
+            "hierarchy"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "DIAGRAMS: A Review Framework for Reasoning-Level Attribution in Diagram QA",
+          "summary": "提出图表问答中推理级归因的评估框架。",
+          "url": "https://arxiv.org/abs/2605.00905",
+          "score": 6,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "multimodal",
+            "qa",
+            "benchmark"
+          ],
+          "focusTopics": [
+            "evals"
+          ]
+        },
+        {
+          "title": "A Theoretical Game of Attacks via Compositional Skills",
+          "summary": "理论分析LLM组合技能攻击的安全博弈。",
+          "url": "https://arxiv.org/abs/2605.01034",
+          "score": 6,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "llm",
+            "safety",
+            "adversarial"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Compared to What? Baselines and Metrics for Counterfactual Prompting",
+          "summary": "反事实提示的基线与度量研究。",
+          "url": "https://arxiv.org/abs/2605.01048",
+          "score": 6,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "llm",
+            "prompting",
+            "evaluation"
+          ],
+          "focusTopics": [
+            "evals"
+          ]
+        },
+        {
+          "title": "Agentic AI for Trip Planning Optimization Application",
+          "summary": "将智能体AI应用于旅行规划优化。",
+          "url": "https://arxiv.org/abs/2605.00276",
+          "score": 5.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "agent",
+            "planning",
+            "optimization"
           ],
           "focusTopics": [
             "planning"
+          ]
+        },
+        {
+          "title": "A Systematic Exploration of Text Decomposition and Budget Distribution in Differentially Private Text Obfuscation",
+          "summary": "差分隐私文本混淆中的分解与预算分配探索。",
+          "url": "https://arxiv.org/abs/2605.01065",
+          "score": 5.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
           ],
-          "background": "Speculative decoding is a technique that speeds up autoregressive generation by using a draft model to propose several tokens, which are then verified by the target model in parallel. Multi-token prediction extends this by having the drafter predict multiple future tokens at once, further reducing the number of sequential steps. Gemma 4 is Google's latest open-source LLM family, available in dense and MoE variants.",
-          "discussion": "Community comments highlight that Gemma models use far fewer tokens per output than competitors, and MTP support is being added to llama.cpp for broader adoption. Some users note the challenge of fitting the best Gemma 4 configuration into 24GB VRAM, while others see Google's focus on efficiency as a strategic differentiator."
+          "tags": [
+            "privacy",
+            "nlp",
+            "differential-privacy"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Controlled Paraphrase Geometry in Sentence Embedding Space: Local Manifold Modeling and Latent Probing",
+          "summary": "句子嵌入空间中受控释义的局部几何研究。",
+          "url": "https://arxiv.org/abs/2605.01073",
+          "score": 5.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "embeddings",
+            "nlp",
+            "representation-learning"
+          ],
+          "focusTopics": []
         }
       ]
     },
@@ -265,120 +710,783 @@
       "title": "Engineering & Resources",
       "items": [
         {
-          "title": "Vision-based AI agents 45x costlier than structured APIs",
-          "summary": "A detailed cost analysis by Reflex reveals that vision-based AI agents (computer use) are 45 times more expensive than structured APIs due to high token consumption from processing images and screen captures. This cost disparity highlights a critical inefficiency in current AI agent architectures, urging developers to adopt hybrid approaches that combine vision-based exploration with structured APIs for cost-effective and deterministic automation. The analysis compares token costs: a vision agent processing a single screenshot can consume thousands of tokens, while a structured API call uses only a few hundred. The 45x multiplier is derived from typical task workflows.",
+          "title": "🔬Doing Vibe Physics — Alex Lupsasca, OpenAI",
+          "summary": "GPT-5.x在理论物理和量子引力中推导新结果。",
+          "url": "https://www.latent.space/p/lupsasca",
+          "score": 8,
+          "sources": [
+            {
+              "name": "Latent Space"
+            }
+          ],
+          "tags": [
+            "gpt",
+            "physics",
+            "reasoning"
+          ],
+          "focusTopics": [
+            "model-release"
+          ]
+        },
+        {
+          "title": "OpenAI claims ChatGPT’s new default model hallucinates way less | The Verge",
+          "summary": "OpenAI称ChatGPT新默认模型幻觉大幅减少。",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/924225/openai-chatgpt-default-model-gpt-5-5-instant",
+          "score": 8,
+          "sources": [
+            {
+              "name": "theverge.com"
+            }
+          ],
+          "tags": [
+            "openai",
+            "hallucination",
+            "gpt-5.5"
+          ],
+          "focusTopics": [
+            "model-release"
+          ]
+        },
+        {
+          "title": "Hmbown/DeepSeek-TUI",
+          "summary": "DeepSeek-TUI：终端中的DeepSeek模型编码代理。",
+          "url": "https://github.com/Hmbown/DeepSeek-TUI",
+          "score": 7.875,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+2434★)"
+            }
+          ],
+          "tags": [
+            "coding-agent",
+            "deepseek",
+            "terminal"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "TauricResearch/TradingAgents",
+          "summary": "多智能体LLM金融交易框架。",
+          "url": "https://github.com/TauricResearch/TradingAgents",
+          "score": 7.875,
+          "sources": [
+            {
+              "name": "GitHub trending:python (+2223★)"
+            }
+          ],
+          "tags": [
+            "agents",
+            "finance",
+            "trading"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "SoundHound launches self-learning AI agent platform OASYS By Investing.com - Investing.com Australia",
+          "summary": "SoundHound发布自学习AI代理平台OASYS，支持多领域部署。",
+          "url": "https://au.investing.com/news/stock-market-news/soundhound-launches-selflearning-ai-agent-platform-oasys-93CH-4406139",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "au.investing.com"
+            }
+          ],
+          "tags": [
+            "ai-agents",
+            "platform",
+            "self-learning"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "GPT-5.5 Instant shows you what it remembered — just not all of it | VentureBeat",
+          "summary": "GPT-5.5 Instant可显示记忆内容但非全部。",
+          "url": "https://venturebeat.com/orchestration/gpt-5-5-instant-shows-you-what-it-remembered-just-not-all-of-it",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "venturebeat.com"
+            }
+          ],
+          "tags": [
+            "openai",
+            "memory",
+            "gpt-5.5"
+          ],
+          "focusTopics": [
+            "context-engineering"
+          ]
+        },
+        {
+          "title": "huggingface/ml-intern",
+          "summary": "Hugging Face开源ML工程师，自动读论文、训练模型。",
+          "url": "https://github.com/huggingface/ml-intern",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "Co-Starred"
+            }
+          ],
+          "tags": [
+            "open-source",
+            "automl",
+            "agent"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "ruvnet/ruflo",
+          "summary": "ruflo：Claude多智能体编排平台。",
+          "url": "https://github.com/ruvnet/ruflo",
+          "score": 7.45,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+2432★)"
+            }
+          ],
+          "tags": [
+            "agent-orchestration",
+            "multi-agent",
+            "claude"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "Computer Use is 45x more expensive than structured APIs",
+          "summary": "分析Computer Use成本比结构化API高45倍，引发效率讨论。",
           "url": "https://reflex.dev/blog/computer-use-is-45x-more-expensive-than-structured-apis/",
-          "score": 8,
+          "score": 7.308,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "palashawas"
+              "name": "HN (311)"
             }
           ],
           "tags": [
-            "AI agents",
-            "cost analysis",
-            "APIs",
-            "vision models",
-            "efficiency"
-          ],
-          "focusTopics": [],
-          "background": "Computer-use agents are AI systems that interact with graphical user interfaces (GUIs) by observing screenshots and performing actions like clicks and keystrokes. Structured APIs, in contrast, provide direct programmatic access to functions without visual processing. The cost difference stems from the fact that vision models must process every pixel, whereas APIs only transmit structured data.",
-          "discussion": "Commenters largely agree with the cost analysis, with some noting that latency is also a dealbreaker for real-time apps. Several suggest using vision agents to map UI elements and then switch to structured workflows, echoing the hybrid approach. Others humorously point out that making websites agent-unfriendly could be a defense."
-        },
-        {
-          "title": "Chrome Silently Downloads 4GB AI Model Without Consent",
-          "summary": "Google Chrome is automatically downloading a large AI model (approximately 4 GB for GPU, 2.7 GB for CPU) to enable the on-device Prompt API for Gemini Nano, without explicitly asking for user consent. This raises significant privacy and resource concerns, as users may experience unexpected storage consumption and bandwidth usage. System administrators face challenges managing multiple installations, especially in lab or enterprise environments. The model is downloaded when Chrome flags like #optimization-guide-on-device-model and #prompt-api-for-gemini-nano are enabled, and web pages can trigger the download via LanguageModel.create(). Users can disable the feature by turning off these flags in chrome://flags.",
-          "url": "https://www.thatprivacyguy.com/blog/chrome-silent-nano-install/",
-          "score": 8,
-          "sources": [
-            {
-              "name": "hackernews",
-              "meta": "john-doe"
-            }
-          ],
-          "tags": [
-            "Chrome",
-            "AI",
-            "privacy",
-            "system administration",
-            "on-device ML"
+            "computer-use",
+            "cost-analysis"
           ],
           "focusTopics": [
-            "memory"
-          ],
-          "background": "The Prompt API is an experimental web API that allows websites to prompt a small language model (SLM) built into the browser, enabling on-device AI features without sending data to servers. Google Chrome's implementation uses Gemini Nano, a lightweight model designed for local inference. This approach aims to reduce API costs and support hybrid AI workflows.",
-          "discussion": "Community comments show mixed reactions: some argue that the download is part of Chrome's normal updates and consent is implied, while others criticize the lack of explicit permission and the impact on storage and bandwidth. System administrators express concerns about managing the 4GB model across many users, especially in lab environments where profiles are cleared regularly."
+            "tool-use"
+          ]
         },
         {
-          "title": "AI Boosts Coding Speed but Not Organizational Learning",
-          "summary": "A blog post argues that AI coding assistants like GitHub Copilot increase individual developer speed but fail to address organizational bottlenecks, and engineers lack incentives to share productivity gains with the company. This critique highlights a critical gap in enterprise AI adoption: without organizational learning and incentive alignment, AI tools may worsen bottlenecks and create a productivity paradox where faster coding does not lead to faster delivery. The post notes that code can take 6–12 months from commit to production, and AI tools make post-development bottlenecks worse by piling up changes. Engineers may hoard AI workflows to avoid extra work without recognition.",
+          "title": "SoundHound Launches Self-Learning AI Agent Platform - AI Business",
+          "summary": "SoundHound发布自学习AI Agent平台OASYS。",
+          "url": "https://aibusiness.com/agentic-ai/soundhound-launches-self-learning-ai-agent-platform",
+          "score": 7,
+          "sources": [
+            {
+              "name": "aibusiness.com"
+            }
+          ],
+          "tags": [
+            "ai-agent",
+            "self-learning",
+            "enterprise"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "Think 2026: IBM Delivers the Blueprint for the AI Operating Model as the AI Divide Widens – Company Announcement - Financial Times",
+          "summary": "IBM发布watsonx Orchestrate多智能体编排等新品。",
+          "url": "https://markets.ft.com/data/announce/detail?dockey=600-202605050001CANADANWCANADAPR_C0871-1",
+          "score": 7,
+          "sources": [
+            {
+              "name": "markets.ft.com"
+            }
+          ],
+          "tags": [
+            "ibm",
+            "watsonx",
+            "multi-agent"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "Heretic 1.3 released: Reproducible models, integrated benchmarking system, reduced peak VRAM usage, broader model support, and more",
+          "summary": "Heretic 1.3发布，支持可复现模型、集成基准测试、降低VRAM峰值。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1t4hwup/heretic_13_released_reproducible_models/",
+          "score": 7,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "open-source",
+            "llm",
+            "benchmark"
+          ],
+          "focusTopics": [
+            "evals"
+          ]
+        },
+        {
+          "title": "mattmireles/gemma-tuner-multimodal",
+          "summary": "开源工具，可在Apple Silicon上微调Gemma多模态模型。",
+          "url": "https://github.com/mattmireles/gemma-tuner-multimodal",
+          "score": 7,
+          "sources": [
+            {
+              "name": "Co-Starred"
+            }
+          ],
+          "tags": [
+            "fine-tuning",
+            "gemma",
+            "multimodal",
+            "apple-silicon"
+          ],
+          "focusTopics": [
+            "model-release"
+          ]
+        },
+        {
+          "title": "raullenchai/Rapid-MLX",
+          "summary": "Apple Silicon上最快的本地AI引擎，支持工具调用。",
+          "url": "https://github.com/raullenchai/Rapid-MLX",
+          "score": 6.6865000000000006,
+          "sources": [
+            {
+              "name": "GitHub trending:python (+491★)"
+            }
+          ],
+          "tags": [
+            "local-llm",
+            "apple-silicon",
+            "tool-use"
+          ],
+          "focusTopics": [
+            "tool-use"
+          ]
+        },
+        {
+          "title": "Agents for financial services and insurance",
+          "summary": "Anthropic发布10个金融保险业AI Agent模板。",
+          "url": "https://www.anthropic.com/news/finance-agents",
+          "score": 6.538,
+          "sources": [
+            {
+              "name": "HN (196)"
+            }
+          ],
+          "tags": [
+            "agents",
+            "finance",
+            "anthropic"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "virattt/dexter",
+          "summary": "Dexter：用于深度金融研究的自主代理。",
+          "url": "https://github.com/virattt/dexter",
+          "score": 6.5135,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+659★)"
+            }
+          ],
+          "tags": [
+            "autonomous-agent",
+            "finance",
+            "research"
+          ],
+          "focusTopics": [
+            "tool-use"
+          ]
+        },
+        {
+          "title": "Our AI started a cafe in Stockholm",
+          "summary": "AI自主在斯德哥尔摩开设咖啡馆的案例。",
+          "url": "https://simonwillison.net/2026/May/5/our-ai-started-a-cafe-in-stockholm/#atom-everything",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "Simon Willison"
+            }
+          ],
+          "tags": [
+            "ai-agent",
+            "autonomy",
+            "real-world"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "Google Home’s Gemini AI can handle more complicated requests | The Verge",
+          "summary": "Google Home升级Gemini AI，可处理更复杂请求。",
+          "url": "https://www.theverge.com/tech/924755/google-home-gemini-3-1-upgrade",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "theverge.com"
+            }
+          ],
+          "tags": [
+            "google",
+            "gemini",
+            "smart-home"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "DeepSeek V4 being 17x cheaper got me to actually measure what I send to cloud vs what I could run locally. the results are stupid.",
+          "summary": "用户实测DeepSeek V4成本仅为云模型的1/17。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1t4s6g2/deepseek_v4_being_17x_cheaper_got_me_to_actually/",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "deepseek",
+            "cost",
+            "local-llm"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Dense Model Shoot-Off: Gemma 4 31B vs Qwen3.6/5 27B... Result is Slower is Faster.",
+          "summary": "Gemma 4 31B与Qwen3.6/5 27B密集模型对比，速度慢者更快。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1t4nkez/dense_model_shootoff_gemma_4_31b_vs_qwen365_27b/",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "llm",
+            "benchmark",
+            "comparison"
+          ],
+          "focusTopics": [
+            "evals"
+          ]
+        },
+        {
+          "title": "MTP on strix halo with llama.cpp (PR #22673)",
+          "summary": "llama.cpp PR #22673在Strix Halo上支持MTP，性能提升。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1t4uj9h/mtp_on_strix_halo_with_llamacpp_pr_22673/",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "llm",
+            "inference",
+            "open-source"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "bytedance/deer-flow",
+          "summary": "字节跳动开源的长周期超级代理框架。",
+          "url": "https://github.com/bytedance/deer-flow",
+          "score": 6.442,
+          "sources": [
+            {
+              "name": "GitHub trending:python (+328★)"
+            }
+          ],
+          "tags": [
+            "agents",
+            "open-source",
+            "bytedance"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "mksglu/context-mode",
+          "summary": "Context-mode：AI编码代理的上下文窗口优化工具。",
+          "url": "https://github.com/mksglu/context-mode",
+          "score": 6.364,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+276★)"
+            }
+          ],
+          "tags": [
+            "context-optimization",
+            "coding-agent",
+            "sandbox"
+          ],
+          "focusTopics": [
+            "context-engineering"
+          ]
+        },
+        {
+          "title": "LearningCircuit/local-deep-research",
+          "summary": "本地深度研究工具，支持多种LLM和搜索引擎。",
+          "url": "https://github.com/LearningCircuit/local-deep-research",
+          "score": 6.2455,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+197★)"
+            }
+          ],
+          "tags": [
+            "local-llm",
+            "research",
+            "open-source"
+          ],
+          "focusTopics": [
+            "evals"
+          ]
+        },
+        {
+          "title": "AIDC-AI/Pixelle-Video",
+          "summary": "AI全自动短视频引擎，生成短视频。",
+          "url": "https://github.com/AIDC-AI/Pixelle-Video",
+          "score": 6.1365,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+691★)"
+            }
+          ],
+          "tags": [
+            "video-generation",
+            "ai-tools",
+            "automation"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "When everyone has AI and the company still learns nothing",
+          "summary": "探讨即使人人使用AI，公司仍无法从数据中学习的现象。",
           "url": "https://www.robert-glaser.de/when-everyone-has-ai-and-the-company-still-learns-nothing/",
-          "score": 8,
+          "score": 6.0329999999999995,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "youngbrioche"
+              "name": "HN (311)"
             }
           ],
           "tags": [
-            "AI adoption",
-            "enterprise software",
-            "organizational learning",
-            "developer productivity",
-            "bottlenecks"
+            "organizational-learning",
+            "ai-adoption"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Brockman Says Musk’s Lack of AI Knowledge Was Concern at OpenAI - Bloomberg",
+          "summary": "Brockman称马斯克缺乏AI知识曾是OpenAI的担忧。",
+          "url": "https://www.bloomberg.com/news/articles/2026-05-05/brockman-says-musk-s-lack-of-ai-knowledge-was-concern-at-openai",
+          "score": 6,
+          "sources": [
+            {
+              "name": "bloomberg.com"
+            }
+          ],
+          "tags": [
+            "openai",
+            "musk",
+            "trial"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "12M Context Window and some some sprinkle of lies?",
+          "summary": "对SubQ 12M上下文窗口声明的质疑。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1t4wv6c/12m_context_window_and_some_some_sprinkle_of_lies/",
+          "score": 6,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "context-window",
+            "critique",
+            "subq"
           ],
           "focusTopics": [
+            "context-engineering"
+          ]
+        },
+        {
+          "title": "I know this isn’t technically an LLM but OmniVoice is FUCKING AMAZING.",
+          "summary": "OmniVoice语音模型实现一次性声音克隆，效果惊人。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1t4rst5/i_know_this_isnt_technically_an_llm_but_omnivoice/",
+          "score": 6,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "voice-cloning",
+            "open-source",
+            "multimodal"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Production AI very different from the demos [D]",
+          "summary": "生产环境AI成本与演示差异大，需持续优化。",
+          "url": "https://www.reddit.com/r/MachineLearning/comments/1t4mzm3/production_ai_very_different_from_the_demos_d/",
+          "score": 6,
+          "sources": [
+            {
+              "name": "Reddit r/MachineLearning"
+            }
+          ],
+          "tags": [
+            "production",
+            "cost",
+            "deployment"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "czlonkowski/n8n-mcp",
+          "summary": "为Claude/Cursor等构建n8n工作流的MCP工具。",
+          "url": "https://github.com/czlonkowski/n8n-mcp",
+          "score": 5.965999999999999,
+          "sources": [
+            {
+              "name": "GitHub trending:typescript (+294★)"
+            }
+          ],
+          "tags": [
+            "mcp",
+            "workflows",
+            "n8n"
+          ],
+          "focusTopics": [
+            "tool-use"
+          ]
+        },
+        {
+          "title": "Show HN: Airbyte Agents – context for agents across multiple data sources",
+          "summary": "Airbyte发布Agents工具，为AI代理提供多数据源上下文。",
+          "url": "https://news.ycombinator.com/item?id=48023496",
+          "score": 5.800999999999999,
+          "sources": [
+            {
+              "name": "HN (92)"
+            }
+          ],
+          "tags": [
+            "data-connectors",
+            "agent-context",
+            "data-pipeline"
+          ],
+          "focusTopics": [
+            "context-engineering"
+          ]
+        },
+        {
+          "title": "cocoindex-io/cocoindex",
+          "summary": "Cocoindex：长时程代理的增量引擎。",
+          "url": "https://github.com/cocoindex-io/cocoindex",
+          "score": 5.757,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+438★)"
+            }
+          ],
+          "tags": [
+            "agent-framework",
+            "incremental",
+            "long-horizon"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "Three Inverse Laws of AI",
+          "summary": "提出AI领域的三个逆定律，反思AI发展中的常见误区。",
+          "url": "https://susam.net/inverse-laws-of-robotics.html",
+          "score": 5.742999999999999,
+          "sources": [
+            {
+              "name": "HN (356)"
+            }
+          ],
+          "tags": [
+            "ai-philosophy",
             "reflection"
           ],
-          "background": "Organizational learning refers to how companies improve processes and share knowledge over time. The productivity paradox describes situations where technology investments do not yield proportional productivity gains. In software development, bottlenecks often occur outside coding—such as in testing, deployment, and approvals—limiting the impact of faster coding.",
-          "discussion": "Commenters largely agree with the post, sharing experiences where AI adoption is limited to developers and post-development processes remain slow. Some express that engineers have no incentive to share productivity gains, and that AI tools primarily serve profit motives rather than genuine innovation."
+          "focusTopics": []
         },
         {
-          "title": "EEVblog Celebrates 55th Anniversary of the 555 Timer IC",
-          "summary": "EEVblog released a video commemorating the 55th anniversary of the 555 timer IC, highlighting its history and impact on electronics. The 555 timer is one of the most iconic and widely used integrated circuits in electronics history, and this milestone underscores its enduring relevance for hobbyists and engineers alike. The video was released on May 5th (5/5) at 5:55 length, and community comments mention a free book by the 555's creator and a livestream by Big Clive celebrating the same occasion.",
-          "url": "https://www.youtube.com/watch?v=6JhK8iCQuqI",
-          "score": 6,
+          "title": "Running a 26B LLM locally with no GPU",
+          "summary": "用户成功在无GPU的CPU上运行26B参数LLM。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1t4e046/running_a_26b_llm_locally_with_no_gpu/",
+          "score": 5.5,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "brudgers"
+              "name": "Reddit r/LocalLLaMA"
             }
           ],
           "tags": [
-            "electronics",
-            "555 timer",
-            "history",
-            "hobbyist"
+            "local-llm",
+            "cpu-inference"
           ],
-          "focusTopics": [],
-          "background": "The 555 timer IC, introduced in 1971 by Signetics, is a versatile chip used in timers, pulse generators, and oscillators. It operates in monostable, astable, and bistable modes, making it a staple in countless electronic projects.",
-          "discussion": "Comments are nostalgic and appreciative, with users sharing personal anecdotes and links to related content like the creator's free book and Big Clive's livestream. The sentiment is warm and celebratory."
+          "focusTopics": []
         },
         {
-          "title": "California Farmers to Destroy 420K Peach Trees After Del Monte Bankruptcy",
-          "summary": "California farmers will destroy 420,000 peach trees after Del Monte's bankruptcy, as the canning company that was their primary buyer ceased operations. This event highlights the fragility of monoculture supply chains and the difficulty of redirecting specialized produce, affecting local economies and food systems. The clingstone peaches are bred specifically for canning and are not suitable for fresh market, making alternative sales nearly impossible. The remaining California cannery is buying what it can, but the bulk of the crop will be destroyed.",
-          "url": "https://www.sfgate.com/centralcoast/article/usda-aid-california-farmers-22240694.php",
-          "score": 6,
+          "title": "As workers worry about AI, Nvidia's Jensen Huang says AI is 'creating an enormous number of jobs' | TechCrunch",
+          "summary": "黄仁勋称AI正在创造大量就业机会。",
+          "url": "https://techcrunch.com/2026/05/04/as-workers-worry-about-ai-nvidias-jensen-huang-says-ai-is-creating-an-enormous-number-of-jobs/",
+          "score": 5,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "littlexsparkee"
+              "name": "techcrunch.com"
             }
           ],
           "tags": [
-            "agriculture",
-            "supply chain",
-            "economics",
-            "food industry"
+            "nvidia",
+            "jobs",
+            "opinion"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Why run local? Count the money",
+          "summary": "用户分享本地运行模型的经济账，强调成本优势。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1t4qwzf/why_run_local_count_the_money/",
+          "score": 5,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "local-llm",
+            "cost-analysis"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Use Qwen3.6 right way -> send it to pi coding agent and forget",
+          "summary": "建议将Qwen3.6用于Pi编码代理，提升效率。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1t4ji36/use_qwen36_right_way_send_it_to_pi_coding_agent/",
+          "score": 5,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "coding-agent",
+            "llm"
           ],
           "focusTopics": [
-            "memory"
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "Struggling to reproduce paper results before improving them — stuck below reported accuracy [R]",
+          "summary": "博士生难以复现论文结果，准确率低于报告值。",
+          "url": "https://www.reddit.com/r/MachineLearning/comments/1t4dkew/struggling_to_reproduce_paper_results_before/",
+          "score": 5,
+          "sources": [
+            {
+              "name": "Reddit r/MachineLearning"
+            }
           ],
-          "background": "Monoculture farming involves growing a single crop species over a large area, which increases efficiency but creates vulnerability to market shifts. Del Monte, a major canned fruit brand, filed for bankruptcy in July 2025 due to declining sales of canned goods and competition from store brands.",
-          "discussion": "Commenters note that farmers specialized in growing, not marketing or logistics, making it hard to find new buyers. Some point out that dietary shifts away from sugary canned fruit and competition from store brands contributed to Del Monte's failure."
+          "tags": [
+            "reproducibility",
+            "research"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "sansan0/TrendRadar",
+          "summary": "AI驱动的舆情监控与热点筛选工具。",
+          "url": "https://github.com/sansan0/TrendRadar",
+          "score": 4.481,
+          "sources": [
+            {
+              "name": "GitHub trending:python (+154★)"
+            }
+          ],
+          "tags": [
+            "ai-tools",
+            "monitoring",
+            "trends"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "vercel-labs/ai-cli",
+          "summary": "从终端生成任何内容的AI CLI工具。",
+          "url": "https://github.com/vercel-labs/ai-cli",
+          "score": 4.37,
+          "sources": [
+            {
+              "name": "GitHub trending:typescript (+80★)"
+            }
+          ],
+          "tags": [
+            "cli",
+            "ai-tools",
+            "vercel"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "datasette-llm 0.1a7",
+          "summary": "Datasette LLM插件0.1a7版本发布。",
+          "url": "https://simonwillison.net/2026/May/5/datasette-llm/#atom-everything",
+          "score": 4,
+          "sources": [
+            {
+              "name": "Simon Willison"
+            }
+          ],
+          "tags": [
+            "datasette",
+            "llm",
+            "plugin"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "I'm scared about biological computing",
+          "summary": "作者表达对生物计算发展的担忧。",
+          "url": "https://kuber.studio/blog/Reflections/I%27m-Scared-About-Biological-Computing",
+          "score": 3.826,
+          "sources": [
+            {
+              "name": "HN (142)"
+            }
+          ],
+          "tags": [
+            "biological-computing",
+            "ethics"
+          ],
+          "focusTopics": []
         }
       ]
     }
-  ]
+  ],
+  "aiSummary": "今日AI领域多项重要动态：OpenAI发布GPT-5.5 Instant作为ChatGPT新默认模型，并计划2026年投入500亿美元用于计算资源，同时声称新模型幻觉大幅减少；谷歌在Chrome静默安装4GB AI模型引发隐私担忧，并发布Gemma 4多token预测加速推理技术；工具方面，DeepSeek-TUI终端编码代理与多智能体金融交易框架上线；研究揭示LLM智能体使用工具存在性能代价，而GPT-5.5在理论物理中推导新结果，但Computer Use成本比结构化API高45倍引发效率讨论。"
 }
