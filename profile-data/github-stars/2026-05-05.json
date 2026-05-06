@@ -1,0 +1,41 @@
+{
+  "date": "2026-05-05",
+  "stars": [
+    {
+      "repo": "asg017/liblotus",
+      "url": "https://github.com/asg017/liblotus",
+      "description": "",
+      "language": "Rust",
+      "stargazersCount": 2,
+      "starredBy": "simonw",
+      "starredAt": "2026-05-05T16:06:58Z",
+      "highlights": "Liblotus is a Rust library for building fast, embeddable vector search indexes with support for hybrid search (sparse + dense vectors). It offers efficient indexing and querying for semantic search applications.",
+      "worthReading": "With only 2 stars but starred by Simon Willison, this early-stage project could become a key tool for lightweight, local vector search in AI applications.",
+      "topics": [],
+      "tags": [
+        "rag",
+        "infra"
+      ],
+      "score": 5,
+      "scoreReason": "Freshness is high (new repo, low stars, rising potential) but relevance is moderate (vector search for RAG) and concreteness is low (no description, early stage), resulting in a score of 5."
+    },
+    {
+      "repo": "huggingface/context-course",
+      "url": "https://github.com/huggingface/context-course",
+      "description": "A course on context engineering with code agents.",
+      "language": "Python",
+      "stargazersCount": 12,
+      "starredBy": "pcuenca",
+      "starredAt": "2026-05-05T09:32:33Z",
+      "highlights": "This repository offers a course on context engineering specifically for code agents, covering how to design prompts and manage context to improve agent performance. It includes hands-on code examples and practical guidance for building more effective AI agents.",
+      "worthReading": "It's a niche but practical resource for developers working on agent-based systems, providing actionable techniques to optimize context handling—a critical but often overlooked aspect of agent design.",
+      "topics": [],
+      "tags": [
+        "agent",
+        "llm"
+      ],
+      "score": 7,
+      "scoreReason": "Freshness is high (new repo, low stars but rising interest in agents), relevance is high (directly about agent context engineering), and concreteness is moderate (course with code examples, though still early-stage)."
+    }
+  ]
+}

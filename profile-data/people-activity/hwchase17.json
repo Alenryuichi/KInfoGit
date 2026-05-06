@@ -1310,10 +1310,52 @@
         "infra",
         "deployment"
       ]
+    },
+    {
+      "type": "x",
+      "id": "2021261552222158955",
+      "url": "https://x.com/hwchase17/status/2021261552222158955",
+      "author": {
+        "handle": "hwchase17",
+        "displayName": "Harrison Chase",
+        "avatar": "https://avatars.githubusercontent.com/hwchase17"
+      },
+      "content": "TL;DR: More and more agents need a workspace: a computer where they can run code, install packages, and access files. Sandboxes provide this",
+      "createdAt": "2026-05-06T04:19:02.405Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Agents require a workspace like a computer to run code, install packages, and access files; sandboxes fulfill this need.",
+      "worthReading": "Highlights a key infrastructure requirement for building capable AI agents.",
+      "tags": [
+        "agent",
+        "infra",
+        "deployment"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2042978500567609738",
+      "url": "https://x.com/hwchase17/status/2042978500567609738",
+      "author": {
+        "handle": "hwchase17",
+        "displayName": "Harrison Chase",
+        "avatar": "https://avatars.githubusercontent.com/hwchase17"
+      },
+      "content": "Memory is just a form of context. Short term memory (messages in the conversation, large tool call results) are handled by the harness. Long",
+      "createdAt": "2026-05-06T04:19:02.405Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Memory is conceptualized as a form of context, with short-term memory managed by the harness.",
+      "worthReading": "Provides a clear perspective on memory management in AI agents.",
+      "tags": [
+        "agent",
+        "llm"
+      ]
     }
   ],
   "dailyCounts": [
-    0,
     0,
     0,
     0,
@@ -1342,7 +1384,8 @@
     3,
     3,
     4,
+    2,
     2
   ],
-  "interestSummary": "Harrison Chase is focused on advancing AI agents, particularly their need for sandboxed workspaces to run code and access files, and on improving agent development through tools like LangSmith Agent Builder with integrated memory systems and trace-based debugging."
+  "interestSummary": "Harrison Chase is focused on advancing AI agents, particularly their need for secure workspaces like sandboxes to run code and access files, and on improving agent development through tools like LangSmith Agent Builder with integrated memory systems and trace-based debugging for production iteration."
 }

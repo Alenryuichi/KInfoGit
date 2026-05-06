@@ -276,6 +276,25 @@
       "score": 6,
       "scoreReason": "Freshness is moderate (173 stars, new but not explosive), relevance is high for AI prompt engineering, and concreteness is solid as a working CLI tool.",
       "type": "github"
+    },
+    {
+      "repo": "asg017/liblotus",
+      "url": "https://github.com/asg017/liblotus",
+      "description": "",
+      "language": "Rust",
+      "stargazersCount": 2,
+      "starredBy": "simonw",
+      "starredAt": "2026-05-05T16:06:58Z",
+      "highlights": "Liblotus is a Rust library for building fast, embeddable vector search indexes with support for hybrid search (sparse + dense vectors). It offers efficient indexing and querying for semantic search applications.",
+      "worthReading": "With only 2 stars but starred by Simon Willison, this early-stage project could become a key tool for lightweight, local vector search in AI applications.",
+      "topics": [],
+      "tags": [
+        "rag",
+        "infra"
+      ],
+      "score": 5,
+      "scoreReason": "Freshness is high (new repo, low stars, rising potential) but relevance is moderate (vector search for RAG) and concreteness is low (no description, early stage), resulting in a score of 5.",
+      "type": "github"
     }
   ],
   "posts": [
@@ -932,6 +951,27 @@
       "tags": [
         "evaluation",
         "deployment"
+      ],
+      "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3ml57nzilrs2z",
+      "url": "https://bsky.app/profile/simonwillison.net/post/3ml57nzilrs2z",
+      "author": {
+        "handle": "simonwillison.net",
+        "displayName": "Simon Willison",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
+      },
+      "content": "AI-run business experiments are interesting and fun up to the point where they waste the time of humans who haven't opted into the experiments - I think they need to keep their own human operators in the loop for outbound actions that affect other people simonwillison.net/2026/May/5/o...",
+      "createdAt": "2026-05-05T22:17:00.556Z",
+      "likeCount": 42,
+      "replyCount": 4,
+      "repostCount": 11,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [
+        "agent",
+        "safety"
       ],
       "type": "bluesky"
     }
@@ -2136,10 +2176,29 @@
         "agent",
         "llm"
       ]
+    },
+    {
+      "type": "x",
+      "id": "952257232380379136",
+      "url": "https://x.com/simonw/status/952257232380379136",
+      "author": {
+        "handle": "simonw",
+        "displayName": "Simon Willison",
+        "avatar": "https://avatars.githubusercontent.com/simonw"
+      },
+      "content": "This may be the best guidance I've seen anywhere on writing a really good commit history.",
+      "createdAt": "2018-01-13T00:00:00.000Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Simon Willison praises guidance on writing good commit history.",
+      "worthReading": "Highlights best practices for commit messages from a respected developer.",
+      "tags": [
+        "tooling"
+      ]
     }
   ],
   "dailyCounts": [
-    0,
     4,
     1,
     1,
@@ -2168,7 +2227,8 @@
     4,
     5,
     6,
-    3
+    5,
+    1
   ],
-  "interestSummary": "Simon Willison is deeply engaged in evaluating and comparing the latest AI models (including Gemma, Opus, Qwen, and Muse), with a particular focus on their code generation, image generation (especially his \"pelican on a bicycle\" benchmark), and tool-use capabilities. He is also actively exploring practical AI tools for document parsing, local model execution, and integrating AI with data workflows like Datasette and Google Sheets."
+  "interestSummary": "Simon Willison is actively exploring and benchmarking the latest AI models (Gemma, Claude, Qwen) for code generation and image creation, with a particular focus on running them locally on Apple Silicon and testing their capabilities through whimsical \"pelican on a bicycle\" benchmarks. He is also building tools around document parsing (LiteParse), experimenting with AI memory systems, and engaging with the broader implications of coding agents and AI pricing changes."
 }

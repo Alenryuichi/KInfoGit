@@ -125,6 +125,25 @@
       "score": 3,
       "scoreReason": "Freshness is low (5 stars, no recent traction), relevance is low (not AI-specific), concreteness is moderate (actual config files but no novel approach).",
       "type": "github"
+    },
+    {
+      "repo": "huggingface/context-course",
+      "url": "https://github.com/huggingface/context-course",
+      "description": "A course on context engineering with code agents.",
+      "language": "Python",
+      "stargazersCount": 12,
+      "starredBy": "pcuenca",
+      "starredAt": "2026-05-05T09:32:33Z",
+      "highlights": "This repository offers a course on context engineering specifically for code agents, covering how to design prompts and manage context to improve agent performance. It includes hands-on code examples and practical guidance for building more effective AI agents.",
+      "worthReading": "It's a niche but practical resource for developers working on agent-based systems, providing actionable techniques to optimize context handling—a critical but often overlooked aspect of agent design.",
+      "topics": [],
+      "tags": [
+        "agent",
+        "llm"
+      ],
+      "score": 7,
+      "scoreReason": "Freshness is high (new repo, low stars but rising interest in agents), relevance is high (directly about agent context engineering), and concreteness is moderate (course with code examples, though still early-stage).",
+      "type": "github"
     }
   ],
   "posts": [],
@@ -139,7 +158,6 @@
     0,
     0,
     0,
-    0,
     1,
     0,
     1,
@@ -160,7 +178,8 @@
     0,
     1,
     0,
+    1,
     0
   ],
-  "interestSummary": "Pedro Cuenca is currently focused on open-source ML tooling and infrastructure, particularly around Hugging Face ecosystem integrations, LLM inference optimization for Apple Silicon, and practical implementations of generative models like VQ-VAE."
+  "interestSummary": "Pedro Cuenca is currently focused on PyTorch implementations of generative models (VQ-VAE), LLM inference optimization for Apple Silicon, and open-source ML engineering tools, including agent workspace management and context engineering courses."
 }
