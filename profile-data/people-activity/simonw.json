@@ -2,52 +2,6 @@
   "id": "simonw",
   "stars": [
     {
-      "repo": "mattmireles/gemma-tuner-multimodal",
-      "url": "https://github.com/mattmireles/gemma-tuner-multimodal",
-      "description": "Fine-tune Gemma 4 and 3n with audio, images and text on Apple Silicon, using PyTorch and Metal Performance Shaders.",
-      "language": "Python",
-      "stargazersCount": 1202,
-      "starredBy": "simonw",
-      "highlights": "This project enables fine-tuning of Gemma models (versions 4 and 3n) with multimodal data including audio, images, and text, specifically optimized for Apple Silicon hardware using PyTorch and Metal Performance Shaders. It provides a practical solution for running advanced multimodal fine-tuning on consumer Apple hardware.",
-      "worthReading": "It demonstrates how to leverage Apple's Metal framework for efficient multimodal training on accessible hardware, making advanced fine-tuning techniques more approachable for developers with Apple Silicon machines.",
-      "topics": [],
-      "tags": [
-        "fine-tuning",
-        "multi-modal",
-        "deployment"
-      ],
-      "score": 8,
-      "scoreReason": "High freshness (multimodal fine-tuning on Apple Silicon is novel and gaining traction), high relevance (frontier AI tooling for multimodal LLMs), high concreteness (specific implementation with PyTorch and Metal Performance Shaders)",
-      "type": "github",
-      "starredAt": "2026-04-07"
-    },
-    {
-      "repo": "MemPalace/mempalace",
-      "url": "https://github.com/MemPalace/mempalace",
-      "description": "The highest-scoring AI memory system ever benchmarked. And it's free.",
-      "language": "Python",
-      "stargazersCount": 42362,
-      "starredBy": "simonw",
-      "highlights": "MemPalace is a free, high-performance AI memory system that achieved top benchmark scores for memory retention and recall. It integrates with ChromaDB for vector storage and supports MCP (Model Context Protocol) for enhanced LLM interactions.",
-      "worthReading": "Its exceptional benchmark performance and open-source availability make it a valuable tool for developers building AI applications requiring reliable memory systems.",
-      "topics": [
-        "ai",
-        "chromadb",
-        "llm",
-        "mcp",
-        "memory",
-        "python"
-      ],
-      "tags": [
-        "llm",
-        "tooling"
-      ],
-      "score": 8,
-      "scoreReason": "High relevance as frontier AI memory system with concrete benchmark claims, moderate freshness due to Simonw's recent star despite high existing star count, strong concreteness with specific performance claims.",
-      "type": "github",
-      "starredAt": "2026-04-07"
-    },
-    {
       "repo": "jsoma/natural-pdf",
       "url": "https://github.com/jsoma/natural-pdf",
       "description": "A friendly library for working with PDFs",
@@ -298,48 +252,6 @@
     }
   ],
   "posts": [
-    {
-      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3miwpxjyqa22c",
-      "url": "https://bsky.app/profile/simonwillison.net/post/3miwpxjyqa22c",
-      "author": {
-        "handle": "simonwillison.net",
-        "displayName": "Simon Willison",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
-      },
-      "content": "Wrote up some thoughts on Anthropic's Project Glassing, where their latest Opus-beating model is available to partnered security research organizations only. Given the recent alarm bells raised by credible security voices I think this is a justified decision.\nsimonwillison.net/2026/Apr/7/p...",
-      "createdAt": "2026-04-07T21:29:38.296Z",
-      "likeCount": 163,
-      "replyCount": 11,
-      "repostCount": 32,
-      "highlights": "",
-      "worthReading": "",
-      "tags": [
-        "safety",
-        "deployment"
-      ],
-      "type": "bluesky"
-    },
-    {
-      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3miwpsrjsas2c",
-      "url": "https://bsky.app/profile/simonwillison.net/post/3miwpsrjsas2c",
-      "author": {
-        "handle": "simonwillison.net",
-        "displayName": "Simon Willison",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
-      },
-      "content": "I'm a big fan of the pelican GLM-5.1 drew me today, it even animated it! simonwillison.net/2026/Apr/7/g...",
-      "createdAt": "2026-04-07T21:26:58.424Z",
-      "likeCount": 97,
-      "replyCount": 7,
-      "repostCount": 5,
-      "highlights": "",
-      "worthReading": "",
-      "tags": [
-        "llm",
-        "multi-modal"
-      ],
-      "type": "bluesky"
-    },
     {
       "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mizg7apj6c2z",
       "url": "https://bsky.app/profile/simonwillison.net/post/3mizg7apj6c2z",
@@ -974,6 +886,48 @@
         "safety"
       ],
       "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3ml732s52h22v",
+      "url": "https://bsky.app/profile/simonwillison.net/post/3ml732s52h22v",
+      "author": {
+        "handle": "simonwillison.net",
+        "displayName": "Simon Willison",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
+      },
+      "content": "I'm at the Claude w/ Code event in San Francisco, and I'll be live blogging the keynote here: simonwillison.net/2026/May/6/c...",
+      "createdAt": "2026-05-06T15:59:59.812Z",
+      "likeCount": 78,
+      "replyCount": 1,
+      "repostCount": 10,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [
+        "llm",
+        "tooling"
+      ],
+      "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3ml6xlk4ams22",
+      "url": "https://bsky.app/profile/simonwillison.net/post/3ml6xlk4ams22",
+      "author": {
+        "handle": "simonwillison.net",
+        "displayName": "Simon Willison",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
+      },
+      "content": "I was talking with Joseph Ruscio on the @heavybit.com podcast the other day when I realized that vibe coding and agentic engineering have started to blur a bit in some of my work - I published some extracts from the transcript simonwillison.net/2026/May/6/v...",
+      "createdAt": "2026-05-06T14:57:46.855Z",
+      "likeCount": 37,
+      "replyCount": 5,
+      "repostCount": 6,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [
+        "agent",
+        "tooling"
+      ],
+      "type": "bluesky"
     }
   ],
   "videos": [],
@@ -1096,6 +1050,26 @@
       "summary": "<p>I just released <a href=\"https://llm.datasette.io/en/latest/changelog.html#a0-2026-04-28\">LLM 0.32a0</a>, an alpha release of my <a href=\"https://llm.datasette.io/\">LLM</a> Python library and CLI tool for accessing LLMs, with some consequential changes that I've been working towards for quite a...",
       "highlights": "LLM 0.32a0 is a major refactor that prioritizes backwards compatibility while introducing significant internal changes for future extensibility. The alpha release aims to stabilize new APIs and data structures, allowing plugin authors to adapt before the stable release.",
       "worthReading": "If you use or build plugins for the LLM tool, this post details critical architectural shifts that will affect your workflow, making it essential for staying up-to-date with the ecosystem's evolution.",
+      "type": "blog"
+    },
+    {
+      "title": "Live blog: Code w/ Claude 2026",
+      "url": "https://simonwillison.net/2026/May/6/code-w-claude-2026/#atom-entries",
+      "author": "Simon Willison",
+      "publishedAt": "2026-05-06T15:58:27+00:00",
+      "summary": "<p>I'm at Anthropic's Code w/ Claude event today. Here's my live blog of the morning keynote sessions.</p><p><em>You are only seeing the long-form articles from my blog. Subscribe to <a href=\"https://simonwillison.net/atom/everything/\">/atom/everything/</a> to get all of my posts, or take a look at...",
+      "highlights": "Anthropic's Code w/ Claude event showcases new capabilities for AI-assisted coding, including improved code generation, debugging, and collaborative features. The live blog format provides real-time insights into keynote sessions, highlighting practical applications and future directions for Claude in software development.",
+      "worthReading": "For developers interested in the cutting edge of AI coding tools, this live blog offers firsthand observations of Claude's latest features and Anthropic's vision for AI-assisted programming.",
+      "type": "blog"
+    },
+    {
+      "title": "Vibe coding and agentic engineering are getting closer than I'd like",
+      "url": "https://simonwillison.net/2026/May/6/vibe-coding-and-agentic-engineering/#atom-entries",
+      "author": "Simon Willison",
+      "publishedAt": "2026-05-06T14:24:08+00:00",
+      "summary": "<p>I recently talked with Joseph Ruscio about AI coding tools for Heavybit's High Leverage podcast: <a href=\"https://www.heavybit.com/library/podcasts/high-leverage/ep-9-the-ai-coding-paradigm-shift-with-simon-willison\">Ep. #9, The AI Coding Paradigm Shift with Simon Willison</a>. Here are some of...",
+      "highlights": "The post discusses the convergence of 'vibe coding' (using AI to generate code without fully understanding it) and 'agentic engineering' (autonomous AI agents that build software), warning that as these approaches advance, developers risk losing control over code quality and security. It emphasizes the need for human oversight and testing, especially as AI-generated code becomes more complex and harder to audit.",
+      "worthReading": "It offers a nuanced perspective on the risks of over-relying on AI coding tools, making it valuable for developers and tech leaders navigating the shift toward AI-assisted software development.",
       "type": "blog"
     }
   ],
@@ -2196,10 +2170,30 @@
       "tags": [
         "tooling"
       ]
+    },
+    {
+      "type": "x",
+      "id": "1970147806225854531",
+      "url": "https://x.com/simonw/status/1970147806225854531",
+      "author": {
+        "handle": "simonw",
+        "displayName": "Simon Willison",
+        "avatar": "https://avatars.githubusercontent.com/simonw"
+      },
+      "content": "It's interesting how \"better at code\" has become the defining goal of almost every AI lab over the",
+      "createdAt": "2026-05-07T04:18:26.824Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Simon observes that AI labs are increasingly focused on improving code generation capabilities.",
+      "worthReading": "Reflects a key trend in AI development priorities.",
+      "tags": [
+        "llm",
+        "deployment"
+      ]
     }
   ],
   "dailyCounts": [
-    4,
     1,
     1,
     0,
@@ -2228,7 +2222,8 @@
     5,
     6,
     5,
+    3,
     1
   ],
-  "interestSummary": "Simon Willison is actively exploring and benchmarking the latest AI models (Gemma, Claude, Qwen) for code generation and image creation, with a particular focus on running them locally on Apple Silicon and testing their capabilities through whimsical \"pelican on a bicycle\" benchmarks. He is also building tools around document parsing (LiteParse), experimenting with AI memory systems, and engaging with the broader implications of coding agents and AI pricing changes."
+  "interestSummary": "Simon Willison is deeply focused on evaluating and comparing the latest AI models (including Claude Opus 4.7, Gemini Flash TTS, GPT-5.5, and Qwen3.6) through hands-on experiments, often using whimsical benchmarks like generating images of pelicans riding bicycles, while also exploring tools for document parsing, code agents, and the evolving landscape of AI pricing and capabilities."
 }

@@ -1,0 +1,925 @@
+{
+  "date": "2026-05-07",
+  "posts": [
+    {
+      "type": "x",
+      "id": "2037921699824607591",
+      "url": "https://x.com/karpathy/status/2037921699824607591",
+      "author": {
+        "handle": "karpathy",
+        "displayName": "Andrej Karpathy",
+        "avatar": "https://avatars.githubusercontent.com/karpathy"
+      },
+      "content": "Drafted a blog post - Used an LLM to meticulously improve the argument over 4 hours. - LLM demolishes the entire argument and convinces me that the opposite is in fact true.",
+      "createdAt": "2026-05-07T04:18:23.347Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Karpathy used an LLM to improve a blog post, but the LLM convinced him the opposite argument was true.",
+      "worthReading": "Shows how LLMs can challenge and refine reasoning, not just generate text.",
+      "tags": [
+        "llm"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "1617979122625712128",
+      "url": "https://x.com/karpathy/status/1617979122625712128",
+      "author": {
+        "handle": "karpathy",
+        "displayName": "Andrej Karpathy",
+        "avatar": "https://avatars.githubusercontent.com/karpathy"
+      },
+      "content": "The hottest new programming language is English",
+      "createdAt": "2026-05-07T04:18:23.347Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Karpathy suggests English is becoming the new programming language due to LLMs.",
+      "worthReading": "Captures a key insight about how LLMs are changing programming.",
+      "tags": [
+        "llm"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2002118205729562949",
+      "url": "https://x.com/karpathy/status/2002118205729562949",
+      "author": {
+        "handle": "karpathy",
+        "displayName": "Andrej Karpathy",
+        "avatar": "https://avatars.githubusercontent.com/karpathy"
+      },
+      "content": "By training LLMs against auto-generated data, we can achieve... [content truncated in search result]",
+      "createdAt": "2026-05-07T04:18:23.347Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Karpathy discusses training LLMs with auto-generated data.",
+      "worthReading": "Highlights a technique for improving LLM training efficiency.",
+      "tags": [
+        "llm",
+        "fine-tuning"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "1970147806225854531",
+      "url": "https://x.com/simonw/status/1970147806225854531",
+      "author": {
+        "handle": "simonw",
+        "displayName": "Simon Willison",
+        "avatar": "https://avatars.githubusercontent.com/simonw"
+      },
+      "content": "It's interesting how \"better at code\" has become the defining goal of almost every AI lab over the",
+      "createdAt": "2026-05-07T04:18:26.824Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Simon observes that AI labs are increasingly focused on improving code generation capabilities.",
+      "worthReading": "Reflects a key trend in AI development priorities.",
+      "tags": [
+        "llm",
+        "deployment"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "1975603633791377920",
+      "url": "https://x.com/hwchase17/status/1975603633791377920",
+      "author": {
+        "handle": "hwchase17",
+        "displayName": "Harrison Chase",
+        "avatar": "https://avatars.githubusercontent.com/hwchase17"
+      },
+      "content": "I am not excited about visual workflow builders 1. Not simple enough for the average user",
+      "createdAt": "2026-05-07T04:18:36.310Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Harrison Chase expresses skepticism about visual workflow builders, citing lack of simplicity for average users.",
+      "worthReading": "Provides insight into his design philosophy for developer tools.",
+      "tags": [
+        "tooling"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2011814697889316930",
+      "url": "https://x.com/hwchase17/status/2011814697889316930",
+      "author": {
+        "handle": "hwchase17",
+        "displayName": "Harrison Chase",
+        "avatar": "https://avatars.githubusercontent.com/hwchase17"
+      },
+      "content": "We launched LangSmith Agent Builder this week as a no-code way to build agents. A key part of Agent builder is it's memory system.",
+      "createdAt": "2026-05-07T04:18:36.310Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Announcement of LangSmith Agent Builder with emphasis on its memory system.",
+      "worthReading": "Shows LangChain's push towards no-code agent building.",
+      "tags": [
+        "agent",
+        "tooling"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2040467997022884194",
+      "url": "https://x.com/hwchase17/status/2040467997022884194",
+      "author": {
+        "handle": "hwchase17",
+        "displayName": "Harrison Chase",
+        "avatar": "https://avatars.githubusercontent.com/hwchase17"
+      },
+      "content": "In the hot path as the agent is running. The agent can decided to (or the user can prompt it to) update its memory as it is working on the core",
+      "createdAt": "2026-05-07T04:18:36.310Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Discusses agent memory updates during runtime, either autonomously or via user prompt.",
+      "worthReading": "Highlights dynamic memory management in agents.",
+      "tags": [
+        "agent"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2013641863123870133",
+      "url": "https://x.com/hwchase17/status/2013641863123870133",
+      "author": {
+        "handle": "hwchase17",
+        "displayName": "Harrison Chase",
+        "avatar": "https://avatars.githubusercontent.com/hwchase17"
+      },
+      "content": "When building agents, you need to iterate on production data much more than when building traditional software. You need to iterate on how",
+      "createdAt": "2026-05-07T04:18:36.310Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Emphasizes the importance of iterating on production data for agent development.",
+      "worthReading": "Key insight for agent development workflow.",
+      "tags": [
+        "agent",
+        "evaluation"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2021261552222158955",
+      "url": "https://x.com/hwchase17/status/2021261552222158955",
+      "author": {
+        "handle": "hwchase17",
+        "displayName": "Harrison Chase",
+        "avatar": "https://avatars.githubusercontent.com/hwchase17"
+      },
+      "content": "TL;DR: More and more agents need a workspace: a computer where they can run code, install packages, and access files. Sandboxes provide this",
+      "createdAt": "2026-05-07T04:18:36.310Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Argues that agents require sandboxed workspaces for code execution and file access.",
+      "worthReading": "Explains the need for sandboxes in agent infrastructure.",
+      "tags": [
+        "agent",
+        "infra"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "1944443447953498285",
+      "url": "https://x.com/DrJimFan/status/1944443447953498285",
+      "author": {
+        "handle": "DrJimFan",
+        "displayName": "Jim Fan",
+        "avatar": "https://avatars.githubusercontent.com/DrJimFan"
+      },
+      "content": "I've been a bit quiet on X recently. The past year has been a transformational experience.",
+      "createdAt": "2026-05-07T04:18:43.962Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Jim Fan acknowledges his recent silence on X and reflects on a transformative past year.",
+      "worthReading": "Provides insight into his personal journey and potential upcoming announcements.",
+      "tags": [
+        "agent"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "1873759183960485990",
+      "url": "https://x.com/DrJimFan/status/1873759183960485990",
+      "author": {
+        "handle": "DrJimFan",
+        "displayName": "Jim Fan",
+        "avatar": "https://avatars.githubusercontent.com/DrJimFan"
+      },
+      "content": "It gives me a lot of comfort knowing that we are the last generation without advanced robots everywhere.",
+      "createdAt": "2026-05-07T04:18:43.962Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Expresses optimism about the imminent ubiquity of advanced robots.",
+      "worthReading": "Captures his vision for the future of robotics and AGI.",
+      "tags": [
+        "agent",
+        "multi-modal"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2018754323141054786",
+      "url": "https://x.com/DrJimFan/status/2018754323141054786",
+      "author": {
+        "handle": "DrJimFan",
+        "displayName": "Jim Fan",
+        "avatar": "https://avatars.githubusercontent.com/DrJimFan"
+      },
+      "content": "In this context, I define world modeling as predicting the next plausible world state (or a longer duration of states) conditioned on an action.",
+      "createdAt": "2026-05-07T04:18:43.962Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Defines world modeling in the context of robotics and AI.",
+      "worthReading": "Clarifies a key concept in his research on embodied AI.",
+      "tags": [
+        "multi-modal",
+        "agent"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2005340845055340558",
+      "url": "https://x.com/DrJimFan/status/2005340845055340558",
+      "author": {
+        "handle": "DrJimFan",
+        "displayName": "Jim Fan",
+        "avatar": "https://avatars.githubusercontent.com/DrJimFan"
+      },
+      "content": "Everyone's freaking out about vibe coding. In the holiday spirit, allow me to share my anxiety on the wild",
+      "createdAt": "2026-05-07T04:18:43.962Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Comments on the hype around 'vibe coding' and shares his own concerns.",
+      "worthReading": "Offers a perspective on current AI trends and their implications.",
+      "tags": [
+        "llm",
+        "evaluation"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "1943444549696917714",
+      "url": "https://x.com/jeremyphoward/status/1943444549696917714",
+      "author": {
+        "handle": "jeremyphoward",
+        "displayName": "Jeremy Howard",
+        "avatar": "https://avatars.githubusercontent.com/jph00"
+      },
+      "content": "Here's a complete unedited video of asking Grok for its views on the Israel/Palestine situation. It first searches twitter for what Elon thinks.",
+      "createdAt": "2026-05-07T04:18:47.814Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Demonstrates Grok's behavior of searching Twitter for Elon Musk's opinion on a sensitive geopolitical topic.",
+      "worthReading": "Reveals potential bias in AI systems that rely on specific individuals' viewpoints.",
+      "tags": [
+        "safety",
+        "evaluation"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "1764853209498034537",
+      "url": "https://x.com/soumithchintala/status/1764853209498034537",
+      "author": {
+        "handle": "soumithchintala",
+        "displayName": "Soumith Chintala",
+        "avatar": "https://avatars.githubusercontent.com/soumith"
+      },
+      "content": "reading \"AI News\" (previously Smol Talk) is probably the highest-leverage 45 mins",
+      "createdAt": "2024-03-05T00:00:00Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Soumith recommends reading 'AI News' as a high-leverage activity.",
+      "worthReading": "Shows what a key AI figure considers valuable for staying informed.",
+      "tags": [
+        "llm"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "1892566535513755940",
+      "url": "https://x.com/soumithchintala/status/1892566535513755940",
+      "author": {
+        "handle": "soumithchintala",
+        "displayName": "Soumith Chintala",
+        "avatar": "https://avatars.githubusercontent.com/soumith"
+      },
+      "content": "Today, we are excited to announce Thinking Machines Lab (thinkingmachines.ai), an artificial intelligence research and product company.",
+      "createdAt": "2025-02-20T00:00:00Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Soumith announces the launch of Thinking Machines Lab, an AI research and product company.",
+      "worthReading": "Announces a major new venture from a PyTorch co-founder.",
+      "tags": [
+        "infra"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "1300137812872765440",
+      "url": "https://x.com/fchollet/status/1300137812872765440",
+      "author": {
+        "handle": "fchollet",
+        "displayName": "Francois Chollet",
+        "avatar": "https://avatars.githubusercontent.com/fchollet"
+      },
+      "content": "I think it's clear that for many smaller companies that invested in deep learning, it turned out",
+      "createdAt": "2020-08-30T00:00:00Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Deep learning investments may not have paid off for smaller companies.",
+      "worthReading": "Reflects on the practical challenges of adopting deep learning.",
+      "tags": [
+        "deployment"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2018836816552694139",
+      "url": "https://x.com/fchollet/status/2018836816552694139",
+      "author": {
+        "handle": "fchollet",
+        "displayName": "Francois Chollet",
+        "avatar": "https://avatars.githubusercontent.com/fchollet"
+      },
+      "content": "Folks who work in AI or software engineering feel like the world is changing exponential fast.",
+      "createdAt": "2024-05-28T00:00:00Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Perception of rapid change in AI and software engineering.",
+      "worthReading": "Captures the sentiment of professionals in the field.",
+      "tags": [
+        "deployment"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2034676840896635257",
+      "url": "https://x.com/fchollet/status/2034676840896635257",
+      "author": {
+        "handle": "fchollet",
+        "displayName": "Francois Chollet",
+        "avatar": "https://avatars.githubusercontent.com/fchollet"
+      },
+      "content": "Current AI is a librarian of existing knowledge. Science requires an explorer of the unknown.",
+      "createdAt": "2024-06-21T00:00:00Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Contrasts current AI's retrieval capabilities with the exploratory nature of science.",
+      "worthReading": "Highlights a key limitation of AI for scientific discovery.",
+      "tags": [
+        "evaluation"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "1978840835341914164",
+      "url": "https://x.com/drfeifei/status/1978840835341914164",
+      "author": {
+        "handle": "drfeifei",
+        "displayName": "Fei-Fei Li",
+        "avatar": null
+      },
+      "content": "Very excited to share @theworldlabs 's latest research work RTFM!! It's a real-time, ...",
+      "createdAt": "2026-05-07T04:19:08.055Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Fei-Fei Li announces World Labs' RTFM research, a real-time spatial intelligence model.",
+      "worthReading": "Highlights her continued work on spatial AI and World Labs' progress.",
+      "tags": [
+        "multi-modal",
+        "infra",
+        "agent"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "951117788835278848",
+      "url": "https://x.com/minimaxir/status/951117788835278848",
+      "author": {
+        "handle": "minimaxir",
+        "displayName": "Max Woolf",
+        "avatar": "https://avatars.githubusercontent.com/minimaxir"
+      },
+      "content": "So here's my postmortem after hunting for a data science job.",
+      "createdAt": "2018-01-10T00:00:00Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Max Woolf shares a postmortem of his data science job search.",
+      "worthReading": "Provides insights into the data science job market and job hunting strategies.",
+      "tags": [
+        "deployment"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "1418867090476392451",
+      "url": "https://x.com/PhilNWang/status/1418867090476392451",
+      "author": {
+        "handle": "lucidrains",
+        "displayName": "Phil Wang",
+        "avatar": "https://avatars.githubusercontent.com/lucidrains"
+      },
+      "content": "I got to cover for the excellent @HadleyFreeman in the Guardian today so",
+      "createdAt": "2021-07-24T00:00:00Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Phil Wang covered for Hadley Freeman in the Guardian.",
+      "worthReading": "Shows Phil Wang's work as a writer for The Guardian.",
+      "tags": []
+    },
+    {
+      "type": "x",
+      "id": "1000026291649818625",
+      "url": "https://x.com/PhilNWang/status/1000026291649818625",
+      "author": {
+        "handle": "lucidrains",
+        "displayName": "Phil Wang",
+        "avatar": "https://avatars.githubusercontent.com/lucidrains"
+      },
+      "content": "Having a wonderful time hanging out with my uncle James Wong at the Chelsea Flower show!",
+      "createdAt": "2018-05-26T00:00:00Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Phil Wang spent time with his uncle James Wong at the Chelsea Flower Show.",
+      "worthReading": "Personal moment with family at a notable event.",
+      "tags": []
+    },
+    {
+      "type": "x",
+      "id": "2036834073369596295",
+      "url": "https://x.com/srush_nlp/status/2036834073369596295",
+      "author": {
+        "handle": "srush_io",
+        "displayName": "Sasha Rush",
+        "avatar": "https://avatars.githubusercontent.com/srush"
+      },
+      "content": "On the infra side, composer 2 uses CP. This is (i think?) the first real detail from using CP on MLA. My understanding is that each rank",
+      "createdAt": "2026-05-07T04:19:23.798Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Sasha discusses infrastructure details: Composer 2 uses CP (context parallelism) on MLA (Multi-head Latent Attention).",
+      "worthReading": "Provides insight into practical implementation details of large model training infrastructure.",
+      "tags": [
+        "infra",
+        "llm"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "1944117659295264882",
+      "url": "https://x.com/srush_nlp/status/1944117659295264882",
+      "author": {
+        "handle": "srush_io",
+        "displayName": "Sasha Rush",
+        "avatar": "https://avatars.githubusercontent.com/srush"
+      },
+      "content": "today i woke up to a living version of a phd student's nightmare. a new paper in my inbox: a detailed reproduction of a paper i wrote",
+      "createdAt": "2026-05-07T04:19:23.798Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Sasha humorously describes the experience of receiving a reproduction of his own paper.",
+      "worthReading": "Illustrates the academic experience of having one's work independently replicated.",
+      "tags": [
+        "evaluation"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "1716181162354442450",
+      "url": "https://x.com/StasBekman/status/1716181162354442450",
+      "author": {
+        "handle": "stas00",
+        "displayName": "Stas Bekman",
+        "avatar": "https://avatars.githubusercontent.com/stas00"
+      },
+      "content": "I have been compiling LLM/VLM training logbooks/chronicles. This is the one of the best sources to",
+      "createdAt": "2026-05-07T04:19:32.282Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Stas has been compiling training logbooks for LLM/VLM, indicating a focus on documenting training processes.",
+      "worthReading": "Useful for researchers and engineers looking for practical training insights.",
+      "tags": [
+        "llm",
+        "infra",
+        "fine-tuning"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2014578754782409106",
+      "url": "https://x.com/StasBekman/status/2014578754782409106",
+      "author": {
+        "handle": "stas00",
+        "displayName": "Stas Bekman",
+        "avatar": "https://avatars.githubusercontent.com/stas00"
+      },
+      "content": "Thanks to an awesome contribution from @omarnomad The Machine Learning Engineering Open book now can",
+      "createdAt": "2026-05-07T04:19:32.282Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Stas acknowledges a contribution to the Machine Learning Engineering Open Book, showing community collaboration.",
+      "worthReading": "Highlights open-source contributions to ML education.",
+      "tags": [
+        "tooling",
+        "infra"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "1984304045079830625",
+      "url": "https://x.com/StasBekman/status/1984304045079830625",
+      "author": {
+        "handle": "stas00",
+        "displayName": "Stas Bekman",
+        "avatar": "https://avatars.githubusercontent.com/stas00"
+      },
+      "content": "A huge thank you note to Yih-Dar SHIEH who has been doing an amazing QA work for @huggingface for",
+      "createdAt": "2026-05-07T04:19:32.282Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Stas thanks a contributor for QA work at Hugging Face, emphasizing quality assurance in ML.",
+      "worthReading": "Shows appreciation for behind-the-scenes work in ML community.",
+      "tags": [
+        "tooling",
+        "infra"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "1726819595871543715",
+      "url": "https://x.com/StasBekman/status/1726819595871543715",
+      "author": {
+        "handle": "stas00",
+        "displayName": "Stas Bekman",
+        "avatar": "https://avatars.githubusercontent.com/stas00"
+      },
+      "content": "This is a long overdue section of the ML Engineering Understanding Training Loss Patterns",
+      "createdAt": "2026-05-07T04:19:32.282Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Stas announces a new section on understanding training loss patterns in ML Engineering.",
+      "worthReading": "Important for practitioners debugging training runs.",
+      "tags": [
+        "llm",
+        "fine-tuning",
+        "infra"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2030950429505495179",
+      "url": "https://x.com/RisingSayak/status/2030950429505495179",
+      "author": {
+        "handle": "sayakpaul",
+        "displayName": "Sayak Paul",
+        "avatar": "https://avatars.githubusercontent.com/sayakpaul"
+      },
+      "content": "Details:",
+      "createdAt": "2026-05-07T04:19:39.579Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Sayak Paul shared a post with details, but the content is truncated.",
+      "worthReading": "May contain insights from his work at Hugging Face.",
+      "tags": [
+        "llm",
+        "deployment"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2045131533246423299",
+      "url": "https://x.com/RisingSayak/status/2045131533246423299",
+      "author": {
+        "handle": "sayakpaul",
+        "displayName": "Sayak Paul",
+        "avatar": "https://avatars.githubusercontent.com/sayakpaul"
+      },
+      "content": "@PyTorch Of course, I forgot. Check out the docs for complete examples:",
+      "createdAt": "2026-05-07T04:19:39.579Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Sayak Paul acknowledges forgetting something and directs to PyTorch documentation.",
+      "worthReading": "Shows his engagement with PyTorch and documentation.",
+      "tags": [
+        "infra",
+        "deployment"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "1927497698015334820",
+      "url": "https://x.com/_philschmid/status/1927497698015334820",
+      "author": {
+        "handle": "philschmid",
+        "displayName": "Philipp Schmid",
+        "avatar": "https://avatars.githubusercontent.com/philschmid"
+      },
+      "content": "Guide: ReAct agent from scratch with Gemini 2.5 and LangGraph | Gemini API | Google AI for Developers. ai.google.dev.",
+      "createdAt": "2025-05-27",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Philipp shares a guide on building a ReAct agent from scratch using Gemini 2.5 and LangGraph.",
+      "worthReading": "Provides a practical tutorial for implementing ReAct agents with the latest Gemini model.",
+      "tags": [
+        "agent",
+        "llm"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2049511241450709072",
+      "url": "https://x.com/_philschmid/status/2049511241450709072",
+      "author": {
+        "handle": "philschmid",
+        "displayName": "Philipp Schmid",
+        "avatar": "https://avatars.githubusercontent.com/philschmid"
+      },
+      "content": "How to use Deep Research with the Gemini API. www.philschmid.de.",
+      "createdAt": "2025-04-29",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Philipp explains how to use the Deep Research feature with the Gemini API.",
+      "worthReading": "Offers insights into leveraging Gemini's Deep Research capabilities via API.",
+      "tags": [
+        "llm",
+        "tooling"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2044880350237626844",
+      "url": "https://x.com/emollick/status/2044880350237626844",
+      "author": {
+        "handle": "emollick",
+        "displayName": "Ethan Mollick",
+        "avatar": null
+      },
+      "content": "On the plus side with Opus 4.7, if it does decide to think it produces BY FAR the best",
+      "createdAt": "2026-05-07T04:19:51.390Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Opus 4.7 produces the best results when it decides to think.",
+      "worthReading": "Highlights a key improvement in AI reasoning capabilities.",
+      "tags": [
+        "llm"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2045318277958709540",
+      "url": "https://x.com/emollick/status/2045318277958709540",
+      "author": {
+        "handle": "emollick",
+        "displayName": "Ethan Mollick",
+        "avatar": null
+      },
+      "content": "One thing thing about AI, for better and worse, is that \"everything around me is somebody's life",
+      "createdAt": "2026-05-07T04:19:51.390Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Reflects on the profound impact of AI on people's lives.",
+      "worthReading": "Offers a human-centric perspective on AI's societal implications.",
+      "tags": [
+        "safety"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "1964447221853966775",
+      "url": "https://x.com/emollick/status/1964447221853966775",
+      "author": {
+        "handle": "emollick",
+        "displayName": "Ethan Mollick",
+        "avatar": null
+      },
+      "content": "We are starting to see some nuanced discussions of what it means to work with advanced AI In this",
+      "createdAt": "2026-05-07T04:19:51.390Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Notes the emergence of nuanced discussions about working with advanced AI.",
+      "worthReading": "Signals a shift in the AI discourse toward practical collaboration.",
+      "tags": [
+        "agent"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2029623875303018817",
+      "url": "https://x.com/emollick/status/2029623875303018817",
+      "author": {
+        "handle": "emollick",
+        "displayName": "Ethan Mollick",
+        "avatar": null
+      },
+      "content": "Had early access to GPT-5.4 and Pro. They are very good. One fun illustration of progress,",
+      "createdAt": "2026-05-07T04:19:51.390Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Early access to GPT-5.4 and Pro shows significant progress.",
+      "worthReading": "Provides a firsthand look at cutting-edge AI model improvements.",
+      "tags": [
+        "llm"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "1491834518705033218",
+      "url": "https://x.com/emilymbender/status/1491834518705033218",
+      "author": {
+        "handle": "emilymbender",
+        "displayName": "Emily M. Bender",
+        "avatar": null
+      },
+      "content": "Image is of the 1990s Microsoft writing assistant character Clippy with its eyebrows raised positioned in.",
+      "createdAt": "2022-02-10T00:00:00Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Emily Bender posted an image of Clippy, likely to critique AI hype or anthropomorphism.",
+      "worthReading": "Shows Bender's use of humor to comment on AI's limitations.",
+      "tags": [
+        "safety"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "1852336263732551982",
+      "url": "https://x.com/emilymbender/status/1852336263732551982",
+      "author": {
+        "handle": "emilymbender",
+        "displayName": "Emily M. Bender",
+        "avatar": null
+      },
+      "content": "EMILY M. BENDER: Yeah. And so passive, like, oops, the moon, the moon went further away. It's like no, actually, you made some decisions.",
+      "createdAt": "2024-11-01T00:00:00Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Bender criticizes passive language in AI discourse, emphasizing human agency in AI outcomes.",
+      "worthReading": "Illustrates Bender's focus on accountability in AI development.",
+      "tags": [
+        "safety"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "1905112640805806555",
+      "url": "https://x.com/nsaphra/status/1905112640805806555",
+      "author": {
+        "handle": "NaomiSaphra",
+        "displayName": "Naomi Saphra",
+        "avatar": null
+      },
+      "content": "Life update: I'm starting as faculty at Boston University in 2026! BU ...",
+      "createdAt": "2026-01-01T00:00:00Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Naomi Saphra announces starting as faculty at Boston University in 2026.",
+      "worthReading": "Shows career move and continued involvement in academia.",
+      "tags": [
+        "llm",
+        "evaluation"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2008205702133936412",
+      "url": "https://x.com/nsaphra/status/2008205702133936412",
+      "author": {
+        "handle": "NaomiSaphra",
+        "displayName": "Naomi Saphra",
+        "avatar": null
+      },
+      "content": "what a perfect space for scientific discourse! I'll start off with a few images of myself",
+      "createdAt": "2026-05-07T04:20:03.053Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Sarcastic comment about scientific discourse on social media.",
+      "worthReading": "Reflects her critical perspective on online discussions.",
+      "tags": [
+        "safety"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "1590514011837464576",
+      "url": "https://x.com/nsaphra/status/1590514011837464576",
+      "author": {
+        "handle": "NaomiSaphra",
+        "displayName": "Naomi Saphra",
+        "avatar": null
+      },
+      "content": "I work on understanding and improving training for NLP models, with a focus on studying how structures and mechanistic behaviors emerge over the",
+      "createdAt": "2026-05-07T04:20:03.053Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Describes her research focus on NLP model training and emergent behaviors.",
+      "worthReading": "Summarizes her research interests in interpretability.",
+      "tags": [
+        "llm",
+        "fine-tuning"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2014360939563520146",
+      "url": "https://x.com/beenwrekt/status/2014360939563520146",
+      "author": {
+        "handle": "beenwrekt",
+        "displayName": "Ben Recht",
+        "avatar": null
+      },
+      "content": "For the first time in almost a decade, I'm teaching a class on learning and control.",
+      "createdAt": "2026-05-07T04:20:11.369Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Ben Recht is teaching a class on learning and control after a long hiatus.",
+      "worthReading": "Shows his return to teaching a course that bridges machine learning and control theory.",
+      "tags": [
+        "evaluation"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2046959576646561917",
+      "url": "https://x.com/beenwrekt/status/2046959576646561917",
+      "author": {
+        "handle": "beenwrekt",
+        "displayName": "Ben Recht",
+        "avatar": null
+      },
+      "content": "Building a theory of the architecture of organizing machines and people.",
+      "createdAt": "2026-05-07T04:20:11.369Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "He is working on a theory for organizing both machines and people.",
+      "worthReading": "Reflects his interest in the intersection of optimization, organization, and human-machine systems.",
+      "tags": [
+        "infra"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "1982829248495972704",
+      "url": "https://x.com/beenwrekt/status/1982829248495972704",
+      "author": {
+        "handle": "beenwrekt",
+        "displayName": "Ben Recht",
+        "avatar": null
+      },
+      "content": "How two mathematicians resolved a 50-year-old open problem by finding the solution in an 80-year-old paper",
+      "createdAt": "2026-05-07T04:20:11.369Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "He shares a story about mathematicians solving a long-standing problem using an old paper.",
+      "worthReading": "Highlights the value of historical knowledge in mathematical research.",
+      "tags": [
+        "safety"
+      ]
+    }
+  ]
+}

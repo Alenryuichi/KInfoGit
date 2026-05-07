@@ -2,26 +2,6 @@
   "id": "minimaxir",
   "stars": [
     {
-      "repo": "mattmireles/gemma-tuner-multimodal",
-      "url": "https://github.com/mattmireles/gemma-tuner-multimodal",
-      "description": "Fine-tune Gemma 4 and 3n with audio, images and text on Apple Silicon, using PyTorch and Metal Performance Shaders.",
-      "language": "Python",
-      "stargazersCount": 1239,
-      "starredBy": "minimaxir",
-      "highlights": "This project enables multimodal fine-tuning of Gemma models (4 and 3n) with audio, image, and text data on Apple Silicon hardware. It leverages PyTorch and Metal Performance Shaders for optimized performance on Apple's M-series chips.",
-      "worthReading": "It's worth exploring for developers interested in running advanced multimodal AI models efficiently on consumer Apple hardware without relying on cloud services.",
-      "topics": [],
-      "tags": [
-        "fine-tuning",
-        "multi-modal",
-        "deployment"
-      ],
-      "score": 7,
-      "scoreReason": "Strong relevance for multimodal fine-tuning on Apple Silicon (frontier AI), good concreteness with specific technical implementation, moderate freshness with decent star count but not yet established",
-      "type": "github",
-      "starredAt": "2026-04-07"
-    },
-    {
       "repo": "prawnydagrate/rschess",
       "url": "https://github.com/prawnydagrate/rschess",
       "description": "A Rust chess library with the aim to be as feature-rich as possible",
@@ -1013,10 +993,29 @@
       "highlights": "A reply or mention to another user.",
       "worthReading": "Indicates engagement with the community.",
       "tags": []
+    },
+    {
+      "type": "x",
+      "id": "951117788835278848",
+      "url": "https://x.com/minimaxir/status/951117788835278848",
+      "author": {
+        "handle": "minimaxir",
+        "displayName": "Max Woolf",
+        "avatar": "https://avatars.githubusercontent.com/minimaxir"
+      },
+      "content": "So here's my postmortem after hunting for a data science job.",
+      "createdAt": "2018-01-10T00:00:00Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Max Woolf shares a postmortem of his data science job search.",
+      "worthReading": "Provides insights into the data science job market and job hunting strategies.",
+      "tags": [
+        "deployment"
+      ]
     }
   ],
   "dailyCounts": [
-    1,
     0,
     1,
     0,
@@ -1045,7 +1044,8 @@
     3,
     2,
     1,
-    3
+    3,
+    1
   ],
-  "interestSummary": "Max Woolf is currently focused on AI tooling and content creation, with a particular interest in fine-tuning multimodal models on Apple Silicon and exploring data visualization and Rust development."
+  "interestSummary": "Max Woolf's recent activity shows an interest in Rust programming, data visualization, and AI model evaluation, with a recurring critical focus on the lack of transparency and safety measures in new AI models."
 }

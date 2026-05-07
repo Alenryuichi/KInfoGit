@@ -3,26 +3,6 @@
   "stars": [],
   "posts": [
     {
-      "uri": "at://did:plc:3igkkqe5nkm66olc4y2syzpy/app.bsky.feed.post/3miwp5cdlq22i",
-      "url": "https://bsky.app/profile/markriedl.bsky.social/post/3miwp5cdlq22i",
-      "author": {
-        "handle": "markriedl.bsky.social",
-        "displayName": "Mark Riedl",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:3igkkqe5nkm66olc4y2syzpy/bafkreickb4bivyblxfzso5pcituqx6rmtmoyemq7qu4wobludjynuhq3ue"
-      },
-      "content": "*fondly remembers when GPT-2 was too dangerous to release*",
-      "createdAt": "2026-04-07T21:14:57.848Z",
-      "likeCount": 91,
-      "replyCount": 7,
-      "repostCount": 10,
-      "highlights": "",
-      "worthReading": "",
-      "tags": [
-        "safety"
-      ],
-      "type": "bluesky"
-    },
-    {
       "uri": "at://did:plc:3igkkqe5nkm66olc4y2syzpy/app.bsky.feed.post/3mix43afogk2j",
       "url": "https://bsky.app/profile/markriedl.bsky.social/post/3mix43afogk2j",
       "author": {
@@ -925,7 +905,9 @@
       "repostCount": 1,
       "highlights": "",
       "worthReading": "",
-      "tags": [],
+      "tags": [
+        "safety"
+      ],
       "type": "bluesky"
     },
     {
@@ -1107,7 +1089,6 @@
   "videos": [],
   "blogs": [],
   "dailyCounts": [
-    1,
     2,
     1,
     2,
@@ -1136,7 +1117,8 @@
     0,
     5,
     0,
+    0,
     0
   ],
-  "interestSummary": "Mark Riedl is currently focused on the practical limitations and failure modes of large language models (LLMs), including story generation issues and vulnerabilities in AI-generated code, while also exploring their beneficial applications such as supporting neurodivergent job seekers and studying the \"AI-as-Amplifier Paradox\" in skill development."
+  "interestSummary": "Mark Riedl is currently focused on the limitations and vulnerabilities of LLMs in creative and practical applications, including story generation failures, vibe-coded software risks, and AI tools for neurodivergent job seekers, while also exploring the broader societal impacts of AI such as skill amplification versus erosion."
 }
