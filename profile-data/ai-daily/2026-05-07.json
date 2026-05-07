@@ -1,0 +1,290 @@
+{
+  "date": "2026-05-07",
+  "itemCount": 12,
+  "sections": [
+    {
+      "id": "headlines",
+      "title": "Headlines & Launches",
+      "items": [
+        {
+          "title": "Simon Willison Live Blogs Anthropic's Code w/ Claude 2026",
+          "summary": "Simon Willison is live blogging the morning keynote sessions at Anthropic's Code w/ Claude 2026 event, providing real-time updates on announcements about Claude's coding capabilities. This live blog offers timely insights into Anthropic's latest advancements in AI-assisted coding, which could significantly impact software development workflows and the broader generative AI ecosystem. The event focuses on Claude's coding capabilities, and the live blog is hosted on Simon Willison's website, covering the morning keynote sessions with tags including 'claude-code' and 'live-blog'.",
+          "url": "https://simonwillison.net/2026/May/6/code-w-claude-2026/#atom-everything",
+          "score": 8,
+          "sources": [
+            {
+              "name": "rss",
+              "meta": "Simon Willison"
+            }
+          ],
+          "tags": [
+            "ai",
+            "claude",
+            "anthropic",
+            "live-blog",
+            "generative-ai"
+          ],
+          "focusTopics": [],
+          "background": "Claude is a series of large language models developed by Anthropic, first released in 2023, and is used for software development via Claude Code. The models are trained using 'constitutional AI' to improve ethical compliance. Anthropic's Code w/ Claude event is a conference dedicated to showcasing Claude's capabilities in coding and software development."
+        },
+        {
+          "title": "vLLM V0 to V1: Prioritizing Correctness in RL",
+          "summary": "The blog post details the transition of vLLM from version 0 to version 1, emphasizing a shift towards ensuring correctness before applying corrections in reinforcement learning workflows. This focus on correctness is significant because it addresses fundamental issues in RL training loops, potentially improving the reliability and performance of large language model serving systems. The transition involves architectural changes to vLLM's inference engine to better support RL training, including improvements in memory management and batching strategies.",
+          "url": "https://huggingface.co/blog/ServiceNow-AI/correctness-before-corrections",
+          "score": 8,
+          "sources": [
+            {
+              "name": "rss",
+              "meta": "Hugging Face Blog"
+            }
+          ],
+          "tags": [
+            "vLLM",
+            "reinforcement learning",
+            "AI systems",
+            "machine learning",
+            "Hugging Face"
+          ],
+          "focusTopics": [
+            "memory"
+          ],
+          "background": "vLLM is an open-source framework for efficient inference and serving of large language models, originally developed at UC Berkeley. It uses PagedAttention for memory management and supports features like continuous batching and quantization. The V0 to V1 transition represents a major evolution in its design."
+        },
+        {
+          "title": "Tilde.run: Transactional Versioned Filesystem for AI Agents",
+          "summary": "Tilde.run is a new agent sandbox that provides a transactional, versioned filesystem, allowing AI agents to perform operations safely and reversibly. As AI agents become more autonomous, the need for safe execution environments with rollback capabilities is critical; Tilde.run addresses this by enabling atomic commits and version control for agent actions. The sandbox uses a transactional filesystem that supports atomic commits, ensuring that changes are applied consistently or rolled back entirely. It also integrates with version control systems like Git and S3 for persistent storage.",
+          "url": "https://tilde.run/",
+          "score": 7,
+          "sources": [
+            {
+              "name": "hackernews",
+              "meta": "ozkatz"
+            }
+          ],
+          "tags": [
+            "agent sandbox",
+            "versioned filesystem",
+            "AI agents",
+            "developer tools",
+            "transactional"
+          ],
+          "focusTopics": [
+            "memory"
+          ],
+          "background": "Agent sandboxes are isolated environments where AI agents can execute code or modify files without affecting the host system. A transactional, versioned filesystem adds the ability to commit or revert changes atomically, similar to database transactions, which is crucial for debugging and safety in autonomous agent workflows.",
+          "discussion": "Commenters expressed interest but also raised concerns about pricing, implementation details of atomic commits, and how conflicts are handled when multiple agents modify the same files. Some questioned the novelty compared to existing versioned systems like Git."
+        },
+        {
+          "title": "Ted Turner, Media Mogul and Bison Conservationist, Dies at 87",
+          "summary": "Ted Turner, the media mogul who founded CNN and revolutionized 24-hour news, died on May 6, 2026, at age 87. He was also a prominent bison conservationist, owning the largest private bison herd in the United States. Turner's death marks the end of an era in media, as he pioneered the cable news model and reshaped how news is consumed globally. His conservation efforts also highlight a lesser-known but impactful legacy in wildlife preservation. Turner founded CNN in 1980, the first 24-hour cable news network, and later merged his company with Time Warner. He also owned approximately 45,000 bison and operated the 'Ted's Montana Grill' restaurant chain, and was the fourth-largest private landowner in the U.S.",
+          "url": "https://www.cnn.com/2026/05/06/us/ted-turner-death",
+          "score": 7,
+          "sources": [
+            {
+              "name": "hackernews",
+              "meta": "pseudolus"
+            }
+          ],
+          "tags": [
+            "obituary",
+            "media",
+            "business",
+            "conservation"
+          ],
+          "focusTopics": [],
+          "background": "Ted Turner was a pioneering media entrepreneur who built a vast empire from a small Atlanta UHF station. He famously exploited a loophole in broadcast contracts to launch the superstation WTBS, and his creation of CNN changed television news forever. Beyond media, he was a dedicated conservationist, using his land for bison restoration and environmental initiatives.",
+          "discussion": "Community comments highlight Turner's business acumen, such as exploiting broadcast contract loopholes, and his conservation legacy with bison. Some users express curiosity about the fate of his vast land holdings after his death."
+        },
+        {
+          "title": "Hallucinopedia: LLM-Generated Steampunk Wikipedia",
+          "summary": "Hallucinopedia is a website that generates hallucinated Wikipedia-style articles on arbitrary topics using a large language model, with a steampunk aesthetic. Users can create new pages by typing any URL slug, and the content is generated on the fly. This project showcases creative use of LLMs for entertainment and artistic expression, demonstrating how AI can be used to generate coherent, themed content on demand. It also engages the community in exploring the boundaries of AI-generated text and hallucination. The system generates articles independently without using context from linked pages, as noted by a commenter. The model appears to have a tendency to include fungi references, even in unrelated topics like Alan Turing.",
+          "url": "http://halupedia.com/",
+          "score": 6,
+          "sources": [
+            {
+              "name": "hackernews",
+              "meta": "bstrama"
+            }
+          ],
+          "tags": [
+            "LLM",
+            "creative coding",
+            "web app",
+            "AI-generated content"
+          ],
+          "focusTopics": [],
+          "background": "Hallucinopedia is a web app that uses a large language model (LLM) to produce fake Wikipedia articles. The steampunk aesthetic gives the site a distinctive visual style. The term 'hallucination' in AI refers to when a model generates plausible but incorrect or nonsensical information.",
+          "discussion": "The community is enthusiastic, with many users enjoying the creative output and suggesting features like using linked page context to guide generation. Some note the model's quirky obsession with fungi, adding humor to the discussion."
+        }
+      ]
+    },
+    {
+      "id": "research",
+      "title": "Research & Innovation",
+      "items": [
+        {
+          "title": "Anthropic Boosts Claude Limits, Inks Compute Deal with SpaceX",
+          "summary": "Anthropic announced higher usage limits for Claude and a compute partnership with SpaceX, including 300 megawatts of new capacity (over 220,000 NVIDIA GPUs) and plans for orbital AI compute. This deal significantly expands Anthropic's compute resources, enabling faster scaling of Claude and potentially pioneering orbital AI data centers, which could reduce energy constraints for AI training. The five-hour rate limits for Claude are doubled, but weekly limits remain unchanged, meaning users can reach weekly caps in three days instead of five. The compute deal involves xAI's Colossus 1 datacenter, which has faced environmental criticism.",
+          "url": "https://www.anthropic.com/news/higher-limits-spacex",
+          "score": 8,
+          "sources": [
+            {
+              "name": "hackernews",
+              "meta": "meetpateltech"
+            }
+          ],
+          "tags": [
+            "AI",
+            "Anthropic",
+            "SpaceX",
+            "compute infrastructure",
+            "environmental impact"
+          ],
+          "focusTopics": [],
+          "background": "AI models like Claude require massive compute power for training and inference, often limited by energy availability. Orbital AI compute proposes placing data centers in space to leverage solar power and reduce terrestrial energy strain.",
+          "discussion": "Commenters noted the irony of Anthropic using the datacenter built for Grok, and expressed skepticism about orbital AI compute being a marketing move. Environmental concerns were raised about the Colossus datacenter's impact on local communities."
+        }
+      ]
+    },
+    {
+      "id": "engineering",
+      "title": "Engineering & Resources",
+      "items": [
+        {
+          "title": "Valve Open-Sources Steam Controller CAD Files",
+          "summary": "Valve has released the CAD files for the Steam Controller and Steam Controller Puck under a Creative Commons license, enabling anyone to download, modify, and 3D-print custom accessories or replacement parts. This move empowers DIY modders and accessibility advocates to create custom grips, mounts, and adaptive solutions, reducing costs for disabled gamers and fostering a more inclusive gaming ecosystem. The release includes STP and STL models of the external shell, plus engineering drawings highlighting critical keep-out zones for signal integrity. Valve has previously open-sourced CAD files for the Steam Deck and Valve Index.",
+          "url": "https://www.digitalfoundry.net/news/2026/05/valve-releases-steam-controller-cad-files-under-creative-commons-license",
+          "score": 8,
+          "sources": [
+            {
+              "name": "hackernews",
+              "meta": "haunter"
+            }
+          ],
+          "tags": [
+            "open source",
+            "gaming",
+            "accessibility",
+            "3D printing",
+            "hardware"
+          ],
+          "focusTopics": [],
+          "background": "CAD (Computer-Aided Design) files are digital blueprints used to create physical objects via 3D printing or machining. The Creative Commons license allows free use and adaptation, though Creative Commons generally does not recommend its licenses for hardware. Valve's release follows a trend of open-sourcing hardware designs to encourage community innovation.",
+          "discussion": "The community is largely positive, with users praising the potential for accessibility modifications and DIY projects. However, some express concern about the Steam Controller's reliance on Steam software, viewing it as a step toward a walled garden."
+        },
+        {
+          "title": "Vibe Coding and Agentic Engineering Converge",
+          "summary": "Simon Willison, in a podcast discussion, realized that vibe coding and agentic engineering are blurring in his own work, as AI coding tools like Claude Code become reliable enough that he no longer reviews every line of code for production systems. This convergence challenges the previous clear distinction between irresponsible vibe coding and responsible agentic engineering, raising critical questions about trust, code quality, and accountability in AI-assisted software development. Willison notes that for routine tasks like building a JSON API endpoint, the AI agent produces correct code consistently, but he feels guilt about not reviewing it, comparing it to trusting code from other teams in large organizations.",
+          "url": "https://simonwillison.net/2026/May/6/vibe-coding-and-agentic-engineering/#atom-everything",
+          "score": 8,
+          "sources": [
+            {
+              "name": "rss",
+              "meta": "Simon Willison"
+            }
+          ],
+          "tags": [
+            "AI coding",
+            "vibe coding",
+            "agentic engineering",
+            "software engineering",
+            "LLM"
+          ],
+          "focusTopics": [],
+          "background": "Vibe coding, coined by Andrej Karpathy in 2025, refers to AI-assisted programming where developers accept generated code without thorough review. Agentic engineering, also popularized by Karpathy, emphasizes disciplined use of AI agents with human oversight. The two were initially seen as distinct approaches, but as AI tools improve, the line is blurring.",
+          "discussion": "Community comments express skepticism about AI reliability, with jwpapi noting that even simple endpoints require many decisions. zarzavat argues that AI errors are becoming more subtle, while devin criticizes using lines of code as a metric. etothet suggests that undisciplined engineering practices existed before AI, which merely accelerates them."
+        },
+        {
+          "title": "Google Cloud Fraud Defense: reCAPTCHA's Next Evolution",
+          "summary": "Google announced Google Cloud Fraud Defense, the next evolution of reCAPTCHA, which introduces mobile device verification and QR code-based challenges to combat fraud in the agentic web era. This marks a significant shift from traditional CAPTCHA to a device-centric fraud prevention system, potentially affecting how users authenticate across the web and raising privacy concerns due to mandatory mobile device requirements. The system requires a modern Android device with Google Play Services or a modern iPhone/iPad for verification, and uses QR codes for certain challenges; it integrates with Cloud Armor and Apigee for multi-layered protection.",
+          "url": "https://cloud.google.com/blog/products/identity-security/introducing-google-cloud-fraud-defense-the-next-evolution-of-recaptcha/",
+          "score": 8,
+          "sources": [
+            {
+              "name": "hackernews",
+              "meta": "unforgivenpasta"
+            }
+          ],
+          "tags": [
+            "Google Cloud",
+            "reCAPTCHA",
+            "fraud defense",
+            "privacy",
+            "security"
+          ],
+          "focusTopics": [],
+          "background": "reCAPTCHA is Google's CAPTCHA system that distinguishes humans from bots. It evolved from text-based challenges to invisible risk analysis (v3). Cloud Fraud Defense extends this by requiring mobile device proof and QR code scans for high-risk actions, aiming to prevent automated fraud like credential stuffing and account takeover.",
+          "discussion": "Community comments express concerns about mandatory mobile device requirements potentially de-anonymizing users, QR code security risks (e.g., zero-day URL exploits), and accessibility issues for users on custom ROMs like LineageOS. Some also note that AI can already solve visual challenges, questioning the long-term effectiveness."
+        },
+        {
+          "title": "From Supabase to Clerk to Better Auth: Migration Story",
+          "summary": "The author of val.town published a blog post detailing their migration from Supabase and Clerk authentication to the open-source alternative Better Auth, sparking community discussion on the trade-offs of outsourcing authentication. This migration reflects a growing trend among developers to move away from VC-funded third-party auth providers toward open-source, self-hosted solutions, reducing dependency risks and improving long-term reliability. The blog post highlights that combining multiple third-party services reduces overall system availability (e.g., 99% each yields 97% combined), and that Better Auth offers a self-hosted, open-source alternative with more control.",
+          "url": "https://blog.val.town/better-auth",
+          "score": 7,
+          "sources": [
+            {
+              "name": "hackernews",
+              "meta": "stevekrouse"
+            }
+          ],
+          "tags": [
+            "authentication",
+            "open-source",
+            "SaaS",
+            "engineering-decisions"
+          ],
+          "focusTopics": [
+            "memory"
+          ],
+          "background": "Authentication is a critical component of most web applications, often outsourced to services like Supabase and Clerk for convenience. However, reliance on VC-funded providers carries risks of pricing changes, shutdowns, or lock-in. Better Auth is an open-source authentication library that allows developers to self-host and maintain full ownership of user data.",
+          "discussion": "Community comments strongly advocate against outsourcing authentication, with users like wg0 warning that VC-funded software will eventually milk users dry. Others question the complexity of self-hosting, while Better Auth's creator Bereket expresses joy that the project solves real problems. The discussion also praises the blog for honest engineering writing."
+        },
+        {
+          "title": "Guide to Setting Up Sun Ray Server on OpenIndiana Hipster 2025.10",
+          "summary": "A detailed guide has been published explaining how to set up a Sun Ray server on OpenIndiana Hipster 2025.10, reviving legacy thin client technology. This guide preserves and revives a historically significant thin client system, allowing enthusiasts and researchers to experience Sun Ray technology, which was ahead of its time in centralized computing. The guide covers installation of the Sun Ray server software (SRSS) on OpenIndiana, configuration of network boot, and connection of Sun Ray clients, with references to DTrace for troubleshooting.",
+          "url": "https://catstret.ch/202605/srss-hipster202510/",
+          "score": 7,
+          "sources": [
+            {
+              "name": "hackernews",
+              "meta": "jandeboevrie"
+            }
+          ],
+          "tags": [
+            "Sun Ray",
+            "OpenIndiana",
+            "thin client",
+            "DTrace",
+            "legacy systems"
+          ],
+          "focusTopics": [],
+          "background": "Sun Ray was a thin client architecture developed by Sun Microsystems in the late 1990s, where clients are stateless and connect to a central server. OpenIndiana is an open-source Illumos-based operating system, a descendant of OpenSolaris. DTrace is a dynamic tracing framework originally created by Sun.",
+          "discussion": "Community comments express nostalgia and appreciation for Sun Ray technology, with bcantrill sharing how Sun Ray servers played a role in DTrace's early development. Others compare it to LTSP and lament the loss of hardware after Oracle's acquisition."
+        },
+        {
+          "title": "Critique of Performative Productivity in the Workplace",
+          "summary": "An article on No One's Happy critiques the trend of performative productivity, where workplace artifacts are elongated and AI is used to appear competent without substance. This critique highlights a growing issue in software engineering and other fields where appearance of work is valued over actual output, potentially leading to inefficiency and misallocation of resources. The article notes that requirements documents, status updates, and other artifacts are being elongated unnecessarily, and AI tools are used to generate verbose content that is not read by recipients.",
+          "url": "https://nooneshappy.com/article/appearing-productive-in-the-workplace/",
+          "score": 6,
+          "sources": [
+            {
+              "name": "hackernews",
+              "meta": "diebillionaires"
+            }
+          ],
+          "tags": [
+            "workplace culture",
+            "productivity",
+            "AI misuse",
+            "software engineering"
+          ],
+          "focusTopics": [
+            "reflection"
+          ],
+          "background": "Performative productivity refers to activities that create the illusion of productivity without delivering real value. In software engineering, this can manifest as over-engineering, excessive documentation, or using AI to generate content that looks impressive but lacks substance.",
+          "discussion": "Community comments resonate with the article, sharing personal experiences of over-engineered systems and AI-generated work that masks incompetence. Some commenters note that software engineering is uniquely susceptible to such performative behavior due to lack of tangible output."
+        }
+      ]
+    }
+  ]
+}
