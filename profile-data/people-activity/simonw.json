@@ -253,27 +253,6 @@
   ],
   "posts": [
     {
-      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mizg7apj6c2z",
-      "url": "https://bsky.app/profile/simonwillison.net/post/3mizg7apj6c2z",
-      "author": {
-        "handle": "simonwillison.net",
-        "displayName": "Simon Willison",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
-      },
-      "content": "Pelicans for Meta's new Muse Spark models - plus I did a bit of a deep dive into the Code Interpreter and fascinating \"container.visual_grounding\" tools in their meta.ai chat UI simonwillison.net/2026/Apr/8/m...",
-      "createdAt": "2026-04-08T23:12:58.789Z",
-      "likeCount": 48,
-      "replyCount": 7,
-      "repostCount": 2,
-      "highlights": "",
-      "worthReading": "",
-      "tags": [
-        "llm",
-        "tooling"
-      ],
-      "type": "bluesky"
-    },
-    {
       "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mjkfkgva5c2d",
       "url": "https://bsky.app/profile/simonwillison.net/post/3mjkfkgva5c2d",
       "author": {
@@ -928,6 +907,27 @@
         "tooling"
       ],
       "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mlbpmp4udc2l",
+      "url": "https://bsky.app/profile/simonwillison.net/post/3mlbpmp4udc2l",
+      "author": {
+        "handle": "simonwillison.net",
+        "displayName": "Simon Willison",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
+      },
+      "content": "Under-reported details of the xAI/Anthropic Colossus data center deal: Anthropic get Colossus 1 but xAI keep using the larger Colossus 2, Colossus 1 has a REALLY bad environmental record, and xAI just shut down a bunch of older models on 2 weeks' notice simonwillison.net/2026/May/7/x...",
+      "createdAt": "2026-05-07T17:13:14.954Z",
+      "likeCount": 123,
+      "replyCount": 5,
+      "repostCount": 24,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [
+        "infra",
+        "deployment"
+      ],
+      "type": "bluesky"
     }
   ],
   "videos": [],
@@ -1070,6 +1070,16 @@
       "summary": "<p>I recently talked with Joseph Ruscio about AI coding tools for Heavybit's High Leverage podcast: <a href=\"https://www.heavybit.com/library/podcasts/high-leverage/ep-9-the-ai-coding-paradigm-shift-with-simon-willison\">Ep. #9, The AI Coding Paradigm Shift with Simon Willison</a>. Here are some of...",
       "highlights": "The post discusses the convergence of 'vibe coding' (using AI to generate code without fully understanding it) and 'agentic engineering' (autonomous AI agents that build software), warning that as these approaches advance, developers risk losing control over code quality and security. It emphasizes the need for human oversight and testing, especially as AI-generated code becomes more complex and harder to audit.",
       "worthReading": "It offers a nuanced perspective on the risks of over-relying on AI coding tools, making it valuable for developers and tech leaders navigating the shift toward AI-assisted software development.",
+      "type": "blog"
+    },
+    {
+      "title": "Notes on the xAI/Anthropic data center deal",
+      "url": "https://simonwillison.net/2026/May/7/xai-anthropic/#atom-entries",
+      "author": "Simon Willison",
+      "publishedAt": "2026-05-07T17:09:28+00:00",
+      "summary": "<p>There weren't a lot of big new announcements from Anthropic at yesterday's Code w/ Claude event, but the biggest by far was the deal they've struck with SpaceX/xAI to use \"all of the capacity of their Colossus data center\".</p> <p>As I mentioned in my <a...",
+      "highlights": "Anthropic has struck a deal with xAI to use the full capacity of the Colossus data center, signaling a major infrastructure collaboration. This move highlights the escalating demand for compute resources in AI development and the strategic partnerships forming to secure them.",
+      "worthReading": "The post offers a clear analysis of the implications of this deal for the AI industry, particularly around resource consolidation and competitive dynamics.",
       "type": "blog"
     }
   ],
@@ -2191,10 +2201,50 @@
         "llm",
         "deployment"
       ]
+    },
+    {
+      "type": "x",
+      "id": "952257232380379136",
+      "url": "https://x.com/simonw/status/952257232380379136",
+      "author": {
+        "handle": "simonw",
+        "displayName": "Simon Willison",
+        "avatar": "https://avatars.githubusercontent.com/simonw"
+      },
+      "content": "This may be the best guidance I've seen anywhere on writing a really good commit history.",
+      "createdAt": "2018-01-13T00:00:00.000Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Simon praises a resource on writing good commit history.",
+      "worthReading": "Highlights best practices for commit messages.",
+      "tags": [
+        "tooling"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "1970147806225854531",
+      "url": "https://x.com/simonw/status/1970147806225854531",
+      "author": {
+        "handle": "simonw",
+        "displayName": "Simon Willison",
+        "avatar": "https://avatars.githubusercontent.com/simonw"
+      },
+      "content": "It's interesting how \"better at code\" has become the defining goal of almost every AI lab over the",
+      "createdAt": "2025-10-20T00:00:00.000Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Simon observes that AI labs are focused on improving code generation.",
+      "worthReading": "Reflects a key trend in AI development.",
+      "tags": [
+        "llm",
+        "agent"
+      ]
     }
   ],
   "dailyCounts": [
-    1,
     1,
     0,
     0,
@@ -2223,7 +2273,8 @@
     6,
     5,
     3,
-    1
+    2,
+    2
   ],
-  "interestSummary": "Simon Willison is deeply focused on evaluating and comparing the latest AI models (including Claude Opus 4.7, Gemini Flash TTS, GPT-5.5, and Qwen3.6) through hands-on experiments, often using whimsical benchmarks like generating images of pelicans riding bicycles, while also exploring tools for document parsing, code agents, and the evolving landscape of AI pricing and capabilities."
+  "interestSummary": "Simon Willison is deeply focused on evaluating and comparing the latest AI models (Claude Opus 4.7, Qwen, GPT-5.5) for coding and image generation, often using whimsical benchmarks like \"pelicans riding bicycles.\" He is also actively building tools and workflows that integrate AI coding agents, document parsing (LiteParse), and Google Sheets with Datasette."
 }

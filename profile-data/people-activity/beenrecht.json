@@ -220,6 +220,27 @@
       "worthReading": "",
       "tags": [],
       "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:oogxmzmgauh5ug2tfe5vc7wm/app.bsky.feed.post/3mlbhnjmykk2u",
+      "url": "https://bsky.app/profile/beenwrekt.bsky.social/post/3mlbhnjmykk2u",
+      "author": {
+        "handle": "beenwrekt.bsky.social",
+        "displayName": "Ben Recht",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:oogxmzmgauh5ug2tfe5vc7wm/bafkreigi5u3fn2porezvfmnxunm7zynzebk43tsrzvzeplciswiazdyqqe"
+      },
+      "content": "Are large language models mathematically rational? I swear I’m not dodging the question in this post, but it depends on your perspective.",
+      "createdAt": "2026-05-07T14:50:32.810Z",
+      "likeCount": 13,
+      "replyCount": 2,
+      "repostCount": 1,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [
+        "llm",
+        "evaluation"
+      ],
+      "type": "bluesky"
     }
   ],
   "videos": [],
@@ -1560,11 +1581,70 @@
       "tags": [
         "safety"
       ]
+    },
+    {
+      "type": "x",
+      "id": "2014360939563520146",
+      "url": "https://x.com/beenwrekt/status/2014360939563520146",
+      "author": {
+        "handle": "beenwrekt",
+        "displayName": "Ben Recht",
+        "avatar": null
+      },
+      "content": "For the first time in almost a decade, I'm teaching a class on learning and control.",
+      "createdAt": "2026-05-08T04:09:08.690Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Ben Recht is teaching a class on learning and control after a long hiatus.",
+      "worthReading": "Shows his renewed focus on the intersection of machine learning and control theory.",
+      "tags": [
+        "evaluation"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "1954913573605712297",
+      "url": "https://x.com/beenwrekt/status/1954913573605712297",
+      "author": {
+        "handle": "beenwrekt",
+        "displayName": "Ben Recht",
+        "avatar": null
+      },
+      "content": "Revisiting Sutton's Bitter Lesson in the wake of GPT-5.",
+      "createdAt": "2026-05-08T04:09:08.690Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Recht reflects on Sutton's Bitter Lesson in the context of GPT-5.",
+      "worthReading": "Connects classic AI philosophy to modern LLM developments.",
+      "tags": [
+        "llm"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "1943316482408222961",
+      "url": "https://x.com/beenwrekt/status/1943316482408222961",
+      "author": {
+        "handle": "beenwrekt",
+        "displayName": "Ben Recht",
+        "avatar": null
+      },
+      "content": "Fully open machine learning requires not only GPU access but a community commitment to openness.",
+      "createdAt": "2026-05-08T04:09:08.690Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Recht argues that open ML needs both hardware access and community dedication.",
+      "worthReading": "Highlights the broader requirements for truly open machine learning.",
+      "tags": [
+        "infra"
+      ]
     }
   ],
   "dailyCounts": [
     0,
-    0,
     1,
     0,
     0,
@@ -1592,7 +1672,8 @@
     5,
     3,
     3,
+    4,
     3
   ],
-  "interestSummary": "Ben Recht is currently focused on teaching and writing about the intersection of learning and control theory, with a particular emphasis on simulation, uncertainty quantification, and engineering architecture, while also promoting his book \"The Irrational Decision.\""
+  "interestSummary": "Ben Recht is currently focused on teaching a new class on learning and control, and is actively writing about the theory of engineering architecture, simulation in feedback systems, and the intersection of machine learning with rationality and replication crises."
 }

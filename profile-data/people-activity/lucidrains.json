@@ -99,6 +99,24 @@
       "score": 4,
       "scoreReason": "Freshness is low (890 stars, not rising fast), relevance is low (not AI frontier), concreteness is high (working hardware plans).",
       "type": "github"
+    },
+    {
+      "repo": "antirez/ds4",
+      "url": "https://github.com/antirez/ds4",
+      "description": "DeepSeek 4 Flash local inference engine for Metal",
+      "language": "C",
+      "stargazersCount": 784,
+      "starredBy": "lucidrains",
+      "starredAt": "2026-05-07T15:17:20Z",
+      "highlights": "ds4 is a local inference engine for DeepSeek 4 Flash, optimized for Apple Metal. It provides efficient on-device inference for a cutting-edge LLM, making advanced AI accessible on consumer hardware.",
+      "worthReading": "It demonstrates how to run a state-of-the-art model locally, which is crucial for privacy and offline use cases. The project is by antirez, a respected developer, and is gaining traction quickly.",
+      "topics": [],
+      "tags": [
+        "llm"
+      ],
+      "score": 7,
+      "scoreReason": "Freshness is high (new repo, 784 stars, rising), relevance is high (LLM inference engine), and concreteness is solid (working code for Metal).",
+      "type": "github"
     }
   ],
   "posts": [],
@@ -383,7 +401,6 @@
     }
   ],
   "dailyCounts": [
-    0,
     1,
     0,
     0,
@@ -412,7 +429,8 @@
     0,
     2,
     0,
-    2
+    3,
+    0
   ],
-  "interestSummary": "Phil Wang is currently focused on open-source robotics and hardware, including humanoid robots, exoskeletons, and teleoperation devices, while also engaging in comedy and game criticism on social media."
+  "interestSummary": "Phil Wang's recent interests center on open-source robotics and hardware, including humanoid robots, exoskeletons, and teleoperation devices, alongside a focus on low-cost medical tools and practical software tools like a Nim UI library and a local AI inference engine."
 }

@@ -3,48 +3,6 @@
   "stars": [],
   "posts": [
     {
-      "uri": "at://did:plc:3igkkqe5nkm66olc4y2syzpy/app.bsky.feed.post/3mix43afogk2j",
-      "url": "https://bsky.app/profile/markriedl.bsky.social/post/3mix43afogk2j",
-      "author": {
-        "handle": "markriedl.bsky.social",
-        "displayName": "Mark Riedl",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:3igkkqe5nkm66olc4y2syzpy/bafkreickb4bivyblxfzso5pcituqx6rmtmoyemq7qu4wobludjynuhq3ue"
-      },
-      "content": "So many people assume that story generation has been solved for a while. Mythos is showing one of the typical failure modes of LLM story generation: taking refuge in prolonged banter between characters that never advances the plot or understanding of the characters.",
-      "createdAt": "2026-04-08T01:06:27.354Z",
-      "likeCount": 30,
-      "replyCount": 3,
-      "repostCount": 2,
-      "highlights": "",
-      "worthReading": "",
-      "tags": [
-        "llm",
-        "evaluation"
-      ],
-      "type": "bluesky"
-    },
-    {
-      "uri": "at://did:plc:3igkkqe5nkm66olc4y2syzpy/app.bsky.feed.post/3miwyhbhlis2x",
-      "url": "https://bsky.app/profile/markriedl.bsky.social/post/3miwyhbhlis2x",
-      "author": {
-        "handle": "markriedl.bsky.social",
-        "displayName": "Mark Riedl",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:3igkkqe5nkm66olc4y2syzpy/bafkreickb4bivyblxfzso5pcituqx6rmtmoyemq7qu4wobludjynuhq3ue"
-      },
-      "content": "Local NPR coverage of my work with Dr. Jennifer Kim on building LLM-based tools to support neurodivergent job seekers www.gpb.org/news/2026/03...",
-      "createdAt": "2026-04-08T00:01:36.151Z",
-      "likeCount": 11,
-      "replyCount": 0,
-      "repostCount": 1,
-      "highlights": "",
-      "worthReading": "",
-      "tags": [
-        "llm",
-        "tooling"
-      ],
-      "type": "bluesky"
-    },
-    {
       "uri": "at://did:plc:3igkkqe5nkm66olc4y2syzpy/app.bsky.feed.post/3mj3kvxlcmk2e",
       "url": "https://bsky.app/profile/markriedl.bsky.social/post/3mj3kvxlcmk2e",
       "author": {
@@ -1084,12 +1042,50 @@
         "evaluation"
       ],
       "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:3igkkqe5nkm66olc4y2syzpy/app.bsky.feed.post/3mlceriu7xc2g",
+      "url": "https://bsky.app/profile/markriedl.bsky.social/post/3mlceriu7xc2g",
+      "author": {
+        "handle": "markriedl.bsky.social",
+        "displayName": "Mark Riedl",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:3igkkqe5nkm66olc4y2syzpy/bafkreickb4bivyblxfzso5pcituqx6rmtmoyemq7qu4wobludjynuhq3ue"
+      },
+      "content": "Cool cool",
+      "createdAt": "2026-05-07T23:31:44.728Z",
+      "likeCount": 6,
+      "replyCount": 0,
+      "repostCount": 2,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [],
+      "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:3igkkqe5nkm66olc4y2syzpy/app.bsky.feed.post/3mlcmjcctms23",
+      "url": "https://bsky.app/profile/markriedl.bsky.social/post/3mlcmjcctms23",
+      "author": {
+        "handle": "markriedl.bsky.social",
+        "displayName": "Mark Riedl",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:3igkkqe5nkm66olc4y2syzpy/bafkreickb4bivyblxfzso5pcituqx6rmtmoyemq7qu4wobludjynuhq3ue"
+      },
+      "content": "AAAI used a novel AI paper reviewing system on all 22k papers submitted. In phase 1, authors received 1 clearly marked AI generated review and 1 human review. arxiv.org/abs/2604.13940",
+      "createdAt": "2026-05-08T01:50:19.367Z",
+      "likeCount": 9,
+      "replyCount": 1,
+      "repostCount": 2,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [
+        "evaluation",
+        "llm"
+      ],
+      "type": "bluesky"
     }
   ],
   "videos": [],
   "blogs": [],
   "dailyCounts": [
-    2,
     1,
     2,
     2,
@@ -1118,7 +1114,8 @@
     5,
     0,
     0,
-    0
+    1,
+    1
   ],
-  "interestSummary": "Mark Riedl is currently focused on the limitations and vulnerabilities of LLMs in creative and practical applications, including story generation failures, vibe-coded software risks, and AI tools for neurodivergent job seekers, while also exploring the broader societal impacts of AI such as skill amplification versus erosion."
+  "interestSummary": "Mark Riedl is currently focused on the vulnerabilities and societal impacts of AI, particularly in software development (vibe-coded software), local government chatbots, and the paradox of AI amplifying versus eroding human skills, while also engaging in AI humor and academic outreach for CHI 2026."
 }

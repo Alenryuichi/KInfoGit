@@ -1456,10 +1456,72 @@
         "agent",
         "infra"
       ]
+    },
+    {
+      "type": "x",
+      "id": "2011814697889316930",
+      "url": "https://x.com/hwchase17/status/2011814697889316930",
+      "author": {
+        "handle": "hwchase17",
+        "displayName": "Harrison Chase",
+        "avatar": "https://avatars.githubusercontent.com/hwchase17"
+      },
+      "content": "We launched LangSmith Agent Builder this week as a no-code way to build agents. A key part of Agent builder is it's memory system.",
+      "createdAt": "2026-05-08T04:07:22.118Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "LangSmith Agent Builder is a no-code agent builder with a memory system.",
+      "worthReading": "Shows LangChain's move towards no-code agent creation.",
+      "tags": [
+        "agent",
+        "tooling"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2042978500567609738",
+      "url": "https://x.com/hwchase17/status/2042978500567609738",
+      "author": {
+        "handle": "hwchase17",
+        "displayName": "Harrison Chase",
+        "avatar": "https://avatars.githubusercontent.com/hwchase17"
+      },
+      "content": "Your harness, your memory ... The “best” way to build agentic systems has changed dramatically over the past three years. When ChatGPT came out,",
+      "createdAt": "2026-05-08T04:07:22.118Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "The best way to build agentic systems has evolved significantly since ChatGPT.",
+      "worthReading": "Reflects on the evolution of agent development.",
+      "tags": [
+        "agent",
+        "llm"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2021261552222158955",
+      "url": "https://x.com/hwchase17/status/2021261552222158955",
+      "author": {
+        "handle": "hwchase17",
+        "displayName": "Harrison Chase",
+        "avatar": "https://avatars.githubusercontent.com/hwchase17"
+      },
+      "content": "TL;DR: More and more agents need a workspace: a computer where they can run code, install packages, and access files. Sandboxes provide this",
+      "createdAt": "2026-05-08T04:07:22.118Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Agents increasingly require a sandboxed workspace to execute code and access files.",
+      "worthReading": "Highlights the need for sandbox environments for agents.",
+      "tags": [
+        "agent",
+        "infra"
+      ]
     }
   ],
   "dailyCounts": [
-    0,
     0,
     0,
     0,
@@ -1488,7 +1550,8 @@
     4,
     2,
     2,
-    5
+    5,
+    3
   ],
-  "interestSummary": "Harrison Chase is focused on advancing AI agents by emphasizing the need for sandboxed workspaces for code execution and file access, and promoting LangChain's new no-code Agent Builder with integrated memory systems, while highlighting the shift towards trace-based debugging and monitoring in production agent environments."
+  "interestSummary": "Harrison Chase is focused on advancing AI agent infrastructure, particularly the need for sandboxed workspaces that allow agents to run code and access files, and the importance of memory systems and trace-based iteration for building and debugging production agents."
 }

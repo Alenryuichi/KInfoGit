@@ -1605,6 +1605,70 @@
         "llm",
         "fine-tuning"
       ]
+    },
+    {
+      "type": "x",
+      "id": "2037921699824607591",
+      "url": "https://x.com/karpathy/status/2037921699824607591",
+      "author": {
+        "handle": "karpathy",
+        "displayName": "Andrej Karpathy",
+        "avatar": "https://avatars.githubusercontent.com/karpathy"
+      },
+      "content": "Drafted a blog post. Used an LLM to meticulously improve the argument over 4 hours. Wow, feeling great, it’s so convincing! Fun idea let’s ask it to argue the opposite. LLM demolishes the entire argument and convinces me that the opposite is in fact true. lol",
+      "createdAt": "2026-05-08T04:07:09.760Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "LLMs can be used to improve arguments, but they can also convincingly argue the opposite, revealing their persuasive power and potential pitfalls.",
+      "worthReading": "Illustrates the double-edged nature of LLMs in reasoning and argumentation.",
+      "tags": [
+        "llm",
+        "safety"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "1617979122625712128",
+      "url": "https://x.com/karpathy/status/1617979122625712128",
+      "author": {
+        "handle": "karpathy",
+        "displayName": "Andrej Karpathy",
+        "avatar": "https://avatars.githubusercontent.com/karpathy"
+      },
+      "content": "The hottest new programming language is English",
+      "createdAt": "2026-05-08T04:07:09.760Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Natural language is becoming a dominant interface for programming, especially with LLMs.",
+      "worthReading": "Captures a key trend in AI-assisted coding and the shift towards natural language programming.",
+      "tags": [
+        "llm",
+        "tooling"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2002118205729562949",
+      "url": "https://x.com/karpathy/status/2002118205729562949",
+      "author": {
+        "handle": "karpathy",
+        "displayName": "Andrej Karpathy",
+        "avatar": "https://avatars.githubusercontent.com/karpathy"
+      },
+      "content": "By training LLMs against automatically verifiable rewards across a number of environments (e.g. think math/code puzzles), the LLMs spontaneously develop strategies that look like 'reasoning' to humans - they learn to break down problem solving into intermediate calculations and they learn a number of problem-solving techniques.",
+      "createdAt": "2026-05-08T04:07:09.760Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "LLMs can develop emergent reasoning-like behaviors through reinforcement learning with verifiable rewards.",
+      "worthReading": "Shows how training methods can lead to spontaneous reasoning capabilities in LLMs.",
+      "tags": [
+        "llm",
+        "fine-tuning",
+        "evaluation"
+      ]
     }
   ],
   "dailyCounts": [
@@ -1613,7 +1677,6 @@
     0,
     0,
     0,
-    0,
     3,
     3,
     0,
@@ -1637,7 +1700,8 @@
     2,
     3,
     5,
+    3,
     3
   ],
-  "interestSummary": "Andrej Karpathy is deeply focused on using LLMs to build personal knowledge bases and exploring their capabilities as a new form of intelligence, while also actively tuning and experimenting with models like nanochat and reflecting on AI-assisted coding workflows."
+  "interestSummary": "Andrej Karpathy is currently focused on using LLMs to build personal knowledge bases for research, while also experimenting with autonomous model tuning (e.g., nanochat) and reflecting on the surprising capabilities and limitations of LLM intelligence."
 }

@@ -1,31 +1,6 @@
 {
   "id": "stas00",
-  "stars": [
-    {
-      "repo": "xl0/lovely-tensors",
-      "url": "https://github.com/xl0/lovely-tensors",
-      "description": "Tensors, for human consumption",
-      "language": "Jupyter Notebook",
-      "stargazersCount": 1384,
-      "starredBy": "stas00",
-      "highlights": "Lovely Tensors provides intuitive tensor visualization and analysis tools for PyTorch, making complex tensor operations more accessible and interpretable. It focuses on human-friendly representations of tensor data through clear visualizations and statistical summaries.",
-      "worthReading": "It addresses the common pain point of debugging and understanding tensor operations in deep learning workflows with practical, ready-to-use visualization utilities.",
-      "topics": [
-        "deep-learning",
-        "library",
-        "pytorch",
-        "statistics",
-        "visualization"
-      ],
-      "tags": [
-        "tooling"
-      ],
-      "score": 5,
-      "scoreReason": "Moderate freshness (established repo with visualization focus), high relevance (deep learning tooling), moderate concreteness (visualization library but not frontier AI)",
-      "type": "github",
-      "starredAt": "2026-04-08"
-    }
-  ],
+  "stars": [],
   "posts": [],
   "videos": [],
   "blogs": [],
@@ -1875,10 +1850,92 @@
         "fine-tuning",
         "infra"
       ]
+    },
+    {
+      "type": "x",
+      "id": "1750636949612974498",
+      "url": "https://x.com/StasBekman/status/1750636949612974498",
+      "author": {
+        "handle": "stas00",
+        "displayName": "Stas Bekman",
+        "avatar": "https://avatars.githubusercontent.com/stas00"
+      },
+      "content": "If you were holding off to try @MSFTDeepSpeed ZeRO++ it looks like deepspeed@master should",
+      "createdAt": "2024-01-26T00:00:00Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Stas Bekman suggests that DeepSpeed ZeRO++ is now ready to try on the master branch.",
+      "worthReading": "Relevant for those interested in DeepSpeed ZeRO++ optimization for large model training.",
+      "tags": [
+        "infra",
+        "fine-tuning"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "1821362487151013970",
+      "url": "https://x.com/StasBekman/status/1821362487151013970",
+      "author": {
+        "handle": "stas00",
+        "displayName": "Stas Bekman",
+        "avatar": "https://avatars.githubusercontent.com/stas00"
+      },
+      "content": "Hear, hear, I'm excited to introduce a new performance metric: Maximum Achievable Matmul",
+      "createdAt": "2024-08-08T00:00:00Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Stas Bekman introduces a new performance metric called Maximum Achievable Matmul.",
+      "worthReading": "Provides a novel metric for evaluating matrix multiplication performance in ML systems.",
+      "tags": [
+        "infra",
+        "evaluation"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2014578754782409106",
+      "url": "https://x.com/StasBekman/status/2014578754782409106",
+      "author": {
+        "handle": "stas00",
+        "displayName": "Stas Bekman",
+        "avatar": "https://avatars.githubusercontent.com/stas00"
+      },
+      "content": "Thanks to an awesome contribution from @omarnomad The Machine Learning Engineering Open book now can",
+      "createdAt": "2024-08-24T00:00:00Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Stas Bekman thanks a contributor for enhancing the Machine Learning Engineering Open Book.",
+      "worthReading": "Highlights community contributions to an open ML engineering resource.",
+      "tags": [
+        "tooling",
+        "deployment"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2034315810693599349",
+      "url": "https://x.com/StasBekman/status/2034315810693599349",
+      "author": {
+        "handle": "stas00",
+        "displayName": "Stas Bekman",
+        "avatar": "https://avatars.githubusercontent.com/stas00"
+      },
+      "content": "Classical Jensen math. Unidirectional bandwidth is topped at 450GB/s, and then there comes a protocol overhead of two digit percentage. 1.",
+      "createdAt": "2024-09-01T00:00:00Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Stas Bekman discusses bandwidth limitations and protocol overhead in computing.",
+      "worthReading": "Important for understanding hardware bottlenecks in ML systems.",
+      "tags": [
+        "infra"
+      ]
     }
   ],
   "dailyCounts": [
-    1,
     0,
     0,
     0,
@@ -1888,6 +1945,7 @@
     4,
     0,
     0,
+    4,
     4,
     4,
     4,
@@ -1909,5 +1967,5 @@
     4,
     4
   ],
-  "interestSummary": "Stas Bekman is focused on large-scale LLM/VLM training optimization, particularly exploring cutting-edge tools like DeepSpeed ZeRO++, FlashAttention 4, and PyTorch's new utilities, while also compiling training logbooks and maintaining the Machine Learning Engineering Open Book."
+  "interestSummary": "Stas Bekman is focused on optimizing large model training, specifically around DeepSpeed ZeRO++, FlashAttention 4, and PyTorch tooling, while also curating LLM/VLM training resources and contributing to machine learning engineering literature."
 }

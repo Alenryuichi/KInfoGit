@@ -3,48 +3,6 @@
   "stars": [],
   "posts": [
     {
-      "uri": "at://did:plc:flxq4uyjfotciovpw3x3fxnu/app.bsky.feed.post/3mixnjeljlc2p",
-      "url": "https://bsky.app/profile/emollick.bsky.social/post/3mixnjeljlc2p",
-      "author": {
-        "handle": "emollick.bsky.social",
-        "displayName": "Ethan Mollick",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:flxq4uyjfotciovpw3x3fxnu/bafkreigq63ljumc43yx5eoxchrq75d72irea6ddcceedwmdttxebyowc3q"
-      },
-      "content": "In different hands, Mythos would be an unprecedented cyberweapon\n\nI am not sure how we deal with this, except to note a narrow window where we know only 3 companies could be at this level of capability. But it may be Chinese models (maybe open weights ones?) get there in 9 months.",
-      "createdAt": "2026-04-08T06:18:35.114Z",
-      "likeCount": 76,
-      "replyCount": 5,
-      "repostCount": 8,
-      "highlights": "",
-      "worthReading": "",
-      "tags": [
-        "safety",
-        "llm"
-      ],
-      "type": "bluesky"
-    },
-    {
-      "uri": "at://did:plc:flxq4uyjfotciovpw3x3fxnu/app.bsky.feed.post/3mix2s7blu22p",
-      "url": "https://bsky.app/profile/emollick.bsky.social/post/3mix2s7blu22p",
-      "author": {
-        "handle": "emollick.bsky.social",
-        "displayName": "Ethan Mollick",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:flxq4uyjfotciovpw3x3fxnu/bafkreigq63ljumc43yx5eoxchrq75d72irea6ddcceedwmdttxebyowc3q"
-      },
-      "content": "I think the story that was shared in the Mythos System Card still has the signs of flawed LLM writing (which looks like good writing at a glance): A story that doesn't really hold together logically, but sounds like it should. The back-and-forth banter. Lack of characters.\n\nWriting fiction is hard!",
-      "createdAt": "2026-04-08T00:43:30.441Z",
-      "likeCount": 61,
-      "replyCount": 7,
-      "repostCount": 1,
-      "highlights": "",
-      "worthReading": "",
-      "tags": [
-        "llm",
-        "evaluation"
-      ],
-      "type": "bluesky"
-    },
-    {
       "uri": "at://did:plc:flxq4uyjfotciovpw3x3fxnu/app.bsky.feed.post/3mj65pg2w7224",
       "url": "https://bsky.app/profile/emollick.bsky.social/post/3mj65pg2w7224",
       "author": {
@@ -1413,7 +1371,9 @@
       "repostCount": 12,
       "highlights": "",
       "worthReading": "",
-      "tags": [],
+      "tags": [
+        "infra"
+      ],
       "type": "bluesky"
     },
     {
@@ -1432,6 +1392,26 @@
       "highlights": "",
       "worthReading": "",
       "tags": [],
+      "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:flxq4uyjfotciovpw3x3fxnu/app.bsky.feed.post/3mlcc6kh2rc2x",
+      "url": "https://bsky.app/profile/emollick.bsky.social/post/3mlcc6kh2rc2x",
+      "author": {
+        "handle": "emollick.bsky.social",
+        "displayName": "Ethan Mollick",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:flxq4uyjfotciovpw3x3fxnu/bafkreigq63ljumc43yx5eoxchrq75d72irea6ddcceedwmdttxebyowc3q"
+      },
+      "content": "So Claude Mythos was, indeed, not marketing hype. \n\nRemember this is a general purpose model that just happens to be good at finding exploits because good models are good at lots of things. Expect similar from OpenAI & Google. And from open models in 8 months. hacks.mozilla.org/2026/05/behi...",
+      "createdAt": "2026-05-07T22:45:21.377Z",
+      "likeCount": 242,
+      "replyCount": 7,
+      "repostCount": 55,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [
+        "safety"
+      ],
       "type": "bluesky"
     }
   ],
@@ -3269,10 +3249,71 @@
       "tags": [
         "llm"
       ]
+    },
+    {
+      "type": "x",
+      "id": "2020713378319417626",
+      "url": "https://x.com/emollick/status/2020713378319417626",
+      "author": {
+        "handle": "emollick",
+        "displayName": "Ethan Mollick",
+        "avatar": null
+      },
+      "content": "So much work is going into faking continual learning and memory for AIs,",
+      "createdAt": "2026-05-08T04:08:51.026Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Critiques efforts to simulate continual learning and memory in AI, implying it may be superficial.",
+      "worthReading": "Highlights a key debate in AI research about genuine vs. simulated capabilities.",
+      "tags": [
+        "llm",
+        "safety"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2029623875303018817",
+      "url": "https://x.com/emollick/status/2029623875303018817",
+      "author": {
+        "handle": "emollick",
+        "displayName": "Ethan Mollick",
+        "avatar": null
+      },
+      "content": "Had early access to GPT-5.4 and Pro. They are very good. One fun illustration of progress,",
+      "createdAt": "2026-05-08T04:08:51.026Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Reports early access to advanced AI models, noting significant progress.",
+      "worthReading": "Provides firsthand insight into cutting-edge AI model capabilities.",
+      "tags": [
+        "llm",
+        "evaluation"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2038468659585208561",
+      "url": "https://x.com/emollick/status/2038468659585208561",
+      "author": {
+        "handle": "emollick",
+        "displayName": "Ethan Mollick",
+        "avatar": null
+      },
+      "content": "If it helps, I teach at a business school & many of my smartest students are hired by funds because they can reliably turn their only-human",
+      "createdAt": "2026-05-08T04:08:51.026Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Notes that human skills remain valuable in finance despite AI advances.",
+      "worthReading": "Offers perspective on the enduring value of human judgment in an AI-driven world.",
+      "tags": [
+        "deployment"
+      ]
     }
   ],
   "dailyCounts": [
-    2,
     0,
     4,
     2,
@@ -3301,7 +3342,8 @@
     7,
     5,
     4,
-    5
+    6,
+    3
   ],
-  "interestSummary": "Ethan Mollick is closely tracking frontier AI model capabilities and security concerns, particularly around systems like Claude Mythos, while also examining AI's impact on writing style, education, game industry adaptation, and the evolving landscape of AI engineering practices."
+  "interestSummary": "Ethan Mollick is closely tracking the rapid evolution of AI capabilities, particularly frontier model comparisons, practical applications in education and industry, and the societal narratives surrounding AI's impact on jobs, cybersecurity, and infrastructure. He is also experimenting with AI's role in creative and business contexts, such as teaching a \"vibefounding\" class for MBAs and analyzing how AI reshapes writing style and game development."
 }
