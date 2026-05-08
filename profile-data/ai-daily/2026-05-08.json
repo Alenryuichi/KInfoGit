@@ -1,189 +1,100 @@
 {
   "date": "2026-05-08",
-  "itemCount": 13,
+  "itemCount": 80,
   "sections": [
     {
       "id": "headlines",
       "title": "Headlines & Launches",
       "items": [
         {
-          "title": "Dirtyfrag: Universal Linux LPE Vulnerability Chain",
-          "summary": "A new Linux local privilege escalation vulnerability chain called Dirtyfrag has been disclosed, exploiting page-cache write via xfrm-ESP and RxRPC subsystems. No patches or CVEs exist because the embargo was broken. This vulnerability is universal across major Linux distributions, affecting a wide range of systems. It highlights ongoing kernel security issues and the risks of enabling optional functionality by default. Dirtyfrag extends the bug class from Dirty Pipe and Copy Fail, using the same sink (xfrm-ESP page-cache write) as Copy Fail but through network sockets. The RxRPC component is reportedly unrelated to previous issues.",
-          "url": "https://www.openwall.com/lists/oss-security/2026/05/07/8",
-          "score": 9,
+          "title": "[AINews] Anthropic-SpaceXai's 300MW/$5B/yr deal for Colossus I, ARR growth is 8000% annualized",
+          "summary": "Anthropic与xAI达成300MW/50亿美元数据中心交易，ARR增长8000%。",
+          "url": "https://www.latent.space/p/ainews-anthropic-spacexais-300mw5byr",
+          "score": 8.5,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "flipped"
+              "name": "Latent Space"
             }
           ],
           "tags": [
-            "Linux",
-            "kernel",
-            "privilege escalation",
-            "vulnerability",
-            "security"
+            "anthropic",
+            "xai",
+            "datacenter",
+            "funding"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "China's Moonshot AI raises $2B at $20B valuation as demand for open source AI skyrockets | TechCrunch",
+          "summary": "中国Moonshot AI以200亿美元估值融资20亿美元",
+          "url": "https://techcrunch.com/2026/05/07/chinas-moonshot-ai-raises-2b-at-20b-valuation-as-demand-for-open-source-ai-skyrockets/",
+          "score": 8.5,
+          "sources": [
+            {
+              "name": "techcrunch.com"
+            }
+          ],
+          "tags": [
+            "funding",
+            "open-source",
+            "china"
           ],
           "focusTopics": [
-            "memory"
-          ],
-          "background": "Local privilege escalation (LPE) vulnerabilities allow an attacker with limited access to gain root privileges. The Linux kernel's xfrm subsystem handles IPsec encryption, while RxRPC is a protocol for remote procedure calls. Dirtyfrag chains two bugs to achieve arbitrary write to the page cache.",
-          "discussion": "Commenters noted the similarity to Copy Fail and criticized the broken embargo. Some expressed frustration that optional kernel features are enabled by default, increasing attack surface. Others debated the root cause, with one commenter pointing to the authencesn module rather than algif_aead."
+            "model-release"
+          ]
         },
         {
-          "title": "Anthropic Releases Natural Language Autoencoders for Model Interpretability",
-          "summary": "Anthropic has released open-weight Natural Language Autoencoders (NLAs) that translate internal activations of models like Qwen 2.5, Gemma 3, and Llama 3.3 into human-readable text, along with a detailed blog post and interactive visualization tools. This marks a significant advance in AI interpretability by providing an unsupervised method to directly read what a model is 'thinking' in natural language, potentially improving safety and transparency of large language models. The NLAs use a verbalizer model to map activations to text and a reconstructor model to invert the text back to activations, ensuring the explanation preserves information. The open-weight models are available on Hugging Face and GitHub.",
-          "url": "https://www.anthropic.com/research/natural-language-autoencoders",
-          "score": 9,
+          "title": "Elon Musk and Meta Line Up $68 Billion in Bets on the AI Future in Texas - Bloomberg",
+          "summary": "马斯克和Meta在德州投资680亿美元布局AI未来",
+          "url": "https://www.bloomberg.com/news/newsletters/2026-05-07/elon-musk-and-meta-line-up-68-billion-in-bets-on-the-ai-future-in-texas",
+          "score": 7.5,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "instagraham"
+              "name": "bloomberg.com"
             }
           ],
           "tags": [
-            "interpretability",
-            "AI safety",
-            "transformer circuits",
-            "open source",
-            "Anthropic"
+            "investment",
+            "infrastructure",
+            "texas"
           ],
-          "focusTopics": [],
-          "background": "Large language models process information through internal activations that are difficult for humans to interpret. Previous interpretability methods like sparse autoencoders could identify features but not produce natural language explanations. NLAs directly generate readable text from activations, offering a more intuitive interface for understanding model behavior.",
-          "discussion": "The community is highly engaged, with many praising the open-weight release and pointing to detailed technical resources on Transformer Circuits. Some commenters raise concerns about training data contamination, as models may have been exposed to similar explanations during training, potentially biasing results."
+          "focusTopics": []
         },
         {
-          "title": "Agents need control flow, not more prompts",
-          "summary": "A blog post argues that effective AI agents should rely on explicit control flow logic rather than increasingly complex prompts, based on practical experience building a QA agent that processes hundreds of markdown files. This challenges the prevailing trend of over-relying on prompt engineering for agent behavior, suggesting a shift toward more deterministic, software-engineering-based approaches that could improve reliability and efficiency of LLM applications. The author describes a QA agent that must run through 200 markdown files in a browser session, and found that no amount of prompt refinement could reliably handle the task, leading them to implement control flow logic instead.",
-          "url": "https://bsuh.bearblog.dev/agents-need-control-flow/",
-          "score": 8,
-          "sources": [
-            {
-              "name": "hackernews",
-              "meta": "bsuh"
-            }
-          ],
-          "tags": [
-            "AI agents",
-            "prompt engineering",
-            "control flow",
-            "software engineering",
-            "LLM applications"
-          ],
-          "focusTopics": [],
-          "background": "Current AI agents often use large language models (LLMs) with carefully crafted prompts to decide their actions. However, complex tasks require branching, loops, and error handling that prompts alone cannot reliably provide. Control flow—using explicit programming constructs like if-else, loops, and state machines—offers a more robust alternative.",
-          "discussion": "Commenters broadly agree, with some suggesting that LLMs should be used to write deterministic code at design time rather than making decisions at runtime. Others note that this points to a need for next-generation AI architectures beyond pure LLMs."
-        },
-        {
-          "title": "Cloudflare Lays Off 20% of Workforce",
-          "summary": "Cloudflare announced it is laying off approximately 1,100 employees, about 20% of its workforce, in a move the company describes as 'building for the future'. This significant reduction at a major tech infrastructure company signals ongoing cost-cutting pressures in the industry, with community members speculating about AI's role in the layoffs. Departing employees will receive full base pay through end of 2026, healthcare coverage through year-end in the US, and accelerated equity vesting.",
-          "url": "https://blog.cloudflare.com/building-for-the-future/",
-          "score": 8,
-          "sources": [
-            {
-              "name": "hackernews",
-              "meta": "PriorityLeft"
-            }
-          ],
-          "tags": [
-            "layoffs",
-            "cloudflare",
-            "tech industry",
-            "workforce",
-            "AI impact"
-          ],
-          "focusTopics": [
-            "memory"
-          ],
-          "background": "Cloudflare is a major content delivery network and cloud security company. The layoffs come after a period of rapid hiring, including a program to hire 1,111 interns in September 2025.",
-          "discussion": "Community comments express frustration with the euphemistic title 'Building for the Future' and note the irony of hiring 1,111 interns months before laying off 1,100 people. Some speculate that AI investments have increased costs without offsetting revenue, leading to layoffs."
-        },
-        {
-          "title": "AI Slop Eroding Trust in Online Communities",
-          "summary": "A personal essay argues that AI-generated content, or 'AI slop,' is destroying online communities by flooding them with low-quality, inauthentic posts and overwhelming human moderators. This matters because authentic human interaction is the foundation of online communities, and the rise of AI-generated content threatens to make these spaces unusable, driving users away and increasing moderation costs. The author notes that AI bots can now farm karma and engage in conversations undetected, and one community reports banning 600 AI accounts monthly. The burden of moderation has increased significantly since AI content became prevalent.",
-          "url": "https://rmoff.net/2026/05/06/ai-slop-is-killing-online-communities/",
-          "score": 8,
-          "sources": [
-            {
-              "name": "hackernews",
-              "meta": "thm"
-            }
-          ],
-          "tags": [
-            "AI",
-            "online communities",
-            "content moderation",
-            "trust",
-            "social media"
-          ],
-          "focusTopics": [],
-          "background": "Online communities rely on trust and genuine human interaction. AI-generated content, often called 'slop,' includes low-effort posts, spam, and bot-driven conversations that degrade quality and authenticity. Moderators struggle to keep up with the influx, leading to burnout and community decline.",
-          "discussion": "Commenters share personal experiences: one user successfully farmed karma with an AI agent, another runs a niche community that bans 600 AI accounts monthly, and a veteran notes parallels with Usenet's spam crisis. There is a sense of losing the battle against AI content."
-        },
-        {
-          "title": "Chrome removes on-device AI data privacy claim",
-          "summary": "Google Chrome removed a statement claiming that on-device AI features do not send data to Google servers, raising privacy concerns. This change undermines user trust in Chrome's privacy promises, especially as Google pushes more AI features into the browser, potentially affecting millions of users. The removal coincides with reports that Chrome silently downloads a 4GB AI model (Gemini Nano) without user consent, which may violate EU laws like GDPR and the ePrivacy Directive.",
-          "url": "https://old.reddit.com/r/chrome/comments/1t5qayz/chrome_removes_claim_of_ondevice_al_not_sending/",
-          "score": 8,
-          "sources": [
-            {
-              "name": "hackernews",
-              "meta": "newsoftheday"
-            }
-          ],
-          "tags": [
-            "privacy",
-            "Chrome",
-            "AI",
-            "data collection",
-            "Google"
-          ],
-          "focusTopics": [],
-          "background": "On-device AI processes data locally on the user's device, but some implementations may still send data to cloud servers for processing. Google's Gemini Nano is a lightweight AI model designed to run locally in Chrome for features like smart compose and tab organization. The controversy highlights ongoing tensions between AI functionality and data privacy.",
-          "discussion": "Commenters expressed skepticism, with some believing the AI business is fundamentally about data collection. Others noted that if Chrome starts sending data to Google, it could create compliance issues for companies handling customer data. A few suggested switching to privacy-focused browsers like Brave."
-        },
-        {
-          "title": "xAI-Anthropic Colossus Deal Raises Environmental Flags",
-          "summary": "Anthropic announced a deal to use all capacity of xAI's Colossus 1 data center, which has a controversial environmental record due to gas turbines operating without proper permits. This deal highlights the tension between AI companies' insatiable compute demand and the environmental costs of data centers, potentially fueling political backlash against AI infrastructure. Colossus 1 is powered by gas turbines that initially lacked Clean Air Act permits and pollution controls; xAI retains Colossus 2 for its own models, while Anthropic gets Colossus 1.",
-          "url": "https://simonwillison.net/2026/May/7/xai-anthropic/#atom-everything",
+          "title": "Cline Kanban Flaw Lets Websites Hijack AI Coding Agents - Infosecurity Magazine",
+          "summary": "Cline Kanban漏洞可让网站劫持AI编码代理。",
+          "url": "https://www.infosecurity-magazine.com/news/cline-kanban-websocket-hijack-ai/",
           "score": 7,
           "sources": [
             {
-              "name": "rss",
-              "meta": "Simon Willison"
+              "name": "infosecurity-magazine.com"
             }
           ],
           "tags": [
-            "AI",
-            "data centers",
-            "environment",
-            "Anthropic",
-            "xAI"
+            "ai-coding",
+            "security",
+            "vulnerability"
           ],
-          "focusTopics": [],
-          "background": "Colossus is xAI's supercomputer in Memphis, Tennessee, believed to be the world's largest AI supercomputer, built to train Grok. Its gas turbines have been linked to increased hospital admissions due to air pollution, drawing criticism from environmental groups and local communities.",
-          "discussion": "Commenters expressed concern over Anthropic's environmental stance, with Andy Masley stating he would not run computing at that data center. Some initially thought xAI was abandoning Grok, but it was clarified that xAI keeps Colossus 2. A developer complained about xAI's abrupt deprecation of Grok 4.1 Fast with only two weeks' notice."
+          "focusTopics": [
+            "coding-agents"
+          ]
         },
         {
-          "title": "The Self-Cancelling Subscription",
-          "summary": "A user shares a frustrating experience where a subscription service kept reactivating itself after cancellation, requiring multiple attempts to fully terminate. This highlights the ongoing consumer pain point of difficult subscription cancellations, reflecting broader issues in user experience and business practices that prioritize retention over transparency. The author details a personal anecdote of canceling a subscription, only to have it reactivate without clear explanation, requiring repeated customer service interactions.",
-          "url": "https://predr.ag/blog/the-self-cancelling-subscription/",
-          "score": 6,
+          "title": "French prosecutors open a criminal investigation into X’s AI deepfakes. | The Verge",
+          "summary": "法国检察官对X的AI深度伪造展开刑事调查",
+          "url": "https://www.theverge.com/tech/926473/french-prosecutors-open-a-criminal-investigation-into-xs-ai-deepfakes",
+          "score": 6.5,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "surprisetalk"
+              "name": "theverge.com"
             }
           ],
           "tags": [
-            "subscriptions",
-            "user experience",
-            "consumer tech",
-            "customer service"
+            "deepfake",
+            "regulation",
+            "legal"
           ],
-          "focusTopics": [],
-          "background": "Subscription services often use complex systems to manage billing and access, which can lead to unintended reactivations. This story illustrates the gap between intended user actions and system behavior, a common challenge in consumer tech.",
-          "discussion": "Commenters express frustration with similar experiences, with some noting they would abandon the service after the first failure. One commenter muses about a subscription that cancels itself after non-use, though acknowledges it's a poor business model."
+          "focusTopics": []
         }
       ]
     },
@@ -192,73 +103,567 @@
       "title": "Research & Innovation",
       "items": [
         {
-          "title": "Mozilla Uses Claude Mythos to Fix Hundreds of Firefox Bugs",
-          "summary": "Mozilla used the Claude Mythos preview to locate and fix hundreds of vulnerabilities in Firefox, with the number of monthly security bug fixes jumping from 20-30 to 423 in April 2026. This marks a paradigm shift in AI-assisted security auditing, moving from AI-generated false positives to effective vulnerability detection, and demonstrates that advanced LLMs can significantly harden critical open-source software. The harness used advanced techniques to steer, scale, and stack models to generate high-signal results while filtering noise, and many attempted exploits were blocked by Firefox's existing defense-in-depth measures.",
-          "url": "https://simonwillison.net/2026/May/7/firefox-claude-mythos/#atom-everything",
-          "score": 9,
+          "title": "Agent Island: A Saturation- and Contamination-Resistant Benchmark from Multiagent Games",
+          "summary": "基于多智能体游戏的抗污染基准测试。",
+          "url": "https://arxiv.org/abs/2605.04312",
+          "score": 8.5,
           "sources": [
             {
-              "name": "rss",
-              "meta": "Simon Willison"
+              "name": "ArXiv cs.AI"
             }
           ],
           "tags": [
-            "AI",
-            "security",
-            "Firefox",
-            "vulnerability detection",
-            "Mozilla"
+            "benchmark",
+            "multi-agent",
+            "evals"
           ],
-          "focusTopics": [],
-          "background": "Claude Mythos Preview is Anthropic's most advanced frontier model, released in April 2026 but not publicly available. AI-generated security reports were previously considered low-quality 'slop' that imposed high costs on maintainers. Mozilla's approach combined improved model capability with better harnessing techniques.",
-          "discussion": "The Lobste.rs discussion praised the technical depth and the shift from AI slop to real security value, with some commenters noting the importance of defense-in-depth and the impressive scale of the bug-fixing effort."
+          "focusTopics": [
+            "evals"
+          ]
         },
         {
-          "title": "AlphaEvolve: Gemini-powered coding agent scales impact",
-          "summary": "Google DeepMind unveiled AlphaEvolve, a Gemini-powered coding agent that autonomously optimizes algorithms across fields, including solving mathematical problems like Erdős problems. This demonstrates AI's potential to improve its own infrastructure and accelerate research in mathematics and computing, potentially reducing months of human effort to hours. AlphaEvolve uses an evolutionary approach combined with Gemini's reasoning to design advanced algorithms, and it has been applied to optimize matrix multiplication and other high-level problems.",
-          "url": "https://deepmind.google/blog/alphaevolve-impact/",
+          "title": "META Superintelligence Lab Presents: ProgramBench: Can SOTA AI Recreate Real Executable Programs(ffmpeg, SQLite, ripgrep) From Scratch Without The Internet?",
+          "summary": "Meta发布ProgramBench：测试AI能否从头复现ffmpeg等程序",
+          "url": "https://www.reddit.com/r/MachineLearning/comments/1t5zdg5/meta_superintelligence_lab_presents_programbench/",
+          "score": 8.5,
+          "sources": [
+            {
+              "name": "Reddit r/MachineLearning"
+            }
+          ],
+          "tags": [
+            "programbench",
+            "meta",
+            "code-generation"
+          ],
+          "focusTopics": [
+            "coding-agents",
+            "evals"
+          ]
+        },
+        {
+          "title": "Natural Language Autoencoders: Turning Claude's Thoughts into Text",
+          "summary": "Anthropic研究：将Claude思维转化为文本的自然语言自编码器。",
+          "url": "https://www.anthropic.com/research/natural-language-autoencoders",
+          "score": 8.225999999999999,
+          "sources": [
+            {
+              "name": "HN (192)"
+            }
+          ],
+          "tags": [
+            "autoencoder",
+            "interpretability",
+            "claude"
+          ],
+          "focusTopics": [
+            "context-engineering"
+          ]
+        },
+        {
+          "title": "LCM: Lossless Context Management",
+          "summary": "提出无损上下文管理架构，解决LLM记忆问题。",
+          "url": "https://arxiv.org/abs/2605.04050",
           "score": 8,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "berlianta"
+              "name": "ArXiv cs.AI"
             }
           ],
           "tags": [
-            "AI",
-            "coding agent",
-            "DeepMind",
-            "algorithm optimization",
-            "Gemini"
+            "llm",
+            "context-management",
+            "memory"
+          ],
+          "focusTopics": [
+            "context-engineering"
+          ]
+        },
+        {
+          "title": "Parallel Prefix Verification for Speculative Generation",
+          "summary": "并行前缀验证加速推测解码。",
+          "url": "https://arxiv.org/abs/2605.04263",
+          "score": 8,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "speculative-decoding",
+            "llm-inference"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "11.67% ARC-AGI-2 Local Eval on a Single 4090: The TOPAS Recursive Architecture",
+          "summary": "TOPAS递归架构在单4090上实现11.67% ARC-AGI-2评估成绩",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1t6n97x/1167_arcagi2_local_eval_on_a_single_4090_the/",
+          "score": 8,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "arc-agi",
+            "recursive-architecture",
+            "local-llm"
+          ],
+          "focusTopics": [
+            "evals"
+          ]
+        },
+        {
+          "title": "AlphaEvolve: Gemini-powered coding agent scaling impact across fields",
+          "summary": "AlphaEvolve：Gemini驱动的编码代理跨领域扩展影响。",
+          "url": "https://deepmind.google/blog/alphaevolve-impact/",
+          "score": 7.9479999999999995,
+          "sources": [
+            {
+              "name": "HN (241)"
+            }
+          ],
+          "tags": [
+            "coding-agent",
+            "gemini",
+            "scaling"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "VectifyAI/PageIndex",
+          "summary": "无向量推理RAG文档索引，创新检索增强生成方法。",
+          "url": "https://github.com/VectifyAI/PageIndex",
+          "score": 7.7895,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+943★)"
+            }
+          ],
+          "tags": [
+            "rag",
+            "document-index",
+            "reasoning"
+          ],
+          "focusTopics": [
+            "context-engineering"
+          ]
+        },
+        {
+          "title": "When Context Hurts: The Crossover Effect of Knowledge Transfer on Multi-Agent Design Exploration",
+          "summary": "发现多智能体设计中上下文过多反而有害。",
+          "url": "https://arxiv.org/abs/2605.04361",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "multi-agent",
+            "context",
+            "design"
+          ],
+          "focusTopics": [
+            "agent-harness",
+            "context-engineering"
+          ]
+        },
+        {
+          "title": "Adapt to Thrive! Adaptive Power-Mean Policy Optimization for Improved LLM Reasoning",
+          "summary": "自适应策略优化提升LLM推理能力。",
+          "url": "https://arxiv.org/abs/2605.04066",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "reinforcement-learning",
+            "llm",
+            "reasoning"
+          ],
+          "focusTopics": [
+            "post-training"
+          ]
+        },
+        {
+          "title": "Multi-Token Prediction (MTP) for LLaMA.cpp - Gemma 4 speedup by 40%",
+          "summary": "LLaMA.cpp 实现多 token 预测，Gemma 4 加速 40%。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1t6se6r/multitoken_prediction_mtp_for_llamacpp_gemma_4/",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "multi-token-prediction",
+            "llamacpp",
+            "gemma"
           ],
           "focusTopics": [
             "planning"
-          ],
-          "background": "AlphaEvolve is an evolutionary coding agent built on top of Gemini, a family of multimodal large language models by Google DeepMind. It iteratively generates and tests algorithm variants, selecting the best performers, similar to natural selection. This approach allows AI to autonomously discover optimizations that humans might miss.",
-          "discussion": "Commenters compared AlphaEvolve to Antirez's work on optimizing Redis, noting that foundation models excel at well-defined optimization problems. Some expressed excitement about AI self-improvement, while others questioned Google's focus on releasing stable Gemini models instead of new research."
+          ]
         },
         {
-          "title": "Burning Man MOOP Map Tracks Cleanup Efforts",
-          "summary": "A detailed MOOP (Matter Out of Place) map and process for Burning Man 2025 has been published, showing the rigorous cleanup of debris across 3,935 acres of Black Rock Desert. This demonstrates how a large-scale event can achieve near-zero environmental impact through meticulous data collection and community effort, setting a benchmark for other festivals and public land use. The map is color-coded by cleanup severity, and the process includes photographing every piece of debris, even individual clumps of toilet paper, with pixel counting on green screens to verify cleanliness.",
-          "url": "https://www.not-ship.com/burning-man-moop/",
-          "score": 6,
+          "title": "z-lab/dflash",
+          "summary": "DFlash: 用于快速推测解码的块扩散方法。",
+          "url": "https://github.com/z-lab/dflash",
+          "score": 7.3815,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "speckx"
+              "name": "GitHub trending:all (+671★)"
             }
           ],
           "tags": [
-            "environmental cleanup",
-            "data visualization",
-            "event logistics",
-            "community effort"
+            "speculative-decoding",
+            "diffusion",
+            "llm-inference"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Pro$^2$Assist: Continuous Step-Aware Proactive Assistance with Multimodal Egocentric Perception for Long-Horizon Procedural Tasks",
+          "summary": "多模态自我中心感知的连续步骤辅助框架。",
+          "url": "https://arxiv.org/abs/2605.04227",
+          "score": 7,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "multimodal",
+            "procedural-tasks",
+            "assistance"
           ],
           "focusTopics": [
-            "reflection"
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "The Scaling Properties of Implicit Deductive Reasoning in Transformers",
+          "summary": "研究Transformer隐式演绎推理的缩放性质。",
+          "url": "https://arxiv.org/abs/2605.04330",
+          "score": 7,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
           ],
-          "background": "MOOP stands for 'Matter Out of Place' and is central to Burning Man's 'Leave No Trace' policy. The event takes place in the Black Rock Desert of Nevada, and the Bureau of Land Management (BLM) requires the land to be restored to its original condition after the event.",
-          "discussion": "Commenters shared firsthand experiences, noting the scale (3,935 acres) and the grueling cleanup process, especially after rain and wind storms. Many expressed increased respect for Burning Man's environmental stewardship, contrasting it with other events that leave messes."
+          "tags": [
+            "transformer",
+            "reasoning",
+            "scaling"
+          ],
+          "focusTopics": [
+            "planning"
+          ]
+        },
+        {
+          "title": "Free Energy-Driven Reinforcement Learning with Adaptive Advantage Shaping for Unsupervised Reasoning in LLMs",
+          "summary": "自由能驱动的强化学习用于LLM无监督推理。",
+          "url": "https://arxiv.org/abs/2605.04065",
+          "score": 7,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "reinforcement-learning",
+            "llm",
+            "reasoning"
+          ],
+          "focusTopics": [
+            "post-training"
+          ]
+        },
+        {
+          "title": "ZAYA1-74B-Preview: Scaling Pretraining on AMD",
+          "summary": "ZAYA1-74B 模型在 AMD 上预训练，发布预览版。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1t6q58n/zaya174bpreview_scaling_pretraining_on_amd/",
+          "score": 7,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "model-release",
+            "amd",
+            "pretraining"
+          ],
+          "focusTopics": [
+            "model-release"
+          ]
+        },
+        {
+          "title": "Temporal Reasoning Is Not the Bottleneck: A Probabilistic Inconsistency Framework for Neuro-Symbolic QA",
+          "summary": "提出概率不一致框架分析LLM时序推理瓶颈。",
+          "url": "https://arxiv.org/abs/2605.04243",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "llm",
+            "reasoning",
+            "temporal"
+          ],
+          "focusTopics": [
+            "planning"
+          ]
+        },
+        {
+          "title": "Not All That Is Fluent Is Factual: Investigating Hallucinations of Large Language Models in Academic Writing",
+          "summary": "研究LLM在学术写作中的幻觉问题。",
+          "url": "https://arxiv.org/abs/2605.04171",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "llm",
+            "hallucination",
+            "academic-writing"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "ChatGPT Health triage advice falls short in key cases - Nature",
+          "summary": "Nature研究显示ChatGPT健康分诊在某些关键病例中表现不佳。",
+          "url": "https://www.nature.com/articles/s41591-026-04427-1",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "nature.com"
+            }
+          ],
+          "tags": [
+            "chatgpt",
+            "healthcare",
+            "triage"
+          ],
+          "focusTopics": [
+            "evals"
+          ]
+        },
+        {
+          "title": "I trained a NER model on 33,000 Indian Supreme Court judgments (1950–2024) CASE_CITATION hits 97.76% F1, +17 points over the only prior baseline [P]",
+          "summary": "在印度最高法院判决上微调NER模型，F1达97.76%。",
+          "url": "https://www.reddit.com/r/MachineLearning/comments/1t6iax2/i_trained_a_ner_model_on_33000_indian_supreme/",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "Reddit r/MachineLearning"
+            }
+          ],
+          "tags": [
+            "ner",
+            "legal-ai",
+            "fine-tuning"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "ANDRE: An Attention-based Neuro-symbolic Differentiable Rule Extractor",
+          "summary": "基于注意力的神经符号可微分规则提取器。",
+          "url": "https://arxiv.org/abs/2605.04193",
+          "score": 6,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "neuro-symbolic",
+            "rule-learning"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Are LLMs Ready for Conflict Monitoring? Empirical Evidence from West Africa",
+          "summary": "评估LLM在西非冲突监测中的表现，发现系统性输出失真。",
+          "url": "https://arxiv.org/abs/2605.04177",
+          "score": 6,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "llm",
+            "conflict-monitoring",
+            "evaluation"
+          ],
+          "focusTopics": [
+            "evals"
+          ]
+        },
+        {
+          "title": "MedFabric and EtHER: A Data-Centric Framework for Word-Level Fabrication Generation and Detection in Medical LLMs",
+          "summary": "提出数据驱动的框架用于医疗LLM中的幻觉生成与检测。",
+          "url": "https://arxiv.org/abs/2605.04180",
+          "score": 6,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "medical-llm",
+            "hallucination",
+            "data-centric"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "The Impact of Vocabulary Overlaps on Knowledge Transfer in Multilingual Machine Translation",
+          "summary": "研究词汇重叠对多语言机器翻译知识迁移的影响。",
+          "url": "https://arxiv.org/abs/2605.04196",
+          "score": 5.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "multilingual",
+            "machine-translation",
+            "knowledge-transfer"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Nsanku: Evaluating Zero-Shot Translation Performance of LLMs for Ghanaian Languages",
+          "summary": "评估LLM对加纳语言的零样本翻译性能。",
+          "url": "https://arxiv.org/abs/2605.04208",
+          "score": 5.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "llm",
+            "zero-shot",
+            "translation"
+          ],
+          "focusTopics": [
+            "evals"
+          ]
+        },
+        {
+          "title": "Self-Prompting Small Language Models for Privacy-Sensitive Clinical Information Extraction",
+          "summary": "使用自提示小语言模型进行隐私敏感的临床信息提取。",
+          "url": "https://arxiv.org/abs/2605.04221",
+          "score": 5.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "small-language-model",
+            "clinical-nlp",
+            "privacy"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Using Jensen-Shannon Divergence to detect narrative regime shifts in daily news corpora [P]",
+          "summary": "用JS散度检测每日新闻语料中的叙事转变",
+          "url": "https://www.reddit.com/r/MachineLearning/comments/1t6fk77/using_jensenshannon_divergence_to_detect/",
+          "score": 5.5,
+          "sources": [
+            {
+              "name": "Reddit r/MachineLearning"
+            }
+          ],
+          "tags": [
+            "nlp",
+            "sentiment",
+            "narrative"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "FMI_SU_Yotkova_Kastreva at SemEval-2026 Task 13: Lightweight Detection of LLM-Generated Code via Stylometric Signals",
+          "summary": "轻量级检测LLM生成代码的文体学方法。",
+          "url": "https://arxiv.org/abs/2605.04157",
+          "score": 5,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "llm",
+            "code-detection",
+            "stylometry"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "PyTorch reproduction of TensorFlow paper underperforms by 4 pp on DermaMNIST , what cross-framework issues should I check? [R]",
+          "summary": "PyTorch复现TensorFlow论文在DermaMNIST上差4个百分点",
+          "url": "https://www.reddit.com/r/MachineLearning/comments/1t6mxcp/pytorch_reproduction_of_tensorflow_paper/",
+          "score": 5,
+          "sources": [
+            {
+              "name": "Reddit r/MachineLearning"
+            }
+          ],
+          "tags": [
+            "reproducibility",
+            "pytorch",
+            "tensorflow"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Diffusion for generating/editing ASTs? [D]",
+          "summary": "讨论用扩散模型生成或编辑抽象语法树",
+          "url": "https://www.reddit.com/r/MachineLearning/comments/1t6hv55/diffusion_for_generatingediting_asts_d/",
+          "score": 4.5,
+          "sources": [
+            {
+              "name": "Reddit r/MachineLearning"
+            }
+          ],
+          "tags": [
+            "diffusion",
+            "ast",
+            "code-generation"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "How much can a video generated by the same diffusion model differ across GPU architectures if the initial noise latent is fixed? [D]",
+          "summary": "固定噪声下不同GPU架构的扩散视频生成差异讨论",
+          "url": "https://www.reddit.com/r/MachineLearning/comments/1t69dvx/how_much_can_a_video_generated_by_the_same/",
+          "score": 4,
+          "sources": [
+            {
+              "name": "Reddit r/MachineLearning"
+            }
+          ],
+          "tags": [
+            "diffusion",
+            "reproducibility",
+            "gpu"
+          ],
+          "focusTopics": []
         }
       ]
     },
@@ -267,50 +672,791 @@
       "title": "Engineering & Resources",
       "items": [
         {
-          "title": "DeepSeek 4 Flash Local Inference Engine for Metal",
-          "summary": "Antirez released ds4.c, a small native inference engine for DeepSeek V4 Flash optimized specifically for Apple Metal hardware, available on GitHub. This focused optimization for a specific model and hardware demonstrates the potential for community-driven, high-performance local inference, potentially narrowing the gap between open-source and frontier models. The engine is intentionally narrow—not a generic GGUF runner or framework—and supports only DeepSeek V4 Flash on Metal. It loads from GGUF and uses kernel-level optimizations, with initial prompt processing taking about 4 minutes for large inputs due to lack of caching.",
-          "url": "https://github.com/antirez/ds4",
-          "score": 8,
+          "title": "addyosmani/agent-skills",
+          "summary": "生产级AI编码代理技能集合，提升代理工程能力。",
+          "url": "https://github.com/addyosmani/agent-skills",
+          "score": 8.725,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "tamnd"
+              "name": "GitHub trending:all (+3062★)"
             }
           ],
           "tags": [
-            "inference",
-            "optimization",
-            "Metal",
-            "DeepSeek",
-            "open source"
+            "ai-coding",
+            "agent-skills",
+            "engineering"
           ],
-          "focusTopics": [],
-          "background": "Local inference engines like llama.cpp and MLC-LLM enable running large language models on consumer hardware, but often lack model-specific optimizations. Apple's Metal API provides GPU acceleration on Macs, and this project targets that platform with a custom kernel approach.",
-          "discussion": "The community praised the project's technical depth and educational value, with some noting it could inspire more hardware-specific optimizations. Concerns were raised about the 4-minute initial prompt delay, but the author explained that disk caching mitigates this for repeated use."
+          "focusTopics": [
+            "coding-agents"
+          ]
         },
         {
-          "title": "TRUST: A Turbo Pascal-inspired IDE for Rust",
-          "summary": "A developer released TRUST, an IDE for Rust that mimics the look and feel of Borland's Turbo Pascal from 1989, including a retro blue CRT-style interface and keyboard shortcuts. This project highlights the contrast between Rust's modern safety guarantees and its slow compile times, sparking discussion about what modern IDEs have lost in terms of responsiveness and simplicity. TRUST is built with the Ratatui library for terminal UI and uses the Rust compiler's incremental compilation; however, the debugger is marked as \"Not implemented\" and the IDE lacks many features of modern Rust IDEs like RustRover or VS Code.",
-          "url": "https://github.com/wojtczyk/trust",
+          "title": "Hmbown/DeepSeek-TUI",
+          "summary": "DeepSeek模型的终端编码代理工具。",
+          "url": "https://github.com/Hmbown/DeepSeek-TUI",
+          "score": 8.3,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+5799★)"
+            }
+          ],
+          "tags": [
+            "coding-agent",
+            "deepseek",
+            "cli"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "Notes from inside China's AI labs",
+          "summary": "作者走访中国主要AI实验室后的观察与见解。",
+          "url": "https://www.interconnects.ai/p/notes-from-inside-chinas-ai-labs",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "Interconnects"
+            }
+          ],
+          "tags": [
+            "china",
+            "ai-labs",
+            "industry-insights"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Notes on the xAI/Anthropic data center deal",
+          "summary": "分析xAI与Anthropic数据中心交易的影响。",
+          "url": "https://simonwillison.net/2026/May/7/xai-anthropic/#atom-everything",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "Simon Willison"
+            }
+          ],
+          "tags": [
+            "anthropic",
+            "xai",
+            "datacenter"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "OpenAI launched a Codex extension for Chrome. | The Verge",
+          "summary": "OpenAI为Chrome推出Codex扩展",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/926520/openai-launched-a-codex-extension-for-chrome",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "theverge.com"
+            }
+          ],
+          "tags": [
+            "codex",
+            "chrome-extension",
+            "ai-coding"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "New Gemma 4 MTP on MLX?",
+          "summary": "Google发布Gemma 4多令牌预测草稿模型，支持MLX",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1t6iy5s/new_gemma_4_mtp_on_mlx/",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "gemma-4",
+            "mtp",
+            "speculative-decoding"
+          ],
+          "focusTopics": [
+            "model-release"
+          ]
+        },
+        {
+          "title": "Agents need control flow, not more prompts",
+          "summary": "AI代理需要控制流而非更多提示，强调结构化执行的重要性。",
+          "url": "https://bsuh.bearblog.dev/agents-need-control-flow/",
+          "score": 7.35,
+          "sources": [
+            {
+              "name": "HN (325)"
+            }
+          ],
+          "tags": [
+            "agents",
+            "control-flow",
+            "llm"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "Chrome removes claim of On-device Al not sending data to Google Servers",
+          "summary": "Chrome移除设备端AI不发送数据到谷歌服务器的声明",
+          "url": "https://old.reddit.com/r/chrome/comments/1t5qayz/chrome_removes_claim_of_ondevice_al_not_sending/",
+          "score": 7.339,
+          "sources": [
+            {
+              "name": "HN (463)"
+            }
+          ],
+          "tags": [
+            "chrome",
+            "privacy",
+            "on-device-ai"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Behind the Scenes Hardening Firefox with Claude Mythos Preview",
+          "summary": "Mozilla使用Claude Mythos预览版加固Firefox安全。",
+          "url": "https://simonwillison.net/2026/May/7/firefox-claude-mythos/#atom-everything",
           "score": 7,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "wojtczyk"
+              "name": "Simon Willison"
             }
           ],
           "tags": [
-            "Rust",
-            "IDE",
-            "retro computing",
-            "developer experience",
-            "compiler performance"
+            "claude",
+            "firefox",
+            "security"
           ],
-          "focusTopics": [],
-          "background": "Turbo Pascal was a highly popular IDE in the 1980s and 1990s, known for its fast compilation (34,000 lines per minute on a 10 MHz 80286) and integrated debugger. Rust, while offering memory safety and modern features, is often criticized for long compile times and a heavy toolchain. TRUST aims to recreate the nostalgic experience of Turbo Pascal within the Rust ecosystem.",
-          "discussion": "Commenters expressed nostalgia for Turbo Pascal's speed and simplicity, with one noting that Rust still has \"a bit to catch up with 1989\" in terms of compile performance. Another pointed out that the debugger being unimplemented makes the retro design a painful reminder of lost responsiveness."
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "The Pulse: Did capacity shortages turn Anthropic hostile to devs?",
+          "summary": "探讨容量短缺是否导致Anthropic对开发者态度转变。",
+          "url": "https://newsletter.pragmaticengineer.com/p/the-pulse-did-capacity-shortages",
+          "score": 7,
+          "sources": [
+            {
+              "name": "Pragmatic Engineer"
+            }
+          ],
+          "tags": [
+            "anthropic",
+            "developer-relations",
+            "capacity"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Elon Musk's lawsuit is putting OpenAI's safety record under the microscope | TechCrunch",
+          "summary": "马斯克诉讼将OpenAI安全记录置于显微镜下",
+          "url": "https://techcrunch.com/2026/05/07/elon-musks-lawsuit-is-putting-openais-safety-record-under-the-microscope/",
+          "score": 7,
+          "sources": [
+            {
+              "name": "techcrunch.com"
+            }
+          ],
+          "tags": [
+            "openai",
+            "safety",
+            "lawsuit"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Google's $9.99-per-month AI health coach launches May 19 | TechCrunch",
+          "summary": "谷歌每月9.99美元的AI健康教练将于5月19日推出",
+          "url": "https://techcrunch.com/2026/05/07/googles-9-99-per-month-ai-health-coach-launches-may-19/",
+          "score": 7,
+          "sources": [
+            {
+              "name": "techcrunch.com"
+            }
+          ],
+          "tags": [
+            "health",
+            "google",
+            "subscription"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "AMD Intros Instinct MI350P Accelerator: CDNA 4 Comes to PCIe Cards",
+          "summary": "AMD 发布 Instinct MI350P 加速器，CDNA 4 架构 PCIe 卡。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1t6b2x8/amd_intros_instinct_mi350p_accelerator_cdna_4/",
+          "score": 7,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "amd",
+            "hardware",
+            "gpu"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "I embedded an AI agent in my shell. It can now run interactive programs.",
+          "summary": "在shell中嵌入AI代理，可运行交互式程序",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1t6nuhz/i_embedded_an_ai_agent_in_my_shell_it_can_now_run/",
+          "score": 7,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "ai-agent",
+            "shell",
+            "interactive"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "feat: Add Mimo v2.5 model support by AesSedai · Pull Request #22493 · ggml-org/llama.cpp",
+          "summary": "llama.cpp新增小米MiMo V2.5模型支持，310B参数MoE",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1t67lvx/feat_add_mimo_v25_model_support_by_aessedai_pull/",
+          "score": 7,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "llama.cpp",
+            "mimo",
+            "moe"
+          ],
+          "focusTopics": [
+            "model-release"
+          ]
+        },
+        {
+          "title": "huggingface/ml-intern",
+          "summary": "开源ML工程师项目，自动读论文、训练模型。",
+          "url": "https://github.com/huggingface/ml-intern",
+          "score": 7,
+          "sources": [
+            {
+              "name": "Co-Starred"
+            }
+          ],
+          "tags": [
+            "open-source",
+            "automl",
+            "agent"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "AI slop is killing online communities",
+          "summary": "AI垃圾内容正在扼杀在线社区",
+          "url": "https://rmoff.net/2026/05/06/ai-slop-is-killing-online-communities/",
+          "score": 6.856999999999999,
+          "sources": [
+            {
+              "name": "HN (444)"
+            }
+          ],
+          "tags": [
+            "ai-slop",
+            "online-community",
+            "content-quality"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "DeepSeek 4 Flash local inference engine for Metal",
+          "summary": "DeepSeek 4 Flash本地推理引擎，针对Apple Metal优化。",
+          "url": "https://github.com/antirez/ds4",
+          "score": 6.817,
+          "sources": [
+            {
+              "name": "HN (289)"
+            }
+          ],
+          "tags": [
+            "deepseek",
+            "local-inference",
+            "metal"
+          ],
+          "focusTopics": [
+            "model-release"
+          ]
+        },
+        {
+          "title": "LearningCircuit/local-deep-research",
+          "summary": "开源本地深度研究工具，支持本地和云端LLM，SimpleQA达95%。",
+          "url": "https://github.com/LearningCircuit/local-deep-research",
+          "score": 6.7885,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+559★)"
+            }
+          ],
+          "tags": [
+            "local-llm",
+            "research-tool",
+            "open-source"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "InsForge/InsForge",
+          "summary": "基于Postgres的后端，为编码代理提供AI网关。",
+          "url": "https://github.com/InsForge/InsForge",
+          "score": 6.640000000000001,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+460★)"
+            }
+          ],
+          "tags": [
+            "backend",
+            "coding-agent",
+            "postgres"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "aaif-goose/goose",
+          "summary": "开源可扩展AI代理，超越代码建议，支持安装执行测试。",
+          "url": "https://github.com/aaif-goose/goose",
+          "score": 6.535,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+390★)"
+            }
+          ],
+          "tags": [
+            "ai-agent",
+            "open-source",
+            "extensible"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "ChatGPT’s ‘Trusted Contact’ will alert loved ones of safety concerns | The Verge",
+          "summary": "ChatGPT推出‘可信联系人’功能，可通知亲友安全担忧",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/925874/chatgpt-trusted-contact-emergency-self-harm-notification",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "theverge.com"
+            }
+          ],
+          "tags": [
+            "chatgpt",
+            "safety",
+            "feature"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "WARNING: Open-OSS/privacy-filter MALWARE",
+          "summary": "警告 Hugging Face 上存在伪装成模型的恶意软件。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1t6febk/warning_openossprivacyfilter_malware/",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "security",
+            "malware",
+            "huggingface"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "AMD to release slottable GPU",
+          "summary": "AMD 将推出可插拔 GPU，面向本地 LLM 用户。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1t6gcw0/amd_to_release_slottable_gpu/",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "amd",
+            "gpu",
+            "hardware"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Qwen3.6 27B uncensored heretic v2 Native MTP Preserved is Out Now With KLD 0.0021, 6/100 Refusals and the Full 15 MTPs Preserved and Retained, Available in Safetensors, GGUFs and NVFP4s formats.",
+          "summary": "Qwen3.6 27B无审查版发布，保留原生MTP，拒绝率低",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1t5yajb/qwen36_27b_uncensored_heretic_v2_native_mtp/",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "qwen",
+            "uncensored",
+            "mtp"
+          ],
+          "focusTopics": [
+            "model-release"
+          ]
+        },
+        {
+          "title": "SoundHound AI (SOUN) Launches OASYS Self-Learning AI Agent Platform - Yahoo Finance",
+          "summary": "SoundHound AI发布OASYS自学习AI代理平台",
+          "url": "https://finance.yahoo.com/sectors/technology/articles/soundhound-ai-soun-launches-oasys-145932948.html",
+          "score": 6,
+          "sources": [
+            {
+              "name": "finance.yahoo.com"
+            }
+          ],
+          "tags": [
+            "ai-agent",
+            "self-learning",
+            "platform"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "Top Trump Aide Says Administration Won’t Pick Winners in AI Race - Bloomberg",
+          "summary": "特朗普高级助手称政府不会在AI竞赛中挑选赢家",
+          "url": "https://www.bloomberg.com/news/articles/2026-05-07/top-trump-aide-says-administration-won-t-pick-winners-in-ai-race",
+          "score": 6,
+          "sources": [
+            {
+              "name": "bloomberg.com"
+            }
+          ],
+          "tags": [
+            "policy",
+            "government",
+            "ai-race"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Spotify wants to become the home for AI-generated personal audio | TechCrunch",
+          "summary": "Spotify希望成为AI生成个人音频的家园",
+          "url": "https://techcrunch.com/2026/05/07/spotify-wants-to-become-the-home-for-ai-generated-personal-audio/",
+          "score": 6,
+          "sources": [
+            {
+              "name": "techcrunch.com"
+            }
+          ],
+          "tags": [
+            "audio",
+            "ai-generation",
+            "spotify"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Are local models becoming “good enough” faster than expected?",
+          "summary": "讨论本地模型是否已足够好，社区观点。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1t6p0zk/are_local_models_becoming_good_enough_faster_than/",
+          "score": 6,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "local-llm",
+            "discussion"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Extracted MTP tensor GGUFs - smaller donor models for grafting.",
+          "summary": "提取 MTP 张量 GGUF，用于模型嫁接。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1t6r1ny/extracted_mtp_tensor_ggufs_smaller_donor_models/",
+          "score": 6,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "gguf",
+            "multi-token-prediction",
+            "tools"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "langgenius/dify",
+          "summary": "生产级代理工作流开发平台，Dify开源项目。",
+          "url": "https://github.com/langgenius/dify",
+          "score": 5.796499999999999,
+          "sources": [
+            {
+              "name": "GitHub trending:typescript (+181★)"
+            }
+          ],
+          "tags": [
+            "agent-platform",
+            "workflow",
+            "open-source"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "Google Translate Rival DeepL Announces Plans to Cut 25% of Staff - Bloomberg",
+          "summary": "DeepL宣布计划裁员25%",
+          "url": "https://www.bloomberg.com/news/articles/2026-05-07/google-translate-rival-deepl-announces-plans-to-cut-25-of-staff",
+          "score": 5.5,
+          "sources": [
+            {
+              "name": "bloomberg.com"
+            }
+          ],
+          "tags": [
+            "layoff",
+            "translation",
+            "deepl"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "decolua/9router",
+          "summary": "免费AI编码工具，连接多种IDE和LLM提供商。",
+          "url": "https://github.com/decolua/9router",
+          "score": 5.323499999999999,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+149★)"
+            }
+          ],
+          "tags": [
+            "ai-coding",
+            "free-api",
+            "multi-provider"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "Principles for agent-native CLIs",
+          "summary": "面向Agent的CLI设计原则，强调原生Agent交互。",
+          "url": "https://twitter.com/trevin/status/2051316002730991795",
+          "score": 5.276999999999999,
+          "sources": [
+            {
+              "name": "HN (59)"
+            }
+          ],
+          "tags": [
+            "cli",
+            "agents",
+            "design"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "awslabs/aidlc-workflows",
+          "summary": "AWS AI驱动生命周期工作流，指导AI编码代理。",
+          "url": "https://github.com/awslabs/aidlc-workflows",
+          "score": 5.1465,
+          "sources": [
+            {
+              "name": "GitHub trending:python (+31★)"
+            }
+          ],
+          "tags": [
+            "ai-coding",
+            "workflow",
+            "aws"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "cheahjs/free-llm-api-resources",
+          "summary": "免费LLM推理API资源列表，聚合多种服务。",
+          "url": "https://github.com/cheahjs/free-llm-api-resources",
+          "score": 5.096,
+          "sources": [
+            {
+              "name": "GitHub trending:python (+564★)"
+            }
+          ],
+          "tags": [
+            "llm",
+            "free-api",
+            "resource-list"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "llm-gemini 0.31",
+          "summary": "llm-gemini工具更新至0.31版本，支持Gemini 2.5 Flash等。",
+          "url": "https://simonwillison.net/2026/May/7/llm-gemini/#atom-everything",
+          "score": 5,
+          "sources": [
+            {
+              "name": "Simon Willison"
+            }
+          ],
+          "tags": [
+            "llm",
+            "gemini",
+            "cli-tool"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Transformer Math Explorer [P]",
+          "summary": "Transformer数学交互式参考，涵盖GPT-2到Llama",
+          "url": "https://www.reddit.com/r/MachineLearning/comments/1t6a2ri/transformer_math_explorer_p/",
+          "score": 5,
+          "sources": [
+            {
+              "name": "Reddit r/MachineLearning"
+            }
+          ],
+          "tags": [
+            "transformer",
+            "math",
+            "educational"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Blaizzy/mlx-vlm",
+          "summary": "Mac上MLX视觉语言模型推理与微调包。",
+          "url": "https://github.com/Blaizzy/mlx-vlm",
+          "score": 4.75,
+          "sources": [
+            {
+              "name": "GitHub trending:python (+50★)"
+            }
+          ],
+          "tags": [
+            "vlm",
+            "mlx",
+            "mac"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "vercel-labs/open-agents",
+          "summary": "开源云代理构建模板，Vercel Labs出品。",
+          "url": "https://github.com/vercel-labs/open-agents",
+          "score": 4.4465,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+131★)"
+            }
+          ],
+          "tags": [
+            "cloud-agents",
+            "open-source",
+            "template"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Two Home Affairs officials suspended after AI 'hallucinations' found",
+          "summary": "南非内政部官员因AI幻觉被停职，AI应用风险案例。",
+          "url": "https://www.citizen.co.za/news/home-affairs-officials-suspended-ai-hallucinations/",
+          "score": 4.406,
+          "sources": [
+            {
+              "name": "HN (52)"
+            }
+          ],
+          "tags": [
+            "ai-safety",
+            "hallucination",
+            "government"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "xming521/WeClone",
+          "summary": "从聊天记录创建AI分身，微调LLM并绑定聊天机器人。",
+          "url": "https://github.com/xming521/WeClone",
+          "score": 4.28,
+          "sources": [
+            {
+              "name": "GitHub trending:python (+20★)"
+            }
+          ],
+          "tags": [
+            "llm",
+            "fine-tuning",
+            "ai-twin"
+          ],
+          "focusTopics": [
+            "post-training"
+          ]
+        },
+        {
+          "title": "Open-LLM-VTuber/Open-LLM-VTuber",
+          "summary": "跨平台LLM语音交互VTuber，支持语音打断和Live2D。",
+          "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber",
+          "score": 3.8625,
+          "sources": [
+            {
+              "name": "GitHub trending:python (+25★)"
+            }
+          ],
+          "tags": [
+            "llm",
+            "voice-interaction",
+            "vtuber"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "openai/plugins",
+          "summary": "OpenAI插件仓库，但非今日新发布。",
+          "url": "https://github.com/openai/plugins",
+          "score": 2.5755,
+          "sources": [
+            {
+              "name": "GitHub trending:python (+17★)"
+            }
+          ],
+          "tags": [
+            "openai",
+            "plugins"
+          ],
+          "focusTopics": []
         }
       ]
     }
-  ]
+  ],
+  "aiSummary": "今日AI领域迎来多项重大动态：Anthropic与xAI达成300MW/50亿美元数据中心交易，ARR增长8000% [查看详情](#item-latent-space-p-ainews-anthropic-spacexais-300mw5byr)，同时中国Moonshot AI以200亿美元估值融资20亿美元 [查看详情](#item-techcrunch-com-2026-05-07-chinas-moonshot-ai-raises-2b-at-20)，马斯克和Meta也在德州投资680亿美元布局AI未来 [查看详情](#item-bloomberg-com-news-newsletters-2026-05-07-elon-musk-and-meta)。研究方面，Meta发布ProgramBench测试AI复现程序能力 [查看详情](#item-reddit-com-r-MachineLearning-comments-1t5zdg5-meta-superinte)，Anthropic推出将Claude思维转化为文本的自然语言自编码器 [查看详情](#item-anthropic-com-research-natural-language-autoencoders)。工具更新包括OpenAI为Chrome推出Codex扩展 [查看详情](#item-theverge-com-ai-artificial-intelligence-926520-openai-launch)以及生产级AI编码代理技能集合 [查看详情](#item-github-com-addyosmani-agent-skills)。观点洞察指出AI代理需要控制流而非更多提示 [查看详情](#item-bsuh-bearblog-dev-agents-need-control-flow)，并分析了中国AI实验室内部观察 [查看详情](#item-interconnects-ai-p-notes-from-inside-chinas-ai-labs)。"
 }
