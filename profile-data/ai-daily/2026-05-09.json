@@ -1,162 +1,80 @@
 {
   "date": "2026-05-09",
-  "itemCount": 11,
+  "itemCount": 78,
   "sections": [
     {
       "id": "headlines",
       "title": "Headlines & Launches",
       "items": [
         {
-          "title": "Google's reCAPTCHA breaks for de-googled Android users",
-          "summary": "Google's new reCAPTCHA now requires hardware attestation, blocking de-googled Android devices that lack Google Play Services or certified hardware. This change forces users to choose between privacy and access to many websites, potentially excluding a growing community of privacy-conscious users and raising concerns about Google's control over web access. The new reCAPTCHA uses remote attestation, which ties device identity to Google servers via hardware-backed keys, making it impossible for de-googled or custom ROM users to pass the challenge.",
-          "url": "https://reclaimthenet.org/google-broke-recaptcha-for-de-googled-android-users",
-          "score": 8,
+          "title": "Anthropic Inks $1.8 Billion Computing Deal With Akamai (AKAM) - Bloomberg",
+          "summary": "Anthropic与Akamai签署18亿美元计算合同。",
+          "url": "https://www.bloomberg.com/news/articles/2026-05-08/anthropic-inks-1-8-billion-computing-deal-with-akamai",
+          "score": 8.5,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "anonymousiam"
+              "name": "bloomberg.com"
             }
           ],
           "tags": [
-            "privacy",
-            "reCAPTCHA",
-            "Android",
-            "remote attestation",
-            "Google"
+            "anthropic",
+            "compute-deal",
+            "infrastructure"
           ],
-          "focusTopics": [],
-          "background": "De-googled Android refers to devices running Android without Google services, often using custom ROMs like LineageOS. Hardware attestation verifies a device's integrity using a Trusted Platform Module (TPM) or similar secure element, which is typically absent or not recognized on de-googled devices.",
-          "discussion": "Community comments express strong frustration and privacy concerns, with users vowing to avoid hardware attestation and seeking alternative CAPTCHA solutions. Some technical users explain the attestation flow and warn about potential tracking via burned-in keys."
+          "focusTopics": []
         },
         {
-          "title": "Mojo 1.0 Beta: High-Performance Python Successor",
-          "summary": "Modular has released Mojo 1.0 Beta, a programming language that combines Python-like syntax with Rust-style ownership, Zig-like comptime metaprogramming, and first-class SIMD support for high performance. Mojo aims to bridge the gap between ease of use and performance, targeting machine learning and systems programming. Its unique approach to leveraging MLIR for code generation could challenge existing languages like Rust and CUDA. Mojo is not yet fully compatible with existing Python code, requiring explicit interop calls. The language is currently proprietary but committed to open-sourcing in Fall 2026.",
-          "url": "https://mojolang.org/",
+          "title": "Reports suggest DeepSeek is seeking $7.35 billion in funding and plans to release its V4.1 update next month.",
+          "summary": "DeepSeek寻求73.5亿美元融资，计划下月发布V4.1更新。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1t7bfpw/reports_suggest_deepseek_is_seeking_735_billion/",
           "score": 8,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "sbt567"
+              "name": "Reddit r/LocalLLaMA"
             }
           ],
           "tags": [
-            "Mojo",
-            "programming language",
-            "ML",
-            "performance",
-            "open source"
+            "deepseek",
+            "funding",
+            "model-release"
           ],
           "focusTopics": [
-            "memory"
-          ],
-          "background": "Mojo is a new programming language developed by Modular, designed to be as easy to use as Python while achieving performance comparable to C++ and Rust. It uses MLIR (Multi-Level Intermediate Representation) for advanced optimizations and supports GPU and CPU code in the same language. The ownership model prevents data races, and comptime enables compile-time code execution.",
-          "discussion": "Community sentiment is mixed: some developers praise Mojo's performance and features like ownership and comptime, while others express concerns about Python compatibility and the delayed open-source timeline (Fall 2026). There is also skepticism about competition with Nvidia's CUDA and CuTile."
+            "model-release"
+          ]
         },
         {
-          "title": "HTML Over Markdown for LLM Outputs Gains Traction",
-          "summary": "Thariq Shihipar, a member of the Claude Code team at Anthropic, advocates using HTML instead of Markdown as the output format when prompting Claude, providing compelling examples and prompt suggestions. Simon Willison also experiments with this approach, using GPT-5.5 to generate rich HTML explanations of a Linux exploit. This shift could improve the quality and interactivity of LLM-generated content, enabling richer explanations with SVG diagrams, interactive widgets, and in-page navigation. It challenges the long-standing default of Markdown for LLM outputs, potentially influencing prompt engineering best practices across the industry. The article includes a specific prompt example for reviewing a pull request, asking Claude to create an HTML artifact with inline margin annotations and color-coded findings. Simon Willison notes that Markdown's token efficiency was crucial during the GPT-4 era with its 8,192 token limit, but that constraint is less relevant now.",
-          "url": "https://simonwillison.net/2026/May/8/unreasonable-effectiveness-of-html/#atom-everything",
-          "score": 8,
-          "sources": [
-            {
-              "name": "rss",
-              "meta": "Simon Willison"
-            }
-          ],
-          "tags": [
-            "LLM",
-            "prompt engineering",
-            "HTML",
-            "Claude",
-            "best practices"
-          ],
-          "focusTopics": [],
-          "background": "Markdown has been the default output format for many LLM interactions due to its simplicity and token efficiency. However, HTML offers richer formatting capabilities, including embedded SVG, CSS styling, and JavaScript interactivity, which can make explanations more engaging and easier to navigate. The concept of \"artifacts\" in LLM interfaces (e.g., LibreChat, Open WebUI) allows rendering generated HTML as interactive content."
-        },
-        {
-          "title": "io_uring Zero-Copy RX Freelist OOB Write Exploit",
-          "summary": "A detailed exploit for an out-of-bounds write in the io_uring zero-copy RX freelist was published, allowing local privilege escalation from CAP_SYS_ADMIN and CAP_NET_ADMIN to root. Although the exploit requires already elevated capabilities, it highlights ongoing security concerns with io_uring, a subsystem that has been a frequent source of vulnerabilities in the Linux kernel. The vulnerability occurs because free_count is incremented before the write, and the write uses the pre-increment value as the index, allowing an out-of-bounds write when free_count equals num_niovs. The exploit was already patched in the kernel, and the author notes it requires CAP_SYS_ADMIN and CAP_NET_ADMIN.",
-          "url": "https://ze3tar.github.io/post-zcrx.html",
+          "title": "Siemens Gains From EU Move to Ease Industrial AI Regulation - Bloomberg",
+          "summary": "欧盟放宽工业AI监管，西门子受益。",
+          "url": "https://www.bloomberg.com/news/articles/2026-05-08/siemens-scores-win-on-eu-push-to-streamline-industrial-ai-rules",
           "score": 7,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "MrBruh"
+              "name": "bloomberg.com"
             }
           ],
           "tags": [
-            "Linux kernel",
-            "io_uring",
-            "security",
-            "exploit",
-            "CVE"
+            "regulation",
+            "eu",
+            "industrial-ai"
           ],
-          "focusTopics": [],
-          "background": "io_uring is a Linux kernel interface for asynchronous I/O, designed to reduce system call overhead. Zero-copy RX allows network data to be received directly into userspace pages without copying, improving performance. The freelist is a data structure used to manage memory buffers in this path.",
-          "discussion": "Commenters expressed skepticism about the practical impact, noting that the exploit requires already elevated capabilities (CAP_SYS_ADMIN and CAP_NET_ADMIN) and that a patch already exists. Some compared it to a similar exploit from months earlier, while others criticized the sensational title."
+          "focusTopics": []
         },
         {
-          "title": "David Attenborough Celebrates 100th Birthday",
-          "summary": "David Attenborough turned 100 years old, marking a major milestone for the legendary broadcaster and natural historian. His documentaries have inspired generations of scientists and engineers, and his centenary highlights his enduring cultural impact on science communication and environmental awareness. Google honored him with a special doodle featuring animal drawings and a 'Thank You Sir David' message. He is also credited with suggesting yellow tennis balls for better TV visibility.",
-          "url": "https://www.bbc.com/news/articles/cp3pww9g0p5o",
+          "title": "DOGE used ChatGPT in a way that was both dumb and illegal, judge rules | The Verge",
+          "summary": "法官裁定DOGE使用ChatGPT的方式既愚蠢又非法，涉及AI法律问题。",
+          "url": "https://www.theverge.com/policy/927071/doge-chatgpt-grants-canceled",
           "score": 7,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "defrost"
+              "name": "theverge.com"
             }
           ],
           "tags": [
-            "David Attenborough",
-            "science communication",
-            "nature documentaries",
-            "cultural impact"
+            "legal",
+            "policy",
+            "chatgpt"
           ],
-          "focusTopics": [],
-          "background": "David Attenborough is a British broadcaster and natural historian known for narrating and producing nature documentaries like 'Life on Earth' and 'Planet Earth'. His work has shaped public understanding of the natural world for over seven decades.",
-          "discussion": "The HN community shared personal anecdotes, such as his local presence in Richmond and his role in making tennis balls yellow. Many expressed gratitude for his influence on their careers and curiosity about nature."
-        },
-        {
-          "title": "CyberSecQwen-4B: Small, Specialized LLM for Defensive Cyber",
-          "summary": "The blog post introduces CyberSecQwen-4B, a 4-billion-parameter language model fine-tuned from Qwen3-4B-Instruct-2507 specifically for defensive cybersecurity tasks, emphasizing the need for small, specialized, locally-runnable models. This matters because it addresses the practical need for on-premises, privacy-preserving AI in cybersecurity, reducing reliance on cloud services and enabling deployment in air-gapped environments. It also highlights a trend toward specialized small models over general-purpose large ones for domain-specific tasks. The base model Qwen3-4B-Instruct-2507 is Apache-2.0 licensed and was the highest-performing 4B-class instruction-tuned model at training time. The fine-tuning likely uses domain-specific cybersecurity data to enhance performance on defensive tasks like threat detection and incident response.",
-          "url": "https://huggingface.co/blog/lablab-ai-amd-developer-hackathon/cybersecqwen-4b",
-          "score": 7,
-          "sources": [
-            {
-              "name": "rss",
-              "meta": "Hugging Face Blog"
-            }
-          ],
-          "tags": [
-            "cybersecurity",
-            "LLM",
-            "edge AI",
-            "specialized models",
-            "defensive security"
-          ],
-          "focusTopics": [],
-          "background": "Large language models (LLMs) are increasingly used in cybersecurity, but cloud-based models raise data privacy and latency concerns. Running models locally on-premises mitigates these risks, especially for sensitive sectors like defense and finance. Small specialized models like CyberSecQwen-4B offer a balance of performance and efficiency, enabling deployment on edge devices or in air-gapped networks."
-        },
-        {
-          "title": "Poland Joins Top 20 Largest Economies",
-          "summary": "Poland's economy has grown to become one of the world's 20 largest, according to recent GDP rankings, driven by post-communist reforms and EU integration. This milestone highlights Poland's successful economic transformation and could serve as a model for other transitioning economies, while also strengthening its position within the EU. Poland was the largest beneficiary of EU structural funds from 2014-2020, receiving one in four euros, which helped fuel its growth. However, critics note that much of the growth comes from foreign-owned companies rather than domestic firms.",
-          "url": "https://apnews.com/article/poland-economy-growth-g20-gdp-26fe06e120398410f8d773ba5661e7aa",
-          "score": 6,
-          "sources": [
-            {
-              "name": "hackernews",
-              "meta": "surprisetalk"
-            }
-          ],
-          "tags": [
-            "economics",
-            "Poland",
-            "growth",
-            "EU"
-          ],
-          "focusTopics": [],
-          "background": "Poland underwent a peaceful transition from a Soviet satellite state in 1989, implementing shock therapy reforms and later joining NATO and the EU. Its consistent high growth has been driven by EU integration, foreign investment, and a skilled, relatively low-cost labor force.",
-          "discussion": "Commenters debated the nature of Poland's growth: some praised it as a role model for consistent high growth, while others argued it is largely driven by foreign companies exploiting cheap labor, with few globally competitive Polish firms. A user also noted Poland's significant EU fund receipts."
+          "focusTopics": []
         }
       ]
     },
@@ -165,46 +83,460 @@
       "title": "Research & Innovation",
       "items": [
         {
-          "title": "EMO: Pretraining Mixture of Experts for Emergent Modularity",
-          "summary": "Allen AI released EMO, a 1B-active, 14B-total parameter mixture-of-experts model pretrained on 1 trillion tokens, where modular structure emerges automatically from data without human-defined priors. EMO demonstrates that emergent modularity can improve efficiency and interpretability in large-scale models, enabling selective use of experts with minimal performance loss, which could reduce computational costs and enhance model transparency. Retaining only 25% (12.5%) of experts incurs just a 1% (3%) absolute performance drop compared to the full model, showing strong modular specialization. The model matches standard MoE performance while enabling flexible expert pruning.",
-          "url": "https://huggingface.co/blog/allenai/emo",
-          "score": 8,
+          "title": "LCM: Lossless Context Management",
+          "summary": "提出无损上下文管理架构，提升LLM长程记忆能力。",
+          "url": "https://arxiv.org/abs/2605.04050",
+          "score": 7.5,
           "sources": [
             {
-              "name": "rss",
-              "meta": "Hugging Face Blog"
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "llm",
+            "context-management",
+            "memory"
+          ],
+          "focusTopics": [
+            "context-engineering"
+          ]
+        },
+        {
+          "title": "Agent Island: A Saturation- and Contamination-Resistant Benchmark from Multiagent Games",
+          "summary": "基于多智能体游戏构建抗饱和与污染的新基准。",
+          "url": "https://arxiv.org/abs/2605.04312",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "benchmark",
+            "multi-agent",
+            "evals"
+          ],
+          "focusTopics": [
+            "evals"
+          ]
+        },
+        {
+          "title": "EMO: Pretraining mixture of experts for emergent modularity",
+          "summary": "提出混合专家预训练方法实现涌现模块化。",
+          "url": "https://huggingface.co/blog/allenai/emo",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "Hugging Face"
             }
           ],
           "tags": [
             "mixture-of-experts",
             "pretraining",
-            "modularity",
-            "deep learning",
-            "AI research"
+            "modularity"
           ],
-          "focusTopics": [],
-          "background": "Mixture-of-Experts (MoE) is a neural network architecture that uses multiple submodules (experts) with a gating mechanism to handle different inputs, improving efficiency by activating only a subset of parameters per forward pass. Traditional MoE models often rely on manually designed routing or auxiliary losses to encourage specialization. Emergent modularity refers to the spontaneous formation of specialized modules during training without explicit supervision, which can lead to better interpretability and adaptability."
+          "focusTopics": []
         },
         {
-          "title": "Raspberry Pi Zero Serves Website Entirely from RAM",
-          "summary": "A developer is serving a static website from a Raspberry Pi Zero v1.3 running Alpine Linux entirely in RAM, with TLS termination handled by a cloud provider like Cloudflare. This demonstrates a low-cost, low-power approach to self-hosting that improves reliability by eliminating SD card failures and reducing latency, while offloading CPU-intensive TLS to the cloud. The Pi Zero has only 512MB of shared RAM and a single-core ARM Cortex-A7 CPU, yet it can serve a static site efficiently when the OS and content are loaded into a RAM disk. The setup uses Alpine Linux for its small footprint and diskless operation.",
-          "url": "https://btxx.org/posts/memory/",
-          "score": 6,
+          "title": "Teaching Claude Why",
+          "summary": "Anthropic研究如何教会Claude理解原因，提升推理能力。",
+          "url": "https://www.anthropic.com/research/teaching-claude-why",
+          "score": 7.0489999999999995,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "xngbuilds"
+              "name": "HN (83)"
             }
           ],
           "tags": [
-            "Raspberry Pi",
-            "self-hosting",
-            "static site",
-            "embedded systems"
+            "anthropic",
+            "reasoning",
+            "llm"
           ],
-          "focusTopics": [],
-          "background": "Raspberry Pi Zero is an ultra-low-cost single-board computer popular for embedded projects. Running entirely from RAM (diskless) eliminates the need for an SD card, which is a common point of failure, and improves performance by avoiding flash storage latency. TLS termination is typically CPU-heavy, so offloading it to a cloud provider like Cloudflare reduces load on the Pi.",
-          "discussion": "Commenters noted that offloading TLS to the cloud saves CPU but makes the setup partially dependent on a cloud provider. Some pointed out that a Pi Zero is more powerful than 1990s servers and can handle more than a minimal static site. Others shared experiences running Alpine Linux entirely in RAM for years without SD card failures."
+          "focusTopics": [
+            "planning"
+          ]
+        },
+        {
+          "title": "Parallel Prefix Verification for Speculative Generation",
+          "summary": "并行前缀验证加速推测解码，提升LLM推理效率。",
+          "url": "https://arxiv.org/abs/2605.04263",
+          "score": 7,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "llm",
+            "speculative-decoding",
+            "inference"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "ReaComp: Compiling LLM Reasoning into Symbolic Solvers for Efficient Program Synthesis",
+          "summary": "将LLM推理编译为符号求解器，高效合成程序。",
+          "url": "https://arxiv.org/abs/2605.05485",
+          "score": 7,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "llm",
+            "program-synthesis",
+            "reasoning"
+          ],
+          "focusTopics": [
+            "planning"
+          ]
+        },
+        {
+          "title": "Chainwash: Multi-Step Rewriting Attacks on Diffusion Language Model Watermarks",
+          "summary": "研究多步重写攻击破解扩散语言模型水印。",
+          "url": "https://arxiv.org/abs/2605.05503",
+          "score": 7,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "watermark",
+            "llm",
+            "security"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "The Cost of Context: Mitigating Textual Bias in Multimodal Retrieval-Augmented Generation",
+          "summary": "研究多模态RAG中文本偏见缓解方法。",
+          "url": "https://arxiv.org/abs/2605.05594",
+          "score": 7,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "multimodal",
+            "rag",
+            "bias"
+          ],
+          "focusTopics": [
+            "context-engineering"
+          ]
+        },
+        {
+          "title": "z-lab/dflash",
+          "summary": "块扩散用于闪存推测解码",
+          "url": "https://github.com/z-lab/dflash",
+          "score": 6.5185,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+379★)"
+            }
+          ],
+          "tags": [
+            "diffusion",
+            "speculative-decoding",
+            "llm"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Pro$^2$Assist: Continuous Step-Aware Proactive Assistance with Multimodal Egocentric Perception for Long-Horizon Procedural Tasks",
+          "summary": "多模态自我中心感知的连续步骤主动辅助框架。",
+          "url": "https://arxiv.org/abs/2605.04227",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "multimodal",
+            "procedural-tasks",
+            "assistance"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "The Scaling Properties of Implicit Deductive Reasoning in Transformers",
+          "summary": "研究Transformer隐式演绎推理的缩放性质。",
+          "url": "https://arxiv.org/abs/2605.04330",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "llm",
+            "reasoning",
+            "scaling"
+          ],
+          "focusTopics": [
+            "planning"
+          ]
+        },
+        {
+          "title": "When Context Hurts: The Crossover Effect of Knowledge Transfer on Multi-Agent Design Exploration",
+          "summary": "揭示多智能体设计中上下文过多反而有害的交叉效应。",
+          "url": "https://arxiv.org/abs/2605.04361",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "multi-agent",
+            "context",
+            "orchestration"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "AdaGATE: Adaptive Gap-Aware Token-Efficient Evidence Assembly for Multi-Hop Retrieval-Augmented Generation",
+          "summary": "自适应间隙感知的令牌高效证据组装，提升多跳RAG。",
+          "url": "https://arxiv.org/abs/2605.05245",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "rag",
+            "multi-hop",
+            "retrieval"
+          ],
+          "focusTopics": [
+            "context-engineering"
+          ]
+        },
+        {
+          "title": "A Few Good Clauses: Comparing LLMs vs Domain-Trained Small Language Models on Structured Contract Extraction",
+          "summary": "比较领域训练的小模型与LLM在合同提取上的表现。",
+          "url": "https://arxiv.org/abs/2605.05532",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "llm",
+            "small-language-model",
+            "contract-extraction"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "When2Speak: A Dataset for Temporal Participation and Turn-Taking in Multi-Party Conversations for Large Language Models",
+          "summary": "发布多轮对话中时序参与和话轮转换数据集。",
+          "url": "https://arxiv.org/abs/2605.05626",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "dataset",
+            "multi-party-conversation",
+            "llm"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "One Turn Too Late: Response-Aware Defense Against Hidden Malicious Intent in Multi-Turn Dialogue",
+          "summary": "提出多轮对话中隐藏恶意意图的响应感知防御。",
+          "url": "https://arxiv.org/abs/2605.05630",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "safety",
+            "multi-turn-dialogue",
+            "llm"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "ANDRE: An Attention-based Neuro-symbolic Differentiable Rule Extractor",
+          "summary": "基于注意力的神经符号可微规则提取器，提升可解释性。",
+          "url": "https://arxiv.org/abs/2605.04193",
+          "score": 6,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "neuro-symbolic",
+            "rule-learning"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Temporal Reasoning Is Not the Bottleneck: A Probabilistic Inconsistency Framework for Neuro-Symbolic QA",
+          "summary": "提出概率不一致框架，揭示LLM时间推理瓶颈非核心。",
+          "url": "https://arxiv.org/abs/2605.04243",
+          "score": 6,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "llm",
+            "reasoning",
+            "temporal"
+          ],
+          "focusTopics": [
+            "planning"
+          ]
+        },
+        {
+          "title": "SLAM: Structural Linguistic Activation Marking for Language Models",
+          "summary": "提出结构语言激活标记方法，实现无损LLM水印。",
+          "url": "https://arxiv.org/abs/2605.05443",
+          "score": 6,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "llm",
+            "watermark",
+            "security"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Can LLMs model real-world systems in TLA+?",
+          "summary": "研究LLM能否在TLA+中建模真实世界系统",
+          "url": "https://www.sigops.org/2026/can-llms-model-real-world-systems-in-tla/",
+          "score": 5.5969999999999995,
+          "sources": [
+            {
+              "name": "HN (24)"
+            }
+          ],
+          "tags": [
+            "llm",
+            "formal-methods",
+            "tla+"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Regularized Centered Emphatic Temporal Difference Learning",
+          "summary": "研究离策略TD学习的正则化方法，改进函数逼近。",
+          "url": "https://arxiv.org/abs/2605.04100",
+          "score": 5.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "reinforcement-learning",
+            "td-learning"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Counterargument for Critical Thinking as Judged by AI and Humans",
+          "summary": "研究AI与人类评判的反驳论证对批判性写作的影响。",
+          "url": "https://arxiv.org/abs/2605.05353",
+          "score": 5.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "llm",
+            "critical-thinking",
+            "education"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Formalizing statistical learning theory in Lean 4 [R]",
+          "summary": "在Lean 4中形式化统计学习理论的项目。",
+          "url": "https://www.reddit.com/r/MachineLearning/comments/1t7bgve/formalizing_statistical_learning_theory_in_lean_4/",
+          "score": 5.5,
+          "sources": [
+            {
+              "name": "Reddit r/MachineLearning"
+            }
+          ],
+          "tags": [
+            "formalization",
+            "statistical-learning",
+            "lean4"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Actionable Real-Time Modeling of Surgical Team Dynamics via Time-Expanded Interaction Graphs",
+          "summary": "用时序交互图建模手术团队动态，辅助实时分析。",
+          "url": "https://arxiv.org/abs/2605.04169",
+          "score": 5,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "healthcare",
+            "graph-neural-networks"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Generating Query-Focused Summarization Datasets from Query-Free Summarization Datasets",
+          "summary": "从无查询摘要数据集生成查询聚焦摘要数据集。",
+          "url": "https://arxiv.org/abs/2605.05392",
+          "score": 5,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "summarization",
+            "dataset-generation"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Backcasting forecast errors: model collapsing to mean [P]",
+          "summary": "时间序列回测预测误差时模型坍塌到均值的问题。",
+          "url": "https://www.reddit.com/r/MachineLearning/comments/1t7knyd/backcasting_forecast_errors_model_collapsing_to/",
+          "score": 4,
+          "sources": [
+            {
+              "name": "Reddit r/MachineLearning"
+            }
+          ],
+          "tags": [
+            "time-series",
+            "forecasting",
+            "model-collapse"
+          ],
+          "focusTopics": []
         }
       ]
     },
@@ -213,51 +545,870 @@
       "title": "Engineering & Resources",
       "items": [
         {
-          "title": "AI Disrupts Vulnerability Disclosure Cultures",
-          "summary": "AI is accelerating exploit generation, breaking traditional vulnerability disclosure cultures that relied on long embargo periods and limited transparency. This forces a shift toward shorter embargoes and greater software transparency. This change impacts software security globally, as faster exploit generation increases the risk of zero-day attacks, especially for organizations that cannot patch quickly. It may also accelerate the adoption of open-source and source-available software to enable faster community-driven fixes. The article argues that AI makes it cheaper and faster to generate exploits, reducing the effectiveness of coordinated disclosure with long embargoes. Community comments highlight that software transparency and reversing tools have been improving for over a decade, and AI is now amplifying these trends.",
-          "url": "https://www.jefftk.com/p/ai-is-breaking-two-vulnerability-cultures",
+          "title": "addyosmani/agent-skills",
+          "summary": "生产级AI编码代理技能库",
+          "url": "https://github.com/addyosmani/agent-skills",
+          "score": 8.3,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+1893★)"
+            }
+          ],
+          "tags": [
+            "ai-coding",
+            "agent-skills",
+            "open-source"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "[AINews] GPT-Realtime-2, -Translate, and -Whisper: new SOTA realtime voice APIs",
+          "summary": "OpenAI发布GPT-Realtime-2等新实时语音API。",
+          "url": "https://www.latent.space/p/ainews-gpt-realtime-2-translate-and",
           "score": 8,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "speckx"
+              "name": "Latent Space"
             }
           ],
           "tags": [
-            "AI",
-            "vulnerability disclosure",
-            "software security",
-            "open source"
+            "openai",
+            "voice-api",
+            "realtime"
           ],
-          "focusTopics": [],
-          "background": "Vulnerability disclosure cultures refer to the norms and policies around how security flaws are reported and fixed. Traditionally, coordinated disclosure involves an embargo period where researchers privately notify vendors to develop patches before public disclosure. AI tools like large language models can now analyze code and generate exploits faster, undermining the traditional embargo model.",
-          "discussion": "Community comments are divided: some argue the shift was inevitable due to software transparency trends, while others believe shorter embargoes may not help slow patchers. One commenter notes that AI makes coordinated disclosure more important, not less, to manage the increased exploit generation speed."
+          "focusTopics": [
+            "model-release"
+          ]
         },
         {
-          "title": "Meshtastic: Open-Source LoRa Mesh for Off-Grid Texting",
-          "summary": "Meshtastic is an open-source, LoRa-based mesh networking platform that enables off-grid text messaging using low-power, long-range radios without requiring a license. This project provides a decentralized communication alternative for areas without cellular or internet coverage, empowering hobbyists, emergency responders, and IoT developers with a resilient, community-driven network. Meshtastic operates in the ISM radio bands (e.g., 868 MHz in Europe, 915 MHz in the US) and uses LoRa modulation for long-range, low-power communication. Each node can relay messages to extend the network range, and the software is fully open-source with hundreds of contributors.",
-          "url": "https://meshtastic.org/docs/introduction/",
+          "title": "Hmbown/DeepSeek-TUI",
+          "summary": "DeepSeek模型的终端编码代理",
+          "url": "https://github.com/Hmbown/DeepSeek-TUI",
+          "score": 7.875,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+3731★)"
+            }
+          ],
+          "tags": [
+            "deepseek",
+            "coding-agent",
+            "tui"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "Airbnb says AI now writes 60% of its new code | TechCrunch",
+          "summary": "Airbnb称AI现已编写其60%的新代码，展示AI编程的广泛应用。",
+          "url": "https://techcrunch.com/2026/05/08/airbnb-says-ai-now-writes-60-of-its-new-code/",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "techcrunch.com"
+            }
+          ],
+          "tags": [
+            "ai-coding",
+            "enterprise",
+            "productivity"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "new MoE from ai2, EMO",
+          "summary": "AI2发布新MoE模型EMO，1B活跃/14B总参数量，采用文档级路由。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1t7kgy4/new_moe_from_ai2_emo/",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "moe",
+            "ai2",
+            "model-release"
+          ],
+          "focusTopics": [
+            "model-release"
+          ]
+        },
+        {
+          "title": "huggingface/ml-intern",
+          "summary": "Hugging Face开源ML工程师项目，自动读论文、训练模型。",
+          "url": "https://github.com/huggingface/ml-intern",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "Co-Starred"
+            }
+          ],
+          "tags": [
+            "open-source",
+            "ml-engineer",
+            "automation"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "anomalyco/opencode",
+          "summary": "开源编码代理，支持多种LLM和工具。",
+          "url": "https://github.com/anomalyco/opencode",
+          "score": 7.317,
+          "sources": [
+            {
+              "name": "GitHub trending:typescript (+628★)"
+            }
+          ],
+          "tags": [
+            "coding-agent",
+            "open-source"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "LearningCircuit/local-deep-research",
+          "summary": "本地深度研究工具，支持多种LLM和搜索引擎，SimpleQA达95%。",
+          "url": "https://github.com/LearningCircuit/local-deep-research",
+          "score": 7.2135,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+559★)"
+            }
+          ],
+          "tags": [
+            "local-llm",
+            "research-tool",
+            "simpleqa"
+          ],
+          "focusTopics": [
+            "evals"
+          ]
+        },
+        {
+          "title": "decolua/9router",
+          "summary": "免费AI编码路由工具，连接多种模型",
+          "url": "https://github.com/decolua/9router",
+          "score": 7.0249999999999995,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+1052★)"
+            }
+          ],
+          "tags": [
+            "ai-coding",
+            "router",
+            "free"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "Using Claude Code: The Unreasonable Effectiveness of HTML",
+          "summary": "使用Claude Code体验HTML的惊人效果。",
+          "url": "https://simonwillison.net/2026/May/8/unreasonable-effectiveness-of-html/#atom-everything",
           "score": 7,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "ColinWright"
+              "name": "Simon Willison"
             }
           ],
           "tags": [
-            "mesh networking",
-            "LoRa",
-            "decentralized communication",
-            "open-source",
-            "IoT"
+            "claude-code",
+            "ai-coding",
+            "html"
           ],
           "focusTopics": [
-            "memory"
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "Got MTP + TurboQuant running — Qwen3.6-27B -- 80+ t/s at 262K context on a single RTX 4090",
+          "summary": "在RTX 4090上实现Qwen3.6-27B 80+ t/s及262K上下文。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1t7kyju/got_mtp_turboquant_running_qwen3627b_80_ts_at/",
+          "score": 7,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
           ],
-          "background": "LoRa (Long Range) is a spread-spectrum radio modulation technique that enables low-power, long-distance data transmission, commonly used in IoT applications. Mesh networking allows devices to relay messages through intermediate nodes, creating a self-healing network without centralized infrastructure. Meshtastic was created by Kevin Hester in 2020 and has since grown into a community-driven project with local groups worldwide.",
-          "discussion": "Community members expressed strong interest, with some sharing technical talks on radio modulation and others noting the project's similarity to early internet days. However, some users reported that Meshtastic networks can be quiet, with mostly telemetry data and little conversation, and suggested trying Meshcore as an alternative."
+          "tags": [
+            "qwen",
+            "inference",
+            "optimization"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Gemma 4 26B Hits 600 Tok/s on One RTX 5090",
+          "summary": "Gemma 4 26B在RTX 5090上通过DFlash达到600 tok/s。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1t796qe/gemma_4_26b_hits_600_toks_on_one_rtx_5090/",
+          "score": 7,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "gemma",
+            "benchmark",
+            "speculative-decoding"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "You can do CUDA inference on an Apple Silicon Mac with PCI Passthrough",
+          "summary": "在Apple Silicon Mac上通过PCI Passthrough实现CUDA推理的项目。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1t7cqg9/you_can_do_cuda_inference_on_an_apple_silicon_mac/",
+          "score": 7,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "cuda",
+            "apple-silicon",
+            "gpu-passthrough"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "earendil-works/pi",
+          "summary": "AI代理工具包，含CLI、统一LLM API、TUI等。",
+          "url": "https://github.com/earendil-works/pi",
+          "score": 6.907,
+          "sources": [
+            {
+              "name": "GitHub trending:typescript (+638★)"
+            }
+          ],
+          "tags": [
+            "agent-toolkit",
+            "cli",
+            "llm-api"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "AI is breaking two vulnerability cultures",
+          "summary": "AI正在改变漏洞披露文化，打破传统安全研究的两大范式。",
+          "url": "https://www.jefftk.com/p/ai-is-breaking-two-vulnerability-cultures",
+          "score": 6.652,
+          "sources": [
+            {
+              "name": "HN (234)"
+            }
+          ],
+          "tags": [
+            "ai-security",
+            "vulnerability",
+            "culture"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "anthropics/financial-services",
+          "summary": "Anthropic开源金融服务AI工具集",
+          "url": "https://github.com/anthropics/financial-services",
+          "score": 6.6,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+3660★)"
+            }
+          ],
+          "tags": [
+            "anthropic",
+            "financial-services",
+            "open-source"
+          ],
+          "focusTopics": [
+            "tool-use"
+          ]
+        },
+        {
+          "title": "rohitg00/agentmemory",
+          "summary": "AI编码代理持久记忆工具，基于真实基准。",
+          "url": "https://github.com/rohitg00/agentmemory",
+          "score": 6.55,
+          "sources": [
+            {
+              "name": "GitHub trending:typescript (+400★)"
+            }
+          ],
+          "tags": [
+            "agent-memory",
+            "persistent-memory",
+            "coding-agent"
+          ],
+          "focusTopics": [
+            "context-engineering",
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "datawhalechina/hello-agents",
+          "summary": "从零开始构建智能体的中文教程，涵盖原理与实践。",
+          "url": "https://github.com/datawhalechina/hello-agents",
+          "score": 6.525499999999999,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+667★)"
+            }
+          ],
+          "tags": [
+            "agent-tutorial",
+            "chinese"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "Developers worry about job loss at Anthropic’s conference | Semafor",
+          "summary": "在Anthropic开发者大会上，开发者担忧AI导致失业。",
+          "url": "https://www.semafor.com/article/05/08/2026/coders-worry-about-job-loss-at-anthropics-developer-conference",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "semafor.com"
+            }
+          ],
+          "tags": [
+            "job-loss",
+            "developer-conference",
+            "anthropic"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Fission-AI/OpenSpec",
+          "summary": "规范驱动开发工具，用于AI编码助手。",
+          "url": "https://github.com/Fission-AI/OpenSpec",
+          "score": 6.424,
+          "sources": [
+            {
+              "name": "GitHub trending:typescript (+316★)"
+            }
+          ],
+          "tags": [
+            "spec-driven",
+            "ai-coding",
+            "developer-tools"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "CyberSecQwen-4B: Why Defensive Cyber Needs Small, Specialized, Locally-Runnable Models",
+          "summary": "发布4B参数网络安全专用小模型CyberSecQwen。",
+          "url": "https://huggingface.co/blog/lablab-ai-amd-developer-hackathon/cybersecqwen-4b",
+          "score": 6,
+          "sources": [
+            {
+              "name": "Hugging Face"
+            }
+          ],
+          "tags": [
+            "cybersecurity",
+            "small-language-model",
+            "open-source"
+          ],
+          "focusTopics": [
+            "model-release"
+          ]
+        },
+        {
+          "title": "[AINews] Anthropic growing 10x/year while everyone else is laying off >10% of their workforce",
+          "summary": "Anthropic年增长10倍，其他公司裁员超10%。",
+          "url": "https://www.latent.space/p/ainews-anthropic-growing-10xyear",
+          "score": 6,
+          "sources": [
+            {
+              "name": "Latent Space"
+            }
+          ],
+          "tags": [
+            "anthropic",
+            "industry-trends"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Research and development of new AI could soon be undertaken by AI | Semafor",
+          "summary": "新AI的研究与开发可能很快由AI自身承担，探讨AI自主研究。",
+          "url": "https://www.semafor.com/article/05/08/2026/research-and-development-of-new-ai-could-soon-be-undertaken-by-ai",
+          "score": 6,
+          "sources": [
+            {
+              "name": "semafor.com"
+            }
+          ],
+          "tags": [
+            "ai-research",
+            "automation",
+            "future"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Qwen 35B-A3B is very usable with 12GB of VRAM",
+          "summary": "Qwen 35B-A3B MoE模型在12GB显存上运行良好。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1t7l56a/qwen_35ba3b_is_very_usable_with_12gb_of_vram/",
+          "score": 6,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "qwen",
+            "moe",
+            "local-llm"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "z-lab released gemma-4-26B-A4B-it-DFlash. Anybody tried it yet?",
+          "summary": "z-lab发布Gemma-4-26B-A4B-it-DFlash，支持推测解码。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1t79ayh/zlab_released_gemma426ba4bitdflash_anybody_tried/",
+          "score": 6,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "gemma",
+            "speculative-decoding",
+            "model-release"
+          ],
+          "focusTopics": [
+            "model-release"
+          ]
+        },
+        {
+          "title": "Ring 2.6 1T",
+          "summary": "Ring 2.6 1T模型在OpenRouter上线，开放权重。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1t7bvmq/ring_26_1t/",
+          "score": 6,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "ring",
+            "model-release",
+            "open-weights"
+          ],
+          "focusTopics": [
+            "model-release"
+          ]
+        },
+        {
+          "title": "vercel-labs/open-agents",
+          "summary": "Vercel开源云代理构建模板。",
+          "url": "https://github.com/vercel-labs/open-agents",
+          "score": 5.965999999999999,
+          "sources": [
+            {
+              "name": "GitHub trending:typescript (+294★)"
+            }
+          ],
+          "tags": [
+            "cloud-agent",
+            "template",
+            "vercel"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "Mojo 1.0 Beta",
+          "summary": "Mojo编程语言发布1.0 Beta版，面向AI/ML高性能计算。",
+          "url": "https://mojolang.org/",
+          "score": 5.954999999999999,
+          "sources": [
+            {
+              "name": "HN (285)"
+            }
+          ],
+          "tags": [
+            "programming-language",
+            "mojo",
+            "beta"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "colbymchenry/codegraph",
+          "summary": "预索引代码知识图谱，减少Claude Code的token和工具调用。",
+          "url": "https://github.com/colbymchenry/codegraph",
+          "score": 5.7665,
+          "sources": [
+            {
+              "name": "GitHub trending:typescript (+161★)"
+            }
+          ],
+          "tags": [
+            "code-graph",
+            "claude-code",
+            "token-efficiency"
+          ],
+          "focusTopics": [
+            "coding-agents",
+            "context-engineering"
+          ]
+        },
+        {
+          "title": "AI Power Use Risks Blowing Up for Governments - Bloomberg",
+          "summary": "AI电力使用可能给政府带来风险，讨论能源影响。",
+          "url": "https://www.bloomberg.com/news/newsletters/2026-05-08/ai-power-use-risks-blowing-up-for-governments",
+          "score": 5.5,
+          "sources": [
+            {
+              "name": "bloomberg.com"
+            }
+          ],
+          "tags": [
+            "energy",
+            "policy",
+            "infrastructure"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "vLLM ROCm has been added to Lemonade as an experimental backend",
+          "summary": "vLLM ROCm后端加入Lemonade，支持运行.safetensors模型。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1t7g70j/vllm_rocm_has_been_added_to_lemonade_as_an/",
+          "score": 5.5,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "vllm",
+            "rocm",
+            "inference"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "MTP is all about acceptance rate",
+          "summary": "讨论MTP（多token预测）的接受率及其重要性。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1t7mdrl/mtp_is_all_about_acceptance_rate/",
+          "score": 5.5,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "mtp",
+            "speculative-decoding",
+            "inference"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "CopilotKit/CopilotKit",
+          "summary": "前端代理与生成式UI栈，支持React和Angular。",
+          "url": "https://github.com/CopilotKit/CopilotKit",
+          "score": 5.422499999999999,
+          "sources": [
+            {
+              "name": "GitHub trending:typescript (+215★)"
+            }
+          ],
+          "tags": [
+            "frontend",
+            "generative-ui",
+            "react"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "ChromeDevTools/chrome-devtools-mcp",
+          "summary": "Chrome DevTools MCP，供编码代理使用。",
+          "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+          "score": 5.3175,
+          "sources": [
+            {
+              "name": "GitHub trending:typescript (+145★)"
+            }
+          ],
+          "tags": [
+            "chrome-devtools",
+            "mcp",
+            "coding-agent"
+          ],
+          "focusTopics": [
+            "coding-agents",
+            "tool-use"
+          ]
+        },
+        {
+          "title": "awslabs/aidlc-workflows",
+          "summary": "AWS AI驱动生命周期工作流规则",
+          "url": "https://github.com/awslabs/aidlc-workflows",
+          "score": 5.186999999999999,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+58★)"
+            }
+          ],
+          "tags": [
+            "aws",
+            "workflow",
+            "ai-coding"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "AI’s Promise, Concern Puts Trump Administration in Bind - Bloomberg",
+          "summary": "AI的前景与担忧使特朗普政府陷入两难，讨论政策困境。",
+          "url": "https://www.bloomberg.com/news/newsletters/2026-05-08/ai-s-promise-concern-puts-trump-administration-in-bind",
+          "score": 5,
+          "sources": [
+            {
+              "name": "bloomberg.com"
+            }
+          ],
+          "tags": [
+            "policy",
+            "regulation",
+            "government"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "PlayStation sees AI as a ‘powerful tool’ to help make games | The Verge",
+          "summary": "PlayStation视AI为制作游戏的强大工具，游戏行业应用。",
+          "url": "https://www.theverge.com/games/926914/sony-playstation-ai-powerful-tool-games",
+          "score": 5,
+          "sources": [
+            {
+              "name": "theverge.com"
+            }
+          ],
+          "tags": [
+            "gaming",
+            "ai-tools",
+            "sony"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Qwen3.6 35B A3B uncensored heretic Native MTP Preserved is Out Now With KLD 0.0015, 10/100 Refusals and the Full 19 MTPs Preserved and Retained, Available in Safetensors, GGUFs. NVFP4, NVFP4 GGUFs and GPTQ-Int4 Formats",
+          "summary": "Qwen3.6 35B A3B无审查版本发布，保留原生MTP。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1t7qfaq/qwen36_35b_a3b_uncensored_heretic_native_mtp/",
+          "score": 5,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "qwen",
+            "uncensored",
+            "moe"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "The amount of new agent APIs/harnesses are dizzying, with everyone and their dog releasing their own. Can we do a compilation thread of comparisons?",
+          "summary": "社区呼吁整理对比众多新agent API/框架。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1t7d9h0/the_amount_of_new_agent_apisharnesses_are/",
+          "score": 5,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "agent",
+            "api",
+            "comparison"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "Interactive KL Divergence Visualisation [P]",
+          "summary": "交互式KL散度可视化工具，帮助理解概念。",
+          "url": "https://www.reddit.com/r/MachineLearning/comments/1t7lmu4/interactive_kl_divergence_visualisation_p/",
+          "score": 5,
+          "sources": [
+            {
+              "name": "Reddit r/MachineLearning"
+            }
+          ],
+          "tags": [
+            "visualization",
+            "kl-divergence",
+            "educational"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "HKUDS/AI-Trader",
+          "summary": "全自动代理原生交易系统",
+          "url": "https://github.com/HKUDS/AI-Trader",
+          "score": 4.978,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+202★)"
+            }
+          ],
+          "tags": [
+            "trading",
+            "agent",
+            "automation"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "PaddlePaddle/PaddleOCR",
+          "summary": "PaddleOCR工具，将PDF/图像转为结构化数据供AI使用。",
+          "url": "https://github.com/PaddlePaddle/PaddleOCR",
+          "score": 4.8759999999999994,
+          "sources": [
+            {
+              "name": "GitHub trending:python (+134★)"
+            }
+          ],
+          "tags": [
+            "ocr",
+            "document-processing"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "lobehub/lobehub",
+          "summary": "LobeHub平台，用于构建和协作AI代理队友。",
+          "url": "https://github.com/lobehub/lobehub",
+          "score": 4.4375,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+125★)"
+            }
+          ],
+          "tags": [
+            "agent-platform",
+            "collaboration"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "People Interested in Continual Learning Research[R]",
+          "summary": "寻找对持续学习研究感兴趣的人。",
+          "url": "https://www.reddit.com/r/MachineLearning/comments/1t72u1r/people_interested_in_continual_learning_researchr/",
+          "score": 4,
+          "sources": [
+            {
+              "name": "Reddit r/MachineLearning"
+            }
+          ],
+          "tags": [
+            "continual-learning",
+            "discussion"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Disillusionment with mechanistic interpretability research [D]",
+          "summary": "对机械可解释性研究感到失望的讨论。",
+          "url": "https://www.reddit.com/r/MachineLearning/comments/1t6zdj6/disillusionment_with_mechanistic_interpretability/",
+          "score": 4,
+          "sources": [
+            {
+              "name": "Reddit r/MachineLearning"
+            }
+          ],
+          "tags": [
+            "mechanistic-interpretability",
+            "discussion"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Embedding models for time series data [D]",
+          "summary": "询问时间序列数据的嵌入模型。",
+          "url": "https://www.reddit.com/r/MachineLearning/comments/1t7avgp/embedding_models_for_time_series_data_d/",
+          "score": 4,
+          "sources": [
+            {
+              "name": "Reddit r/MachineLearning"
+            }
+          ],
+          "tags": [
+            "time-series",
+            "embedding",
+            "discussion"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "cheahjs/free-llm-api-resources",
+          "summary": "免费LLM推理API资源列表。",
+          "url": "https://github.com/cheahjs/free-llm-api-resources",
+          "score": 3.6654999999999998,
+          "sources": [
+            {
+              "name": "GitHub trending:python (+177★)"
+            }
+          ],
+          "tags": [
+            "llm-api",
+            "free-resources"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "vllm-project/vllm-ascend",
+          "summary": "vLLM在昇腾硬件上的社区维护插件。",
+          "url": "https://github.com/vllm-project/vllm-ascend",
+          "score": 2.5589999999999997,
+          "sources": [
+            {
+              "name": "GitHub trending:python (+6★)"
+            }
+          ],
+          "tags": [
+            "vllm",
+            "ascend",
+            "hardware-plugin"
+          ],
+          "focusTopics": []
         }
       ]
     }
-  ]
+  ],
+  "aiSummary": "今日AI领域动态密集：Anthropic与Akamai签署18亿美元计算合同[#item-bloomberg-com-news-articles-2026-05-08-anthropic-inks-1-8-bi]，DeepSeek寻求73.5亿美元融资并计划下月发布V4.1更新[#item-reddit-com-r-LocalLLaMA-comments-1t7bfpw-reports-suggest-dee]，欧盟放宽工业AI监管使西门子受益[#item-bloomberg-com-news-articles-2026-05-08-siemens-scores-win-on]。研究方面，有论文提出无损上下文管理架构提升LLM长程记忆[#item-arxiv-org-abs-2605-04050]，以及基于多智能体游戏构建抗污染新基准[#item-arxiv-org-abs-2605-04312]。工具更新中，OpenAI发布GPT-Realtime-2等实时语音API[#item-latent-space-p-ainews-gpt-realtime-2-translate-and]，GitHub上出现生产级AI编码代理技能库[#item-github-com-addyosmani-agent-skills]。观点洞察显示，Airbnb称AI现已编写其60%的新代码[#item-techcrunch-com-2026-05-08-airbnb-says-ai-now-writes-60-of-it]，开发者还在单张RTX 4090上实现了Qwen3.6-27B模型80+ t/s的推理速度[#item-reddit-com-r-LocalLLaMA-comments-1t7kyju-got-mtp-turboquant-]。"
 }
