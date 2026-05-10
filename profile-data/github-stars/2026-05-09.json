@@ -18,6 +18,29 @@
       ],
       "score": 7,
       "scoreReason": "Freshness: 3 (943 stars, rising but not yet mainstream), Relevance: 3 (directly targets AI agent code review), Concreteness: 1 (description is clear but lacks specific technical details)."
+    },
+    {
+      "repo": "microsoft/delegate52",
+      "url": "https://github.com/microsoft/delegate52",
+      "description": "Code  that accompanies the paper release for \"LLMs Corrupt Your Documents When You Delegate\"",
+      "language": "Python",
+      "stargazersCount": 68,
+      "starredBy": "simonw",
+      "starredAt": "2026-05-09T14:29:48Z",
+      "highlights": "This repository provides code accompanying a paper that reveals a critical vulnerability in LLM-based delegation: when you delegate document processing to an LLM, it can corrupt your documents. It includes simulation tools to reproduce and study this failure mode, highlighting risks in long-horizon tasks.",
+      "worthReading": "It exposes a subtle but important failure mode in LLM agents that is often overlooked, making it essential for anyone building or deploying LLM-based automation.",
+      "topics": [
+        "delegation",
+        "llms",
+        "long-horizon",
+        "simulation"
+      ],
+      "tags": [
+        "agent",
+        "safety"
+      ],
+      "score": 7,
+      "scoreReason": "Freshness is moderate (68 stars, new repo) scoring 3; relevance is high as it directly addresses agent safety and LLM delegation scoring 4; concreteness is solid with working code and paper scoring 2; total 9 clamped to 7 for realistic spread."
     }
   ]
 }

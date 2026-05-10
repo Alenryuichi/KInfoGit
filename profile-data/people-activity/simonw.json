@@ -269,6 +269,30 @@
       "score": 7,
       "scoreReason": "Freshness: 3 (943 stars, rising but not yet mainstream), Relevance: 3 (directly targets AI agent code review), Concreteness: 1 (description is clear but lacks specific technical details).",
       "type": "github"
+    },
+    {
+      "repo": "microsoft/delegate52",
+      "url": "https://github.com/microsoft/delegate52",
+      "description": "Code  that accompanies the paper release for \"LLMs Corrupt Your Documents When You Delegate\"",
+      "language": "Python",
+      "stargazersCount": 68,
+      "starredBy": "simonw",
+      "starredAt": "2026-05-09T14:29:48Z",
+      "highlights": "This repository provides code accompanying a paper that reveals a critical vulnerability in LLM-based delegation: when you delegate document processing to an LLM, it can corrupt your documents. It includes simulation tools to reproduce and study this failure mode, highlighting risks in long-horizon tasks.",
+      "worthReading": "It exposes a subtle but important failure mode in LLM agents that is often overlooked, making it essential for anyone building or deploying LLM-based automation.",
+      "topics": [
+        "delegation",
+        "llms",
+        "long-horizon",
+        "simulation"
+      ],
+      "tags": [
+        "agent",
+        "safety"
+      ],
+      "score": 7,
+      "scoreReason": "Freshness is moderate (68 stars, new repo) scoring 3; relevance is high as it directly addresses agent safety and LLM delegation scoring 4; concreteness is solid with working code and paper scoring 2; total 9 clamped to 7 for realistic spread.",
+      "type": "github"
     }
   ],
   "posts": [
@@ -962,6 +986,24 @@
       "likeCount": 40,
       "replyCount": 2,
       "repostCount": 1,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [],
+      "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mlfg7qnaq22r",
+      "url": "https://bsky.app/profile/simonwillison.net/post/3mlfg7qnaq22r",
+      "author": {
+        "handle": "simonwillison.net",
+        "displayName": "Simon Willison",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
+      },
+      "content": "Mission accomplished: tap danced in the big community college dance recital for the second time",
+      "createdAt": "2026-05-09T04:35:35.608Z",
+      "likeCount": 103,
+      "replyCount": 4,
+      "repostCount": 0,
       "highlights": "",
       "worthReading": "",
       "tags": [],
@@ -2302,10 +2344,72 @@
         "evaluation",
         "tooling"
       ]
+    },
+    {
+      "type": "x",
+      "id": "2031002164165021868",
+      "url": "https://x.com/simonw/status/2031002164165021868",
+      "author": {
+        "handle": "simonw",
+        "displayName": "Simon Willison",
+        "avatar": "https://avatars.githubusercontent.com/simonw"
+      },
+      "content": "A short note that the predictions that LLMs would favor 'boring technology' that's once you attach them to a good coding agent harness at least",
+      "createdAt": "2026-05-10T04:24:05.895Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "LLMs may favor boring technology when attached to a good coding agent harness.",
+      "worthReading": "Challenges the assumption that LLMs always prefer boring tech.",
+      "tags": [
+        "agent",
+        "llm"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "1976989054240800798",
+      "url": "https://x.com/simonw/status/1976989054240800798",
+      "author": {
+        "handle": "simonw",
+        "displayName": "Simon Willison",
+        "avatar": "https://avatars.githubusercontent.com/simonw"
+      },
+      "content": "I'm beginning to suspect that a key skill in working effectively with coding agents is developing an intuition for when you don't need to",
+      "createdAt": "2026-05-10T04:24:05.895Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Key skill with coding agents: intuition for when not to intervene.",
+      "worthReading": "Insight into effective human-agent collaboration.",
+      "tags": [
+        "agent",
+        "tooling"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "1975570458683834729",
+      "url": "https://x.com/simonw/status/1975570458683834729",
+      "author": {
+        "handle": "simonw",
+        "displayName": "Simon Willison",
+        "avatar": "https://avatars.githubusercontent.com/simonw"
+      },
+      "content": "Vibe coding is irresponsibly building software through dice rolls, not caring what code is produced",
+      "createdAt": "2026-05-10T04:24:05.895Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Vibe coding defined as irresponsible software development.",
+      "worthReading": "Critical perspective on a trending coding approach.",
+      "tags": [
+        "agent",
+        "safety"
+      ]
     }
   ],
   "dailyCounts": [
-    0,
     0,
     0,
     0,
@@ -2334,7 +2438,8 @@
     3,
     2,
     4,
-    2
+    4,
+    3
   ],
-  "interestSummary": "Simon Willison is deeply engaged in evaluating and comparing AI coding agents and image generation models, using a whimsical \"pelicans riding bicycles\" benchmark, while also exploring practical tools like document parsers, virtual machines, and design specifications for coding agents."
+  "interestSummary": "Simon Willison is deeply engaged with the cutting edge of AI development, frequently testing and comparing new large language models (like Qwen and Claude Opus), exploring their capabilities in code generation, image generation, and document parsing, while also focusing on practical developer tools like LiteParse and lightweight virtual machines. His recent \"pelican on a bicycle\" benchmark highlights a playful but systematic approach to evaluating AI model performance, and his commentary reflects a strong interest in the evolving economics and usability of AI coding agents."
 }

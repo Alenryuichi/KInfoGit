@@ -1582,6 +1582,90 @@
         "deployment",
         "evaluation"
       ]
+    },
+    {
+      "type": "x",
+      "id": "2021261552222158955",
+      "url": "https://x.com/hwchase17/status/2021261552222158955",
+      "author": {
+        "handle": "hwchase17",
+        "displayName": "Harrison Chase",
+        "avatar": "https://avatars.githubusercontent.com/hwchase17"
+      },
+      "content": "TL;DR: More and more agents need a workspace: a computer where they can run code, install packages, and access files. Sandboxes provide this",
+      "createdAt": "2026-05-10T04:24:15.873Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Agents require a sandboxed workspace to execute code and access files, highlighting the need for secure execution environments.",
+      "worthReading": "Explains a fundamental requirement for agent deployment: a workspace for code execution and file access.",
+      "tags": [
+        "agent",
+        "infra"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2042978500567609738",
+      "url": "https://x.com/hwchase17/status/2042978500567609738",
+      "author": {
+        "handle": "hwchase17",
+        "displayName": "Harrison Chase",
+        "avatar": "https://avatars.githubusercontent.com/hwchase17"
+      },
+      "content": "Your harness, your memory ... The “best” way to build agentic systems has changed dramatically over the past three years. When ChatGPT came out,",
+      "createdAt": "2026-05-10T04:24:15.873Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "The approach to building agentic systems has evolved significantly since ChatGPT's release, emphasizing memory and harness.",
+      "worthReading": "Reflects on the rapid evolution of agentic system design and the importance of memory.",
+      "tags": [
+        "agent",
+        "llm"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2011814697889316930",
+      "url": "https://x.com/hwchase17/status/2011814697889316930",
+      "author": {
+        "handle": "hwchase17",
+        "displayName": "Harrison Chase",
+        "avatar": "https://avatars.githubusercontent.com/hwchase17"
+      },
+      "content": "We launched LangSmith Agent Builder this week as a no-code way to build agents. A key part of Agent builder is it's memory system. In this",
+      "createdAt": "2026-05-10T04:24:15.873Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "LangSmith Agent Builder enables no-code agent creation with a focus on memory systems.",
+      "worthReading": "Announces a no-code tool for building agents, highlighting the importance of memory.",
+      "tags": [
+        "agent",
+        "tooling"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2013641863123870133",
+      "url": "https://x.com/hwchase17/status/2013641863123870133",
+      "author": {
+        "handle": "hwchase17",
+        "displayName": "Harrison Chase",
+        "avatar": "https://avatars.githubusercontent.com/hwchase17"
+      },
+      "content": "When building agents, you need to iterate on production data much more than when building traditional software. You need to iterate on how",
+      "createdAt": "2026-05-10T04:24:15.873Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Agent development requires more iteration on production data compared to traditional software.",
+      "worthReading": "Emphasizes the data-driven iteration cycle unique to agent development.",
+      "tags": [
+        "agent",
+        "evaluation"
+      ]
     }
   ],
   "dailyCounts": [
@@ -1592,7 +1676,6 @@
     0,
     0,
     0,
-    0,
     4,
     3,
     3,
@@ -1614,7 +1697,8 @@
     2,
     5,
     3,
-    3
+    3,
+    4
   ],
-  "interestSummary": "Harrison Chase is focused on the development and production deployment of AI agents, emphasizing the need for sandboxed workspaces, robust memory systems, and a shift from traditional code debugging to trace-based iteration on production data."
+  "interestSummary": "Harrison Chase is focused on advancing AI agent development, particularly emphasizing the need for agent workspaces with sandboxed environments and the importance of iterating on production data for debugging and monitoring, as highlighted by LangChain's new Agent Builder tool."
 }
