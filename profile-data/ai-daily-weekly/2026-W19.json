@@ -1,0 +1,323 @@
+{
+  "week": "2026-W19",
+  "dateRange": {
+    "start": "2026-05-04",
+    "end": "2026-05-10"
+  },
+  "overview": "This week in AI was dominated by major model releases and the rapid maturation of coding agents. OpenAI's GPT-5.5 Instant launch (score 9.5) set the tone, becoming the new default for ChatGPT and sparking discussions on memory features. DeepSeek V4's full paper (8.5) with FP4 quantization details further fueled open-source momentum. The coding-agents category saw explosive growth, led by addyosmani/agent-skills (8.7) and Meta's ProgramBench (8.5), which tests AI's ability to recreate real-world programs. Cross-topic patterns emerged: model-release drove coding-agents coverage as new models enabled more capable agents, while context-engineering innovations like Context Mode (8.3) directly improved agent efficiency. Agent harnesses advanced with ruflo (9.1) and TradingAgents (8.7), signaling a shift toward production-ready multi-agent systems. Evals gained prominence with Agent Island (8.5) and Harvard's ER diagnosis study (8.0), highlighting both progress and the need for robust benchmarks. Post-training research contributed adaptive methods like Adaptive Power-Mean Policy Optimization (7.5), while tool-use studies questioned the cost-effectiveness of computer use vs. structured APIs.",
+  "topStoriesByTopic": [
+    {
+      "topic": "coding-agents",
+      "topicLabel": "Coding Agents",
+      "stories": [
+        {
+          "title": "addyosmani/agent-skills",
+          "url": "https://github.com/addyosmani/agent-skills",
+          "oneLiner": "A curated collection of production-grade skills for AI coding agents, setting a new standard for agent engineering.",
+          "score": 8.7,
+          "sources": [
+            "GitHub"
+          ]
+        },
+        {
+          "title": "META Superintelligence Lab Presents: ProgramBench: Can SOTA AI Recreate Real Executable Programs(ffmpeg, SQLite, ripgrep) From Scratch Without The Internet?",
+          "url": "https://www.reddit.com/r/MachineLearning/comments/1t5zdg5/meta_superintelligence_lab_presents_programbench/",
+          "oneLiner": "Meta's new benchmark challenges AI to recreate complex real-world programs, pushing the limits of coding agents.",
+          "score": 8.5,
+          "sources": [
+            "Reddit"
+          ]
+        },
+        {
+          "title": "Hmbown/DeepSeek-TUI",
+          "url": "https://github.com/Hmbown/DeepSeek-TUI",
+          "oneLiner": "A terminal-based coding agent powered by DeepSeek, bringing agentic coding to the command line.",
+          "score": 8.3,
+          "sources": [
+            "GitHub"
+          ]
+        }
+      ]
+    },
+    {
+      "topic": "context-engineering",
+      "topicLabel": "Context Engineering",
+      "stories": [
+        {
+          "title": "mksglu/context-mode",
+          "url": "https://github.com/mksglu/context-mode",
+          "oneLiner": "Optimizes context windows for AI coding agents, slashing token usage by 98% and enabling longer sessions.",
+          "score": 8.3,
+          "sources": [
+            "GitHub"
+          ]
+        },
+        {
+          "title": "Natural Language Autoencoders: Turning Claude's Thoughts into Text",
+          "url": "https://www.anthropic.com/research/natural-language-autoencoders",
+          "oneLiner": "Anthropic's novel approach to interpretability by converting Claude's internal representations into readable text.",
+          "score": 8.2,
+          "sources": [
+            "HN"
+          ]
+        },
+        {
+          "title": "FastDMS: 6.4X KV-cache compression running faster than vLLM BF16/FP8",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1t3vlrx/fastdms_64x_kvcache_compression_running_faster/",
+          "oneLiner": "A breakthrough in KV-cache compression that outperforms standard formats, enabling longer contexts on limited hardware.",
+          "score": 8,
+          "sources": [
+            "Reddit"
+          ]
+        }
+      ]
+    },
+    {
+      "topic": "agent-harness",
+      "topicLabel": "Agent Harness",
+      "stories": [
+        {
+          "title": "ruvnet/ruflo",
+          "url": "https://github.com/ruvnet/ruflo",
+          "oneLiner": "A leading orchestration platform for Claude agents, enabling complex multi-agent swarms with ease.",
+          "score": 9.1,
+          "sources": [
+            "GitHub"
+          ]
+        },
+        {
+          "title": "TauricResearch/TradingAgents",
+          "url": "https://github.com/TauricResearch/TradingAgents",
+          "oneLiner": "A multi-agent LLM framework for financial trading, demonstrating agent harnesses in high-stakes domains.",
+          "score": 8.7,
+          "sources": [
+            "GitHub"
+          ]
+        },
+        {
+          "title": "bytedance/UI-TARS-desktop",
+          "url": "https://github.com/bytedance/UI-TARS-desktop",
+          "oneLiner": "ByteDance's open-source multimodal agent stack, bringing GUI automation to desktop agents.",
+          "score": 7.6,
+          "sources": [
+            "GitHub"
+          ]
+        }
+      ]
+    },
+    {
+      "topic": "planning",
+      "topicLabel": "Planning",
+      "stories": [
+        {
+          "title": "Multi-Token Prediction (MTP) for LLaMA.cpp - Gemma 4 speedup by 40%",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1t6se6r/multitoken_prediction_mtp_for_llamacpp_gemma_4/",
+          "oneLiner": "Multi-token prediction accelerates inference by 40%, a key planning technique for efficient reasoning.",
+          "score": 7.5,
+          "sources": [
+            "Reddit"
+          ]
+        },
+        {
+          "title": "Teaching Claude Why",
+          "url": "https://www.anthropic.com/research/teaching-claude-why",
+          "oneLiner": "Anthropic's research on teaching models to understand causal reasoning, improving planning capabilities.",
+          "score": 7,
+          "sources": [
+            "HN"
+          ]
+        },
+        {
+          "title": "ReaComp: Compiling LLM Reasoning into Symbolic Solvers for Efficient Program Synthesis",
+          "url": "https://arxiv.org/abs/2605.05485",
+          "oneLiner": "A hybrid approach that compiles LLM reasoning into symbolic solvers, boosting program synthesis efficiency.",
+          "score": 7,
+          "sources": [
+            "ArXiv"
+          ]
+        }
+      ]
+    },
+    {
+      "topic": "tool-use",
+      "topicLabel": "Tool Use",
+      "stories": [
+        {
+          "title": "Are Tools All We Need? Unveiling the Tool-Use Tax in LLM Agents",
+          "url": "https://arxiv.org/abs/2605.00136",
+          "oneLiner": "Reveals a performance cost when LLM agents use tools, challenging the assumption that more tools are always better.",
+          "score": 8,
+          "sources": [
+            "ArXiv"
+          ]
+        },
+        {
+          "title": "AgentFloor: How Far Up the tool use Ladder Can Small Open-Weight Models Go?",
+          "url": "https://arxiv.org/abs/2605.00334",
+          "oneLiner": "Benchmarks small open-weight models on tool-use tasks, showing surprising capabilities and limitations.",
+          "score": 7.5,
+          "sources": [
+            "ArXiv"
+          ]
+        },
+        {
+          "title": "Computer Use is 45x more expensive than structured APIs",
+          "url": "https://reflex.dev/blog/computer-use-is-45x-more-expensive-than-structured-apis/",
+          "oneLiner": "A cost analysis showing that computer use via agents is vastly more expensive than structured APIs, sparking efficiency debates.",
+          "score": 7.3,
+          "sources": [
+            "HN"
+          ]
+        }
+      ]
+    },
+    {
+      "topic": "post-training",
+      "topicLabel": "Post-Training",
+      "stories": [
+        {
+          "title": "Adapt to Thrive! Adaptive Power-Mean Policy Optimization for Improved LLM Reasoning",
+          "url": "https://arxiv.org/abs/2605.04066",
+          "oneLiner": "A new adaptive RL algorithm that significantly improves LLM reasoning capabilities through post-training.",
+          "score": 7.5,
+          "sources": [
+            "ArXiv"
+          ]
+        },
+        {
+          "title": "TUR-DPO: Topology- and Uncertainty-Aware Direct Preference Optimization",
+          "url": "https://arxiv.org/abs/2605.00224",
+          "oneLiner": "Enhances DPO by incorporating topology and uncertainty, leading to better-aligned LLMs.",
+          "score": 7,
+          "sources": [
+            "ArXiv"
+          ]
+        },
+        {
+          "title": "vLLM V0 to V1: Correctness Before Corrections in RL",
+          "url": "https://huggingface.co/blog/ServiceNow-AI/correctness-before-corrections",
+          "oneLiner": "A blog post on vLLM's evolution, emphasizing correctness in RL training for reliable model updates.",
+          "score": 7,
+          "sources": [
+            "Hugging Face"
+          ]
+        }
+      ]
+    },
+    {
+      "topic": "model-release",
+      "topicLabel": "Model Release",
+      "stories": [
+        {
+          "title": "OpenAI releases GPT-5.5 Instant, a new default model for ChatGPT",
+          "url": "https://techcrunch.com/2026/05/05/openai-releases-gpt-5-5-instant-a-new-default-model-for-chatgpt/",
+          "oneLiner": "OpenAI's latest flagship model becomes the default for ChatGPT, promising faster and more capable interactions.",
+          "score": 9.5,
+          "sources": [
+            "TechCrunch"
+          ]
+        },
+        {
+          "title": "Anthropic and SpaceX announce major partnership as AI arms races continues",
+          "url": "https://www.nbcnews.com/tech/tech-news/anthropic-spacex-partnership-compute-power-rcna343902",
+          "oneLiner": "A landmark deal to boost Claude's computing power via SpaceX, signaling the escalating AI compute race.",
+          "score": 8.5,
+          "sources": [
+            "NBC News"
+          ]
+        },
+        {
+          "title": "DeepSeek V4 paper full version is out, FP4 QAT details and stability tricks",
+          "url": "https://www.reddit.com/r/MachineLearning/comments/1t7yrvr/deepseek_v4_paper_full_version_is_out_fp4_qat/",
+          "oneLiner": "DeepSeek V4's full paper reveals FP4 quantization techniques, pushing the frontier of efficient model deployment.",
+          "score": 8.5,
+          "sources": [
+            "Reddit"
+          ]
+        }
+      ]
+    },
+    {
+      "topic": "evals",
+      "topicLabel": "Evals",
+      "stories": [
+        {
+          "title": "Agent Island: A Saturation- and Contamination-Resistant Benchmark from Multiagent Games",
+          "url": "https://arxiv.org/abs/2605.04312",
+          "oneLiner": "A novel benchmark designed to resist saturation and contamination, using multi-agent games for robust evaluation.",
+          "score": 8.5,
+          "sources": [
+            "ArXiv"
+          ]
+        },
+        {
+          "title": "In Harvard study, AI offered more accurate emergency room diagnoses than two human doctors",
+          "url": "https://techcrunch.com/2026/05/03/in-harvard-study-ai-offered-more-accurate-diagnoses-than-emergency-room-doctors/",
+          "oneLiner": "A landmark study showing AI outperforming human doctors in ER diagnoses, highlighting AI's potential in healthcare.",
+          "score": 8,
+          "sources": [
+            "TechCrunch"
+          ]
+        },
+        {
+          "title": "11.67% ARC-AGI-2 Local Eval on a Single 4090: The TOPAS Recursive Architecture",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1t6n97x/1167_arcagi2_local_eval_on_a_single_4090_the/",
+          "oneLiner": "A recursive architecture achieves record ARC-AGI-2 score on consumer hardware, pushing the envelope for local AI.",
+          "score": 8,
+          "sources": [
+            "Reddit"
+          ]
+        }
+      ]
+    }
+  ],
+  "trendingTopics": [
+    {
+      "topic": "Production-Ready Agent Frameworks",
+      "description": "Multiple high-scoring agent harness releases (ruflo, TradingAgents) and enterprise platforms (Citi, SoundHound) indicate a shift from research to deployment."
+    },
+    {
+      "topic": "Model Release-Driven Agent Capabilities",
+      "description": "New models like GPT-5.5 Instant and DeepSeek V4 enable more powerful coding agents, as seen in the surge of agent-skills and ProgramBench."
+    },
+    {
+      "topic": "Benchmark Innovation and Robustness",
+      "description": "New evals like Agent Island and ProgramBench address contamination and saturation, while real-world studies (Harvard ER) validate AI performance."
+    }
+  ],
+  "keyReads": [
+    {
+      "title": "Natural Language Autoencoders: Turning Claude's Thoughts into Text",
+      "url": "https://www.anthropic.com/research/natural-language-autoencoders",
+      "summary": "Anthropic's research on converting Claude's internal representations into human-readable text, advancing interpretability.",
+      "why": "A deep dive into AI interpretability that could reshape how we understand model reasoning."
+    },
+    {
+      "title": "Are Tools All We Need? Unveiling the Tool-Use Tax in LLM Agents",
+      "url": "https://arxiv.org/abs/2605.00136",
+      "summary": "A critical analysis revealing that tool use imposes a performance tax on LLM agents, questioning the tool-centric paradigm.",
+      "why": "Essential reading for anyone building agent systems, challenging assumptions about tool augmentation."
+    },
+    {
+      "title": "DeepSeek V4 paper full version is out, FP4 QAT details and stability tricks",
+      "url": "https://www.reddit.com/r/MachineLearning/comments/1t7yrvr/deepseek_v4_paper_full_version_is_out_fp4_qat/",
+      "summary": "The full DeepSeek V4 paper detailing FP4 quantization-aware training and stability techniques for efficient deployment.",
+      "why": "A technical deep-dive into state-of-the-art model compression, crucial for understanding next-gen open-source models."
+    }
+  ],
+  "stats": {
+    "totalItems": 280,
+    "uniqueTopics": 8,
+    "daysWithContent": 7,
+    "topicCounts": {
+      "evals": 29,
+      "agent-harness": 44,
+      "post-training": 9,
+      "tool-use": 11,
+      "coding-agents": 36,
+      "model-release": 31,
+      "context-engineering": 17,
+      "planning": 8
+    }
+  }
+}
