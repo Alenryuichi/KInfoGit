@@ -66,6 +66,27 @@
       "score": 3,
       "scoreReason": "Freshness is low (109 stars, not clearly rising), relevance is low (not a frontier AI topic), concreteness is moderate (working tool but niche).",
       "type": "github"
+    },
+    {
+      "repo": "petgraph/petgraph",
+      "url": "https://github.com/petgraph/petgraph",
+      "description": "Graph data structure library for Rust.",
+      "language": "Rust",
+      "stargazersCount": 3890,
+      "starredBy": "minimaxir",
+      "starredAt": "2026-05-10T16:23:37Z",
+      "highlights": "Petgraph is a comprehensive graph data structure library for Rust, offering a variety of graph types (undirected, directed, with or without node/edge weights) and classic graph algorithms (DFS, BFS, shortest paths, minimum spanning trees, etc.). It is widely used in the Rust ecosystem for modeling and solving graph problems efficiently.",
+      "worthReading": "For AI engineers working on graph-based models, network analysis, or any Rust project requiring graph manipulation, petgraph provides a robust, well-documented foundation that can accelerate development.",
+      "topics": [
+        "graph-algorithms",
+        "rust"
+      ],
+      "tags": [
+        "infra"
+      ],
+      "score": 4,
+      "scoreReason": "Freshness is low (0) as it's a mature library with no recent major updates; relevance is moderate (2) as graph algorithms are useful in AI but not directly frontier; concreteness is high (2) as it provides real, working code and algorithms.",
+      "type": "github"
     }
   ],
   "posts": [],
@@ -1130,12 +1151,32 @@
         "llm",
         "evaluation"
       ]
+    },
+    {
+      "type": "x",
+      "id": "1600258754993262594",
+      "url": "https://x.com/minimaxir/status/1600258754993262594",
+      "author": {
+        "handle": "minimaxir",
+        "displayName": "Max Woolf",
+        "avatar": "https://avatars.githubusercontent.com/minimaxir"
+      },
+      "content": "congrats to OpenAI on winning the Turing Test",
+      "createdAt": "2022-12-07T00:00:00Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Max Woolf sarcastically congratulates OpenAI for supposedly passing the Turing Test, reflecting on AI milestones.",
+      "worthReading": "Highlights the ongoing debate about AI achieving human-like intelligence.",
+      "tags": [
+        "llm",
+        "evaluation"
+      ]
     }
   ],
   "dailyCounts": [
     0,
     0,
-    0,
     4,
     4,
     0,
@@ -1162,7 +1203,8 @@
     1,
     3,
     2,
-    2
+    3,
+    1
   ],
-  "interestSummary": "Max Woolf has recently focused on evaluating AI model releases, emphasizing concerns about transparency and safety practices, while also showing interest in data visualization tools and unconventional code embedding techniques."
+  "interestSummary": "Max Woolf has recently focused on data visualization tools and Rust libraries for graphs and benchmarking, while expressing concerns about AI model transparency and safety practices on social media."
 }

@@ -1,0 +1,25 @@
+{
+  "date": "2026-05-10",
+  "stars": [
+    {
+      "repo": "petgraph/petgraph",
+      "url": "https://github.com/petgraph/petgraph",
+      "description": "Graph data structure library for Rust.",
+      "language": "Rust",
+      "stargazersCount": 3890,
+      "starredBy": "minimaxir",
+      "starredAt": "2026-05-10T16:23:37Z",
+      "highlights": "Petgraph is a comprehensive graph data structure library for Rust, offering a variety of graph types (undirected, directed, with or without node/edge weights) and classic graph algorithms (DFS, BFS, shortest paths, minimum spanning trees, etc.). It is widely used in the Rust ecosystem for modeling and solving graph problems efficiently.",
+      "worthReading": "For AI engineers working on graph-based models, network analysis, or any Rust project requiring graph manipulation, petgraph provides a robust, well-documented foundation that can accelerate development.",
+      "topics": [
+        "graph-algorithms",
+        "rust"
+      ],
+      "tags": [
+        "infra"
+      ],
+      "score": 4,
+      "scoreReason": "Freshness is low (0) as it's a mature library with no recent major updates; relevance is moderate (2) as graph algorithms are useful in AI but not directly frontier; concreteness is high (2) as it provides real, working code and algorithms."
+    }
+  ]
+}

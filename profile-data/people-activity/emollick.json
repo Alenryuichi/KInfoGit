@@ -3,47 +3,6 @@
   "stars": [],
   "posts": [
     {
-      "uri": "at://did:plc:flxq4uyjfotciovpw3x3fxnu/app.bsky.feed.post/3mj7ybjw32c2r",
-      "url": "https://bsky.app/profile/emollick.bsky.social/post/3mj7ybjw32c2r",
-      "author": {
-        "handle": "emollick.bsky.social",
-        "displayName": "Ethan Mollick",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:flxq4uyjfotciovpw3x3fxnu/bafkreigq63ljumc43yx5eoxchrq75d72irea6ddcceedwmdttxebyowc3q"
-      },
-      "content": "A lot of our education on writing well focuses on logic, clarity, and argument. AI will force us to think more about style. The boredom that comes from everything on the internet reading Claude-y now, no matter how good the substance is, should make us appreciate (and make us want to develop) style.",
-      "createdAt": "2026-04-11T13:52:21.334Z",
-      "likeCount": 93,
-      "replyCount": 10,
-      "repostCount": 12,
-      "highlights": "",
-      "worthReading": "",
-      "tags": [
-        "llm"
-      ],
-      "type": "bluesky"
-    },
-    {
-      "uri": "at://did:plc:flxq4uyjfotciovpw3x3fxnu/app.bsky.feed.post/3mj6tf7yvfk2p",
-      "url": "https://bsky.app/profile/emollick.bsky.social/post/3mj6tf7yvfk2p",
-      "author": {
-        "handle": "emollick.bsky.social",
-        "displayName": "Ethan Mollick",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:flxq4uyjfotciovpw3x3fxnu/bafkreigq63ljumc43yx5eoxchrq75d72irea6ddcceedwmdttxebyowc3q"
-      },
-      "content": "Neat experiment finds AI fact checks on Twitter are rated as more helpful & less ideological than human ones.\n\n\"LLM-generated Community Notes can achieve broader cross-ideological acceptance than human-written notes, receiving more positive ratings from raters across the political spectrum\"",
-      "createdAt": "2026-04-11T02:52:16.710Z",
-      "likeCount": 40,
-      "replyCount": 6,
-      "repostCount": 2,
-      "highlights": "",
-      "worthReading": "",
-      "tags": [
-        "llm",
-        "evaluation"
-      ],
-      "type": "bluesky"
-    },
-    {
       "uri": "at://did:plc:flxq4uyjfotciovpw3x3fxnu/app.bsky.feed.post/3mjd333evd22h",
       "url": "https://bsky.app/profile/emollick.bsky.social/post/3mjd333evd22h",
       "author": {
@@ -3409,11 +3368,54 @@
       "tags": [
         "safety"
       ]
+    },
+    {
+      "type": "x",
+      "id": "2020713378319417626",
+      "url": "https://x.com/emollick/status/2020713378319417626",
+      "author": {
+        "handle": "emollick",
+        "displayName": "Ethan Mollick",
+        "avatar": null
+      },
+      "content": "So much work is going into faking continual learning and memory for AIs",
+      "createdAt": "2026-05-11T04:30:56.843Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Critiques the effort to simulate continual learning and memory in AI systems.",
+      "worthReading": "Highlights a key debate in AI research about genuine vs. simulated capabilities.",
+      "tags": [
+        "llm",
+        "safety",
+        "evaluation"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2029623875303018817",
+      "url": "https://x.com/emollick/status/2029623875303018817",
+      "author": {
+        "handle": "emollick",
+        "displayName": "Ethan Mollick",
+        "avatar": null
+      },
+      "content": "Had early access to GPT-5.4 and Pro. They are very good. One fun illustration of progress",
+      "createdAt": "2026-05-11T04:30:56.843Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Early access to GPT-5.4 and Pro shows significant progress.",
+      "worthReading": "Provides insight into the capabilities of upcoming AI models.",
+      "tags": [
+        "llm",
+        "multi-modal",
+        "deployment"
+      ]
     }
   ],
   "dailyCounts": [
     2,
-    2,
     3,
     7,
     6,
@@ -3441,7 +3443,8 @@
     6,
     5,
     4,
-    3
+    3,
+    2
   ],
-  "interestSummary": "Ethan Mollick is closely tracking the practical and philosophical implications of rapidly advancing AI, focusing on how models' distinct personalities and capability jumps (like Claude's \"adaptive thinking\" and ChatGPT's reasoning traces) are reshaping education, work, and public discourse. He is also analyzing the societal and economic ripple effects of AI, from data center proximity and compute bubbles to the need for new standards like the \"FLOP\" and the challenge of AI's growing role in cybersecurity and fact-checking."
+  "interestSummary": "Ethan Mollick is closely tracking the evolving capabilities and distinct personalities of frontier AI models (ChatGPT, Claude, Opus 4.7), focusing on practical issues like thinking traces, effort routing, and the \"jagged frontier.\" He is also engaged with the broader economic and societal implications of AI, including debates over compute bubbles, data center proximity, and the impact on jobs and education."
 }

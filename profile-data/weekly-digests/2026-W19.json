@@ -1,0 +1,188 @@
+{
+  "week": "2026-W19",
+  "dateRange": {
+    "start": "2026-05-04",
+    "end": "2026-05-10"
+  },
+  "overview": "This week in AI was dominated by major infrastructure deals, the rise of local inference engines, and a growing debate around model distillation. The xAI/Anthropic Colossus data center deal sparked widespread discussion on Bluesky, with Simon Willison and Ethan Mollick highlighting its environmental and competitive implications. Meanwhile, antirez's ds4 repo — a local inference engine for DeepSeek 4 Flash on Metal — was starred by both lucidrains and simonw, signaling strong interest in on-device AI. The 'distillation panic' blog post by Nathan Lambert resonated with many, as the term 'distillation attacks' was criticized for mischaracterizing the practice. On the coding tools front, Simon Willison's live blog from Anthropic's Code w/ Claude event and his reflections on vibe coding and agentic engineering captured the tension between rapid prototyping and production reliability. GitHub also saw notable repos like petgraph (Rust graph library) and roborev (continuous code review for agents) gain traction.",
+  "trendingTopics": [
+    {
+      "topic": "xAI/Anthropic Colossus Data Center Deal",
+      "description": "Simon Willison and Ethan Mollick discussed the deal on Bluesky, noting that Anthropic gets Colossus 1 but xAI keeps Colossus 2, raising environmental concerns and questions about Grok's frontier status."
+    },
+    {
+      "topic": "Local Inference and On-Device AI",
+      "description": "The antirez/ds4 repo (DeepSeek 4 Flash local inference engine for Metal) was starred by multiple prominent developers, reflecting a trend toward running models locally."
+    },
+    {
+      "topic": "Distillation Attacks Debate",
+      "description": "Nathan Lambert's blog post criticized the term 'distillation attacks,' arguing it's a misnomer for what is essentially model imitation. The post was widely shared on Bluesky and X."
+    },
+    {
+      "topic": "AI Coding Tools and Agentic Engineering",
+      "description": "Simon Willison's blog and live blog from Anthropic's Code w/ Claude event highlighted the growing capabilities and risks of vibe coding and agentic engineering."
+    },
+    {
+      "topic": "Context Engineering and Code Agents",
+      "description": "HuggingFace's context-course repo (starred by pcuenca) and discussions on X about LLM knowledge bases point to a focus on improving how models use context."
+    }
+  ],
+  "notableRepos": [
+    {
+      "repo": "petgraph/petgraph",
+      "url": "https://github.com/petgraph/petgraph",
+      "stars": 3890,
+      "description": "Graph data structure library for Rust, starred by minimaxir.",
+      "starredBy": [
+        "minimaxir"
+      ]
+    },
+    {
+      "repo": "antirez/ds4",
+      "url": "https://github.com/antirez/ds4",
+      "stars": 2657,
+      "description": "DeepSeek 4 Flash local inference engine for Metal, starred by simonw and lucidrains.",
+      "starredBy": [
+        "simonw",
+        "lucidrains"
+      ]
+    },
+    {
+      "repo": "roborev-dev/roborev",
+      "url": "https://github.com/roborev-dev/roborev",
+      "stars": 943,
+      "description": "Continuous background code review database for agents, starred by simonw.",
+      "starredBy": [
+        "simonw"
+      ]
+    },
+    {
+      "repo": "danshapiro/trycycle",
+      "url": "https://github.com/danshapiro/trycycle",
+      "stars": 173,
+      "description": "Starred by simonw, project details not fully described.",
+      "starredBy": [
+        "simonw"
+      ]
+    },
+    {
+      "repo": "Fusion/pngsource",
+      "url": "https://github.com/Fusion/pngsource",
+      "stars": 109,
+      "description": "Embed source code in PNG files, starred by minimaxir.",
+      "starredBy": [
+        "minimaxir"
+      ]
+    },
+    {
+      "repo": "microsoft/delegate52",
+      "url": "https://github.com/microsoft/delegate52",
+      "stars": 68,
+      "description": "Paper release for 'LLMs Corrupt Your Documents When You Delegate', starred by simonw.",
+      "starredBy": [
+        "simonw"
+      ]
+    },
+    {
+      "repo": "huggingface/context-course",
+      "url": "https://github.com/huggingface/context-course",
+      "stars": 12,
+      "description": "A course on context engineering with code agents, starred by pcuenca.",
+      "starredBy": [
+        "pcuenca"
+      ]
+    }
+  ],
+  "notableVideos": [],
+  "notableBlogs": [
+    {
+      "title": "The distillation panic",
+      "url": "https://www.interconnects.ai/p/the-distillation-panic",
+      "author": "Nathan Lambert",
+      "summary": "Critiques the term 'distillation attacks' as a misnomer for what is really model imitation."
+    },
+    {
+      "title": "Live blog: Code w/ Claude 2026",
+      "url": "https://simonwillison.net/2026/May/6/code-w-claude-2026/#atom-entries",
+      "author": "Simon Willison",
+      "summary": "Live coverage of Anthropic's event, including keynotes on coding with Claude."
+    },
+    {
+      "title": "Vibe coding and agentic engineering are getting closer than I'd like",
+      "url": "https://simonwillison.net/2026/May/6/vibe-coding-and-agentic-engineering/#atom-entries",
+      "author": "Simon Willison",
+      "summary": "Reflects on the convergence of vibe coding and agentic engineering, and associated risks."
+    },
+    {
+      "title": "Notes on the xAI/Anthropic data center deal",
+      "url": "https://simonwillison.net/2026/May/7/xai-anthropic/#atom-entries",
+      "author": "Simon Willison",
+      "summary": "Analyzes the implications of the xAI/Anthropic deal for compute access and environmental impact."
+    }
+  ],
+  "notableXPosts": [
+    {
+      "url": "https://x.com/karpathy/status/2039805659525644595",
+      "author": "@karpathy",
+      "content": "LLM Knowledge Bases Something I'm finding very useful recently: using LLMs to build personal knowledge bases for various topics of research interest.",
+      "likes": 0
+    },
+    {
+      "url": "https://x.com/hwchase17/status/2027094058330656814",
+      "author": "@hwchase17",
+      "content": "A brilliant surgeon without instruments, nurses, or an operating room is almost useless. The skill is real. But without the system around them, it goes nowhere.",
+      "likes": 0
+    },
+    {
+      "url": "https://x.com/DrJimFan/status/1872436577181614521",
+      "author": "@DrJimFan",
+      "content": "Resource constraints are a beautiful thing. Survival instinct in a cut-throat AI competitive land",
+      "likes": 0
+    }
+  ],
+  "keyDiscussions": [
+    {
+      "title": "xAI/Anthropic Colossus Deal Analysis",
+      "summary": "Simon Willison and Ethan Mollick discuss the deal's environmental record and implications for Grok's frontier status.",
+      "author": "Simon Willison",
+      "source": "bluesky"
+    },
+    {
+      "title": "Claude Mythos and Model Capabilities",
+      "summary": "Ethan Mollick notes that Claude Mythos is not marketing hype, and general-purpose models are good at many things including finding exploits.",
+      "author": "Ethan Mollick",
+      "source": "bluesky"
+    },
+    {
+      "title": "Distillation Panic Debate",
+      "summary": "Nathan Lambert's blog post on distillation attacks sparks discussion on Bluesky and X about the terminology and implications.",
+      "author": "Nathan Lambert",
+      "source": "bluesky"
+    },
+    {
+      "title": "Vibe Coding and Agentic Engineering",
+      "summary": "Simon Willison's blog post on the convergence of vibe coding and agentic engineering is widely shared and discussed.",
+      "author": "Simon Willison",
+      "source": "bluesky"
+    }
+  ],
+  "crossReferences": [
+    {
+      "repo": "antirez/ds4",
+      "starredBy": [
+        "lucidrains",
+        "simonw"
+      ],
+      "url": "https://github.com/antirez/ds4"
+    }
+  ],
+  "stats": {
+    "totalRepos": 10,
+    "totalPosts": 65,
+    "uniqueAuthors": 40,
+    "daysWithContent": 7,
+    "totalXPosts": 320,
+    "totalVideos": 0,
+    "totalBlogs": 5
+  }
+}

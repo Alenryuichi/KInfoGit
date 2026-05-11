@@ -3,27 +3,6 @@
   "stars": [],
   "posts": [
     {
-      "uri": "at://did:plc:7chsbgw6o6oh5oiglpgc3467/app.bsky.feed.post/3mj6qgmdkds2v",
-      "url": "https://bsky.app/profile/hardmaru.bsky.social/post/3mj6qgmdkds2v",
-      "author": {
-        "handle": "hardmaru.bsky.social",
-        "displayName": "hardmaru",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:7chsbgw6o6oh5oiglpgc3467/bafkreicpq2lhscgzahbyspqimfvb5y34acedy2xqsjiykptgvr2dk2tyga"
-      },
-      "content": "A “Neural Computer” is built by adapting video generation architectures to train a World Model of an actual computer that can directly simulate a computer interface.\n\nPaper: arxiv.org/abs/2604.06425\nCode: github.com/metauto-ai/N...\n\nCool work led by Mingchen Zhuge et al. from Schmidhuber’s lab!",
-      "createdAt": "2026-04-11T01:59:21.972Z",
-      "likeCount": 75,
-      "replyCount": 2,
-      "repostCount": 14,
-      "highlights": "",
-      "worthReading": "",
-      "tags": [
-        "llm",
-        "infra"
-      ],
-      "type": "bluesky"
-    },
-    {
       "uri": "at://did:plc:7chsbgw6o6oh5oiglpgc3467/app.bsky.feed.post/3mjk4clq33s27",
       "url": "https://bsky.app/profile/hardmaru.bsky.social/post/3mjk4clq33s27",
       "author": {
@@ -358,10 +337,29 @@
       "tags": [
         "agent"
       ]
+    },
+    {
+      "type": "x",
+      "id": "1418105327799525376",
+      "url": "https://x.com/okw/status/1418105327799525376",
+      "author": {
+        "handle": "hardmaru",
+        "displayName": "David Ha",
+        "avatar": null
+      },
+      "content": "Don't miss David Ha @hardmaru's keynote at @ALifeConf #ALIFE2021 on 'World Models and Attention for Reinforcement Learning'!",
+      "createdAt": "2021-07-22",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "David Ha gave a keynote on world models and attention for reinforcement learning at ALIFE 2021.",
+      "worthReading": "Highlights Ha's work on world models, a key concept in AI.",
+      "tags": [
+        "agent"
+      ]
     }
   ],
   "dailyCounts": [
-    1,
     0,
     0,
     1,
@@ -390,7 +388,8 @@
     0,
     1,
     1,
-    0
+    0,
+    1
   ],
-  "interestSummary": "David Ha is currently focused on advancing AI research through his work at Sakana AI, particularly in areas like world models, neural cellular automata, and dynamic model orchestration, while also scaling the company's R&D team in Tokyo and contributing to open-source projects on efficient transformer architectures and diverse datasets."
+  "interestSummary": "David Ha's recent focus is on scaling Sakana AI's R&D efforts through hiring and advancing multi-agent systems, dynamic model orchestration, and efficient transformer architectures, with a strong emphasis on test-time compute and non-English datasets for AI evaluation."
 }

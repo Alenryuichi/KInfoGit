@@ -1080,12 +1080,55 @@
         "infra",
         "deployment"
       ]
+    },
+    {
+      "type": "x",
+      "id": "2052643160292254120",
+      "url": "https://x.com/RisingSayak/status/2052643160292254120",
+      "author": {
+        "handle": "sayakpaul",
+        "displayName": "Sayak Paul",
+        "avatar": "https://avatars.githubusercontent.com/sayakpaul"
+      },
+      "content": "Together w/ the community, our initiative of profiling Diffusers pipelines & potentially improving them is going very strong",
+      "createdAt": "2026-05-11T04:30:40.987Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Sayak Paul highlights community-driven profiling of Diffusers pipelines to improve performance.",
+      "worthReading": "Shows collaborative effort to optimize Hugging Face Diffusers, a key library for diffusion models.",
+      "tags": [
+        "infra",
+        "deployment",
+        "tooling"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "sig-1778473840987-abl7nk",
+      "url": "https://x.com/RisingSayak",
+      "author": {
+        "handle": "sayakpaul",
+        "displayName": "Sayak Paul",
+        "avatar": "https://avatars.githubusercontent.com/sayakpaul"
+      },
+      "content": "My presentation at the @PyTorch Conf EU is now live. It's an exciting piece given its emphasis on how we make Diffusers play quite well w/ `torch.compile`",
+      "createdAt": "2026-05-11T04:30:40.987Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Sayak Paul presented at PyTorch Conf EU on integrating Diffusers with torch.compile for performance gains.",
+      "worthReading": "Demonstrates practical optimization of diffusion models using PyTorch's compiler, relevant for deployment.",
+      "tags": [
+        "infra",
+        "deployment",
+        "tooling"
+      ]
     }
   ],
   "dailyCounts": [
     0,
     0,
-    0,
     4,
     4,
     1,
@@ -1112,7 +1155,8 @@
     2,
     3,
     2,
-    0
+    0,
+    2
   ],
-  "interestSummary": "Sayak Paul's recent focus is on optimizing and deploying Hugging Face models, with particular interest in diffusion models, inference memory requirements, and TPU inference support, alongside developing Rust-based tooling for the Hugging Face Hub."
+  "interestSummary": "Sayak Paul is currently focused on optimizing and deploying diffusion models and Hugging Face tools, with interests in inference memory estimation, TPU inference, and Rust-based hub clients."
 }
