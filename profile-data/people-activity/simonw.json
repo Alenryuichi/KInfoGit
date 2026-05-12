@@ -1008,6 +1008,83 @@
       "worthReading": "",
       "tags": [],
       "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mllxsz32422q",
+      "url": "https://bsky.app/profile/simonwillison.net/post/3mllxsz32422q",
+      "author": {
+        "handle": "simonwillison.net",
+        "displayName": "Simon Willison",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
+      },
+      "content": "New TIL: I figured out how to use my LLM CLI tool in a shebang line, which means you can write executable scripts in English, or hook up more complex scripts with a snippet of YAML template - til.simonwillison.net/llms/llm-she...",
+      "createdAt": "2026-05-11T19:06:34.024Z",
+      "likeCount": 114,
+      "replyCount": 8,
+      "repostCount": 5,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [
+        "tooling"
+      ],
+      "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mllkcpjq7c2s",
+      "url": "https://bsky.app/profile/simonwillison.net/post/3mllkcpjq7c2s",
+      "author": {
+        "handle": "simonwillison.net",
+        "displayName": "Simon Willison",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
+      },
+      "content": "This is excellent. I particularly like the definition of the \"Zombie Internet\", which starts: \"It’s people talking to bots, people talking to people, people creating “AI agents” and then instructing them to interact with people. It’s people using AI talking to people who are not using AI [...]\"",
+      "createdAt": "2026-05-11T15:04:48.506Z",
+      "likeCount": 72,
+      "replyCount": 8,
+      "repostCount": 8,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [
+        "agent",
+        "llm"
+      ],
+      "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mlms5alufs2e",
+      "url": "https://bsky.app/profile/simonwillison.net/post/3mlms5alufs2e",
+      "author": {
+        "handle": "simonwillison.net",
+        "displayName": "Simon Willison",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
+      },
+      "content": "\"old woman\n\npossibly damp\n\nfaster than an old woman should be\"",
+      "createdAt": "2026-05-12T02:57:34.748Z",
+      "likeCount": 12,
+      "replyCount": 1,
+      "repostCount": 0,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [],
+      "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mlmj6umalc2r",
+      "url": "https://bsky.app/profile/simonwillison.net/post/3mlmj6umalc2r",
+      "author": {
+        "handle": "simonwillison.net",
+        "displayName": "Simon Willison",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
+      },
+      "content": "Wrote about today's GitLab restructuring / \"workforce reduction\" announcement, and ended up digging around in version control for both the GitLab and the 37signals public employee handbooks to help illustrate my thoughts simonwillison.net/2026/May/11/...",
+      "createdAt": "2026-05-12T00:17:25.610Z",
+      "likeCount": 35,
+      "replyCount": 5,
+      "repostCount": 7,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [],
+      "type": "bluesky"
     }
   ],
   "videos": [],
@@ -2470,10 +2547,50 @@
       "tags": [
         "tooling"
       ]
+    },
+    {
+      "type": "x",
+      "id": "1931090610724995303",
+      "url": "https://x.com/simonw/status/1931090610724995303",
+      "author": {
+        "handle": "simonw",
+        "displayName": "Simon Willison",
+        "avatar": "https://avatars.githubusercontent.com/simonw"
+      },
+      "content": "I've published video, slides and a detailed annotated transcript from my talk at this week's AI Engineer World's",
+      "createdAt": "2026-05-12T04:19:03.199Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Simon Willison shared a talk about the last year six months in LLMs, illustrated with pelicans on bicycles.",
+      "worthReading": "Provides a creative and insightful overview of recent LLM developments.",
+      "tags": [
+        "llm"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "1970147806225854531",
+      "url": "https://x.com/simonw/status/1970147806225854531",
+      "author": {
+        "handle": "simonw",
+        "displayName": "Simon Willison",
+        "avatar": "https://avatars.githubusercontent.com/simonw"
+      },
+      "content": "It's interesting how 'better at code' has become the defining goal of almost every AI lab over the",
+      "createdAt": "2026-05-12T04:19:03.199Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Simon Willison observes that AI labs are increasingly focused on improving code generation capabilities.",
+      "worthReading": "Highlights a key trend in AI research priorities.",
+      "tags": [
+        "llm",
+        "tooling"
+      ]
     }
   ],
   "dailyCounts": [
-    0,
     0,
     2,
     3,
@@ -2502,7 +2619,8 @@
     4,
     4,
     3,
-    3
+    5,
+    4
   ],
-  "interestSummary": "Simon Willison is deeply engaged in evaluating and comparing the latest AI models (Gemini, Claude, Qwen, GPT) and their capabilities, particularly in code generation and image creation, as evidenced by his \"pelican benchmark\" for image models and his analysis of model token usage and pricing changes. He is also actively exploring practical developer tools like LiteParse for document parsing, PyWry for cross-platform apps, and Google Sheets integration with Datasette, while maintaining a strong interest in the broader implications of coding agents and AI accessibility."
+  "interestSummary": "Simon Willison is deeply focused on evaluating and comparing large language models (especially for code generation and image generation), using quirky benchmarks like \"pelicans riding bicycles,\" while also exploring practical tools for document parsing, local AI inference, and agent-based development workflows."
 }

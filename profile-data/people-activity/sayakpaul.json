@@ -81,6 +81,42 @@
       "scoreReason": "Moderate freshness with rising traction in Rust AI tooling, high relevance for AI infrastructure, and good concreteness as a functional Rust client.",
       "starredAt": "2026-04-17T11:46:18Z",
       "type": "github"
+    },
+    {
+      "repo": "mitchellh/vouch",
+      "url": "https://github.com/mitchellh/vouch",
+      "description": "A community trust management system based on explicit vouches to participate.",
+      "language": "Nushell",
+      "stargazersCount": 4390,
+      "starredBy": "sayakpaul",
+      "starredAt": "2026-05-11T08:57:16Z",
+      "highlights": "Vouch is a community trust management system that uses explicit vouches to grant participation rights, aiming to reduce spam and abuse. It provides a decentralized approach to access control based on social trust rather than centralized moderation.",
+      "worthReading": "It explores an alternative to traditional moderation by leveraging community vouching, which could be relevant for AI communities or platforms seeking trust-based access control.",
+      "topics": [],
+      "tags": [
+        "tooling"
+      ],
+      "score": 6,
+      "scoreReason": "Freshness is moderate (4.4k stars, not extremely new but rising), relevance is moderate as it's a trust tool not directly AI but applicable to AI communities, concreteness is high with a working implementation.",
+      "type": "github"
+    },
+    {
+      "repo": "pytorch/devlogs",
+      "url": "https://github.com/pytorch/devlogs",
+      "description": "Developer blog for PyTorch",
+      "language": "CSS",
+      "stargazersCount": 12,
+      "starredBy": "sayakpaul",
+      "starredAt": "2026-05-11T06:54:29Z",
+      "highlights": "A developer blog for PyTorch, providing insights into the development process, new features, and technical decisions. It offers a behind-the-scenes look at one of the most popular deep learning frameworks.",
+      "worthReading": "Valuable for understanding PyTorch's evolution and upcoming features directly from the developers, which can inform AI infrastructure decisions.",
+      "topics": [],
+      "tags": [
+        "infra"
+      ],
+      "score": 4,
+      "scoreReason": "Freshness is low (12 stars, no recent traction), relevance is moderate (PyTorch infra but not frontier AI), concreteness is low (blog, not code/artifact).",
+      "type": "github"
     }
   ],
   "posts": [],
@@ -1124,11 +1160,31 @@
         "deployment",
         "tooling"
       ]
+    },
+    {
+      "type": "x",
+      "id": "2030950429505495179",
+      "url": "https://x.com/RisingSayak/status/2030950429505495179",
+      "author": {
+        "handle": "sayakpaul",
+        "displayName": "Sayak Paul",
+        "avatar": "https://avatars.githubusercontent.com/sayakpaul"
+      },
+      "content": "My presentation at the @PyTorch Conf EU is now live. It's an exciting piece given its emphasis on how we make Diffusers play quite well w/ `torch.compile`",
+      "createdAt": "2026-05-12T04:20:04.493Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Sayak Paul presented at PyTorch Conf EU about optimizing Diffusers with torch.compile.",
+      "worthReading": "Shows practical integration of Hugging Face Diffusers with PyTorch compilation for performance.",
+      "tags": [
+        "deployment",
+        "infra"
+      ]
     }
   ],
   "dailyCounts": [
     0,
-    0,
     4,
     4,
     1,
@@ -1156,7 +1212,8 @@
     3,
     2,
     0,
-    2
+    4,
+    1
   ],
-  "interestSummary": "Sayak Paul is currently focused on optimizing and deploying diffusion models and Hugging Face tools, with interests in inference memory estimation, TPU inference, and Rust-based hub clients."
+  "interestSummary": "Sayak Paul is currently focused on advancing diffusion models and text-to-image data, as well as optimizing Hugging Face model deployment through memory estimation and TPU inference, while also exploring Rust-based Hugging Face Hub clients and PyTorch development logs."
 }

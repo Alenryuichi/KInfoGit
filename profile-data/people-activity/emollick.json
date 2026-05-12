@@ -3,48 +3,6 @@
   "stars": [],
   "posts": [
     {
-      "uri": "at://did:plc:flxq4uyjfotciovpw3x3fxnu/app.bsky.feed.post/3mjd333evd22h",
-      "url": "https://bsky.app/profile/emollick.bsky.social/post/3mjd333evd22h",
-      "author": {
-        "handle": "emollick.bsky.social",
-        "displayName": "Ethan Mollick",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:flxq4uyjfotciovpw3x3fxnu/bafkreigq63ljumc43yx5eoxchrq75d72irea6ddcceedwmdttxebyowc3q"
-      },
-      "content": "Currently, ChatGPT has the best way of viewing thinking traces, a short summary of steps in the main window, and a detailed audit in the sidebar if you want it\n\nClaude does almost as well, but more summarized and harder to see calculations and code\n\nIts a big weak spot for Gemini in comparison",
-      "createdAt": "2026-04-12T19:20:25.203Z",
-      "likeCount": 30,
-      "replyCount": 5,
-      "repostCount": 2,
-      "highlights": "",
-      "worthReading": "",
-      "tags": [
-        "llm",
-        "evaluation"
-      ],
-      "type": "bluesky"
-    },
-    {
-      "uri": "at://did:plc:flxq4uyjfotciovpw3x3fxnu/app.bsky.feed.post/3mjcsk6cnb227",
-      "url": "https://bsky.app/profile/emollick.bsky.social/post/3mjcsk6cnb227",
-      "author": {
-        "handle": "emollick.bsky.social",
-        "displayName": "Ethan Mollick",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:flxq4uyjfotciovpw3x3fxnu/bafkreigq63ljumc43yx5eoxchrq75d72irea6ddcceedwmdttxebyowc3q"
-      },
-      "content": "It is notable that the hot debate in AI engineering is exactly which markdown files are most important to feed AI (skills, memory, tool instructions) and in which order to feed them to get the best output. Feels that this is likely a temporary state of affairs in the development of agents",
-      "createdAt": "2026-04-12T16:47:47.917Z",
-      "likeCount": 118,
-      "replyCount": 14,
-      "repostCount": 8,
-      "highlights": "",
-      "worthReading": "",
-      "tags": [
-        "agent",
-        "tooling"
-      ],
-      "type": "bluesky"
-    },
-    {
       "uri": "at://did:plc:flxq4uyjfotciovpw3x3fxnu/app.bsky.feed.post/3mjfuqcih5k2p",
       "url": "https://bsky.app/profile/emollick.bsky.social/post/3mjfuqcih5k2p",
       "author": {
@@ -1230,7 +1188,9 @@
       "repostCount": 3,
       "highlights": "",
       "worthReading": "",
-      "tags": [],
+      "tags": [
+        "safety"
+      ],
       "type": "bluesky"
     },
     {
@@ -3412,39 +3372,102 @@
         "multi-modal",
         "deployment"
       ]
+    },
+    {
+      "type": "x",
+      "id": "2053888295927525821",
+      "url": "https://x.com/emollick/status/2053888295927525821",
+      "author": {
+        "handle": "emollick",
+        "displayName": "Ethan Mollick",
+        "avatar": null
+      },
+      "content": "This is going to get even worse as people realize that careful tuning in their prompts can make AI writing seem not like AI writing to readers. We expect word counts to align, in some way, with thinking & value. Writing took effort. We are not mentally ready for the alternative.",
+      "createdAt": "2026-05-12T04:20:14.990Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Careful prompt tuning can make AI writing indistinguishable from human writing, challenging our assumptions about effort and value.",
+      "worthReading": "Highlights a key psychological barrier to AI adoption in writing tasks.",
+      "tags": [
+        "llm",
+        "safety"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2020713378319417626",
+      "url": "https://x.com/emollick/status/2020713378319417626",
+      "author": {
+        "handle": "emollick",
+        "displayName": "Ethan Mollick",
+        "avatar": null
+      },
+      "content": "So much work is going into faking continual learning and memory for AIs",
+      "createdAt": "2026-05-12T04:20:14.990Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Critiques the focus on simulating continual learning and memory in AI systems.",
+      "worthReading": "Raises questions about the authenticity of AI capabilities.",
+      "tags": [
+        "llm",
+        "evaluation"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2044880350237626844",
+      "url": "https://x.com/emollick/status/2044880350237626844",
+      "author": {
+        "handle": "emollick",
+        "displayName": "Ethan Mollick",
+        "avatar": null
+      },
+      "content": "On the plus side with Opus 4.7, if it does decide to think it produces BY FAR the best",
+      "createdAt": "2026-05-12T04:20:14.990Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Notes that Opus 4.7 can produce excellent results when it engages in reasoning.",
+      "worthReading": "Indicates that advanced models can excel when properly utilized.",
+      "tags": [
+        "llm",
+        "agent"
+      ]
     }
   ],
   "dailyCounts": [
+    3,
+    7,
+    6,
+    3,
+    3,
+    6,
+    5,
+    6,
+    7,
+    7,
+    8,
+    8,
+    7,
+    8,
+    7,
+    8,
+    6,
+    7,
+    6,
+    5,
+    6,
+    7,
+    5,
+    4,
+    6,
+    5,
+    4,
+    3,
     2,
-    3,
-    7,
-    6,
-    3,
-    3,
-    6,
-    5,
-    6,
-    7,
-    7,
-    8,
-    8,
-    7,
-    8,
-    7,
-    8,
-    6,
-    7,
-    6,
-    5,
-    6,
-    7,
-    5,
-    4,
-    6,
-    5,
-    4,
-    3,
-    2
+    3
   ],
-  "interestSummary": "Ethan Mollick is closely tracking the evolving capabilities and distinct personalities of frontier AI models (ChatGPT, Claude, Opus 4.7), focusing on practical issues like thinking traces, effort routing, and the \"jagged frontier.\" He is also engaged with the broader economic and societal implications of AI, including debates over compute bubbles, data center proximity, and the impact on jobs and education."
+  "interestSummary": "Ethan Mollick is closely tracking the rapid capability advances of frontier AI models (like Claude Opus 4.7), their economic and cybersecurity implications, and the societal narratives around data centers and job disruption, while also experimenting with novel AI applications in education like \"vibefounding.\""
 }
