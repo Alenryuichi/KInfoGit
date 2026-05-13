@@ -1816,6 +1816,90 @@
         "evaluation",
         "tooling"
       ]
+    },
+    {
+      "type": "x",
+      "id": "2040467997022884194",
+      "url": "https://x.com/hwchase17/status/2040467997022884194",
+      "author": {
+        "handle": "hwchase17",
+        "displayName": "Harrison Chase",
+        "avatar": "https://avatars.githubusercontent.com/hwchase17"
+      },
+      "content": "In the hot path as the agent is running. The agent can decided to (or the user can prompt it to) update its memory as it is working on the core",
+      "createdAt": "2026-05-13T04:22:40.314Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Agent can update its memory while running, either autonomously or via user prompt.",
+      "worthReading": "Highlights a key design pattern for dynamic memory management in agents.",
+      "tags": [
+        "agent",
+        "tooling"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2021261552222158955",
+      "url": "https://x.com/hwchase17/status/2021261552222158955",
+      "author": {
+        "handle": "hwchase17",
+        "displayName": "Harrison Chase",
+        "avatar": "https://avatars.githubusercontent.com/hwchase17"
+      },
+      "content": "TL;DR: More and more agents need a workspace: a computer where they can run code, install packages, and access files. Sandboxes provide this",
+      "createdAt": "2026-05-13T04:22:40.314Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Agents increasingly require a sandboxed workspace to execute code and manage files.",
+      "worthReading": "Explains why sandboxed environments are becoming critical for agent functionality.",
+      "tags": [
+        "infra",
+        "agent"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2042978500567609738",
+      "url": "https://x.com/hwchase17/status/2042978500567609738",
+      "author": {
+        "handle": "hwchase17",
+        "displayName": "Harrison Chase",
+        "avatar": "https://avatars.githubusercontent.com/hwchase17"
+      },
+      "content": "Your harness, your memory ... The “best” way to build agentic systems has changed dramatically over the past three years. When ChatGPT came out,",
+      "createdAt": "2026-05-13T04:22:40.314Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "The approach to building agentic systems has evolved significantly since ChatGPT's launch.",
+      "worthReading": "Reflects on the rapid evolution of agent development practices.",
+      "tags": [
+        "agent",
+        "llm"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2013641863123870133",
+      "url": "https://x.com/hwchase17/status/2013641863123870133",
+      "author": {
+        "handle": "hwchase17",
+        "displayName": "Harrison Chase",
+        "avatar": "https://avatars.githubusercontent.com/hwchase17"
+      },
+      "content": "When building agents, you need to iterate on production data much more than when building traditional software. You need to iterate on how",
+      "createdAt": "2026-05-13T04:22:40.314Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Agent development requires more iteration on production data compared to traditional software.",
+      "worthReading": "Emphasizes the data-centric nature of agent engineering.",
+      "tags": [
+        "evaluation",
+        "deployment"
+      ]
     }
   ],
   "dailyCounts": [
@@ -1823,7 +1907,6 @@
     0,
     0,
     0,
-    0,
     4,
     3,
     3,
@@ -1848,7 +1931,8 @@
     3,
     4,
     4,
-    3
+    3,
+    4
   ],
-  "interestSummary": "Harrison Chase is focused on advancing AI agent development, particularly through providing agents with workspaces (sandboxes) for running code and accessing files, and emphasizing the need for new operational workflows centered on traces rather than traditional code for debugging and iteration in production."
+  "interestSummary": "Harrison Chase is focused on advancing AI agent development, particularly through providing agents with sandboxed workspaces for code execution and file access, and promoting LangChain's new no-code Agent Builder with its integrated memory system. He emphasizes that building and iterating on agents requires a shift from traditional software operations to working with production traces for debugging and testing."
 }

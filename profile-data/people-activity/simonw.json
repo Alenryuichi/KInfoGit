@@ -293,6 +293,51 @@
       "score": 7,
       "scoreReason": "Freshness is moderate (68 stars, new repo) scoring 3; relevance is high as it directly addresses agent safety and LLM delegation scoring 4; concreteness is solid with working code and paper scoring 2; total 9 clamped to 7 for realistic spread.",
       "type": "github"
+    },
+    {
+      "repo": "cactus-compute/needle",
+      "url": "https://github.com/cactus-compute/needle",
+      "description": "26m function call model that runs on incredibly small devices",
+      "language": "Python",
+      "stargazersCount": 534,
+      "starredBy": "simonw",
+      "starredAt": "2026-05-12T19:39:18Z",
+      "highlights": "A compact 26M parameter model optimized for function calling on resource-constrained devices, enabling on-device AI execution. It leverages Gemma architecture and is designed for low-latency, privacy-preserving inference.",
+      "worthReading": "It demonstrates how to run capable LLMs on tiny hardware, opening up edge AI applications like IoT and mobile assistants.",
+      "topics": [
+        "cactus",
+        "gemini",
+        "gemma",
+        "llm",
+        "on-device-ai"
+      ],
+      "tags": [
+        "llm",
+        "agent",
+        "deployment"
+      ],
+      "score": 7,
+      "scoreReason": "Freshness is moderate (534 stars, rising but not explosive), relevance is high (on-device LLM for function calling aligns with agent and deployment trends), concreteness is high (working model with clear specs).",
+      "type": "github"
+    },
+    {
+      "repo": "datasette/datasette-auth-tailscale",
+      "url": "https://github.com/datasette/datasette-auth-tailscale",
+      "description": "",
+      "language": "Python",
+      "stargazersCount": 2,
+      "starredBy": "simonw",
+      "starredAt": "2026-05-12T16:09:21Z",
+      "highlights": "This plugin enables Tailscale authentication for Datasette, allowing users to restrict access to their Datasette instances to Tailscale network members. It leverages Tailscale's identity and access controls for seamless, secure sharing.",
+      "worthReading": "For Datasette users already on Tailscale, this plugin provides a simple yet powerful way to add authentication without managing separate user databases, making it ideal for internal tools and collaborative data exploration.",
+      "topics": [],
+      "tags": [
+        "infra",
+        "tooling"
+      ],
+      "score": 4,
+      "scoreReason": "Freshness is low (2 stars, no traction); relevance is moderate (infra/tooling for Datasette, but niche); concreteness is high (working plugin with clear purpose).",
+      "type": "github"
     }
   ],
   "posts": [
@@ -1080,6 +1125,24 @@
       "createdAt": "2026-05-12T00:17:25.610Z",
       "likeCount": 35,
       "replyCount": 5,
+      "repostCount": 7,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [],
+      "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mlp3eosabk2l",
+      "url": "https://bsky.app/profile/simonwillison.net/post/3mlp3eosabk2l",
+      "author": {
+        "handle": "simonwillison.net",
+        "displayName": "Simon Willison",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
+      },
+      "content": "This \"Unethical Guide to Surviving AI Layoffs\" by Mo Bitar perfectly captures the current moment www.tiktok.com/@atmoio/vide...",
+      "createdAt": "2026-05-13T00:48:07.671Z",
+      "likeCount": 55,
+      "replyCount": 3,
       "repostCount": 7,
       "highlights": "",
       "worthReading": "",
@@ -2588,10 +2651,52 @@
         "llm",
         "tooling"
       ]
+    },
+    {
+      "type": "x",
+      "id": "1975570458683834729",
+      "url": "https://x.com/simonw/status/1975570458683834729",
+      "author": {
+        "handle": "simonw",
+        "displayName": "Simon Willison",
+        "avatar": "https://avatars.githubusercontent.com/simonw"
+      },
+      "content": "Vibe coding is irresponsibly building software through dice rolls, not caring what code is produced",
+      "createdAt": "2026-05-13T04:22:35.173Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Simon Willison defines vibe coding as irresponsible software development where code quality is neglected.",
+      "worthReading": "Provides a critical perspective on a trending AI-assisted coding practice.",
+      "tags": [
+        "agent",
+        "safety",
+        "evaluation"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2031002164165021868",
+      "url": "https://x.com/simonw/status/2031002164165021868",
+      "author": {
+        "handle": "simonw",
+        "displayName": "Simon Willison",
+        "avatar": "https://avatars.githubusercontent.com/simonw"
+      },
+      "content": "A short note that the predictions that LLMs would favor 'boring technology' that's",
+      "createdAt": "2026-05-13T04:22:35.173Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Willison notes that LLMs may not favor boring technology as predicted.",
+      "worthReading": "Challenges a common assumption about LLM preferences in technology choices.",
+      "tags": [
+        "llm",
+        "deployment"
+      ]
     }
   ],
   "dailyCounts": [
-    0,
     2,
     3,
     2,
@@ -2620,7 +2725,8 @@
     4,
     3,
     5,
-    4
+    6,
+    3
   ],
-  "interestSummary": "Simon Willison is deeply focused on evaluating and comparing large language models (especially for code generation and image generation), using quirky benchmarks like \"pelicans riding bicycles,\" while also exploring practical tools for document parsing, local AI inference, and agent-based development workflows."
+  "interestSummary": "Simon Willison is deeply engaged with evaluating and comparing the latest AI language and image generation models (like Claude Opus 4.7, Qwen3.6, and GPT-5.5), using whimsical benchmarks like \"pelicans riding bicycles\" to test their capabilities, while also exploring practical developer tools for document parsing, virtual machines, and code review automation."
 }
