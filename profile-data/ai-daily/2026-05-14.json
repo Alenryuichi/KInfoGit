@@ -1,0 +1,1374 @@
+{
+  "date": "2026-05-14",
+  "itemCount": 76,
+  "sections": [
+    {
+      "id": "headlines",
+      "title": "Headlines & Launches",
+      "items": [
+        {
+          "title": "Microsoft's MDASH AI System Finds 16 Windows Flaws Fixed in Patch Tuesday - The Hacker News",
+          "summary": "微软MDASH AI系统发现16个Windows漏洞并修复。",
+          "url": "https://thehackernews.com/2026/05/microsofts-mdash-ai-system-finds-16.html",
+          "score": 7,
+          "sources": [
+            {
+              "name": "thehackernews.com"
+            }
+          ],
+          "tags": [
+            "ai-security",
+            "vulnerability-discovery",
+            "microsoft"
+          ],
+          "focusTopics": []
+        }
+      ]
+    },
+    {
+      "id": "research",
+      "title": "Research & Innovation",
+      "items": [
+        {
+          "title": "OLIVIA: Online Learning via Inference-time Action Adaptation for Decision Making in LLM ReAct Agents",
+          "summary": "提出OLIVIA，在推理时通过动作适应实现LLM ReAct智能体在线学习。",
+          "url": "https://arxiv.org/abs/2605.11169",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "llm-agent",
+            "react",
+            "online-learning"
+          ],
+          "focusTopics": [
+            "planning",
+            "tool-use"
+          ]
+        },
+        {
+          "title": "PIVOT: Bridging Planning and Execution in LLM Agents via Trajectory Refinement",
+          "summary": "提出PIVOT框架，通过轨迹细化桥接LLM智能体的规划与执行。",
+          "url": "https://arxiv.org/abs/2605.11225",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "llm-agent",
+            "planning",
+            "execution"
+          ],
+          "focusTopics": [
+            "planning"
+          ]
+        },
+        {
+          "title": "ReVision: Scaling Computer-Use Agents via Temporal Visual Redundancy Reduction",
+          "summary": "提出通过时间视觉冗余减少来扩展计算机使用智能体。",
+          "url": "https://arxiv.org/abs/2605.11212",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "computer-use",
+            "agent",
+            "visual-redundancy"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "Efficient pretraining with token superposition by Nous Research",
+          "summary": "Nous Research 提出 token superposition 高效预训练方法。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tc67pw/efficient_pretraining_with_token_superposition_by/",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "pretraining",
+            "efficiency",
+            "research"
+          ],
+          "focusTopics": [
+            "post-training"
+          ]
+        },
+        {
+          "title": "EVOCHAMBER: Test-Time Co-evolution of Multi-Agent System at Individual, Team, and Population Scales",
+          "summary": "提出多智能体系统测试时协同进化框架，涵盖个体、团队和群体尺度。",
+          "url": "https://arxiv.org/abs/2605.11136",
+          "score": 7,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "multi-agent",
+            "evolution",
+            "test-time"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "The Many Faces of On-Policy Distillation: Pitfalls, Mechanisms, and Fixes",
+          "summary": "分析在线策略蒸馏的陷阱、机制与修复，对后训练有重要启示。",
+          "url": "https://arxiv.org/abs/2605.11182",
+          "score": 7,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "distillation",
+            "post-training",
+            "llm"
+          ],
+          "focusTopics": [
+            "post-training"
+          ]
+        },
+        {
+          "title": "HEBATRON: A Hebrew-Specialized Open-Weight Mixture-of-Experts Language Model",
+          "summary": "发布希伯来语专用开源MoE语言模型Hebatron。",
+          "url": "https://arxiv.org/abs/2605.11255",
+          "score": 7,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "llm",
+            "hebrew",
+            "mixture-of-experts",
+            "open-source"
+          ],
+          "focusTopics": [
+            "model-release"
+          ]
+        },
+        {
+          "title": "Learning, Fast and Slow: Towards LLMs That Adapt Continually [R]",
+          "summary": "提出让LLM持续适应新任务的快速与慢速学习方法。",
+          "url": "https://www.reddit.com/r/MachineLearning/comments/1tbvsxo/learning_fast_and_slow_towards_llms_that_adapt/",
+          "score": 7,
+          "sources": [
+            {
+              "name": "Reddit r/MachineLearning"
+            }
+          ],
+          "tags": [
+            "llm",
+            "continual-learning",
+            "adaptation"
+          ],
+          "focusTopics": [
+            "post-training"
+          ]
+        },
+        {
+          "title": "Don't Look at the Numbers: Visual Anchoring Bias and Layer-wise Representation in VLMs",
+          "summary": "发现图像中嵌入的数字锚点会系统性偏置VLM质量判断，揭示视觉锚定偏差。",
+          "url": "https://arxiv.org/abs/2605.11218",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "vlm",
+            "bias",
+            "visual-anchoring"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Sampling More, Getting Less: Calibration is the Diversity Bottleneck in LLMs",
+          "summary": "发现校准是LLM多样性的瓶颈，采样越多多样性反而下降。",
+          "url": "https://arxiv.org/abs/2605.11128",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "llm",
+            "diversity",
+            "calibration"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "How Does Differential Privacy Affect Social Bias in LLMs? A Systematic Evaluation",
+          "summary": "系统评估差分隐私如何影响LLM中的社会偏见。",
+          "url": "https://arxiv.org/abs/2605.11195",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "differential-privacy",
+            "bias",
+            "llm"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "ReAD: Reinforcement-Guided Capability Distillation for Large Language Models",
+          "summary": "提出强化引导的能力蒸馏方法用于大语言模型。",
+          "url": "https://arxiv.org/abs/2605.11290",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "llm",
+            "knowledge-distillation",
+            "reinforcement-learning"
+          ],
+          "focusTopics": [
+            "post-training"
+          ]
+        },
+        {
+          "title": "Elastic Attention Cores for Scalable Vision Transformers [R]",
+          "summary": "提出弹性注意力核用于可扩展视觉Transformer。",
+          "url": "https://www.reddit.com/r/MachineLearning/comments/1tbxbfp/elastic_attention_cores_for_scalable_vision/",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "Reddit r/MachineLearning"
+            }
+          ],
+          "tags": [
+            "vision-transformer",
+            "attention",
+            "scalable"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "RankQ: Offline-to-Online Reinforcement Learning via Self-Supervised Action Ranking",
+          "summary": "提出RankQ方法，通过自监督动作排序实现离线到在线强化学习。",
+          "url": "https://arxiv.org/abs/2605.11151",
+          "score": 6,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "reinforcement-learning",
+            "offline-to-online",
+            "self-supervised"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Do Vision-Language-Models show human-like logical problem-solving capability in point and click puzzle games?",
+          "summary": "评估VLM在点击解谜游戏中的类人逻辑推理能力。",
+          "url": "https://arxiv.org/abs/2605.11223",
+          "score": 6,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "vlm",
+            "reasoning",
+            "interactive"
+          ],
+          "focusTopics": [
+            "planning"
+          ]
+        },
+        {
+          "title": "ClinicalBench: Stress-Testing Assertion-Aware Retrieval for Cross-Admission Clinical QA on MIMIC-IV",
+          "summary": "提出ClinicalBench，压力测试跨入院临床QA的断言感知检索。",
+          "url": "https://arxiv.org/abs/2605.11143",
+          "score": 6,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "benchmark",
+            "clinical",
+            "retrieval"
+          ],
+          "focusTopics": [
+            "evals"
+          ]
+        },
+        {
+          "title": "The Bicameral Model: Bidirectional Hidden-State Coupling Between Parallel Language Models",
+          "summary": "提出双院制模型，在并行语言模型间实现双向隐藏状态耦合。",
+          "url": "https://arxiv.org/abs/2605.11167",
+          "score": 6,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "llm",
+            "multi-model",
+            "coupling"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Instructions shape Production of Language, not Processing",
+          "summary": "研究指令如何影响语言模型的生成机制而非处理机制。",
+          "url": "https://arxiv.org/abs/2605.11206",
+          "score": 6,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "llm",
+            "cognitive-science",
+            "instruction-following"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Trained transformer-based chess models to play like humans (including thinking time) [P]",
+          "summary": "训练基于Transformer的国际象棋模型模拟人类棋风。",
+          "url": "https://www.reddit.com/r/MachineLearning/comments/1tcemdg/trained_transformerbased_chess_models_to_play/",
+          "score": 6,
+          "sources": [
+            {
+              "name": "Reddit r/MachineLearning"
+            }
+          ],
+          "tags": [
+            "transformer",
+            "chess",
+            "human-like"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "A Cascaded Generative Approach for e-Commerce Recommendations",
+          "summary": "提出级联生成方法用于电商推荐，结合多阶段生成与排序。",
+          "url": "https://arxiv.org/abs/2605.11118",
+          "score": 5.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "recommendation",
+            "e-commerce",
+            "generative"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "The Semantic Training Gap: Ontology-Grounded Tool Architectures for Industrial AI Agent Systems",
+          "summary": "提出基于本体的工具架构，用于工业AI智能体系统的语义训练。",
+          "url": "https://arxiv.org/abs/2605.11234",
+          "score": 5.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "ai-agent",
+            "ontology",
+            "industrial"
+          ],
+          "focusTopics": [
+            "tool-use"
+          ]
+        },
+        {
+          "title": "Decomposing Evolutionary Mixture-of-LoRA Architectures: The Routing Lever, the Lifecycle Penalty, and a Substrate-Conditional Boundary",
+          "summary": "分解进化式混合LoRA架构，分析路由、生命周期惩罚和边界。",
+          "url": "https://arxiv.org/abs/2605.11153",
+          "score": 5.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "lora",
+            "mixture-of-experts",
+            "evolution"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Training a number-aware embedding model + Text JEPA doesn't work too well + Text auto-encoders have a strange frequency bias [R][P]",
+          "summary": "训练数字感知嵌入模型和Text JEPA的实验分享。",
+          "url": "https://www.reddit.com/r/MachineLearning/comments/1tbxekp/training_a_numberaware_embedding_model_text_jepa/",
+          "score": 5,
+          "sources": [
+            {
+              "name": "Reddit r/MachineLearning"
+            }
+          ],
+          "tags": [
+            "embedding",
+            "jepa",
+            "autoencoder"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "RETUYT-INCO at BEA 2026 Shared Task 2: Meta-prompting in Rubric-based Scoring for German",
+          "summary": "在德语评分任务中使用元提示的共享任务参与。",
+          "url": "https://arxiv.org/abs/2605.11242",
+          "score": 4.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "nlp",
+            "education",
+            "prompting"
+          ],
+          "focusTopics": []
+        }
+      ]
+    },
+    {
+      "id": "engineering",
+      "title": "Engineering & Resources",
+      "items": [
+        {
+          "title": "Show HN: Needle: We Distilled Gemini Tool Calling into a 26M Model",
+          "summary": "开源26M参数工具调用模型Needle，速度快。",
+          "url": "https://github.com/cactus-compute/needle",
+          "score": 8.725,
+          "sources": [
+            {
+              "name": "HN (638)"
+            }
+          ],
+          "tags": [
+            "tool-calling",
+            "open-source",
+            "small-model"
+          ],
+          "focusTopics": [
+            "tool-use",
+            "model-release"
+          ]
+        },
+        {
+          "title": "Notion just turned its workspace into a hub for AI agents - TechCrunch",
+          "summary": "Notion发布新开发者平台，将工作空间转变为AI代理中心。",
+          "url": "https://techcrunch.com/2026/05/13/notion-just-turned-its-workspace-into-a-hub-for-ai-agents/",
+          "score": 8.5,
+          "sources": [
+            {
+              "name": "techcrunch.com"
+            }
+          ],
+          "tags": [
+            "ai-agents",
+            "notion",
+            "developer-platform"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "AIDC-AI/Ovis2.6-80B-A3B · Hugging Face",
+          "summary": "Ovis2.6-80B-A3B 多模态大语言模型发布，基于 Ovis 系列。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tby79g/aidcaiovis2680ba3b_hugging_face/",
+          "score": 8,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "multimodal",
+            "mllm",
+            "open-source"
+          ],
+          "focusTopics": [
+            "model-release"
+          ]
+        },
+        {
+          "title": "sensenova/SenseNova-U1-A3B-MoT · Hugging Face",
+          "summary": "SenseNova-U1 统一多模态理解与生成的原生多模态模型发布。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tc47q0/sensenovasensenovau1a3bmot_hugging_face/",
+          "score": 8,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "multimodal",
+            "model-release",
+            "unified"
+          ],
+          "focusTopics": [
+            "model-release"
+          ]
+        },
+        {
+          "title": "rohitg00/agentmemory",
+          "summary": "AgentMemory：为AI编程代理提供持久记忆，基于基准。",
+          "url": "https://github.com/rohitg00/agentmemory",
+          "score": 7.875,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+1379★)"
+            }
+          ],
+          "tags": [
+            "agent",
+            "memory",
+            "benchmark"
+          ],
+          "focusTopics": [
+            "context-engineering"
+          ]
+        },
+        {
+          "title": "mattpocock/skills",
+          "summary": "Anthropic Claude Code技能集，供工程师使用。",
+          "url": "https://github.com/mattpocock/skills",
+          "score": 7.875,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+3392★)"
+            }
+          ],
+          "tags": [
+            "claude-code",
+            "skills",
+            "ai-coding"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "AI chatbots are giving out people’s real phone numbers | MIT Technology Review",
+          "summary": "AI聊天机器人泄露用户真实电话号码的安全问题。",
+          "url": "https://www.technologyreview.com/2026/05/13/1137203/ai-chatbots-are-giving-out-peoples-real-phone-numbers/",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "technologyreview.com"
+            }
+          ],
+          "tags": [
+            "ai-safety",
+            "privacy",
+            "chatbot"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Anthropic now has more business customers than OpenAI, according to Ramp data | TechCrunch",
+          "summary": "Ramp数据显示Anthropic企业客户数超过OpenAI。",
+          "url": "https://techcrunch.com/2026/05/13/anthropic-now-has-more-business-customers-than-openai-according-to-ramp-data/",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "techcrunch.com"
+            }
+          ],
+          "tags": [
+            "anthropic",
+            "openai",
+            "enterprise"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "DramaBox - Most Expressive Voice model ever based on LTX 2.3",
+          "summary": "DramaBox 是基于 LTX 2.3 的最具表现力的语音模型发布。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tc5wx1/dramabox_most_expressive_voice_model_ever_based/",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "voice-model",
+            "open-source",
+            "multimodal"
+          ],
+          "focusTopics": [
+            "model-release"
+          ]
+        },
+        {
+          "title": "antirez/ds4",
+          "summary": "antirez发布DeepSeek 4 Flash本地推理引擎，支持Metal。",
+          "url": "https://github.com/antirez/ds4",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "Co-Starred"
+            }
+          ],
+          "tags": [
+            "deepseek",
+            "local-inference",
+            "metal"
+          ],
+          "focusTopics": [
+            "model-release"
+          ]
+        },
+        {
+          "title": "obra/superpowers",
+          "summary": "Superpowers：代理技能框架与软件开发方法论。",
+          "url": "https://github.com/obra/superpowers",
+          "score": 7.45,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+1401★)"
+            }
+          ],
+          "tags": [
+            "agent",
+            "framework",
+            "skills"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "NousResearch/hermes-agent",
+          "summary": "NousResearch发布的通用AI Agent框架。",
+          "url": "https://github.com/NousResearch/hermes-agent",
+          "score": 7.45,
+          "sources": [
+            {
+              "name": "GitHub trending:python (+1881★)"
+            }
+          ],
+          "tags": [
+            "agent-framework",
+            "open-source"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "garrytan/gstack",
+          "summary": "Garry Tan的Claude Code配置，含23个工具。",
+          "url": "https://github.com/garrytan/gstack",
+          "score": 7.45,
+          "sources": [
+            {
+              "name": "GitHub trending:typescript (+1083★)"
+            }
+          ],
+          "tags": [
+            "claude-code",
+            "developer-tools"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "anthropics/skills",
+          "summary": "Anthropic官方Agent Skills公共仓库。",
+          "url": "https://github.com/anthropics/skills",
+          "score": 7.3275,
+          "sources": [
+            {
+              "name": "GitHub trending:python (+635★)"
+            }
+          ],
+          "tags": [
+            "agent-skills",
+            "anthropic"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "Amazon launches an AI shopping assistant for the search bar, powered by Alexa+  | TechCrunch",
+          "summary": "亚马逊推出由Alexa+驱动的AI购物助手。",
+          "url": "https://techcrunch.com/2026/05/13/amazon-launches-an-ai-shopping-assistant-for-the-search-bar-powered-by-alexa/",
+          "score": 7,
+          "sources": [
+            {
+              "name": "techcrunch.com"
+            }
+          ],
+          "tags": [
+            "ai-assistant",
+            "ecommerce",
+            "alexa"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Adaption aims big with AutoScientist, an AI tool that helps models train themselves | TechCrunch",
+          "summary": "Adaption推出AutoScientist工具帮助模型自我训练。",
+          "url": "https://techcrunch.com/2026/05/13/adaption-aims-big-with-autoscientist-an-ai-tool-that-helps-models-train-themselves/",
+          "score": 7,
+          "sources": [
+            {
+              "name": "techcrunch.com"
+            }
+          ],
+          "tags": [
+            "auto-ml",
+            "training",
+            "tool"
+          ],
+          "focusTopics": [
+            "post-training"
+          ]
+        },
+        {
+          "title": "Mira Murati’s Thinking Machines previews ‘interaction models’ | Semafor",
+          "summary": "Mira Murati的Thinking Machines预览交互模型。",
+          "url": "https://www.semafor.com/article/05/13/2026/mira-muratis-thinking-machines-previews-interaction-models",
+          "score": 7,
+          "sources": [
+            {
+              "name": "semafor.com"
+            }
+          ],
+          "tags": [
+            "interaction-models",
+            "startup"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Web-Search is coming to a screeching performance halt as Google shuts down their free search index, and traffic defenders like Cloudflare challenge AI at every gateway. What are our options?",
+          "summary": "讨论 Google 关闭免费搜索索引对 AI 网络搜索的影响及替代方案。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tcaboi/websearch_is_coming_to_a_screeching_performance/",
+          "score": 7,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "web-search",
+            "ai-infrastructure"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "I made a UI and server for using Anthropic's new Natural Language Autoencoders locally with llama.cpp",
+          "summary": "为 Anthropic 的自然语言自编码器制作本地 UI 和服务器。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tc7zto/i_made_a_ui_and_server_for_using_anthropics_new/",
+          "score": 7,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "anthropic",
+            "autoencoder",
+            "local-llm"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Scenema Audio: Zero-shot expressive voice cloning and speech generation [N]",
+          "summary": "Scenema Audio发布零样本语音克隆和语音生成模型。",
+          "url": "https://www.reddit.com/r/MachineLearning/comments/1tcdj2d/scenema_audio_zeroshot_expressive_voice_cloning/",
+          "score": 7,
+          "sources": [
+            {
+              "name": "Reddit r/MachineLearning"
+            }
+          ],
+          "tags": [
+            "voice-cloning",
+            "speech-generation",
+            "zero-shot"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "huggingface/ml-intern",
+          "summary": "Hugging Face开源ML工程师项目，自动读论文、训练模型。",
+          "url": "https://github.com/huggingface/ml-intern",
+          "score": 7,
+          "sources": [
+            {
+              "name": "Co-Starred"
+            }
+          ],
+          "tags": [
+            "open-source",
+            "ml-engineer",
+            "automation"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "tinyhumansai/openhuman",
+          "summary": "OpenHuman：个人AI超级智能，注重隐私和简洁。",
+          "url": "https://github.com/tinyhumansai/openhuman",
+          "score": 6.6,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+1696★)"
+            }
+          ],
+          "tags": [
+            "personal-ai",
+            "open-source"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "WhatsApp adds an incognito mode in Meta AI chats | TechCrunch",
+          "summary": "WhatsApp为Meta AI聊天添加隐身模式。",
+          "url": "https://techcrunch.com/2026/05/13/whatsapp-adds-an-incognito-mode-in-meta-ai-chats/",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "techcrunch.com"
+            }
+          ],
+          "tags": [
+            "meta-ai",
+            "privacy",
+            "messaging"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Mark Zuckerberg announces ‘completely private’ encrypted Meta AI chat | The Verge",
+          "summary": "扎克伯格宣布Meta AI聊天完全加密私密。",
+          "url": "https://www.theverge.com/tech/929791/meta-ai-incognito-chats",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "theverge.com"
+            }
+          ],
+          "tags": [
+            "meta-ai",
+            "privacy",
+            "encryption"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "24+ tok/s from ~30B MoE models on an old GTX 1080 (8 GB VRAM, 128k context)",
+          "summary": "在旧 GTX 1080 上以 24+ tok/s 运行约 30B MoE 模型。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tcc7h5/24_toks_from_30b_moe_models_on_an_old_gtx_1080_8/",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "inference",
+            "performance",
+            "moe"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "millionco/react-doctor",
+          "summary": "React Doctor：捕获AI代理编写的糟糕React代码。",
+          "url": "https://github.com/millionco/react-doctor",
+          "score": 6.430999999999999,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+604★)"
+            }
+          ],
+          "tags": [
+            "react",
+            "code-quality",
+            "ai-coding"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "Medicare's new payment model is built for AI. Most of the tech world has no idea",
+          "summary": "Medicare新支付模型为AI设计，科技界未察觉。",
+          "url": "https://techcrunch.com/2026/05/12/medicares-new-payment-model-is-built-for-ai-and-most-of-the-tech-world-has-no-idea/",
+          "score": 6.106,
+          "sources": [
+            {
+              "name": "HN (52)"
+            }
+          ],
+          "tags": [
+            "medicare",
+            "ai-policy",
+            "healthcare"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "[AINews] The End of Finetuning",
+          "summary": "反思微调是否走向终结的行业分析。",
+          "url": "https://www.latent.space/p/ainews-the-end-of-finetuning",
+          "score": 6,
+          "sources": [
+            {
+              "name": "Latent Space"
+            }
+          ],
+          "tags": [
+            "finetuning",
+            "llm",
+            "opinion"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "BasedAI Emerges from Stealth to Launch Hirebase, the instant AI Workforce Platform for Businesses - Yahoo Finance",
+          "summary": "BasedAI推出Hirebase，即时AI劳动力平台。",
+          "url": "https://finance.yahoo.com/news/basedai-emerges-stealth-launch-hirebase-160000364.html",
+          "score": 6,
+          "sources": [
+            {
+              "name": "finance.yahoo.com"
+            }
+          ],
+          "tags": [
+            "ai-workforce",
+            "platform-launch"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Alexa is moving into Amazon․com | The Verge",
+          "summary": "Alexa整合进Amazon.com购物体验。",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/929457/amazon-announces-alexa-for-shopping-ai-assistant-rufus",
+          "score": 6,
+          "sources": [
+            {
+              "name": "theverge.com"
+            }
+          ],
+          "tags": [
+            "alexa",
+            "shopping",
+            "ai-assistant"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "TextGen is now a native desktop app. Open-source alternative to LM Studio (formerly text-generation-webui).",
+          "summary": "TextGen 发布原生桌面应用，作为 LM Studio 的开源替代。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tbyyee/textgen_is_now_a_native_desktop_app_opensource/",
+          "score": 6,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "local-llm",
+            "desktop-app",
+            "open-source"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "MI50s Qwen 3.6 27B @52.8 tps TG @1569 tps PP (no MTP, no Quant)",
+          "summary": "分享 MI50 上运行 Qwen 3.6 27B 的推理性能数据。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tc9j6u/mi50s_qwen_36_27b_528_tps_tg_1569_tps_pp_no_mtp/",
+          "score": 6,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "inference",
+            "performance",
+            "qwen"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "llama.cpp docker images to run MTP models",
+          "summary": "llama.cpp Docker 镜像更新以支持 MTP 模型。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tc132c/llamacpp_docker_images_to_run_mtp_models/",
+          "score": 6,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "llama.cpp",
+            "docker",
+            "mtp"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Show HN: Rotunda - A browser built for agents with simulated typing",
+          "summary": "Rotunda：为AI代理构建的浏览器，支持模拟打字。",
+          "url": "https://github.com/monkeysee-ai/rotunda",
+          "score": 5.986,
+          "sources": [
+            {
+              "name": "HN (12)"
+            }
+          ],
+          "tags": [
+            "agent",
+            "browser",
+            "open-source"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "Meta won't let you block its AI account on Threads",
+          "summary": "Meta不允许用户在Threads屏蔽其AI账号。",
+          "url": "https://www.theverge.com/tech/929091/meta-ai-threads-account-block",
+          "score": 5.845999999999999,
+          "sources": [
+            {
+              "name": "HN (107)"
+            }
+          ],
+          "tags": [
+            "meta",
+            "ai-account",
+            "social-media"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "CodebuffAI/codebuff",
+          "summary": "Codebuff 是一个终端代码生成工具，属于 AI 编程助手。",
+          "url": "https://github.com/CodebuffAI/codebuff",
+          "score": 5.8069999999999995,
+          "sources": [
+            {
+              "name": "GitHub trending:typescript (+188★)"
+            }
+          ],
+          "tags": [
+            "ai-coding",
+            "cli-tool"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "MervinPraison/PraisonAI",
+          "summary": "多Agent协作框架，可部署AI员工。",
+          "url": "https://github.com/MervinPraison/PraisonAI",
+          "score": 5.7165,
+          "sources": [
+            {
+              "name": "GitHub trending:python (+411★)"
+            }
+          ],
+          "tags": [
+            "multi-agent",
+            "framework"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "MemoriLabs/Memori",
+          "summary": "Agent原生记忆基础设施，LLM无关。",
+          "url": "https://github.com/MemoriLabs/Memori",
+          "score": 5.624,
+          "sources": [
+            {
+              "name": "GitHub trending:python (+66★)"
+            }
+          ],
+          "tags": [
+            "memory",
+            "agent-infrastructure"
+          ],
+          "focusTopics": [
+            "context-engineering"
+          ]
+        },
+        {
+          "title": "The US is winning the AI race where it matters most: commercialization",
+          "summary": "分析美国在AI商业化竞赛中领先。",
+          "url": "https://avkcode.github.io/blog/us-winning-ai-race.html",
+          "score": 5.585999999999999,
+          "sources": [
+            {
+              "name": "HN (162)"
+            }
+          ],
+          "tags": [
+            "ai-commercialization",
+            "us-policy"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Rethinking LLMOps for Fraud and AML: Building a Compliance-Grade LLM Serving Stack",
+          "summary": "重新思考LLMOps在欺诈检测和反洗钱中的应用，构建合规级LLM服务栈。",
+          "url": "https://arxiv.org/abs/2605.11232",
+          "score": 5.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "llmops",
+            "fraud-detection",
+            "compliance"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "iOfficeAI/AionUi",
+          "summary": "开源AI助手协作应用，支持多种CLI。",
+          "url": "https://github.com/iOfficeAI/AionUi",
+          "score": 5.3325,
+          "sources": [
+            {
+              "name": "GitHub trending:typescript (+155★)"
+            }
+          ],
+          "tags": [
+            "ai-assistant",
+            "open-source"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "opendatalab/MinerU",
+          "summary": "文档转LLM就绪格式的工具，支持PDF等。",
+          "url": "https://github.com/opendatalab/MinerU",
+          "score": 5.2935,
+          "sources": [
+            {
+              "name": "GitHub trending:python (+129★)"
+            }
+          ],
+          "tags": [
+            "document-processing",
+            "llm"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Launch HN: Ardent (YC P26) – Postgres sandboxes in seconds with zero migration",
+          "summary": "Ardent推出Postgres沙箱，面向编程Agent。",
+          "url": "https://www.tryardent.com/",
+          "score": 5.292,
+          "sources": [
+            {
+              "name": "HN (64)"
+            }
+          ],
+          "tags": [
+            "postgres",
+            "sandbox",
+            "coding-agents"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "ErlichLiu/Proma",
+          "summary": "Proma 是基于 Claude Agent SDK 的开源通用 Agent 实践，支持飞书调用。",
+          "url": "https://github.com/ErlichLiu/Proma",
+          "score": 5.1525,
+          "sources": [
+            {
+              "name": "GitHub trending:typescript (+35★)"
+            }
+          ],
+          "tags": [
+            "agent-framework",
+            "open-source",
+            "claude"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "TypeScript, C# and Turbo Pascal with Anders Hejlsberg",
+          "summary": "Anders Hejlsberg谈TypeScript、C#及AI对软件工程的影响。",
+          "url": "https://newsletter.pragmaticengineer.com/p/typescript-c-and-turbo-pascal-with",
+          "score": 5,
+          "sources": [
+            {
+              "name": "Pragmatic Engineer"
+            }
+          ],
+          "tags": [
+            "typescript",
+            "programming-languages",
+            "ai-impact"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "K-Dense-AI/scientific-agent-skills",
+          "summary": "科学代理技能集：用于研究、工程、分析等。",
+          "url": "https://github.com/K-Dense-AI/scientific-agent-skills",
+          "score": 4.8235,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+99★)"
+            }
+          ],
+          "tags": [
+            "agent",
+            "skills",
+            "science"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "Tell HN: Dont use Claude Design, lost access to my projects after unsubscribing",
+          "summary": "用户反馈取消Claude订阅后丢失项目访问权限。",
+          "url": "https://news.ycombinator.com/item?id=48128003",
+          "score": 4.721,
+          "sources": [
+            {
+              "name": "HN (157)"
+            }
+          ],
+          "tags": [
+            "claude",
+            "user-experience"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "ZhuLinsen/daily_stock_analysis",
+          "summary": "LLM驱动的股票分析系统，个人项目。",
+          "url": "https://github.com/ZhuLinsen/daily_stock_analysis",
+          "score": 4.544,
+          "sources": [
+            {
+              "name": "GitHub trending:python (+196★)"
+            }
+          ],
+          "tags": [
+            "llm",
+            "finance",
+            "stock-analysis"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "running Qwen 3.6 35b A3B on 2x 5060TI",
+          "summary": "用户分享在2x 5060TI上运行Qwen 3.6 35b A3B的经验。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tch5ps/running_qwen_36_35b_a3b_on_2x_5060ti/",
+          "score": 4.5,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "qwen",
+            "local-llm",
+            "hardware"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "microsoft/data-formulator",
+          "summary": "微软AI可视化数据工具，常青项目。",
+          "url": "https://github.com/microsoft/data-formulator",
+          "score": 4.2815,
+          "sources": [
+            {
+              "name": "GitHub trending:typescript (+21★)"
+            }
+          ],
+          "tags": [
+            "visualization",
+            "ai"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "we really all are going to make it, aren't we? 2x3090 setup.",
+          "summary": "用户分享 2x3090 设置运行本地 LLM 的体验。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tcf2dt/we_really_all_are_going_to_make_it_arent_we/",
+          "score": 4,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "local-llm",
+            "hardware"
+          ],
+          "focusTopics": []
+        }
+      ]
+    }
+  ],
+  "aiSummary": "今日AI领域动态：微软[MDASH AI系统发现16个Windows漏洞并修复](#item-thehackernews-com-2026-05-microsofts-mdash-ai-system-finds-1)；研究方面，[OLIVIA](#item-arxiv-org-abs-2605-11169)与[PIVOT](#item-arxiv-org-abs-2605-11225)分别提出LLM智能体在线学习与规划执行桥接新框架；工具方面，[Notion发布新开发者平台](#item-techcrunch-com-2026-05-13-notion-just-turned-its-workspace-i)将工作空间转为AI代理中心，[26M参数工具调用模型Needle](#item-github-com-cactus-compute-needle)开源；观点指出[AI聊天机器人泄露用户电话号码](#item-technologyreview-com-2026-05-13-1137203-ai-chatbots-are-givi)的安全隐患，且[Anthropic企业客户数已超过OpenAI](#item-techcrunch-com-2026-05-13-anthropic-now-has-more-business-cu)。"
+}
