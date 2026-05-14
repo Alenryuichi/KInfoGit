@@ -1,0 +1,57 @@
+{
+  "date": "2026-05-13",
+  "stars": [
+    {
+      "repo": "apocryphx/ObjCTokenizer",
+      "url": "https://github.com/apocryphx/ObjCTokenizer",
+      "description": "Objective-C port of the tokenizer in HuggingFace's swift-transformers",
+      "language": "Objective-C",
+      "stargazersCount": 2,
+      "starredBy": "pcuenca",
+      "starredAt": "2026-05-13T15:14:35Z",
+      "highlights": "This repository provides an Objective-C port of HuggingFace's swift-transformers tokenizer, enabling tokenization for LLMs in iOS/macOS apps. It bridges the gap between Swift-based tokenizer implementations and Objective-C codebases, making it easier to integrate transformer models into legacy or mixed-language projects.",
+      "worthReading": "For developers working with LLMs in Apple ecosystems who need to tokenize text in Objective-C, this is a niche but practical tool that saves rewriting tokenization logic.",
+      "topics": [],
+      "tags": [
+        "llm",
+        "tooling"
+      ],
+      "score": 4,
+      "scoreReason": "Freshness is low (2 stars, no clear traction), relevance is moderate (LLM tokenization but niche), concreteness is high (working port of a known library)."
+    },
+    {
+      "repo": "merveenoyan/space-doctor",
+      "url": "https://github.com/merveenoyan/space-doctor",
+      "description": "",
+      "language": "Python",
+      "stargazersCount": 1,
+      "starredBy": "pcuenca",
+      "starredAt": "2026-05-13T11:29:17Z",
+      "highlights": "Space Doctor is a tool that helps manage and optimize disk space on Hugging Face Hub repositories. It provides insights into storage usage and assists in cleaning up unnecessary files.",
+      "worthReading": "For AI practitioners using Hugging Face Hub, this tool can save time and prevent storage issues, making it a practical utility for managing model and dataset repositories.",
+      "topics": [],
+      "tags": [
+        "tooling"
+      ],
+      "score": 3,
+      "scoreReason": "Freshness is low (1 star, no traction), relevance is moderate (tooling for AI but not frontier), concreteness is high (specific tool), resulting in a score of 3."
+    },
+    {
+      "repo": "IgorWarzocha/howcode",
+      "url": "https://github.com/IgorWarzocha/howcode",
+      "description": "The Pi desktop app you want to use.",
+      "language": "TypeScript",
+      "stargazersCount": 223,
+      "starredBy": "philschmid",
+      "starredAt": "2026-05-13T14:58:19Z",
+      "highlights": "Howcode is a desktop application for interacting with Pi, likely an AI assistant or coding tool. It provides a native UI for leveraging AI capabilities on the desktop, built with TypeScript for performance and reliability.",
+      "worthReading": "It offers a polished desktop experience for AI interaction, which could be useful for developers looking for a dedicated app to streamline their workflow with AI models.",
+      "topics": [],
+      "tags": [
+        "tooling"
+      ],
+      "score": 4,
+      "scoreReason": "Freshness is moderate (low stars but rising), relevance is low (not clearly frontier AI, more of a desktop wrapper), concreteness is medium (specific app but vague description)."
+    }
+  ]
+}

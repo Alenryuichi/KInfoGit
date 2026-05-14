@@ -1347,47 +1347,6 @@
     },
     {
       "type": "x",
-      "id": "1555626060384911360",
-      "url": "https://x.com/simonw/status/1555626060384911360",
-      "author": {
-        "handle": "simonw",
-        "displayName": "Simon Willison",
-        "avatar": "https://avatars.githubusercontent.com/simonw"
-      },
-      "content": "Screenshot from a video game where a team of raccoons go on a heist",
-      "createdAt": "2026-04-16T11:13:29.936Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Simon Willison shares an AI-generated image prompt result showing creative multi-modal AI capabilities.",
-      "worthReading": "Demonstrates AI's creative potential beyond text generation.",
-      "tags": [
-        "multi-modal"
-      ]
-    },
-    {
-      "type": "x",
-      "id": "1970147806225854531",
-      "url": "https://x.com/simonw/status/1970147806225854531",
-      "author": {
-        "handle": "simonw",
-        "displayName": "Simon Willison",
-        "avatar": "https://avatars.githubusercontent.com/simonw"
-      },
-      "content": "It's interesting how 'better at code' has become the defining goal of almost every AI lab over the...",
-      "createdAt": "2026-04-16T11:13:29.936Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Willison observes the AI industry's intense focus on improving coding capabilities as a primary benchmark for progress.",
-      "worthReading": "Highlights a key trend in AI development priorities.",
-      "tags": [
-        "agent",
-        "evaluation"
-      ]
-    },
-    {
-      "type": "x",
       "id": "1639691902357483520",
       "url": "https://x.com/simonw/status/1639691902357483520",
       "author": {
@@ -2694,10 +2653,73 @@
         "llm",
         "deployment"
       ]
+    },
+    {
+      "type": "x",
+      "id": "2031002164165021868",
+      "url": "https://x.com/simonw/status/2031002164165021868",
+      "author": {
+        "handle": "simonw",
+        "displayName": "Simon Willison",
+        "avatar": "https://avatars.githubusercontent.com/simonw"
+      },
+      "content": "A short note that the predictions that LLMs would favor \"boring technology\" that's once you attach them to a good coding agent harness at least",
+      "createdAt": "2026-05-14T04:21:52.715Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "LLMs may favor boring technology when paired with a good coding agent harness.",
+      "worthReading": "Challenges the assumption that LLMs always prefer novel tech.",
+      "tags": [
+        "llm",
+        "agent",
+        "tooling"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "1976989054240800798",
+      "url": "https://x.com/simonw/status/1976989054240800798",
+      "author": {
+        "handle": "simonw",
+        "displayName": "Simon Willison",
+        "avatar": "https://avatars.githubusercontent.com/simonw"
+      },
+      "content": "I'm beginning to suspect that a key skill in working effectively with coding agents is developing an intuition for when you don't need to",
+      "createdAt": "2026-05-14T04:21:52.715Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Key skill for coding agents is knowing when not to intervene.",
+      "worthReading": "Insightful perspective on human-agent collaboration.",
+      "tags": [
+        "agent",
+        "tooling"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "1975570458683834729",
+      "url": "https://x.com/simonw/status/1975570458683834729",
+      "author": {
+        "handle": "simonw",
+        "displayName": "Simon Willison",
+        "avatar": "https://avatars.githubusercontent.com/simonw"
+      },
+      "content": "Vibe coding is irresponsibly building software through dice rolls, not caring what code is produced",
+      "createdAt": "2026-05-14T04:21:52.715Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Defines vibe coding as irresponsible software development.",
+      "worthReading": "Critical view on a trending practice in AI-assisted coding.",
+      "tags": [
+        "agent",
+        "deployment"
+      ]
     }
   ],
   "dailyCounts": [
-    2,
     3,
     2,
     1,
@@ -2726,7 +2748,8 @@
     3,
     5,
     6,
+    3,
     3
   ],
-  "interestSummary": "Simon Willison is deeply engaged with evaluating and comparing the latest AI language and image generation models (like Claude Opus 4.7, Qwen3.6, and GPT-5.5), using whimsical benchmarks like \"pelicans riding bicycles\" to test their capabilities, while also exploring practical developer tools for document parsing, virtual machines, and code review automation."
+  "interestSummary": "Simon Willison is focused on evaluating and comparing various AI models for code generation and image creation, using whimsical benchmarks like generating images of pelicans riding bicycles. He is also actively building tools and interfaces for document parsing and coding agent workflows, while tracking developments in AI pricing and system prompts from major labs."
 }

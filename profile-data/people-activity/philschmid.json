@@ -102,51 +102,30 @@
       "scoreReason": "Repository lacks description and topics, making relevance and concreteness unverifiable; moderate freshness from recent star gain but insufficient information for higher scoring.",
       "starredAt": "2026-04-16T13:05:21Z",
       "type": "github"
+    },
+    {
+      "repo": "IgorWarzocha/howcode",
+      "url": "https://github.com/IgorWarzocha/howcode",
+      "description": "The Pi desktop app you want to use.",
+      "language": "TypeScript",
+      "stargazersCount": 223,
+      "starredBy": "philschmid",
+      "starredAt": "2026-05-13T14:58:19Z",
+      "highlights": "Howcode is a desktop application for interacting with Pi, likely an AI assistant or coding tool. It provides a native UI for leveraging AI capabilities on the desktop, built with TypeScript for performance and reliability.",
+      "worthReading": "It offers a polished desktop experience for AI interaction, which could be useful for developers looking for a dedicated app to streamline their workflow with AI models.",
+      "topics": [],
+      "tags": [
+        "tooling"
+      ],
+      "score": 4,
+      "scoreReason": "Freshness is moderate (low stars but rising), relevance is low (not clearly frontier AI, more of a desktop wrapper), concreteness is medium (specific app but vague description).",
+      "type": "github"
     }
   ],
   "posts": [],
   "videos": [],
   "blogs": [],
   "xPosts": [
-    {
-      "type": "x",
-      "id": "2041532361330819500",
-      "url": "https://x.com/_philschmid/status/2041532361330819500",
-      "author": {
-        "handle": "philschmid",
-        "displayName": "Philipp Schmid",
-        "avatar": "https://avatars.githubusercontent.com/philschmid"
-      },
-      "content": "How to use Gemma 4 with the Gemini API and Google AI Studio. www.philschmid.de.",
-      "createdAt": "2026-04-16T11:15:37.343Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "A technical guide on integrating Gemma 4 with Google's Gemini API and AI Studio platform.",
-      "worthReading": "Provides practical instructions for developers working with Google's latest AI models and tools.",
-      "tags": [
-        "llm",
-        "tooling"
-      ]
-    },
-    {
-      "type": "x",
-      "id": "2007441805357326581",
-      "url": "https://x.com/_philschmid/status/2007441805357326581",
-      "author": {
-        "handle": "philschmid",
-        "displayName": "Philipp Schmid",
-        "avatar": "https://avatars.githubusercontent.com/philschmid"
-      },
-      "content": "Random thought. We are going to be so much faster at creating and building.",
-      "createdAt": "2026-04-16T11:15:37.343Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "An optimistic reflection on the accelerating pace of innovation and development capabilities.",
-      "worthReading": "Captures the mindset of rapid progress in technology creation.",
-      "tags": []
-    },
     {
       "type": "x",
       "id": "2041532361330819500",
@@ -1397,10 +1376,52 @@
         "deployment",
         "tooling"
       ]
+    },
+    {
+      "type": "x",
+      "id": "1927497698015334820",
+      "url": "https://x.com/_philschmid/status/1927497698015334820",
+      "author": {
+        "handle": "philschmid",
+        "displayName": "Philipp Schmid",
+        "avatar": "https://avatars.githubusercontent.com/philschmid"
+      },
+      "content": "Guide: ReAct agent from scratch with Gemini 2.5 and LangGraph | Gemini API | Google AI for Developers.",
+      "createdAt": "2024-05-27T00:00:00Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Philipp Schmid shares a guide on building a ReAct agent from scratch using Gemini 2.5 and LangGraph.",
+      "worthReading": "Provides a hands-on tutorial for implementing agents with Google's latest Gemini model.",
+      "tags": [
+        "agent",
+        "llm",
+        "tooling"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2048750595540967904",
+      "url": "https://x.com/_philschmid/status/2048750595540967904",
+      "author": {
+        "handle": "philschmid",
+        "displayName": "Philipp Schmid",
+        "avatar": "https://avatars.githubusercontent.com/philschmid"
+      },
+      "content": "Google DeepMind and Korea Partner to Accelerate Scientific Discovery.",
+      "createdAt": "2026-05-14T04:22:56.399Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Philipp Schmid highlights a partnership between Google DeepMind and Korea to speed up scientific research.",
+      "worthReading": "Shows real-world application of AI in scientific discovery and international collaboration.",
+      "tags": [
+        "multi-modal",
+        "deployment"
+      ]
     }
   ],
   "dailyCounts": [
-    2,
     3,
     4,
     0,
@@ -1429,7 +1450,8 @@
     3,
     3,
     2,
-    3
+    4,
+    2
   ],
-  "interestSummary": "Philipp Schmid is currently focused on AI development and deployment workflows, including using models like Gemma 4 and tools like Google AI Studio, while also exploring automation, coding efficiency, and technical reports from companies like Moonshot AI and Cursor."
+  "interestSummary": "Philipp Schmid is currently focused on AI development tools and deployment workflows, with interests in vibe-coding, Google AI Studio, and MCP-based automation for macOS, while also exploring advanced technical reports from companies like Moonshot AI and Cursor."
 }

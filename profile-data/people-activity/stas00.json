@@ -89,88 +89,6 @@
     },
     {
       "type": "x",
-      "id": "1750636949612974498",
-      "url": "https://x.com/StasBekman/status/1750636949612974498",
-      "author": {
-        "handle": "stas00",
-        "displayName": "Stas Bekman",
-        "avatar": "https://avatars.githubusercontent.com/stas00"
-      },
-      "content": "If you were holding off to try @MSFTDeepSpeed ZeRO++ it looks like deepspeed@master should",
-      "createdAt": "2026-04-16T11:15:07.510Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Suggests that DeepSpeed's ZeRO++ feature is now available in the master branch and worth trying.",
-      "worthReading": "Provides timely update on availability of an important distributed training optimization.",
-      "tags": [
-        "infra",
-        "deployment"
-      ]
-    },
-    {
-      "type": "x",
-      "id": "2029625103500317066",
-      "url": "https://x.com/StasBekman/status/2029625103500317066",
-      "author": {
-        "handle": "stas00",
-        "displayName": "Stas Bekman",
-        "avatar": "https://avatars.githubusercontent.com/stas00"
-      },
-      "content": "If you're trying out FA4, you're likely to run into not being able to load cutlass.cute",
-      "createdAt": "2026-04-16T11:15:07.510Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Warns about a potential issue when experimenting with FA4 (likely FlashAttention 4) related to loading cutlass.cute.",
-      "worthReading": "Heads-up for practitioners experimenting with cutting-edge attention implementations.",
-      "tags": [
-        "infra",
-        "tooling"
-      ]
-    },
-    {
-      "type": "x",
-      "id": "2014578754782409106",
-      "url": "https://x.com/StasBekman/status/2014578754782409106",
-      "author": {
-        "handle": "stas00",
-        "displayName": "Stas Bekman",
-        "avatar": "https://avatars.githubusercontent.com/stas00"
-      },
-      "content": "Thanks to an awesome contribution from @omarnomad The Machine Learning Engineering Open book now can",
-      "createdAt": "2026-04-16T11:15:07.510Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Acknowledges a contribution that enhanced the 'Machine Learning Engineering Open book'.",
-      "worthReading": "Highlights collaborative improvement of an open educational resource for ML engineering.",
-      "tags": [
-        "tooling"
-      ]
-    },
-    {
-      "type": "x",
-      "id": "2034315810693599349",
-      "url": "https://x.com/StasBekman/status/2034315810693599349",
-      "author": {
-        "handle": "stas00",
-        "displayName": "Stas Bekman",
-        "avatar": "https://avatars.githubusercontent.com/stas00"
-      },
-      "content": "Classical Jensen math. Unidirectional bandwidth is topped at 450GB/s, and then there comes a protocol overhead of two digit percentage.",
-      "createdAt": "2026-04-16T11:15:07.510Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Discusses a hardware bandwidth limit (450GB/s) and significant protocol overhead affecting performance.",
-      "worthReading": "Technical insight into performance bottlenecks in high-speed data transfer systems.",
-      "tags": [
-        "infra"
-      ]
-    },
-    {
-      "type": "x",
       "id": "1716181162354442450",
       "url": "https://x.com/StasBekman/status/1716181162354442450",
       "author": {
@@ -2323,10 +2241,91 @@
       "tags": [
         "fine-tuning"
       ]
+    },
+    {
+      "type": "x",
+      "id": "1750636949612974498",
+      "url": "https://x.com/StasBekman/status/1750636949612974498",
+      "author": {
+        "handle": "stas00",
+        "displayName": "Stas Bekman",
+        "avatar": "https://avatars.githubusercontent.com/stas00"
+      },
+      "content": "If you were holding off to try @MSFTDeepSpeed ZeRO++ it looks like deepspeed@master should",
+      "createdAt": "2024-01-26T00:00:00Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Stas Bekman indicates that DeepSpeed ZeRO++ is ready to try on the master branch.",
+      "worthReading": "Relevant for ML engineers interested in distributed training optimizations.",
+      "tags": [
+        "infra",
+        "fine-tuning"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "1821362487151013970",
+      "url": "https://x.com/StasBekman/status/1821362487151013970",
+      "author": {
+        "handle": "stas00",
+        "displayName": "Stas Bekman",
+        "avatar": "https://avatars.githubusercontent.com/stas00"
+      },
+      "content": "Hear, hear, I'm excited to introduce a new performance metric: Maximum Achievable Matmul",
+      "createdAt": "2024-08-08T00:00:00Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Stas Bekman introduces a new performance metric called Maximum Achievable Matmul.",
+      "worthReading": "Useful for understanding GPU compute efficiency in ML workloads.",
+      "tags": [
+        "infra",
+        "evaluation"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2014578754782409106",
+      "url": "https://x.com/StasBekman/status/2014578754782409106",
+      "author": {
+        "handle": "stas00",
+        "displayName": "Stas Bekman",
+        "avatar": "https://avatars.githubusercontent.com/stas00"
+      },
+      "content": "Thanks to an awesome contribution from @omarnomad The Machine Learning Engineering Open book now can",
+      "createdAt": "2025-08-08T00:00:00Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Stas Bekman thanks a contributor for enhancing the Machine Learning Engineering Open Book.",
+      "worthReading": "Highlights community contributions to open-source ML education.",
+      "tags": [
+        "tooling"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2034315810693599349",
+      "url": "https://x.com/StasBekman/status/2034315810693599349",
+      "author": {
+        "handle": "stas00",
+        "displayName": "Stas Bekman",
+        "avatar": "https://avatars.githubusercontent.com/stas00"
+      },
+      "content": "Classical Jensen math. Unidirectional bandwidth is topped at 450GB/s, and then there comes a protocol overhead of two digit percentage. 1.",
+      "createdAt": "2025-10-26T00:00:00Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Stas Bekman discusses bandwidth limitations and protocol overhead in computing.",
+      "worthReading": "Insightful for understanding hardware bottlenecks in ML systems.",
+      "tags": [
+        "infra"
+      ]
     }
   ],
   "dailyCounts": [
-    4,
     4,
     0,
     0,
@@ -2355,7 +2354,8 @@
     4,
     4,
     3,
+    4,
     4
   ],
-  "interestSummary": "Stas Bekman is focused on large model training optimization, including DeepSpeed ZeRO++, FlashAttention 4, and PyTorch tooling, while also compiling LLM/VLM training resources and contributing to the Machine Learning Engineering Open Book."
+  "interestSummary": "Stas Bekman is focused on large language model and vision-language model training, particularly optimizing memory and performance through tools like DeepSpeed ZeRO++, FlashAttention 4, and TiledMLP, while also compiling training logbooks and contributing to the Machine Learning Engineering Open Book."
 }

@@ -2,30 +2,6 @@
   "id": "sayakpaul",
   "stars": [
     {
-      "repo": "alvarobartt/hf-mem",
-      "url": "https://github.com/alvarobartt/hf-mem",
-      "description": "A CLI to estimate inference memory requirements for Hugging Face models, written in Python.",
-      "language": "Python",
-      "stargazersCount": 903,
-      "starredBy": "sayakpaul",
-      "highlights": "This CLI tool provides memory estimation for Hugging Face model inference, helping developers plan resource allocation. It supports GGUF and SafeTensors formats, offering practical insights for deployment.",
-      "worthReading": "It addresses a common pain point in model deployment by giving concrete memory requirements before running inference.",
-      "topics": [
-        "gguf",
-        "hf-extension",
-        "huggingface",
-        "safetensors"
-      ],
-      "tags": [
-        "deployment",
-        "tooling"
-      ],
-      "score": 7,
-      "scoreReason": "Freshness: Young repo (903 stars) gaining traction with recent star from notable AI leader; Relevance: Directly addresses practical LLM infrastructure (model memory estimation); Concreteness: Concrete CLI tool with specific functionality for Hugging Face models.",
-      "type": "github",
-      "starredAt": "2026-04-14"
-    },
-    {
       "repo": "DWarez/kernels_bench",
       "url": "https://github.com/DWarez/kernels_bench",
       "description": "",
@@ -123,62 +99,6 @@
   "videos": [],
   "blogs": [],
   "xPosts": [
-    {
-      "type": "x",
-      "id": "1793854085633913255",
-      "url": "https://x.com/RisingSayak/status/1793854085633913255",
-      "author": {
-        "handle": "sayakpaul",
-        "displayName": "Sayak Paul",
-        "avatar": "https://avatars.githubusercontent.com/sayakpaul"
-      },
-      "content": "Had a nice time chatting about the state of diffusion models and some text-to-image data shenanigans at",
-      "createdAt": "2026-04-16T11:15:25.570Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Sayak Paul discusses the current state of diffusion models and text-to-image data issues.",
-      "worthReading": "Provides insight into ongoing discussions about diffusion model development and data challenges.",
-      "tags": [
-        "multi-modal"
-      ]
-    },
-    {
-      "type": "x",
-      "id": "2030950429505495179",
-      "url": "https://x.com/RisingSayak/status/2030950429505495179",
-      "author": {
-        "handle": "sayakpaul",
-        "displayName": "Sayak Paul",
-        "avatar": "https://avatars.githubusercontent.com/sayakpaul"
-      },
-      "content": "Details:",
-      "createdAt": "2026-04-16T11:15:25.570Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "A brief post by Sayak Paul sharing unspecified details.",
-      "worthReading": "Indicates active engagement on technical topics, though content is minimal.",
-      "tags": []
-    },
-    {
-      "type": "x",
-      "id": "2039600999875387538",
-      "url": "https://x.com/RisingSayak/status/2039600999875387538",
-      "author": {
-        "handle": "sayakpaul",
-        "displayName": "Sayak Paul",
-        "avatar": "https://avatars.githubusercontent.com/sayakpaul"
-      },
-      "content": "Giving a talk here is by far the most fulfilling experience of my life!",
-      "createdAt": "2026-04-16T11:15:25.570Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Sayak Paul expresses that giving a talk was an extremely fulfilling personal experience.",
-      "worthReading": "Shows personal enthusiasm for public speaking and knowledge sharing in the AI community.",
-      "tags": []
-    },
     {
       "type": "x",
       "id": "1793854085633913255",
@@ -1181,11 +1101,71 @@
         "deployment",
         "infra"
       ]
+    },
+    {
+      "type": "x",
+      "id": "2054116246485082174",
+      "url": "https://x.com/RisingSayak/status/2054116246485082174",
+      "author": {
+        "handle": "sayakpaul",
+        "displayName": "Sayak Paul",
+        "avatar": "https://avatars.githubusercontent.com/sayakpaul"
+      },
+      "content": "1. Read the post. 2. Contemplate. 3. Repeat 1.",
+      "createdAt": "2026-05-14T04:22:51.770Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Advocates a reflective reading practice: read, contemplate, repeat.",
+      "worthReading": "Encourages deeper engagement with content rather than passive consumption.",
+      "tags": [
+        "llm"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "1793854085633913255",
+      "url": "https://x.com/RisingSayak/status/1793854085633913255",
+      "author": {
+        "handle": "sayakpaul",
+        "displayName": "Sayak Paul",
+        "avatar": "https://avatars.githubusercontent.com/sayakpaul"
+      },
+      "content": "Had a nice time chatting about the state of diffusion models and some text-to-image data shenanigans at",
+      "createdAt": "2026-05-14T04:22:51.770Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Discussed diffusion models and text-to-image data issues in a chat.",
+      "worthReading": "Provides insight into current challenges and discussions in generative AI.",
+      "tags": [
+        "multi-modal"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "1937703345197842917",
+      "url": "https://x.com/RisingSayak/status/1937703345197842917",
+      "author": {
+        "handle": "sayakpaul",
+        "displayName": "Sayak Paul",
+        "avatar": "https://avatars.githubusercontent.com/sayakpaul"
+      },
+      "content": "Release notes: Release Diffusers 0.34.0: New Image and Video Models, Better torch.",
+      "createdAt": "2024-06-24",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Announced Diffusers 0.34.0 release with new image/video models and torch improvements.",
+      "worthReading": "Highlights important updates in the Diffusers library for ML practitioners.",
+      "tags": [
+        "deployment",
+        "tooling"
+      ]
     }
   ],
   "dailyCounts": [
     4,
-    4,
     1,
     1,
     1,
@@ -1213,7 +1193,8 @@
     0,
     4,
     1,
-    0
+    0,
+    3
   ],
-  "interestSummary": "Sayak Paul is focused on optimizing and deploying Hugging Face models, particularly diffusion models, with recent interests in inference memory estimation, TPU inference, and Rust-based tooling, while also exploring community trust systems and PyTorch development."
+  "interestSummary": "Sayak Paul is currently focused on diffusion models and text-to-image data, while expanding his interests into infrastructure areas like TPU inference for vLLM, Rust-based Hugging Face Hub tooling, and community trust systems."
 }
