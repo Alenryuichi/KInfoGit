@@ -3,27 +3,6 @@
   "stars": [],
   "posts": [
     {
-      "uri": "at://did:plc:oogxmzmgauh5ug2tfe5vc7wm/app.bsky.feed.post/3mjk46gzu6s22",
-      "url": "https://bsky.app/profile/beenwrekt.bsky.social/post/3mjk46gzu6s22",
-      "author": {
-        "handle": "beenwrekt.bsky.social",
-        "displayName": "Ben Recht",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:oogxmzmgauh5ug2tfe5vc7wm/bafkreigi5u3fn2porezvfmnxunm7zynzebk43tsrzvzeplciswiazdyqqe"
-      },
-      "content": "The long legacy of simulation in control theory and what it can teach us about transferring policies from GPU to reality.",
-      "createdAt": "2026-04-15T14:28:49.999Z",
-      "likeCount": 11,
-      "replyCount": 0,
-      "repostCount": 0,
-      "highlights": "",
-      "worthReading": "",
-      "tags": [
-        "deployment",
-        "infra"
-      ],
-      "type": "bluesky"
-    },
-    {
       "uri": "at://did:plc:oogxmzmgauh5ug2tfe5vc7wm/app.bsky.feed.post/3mjpfnz6pec2i",
       "url": "https://bsky.app/profile/beenwrekt.bsky.social/post/3mjpfnz6pec2i",
       "author": {
@@ -206,67 +185,6 @@
   "videos": [],
   "blogs": [],
   "xPosts": [
-    {
-      "type": "x",
-      "id": "2014360939563520146",
-      "url": "https://x.com/beenwrekt/status/2014360939563520146",
-      "author": {
-        "handle": "beenwrekt",
-        "displayName": "Ben Recht",
-        "avatar": null
-      },
-      "content": "For the first time in almost a decade, I'm teaching a class on learning and control.",
-      "createdAt": "2026-04-16T11:16:46.154Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Ben Recht is returning to teaching a course on learning and control after nearly ten years.",
-      "worthReading": "Shows his ongoing academic engagement and focus on the intersection of learning and control systems.",
-      "tags": [
-        "evaluation"
-      ]
-    },
-    {
-      "type": "x",
-      "id": "2026318556233912355",
-      "url": "https://x.com/beenwrekt/status/2026318556233912355",
-      "author": {
-        "handle": "beenwrekt",
-        "displayName": "Ben Recht",
-        "avatar": null
-      },
-      "content": "Part one of a new blog series: using the discovery of vitamins as a parable for why replication crises in [science/ML] matter.",
-      "createdAt": "2026-04-16T11:16:46.154Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Introduces a blog series using the history of vitamin discovery as an analogy to discuss the importance of replication in scientific and machine learning research.",
-      "worthReading": "Applies a historical scientific case to critique modern research practices, emphasizing methodological rigor.",
-      "tags": [
-        "evaluation"
-      ]
-    },
-    {
-      "type": "x",
-      "id": "1954913573605712297",
-      "url": "https://x.com/beenwrekt/status/1954913573605712297",
-      "author": {
-        "handle": "beenwrekt",
-        "displayName": "Ben Recht",
-        "avatar": null
-      },
-      "content": "Revisiting Sutton's Bitter Lesson in the wake of GPT-5.",
-      "createdAt": "2026-04-16T11:16:46.154Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Re-examines the 'Bitter Lesson'—the idea that general methods leveraging computation scale best—in the context of advanced models like GPT-5.",
-      "worthReading": "Engages with a foundational AI debate about scaling vs. specialized knowledge in the era of large language models.",
-      "tags": [
-        "llm",
-        "evaluation"
-      ]
-    },
     {
       "type": "x",
       "id": "1137079289747259395",
@@ -1879,10 +1797,49 @@
       "tags": [
         "evaluation"
       ]
+    },
+    {
+      "type": "x",
+      "id": "2014360939563520146",
+      "url": "https://x.com/beenwrekt/status/2014360939563520146",
+      "author": {
+        "handle": "beenwrekt",
+        "displayName": "Ben Recht",
+        "avatar": null
+      },
+      "content": "For the first time in almost a decade, I'm teaching a class on learning and control.",
+      "createdAt": "2026-05-15T04:26:47.223Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Ben Recht is teaching a class on learning and control after a long hiatus.",
+      "worthReading": "Shows a shift in his teaching focus towards control theory.",
+      "tags": [
+        "evaluation"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "1986456299081769208",
+      "url": "https://x.com/beenwrekt/status/1986456299081769208",
+      "author": {
+        "handle": "beenwrekt",
+        "displayName": "Ben Recht",
+        "avatar": null
+      },
+      "content": "Everyone knows actions are fundamentally different than predictions, but it's hard to write this",
+      "createdAt": "2026-05-15T04:26:47.223Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Ben Recht discusses the fundamental difference between actions and predictions.",
+      "worthReading": "Highlights a key distinction in machine learning and control.",
+      "tags": [
+        "evaluation"
+      ]
     }
   ],
   "dailyCounts": [
-    4,
     0,
     1,
     3,
@@ -1911,7 +1868,8 @@
     4,
     3,
     2,
+    2,
     2
   ],
-  "interestSummary": "Ben Recht is currently focused on developing a theory of engineering architecture, exploring the intersection of control theory, simulation, and uncertainty quantification, while also revisiting foundational ideas in machine learning and the replication crisis through his new class on learning and control."
+  "interestSummary": "Ben Recht is currently focused on developing a theory of engineering architecture for organizing machines and people, while also promoting his book *The Irrational Decision* and critically examining uncertainty quantification, institutional optimization, and mathematical rationality in large language models."
 }

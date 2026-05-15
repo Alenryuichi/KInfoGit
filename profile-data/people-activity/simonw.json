@@ -342,27 +342,6 @@
   ],
   "posts": [
     {
-      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mjkfkgva5c2d",
-      "url": "https://bsky.app/profile/simonwillison.net/post/3mjkfkgva5c2d",
-      "author": {
-        "handle": "simonwillison.net",
-        "displayName": "Simon Willison",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
-      },
-      "content": "The example prompt for Google's new Gemini Flash TTS text-to-speed model is a lot simonwillison.net/2026/Apr/15/...",
-      "createdAt": "2026-04-15T17:16:36.177Z",
-      "likeCount": 60,
-      "replyCount": 9,
-      "repostCount": 7,
-      "highlights": "",
-      "worthReading": "",
-      "tags": [
-        "llm",
-        "multi-modal"
-      ],
-      "type": "bluesky"
-    },
-    {
       "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mjl5u4uq6s2r",
       "url": "https://bsky.app/profile/simonwillison.net/post/3mjl5u4uq6s2r",
       "author": {
@@ -1110,7 +1089,9 @@
       "repostCount": 0,
       "highlights": "",
       "worthReading": "",
-      "tags": [],
+      "tags": [
+        "evaluation"
+      ],
       "type": "bluesky"
     },
     {
@@ -1146,7 +1127,9 @@
       "repostCount": 7,
       "highlights": "",
       "worthReading": "",
-      "tags": [],
+      "tags": [
+        "deployment"
+      ],
       "type": "bluesky"
     }
   ],
@@ -1304,47 +1287,6 @@
     }
   ],
   "xPosts": [
-    {
-      "type": "x",
-      "id": "1555626060384911360",
-      "url": "https://x.com/simonw/status/1555626060384911360",
-      "author": {
-        "handle": "simonw",
-        "displayName": "Simon Willison",
-        "avatar": "https://avatars.githubusercontent.com/simonw"
-      },
-      "content": "Screenshot from a video game where a team of raccoons go on a heist",
-      "createdAt": "2026-04-16T11:13:29.936Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Simon Willison shares an AI-generated image prompt result showing creative multi-modal AI capabilities.",
-      "worthReading": "Demonstrates AI's creative potential beyond text generation.",
-      "tags": [
-        "multi-modal"
-      ]
-    },
-    {
-      "type": "x",
-      "id": "1970147806225854531",
-      "url": "https://x.com/simonw/status/1970147806225854531",
-      "author": {
-        "handle": "simonw",
-        "displayName": "Simon Willison",
-        "avatar": "https://avatars.githubusercontent.com/simonw"
-      },
-      "content": "It's interesting how 'better at code' has become the defining goal of almost every AI lab over the...",
-      "createdAt": "2026-04-16T11:13:29.936Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Willison observes the AI industry's intense focus on improving coding capabilities as a primary benchmark for progress.",
-      "worthReading": "Highlights a key trend in AI development priorities.",
-      "tags": [
-        "agent",
-        "evaluation"
-      ]
-    },
     {
       "type": "x",
       "id": "1639691902357483520",
@@ -2717,10 +2659,30 @@
         "agent",
         "deployment"
       ]
+    },
+    {
+      "type": "x",
+      "id": "1970147806225854531",
+      "url": "https://x.com/simonw/status/1970147806225854531",
+      "author": {
+        "handle": "simonw",
+        "displayName": "Simon Willison",
+        "avatar": "https://avatars.githubusercontent.com/simonw"
+      },
+      "content": "It's interesting how \"better at code\" has become the defining goal of almost every AI lab over the",
+      "createdAt": "2026-05-15T04:25:27.882Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Simon notes that AI labs are increasingly focused on improving code generation capabilities.",
+      "worthReading": "Reflects a key trend in AI development priorities.",
+      "tags": [
+        "llm",
+        "tooling"
+      ]
     }
   ],
   "dailyCounts": [
-    3,
     2,
     1,
     5,
@@ -2749,7 +2711,8 @@
     5,
     6,
     3,
-    3
+    3,
+    1
   ],
-  "interestSummary": "Simon Willison is focused on evaluating and comparing various AI models for code generation and image creation, using whimsical benchmarks like generating images of pelicans riding bicycles. He is also actively building tools and interfaces for document parsing and coding agent workflows, while tracking developments in AI pricing and system prompts from major labs."
+  "interestSummary": "Simon Willison is deeply focused on evaluating and comparing the latest AI models (Claude Opus 4.7, GPT-5.5, DeepSeek V4, Qwen3.6) for coding and image generation, using a humorous \"pelicans riding bicycles\" benchmark. He is also actively building tools and workflows for coding agents, document parsing, and integrating AI with Python ecosystems like Datasette and LiteParse."
 }

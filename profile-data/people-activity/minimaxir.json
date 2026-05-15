@@ -87,87 +87,55 @@
       "score": 4,
       "scoreReason": "Freshness is low (0) as it's a mature library with no recent major updates; relevance is moderate (2) as graph algorithms are useful in AI but not directly frontier; concreteness is high (2) as it provides real, working code and algorithms.",
       "type": "github"
+    },
+    {
+      "repo": "sharkdp/hyperfine",
+      "url": "https://github.com/sharkdp/hyperfine",
+      "description": "A command-line benchmarking tool",
+      "language": "Rust",
+      "stargazersCount": 28110,
+      "starredBy": "minimaxir",
+      "starredAt": "2026-05-14T21:17:27Z",
+      "highlights": "Hyperfine is a command-line benchmarking tool that provides precise timing and statistical analysis for arbitrary commands. It supports warm-up runs, parameterized benchmarks, and export to various formats like JSON and Markdown.",
+      "worthReading": "For AI engineers, hyperfine is invaluable for benchmarking model inference, data processing pipelines, or any CLI tool, ensuring reproducible performance comparisons.",
+      "topics": [
+        "benchmark",
+        "cli",
+        "command-line",
+        "rust",
+        "terminal",
+        "tool"
+      ],
+      "tags": [
+        "tooling"
+      ],
+      "score": 7,
+      "scoreReason": "Freshness: 2 (established but still actively maintained, no recent major release), Relevance: 3 (essential tooling for AI devs benchmarking), Concreteness: 2 (mature, widely used tool).",
+      "type": "github"
+    },
+    {
+      "repo": "antirez/ds4",
+      "url": "https://github.com/antirez/ds4",
+      "description": "DeepSeek 4 Flash local inference engine for Metal and CUDA",
+      "language": "C",
+      "stargazersCount": 9030,
+      "starredBy": "minimaxir",
+      "starredAt": "2026-05-14T17:24:06Z",
+      "highlights": "ds4 is a local inference engine for DeepSeek 4 Flash, supporting Metal and CUDA. It provides efficient, low-level inference for the DeepSeek 4 Flash model on consumer hardware.",
+      "worthReading": "It's worth exploring for AI engineers interested in running DeepSeek 4 Flash locally with optimized performance on both Apple Silicon and NVIDIA GPUs.",
+      "topics": [],
+      "tags": [
+        "llm"
+      ],
+      "score": 7,
+      "scoreReason": "Freshness: 2 (new repo with 9k stars, rising fast), Relevance: 3 (LLM inference engine for a frontier model), Concreteness: 2 (working code, specific hardware support).",
+      "type": "github"
     }
   ],
   "posts": [],
   "videos": [],
   "blogs": [],
   "xPosts": [
-    {
-      "type": "x",
-      "id": "1943173189372399719",
-      "url": "https://twitter.com/minimaxir/status/1943173189372399719",
-      "author": {
-        "handle": "minimaxir",
-        "displayName": "Max Woolf",
-        "avatar": "https://avatars.githubusercontent.com/minimaxir"
-      },
-      "content": "Impressive model based on a few minutes of playing, but disappointing to see no mention at all of a model card, red teaming, yesterday's incident,",
-      "createdAt": "2026-04-16T11:14:28.788Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Max Woolf critiques a new AI model for lacking proper documentation (model card) and safety testing (red teaming), while also referencing a recent incident.",
-      "worthReading": "It highlights ongoing concerns about AI safety practices and transparency in model releases.",
-      "tags": [
-        "safety",
-        "evaluation"
-      ]
-    },
-    {
-      "type": "x",
-      "id": "2029982443026223510",
-      "url": "https://x.com/minimaxir/status/2029982443026223510",
-      "author": {
-        "handle": "minimaxir",
-        "displayName": "Max Woolf",
-        "avatar": "https://avatars.githubusercontent.com/minimaxir"
-      },
-      "content": "me irl",
-      "createdAt": "2025-03-06",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "A personal, casual post expressing a relatable feeling or situation.",
-      "worthReading": "It shows a more informal, human side of the technical analyst.",
-      "tags": []
-    },
-    {
-      "type": "x",
-      "id": "1825584262311186616",
-      "url": "https://x.com/minimaxir/status/1825584262311186616",
-      "author": {
-        "handle": "minimaxir",
-        "displayName": "Max Woolf",
-        "avatar": "https://avatars.githubusercontent.com/minimaxir"
-      },
-      "content": "",
-      "createdAt": "2026-04-16T11:14:28.788Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "A tweet with engagement (19 likes) but no visible text content in the provided snippet.",
-      "worthReading": "Indicates audience interaction, though the specific topic is unknown.",
-      "tags": []
-    },
-    {
-      "type": "x",
-      "id": "2019510645180494156",
-      "url": "https://x.com/minimaxir/status/2019510645180494156",
-      "author": {
-        "handle": "minimaxir",
-        "displayName": "Max Woolf",
-        "avatar": "https://avatars.githubusercontent.com/minimaxir"
-      },
-      "content": "",
-      "createdAt": "2026-04-16T11:14:28.788Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "A tweet with significant views (468) but no visible text content in the provided snippet.",
-      "worthReading": "Suggests the post garnered attention, but the subject matter is unclear.",
-      "tags": []
-    },
     {
       "type": "x",
       "id": "1943173189372399719",
@@ -1213,10 +1181,66 @@
       "highlights": "A short, relatable post with a meme-like tone.",
       "worthReading": "Demonstrates personal engagement style.",
       "tags": []
+    },
+    {
+      "type": "x",
+      "id": "1641885820734046209",
+      "url": "https://x.com/minimaxir/status/1641885820734046209",
+      "author": {
+        "handle": "minimaxir",
+        "displayName": "Max Woolf",
+        "avatar": "https://avatars.githubusercontent.com/minimaxir"
+      },
+      "content": "LOL. Remove the code in the algorithm that boosts the tweets of Elon by elvodqa · Pull Request #160 ·... github.com.",
+      "createdAt": "2023-03-31T00:00:00Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Max Woolf finds humor in a pull request that removes code boosting Elon Musk's tweets.",
+      "worthReading": "Shows a critical perspective on algorithmic amplification on social media.",
+      "tags": [
+        "deployment",
+        "infra"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2029982443026223510",
+      "url": "https://x.com/minimaxir/status/2029982443026223510",
+      "author": {
+        "handle": "minimaxir",
+        "displayName": "Max Woolf",
+        "avatar": "https://avatars.githubusercontent.com/minimaxir"
+      },
+      "content": "me irl",
+      "createdAt": "2026-05-15T04:26:07.869Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "A short, relatable post expressing a personal sentiment.",
+      "worthReading": "Illustrates the casual, human side of a technical professional.",
+      "tags": []
+    },
+    {
+      "type": "x",
+      "id": "1877857554060972273",
+      "url": "https://x.com/minimaxir/status/1877857554060972273",
+      "author": {
+        "handle": "minimaxir",
+        "displayName": "Max Woolf",
+        "avatar": "https://avatars.githubusercontent.com/minimaxir"
+      },
+      "content": "what",
+      "createdAt": "2026-05-15T04:26:07.869Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "A brief expression of confusion or surprise.",
+      "worthReading": "Reflects spontaneous reaction to some event.",
+      "tags": []
     }
   ],
   "dailyCounts": [
-    4,
     0,
     0,
     4,
@@ -1245,7 +1269,8 @@
     1,
     2,
     2,
-    2
+    4,
+    3
   ],
-  "interestSummary": "Max Woolf has recently been exploring data visualization and Rust programming tools, while also engaging critically with AI model releases and discussing OpenAI's achievements."
+  "interestSummary": "Max Woolf is currently focused on performance benchmarking and data visualization tools, particularly in Rust, while also exploring local AI inference engines and expressing skepticism about AI safety practices in model releases."
 }

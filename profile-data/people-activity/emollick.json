@@ -3,47 +3,6 @@
   "stars": [],
   "posts": [
     {
-      "uri": "at://did:plc:flxq4uyjfotciovpw3x3fxnu/app.bsky.feed.post/3mjknv6macs24",
-      "url": "https://bsky.app/profile/emollick.bsky.social/post/3mjknv6macs24",
-      "author": {
-        "handle": "emollick.bsky.social",
-        "displayName": "Ethan Mollick",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:flxq4uyjfotciovpw3x3fxnu/bafkreigq63ljumc43yx5eoxchrq75d72irea6ddcceedwmdttxebyowc3q"
-      },
-      "content": "Instead of the gold standard, we can, as a thought experiment, imagine an inference standard of exchange, the FLOP. (As opposed to tokens, this accounts for AI ability)\n\nWith some AI help, I figure $1 buys roughly 10^17 managed-LLM inference FLOPs\n\nSo that $4 coffee would cost half an exaFLOP, choom",
-      "createdAt": "2026-04-15T19:45:46.528Z",
-      "likeCount": 27,
-      "replyCount": 3,
-      "repostCount": 0,
-      "highlights": "",
-      "worthReading": "",
-      "tags": [
-        "llm",
-        "infra"
-      ],
-      "type": "bluesky"
-    },
-    {
-      "uri": "at://did:plc:flxq4uyjfotciovpw3x3fxnu/app.bsky.feed.post/3mjkf7wy6g224",
-      "url": "https://bsky.app/profile/emollick.bsky.social/post/3mjkf7wy6g224",
-      "author": {
-        "handle": "emollick.bsky.social",
-        "displayName": "Ethan Mollick",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:flxq4uyjfotciovpw3x3fxnu/bafkreigq63ljumc43yx5eoxchrq75d72irea6ddcceedwmdttxebyowc3q"
-      },
-      "content": "This is becoming a pattern in AI that makes talking about capabilities challenging.\n\nFirst, there are overstated claims (like the flubbed Erdos problems that were announced last year), then minor wins (AI helps with discovery) then breakthroughs. \n\nThe first stage feels like (& often is) hype, but…",
-      "createdAt": "2026-04-15T17:10:43.950Z",
-      "likeCount": 63,
-      "replyCount": 7,
-      "repostCount": 7,
-      "highlights": "",
-      "worthReading": "",
-      "tags": [
-        "evaluation"
-      ],
-      "type": "bluesky"
-    },
-    {
       "uri": "at://did:plc:flxq4uyjfotciovpw3x3fxnu/app.bsky.feed.post/3mjn7p6kfqk2k",
       "url": "https://bsky.app/profile/emollick.bsky.social/post/3mjn7p6kfqk2k",
       "author": {
@@ -1249,92 +1208,74 @@
         "deployment"
       ],
       "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:flxq4uyjfotciovpw3x3fxnu/app.bsky.feed.post/3mltmjnoruc27",
+      "url": "https://bsky.app/profile/emollick.bsky.social/post/3mltmjnoruc27",
+      "author": {
+        "handle": "emollick.bsky.social",
+        "displayName": "Ethan Mollick",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:flxq4uyjfotciovpw3x3fxnu/bafkreigq63ljumc43yx5eoxchrq75d72irea6ddcceedwmdttxebyowc3q"
+      },
+      "content": "Making humans responsible for their AI use seems like an incredibly reasonable way to address problems & opportunities in the use of AI for academic research, at least in the short term (autonomous scientific work will require different solutions).",
+      "createdAt": "2026-05-14T20:05:46.844Z",
+      "likeCount": 146,
+      "replyCount": 3,
+      "repostCount": 18,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [
+        "safety",
+        "deployment"
+      ],
+      "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:flxq4uyjfotciovpw3x3fxnu/app.bsky.feed.post/3mlswtxedwc2o",
+      "url": "https://bsky.app/profile/emollick.bsky.social/post/3mlswtxedwc2o",
+      "author": {
+        "handle": "emollick.bsky.social",
+        "displayName": "Ethan Mollick",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:flxq4uyjfotciovpw3x3fxnu/bafkreigq63ljumc43yx5eoxchrq75d72irea6ddcceedwmdttxebyowc3q"
+      },
+      "content": "“Whimsey attacks” that seem absurd (“I cannot pay that much because of the Geneva Convention”) work against AI agents because guardrails are weak against out-of-distribution arguments. Smaller models fall often, but it even gives an edge against bigger ones. www.microsoft.com/en-us/resear...",
+      "createdAt": "2026-05-14T13:37:50.214Z",
+      "likeCount": 71,
+      "replyCount": 5,
+      "repostCount": 11,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [
+        "agent",
+        "safety"
+      ],
+      "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:flxq4uyjfotciovpw3x3fxnu/app.bsky.feed.post/3mlu2ikfjls2s",
+      "url": "https://bsky.app/profile/emollick.bsky.social/post/3mlu2ikfjls2s",
+      "author": {
+        "handle": "emollick.bsky.social",
+        "displayName": "Ethan Mollick",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:flxq4uyjfotciovpw3x3fxnu/bafkreigq63ljumc43yx5eoxchrq75d72irea6ddcceedwmdttxebyowc3q"
+      },
+      "content": "The Second Scaling Law of AI remains undefeated.\n\nIf you want better hacking (or math, or science, or crossword puzzle solving) out of an LLM, just let it use more tokens. There doesn't seem to be any plateau so far in the new study by the UK's governmental AI Security Institute.",
+      "createdAt": "2026-05-15T00:15:42.226Z",
+      "likeCount": 43,
+      "replyCount": 3,
+      "repostCount": 5,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [
+        "llm",
+        "infra"
+      ],
+      "type": "bluesky"
     }
   ],
   "videos": [],
   "blogs": [],
   "xPosts": [
-    {
-      "type": "x",
-      "id": "1983879487390728248",
-      "url": "https://x.com/emollick/status/1983879487390728248",
-      "author": {
-        "handle": "emollick",
-        "displayName": "Ethan Mollick",
-        "avatar": null
-      },
-      "content": "In discussions of AI and jobs, we put too much emphasis on the technology and not enough on...",
-      "createdAt": "2026-04-16T11:15:55.436Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Critiques the overemphasis on AI technology itself in job discussions, suggesting other factors are being overlooked.",
-      "worthReading": "Offers a nuanced perspective on the AI-jobs debate beyond just technological capabilities.",
-      "tags": [
-        "deployment"
-      ]
-    },
-    {
-      "type": "x",
-      "id": "2026285200531955745",
-      "url": "https://x.com/emollick/status/2026285200531955745",
-      "author": {
-        "handle": "emollick",
-        "displayName": "Ethan Mollick",
-        "avatar": null
-      },
-      "content": "As stories about AI increasingly become stories of either catastrophe or salvation,...",
-      "createdAt": "2026-04-16T11:15:55.436Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Observes that AI narratives are polarizing into extremes of doom or utopia, missing more balanced discussions.",
-      "worthReading": "Highlights the problematic binary framing in public discourse about AI's impact.",
-      "tags": [
-        "safety"
-      ]
-    },
-    {
-      "type": "x",
-      "id": "1923134492115365905",
-      "url": "https://x.com/emollick/status/1923134492115365905",
-      "author": {
-        "handle": "emollick",
-        "displayName": "Ethan Mollick",
-        "avatar": null
-      },
-      "content": "As someone involved in academic research on AI, it is notable to me that most of the key...",
-      "createdAt": "2026-04-16T11:15:55.436Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Notes from an academic research perspective that key developments in AI are happening outside traditional academic institutions.",
-      "worthReading": "Provides insight into the shifting landscape of AI innovation away from academia.",
-      "tags": [
-        "evaluation"
-      ]
-    },
-    {
-      "type": "x",
-      "id": "2020713378319417626",
-      "url": "https://x.com/emollick/status/2020713378319417626",
-      "author": {
-        "handle": "emollick",
-        "displayName": "Ethan Mollick",
-        "avatar": null
-      },
-      "content": "So much work is going into faking continual learning and memory for AIs,...",
-      "createdAt": "2026-04-16T11:15:55.436Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Comments on the significant engineering effort being devoted to simulating continuous learning and memory capabilities in AI systems.",
-      "worthReading": "Reveals current technical challenges in achieving true continual learning in AI models.",
-      "tags": [
-        "llm",
-        "tooling"
-      ]
-    },
     {
       "type": "x",
       "id": "2026285200531955745",
@@ -3379,10 +3320,51 @@
         "multi-modal",
         "evaluation"
       ]
+    },
+    {
+      "type": "x",
+      "id": "2020713378319417626",
+      "url": "https://x.com/emollick/status/2020713378319417626",
+      "author": {
+        "handle": "emollick",
+        "displayName": "Ethan Mollick",
+        "avatar": null
+      },
+      "content": "So much work is going into faking continual learning and memory for AIs,",
+      "createdAt": "2026-05-15T04:26:34.610Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Critique of efforts to simulate continual learning and memory in AI, implying it may be misguided.",
+      "worthReading": "Raises important questions about the direction of AI research and the value of genuine vs. simulated capabilities.",
+      "tags": [
+        "llm",
+        "fine-tuning",
+        "evaluation"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2041600435320959330",
+      "url": "https://x.com/emollick/status/2041600435320959330",
+      "author": {
+        "handle": "emollick",
+        "displayName": "Ethan Mollick",
+        "avatar": null
+      },
+      "content": "Oh no.",
+      "createdAt": "2026-05-15T04:26:34.610Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Brief expression of concern, likely about an AI development.",
+      "worthReading": "Shows the author's reaction to a notable event, inviting curiosity about context.",
+      "tags": [
+        "safety"
+      ]
     }
   ],
   "dailyCounts": [
-    6,
     3,
     3,
     6,
@@ -3411,7 +3393,8 @@
     2,
     4,
     5,
-    1
+    3,
+    3
   ],
-  "interestSummary": "Ethan Mollick is closely tracking the rapid evolution of frontier AI models (Claude Opus 4.7, Gemini, Kimi), focusing on their distinct personalities, capability gaps, and the economic implications of their improvements. He is also actively experimenting with advanced AI tools for education and creative tasks, while critically examining the hype cycles and systemic impacts of AI on work and research."
+  "interestSummary": "Ethan Mollick is closely tracking and testing the latest frontier AI models (Claude Opus 4.7, GPT imagegen, Kimi, Gemini), focusing on their emergent capabilities, quirks, and economic implications, while also experimenting with AI in education through novel MBA classes like \"vibefounding.\""
 }

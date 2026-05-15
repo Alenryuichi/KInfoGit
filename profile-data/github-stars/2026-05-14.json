@@ -1,0 +1,63 @@
+{
+  "date": "2026-05-14",
+  "stars": [
+    {
+      "repo": "sharkdp/hyperfine",
+      "url": "https://github.com/sharkdp/hyperfine",
+      "description": "A command-line benchmarking tool",
+      "language": "Rust",
+      "stargazersCount": 28110,
+      "starredBy": "minimaxir",
+      "starredAt": "2026-05-14T21:17:27Z",
+      "highlights": "Hyperfine is a command-line benchmarking tool that provides precise timing and statistical analysis for arbitrary commands. It supports warm-up runs, parameterized benchmarks, and export to various formats like JSON and Markdown.",
+      "worthReading": "For AI engineers, hyperfine is invaluable for benchmarking model inference, data processing pipelines, or any CLI tool, ensuring reproducible performance comparisons.",
+      "topics": [
+        "benchmark",
+        "cli",
+        "command-line",
+        "rust",
+        "terminal",
+        "tool"
+      ],
+      "tags": [
+        "tooling"
+      ],
+      "score": 7,
+      "scoreReason": "Freshness: 2 (established but still actively maintained, no recent major release), Relevance: 3 (essential tooling for AI devs benchmarking), Concreteness: 2 (mature, widely used tool)."
+    },
+    {
+      "repo": "antirez/ds4",
+      "url": "https://github.com/antirez/ds4",
+      "description": "DeepSeek 4 Flash local inference engine for Metal and CUDA",
+      "language": "C",
+      "stargazersCount": 9030,
+      "starredBy": "minimaxir",
+      "starredAt": "2026-05-14T17:24:06Z",
+      "highlights": "ds4 is a local inference engine for DeepSeek 4 Flash, supporting Metal and CUDA. It provides efficient, low-level inference for the DeepSeek 4 Flash model on consumer hardware.",
+      "worthReading": "It's worth exploring for AI engineers interested in running DeepSeek 4 Flash locally with optimized performance on both Apple Silicon and NVIDIA GPUs.",
+      "topics": [],
+      "tags": [
+        "llm"
+      ],
+      "score": 7,
+      "scoreReason": "Freshness: 2 (new repo with 9k stars, rising fast), Relevance: 3 (LLM inference engine for a frontier model), Concreteness: 2 (working code, specific hardware support)."
+    },
+    {
+      "repo": "ariG23498/trace-util",
+      "url": "https://github.com/ariG23498/trace-util",
+      "description": "A utility script to upload pytorch traces to a Hugging Face Bucket, and then build sharable trace URL",
+      "language": "Python",
+      "stargazersCount": 2,
+      "starredBy": "pcuenca",
+      "starredAt": "2026-05-14T07:08:27Z",
+      "highlights": "A utility script to upload PyTorch traces to a Hugging Face bucket and generate sharable trace URLs. Simplifies sharing and collaboration on model execution traces.",
+      "worthReading": "Useful for AI engineers who need to share PyTorch traces for debugging or collaboration, leveraging Hugging Face infrastructure.",
+      "topics": [],
+      "tags": [
+        "tooling"
+      ],
+      "score": 3,
+      "scoreReason": "Freshness is low (2 stars, no traction), relevance is moderate (tooling for AI but niche), concreteness is high (specific working script)."
+    }
+  ]
+}

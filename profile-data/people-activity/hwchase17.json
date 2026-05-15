@@ -1984,12 +1984,98 @@
       "tags": [
         "tooling"
       ]
+    },
+    {
+      "type": "x",
+      "id": "2021261552222158955",
+      "url": "https://x.com/hwchase17/status/2021261552222158955",
+      "author": {
+        "handle": "hwchase17",
+        "displayName": "Harrison Chase",
+        "avatar": "https://avatars.githubusercontent.com/hwchase17"
+      },
+      "content": "TL;DR: More and more agents need a workspace: a computer where they can run code, install packages, and access files. Sandboxes provide this",
+      "createdAt": "2026-05-15T04:25:33.172Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Agents require a sandboxed workspace to execute code, install packages, and access files.",
+      "worthReading": "Highlights a key infrastructure need for agent deployment.",
+      "tags": [
+        "agent",
+        "infra",
+        "deployment"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2013641863123870133",
+      "url": "https://x.com/hwchase17/status/2013641863123870133",
+      "author": {
+        "handle": "hwchase17",
+        "displayName": "Harrison Chase",
+        "avatar": "https://avatars.githubusercontent.com/hwchase17"
+      },
+      "content": "When building agents, you need to iterate on production data much more than when building traditional software. You need to iterate on how",
+      "createdAt": "2026-05-15T04:25:33.173Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Agent development requires more iteration on production data than traditional software.",
+      "worthReading": "Emphasizes the unique feedback loop needed for agent reliability.",
+      "tags": [
+        "agent",
+        "evaluation",
+        "deployment"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2027094058330656814",
+      "url": "https://x.com/hwchase17/status/2027094058330656814",
+      "author": {
+        "handle": "hwchase17",
+        "displayName": "Harrison Chase",
+        "avatar": "https://avatars.githubusercontent.com/hwchase17"
+      },
+      "content": "Traditional Application Performance Monitoring (APM) tools focus on metrics like latency, traffic, errors, and saturation. They track HTTP",
+      "createdAt": "2026-05-15T04:25:33.173Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Traditional APM metrics are insufficient for monitoring agents.",
+      "worthReading": "Suggests the need for new monitoring paradigms for AI agents.",
+      "tags": [
+        "agent",
+        "infra",
+        "tooling"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "1975603633791377920",
+      "url": "https://x.com/hwchase17/status/1975603633791377920",
+      "author": {
+        "handle": "hwchase17",
+        "displayName": "Harrison Chase",
+        "avatar": "https://avatars.githubusercontent.com/hwchase17"
+      },
+      "content": "I am not excited about visual workflow builders 1. Not simple enough for the average user",
+      "createdAt": "2026-05-15T04:25:33.173Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Visual workflow builders are not simple enough for average users.",
+      "worthReading": "Critiques a common approach to agent building, advocating for simplicity.",
+      "tags": [
+        "agent",
+        "tooling"
+      ]
     }
   ],
   "dailyCounts": [
     0,
     0,
-    0,
     4,
     3,
     3,
@@ -2015,8 +2101,9 @@
     4,
     4,
     3,
+    4,
     4,
     4
   ],
-  "interestSummary": "Harrison Chase is focused on advancing AI agents, particularly their need for workspaces and sandboxes to run code, and on improving agent development through tools like LangSmith's no-code Agent Builder with integrated memory systems, emphasizing the shift from traditional software operations to trace-based debugging and iteration in production."
+  "interestSummary": "Harrison Chase is focused on advancing AI agents, particularly their need for sandboxed workspaces to run code and access files, and the development of tools like LangSmith Agent Builder for no-code agent creation with integrated memory systems. He also emphasizes the shift from traditional software monitoring to trace-based debugging and iteration for production agents."
 }
