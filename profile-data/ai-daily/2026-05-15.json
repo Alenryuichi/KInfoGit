@@ -1,0 +1,1255 @@
+{
+  "date": "2026-05-15",
+  "itemCount": 67,
+  "sections": [
+    {
+      "id": "headlines",
+      "title": "Headlines & Launches",
+      "items": [
+        {
+          "title": "Anthropic forms $200 million partnership with the Gates Foundation",
+          "summary": "Anthropic与盖茨基金会达成2亿美元AI合作。",
+          "url": "https://www.anthropic.com/news/gates-foundation-partnership",
+          "score": 9,
+          "sources": [
+            {
+              "name": "anthropic.com"
+            }
+          ],
+          "tags": [
+            "partnership",
+            "philanthropy",
+            "anthropic"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Anthropic, Gates Foundation launch $200 million partnership for AI in health, education - Reuters",
+          "summary": "Anthropic与盖茨基金会合作，投入2亿美元用于AI健康与教育。",
+          "url": "https://www.reuters.com/business/retail-consumer/anthropic-gates-foundation-launch-200-million-partnership-ai-health-education-2026-05-14/",
+          "score": 8.5,
+          "sources": [
+            {
+              "name": "reuters.com"
+            }
+          ],
+          "tags": [
+            "anthropic",
+            "gates-foundation",
+            "partnership",
+            "healthcare",
+            "education"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Google is about to release a new Gemini model - Sources | Alex Heath",
+          "summary": "消息称Google将在I/O发布新Gemini模型，但非前沿模型。",
+          "url": "https://sources.news/p/google-about-to-release-new-gemini",
+          "score": 8,
+          "sources": [
+            {
+              "name": "sources.news"
+            }
+          ],
+          "tags": [
+            "gemini",
+            "google",
+            "model-release"
+          ],
+          "focusTopics": [
+            "model-release"
+          ]
+        },
+        {
+          "title": "Microsoft starts canceling Claude Code licenses",
+          "summary": "微软开始取消Claude Code许可证。",
+          "url": "https://www.theverge.com/tech/930447/microsoft-claude-code-discontinued-notepad",
+          "score": 8,
+          "sources": [
+            {
+              "name": "theverge.com"
+            }
+          ],
+          "tags": [
+            "microsoft",
+            "claude",
+            "licensing"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "Synthetic Raises $10M Seed Led by Khosla Ventures | VentureBeat",
+          "summary": "Synthetic获1000万美元种子轮融资，用于AI记账服务。",
+          "url": "https://venturebeat.com/business/synthetic-raises-10m-seed-led-by-khosla-ventures",
+          "score": 7,
+          "sources": [
+            {
+              "name": "venturebeat.com"
+            }
+          ],
+          "tags": [
+            "funding",
+            "fintech",
+            "ai-agent"
+          ],
+          "focusTopics": []
+        }
+      ]
+    },
+    {
+      "id": "research",
+      "title": "Research & Innovation",
+      "items": [
+        {
+          "title": "Do Androids Dream of Breaking the Game? Systematically Auditing AI Agent Benchmarks with BenchJack",
+          "summary": "系统审计AI智能体基准测试，揭示漏洞并提出BenchJack工具。",
+          "url": "https://arxiv.org/abs/2605.12673",
+          "score": 8,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "benchmark",
+            "agent",
+            "auditing"
+          ],
+          "focusTopics": [
+            "evals"
+          ]
+        },
+        {
+          "title": "Revealing Interpretable Failure Modes of VLMs",
+          "summary": "揭示视觉语言模型的可解释失败模式，提升安全性。",
+          "url": "https://arxiv.org/abs/2605.12674",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "vlm",
+            "interpretability",
+            "safety"
+          ],
+          "focusTopics": [
+            "evals"
+          ]
+        },
+        {
+          "title": "Correct Answers from Sound Reasoning: Verifiable Process Supervision for Language Models",
+          "summary": "提出可验证过程监督方法，训练语言模型生成正确答案和合理推理。",
+          "url": "https://arxiv.org/abs/2605.12519",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "reasoning",
+            "supervision",
+            "verification"
+          ],
+          "focusTopics": [
+            "post-training"
+          ]
+        },
+        {
+          "title": "I trained Qwen3.5 to jailbreak itself with RL, then used the failures to improve its defenses",
+          "summary": "用RL训练Qwen3.5自我越狱并利用失败改进防御。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tdegh0/i_trained_qwen35_to_jailbreak_itself_with_rl_then/",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "rl",
+            "jailbreak",
+            "red-teaming",
+            "alignment"
+          ],
+          "focusTopics": [
+            "post-training"
+          ]
+        },
+        {
+          "title": "Continual Harness: Online Adaptation for Self-Improving Foundation Agents [R]",
+          "summary": "提出持续在线适应框架用于自我改进的基础智能体。",
+          "url": "https://www.reddit.com/r/MachineLearning/comments/1tcmj6v/continual_harness_online_adaptation_for/",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "Reddit r/MachineLearning"
+            }
+          ],
+          "tags": [
+            "online-adaptation",
+            "foundation-agents",
+            "continual-learning"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "Think Twice, Act Once: Verifier-Guided Action Selection For Embodied Agents",
+          "summary": "提出验证器引导的动作选择方法，用于具身智能体任务。",
+          "url": "https://arxiv.org/abs/2605.12620",
+          "score": 7,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "embodied-agent",
+            "action-selection",
+            "verifier"
+          ],
+          "focusTopics": [
+            "planning"
+          ]
+        },
+        {
+          "title": "DisaBench: A Participatory Evaluation Framework for Disability Harms in Language Models",
+          "summary": "提出DisaBench框架，评估语言模型对残疾人群体的危害。",
+          "url": "https://arxiv.org/abs/2605.12702",
+          "score": 7,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "benchmark",
+            "safety",
+            "disability"
+          ],
+          "focusTopics": [
+            "evals"
+          ]
+        },
+        {
+          "title": "CHAL: Council of Hierarchical Agentic Language",
+          "summary": "提出分层智能体语言委员会，通过多智能体辩论提升推理。",
+          "url": "https://arxiv.org/abs/2605.12718",
+          "score": 7,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "multi-agent",
+            "debate",
+            "reasoning"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "ToolWeave: Structured Synthesis of Complex Multi-Turn Tool-Calling Dialogues",
+          "summary": "提出ToolWeave，结构化合成复杂多轮工具调用对话。",
+          "url": "https://arxiv.org/abs/2605.12521",
+          "score": 7,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "tool-calling",
+            "multi-turn",
+            "dialogue-synthesis"
+          ],
+          "focusTopics": [
+            "tool-use"
+          ]
+        },
+        {
+          "title": "Follow the Mean: Reference-Guided Flow Matching [R]",
+          "summary": "提出参考引导的流匹配方法用于生成建模。",
+          "url": "https://www.reddit.com/r/MachineLearning/comments/1tdbxwg/follow_the_mean_referenceguided_flow_matching_r/",
+          "score": 7,
+          "sources": [
+            {
+              "name": "Reddit r/MachineLearning"
+            }
+          ],
+          "tags": [
+            "flow-matching",
+            "generative-modeling"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Macro-Action Based Multi-Agent Instruction Following through Value Cancellation",
+          "summary": "提出基于宏动作的多智能体指令跟随方法，通过价值取消实现。",
+          "url": "https://arxiv.org/abs/2605.12655",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "multi-agent",
+            "reinforcement-learning",
+            "instruction-following"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "Learning Transferable Latent User Preferences for Human-Aligned Decision Making",
+          "summary": "学习可迁移的潜在用户偏好，用于人机对齐决策。",
+          "url": "https://arxiv.org/abs/2605.12682",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "llm",
+            "alignment",
+            "preference-learning"
+          ],
+          "focusTopics": [
+            "post-training"
+          ]
+        },
+        {
+          "title": "State-Centric Decision Process",
+          "summary": "提出以状态为中心的决策过程，用于语言环境中的智能体。",
+          "url": "https://arxiv.org/abs/2605.12755",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "decision-making",
+            "state-centric",
+            "agent"
+          ],
+          "focusTopics": [
+            "planning"
+          ]
+        },
+        {
+          "title": "Mitigating Cross-Lingual Cultural Inconsistencies in LLMs via Consensus-Driven Preference Optimisation",
+          "summary": "通过共识驱动的偏好优化缓解LLM跨语言文化不一致。",
+          "url": "https://arxiv.org/abs/2605.12515",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "llm",
+            "multilingual",
+            "alignment"
+          ],
+          "focusTopics": [
+            "post-training"
+          ]
+        },
+        {
+          "title": "TimelineReasoner: Advancing Timeline Summarization with Large Reasoning Models",
+          "summary": "提出TimelineReasoner，利用大型推理模型推进时间线摘要。",
+          "url": "https://arxiv.org/abs/2605.12518",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "reasoning",
+            "summarization",
+            "timeline"
+          ],
+          "focusTopics": [
+            "planning"
+          ]
+        },
+        {
+          "title": "BoostTaxo: Zero-Shot Taxonomy Induction via Boosting-Style Agentic Reasoning and Constraint-Aware Calibration",
+          "summary": "提出BoostTaxo，用boosting式agent推理进行零样本分类体系归纳。",
+          "url": "https://arxiv.org/abs/2605.12520",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "taxonomy-induction",
+            "zero-shot",
+            "agentic-reasoning"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "BEHAVE: A Hybrid AI Framework for Real-Time Modeling of Collective Human Dynamics",
+          "summary": "提出BEHAVE混合AI框架，实时建模集体人类动态。",
+          "url": "https://arxiv.org/abs/2605.12730",
+          "score": 6,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "human-dynamics",
+            "simulation",
+            "ai-framework"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Bridging the Missing-Modality Gap: Improving Text-Only Calibration of Vision Language Models",
+          "summary": "改进视觉语言模型在纯文本输入下的校准，弥补缺失模态。",
+          "url": "https://arxiv.org/abs/2605.12517",
+          "score": 6,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "vlm",
+            "calibration",
+            "text-only"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Differences in Text Generated by Diffusion and Autoregressive Language Models",
+          "summary": "比较扩散语言模型与自回归语言模型生成文本的差异。",
+          "url": "https://arxiv.org/abs/2605.12522",
+          "score": 6,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "diffusion-lm",
+            "autoregressive",
+            "text-generation"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "In-Situ Behavioral Evaluation for LLM Fairness, Not Standardized-Test Scores",
+          "summary": "提出LLM公平性应通过情境对话行为而非标准化测试评估。",
+          "url": "https://arxiv.org/abs/2605.12530",
+          "score": 6,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "fairness",
+            "evaluation",
+            "llm"
+          ],
+          "focusTopics": [
+            "evals"
+          ]
+        },
+        {
+          "title": "A First Comprehensive Study of TurboQuant: Accuracy and Performance",
+          "summary": "TurboQuant量化方法首次全面研究，FP8 KV缓存量化最佳。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tdb4ic/a_first_comprehensive_study_of_turboquant/",
+          "score": 6,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "quantization",
+            "kv-cache",
+            "fp8"
+          ],
+          "focusTopics": [
+            "context-engineering"
+          ]
+        },
+        {
+          "title": "Domain Adaptation of Large Language Models for Polymer-Composite Additive Manufacturing Using Retrieval-Augmented Generation and Fine-Tuning",
+          "summary": "使用RAG和微调实现LLM在聚合物复合材料增材制造中的领域适应。",
+          "url": "https://arxiv.org/abs/2605.12516",
+          "score": 5.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "rag",
+            "fine-tuning",
+            "domain-adaptation"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "AI-supported chatbots as triggers of potential communication crises",
+          "summary": "研究AI聊天机器人如何引发潜在沟通危机。",
+          "url": "https://www.nature.com/articles/s41599-026-07617-x",
+          "score": 5,
+          "sources": [
+            {
+              "name": "nature.com"
+            }
+          ],
+          "tags": [
+            "chatbot",
+            "communication",
+            "user-experience"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Need a second pair of eyes, this Qwen3.6 27B quant recipe consistently thinks less and is correct",
+          "summary": "Qwen3.6 27B INT8量化配方使模型思考更少但正确。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tdhcqb/need_a_second_pair_of_eyes_this_qwen36_27b_quant/",
+          "score": 5,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "qwen",
+            "quantization",
+            "reasoning"
+          ],
+          "focusTopics": [
+            "planning"
+          ]
+        },
+        {
+          "title": "Exploring how EFL students talk to and through AI to develop texts",
+          "summary": "探索EFL学生如何通过AI对话辅助文本创作。",
+          "url": "https://arxiv.org/abs/2605.12523",
+          "score": 4.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "education",
+            "efl",
+            "ai-assisted-writing"
+          ],
+          "focusTopics": []
+        }
+      ]
+    },
+    {
+      "id": "engineering",
+      "title": "Engineering & Resources",
+      "items": [
+        {
+          "title": "NousResearch/hermes-agent",
+          "summary": "Nous Research发布hermes-agent，与用户共同成长的Agent。",
+          "url": "https://github.com/NousResearch/hermes-agent",
+          "score": 8.725,
+          "sources": [
+            {
+              "name": "GitHub trending:python (+1728★)"
+            }
+          ],
+          "tags": [
+            "agent",
+            "open-source",
+            "nous-research"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "You can access Codex on your phone now - Axios",
+          "summary": "OpenAI将AI编程助手Codex引入ChatGPT手机应用。",
+          "url": "https://www.axios.com/2026/05/14/openai-brings-codex-to-your-phone",
+          "score": 8.5,
+          "sources": [
+            {
+              "name": "axios.com"
+            }
+          ],
+          "tags": [
+            "ai-coding",
+            "mobile",
+            "openai"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "tinyhumansai/openhuman",
+          "summary": "开源个人AI超级智能项目，注重隐私和简洁。",
+          "url": "https://github.com/tinyhumansai/openhuman",
+          "score": 8.3,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+3329★)"
+            }
+          ],
+          "tags": [
+            "open-source",
+            "personal-ai",
+            "privacy"
+          ],
+          "focusTopics": [
+            "model-release"
+          ]
+        },
+        {
+          "title": "rohitg00/agentmemory",
+          "summary": "为AI编程代理提供持久记忆的库，基于基准测试。",
+          "url": "https://github.com/rohitg00/agentmemory",
+          "score": 8.3,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+1879★)"
+            }
+          ],
+          "tags": [
+            "ai-coding",
+            "memory",
+            "agent"
+          ],
+          "focusTopics": [
+            "coding-agents",
+            "context-engineering"
+          ]
+        },
+        {
+          "title": "obra/superpowers",
+          "summary": "代理技能框架和软件开发方法论，可工作。",
+          "url": "https://github.com/obra/superpowers",
+          "score": 8.3,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+1780★)"
+            }
+          ],
+          "tags": [
+            "agent-framework",
+            "skills",
+            "methodology"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "mattpocock/skills",
+          "summary": "Matt Pocock分享的Claude Code技能集，面向真实工程师。",
+          "url": "https://github.com/mattpocock/skills",
+          "score": 8.3,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+2987★)"
+            }
+          ],
+          "tags": [
+            "claude-code",
+            "ai-coding",
+            "developer-tools"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "Claude Code's '/goals' separates the agent that works from the one that decides it's done | VentureBeat",
+          "summary": "Claude Code新增'/goals'功能，分离工作与决策。",
+          "url": "https://venturebeat.com/orchestration/claude-codes-goals-separates-the-agent-that-works-from-the-one-that-decides-its-done",
+          "score": 8,
+          "sources": [
+            {
+              "name": "venturebeat.com"
+            }
+          ],
+          "tags": [
+            "ai-coding",
+            "claude",
+            "agent"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "inclusionAI/Ring-2.6-1T · Hugging Face",
+          "summary": "Ring-2.6-1T万亿参数推理模型发布。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1td3fhc/inclusionairing261t_hugging_face/",
+          "score": 8,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "ring",
+            "reasoning",
+            "large-model",
+            "open-source"
+          ],
+          "focusTopics": [
+            "model-release",
+            "planning"
+          ]
+        },
+        {
+          "title": "huggingface/ml-intern",
+          "summary": "Hugging Face发布ml-intern：开源ML工程师，自动读论文、训练模型。",
+          "url": "https://github.com/huggingface/ml-intern",
+          "score": 8,
+          "sources": [
+            {
+              "name": "Co-Starred"
+            }
+          ],
+          "tags": [
+            "open-source",
+            "ml-engineer",
+            "automation"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "garrytan/gstack",
+          "summary": "Garry Tan的Claude Code配置，包含23个CEO/设计/工程等工具。",
+          "url": "https://github.com/garrytan/gstack",
+          "score": 7.7475000000000005,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+915★)"
+            }
+          ],
+          "tags": [
+            "claude-code",
+            "ai-coding",
+            "developer-tools"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "Granite Embedding Multilingual R2: Open Apache 2.0 Multilingual Embeddings with 32K Context — Best Sub-100M Retrieval Quality",
+          "summary": "IBM发布Granite多语言嵌入模型R2，支持32K上下文，Apache 2.0许可。",
+          "url": "https://huggingface.co/blog/ibm-granite/granite-embedding-multilingual-r2",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "Hugging Face"
+            }
+          ],
+          "tags": [
+            "embedding",
+            "multilingual",
+            "open-source"
+          ],
+          "focusTopics": [
+            "model-release"
+          ]
+        },
+        {
+          "title": "Scenema Audio: Zero-shot expressive voice cloning and speech generation",
+          "summary": "Scenema Audio发布零样本语音克隆和语音生成模型及推理代码。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tcwqdd/scenema_audio_zeroshot_expressive_voice_cloning/",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "voice-cloning",
+            "speech-generation",
+            "open-source"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "NVFP4 Kimi2.6 and Kimi 2.5 released by Nvidia",
+          "summary": "NVIDIA发布Kimi2.6和Kimi2.5的NVFP4量化版本。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tcxb77/nvfp4_kimi26_and_kimi_25_released_by_nvidia/",
+          "score": 7,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "kimi",
+            "quantization",
+            "nvidia",
+            "model-release"
+          ],
+          "focusTopics": [
+            "model-release"
+          ]
+        },
+        {
+          "title": "Multi-Token Prediction (MTP) for Qwen on LLaMA.cpp + TurboQuant",
+          "summary": "在LLaMA.cpp上为Qwen实现多令牌预测，性能提升40%。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tckzy2/multitoken_prediction_mtp_for_qwen_on_llamacpp/",
+          "score": 7,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "multi-token-prediction",
+            "llama.cpp",
+            "qwen"
+          ],
+          "focusTopics": [
+            "context-engineering"
+          ]
+        },
+        {
+          "title": "antirez/ds4",
+          "summary": "antirez/ds4：DeepSeek 4 Flash本地推理引擎，支持Metal。",
+          "url": "https://github.com/antirez/ds4",
+          "score": 7,
+          "sources": [
+            {
+              "name": "Co-Starred"
+            }
+          ],
+          "tags": [
+            "deepseek",
+            "local-inference",
+            "metal"
+          ],
+          "focusTopics": [
+            "model-release"
+          ]
+        },
+        {
+          "title": "AI-Native Healthcare: 100M Doctor Visits, 10–20 Hours Saved, Prior Auth in Minutes — Janie Lee & Chai Asawa, Abridge",
+          "summary": "Abridge如何将医患对话转化为医疗操作系统，节省大量时间。",
+          "url": "https://www.latent.space/p/abridge",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "Latent Space"
+            }
+          ],
+          "tags": [
+            "healthcare",
+            "ai-natives",
+            "conversational-ai"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Lovable just backed a company that's looking to bring vibe coding to hardware | TechCrunch",
+          "summary": "Lovable投资将vibe coding引入硬件的公司。",
+          "url": "https://techcrunch.com/2026/05/14/lovable-just-backed-a-company-thats-looking-to-bring-vibe-coding-to-hardware/",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "techcrunch.com"
+            }
+          ],
+          "tags": [
+            "hardware",
+            "vibe-coding",
+            "startup"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Codex is now in the ChatGPT mobile app",
+          "summary": "OpenAI的Codex现已集成到ChatGPT移动应用中。",
+          "url": "https://openai.com/index/work-with-codex-from-anywhere/",
+          "score": 6.454000000000001,
+          "sources": [
+            {
+              "name": "HN (168)"
+            }
+          ],
+          "tags": [
+            "codex",
+            "chatgpt",
+            "ai-coding"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "Ontario auditors find doctors' AI note takers routinely blow basic facts",
+          "summary": "安大略审计发现医生使用的AI笔记工具经常出现基本事实错误。",
+          "url": "https://www.theregister.com/ai-ml/2026/05/14/ontario-auditors-find-doctors-ai-note-takers-routinely-blow-basic-facts/5240771",
+          "score": 6.238,
+          "sources": [
+            {
+              "name": "HN (96)"
+            }
+          ],
+          "tags": [
+            "healthcare",
+            "ai-notes",
+            "audit"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "cline/cline",
+          "summary": "Cline作为自主编码Agent的SDK/IDE扩展/CLI助手发布。",
+          "url": "https://github.com/cline/cline",
+          "score": 6.0445,
+          "sources": [
+            {
+              "name": "GitHub trending:typescript (+63★)"
+            }
+          ],
+          "tags": [
+            "coding-agent",
+            "open-source",
+            "sdk"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "[AINews] Codex Rises, Claude Meters Programmatic Usage",
+          "summary": "AI新闻：Codex崛起，Claude计量程序化使用。",
+          "url": "https://www.latent.space/p/ainews-codex-rises-claude-meters",
+          "score": 6,
+          "sources": [
+            {
+              "name": "Latent Space"
+            }
+          ],
+          "tags": [
+            "coding-agents",
+            "usage-metering"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "What happens when AI starts building itself?",
+          "summary": "探讨AI开始自我构建时的潜在影响。",
+          "url": "https://techcrunch.com/2026/05/14/what-happens-when-ai-starts-building-itself/",
+          "score": 6,
+          "sources": [
+            {
+              "name": "techcrunch.com"
+            }
+          ],
+          "tags": [
+            "ai-safety",
+            "autonomy",
+            "future"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "RDNA3 Flash Attention fix just dropped by llama.cpp b9158",
+          "summary": "llama.cpp b9158修复RDNA3 Flash Attention问题。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tdgtdu/rdna3_flash_attention_fix_just_dropped_by/",
+          "score": 6,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "llama.cpp",
+            "flash-attention",
+            "amd"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "New arXiv policy: 1-year ban for hallucinated references",
+          "summary": "arXiv新政策：对虚构参考文献的作者实施一年禁令。",
+          "url": "https://twitter.com/tdietterich/status/2055000956144935055",
+          "score": 5.9159999999999995,
+          "sources": [
+            {
+              "name": "HN (272)"
+            }
+          ],
+          "tags": [
+            "arxiv",
+            "policy",
+            "hallucination"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "millionco/react-doctor",
+          "summary": "React Doctor：AI Agent检测不良React代码。",
+          "url": "https://github.com/millionco/react-doctor",
+          "score": 5.739,
+          "sources": [
+            {
+              "name": "GitHub trending:typescript (+426★)"
+            }
+          ],
+          "tags": [
+            "react",
+            "ai-coding",
+            "code-quality"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "Imbad0202/academic-research-skills",
+          "summary": "Claude Code学术研究技能：研究、写作、审阅、修订、定稿。",
+          "url": "https://github.com/Imbad0202/academic-research-skills",
+          "score": 5.736,
+          "sources": [
+            {
+              "name": "GitHub trending:python (+424★)"
+            }
+          ],
+          "tags": [
+            "academic-research",
+            "claude-code",
+            "agent-skills"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "CodebuffAI/codebuff",
+          "summary": "Codebuff从终端生成代码的AI工具发布。",
+          "url": "https://github.com/CodebuffAI/codebuff",
+          "score": 5.7185,
+          "sources": [
+            {
+              "name": "GitHub trending:typescript (+129★)"
+            }
+          ],
+          "tags": [
+            "coding-agent",
+            "cli",
+            "code-generation"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "OthmanAdi/planning-with-files",
+          "summary": "Claude Code技能实现Manus风格持久化Markdown规划。",
+          "url": "https://github.com/OthmanAdi/planning-with-files",
+          "score": 5.710999999999999,
+          "sources": [
+            {
+              "name": "GitHub trending:python (+124★)"
+            }
+          ],
+          "tags": [
+            "planning",
+            "claude-code",
+            "agent-skills"
+          ],
+          "focusTopics": [
+            "planning"
+          ]
+        },
+        {
+          "title": "The Pulse: Forward deployed engineering heats up again",
+          "summary": "前部署工程升温，AI使用率100%自报，vibe coding与agentic工程融合。",
+          "url": "https://newsletter.pragmaticengineer.com/p/the-pulse-forward-deployed-engineering",
+          "score": 5.5,
+          "sources": [
+            {
+              "name": "Pragmatic Engineer"
+            }
+          ],
+          "tags": [
+            "forward-deployed",
+            "vibe-coding",
+            "agentic-engineering"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "VS Code's new \"Agents window\" lets you use local AI models. Still requires an Internet connection and a Github Copilot plan (because we can't have nice things)",
+          "summary": "VS Code新Agents窗口支持本地AI模型但需联网和Copilot订阅。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1td3uzi/vs_codes_new_agents_window_lets_you_use_local_ai/",
+          "score": 5.5,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "vscode",
+            "coding-agent",
+            "local-llm"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "wanshuiyin/Auto-claude-code-research-in-sleep",
+          "summary": "轻量级Markdown技能，用于自主ML研究：跨模型评审、想法发现。",
+          "url": "https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep",
+          "score": 5.3069999999999995,
+          "sources": [
+            {
+              "name": "GitHub trending:python (+138★)"
+            }
+          ],
+          "tags": [
+            "ml-research",
+            "autonomous",
+            "claude-code"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "[AINews] Everything is Conductor",
+          "summary": "AI新闻汇总：一切皆Conductor，强调小型趋势。",
+          "url": "https://www.latent.space/p/ainews-everything-is-conductor",
+          "score": 5,
+          "sources": [
+            {
+              "name": "Latent Space"
+            }
+          ],
+          "tags": [
+            "news-roundup",
+            "trends"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "What's in a GGUF, besides the weights – and what's still missing?",
+          "summary": "探讨GGUF格式中除了权重还有什么，以及缺失的功能。",
+          "url": "https://nobodywho.ooo/posts/whats-in-a-gguf/",
+          "score": 4.523,
+          "sources": [
+            {
+              "name": "HN (91)"
+            }
+          ],
+          "tags": [
+            "gguf",
+            "model-format",
+            "llm"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Have a Coherent AI Policy",
+          "summary": "关于制定连贯AI政策的观点文章。",
+          "url": "https://brianmeeker.me/2026/05/14/have-a-coherent-ai-policy/",
+          "score": 4.343,
+          "sources": [
+            {
+              "name": "HN (31)"
+            }
+          ],
+          "tags": [
+            "ai-policy",
+            "opinion"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "awslabs/agent-plugins",
+          "summary": "AWS Agent插件，为AI编码Agent提供架构、部署、运维技能。",
+          "url": "https://github.com/awslabs/agent-plugins",
+          "score": 4.262,
+          "sources": [
+            {
+              "name": "GitHub trending:python (+8★)"
+            }
+          ],
+          "tags": [
+            "aws",
+            "agent-plugins",
+            "cloud"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "Anyone actually using a local LLM as their daily knowledge base? Not for coding, for life stuff. What's your setup?",
+          "summary": "讨论使用本地LLM作为日常知识库的实践。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tcrtt6/anyone_actually_using_a_local_llm_as_their_daily/",
+          "score": 3,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "local-llm",
+            "knowledge-base",
+            "rag"
+          ],
+          "focusTopics": [
+            "context-engineering"
+          ]
+        },
+        {
+          "title": "Elevated error rates on Opus 4.7",
+          "summary": "Claude Opus 4.7出现错误率升高，服务状态页面。",
+          "url": "https://status.claude.com/incidents/8z7l5zcy0v3b",
+          "score": 1.808,
+          "sources": [
+            {
+              "name": "HN (36)"
+            }
+          ],
+          "tags": [
+            "claude",
+            "status",
+            "outage"
+          ],
+          "focusTopics": []
+        }
+      ]
+    }
+  ],
+  "aiSummary": "**AI 今日快报**  \nAnthropic与盖茨基金会达成2亿美元合作，聚焦AI在健康与教育领域的应用[#item-anthropic-com-news-gates-foundation-partnership]；Google被曝将在I/O大会发布新Gemini模型，但非前沿版本[#item-sources-news-p-google-about-to-release-new-gemini]。研究方面，新工具BenchJack系统审计AI智能体基准测试漏洞[#item-arxiv-org-abs-2605-12673]，并揭示视觉语言模型的可解释失败模式[#item-arxiv-org-abs-2605-12674]。工具更新上，OpenAI将编程助手Codex引入ChatGPT手机应用[#item-axios-com-2026-05-14-openai-brings-codex-to-your-phone]，Nous Research发布与用户共同成长的Agent[#item-github-com-NousResearch-hermes-agent]。观点洞察指出，AI笔记工具在医疗场景中频繁出现基本事实错误[#item-theregister-com-ai-ml-2026-05-14-ontario-auditors-find-docto]，而Abridge正通过AI将医患对话转化为高效医疗操作系统[#item-latent-space-p-abridge]。"
+}
