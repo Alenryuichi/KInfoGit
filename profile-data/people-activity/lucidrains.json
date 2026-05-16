@@ -99,6 +99,24 @@
       "score": 7,
       "scoreReason": "Freshness is high (new repo, 784 stars, rising), relevance is high (LLM inference engine), and concreteness is solid (working code for Metal).",
       "type": "github"
+    },
+    {
+      "repo": "mratsim/tattletale",
+      "url": "https://github.com/mratsim/tattletale",
+      "description": "Stealth LLM inference engine",
+      "language": "Nim",
+      "stargazersCount": 10,
+      "starredBy": "lucidrains",
+      "starredAt": "2026-05-16T01:21:36Z",
+      "highlights": "Tattletale is a stealth LLM inference engine written in Nim, focusing on performance and efficiency. It aims to provide a lightweight alternative for running large language models with minimal overhead.",
+      "worthReading": "It's worth exploring for its novel approach to LLM inference using Nim, which could offer unique performance characteristics and a fresh perspective in a field dominated by Python and C++.",
+      "topics": [],
+      "tags": [
+        "llm"
+      ],
+      "score": 5,
+      "scoreReason": "Freshness is moderate (low stars but rising, early stage), relevance is high (LLM inference engine), concreteness is low (stealth, no detailed features yet).",
+      "type": "github"
     }
   ],
   "posts": [],
@@ -446,7 +464,6 @@
   ],
   "dailyCounts": [
     0,
-    0,
     2,
     2,
     0,
@@ -474,7 +491,8 @@
     1,
     1,
     2,
+    1,
     1
   ],
-  "interestSummary": "Phil Wang's recent GitHub stars indicate a strong interest in open-source hardware and biomedical engineering, particularly humanoid robotics, exoskeletons, and low-cost medical devices, alongside a curiosity about native UI frameworks and local AI inference. His X posts, however, show his primary focus remains on stand-up comedy and cultural commentary, including writing for The Guardian and sharing humorous personal updates."
+  "interestSummary": "Phil Wang's recent interests span open-source hardware projects like humanoid robotics and exoskeletons, affordable medical devices, and local AI inference engines, alongside his ongoing work as a comedian and writer for The Guardian."
 }

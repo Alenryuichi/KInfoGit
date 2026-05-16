@@ -1991,11 +1991,74 @@
         "tooling",
         "agent"
       ]
+    },
+    {
+      "type": "x",
+      "id": "2002118205729562949",
+      "url": "https://x.com/karpathy/status/2002118205729562949",
+      "author": {
+        "handle": "karpathy",
+        "displayName": "Andrej Karpathy",
+        "avatar": "https://avatars.githubusercontent.com/karpathy"
+      },
+      "content": "2025 LLM Year in Review. 2025 has been a strong and eventful year of progress in LLMs. The following is a list of personally notable and mildly surprising \"paradigm changes\" - things that altered the landscape and stood out to me conceptually. At the start of 2025, the LLM production stack in all labs looked something like this: ...",
+      "createdAt": "2025-12-31T00:00:00Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Karpathy reviews major paradigm changes in LLMs during 2025, noting shifts in the production stack.",
+      "worthReading": "Provides a high-level summary of key LLM trends from a leading AI researcher.",
+      "tags": [
+        "llm",
+        "infra",
+        "deployment"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2042334451611693415",
+      "url": "https://x.com/karpathy/status/2042334451611693415",
+      "author": {
+        "handle": "karpathy",
+        "displayName": "Andrej Karpathy",
+        "avatar": "https://avatars.githubusercontent.com/karpathy"
+      },
+      "content": "Judging by my tl there is a growing gap in understanding of AI capability. The first issue I think is around recency and tier of use. I think a lot of people tried the free tier of ChatGPT somewhere last year and allowed it to inform their views on AI a little too much.",
+      "createdAt": "2026-03-15T00:00:00Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Karpathy observes a growing gap in AI capability understanding, noting that many base their views on outdated free-tier ChatGPT experiences.",
+      "worthReading": "Highlights a common misconception about AI progress and the importance of staying current.",
+      "tags": [
+        "llm",
+        "evaluation"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2017442712388309406",
+      "url": "https://x.com/karpathy/status/2017442712388309406",
+      "author": {
+        "handle": "karpathy",
+        "displayName": "Andrej Karpathy",
+        "avatar": "https://avatars.githubusercontent.com/karpathy"
+      },
+      "content": "I'm being accused of overhyping the [site everyone heard too much about today already]. To add a few words beyond just memes in jest - obviously when you take a look at the activity, it's a lot of garbage - spams, scams, slop, the crypto people, highly ...",
+      "createdAt": "2026-01-20T00:00:00Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Karpathy defends against accusations of overhyping a site, acknowledging the prevalence of spam and scams.",
+      "worthReading": "Shows Karpathy's nuanced view on hype versus reality in AI-related platforms.",
+      "tags": [
+        "deployment",
+        "safety"
+      ]
     }
   ],
   "dailyCounts": [
     0,
-    0,
     3,
     3,
     3,
@@ -2021,9 +2084,10 @@
     3,
     4,
     4,
+    3,
     3,
     3,
     3
   ],
-  "interestSummary": "Andrej Karpathy is deeply focused on the practical capabilities and limitations of large language models (LLMs), particularly in coding workflows and autonomous research tuning, while exploring how LLMs are reshaping software development and personal productivity."
+  "interestSummary": "Andrej Karpathy is deeply engaged in hands-on LLM experimentation and coding workflows, exploring their surprising capabilities and limitations while focusing on autonomous fine-tuning (e.g., \"autoresearch tuning nanochat\") and the potential for AI-driven, bespoke software creation."
 }

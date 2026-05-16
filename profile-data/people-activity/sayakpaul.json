@@ -2,25 +2,6 @@
   "id": "sayakpaul",
   "stars": [
     {
-      "repo": "vllm-project/tpu-inference",
-      "url": "https://github.com/vllm-project/tpu-inference",
-      "description": "TPU inference for vLLM, with unified JAX and PyTorch support.",
-      "language": "Python",
-      "stargazersCount": 290,
-      "starredBy": "sayakpaul",
-      "highlights": "Enables high-performance TPU inference for vLLM, offering unified support for both JAX and PyTorch backends. This allows efficient large language model serving on Google's specialized hardware.",
-      "worthReading": "It addresses a key infrastructure gap by bringing vLLM's optimized serving capabilities to TPU hardware, which is valuable for production deployments requiring scale.",
-      "topics": [],
-      "tags": [
-        "infra",
-        "deployment"
-      ],
-      "score": 7,
-      "scoreReason": "High relevance for frontier AI (TPU inference for vLLM), moderate freshness (young repo gaining traction at 290 stars), good concreteness (unified JAX/PyTorch support for concrete implementation)",
-      "starredAt": "2026-04-16T10:23:54Z",
-      "type": "github"
-    },
-    {
       "repo": "huggingface/hf-hub",
       "url": "https://github.com/huggingface/hf-hub",
       "description": "Rust client for the huggingface hub aiming for minimal subset of features over `huggingface-hub` python package",
@@ -1108,10 +1089,51 @@
         "deployment",
         "infra"
       ]
+    },
+    {
+      "type": "x",
+      "id": "2054792086982205518",
+      "url": "https://x.com/RisingSayak/status/2054792086982205518",
+      "author": {
+        "handle": "sayakpaul",
+        "displayName": "Sayak Paul",
+        "avatar": "https://avatars.githubusercontent.com/sayakpaul"
+      },
+      "content": "After working on releasing the v5, this is the latest release from the Transformers team at",
+      "createdAt": "2026-05-16T04:16:40.191Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Sayak Paul mentions working on the v5 release from the Transformers team.",
+      "worthReading": "Highlights a major release milestone in the Transformers library.",
+      "tags": [
+        "deployment",
+        "fine-tuning"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2028653642530881969",
+      "url": "https://x.com/RisingSayak/status/2028653642530881969",
+      "author": {
+        "handle": "sayakpaul",
+        "displayName": "Sayak Paul",
+        "avatar": "https://avatars.githubusercontent.com/sayakpaul"
+      },
+      "content": "Thanks @AnthropicAI. Thanks @huggingface for letting me work on Diffusers and other open-source projects across the fleet.",
+      "createdAt": "2026-05-16T04:16:40.191Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Sayak Paul expresses gratitude to Anthropic and Hugging Face for the opportunity to work on Diffusers and other open-source projects.",
+      "worthReading": "Shows appreciation for collaboration and open-source work at Hugging Face.",
+      "tags": [
+        "tooling",
+        "deployment"
+      ]
     }
   ],
   "dailyCounts": [
-    1,
     1,
     1,
     2,
@@ -1140,7 +1162,8 @@
     1,
     0,
     3,
-    1
+    1,
+    2
   ],
-  "interestSummary": "Sayak Paul is focused on advancing diffusion models and PyTorch integration at Hugging Face, with recent interests in TPU inference for vLLM and Rust-based tooling for the Hugging Face hub."
+  "interestSummary": "Sayak Paul's recent interests center on his work at Hugging Face with diffusion models and PyTorch, specifically optimizing the Diffusers library with `torch.compile`, while also exploring Rust-based Hugging Face Hub clients and community trust systems."
 }

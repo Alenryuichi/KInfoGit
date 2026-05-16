@@ -18,13 +18,32 @@
       "score": 4,
       "scoreReason": "Freshness is low (166 stars, not clearly rising), relevance is moderate (tooling for UI layouts, not frontier AI), concreteness is high (working code).",
       "type": "github"
+    },
+    {
+      "repo": "earendil-works/pi",
+      "url": "https://github.com/earendil-works/pi",
+      "description": "AI agent toolkit: coding agent CLI, unified LLM API, TUI & web UI libraries, Slack bot, vLLM pods",
+      "language": "TypeScript",
+      "stargazersCount": 49978,
+      "starredBy": "tridao",
+      "starredAt": "2026-05-16T02:21:27Z",
+      "highlights": "Pi is an AI agent toolkit offering a coding agent CLI, unified LLM API, TUI & web UI libraries, Slack bot, and vLLM pods. It provides a comprehensive set of tools for building and deploying AI agents with a focus on developer experience and flexibility.",
+      "worthReading": "With nearly 50k stars, Pi has gained significant traction, indicating strong community interest. Its all-in-one approach to agent tooling makes it a valuable resource for developers looking to integrate AI agents into their workflows.",
+      "topics": [],
+      "tags": [
+        "agent",
+        "tooling",
+        "infra"
+      ],
+      "score": 7,
+      "scoreReason": "Score 7: Freshness is moderate (high star count but established, no recent major updates noted); relevance is high (agent toolkit, LLM API, vLLM); concreteness is high (working CLI, libraries, and integrations).",
+      "type": "github"
     }
   ],
   "posts": [],
   "videos": [],
   "blogs": [],
   "dailyCounts": [
-    0,
     0,
     0,
     0,
@@ -53,7 +72,8 @@
     0,
     0,
     0,
-    0
+    0,
+    1
   ],
-  "interestSummary": "Tri Dao's recent focus appears to be on exploring FlyDSL, a Python front-end for flexible layout DSLs, likely related to hardware or system-level design, given his background in attention mechanisms."
+  "interestSummary": "Tri Dao appears to be exploring GPU-level programming abstractions and AI agent toolkits, suggesting a continued focus on low-level hardware efficiency and high-level LLM application infrastructure."
 }

@@ -1,0 +1,99 @@
+{
+  "date": "2026-05-15",
+  "stars": [
+    {
+      "repo": "Tyriar/vscode-theme-sapphire",
+      "url": "https://github.com/Tyriar/vscode-theme-sapphire",
+      "description": "Sapphire is a vibrant blue theme for Visual Studio Code",
+      "language": "TypeScript",
+      "stargazersCount": 39,
+      "starredBy": "minimaxir",
+      "starredAt": "2026-05-15T22:33:49Z",
+      "highlights": "A vibrant blue theme for Visual Studio Code with a focus on readability and aesthetics. It offers a consistent color palette that reduces eye strain during long coding sessions.",
+      "worthReading": "While not directly AI-related, it can enhance developer experience for AI engineers who spend hours in VS Code. The theme is well-crafted and may improve focus.",
+      "topics": [
+        "theme",
+        "vscode"
+      ],
+      "tags": [
+        "tooling"
+      ],
+      "score": 2,
+      "scoreReason": "Freshness is low (39 stars, no recent traction), relevance is low (non-AI theme), concreteness is high (working theme) but overall not noteworthy for an AI leader feed."
+    },
+    {
+      "repo": "marimo-team/marimo",
+      "url": "https://github.com/marimo-team/marimo",
+      "description": "A reactive notebook for Python — run reproducible experiments, query with SQL, execute as a script, deploy as an app, and version with git. Stored as pure Python. All in a modern, AI-native editor.",
+      "language": "Python",
+      "stargazersCount": 20996,
+      "starredBy": "minimaxir",
+      "starredAt": "2026-05-15T17:13:35Z",
+      "highlights": "Marimo is a reactive Python notebook that combines the best of Jupyter and Streamlit: it runs cells automatically when dependencies change, supports SQL queries, and can be deployed as an interactive web app. Notebooks are stored as pure Python files, enabling easy version control with git and execution as scripts.",
+      "worthReading": "It offers a modern, AI-native editor with features like variable explorer, data table viewer, and built-in SQL, making it a powerful tool for data scientists and AI engineers who want reproducible, deployable notebooks.",
+      "topics": [
+        "artificial-intelligence",
+        "dag",
+        "data-science",
+        "data-visualization",
+        "dataflow",
+        "developer-tools",
+        "machine-learning",
+        "notebooks",
+        "pipeline",
+        "python",
+        "reactive",
+        "sql",
+        "web-app"
+      ],
+      "tags": [
+        "tooling",
+        "deployment",
+        "infra"
+      ],
+      "score": 8,
+      "scoreReason": "Freshness 3 (20k stars but still actively growing with recent releases), Relevance 3 (directly useful for AI/ML workflows as a development and deployment tool), Concreteness 2 (fully functional with clear features and use cases)."
+    },
+    {
+      "repo": "abetlen/llama-cpp-python",
+      "url": "https://github.com/abetlen/llama-cpp-python",
+      "description": "Python bindings for llama.cpp",
+      "language": "Python",
+      "stargazersCount": 10303,
+      "starredBy": "pcuenca",
+      "starredAt": "2026-05-15T10:59:08Z",
+      "highlights": "llama-cpp-python provides Python bindings for llama.cpp, enabling efficient inference of LLMs on CPU and GPU. It supports quantization, GPU acceleration, and a wide range of model architectures, making it a key tool for local LLM deployment.",
+      "worthReading": "Essential for AI engineers deploying LLMs locally or in resource-constrained environments, offering a seamless Python interface to the high-performance llama.cpp backend.",
+      "topics": [],
+      "tags": [
+        "infra",
+        "deployment"
+      ],
+      "score": 7,
+      "scoreReason": "Freshness is moderate (established 10k+ stars but actively maintained with new features), relevance is high (core LLM infra tooling), and concreteness is high (working code with clear utility)."
+    },
+    {
+      "repo": "qualisero/awesome-pi-agent",
+      "url": "https://github.com/qualisero/awesome-pi-agent",
+      "description": "Awesome list of add-ons, hooks, tools, skills, and resources for the pi coding agent (pi-mono).",
+      "language": "JavaScript",
+      "stargazersCount": 918,
+      "starredBy": "philschmid",
+      "starredAt": "2026-05-15T15:06:47Z",
+      "highlights": "A curated list of add-ons, hooks, tools, and skills for the pi coding agent, enabling users to extend its capabilities. It serves as a central resource for the pi-agent ecosystem, similar to awesome lists for other frameworks.",
+      "worthReading": "For developers using or evaluating the pi coding agent, this list provides a quick overview of available extensions and community resources, saving time in discovering integrations.",
+      "topics": [
+        "agentic-ai",
+        "llm",
+        "pi",
+        "pi-agent"
+      ],
+      "tags": [
+        "agent",
+        "tooling"
+      ],
+      "score": 6,
+      "scoreReason": "Freshness (2): moderate stars (918) and recent creation; Relevance (3): directly about an agent ecosystem; Concreteness (1): an awesome list, not a novel artifact."
+    }
+  ]
+}

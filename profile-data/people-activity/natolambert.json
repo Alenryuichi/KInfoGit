@@ -3,69 +3,6 @@
   "stars": [],
   "posts": [
     {
-      "uri": "at://did:plc:brkj2yocng7vtggmyujy4khq/app.bsky.feed.post/3mjn7igj4ft2y",
-      "url": "https://bsky.app/profile/natolambert.bsky.social/post/3mjn7igj4ft2y",
-      "author": {
-        "handle": "natolambert.bsky.social",
-        "displayName": "Nathan Lambert",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:brkj2yocng7vtggmyujy4khq/bafkreibrwiekumktnfukcbrl2w7emcft4icv2zlt6vxnorfwmwlwlzepqm"
-      },
-      "content": "New video! Talking through my 10+ open model pieces from early 2026 and how they fit together. They're all trying to figure out where open models go next.\nwww.youtube.com/watch?v=hKIX...",
-      "createdAt": "2026-04-16T20:06:04.540Z",
-      "likeCount": 6,
-      "replyCount": 1,
-      "repostCount": 2,
-      "highlights": "",
-      "worthReading": "",
-      "tags": [
-        "llm",
-        "evaluation"
-      ],
-      "type": "bluesky"
-    },
-    {
-      "uri": "at://did:plc:brkj2yocng7vtggmyujy4khq/app.bsky.feed.post/3mjmnlzo7wk22",
-      "url": "https://bsky.app/profile/natolambert.bsky.social/post/3mjmnlzo7wk22",
-      "author": {
-        "handle": "natolambert.bsky.social",
-        "displayName": "Nathan Lambert",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:brkj2yocng7vtggmyujy4khq/bafkreibrwiekumktnfukcbrl2w7emcft4icv2zlt6vxnorfwmwlwlzepqm"
-      },
-      "content": "Opus 4.7 has a new tokenizer. \nThis means it's also a new base model.\nGlory days of pretraining still very much going.",
-      "createdAt": "2026-04-16T14:45:58.821Z",
-      "likeCount": 78,
-      "replyCount": 4,
-      "repostCount": 4,
-      "highlights": "",
-      "worthReading": "",
-      "tags": [
-        "llm",
-        "fine-tuning"
-      ],
-      "type": "bluesky"
-    },
-    {
-      "uri": "at://did:plc:brkj2yocng7vtggmyujy4khq/app.bsky.feed.post/3mjmnl5b45h2r",
-      "url": "https://bsky.app/profile/natolambert.bsky.social/post/3mjmnl5b45h2r",
-      "author": {
-        "handle": "natolambert.bsky.social",
-        "displayName": "Nathan Lambert",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:brkj2yocng7vtggmyujy4khq/bafkreibrwiekumktnfukcbrl2w7emcft4icv2zlt6vxnorfwmwlwlzepqm"
-      },
-      "content": "The current pace of token-efficient reasoning improvements across minor Claude Opus/GPT model versions is pretty wild. All signs point to this continuing.\n\n4.6 to 4.7 could've been presented as a fairly large model bump in the past with this plot.",
-      "createdAt": "2026-04-16T14:45:29.030Z",
-      "likeCount": 24,
-      "replyCount": 0,
-      "repostCount": 4,
-      "highlights": "",
-      "worthReading": "",
-      "tags": [
-        "llm",
-        "evaluation"
-      ],
-      "type": "bluesky"
-    },
-    {
       "uri": "at://did:plc:brkj2yocng7vtggmyujy4khq/app.bsky.feed.post/3mjxa2tmyac2q",
       "url": "https://bsky.app/profile/natolambert.bsky.social/post/3mjxa2tmyac2q",
       "author": {
@@ -488,7 +425,6 @@
     }
   ],
   "dailyCounts": [
-    3,
     0,
     0,
     0,
@@ -515,9 +451,10 @@
     0,
     1,
     1,
+    0,
     0,
     0,
     0
   ],
-  "interestSummary": "Nathan Lambert is currently focused on tracking the rapid pace of token-efficient reasoning improvements in leading closed-source LLMs like Claude Opus and GPT, while analyzing the sustainability of the ~6-month performance gap between closed and open models. He is also deeply engaged with the Chinese AI ecosystem, visiting labs in Beijing and Hangzhou, and writing about the risks of conflating API attacks with legitimate distillation techniques."
+  "interestSummary": "Nathan Lambert is focused on the dynamics of open versus closed AI models, particularly the performance gap and distillation debates, while actively engaging with the Chinese AI ecosystem through visits to labs and companies. He is also updating his RLHF book with sections on on-policy distillation."
 }

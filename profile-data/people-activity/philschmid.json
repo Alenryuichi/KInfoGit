@@ -2,85 +2,6 @@
   "id": "philschmid",
   "stars": [
     {
-      "repo": "ashwwwin/automation-mcp",
-      "url": "https://github.com/ashwwwin/automation-mcp",
-      "description": "Control your Mac with detailed mouse, keyboard, screen, and window management capabilities.",
-      "language": "TypeScript",
-      "stargazersCount": 386,
-      "starredBy": "philschmid",
-      "highlights": "This project implements a Model Context Protocol (MCP) server that enables LLMs to control macOS systems through detailed mouse, keyboard, screen, and window management capabilities. It provides granular automation tools for desktop interaction, bridging AI systems with physical computer control.",
-      "worthReading": "It demonstrates practical LLM-to-system integration for automation workflows, offering a concrete example of how AI can directly manipulate desktop environments beyond simple API calls.",
-      "topics": [
-        "mcp",
-        "mcp-server"
-      ],
-      "tags": [
-        "agent",
-        "tooling"
-      ],
-      "score": 7,
-      "scoreReason": "Freshness: Young repo with moderate stars gaining traction (386 stars). Relevance: Directly addresses frontier AI (MCP server for agent control). Concreteness: Concrete implementation for Mac automation with specific capabilities.",
-      "starredAt": "2026-04-16T18:09:26Z",
-      "type": "github"
-    },
-    {
-      "repo": "omaclaren/pi-markdown-preview",
-      "url": "https://github.com/omaclaren/pi-markdown-preview",
-      "description": "Rendered markdown + LaTeX preview for pi",
-      "language": "TypeScript",
-      "stargazersCount": 39,
-      "starredBy": "philschmid",
-      "highlights": "This project provides a markdown and LaTeX preview tool specifically designed for the Raspberry Pi platform, enabling real-time rendering of technical documentation with mathematical notation. It offers a lightweight solution for developers working with technical content on resource-constrained devices.",
-      "worthReading": "It demonstrates practical TypeScript implementation for embedded systems and addresses the specific needs of Raspberry Pi users who require markdown with mathematical formula support.",
-      "topics": [],
-      "tags": [
-        "tooling"
-      ],
-      "score": 2,
-      "scoreReason": "Low relevance (markdown/LaTeX preview tool, not frontier AI) and low freshness (39 stars with no indication of recent traction), though concrete in implementation.",
-      "starredAt": "2026-04-16T13:17:11Z",
-      "type": "github"
-    },
-    {
-      "repo": "nicobailon/pi-subagents",
-      "url": "https://github.com/nicobailon/pi-subagents",
-      "description": "Pi extension for async subagent delegation with truncation, artifacts, and session sharing",
-      "language": "TypeScript",
-      "stargazersCount": 796,
-      "starredBy": "philschmid",
-      "highlights": "This TypeScript project extends the Pi framework to enable asynchronous subagent delegation with features like truncation, artifact management, and session sharing. It provides a structured approach to distributing AI agent workloads while maintaining context and resource efficiency.",
-      "worthReading": "With nearly 800 stars, it demonstrates practical implementation of agent delegation patterns that could benefit developers building complex AI agent systems.",
-      "topics": [],
-      "tags": [
-        "agent",
-        "deployment",
-        "tooling"
-      ],
-      "score": 7,
-      "scoreReason": "Freshness: Young repo with moderate stars gaining traction; Relevance: Directly addresses frontier AI (agent delegation/LLM infra); Concreteness: Describes specific technical features (truncation, artifacts, session sharing)",
-      "starredAt": "2026-04-16T13:06:50Z",
-      "type": "github"
-    },
-    {
-      "repo": "espennilsen/pi",
-      "url": "https://github.com/espennilsen/pi",
-      "description": "",
-      "language": "TypeScript",
-      "stargazersCount": 91,
-      "starredBy": "philschmid",
-      "highlights": "The espennilsen/pi repository appears to be a TypeScript project focused on mathematical or computational implementations, likely related to Pi calculations or mathematical constants. With 91 stars, it demonstrates community interest in numerical computation or algorithm optimization.",
-      "worthReading": "It's worth exploring for developers interested in mathematical algorithms, TypeScript implementations of computational methods, or educational code examples for numerical computing.",
-      "topics": [],
-      "tags": [
-        "agent",
-        "tooling"
-      ],
-      "score": 2,
-      "scoreReason": "Repository lacks description and topics, making relevance and concreteness unverifiable; moderate freshness from recent star gain but insufficient information for higher scoring.",
-      "starredAt": "2026-04-16T13:05:21Z",
-      "type": "github"
-    },
-    {
       "repo": "IgorWarzocha/howcode",
       "url": "https://github.com/IgorWarzocha/howcode",
       "description": "The Pi desktop app you want to use.",
@@ -96,6 +17,30 @@
       ],
       "score": 4,
       "scoreReason": "Freshness is moderate (low stars but rising), relevance is low (not clearly frontier AI, more of a desktop wrapper), concreteness is medium (specific app but vague description).",
+      "type": "github"
+    },
+    {
+      "repo": "qualisero/awesome-pi-agent",
+      "url": "https://github.com/qualisero/awesome-pi-agent",
+      "description": "Awesome list of add-ons, hooks, tools, skills, and resources for the pi coding agent (pi-mono).",
+      "language": "JavaScript",
+      "stargazersCount": 918,
+      "starredBy": "philschmid",
+      "starredAt": "2026-05-15T15:06:47Z",
+      "highlights": "A curated list of add-ons, hooks, tools, and skills for the pi coding agent, enabling users to extend its capabilities. It serves as a central resource for the pi-agent ecosystem, similar to awesome lists for other frameworks.",
+      "worthReading": "For developers using or evaluating the pi coding agent, this list provides a quick overview of available extensions and community resources, saving time in discovering integrations.",
+      "topics": [
+        "agentic-ai",
+        "llm",
+        "pi",
+        "pi-agent"
+      ],
+      "tags": [
+        "agent",
+        "tooling"
+      ],
+      "score": 6,
+      "scoreReason": "Freshness (2): moderate stars (918) and recent creation; Relevance (3): directly about an agent ecosystem; Concreteness (1): an awesome list, not a novel artifact.",
       "type": "github"
     }
   ],
@@ -1435,10 +1380,53 @@
       "highlights": "This post has high views but low likes.",
       "worthReading": "Shows reach of his content.",
       "tags": []
+    },
+    {
+      "type": "x",
+      "id": "2037924497563505058",
+      "url": "https://x.com/_philschmid/status/2037924497563505058",
+      "author": {
+        "handle": "philschmid",
+        "displayName": "Philipp Schmid",
+        "avatar": "https://avatars.githubusercontent.com/philschmid"
+      },
+      "content": "I read three technical reports from Moonshot AI's Kimi K2.5 paper, Cursor's Composer 2 report and blog post, and Chroma's Context-1 write-up",
+      "createdAt": "2026-05-16T04:16:44.735Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Philipp Schmid reviews three technical reports: Moonshot AI's Kimi K2.5, Cursor's Composer 2, and Chroma's Context-1.",
+      "worthReading": "Shows his engagement with cutting-edge AI research and tools.",
+      "tags": [
+        "llm",
+        "tooling",
+        "evaluation"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2031355349526012050",
+      "url": "https://x.com/_philschmid/status/2031355349526012050",
+      "author": {
+        "handle": "philschmid",
+        "displayName": "Philipp Schmid",
+        "avatar": "https://avatars.githubusercontent.com/philschmid"
+      },
+      "content": "Told an AI agent to read the autoresearch repo and build a version for QMD. Get training data from tobi/qmd github. Went to sleep. Woke up to a 0.8B model",
+      "createdAt": "2026-05-16T04:16:44.735Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "He automated model creation using an AI agent, resulting in a 0.8B model overnight.",
+      "worthReading": "Demonstrates practical use of AI agents for rapid prototyping.",
+      "tags": [
+        "agent",
+        "fine-tuning",
+        "deployment"
+      ]
     }
   ],
   "dailyCounts": [
-    4,
     0,
     2,
     4,
@@ -1467,7 +1455,8 @@
     2,
     4,
     2,
-    4
+    5,
+    2
   ],
-  "interestSummary": "Philipp Schmid is deeply focused on AI-assisted development tools and workflows, exploring vibe-coding in Google AI Studio, technical reports on models like Kimi K2.5 and Cursor Composer, and automation of Mac interactions via GitHub projects."
+  "interestSummary": "Philipp Schmid is currently focused on AI-augmented development workflows, particularly \"vibe-coding\" and rapid prototyping with tools like Google AI Studio and pi-coding agents, while also deeply studying recent technical reports from Moonshot AI, Cursor, and Chroma to stay at the forefront of AI model and tool advancements."
 }

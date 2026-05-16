@@ -3,69 +3,6 @@
   "stars": [],
   "posts": [
     {
-      "uri": "at://did:plc:flxq4uyjfotciovpw3x3fxnu/app.bsky.feed.post/3mjn7p6kfqk2k",
-      "url": "https://bsky.app/profile/emollick.bsky.social/post/3mjn7p6kfqk2k",
-      "author": {
-        "handle": "emollick.bsky.social",
-        "displayName": "Ethan Mollick",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:flxq4uyjfotciovpw3x3fxnu/bafkreigq63ljumc43yx5eoxchrq75d72irea6ddcceedwmdttxebyowc3q"
-      },
-      "content": "I think the adaptive thinking requirement in the new Claude Opus 4.7 is bad in the ways that all AI effort routers are bad, but magnified by the fact that there is no manual override like in ChatGPT.\n\nIt regularly decides that non-math/code stuff is \"low effort\" & produces worse results.",
-      "createdAt": "2026-04-16T20:09:51.971Z",
-      "likeCount": 46,
-      "replyCount": 1,
-      "repostCount": 3,
-      "highlights": "",
-      "worthReading": "",
-      "tags": [
-        "llm",
-        "evaluation"
-      ],
-      "type": "bluesky"
-    },
-    {
-      "uri": "at://did:plc:flxq4uyjfotciovpw3x3fxnu/app.bsky.feed.post/3mjn64oh34k2k",
-      "url": "https://bsky.app/profile/emollick.bsky.social/post/3mjn64oh34k2k",
-      "author": {
-        "handle": "emollick.bsky.social",
-        "displayName": "Ethan Mollick",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:flxq4uyjfotciovpw3x3fxnu/bafkreigq63ljumc43yx5eoxchrq75d72irea6ddcceedwmdttxebyowc3q"
-      },
-      "content": "I have found that asking for a sestina regularly triggers Opus 4.7's safety guardrails.\n\nThe forbidden poetic form!",
-      "createdAt": "2026-04-16T19:41:37.361Z",
-      "likeCount": 55,
-      "replyCount": 7,
-      "repostCount": 3,
-      "highlights": "",
-      "worthReading": "",
-      "tags": [
-        "safety",
-        "llm"
-      ],
-      "type": "bluesky"
-    },
-    {
-      "uri": "at://did:plc:flxq4uyjfotciovpw3x3fxnu/app.bsky.feed.post/3mjmpufvxu22d",
-      "url": "https://bsky.app/profile/emollick.bsky.social/post/3mjmpufvxu22d",
-      "author": {
-        "handle": "emollick.bsky.social",
-        "displayName": "Ethan Mollick",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:flxq4uyjfotciovpw3x3fxnu/bafkreigq63ljumc43yx5eoxchrq75d72irea6ddcceedwmdttxebyowc3q"
-      },
-      "content": "Claude remains irreducibly Claude, across many generations. If you know, you know.\n\n(The fact that models have distinct personalities that are consistent across generations is technically interesting, it also makes it easy to use new releases when they come along, because they feel very similar).",
-      "createdAt": "2026-04-16T15:26:27.592Z",
-      "likeCount": 56,
-      "replyCount": 5,
-      "repostCount": 3,
-      "highlights": "",
-      "worthReading": "",
-      "tags": [
-        "llm",
-        "evaluation"
-      ],
-      "type": "bluesky"
-    },
-    {
       "uri": "at://did:plc:flxq4uyjfotciovpw3x3fxnu/app.bsky.feed.post/3mjnuzt5jvs2k",
       "url": "https://bsky.app/profile/emollick.bsky.social/post/3mjnuzt5jvs2k",
       "author": {
@@ -1269,6 +1206,27 @@
       "tags": [
         "llm",
         "infra"
+      ],
+      "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:flxq4uyjfotciovpw3x3fxnu/app.bsky.feed.post/3mlvrtffcl22s",
+      "url": "https://bsky.app/profile/emollick.bsky.social/post/3mlvrtffcl22s",
+      "author": {
+        "handle": "emollick.bsky.social",
+        "displayName": "Ethan Mollick",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:flxq4uyjfotciovpw3x3fxnu/bafkreigq63ljumc43yx5eoxchrq75d72irea6ddcceedwmdttxebyowc3q"
+      },
+      "content": "Anton labs have hooked up a bunch of AI models to harnesses and had them working as DJs, programming and running a radio station, including taking callers and donations, which they use to buy more music.\n\nThe results are both hilarious and a good reminder of how working with AI is deeply weird.",
+      "createdAt": "2026-05-15T16:46:01.875Z",
+      "likeCount": 72,
+      "replyCount": 4,
+      "repostCount": 16,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [
+        "agent",
+        "tooling"
       ],
       "type": "bluesky"
     }
@@ -3362,10 +3320,92 @@
       "tags": [
         "safety"
       ]
+    },
+    {
+      "type": "x",
+      "id": "2048812210839785668",
+      "url": "https://x.com/emollick/status/2048812210839785668",
+      "author": {
+        "handle": "emollick",
+        "displayName": "Ethan Mollick",
+        "avatar": null
+      },
+      "content": "Very cool analysis of the submissions to a major management journal that shows how much the...",
+      "createdAt": "2026-05-16T04:16:50.158Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Analysis of submissions to a major management journal reveals interesting patterns.",
+      "worthReading": "Provides insight into academic publishing trends in management research.",
+      "tags": [
+        "evaluation"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "1964447221853966775",
+      "url": "https://x.com/emollick/status/1964447221853966775",
+      "author": {
+        "handle": "emollick",
+        "displayName": "Ethan Mollick",
+        "avatar": null
+      },
+      "content": "We are starting to see some nuanced discussions of what it means to work with advanced AI. In this...",
+      "createdAt": "2026-05-16T04:16:50.158Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Discusses emerging nuanced perspectives on collaborating with advanced AI.",
+      "worthReading": "Captures the evolving conversation around human-AI collaboration.",
+      "tags": [
+        "llm",
+        "safety"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2044880350237626844",
+      "url": "https://x.com/emollick/status/2044880350237626844",
+      "author": {
+        "handle": "emollick",
+        "displayName": "Ethan Mollick",
+        "avatar": null
+      },
+      "content": "On the plus side with Opus 4.7, if it does decide to think it produces BY FAR the best...",
+      "createdAt": "2026-05-16T04:16:50.158Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Opus 4.7, when engaged, yields superior results compared to other models.",
+      "worthReading": "Highlights performance differences in AI models depending on usage.",
+      "tags": [
+        "llm",
+        "evaluation"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2030813923469894093",
+      "url": "https://x.com/emollick/status/2030813923469894093",
+      "author": {
+        "handle": "emollick",
+        "displayName": "Ethan Mollick",
+        "avatar": null
+      },
+      "content": "Here is a full implementation of the Chinese Room using a printed copy of GPT-1, in case you have a few spare years and want to actually run...",
+      "createdAt": "2026-05-16T04:16:50.158Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Proposes a thought experiment implementing the Chinese Room argument with GPT-1.",
+      "worthReading": "Connects philosophical AI concepts with practical implementation.",
+      "tags": [
+        "safety",
+        "llm"
+      ]
     }
   ],
   "dailyCounts": [
-    3,
     3,
     6,
     5,
@@ -3394,7 +3434,8 @@
     4,
     5,
     3,
-    3
+    4,
+    4
   ],
-  "interestSummary": "Ethan Mollick is closely tracking and testing the latest frontier AI models (Claude Opus 4.7, GPT imagegen, Kimi, Gemini), focusing on their emergent capabilities, quirks, and economic implications, while also experimenting with AI in education through novel MBA classes like \"vibefounding.\""
+  "interestSummary": "Ethan Mollick is closely tracking and testing the latest frontier AI models, particularly Anthropic's Opus 4.7 and OpenAI's GPT-5.4, focusing on their reasoning capabilities, image generation quality, and economic impact. He is also experimenting with agentic AI tools and teaching an MBA class on \"vibefounding,\" exploring how advanced AI can be applied to practical business and creative tasks."
 }

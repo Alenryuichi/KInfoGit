@@ -130,6 +130,61 @@
       "score": 7,
       "scoreReason": "Freshness: 2 (new repo with 9k stars, rising fast), Relevance: 3 (LLM inference engine for a frontier model), Concreteness: 2 (working code, specific hardware support).",
       "type": "github"
+    },
+    {
+      "repo": "Tyriar/vscode-theme-sapphire",
+      "url": "https://github.com/Tyriar/vscode-theme-sapphire",
+      "description": "Sapphire is a vibrant blue theme for Visual Studio Code",
+      "language": "TypeScript",
+      "stargazersCount": 39,
+      "starredBy": "minimaxir",
+      "starredAt": "2026-05-15T22:33:49Z",
+      "highlights": "A vibrant blue theme for Visual Studio Code with a focus on readability and aesthetics. It offers a consistent color palette that reduces eye strain during long coding sessions.",
+      "worthReading": "While not directly AI-related, it can enhance developer experience for AI engineers who spend hours in VS Code. The theme is well-crafted and may improve focus.",
+      "topics": [
+        "theme",
+        "vscode"
+      ],
+      "tags": [
+        "tooling"
+      ],
+      "score": 2,
+      "scoreReason": "Freshness is low (39 stars, no recent traction), relevance is low (non-AI theme), concreteness is high (working theme) but overall not noteworthy for an AI leader feed.",
+      "type": "github"
+    },
+    {
+      "repo": "marimo-team/marimo",
+      "url": "https://github.com/marimo-team/marimo",
+      "description": "A reactive notebook for Python — run reproducible experiments, query with SQL, execute as a script, deploy as an app, and version with git. Stored as pure Python. All in a modern, AI-native editor.",
+      "language": "Python",
+      "stargazersCount": 20996,
+      "starredBy": "minimaxir",
+      "starredAt": "2026-05-15T17:13:35Z",
+      "highlights": "Marimo is a reactive Python notebook that combines the best of Jupyter and Streamlit: it runs cells automatically when dependencies change, supports SQL queries, and can be deployed as an interactive web app. Notebooks are stored as pure Python files, enabling easy version control with git and execution as scripts.",
+      "worthReading": "It offers a modern, AI-native editor with features like variable explorer, data table viewer, and built-in SQL, making it a powerful tool for data scientists and AI engineers who want reproducible, deployable notebooks.",
+      "topics": [
+        "artificial-intelligence",
+        "dag",
+        "data-science",
+        "data-visualization",
+        "dataflow",
+        "developer-tools",
+        "machine-learning",
+        "notebooks",
+        "pipeline",
+        "python",
+        "reactive",
+        "sql",
+        "web-app"
+      ],
+      "tags": [
+        "tooling",
+        "deployment",
+        "infra"
+      ],
+      "score": 8,
+      "scoreReason": "Freshness 3 (20k stars but still actively growing with recent releases), Relevance 3 (directly useful for AI/ML workflows as a development and deployment tool), Concreteness 2 (fully functional with clear features and use cases).",
+      "type": "github"
     }
   ],
   "posts": [],
@@ -1238,11 +1293,66 @@
       "highlights": "A brief expression of confusion or surprise.",
       "worthReading": "Reflects spontaneous reaction to some event.",
       "tags": []
+    },
+    {
+      "type": "x",
+      "id": "1877857554060972273",
+      "url": "https://x.com/minimaxir/status/1877857554060972273",
+      "author": {
+        "handle": "minimaxir",
+        "displayName": "Max Woolf",
+        "avatar": "https://avatars.githubusercontent.com/minimaxir"
+      },
+      "content": "what",
+      "createdAt": "2026-05-16T04:16:21.261Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Max Woolf posted a single word 'what'.",
+      "worthReading": "May indicate confusion or reaction to something, but lacks context.",
+      "tags": []
+    },
+    {
+      "type": "x",
+      "id": "2029982443026223510",
+      "url": "https://x.com/minimaxir/status/2029982443026223510",
+      "author": {
+        "handle": "minimaxir",
+        "displayName": "Max Woolf",
+        "avatar": "https://avatars.githubusercontent.com/minimaxir"
+      },
+      "content": "me irl",
+      "createdAt": "2026-05-16T04:16:21.261Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Max Woolf posted 'me irl', a common meme phrase meaning 'me in real life'.",
+      "worthReading": "Shows a personal or humorous side, but not technically insightful.",
+      "tags": []
+    },
+    {
+      "type": "x",
+      "id": "1600258754993262594",
+      "url": "https://x.com/minimaxir/status/1600258754993262594",
+      "author": {
+        "handle": "minimaxir",
+        "displayName": "Max Woolf",
+        "avatar": "https://avatars.githubusercontent.com/minimaxir"
+      },
+      "content": "congrats to OpenAI on winning the Turing Test",
+      "createdAt": "2026-05-16T04:16:21.261Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Max Woolf congratulates OpenAI on winning the Turing Test, likely sarcastic or critical.",
+      "worthReading": "Reflects opinion on AI progress and Turing Test relevance.",
+      "tags": [
+        "evaluation"
+      ]
     }
   ],
   "dailyCounts": [
     0,
-    0,
     4,
     1,
     4,
@@ -1270,7 +1380,8 @@
     2,
     2,
     4,
+    5,
     3
   ],
-  "interestSummary": "Max Woolf is currently focused on performance benchmarking and data visualization tools, particularly in Rust, while also exploring local AI inference engines and expressing skepticism about AI safety practices in model releases."
+  "interestSummary": "Max Woolf is currently focused on AI-native development tools and benchmarking, with interests in Rust libraries for visualization and data structures, as well as reactive notebooks and local inference engines."
 }
