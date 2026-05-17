@@ -1,0 +1,23 @@
+{
+  "date": "2026-05-16",
+  "posts": [
+    {
+      "title": "Recent Developments in LLM Architectures: KV Sharing, mHC, and Compressed Attention",
+      "url": "https://magazine.sebastianraschka.com/p/recent-developments-in-llm-architectures",
+      "author": "Sebastian Raschka",
+      "publishedAt": "Sat, 16 May 2026 11:33:51 GMT",
+      "summary": "From Gemma 4 to DeepSeek V4, How New Open-Weight LLMs Are Reducing Long-Context Costs",
+      "highlights": "This post covers recent advances in LLM architectures aimed at reducing memory and compute costs for long-context processing, including KV sharing, multi-head caching (mHC), and compressed attention mechanisms. Key examples include Gemma 4's and DeepSeek V4's approaches to efficient attention, which enable handling longer sequences without proportional resource increases.",
+      "worthReading": "For practitioners and researchers working with LLMs, this article provides a concise overview of cutting-edge techniques that address the scalability bottleneck of long-context models, offering practical insights into how open-weight models are evolving."
+    },
+    {
+      "title": "Latest open artifacts (#21): Open model bonanza! Gemma 4, DeepSeek V4, Kimi K2.6, MiMo 2.5, GLM-5.1 & others. On CAISI's V4 assessment.",
+      "url": "https://www.interconnects.ai/p/latest-open-artifacts-21-open-model",
+      "author": "Nathan Lambert",
+      "publishedAt": "Sat, 16 May 2026 17:00:11 GMT",
+      "summary": "An eventful month with one flagship release after another",
+      "highlights": "The post reviews a wave of major open model releases including Gemma 4, DeepSeek V4, Kimi K2.6, MiMo 2.5, and GLM-5.1, highlighting the rapid pace of innovation in open AI. It focuses on CAISI's V4 assessment, providing a comparative analysis of performance and capabilities across these models.",
+      "worthReading": "If you follow open-source AI, this post offers a concise yet comprehensive snapshot of the latest model landscape, saving you hours of individual paper reviews."
+    }
+  ]
+}

@@ -13,6 +13,16 @@
       "highlights": "The post presents a systematic, learning-focused approach for analyzing new open-weight LLM architectures, emphasizing practical understanding over theoretical abstraction. It likely details a repeatable workflow that helps practitioners efficiently grasp architectural innovations and their implications.",
       "worthReading": "It offers actionable guidance for staying current with rapidly evolving LLM releases, making it valuable for developers, researchers, and enthusiasts seeking to deepen their practical understanding of model architectures.",
       "type": "blog"
+    },
+    {
+      "title": "Recent Developments in LLM Architectures: KV Sharing, mHC, and Compressed Attention",
+      "url": "https://magazine.sebastianraschka.com/p/recent-developments-in-llm-architectures",
+      "author": "Sebastian Raschka",
+      "publishedAt": "Sat, 16 May 2026 11:33:51 GMT",
+      "summary": "From Gemma 4 to DeepSeek V4, How New Open-Weight LLMs Are Reducing Long-Context Costs",
+      "highlights": "This post covers recent advances in LLM architectures aimed at reducing memory and compute costs for long-context processing, including KV sharing, multi-head caching (mHC), and compressed attention mechanisms. Key examples include Gemma 4's and DeepSeek V4's approaches to efficient attention, which enable handling longer sequences without proportional resource increases.",
+      "worthReading": "For practitioners and researchers working with LLMs, this article provides a concise overview of cutting-edge techniques that address the scalability bottleneck of long-context models, offering practical insights into how open-weight models are evolving.",
+      "type": "blog"
     }
   ],
   "dailyCounts": [

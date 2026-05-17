@@ -2,24 +2,6 @@
   "id": "pcuenca",
   "stars": [
     {
-      "repo": "tarekziade/loopsleuth",
-      "url": "https://github.com/tarekziade/loopsleuth",
-      "description": "Quadratic complexity detection",
-      "language": "Rust",
-      "stargazersCount": 6,
-      "starredBy": "pcuenca",
-      "highlights": "Loopsleuth is a Rust tool that detects quadratic complexity patterns in code, helping developers identify performance bottlenecks before they cause issues. It provides static analysis to catch inefficient nested loops and similar patterns that can degrade application performance.",
-      "worthReading": "This tool addresses a common but often overlooked performance problem in software development, making it valuable for optimizing code efficiency across various domains.",
-      "topics": [],
-      "tags": [
-        "tooling"
-      ],
-      "score": 4,
-      "scoreReason": "Moderate relevance to AI tooling but low freshness with only 6 stars and no clear AI frontier focus beyond general development utilities.",
-      "starredAt": "2026-04-17T09:54:00Z",
-      "type": "github"
-    },
-    {
       "repo": "huggingface/ml-intern",
       "url": "https://github.com/huggingface/ml-intern",
       "description": "🤗 ml-intern: an open-source ML engineer that reads papers, trains models, and ships ML models",
@@ -240,7 +222,6 @@
   "videos": [],
   "blogs": [],
   "dailyCounts": [
-    1,
     0,
     0,
     0,
@@ -269,7 +250,8 @@
     2,
     1,
     1,
+    0,
     0
   ],
-  "interestSummary": "Pedro Cuenca's recent interests focus on open-source ML engineering tools, particularly around Hugging Face ecosystem integration, Apple Silicon optimization (inference servers, local inference engines), and developer utilities for model training, tracing, and workspace management."
+  "interestSummary": "Pedro Cuenca is currently focused on open-source machine learning tooling, particularly around Hugging Face infrastructure, including inference servers, model training, and context engineering, with an emphasis on Apple Silicon optimization and efficient tokenizer implementations."
 }

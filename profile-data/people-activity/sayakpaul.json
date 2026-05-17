@@ -2,25 +2,6 @@
   "id": "sayakpaul",
   "stars": [
     {
-      "repo": "huggingface/hf-hub",
-      "url": "https://github.com/huggingface/hf-hub",
-      "description": "Rust client for the huggingface hub aiming for minimal subset of features over `huggingface-hub` python package",
-      "language": "Rust",
-      "stargazersCount": 285,
-      "starredBy": "sayakpaul",
-      "highlights": "Provides a Rust client for the Hugging Face Hub, offering a minimal subset of features compared to the Python package. Enables Rust developers to interact with Hugging Face's model repository and datasets efficiently.",
-      "worthReading": "It addresses the growing need for Rust tooling in the AI ecosystem, making Hugging Face resources accessible to Rust developers working on performance-critical applications.",
-      "topics": [],
-      "tags": [
-        "tooling",
-        "infra"
-      ],
-      "score": 6,
-      "scoreReason": "Moderate freshness with rising traction in Rust AI tooling, high relevance for AI infrastructure, and good concreteness as a functional Rust client.",
-      "starredAt": "2026-04-17T11:46:18Z",
-      "type": "github"
-    },
-    {
       "repo": "mitchellh/vouch",
       "url": "https://github.com/mitchellh/vouch",
       "description": "A community trust management system based on explicit vouches to participate.",
@@ -1131,10 +1112,72 @@
         "tooling",
         "deployment"
       ]
+    },
+    {
+      "type": "x",
+      "id": "2054792086982205518",
+      "url": "https://x.com/RisingSayak/status/2054792086982205518",
+      "author": {
+        "handle": "sayakpaul",
+        "displayName": "Sayak Paul",
+        "avatar": "https://avatars.githubusercontent.com/sayakpaul"
+      },
+      "content": "After working on releasing the v5, this is the latest release from the Transformers team at",
+      "createdAt": "2026-05-17T04:28:01.822Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Sayak announces a new release from the Transformers team after working on v5.",
+      "worthReading": "Shows ongoing contributions to open-source ML libraries.",
+      "tags": [
+        "infra",
+        "deployment"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2028653642530881969",
+      "url": "https://x.com/RisingSayak/status/2028653642530881969",
+      "author": {
+        "handle": "sayakpaul",
+        "displayName": "Sayak Paul",
+        "avatar": "https://avatars.githubusercontent.com/sayakpaul"
+      },
+      "content": "Thanks @AnthropicAI. Thanks @huggingface for letting me work on Diffusers and other open-source projects across the fleet.",
+      "createdAt": "2026-05-17T04:28:01.822Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Sayak expresses gratitude for opportunities to work on Diffusers and other open-source projects.",
+      "worthReading": "Highlights his role at Hugging Face and contributions to open-source.",
+      "tags": [
+        "tooling",
+        "deployment"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2046617938585702847",
+      "url": "https://x.com/RisingSayak/status/2046617938585702847",
+      "author": {
+        "handle": "sayakpaul",
+        "displayName": "Sayak Paul",
+        "avatar": "https://avatars.githubusercontent.com/sayakpaul"
+      },
+      "content": "My presentation at the @PyTorch Conf EU is now live. It's an exciting piece given its",
+      "createdAt": "2026-05-17T04:28:01.822Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Sayak shares that his PyTorch Conference EU presentation is now available.",
+      "worthReading": "Indicates his involvement in major ML conferences and thought leadership.",
+      "tags": [
+        "evaluation",
+        "deployment"
+      ]
     }
   ],
   "dailyCounts": [
-    1,
     1,
     2,
     1,
@@ -1163,7 +1206,8 @@
     0,
     3,
     1,
-    2
+    2,
+    3
   ],
-  "interestSummary": "Sayak Paul's recent interests center on his work at Hugging Face with diffusion models and PyTorch, specifically optimizing the Diffusers library with `torch.compile`, while also exploring Rust-based Hugging Face Hub clients and community trust systems."
+  "interestSummary": "Based on their recent activity, Sayak Paul is focused on their work at Hugging Face and PyTorch ecosystem integration, particularly making Diffusers work well with `torch.compile`, while also showing interest in community trust systems and developer tools."
 }

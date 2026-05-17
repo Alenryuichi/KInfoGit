@@ -2410,10 +2410,91 @@
         "infra",
         "tooling"
       ]
+    },
+    {
+      "type": "x",
+      "id": "2034315810693599349",
+      "url": "https://x.com/StasBekman/status/2034315810693599349",
+      "author": {
+        "handle": "stas00",
+        "displayName": "Stas Bekman",
+        "avatar": "https://avatars.githubusercontent.com/stas00"
+      },
+      "content": "Classical Jensen math. Unidirectional bandwidth is topped at 450GB/s, and then there comes a protocol overhead of two digit percentage.",
+      "createdAt": "2026-05-17T04:27:54.271Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Discusses bandwidth limitations and protocol overhead in GPU interconnects.",
+      "worthReading": "Provides insight into hardware performance constraints relevant to ML infrastructure.",
+      "tags": [
+        "infra"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "1821362487151013970",
+      "url": "https://x.com/StasBekman/status/1821362487151013970",
+      "author": {
+        "handle": "stas00",
+        "displayName": "Stas Bekman",
+        "avatar": "https://avatars.githubusercontent.com/stas00"
+      },
+      "content": "Hear, hear, I'm excited to introduce a new performance metric: Maximum Achievable Matmul",
+      "createdAt": "2026-05-17T04:27:54.271Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Introduces a new performance metric for matrix multiplication.",
+      "worthReading": "Relevant for evaluating and optimizing ML model performance.",
+      "tags": [
+        "evaluation",
+        "infra"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2014578754782409106",
+      "url": "https://x.com/StasBekman/status/2014578754782409106",
+      "author": {
+        "handle": "stas00",
+        "displayName": "Stas Bekman",
+        "avatar": "https://avatars.githubusercontent.com/stas00"
+      },
+      "content": "Thanks to an awesome contribution from @omarnomad The Machine Learning Engineering Open book now can",
+      "createdAt": "2026-05-17T04:27:54.271Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Announces a contribution to the Machine Learning Engineering Open Book.",
+      "worthReading": "Highlights community contributions to open-source ML education.",
+      "tags": [
+        "tooling"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2029625103500317066",
+      "url": "https://x.com/StasBekman/status/2029625103500317066",
+      "author": {
+        "handle": "stas00",
+        "displayName": "Stas Bekman",
+        "avatar": "https://avatars.githubusercontent.com/stas00"
+      },
+      "content": "If you're trying out FA4, you're likely to run into not being able to load cutlass.cute",
+      "createdAt": "2026-05-17T04:27:54.271Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Warns about a common issue with FA4 and cutlass.cute loading.",
+      "worthReading": "Practical troubleshooting tip for ML engineers using FA4.",
+      "tags": [
+        "infra",
+        "tooling"
+      ]
     }
   ],
   "dailyCounts": [
-    0,
     4,
     4,
     4,
@@ -2442,7 +2523,8 @@
     4,
     4,
     4,
+    4,
     4
   ],
-  "interestSummary": "Stas Bekman is focused on compiling training logbooks and resources for large language models (LLMs) and vision-language models (VLMs), while actively promoting new PyTorch tools, memory optimization techniques like TiledMLP, and improvements to the Machine Learning Engineering Open Book."
+  "interestSummary": "Stas Bekman is focused on compiling and sharing logbooks and resources for training large language models (LLMs) and vision-language models (VLMs), with an emphasis on memory optimization tools like TiledMLP and DeepSpeed ZeRO++, while also promoting the Machine Learning Engineering Open Book and new PyTorch developments."
 }

@@ -36,6 +36,23 @@
       ],
       "score": 5,
       "scoreReason": "Freshness is moderate (low stars but rising, early stage), relevance is high (LLM inference engine), concreteness is low (stealth, no detailed features yet)."
+    },
+    {
+      "repo": "noahgolmant/pytorch-hessian-eigenthings",
+      "url": "https://github.com/noahgolmant/pytorch-hessian-eigenthings",
+      "description": "Efficient PyTorch Hessian eigendecomposition tools!",
+      "language": "Python",
+      "stargazersCount": 428,
+      "starredBy": "lucidrains",
+      "starredAt": "2026-05-16T23:52:56Z",
+      "highlights": "This repository provides efficient tools for computing eigenvalues and eigenvectors of the Hessian matrix in PyTorch, enabling deeper understanding of neural network loss landscapes. It implements power iteration and Lanczos methods for scalable eigendecomposition, useful for optimization analysis and generalization studies.",
+      "worthReading": "Understanding Hessian properties is crucial for advanced optimization and generalization research; this library makes such analysis accessible and efficient for PyTorch users.",
+      "topics": [],
+      "tags": [
+        "tooling"
+      ],
+      "score": 5,
+      "scoreReason": "Freshness is low (428 stars, no recent updates), relevance is moderate (touches optimization but not frontier AI), concreteness is high (working code with clear methodology)."
     }
   ]
 }

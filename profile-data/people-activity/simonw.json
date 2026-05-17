@@ -2,32 +2,6 @@
   "id": "simonw",
   "stars": [
     {
-      "repo": "smol-machines/smolvm",
-      "url": "https://github.com/smol-machines/smolvm",
-      "description": "Tool to build & run portable, lightweight, self-contained virtual machines.",
-      "language": "Rust",
-      "stargazersCount": 1013,
-      "starredBy": "simonw",
-      "highlights": "Enables creation of portable, lightweight virtual machines optimized for container-like workloads with minimal overhead. Built in Rust for performance and safety, it provides a self-contained runtime environment ideal for deployment scenarios.",
-      "worthReading": "It addresses infrastructure efficiency challenges in AI/ML deployment by offering a streamlined virtualization solution that could optimize resource usage for model serving and tool execution.",
-      "topics": [
-        "containers",
-        "crun",
-        "libkrun",
-        "microvm",
-        "rust",
-        "virtual-machine"
-      ],
-      "tags": [
-        "infra",
-        "deployment"
-      ],
-      "score": 6,
-      "scoreReason": "Moderate freshness with growing traction, strong relevance to AI infrastructure/deployment needs, and high concreteness as a working tool.",
-      "starredAt": "2026-04-17T22:39:58Z",
-      "type": "github"
-    },
-    {
       "repo": "chrislgarry/Apollo-11",
       "url": "https://github.com/chrislgarry/Apollo-11",
       "description": "Original Apollo 11 Guidance Computer (AGC) source code for the command and lunar modules.",
@@ -1086,6 +1060,27 @@
       "worthReading": "",
       "tags": [
         "deployment"
+      ],
+      "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mlyseldi322a",
+      "url": "https://bsky.app/profile/simonwillison.net/post/3mlyseldi322a",
+      "author": {
+        "handle": "simonwillison.net",
+        "displayName": "Simon Willison",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
+      },
+      "content": "To prepare for my #PyConUS lightning talk this afternoon I decided to track down ALL of the names that @openclaw has used since November, using a script against its GitHub repo\n\nWarelay → CLAWDIS → CLAWDBOT → Clawdbot → Moltbot →🦞 OpenClaw\n\nsimonwillison.net/2026/May/16/...",
+      "createdAt": "2026-05-16T21:33:37.745Z",
+      "likeCount": 41,
+      "replyCount": 6,
+      "repostCount": 3,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [
+        "agent",
+        "tooling"
       ],
       "type": "bluesky"
     }
@@ -2658,10 +2653,51 @@
         "llm",
         "deployment"
       ]
+    },
+    {
+      "type": "x",
+      "id": "1975570458683834729",
+      "url": "https://x.com/simonw/status/1975570458683834729",
+      "author": {
+        "handle": "simonw",
+        "displayName": "Simon Willison",
+        "avatar": "https://avatars.githubusercontent.com/simonw"
+      },
+      "content": "Vibe coding is irresponsibly building software through dice rolls, not caring what code is produced",
+      "createdAt": "2026-05-17T04:27:05.141Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Simon Willison criticizes 'vibe coding' as an irresponsible approach to software development.",
+      "worthReading": "Highlights a critical perspective on a trending coding methodology.",
+      "tags": [
+        "llm",
+        "safety"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2031002164165021868",
+      "url": "https://x.com/simonw/status/2031002164165021868",
+      "author": {
+        "handle": "simonw",
+        "displayName": "Simon Willison",
+        "avatar": "https://avatars.githubusercontent.com/simonw"
+      },
+      "content": "A short note that the predictions that LLMs would favor 'boring technology' that's",
+      "createdAt": "2026-05-17T04:27:05.141Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Simon Willison notes that LLMs may not favor boring technology as predicted.",
+      "worthReading": "Challenges common assumptions about LLM preferences.",
+      "tags": [
+        "llm",
+        "evaluation"
+      ]
     }
   ],
   "dailyCounts": [
-    1,
     5,
     4,
     4,
@@ -2690,7 +2726,8 @@
     3,
     3,
     1,
-    1
+    2,
+    2
   ],
-  "interestSummary": "Simon Willison is deeply focused on evaluating and comparing the latest AI models (Claude Opus, GPT-5.5, DeepSeek V4) and their coding agent capabilities, while actively building tools and benchmarks that involve image generation, document parsing, and agent accountability. He also maintains a playful, community-driven interest in generating \"pelicans riding bicycles\" images as a benchmark for model quality."
+  "interestSummary": "Simon Willison is deeply engaged with the latest developments in AI coding agents and LLMs, frequently benchmarking new models (Claude Opus 4.7, DeepSeek V4, GPT-5.5) and building tools around them, while maintaining a playful side through \"pelicans on bicycles\" image generation tests. He's also actively contributing to the Python/Datasette ecosystem and exploring document parsing, local inference, and code review automation."
 }
