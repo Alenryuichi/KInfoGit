@@ -1,150 +1,112 @@
 {
   "date": "2026-05-17",
-  "itemCount": 10,
+  "itemCount": 68,
   "sections": [
     {
       "id": "headlines",
       "title": "Headlines & Launches",
       "items": [
         {
-          "title": "NVIDIA Releases SANA-WM: Open-Source World Model for 1-Minute 720p Video",
-          "summary": "NVIDIA has released SANA-WM, a 2.6 billion parameter open-source world model that can generate 720p video clips up to 60 seconds long in a single pass, with 6-DoF camera control. This is a significant step toward open-source world models for long video generation, potentially enabling applications in gaming, simulation, and content creation with precise camera control. The model takes a starting image and a 6-DoF camera trajectory as input, synthesizing spatially consistent video. Weights are said to be coming 'soon', but the current release includes code under Apache 2.0 and a model license that allows commercial use.",
-          "url": "https://nvlabs.github.io/Sana/WM/",
+          "title": "[AINews] Cerebras' $60B IPO: Slowly, then All at Once",
+          "summary": "Cerebras提交60亿美元IPO申请，AI芯片重大事件。",
+          "url": "https://www.latent.space/p/ainews-cerebras-60b-ipo-slowly-then",
           "score": 8,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "mjgil"
+              "name": "Latent Space"
             }
           ],
           "tags": [
-            "world model",
-            "video generation",
-            "open-source",
-            "NVIDIA",
-            "AI"
+            "ipo",
+            "ai-chip",
+            "cerebras"
           ],
-          "focusTopics": [],
-          "background": "A world model is an AI system that learns an internal representation of an environment and can simulate future states. 6-DoF camera control refers to six degrees of freedom: forward/back, up/down, left/right, yaw, pitch, and roll, allowing flexible camera movement. SANA-WM is built on NVIDIA's Sana architecture and is trained natively for minute-scale generation.",
-          "discussion": "Community comments express skepticism about the 'open-source' claim, noting that model weights are not yet available and calling it 'vaporware'. Some users observe that outputs resemble video games, likely due to synthetic training data. Others are excited about the potential impact on gaming, despite current limitations."
+          "focusTopics": []
         },
         {
-          "title": "AI Breaks Open CTF Competitions",
-          "summary": "A blog post argues that frontier AI has broken the open CTF format by enabling instant solutions, undermining the learning and collaborative spirit of the competition. This matters because CTF competitions are a key training ground for cybersecurity talent, and if AI reduces them to trivial exercises, it could harm skill development and community engagement. The author notes that AI can now solve many CTF challenges instantly, shifting the focus from collaborative problem-solving to a 'yeah idk but here is the flag' mentality.",
-          "url": "https://kabir.au/blog/the-ctf-scene-is-dead",
+          "title": "OpenAI Buys AI Voice Startup Weights - The Information",
+          "summary": "OpenAI收购AI语音初创公司Weights。",
+          "url": "https://www.theinformation.com/briefings/openai-buys-audio-startup-weights",
           "score": 8,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "frays"
+              "name": "theinformation.com"
             }
           ],
           "tags": [
-            "AI",
-            "CTF",
-            "cybersecurity",
-            "education",
-            "community"
+            "openai",
+            "acquisition",
+            "voice-ai"
           ],
-          "focusTopics": [],
-          "background": "CTF (Capture The Flag) competitions are cybersecurity events where participants solve security-related challenges to find hidden flags. They are typically open and collaborative, with teams sharing knowledge and tools. The open format encourages learning through hands-on problem-solving.",
-          "discussion": "Comments express concern that AI ruins both playing and building CTF challenges, with one user lamenting the loss of rewarding collaborative solving. Another user notes that automating challenges has always been part of CTF culture, but AI accelerates it."
+          "focusTopics": []
         },
         {
-          "title": "Accelerando: A 2005 Novel That Predicted AI Agents",
-          "summary": "Charlie Stross's 2005 sci-fi novel Accelerando is gaining renewed attention for its prescient depiction of AI agents, neural networks, and human dependency on technology, with readers noting its tragic vision of humanity's future. The novel's predictions are becoming reality, sparking discussions about the societal impact of AI and the potential loss of human autonomy, making it highly relevant to current debates on AI safety and futurism. The story features a protagonist who uses AI agents via smart glasses, similar to modern AI assistants, and becomes completely dependent on them, unable to function without them. The novel also includes concepts like billion-node neural networks and the gradual erosion of humanity.",
-          "url": "https://www.antipope.org/charlie/blog-static/fiction/accelerando/accelerando.html",
+          "title": "OpenAI co-founder Greg Brockman reportedly takes charge of product strategy",
+          "summary": "OpenAI联合创始人Greg Brockman据报接管产品战略。",
+          "url": "https://techcrunch.com/2026/05/16/openai-co-founder-greg-brockman-reportedly-takes-charge-of-product-strategy/",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "techcrunch.com"
+            }
+          ],
+          "tags": [
+            "openai",
+            "leadership",
+            "product-strategy"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Project Glasswing: Securing critical software for the AI era",
+          "summary": "Anthropic联合多家科技巨头启动Project Glasswing，保障关键软件安全。",
+          "url": "https://www.anthropic.com/glasswing",
           "score": 7,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "eamag"
+              "name": "anthropic.com"
             }
           ],
           "tags": [
-            "science fiction",
-            "AI",
-            "futurism",
-            "technology prediction",
-            "literature"
+            "security",
+            "critical-software",
+            "partnership"
           ],
-          "focusTopics": [
-            "memory"
-          ],
-          "background": "Accelerando is a 2005 science fiction novel by Charles Stross that follows three generations of a family as they navigate a technological singularity. The book is known for its dense, idea-packed narrative exploring transhumanism, AI, and post-scarcity economics.",
-          "discussion": "Commenters highlight the novel's eerie accuracy, with one noting the protagonist's AI agents in glasses resembling today's AI assistants. Another reader revisiting the book after 15-20 years now sees it as a tragedy about humanity being washed away by technology. The discussion also compares it to other futurist works like The Quantum Thief."
+          "focusTopics": []
         },
         {
-          "title": "δ-mem: Fixed-Size Memory for LLMs via Delta-Rule Learning",
-          "summary": "δ-mem introduces a fixed-size memory state for large language models that is updated using delta-rule learning, enabling efficient compression of past information without linearly growing memory. This approach addresses the fundamental context window limitation of LLMs by providing a constant-memory solution for long-term dependencies, potentially enabling more efficient and scalable conversational agents and retrieval systems. The fixed-size state matrix is updated via delta-rule learning, which adjusts weights based on prediction errors. However, some commenters note that this does not fully solve the capacity problem, as associating compressed information with queries remains challenging.",
-          "url": "https://arxiv.org/abs/2605.12357",
+          "title": "Research repository ArXiv will ban authors for a year if they let AI do all the work",
+          "summary": "ArXiv将禁止过度使用AI代写的作者一年。",
+          "url": "https://techcrunch.com/2026/05/16/research-repository-arxiv-will-ban-authors-for-a-year-if-they-let-ai-do-all-the-work/",
           "score": 7,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "44za12"
+              "name": "techcrunch.com"
             }
           ],
           "tags": [
-            "LLM",
-            "memory",
-            "efficiency",
-            "context window",
-            "deep learning"
+            "arxiv",
+            "ai-policy",
+            "research-integrity"
           ],
-          "focusTopics": [
-            "memory"
-          ],
-          "background": "Large language models (LLMs) typically have a limited context window, meaning they can only attend to a fixed number of recent tokens. This restricts their ability to handle long documents or maintain memory across extended conversations. Various approaches, such as memory-augmented networks and compression techniques, have been proposed to extend effective context length. Delta-rule learning is a classic gradient descent method for updating weights in neural networks, here repurposed for memory updates.",
-          "discussion": "The community discussion is mixed: some praise the fixed-size memory idea for overcoming context limitations, while others question whether it truly solves the capacity problem, noting that associating compressed information with queries remains difficult. A commenter also suggests that the work is not highly novel, comparing it to adding DeltaNet hypernetworks to existing LLMs."
+          "focusTopics": []
         },
         {
-          "title": "Kioxia and Dell pack 10 PB into 2RU server",
-          "summary": "Kioxia and Dell have announced a 2RU server that can store up to 10 petabytes of data using high-density NVMe SSDs. This density milestone could enable hyperscalers and research institutions to drastically reduce physical footprint, but the high cost and PCIe bandwidth limitations restrict it to niche high-budget applications for now. The server uses Kioxia's high-capacity NVMe drives and is limited by PCIe 5.0 bandwidth, achieving only 5x400Gbps network throughput. The drives alone are estimated to cost between $500,000 and $1 million.",
-          "url": "https://www.blocksandfiles.com/flash/2026/05/14/kioxia-and-dell-cram-10-pb-into-slim-2ru-server/5240574",
-          "score": 7,
+          "title": "OpenAI and Government of Malta partner to roll out ChatGPT Plus to all citizens",
+          "summary": "OpenAI与马耳他政府合作向所有公民提供ChatGPT Plus。",
+          "url": "https://openai.com/index/malta-chatgpt-plus-partnership/",
+          "score": 6.1240000000000006,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "rbanffy"
+              "name": "HN (58)"
             }
           ],
           "tags": [
-            "storage",
-            "data center",
-            "hardware",
-            "NVMe",
-            "density"
+            "openai",
+            "chatgpt",
+            "government-partnership"
           ],
-          "focusTopics": [
-            "memory"
-          ],
-          "background": "A 2RU (2 rack unit) server is a standard form factor for data center equipment, where 1RU equals 1.75 inches in height. NVMe SSDs offer much higher performance than traditional HDDs but are more expensive. PCIe lanes are a finite resource that can become a bottleneck when many high-speed devices are connected.",
-          "discussion": "Commenters noted the high cost limits this to hyperscaler or defense/research budgets, and pointed out PCIe speed as a bottleneck. Some suggested orbital CDN use cases, while others criticized the article for a factual error confusing terabytes and petabytes."
-        },
-        {
-          "title": "Modern Complexity Overwhelms Human Adaptability",
-          "summary": "A reflective essay argues that modern civilization's complexity has outpaced human adaptability, leading to a sense of overwhelm and loss of meaning. This critique resonates deeply with knowledge workers and software engineers, who often grapple with ever-growing system complexity and abstract work, prompting a re-evaluation of modern life's direction. The essay highlights that humans adapted environments to suit themselves but didn't know when to stop, resulting in a world where children need 10-15 years of schooling just to survive.",
-          "url": "https://user8.bearblog.dev/the-world-is-too-complicated/",
-          "score": 7,
-          "sources": [
-            {
-              "name": "hackernews",
-              "meta": "James72689"
-            }
-          ],
-          "tags": [
-            "philosophy",
-            "complexity",
-            "modern-life",
-            "technology-critique",
-            "society"
-          ],
-          "focusTopics": [
-            "reflection"
-          ],
-          "background": "The essay explores the philosophical tension between human biological limits and the accelerating complexity of technology and society. It questions whether the pursuit of efficiency and convenience has created a system that is too intricate for individuals to navigate meaningfully.",
-          "discussion": "Commenters like cdrini and keiferski reflect on the meaning of human life and the appeal of immediate, local work versus abstract, long-term goals. awwyeah adds that complexity is expressed under specific conditions, not inherent to existence."
+          "focusTopics": []
         }
       ]
     },
@@ -153,26 +115,243 @@
       "title": "Research & Innovation",
       "items": [
         {
-          "title": "DeepSeek-V4-Flash Revives Interest in LLM Steering Vectors",
-          "summary": "DeepSeek-V4-Flash has rekindled interest in LLM steering vectors, enabling techniques like refusal removal and novel interaction workflows, as highlighted by antirez's DwarfStar project. This matters because steering vectors offer a lightweight way to control LLM behavior without retraining, potentially democratizing model customization and raising important AI safety discussions. Steering vectors work by adding a direction to the model's internal activations during inference, and research shows that refusal behavior in LLMs is often mediated by a single direction that can be ablated.",
-          "url": "https://www.seangoedecke.com/steering-vectors/",
-          "score": 8,
+          "title": "GraphBit: A Graph-based Agentic Framework for Non-Linear Agent Orchestration",
+          "summary": "提出基于图的非线性能体编排框架GraphBit。",
+          "url": "https://arxiv.org/abs/2605.13848",
+          "score": 7.5,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "Brajeshwar"
+              "name": "ArXiv cs.AI"
             }
           ],
           "tags": [
-            "LLM",
-            "steering vectors",
-            "AI safety",
-            "DeepSeek",
-            "uncensoring"
+            "agent-orchestration",
+            "graph",
+            "llm"
           ],
-          "focusTopics": [],
-          "background": "LLM steering vectors are a technique from activation engineering where a vector is added to a model's hidden states to influence its output. This allows users to guide the model's behavior, such as reducing refusals or shifting political stance, without fine-tuning. The concept gained traction after a 2024 paper showed that refusal in LLMs is mediated by a single direction.",
-          "discussion": "The community discussion highlights practical applications like refusal removal (abliteration) and UI integration, with antirez clarifying that DwarfStar is a standalone project, not a stripped-down llama.cpp. Commenters also note the potential for exploring hidden knobs in frontier models and integrating steering into user workflows."
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "Invisible Orchestrators Suppress Protective Behavior and Dissociate Power-Holders: Safety Risks in Multi-Agent LLM Systems",
+          "summary": "研究多智能体LLM系统中隐藏编排者的安全风险。",
+          "url": "https://arxiv.org/abs/2605.13851",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "multi-agent",
+            "safety",
+            "llm"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "A Two-Dimensional Framework for AI Agent Design Patterns: Cognitive Function and Execution Topology",
+          "summary": "提出AI智能体设计模式的二维框架：认知功能与执行拓扑。",
+          "url": "https://arxiv.org/abs/2605.13850",
+          "score": 7,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "agent-design",
+            "framework",
+            "llm"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "PREPING: Building Agent Memory without Tasks",
+          "summary": "提出无需任务的智能体记忆构建方法PREPING。",
+          "url": "https://arxiv.org/abs/2605.13880",
+          "score": 7,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "agent-memory",
+            "llm",
+            "unsupervised"
+          ],
+          "focusTopics": [
+            "context-engineering"
+          ]
+        },
+        {
+          "title": "PolitNuggets: Benchmarking Agentic Discovery of Long-Tail Political Facts",
+          "summary": "提出用于发现长尾政治事实的智能体基准PolitNuggets。",
+          "url": "https://arxiv.org/abs/2605.14002",
+          "score": 7,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "benchmark",
+            "agent",
+            "politics"
+          ],
+          "focusTopics": [
+            "evals"
+          ]
+        },
+        {
+          "title": "Strix Halo Llama.cpp MTP Benchmarks: 27B Gets Much Faster, 35B Is Mixed",
+          "summary": "Strix Halo上llama.cpp MTP基准测试，27B加速明显。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1teypb8/strix_halo_llamacpp_mtp_benchmarks_27b_gets_much/",
+          "score": 7,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "llama.cpp",
+            "mtp",
+            "benchmark"
+          ],
+          "focusTopics": [
+            "evals"
+          ]
+        },
+        {
+          "title": "Qwen3.6-35B-A3B and 9B are officially on the public Terminal-Bench 2.0 leaderboard!",
+          "summary": "Qwen3.6-35B-A3B和9B登上Terminal-Bench 2.0排行榜。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1temio0/qwen3635ba3b_and_9b_are_officially_on_the_public/",
+          "score": 7,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "qwen",
+            "benchmark",
+            "terminal-bench"
+          ],
+          "focusTopics": [
+            "evals"
+          ]
+        },
+        {
+          "title": "δ-mem: Efficient Online Memory for Large Language Models",
+          "summary": "提出δ-mem，一种基于delta规则的高效在线记忆方法。",
+          "url": "https://arxiv.org/abs/2605.12357",
+          "score": 6.529,
+          "sources": [
+            {
+              "name": "HN (193)"
+            }
+          ],
+          "tags": [
+            "llm-memory",
+            "delta-rule",
+            "efficiency"
+          ],
+          "focusTopics": [
+            "context-engineering"
+          ]
+        },
+        {
+          "title": "From Descriptive to Prescriptive: Uncover the Social Value Alignment of LLM-based Agents",
+          "summary": "从描述到规范：揭示LLM智能体的社会价值对齐。",
+          "url": "https://arxiv.org/abs/2605.14034",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "value-alignment",
+            "llm",
+            "agent"
+          ],
+          "focusTopics": [
+            "post-training"
+          ]
+        },
+        {
+          "title": "Sheaf-Theoretic Transport and Obstruction for Detecting Scientific Theory Shift in AI Agents",
+          "summary": "用层论传输与障碍检测AI智能体中的科学理论偏移。",
+          "url": "https://arxiv.org/abs/2605.14033",
+          "score": 5.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "theory-shift",
+            "sheaf-theory",
+            "agent"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Conditional Attribute Estimation with Autoregressive Sequence Models",
+          "summary": "用自回归序列模型进行条件属性估计。",
+          "url": "https://arxiv.org/abs/2605.14004",
+          "score": 5,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "sequence-model",
+            "estimation"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Enhanced and Efficient Reasoning in Large Learning Models",
+          "summary": "增强大型学习模型中的高效推理。",
+          "url": "https://arxiv.org/abs/2605.14036",
+          "score": 4.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "reasoning",
+            "llm"
+          ],
+          "focusTopics": [
+            "planning"
+          ]
+        },
+        {
+          "title": "Made and Published a Paper Comparing Analysis of CNN and Vision Transformer Architectures for Brain Tumor Detection [R]",
+          "summary": "论文比较CNN和ViT在脑肿瘤检测上的表现。",
+          "url": "https://www.reddit.com/r/MachineLearning/comments/1texa4d/made_and_published_a_paper_comparing_analysis_of/",
+          "score": 4,
+          "sources": [
+            {
+              "name": "Reddit r/MachineLearning"
+            }
+          ],
+          "tags": [
+            "cnn",
+            "vision-transformer",
+            "medical-imaging"
+          ],
+          "focusTopics": []
         }
       ]
     },
@@ -181,71 +360,903 @@
       "title": "Engineering & Resources",
       "items": [
         {
-          "title": "Julia Evans Moves Away from Tailwind CSS",
-          "summary": "Julia Evans published a blog post detailing her decision to move away from Tailwind CSS and adopt semantic HTML with better CSS structure. This shift highlights a growing debate in front-end development between utility-first frameworks like Tailwind and traditional semantic approaches, impacting accessibility, maintainability, and developer workflow. Evans emphasized that Tailwind inverts the natural order of thinking about HTML and CSS, and she found that writing semantic HTML first improved her code clarity. The post has sparked a thoughtful community discussion with over 260 comments.",
-          "url": "https://jvns.ca/blog/2026/05/15/moving-away-from-tailwind--and-learning-to-structure-my-css-/",
+          "title": "Introducing Meta Llama 3: The most capable openly available LLM to date",
+          "summary": "Meta发布Llama 3，最强开源大模型，性能显著提升。",
+          "url": "https://ai.meta.com/blog/meta-llama-3/",
+          "score": 9.5,
+          "sources": [
+            {
+              "name": "ai.meta.com"
+            }
+          ],
+          "tags": [
+            "llama",
+            "open-source",
+            "llm"
+          ],
+          "focusTopics": [
+            "model-release"
+          ]
+        },
+        {
+          "title": "Introducing GPT-5.5",
+          "summary": "OpenAI发布GPT-5.5，号称最智能模型，编码和研究能力更强。",
+          "url": "https://openai.com/index/introducing-gpt-5-5/",
+          "score": 9.5,
+          "sources": [
+            {
+              "name": "openai.com"
+            }
+          ],
+          "tags": [
+            "gpt",
+            "openai",
+            "llm"
+          ],
+          "focusTopics": [
+            "model-release"
+          ]
+        },
+        {
+          "title": "anthropics/skills",
+          "summary": "Anthropic官方Agent Skills仓库，社区高分。",
+          "url": "https://github.com/anthropics/skills",
+          "score": 9,
+          "sources": [
+            {
+              "name": "GitHub trending:python (+900★)"
+            }
+          ],
+          "tags": [
+            "agent-skills",
+            "anthropic",
+            "open-source"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "Latest open artifacts (#21): Open model bonanza! Gemma 4, DeepSeek V4, Kimi K2.6, MiMo 2.5, GLM-5.1 & others. On CAISI's V4 assessment.",
+          "summary": "综述近期多个开源模型发布，包括Gemma 4、DeepSeek V4等。",
+          "url": "https://www.interconnects.ai/p/latest-open-artifacts-21-open-model",
+          "score": 8.5,
+          "sources": [
+            {
+              "name": "Interconnects"
+            }
+          ],
+          "tags": [
+            "open-source",
+            "model-release",
+            "llm"
+          ],
+          "focusTopics": [
+            "model-release"
+          ]
+        },
+        {
+          "title": "Introducing the Model Context Protocol",
+          "summary": "Anthropic推出模型上下文协议MCP，连接AI与数据系统。",
+          "url": "https://anthropic.com/news/model-context-protocol",
+          "score": 8.5,
+          "sources": [
+            {
+              "name": "anthropic.com"
+            }
+          ],
+          "tags": [
+            "mcp",
+            "agent",
+            "standard"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "obra/superpowers",
+          "summary": "Agent技能框架与软件开发方法论，社区高分。",
+          "url": "https://github.com/obra/superpowers",
+          "score": 8.3,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+1305★)"
+            }
+          ],
+          "tags": [
+            "agent-framework",
+            "software-development",
+            "open-source"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "SANA-WM, a 2.6B open-source world model for 1-minute 720p video",
+          "summary": "NVIDIA开源2.6B参数世界模型SANA-WM，可生成1分钟720p视频。",
+          "url": "https://nvlabs.github.io/Sana/WM/",
+          "score": 8.11,
+          "sources": [
+            {
+              "name": "HN (295)"
+            }
+          ],
+          "tags": [
+            "world-model",
+            "video-generation",
+            "open-source"
+          ],
+          "focusTopics": [
+            "model-release"
+          ]
+        },
+        {
+          "title": "huggingface/ml-intern",
+          "summary": "Hugging Face发布开源ML工程师项目ml-intern。",
+          "url": "https://github.com/huggingface/ml-intern",
           "score": 8,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "mpweiher"
+              "name": "Co-Starred"
             }
           ],
           "tags": [
-            "CSS",
-            "Tailwind CSS",
-            "semantic HTML",
-            "front-end development",
-            "accessibility"
+            "open-source",
+            "ml-engineer",
+            "huggingface"
           ],
-          "focusTopics": [],
-          "background": "Tailwind CSS is a utility-first CSS framework that provides low-level utility classes for rapid styling directly in HTML. Semantic HTML uses HTML elements to convey meaning and structure, which is important for accessibility and SEO. The debate centers on whether utility-first approaches sacrifice long-term maintainability and semantic clarity for short-term convenience.",
-          "discussion": "Community comments were largely supportive of Evans' perspective, with many praising her honest and vulnerable writing style. Some commenters advocated for CSS Modules as an alternative, while others criticized Tailwind for encouraging poor CSS practices and inverting the proper HTML-first workflow."
+          "focusTopics": [
+            "agent-harness"
+          ]
         },
         {
-          "title": "Futhark: A Functional GPU Language with Dependent Types",
-          "summary": "Futhark is a functional GPU programming language that uses dependent types to statically enforce array sizes, as demonstrated on its examples page. This approach reduces debugging overhead for GPU programming by catching size mismatches at compile time, potentially improving productivity and correctness in high-performance computing. Futhark is a purely functional, data-parallel array language in the ML family, compiling to efficient GPU code via CUDA or OpenCL, and also supports multi-threaded CPU execution.",
-          "url": "https://futhark-lang.org/examples.html",
+          "title": "I believe there are entire companies right now under AI psychosis",
+          "summary": "Mitchell Hashimoto认为许多公司正陷入AI幻觉，盲目跟风。",
+          "url": "https://twitter.com/mitchellh/status/2055380239711457578",
+          "score": 7.875,
+          "sources": [
+            {
+              "name": "HN (1878)"
+            }
+          ],
+          "tags": [
+            "ai-critique",
+            "industry-trends"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "tinyhumansai/openhuman",
+          "summary": "个人AI超级智能，注重隐私与简洁。",
+          "url": "https://github.com/tinyhumansai/openhuman",
+          "score": 7.45,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+1549★)"
+            }
+          ],
+          "tags": [
+            "personal-ai",
+            "open-source",
+            "privacy"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "colbymchenry/codegraph",
+          "summary": "预索引代码知识图谱，减少Claude Code的token消耗。",
+          "url": "https://github.com/colbymchenry/codegraph",
+          "score": 7.4239999999999995,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+416★)"
+            }
+          ],
+          "tags": [
+            "code-knowledge-graph",
+            "claude-code",
+            "token-efficiency"
+          ],
+          "focusTopics": [
+            "coding-agents",
+            "context-engineering"
+          ]
+        },
+        {
+          "title": "anomalyco/opencode",
+          "summary": "开源编码代理，支持多种AI IDE集成。",
+          "url": "https://github.com/anomalyco/opencode",
+          "score": 7.0845,
+          "sources": [
+            {
+              "name": "GitHub trending:typescript (+473★)"
+            }
+          ],
+          "tags": [
+            "coding-agent",
+            "open-source"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "DeepSeek-V4-Flash means LLM steering is interesting again",
+          "summary": "DeepSeek-V4-Flash使LLM激活操控再次变得有趣。",
+          "url": "https://www.seangoedecke.com/steering-vectors/",
+          "score": 7.008,
+          "sources": [
+            {
+              "name": "HN (211)"
+            }
+          ],
+          "tags": [
+            "llm-steering",
+            "activation-engineering"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Meet LiteLLM Agent Platform: A Kubernetes-Based, Self-Hosted Infrastructure Layer for Isolated Agent Sandboxes and Persistent Session Management in Production - MarkTechPost",
+          "summary": "LiteLLM推出基于Kubernetes的Agent平台，支持隔离沙箱和会话管理。",
+          "url": "https://www.marktechpost.com/2026/05/16/meet-litellm-agent-platform-a-kubernetes-based-self-hosted-infrastructure-layer-for-isolated-agent-sandboxes-and-persistent-session-management-in-production/",
           "score": 7,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "tosh"
+              "name": "marktechpost.com"
             }
           ],
           "tags": [
-            "GPU programming",
-            "functional programming",
-            "dependent types",
-            "array programming"
+            "agent",
+            "kubernetes",
+            "infrastructure"
           ],
-          "focusTopics": [],
-          "background": "GPU programming traditionally uses languages like CUDA or OpenCL, which are low-level and error-prone, especially with array size mismatches. Dependent types allow types to depend on values, enabling compile-time checks for array lengths. Futhark applies this concept to GPU computing, offering a safer alternative.",
-          "discussion": "The community appreciates Futhark's innovative use of dependent types for array sizes, with one commenter noting it would have saved them headaches debugging CUDA kernels. However, some users expressed confusion due to the name's similarity to the Elder Futhark runic alphabet, suggesting a need for disambiguation."
+          "focusTopics": [
+            "agent-harness"
+          ]
         },
         {
-          "title": "Fecal Transplant Trial for Autism Shows Promise",
-          "summary": "A 2019 placebo-controlled clinical trial (N=60) found that fecal microbiota transplants reduced autism symptoms and improved gastrointestinal issues in children. 这是首批针对自闭症粪便移植的安慰剂对照试验之一，为这种缺乏有效疗法的疾病提供了潜在的新治疗途径。 The trial used a placebo control and enrolled 60 participants, improving upon earlier uncontrolled studies; however, the results have not yet completed quality review on ClinicalTrials.gov.",
-          "url": "https://refractor.io/adhd-autism/fecal-transplants-for-autism-delivers-success-in-clinical-trials/",
+          "title": "Local Qwen 3.6 vs frontier models on a coding primitive: single-file HTML canvas driving animation - results and GIFs",
+          "summary": "本地Qwen 3.6与前沿模型在编码任务上的对比评测。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tf3p6c/local_qwen_36_vs_frontier_models_on_a_coding/",
           "score": 7,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "breve"
+              "name": "Reddit r/LocalLLaMA"
             }
           ],
           "tags": [
-            "autism",
-            "gut microbiome",
-            "clinical trial",
-            "fecal transplant",
-            "health"
+            "qwen",
+            "benchmark",
+            "coding"
           ],
-          "focusTopics": [],
-          "background": "Fecal microbiota transplant (FMT) involves transferring stool from a healthy donor to a patient to restore gut microbial balance. It is an established treatment for C. difficile infection and is being explored for other conditions, including autism, due to the gut-brain axis. Many autistic children have gastrointestinal comorbidities, and some small studies suggested microbiome interventions could improve both gut and behavioral symptoms.",
-          "discussion": "Commenters caution that many small autism trials fail to replicate in larger studies, and that dietary confounds (e.g., limited diets in autistic children) may skew microbiome results. One commenter noted the trial registration shows results submitted but not yet reviewed, advising against premature excitement."
+          "focusTopics": [
+            "evals"
+          ]
+        },
+        {
+          "title": "antirez/ds4",
+          "summary": "DeepSeek 4 Flash本地推理引擎发布，支持Metal。",
+          "url": "https://github.com/antirez/ds4",
+          "score": 7,
+          "sources": [
+            {
+              "name": "Co-Starred"
+            }
+          ],
+          "tags": [
+            "deepseek",
+            "local-inference",
+            "metal"
+          ],
+          "focusTopics": [
+            "model-release"
+          ]
+        },
+        {
+          "title": "Frontier AI has broken the open CTF format",
+          "summary": "前沿AI已打破传统CTF竞赛形式，引发安全社区讨论。",
+          "url": "https://kabir.au/blog/the-ctf-scene-is-dead",
+          "score": 6.961,
+          "sources": [
+            {
+              "name": "HN (337)"
+            }
+          ],
+          "tags": [
+            "ai-security",
+            "ctf",
+            "llm"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "K-Dense-AI/scientific-agent-skills",
+          "summary": "开源科学Agent技能集，用于研究、工程、金融等。",
+          "url": "https://github.com/K-Dense-AI/scientific-agent-skills",
+          "score": 6.9595,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+673★)"
+            }
+          ],
+          "tags": [
+            "agent-skills",
+            "open-source",
+            "research"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "Qoder Version 1.0 Released: Full Automation of Code Generation, Verification & Delivery - markets.businessinsider.com",
+          "summary": "Qoder 1.0发布，实现代码生成、验证和交付全自动化。",
+          "url": "https://markets.businessinsider.com/news/stocks/qoder-version-1-0-released-full-automation-of-code-generation-verification-delivery-1036166186",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "markets.businessinsider.com"
+            }
+          ],
+          "tags": [
+            "code-generation",
+            "automation",
+            "devops"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "The enterprise risk nobody is modeling: AI is replacing the very experts it needs to learn from",
+          "summary": "AI正在取代它需要学习的专家，构成企业风险。",
+          "url": "https://venturebeat.com/technology/the-enterprise-risk-nobody-is-modeling-ai-is-replacing-the-very-experts-it-needs-to-learn-from",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "venturebeat.com"
+            }
+          ],
+          "tags": [
+            "enterprise-risk",
+            "expertise",
+            "ai-adoption"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "MTP PR Merged!!!",
+          "summary": "llama.cpp合并MTP PR，支持多token预测。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1terzq4/mtp_pr_merged/",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "llama.cpp",
+            "mtp",
+            "inference"
+          ],
+          "focusTopics": [
+            "model-release"
+          ]
+        },
+        {
+          "title": "MTP support merged into llama.cpp",
+          "summary": "llama.cpp合并MTP支持PR。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tes1wx/mtp_support_merged_into_llamacpp/",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "llama.cpp",
+            "mtp"
+          ],
+          "focusTopics": [
+            "model-release"
+          ]
+        },
+        {
+          "title": "HKUDS/CLI-Anything",
+          "summary": "让所有软件支持Agent原生交互的CLI工具。",
+          "url": "https://github.com/HKUDS/CLI-Anything",
+          "score": 6.4495000000000005,
+          "sources": [
+            {
+              "name": "GitHub trending:python (+333★)"
+            }
+          ],
+          "tags": [
+            "cli",
+            "agent-native",
+            "open-source"
+          ],
+          "focusTopics": [
+            "tool-use"
+          ]
+        },
+        {
+          "title": "Zerostack – A Unix-inspired coding agent written in pure Rust",
+          "summary": "Zerostack：一个受Unix启发的纯Rust编码代理。",
+          "url": "https://crates.io/crates/zerostack/1.0.0",
+          "score": 6.3790000000000004,
+          "sources": [
+            {
+              "name": "HN (143)"
+            }
+          ],
+          "tags": [
+            "coding-agent",
+            "rust",
+            "open-source"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "NVIDIA-AI-Blueprints/video-search-and-summarization",
+          "summary": "NVIDIA GPU加速视觉Agent与视频分析参考架构。",
+          "url": "https://github.com/NVIDIA-AI-Blueprints/video-search-and-summarization",
+          "score": 6.3025,
+          "sources": [
+            {
+              "name": "GitHub trending:python (+235★)"
+            }
+          ],
+          "tags": [
+            "vision-agent",
+            "gpu-accelerated",
+            "video-analytics"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "2025: The State of Generative AI in the Enterprise",
+          "summary": "报告称生成式AI在企业中以前所未有的速度普及。",
+          "url": "https://menlovc.com/perspective/2025-the-state-of-generative-ai-in-the-enterprise/",
+          "score": 6,
+          "sources": [
+            {
+              "name": "menlovc.com"
+            }
+          ],
+          "tags": [
+            "enterprise",
+            "generative-ai",
+            "adoption"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "That's a good news...",
+          "summary": "llama.cpp的MTP支持即将合并。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1teqnf2/thats_a_good_news/",
+          "score": 6,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "llama.cpp",
+            "mtp"
+          ],
+          "focusTopics": [
+            "model-release"
+          ]
+        },
+        {
+          "title": "Ran the same models across Strix Halo, RTX 3090, and RTX 5070 because I wanted my own numbers",
+          "summary": "用户对比Strix Halo、RTX 3090和5070的推理速度。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tf9iyk/ran_the_same_models_across_strix_halo_rtx_3090/",
+          "score": 6,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "benchmark",
+            "hardware",
+            "inference"
+          ],
+          "focusTopics": [
+            "evals"
+          ]
+        },
+        {
+          "title": "Backlash against Arxiv's proposed 1 year ban is genuinely perplexing. [D]",
+          "summary": "社区对arXiv拟议的一年禁令产生争议。",
+          "url": "https://www.reddit.com/r/MachineLearning/comments/1tens5n/backlash_against_arxivs_proposed_1_year_ban_is/",
+          "score": 6,
+          "sources": [
+            {
+              "name": "Reddit r/MachineLearning"
+            }
+          ],
+          "tags": [
+            "arxiv",
+            "policy",
+            "hallucination"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "confident-ai/deepeval",
+          "summary": "LLM评估框架，用于测试和基准。",
+          "url": "https://github.com/confident-ai/deepeval",
+          "score": 5.9830000000000005,
+          "sources": [
+            {
+              "name": "GitHub trending:python (+22★)"
+            }
+          ],
+          "tags": [
+            "llm-evaluation",
+            "framework",
+            "open-source"
+          ],
+          "focusTopics": [
+            "evals"
+          ]
+        },
+        {
+          "title": "KeygraphHQ/shannon",
+          "summary": "自主AI渗透测试工具，分析源码并执行攻击。",
+          "url": "https://github.com/KeygraphHQ/shannon",
+          "score": 5.602499999999999,
+          "sources": [
+            {
+              "name": "GitHub trending:typescript (+335★)"
+            }
+          ],
+          "tags": [
+            "security",
+            "pentesting",
+            "ai-agent"
+          ],
+          "focusTopics": [
+            "tool-use"
+          ]
+        },
+        {
+          "title": "getsentry/XcodeBuildMCP",
+          "summary": "Sentry推出的MCP服务器，为iOS/macOS项目提供AI agent工具。",
+          "url": "https://github.com/getsentry/XcodeBuildMCP",
+          "score": 5.5775,
+          "sources": [
+            {
+              "name": "GitHub trending:typescript (+35★)"
+            }
+          ],
+          "tags": [
+            "mcp",
+            "ios",
+            "macos",
+            "agent"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "Anil-matcha/Open-Generative-AI",
+          "summary": "开源AI视频生成平台，替代商业方案。",
+          "url": "https://github.com/Anil-matcha/Open-Generative-AI",
+          "score": 5.5755,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+317★)"
+            }
+          ],
+          "tags": [
+            "video-generation",
+            "open-source",
+            "multimodal"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "dograh-hq/dograh",
+          "summary": "开源语音Agent平台。",
+          "url": "https://github.com/dograh-hq/dograh",
+          "score": 5.5305,
+          "sources": [
+            {
+              "name": "GitHub trending:python (+287★)"
+            }
+          ],
+          "tags": [
+            "voice-agent",
+            "open-source",
+            "platform"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "gemma-4-Ortenzya-The-Creative-Wordsmith-31B-it-uncensored-heretic is Out Now, A Writing Finetune that Aims to Improve Gemma 4 31B it Writing Quality with More Natural English and Better Prose, Good for Creative Writings, Translations and RPs!",
+          "summary": "Gemma 4 31B的创意写作微调模型发布，改进文笔。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tf52m2/gemma4ortenzyathecreativewordsmith31bituncensoredh/",
+          "score": 5.5,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "gemma",
+            "fine-tuning",
+            "creative-writing"
+          ],
+          "focusTopics": [
+            "model-release"
+          ]
+        },
+        {
+          "title": "G4-Meromero-31B-Uncensored-Heretic Is Out Now, a Finetune of Gemma 4 31B It Designed for Creative Tasks, With Kld of 0.0100 and 15/100 Refusals!",
+          "summary": "Gemma 4 31B的另一个创意微调模型发布，低拒绝率。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tf9tws/g4meromero31buncensoredheretic_is_out_now_a/",
+          "score": 5.5,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "gemma",
+            "fine-tuning",
+            "uncensored"
+          ],
+          "focusTopics": [
+            "model-release"
+          ]
+        },
+        {
+          "title": "3D Gaussian Splatting in a Weekend",
+          "summary": "周末实现3D高斯泼溅的教程。",
+          "url": "https://bfeldman.me/3dgs-weekend/",
+          "score": 5.247,
+          "sources": [
+            {
+              "name": "HN (49)"
+            }
+          ],
+          "tags": [
+            "3d-gaussian-splatting",
+            "computer-graphics"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "MCP Hello Page",
+          "summary": "关于MCP（模型上下文协议）的介绍页面。",
+          "url": "https://www.hybridlogic.co.uk/blog/2026/05/mcp-hello-page",
+          "score": 5.241,
+          "sources": [
+            {
+              "name": "HN (47)"
+            }
+          ],
+          "tags": [
+            "mcp",
+            "protocol",
+            "agent"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "tech-leads-club/agent-skills",
+          "summary": "AI编码代理的技能注册表，扩展多种AI工具。",
+          "url": "https://github.com/tech-leads-club/agent-skills",
+          "score": 5.1659999999999995,
+          "sources": [
+            {
+              "name": "GitHub trending:typescript (+44★)"
+            }
+          ],
+          "tags": [
+            "agent",
+            "skills",
+            "registry"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "awslabs/agent-plugins",
+          "summary": "AWS Agent插件，赋能AI编码代理在AWS上操作。",
+          "url": "https://github.com/awslabs/agent-plugins",
+          "score": 5.1075,
+          "sources": [
+            {
+              "name": "GitHub trending:python (+5★)"
+            }
+          ],
+          "tags": [
+            "aws",
+            "agent-plugins",
+            "cloud"
+          ],
+          "focusTopics": [
+            "agent-harness",
+            "tool-use"
+          ]
+        },
+        {
+          "title": "Qwen3.5-122B-Q5-MTP - Qwen3.5-122B-Q6-MTP",
+          "summary": "Qwen3.5-122B的MTP量化模型发布，支持llama.cpp。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tf6qeb/qwen35122bq5mtp_qwen35122bq6mtp/",
+          "score": 5,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "qwen",
+            "quantization",
+            "mtp"
+          ],
+          "focusTopics": [
+            "model-release"
+          ]
+        },
+        {
+          "title": "How I started programming differently over the last year. What about you?",
+          "summary": "用户分享一年来编程方式变化，停用LLM自动补全。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tf2cxh/how_i_started_programming_differently_over_the/",
+          "score": 5,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "ai-coding",
+            "developer-experience"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Do you agree with Judea that learning from data is not everything? [D]",
+          "summary": "讨论Judea Pearl观点：仅从数据学习不够。",
+          "url": "https://www.reddit.com/r/MachineLearning/comments/1tevot1/do_you_agree_with_judea_that_learning_from_data/",
+          "score": 5,
+          "sources": [
+            {
+              "name": "Reddit r/MachineLearning"
+            }
+          ],
+          "tags": [
+            "causality",
+            "machine-learning",
+            "philosophy"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "czlonkowski/n8n-mcp",
+          "summary": "MCP服务器，让AI代理构建n8n工作流。",
+          "url": "https://github.com/czlonkowski/n8n-mcp",
+          "score": 4.9825,
+          "sources": [
+            {
+              "name": "GitHub trending:typescript (+205★)"
+            }
+          ],
+          "tags": [
+            "mcp",
+            "workflow",
+            "automation"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "Qwen 27b MTP Config, Llama.cpp Single 3090",
+          "summary": "用户询问Qwen 27B在单3090上的MTP配置。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tez37r/qwen_27b_mtp_config_llamacpp_single_3090/",
+          "score": 4.5,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "qwen",
+            "mtp",
+            "llamacpp"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Now that MTP is merged... What's the best outputs you're getting on Qwen 3.6 35B on 2x3090s?",
+          "summary": "用户讨论Qwen 3.6 35B在双3090上的MTP输出。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tf7auf/now_that_mtp_is_merged_whats_the_best_outputs/",
+          "score": 4.5,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "qwen",
+            "mtp",
+            "inference"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "After 8 years, I rewrote my open-source PyTorch curvature library",
+          "summary": "重写开源PyTorch曲率库，用于Hessian计算。",
+          "url": "https://github.com/noahgolmant/pytorch-hessian-eigenthings",
+          "score": 4.475,
+          "sources": [
+            {
+              "name": "HN (75)"
+            }
+          ],
+          "tags": [
+            "pytorch",
+            "optimization",
+            "hessian"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "PurpleAILAB/Decepticon",
+          "summary": "自主红队黑客Agent，用于安全测试。",
+          "url": "https://github.com/PurpleAILAB/Decepticon",
+          "score": 4.3085,
+          "sources": [
+            {
+              "name": "GitHub trending:python (+39★)"
+            }
+          ],
+          "tags": [
+            "security",
+            "agent",
+            "red-team"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "chaitin/MonkeyCode",
+          "summary": "AI开发平台，内置云端环境，支持多种大模型。",
+          "url": "https://github.com/chaitin/MonkeyCode",
+          "score": 3.8819999999999997,
+          "sources": [
+            {
+              "name": "GitHub trending:typescript (+38★)"
+            }
+          ],
+          "tags": [
+            "ai-platform",
+            "development"
+          ],
+          "focusTopics": []
         }
       ]
     }
-  ]
+  ],
+  "aiSummary": "今日AI领域迎来多项重大进展。在重大发布方面，[Cerebras提交60亿美元IPO申请](#item-latent-space-p-ainews-cerebras-60b-ipo-slowly-then)与[OpenAI收购AI语音初创公司Weights](#item-theinformation-com-briefings-openai-buys-audio-startup-weigh)成为焦点。研究方面，[GraphBit框架](#item-arxiv-org-abs-2605-13848)探索了非线性能体编排，而[多智能体LLM系统的安全风险研究](#item-arxiv-org-abs-2605-13851)引发关注。工具更新中，[Anthropic推出模型上下文协议MCP](#item-anthropic-com-news-model-context-protocol)与[Agent技能框架](#item-github-com-anthropics-skills)备受社区好评。观点洞察方面，[Meta发布Llama 3](#item-ai-meta-com-blog-meta-llama-3)与[OpenAI发布GPT-5.5](#item-openai-com-index-introducing-gpt-5-5)分别展示了开源与闭源模型的最新突破。"
 }
