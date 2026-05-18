@@ -1,0 +1,832 @@
+{
+  "date": "2026-05-18",
+  "posts": [
+    {
+      "type": "x",
+      "id": "2039805659525644595",
+      "url": "https://x.com/karpathy/status/2039805659525644595",
+      "author": {
+        "handle": "karpathy",
+        "displayName": "Andrej Karpathy",
+        "avatar": "https://avatars.githubusercontent.com/karpathy"
+      },
+      "content": "LLM Knowledge Bases\n\nSomething I'm finding very useful recently: using LLMs to build personal knowledge bases for various topics of research interest. In this way, a large fraction of my recent token throughput is going less into manipulating code, and more into manipulating",
+      "createdAt": "2026-05-18T04:31:31.254Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Using LLMs to build personal knowledge bases for research topics, shifting token usage from code to knowledge manipulation.",
+      "worthReading": "Shows a practical application of LLMs for personal knowledge management.",
+      "tags": [
+        "llm",
+        "rag",
+        "tooling"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2015883857489522876",
+      "url": "https://x.com/karpathy/status/2015883857489522876",
+      "author": {
+        "handle": "karpathy",
+        "displayName": "Andrej Karpathy",
+        "avatar": "https://avatars.githubusercontent.com/karpathy"
+      },
+      "content": "A few random notes from claude coding quite a bit last few weeks.\n\nCoding workflow. Given the latest lift in LLM coding capability, like many others I rapidly went from about 80% manual+autocomplete coding and 20% agents in November to 80% agent coding and 20% edits+touchups in",
+      "createdAt": "2026-05-18T04:31:31.254Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Shift from 80% manual coding to 80% agent coding due to improved LLM coding capabilities.",
+      "worthReading": "Illustrates the rapid adoption of AI agents in coding workflows.",
+      "tags": [
+        "agent",
+        "tooling",
+        "deployment"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2042334451611693415",
+      "url": "https://x.com/karpathy/status/2042334451611693415",
+      "author": {
+        "handle": "karpathy",
+        "displayName": "Andrej Karpathy",
+        "avatar": "https://avatars.githubusercontent.com/karpathy"
+      },
+      "content": "Judging by my tl there is a growing gap in understanding of AI capability. The first issue I think is around recency and tier of use. I think a lot of people tried the free tier of ChatGPT somewhere last year and allowed it to inform their views on AI a little too much. People on X are the first to know.",
+      "createdAt": "2026-05-18T04:31:31.254Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Highlights a gap in AI understanding due to outdated or limited use of AI tools.",
+      "worthReading": "Important perspective on public perception vs. actual AI capability.",
+      "tags": [
+        "llm",
+        "evaluation"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "1970147806225854531",
+      "url": "https://x.com/simonw/status/1970147806225854531",
+      "author": {
+        "handle": "simonw",
+        "displayName": "Simon Willison",
+        "avatar": "https://avatars.githubusercontent.com/simonw"
+      },
+      "content": "It's interesting how \"better at code\" has become the defining goal of almost every AI lab over the",
+      "createdAt": "2026-05-18T04:31:34.971Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Simon observes that AI labs are prioritizing code generation as the primary benchmark for model improvement.",
+      "worthReading": "Reflects a key trend in AI development where coding ability is seen as a proxy for general intelligence.",
+      "tags": [
+        "llm",
+        "evaluation"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2021261552222158955",
+      "url": "https://x.com/hwchase17/status/2021261552222158955",
+      "author": {
+        "handle": "hwchase17",
+        "displayName": "Harrison Chase",
+        "avatar": "https://avatars.githubusercontent.com/hwchase17"
+      },
+      "content": "TL;DR: More and more agents need a workspace: a computer where they can run code, install packages, and access files. Sandboxes provide this",
+      "createdAt": "2026-05-18T04:31:40.044Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Agents require a sandboxed workspace to execute code and manage dependencies.",
+      "worthReading": "Highlights a key infrastructure need for building reliable agent systems.",
+      "tags": [
+        "agent",
+        "infra"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2042978500567609738",
+      "url": "https://x.com/hwchase17/status/2042978500567609738",
+      "author": {
+        "handle": "hwchase17",
+        "displayName": "Harrison Chase",
+        "avatar": "https://avatars.githubusercontent.com/hwchase17"
+      },
+      "content": "Your harness, your memory ... The “best” way to build agentic systems has changed dramatically over the past three years. When ChatGPT came out,",
+      "createdAt": "2026-05-18T04:31:40.044Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "The approach to building agentic systems has evolved significantly since ChatGPT's release.",
+      "worthReading": "Reflects on the rapid evolution of agent development practices.",
+      "tags": [
+        "agent",
+        "llm"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2054971176464847188",
+      "url": "https://x.com/hwchase17/status/2054971176464847188",
+      "author": {
+        "handle": "hwchase17",
+        "displayName": "Harrison Chase",
+        "avatar": "https://avatars.githubusercontent.com/hwchase17"
+      },
+      "content": "Today we're launching LangChain Labs, a new applied research effort focused on Continual Learning. Our goal is to advance open,",
+      "createdAt": "2026-05-18T04:31:40.044Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Announcement of LangChain Labs, an applied research initiative for continual learning.",
+      "worthReading": "Signals LangChain's investment in long-term AI research beyond current tooling.",
+      "tags": [
+        "agent",
+        "tooling"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2018754323141054786",
+      "url": "https://x.com/DrJimFan/status/2018754323141054786",
+      "author": {
+        "handle": "DrJimFan",
+        "displayName": "Jim Fan",
+        "avatar": "https://avatars.githubusercontent.com/DrJimFan"
+      },
+      "content": "The Second Pre-training Paradigm",
+      "createdAt": "2026-05-18T04:31:43.277Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Jim Fan discusses a new pre-training paradigm, likely related to robotics or AI.",
+      "worthReading": "Provides insight into emerging AI training methodologies from a leading researcher.",
+      "tags": [
+        "multi-modal",
+        "fine-tuning",
+        "agent"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "1943444549696917714",
+      "url": "https://x.com/jeremyphoward/status/1943444549696917714",
+      "author": {
+        "handle": "jeremyphoward",
+        "displayName": "Jeremy Howard",
+        "avatar": "https://avatars.githubusercontent.com/jph00"
+      },
+      "content": "Here's a complete unedited video of asking Grok for its views on the Israel/Palestine situation. It first searches twitter for what Elon thinks.",
+      "createdAt": "2026-05-18T04:31:48.090Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Jeremy Howard demonstrates Grok's behavior by asking about Israel/Palestine, showing it searches for Elon Musk's views first.",
+      "worthReading": "Reveals potential bias in AI models that defer to a single person's opinions.",
+      "tags": [
+        "safety",
+        "evaluation"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "1285688473798823954",
+      "url": "https://x.com/jeremyphoward/status/1285688473798823954",
+      "author": {
+        "handle": "jeremyphoward",
+        "displayName": "Jeremy Howard",
+        "avatar": "https://avatars.githubusercontent.com/jph00"
+      },
+      "content": "My 4yo daughter (and her stuffed animals) have just started learning to code. I'm amazed at how great the learning tools are for pretty much everything she wants to learn. And she's having such a great time!",
+      "createdAt": "2020-07-21",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Jeremy Howard shares that his 4-year-old daughter is learning to code with effective tools.",
+      "worthReading": "Shows early coding education is accessible and engaging for young children.",
+      "tags": [
+        "tooling"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2046278307436752955",
+      "url": "https://x.com/soumithchintala/status/2046278307436752955",
+      "author": {
+        "handle": "soumithchintala",
+        "displayName": "Soumith Chintala",
+        "avatar": "https://avatars.githubusercontent.com/soumith"
+      },
+      "content": "@Mojo_flyin @dwarkesh_sp i'd be excited to have Google and AMD create real ecosystems. I fail to see why Jensen has a burden there. There should be multiple strong American AI ecosystems at the hardware layer. Historically, I struggled to make a dent in conversations around ecosystems with many",
+      "createdAt": "2026-05-18T04:31:53.326Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Chintala advocates for multiple strong American AI hardware ecosystems, including Google and AMD, and dismisses the idea that Jensen (Nvidia) has a burden to support them.",
+      "worthReading": "Reveals Chintala's perspective on AI hardware competition and ecosystem diversity.",
+      "tags": [
+        "infra"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2053940215505645938",
+      "url": "https://x.com/soumithchintala/status/2053940215505645938",
+      "author": {
+        "handle": "soumithchintala",
+        "displayName": "Soumith Chintala",
+        "avatar": "https://avatars.githubusercontent.com/soumith"
+      },
+      "content": "Thinky's secret plan:\n\n1: Increase Human<->AI bandwidth\n2: Raise ceiling of human+AI intelligence\n3: Help humans continue as main-characters in the new world\n\nWe are at Step 1.\nInteraction Models are great real-time collaborative tools for humans.\nHere's a preview:",
+      "createdAt": "2026-05-18T04:31:53.326Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Chintala outlines Thinking Machines Lab's vision: increasing human-AI bandwidth, raising human+AI intelligence ceiling, and keeping humans central. They are at Step 1 with Interaction Models.",
+      "worthReading": "Provides insight into the mission of Chintala's new startup, Thinking Machines Lab.",
+      "tags": [
+        "multi-modal",
+        "agent"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2034676840896635257",
+      "url": "https://x.com/fchollet/status/2034676840896635257",
+      "author": {
+        "handle": "fchollet",
+        "displayName": "Francois Chollet",
+        "avatar": "https://avatars.githubusercontent.com/fchollet"
+      },
+      "content": "Current AI is a librarian of existing knowledge. Science requires an explorer of the unknown.",
+      "createdAt": "2026-05-18T04:31:59.709Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Chollet contrasts current AI's role as a librarian of existing knowledge with the need for an explorer of the unknown in science.",
+      "worthReading": "It succinctly captures a key limitation of current AI systems and the direction needed for scientific discovery.",
+      "tags": [
+        "evaluation"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2018836816552694139",
+      "url": "https://x.com/fchollet/status/2018836816552694139",
+      "author": {
+        "handle": "fchollet",
+        "displayName": "Francois Chollet",
+        "avatar": "https://avatars.githubusercontent.com/fchollet"
+      },
+      "content": "Folks who work in AI or software engineering feel like the world is changing exponential fast.",
+      "createdAt": "2026-05-18T04:31:59.709Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Chollet notes the perception among AI and software engineers that the world is changing at an exponential pace.",
+      "worthReading": "It reflects the rapid evolution in AI and its perceived impact on the industry.",
+      "tags": [
+        "deployment"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "sig-1779078719709-5i6nyc",
+      "url": "https://x.com/fchollet",
+      "author": {
+        "handle": "fchollet",
+        "displayName": "Francois Chollet",
+        "avatar": "https://avatars.githubusercontent.com/fchollet"
+      },
+      "content": "The 3rd edition of my book Deep Learning with Python is being printed right now, and will be in bookstores within 2 weeks. The problem with Facebook is not *just* the loss of your privacy and the fact that it can be used as a totalitarian panopticon.",
+      "createdAt": "2026-05-18T04:31:59.709Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Chollet announces the upcoming 3rd edition of his book and comments on Facebook's issues beyond privacy loss.",
+      "worthReading": "It shows his ongoing work in deep learning education and his critical view on social media platforms.",
+      "tags": [
+        "fine-tuning"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "1978840835341914164",
+      "url": "https://x.com/drfeifei/status/1978840835341914164",
+      "author": {
+        "handle": "drfeifei",
+        "displayName": "Fei-Fei Li",
+        "avatar": null
+      },
+      "content": "Very excited to share @theworldlabs 's latest research work RTFM!! It's a real-time,",
+      "createdAt": "2026-05-18T04:32:07.394Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Fei-Fei Li announces RTFM, a real-time research work from World Labs.",
+      "worthReading": "Shows her active role in advancing spatial intelligence research.",
+      "tags": [
+        "multi-modal",
+        "agent"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2052051601095860717",
+      "url": "https://x.com/ClementDelangue/status/2052051601095860717",
+      "author": {
+        "handle": "ClementDelangue",
+        "displayName": "Clem Delangue",
+        "avatar": null
+      },
+      "content": "We're launching the agentic robotics app store today. Let's democratize AI robotics for all! 300+ apps shipped. 10,000 robots in the wild. It used to take weeks from a robotics engineer to build apps, now everyone can do it in hours with ML intern or your favorite neighborhood",
+      "createdAt": "2026-05-18T04:32:12.414Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Hugging Face launches an app store for agentic robotics, enabling rapid app development by non-experts.",
+      "worthReading": "Highlights a major push to democratize robotics through AI, making it accessible beyond specialists.",
+      "tags": [
+        "agent",
+        "deployment",
+        "tooling"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2053825719587815711",
+      "url": "https://x.com/ClementDelangue/status/2053825719587815711",
+      "author": {
+        "handle": "ClementDelangue",
+        "displayName": "Clem Delangue",
+        "avatar": null
+      },
+      "content": "Local open-weight AI on a laptop has been improving more than twice as fast as Moore's Law! Between May 2024 and May 2026, the most expensive MacBook Pro you could buy stayed at 128 GB of unified memory. The hardware ceiling barely moved. But the smartest open-weight model",
+      "createdAt": "2026-05-18T04:32:12.414Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Open-weight AI models on laptops are improving at over twice the rate of Moore's Law, outpacing hardware constraints.",
+      "worthReading": "Shows the rapid progress of local AI, suggesting a shift toward edge inference and reduced reliance on cloud.",
+      "tags": [
+        "llm",
+        "infra",
+        "deployment"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "1877857554060972273",
+      "url": "https://x.com/minimaxir/status/1877857554060972273",
+      "author": {
+        "handle": "minimaxir",
+        "displayName": "Max Woolf",
+        "avatar": "https://avatars.githubusercontent.com/minimaxir"
+      },
+      "content": "what",
+      "createdAt": "2026-05-18T04:32:17.028Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "A short, ambiguous post by Max Woolf.",
+      "worthReading": "May indicate a reaction or commentary on a current event.",
+      "tags": [
+        "llm"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2029982443026223510",
+      "url": "https://x.com/minimaxir/status/2029982443026223510",
+      "author": {
+        "handle": "minimaxir",
+        "displayName": "Max Woolf",
+        "avatar": "https://avatars.githubusercontent.com/minimaxir"
+      },
+      "content": "me irl",
+      "createdAt": "2026-05-18T04:32:17.028Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "A relatable personal post.",
+      "worthReading": "Shows a casual side of the author.",
+      "tags": [
+        "llm"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "1600258754993262594",
+      "url": "https://x.com/minimaxir/status/1600258754993262594",
+      "author": {
+        "handle": "minimaxir",
+        "displayName": "Max Woolf",
+        "avatar": "https://avatars.githubusercontent.com/minimaxir"
+      },
+      "content": "congrats to OpenAI on winning the Turing Test",
+      "createdAt": "2026-05-18T04:32:17.028Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Sarcastic or ironic congratulations to OpenAI.",
+      "worthReading": "Reflects his critical view on AI milestones.",
+      "tags": [
+        "llm",
+        "safety"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "1499157715054120969",
+      "url": "https://x.com/srush_nlp/status/1499157715054120969",
+      "author": {
+        "handle": "srush_io",
+        "displayName": "Sasha Rush",
+        "avatar": "https://avatars.githubusercontent.com/srush"
+      },
+      "content": "Wager established. Jonathan Frankle (@jefrankle) stepped up to my Transformer long bet.",
+      "createdAt": "2022-03-02T00:00:00.000Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Sasha Rush made a long bet with Jonathan Frankle about Transformers.",
+      "worthReading": "Shows a playful academic challenge between researchers.",
+      "tags": [
+        "llm"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "1902736199636205914",
+      "url": "https://x.com/srush_nlp/status/1902736199636205914",
+      "author": {
+        "handle": "srush_io",
+        "displayName": "Sasha Rush",
+        "avatar": "https://avatars.githubusercontent.com/srush"
+      },
+      "content": "Some personal news: I recently joined Cursor. Cursor is a small, ambitious team, and they've created...",
+      "createdAt": "2025-03-20T00:00:00.000Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Sasha Rush announced joining Cursor, a small ambitious team.",
+      "worthReading": "Indicates a career move to an AI startup.",
+      "tags": [
+        "tooling"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "1925965947480735895",
+      "url": "https://x.com/srush_nlp/status/1925965947480735895",
+      "author": {
+        "handle": "srush_io",
+        "displayName": "Sasha Rush",
+        "avatar": "https://avatars.githubusercontent.com/srush"
+      },
+      "content": "Been reflecting a bit on the Harvard news. This paper from 2017 was ... Didn't realize at the time how lucky for us Americans to work with incredible people from around the world.",
+      "createdAt": "2025-05-24T00:00:00.000Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Reflection on Harvard news and gratitude for international collaboration.",
+      "worthReading": "Personal reflection on academic community.",
+      "tags": [
+        "safety"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "1920183013734076448",
+      "url": "https://x.com/StasBekman/status/1920183013734076448",
+      "author": {
+        "handle": "stas00",
+        "displayName": "Stas Bekman",
+        "avatar": "https://avatars.githubusercontent.com/stas00"
+      },
+      "content": "When dealing with tight gpu memory situations try to change a PyTorch version to both newer and older and it might just do the trick. I get massively different memory usage patterns with pt 2.4 to 2.8. e.g. today I tried last night's nightly and it was using 6GB less memory",
+      "createdAt": "2026-05-18T04:32:29.360Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Changing PyTorch version can significantly reduce GPU memory usage, with differences of up to 6GB between versions.",
+      "worthReading": "Practical tip for ML practitioners facing memory constraints during training.",
+      "tags": [
+        "infra",
+        "fine-tuning"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "1716181162354442450",
+      "url": "https://x.com/StasBekman/status/1716181162354442450",
+      "author": {
+        "handle": "stas00",
+        "displayName": "Stas Bekman",
+        "avatar": "https://avatars.githubusercontent.com/stas00"
+      },
+      "content": "I have been compiling LLM/VLM training logbooks/chronicles. This is the one of the best sources to ...",
+      "createdAt": "2026-05-18T04:32:29.360Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Stas Bekman compiles training logbooks for LLM/VLM, providing valuable resources.",
+      "worthReading": "Curated logbooks help practitioners learn from real training experiences.",
+      "tags": [
+        "llm"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2014578754782409106",
+      "url": "https://x.com/StasBekman/status/2014578754782409106",
+      "author": {
+        "handle": "stas00",
+        "displayName": "Stas Bekman",
+        "avatar": "https://avatars.githubusercontent.com/stas00"
+      },
+      "content": "Thanks to an awesome contribution from @omarnomad The Machine Learning Engineering Open book now can ...",
+      "createdAt": "2026-05-18T04:32:29.360Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "The ML Engineering Open Book receives contributions to expand its content.",
+      "worthReading": "Open-source ML engineering book is actively improved by the community.",
+      "tags": [
+        "tooling",
+        "llm"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "1726819595871543715",
+      "url": "https://x.com/StasBekman/status/1726819595871543715",
+      "author": {
+        "handle": "stas00",
+        "displayName": "Stas Bekman",
+        "avatar": "https://avatars.githubusercontent.com/stas00"
+      },
+      "content": "This is a long overdue section of the ML Engineering Understanding Training Loss Patterns ...",
+      "createdAt": "2026-05-18T04:32:29.360Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "New section on understanding training loss patterns added to ML Engineering resources.",
+      "worthReading": "Helps practitioners diagnose and improve model training by analyzing loss curves.",
+      "tags": [
+        "fine-tuning",
+        "evaluation"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2055187769266434101",
+      "url": "https://x.com/RisingSayak/status/2055187769266434101",
+      "author": {
+        "handle": "sayakpaul",
+        "displayName": "Sayak Paul",
+        "avatar": "https://avatars.githubusercontent.com/sayakpaul"
+      },
+      "content": "The kernels project at Hugging Face has been growing! We want it to be the go-to place for kernel devs and kernel users. We're looking to work w/ folks who're interested in doing agentic kernel dev, providing real optim value to real models. Reach out if interested :)",
+      "createdAt": "2026-05-18T04:32:35.772Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Sayak Paul announces growth of Hugging Face kernels project and seeks contributors for agentic kernel development.",
+      "worthReading": "Highlights a practical opportunity in AI infrastructure optimization.",
+      "tags": [
+        "infra",
+        "deployment",
+        "tooling"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2054116246485082174",
+      "url": "https://x.com/RisingSayak/status/2054116246485082174",
+      "author": {
+        "handle": "sayakpaul",
+        "displayName": "Sayak Paul",
+        "avatar": "https://avatars.githubusercontent.com/sayakpaul"
+      },
+      "content": "1. Read the post. 2. Contemplate. 3. Repeat 1.",
+      "createdAt": "2026-05-18T04:32:35.772Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Sayak Paul shares a brief, reflective post about reading and contemplation.",
+      "worthReading": "Encourages thoughtful engagement with content.",
+      "tags": [
+        "evaluation"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2048750595540967904",
+      "url": "https://x.com/_philschmid/status/2048750595540967904",
+      "author": {
+        "handle": "philschmid",
+        "displayName": "Philipp Schmid",
+        "avatar": "https://avatars.githubusercontent.com/philschmid"
+      },
+      "content": "Google DeepMind and Korea Partner to Accelerate Scientific Discovery. deepmind.google.",
+      "createdAt": "2026-05-18T04:32:38.553Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Announcement of partnership between Google DeepMind and Korea to accelerate scientific discovery.",
+      "worthReading": "Shows Philipp Schmid's involvement in AI for science collaborations.",
+      "tags": [
+        "deployment"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2044864822076969268",
+      "url": "https://x.com/emollick/status/2044864822076969268",
+      "author": {
+        "handle": "emollick",
+        "displayName": "Ethan Mollick",
+        "avatar": null
+      },
+      "content": "I think the adaptive thinking requirement in Claude Opus 4.7 is bad in the ways that all AI effort routers are bad, but magnified by the fact that there is no manual override like in ChatGPT. It regularly decides that non-math/code stuff is \"low effort\" & produces worse results.",
+      "createdAt": "2026-05-18T04:32:43.706Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Ethan Mollick criticizes Claude Opus 4.7's adaptive thinking for misclassifying non-math/code tasks as low effort, leading to worse results.",
+      "worthReading": "Highlights a key limitation in AI effort routing that affects practical usage.",
+      "tags": [
+        "llm",
+        "evaluation"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2030813923469894093",
+      "url": "https://x.com/emollick/status/2030813923469894093",
+      "author": {
+        "handle": "emollick",
+        "displayName": "Ethan Mollick",
+        "avatar": null
+      },
+      "content": "Here is a full implementation of the Chinese Room using a printed copy of GPT-1, in case you have a few spare years and want to actually run",
+      "createdAt": "2026-05-18T04:32:43.706Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Mollick humorously references the Chinese Room thought experiment with a physical implementation using GPT-1.",
+      "worthReading": "Illustrates the philosophical implications of AI through a practical joke.",
+      "tags": [
+        "llm",
+        "safety"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "1775911190385852840",
+      "url": "https://x.com/emilymbender/status/1775911190385852840",
+      "author": {
+        "handle": "emilymbender",
+        "displayName": "Emily M. Bender",
+        "avatar": null
+      },
+      "content": "Look what @alexhanna and I got to do! (Hang out with the cool kids ...) We're talking about the Turing Test, the grandmother of all tests for AI sentience. Joining us are AI researchers Alex Hanna and Emily M. Bender",
+      "createdAt": "2024-04-04T00:00:00Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Bender and Hanna discuss the Turing Test as the foundational test for AI sentience.",
+      "worthReading": "Shows Bender's engagement in public discourse on AI sentience and the Turing Test.",
+      "tags": [
+        "safety",
+        "evaluation"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "1536198662656626688",
+      "url": "https://x.com/emilymbender/status/1536198662656626688",
+      "author": {
+        "handle": "emilymbender",
+        "displayName": "Emily M. Bender",
+        "avatar": null
+      },
+      "content": "For those playing along at home, here's a \"AI is sentient!\" argument bingo card.",
+      "createdAt": "2022-06-13T00:00:00Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Bender creates a bingo card for common arguments claiming AI sentience.",
+      "worthReading": "Humorous yet critical take on AI hype and sentience claims.",
+      "tags": [
+        "safety"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2008205702133936412",
+      "url": "https://x.com/nsaphra/status/2008205702133936412",
+      "author": {
+        "handle": "NaomiSaphra",
+        "displayName": "Naomi Saphra",
+        "avatar": null
+      },
+      "content": "what a perfect space for scientific discourse! I'll start off with a few images of myself",
+      "createdAt": "2026-05-18T04:32:51.556Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Sarcastic comment about using images of oneself for scientific discourse.",
+      "worthReading": "Shows Saphra's humorous take on social media as a platform for science.",
+      "tags": [
+        "safety"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "1905112640805806555",
+      "url": "https://x.com/nsaphra/status/1905112640805806555",
+      "author": {
+        "handle": "NaomiSaphra",
+        "displayName": "Naomi Saphra",
+        "avatar": null
+      },
+      "content": "Life update: I'm starting as faculty at Boston University in 2026! BU ...",
+      "createdAt": "2026-05-18T04:32:51.556Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Announces starting as faculty at Boston University in 2026.",
+      "worthReading": "Key career milestone for a prominent AI interpretability researcher.",
+      "tags": [
+        "evaluation"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "1954913573605712297",
+      "url": "https://x.com/beenwrekt/status/1954913573605712297",
+      "author": {
+        "handle": "beenwrekt",
+        "displayName": "Ben Recht",
+        "avatar": null
+      },
+      "content": "Revisiting Sutton's Bitter Lesson in the wake of GPT-5.",
+      "createdAt": "2026-05-18T04:32:58.015Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Ben Recht revisits Sutton's Bitter Lesson in the context of GPT-5, likely discussing the implications of scaling and general methods over specialized knowledge.",
+      "worthReading": "Provides perspective on a classic AI insight applied to modern large language models.",
+      "tags": [
+        "llm"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2014360939563520146",
+      "url": "https://x.com/beenwrekt/status/2014360939563520146",
+      "author": {
+        "handle": "beenwrekt",
+        "displayName": "Ben Recht",
+        "avatar": null
+      },
+      "content": "For the first time in almost a decade, I'm teaching a class on learning and control.",
+      "createdAt": "2026-05-18T04:32:58.015Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Ben Recht announces teaching a class on learning and control after a long hiatus.",
+      "worthReading": "Indicates a renewed focus on the intersection of machine learning and control theory.",
+      "tags": [
+        "evaluation"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "1624818456645468160",
+      "url": "https://x.com/beenwrekt/status/1624818456645468160",
+      "author": {
+        "handle": "beenwrekt",
+        "displayName": "Ben Recht",
+        "avatar": null
+      },
+      "content": "I have a recommended reading list for Artificial Intelligence, and it hasn't changed since 2019.",
+      "createdAt": "2026-05-18T04:32:58.015Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Ben Recht notes that his recommended AI reading list remains unchanged since 2019.",
+      "worthReading": "Suggests that foundational AI knowledge has not been superseded by recent developments.",
+      "tags": [
+        "llm"
+      ]
+    }
+  ]
+}

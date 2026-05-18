@@ -1,0 +1,78 @@
+{
+  "date": "2026-05-17",
+  "stars": [
+    {
+      "repo": "psf/pypistats.org",
+      "url": "https://github.com/psf/pypistats.org",
+      "description": "PyPI downloads analytics dashboard",
+      "language": "Python",
+      "stargazersCount": 187,
+      "starredBy": "simonw",
+      "starredAt": "2026-05-17T21:57:49Z",
+      "highlights": "PyPI Stats provides a public dashboard for viewing download statistics of Python packages from PyPI. It offers insights into package popularity and trends over time, useful for developers and maintainers.",
+      "worthReading": "For AI leaders tracking the adoption of their Python-based AI tools, this repo offers a simple way to monitor download metrics and gauge community interest.",
+      "topics": [
+        "download-counts",
+        "pypi",
+        "pypi-packages",
+        "python",
+        "python-packages"
+      ],
+      "tags": [
+        "tooling"
+      ],
+      "score": 4,
+      "scoreReason": "Freshness is low (187 stars, not rising), relevance is moderate as a tooling for monitoring Python package downloads, and concreteness is high with a working dashboard."
+    },
+    {
+      "repo": "mschwager/cohesion",
+      "url": "https://github.com/mschwager/cohesion",
+      "description": "A tool for measuring Python class cohesion.",
+      "language": "Python",
+      "stargazersCount": 263,
+      "starredBy": "simonw",
+      "starredAt": "2026-05-17T20:36:46Z",
+      "highlights": "Cohesion is a flake8 plugin that measures Python class cohesion using the Lack of Cohesion of Methods (LCOM) metric. It helps developers identify classes that may be doing too much and should be refactored, improving code maintainability and adherence to single responsibility principle.",
+      "worthReading": "For Python developers focused on code quality, this tool provides a concrete, automated way to detect low-cohesion classes, which is a key indicator of design issues in object-oriented code.",
+      "topics": [
+        "class",
+        "code",
+        "cohesion",
+        "flake8",
+        "flake8-plugin",
+        "lint",
+        "linter-plugin",
+        "measure",
+        "module",
+        "oop",
+        "python",
+        "quality"
+      ],
+      "tags": [
+        "tooling"
+      ],
+      "score": 5,
+      "scoreReason": "Freshness is low (263 stars, not new), relevance is moderate as a code quality tool for Python OOP, and concreteness is high (working flake8 plugin with clear metric)."
+    },
+    {
+      "repo": "ggml-org/llama.cpp",
+      "url": "https://github.com/ggml-org/llama.cpp",
+      "description": "LLM inference in C/C++",
+      "language": "C++",
+      "stargazersCount": 110678,
+      "starredBy": "pcuenca",
+      "starredAt": "2026-05-17T15:29:51Z",
+      "highlights": "llama.cpp enables efficient LLM inference in C/C++ with minimal dependencies, supporting a wide range of models including LLaMA, Mistral, and GPT-2. It features quantization, GPU acceleration, and a lightweight server for local deployment.",
+      "worthReading": "As the de facto standard for local LLM inference, llama.cpp is essential for developers building on-device AI applications or exploring model optimization techniques.",
+      "topics": [
+        "ggml"
+      ],
+      "tags": [
+        "infra",
+        "deployment"
+      ],
+      "score": 7,
+      "scoreReason": "Freshness is low (very established, 110k stars) but recent updates like Vulkan support earn a 2; relevance is high (4) as core LLM infra; concreteness is high (2) for a mature, working project."
+    }
+  ]
+}

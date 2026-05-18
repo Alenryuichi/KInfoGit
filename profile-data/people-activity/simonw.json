@@ -312,30 +312,64 @@
       "score": 4,
       "scoreReason": "Freshness is low (2 stars, no traction); relevance is moderate (infra/tooling for Datasette, but niche); concreteness is high (working plugin with clear purpose).",
       "type": "github"
+    },
+    {
+      "repo": "psf/pypistats.org",
+      "url": "https://github.com/psf/pypistats.org",
+      "description": "PyPI downloads analytics dashboard",
+      "language": "Python",
+      "stargazersCount": 187,
+      "starredBy": "simonw",
+      "starredAt": "2026-05-17T21:57:49Z",
+      "highlights": "PyPI Stats provides a public dashboard for viewing download statistics of Python packages from PyPI. It offers insights into package popularity and trends over time, useful for developers and maintainers.",
+      "worthReading": "For AI leaders tracking the adoption of their Python-based AI tools, this repo offers a simple way to monitor download metrics and gauge community interest.",
+      "topics": [
+        "download-counts",
+        "pypi",
+        "pypi-packages",
+        "python",
+        "python-packages"
+      ],
+      "tags": [
+        "tooling"
+      ],
+      "score": 4,
+      "scoreReason": "Freshness is low (187 stars, not rising), relevance is moderate as a tooling for monitoring Python package downloads, and concreteness is high with a working dashboard.",
+      "type": "github"
+    },
+    {
+      "repo": "mschwager/cohesion",
+      "url": "https://github.com/mschwager/cohesion",
+      "description": "A tool for measuring Python class cohesion.",
+      "language": "Python",
+      "stargazersCount": 263,
+      "starredBy": "simonw",
+      "starredAt": "2026-05-17T20:36:46Z",
+      "highlights": "Cohesion is a flake8 plugin that measures Python class cohesion using the Lack of Cohesion of Methods (LCOM) metric. It helps developers identify classes that may be doing too much and should be refactored, improving code maintainability and adherence to single responsibility principle.",
+      "worthReading": "For Python developers focused on code quality, this tool provides a concrete, automated way to detect low-cohesion classes, which is a key indicator of design issues in object-oriented code.",
+      "topics": [
+        "class",
+        "code",
+        "cohesion",
+        "flake8",
+        "flake8-plugin",
+        "lint",
+        "linter-plugin",
+        "measure",
+        "module",
+        "oop",
+        "python",
+        "quality"
+      ],
+      "tags": [
+        "tooling"
+      ],
+      "score": 5,
+      "scoreReason": "Freshness is low (263 stars, not new), relevance is moderate as a code quality tool for Python OOP, and concreteness is high (working flake8 plugin with clear metric).",
+      "type": "github"
     }
   ],
   "posts": [
-    {
-      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mjq57sww3226",
-      "url": "https://bsky.app/profile/simonwillison.net/post/3mjq57sww3226",
-      "author": {
-        "handle": "simonwillison.net",
-        "displayName": "Simon Willison",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
-      },
-      "content": "Join us at PyCon US 2026 in Long Beach—we have new AI and security tracks this year simonwillison.net/2026/Apr/17/...",
-      "createdAt": "2026-04-18T00:03:28.212Z",
-      "likeCount": 17,
-      "replyCount": 3,
-      "repostCount": 3,
-      "highlights": "",
-      "worthReading": "",
-      "tags": [
-        "agent",
-        "safety"
-      ],
-      "type": "bluesky"
-    },
     {
       "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mjsntbnqe22z",
       "url": "https://bsky.app/profile/simonwillison.net/post/3mjsntbnqe22z",
@@ -1239,88 +1273,6 @@
     }
   ],
   "xPosts": [
-    {
-      "type": "x",
-      "id": "1639691902357483520",
-      "url": "https://x.com/simonw/status/1639691902357483520",
-      "author": {
-        "handle": "simonw",
-        "displayName": "Simon Willison",
-        "avatar": "https://avatars.githubusercontent.com/simonw"
-      },
-      "content": "If you're just starting to learn software engineering right now but you're considering dropping it",
-      "createdAt": "2026-04-18T04:01:17.594Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Addresses challenges for beginners in software engineering, suggesting persistence despite difficulties.",
-      "worthReading": "Provides encouragement and perspective for new developers facing learning curves.",
-      "tags": [
-        "tooling"
-      ]
-    },
-    {
-      "type": "x",
-      "id": "1976989054240800798",
-      "url": "https://x.com/simonw/status/1976989054240800798",
-      "author": {
-        "handle": "simonw",
-        "displayName": "Simon Willison",
-        "avatar": "https://avatars.githubusercontent.com/simonw"
-      },
-      "content": "I'm beginning to suspect that a key skill in working effectively with coding agents is developing an intuition for when you don't need to",
-      "createdAt": "2026-04-18T04:01:17.594Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Highlights the importance of discernment in using AI coding agents, focusing on when not to rely on them.",
-      "worthReading": "Offers practical insight into optimizing human-AI collaboration in coding workflows.",
-      "tags": [
-        "agent"
-      ]
-    },
-    {
-      "type": "x",
-      "id": "2008298185962512763",
-      "url": "https://x.com/simonw/status/2008298185962512763",
-      "author": {
-        "handle": "simonw",
-        "displayName": "Simon Willison",
-        "avatar": "https://avatars.githubusercontent.com/simonw"
-      },
-      "content": "This seems like a good bet to me - coding agents make it no longer remotely excusable to skip out on",
-      "createdAt": "2026-04-18T04:01:17.594Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Argues that AI coding agents reduce excuses for avoiding certain development tasks, emphasizing accountability.",
-      "worthReading": "Encourages leveraging AI tools to improve software engineering practices and responsibility.",
-      "tags": [
-        "agent",
-        "tooling"
-      ]
-    },
-    {
-      "type": "x",
-      "id": "1970147806225854531",
-      "url": "https://x.com/simonw/status/1970147806225854531",
-      "author": {
-        "handle": "simonw",
-        "displayName": "Simon Willison",
-        "avatar": "https://avatars.githubusercontent.com/simonw"
-      },
-      "content": "It's interesting how 'better at code' has become the defining goal of almost every AI lab over the",
-      "createdAt": "2026-04-18T04:01:17.594Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Observes the trend in AI research prioritizing code generation and improvement as a primary objective.",
-      "worthReading": "Reflects on the direction of AI development and its focus on programming capabilities.",
-      "tags": [
-        "agent",
-        "llm"
-      ]
-    },
     {
       "type": "x",
       "id": "1970147806225854531",
@@ -2695,10 +2647,30 @@
         "llm",
         "evaluation"
       ]
+    },
+    {
+      "type": "x",
+      "id": "1970147806225854531",
+      "url": "https://x.com/simonw/status/1970147806225854531",
+      "author": {
+        "handle": "simonw",
+        "displayName": "Simon Willison",
+        "avatar": "https://avatars.githubusercontent.com/simonw"
+      },
+      "content": "It's interesting how \"better at code\" has become the defining goal of almost every AI lab over the",
+      "createdAt": "2026-05-18T04:31:34.971Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Simon observes that AI labs are prioritizing code generation as the primary benchmark for model improvement.",
+      "worthReading": "Reflects a key trend in AI development where coding ability is seen as a proxy for general intelligence.",
+      "tags": [
+        "llm",
+        "evaluation"
+      ]
     }
   ],
   "dailyCounts": [
-    5,
     4,
     4,
     8,
@@ -2727,7 +2699,8 @@
     3,
     1,
     2,
-    2
+    4,
+    1
   ],
-  "interestSummary": "Simon Willison is deeply engaged with the latest developments in AI coding agents and LLMs, frequently benchmarking new models (Claude Opus 4.7, DeepSeek V4, GPT-5.5) and building tools around them, while maintaining a playful side through \"pelicans on bicycles\" image generation tests. He's also actively contributing to the Python/Datasette ecosystem and exploring document parsing, local inference, and code review automation."
+  "interestSummary": "Simon Willison is closely tracking and comparing the latest AI model releases (Claude Opus 4.7, GPT-5.5, DeepSeek V4), with a particular focus on coding agent capabilities, pricing changes, and image generation benchmarks—often using whimsical \"pelicans riding bicycles\" tests. He is also actively building and documenting tools for data extraction, Google Sheets integration, and coding agent accountability."
 }

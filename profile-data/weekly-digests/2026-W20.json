@@ -1,0 +1,197 @@
+{
+  "week": "2026-W20",
+  "dateRange": {
+    "start": "2026-05-11",
+    "end": "2026-05-17"
+  },
+  "overview": "This week in AI was marked by intense focus on open-weight models, with multiple releases and analyses converging across GitHub, Bluesky, and blog articles. The open model ecosystem saw significant commentary, particularly around China's high-participation, open-first AI ecosystem as discussed by Nathan Lambert in his blog 'How open model ecosystems compound'. Meanwhile, Sebastian Raschka's blog 'Recent Developments in LLM Architectures' covered KV sharing, mHC, and compressed attention, reflecting technical advances in models like Gemma 4 and DeepSeek V4. On GitHub, the antirez/ds4 repo (DeepSeek 4 Flash local inference engine) was starred by multiple prominent figures (pcuenca and minimaxir), indicating strong interest in running cutting-edge models locally. The pi agent toolkit (earendil-works/pi) also gained traction, with a dedicated awesome list (qualisero/awesome-pi-agent) appearing. Bluesky discussions were dominated by critical perspectives on AI's societal impact, with Emily M. Bender's posts about ChatGPT being a 'product' and the 'Zombie Internet' concept receiving high engagement. Ethan Mollick and Simon Willison contributed thoughtful posts on AI responsibility and practical tooling, respectively. X posts from Andrej Karpathy, Simon Willison, and Harrison Chase explored coding agents, memory systems, and the evolving landscape of agentic workflows. Overall, the week balanced technical innovation with ethical reflection, highlighting the growing gap between AI capability hype and grounded analysis.",
+  "trendingTopics": [
+    {
+      "topic": "Open Model Releases and Architectures",
+      "description": "Multiple blog posts and GitHub repos focused on new open-weight models like DeepSeek V4 and Gemma 4, with discussions on architectures (KV sharing, compressed attention) and ecosystem impacts."
+    },
+    {
+      "topic": "Local Inference and Tooling",
+      "description": "The antirez/ds4 repo (DeepSeek 4 Flash local inference) was starred by multiple prominent figures, alongside llama.cpp and its Python bindings, indicating strong interest in running LLMs locally."
+    },
+    {
+      "topic": "AI Ethics and Societal Impact",
+      "description": "Emily M. Bender's Bluesky posts about ChatGPT as a product and the 'Zombie Internet' concept received high engagement, reflecting ongoing critical discourse on AI's role."
+    },
+    {
+      "topic": "Coding Agents and Agentic Workflows",
+      "description": "The pi agent toolkit and related awesome list gained stars; X posts from Karpathy, Simon Willison, and Harrison Chase discussed coding agents, memory systems, and best practices."
+    },
+    {
+      "topic": "AI Productivitiy and Responsibility",
+      "description": "Ethan Mollick's Bluesky posts on human responsibility for AI use and the missing segment in AI & politics debates sparked discussion."
+    }
+  ],
+  "notableRepos": [
+    {
+      "repo": "ggml-org/llama.cpp",
+      "url": "https://github.com/ggml-org/llama.cpp",
+      "stars": 110678,
+      "description": "LLM inference in C/C++, starred by pcuenca; foundational for local LLM deployment.",
+      "starredBy": [
+        "pcuenca"
+      ]
+    },
+    {
+      "repo": "earendil-works/pi",
+      "url": "https://github.com/earendil-works/pi",
+      "stars": 49978,
+      "description": "AI agent toolkit including coding agent CLI, unified LLM API, TUI & web UI libraries; starred by tridao.",
+      "starredBy": [
+        "tridao"
+      ]
+    },
+    {
+      "repo": "marimo-team/marimo",
+      "url": "https://github.com/marimo-team/marimo",
+      "stars": 20996,
+      "description": "Reactive notebook for Python, AI-native editor; starred by minimaxir.",
+      "starredBy": [
+        "minimaxir"
+      ]
+    },
+    {
+      "repo": "antirez/ds4",
+      "url": "https://github.com/antirez/ds4",
+      "stars": 9030,
+      "description": "DeepSeek 4 Flash local inference engine for Metal and CUDA; starred by minimaxir and pcuenca.",
+      "starredBy": [
+        "minimaxir",
+        "pcuenca"
+      ]
+    },
+    {
+      "repo": "abetlen/llama-cpp-python",
+      "url": "https://github.com/abetlen/llama-cpp-python",
+      "stars": 10303,
+      "description": "Python bindings for llama.cpp; starred by pcuenca.",
+      "starredBy": [
+        "pcuenca"
+      ]
+    },
+    {
+      "repo": "sharkdp/hyperfine",
+      "url": "https://github.com/sharkdp/hyperfine",
+      "stars": 28110,
+      "description": "Command-line benchmarking tool; starred by minimaxir.",
+      "starredBy": [
+        "minimaxir"
+      ]
+    },
+    {
+      "repo": "mitchellh/vouch",
+      "url": "https://github.com/mitchellh/vouch",
+      "stars": 4390,
+      "description": "Community trust management system based on explicit vouches; starred by sayakpaul.",
+      "starredBy": [
+        "sayakpaul"
+      ]
+    },
+    {
+      "repo": "cactus-compute/needle",
+      "url": "https://github.com/cactus-compute/needle",
+      "stars": 534,
+      "description": "26m function call model that runs on incredibly small devices; starred by simonw.",
+      "starredBy": [
+        "simonw"
+      ]
+    }
+  ],
+  "notableVideos": [],
+  "notableBlogs": [
+    {
+      "title": "How open model ecosystems compound",
+      "url": "https://www.interconnects.ai/p/how-open-model-ecosystems-compound",
+      "author": "Nathan Lambert",
+      "summary": "Reflections on China's high-participation, open-first AI ecosystem."
+    },
+    {
+      "title": "Recent Developments in LLM Architectures: KV Sharing, mHC, and Compressed Attention",
+      "url": "https://magazine.sebastianraschka.com/p/recent-developments-in-llm-architectures",
+      "author": "Sebastian Raschka",
+      "summary": "From Gemma 4 to DeepSeek V4, how new open-weight LLMs are reducing long-context costs."
+    },
+    {
+      "title": "Latest open artifacts (#21): Open model bonanza!",
+      "url": "https://www.interconnects.ai/p/latest-open-artifacts-21-open-model",
+      "author": "Nathan Lambert",
+      "summary": "Open model bonanza including Gemma 4, DeepSeek V4, Kimi K2.6, and others."
+    }
+  ],
+  "notableXPosts": [
+    {
+      "url": "https://x.com/karpathy/status/2042334451611693415",
+      "author": "@karpathy",
+      "content": "Judging by my tl there is a growing gap in understanding of AI capability. The first issue I think is around",
+      "likes": 0
+    },
+    {
+      "url": "https://x.com/simonw/status/2031002164165021868",
+      "author": "@simonw",
+      "content": "A short note that the predictions that LLMs would favor 'boring technology' that's once you attach them to a good coding agent harness at least",
+      "likes": 0
+    },
+    {
+      "url": "https://x.com/hwchase17/status/2040467997022884194",
+      "author": "@hwchase17",
+      "content": "In the hot path as the agent is running. The agent can decided to (or the user can prompt it to) update its memory as it is working on the core",
+      "likes": 0
+    }
+  ],
+  "keyDiscussions": [
+    {
+      "title": "ChatGPT as a product, not a tool",
+      "summary": "Emily M. Bender reminds that ChatGPT is a product; everything typed is data sent to OpenAI.",
+      "author": "Emily M. Bender",
+      "source": "bluesky"
+    },
+    {
+      "title": "AI productivity claims vs reality",
+      "summary": "Emily M. Bender cites 404media article noting AI productivity gains haven't led to better products or shorter work weeks.",
+      "author": "Emily M. Bender",
+      "source": "bluesky"
+    },
+    {
+      "title": "ArXiV new LLM policy",
+      "summary": "Mark Riedl shares screenshots of ArXiV's new LLM policy, sparking discussion.",
+      "author": "Mark Riedl",
+      "source": "bluesky"
+    },
+    {
+      "title": "Human responsibility for AI use",
+      "summary": "Ethan Mollick argues making humans responsible for AI use is reasonable for academic research.",
+      "author": "Ethan Mollick",
+      "source": "bluesky"
+    },
+    {
+      "title": "LLM shebang scripts",
+      "summary": "Simon Willison describes using LLM CLI tool in shebang lines to write executable scripts in English.",
+      "author": "Simon Willison",
+      "source": "bluesky"
+    }
+  ],
+  "crossReferences": [
+    {
+      "repo": "antirez/ds4",
+      "starredBy": [
+        "pcuenca",
+        "minimaxir"
+      ],
+      "url": "https://github.com/antirez/ds4"
+    }
+  ],
+  "stats": {
+    "totalRepos": 23,
+    "totalPosts": 65,
+    "uniqueAuthors": 46,
+    "daysWithContent": 7,
+    "totalXPosts": 298,
+    "totalVideos": 0,
+    "totalBlogs": 3
+  }
+}

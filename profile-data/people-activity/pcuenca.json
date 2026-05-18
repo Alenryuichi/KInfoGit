@@ -216,6 +216,27 @@
       "score": 7,
       "scoreReason": "Freshness is moderate (established 10k+ stars but actively maintained with new features), relevance is high (core LLM infra tooling), and concreteness is high (working code with clear utility).",
       "type": "github"
+    },
+    {
+      "repo": "ggml-org/llama.cpp",
+      "url": "https://github.com/ggml-org/llama.cpp",
+      "description": "LLM inference in C/C++",
+      "language": "C++",
+      "stargazersCount": 110678,
+      "starredBy": "pcuenca",
+      "starredAt": "2026-05-17T15:29:51Z",
+      "highlights": "llama.cpp enables efficient LLM inference in C/C++ with minimal dependencies, supporting a wide range of models including LLaMA, Mistral, and GPT-2. It features quantization, GPU acceleration, and a lightweight server for local deployment.",
+      "worthReading": "As the de facto standard for local LLM inference, llama.cpp is essential for developers building on-device AI applications or exploring model optimization techniques.",
+      "topics": [
+        "ggml"
+      ],
+      "tags": [
+        "infra",
+        "deployment"
+      ],
+      "score": 7,
+      "scoreReason": "Freshness is low (very established, 110k stars) but recent updates like Vulkan support earn a 2; relevance is high (4) as core LLM infra; concreteness is high (2) for a mature, working project.",
+      "type": "github"
     }
   ],
   "posts": [],
@@ -224,7 +245,6 @@
   "dailyCounts": [
     0,
     0,
-    0,
     1,
     1,
     0,
@@ -251,7 +271,8 @@
     1,
     1,
     0,
+    1,
     0
   ],
-  "interestSummary": "Pedro Cuenca is currently focused on open-source machine learning tooling, particularly around Hugging Face infrastructure, including inference servers, model training, and context engineering, with an emphasis on Apple Silicon optimization and efficient tokenizer implementations."
+  "interestSummary": "Pedro Cuenca is currently focused on open-source machine learning tools and LLM inference optimization, particularly for Apple Silicon and Metal, as well as infrastructure for Hugging Face workflows like agent workspaces and trace uploading."
 }

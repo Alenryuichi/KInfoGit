@@ -4,14 +4,97 @@
     <title>Stars &amp; Posts — Kylin Miao</title>
     <link>https://kylinmiao.me/stars/</link>
     <description>Daily curated GitHub starred repos, Bluesky/X posts, YouTube videos and blog articles from AI leaders with AI-powered summaries.</description>
-    <lastBuildDate>Sun, 17 May 2026 04:28:32 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 18 May 2026 04:33:29 GMT</lastBuildDate>
     <atom:link href="https://kylinmiao.me/stars/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Stars &amp; Posts — 2026-05-18</title>
+      <link>https://kylinmiao.me/stars/2026-05-18/</link>
+      <guid isPermaLink="true">https://kylinmiao.me/stars/2026-05-18/</guid>
+      <pubDate>Mon, 18 May 2026 12:00:00 GMT</pubDate>
+      <description>The AI research community is navigating a fragmented landscape, as Ethan Mollick notes that his Bluesky feed has grown quieter—not because tensions have eased, but because automated blocking lists have effectively siloed conversations. Meanwhile, a prescient two-month-post-ChatGPT prediction is being recirculated as a daily reminder of how the field’s trajectory remains eerily on track. On GitHub, the star charts reflect a continued focus on open-weight model fine-tuning and agentic tooling, with several new repositories for structured output parsing and long-context inference gaining traction. Naomi Saphra’s lighthearted but pointed observation about always reading YouTube comments underscores a broader sentiment: the most raw and unfiltered feedback on AI tools often comes from unexpected corners of the web. Overall, the day’s signals point to a community both self-aware of its echo chambers and hungry for ground-level signals amid the noise.
+
+Bluesky Posts:
+* Ethan Mollick: BlueSky AI conversations have gotten less heated recently*
+
+* because much of this site has blocked me via automated lists so I have no contact with l...
+* Ethan Mollick: Most prophetic tweet of all time (2 months post ChatGPT release by a member of the AI technical staff). And you can safely repost it every day and it ...
+* Naomi Saphra: I will ALWAYS read the youtube comments
+
+X Posts:
+* Andrej Karpathy: LLM Knowledge Bases
+
+Something I&apos;m finding very useful recently: using LLMs to build personal knowledge bases for various topics of research interest....
+* Andrej Karpathy: A few random notes from claude coding quite a bit last few weeks.
+
+Coding workflow. Given the latest lift in LLM coding capability, like many others I...
+* Andrej Karpathy: Judging by my tl there is a growing gap in understanding of AI capability. The first issue I think is around recency and tier of use. I think a lot of...
+* Simon Willison: It&apos;s interesting how &quot;better at code&quot; has become the defining goal of almost every AI lab over the
+* Harrison Chase: TL;DR: More and more agents need a workspace: a computer where they can run code, install packages, and access files. Sandboxes provide this
+* Harrison Chase: Your harness, your memory ... The “best” way to build agentic systems has changed dramatically over the past three years. When ChatGPT came out,
+* Harrison Chase: Today we&apos;re launching LangChain Labs, a new applied research effort focused on Continual Learning. Our goal is to advance open,
+* Jim Fan: The Second Pre-training Paradigm
+* Jeremy Howard: Here&apos;s a complete unedited video of asking Grok for its views on the Israel/Palestine situation. It first searches twitter for what Elon thinks.
+* Jeremy Howard: My 4yo daughter (and her stuffed animals) have just started learning to code. I&apos;m amazed at how great the learning tools are for pretty much everythin...
+* Soumith Chintala: @Mojo_flyin @dwarkesh_sp i&apos;d be excited to have Google and AMD create real ecosystems. I fail to see why Jensen has a burden there. There should be mu...
+* Soumith Chintala: Thinky&apos;s secret plan:
+
+1: Increase Human&lt;-&gt;AI bandwidth
+2: Raise ceiling of human+AI intelligence
+3: Help humans continue as main-characters in the ne...
+* Francois Chollet: Current AI is a librarian of existing knowledge. Science requires an explorer of the unknown.
+* Francois Chollet: Folks who work in AI or software engineering feel like the world is changing exponential fast.
+* Francois Chollet: The 3rd edition of my book Deep Learning with Python is being printed right now, and will be in bookstores within 2 weeks. The problem with Facebook i...
+* Fei-Fei Li: Very excited to share @theworldlabs &apos;s latest research work RTFM!! It&apos;s a real-time,
+* Clem Delangue: We&apos;re launching the agentic robotics app store today. Let&apos;s democratize AI robotics for all! 300+ apps shipped. 10,000 robots in the wild. It used to ...
+* Clem Delangue: Local open-weight AI on a laptop has been improving more than twice as fast as Moore&apos;s Law! Between May 2024 and May 2026, the most expensive MacBook ...
+* Max Woolf: what
+* Max Woolf: me irl
+* Max Woolf: congrats to OpenAI on winning the Turing Test
+* Sasha Rush: Wager established. Jonathan Frankle (@jefrankle) stepped up to my Transformer long bet.
+* Sasha Rush: Some personal news: I recently joined Cursor. Cursor is a small, ambitious team, and they&apos;ve created...
+* Sasha Rush: Been reflecting a bit on the Harvard news. This paper from 2017 was ... Didn&apos;t realize at the time how lucky for us Americans to work with incredible ...
+* Stas Bekman: When dealing with tight gpu memory situations try to change a PyTorch version to both newer and older and it might just do the trick. I get massively ...
+* Stas Bekman: I have been compiling LLM/VLM training logbooks/chronicles. This is the one of the best sources to ...
+* Stas Bekman: Thanks to an awesome contribution from @omarnomad The Machine Learning Engineering Open book now can ...
+* Stas Bekman: This is a long overdue section of the ML Engineering Understanding Training Loss Patterns ...
+* Sayak Paul: The kernels project at Hugging Face has been growing! We want it to be the go-to place for kernel devs and kernel users. We&apos;re looking to work w/ folk...
+* Sayak Paul: 1. Read the post. 2. Contemplate. 3. Repeat 1.
+* Philipp Schmid: Google DeepMind and Korea Partner to Accelerate Scientific Discovery. deepmind.google.
+* Ethan Mollick: I think the adaptive thinking requirement in Claude Opus 4.7 is bad in the ways that all AI effort routers are bad, but magnified by the fact that the...
+* Ethan Mollick: Here is a full implementation of the Chinese Room using a printed copy of GPT-1, in case you have a few spare years and want to actually run
+* Emily M. Bender: Look what @alexhanna and I got to do! (Hang out with the cool kids ...) We&apos;re talking about the Turing Test, the grandmother of all tests for AI senti...
+* Emily M. Bender: For those playing along at home, here&apos;s a &quot;AI is sentient!&quot; argument bingo card.
+* Naomi Saphra: what a perfect space for scientific discourse! I&apos;ll start off with a few images of myself
+* Naomi Saphra: Life update: I&apos;m starting as faculty at Boston University in 2026! BU ...
+* Ben Recht: Revisiting Sutton&apos;s Bitter Lesson in the wake of GPT-5.
+* Ben Recht: For the first time in almost a decade, I&apos;m teaching a class on learning and control.
+* Ben Recht: I have a recommended reading list for Artificial Intelligence, and it hasn&apos;t changed since 2019.</description>
+    </item>
     <item>
       <title>Stars &amp; Posts — 2026-05-17</title>
       <link>https://kylinmiao.me/stars/2026-05-17/</link>
       <guid isPermaLink="true">https://kylinmiao.me/stars/2026-05-17/</guid>
       <pubDate>Sun, 17 May 2026 12:00:00 GMT</pubDate>
-      <description>X Posts:
+      <description>Today&apos;s trending signals point to a dual focus on foundational tooling and the cultural shape of AI development. On GitHub, Python infrastructure is getting a sharp upgrade, with **psf/pypistats.org** (a PyPI analytics dashboard) and **mschwager/cohesion** (a class cohesion measurer) both gaining traction via simonw’s stars, while the ever-dominant **llama.cpp** crosses 110K stars, cementing its role as the go-to for local LLM inference. On Bluesky, Ethan Mollick sparked a lively debate by revealing GPT-5.5 Pro’s attempt at humor analysis produced “scrotum snorkel” and “tuba subpoena,” underscoring that even advanced models struggle with nuanced creativity. Nathan Lambert’s call for more “zagging” in AI—valuing independent thought over Silicon Valley monoculture—resonated, while Emily M. Bender took a sharp jab at misplaced graduation speeches, and Amy Zhang celebrated Kevin Feng’s dissertation on designing interactive systems for “generally capable AI,” marking a milestone for the Social Futures Lab. The throughline: a community balancing rigorous engineering with a growing appetite for critical, human-centered perspectives on where the technology is heading.
+
+GitHub Repos:
+* psf/pypistats.org — PyPI downloads analytics dashboard [Python]
+* mschwager/cohesion — A tool for measuring Python class cohesion. [Python]
+* ggml-org/llama.cpp — LLM inference in C/C++ [C++]
+
+Bluesky Posts:
+* Nathan Lambert: Being out of SF has lowered my information proximity but with the big upside of giving me space to cultivate my own beliefs and values around ai. 
+
+We...
+* Ethan Mollick: GPT-5.5 Pro faces its hardest academic challenge: to apply the technique from a paper analyzing which word pairs were funny &amp; why to come up with its ...
+* Ethan Mollick: “Data centers create economic activity, especially in directly related sectors and during construction, and they are associated with larger county-lev...
+* Ethan Mollick: I know the upcoming film version of the Odyssey is controversial, so I whipped together a completely accurate take that I think will be happily accept...
+* Emily M. Bender: The kids are alright. 
+
+Quite on top of everything else, what kind of bozo makes a graduation speech that isn&apos;t actually about the graduates?
+* Amy Zhang: Congrats to @kjfeng.me on passing his dissertation defense, titled &quot;Designing for Interactive Systems Powered by Generally Capable AI&quot;! Kevin is @soci...
+
+X Posts:
 * Andrej Karpathy: LLM Knowledge Bases Something I&apos;m finding very useful recently: using LLMs to build personal knowledge bases for various topics of research interest. ...
 * Andrej Karpathy: I&apos;m being accused of overhyping the [site everyone heard too much about today already].
 * Andrej Karpathy: Very interested in what the coming era of highly bespoke software might look like. Example from this morning - I&apos;ve become a bit loosy goosy with my c...
@@ -2295,74 +2378,6 @@ X Posts:
 * Angela Zhou: It&apos;s uncanny right?
 * Ben Recht: This stupid website is so cooked.
 * Ben Recht: And awesome to see many Berkeley alums thriving here. @LaurentLessard, @DimitrisPapail, and Shivaram</description>
-    </item>
-    <item>
-      <title>Stars &amp; Posts — 2026-04-18</title>
-      <link>https://kylinmiao.me/stars/2026-04-18/</link>
-      <guid isPermaLink="true">https://kylinmiao.me/stars/2026-04-18/</guid>
-      <pubDate>Sat, 18 Apr 2026 12:00:00 GMT</pubDate>
-      <description>Today&apos;s focus is on the tangible progress and community growth in AI, highlighted by Ethan Mollick&apos;s observation that despite industry debates, models like Opus 4.7 continue to deliver measurable improvements on economically critical tasks. In developer news, Simon Willison is promoting PyCon US 2026, which is expanding its program with dedicated AI and security tracks, signaling the event&apos;s adaptation to current tech priorities. The trending theme is a shift from theoretical hype to practical implementation, emphasizing both measurable model capabilities and the evolving platforms for professional collaboration and learning.
-
-Bluesky Posts:
-* Simon Willison: Join us at PyCon US 2026 in Long Beach—we have new AI and security tracks this year simonwillison.net/2026/Apr/17/...
-* Ethan Mollick: A major lesson to take away from Opus 4.7 is that, while there is a lot of arguments about implementation and personality, models keep improving measu...
-* Emily M. Bender: One of the many, many podcasts I&apos;ve interviewed with in the past year decided to promote my episode heavily on YouTube and the comments are an interes...
-* angela zhou: getting reviews like &quot;shallow engagement with AI ... won&apos;t policymakers just be trying to replace the whole system with AI anyway. what&apos;s the point ab...
-
-X Posts:
-* Andrej Karpathy: LLMs are emerging as a new kind of intelligence, simultaneously a lot smarter than I expected and a lot dumber than I expected. In any case they
-* Andrej Karpathy: A few random notes from claude coding quite a bit last few weeks. Coding workflow. Given the latest lift in LLM
-* Andrej Karpathy: Three days ago I left autoresearch tuning nanochat for ~2 days on depth=12 model.
-* Simon Willison: If you&apos;re just starting to learn software engineering right now but you&apos;re considering dropping it
-* Simon Willison: I&apos;m beginning to suspect that a key skill in working effectively with coding agents is developing an intuition for when you don&apos;t need to
-* Simon Willison: This seems like a good bet to me - coding agents make it no longer remotely excusable to skip out on
-* Simon Willison: It&apos;s interesting how &apos;better at code&apos; has become the defining goal of almost every AI lab over the
-* Harrison Chase: TL;DR: More and more agents need a workspace: a computer where they can run code, install packages, and access files. Sandboxes provide this
-* Harrison Chase: We launched LangSmith Agent Builder this week as a no-code way to build agents. A key part of Agent builder is it&apos;s memory system.
-* Harrison Chase: When building agents, you need to iterate on production data much more than when building traditional software. You need to iterate on how
-* Harrison Chase: Traditional Application Performance Monitoring (APM) tools focus on metrics like latency, traffic, errors, and saturation. They track HTTP
-* Jim Fan: The Second Pre-training Paradigm
-* Jim Fan: I&apos;ve been a bit quiet on X recently. The past year has been a transformational experience.
-* Jim Fan: We are living in a timeline where a non-US company is keeping the original mission of OpenAI alive - truly
-* Jeremy Howard: Here&apos;s a complete unedited video of asking Grok for its views on the Israel/Palestine situation. It first searches twitter for what Elon thinks.
-* Jeremy Howard: Here&apos;s what I would prefer to see:
-* Soumith Chintala: reading &apos;AI News&apos; (previously Smol Talk) is probably the highest-leverage 45 mins
-* Soumith Chintala: Today, we are excited to announce Thinking Machines Lab (thinkingmachines.ai), an artificial intelligence research and product company. We are
-* Francois Chollet: Folks who work in AI or software engineering feel like the world is changing exponential fast.
-* Francois Chollet: Re-reading an article I wrote in 2017, and I&apos;m finding I could have written it yesterday.
-* Fei-Fei Li: Very excited to share @theworldlabs &apos;s latest research work RTFM!! It&apos;s a real-time,
-* Fei-Fei Li: “I often tell my students not to be misled by the name &apos;artificial intelligence&apos; — there is nothing artificial about it. A.I. is made by humans, inten...
-* Clem Delangue: I think open source comes in as a way to create more competition... Hugging Face co-Founder &amp; CEO Clément Delangue said on Tuesday that he believes op...
-* Clem Delangue: HuggingFace CEO Clem Delangue said we&apos;re in an &apos;LLM bubble&apos; that might burst next year, arguing the industry&apos;s obsessed with building one massive mode...
-* Max Woolf: Impressive model based on a few minutes of playing, but disappointing to see no mention at all of a model card, red teaming, yesterday&apos;s incident,
-* Max Woolf: me irl
-* Max Woolf: 
-* Max Woolf: 
-* Phil Wang: Stand-up comedy&apos;s gain is game criticism&apos;s loss: comedian @PhilNWang speaks with clarity and insight about the five video games he would like to
-* Phil Wang: Phil Wang // Insta: @wangpix (@PhilNWang). 324 likes 24 replies. I got to cover for the excellent @HadleyFreeman in the Guardian today so
-* Stas Bekman: I have been compiling LLM/VLM training logbooks/chronicles. This is the one of the best sources to...
-* Stas Bekman: The @PyTorch team are working on a new super important tool: https://t.co/rnfpDuvgOI
-* Stas Bekman: Thanks to an awesome contribution from @omarnomad The Machine Learning Engineering Open book now can...
-* Stas Bekman: To remind - this is the memory saving you get when enabling TiledMLP :) Left: normal memory...
-* Sayak Paul: Working at Hugging Face over the past 3.5+ years has allowed me to identify what technical areas truly interest me! In turn, that has allowed me to di...
-* Philipp Schmid: Vibe-coding in Google AI Studio: my tips to prompt better and create amazing apps. dev.to.
-* Philipp Schmid: I read three technical reports from Moonshot AI&apos;s Kimi K2.5 paper, Cursor&apos;s Composer 2 report and blog post, and Chroma&apos;s Context-1 write-up
-* Ethan Mollick: As stories about AI increasingly become stories of either catastrophe or salvation,
-* Ethan Mollick: Teaching an experimental class for MBAs on &apos;vibefounding,&apos; the students have four days to come up and
-* Ethan Mollick: I guarantee that any industry expert, with a little time and effort, can make a better (or at least more focused) skill than the default
-* Ethan Mollick: I pointed Claude Cowork at a set of 107 documents (PPTs, Word docs, Excel) that were initially
-* Ethan Mollick: We are starting to see some nuanced discussions of what it means to work with advanced AI In this
-* Naomi Saphra: I&apos;ll meet you at this button.
-* Naomi Saphra: This book starts like it&apos;s gonna be a fun microhistory of TB (it gave us the Stetson!).
-* Naomi Saphra: Just got a desk reject, post-rebuttals, for a paper being submitted to arxiv &lt;30 min late for the deadline.
-* Angela Zhou: #throwback to the beginnings of a beautiful friendship =D @ansonmount @HellOnWheelsAMC #HellonWheels #onlocation
-* Ben Recht: And awesome to see many Berkeley alums thriving here. @LaurentLessard, @DimitrisPapail, and Shivaram
-* Ben Recht: Here&apos;s my blog about this identity and its consequences in observational studies.
-* Ben Recht: For the first time in almost a decade, I&apos;m teaching a class on learning and control.
-
-Blog Articles:
-* Changes in the system prompt between Claude Opus 4.6 and 4.7 — Simon Willison: &lt;p&gt;Anthropic are the only major AI lab to &lt;a href=&quot;https://platform.claude.com/docs/en/release-notes/system-prompts&quot;&gt;publish the system prompts&lt;/a&gt; fo...
-* My Workflow for Understanding LLM Architectures — Sebastian Raschka: A learning-oriented workflow for understanding new open-weight model releases</description>
     </item>
   </channel>
 </rss>

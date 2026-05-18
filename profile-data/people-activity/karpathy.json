@@ -179,69 +179,6 @@
   "xPosts": [
     {
       "type": "x",
-      "id": "2002118205729562949",
-      "url": "https://x.com/karpathy/status/2002118205729562949",
-      "author": {
-        "handle": "karpathy",
-        "displayName": "Andrej Karpathy",
-        "avatar": "https://avatars.githubusercontent.com/karpathy"
-      },
-      "content": "LLMs are emerging as a new kind of intelligence, simultaneously a lot smarter than I expected and a lot dumber than I expected. In any case they",
-      "createdAt": "2026-04-18T04:01:00.260Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "LLMs represent a novel form of intelligence that defies simple categorization, exhibiting surprising capabilities alongside significant limitations.",
-      "worthReading": "Captures the nuanced, paradoxical nature of current LLM capabilities in a concise observation.",
-      "tags": [
-        "llm",
-        "evaluation"
-      ]
-    },
-    {
-      "type": "x",
-      "id": "2015883857489522876",
-      "url": "https://x.com/karpathy/status/2015883857489522876",
-      "author": {
-        "handle": "karpathy",
-        "displayName": "Andrej Karpathy",
-        "avatar": "https://avatars.githubusercontent.com/karpathy"
-      },
-      "content": "A few random notes from claude coding quite a bit last few weeks. Coding workflow. Given the latest lift in LLM",
-      "createdAt": "2026-04-18T04:01:00.260Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Shares practical insights and observations from extensive recent experience using Claude for coding, focusing on workflow improvements.",
-      "worthReading": "Provides firsthand experience on integrating LLMs into real-world coding practices.",
-      "tags": [
-        "llm",
-        "tooling"
-      ]
-    },
-    {
-      "type": "x",
-      "id": "2031135152349524125",
-      "url": "https://x.com/karpathy/status/2031135152349524125",
-      "author": {
-        "handle": "karpathy",
-        "displayName": "Andrej Karpathy",
-        "avatar": "https://avatars.githubusercontent.com/karpathy"
-      },
-      "content": "Three days ago I left autoresearch tuning nanochat for ~2 days on depth=12 model.",
-      "createdAt": "2026-04-18T04:01:00.260Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Describes an experiment with automated research (autoresearch) for fine-tuning a model called 'nanochat' over an extended period.",
-      "worthReading": "Demonstrates practical application of automated AI research and fine-tuning techniques.",
-      "tags": [
-        "agent",
-        "fine-tuning"
-      ]
-    },
-    {
-      "type": "x",
       "id": "1617979122625712128",
       "url": "https://x.com/karpathy/status/1617979122625712128",
       "author": {
@@ -2118,10 +2055,74 @@
         "agent",
         "tooling"
       ]
+    },
+    {
+      "type": "x",
+      "id": "2039805659525644595",
+      "url": "https://x.com/karpathy/status/2039805659525644595",
+      "author": {
+        "handle": "karpathy",
+        "displayName": "Andrej Karpathy",
+        "avatar": "https://avatars.githubusercontent.com/karpathy"
+      },
+      "content": "LLM Knowledge Bases\n\nSomething I'm finding very useful recently: using LLMs to build personal knowledge bases for various topics of research interest. In this way, a large fraction of my recent token throughput is going less into manipulating code, and more into manipulating",
+      "createdAt": "2026-05-18T04:31:31.254Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Using LLMs to build personal knowledge bases for research topics, shifting token usage from code to knowledge manipulation.",
+      "worthReading": "Shows a practical application of LLMs for personal knowledge management.",
+      "tags": [
+        "llm",
+        "rag",
+        "tooling"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2015883857489522876",
+      "url": "https://x.com/karpathy/status/2015883857489522876",
+      "author": {
+        "handle": "karpathy",
+        "displayName": "Andrej Karpathy",
+        "avatar": "https://avatars.githubusercontent.com/karpathy"
+      },
+      "content": "A few random notes from claude coding quite a bit last few weeks.\n\nCoding workflow. Given the latest lift in LLM coding capability, like many others I rapidly went from about 80% manual+autocomplete coding and 20% agents in November to 80% agent coding and 20% edits+touchups in",
+      "createdAt": "2026-05-18T04:31:31.254Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Shift from 80% manual coding to 80% agent coding due to improved LLM coding capabilities.",
+      "worthReading": "Illustrates the rapid adoption of AI agents in coding workflows.",
+      "tags": [
+        "agent",
+        "tooling",
+        "deployment"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2042334451611693415",
+      "url": "https://x.com/karpathy/status/2042334451611693415",
+      "author": {
+        "handle": "karpathy",
+        "displayName": "Andrej Karpathy",
+        "avatar": "https://avatars.githubusercontent.com/karpathy"
+      },
+      "content": "Judging by my tl there is a growing gap in understanding of AI capability. The first issue I think is around recency and tier of use. I think a lot of people tried the free tier of ChatGPT somewhere last year and allowed it to inform their views on AI a little too much. People on X are the first to know.",
+      "createdAt": "2026-05-18T04:31:31.254Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Highlights a gap in AI understanding due to outdated or limited use of AI tools.",
+      "worthReading": "Important perspective on public perception vs. actual AI capability.",
+      "tags": [
+        "llm",
+        "evaluation"
+      ]
     }
   ],
   "dailyCounts": [
-    3,
     3,
     3,
     4,
@@ -2150,7 +2151,8 @@
     3,
     3,
     3,
+    3,
     3
   ],
-  "interestSummary": "Andrej Karpathy is deeply engaged in hands-on experimentation with LLMs, particularly focused on their coding capabilities and autonomous fine-tuning (as seen with nanochat), while also reflecting on the paradoxical intelligence and limitations of these models and their potential to enable a new era of bespoke software."
+  "interestSummary": "Andrej Karpathy is deeply engaged with the rapid evolution of AI, particularly the transformative impact of large language models (LLMs) on software development and programming, as well as exploring new learning paradigms for LLMs. He is actively experimenting with AI-assisted coding tools and reflecting on the widening gap between public perception and actual AI capabilities."
 }

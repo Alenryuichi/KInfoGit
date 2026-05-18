@@ -15,90 +15,6 @@
         "avatar": "https://avatars.githubusercontent.com/stas00"
       },
       "content": "I have been compiling LLM/VLM training logbooks/chronicles. This is the one of the best sources to...",
-      "createdAt": "2026-04-18T04:03:40.405Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Stas Bekman is compiling training logbooks/chronicles for LLMs and VLMs, which he considers a valuable resource.",
-      "worthReading": "Provides insight into practical documentation and tracking of AI model training processes.",
-      "tags": [
-        "llm",
-        "evaluation"
-      ]
-    },
-    {
-      "type": "x",
-      "id": "1875242682689450060",
-      "url": "https://x.com/StasBekman/status/1875242682689450060",
-      "author": {
-        "handle": "stas00",
-        "displayName": "Stas Bekman",
-        "avatar": "https://avatars.githubusercontent.com/stas00"
-      },
-      "content": "The @PyTorch team are working on a new super important tool: https://t.co/rnfpDuvgOI",
-      "createdAt": "2026-04-18T04:03:40.405Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Highlights the PyTorch team's development of a new important tool, likely related to machine learning infrastructure.",
-      "worthReading": "Shows engagement with core ML tooling developments and community updates.",
-      "tags": [
-        "tooling",
-        "infra"
-      ]
-    },
-    {
-      "type": "x",
-      "id": "2014578754782409106",
-      "url": "https://x.com/StasBekman/status/2014578754782409106",
-      "author": {
-        "handle": "stas00",
-        "displayName": "Stas Bekman",
-        "avatar": "https://avatars.githubusercontent.com/stas00"
-      },
-      "content": "Thanks to an awesome contribution from @omarnomad The Machine Learning Engineering Open book now can...",
-      "createdAt": "2026-04-18T04:03:40.405Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Acknowledges a contribution to the Machine Learning Engineering Open book, indicating community collaboration on educational resources.",
-      "worthReading": "Demonstrates support for open knowledge sharing in ML engineering.",
-      "tags": [
-        "tooling",
-        "deployment"
-      ]
-    },
-    {
-      "type": "x",
-      "id": "1991318358453821818",
-      "url": "https://x.com/StasBekman/status/1991318358453821818",
-      "author": {
-        "handle": "stas00",
-        "displayName": "Stas Bekman",
-        "avatar": "https://avatars.githubusercontent.com/stas00"
-      },
-      "content": "To remind - this is the memory saving you get when enabling TiledMLP :) Left: normal memory...",
-      "createdAt": "2026-04-18T04:03:40.405Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Discusses memory savings achieved by enabling TiledMLP, a technical optimization for ML models.",
-      "worthReading": "Offers practical insight into memory efficiency techniques for ML systems.",
-      "tags": [
-        "infra",
-        "tooling"
-      ]
-    },
-    {
-      "type": "x",
-      "id": "1716181162354442450",
-      "url": "https://x.com/StasBekman/status/1716181162354442450",
-      "author": {
-        "handle": "stas00",
-        "displayName": "Stas Bekman",
-        "avatar": "https://avatars.githubusercontent.com/stas00"
-      },
-      "content": "I have been compiling LLM/VLM training logbooks/chronicles. This is the one of the best sources to...",
       "createdAt": "2026-04-19T04:09:53.325Z",
       "likeCount": 0,
       "replyCount": 0,
@@ -2492,10 +2408,92 @@
         "infra",
         "tooling"
       ]
+    },
+    {
+      "type": "x",
+      "id": "1920183013734076448",
+      "url": "https://x.com/StasBekman/status/1920183013734076448",
+      "author": {
+        "handle": "stas00",
+        "displayName": "Stas Bekman",
+        "avatar": "https://avatars.githubusercontent.com/stas00"
+      },
+      "content": "When dealing with tight gpu memory situations try to change a PyTorch version to both newer and older and it might just do the trick. I get massively different memory usage patterns with pt 2.4 to 2.8. e.g. today I tried last night's nightly and it was using 6GB less memory",
+      "createdAt": "2026-05-18T04:32:29.360Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Changing PyTorch version can significantly reduce GPU memory usage, with differences of up to 6GB between versions.",
+      "worthReading": "Practical tip for ML practitioners facing memory constraints during training.",
+      "tags": [
+        "infra",
+        "fine-tuning"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "1716181162354442450",
+      "url": "https://x.com/StasBekman/status/1716181162354442450",
+      "author": {
+        "handle": "stas00",
+        "displayName": "Stas Bekman",
+        "avatar": "https://avatars.githubusercontent.com/stas00"
+      },
+      "content": "I have been compiling LLM/VLM training logbooks/chronicles. This is the one of the best sources to ...",
+      "createdAt": "2026-05-18T04:32:29.360Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Stas Bekman compiles training logbooks for LLM/VLM, providing valuable resources.",
+      "worthReading": "Curated logbooks help practitioners learn from real training experiences.",
+      "tags": [
+        "llm"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2014578754782409106",
+      "url": "https://x.com/StasBekman/status/2014578754782409106",
+      "author": {
+        "handle": "stas00",
+        "displayName": "Stas Bekman",
+        "avatar": "https://avatars.githubusercontent.com/stas00"
+      },
+      "content": "Thanks to an awesome contribution from @omarnomad The Machine Learning Engineering Open book now can ...",
+      "createdAt": "2026-05-18T04:32:29.360Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "The ML Engineering Open Book receives contributions to expand its content.",
+      "worthReading": "Open-source ML engineering book is actively improved by the community.",
+      "tags": [
+        "tooling",
+        "llm"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "1726819595871543715",
+      "url": "https://x.com/StasBekman/status/1726819595871543715",
+      "author": {
+        "handle": "stas00",
+        "displayName": "Stas Bekman",
+        "avatar": "https://avatars.githubusercontent.com/stas00"
+      },
+      "content": "This is a long overdue section of the ML Engineering Understanding Training Loss Patterns ...",
+      "createdAt": "2026-05-18T04:32:29.360Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "New section on understanding training loss patterns added to ML Engineering resources.",
+      "worthReading": "Helps practitioners diagnose and improve model training by analyzing loss curves.",
+      "tags": [
+        "fine-tuning",
+        "evaluation"
+      ]
     }
   ],
   "dailyCounts": [
-    4,
     4,
     4,
     4,
@@ -2524,7 +2522,8 @@
     4,
     4,
     4,
+    4,
     4
   ],
-  "interestSummary": "Stas Bekman is focused on compiling and sharing logbooks and resources for training large language models (LLMs) and vision-language models (VLMs), with an emphasis on memory optimization tools like TiledMLP and DeepSpeed ZeRO++, while also promoting the Machine Learning Engineering Open Book and new PyTorch developments."
+  "interestSummary": "Stas Bekman is focused on compiling and sharing training logbooks and chronicles for large language and vision-language models, with an emphasis on memory optimization techniques like DeepSpeed ZeRO++ and TiledMLP. He is also actively contributing to and promoting the Machine Learning Engineering Open Book."
 }
