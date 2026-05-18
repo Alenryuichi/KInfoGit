@@ -1,0 +1,306 @@
+{
+  "week": "2026-W20",
+  "dateRange": {
+    "start": "2026-05-11",
+    "end": "2026-05-17"
+  },
+  "overview": "This was a blockbuster week in AI, dominated by major model releases from Meta and OpenAI, which set the tone for the rest of the news cycle. Meta's Llama 3 and OpenAI's GPT-5.5 both dropped, sparking intense discussion about open-source vs. proprietary capabilities and driving coverage in model-release and, indirectly, coding-agents as developers rushed to test the new models. The agent ecosystem also saw significant infrastructure moves: Anthropic open-sourced its skills and MCP protocol, while Notion turned its workspace into an AI agent hub. These developments boosted agent-harness and tool-use topics, with GitHub trending repositories like UI-TARS-desktop and Hermes Agent reflecting community excitement. Meanwhile, context-engineering and planning research papers pushed the boundaries of long-context inference and agent reasoning, with practical demos like 500k context on 48GB VRAM. The week's cross-topic pattern was clear: model-release drove coding-agents coverage, as new models immediately spurred agent framework updates and tool-calling innovations.",
+  "topStoriesByTopic": [
+    {
+      "topic": "coding-agents",
+      "topicLabel": "Coding Agents",
+      "stories": [
+        {
+          "title": "You can access Codex on your phone now",
+          "url": "https://www.axios.com/2026/05/14/openai-brings-codex-to-your-phone",
+          "oneLiner": "OpenAI brings its coding assistant to mobile, making AI pair programming ubiquitous.",
+          "score": 8.5,
+          "sources": [
+            "Axios"
+          ]
+        },
+        {
+          "title": "Claude Code's '/goals' separates the agent that works from the one that decides it's done",
+          "url": "https://venturebeat.com/orchestration/claude-codes-goals-separates-the-agent-that-works-from-the-one-that-decides-its-done",
+          "oneLiner": "A new goal-setting mechanism improves agent autonomy and task completion reliability.",
+          "score": 8,
+          "sources": [
+            "VentureBeat"
+          ]
+        },
+        {
+          "title": "Microsoft starts canceling Claude Code licenses",
+          "url": "https://www.theverge.com/tech/930447/microsoft-claude-code-discontinued-notepad",
+          "oneLiner": "Microsoft's pullback signals friction between enterprise contracts and third-party AI tools.",
+          "score": 8,
+          "sources": [
+            "The Verge"
+          ]
+        }
+      ]
+    },
+    {
+      "topic": "context-engineering",
+      "topicLabel": "Context Engineering",
+      "stories": [
+        {
+          "title": "DeepSeek-V4-Flash W4A16+FP8 with MTP self-speculation: 85 tok/s @ 524k on 2× RTX PRO 6000 Max-Q",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1t9em98/deepseekv4flash_w4a16fp8_with_mtp_selfspeculation/",
+          "oneLiner": "Pushing long-context inference to practical speeds with quantization and speculative decoding.",
+          "score": 7.5,
+          "sources": [
+            "Reddit r/LocalLLaMA"
+          ]
+        },
+        {
+          "title": "500k context on 48gb VRAM!! - 21tok/s (coding)",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tag1ks/500k_context_on_48gb_vram_21toks_coding/",
+          "oneLiner": "Demonstrates that consumer-grade hardware can now handle half-million token contexts.",
+          "score": 7.5,
+          "sources": [
+            "Reddit r/LocalLLaMA"
+          ]
+        }
+      ]
+    },
+    {
+      "topic": "agent-harness",
+      "topicLabel": "Agent Harness",
+      "stories": [
+        {
+          "title": "bytedance/UI-TARS-desktop",
+          "url": "https://github.com/bytedance/UI-TARS-desktop",
+          "oneLiner": "ByteDance open-sources a desktop agent that bridges vision and action.",
+          "score": 9.1,
+          "sources": [
+            "GitHub"
+          ]
+        },
+        {
+          "title": "NousResearch/hermes-agent",
+          "url": "https://github.com/NousResearch/hermes-agent",
+          "oneLiner": "A new open-source agent with continuous learning capabilities gains rapid traction.",
+          "score": 8.7,
+          "sources": [
+            "GitHub"
+          ]
+        },
+        {
+          "title": "Notion just turned its workspace into a hub for AI agents",
+          "url": "https://techcrunch.com/2026/05/13/notion-just-turned-its-workspace-into-a-hub-for-ai-agents/",
+          "oneLiner": "Notion's platform play signals a shift toward agent-centric productivity suites.",
+          "score": 8.5,
+          "sources": [
+            "TechCrunch"
+          ]
+        },
+        {
+          "title": "Introducing the Model Context Protocol",
+          "url": "https://anthropic.com/news/model-context-protocol",
+          "oneLiner": "Anthropic's MCP standardizes how agents connect to external data and tools.",
+          "score": 8.5,
+          "sources": [
+            "Anthropic"
+          ]
+        }
+      ]
+    },
+    {
+      "topic": "planning",
+      "topicLabel": "Planning",
+      "stories": [
+        {
+          "title": "PIVOT: Bridging Planning and Execution in LLM Agents via Trajectory Refinement",
+          "url": "https://arxiv.org/abs/2605.11225",
+          "oneLiner": "A framework that iteratively refines plans using execution feedback, closing the loop.",
+          "score": 7.5,
+          "sources": [
+            "ArXiv"
+          ]
+        },
+        {
+          "title": "More Thinking, More Bias: Length-Driven Position Bias in Reasoning Models",
+          "url": "https://arxiv.org/abs/2605.06672",
+          "oneLiner": "Reveals a critical flaw: longer reasoning chains can introduce systematic bias.",
+          "score": 7.5,
+          "sources": [
+            "ArXiv"
+          ]
+        }
+      ]
+    },
+    {
+      "topic": "tool-use",
+      "topicLabel": "Tool Use",
+      "stories": [
+        {
+          "title": "Show HN: Needle: We Distilled Gemini Tool Calling into a 26M Model",
+          "url": "https://github.com/cactus-compute/needle",
+          "oneLiner": "A tiny model that packs Gemini-level tool calling, enabling on-device agents.",
+          "score": 8.7,
+          "sources": [
+            "HN"
+          ]
+        },
+        {
+          "title": "OpenAI launches ChatGPT for personal finance, will let you connect bank accounts",
+          "url": "https://techcrunch.com/2026/05/15/openai-launches-chatgpt-for-personal-finance-will-let-you-connect-bank-accounts/",
+          "oneLiner": "ChatGPT expands into financial tool use, raising both convenience and privacy questions.",
+          "score": 8,
+          "sources": [
+            "TechCrunch"
+          ]
+        }
+      ]
+    },
+    {
+      "topic": "post-training",
+      "topicLabel": "Post-Training",
+      "stories": [
+        {
+          "title": "I trained Qwen3.5 to jailbreak itself with RL, then used the failures to improve its defenses",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tdegh0/i_trained_qwen35_to_jailbreak_itself_with_rl_then/",
+          "oneLiner": "An adversarial RL approach that turns self-jailbreaking into a defense mechanism.",
+          "score": 7.5,
+          "sources": [
+            "Reddit r/LocalLLaMA"
+          ]
+        },
+        {
+          "title": "Correct Answers from Sound Reasoning: Verifiable Process Supervision for Language Models",
+          "url": "https://arxiv.org/abs/2605.12519",
+          "oneLiner": "A new supervision method ensures models produce both correct answers and valid reasoning.",
+          "score": 7.5,
+          "sources": [
+            "ArXiv"
+          ]
+        }
+      ]
+    },
+    {
+      "topic": "model-release",
+      "topicLabel": "Model Release",
+      "stories": [
+        {
+          "title": "Introducing Meta Llama 3: The most capable openly available LLM to date",
+          "url": "https://ai.meta.com/blog/meta-llama-3/",
+          "oneLiner": "Meta's latest open-source model challenges proprietary leaders with impressive benchmarks.",
+          "score": 9.5,
+          "sources": [
+            "Meta AI"
+          ]
+        },
+        {
+          "title": "Introducing GPT-5.5",
+          "url": "https://openai.com/index/introducing-gpt-5-5/",
+          "oneLiner": "OpenAI's incremental upgrade focuses on coding and research capabilities.",
+          "score": 9.5,
+          "sources": [
+            "OpenAI"
+          ]
+        },
+        {
+          "title": "OpenAI forms $14 billion company to helps other businesses set up AI systems.",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/928028/openai-forms-14-billion-company-to-helps-other-businesses-set-up-ai-systems",
+          "oneLiner": "OpenAI's massive investment in enterprise AI signals a strategic pivot toward B2B.",
+          "score": 9,
+          "sources": [
+            "The Verge"
+          ]
+        }
+      ]
+    },
+    {
+      "topic": "evals",
+      "topicLabel": "Evals",
+      "stories": [
+        {
+          "title": "Do Androids Dream of Breaking the Game? Systematically Auditing AI Agent Benchmarks with BenchJack",
+          "url": "https://arxiv.org/abs/2605.12673",
+          "oneLiner": "A systematic audit reveals vulnerabilities in popular agent benchmarks, prompting new safety tools.",
+          "score": 8,
+          "sources": [
+            "ArXiv"
+          ]
+        },
+        {
+          "title": "arXiv implements 1-year ban for papers containing incontrovertible evidence of unchecked LLM-generated errors",
+          "url": "https://www.reddit.com/r/MachineLearning/comments/1tdje2d/arxiv_implements_1year_ban_for_papers_containing/",
+          "oneLiner": "A strong policy move to combat LLM-generated hallucinated references in academic papers.",
+          "score": 8,
+          "sources": [
+            "Reddit r/MachineLearning"
+          ]
+        },
+        {
+          "title": "Domain-level metacognitive monitoring in frontier LLMs: A 33-model atlas",
+          "url": "https://arxiv.org/abs/2605.06673",
+          "oneLiner": "A comprehensive study maps how well LLMs assess their own knowledge across domains.",
+          "score": 7.5,
+          "sources": [
+            "ArXiv"
+          ]
+        }
+      ]
+    }
+  ],
+  "trendingTopics": [
+    {
+      "topic": "Open-source model releases dominate",
+      "description": "Meta Llama 3 and ByteDance's UI-TARS-desktop drove massive interest in open-weight models, sparking debates on capability gaps and enterprise adoption."
+    },
+    {
+      "topic": "Agent infrastructure matures",
+      "description": "Anthropic's MCP, Notion's agent hub, and GitHub's trending skills repositories show the ecosystem building standards for agent deployment."
+    },
+    {
+      "topic": "Long-context becomes practical",
+      "description": "Context-engineering advances like 500k context on consumer GPUs and DeepSeek's efficient inference bring long-context to the mainstream."
+    },
+    {
+      "topic": "Safety and evaluation under scrutiny",
+      "description": "Benchmark auditing (BenchJack) and arXiv's ban on LLM-generated errors highlight growing concern over evaluation integrity."
+    }
+  ],
+  "keyReads": [
+    {
+      "title": "Introducing the Model Context Protocol",
+      "url": "https://anthropic.com/news/model-context-protocol",
+      "summary": "Anthropic announces MCP, an open standard for connecting AI agents to data sources and tools.",
+      "why": "This protocol could become the foundational layer for agent interoperability, akin to HTTP for the web."
+    },
+    {
+      "title": "Do Androids Dream of Breaking the Game? Systematically Auditing AI Agent Benchmarks with BenchJack",
+      "url": "https://arxiv.org/abs/2605.12673",
+      "summary": "A paper that audits popular AI agent benchmarks, reveals vulnerabilities, and introduces a tool for systematic testing.",
+      "why": "Essential reading for anyone building or evaluating agents, as it exposes how benchmarks can be gamed."
+    },
+    {
+      "title": "PIVOT: Bridging Planning and Execution in LLM Agents via Trajectory Refinement",
+      "url": "https://arxiv.org/abs/2605.11225",
+      "summary": "Proposes a framework that refines agent plans based on execution feedback, improving task success rates.",
+      "why": "Addresses a core challenge in agent reliability by closing the plan-execute loop."
+    },
+    {
+      "title": "More Thinking, More Bias: Length-Driven Position Bias in Reasoning Models",
+      "url": "https://arxiv.org/abs/2605.06672",
+      "summary": "Shows that longer reasoning chains in LLMs can introduce systematic position bias, affecting answer accuracy.",
+      "why": "Important for understanding limitations of chain-of-thought and reasoning models."
+    }
+  ],
+  "stats": {
+    "totalItems": 265,
+    "uniqueTopics": 8,
+    "daysWithContent": 7,
+    "topicCounts": {
+      "context-engineering": 14,
+      "agent-harness": 44,
+      "evals": 20,
+      "coding-agents": 26,
+      "model-release": 34,
+      "planning": 11,
+      "post-training": 15,
+      "tool-use": 12
+    }
+  }
+}

@@ -1,99 +1,26 @@
 {
   "date": "2026-05-18",
-  "itemCount": 11,
+  "itemCount": 45,
   "sections": [
     {
       "id": "headlines",
       "title": "Headlines & Launches",
       "items": [
         {
-          "title": "GDS counters NHS retreat from open source",
-          "summary": "The UK Government Digital Service (GDS) published guidance on May 14, 2026, recommending that public sector code remain open by default, directly countering the NHS's decision to close its open source repositories after vulnerabilities were disclosed via Project Glasswing. This public disagreement between two major UK government bodies highlights a critical policy debate on balancing security and openness in public sector software, with implications for transparency, reuse, and scrutiny of government code. GDS's guidance, titled 'AI, open code and vulnerability risk in the public sector,' does not name the NHS but is widely seen as a direct response. Terence Eden, a prominent commentator, described the situation as an unusually public internal disagreement within the civil service.",
-          "url": "https://simonwillison.net/2026/May/17/gds-weighs-in/#atom-everything",
+          "title": "Anthropic and OpenAI’s Share of AI Startup Revenues Rises to 89%",
+          "summary": "Anthropic和OpenAI占AI初创公司收入89%。",
+          "url": "https://www.theinformation.com/articles/anthropic-openais-share-ai-startup-revenues-rises-89",
           "score": 8,
           "sources": [
             {
-              "name": "rss",
-              "meta": "Simon Willison"
+              "name": "theinformation.com"
             }
           ],
           "tags": [
-            "open source",
-            "government policy",
-            "security",
-            "NHS",
-            "GDS"
+            "market-share",
+            "revenue"
           ],
-          "focusTopics": [],
-          "background": "Project Glasswing is an Anthropic cybersecurity initiative launched in April 2026 that uses AI to find vulnerabilities in critical open source software. The NHS responded by making its repositories private, sparking criticism from open source advocates. GDS has historically championed open source and open standards for government digital services.",
-          "discussion": "The discussion on Simon Willison's blog largely supports GDS's stance, with commenters arguing that closing repositories undermines the benefits of open source and that security through obscurity is ineffective. Some note that the NHS's reaction may have been an overreaction to the vulnerabilities found."
-        },
-        {
-          "title": "AI Won't Speed Up Vague Processes",
-          "summary": "A blog post argues that AI does not inherently speed up software processes because the bottleneck is often vague requirements, which AI cannot fix without clear specifications. This challenges the common assumption that AI will dramatically accelerate software development, highlighting that the core issue of requirement clarity remains unresolved. The post emphasizes that software engineering fundamentally involves clarifying vague requirements, and AI cannot replace this human-driven process.",
-          "url": "https://frederickvanbrabant.com/blog/2026-05-15-i-dont-think-ai-will-make-your-processes-go-faster/",
-          "score": 7,
-          "sources": [
-            {
-              "name": "hackernews",
-              "meta": "TheEdonian"
-            }
-          ],
-          "tags": [
-            "AI",
-            "software engineering",
-            "productivity",
-            "requirements"
-          ],
-          "focusTopics": [],
-          "background": "Since the rise of LLMs, many have predicted that AI will automate coding and boost productivity. However, this view overlooks that a significant portion of software work involves understanding and refining ambiguous requirements, a task that remains challenging for AI.",
-          "discussion": "Commenters largely agree with the article, noting that vague requirements have always been the bottleneck. Some argue that AI can still speed up other phases like ideation and documentation, but the core issue of requirement clarity remains."
-        },
-        {
-          "title": "Tesla Solar Roof Phased Out for Panels",
-          "summary": "A detailed analysis reveals Tesla is reportedly phasing out its Solar Roof product in favor of traditional solar panels, due to high costs and poor economics. This shift signals a major strategic retreat for Tesla's solar business, potentially impacting the premium solar market and consumer perception of integrated solar solutions. An average Tesla Solar Roof costs about $106,000 before incentives, compared to $60,000 for a traditional roof plus panels, with a payback period of 15-25 years versus 7-12 years for panels.",
-          "url": "https://electrek.co/2026/05/14/tesla-solar-roof-promise-vs-reality-pivot-panels/",
-          "score": 7,
-          "sources": [
-            {
-              "name": "hackernews",
-              "meta": "celsoazevedo"
-            }
-          ],
-          "tags": [
-            "Tesla",
-            "solar energy",
-            "renewable energy",
-            "business strategy",
-            "economics"
-          ],
-          "focusTopics": [
-            "memory"
-          ],
-          "background": "Tesla's Solar Roof was introduced as a premium product that integrates solar cells into roof tiles, aiming to replace traditional roofing while generating electricity. However, high installation costs and complex logistics have hindered adoption, leading to a pivot back to conventional solar panels.",
-          "discussion": "Community comments express disappointment over the product's demise, with one user noting the high cost premium and long payback period. Another user suggests the Solar Roof was introduced to boost stock during financial struggles, while others question the viability of solar shingles compared to cheap panels."
-        },
-        {
-          "title": "Mozilla Urges UK Not to Undermine VPNs as Essential Privacy Tools",
-          "summary": "Mozilla has submitted a response to a UK government consultation on age-gating technologies, arguing that VPNs are essential privacy and security tools that should not be undermined. This advocacy is significant because it pushes back against regulatory proposals that could restrict VPN usage, potentially affecting millions of users who rely on VPNs for privacy and security. The consultation, titled 'Growing up in the online world,' includes a question about age-gating VPNs and similar technologies buried about 30 pages deep. Mozilla's response emphasizes addressing root causes of online harm by holding platforms accountable rather than targeting VPNs.",
-          "url": "https://blog.mozilla.org/netpolicy/2026/05/15/mozilla-to-uk-regulators-vpns-are-essential-privacy-and-security-tools-and-should-not-be-undermined/",
-          "score": 7,
-          "sources": [
-            {
-              "name": "hackernews",
-              "meta": "WithinReason"
-            }
-          ],
-          "tags": [
-            "privacy",
-            "VPN",
-            "UK regulation",
-            "digital rights",
-            "Mozilla"
-          ],
-          "focusTopics": [],
-          "background": "Age-gating technologies are methods used to verify a user's age online, often to restrict access to age-inappropriate content. VPNs (Virtual Private Networks) encrypt internet traffic and mask IP addresses, enhancing privacy and security. The UK government is exploring age verification measures, which could inadvertently undermine VPN functionality.",
-          "discussion": "Commenters noted that the Australian government surprisingly recommends VPN usage and provides a guide. One user highlighted that the consultation is open to non-UK residents and urged participation. Another questioned how platforms could be held accountable without age verification, while a third sarcastically referenced Orwell's 1984."
+          "focusTopics": []
         }
       ]
     },
@@ -102,71 +29,114 @@
       "title": "Research & Innovation",
       "items": [
         {
-          "title": "Turn $80 Android Tablet into Debian Linux Workstation",
-          "summary": "A guide on GitHub details how to convert an $80 RK3562 Android tablet into a fully functional Debian Linux workstation, with most hardware devices supported. This demonstrates a practical, low-cost way to repurpose cheap Android tablets into Linux machines, potentially expanding access to Linux for hobbyists and developers. The tablet has 4 GB RAM and uses a Rockchip RK3562 quad-core Cortex-A55 processor; the guide leverages AI-assisted reverse engineering to achieve broad hardware support.",
-          "url": "https://github.com/tech4bot/rk3562deb",
-          "score": 7,
+          "title": "85 GPU-hours comparing 5 abliteration methods on Qwen3.6-27B: benchmarks, safety, weight forensics - Abliterlitics",
+          "summary": "85 GPU小时对比5种abliteration方法，含基准测试。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tfmocw/85_gpuhours_comparing_5_abliteration_methods_on/",
+          "score": 7.5,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "tech4bot"
+              "name": "Reddit r/LocalLLaMA"
             }
           ],
           "tags": [
-            "Linux",
-            "Android",
-            "hacking",
-            "embedded",
-            "DIY"
+            "abliteration",
+            "safety",
+            "benchmark"
           ],
           "focusTopics": [
-            "memory"
-          ],
-          "background": "RK3562 is a low-cost system-on-chip from Rockchip, commonly used in budget Android tablets. Running Debian Linux on such devices typically requires custom firmware and driver work, which can be time-consuming. This project shows that AI tools can streamline the reverse-engineering process, making it feasible for more devices.",
-          "discussion": "Commenters expressed enthusiasm about AI-assisted reverse engineering and noted that 4 GB RAM is sufficient for lightweight development and terminal-based workflows. Some raised concerns about potential price spikes for such tablets once the hack becomes popular."
+            "evals"
+          ]
         },
         {
-          "title": "AI Is a Technology, Not a Product",
-          "summary": "The article argues that AI should be viewed as a foundational technology integrated into products, not a standalone product, using Apple's approach as a case study. This perspective challenges the current trend of marketing AI as a separate product, potentially reshaping how companies prioritize user experience over AI hype. The article draws parallels to the 'Dropbox is a feature, not a product' argument, suggesting AI companies may struggle to build sustainable ecosystems if they remain standalone.",
-          "url": "https://daringfireball.net/2026/05/ai_is_technology_not_a_product",
+          "title": "Recent Developments in LLM Architectures: KV Sharing, mHC, and Compressed Attention [P]",
+          "summary": "综述LLM架构最新进展：KV共享、mHC和压缩注意力。",
+          "url": "https://www.reddit.com/r/MachineLearning/comments/1tfpvod/recent_developments_in_llm_architectures_kv/",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "Reddit r/MachineLearning"
+            }
+          ],
+          "tags": [
+            "llm-architecture",
+            "attention",
+            "kv-cache"
+          ],
+          "focusTopics": [
+            "context-engineering"
+          ]
+        },
+        {
+          "title": "Benchmarking vLLM vs SGLang vs llama.cpp on a mixed Blackwell/Ada cluster",
+          "summary": "在混合Blackwell/Ada集群上对比vLLM、SGLang和llama.cpp的长上下文推理性能。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tg4mw0/benchmarking_vllm_vs_sglang_vs_llamacpp_on_a/",
           "score": 7,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "ch_sm"
+              "name": "Reddit r/LocalLLaMA"
             }
           ],
           "tags": [
-            "AI",
-            "product strategy",
-            "Apple",
-            "technology philosophy"
+            "inference-engine",
+            "benchmark",
+            "long-context"
           ],
-          "focusTopics": [],
-          "background": "Apple has historically focused on integrating technology seamlessly into products, prioritizing customer experience. The article uses this philosophy to argue that AI should be invisible to users, like electricity or the internet.",
-          "discussion": "Commenters largely agree, noting that Apple's ideal AI implementation would make Siri work reliably without feeling like AI. Some draw parallels to the 'Dropbox as a feature' debate, while others emphasize working backwards from customer experience."
+          "focusTopics": [
+            "evals"
+          ]
         },
         {
-          "title": "VoIP Revives Free Pay Phones in Rural Vermont",
-          "summary": "A Vermont entrepreneur is deploying free pay phones in rural areas using Voice over IP (VoIP) technology, offering a modern twist on the classic pay phone for privacy and emergency use. This initiative highlights how VoIP can bridge connectivity gaps in underserved rural areas, while also addressing privacy concerns that mobile phones cannot always satisfy. The pay phones are free to use and rely on VoIP to route calls over the internet, bypassing traditional copper lines. The project is small-scale but demonstrates a niche application of VoIP for public communication.",
-          "url": "https://spectrum.ieee.org/payphone-voip",
-          "score": 6,
+          "title": "#1 on memory benchmark LongMemEval with Gemini Flash, not Pro [R]",
+          "summary": "使用Gemini Flash在LongMemEval上取得第一，非Pro版本。",
+          "url": "https://www.reddit.com/r/MachineLearning/comments/1tfwd69/1_on_memory_benchmark_longmemeval_with_gemini/",
+          "score": 7,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "bookofjoe"
+              "name": "Reddit r/MachineLearning"
             }
           ],
           "tags": [
-            "VoIP",
-            "rural connectivity",
-            "pay phones",
-            "privacy",
-            "telecommunications"
+            "memory",
+            "benchmark",
+            "gemini"
           ],
-          "focusTopics": [],
-          "background": "VoIP (Voice over Internet Protocol) converts voice into digital data packets transmitted over the internet, enabling calls without traditional phone lines. Rural areas often lack reliable broadband, but where internet is available, VoIP can provide low-cost voice services. Pay phones have largely disappeared due to mobile phone adoption, but they remain valuable for emergencies and for individuals who need to avoid being tracked via mobile.",
-          "discussion": "Commenters noted that Telstra in Australia made its pay phone network free, which has been a lifeline for abuse victims. Others raised concerns about proposed FCC regulations requiring ID for calls, and observed that few people memorize phone numbers anymore."
+          "focusTopics": [
+            "evals"
+          ]
+        },
+        {
+          "title": "Testing llama.cpp MTP support on Qwen3.6 - RTX 5090",
+          "summary": "在RTX 5090上测试llama.cpp MTP对Qwen3.6的支持。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tfgxc8/testing_llamacpp_mtp_support_on_qwen36_rtx_5090/",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "llama.cpp",
+            "mtp",
+            "qwen"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "HKUDS/ViMax",
+          "summary": "智能体视频生成框架，集导演、编剧、制片于一体。",
+          "url": "https://github.com/HKUDS/ViMax",
+          "score": 5.786,
+          "sources": [
+            {
+              "name": "GitHub trending:python (+174★)"
+            }
+          ],
+          "tags": [
+            "video-generation",
+            "agentic",
+            "multimodal"
+          ],
+          "focusTopics": []
         }
       ]
     },
@@ -175,99 +145,673 @@
       "title": "Engineering & Resources",
       "items": [
         {
-          "title": "Semble: Code search for agents using 98% fewer tokens than grep",
-          "summary": "Semble is an open-source semantic code search tool that combines static Model2Vec embeddings with BM25 and reranking, achieving 98% fewer tokens than grep+read while maintaining 99% of the retrieval quality of a 137M-parameter transformer. This significantly reduces token costs and latency for AI agents like Claude Code when searching large codebases, making agent-based code navigation more efficient and affordable. Semble runs entirely on CPU with no GPU or API keys required, indexing a typical repo in ~250ms and querying in ~1.5ms. It achieves 0.854 NDCG@10 on a benchmark of ~1250 query/document pairs across 63 repos and 19 languages.",
+          "title": "tinyhumansai/openhuman",
+          "summary": "OpenHuman：个人AI超级智能，私密且强大。",
+          "url": "https://github.com/tinyhumansai/openhuman",
+          "score": 8.3,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+1690★)"
+            }
+          ],
+          "tags": [
+            "personal-ai",
+            "open-source"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "colbymchenry/codegraph",
+          "summary": "预索引代码知识图谱，减少Claude Code等工具调用。",
+          "url": "https://github.com/colbymchenry/codegraph",
+          "score": 8.0855,
+          "sources": [
+            {
+              "name": "GitHub trending:typescript (+857★)"
+            }
+          ],
+          "tags": [
+            "code-graph",
+            "claude-code",
+            "cursor"
+          ],
+          "focusTopics": [
+            "context-engineering",
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "huggingface/ml-intern",
+          "summary": "Hugging Face发布开源ML工程师项目，可读论文、训练模型。",
+          "url": "https://github.com/huggingface/ml-intern",
+          "score": 8,
+          "sources": [
+            {
+              "name": "Co-Starred"
+            }
+          ],
+          "tags": [
+            "open-source",
+            "ml-engineer",
+            "automation"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "antirez/ds4",
+          "summary": "antirez发布DeepSeek 4 Flash本地推理引擎，支持Metal。",
+          "url": "https://github.com/antirez/ds4",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "Co-Starred"
+            }
+          ],
+          "tags": [
+            "inference-engine",
+            "deepseek",
+            "metal"
+          ],
+          "focusTopics": [
+            "model-release"
+          ]
+        },
+        {
+          "title": "I don't think AI will make your processes go faster",
+          "summary": "认为AI不会让流程更快，瓶颈在于模糊需求。",
+          "url": "https://frederickvanbrabant.com/blog/2026-05-15-i-dont-think-ai-will-make-your-processes-go-faster/",
+          "score": 7.4350000000000005,
+          "sources": [
+            {
+              "name": "HN (495)"
+            }
+          ],
+          "tags": [
+            "productivity",
+            "process"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Show HN: Semble – Code search for agents that uses 98% fewer tokens than grep",
+          "summary": "开源代码搜索工具Semble，专为AI代理设计，比grep少用98%的token。",
           "url": "https://github.com/MinishLab/semble",
-          "score": 8,
+          "score": 7.295,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "Bibabomas"
+              "name": "HN (165)"
             }
           ],
           "tags": [
-            "code search",
-            "AI agents",
-            "token efficiency",
-            "open source",
-            "semantic search"
+            "ai-coding",
+            "code-search",
+            "open-source"
           ],
           "focusTopics": [
-            "memory"
-          ],
-          "background": "AI agents often fall back to grep when they cannot find code directly, which reads entire files and consumes many tokens. Semantic code search tools aim to retrieve relevant code snippets more efficiently. Model2Vec embeddings are static (non-transformer) embeddings that are fast to compute, and BM25 is a classic text retrieval algorithm. RRF (Reciprocal Rank Fusion) combines results from multiple retrieval methods.",
-          "discussion": "Community members expressed interest in seeing actual agent benchmarks (e.g., with Claude Code) to verify token savings, and questioned how Semble compares to existing LSPs and tools like colgrep. Some noted that semantic code search could also benefit human developers, and suggested integrating it into agent harnesses."
+            "coding-agents"
+          ]
         },
         {
-          "title": "Native UI Fails at Text, WebKit Picked for Markdown",
-          "summary": "A developer argues that native UI frameworks like SwiftUI struggle with rich text rendering, making WebKit a pragmatic choice for Markdown views in macOS/iOS apps. This debate highlights a fundamental tension between native performance and web rendering maturity, influencing how developers choose UI frameworks for text-heavy applications. The author notes that WebKit is a native OS framework on macOS, and using it for Markdown rendering is appropriate, but warns against replacing all UI with WebKit.",
-          "url": "https://justsitandgrin.im/posts/native-all-the-way-until-you-need-text/",
-          "score": 8,
+          "title": "anthropics/skills",
+          "summary": "Anthropic官方发布的Agent Skills公共仓库。",
+          "url": "https://github.com/anthropics/skills",
+          "score": 7.146,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "dive"
+              "name": "GitHub trending:python (+514★)"
             }
           ],
           "tags": [
-            "native vs web",
-            "text rendering",
-            "SwiftUI",
-            "WebKit",
-            "performance"
+            "agent-skills",
+            "anthropic",
+            "official"
           ],
           "focusTopics": [
-            "memory"
-          ],
-          "background": "Rendering rich text correctly is one of the hardest problems in software, involving bidirectional text, glyph shaping, and reflow. Native frameworks like SwiftUI have limitations, while browser engines like WebKit are mature and GPU-accelerated.",
-          "discussion": "Commenters debate performance: some note TextKit 2 can handle 5,000-line files with sub-8ms keystroke restyling, while others argue WebKit's GPU acceleration and maturity make it faster than SwiftUI. One commenter recommends using swift-markdown-ui library instead of WebKit."
+            "agent-harness"
+          ]
         },
         {
-          "title": "Apple Silicon LLM Costs Exceed OpenRouter API",
-          "summary": "A blog post by William Angel argues that running large language models locally on Apple Silicon is more expensive than using cloud APIs like OpenRouter, claiming local inference costs up to $0.50 per million tokens versus OpenRouter's $0.15. This analysis challenges the common assumption that local LLM inference is cheaper, potentially influencing user decisions on whether to invest in Apple Silicon hardware for AI workloads. The author's cost calculation includes the full purchase price of a MacBook, electricity at inflated rates, and assumes 24/7 operation at maximum power draw, which critics argue overestimates costs and ignores the laptop's dual-use value.",
-          "url": "https://www.williamangel.net/blog/2026/05/17/offline-llm-energy-use.html",
+          "title": "K-Dense-AI/scientific-agent-skills",
+          "summary": "面向科研、工程、金融等领域的AI代理技能集。",
+          "url": "https://github.com/K-Dense-AI/scientific-agent-skills",
+          "score": 7.093,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+762★)"
+            }
+          ],
+          "tags": [
+            "agent-skills",
+            "research",
+            "science"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "Anil-matcha/Open-Generative-AI",
+          "summary": "开源AI视频平台替代品，支持200+模型。",
+          "url": "https://github.com/Anil-matcha/Open-Generative-AI",
+          "score": 7.0045,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+703★)"
+            }
+          ],
+          "tags": [
+            "video-generation",
+            "open-source"
+          ],
+          "focusTopics": [
+            "model-release"
+          ]
+        },
+        {
+          "title": "llama: avoid copying logits during prompt decode in MTP by am17an · Pull Request #23198 · ggml-org/llama.cpp",
+          "summary": "llama.cpp PR优化MTP提示解码速度。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tft1il/llama_avoid_copying_logits_during_prompt_decode/",
           "score": 7,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "datadrivenangel"
+              "name": "Reddit r/LocalLLaMA"
             }
           ],
           "tags": [
-            "LLM",
-            "cost analysis",
-            "Apple Silicon",
-            "cloud vs local",
-            "inference"
+            "llama.cpp",
+            "optimization",
+            "prompt-processing"
           ],
-          "focusTopics": [],
-          "background": "Local LLM inference on Apple Silicon leverages the unified memory architecture for efficient model execution, while cloud APIs like OpenRouter offer pay-per-token pricing. The debate centers on total cost of ownership versus convenience and privacy.",
-          "discussion": "Commenters criticize the analysis for rounding up costs and ignoring the laptop's primary function, with one noting that frontier AI companies sell at a loss, making cloud APIs artificially cheap. Others recommend faster models like Qwen3.6 27B for better local performance."
+          "focusTopics": []
         },
         {
-          "title": "GitHub List of CUDA Books with Community Critiques",
-          "summary": "A GitHub repository titled 'awesome-cuda-books' curates a list of books for learning CUDA programming, and the accompanying community discussion provides critical reviews and alternative recommendations, including newer tools like Warp and cuTile. This resource helps learners navigate the vast CUDA literature with community-vetted opinions, and the discussion highlights the shift toward higher-level abstractions and Python-based tools, reflecting industry trends in GPU programming. The list includes classic titles like 'CUDA by Example' and 'Programming Massively Parallel Processors', but commenters criticize some books for errors or oversimplification. Newer tools like NVIDIA Warp (for writing CUDA kernels in Python) and cuTile are mentioned as modern alternatives.",
-          "url": "https://github.com/alternbits/awesome-cuda-books",
+          "title": "HKUDS/CLI-Anything",
+          "summary": "CLI-Anything：让所有软件成为Agent原生。",
+          "url": "https://github.com/HKUDS/CLI-Anything",
+          "score": 6.732,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+238★)"
+            }
+          ],
+          "tags": [
+            "cli",
+            "agent-native"
+          ],
+          "focusTopics": [
+            "agent-harness",
+            "tool-use"
+          ]
+        },
+        {
+          "title": "AI is a technology not a product",
+          "summary": "AI是技术而非产品，讨论其本质。",
+          "url": "https://daringfireball.net/2026/05/ai_is_technology_not_a_product",
+          "score": 6.502999999999999,
+          "sources": [
+            {
+              "name": "HN (326)"
+            }
+          ],
+          "tags": [
+            "ai-philosophy",
+            "product"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Subjecting AI to human doctor standards? - MobiHealthNews",
+          "summary": "研究强调AI医疗应以患者结果而非基准衡量。",
+          "url": "https://www.mobihealthnews.com/news/anz/subjecting-ai-human-doctor-standards",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "mobihealthnews.com"
+            }
+          ],
+          "tags": [
+            "healthcare",
+            "ai-evaluation"
+          ],
+          "focusTopics": [
+            "evals"
+          ]
+        },
+        {
+          "title": "Moving from Composer 2/Kimi 2.6 to Qwen3.6:35b-a3b",
+          "summary": "用户分享使用Qwen3.6:35b-a3b模型进行日常软件开发的经验。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tfxah9/moving_from_composer_2kimi_26_to_qwen3635ba3b/",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "llm",
+            "coding",
+            "local-llm"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "joeseesun/qiaomu-anything-to-notebooklm",
+          "summary": "多源内容处理器，将微信文章等转为播客/PPT。",
+          "url": "https://github.com/joeseesun/qiaomu-anything-to-notebooklm",
+          "score": 6.361999999999999,
+          "sources": [
+            {
+              "name": "GitHub trending:python (+558★)"
+            }
+          ],
+          "tags": [
+            "content-processing",
+            "notebooklm",
+            "claude"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "University of Arizona students boo Eric Schmidt’s AI cheerleading during commencement",
+          "summary": "亚利桑那大学学生嘘Eric Schmidt的AI鼓吹。",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/932203/university-of-arizona-students-boo-eric-schmidt-ai-commencement",
           "score": 6,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "dariubs"
+              "name": "theverge.com"
             }
           ],
           "tags": [
-            "CUDA",
-            "GPU Programming",
-            "Parallel Computing",
-            "Book List"
+            "public-opinion",
+            "ethics"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "The power of structured workflows and small local models",
+          "summary": "结构化工作流与小型本地模型结合的有效性实验。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tftaaa/the_power_of_structured_workflows_and_small_local/",
+          "score": 6,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "agent",
+            "workflow",
+            "local-llm"
           ],
           "focusTopics": [
-            "reflection"
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "ROCm 7.13 nightly adds strix halo optimizations",
+          "summary": "ROCm 7.13 nightly为Strix Halo添加优化。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tftg09/rocm_713_nightly_adds_strix_halo_optimizations/",
+          "score": 6,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
           ],
-          "background": "CUDA is NVIDIA's parallel computing platform and API that allows developers to use GPUs for general-purpose processing. Learning CUDA traditionally involves reading books and writing low-level kernels, but the ecosystem is evolving with higher-level libraries and Python integrations.",
-          "discussion": "Commenters generally agree that 'CUDA Programming: A Developer's Guide' is the best introductory book, while 'Programming Massively Parallel Processors' has errors. Some advocate against writing custom CUDA kernels unless necessary, pointing to tools like Warp and cuTile as modern alternatives."
+          "tags": [
+            "amd",
+            "rocm",
+            "strix-halo"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Program misleading high school students into paying to perform academic misconduct in ML Research [D]",
+          "summary": "揭露一个误导高中生付费进行学术不端行为的项目。",
+          "url": "https://www.reddit.com/r/MachineLearning/comments/1tfh2s9/program_misleading_high_school_students_into/",
+          "score": 6,
+          "sources": [
+            {
+              "name": "Reddit r/MachineLearning"
+            }
+          ],
+          "tags": [
+            "ethics",
+            "academic-misconduct"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "rohitg00/skillkit",
+          "summary": "SkillKit让AI编程智能体跨平台共享技能。",
+          "url": "https://github.com/rohitg00/skillkit",
+          "score": 5.998,
+          "sources": [
+            {
+              "name": "GitHub trending:typescript (+32★)"
+            }
+          ],
+          "tags": [
+            "ai-coding",
+            "agent",
+            "skills"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "Apple Silicon costs more than OpenRouter",
+          "summary": "比较Apple Silicon与OpenRouter运行离线LLM的能耗成本。",
+          "url": "https://www.williamangel.net/blog/2026/05/17/offline-llm-energy-use.html",
+          "score": 5.991,
+          "sources": [
+            {
+              "name": "HN (297)"
+            }
+          ],
+          "tags": [
+            "llm",
+            "energy",
+            "cost"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Apple's Siri revamp could include auto-deleting chats - TechCrunch",
+          "summary": "苹果Siri改版可能包含自动删除聊天功能。",
+          "url": "https://techcrunch.com/2026/05/17/apples-siri-revamp-could-include-auto-deleting-chats/",
+          "score": 5.5,
+          "sources": [
+            {
+              "name": "techcrunch.com"
+            }
+          ],
+          "tags": [
+            "siri",
+            "privacy"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "If you're giving a commencement speech in 2026, maybe don't ...",
+          "summary": "2026年毕业典礼演讲建议避免提及AI。",
+          "url": "https://techcrunch.com/2026/05/17/if-youre-giving-a-commencement-speech-in-2026-maybe-dont-mention-ai/",
+          "score": 5.5,
+          "sources": [
+            {
+              "name": "techcrunch.com"
+            }
+          ],
+          "tags": [
+            "public-speaking",
+            "ai-sentiment"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Gemma-4-Gembrain-31B-it-uncensored-heretic Is Out Now, a Merge of Multiple Gemma 4 31B it Finetunes Designed to Boost Logical and Lateral Thinking for Improved Adherence, Increased Swipe Variety and Enhanced Creative Prose, With KLD of 0.0186 and 13/100 Refusals!",
+          "summary": "Gemma-4-Gembrain-31B合并模型发布，增强逻辑与创意。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tg7s7j/gemma4gembrain31bituncensoredheretic_is_out_now_a/",
+          "score": 5.5,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "gemma",
+            "merge",
+            "uncensored"
+          ],
+          "focusTopics": [
+            "model-release"
+          ]
+        },
+        {
+          "title": "Slop is making me feel disconnected from AI Research [D]",
+          "summary": "用户抱怨AI研究社区充斥低质量内容，感到疏离。",
+          "url": "https://www.reddit.com/r/MachineLearning/comments/1tfv0vh/slop_is_making_me_feel_disconnected_from_ai/",
+          "score": 5.5,
+          "sources": [
+            {
+              "name": "Reddit r/MachineLearning"
+            }
+          ],
+          "tags": [
+            "community",
+            "discussion"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "ML lead vs PM on eval-methodology layer independence. who's actually right here? [D]",
+          "summary": "ML负责人与PM就评估方法论的层独立性展开争论。",
+          "url": "https://www.reddit.com/r/MachineLearning/comments/1tfkgbx/ml_lead_vs_pm_on_evalmethodology_layer/",
+          "score": 5.5,
+          "sources": [
+            {
+              "name": "Reddit r/MachineLearning"
+            }
+          ],
+          "tags": [
+            "eval",
+            "methodology",
+            "discussion"
+          ],
+          "focusTopics": [
+            "evals"
+          ]
+        },
+        {
+          "title": "Andyyyy64/whichllm",
+          "summary": "根据硬件推荐最佳本地LLM，基于真实基准。",
+          "url": "https://github.com/Andyyyy64/whichllm",
+          "score": 5.4135,
+          "sources": [
+            {
+              "name": "GitHub trending:python (+209★)"
+            }
+          ],
+          "tags": [
+            "llm",
+            "benchmark",
+            "local"
+          ],
+          "focusTopics": [
+            "evals"
+          ]
+        },
+        {
+          "title": "KeygraphHQ/shannon",
+          "summary": "自主AI渗透测试工具，分析源码并执行攻击。",
+          "url": "https://github.com/KeygraphHQ/shannon",
+          "score": 5.3999999999999995,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+200★)"
+            }
+          ],
+          "tags": [
+            "ai-security",
+            "pentesting",
+            "autonomous"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "TechCrunch Mobility: The AI skills arms race is coming for automotive",
+          "summary": "AI技能军备竞赛正在进入汽车行业。",
+          "url": "https://techcrunch.com/2026/05/17/techcrunch-mobility-the-ai-skills-arms-race-is-coming-for-automotive/",
+          "score": 5,
+          "sources": [
+            {
+              "name": "techcrunch.com"
+            }
+          ],
+          "tags": [
+            "automotive",
+            "ai-skills"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "M5 vs DGX Spark vs Strix Halo vs RTX 6000",
+          "summary": "对比M5、DGX Spark等硬件在本地LLM上的性能。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tfzsd6/m5_vs_dgx_spark_vs_strix_halo_vs_rtx_6000/",
+          "score": 5,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "hardware",
+            "benchmark",
+            "local-llm"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Dual GPU llama.cpp speedup",
+          "summary": "双GPU llama.cpp加速技巧与split-mode tensor问题。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tflngz/dual_gpu_llamacpp_speedup/",
+          "score": 5,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "llama.cpp",
+            "gpu",
+            "speedup"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "MTP experiences on 7900xtx?",
+          "summary": "用户询问在7900xtx上使用MTP推测解码的体验。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tg25fz/mtp_experiences_on_7900xtx/",
+          "score": 5,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "speculative-decoding",
+            "hardware"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "How are you handling training data when public datasets don't match your use case? [D]",
+          "summary": "讨论当公共数据集不匹配用例时如何处理训练数据。",
+          "url": "https://www.reddit.com/r/MachineLearning/comments/1tg45fz/how_are_you_handling_training_data_when_public/",
+          "score": 5,
+          "sources": [
+            {
+              "name": "Reddit r/MachineLearning"
+            }
+          ],
+          "tags": [
+            "training-data",
+            "discussion"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "jamiepine/voicebox",
+          "summary": "开源AI语音工作室，支持克隆、听写、创作。",
+          "url": "https://github.com/jamiepine/voicebox",
+          "score": 4.9675,
+          "sources": [
+            {
+              "name": "GitHub trending:typescript (+195★)"
+            }
+          ],
+          "tags": [
+            "voice-cloning",
+            "open-source",
+            "audio"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "dograh-hq/dograh",
+          "summary": "开源语音代理平台，支持语音交互。",
+          "url": "https://github.com/dograh-hq/dograh",
+          "score": 4.5845,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+223★)"
+            }
+          ],
+          "tags": [
+            "voice-agent",
+            "open-source"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "lee-to/ai-factory",
+          "summary": "AI Factory工具，简化AI应用构建流程。",
+          "url": "https://github.com/lee-to/ai-factory",
+          "score": 4.2875,
+          "sources": [
+            {
+              "name": "GitHub trending:typescript (+25★)"
+            }
+          ],
+          "tags": [
+            "ai-tools",
+            "workflow"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "\"Generate a photorealistic realtime render of a human face with webGL\" (Qwen3.5-122B-A10B UD-Q3_K_XL)",
+          "summary": "用Qwen3.5生成逼真人脸WebGL渲染的演示。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tg2muq/generate_a_photorealistic_realtime_render_of_a/",
+          "score": 4,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "multimodal",
+            "webgl",
+            "qwen"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "NousResearch/hermes-paperclip-adapter",
+          "summary": "Hermes代理的Paperclip适配器，用于企业环境。",
+          "url": "https://github.com/NousResearch/hermes-paperclip-adapter",
+          "score": 3.4555,
+          "sources": [
+            {
+              "name": "GitHub trending:typescript (+37★)"
+            }
+          ],
+          "tags": [
+            "agent-adapter",
+            "hermes",
+            "paperclip"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
         }
       ]
     }
-  ]
+  ],
+  "aiSummary": "今日AI领域动态：Anthropic和OpenAI占据AI初创公司收入89%的份额，市场主导地位进一步巩固[重大发布](#item-theinformation-com-articles-anthropic-openais-share-ai-start)。研究方面，有论文对比了5种abliteration方法[研究论文](#item-reddit-com-r-LocalLLaMA-comments-1tfmocw-85-gpuhours-compari)，并综述了LLM架构中KV共享等最新进展[研究论文](#item-reddit-com-r-MachineLearning-comments-1tfpvod-recent-develop)。工具更新上，Hugging Face发布开源ML工程师项目[工具更新](#item-github-com-huggingface-ml-intern)，另有OpenHuman个人AI超级智能项目[工具更新](#item-github-com-tinyhumansai-openhuman)。观点洞察指出，AI是技术而非产品[观点洞察](#item-daringfireball-net-2026-05-ai-is-technology-not-a-product)，且其应用瓶颈在于模糊需求而非速度[观点洞察](#item-frederickvanbrabant-com-blog-2026-05-15-i-dont-think-ai-will)。"
 }
