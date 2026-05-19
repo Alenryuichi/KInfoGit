@@ -1,140 +1,65 @@
 {
   "date": "2026-05-19",
-  "itemCount": 14,
+  "itemCount": 83,
   "sections": [
     {
       "id": "headlines",
       "title": "Headlines & Launches",
       "items": [
         {
-          "title": "Iran Launches Bitcoin-Backed Shipping Insurance for Hormuz Strait",
-          "summary": "Iran has launched a Bitcoin-backed maritime insurance service called Hormuz Safe for shipping companies transiting the Strait of Hormuz, aiming to generate over $10 billion in revenue. This move challenges the US dollar's dominance in global trade and could disrupt traditional shipping insurance markets, while also providing a new use case for Bitcoin as a settlement asset in geopolitical conflicts. The service is reported by Fars news agency and documents from Iran's Ministry of Economy and Financial Affairs; it targets cargo owners and shipping companies transiting the Strait of Hormuz and Persian Gulf.",
-          "url": "https://www.bloomberg.com/news/articles/2026-05-18/iran-starts-bitcoin-backed-shipping-insurance-for-hormuz-strait",
-          "score": 8,
+          "title": "AI Chip Startup Tenstorrent Draws Takeover Interest From Intel, Qualcomm - Bloomberg",
+          "summary": "AI芯片初创公司Tenstorrent吸引英特尔和高通收购兴趣。",
+          "url": "https://www.bloomberg.com/news/articles/2026-05-18/ai-chip-startup-tenstorrent-draws-takeover-interest-from-intel-qualcomm",
+          "score": 8.5,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "srameshc"
+              "name": "bloomberg.com"
             }
           ],
           "tags": [
-            "Bitcoin",
-            "Geopolitics",
-            "Shipping",
-            "Crypto",
-            "Iran"
+            "ai-chip",
+            "tenstorrent",
+            "acquisition"
           ],
-          "focusTopics": [],
-          "background": "The Strait of Hormuz is a critical maritime chokepoint for global oil trade. Since February 2026, Iran has largely blocked the strait following US-Israeli airstrikes, leading to a crisis. Bitcoin-backed insurance offers an alternative to traditional dollar-denominated insurance, potentially bypassing sanctions.",
-          "discussion": "Comments highlight geopolitical tensions: some argue US military power could counter Iran's control, while others see Bitcoin's role as a bigger shift away from dollar hegemony. There is skepticism about the insurance's enforceability against US naval actions."
+          "focusTopics": [
+            "model-release"
+          ]
         },
         {
-          "title": "Fine-Tuning NVIDIA Cosmos Predict 2.5 with LoRA/DoRA",
-          "summary": "NVIDIA has published a blog post detailing how to fine-tune the Cosmos Predict 2.5 world foundation model using LoRA and DoRA techniques to generate robot videos, enabling efficient adaptation for robotics applications. This approach allows robotics practitioners to adapt a powerful world model to specific tasks with minimal computational cost, accelerating the development of video-based robot learning and simulation. LoRA and DoRA are parameter-efficient fine-tuning methods that update only a small fraction of model weights; DoRA further decomposes weights into magnitude and direction for better performance. The blog provides practical steps for applying these methods to Cosmos Predict 2.5.",
-          "url": "https://huggingface.co/blog/nvidia/cosmos-fine-tuning-for-robot-video-generation",
-          "score": 8,
+          "title": "Anthropic acquires Stainless",
+          "summary": "Anthropic收购Stainless，增强API工具链。",
+          "url": "https://www.anthropic.com/news/anthropic-acquires-stainless",
+          "score": 7.874,
           "sources": [
             {
-              "name": "rss",
-              "meta": "Hugging Face Blog"
+              "name": "HN (358)"
             }
           ],
           "tags": [
-            "NVIDIA",
-            "Cosmos",
-            "LoRA",
-            "DoRA",
-            "robot video generation"
+            "acquisition",
+            "anthropic",
+            "api"
           ],
-          "focusTopics": [],
-          "background": "Cosmos Predict 2.5 is a flow-based world foundation model from NVIDIA that unifies Text2World, Image2World, and Video2World tasks. LoRA (Low-Rank Adaptation) injects trainable low-rank matrices into model layers, while DoRA (Weight-Decomposed Low-Rank Adaptation) improves upon LoRA by separately fine-tuning magnitude and directional components. These techniques enable efficient fine-tuning of large models without full retraining."
+          "focusTopics": [
+            "tool-use"
+          ]
         },
         {
-          "title": "Elon Musk Loses Lawsuit Against OpenAI and Sam Altman",
-          "summary": "A jury found that Elon Musk's lawsuit against OpenAI and Sam Altman was filed too late, dismissing the case on statute of limitations grounds. This ruling sets a precedent for legal challenges against AI companies transitioning from non-profit to for-profit structures, potentially limiting future lawsuits based on delayed claims. The jury determined that Musk could have brought similar claims in 2019 or 2021 regarding Microsoft deals, making his 2023 lawsuit untimely under the three-year statute of limitations.",
-          "url": "https://techcrunch.com/2026/05/18/elon-musk-has-lost-his-lawsuit-against-sam-altman-and-openai/",
-          "score": 7,
+          "title": "Anthropic co-founder to present AI encyclical alongside Pope Leo XIV",
+          "summary": "Anthropic联合创始人将与教皇共同发布AI通谕。",
+          "url": "https://www.vaticannews.va/en/pope/news/2026-05/pope-leo-xiv-first-encyclical-magnifica-humanitas.html",
+          "score": 6.645,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "nycdatasci"
+              "name": "HN (90)"
             }
           ],
           "tags": [
-            "AI",
-            "legal",
-            "OpenAI",
-            "Elon Musk",
-            "governance"
+            "anthropic",
+            "ai-ethics",
+            "policy"
           ],
-          "focusTopics": [],
-          "background": "A statute of limitations is a law that sets the maximum time after an event within which legal proceedings may be initiated. Musk's lawsuit alleged that OpenAI breached its non-profit mission by transferring IP to a for-profit entity, but the court found he waited too long to sue.",
-          "discussion": "Commenters noted the legal significance of the statute of limitations ruling, with some questioning the precedent for non-profit to for-profit transitions and suggesting government or taxpayer action may be warranted. Others expressed disappointment that OpenAI faced no penalty despite perceived wrongdoing."
-        },
-        {
-          "title": "FBI Seeks Nationwide Access to License Plate Reader Data",
-          "summary": "The FBI has issued a request to purchase nationwide access to automated license plate reader (ALPR) data, aiming to track vehicle movements across the United States. This move could massively expand government surveillance capabilities, raising serious privacy and civil liberties concerns as it would allow tracking of millions of innocent Americans without a warrant. The ALPR data would be sourced from private companies like Flock Safety, which already operate extensive camera networks. The FBI's request does not specify a budget or timeline, but indicates a desire for real-time access.",
-          "url": "https://www.404media.co/the-fbi-wants-to-buy-nationwide-access-to-license-plate-readers/",
-          "score": 7,
-          "sources": [
-            {
-              "name": "hackernews",
-              "meta": "cdrnsf"
-            }
-          ],
-          "tags": [
-            "privacy",
-            "surveillance",
-            "government",
-            "law enforcement",
-            "data collection"
-          ],
-          "focusTopics": [],
-          "background": "Automated license plate readers (ALPR) are camera systems that capture and store images of license plates, often used by law enforcement to identify stolen vehicles or suspects. However, the data can be retained for months or years, creating a detailed record of where any vehicle has been. Privacy advocates warn that such mass surveillance could be abused and may violate Fourth Amendment protections against unreasonable searches.",
-          "discussion": "Commenters expressed strong concerns about privacy, with some suggesting that personal data should be treated as a liability rather than an asset. Others noted that people already evade detection by masking or removing plates, and questioned how the FBI would access local systems."
-        },
-        {
-          "title": "Shutterstock fined $35M for hard-to-cancel subscriptions",
-          "summary": "The FTC fined Shutterstock $35 million for allegedly using dark patterns to make it difficult for consumers to cancel subscriptions, violating the Restore Online Shoppers' Confidence Act. This enforcement action signals the FTC's continued crackdown on deceptive subscription practices, especially after its 'Click-to-Cancel' rule was struck down by a court. It highlights the need for uniform federal cancellation laws and puts other companies on notice. The $35 million penalty is one of the largest for subscription-related violations. Shutterstock must also change its cancellation process to comply with the law, including allowing customers to cancel online as easily as they signed up.",
-          "url": "https://www.ftc.gov/news-events/news/press-releases/2026/05/shutterstock-pay-35-million-settle-ftc-allegations-over-illegal-subscription-cancellation-practices",
-          "score": 7,
-          "sources": [
-            {
-              "name": "hackernews",
-              "meta": "Lihh27"
-            }
-          ],
-          "tags": [
-            "FTC",
-            "consumer protection",
-            "subscription cancellation",
-            "dark patterns",
-            "regulation"
-          ],
-          "focusTopics": [],
-          "background": "Dark patterns are user interface designs that trick users into doing things they didn't intend, such as signing up for recurring subscriptions or making it hard to cancel. The FTC has been targeting such practices, but its 'Click-to-Cancel' rule, which would have required companies to make cancellation as easy as sign-up, was blocked by a federal appeals court in July 2025. Despite this, the FTC continues to enforce existing laws against deceptive subscription practices.",
-          "discussion": "Commenters largely support the FTC action, with many calling for a nationwide law requiring cancellation methods to match sign-up methods. Some express skepticism about the deterrent effect of the fine, while others draw comparisons to other industries like telecom and internet services."
-        },
-        {
-          "title": "Side-by-Side Syntax Comparison of Four Lisp Dialects",
-          "summary": "A web page at hyperpolyglot.org provides a side-by-side syntax comparison of Common Lisp, Racket, Clojure, and Emacs Lisp, covering basic constructs, functions, macros, and more. This reference helps Lisp programmers quickly understand differences between major dialects, aiding cross-dialect development and learning. Community feedback further improves the accuracy and idiomatic nature of the examples. The comparison includes lines for syntax, functions, variables, loops, macros, and more. Community comments point out non-idiomatic code, such as using eval instead of apply, and missing documentation functions in Common Lisp.",
-          "url": "https://hyperpolyglot.org/lisp",
-          "score": 6,
-          "sources": [
-            {
-              "name": "hackernews",
-              "meta": "veqq"
-            }
-          ],
-          "tags": [
-            "Lisp",
-            "Programming Languages",
-            "Reference",
-            "Syntax Comparison"
-          ],
-          "focusTopics": [],
-          "background": "Lisp is a family of programming languages with a distinctive parenthesized prefix notation. Common Lisp, Racket, Clojure, and Emacs Lisp are four major dialects, each with different design philosophies and ecosystems. Common Lisp is a multi-paradigm language, Racket is a Scheme descendant focused on language-oriented programming, Clojure runs on the JVM and emphasizes immutability, and Emacs Lisp is the extension language for the Emacs editor.",
-          "discussion": "Commenters provided corrections and suggestions for more idiomatic code, such as replacing eval with apply and using endp instead of null. One user noted that SBCL compiles code by default, even in the REPL, and another pointed out the existence of the documentation function in Common Lisp. Overall, the discussion was constructive and focused on improving the accuracy of the comparison."
+          "focusTopics": []
         }
       ]
     },
@@ -143,26 +68,634 @@
       "title": "Research & Innovation",
       "items": [
         {
-          "title": "Haiku OS Now Runs on Apple M1 Macs",
-          "summary": "Haiku OS, the open-source BeOS successor, has been successfully ported to run on Apple M1 Macs, as demonstrated by community progress on ARM64 support. This port revives the BeOS experience on modern Apple Silicon hardware, showcasing Haiku's adaptability and potentially attracting new users interested in lightweight, responsive operating systems. The port is based on community efforts for ARM64 architecture, and while still in early stages, users report positive experiences on older x86 hardware, indicating the OS is stable and fast for basic tasks.",
-          "url": "https://discuss.haiku-os.org/t/my-haiku-arm64-progress/19044?page=2",
-          "score": 7,
+          "title": "I tested 42 LLMs on their willingness to build the apocalypse. The \"safest\" closed-source models are lying to you.",
+          "summary": "测试42个LLM在构建末日场景下的意愿，发现安全模型撒谎。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tgm0k9/i_tested_42_llms_on_their_willingness_to_build/",
+          "score": 8,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "tekkertje"
+              "name": "Reddit r/LocalLLaMA"
             }
           ],
           "tags": [
-            "Haiku OS",
-            "BeOS",
-            "ARM64",
-            "Apple Silicon",
-            "Operating Systems"
+            "llm",
+            "safety",
+            "benchmark",
+            "alignment"
           ],
-          "focusTopics": [],
-          "background": "Haiku is a free and open-source operating system that continues the legacy of BeOS, a discontinued OS known for its efficient multitasking and multimedia capabilities. BeOS was originally developed for PowerPC and later x86, but never achieved commercial success. Haiku aims to be binary-compatible with BeOS while supporting modern standards.",
-          "discussion": "Community members expressed excitement about Haiku's performance on old hardware and its potential on M1 Macs, with some noting the historical irony of BeOS nearly being acquired by Apple. Others lamented the unlikelihood of running Haiku on M-series iPads."
+          "focusTopics": [
+            "evals"
+          ]
+        },
+        {
+          "title": "Rewriting model inference with CUDA kernels: the bottleneck was not just GEMM [P]",
+          "summary": "用 CUDA 内核重写模型推理，瓶颈不限于 GEMM。",
+          "url": "https://www.reddit.com/r/MachineLearning/comments/1tgyx41/rewriting_model_inference_with_cuda_kernels_the/",
+          "score": 8,
+          "sources": [
+            {
+              "name": "Reddit r/MachineLearning"
+            }
+          ],
+          "tags": [
+            "cuda",
+            "inference",
+            "optimization"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Sub-JEPA: a simple fix to LeCun group's LeWorldModel that consistently improves performance [P]",
+          "summary": "Sub-JEPA 改进 LeCun 团队的 LeWorldModel，提升性能。",
+          "url": "https://www.reddit.com/r/MachineLearning/comments/1tgn3bz/subjepa_a_simple_fix_to_lecun_groups_leworldmodel/",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "Reddit r/MachineLearning"
+            }
+          ],
+          "tags": [
+            "jepa",
+            "world-model",
+            "self-supervised"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Scaling LLMs horizontally: hidden-state coupling without weight modification [R]",
+          "summary": "残差耦合实现 LLM 水平扩展，无需修改权重。",
+          "url": "https://www.reddit.com/r/MachineLearning/comments/1tgm530/scaling_llms_horizontally_hiddenstate_coupling/",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "Reddit r/MachineLearning"
+            }
+          ],
+          "tags": [
+            "llm",
+            "scaling",
+            "residual-coupling"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "Agora-1: The Multi-Agent World Model",
+          "summary": "Odyssey发布多智能体世界模型Agora-1。",
+          "url": "https://odyssey.ml/introducing-agora-1",
+          "score": 7.04,
+          "sources": [
+            {
+              "name": "HN (80)"
+            }
+          ],
+          "tags": [
+            "multi-agent",
+            "world-model",
+            "simulation"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "SDOF: Taming the Alignment Tax in Multi-Agent Orchestration with State-Constrained Dispatch",
+          "summary": "提出SDOF方法，通过状态约束减少多智能体编排中的对齐税。",
+          "url": "https://arxiv.org/abs/2605.15204",
+          "score": 7,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "multi-agent",
+            "orchestration",
+            "alignment"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "ICRL: Learning to Internalize Self-Critique with Reinforcement Learning",
+          "summary": "提出ICRL，通过强化学习内化自我批评以提升智能体性能。",
+          "url": "https://arxiv.org/abs/2605.15224",
+          "score": 7,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "self-critique",
+            "reinforcement-learning",
+            "agent"
+          ],
+          "focusTopics": [
+            "post-training"
+          ]
+        },
+        {
+          "title": "Translating black-box medical AI models into interpretable global ...",
+          "summary": "研究将黑盒医疗AI模型转化为可解释的全局决策逻辑。",
+          "url": "https://www.nature.com/articles/s41551-026-01675-x",
+          "score": 7,
+          "sources": [
+            {
+              "name": "nature.com"
+            }
+          ],
+          "tags": [
+            "medical-ai",
+            "interpretability",
+            "explainability"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Qwen 3.6 27B on 24GB VRAM setup: backend comparisons, quant choice and settings (llama.cpp, ik_llama.cpp, BeeLlama, vllm)",
+          "summary": "Qwen3.6 27B在24GB VRAM上的后端对比与量化设置。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tgis7s/qwen_36_27b_on_24gb_vram_setup_backend/",
+          "score": 7,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "qwen",
+            "benchmark",
+            "quantization",
+            "backend"
+          ],
+          "focusTopics": [
+            "evals"
+          ]
+        },
+        {
+          "title": "Does Theory of Mind Improvement Really Benefit Human-AI Interactions? Empirical Findings from Interactive Evaluations",
+          "summary": "实证研究发现提升LLM心智理论能力未必改善人机交互。",
+          "url": "https://arxiv.org/abs/2605.15205",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "theory-of-mind",
+            "human-ai-interaction",
+            "evaluation"
+          ],
+          "focusTopics": [
+            "evals"
+          ]
+        },
+        {
+          "title": "SkillSmith: Compiling Agent Skills into Boundary-Guided Runtime Interfaces",
+          "summary": "提出SkillSmith，将智能体技能编译为边界引导的运行时接口。",
+          "url": "https://arxiv.org/abs/2605.15215",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "agent-skills",
+            "interface",
+            "llm"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "Capability Conditioned Scaffolding for Professional Human LLM Collaboration",
+          "summary": "提出能力条件化脚手架方法，提升人机协作专业性。",
+          "url": "https://arxiv.org/abs/2605.15404",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "llm",
+            "human-ai-collaboration",
+            "scaffolding"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "Bridging the interpretability gap for medical artificial intelligence ...",
+          "summary": "用类关联流形学习弥合医疗AI模型的可解释性差距。",
+          "url": "https://www.nature.com/articles/s41551-026-01676-w",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "nature.com"
+            }
+          ],
+          "tags": [
+            "medical-ai",
+            "interpretability",
+            "manifold-learning"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "21 GPU's benchmarked running a small TTS model (vram peak: 5GB)",
+          "summary": "21款GPU运行小型TTS模型OmniVoice的基准测试。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1th2f5w/21_gpus_benchmarked_running_a_small_tts_model/",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "gpu",
+            "benchmark",
+            "tts"
+          ],
+          "focusTopics": [
+            "evals"
+          ]
+        },
+        {
+          "title": "Quantizing MTP KV Cache = free lunch?",
+          "summary": "量化MTP KV缓存可能带来免费午餐，减少VRAM需求。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tgk9y6/quantizing_mtp_kv_cache_free_lunch/",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "mtp",
+            "kv-cache",
+            "quantization",
+            "vram"
+          ],
+          "focusTopics": [
+            "context-engineering"
+          ]
+        },
+        {
+          "title": "could refusal layers be masking dialect-conditioned safety failures in MoE models [d]",
+          "summary": "研究 MoE 模型在 AAVE 提示下的拒绝层安全失败。",
+          "url": "https://www.reddit.com/r/MachineLearning/comments/1tggu0j/could_refusal_layers_be_masking/",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "Reddit r/MachineLearning"
+            }
+          ],
+          "tags": [
+            "safety",
+            "moe",
+            "dialect"
+          ],
+          "focusTopics": [
+            "evals"
+          ]
+        },
+        {
+          "title": "Voice AI Systems Are Vulnerable to Hidden Audio Attacks",
+          "summary": "研究揭示语音AI系统易受隐藏音频攻击。",
+          "url": "https://spectrum.ieee.org/voice-ai-audio-attacks",
+          "score": 6.274,
+          "sources": [
+            {
+              "name": "HN (108)"
+            }
+          ],
+          "tags": [
+            "voice-ai",
+            "security",
+            "adversarial"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Fair outputs, Biased Internals: Causal Potency and Asymmetry of Latent Bias in LLMs for High-Stakes Decisions",
+          "summary": "研究LLM在高风险决策中输出公平但内部存在潜在偏见。",
+          "url": "https://arxiv.org/abs/2605.15217",
+          "score": 6,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "fairness",
+            "bias",
+            "llm"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "NOVA: Fundamental Limits of Knowledge Discovery Through AI",
+          "summary": "探讨AI通过迭代自我改进发现新知识的基本极限。",
+          "url": "https://arxiv.org/abs/2605.15219",
+          "score": 6,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "knowledge-discovery",
+            "self-improvement",
+            "limits"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "NIMO Controller: a self-driving laboratory orchestrator based on the Model Context Protocol",
+          "summary": "提出NIMO Controller，基于MCP协议的自驱动实验室编排器。",
+          "url": "https://arxiv.org/abs/2605.15227",
+          "score": 6,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "self-driving-lab",
+            "mcp",
+            "orchestrator"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "Always Learning, Always Mixing: Efficient and Simple Data Mixing All The Time",
+          "summary": "提出高效简单的数据混合方法，持续学习与混合。",
+          "url": "https://arxiv.org/abs/2605.15220",
+          "score": 6,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "data-mixing",
+            "training",
+            "efficiency"
+          ],
+          "focusTopics": [
+            "post-training"
+          ]
+        },
+        {
+          "title": "Alignment pretraining: AI discourse creates self-fulfilling (mis)alignment",
+          "summary": "论文：AI话语创造自我实现的（错误）对齐。",
+          "url": "https://arxiv.org/abs/2601.10160",
+          "score": 5.584999999999999,
+          "sources": [
+            {
+              "name": "HN (20)"
+            }
+          ],
+          "tags": [
+            "alignment",
+            "discourse",
+            "self-fulfilling"
+          ],
+          "focusTopics": [
+            "post-training"
+          ]
+        },
+        {
+          "title": "DeepSlide: From Artifacts to Presentation Delivery",
+          "summary": "提出DeepSlide，用AI从工件生成演示文稿，优化幻灯片生成。",
+          "url": "https://arxiv.org/abs/2605.15202",
+          "score": 5.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "ai-slides",
+            "presentation",
+            "generation"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "CAX-Agent: A Lightweight Agent Harness for Reliable APDL Automation",
+          "summary": "提出CAX-Agent，轻量级智能体框架用于可靠APDL自动化。",
+          "url": "https://arxiv.org/abs/2605.15218",
+          "score": 5.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "agent-framework",
+            "automation",
+            "finite-element"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "Verifiable Agentic Infrastructure: Proof-Derived Authorization for Sovereign AI Systems",
+          "summary": "提出可验证智能体基础设施，基于证明的授权用于主权AI系统。",
+          "url": "https://arxiv.org/abs/2605.15228",
+          "score": 5.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "authorization",
+            "agent-infrastructure",
+            "security"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Neural Activation Patterns Across Language Model Architectures: A Comprehensive Analysis of Cognitive Task Performance",
+          "summary": "分析六种LLM架构的神经激活模式与认知任务表现。",
+          "url": "https://arxiv.org/abs/2605.15436",
+          "score": 5.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "llm",
+            "neural-activation",
+            "cognitive-science"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Why are language models less surprised than humans? Testing the Parse Multiplicity Mismatch Hypothesis",
+          "summary": "测试解析多重性不匹配假说，解释语言模型与人类惊讶度差异。",
+          "url": "https://arxiv.org/abs/2605.15440",
+          "score": 5.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "llm",
+            "surprisal",
+            "psycholinguistics"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "mattzh72/articraft",
+          "summary": "基于Agent系统的可扩展3D铰接资产生成框架。",
+          "url": "https://github.com/mattzh72/articraft",
+          "score": 5.334,
+          "sources": [
+            {
+              "name": "GitHub trending:python (+156★)"
+            }
+          ],
+          "tags": [
+            "3d-generation",
+            "agent",
+            "ai-research"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Fluency and Faithfulness in Human and Machine Literary Translation",
+          "summary": "比较人类与机器文学翻译的流畅性与忠实度。",
+          "url": "https://arxiv.org/abs/2605.15282",
+          "score": 5,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "translation",
+            "literary",
+            "nlp"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Automatic Construction of a Legal Citation Graph from 100 Million Ukrainian Court Decisions: Large-Scale Extraction, Topological Analysis, and Ontology-Driven Clustering",
+          "summary": "从1亿乌克兰法院判决自动构建法律引用图。",
+          "url": "https://arxiv.org/abs/2605.15362",
+          "score": 5,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "legal",
+            "citation-graph",
+            "nlp"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Greedy or not, here I come: Language production under vocabulary constraints in humans and resource-rational models",
+          "summary": "研究人类与资源理性模型在词汇约束下的语言生成。",
+          "url": "https://arxiv.org/abs/2605.15365",
+          "score": 5,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "language-production",
+            "vocabulary",
+            "cognitive"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Adesua: Development and Feasibility Study of an AI WhatsApp Bot for Science Learning in West Africa",
+          "summary": "开发AI WhatsApp机器人用于西非科学学习的可行性研究。",
+          "url": "https://arxiv.org/abs/2605.15376",
+          "score": 5,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "ai-education",
+            "llm",
+            "chatbot"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Eskwai for Students: Generative AI Assistant for Legal Education in Ghana",
+          "summary": "生成式AI助手用于加纳法律教育的可行性研究。",
+          "url": "https://arxiv.org/abs/2605.15380",
+          "score": 5,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "ai-education",
+            "llm",
+            "legal"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Deep transferable label propagation with prototypical augmentation | Scientific Reports",
+          "summary": "提出深度可迁移标签传播与原型增强方法。",
+          "url": "https://www.nature.com/articles/s41598-026-53642-w",
+          "score": 5,
+          "sources": [
+            {
+              "name": "nature.com"
+            }
+          ],
+          "tags": [
+            "transfer-learning",
+            "label-propagation",
+            "prototypical-augmentation"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "DiscoExplorer: An Open Interface for the Study of Multilingual Discourse Relations",
+          "summary": "发布DiscoExplorer，用于研究多语言话语关系的开放接口。",
+          "url": "https://arxiv.org/abs/2605.15304",
+          "score": 4.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "discourse",
+            "multilingual",
+            "tool"
+          ],
+          "focusTopics": []
         }
       ]
     },
@@ -171,161 +704,823 @@
       "title": "Engineering & Resources",
       "items": [
         {
-          "title": "Open Agent Leaderboard Launches for AI Agent Evaluation",
-          "summary": "IBM Research and Hugging Face have launched the Open Agent Leaderboard, a standardized benchmark for evaluating AI agents across diverse tasks including math and multi-modal challenges. This leaderboard addresses the growing need for a unified evaluation framework in the rapidly evolving AI agent field, enabling fair comparisons and driving progress in agentic AI research. The leaderboard allows users to filter results by evaluation dimensions, algorithms, datasets, and models, providing granular insights into agent performance. It is hosted on Hugging Face Spaces and open to community contributions.",
-          "url": "https://huggingface.co/blog/ibm-research/open-agent-leaderboard",
+          "title": "colbymchenry/codegraph",
+          "summary": "预索引代码知识图谱，减少Claude Code等AI编程工具的token消耗。",
+          "url": "https://github.com/colbymchenry/codegraph",
+          "score": 8.652999999999999,
+          "sources": [
+            {
+              "name": "GitHub trending:typescript (+952★)"
+            }
+          ],
+          "tags": [
+            "code-knowledge-graph",
+            "ai-coding",
+            "local"
+          ],
+          "focusTopics": [
+            "coding-agents",
+            "context-engineering"
+          ]
+        },
+        {
+          "title": "I built a coding agent that gets 87% on benchmarks with a 4B parameter model, here's how",
+          "summary": "构建了一个用4B参数模型在基准测试中达87%的编码agent。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tgecrq/i_built_a_coding_agent_that_gets_87_on_benchmarks/",
+          "score": 8.5,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "coding-agent",
+            "small-model",
+            "benchmark"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "rohitg00/agentmemory",
+          "summary": "基于基准测试的AI编程代理持久记忆系统。",
+          "url": "https://github.com/rohitg00/agentmemory",
+          "score": 8.3,
+          "sources": [
+            {
+              "name": "GitHub trending:typescript (+1244★)"
+            }
+          ],
+          "tags": [
+            "ai-coding",
+            "memory",
+            "agent"
+          ],
+          "focusTopics": [
+            "coding-agents",
+            "context-engineering"
+          ]
+        },
+        {
+          "title": "llama.cpp MTP support landed - Qwen3.6 27B at 2.44× on a Strix Halo, 2.17× on a RTX 3090 rig",
+          "summary": "llama.cpp新增MTP支持，Qwen3.6 27B速度提升2倍以上。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tgxau6/llamacpp_mtp_support_landed_qwen36_27b_at_244_on/",
           "score": 8,
           "sources": [
             {
-              "name": "rss",
-              "meta": "Hugging Face Blog"
+              "name": "Reddit r/LocalLLaMA"
             }
           ],
           "tags": [
-            "AI agents",
-            "benchmarking",
-            "leaderboard",
-            "Hugging Face",
-            "evaluation"
+            "llamacpp",
+            "mtp",
+            "inference",
+            "speed"
           ],
-          "focusTopics": [],
-          "background": "AI agents are systems that can autonomously perform tasks using large language models (LLMs). Evaluating agents is challenging due to the diversity of tasks and lack of standardized benchmarks. The Open Agent Leaderboard aims to fill this gap by providing a transparent and extensible evaluation platform."
+          "focusTopics": [
+            "context-engineering"
+          ]
         },
         {
-          "title": "Anthropic acquires Stainless, shuts down SDK generator",
-          "summary": "Anthropic has acquired Stainless, a developer tooling company specializing in SDK generation from OpenAPI specs, and will shut down all hosted Stainless products including the SDK generator. This acquisition signals Anthropic's aggressive push to attract top engineering talent for its Claude platform, while the shutdown of a popular SDK tool may disrupt developers who relied on it for API integration. Stainless's SDK generator produced client libraries in multiple languages and updated them automatically as APIs changed; Anthropic will wind down all hosted products, with new signups and projects no longer available starting today.",
-          "url": "https://www.anthropic.com/news/anthropic-acquires-stainless",
+          "title": "HKUDS/CLI-Anything",
+          "summary": "CLI-Anything：让所有软件成为代理原生。",
+          "url": "https://github.com/HKUDS/CLI-Anything",
+          "score": 7.875,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+1049★)"
+            }
+          ],
+          "tags": [
+            "cli",
+            "agent-native",
+            "open-source"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "tech-leads-club/agent-skills",
+          "summary": "Agent Skills注册表：为专业AI编码代理扩展功能。",
+          "url": "https://github.com/tech-leads-club/agent-skills",
+          "score": 7.875,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+1244★)"
+            }
+          ],
+          "tags": [
+            "agent-skills",
+            "coding-agents",
+            "registry"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "The Open Agent Leaderboard",
+          "summary": "IBM发布开放Agent排行榜，评估AI Agent性能。",
+          "url": "https://huggingface.co/blog/ibm-research/open-agent-leaderboard",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "Hugging Face"
+            }
+          ],
+          "tags": [
+            "agent",
+            "leaderboard",
+            "benchmark"
+          ],
+          "focusTopics": [
+            "evals",
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "AI supply-chain attacks bypass model red teams",
+          "summary": "报道50天内4起AI供应链攻击，暴露模型发布流程漏洞。",
+          "url": "https://venturebeat.com/security/supply-chain-incidents-openai-anthropic-meta-release-surface-vendor-questionnaire-matrix",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "venturebeat.com"
+            }
+          ],
+          "tags": [
+            "security",
+            "supply-chain",
+            "red-teaming"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Qwen 3.7 droped on Qwen Chat",
+          "summary": "Qwen 3.7模型在Qwen Chat上线，社区截图确认。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tgpabe/qwen_37_droped_on_qwen_chat/",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "qwen",
+            "model-release",
+            "chat"
+          ],
+          "focusTopics": [
+            "model-release"
+          ]
+        },
+        {
+          "title": "antirez/ds4",
+          "summary": "DeepSeek 4 Flash本地推理引擎，支持Metal加速。",
+          "url": "https://github.com/antirez/ds4",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "Co-Starred"
+            }
+          ],
+          "tags": [
+            "deepseek",
+            "local-inference",
+            "metal"
+          ],
+          "focusTopics": [
+            "model-release"
+          ]
+        },
+        {
+          "title": "Imbad0202/academic-research-skills",
+          "summary": "Claude Code的学术研究技能：研究→写作→审阅→修订→定稿。",
+          "url": "https://github.com/Imbad0202/academic-research-skills",
+          "score": 7.45,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+1439★)"
+            }
+          ],
+          "tags": [
+            "academic",
+            "claude-code",
+            "skills"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "Fine-Tuning NVIDIA Cosmos Predict 2.5 with LoRA/DoRA for Robot Video Generation",
+          "summary": "NVIDIA发布Cosmos Predict 2.5微调指南，用于机器人视频生成。",
+          "url": "https://huggingface.co/blog/nvidia/cosmos-fine-tuning-for-robot-video-generation",
           "score": 7,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "tomeraberbach"
+              "name": "Hugging Face"
             }
           ],
           "tags": [
-            "acquisition",
-            "AI",
-            "Anthropic",
-            "talent",
-            "SDK"
+            "nvidia",
+            "video-generation",
+            "robotics",
+            "fine-tuning"
+          ],
+          "focusTopics": [
+            "model-release"
+          ]
+        },
+        {
+          "title": "AWS Demonstrates Self-Extending CLI Tools with Strands - Let's Data Science",
+          "summary": "AWS展示自扩展CLI工具原型，利用Amazon Bedrock生成命令。",
+          "url": "https://letsdatascience.com/news/aws-demonstrates-self-extending-cli-tools-with-strands-bcffef8a",
+          "score": 7,
+          "sources": [
+            {
+              "name": "letsdatascience.com"
+            }
+          ],
+          "tags": [
+            "aws",
+            "cli",
+            "bedrock",
+            "agent"
           ],
           "focusTopics": [
             "tool-use"
-          ],
-          "background": "Stainless provided developer tools that read OpenAPI specs and output production-ready SDKs, documentation, and MCP servers for agent integrations. Anthropic's Claude platform offers APIs and console for building with Claude models, and the company is expanding its engineering team to enhance the platform's capabilities.",
-          "discussion": "Commenters view the acquisition as an acquihire, noting that Anthropic needs top engineers and that shutting down a useful product is unfortunate. Some express concern about existing users and the trend of agentic coding tools becoming walled gardens."
+          ]
         },
         {
-          "title": "Fighting AI Bot Spam on GitHub with Git's --author Flag",
-          "summary": "A blog post from Archestra AI describes using Git's --author flag to filter out AI-generated spam pull requests in GitHub repositories. The approach checks the author metadata of commits to identify and block bot-like contributions. This provides a practical, low-overhead solution for open-source maintainers overwhelmed by AI bot spam, which has become a significant problem. It highlights the growing need for better spam detection and contributor verification in the open-source ecosystem. The --author flag in Git allows filtering commits by author name or email, which can be used to reject PRs from known bot accounts. However, this method is not foolproof, as bots can easily fake author information, and it may also block legitimate contributors using automation tools.",
-          "url": "https://archestra.ai/blog/only-responsible-ai",
+          "title": "Musk v. Altman proved that AI is led by the wrong people",
+          "summary": "评论称Musk诉Altman案证明AI由错误的人领导。",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/932464/musk-v-altman-proved-that-ai-is-led-by-the-wrong-people",
           "score": 7,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "ildari"
+              "name": "theverge.com"
             }
           ],
           "tags": [
-            "GitHub",
-            "spam",
-            "AI",
-            "open source",
-            "security"
+            "ai-leadership",
+            "openai",
+            "musk"
           ],
-          "focusTopics": [],
-          "background": "Git is a version control system widely used in open-source development. The --author flag is typically used to filter commit logs by author, but here it is repurposed for spam detection. AI bot spam has surged recently, with bots submitting low-quality or irrelevant pull requests to repositories, often to claim bounties or appear active.",
-          "discussion": "Commenters raised security concerns, noting that merged PRs grant higher permissions, making spam a vector for attacks. Others criticized GitHub for lacking basic anti-spam features and suggested alternative solutions like ELO-based reputation systems or blocking accounts with high rejection rates."
+          "focusTopics": []
         },
         {
-          "title": "AI Agents Run a Live Radio Station: Hilarious Failures",
-          "summary": "Andon Labs launched a public experiment where four AI agents autonomously run a live radio station, handling both broadcasting and business operations, with humorous but flawed results. This experiment provides real-world insights into the capabilities and limitations of AI agents in autonomous media production, highlighting challenges in reliability and coherence. The AI agents have full tools to broadcast live shows and manage business tasks, but their revenue is currently terrible; listeners can even try to negotiate sponsor deals with them.",
-          "url": "https://andonlabs.com/blog/andon-fm",
+          "title": "Elon Musk lost his case against Sam Altman",
+          "summary": "陪审团裁定马斯克诉OpenAI案因诉讼时效已过而败诉。",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/932383/jury-verdict-musk-v-altman-openai-trial",
           "score": 7,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "lukaspetersson"
+              "name": "theverge.com"
             }
           ],
           "tags": [
-            "AI agents",
-            "experiment",
-            "media",
-            "radio",
-            "autonomy"
+            "legal",
+            "openai",
+            "elon-musk"
           ],
-          "focusTopics": [],
-          "background": "Andon Labs previously ran experiments with AI agents in retail (vending machines, stores, cafes) to study failures in real-world autonomy. This media experiment extends that work to broadcasting, where agents must generate content, interact with listeners, and handle business decisions without human intervention.",
-          "discussion": "Community comments note that one AI station got stuck repeating the same phrase, and some listeners joked that all listeners are AI. Others defended the experiment as valuable for observing AI failure modes, while a commenter questioned the lack of prompt transparency."
+          "focusTopics": []
         },
         {
-          "title": "Files.md: Open-Source Alternative to Obsidian",
-          "summary": "Files.md, an open-source note-taking tool, has been released on GitHub, offering a different approach to knowledge management compared to Obsidian. This sparks community discussion about open-source alternatives to Obsidian, highlighting the demand for transparent, self-hosted note-taking solutions. Files.md stores notes as local markdown files and features a chat-like interface, which some commenters find innovative. It is not a feature-parity clone of Obsidian.",
-          "url": "https://github.com/zakirullin/files.md",
+          "title": "MTP (Multi-Token Prediction): 2x Faster Token Generation on AMD Strix Halo & Radeon 9700 AI Pro",
+          "summary": "MTP多token预测在AMD Strix Halo上实现2倍token生成加速。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1th154i/mtp_multitoken_prediction_2x_faster_token/",
           "score": 7,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "zakirullin"
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "mtp",
+            "amd",
+            "inference",
+            "speed"
+          ],
+          "focusTopics": [
+            "context-engineering"
+          ]
+        },
+        {
+          "title": "NEW BITNET MODELS!",
+          "summary": "新的BitNet模型发布，期待llama.cpp支持。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tgjwdf/new_bitnet_models/",
+          "score": 7,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "bitnet",
+            "model-release",
+            "open-source"
+          ],
+          "focusTopics": [
+            "model-release"
+          ]
+        },
+        {
+          "title": "Reviving PapersWithCode (by Hugging Face) [P]",
+          "summary": "Hugging Face 团队宣布复兴 PapersWithCode 平台。",
+          "url": "https://www.reddit.com/r/MachineLearning/comments/1tgmwqr/reviving_paperswithcode_by_hugging_face_p/",
+          "score": 7,
+          "sources": [
+            {
+              "name": "Reddit r/MachineLearning"
             }
           ],
           "tags": [
             "open-source",
-            "note-taking",
-            "markdown",
-            "Obsidian-alternative",
-            "productivity"
+            "community",
+            "platform"
           ],
-          "focusTopics": [],
-          "background": "Obsidian is a popular note-taking app that uses local markdown files and supports bidirectional linking, but it is not open-source. Many users seek open-source alternatives for transparency and control over their data.",
-          "discussion": "Commenters noted that Obsidian feels like it should be open-source but isn't, and some suggested Joplin as a mature alternative. Others praised Files.md's unique chat interface as a fresh take on note-taking."
+          "focusTopics": []
         },
         {
-          "title": "PaddleOCR 3.5 Adds Transformers Backend for OCR",
-          "summary": "PaddleOCR 3.5 introduces a Transformers backend, allowing supported OCR and document parsing models to run with the Transformers library while PaddleOCR manages the pipeline. This integration enhances performance and flexibility, enabling users to leverage the extensive Transformers ecosystem for OCR tasks, which could lead to broader adoption and easier experimentation. The Transformers backend is optional and works with supported PaddleOCR models; PaddleOCR continues to handle the OCR pipeline, including text detection and recognition.",
-          "url": "https://huggingface.co/blog/PaddlePaddle/paddleocr-transformers",
+          "title": "Witchcraft, fast local semantic search on top of SQLite [P]",
+          "summary": "Dropbox 开源 Witchcraft，基于 SQLite 的语义搜索。",
+          "url": "https://www.reddit.com/r/MachineLearning/comments/1tgqyo8/witchcraft_fast_local_semantic_search_on_top_of/",
           "score": 7,
           "sources": [
             {
-              "name": "rss",
-              "meta": "Hugging Face Blog"
+              "name": "Reddit r/MachineLearning"
             }
           ],
           "tags": [
-            "OCR",
-            "PaddleOCR",
-            "Transformers",
-            "Document Parsing",
-            "Deep Learning"
+            "semantic-search",
+            "sqlite",
+            "open-source"
           ],
-          "focusTopics": [
-            "memory"
-          ],
-          "background": "PaddleOCR is an open-source OCR toolkit developed by PaddlePaddle, supporting multilingual text detection and recognition. Transformers is a popular deep learning library by Hugging Face that provides pre-trained models and a unified interface. This update bridges the two, allowing users to combine PaddleOCR's pipeline with Transformers' model hub."
+          "focusTopics": []
         },
         {
-          "title": "Interactive Demo Tracks Clicks and Mouse Movements",
-          "summary": "A website (clickclickclick.click) has been launched that displays user clicks and mouse movements in real-time, with a playful bot-detection feature that calls out automated scripts. This demo highlights how easily user behavior can be tracked, raising awareness about online privacy and the sophistication of analytics tools. The site uses JavaScript to capture every click and mouse movement, and it can detect rapid, repetitive clicks (e.g., from a console loop) and label the user as a bot.",
-          "url": "https://clickclickclick.click/",
+          "title": "huggingface/ml-intern",
+          "summary": "开源ML工程师，自动读论文、训练模型并部署。",
+          "url": "https://github.com/huggingface/ml-intern",
+          "score": 7,
+          "sources": [
+            {
+              "name": "Co-Starred"
+            }
+          ],
+          "tags": [
+            "open-source",
+            "ml-engineer",
+            "automation"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "Show HN: InsForge – Open-source Heroku for coding agents",
+          "summary": "InsForge：开源的后端平台，专为AI编程代理设计。",
+          "url": "https://github.com/InsForge/InsForge",
+          "score": 6.896,
+          "sources": [
+            {
+              "name": "HN (32)"
+            }
+          ],
+          "tags": [
+            "coding-agents",
+            "open-source",
+            "backend"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "dograh-hq/dograh",
+          "summary": "开源语音代理平台，支持多种语音交互功能。",
+          "url": "https://github.com/dograh-hq/dograh",
+          "score": 6.8740000000000006,
+          "sources": [
+            {
+              "name": "GitHub trending:python (+616★)"
+            }
+          ],
+          "tags": [
+            "voice-agent",
+            "open-source",
+            "platform"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Cutting inference cold starts by 40x with LP, FUSE, C/R, and CUDA-checkpoint",
+          "summary": "Modal通过LP、FUSE等技术将推理冷启动降低40倍。",
+          "url": "https://modal.com/blog/truly-serverless-gpus",
+          "score": 6.582,
+          "sources": [
+            {
+              "name": "HN (69)"
+            }
+          ],
+          "tags": [
+            "inference",
+            "serverless",
+            "gpu"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "The last six months in LLMs in five minutes",
+          "summary": "Simon Willison总结过去六个月LLM进展的演讲幻灯片。",
+          "url": "https://simonwillison.net/2026/May/19/5-minute-llms/#atom-everything",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "Simon Willison"
+            }
+          ],
+          "tags": [
+            "llm",
+            "summary",
+            "pycon"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "'Claw Chain' Vulnerabilities Threaten OpenClaw Deployments - Dark Reading",
+          "summary": "AI Agent框架OpenClaw发现漏洞，可窃取凭证和提权。",
+          "url": "https://www.darkreading.com/application-security/claw-chain-vulnerabilities-threaten-openclaw",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "darkreading.com"
+            }
+          ],
+          "tags": [
+            "security",
+            "agent-framework",
+            "vulnerability"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "Released a free 9.8M doc Indic multilingual corpus — Hindi, Bengali, Tamil, Telugu + 7 more (CC0, HuggingFace) [P]",
+          "summary": "发布免费 9.8M 文档的印度多语言语料库。",
+          "url": "https://www.reddit.com/r/MachineLearning/comments/1th4po3/released_a_free_98m_doc_indic_multilingual_corpus/",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "Reddit r/MachineLearning"
+            }
+          ],
+          "tags": [
+            "multilingual",
+            "dataset",
+            "indic-languages"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "K-Dense-AI/scientific-agent-skills",
+          "summary": "科学代理技能集：研究、工程、分析、金融和写作。",
+          "url": "https://github.com/K-Dense-AI/scientific-agent-skills",
+          "score": 6.4384999999999994,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+609★)"
+            }
+          ],
+          "tags": [
+            "agent-skills",
+            "science",
+            "open-source"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "We stopped AI bot spam in our GitHub repo using Git's –author flag",
+          "summary": "用Git的--author标志阻止GitHub仓库中的AI机器人垃圾信息。",
+          "url": "https://archestra.ai/blog/only-responsible-ai",
+          "score": 6.327,
+          "sources": [
+            {
+              "name": "HN (409)"
+            }
+          ],
+          "tags": [
+            "ai-bot",
+            "spam",
+            "github"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "earendil-works/pi",
+          "summary": "AI代理工具包：编码CLI、统一LLM API、TUI/Web UI等。",
+          "url": "https://github.com/earendil-works/pi",
+          "score": 6.196999999999999,
+          "sources": [
+            {
+              "name": "GitHub trending:typescript (+448★)"
+            }
+          ],
+          "tags": [
+            "agent-toolkit",
+            "llm",
+            "cli"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "PaddleOCR 3.5: Running OCR and Document Parsing Tasks with a Transformers Backend",
+          "summary": "PaddleOCR 3.5发布，支持Transformers后端进行OCR和文档解析。",
+          "url": "https://huggingface.co/blog/PaddlePaddle/paddleocr-transformers",
           "score": 6,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "andrewzeno"
+              "name": "Hugging Face"
             }
           ],
           "tags": [
-            "interactive",
-            "analytics",
-            "privacy",
-            "demo"
+            "ocr",
+            "document-parsing",
+            "transformers"
           ],
-          "focusTopics": [],
-          "background": "Mouse tracking analytics are used by companies to understand user behavior on websites, often recording sessions for later replay. This demo simplifies that concept into a live, public display.",
-          "discussion": "Commenters expressed a mix of amusement and unease: some found the bot detection clever, while others felt the tracking was creepy. One user shared a similar project they built."
+          "focusTopics": []
+        },
+        {
+          "title": "The Next War Is Already Here. The West Isn't Ready. — Yaroslav Azhnyuk, The Fourth Law & Guest Host Noah Smith, Noahpinion",
+          "summary": "乌克兰无人机创始人谈AI武器化及西方准备不足。",
+          "url": "https://www.latent.space/p/the-fourth-law",
+          "score": 6,
+          "sources": [
+            {
+              "name": "Latent Space"
+            }
+          ],
+          "tags": [
+            "ai-weapons",
+            "drones",
+            "defense"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "An AI hate wave is here - Axios",
+          "summary": "民调显示多数美国人对AI感到担忧，AI反感浪潮来临。",
+          "url": "https://www.axios.com/2026/05/17/ai-backlash-polling-sentiment",
+          "score": 6,
+          "sources": [
+            {
+              "name": "axios.com"
+            }
+          ],
+          "tags": [
+            "public-opinion",
+            "ai-sentiment"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Is the future of coding agents JEPA? [D]",
+          "summary": "讨论 JEPA 用于编程 agent 的未来可能性。",
+          "url": "https://www.reddit.com/r/MachineLearning/comments/1tgq9v2/is_the_future_of_coding_agents_jepa_d/",
+          "score": 6,
+          "sources": [
+            {
+              "name": "Reddit r/MachineLearning"
+            }
+          ],
+          "tags": [
+            "jepa",
+            "coding-agents",
+            "reasoning"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "KeygraphHQ/shannon",
+          "summary": "自主白盒AI渗透测试工具，分析源码并执行攻击。",
+          "url": "https://github.com/KeygraphHQ/shannon",
+          "score": 5.835,
+          "sources": [
+            {
+              "name": "GitHub trending:typescript (+490★)"
+            }
+          ],
+          "tags": [
+            "ai-security",
+            "pentesting",
+            "autonomous"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "jamiepine/voicebox",
+          "summary": "开源AI语音工作室，支持克隆、听写和创作。",
+          "url": "https://github.com/jamiepine/voicebox",
+          "score": 5.815499999999999,
+          "sources": [
+            {
+              "name": "GitHub trending:typescript (+477★)"
+            }
+          ],
+          "tags": [
+            "voice-cloning",
+            "open-source",
+            "audio"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "tinyhumansai/openhuman",
+          "summary": "OpenHuman：个人AI超级智能，注重隐私和简洁。",
+          "url": "https://github.com/tinyhumansai/openhuman",
+          "score": 5.75,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+3941★)"
+            }
+          ],
+          "tags": [
+            "personal-ai",
+            "open-source"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "humanlayer/12-factor-agents",
+          "summary": "12-Factor Agents：构建生产级LLM软件的原则。",
+          "url": "https://github.com/humanlayer/12-factor-agents",
+          "score": 5.698499999999999,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+399★)"
+            }
+          ],
+          "tags": [
+            "llm",
+            "principles",
+            "production"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "We let AIs run radio stations",
+          "summary": "实验让AI无人类干预运营电台，报告失败案例。",
+          "url": "https://andonlabs.com/blog/andon-fm",
+          "score": 5.5649999999999995,
+          "sources": [
+            {
+              "name": "HN (155)"
+            }
+          ],
+          "tags": [
+            "ai-agents",
+            "experiment"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "Kin Health raises $9M to build an AI notetaker for patients | TechCrunch",
+          "summary": "Kin Health获900万美元融资，开发AI患者笔记工具。",
+          "url": "https://techcrunch.com/2026/05/18/kin-health-raises-9m-to-build-an-ai-notetaker-for-patients/",
+          "score": 5.5,
+          "sources": [
+            {
+              "name": "techcrunch.com"
+            }
+          ],
+          "tags": [
+            "healthcare",
+            "funding",
+            "ai-notetaker"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "PSA: If you haven’t updated Llama.cpp for a couple of days and find MTP to not be performing well, update llamacpp.",
+          "summary": "提醒更新llama.cpp以改善MTP性能，实测提升1.5倍。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tgobhj/psa_if_you_havent_updated_llamacpp_for_a_couple/",
+          "score": 5.5,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "llamacpp",
+            "mtp",
+            "update",
+            "performance"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "We built a tool that installs frameworks like ComfyUI, Ollama, OpenWebUI etc on any cloud GPU in one command and saves your whole setup between sessions [R]",
+          "summary": "工具一键安装 ComfyUI/Ollama 等框架并保存环境。",
+          "url": "https://www.reddit.com/r/MachineLearning/comments/1th863j/we_built_a_tool_that_installs_frameworks_like/",
+          "score": 5.5,
+          "sources": [
+            {
+              "name": "Reddit r/MachineLearning"
+            }
+          ],
+          "tags": [
+            "devops",
+            "cloud-gpu",
+            "tooling"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "heygen-com/hyperframes",
+          "summary": "用HTML编写视频渲染，专为AI代理设计。",
+          "url": "https://github.com/heygen-com/hyperframes",
+          "score": 5.2405,
+          "sources": [
+            {
+              "name": "GitHub trending:typescript (+377★)"
+            }
+          ],
+          "tags": [
+            "video-generation",
+            "html",
+            "agent"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "joeseesun/qiaomu-anything-to-notebooklm",
+          "summary": "Claude技能：多源内容处理器，可转换微信文章等为播客/PPT。",
+          "url": "https://github.com/joeseesun/qiaomu-anything-to-notebooklm",
+          "score": 5.0545,
+          "sources": [
+            {
+              "name": "GitHub trending:python (+253★)"
+            }
+          ],
+          "tags": [
+            "claude",
+            "content-processing",
+            "multimodal"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "ZhuLinsen/daily_stock_analysis",
+          "summary": "LLM驱动的股票分析系统，支持多市场行情与实时新闻。",
+          "url": "https://github.com/ZhuLinsen/daily_stock_analysis",
+          "score": 4.715,
+          "sources": [
+            {
+              "name": "GitHub trending:python (+310★)"
+            }
+          ],
+          "tags": [
+            "llm",
+            "finance",
+            "stock-analysis"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "zinja-coder/jadx-mcp-server",
+          "summary": "JADX-AI插件的MCP服务器，用于逆向工程。",
+          "url": "https://github.com/zinja-coder/jadx-mcp-server",
+          "score": 3.4419999999999997,
+          "sources": [
+            {
+              "name": "GitHub trending:python (+28★)"
+            }
+          ],
+          "tags": [
+            "mcp",
+            "reverse-engineering",
+            "plugin"
+          ],
+          "focusTopics": [
+            "tool-use"
+          ]
         }
       ]
     }
-  ]
+  ],
+  "aiSummary": "今日AI领域动态密集：AI芯片初创公司Tenstorrent吸引英特尔和高通收购兴趣[#item-bloomberg-com-news-articles-2026-05-18-ai-chip-startup-tenst]，Anthropic收购Stainless增强API工具链[#item-anthropic-com-news-anthropic-acquires-stainless]，其联合创始人还将与教皇共同发布AI通谕[#item-vaticannews-va-en-pope-news-2026-05-pope-leo-xiv-first-encyc]。研究方面，测试发现42个LLM在构建末日场景下“安全”模型会撒谎[#item-reddit-com-r-LocalLLaMA-comments-1tgm0k9-i-tested-42-llms-on]，Sub-JEPA改进LeCun团队模型性能[#item-reddit-com-r-MachineLearning-comments-1tgn3bz-subjepa-a-simp]。工具更新包括预索引代码知识图谱减少token消耗[#item-github-com-colbymchenry-codegraph]和4B参数编码Agent达87%基准[#item-reddit-com-r-LocalLLaMA-comments-1tgecrq-i-built-a-coding-ag]。观点指出AI供应链攻击暴露模型发布漏洞[#item-venturebeat-com-security-supply-chain-incidents-openai-anthr]，马斯克诉Altman案败诉[#item-theverge-com-ai-artificial-intelligence-932383-jury-verdict-]，评论称AI由错误的人领导[#item-theverge-com-ai-artificial-intelligence-932464-musk-v-altman]。"
 }
