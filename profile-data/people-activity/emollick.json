@@ -3,28 +3,6 @@
   "stars": [],
   "posts": [
     {
-      "uri": "at://did:plc:flxq4uyjfotciovpw3x3fxnu/app.bsky.feed.post/3mjui6u2tf22k",
-      "url": "https://bsky.app/profile/emollick.bsky.social/post/3mjui6u2tf22k",
-      "author": {
-        "handle": "emollick.bsky.social",
-        "displayName": "Ethan Mollick",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:flxq4uyjfotciovpw3x3fxnu/bafkreigq63ljumc43yx5eoxchrq75d72irea6ddcceedwmdttxebyowc3q"
-      },
-      "content": "The continuing gap between the capabilities of Gemini Pro 3.1 (very good model) and the capabilities of the Gemini app/website is odd. The model can do what Claude/GPT can do, but there is a minimal harness for tools (file creation, research etc), no auditable CoT/actions, manual canvas, etc.\n1/",
-      "createdAt": "2026-04-19T17:30:25.949Z",
-      "likeCount": 64,
-      "replyCount": 7,
-      "repostCount": 4,
-      "highlights": "",
-      "worthReading": "",
-      "tags": [
-        "llm",
-        "tooling",
-        "deployment"
-      ],
-      "type": "bluesky"
-    },
-    {
       "uri": "at://did:plc:flxq4uyjfotciovpw3x3fxnu/app.bsky.feed.post/3mjvgqrczdc2k",
       "url": "https://bsky.app/profile/emollick.bsky.social/post/3mjvgqrczdc2k",
       "author": {
@@ -1162,7 +1140,9 @@
       "repostCount": 13,
       "highlights": "",
       "worthReading": "",
-      "tags": [],
+      "tags": [
+        "safety"
+      ],
       "type": "bluesky"
     },
     {
@@ -1260,93 +1240,52 @@
         "llm"
       ],
       "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:flxq4uyjfotciovpw3x3fxnu/app.bsky.feed.post/3mm5gtrlvpk27",
+      "url": "https://bsky.app/profile/emollick.bsky.social/post/3mm5gtrlvpk27",
+      "author": {
+        "handle": "emollick.bsky.social",
+        "displayName": "Ethan Mollick",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:flxq4uyjfotciovpw3x3fxnu/bafkreigq63ljumc43yx5eoxchrq75d72irea6ddcceedwmdttxebyowc3q"
+      },
+      "content": "In a Turing Test of sorts, it looks like a 100% AI generated story just won the Commonwealth Prize for the Caribbean region \"for its lyrical precision and haunting atmosphere, the story stood out for the confidence and restraint of its voice.\" \n\nPublished in Granta: granta.com/the-serpent-...",
+      "createdAt": "2026-05-18T17:50:41.422Z",
+      "likeCount": 127,
+      "replyCount": 16,
+      "repostCount": 28,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [
+        "llm",
+        "evaluation"
+      ],
+      "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:flxq4uyjfotciovpw3x3fxnu/app.bsky.feed.post/3mm553nyl322b",
+      "url": "https://bsky.app/profile/emollick.bsky.social/post/3mm553nyl322b",
+      "author": {
+        "handle": "emollick.bsky.social",
+        "displayName": "Ethan Mollick",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:flxq4uyjfotciovpw3x3fxnu/bafkreigq63ljumc43yx5eoxchrq75d72irea6ddcceedwmdttxebyowc3q"
+      },
+      "content": "One thing to watch for with Claude & GPT is that the models expose too much irrelevant history in their outputs. Slides are given footers saying things like \"Better, more targeted version\" if you asked for a better version, documents make references to how they are improved, etc.",
+      "createdAt": "2026-05-18T14:56:08.660Z",
+      "likeCount": 92,
+      "replyCount": 10,
+      "repostCount": 4,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [
+        "llm"
+      ],
+      "type": "bluesky"
     }
   ],
   "videos": [],
   "blogs": [],
   "xPosts": [
-    {
-      "type": "x",
-      "id": "2026285200531955745",
-      "url": "https://x.com/emollick/status/2026285200531955745",
-      "author": {
-        "handle": "emollick",
-        "displayName": "Ethan Mollick",
-        "avatar": null
-      },
-      "content": "As stories about AI increasingly become stories of either catastrophe or salvation,",
-      "createdAt": "2026-04-19T04:10:40.856Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Ethan Mollick observes that AI narratives are polarizing into extremes of doom or utopia, missing nuanced perspectives.",
-      "worthReading": "It highlights the need for balanced discourse on AI's societal impact beyond binary extremes.",
-      "tags": [
-        "safety",
-        "deployment"
-      ]
-    },
-    {
-      "type": "x",
-      "id": "2020713378319417626",
-      "url": "https://x.com/emollick/status/2020713378319417626",
-      "author": {
-        "handle": "emollick",
-        "displayName": "Ethan Mollick",
-        "avatar": null
-      },
-      "content": "So much work is going into faking continual learning and memory for AIs,",
-      "createdAt": "2026-04-19T04:10:40.856Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Mollick points out significant effort is being invested in simulating ongoing learning and memory capabilities in AI systems, rather than achieving genuine functionality.",
-      "worthReading": "It critiques a key area of AI development, questioning the authenticity of progress in agent-like behaviors.",
-      "tags": [
-        "agent",
-        "llm"
-      ]
-    },
-    {
-      "type": "x",
-      "id": "2038468659585208561",
-      "url": "https://x.com/emollick/status/2038468659585208561",
-      "author": {
-        "handle": "emollick",
-        "displayName": "Ethan Mollick",
-        "avatar": null
-      },
-      "content": "If it helps, I teach at a business school & many of my smartest students are hired by funds because they can reliably turn their only-human",
-      "createdAt": "2026-04-19T04:10:40.856Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Mollick shares an observation from academia, noting that top business students are valued in finance for uniquely human skills that AI cannot replicate.",
-      "worthReading": "It underscores the enduring value of human expertise in certain professional domains despite AI advances.",
-      "tags": [
-        "deployment"
-      ]
-    },
-    {
-      "type": "x",
-      "id": "2011523783467958585",
-      "url": "https://x.com/emollick/status/2011523783467958585",
-      "author": {
-        "handle": "emollick",
-        "displayName": "Ethan Mollick",
-        "avatar": null
-      },
-      "content": "Teaching an experimental class for MBAs on “vibefounding,” the students have four days to come up and",
-      "createdAt": "2026-04-19T04:10:40.856Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Mollick is conducting an innovative MBA course on 'vibefounding,' a rapid, experiential approach to entrepreneurship or ideation.",
-      "worthReading": "It shows Mollick's hands-on, experimental teaching methods in business education, blending AI or modern concepts.",
-      "tags": [
-        "deployment"
-      ]
-    },
     {
       "type": "x",
       "id": "2044880350237626844",
@@ -3433,10 +3372,71 @@
         "llm",
         "safety"
       ]
+    },
+    {
+      "type": "x",
+      "id": "2054292561947164987",
+      "url": "https://x.com/emollick/status/2054292561947164987",
+      "author": {
+        "handle": "emollick",
+        "displayName": "Ethan Mollick",
+        "avatar": null
+      },
+      "content": "From a pure \"do good for the world\" mission perspective, having the acting like a solid personalized tutor is one of the better uses of AI.\n\nIf OpenAI cares about the mission of making the world a better place, tutoring should be an area of investment, not one to silently remove.",
+      "createdAt": "2026-05-19T04:29:16.437Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "AI as a personalized tutor is a high-impact use case; OpenAI should invest in tutoring.",
+      "worthReading": "Highlights a key ethical and practical application of AI in education.",
+      "tags": [
+        "llm",
+        "safety"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2030813923469894093",
+      "url": "https://x.com/emollick/status/2030813923469894093",
+      "author": {
+        "handle": "emollick",
+        "displayName": "Ethan Mollick",
+        "avatar": null
+      },
+      "content": "In 1980, the philosopher John Searle proposed a thought experiment: a person locked in a room, manipulating Chinese characters according to a",
+      "createdAt": "2026-05-19T04:29:16.437Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "References Searle's Chinese Room argument to discuss AI understanding.",
+      "worthReading": "Connects classic philosophy to modern AI debates.",
+      "tags": [
+        "llm"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2053888295927525821",
+      "url": "https://x.com/emollick/status/2053888295927525821",
+      "author": {
+        "handle": "emollick",
+        "displayName": "Ethan Mollick",
+        "avatar": null
+      },
+      "content": "This is going to get even worse as people realize that careful tuning in their prompts can make AI writing seem not like AI writing to readers.\n\nWe expect word counts to align, in some way, with thinking & value. Writing took effort. We are not mentally ready for the alternative.",
+      "createdAt": "2026-05-19T04:29:16.437Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Prompt tuning can make AI writing indistinguishable from human writing, challenging our assumptions about effort and value.",
+      "worthReading": "Highlights an emerging challenge in AI-generated content detection.",
+      "tags": [
+        "llm",
+        "evaluation"
+      ]
     }
   ],
   "dailyCounts": [
-    5,
     6,
     7,
     7,
@@ -3465,7 +3465,8 @@
     4,
     5,
     6,
-    4
+    6,
+    3
   ],
-  "interestSummary": "Ethan Mollick is focused on testing and comparing the capabilities of frontier AI models (like GPT-5.5, GPT imagegen-2, Opus 4.7, and DeepSeek v4), with a particular interest in their practical applications for research, creative tasks, and education. He is also exploring the implications of AI for work and society, including phenomena like \"vibefounding\" and the gap between model capabilities and user-facing tools."
+  "interestSummary": "Ethan Mollick is deeply engaged in testing and comparing frontier AI models (GPT-5.5, DeepSeek v4, Opus 4.7, Kimi 2.6) and their capabilities in reasoning, image generation, and autonomous research, while critically analyzing their strategic implications and societal impacts. He is also exploring practical applications like \"vibefounding\" and AI-driven document analysis, emphasizing the inevitable but uneven transformation of work."
 }

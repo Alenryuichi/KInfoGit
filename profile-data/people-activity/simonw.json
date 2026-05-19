@@ -367,30 +367,27 @@
       "score": 5,
       "scoreReason": "Freshness is low (263 stars, not new), relevance is moderate as a code quality tool for Python OOP, and concreteness is high (working flake8 plugin with clear metric).",
       "type": "github"
+    },
+    {
+      "repo": "andrew/pycon",
+      "url": "https://github.com/andrew/pycon",
+      "description": "Data collection and analysis for a PyCon talk on GitHub Actions security across Python packages.",
+      "language": "HTML",
+      "stargazersCount": 6,
+      "starredBy": "simonw",
+      "starredAt": "2026-05-19T00:08:47Z",
+      "highlights": "This repository provides data collection and analysis scripts for a PyCon talk on GitHub Actions security across Python packages. It offers insights into how GitHub Actions are used in the Python ecosystem and potential security risks.",
+      "worthReading": "It's worth exploring for insights into GitHub Actions security practices and for understanding the security posture of Python packages.",
+      "topics": [],
+      "tags": [
+        "infra"
+      ],
+      "score": 4,
+      "scoreReason": "Freshness is low (6 stars, no clear traction), relevance is moderate (infra security but not frontier AI), concreteness is high (specific data and analysis for a talk).",
+      "type": "github"
     }
   ],
   "posts": [
-    {
-      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mjsntbnqe22z",
-      "url": "https://bsky.app/profile/simonwillison.net/post/3mjsntbnqe22z",
-      "author": {
-        "handle": "simonwillison.net",
-        "displayName": "Simon Willison",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
-      },
-      "content": "Since Anthropic publish their system prompts we can generate a diff between Claude Opus 4.6 and 4.7 - here are my notes on what's changed simonwillison.net/2026/Apr/18/...",
-      "createdAt": "2026-04-19T00:06:00.520Z",
-      "likeCount": 75,
-      "replyCount": 7,
-      "repostCount": 7,
-      "highlights": "",
-      "worthReading": "",
-      "tags": [
-        "llm",
-        "evaluation"
-      ],
-      "type": "bluesky"
-    },
     {
       "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mjvho5z2xc2t",
       "url": "https://bsky.app/profile/simonwillison.net/post/3mjvho5z2xc2t",
@@ -1270,71 +1267,19 @@
       "highlights": "Anthropic has struck a deal with xAI to use the full capacity of the Colossus data center, signaling a major infrastructure collaboration. This move highlights the escalating demand for compute resources in AI development and the strategic partnerships forming to secure them.",
       "worthReading": "The post offers a clear analysis of the implications of this deal for the AI industry, particularly around resource consolidation and competitive dynamics.",
       "type": "blog"
+    },
+    {
+      "title": "The last six months in LLMs in five minutes",
+      "url": "https://simonwillison.net/2026/May/19/5-minute-llms/#atom-entries",
+      "author": "Simon Willison",
+      "publishedAt": "2026-05-19T01:09:44+00:00",
+      "summary": "<p>I put together these annotated slides from my five minute lightning talk at PyCon US 2026, using the <a href=\"https://tools.simonwillison.net/annotated-presentations\">latest iteration</a> of my <a href=\"https://simonwillison.net/2023/Aug/6/annotated-presentations/\">annotated presentation...",
+      "highlights": "The post summarizes key developments in LLMs over the past six months, including the rise of multi-modal models, improved reasoning capabilities, and the increasing importance of evaluation frameworks. It highlights practical tools and techniques for working with LLMs, such as prompt engineering and fine-tuning.",
+      "worthReading": "It offers a concise, high-level overview of recent LLM advancements, making it useful for practitioners who want to stay updated without diving into lengthy technical papers.",
+      "type": "blog"
     }
   ],
   "xPosts": [
-    {
-      "type": "x",
-      "id": "1970147806225854531",
-      "url": "https://x.com/simonw/status/1970147806225854531",
-      "author": {
-        "handle": "simonw",
-        "displayName": "Simon Willison",
-        "avatar": "https://avatars.githubusercontent.com/simonw"
-      },
-      "content": "It's interesting how \"better at code\" has become the defining goal of almost every AI lab over the past year.",
-      "createdAt": "2026-04-19T04:07:34.139Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Observes that AI research has shifted focus toward improving coding capabilities as a primary objective across major labs.",
-      "worthReading": "Highlights a key trend in AI development priorities that reflects industry direction.",
-      "tags": [
-        "llm",
-        "evaluation"
-      ]
-    },
-    {
-      "type": "x",
-      "id": "1931090610724995303",
-      "url": "https://x.com/simonw/status/1931090610724995303",
-      "author": {
-        "handle": "simonw",
-        "displayName": "Simon Willison",
-        "avatar": "https://avatars.githubusercontent.com/simonw"
-      },
-      "content": "The last year six months in LLMs, illustrated by pelicans on bicycles. I've published video, slides and a detailed annotated transcript from my talk at this week's conference.",
-      "createdAt": "2026-04-19T04:07:34.139Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Summarizes recent LLM progress with a creative metaphor and shares comprehensive materials from a conference presentation.",
-      "worthReading": "Provides accessible insights into LLM advancements through engaging presentation materials.",
-      "tags": [
-        "llm",
-        "evaluation"
-      ]
-    },
-    {
-      "type": "x",
-      "id": "1555626060384911360",
-      "url": "https://x.com/simonw/status/1555626060384911360",
-      "author": {
-        "handle": "simonw",
-        "displayName": "Simon Willison",
-        "avatar": "https://avatars.githubusercontent.com/simonw"
-      },
-      "content": "Screenshot from a video game where a team of raccoons go on a heist.",
-      "createdAt": "2026-04-19T04:07:34.139Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Shares an AI-generated image depicting raccoons in a heist scenario within a futuristic video game setting.",
-      "worthReading": "Demonstrates creative AI image generation capabilities through an imaginative prompt.",
-      "tags": [
-        "multi-modal"
-      ]
-    },
     {
       "type": "x",
       "id": "2021280918204228082",
@@ -2668,10 +2613,30 @@
         "llm",
         "evaluation"
       ]
+    },
+    {
+      "type": "x",
+      "id": "1940781740978851923",
+      "url": "https://x.com/simonw/status/1940781740978851923",
+      "author": {
+        "handle": "simonw",
+        "displayName": "Simon Willison",
+        "avatar": "https://avatars.githubusercontent.com/simonw"
+      },
+      "content": "Quitting programming as a career right now because of LLMs would be like quitting carpentry as a career because of power tools.",
+      "createdAt": "2025-01-01T00:00:00Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Analogizes LLMs in programming to power tools in carpentry, suggesting they augment rather than replace.",
+      "worthReading": "Provides a grounded perspective on the impact of LLMs on software development careers.",
+      "tags": [
+        "llm",
+        "tooling"
+      ]
     }
   ],
   "dailyCounts": [
-    4,
     4,
     8,
     5,
@@ -2700,7 +2665,8 @@
     1,
     2,
     4,
-    1
+    1,
+    2
   ],
-  "interestSummary": "Simon Willison is closely tracking and comparing the latest AI model releases (Claude Opus 4.7, GPT-5.5, DeepSeek V4), with a particular focus on coding agent capabilities, pricing changes, and image generation benchmarks—often using whimsical \"pelicans riding bicycles\" tests. He is also actively building and documenting tools for data extraction, Google Sheets integration, and coding agent accountability."
+  "interestSummary": "Simon Willison is deeply engaged with the latest developments in AI, particularly around coding agents, model pricing shifts, and open-source tools like LiteParse, while also exploring whimsical benchmarks for image generation and maintaining his Datasette ecosystem."
 }

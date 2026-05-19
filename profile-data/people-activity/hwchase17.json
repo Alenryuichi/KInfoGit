@@ -15,72 +15,6 @@
         "avatar": "https://avatars.githubusercontent.com/hwchase17"
       },
       "content": "This means that operations you would do on code in the software world, you now do on traces in the agent world. Debugging, testing, profiling",
-      "createdAt": "2026-04-19T04:07:50.200Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Harrison Chase draws parallels between software engineering practices and agent development, emphasizing that debugging, testing, and profiling now apply to agent traces rather than just code.",
-      "worthReading": "It highlights the evolution of development practices in AI agent engineering, showing how traditional software concepts are being adapted.",
-      "tags": [
-        "agent",
-        "evaluation",
-        "tooling"
-      ]
-    },
-    {
-      "type": "x",
-      "id": "2021261552222158955",
-      "url": "https://x.com/hwchase17/status/2021261552222158955",
-      "author": {
-        "handle": "hwchase17",
-        "displayName": "Harrison Chase",
-        "avatar": "https://avatars.githubusercontent.com/hwchase17"
-      },
-      "content": "TL;DR: More and more agents need a workspace: a computer where they can run code, install packages, and access files. Sandboxes provide this",
-      "createdAt": "2026-04-19T04:07:50.200Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Harrison Chase discusses the growing need for agent workspaces—sandboxed environments where agents can execute code, manage dependencies, and interact with files—as essential infrastructure for advanced AI systems.",
-      "worthReading": "This tweet addresses a critical infrastructure requirement for deploying functional AI agents in production environments.",
-      "tags": [
-        "agent",
-        "infra",
-        "deployment"
-      ]
-    },
-    {
-      "type": "x",
-      "id": "2027094058330656814",
-      "url": "https://x.com/hwchase17/status/2027094058330656814",
-      "author": {
-        "handle": "hwchase17",
-        "displayName": "Harrison Chase",
-        "avatar": "https://avatars.githubusercontent.com/hwchase17"
-      },
-      "content": "When you ship traditional software to production, you have a good sense of what to expect. Users click buttons, fill out forms,",
-      "createdAt": "2026-04-19T04:07:50.200Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Harrison Chase contrasts the predictable nature of traditional software deployment with the uncertainties of AI agent deployment, implying that agent behavior is less deterministic.",
-      "worthReading": "It underscores the unique challenges in deploying AI agents compared to conventional software, highlighting the need for new deployment strategies.",
-      "tags": [
-        "agent",
-        "deployment",
-        "evaluation"
-      ]
-    },
-    {
-      "type": "x",
-      "id": "2010044779225329688",
-      "url": "https://x.com/hwchase17/status/2010044779225329688",
-      "author": {
-        "handle": "hwchase17",
-        "displayName": "Harrison Chase",
-        "avatar": "https://avatars.githubusercontent.com/hwchase17"
-      },
-      "content": "This means that operations you would do on code in the software world, you now do on traces in the agent world. Debugging, testing, profiling",
       "createdAt": "2026-04-20T04:10:22.844Z",
       "likeCount": 0,
       "replyCount": 0,
@@ -2196,11 +2130,73 @@
         "agent",
         "tooling"
       ]
+    },
+    {
+      "type": "x",
+      "id": "1975603633791377920",
+      "url": "https://x.com/hwchase17/status/1975603633791377920",
+      "author": {
+        "handle": "hwchase17",
+        "displayName": "Harrison Chase",
+        "avatar": "https://avatars.githubusercontent.com/hwchase17"
+      },
+      "content": "I am not excited about visual workflow builders 1. Not simple enough for the average user",
+      "createdAt": "2026-05-19T04:28:15.280Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Harrison Chase expresses skepticism about visual workflow builders, citing lack of simplicity for average users.",
+      "worthReading": "Provides insight into his design philosophy for developer tools.",
+      "tags": [
+        "tooling",
+        "evaluation"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2011814697889316930",
+      "url": "https://x.com/hwchase17/status/2011814697889316930",
+      "author": {
+        "handle": "hwchase17",
+        "displayName": "Harrison Chase",
+        "avatar": "https://avatars.githubusercontent.com/hwchase17"
+      },
+      "content": "We launched LangSmith Agent Builder this week as a no-code way to build agents. A key part of Agent builder is it's memory system.",
+      "createdAt": "2026-05-19T04:28:15.281Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Announcement of LangSmith Agent Builder, a no-code agent builder with a focus on memory systems.",
+      "worthReading": "Highlights a new product launch and its core feature.",
+      "tags": [
+        "agent",
+        "tooling"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2040467997022884194",
+      "url": "https://x.com/hwchase17/status/2040467997022884194",
+      "author": {
+        "handle": "hwchase17",
+        "displayName": "Harrison Chase",
+        "avatar": "https://avatars.githubusercontent.com/hwchase17"
+      },
+      "content": "In the hot path as the agent is running. The agent can decided to (or the user can prompt it to) update its memory as it is working on the core",
+      "createdAt": "2026-05-19T04:28:15.281Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Describes how agents can update memory during execution, either autonomously or via user prompt.",
+      "worthReading": "Explains a key capability of agent memory systems.",
+      "tags": [
+        "agent",
+        "llm"
+      ]
     }
   ],
   "dailyCounts": [
     3,
-    3,
     4,
     3,
     2,
@@ -2228,7 +2224,8 @@
     4,
     3,
     4,
+    3,
     3
   ],
-  "interestSummary": "Harrison Chase is focused on the evolution of AI agents, emphasizing the need for sandboxed workspaces and trace-based debugging, testing, and profiling as core operations in agent development, alongside promoting no-code tools like LangSmith Agent Builder for building agents with memory systems."
+  "interestSummary": "Harrison Chase is deeply focused on the practical infrastructure for AI agents, particularly emphasizing the need for agent workspaces (sandboxes) and the critical shift from traditional software debugging to trace-based iteration on production data. He is also actively promoting LangChain's new no-code Agent Builder and its memory system, while expressing skepticism about visual workflow builders."
 }

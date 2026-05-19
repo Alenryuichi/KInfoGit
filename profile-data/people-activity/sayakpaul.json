@@ -44,46 +44,6 @@
   "xPosts": [
     {
       "type": "x",
-      "id": "2039600999875387538",
-      "url": "https://x.com/RisingSayak/status/2039600999875387538",
-      "author": {
-        "handle": "sayakpaul",
-        "displayName": "Sayak Paul",
-        "avatar": "https://avatars.githubusercontent.com/sayakpaul"
-      },
-      "content": "Giving a talk here is by far the most fulfilling experience of my life!",
-      "createdAt": "2026-04-19T04:10:05.716Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Sayak Paul expresses that giving a talk was his most fulfilling life experience, indicating significant personal and professional satisfaction from public speaking engagements.",
-      "worthReading": "This reveals the personal impact of his technical communication work beyond just technical content.",
-      "tags": [
-        "deployment"
-      ]
-    },
-    {
-      "type": "x",
-      "id": "1890982496390762641",
-      "url": "https://x.com/RisingSayak/status/1890982496390762641",
-      "author": {
-        "handle": "sayakpaul",
-        "displayName": "Sayak Paul",
-        "avatar": "https://avatars.githubusercontent.com/sayakpaul"
-      },
-      "content": "Repo:",
-      "createdAt": "2026-04-19T04:10:05.716Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Sayak Paul shared a repository link, suggesting he's publishing or referencing technical work, though the specific content isn't detailed in the snippet.",
-      "worthReading": "Shows active technical contribution and sharing of resources with the community.",
-      "tags": [
-        "tooling"
-      ]
-    },
-    {
-      "type": "x",
       "id": "2044802837146943750",
       "url": "https://x.com/RisingSayak/status/2044802837146943750",
       "author": {
@@ -1196,10 +1156,50 @@
       "tags": [
         "evaluation"
       ]
+    },
+    {
+      "type": "x",
+      "id": "1793854085633913255",
+      "url": "https://x.com/RisingSayak/status/1793854085633913255",
+      "author": {
+        "handle": "sayakpaul",
+        "displayName": "Sayak Paul",
+        "avatar": "https://avatars.githubusercontent.com/sayakpaul"
+      },
+      "content": "Had a nice time chatting about the state of diffusion models and some text-to-image data shenanigans at",
+      "createdAt": "2024-05-24T00:00:00Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Sayak Paul discussed diffusion models and text-to-image data issues.",
+      "worthReading": "Provides insight into current challenges and developments in generative AI.",
+      "tags": [
+        "multi-modal"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "1937703345197842917",
+      "url": "https://x.com/RisingSayak/status/1937703345197842917",
+      "author": {
+        "handle": "sayakpaul",
+        "displayName": "Sayak Paul",
+        "avatar": "https://avatars.githubusercontent.com/sayakpaul"
+      },
+      "content": "Release notes: Release Diffusers 0.34.0: New Image and Video Models, Better torch.",
+      "createdAt": "2024-06-24T00:00:00Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Announcement of Diffusers 0.34.0 release with new models and improvements.",
+      "worthReading": "Important update for users of Hugging Face Diffusers library.",
+      "tags": [
+        "deployment",
+        "tooling"
+      ]
     }
   ],
   "dailyCounts": [
-    2,
     1,
     1,
     1,
@@ -1228,7 +1228,8 @@
     1,
     2,
     3,
+    2,
     2
   ],
-  "interestSummary": "Sayak Paul is focused on his work at Hugging Face with diffusion models and PyTorch integration, particularly optimizing Diffusers with torch.compile, while also showing interest in community trust systems and PyTorch development."
+  "interestSummary": "Sayak Paul is focused on advancing the Hugging Face Diffusers library, particularly through integration with PyTorch's `torch.compile` and profiling optimizations, while also exploring community trust systems and PyTorch development updates."
 }
