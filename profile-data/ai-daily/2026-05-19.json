@@ -1,0 +1,331 @@
+{
+  "date": "2026-05-19",
+  "itemCount": 14,
+  "sections": [
+    {
+      "id": "headlines",
+      "title": "Headlines & Launches",
+      "items": [
+        {
+          "title": "Iran Launches Bitcoin-Backed Shipping Insurance for Hormuz Strait",
+          "summary": "Iran has launched a Bitcoin-backed maritime insurance service called Hormuz Safe for shipping companies transiting the Strait of Hormuz, aiming to generate over $10 billion in revenue. This move challenges the US dollar's dominance in global trade and could disrupt traditional shipping insurance markets, while also providing a new use case for Bitcoin as a settlement asset in geopolitical conflicts. The service is reported by Fars news agency and documents from Iran's Ministry of Economy and Financial Affairs; it targets cargo owners and shipping companies transiting the Strait of Hormuz and Persian Gulf.",
+          "url": "https://www.bloomberg.com/news/articles/2026-05-18/iran-starts-bitcoin-backed-shipping-insurance-for-hormuz-strait",
+          "score": 8,
+          "sources": [
+            {
+              "name": "hackernews",
+              "meta": "srameshc"
+            }
+          ],
+          "tags": [
+            "Bitcoin",
+            "Geopolitics",
+            "Shipping",
+            "Crypto",
+            "Iran"
+          ],
+          "focusTopics": [],
+          "background": "The Strait of Hormuz is a critical maritime chokepoint for global oil trade. Since February 2026, Iran has largely blocked the strait following US-Israeli airstrikes, leading to a crisis. Bitcoin-backed insurance offers an alternative to traditional dollar-denominated insurance, potentially bypassing sanctions.",
+          "discussion": "Comments highlight geopolitical tensions: some argue US military power could counter Iran's control, while others see Bitcoin's role as a bigger shift away from dollar hegemony. There is skepticism about the insurance's enforceability against US naval actions."
+        },
+        {
+          "title": "Fine-Tuning NVIDIA Cosmos Predict 2.5 with LoRA/DoRA",
+          "summary": "NVIDIA has published a blog post detailing how to fine-tune the Cosmos Predict 2.5 world foundation model using LoRA and DoRA techniques to generate robot videos, enabling efficient adaptation for robotics applications. This approach allows robotics practitioners to adapt a powerful world model to specific tasks with minimal computational cost, accelerating the development of video-based robot learning and simulation. LoRA and DoRA are parameter-efficient fine-tuning methods that update only a small fraction of model weights; DoRA further decomposes weights into magnitude and direction for better performance. The blog provides practical steps for applying these methods to Cosmos Predict 2.5.",
+          "url": "https://huggingface.co/blog/nvidia/cosmos-fine-tuning-for-robot-video-generation",
+          "score": 8,
+          "sources": [
+            {
+              "name": "rss",
+              "meta": "Hugging Face Blog"
+            }
+          ],
+          "tags": [
+            "NVIDIA",
+            "Cosmos",
+            "LoRA",
+            "DoRA",
+            "robot video generation"
+          ],
+          "focusTopics": [],
+          "background": "Cosmos Predict 2.5 is a flow-based world foundation model from NVIDIA that unifies Text2World, Image2World, and Video2World tasks. LoRA (Low-Rank Adaptation) injects trainable low-rank matrices into model layers, while DoRA (Weight-Decomposed Low-Rank Adaptation) improves upon LoRA by separately fine-tuning magnitude and directional components. These techniques enable efficient fine-tuning of large models without full retraining."
+        },
+        {
+          "title": "Elon Musk Loses Lawsuit Against OpenAI and Sam Altman",
+          "summary": "A jury found that Elon Musk's lawsuit against OpenAI and Sam Altman was filed too late, dismissing the case on statute of limitations grounds. This ruling sets a precedent for legal challenges against AI companies transitioning from non-profit to for-profit structures, potentially limiting future lawsuits based on delayed claims. The jury determined that Musk could have brought similar claims in 2019 or 2021 regarding Microsoft deals, making his 2023 lawsuit untimely under the three-year statute of limitations.",
+          "url": "https://techcrunch.com/2026/05/18/elon-musk-has-lost-his-lawsuit-against-sam-altman-and-openai/",
+          "score": 7,
+          "sources": [
+            {
+              "name": "hackernews",
+              "meta": "nycdatasci"
+            }
+          ],
+          "tags": [
+            "AI",
+            "legal",
+            "OpenAI",
+            "Elon Musk",
+            "governance"
+          ],
+          "focusTopics": [],
+          "background": "A statute of limitations is a law that sets the maximum time after an event within which legal proceedings may be initiated. Musk's lawsuit alleged that OpenAI breached its non-profit mission by transferring IP to a for-profit entity, but the court found he waited too long to sue.",
+          "discussion": "Commenters noted the legal significance of the statute of limitations ruling, with some questioning the precedent for non-profit to for-profit transitions and suggesting government or taxpayer action may be warranted. Others expressed disappointment that OpenAI faced no penalty despite perceived wrongdoing."
+        },
+        {
+          "title": "FBI Seeks Nationwide Access to License Plate Reader Data",
+          "summary": "The FBI has issued a request to purchase nationwide access to automated license plate reader (ALPR) data, aiming to track vehicle movements across the United States. This move could massively expand government surveillance capabilities, raising serious privacy and civil liberties concerns as it would allow tracking of millions of innocent Americans without a warrant. The ALPR data would be sourced from private companies like Flock Safety, which already operate extensive camera networks. The FBI's request does not specify a budget or timeline, but indicates a desire for real-time access.",
+          "url": "https://www.404media.co/the-fbi-wants-to-buy-nationwide-access-to-license-plate-readers/",
+          "score": 7,
+          "sources": [
+            {
+              "name": "hackernews",
+              "meta": "cdrnsf"
+            }
+          ],
+          "tags": [
+            "privacy",
+            "surveillance",
+            "government",
+            "law enforcement",
+            "data collection"
+          ],
+          "focusTopics": [],
+          "background": "Automated license plate readers (ALPR) are camera systems that capture and store images of license plates, often used by law enforcement to identify stolen vehicles or suspects. However, the data can be retained for months or years, creating a detailed record of where any vehicle has been. Privacy advocates warn that such mass surveillance could be abused and may violate Fourth Amendment protections against unreasonable searches.",
+          "discussion": "Commenters expressed strong concerns about privacy, with some suggesting that personal data should be treated as a liability rather than an asset. Others noted that people already evade detection by masking or removing plates, and questioned how the FBI would access local systems."
+        },
+        {
+          "title": "Shutterstock fined $35M for hard-to-cancel subscriptions",
+          "summary": "The FTC fined Shutterstock $35 million for allegedly using dark patterns to make it difficult for consumers to cancel subscriptions, violating the Restore Online Shoppers' Confidence Act. This enforcement action signals the FTC's continued crackdown on deceptive subscription practices, especially after its 'Click-to-Cancel' rule was struck down by a court. It highlights the need for uniform federal cancellation laws and puts other companies on notice. The $35 million penalty is one of the largest for subscription-related violations. Shutterstock must also change its cancellation process to comply with the law, including allowing customers to cancel online as easily as they signed up.",
+          "url": "https://www.ftc.gov/news-events/news/press-releases/2026/05/shutterstock-pay-35-million-settle-ftc-allegations-over-illegal-subscription-cancellation-practices",
+          "score": 7,
+          "sources": [
+            {
+              "name": "hackernews",
+              "meta": "Lihh27"
+            }
+          ],
+          "tags": [
+            "FTC",
+            "consumer protection",
+            "subscription cancellation",
+            "dark patterns",
+            "regulation"
+          ],
+          "focusTopics": [],
+          "background": "Dark patterns are user interface designs that trick users into doing things they didn't intend, such as signing up for recurring subscriptions or making it hard to cancel. The FTC has been targeting such practices, but its 'Click-to-Cancel' rule, which would have required companies to make cancellation as easy as sign-up, was blocked by a federal appeals court in July 2025. Despite this, the FTC continues to enforce existing laws against deceptive subscription practices.",
+          "discussion": "Commenters largely support the FTC action, with many calling for a nationwide law requiring cancellation methods to match sign-up methods. Some express skepticism about the deterrent effect of the fine, while others draw comparisons to other industries like telecom and internet services."
+        },
+        {
+          "title": "Side-by-Side Syntax Comparison of Four Lisp Dialects",
+          "summary": "A web page at hyperpolyglot.org provides a side-by-side syntax comparison of Common Lisp, Racket, Clojure, and Emacs Lisp, covering basic constructs, functions, macros, and more. This reference helps Lisp programmers quickly understand differences between major dialects, aiding cross-dialect development and learning. Community feedback further improves the accuracy and idiomatic nature of the examples. The comparison includes lines for syntax, functions, variables, loops, macros, and more. Community comments point out non-idiomatic code, such as using eval instead of apply, and missing documentation functions in Common Lisp.",
+          "url": "https://hyperpolyglot.org/lisp",
+          "score": 6,
+          "sources": [
+            {
+              "name": "hackernews",
+              "meta": "veqq"
+            }
+          ],
+          "tags": [
+            "Lisp",
+            "Programming Languages",
+            "Reference",
+            "Syntax Comparison"
+          ],
+          "focusTopics": [],
+          "background": "Lisp is a family of programming languages with a distinctive parenthesized prefix notation. Common Lisp, Racket, Clojure, and Emacs Lisp are four major dialects, each with different design philosophies and ecosystems. Common Lisp is a multi-paradigm language, Racket is a Scheme descendant focused on language-oriented programming, Clojure runs on the JVM and emphasizes immutability, and Emacs Lisp is the extension language for the Emacs editor.",
+          "discussion": "Commenters provided corrections and suggestions for more idiomatic code, such as replacing eval with apply and using endp instead of null. One user noted that SBCL compiles code by default, even in the REPL, and another pointed out the existence of the documentation function in Common Lisp. Overall, the discussion was constructive and focused on improving the accuracy of the comparison."
+        }
+      ]
+    },
+    {
+      "id": "research",
+      "title": "Research & Innovation",
+      "items": [
+        {
+          "title": "Haiku OS Now Runs on Apple M1 Macs",
+          "summary": "Haiku OS, the open-source BeOS successor, has been successfully ported to run on Apple M1 Macs, as demonstrated by community progress on ARM64 support. This port revives the BeOS experience on modern Apple Silicon hardware, showcasing Haiku's adaptability and potentially attracting new users interested in lightweight, responsive operating systems. The port is based on community efforts for ARM64 architecture, and while still in early stages, users report positive experiences on older x86 hardware, indicating the OS is stable and fast for basic tasks.",
+          "url": "https://discuss.haiku-os.org/t/my-haiku-arm64-progress/19044?page=2",
+          "score": 7,
+          "sources": [
+            {
+              "name": "hackernews",
+              "meta": "tekkertje"
+            }
+          ],
+          "tags": [
+            "Haiku OS",
+            "BeOS",
+            "ARM64",
+            "Apple Silicon",
+            "Operating Systems"
+          ],
+          "focusTopics": [],
+          "background": "Haiku is a free and open-source operating system that continues the legacy of BeOS, a discontinued OS known for its efficient multitasking and multimedia capabilities. BeOS was originally developed for PowerPC and later x86, but never achieved commercial success. Haiku aims to be binary-compatible with BeOS while supporting modern standards.",
+          "discussion": "Community members expressed excitement about Haiku's performance on old hardware and its potential on M1 Macs, with some noting the historical irony of BeOS nearly being acquired by Apple. Others lamented the unlikelihood of running Haiku on M-series iPads."
+        }
+      ]
+    },
+    {
+      "id": "engineering",
+      "title": "Engineering & Resources",
+      "items": [
+        {
+          "title": "Open Agent Leaderboard Launches for AI Agent Evaluation",
+          "summary": "IBM Research and Hugging Face have launched the Open Agent Leaderboard, a standardized benchmark for evaluating AI agents across diverse tasks including math and multi-modal challenges. This leaderboard addresses the growing need for a unified evaluation framework in the rapidly evolving AI agent field, enabling fair comparisons and driving progress in agentic AI research. The leaderboard allows users to filter results by evaluation dimensions, algorithms, datasets, and models, providing granular insights into agent performance. It is hosted on Hugging Face Spaces and open to community contributions.",
+          "url": "https://huggingface.co/blog/ibm-research/open-agent-leaderboard",
+          "score": 8,
+          "sources": [
+            {
+              "name": "rss",
+              "meta": "Hugging Face Blog"
+            }
+          ],
+          "tags": [
+            "AI agents",
+            "benchmarking",
+            "leaderboard",
+            "Hugging Face",
+            "evaluation"
+          ],
+          "focusTopics": [],
+          "background": "AI agents are systems that can autonomously perform tasks using large language models (LLMs). Evaluating agents is challenging due to the diversity of tasks and lack of standardized benchmarks. The Open Agent Leaderboard aims to fill this gap by providing a transparent and extensible evaluation platform."
+        },
+        {
+          "title": "Anthropic acquires Stainless, shuts down SDK generator",
+          "summary": "Anthropic has acquired Stainless, a developer tooling company specializing in SDK generation from OpenAPI specs, and will shut down all hosted Stainless products including the SDK generator. This acquisition signals Anthropic's aggressive push to attract top engineering talent for its Claude platform, while the shutdown of a popular SDK tool may disrupt developers who relied on it for API integration. Stainless's SDK generator produced client libraries in multiple languages and updated them automatically as APIs changed; Anthropic will wind down all hosted products, with new signups and projects no longer available starting today.",
+          "url": "https://www.anthropic.com/news/anthropic-acquires-stainless",
+          "score": 7,
+          "sources": [
+            {
+              "name": "hackernews",
+              "meta": "tomeraberbach"
+            }
+          ],
+          "tags": [
+            "acquisition",
+            "AI",
+            "Anthropic",
+            "talent",
+            "SDK"
+          ],
+          "focusTopics": [
+            "tool-use"
+          ],
+          "background": "Stainless provided developer tools that read OpenAPI specs and output production-ready SDKs, documentation, and MCP servers for agent integrations. Anthropic's Claude platform offers APIs and console for building with Claude models, and the company is expanding its engineering team to enhance the platform's capabilities.",
+          "discussion": "Commenters view the acquisition as an acquihire, noting that Anthropic needs top engineers and that shutting down a useful product is unfortunate. Some express concern about existing users and the trend of agentic coding tools becoming walled gardens."
+        },
+        {
+          "title": "Fighting AI Bot Spam on GitHub with Git's --author Flag",
+          "summary": "A blog post from Archestra AI describes using Git's --author flag to filter out AI-generated spam pull requests in GitHub repositories. The approach checks the author metadata of commits to identify and block bot-like contributions. This provides a practical, low-overhead solution for open-source maintainers overwhelmed by AI bot spam, which has become a significant problem. It highlights the growing need for better spam detection and contributor verification in the open-source ecosystem. The --author flag in Git allows filtering commits by author name or email, which can be used to reject PRs from known bot accounts. However, this method is not foolproof, as bots can easily fake author information, and it may also block legitimate contributors using automation tools.",
+          "url": "https://archestra.ai/blog/only-responsible-ai",
+          "score": 7,
+          "sources": [
+            {
+              "name": "hackernews",
+              "meta": "ildari"
+            }
+          ],
+          "tags": [
+            "GitHub",
+            "spam",
+            "AI",
+            "open source",
+            "security"
+          ],
+          "focusTopics": [],
+          "background": "Git is a version control system widely used in open-source development. The --author flag is typically used to filter commit logs by author, but here it is repurposed for spam detection. AI bot spam has surged recently, with bots submitting low-quality or irrelevant pull requests to repositories, often to claim bounties or appear active.",
+          "discussion": "Commenters raised security concerns, noting that merged PRs grant higher permissions, making spam a vector for attacks. Others criticized GitHub for lacking basic anti-spam features and suggested alternative solutions like ELO-based reputation systems or blocking accounts with high rejection rates."
+        },
+        {
+          "title": "AI Agents Run a Live Radio Station: Hilarious Failures",
+          "summary": "Andon Labs launched a public experiment where four AI agents autonomously run a live radio station, handling both broadcasting and business operations, with humorous but flawed results. This experiment provides real-world insights into the capabilities and limitations of AI agents in autonomous media production, highlighting challenges in reliability and coherence. The AI agents have full tools to broadcast live shows and manage business tasks, but their revenue is currently terrible; listeners can even try to negotiate sponsor deals with them.",
+          "url": "https://andonlabs.com/blog/andon-fm",
+          "score": 7,
+          "sources": [
+            {
+              "name": "hackernews",
+              "meta": "lukaspetersson"
+            }
+          ],
+          "tags": [
+            "AI agents",
+            "experiment",
+            "media",
+            "radio",
+            "autonomy"
+          ],
+          "focusTopics": [],
+          "background": "Andon Labs previously ran experiments with AI agents in retail (vending machines, stores, cafes) to study failures in real-world autonomy. This media experiment extends that work to broadcasting, where agents must generate content, interact with listeners, and handle business decisions without human intervention.",
+          "discussion": "Community comments note that one AI station got stuck repeating the same phrase, and some listeners joked that all listeners are AI. Others defended the experiment as valuable for observing AI failure modes, while a commenter questioned the lack of prompt transparency."
+        },
+        {
+          "title": "Files.md: Open-Source Alternative to Obsidian",
+          "summary": "Files.md, an open-source note-taking tool, has been released on GitHub, offering a different approach to knowledge management compared to Obsidian. This sparks community discussion about open-source alternatives to Obsidian, highlighting the demand for transparent, self-hosted note-taking solutions. Files.md stores notes as local markdown files and features a chat-like interface, which some commenters find innovative. It is not a feature-parity clone of Obsidian.",
+          "url": "https://github.com/zakirullin/files.md",
+          "score": 7,
+          "sources": [
+            {
+              "name": "hackernews",
+              "meta": "zakirullin"
+            }
+          ],
+          "tags": [
+            "open-source",
+            "note-taking",
+            "markdown",
+            "Obsidian-alternative",
+            "productivity"
+          ],
+          "focusTopics": [],
+          "background": "Obsidian is a popular note-taking app that uses local markdown files and supports bidirectional linking, but it is not open-source. Many users seek open-source alternatives for transparency and control over their data.",
+          "discussion": "Commenters noted that Obsidian feels like it should be open-source but isn't, and some suggested Joplin as a mature alternative. Others praised Files.md's unique chat interface as a fresh take on note-taking."
+        },
+        {
+          "title": "PaddleOCR 3.5 Adds Transformers Backend for OCR",
+          "summary": "PaddleOCR 3.5 introduces a Transformers backend, allowing supported OCR and document parsing models to run with the Transformers library while PaddleOCR manages the pipeline. This integration enhances performance and flexibility, enabling users to leverage the extensive Transformers ecosystem for OCR tasks, which could lead to broader adoption and easier experimentation. The Transformers backend is optional and works with supported PaddleOCR models; PaddleOCR continues to handle the OCR pipeline, including text detection and recognition.",
+          "url": "https://huggingface.co/blog/PaddlePaddle/paddleocr-transformers",
+          "score": 7,
+          "sources": [
+            {
+              "name": "rss",
+              "meta": "Hugging Face Blog"
+            }
+          ],
+          "tags": [
+            "OCR",
+            "PaddleOCR",
+            "Transformers",
+            "Document Parsing",
+            "Deep Learning"
+          ],
+          "focusTopics": [
+            "memory"
+          ],
+          "background": "PaddleOCR is an open-source OCR toolkit developed by PaddlePaddle, supporting multilingual text detection and recognition. Transformers is a popular deep learning library by Hugging Face that provides pre-trained models and a unified interface. This update bridges the two, allowing users to combine PaddleOCR's pipeline with Transformers' model hub."
+        },
+        {
+          "title": "Interactive Demo Tracks Clicks and Mouse Movements",
+          "summary": "A website (clickclickclick.click) has been launched that displays user clicks and mouse movements in real-time, with a playful bot-detection feature that calls out automated scripts. This demo highlights how easily user behavior can be tracked, raising awareness about online privacy and the sophistication of analytics tools. The site uses JavaScript to capture every click and mouse movement, and it can detect rapid, repetitive clicks (e.g., from a console loop) and label the user as a bot.",
+          "url": "https://clickclickclick.click/",
+          "score": 6,
+          "sources": [
+            {
+              "name": "hackernews",
+              "meta": "andrewzeno"
+            }
+          ],
+          "tags": [
+            "interactive",
+            "analytics",
+            "privacy",
+            "demo"
+          ],
+          "focusTopics": [],
+          "background": "Mouse tracking analytics are used by companies to understand user behavior on websites, often recording sessions for later replay. This demo simplifies that concept into a live, public display.",
+          "discussion": "Commenters expressed a mix of amusement and unease: some found the bot detection clever, while others felt the tracking was creepy. One user shared a similar project they built."
+        }
+      ]
+    }
+  ]
+}
