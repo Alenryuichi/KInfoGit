@@ -1,235 +1,188 @@
 {
   "date": "2026-05-20",
-  "itemCount": 18,
+  "itemCount": 81,
   "sections": [
     {
       "id": "headlines",
       "title": "Headlines & Launches",
       "items": [
         {
-          "title": "Google Redesigns Search Box with AI Answers",
-          "summary": "Google announced a major redesign of its search box at Google I/O 2026, integrating AI-generated answers powered by its Gemini model directly into the search results page, moving beyond traditional blue links. This shift could fundamentally change how users interact with search, potentially reducing traffic to external websites as users get answers directly from Google, raising concerns about the future of web publishing and the accuracy of AI-generated information. The new search box uses Google's Gemini large language model to synthesize answers from multiple sources, presenting them in a conversational format. Critics worry about the lack of primary source attribution and the potential for misinformation, as the AI may combine information from different contexts or outdated sources.",
-          "url": "https://blog.google/products-and-platforms/products/search/search-io-2026/",
-          "score": 9,
-          "sources": [
-            {
-              "name": "hackernews",
-              "meta": "berkeleyjunk"
-            }
-          ],
-          "tags": [
-            "Google",
-            "AI",
-            "search",
-            "LLM",
-            "web"
-          ],
-          "focusTopics": [],
-          "background": "Google has dominated web search for decades by returning lists of links to external sites. With the rise of large language models like GPT-4 and Gemini, AI-powered search assistants (e.g., Perplexity, Andi) have emerged that provide direct answers. Google's move represents a strategic response to these competitors, but risks disrupting the web ecosystem that relies on search traffic for revenue.",
-          "discussion": "Commenters expressed skepticism about trusting AI-generated answers, with one noting that LLMs often produce plausible-sounding but inaccurate summaries that lack primary sources. Another referenced the concept of 'Google Zero,' where Google stops sending traffic to other sites, echoing concerns about the impact on web publishers. Some nostalgic comments highlighted how far Google has evolved from its simple search box origins."
-        },
-        {
-          "title": "Andrej Karpathy Joins Anthropic's Pre-Training Team",
-          "summary": "Andrej Karpathy, a prominent AI researcher and former Tesla AI director, has joined Anthropic's pre-training team to work on Claude's core capabilities. Karpathy's move signals Anthropic's growing influence in frontier AI development and could accelerate progress on Claude's foundational models, impacting the competitive landscape among leading AI labs. Karpathy will start immediately on the pre-training team responsible for the massive training runs that give Claude its core knowledge and capabilities, according to Anthropic.",
+          "title": "I’ve joined Anthropic",
+          "summary": "Karpathy宣布加入Anthropic，引发行业关注。",
           "url": "https://twitter.com/karpathy/status/2056753169888334312",
-          "score": 9,
+          "score": 9.575,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "dmarcos"
+              "name": "HN (1166)"
             }
           ],
           "tags": [
-            "AI",
-            "Anthropic",
-            "Karpathy",
-            "industry news",
-            "deep learning"
+            "anthropic",
+            "hiring",
+            "karpathy"
           ],
-          "focusTopics": [],
-          "background": "Andrej Karpathy is a highly influential figure in deep learning, known for his work at OpenAI and Tesla, and for his educational content. Anthropic is an AI safety company that develops the Claude model series, competing with OpenAI's GPT models. Pre-training is the initial phase where a model learns from vast amounts of data to acquire broad knowledge.",
-          "discussion": "The community expressed excitement about Karpathy's move, with some hoping he continues his educational work despite likely NDAs. Others voiced concerns about Anthropic's growing dominance, comparing it to an industry tornado."
+          "focusTopics": []
         },
         {
-          "title": "CISA Contractor Leaks AWS GovCloud Keys on GitHub",
-          "summary": "A CISA contractor exposed AWS GovCloud access keys and internal passwords in a public GitHub repository, and the agency failed to respond promptly after being notified. This incident exposes highly sensitive U.S. government systems to potential compromise, highlighting systemic failures in credential management and incident response within a critical cybersecurity agency. The repository contained a file named \"AWS-Workspace-Firefox-Passwords.csv\" with plaintext usernames and passwords for dozens of internal CISA systems. The contractor was an employee of Nightwing, and the account used both official CISA emails and personal addresses.",
-          "url": "https://krebsonsecurity.com/2026/05/cisa-admin-leaked-aws-govcloud-keys-on-github/",
-          "score": 9,
-          "sources": [
-            {
-              "name": "hackernews",
-              "meta": "LelouBil"
-            }
-          ],
-          "tags": [
-            "security",
-            "CISA",
-            "AWS",
-            "data leak",
-            "government"
-          ],
-          "focusTopics": [],
-          "background": "AWS GovCloud (US) is a cloud environment designed specifically for U.S. government agencies to host sensitive and controlled unclassified information (CUI) with strict compliance requirements. CISA, the Cybersecurity and Infrastructure Security Agency, is responsible for protecting federal networks. Leaked credentials to such environments can lead to unauthorized access to critical government infrastructure.",
-          "discussion": "Commenters expressed shock that CISA did not respond to notifications, with some suggesting the leak could be a honeypot. Others noted the broader risk of AI training data absorbing secrets from repositories, and pointed out that CISA also uploaded sensitive documents to ChatGPT."
-        },
-        {
-          "title": "Google Launches Gemini 3.5 Flash with 3x Price Hike",
-          "summary": "Google released Gemini 3.5 Flash, a new multimodal model with improved coding and reasoning capabilities, priced at $1.50 per million input tokens and $9.00 per million output tokens—three times the cost of its predecessor, Gemini 2.5 Flash. This pricing shift marks a notable departure from the trend of decreasing LLM costs, potentially affecting developer adoption and sparking industry-wide debate on sustainable pricing models for advanced AI capabilities. Gemini 3.5 Flash supports a 1,048,576-token context window and is optimized for agentic loops and coding tasks. Cached input tokens are priced at $0.15 per million, and non-global regions incur a slight premium.",
+          "title": "Gemini 3.5: frontier intelligence with action",
+          "summary": "Google发布Gemini 3.5，前沿智能与行动能力。",
           "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5/",
-          "score": 8,
+          "score": 9.5,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "spectraldrift"
+              "name": "Google AI Blog"
             }
           ],
           "tags": [
-            "AI",
-            "Google",
-            "Gemini",
-            "pricing",
-            "LLM"
+            "gemini",
+            "model-release",
+            "frontier"
           ],
           "focusTopics": [
-            "memory",
-            "planning"
-          ],
-          "background": "Google's Gemini model family includes Pro, Flash, and Nano variants, with Flash models traditionally offering a balance of speed and cost. The previous generation, Gemini 2.5 Flash, was priced at $0.30/$2.50 per million input/output tokens. The 3x price increase for the same model tier is unprecedented in the LLM market.",
-          "discussion": "Community members noted the steep price increase, with one commenter highlighting that Gemini 3.5 Flash costs similar to Gemini 2.5 Pro. Others shared benchmarks showing the new model uses fewer tokens for certain tasks compared to Gemini 3.1 Pro, but expressed concern about the overall pricing direction."
+            "model-release"
+          ]
         },
         {
-          "title": "Virtual Museum Showcases Nearly Every Historic OS",
-          "summary": "A virtual museum has been released as a downloadable Linux VM containing over 1,700 pre-installed operating systems from 1948 to the present, all pre-configured and ready to run under QEMU, VirtualBox, or UTM with a custom launcher. This project provides an unprecedented hands-on resource for historians, educators, and retrocomputing enthusiasts to explore and interact with a vast range of operating systems, preserving digital heritage in a runnable form. The VM includes a custom emulator-independent launcher, snapshot support for reverting broken installs, and automatic updates. The collection spans from early systems like GM-NAA I/O to modern ones, with emulators pre-installed for each platform.",
-          "url": "https://virtualosmuseum.org/",
-          "score": 8,
+          "title": "I/O 2026: Welcome to the agentic Gemini era",
+          "summary": "Google I/O 2026主题演讲：进入Agentic Gemini时代。",
+          "url": "https://blog.google/innovation-and-ai/sundar-pichai-io-2026/",
+          "score": 9,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "andreww591"
+              "name": "Google AI Blog"
             }
           ],
           "tags": [
-            "operating systems",
-            "emulation",
-            "retro computing",
-            "digital preservation",
-            "history"
+            "gemini",
+            "agentic",
+            "google-io"
           ],
-          "focusTopics": [],
-          "background": "Operating system preservation often relies on emulation, which can replicate software behavior but may miss hardware-specific nuances like keyboard latency or CRT display effects. This project aims to make historic OSes easily accessible, though some community members note that emulation cannot fully capture the original user experience.",
-          "discussion": "Community comments highlight both admiration for the curation effort and concerns about emulation fidelity. Users note that some gallery entries show only the 'last, greatest' version, potentially missing more interesting variants, and that the 'feel' of old systems—like keyboard click latency or CRT scanlines—is lost in emulation."
+          "focusTopics": [
+            "agent-harness"
+          ]
         },
         {
-          "title": "Tesla Lithium Refinery Discharges Polluted Wastewater into Texas Creek",
-          "summary": "Tesla's lithium refinery in Robstown, Texas, is discharging up to 231,000 gallons of treated wastewater per day into an unnamed ditch that flows into Petronila Creek and Baffin Bay, despite lacking permission to use the drainage ditch. This raises serious environmental and legal concerns, as the wastewater contains toxic metals like hexavalent chromium and arsenic, potentially harming a popular fishing destination and highlighting gaps in regulatory oversight. Tesla holds a TPDES permit from the Texas Commission on Environmental Quality (TCEQ) issued on January 15, 2025, but the drainage district managing the ditch was never notified. Lab tests found hexavalent chromium at 0.0104 mg/L, just above the reporting limit, and arsenic at 0.0025 mg/L, below federal drinking water standards.",
-          "url": "https://www.autonocion.com/us/tesla-lithium-refinery-texas/",
-          "score": 8,
+          "title": "Gemini 3.5 Flash: more expensive, but Google plan to use it for everything",
+          "summary": "Google I/O发布Gemini 3.5 Flash，计划全面采用。",
+          "url": "https://simonwillison.net/2026/May/19/gemini-35-flash/#atom-everything",
+          "score": 9,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "atombender"
+              "name": "Simon Willison"
             }
           ],
           "tags": [
-            "environment",
-            "Tesla",
-            "lithium",
-            "regulation",
-            "wastewater"
+            "gemini",
+            "model-release",
+            "google-io"
           ],
-          "focusTopics": [],
-          "background": "Tesla's lithium refinery in Texas began construction in May 2023 and uses a process that avoids harsh acids, producing a byproduct of sand and limestone. However, the refinery's wastewater discharge has drawn scrutiny because the drainage district that owns the ditch was not informed, and the permit does not grant rights to use public or private property for conveyance.",
-          "discussion": "Commenters noted that while Tesla has a permit, it lacked permission to use the county-owned ditch, shifting focus from water quality to property rights. Some argued that pollutant levels like arsenic were below drinking water standards, but hexavalent chromium above the reporting limit remains concerning. Others criticized Tesla's statement of full compliance as misleading."
+          "focusTopics": [
+            "model-release"
+          ]
         },
         {
-          "title": "Google's Gemini Omni Generates Videos but Struggles with Physics",
-          "summary": "Google has released Gemini Omni, a multimodal AI model that generates videos from text prompts, but community tests reveal persistent issues with spatial consistency and realistic physics. This highlights the ongoing challenge in AI video generation: achieving temporal coherence and physical plausibility. The mixed reception compared to alternatives like Seedance 2 suggests that Google's model, while visually impressive, may not yet be production-ready for tasks requiring accurate physics. Users noted that objects in generated videos often morph or disappear when out of view, and physics behavior like marble rolling shows unexplained speed changes. The model excels at visual detail but lacks deep spatial understanding.",
-          "url": "https://deepmind.google/models/gemini-omni/",
-          "score": 8,
+          "title": "Google just redesigned the search box for the first time in 25 years — here’s why it matters more than you think. | VentureBeat",
+          "summary": "Google 25年来首次重新设计搜索框，集成AI生成答案。",
+          "url": "https://venturebeat.com/technology/google-just-redesigned-the-search-box-for-the-first-time-in-25-years-heres-why-it-matters-more-than-you-think",
+          "score": 9,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "meetpateltech"
+              "name": "venturebeat.com"
             }
           ],
           "tags": [
-            "AI",
-            "video generation",
-            "multimodal",
-            "Google",
-            "machine learning"
+            "search",
+            "ai-integration",
+            "google"
           ],
-          "focusTopics": [],
-          "background": "Video generation models like Gemini Omni use diffusion or transformer architectures to create frames from text prompts. A key challenge is maintaining object identity and physical consistency across frames, known as temporal coherence. Current models often produce high-quality individual frames but fail to simulate realistic motion and interactions.",
-          "discussion": "Community comments are mixed: some users find Gemini Omni unimpressive compared to Seedance 2, while others point out specific physics failures like bricks morphing in a Jenga tower test. There is agreement that spatial consistency remains a fundamental issue, despite the model's visual quality."
+          "focusTopics": []
         },
         {
-          "title": "Mistral AI Acquires Emmi AI for Industrial AI Stack",
-          "summary": "Mistral AI has acquired Emmi AI, a startup specializing in AI for engineering and manufacturing, to create a leading AI stack for industrial engineering. The acquisition is backed by ASML, which recently invested €1.3 billion in Mistral AI. This acquisition positions Mistral AI as a key player in industrial AI, a niche often overlooked by major AI companies like Google, Anthropic, and OpenAI. It could accelerate AI adoption in manufacturing, energy, and automotive sectors, leveraging ASML's industrial expertise. Emmi AI's co-founder Johannes Brandstetter highlighted their work on real-time power grid stabilization, injection molding simulation, and automotive safety testing. The combined stack will integrate Mistral's AI platform with Emmi's domain-specific models for physical challenges.",
+          "title": "A new era for AI Search",
+          "summary": "Google搜索进入AI新时代，重大更新。",
+          "url": "https://blog.google/products-and-platforms/products/search/search-io-2026/",
+          "score": 8.5,
+          "sources": [
+            {
+              "name": "Google AI Blog"
+            }
+          ],
+          "tags": [
+            "search",
+            "ai",
+            "google"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Google isn't releasing its next big AI model yet, drawing groans at its I/O conference - Business Insider",
+          "summary": "Google I/O宣布Gemini 3.5 Pro推迟发布，引发不满。",
+          "url": "https://www.businessinsider.com/google-io-2026-gemini-3-5-pro-2026-5",
+          "score": 8.5,
+          "sources": [
+            {
+              "name": "businessinsider.com"
+            }
+          ],
+          "tags": [
+            "gemini",
+            "google-io",
+            "model-release"
+          ],
+          "focusTopics": [
+            "model-release"
+          ]
+        },
+        {
+          "title": "Google Revamps Search for AI Era, Debuts Coding Tools - Bloomberg",
+          "summary": "Google为搜索、YouTube和Docs推出AI工具。",
+          "url": "https://www.bloomberg.com/news/articles/2026-05-19/google-revamps-youtube-docs-with-artificial-intelligence-tools",
+          "score": 8,
+          "sources": [
+            {
+              "name": "bloomberg.com"
+            }
+          ],
+          "tags": [
+            "google",
+            "search",
+            "ai-tools"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "OpenAI says it’s getting serious about AI detection and labeling",
+          "summary": "OpenAI加强AI检测与标注，扩展C2PA凭证。",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/933442/openai-synthid-content-credentials-c2pa-expansion",
+          "score": 7,
+          "sources": [
+            {
+              "name": "theverge.com"
+            }
+          ],
+          "tags": [
+            "openai",
+            "ai-detection",
+            "content-credentials"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Mistral AI acquires Emmi AI",
+          "summary": "Mistral AI收购Emmi AI，强化工业AI能力。",
           "url": "https://www.emmi.ai/news/mistral-ai-acquires-emmi-ai",
-          "score": 7,
+          "score": 6.439,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "doener"
+              "name": "HN (163)"
             }
           ],
           "tags": [
-            "AI",
             "acquisition",
-            "industrial engineering",
-            "Mistral AI",
-            "ASML"
+            "mistral",
+            "industrial-ai"
           ],
-          "focusTopics": [
-            "memory"
-          ],
-          "background": "Mistral AI is a French AI company founded in 2023, known for open-weight large language models and a valuation over $14 billion. Emmi AI is an Austrian startup focused on AI for engineering and manufacturing. ASML, a leading semiconductor equipment maker, recently became Mistral AI's largest shareholder with a €1.3 billion investment.",
-          "discussion": "Community members noted ASML's investment adds credibility to Mistral's industrial AI ambitions. Some expressed skepticism about Emmi's actual product and user base, while others saw the vertical focus as a smart differentiator from Big Tech AI companies."
-        },
-        {
-          "title": "Minnesota Becomes First State to Ban Prediction Markets",
-          "summary": "Minnesota Governor Tim Walz signed a law on May 19, 2026, making it a felony for prediction market platforms like Kalshi and Polymarket to operate in the state, the first such ban in the U.S. This ban sets a precedent for state-level regulation of prediction markets, challenging the CFTC's federal oversight and raising questions about preemption, while potentially influencing other states to follow suit. The law classifies operating a prediction market as a felony, punishable by up to five years in prison and fines. Minnesota already has a complete ban on sports betting, making its stance on gambling-related markets particularly strict.",
-          "url": "https://www.npr.org/2026/05/19/nx-s1-5821265/minnesota-ban-prediction-markets",
-          "score": 7,
-          "sources": [
-            {
-              "name": "hackernews",
-              "meta": "ortusdux"
-            }
-          ],
-          "tags": [
-            "prediction markets",
-            "regulation",
-            "sports betting",
-            "policy",
-            "CFTC"
-          ],
-          "focusTopics": [],
-          "background": "Prediction markets are online platforms where users trade contracts based on the outcome of future events, such as elections or sports games. They are regulated by the Commodity Futures Trading Commission (CFTC) as commodity futures, which typically preempts state law. However, Minnesota's law directly challenges this federal authority, potentially leading to legal battles over preemption.",
-          "discussion": "Commenters debated federal preemption, with some arguing that CFTC oversight should override state bans, while others questioned the societal value of prediction markets, comparing them to sports betting and citing risks like insider trading. A few commenters predicted the ban would be short-lived or challenged in court."
-        },
-        {
-          "title": "Disney Shuts Down FiveThirtyEight",
-          "summary": "Disney has decided to shut down FiveThirtyEight, the data journalism outlet founded by Nate Silver, as part of broader cost-cutting measures. This marks the end of a prominent data-driven journalism brand and highlights the challenges of maintaining independent editorial voices within large corporate conglomerates. Nate Silver expressed regret over selling to Disney, noting that corporate priorities often shift away from acquired media assets. The shutdown reflects Disney's focus on streaming and core entertainment.",
-          "url": "https://www.natesilver.net/p/disney-erased-fivethirtyeight",
-          "score": 7,
-          "sources": [
-            {
-              "name": "hackernews",
-              "meta": "7777777phil"
-            }
-          ],
-          "tags": [
-            "media",
-            "data journalism",
-            "corporate acquisition",
-            "Disney",
-            "FiveThirtyEight"
-          ],
-          "focusTopics": [],
-          "background": "FiveThirtyEight was acquired by Disney in 2013 as part of a deal with ESPN. It became known for its statistical analysis in politics, sports, and other fields. Disney's recent cost-cutting has led to the closure of several media properties.",
-          "discussion": "Commenters expressed mixed views: some criticized Nate Silver for selling out, while others noted that corporate acquisitions often lead to loss of editorial independence. Several pointed to the 2016 election coverage as a turning point in public perception."
+          "focusTopics": []
         }
       ]
     },
@@ -238,26 +191,452 @@
       "title": "Research & Innovation",
       "items": [
         {
-          "title": "3D Gaussian Splatting of a Strawberry",
-          "summary": "A user on Hacker News shared a 3D Gaussian splat reconstruction of a strawberry, created from multiple photographs and viewable in a browser via WebGL. This demonstration showcases the accessibility and visual appeal of 3D Gaussian splatting, a technique that has gained popularity since 2023 for real-time radiance field rendering from images. The reconstruction was created using the superspl.at platform, which allows users to upload photos and generate interactive 3D splats. The strawberry model exhibits the characteristic 'dreamy' degradation when viewed up close.",
-          "url": "https://superspl.at/scene/84df8849",
-          "score": 6,
+          "title": "ICRL: Learning to Internalize Self-Critique with Reinforcement Learning",
+          "summary": "ICRL：通过强化学习内化自我批评，提升智能体纠错能力。",
+          "url": "https://arxiv.org/abs/2605.15224",
+          "score": 7.5,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "danybittel"
+              "name": "ArXiv cs.AI"
             }
           ],
           "tags": [
-            "Gaussian Splatting",
-            "3D Reconstruction",
-            "Computer Graphics",
-            "WebGL",
-            "Novelty"
+            "reinforcement-learning",
+            "self-critique",
+            "agent"
           ],
-          "focusTopics": [],
-          "background": "3D Gaussian splatting is a volume rendering technique that represents a scene as a collection of 3D Gaussian primitives. It was revitalized in 2023 by a research group from Inria, enabling real-time rendering of novel views from a set of input images, outperforming earlier methods like NeRF in speed and quality.",
-          "discussion": "Commenters expressed appreciation for the visual quality, with one noting the 'dreamy' degradation effect as a unique aesthetic. Another user shared a link to a different scene they found beautiful. There was also a technical note about WebGL support requirements."
+          "focusTopics": [
+            "post-training"
+          ]
+        },
+        {
+          "title": "The Scaling Laws of Skills in LLM Agent Systems",
+          "summary": "研究LLM智能体系统中技能的规模定律。",
+          "url": "https://arxiv.org/abs/2605.16508",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "scaling-laws",
+            "agent-skills",
+            "llm"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "CHI-Bench: Can AI Agents Automate End-to-End, Long-Horizon, Policy-Rich Healthcare Workflows?",
+          "summary": "CHI-Bench评估AI代理自动化医疗工作流的能力。",
+          "url": "https://arxiv.org/abs/2605.16679",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "benchmark",
+            "healthcare",
+            "ai-agent"
+          ],
+          "focusTopics": [
+            "evals",
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "Here are my KV cache quantization benchmarks: TurboQuant is overrated but saved by TCQ, q5 deserves more attention, and symmetric q8 might be a waste of VRAM",
+          "summary": "KV cache量化基准测试，评估TurboQuant、TCQ等方法的性能。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1thu6os/here_are_my_kv_cache_quantization_benchmarks/",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "kv-cache",
+            "quantization",
+            "benchmark"
+          ],
+          "focusTopics": [
+            "context-engineering"
+          ]
+        },
+        {
+          "title": "SDOF: Taming the Alignment Tax in Multi-Agent Orchestration with State-Constrained Dispatch",
+          "summary": "SDOF通过状态约束调度减少多智能体编排中的对齐损失。",
+          "url": "https://arxiv.org/abs/2605.15204",
+          "score": 7,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "multi-agent",
+            "orchestration",
+            "alignment"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "SkillSmith: Compiling Agent Skills into Boundary-Guided Runtime Interfaces",
+          "summary": "SkillSmith将智能体技能编译为边界引导的运行时接口。",
+          "url": "https://arxiv.org/abs/2605.15215",
+          "score": 7,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "agent-skills",
+            "llm-agent",
+            "interface"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "NOVA: Fundamental Limits of Knowledge Discovery Through AI",
+          "summary": "NOVA探讨AI通过迭代自我改进发现新知识的基本极限。",
+          "url": "https://arxiv.org/abs/2605.15219",
+          "score": 7,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "knowledge-discovery",
+            "self-improvement",
+            "limits"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Nemotron-Labs-Diffusion from NVIDIA",
+          "summary": "NVIDIA发布Nemotron-Labs-Diffusion，支持AR和扩散并行解码。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1thv6du/nemotronlabsdiffusion_from_nvidia/",
+          "score": 7,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "diffusion",
+            "decoding",
+            "nvidia"
+          ],
+          "focusTopics": [
+            "model-release"
+          ]
+        },
+        {
+          "title": "I built a tool that shows you what GPT-2 is \"thinking\" in real-time as it generates 3D graph of concept activations per token [R]",
+          "summary": "构建工具实时可视化GPT-2生成时的概念激活3D图，探索机械可解释性。",
+          "url": "https://www.reddit.com/r/MachineLearning/comments/1thwad9/i_built_a_tool_that_shows_you_what_gpt2_is/",
+          "score": 7,
+          "sources": [
+            {
+              "name": "Reddit r/MachineLearning"
+            }
+          ],
+          "tags": [
+            "mechanistic-interpretability",
+            "gpt-2",
+            "visualization"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "NVlabs/Sana",
+          "summary": "SANA：高效高分辨率图像合成，线性扩散Transformer。",
+          "url": "https://github.com/NVlabs/Sana",
+          "score": 6.8125,
+          "sources": [
+            {
+              "name": "GitHub trending:python (+575★)"
+            }
+          ],
+          "tags": [
+            "image-generation",
+            "diffusion-transformer",
+            "efficient"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Does Theory of Mind Improvement Really Benefit Human-AI Interactions? Empirical Findings from Interactive Evaluations",
+          "summary": "实证研究：提升LLM心理理论能力是否真正改善人机交互。",
+          "url": "https://arxiv.org/abs/2605.15205",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "theory-of-mind",
+            "human-ai-interaction",
+            "llm"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "CAX-Agent: A Lightweight Agent Harness for Reliable APDL Automation",
+          "summary": "CAX-Agent：用于可靠APDL自动化的轻量级智能体框架。",
+          "url": "https://arxiv.org/abs/2605.15218",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "agent-harness",
+            "automation",
+            "simulation"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "NIMO Controller: a self-driving laboratory orchestrator based on the Model Context Protocol",
+          "summary": "NIMO Controller：基于MCP协议的自驱动实验室编排器。",
+          "url": "https://arxiv.org/abs/2605.15227",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "mcp",
+            "self-driving-lab",
+            "orchestrator"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "PQR: A Framework to Generate Diverse and Realistic User Queries that Elicit QA Agent Failures",
+          "summary": "PQR框架生成多样真实查询以引发QA智能体失败。",
+          "url": "https://arxiv.org/abs/2605.16551",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "qa-agent",
+            "evaluation",
+            "failure-detection"
+          ],
+          "focusTopics": [
+            "evals"
+          ]
+        },
+        {
+          "title": "Backprop-free Pong: PC + distributional Hebbian plasticity vs. PPO: 57% vs. 59%, ~1500 lines from scratch [P]",
+          "summary": "无反向传播的Pong游戏：分布Hebbian可塑性接近PPO性能。",
+          "url": "https://www.reddit.com/r/MachineLearning/comments/1thrlix/backpropfree_pong_pc_distributional_hebbian/",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "Reddit r/MachineLearning"
+            }
+          ],
+          "tags": [
+            "reinforcement-learning",
+            "hebbian-learning",
+            "bio-plausible"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Fair outputs, Biased Internals: Causal Potency and Asymmetry of Latent Bias in LLMs for High-Stakes Decisions",
+          "summary": "LLM在高风险决策中输出公平但内部存在潜在偏见。",
+          "url": "https://arxiv.org/abs/2605.15217",
+          "score": 6,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "fairness",
+            "bias",
+            "llm"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Verifiable Agentic Infrastructure: Proof-Derived Authorization for Sovereign AI Systems",
+          "summary": "可验证智能体基础设施：基于证明的授权用于主权AI系统。",
+          "url": "https://arxiv.org/abs/2605.15228",
+          "score": 6,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "authorization",
+            "agent-infrastructure",
+            "security"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "SKG-Eval: Stateful Evaluation of Multi-Turn Dialogue via Incremental Semantic Knowledge Graphs",
+          "summary": "SKG-Eval：基于增量语义知识图谱的多轮对话评估。",
+          "url": "https://arxiv.org/abs/2605.16650",
+          "score": 6,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "dialogue-evaluation",
+            "knowledge-graph",
+            "multi-turn"
+          ],
+          "focusTopics": [
+            "evals"
+          ]
+        },
+        {
+          "title": "Language Acquisition Device in Large Language Models",
+          "summary": "研究LLM中的语言习得装置，探讨数据效率。",
+          "url": "https://arxiv.org/abs/2605.16758",
+          "score": 6,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "llm",
+            "language-acquisition"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "New SOTA 1B model? HRM-text",
+          "summary": "声称新SOTA 1B模型HRM-text，但基准测试结果存疑。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1ti150n/new_sota_1b_model_hrmtext/",
+          "score": 6,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "small-model",
+            "benchmark"
+          ],
+          "focusTopics": [
+            "model-release"
+          ]
+        },
+        {
+          "title": "DeepSlide: From Artifacts to Presentation Delivery",
+          "summary": "提出DeepSlide，用AI从工件生成演示文稿，优化幻灯片生成。",
+          "url": "https://arxiv.org/abs/2605.15202",
+          "score": 5.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "ai-slides",
+            "presentation",
+            "generation"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Beyond Sentiment Classification: A Generative Framework for Emotion Intensity Evaluation in Text",
+          "summary": "超越情感分类：文本情感强度评估的生成框架。",
+          "url": "https://arxiv.org/abs/2605.16613",
+          "score": 5,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "emotion",
+            "nlp",
+            "generative"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Retrieval-Based Multi-Label Legal Annotation: Extensible, Data-Efficient and Hallucination-Free",
+          "summary": "基于检索的多标签法律注释方法，减少幻觉。",
+          "url": "https://arxiv.org/abs/2605.16767",
+          "score": 5,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "legal-ai",
+            "retrieval",
+            "annotation"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Show HN: Gaussian Splat of a Strawberry",
+          "summary": "展示高斯泼溅技术渲染的草莓3D场景。",
+          "url": "https://superspl.at/scene/84df8849",
+          "score": 4.825,
+          "sources": [
+            {
+              "name": "HN (475)"
+            }
+          ],
+          "tags": [
+            "3d-rendering",
+            "gaussian-splatting",
+            "computer-graphics"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Exploring Lightweight Large Language Models for Court View Generation",
+          "summary": "探索轻量级LLM用于法院观点生成。",
+          "url": "https://arxiv.org/abs/2605.16770",
+          "score": 4.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "legal-ai",
+            "llm",
+            "generation"
+          ],
+          "focusTopics": []
         }
       ]
     },
@@ -266,161 +645,843 @@
       "title": "Engineering & Resources",
       "items": [
         {
-          "title": "OpenAI Adopts Google's SynthID Watermark for AI Images",
-          "summary": "OpenAI has integrated Google DeepMind's SynthID watermarking technology into its AI image generation tools and launched a content provenance verification tool. This move makes OpenAI one of the first major adopters of SynthID outside Google's ecosystem. This adoption marks a significant step toward industry-wide content provenance standards, helping users distinguish AI-generated images from real ones. It also signals growing collaboration between major AI companies on authenticity measures, though the effectiveness of watermarking remains debated. SynthID embeds imperceptible watermarks directly into image pixels, which can be detected by a dedicated verification tool. The watermarks are designed to be robust against common edits like cropping and compression, but community comments suggest they may be removable through pixel-level manipulation.",
-          "url": "https://openai.com/index/advancing-content-provenance/",
-          "score": 8,
+          "title": "With Gemini 3.5 Flash, Google bets its next AI wave on agents, not chatbots",
+          "summary": "Google押注Gemini 3.5 Flash推动AI代理而非聊天机器人。",
+          "url": "https://techcrunch.com/2026/05/19/with-gemini-3-5-flash-google-bets-its-next-ai-wave-on-agents-not-chatbots/",
+          "score": 8.5,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "smooke"
+              "name": "techcrunch.com"
             }
           ],
           "tags": [
-            "AI",
-            "watermarking",
-            "content provenance",
-            "OpenAI",
-            "SynthID"
+            "gemini",
+            "agents",
+            "google-io"
           ],
           "focusTopics": [
-            "multi-agent"
-          ],
-          "background": "SynthID is a technology from Google DeepMind that watermarks AI-generated content by embedding digital signals imperceptible to humans. It is already used across Google's generative AI products. Content provenance verification tools, such as those based on C2PA standards, provide a chain of custody for digital media to verify its origin and editing history.",
-          "discussion": "Community comments express skepticism about SynthID's robustness, with one user claiming to have removed the watermark by masking and regenerating pixels. Others question the metadata ethics and practical utility, while some defend the approach, noting the lack of a reproducible removal method."
+            "agent-harness"
+          ]
         },
         {
-          "title": "Forge boosts 8B model accuracy from 53% to 99% on agentic tasks",
-          "summary": "Forge, an open-source reliability layer for self-hosted LLM tool-calling, improves an 8B model's accuracy on multi-step agentic workflows from ~53% to ~99% using domain-agnostic guardrails, without modifying the model itself. This demonstrates that small local models can rival frontier APIs on agentic tasks when equipped with proper guardrails, potentially reducing reliance on expensive cloud services and enabling private, cost-effective AI agents. Forge's guardrail stack includes retry nudges, error recovery, step enforcement, rescue parsing, and VRAM-aware context management, with retry nudges providing the largest accuracy gains (24-49 points). The same 8B model with Forge (99.3%) outperforms Claude Sonnet without guardrails (87.2%).",
-          "url": "https://github.com/antoinezambelli/forge",
-          "score": 8,
+          "title": "HKUDS/CLI-Anything",
+          "summary": "CLI-Anything：让所有软件支持Agent原生交互。",
+          "url": "https://github.com/HKUDS/CLI-Anything",
+          "score": 8.3,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "zambelli"
+              "name": "GitHub trending:all (+1038★)"
             }
           ],
           "tags": [
-            "LLM",
-            "agentic workflows",
+            "agent-native",
+            "cli",
+            "tool-use"
+          ],
+          "focusTopics": [
+            "tool-use"
+          ]
+        },
+        {
+          "title": "rohitg00/agentmemory",
+          "summary": "AI编码Agent持久记忆系统，基于真实基准测试。",
+          "url": "https://github.com/rohitg00/agentmemory",
+          "score": 8.3,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+1609★)"
+            }
+          ],
+          "tags": [
+            "agent-memory",
+            "persistent-memory",
+            "coding-agents"
+          ],
+          "focusTopics": [
+            "context-engineering"
+          ]
+        },
+        {
+          "title": "colbymchenry/codegraph",
+          "summary": "预索引代码知识图谱，减少token和工具调用，100%本地。",
+          "url": "https://github.com/colbymchenry/codegraph",
+          "score": 8.3,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+1850★)"
+            }
+          ],
+          "tags": [
+            "code-knowledge-graph",
+            "claude-code",
+            "cursor"
+          ],
+          "focusTopics": [
+            "context-engineering"
+          ]
+        },
+        {
+          "title": "Gemini Omni",
+          "summary": "Google发布Gemini Omni多模态模型。",
+          "url": "https://deepmind.google/models/gemini-omni/",
+          "score": 8.017,
+          "sources": [
+            {
+              "name": "HN (264)"
+            }
+          ],
+          "tags": [
+            "multimodal",
+            "gemini",
+            "google-deepmind"
+          ],
+          "focusTopics": [
+            "model-release"
+          ]
+        },
+        {
+          "title": "Anthropic adds self-hosted sandboxes and MCP tunnels to Claude Managed Agents - the-decoder.com",
+          "summary": "Anthropic为Claude Managed Agents添加自托管沙箱和MCP隧道。",
+          "url": "https://the-decoder.com/anthropic-adds-self-hosted-sandboxes-and-mcp-tunnels-to-claude-managed-agents/",
+          "score": 8,
+          "sources": [
+            {
+              "name": "the-decoder.com"
+            }
+          ],
+          "tags": [
+            "anthropic",
+            "agents",
+            "mcp"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "bytedance released an open source model that attempts to do just about anything with only 3b parameters",
+          "summary": "字节跳动发布3B参数统一多模态模型Lance。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1thkwgk/bytedance_released_an_open_source_model_that/",
+          "score": 8,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "multimodal",
+            "open-source",
+            "small-model"
+          ],
+          "focusTopics": [
+            "model-release"
+          ]
+        },
+        {
+          "title": "Imbad0202/academic-research-skills",
+          "summary": "Claude Code学术研究技能集：研究→写作→审阅→修订→定稿。",
+          "url": "https://github.com/Imbad0202/academic-research-skills",
+          "score": 7.875,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+3164★)"
+            }
+          ],
+          "tags": [
+            "ai-coding",
+            "academic",
+            "claude-code"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "obra/superpowers",
+          "summary": "Agent技能框架与软件开发方法论。",
+          "url": "https://github.com/obra/superpowers",
+          "score": 7.875,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+1623★)"
+            }
+          ],
+          "tags": [
+            "agent-framework",
+            "skills",
+            "methodology"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "multica-ai/andrej-karpathy-skills",
+          "summary": "基于Karpathy观察的Claude Code行为改进配置。",
+          "url": "https://github.com/multica-ai/andrej-karpathy-skills",
+          "score": 7.875,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+1955★)"
+            }
+          ],
+          "tags": [
+            "claude-code",
+            "coding-pitfalls",
+            "configuration"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "The 13 biggest announcements at Google I/O 2026 - The Verge",
+          "summary": "Google I/O 2026 13大AI公告汇总。",
+          "url": "https://www.theverge.com/tech/933415/google-io-2026-biggest-announcements-ai-gemini",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "theverge.com"
+            }
+          ],
+          "tags": [
+            "google-io",
+            "gemini",
+            "ai-announcements"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Google says Gemini 3.5 Flash can slash enterprise AI costs by more than $1 billion a year",
+          "summary": "Gemini 3.5 Flash可为企业AI每年节省超10亿美元。",
+          "url": "https://venturebeat.com/technology/google-says-gemini-3-5-flash-can-slash-enterprise-ai-costs-by-more-than-1-billion-a-year",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "venturebeat.com"
+            }
+          ],
+          "tags": [
+            "gemini",
+            "enterprise",
+            "cost-saving"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Running DeepSeek-V4 locally with 4x legacy RTX 2080 Ti ($2k budget setup). Custom Turing kernels, W8A8 quantization, and 255 prefill tok/s!",
+          "summary": "用4张RTX 2080 Ti本地运行DeepSeek-V4，实现255 tok/s预填充。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1ti5sxu/running_deepseekv4_locally_with_4x_legacy_rtx/",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "deepseek",
+            "local-inference",
+            "quantization"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "antirez/ds4",
+          "summary": "antirez发布DeepSeek 4 Flash本地推理引擎，支持Metal。",
+          "url": "https://github.com/antirez/ds4",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "Co-Starred"
+            }
+          ],
+          "tags": [
+            "deepseek",
+            "local-inference",
+            "metal"
+          ],
+          "focusTopics": [
+            "model-release"
+          ]
+        },
+        {
+          "title": "Show HN: Forge – Guardrails take an 8B model from 53% to 99% on agentic tasks",
+          "summary": "Forge开源工具将8B模型在智能体任务上准确率从53%提升至99%。",
+          "url": "https://github.com/antoinezambelli/forge",
+          "score": 7.176,
+          "sources": [
+            {
+              "name": "HN (267)"
+            }
+          ],
+          "tags": [
+            "agent",
             "guardrails",
             "open-source",
-            "local models"
-          ],
-          "focusTopics": [],
-          "background": "Agentic workflows involve multi-step tasks where an LLM calls tools and processes results. Even high per-step accuracy compounds into high failure rates over multiple steps. Forge addresses this by adding a reliability layer that handles common failure modes like tool ambiguity and VRAM overflow.",
-          "discussion": "Commenters validated the tool-call ambiguity issue and the importance of serving backend choice. One user noted that small local models with proper harnesses can perform incredibly well, while another highlighted the potential for appropriately scaled tech to reduce reliance on large frontier models."
-        },
-        {
-          "title": "Dumb Ways Open Source Projects Die",
-          "summary": "A reflective article catalogs common but overlooked ways open source projects die, including maintainer burnout, scope creep, and overconfident forks. Understanding these failure modes helps maintainers and communities avoid pitfalls, improving project sustainability and ecosystem health. The article lists patterns like overconfident forks (forks that never gain critical mass) and scope creep driven by vocal users, which can turn a focused tool into an unmaintainable Swiss army knife.",
-          "url": "https://nesbitt.io/2026/05/19/dumb-ways-for-an-open-source-project-to-die.html",
-          "score": 8,
-          "sources": [
-            {
-              "name": "hackernews",
-              "meta": "chmaynard"
-            }
-          ],
-          "tags": [
-            "open source",
-            "software engineering",
-            "community",
-            "project management"
-          ],
-          "focusTopics": [],
-          "background": "Open source projects often fail not just from technical issues but from social and management problems. Common failure modes include maintainer burnout, lack of contribution guidelines, and feature creep. The article draws on community experiences to highlight these patterns.",
-          "discussion": "Commenters expanded on the list, noting that overconfident forks often wither without critical mass, and that scope creep from vocal users can destroy a focused tool. Some lamented the shift from solving personal problems to building personal brands."
-        },
-        {
-          "title": "Apple Unveils Agentic AI Accessibility Features",
-          "summary": "Apple announced new accessibility features powered by Apple Intelligence, including agentic AI capabilities for VoiceOver, Magnifier, and Voice Control, coming in iOS 27, iPadOS 27, and macOS 27. This marks Apple's first public deployment of agentic AI, signaling a strategic shift toward autonomous AI assistants that can act on behalf of users, with accessibility serving as a low-risk testing ground. The new features include agentic VoiceOver that can describe images and navigate apps autonomously, and an upgraded Voice Control that can execute multi-step commands. These capabilities are built on Apple's on-device AI framework, ensuring privacy.",
-          "url": "https://www.apple.com/newsroom/2026/05/apple-unveils-new-accessibility-features-and-updates-with-apple-intelligence/",
-          "score": 8,
-          "sources": [
-            {
-              "name": "hackernews",
-              "meta": "interpol_p"
-            }
-          ],
-          "tags": [
-            "accessibility",
-            "Apple",
-            "AI",
-            "agentic AI",
-            "VoiceOver"
-          ],
-          "focusTopics": [],
-          "background": "Agentic AI refers to AI systems that can pursue goals autonomously across multiple steps, unlike traditional AI that only responds to direct prompts. Apple has historically used accessibility features as a testbed for new technologies, such as the Touch Bar's T1 chip foreshadowing Apple Silicon.",
-          "discussion": "Community comments highlight Apple's pattern of stealth-testing new tech in accessibility, with examples like the Touch Bar. Developers also point out WebKit accessibility gaps, such as VoiceOver's auto mode breaking text selections in WKWebView, forcing trade-offs between functionality and accessibility."
-        },
-        {
-          "title": "Three Linux Kernel LPE Vulnerabilities Disclosed",
-          "summary": "Gentoo disclosed three Linux kernel local privilege escalation vulnerabilities: Copy Fail (CVE-2026-31431), Dirty Frag (CVE-2026-43284, CVE-2026-43500), and Fragnesia (CVE-2026-46300), and recommended automated kernel upgrades or live patching. These vulnerabilities allow unprivileged local users to gain root access, posing a severe risk to cloud environments and any multi-tenant Linux systems. The rapid succession of disclosures highlights the need for automated kernel patching and live patching solutions. Copy Fail affects the kernel's cryptographic subsystem, Dirty Frag targets networking and memory-fragment handling (esp4, esp6, rxrpc), and Fragnesia corrupts the page cache via XFRM ESP-in-TCP. Public proof-of-concept exploits exist for all three.",
-          "url": "https://www.gentoo.org/news/2026/05/19/copy-fail-fragnesia-vulnerabilities.html",
-          "score": 8,
-          "sources": [
-            {
-              "name": "hackernews",
-              "meta": "akhuettel"
-            }
-          ],
-          "tags": [
-            "Linux kernel",
-            "vulnerability",
-            "security",
-            "live patching",
-            "Gentoo"
+            "tool-calling"
           ],
           "focusTopics": [
-            "memory"
-          ],
-          "background": "Local privilege escalation (LPE) vulnerabilities allow an attacker with limited user access to gain full root control of a system. The Linux kernel is a common target due to its widespread use in servers and cloud infrastructure. Live patching enables applying security fixes without rebooting, reducing downtime.",
-          "discussion": "Comments debated the feasibility of live patching, with some noting its risks (kernel panics) and others suggesting sandboxing (gVisor) to reduce kernel vulnerability impact. A sarcastic comment mocked the idea of LLM-generated patches. One user asked whether Gentoo is an outlier in facing this problem."
+            "agent-harness",
+            "tool-use"
+          ]
         },
         {
-          "title": "Simon Willison's LLM Lightning Talk Recap",
-          "summary": "Simon Willison published annotated slides from his PyCon US 2026 lightning talk summarizing the last six months of LLM developments, highlighting the November 2025 inflection point where the 'best' model changed hands five times among Anthropic, OpenAI, and Google. This recap provides a concise, expert-curated overview of rapid LLM progress, helping developers and enthusiasts quickly grasp key shifts in model leadership and capabilities. Willison uses his 'pelican riding a bicycle' SVG test to illustrate model differences, and the talk covers models including Claude Sonnet 4.5, GPT-5.1, Gemini 3, GPT-5.1 Codex Max, and Claude Opus.",
-          "url": "https://simonwillison.net/2026/May/19/5-minute-llms/#atom-everything",
+          "title": "humanlayer/12-factor-agents",
+          "summary": "提出构建生产级 LLM 应用的12条原则。",
+          "url": "https://github.com/humanlayer/12-factor-agents",
+          "score": 7.054,
+          "sources": [
+            {
+              "name": "GitHub trending:typescript (+736★)"
+            }
+          ],
+          "tags": [
+            "llm",
+            "best-practices",
+            "production"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "rtk-ai/rtk",
+          "summary": "CLI代理减少LLM token消耗60-90%，单Rust二进制。",
+          "url": "https://github.com/rtk-ai/rtk",
+          "score": 7.006,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+704★)"
+            }
+          ],
+          "tags": [
+            "token-efficiency",
+            "cli",
+            "rust"
+          ],
+          "focusTopics": [
+            "context-engineering"
+          ]
+        },
+        {
+          "title": "How AI Mode is changing the way people search in the U.S.",
+          "summary": "AI模式在美国搜索中的使用情况一年回顾。",
+          "url": "https://blog.google/products-and-platforms/products/search/ai-mode-us-insights/",
           "score": 7,
           "sources": [
             {
-              "name": "rss",
-              "meta": "Simon Willison"
+              "name": "Google AI Blog"
             }
           ],
           "tags": [
-            "LLM",
-            "PyCon",
-            "lightning talk",
-            "AI developments",
-            "Simon Willison"
+            "search",
+            "ai-mode",
+            "google"
           ],
-          "focusTopics": [],
-          "background": "Simon Willison is a well-known Python developer and creator of the annotated presentation tool used for this talk. The November 2025 inflection point refers to a period of intense competition among major AI labs, with frequent releases of new models claiming state-of-the-art performance."
+          "focusTopics": []
         },
         {
-          "title": "Allen AI Releases OlmoEarth v1.1 with Efficiency Gains",
-          "summary": "Allen AI has released OlmoEarth v1.1, a more efficient family of open-source language models for Earth observation, with improved performance and reduced computational requirements. This update makes advanced Earth observation AI more accessible to researchers and developers, potentially accelerating applications in climate monitoring, agriculture, and disaster response. OlmoEarth v1.1 includes both Base (89M parameters) and Large variants, trained on Sentinel-1, Sentinel-2, and Landsat imagery, and is available on Hugging Face.",
+          "title": "New ways to create and get things done in Google Workspace",
+          "summary": "Google Workspace新增语音功能等AI更新。",
+          "url": "https://blog.google/products-and-platforms/products/workspace/workspace-updates/",
+          "score": 7,
+          "sources": [
+            {
+              "name": "Google AI Blog"
+            }
+          ],
+          "tags": [
+            "workspace",
+            "voice",
+            "productivity"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Everything new in our Google AI subscriptions, fresh from I/O 2026",
+          "summary": "Google AI订阅服务更新，推出100美元套餐。",
+          "url": "https://blog.google/products-and-platforms/products/google-one/google-ai-subscriptions/",
+          "score": 7,
+          "sources": [
+            {
+              "name": "Google AI Blog"
+            }
+          ],
+          "tags": [
+            "subscription",
+            "google-one",
+            "ai"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "OlmoEarth v1.1: A more efficient family of models",
+          "summary": "OlmoEarth v1.1发布，更高效的模型系列。",
           "url": "https://huggingface.co/blog/allenai/olmoearth-v1-1",
           "score": 7,
           "sources": [
             {
-              "name": "rss",
-              "meta": "Hugging Face Blog"
+              "name": "Hugging Face"
             }
           ],
           "tags": [
-            "AI",
-            "language models",
             "open-source",
-            "efficiency",
-            "Hugging Face"
+            "model",
+            "efficiency"
           ],
-          "focusTopics": [],
-          "background": "OlmoEarth is a family of multimodal, spatio-temporal foundation models designed for Earth observation tasks. It uses self-supervised learning on global satellite data to capture both spatial patterns and temporal dynamics, enabling tasks like land cover classification and change detection."
+          "focusTopics": [
+            "model-release"
+          ]
+        },
+        {
+          "title": "AI’s impact on software engineers in 2026: key trends, Part 2",
+          "summary": "AI对软件工程师的影响趋势分析第二部分。",
+          "url": "https://newsletter.pragmaticengineer.com/p/ai-impact-on-software-engineers-part-2",
+          "score": 7,
+          "sources": [
+            {
+              "name": "Pragmatic Engineer"
+            }
+          ],
+          "tags": [
+            "ai-coding",
+            "software-engineering",
+            "trends"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "Google AI Edge Gallery v1.0.13 & v1.0.14 updates: Gemma 4 Multi-Token Prediction, Pixel TPU support, experimental MCP, new skills, now saves chat history",
+          "summary": "Google AI Edge Gallery更新，支持Gemma 4多token预测、Pixel TPU、MCP等。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1ti0g0k/google_ai_edge_gallery_v1013_v1014_updates_gemma/",
+          "score": 7,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "edge-ai",
+            "gemma",
+            "mobile"
+          ],
+          "focusTopics": [
+            "model-release"
+          ]
+        },
+        {
+          "title": "huggingface/ml-intern",
+          "summary": "Hugging Face开源ML工程师项目，自动读论文、训练模型。",
+          "url": "https://github.com/huggingface/ml-intern",
+          "score": 7,
+          "sources": [
+            {
+              "name": "Co-Starred"
+            }
+          ],
+          "tags": [
+            "open-source",
+            "ml-engineer",
+            "automation"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "HKUDS/ViMax",
+          "summary": "Agentic视频生成：导演、编剧、制片、视频生成一体。",
+          "url": "https://github.com/HKUDS/ViMax",
+          "score": 6.7045,
+          "sources": [
+            {
+              "name": "GitHub trending:python (+503★)"
+            }
+          ],
+          "tags": [
+            "video-generation",
+            "agentic",
+            "multimodal"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "msitarzewski/agency-agents",
+          "summary": "多Agent AI代理平台，包含前端、Reddit等专用Agent。",
+          "url": "https://github.com/msitarzewski/agency-agents",
+          "score": 6.6,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+1120★)"
+            }
+          ],
+          "tags": [
+            "multi-agent",
+            "agency",
+            "automation"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "OpenAI Adopts Google's SynthID Watermark for AI Images with Verification Tool",
+          "summary": "OpenAI采用Google SynthID水印技术验证AI图像。",
+          "url": "https://openai.com/index/advancing-content-provenance/",
+          "score": 6.526,
+          "sources": [
+            {
+              "name": "HN (192)"
+            }
+          ],
+          "tags": [
+            "watermark",
+            "ai-images",
+            "provenance"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "How to use Google’s new AI agents to go beyond your standard searches | TechCrunch",
+          "summary": "如何使用Google新AI代理进行高级搜索。",
+          "url": "https://techcrunch.com/2026/05/19/how-to-use-googles-new-ai-agents-to-go-beyond-your-standard-searches/",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "techcrunch.com"
+            }
+          ],
+          "tags": [
+            "google",
+            "agents",
+            "search"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "From teen hacker to Iron Dome researcher, this founder raised $28M to fight AI phishing | TechCrunch",
+          "summary": "创始人融资2800万美元，用AI对抗网络钓鱼。",
+          "url": "https://techcrunch.com/2026/05/19/from-teen-hacker-to-iron-dome-researcher-this-founder-raised-28m-to-fight-ai-phishing/",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "techcrunch.com"
+            }
+          ],
+          "tags": [
+            "ai-security",
+            "phishing",
+            "funding"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "A tool I built to generate 3D objects with functional, articulated parts. It's on github, and is mostly LLM-agnostic.",
+          "summary": "开源工具用 LLM 生成带功能部件的3D物体。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1thucyj/a_tool_i_built_to_generate_3d_objects_with/",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "3d-generation",
+            "llm",
+            "open-source"
+          ],
+          "focusTopics": [
+            "tool-use"
+          ]
+        },
+        {
+          "title": "Time to update llama.cpp to get som MTP improvements!",
+          "summary": "llama.cpp更新以支持多token预测（MTP）改进。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1thlmsx/time_to_update_llamacpp_to_get_som_mtp/",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "llama.cpp",
+            "inference"
+          ],
+          "focusTopics": [
+            "context-engineering"
+          ]
+        },
+        {
+          "title": "heygen-com/hyperframes",
+          "summary": "HeyGen 发布 Hyperframes，用 HTML 生成视频，面向 AI agent。",
+          "url": "https://github.com/heygen-com/hyperframes",
+          "score": 6.0409999999999995,
+          "sources": [
+            {
+              "name": "GitHub trending:typescript (+344★)"
+            }
+          ],
+          "tags": [
+            "video-generation",
+            "html",
+            "agent"
+          ],
+          "focusTopics": [
+            "tool-use"
+          ]
+        },
+        {
+          "title": "[AINews] How to land a job at a frontier lab (on Pretraining)",
+          "summary": "如何在前沿实验室获得工作（预训练方向）的讨论。",
+          "url": "https://www.latent.space/p/ainews-how-to-land-a-job-at-a-frontier",
+          "score": 6,
+          "sources": [
+            {
+              "name": "Latent Space"
+            }
+          ],
+          "tags": [
+            "career",
+            "pretraining",
+            "advice"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Google I/O 2026 Live Blog: All the Gemini and Smart Glasses Updates as They Happen | WIRED",
+          "summary": "Google I/O 2026实时博客，涵盖Gemini和智能眼镜更新。",
+          "url": "https://www.wired.com/live/google-io-2026-live-blog-gemini-android-xr-search/",
+          "score": 6,
+          "sources": [
+            {
+              "name": "wired.com"
+            }
+          ],
+          "tags": [
+            "google-io",
+            "gemini",
+            "live-blog"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Why founders are moving from prompting to systems | VentureBeat",
+          "summary": "创始人从提示工程转向构建AI系统。",
+          "url": "https://venturebeat.com/business/why-founders-are-moving-from-prompting-to-systems",
+          "score": 6,
+          "sources": [
+            {
+              "name": "venturebeat.com"
+            }
+          ],
+          "tags": [
+            "ai-systems",
+            "prompt-engineering",
+            "startups"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Alishahryar1/free-claude-code",
+          "summary": "免费使用Claude Code的终端/VSCode/Discord工具。",
+          "url": "https://github.com/Alishahryar1/free-claude-code",
+          "score": 5.9445,
+          "sources": [
+            {
+              "name": "GitHub trending:python (+563★)"
+            }
+          ],
+          "tags": [
+            "claude-code",
+            "free",
+            "vscode"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "anthropics/claude-plugins-official",
+          "summary": "Anthropic官方Claude Code插件目录。",
+          "url": "https://github.com/anthropics/claude-plugins-official",
+          "score": 5.781499999999999,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+171★)"
+            }
+          ],
+          "tags": [
+            "claude-code",
+            "plugins",
+            "official"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "unslothai/unsloth",
+          "summary": "Unsloth Studio：本地训练和运行开源模型的Web UI。",
+          "url": "https://github.com/unslothai/unsloth",
+          "score": 5.7589999999999995,
+          "sources": [
+            {
+              "name": "GitHub trending:python (+156★)"
+            }
+          ],
+          "tags": [
+            "fine-tuning",
+            "web-ui",
+            "open-models"
+          ],
+          "focusTopics": [
+            "post-training"
+          ]
+        },
+        {
+          "title": "llm-gemini 0.32",
+          "summary": "llm-gemini 0.32发布，支持新模型。",
+          "url": "https://simonwillison.net/2026/May/19/llm-gemini-2/#atom-everything",
+          "score": 5.5,
+          "sources": [
+            {
+              "name": "Simon Willison"
+            }
+          ],
+          "tags": [
+            "llm",
+            "gemini",
+            "cli"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "What do you think about Tabular Foundation Models [D]",
+          "summary": "讨论表格基础模型（如TabPFN-3）的性能和前景。",
+          "url": "https://www.reddit.com/r/MachineLearning/comments/1thofoe/what_do_you_think_about_tabular_foundation_models/",
+          "score": 5.5,
+          "sources": [
+            {
+              "name": "Reddit r/MachineLearning"
+            }
+          ],
+          "tags": [
+            "tabular-data",
+            "foundation-model"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Intro to TLA+ for the LLM Era: Prompt Your Way to Victory",
+          "summary": "介绍如何用LLM提示工程学习TLA+形式化验证。",
+          "url": "https://emptysqua.re/blog/intro-to-tla-plus-for-the-llm-era/",
+          "score": 5.427,
+          "sources": [
+            {
+              "name": "HN (109)"
+            }
+          ],
+          "tags": [
+            "llm",
+            "formal-verification",
+            "tla+"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Firefox expands ‘Shake to Summarize’ to Android. | The Verge",
+          "summary": "Firefox将“摇动总结”功能扩展到Android。",
+          "url": "https://www.theverge.com/tech/933255/firefox-expands-shake-to-summarize-to-android",
+          "score": 5,
+          "sources": [
+            {
+              "name": "theverge.com"
+            }
+          ],
+          "tags": [
+            "firefox",
+            "summarization",
+            "mobile"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "got my first \"rm -rf /\" today",
+          "summary": "AI agent 执行危险命令的社区讨论。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1thosnt/got_my_first_rm_rf_today/",
+          "score": 5,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "agent-safety",
+            "reddit"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "Newbie vibe coding experience: Shifting from Claude Sonnet 4.6 to Qwen3.6-35B-A3B-UD-Q6_K",
+          "summary": "新手从Claude Sonnet切换到Qwen3.6的vibe编码体验分享。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1ti1f2k/newbie_vibe_coding_experience_shifting_from/",
+          "score": 4.5,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "vibe-coding",
+            "local-llm"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Gemini CLI will stop working from June 18, 2026",
+          "summary": "Google宣布Gemini CLI将于2026年6月18日停止服务。",
+          "url": "https://developers.googleblog.com/an-important-update-transitioning-gemini-cli-to-antigravity-cli/",
+          "score": 4.406,
+          "sources": [
+            {
+              "name": "HN (52)"
+            }
+          ],
+          "tags": [
+            "gemini",
+            "cli",
+            "deprecation"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "Remove–AI–Watermarks – CLI and library for removing AI watermarks from images",
+          "summary": "开源工具，用于移除图像中的AI水印。",
+          "url": "https://github.com/wiltodelta/remove-ai-watermarks",
+          "score": 3.721,
+          "sources": [
+            {
+              "name": "HN (107)"
+            }
+          ],
+          "tags": [
+            "open-source",
+            "image-processing",
+            "watermark"
+          ],
+          "focusTopics": []
         }
       ]
     }
-  ]
+  ],
+  "aiSummary": "今日AI领域迎来重大动态：**Karpathy宣布加入Anthropic**（[#item-twitter-com-karpathy-status-2056753169888334312]），同时**Google发布Gemini 3.5**（[#item-blog-google-innovation-and-ai-models-and-research-gemini-mod]），并宣布进入Agentic Gemini时代（[#item-blog-google-innovation-and-ai-sundar-pichai-io-2026]）。研究方面，**ICRL框架**（[#item-arxiv-org-abs-2605-15224]）通过强化学习内化自我批评，而**CHI-Bench**（[#item-arxiv-org-abs-2605-16679]）评估AI代理在医疗工作流中的自动化能力。工具更新亮点包括**CLI-Anything**（[#item-github-com-HKUDS-CLI-Anything]）让软件支持Agent原生交互，以及**codegraph**（[#item-github-com-colbymchenry-codegraph]）实现预索引代码知识图谱。观点洞察指出，**Gemini 3.5 Flash**（[#item-techcrunch-com-2026-05-19-with-gemini-3-5-flash-google-bets-]）被押注为AI代理新浪潮，可为企业每年节省超10亿美元成本（[#item-venturebeat-com-technology-google-says-gemini-3-5-flash-can-]）。"
 }
