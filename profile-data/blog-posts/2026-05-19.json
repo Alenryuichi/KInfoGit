@@ -9,6 +9,15 @@
       "summary": "<p>I put together these annotated slides from my five minute lightning talk at PyCon US 2026, using the <a href=\"https://tools.simonwillison.net/annotated-presentations\">latest iteration</a> of my <a href=\"https://simonwillison.net/2023/Aug/6/annotated-presentations/\">annotated presentation...",
       "highlights": "The post summarizes key developments in LLMs over the past six months, including the rise of multi-modal models, improved reasoning capabilities, and the increasing importance of evaluation frameworks. It highlights practical tools and techniques for working with LLMs, such as prompt engineering and fine-tuning.",
       "worthReading": "It offers a concise, high-level overview of recent LLM advancements, making it useful for practitioners who want to stay updated without diving into lengthy technical papers."
+    },
+    {
+      "title": "Gemini 3.5 Flash: more expensive, but Google plan to use it for everything",
+      "url": "https://simonwillison.net/2026/May/19/gemini-35-flash/#atom-entries",
+      "author": "Simon Willison",
+      "publishedAt": "2026-05-19T22:40:25+00:00",
+      "summary": "<p>Today at Google I/O, Google <a href=\"https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5/\">released Gemini 3.5 Flash</a>. This one skipped the <code>-preview</code> modifier and went straight to general availability, and Google appear to be using it for a whole lot...",
+      "highlights": "Google released Gemini 3.5 Flash directly to general availability, skipping the preview phase, and plans to integrate it across many products. Despite being more expensive, it offers improved performance and efficiency, making it a versatile model for various applications.",
+      "worthReading": "This post provides insight into Google's strategic shift towards a more powerful, production-ready model and its implications for developers and users."
     }
   ]
 }

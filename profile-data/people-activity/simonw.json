@@ -2,27 +2,6 @@
   "id": "simonw",
   "stars": [
     {
-      "repo": "chrislgarry/Apollo-11",
-      "url": "https://github.com/chrislgarry/Apollo-11",
-      "description": "Original Apollo 11 Guidance Computer (AGC) source code for the command and lunar modules.",
-      "language": "Assembly",
-      "stargazersCount": 67442,
-      "starredBy": "simonw",
-      "highlights": "This repository contains the original Apollo 11 Guidance Computer source code, providing authentic historical documentation of the software that landed humans on the moon. It offers a rare look at 1960s-era assembly programming for mission-critical aerospace systems.",
-      "worthReading": "It's a fascinating piece of computing history that demonstrates how complex real-time systems were engineered with extreme constraints, offering insights into foundational software engineering practices.",
-      "topics": [
-        "agc",
-        "apollo",
-        "hacktoberfest",
-        "nasa"
-      ],
-      "tags": [],
-      "score": 3,
-      "scoreReason": "Low relevance to frontier AI topics despite moderate freshness from recent starring, with high concreteness as specific historical artifact.",
-      "starredAt": "2026-04-20T22:24:49Z",
-      "type": "github"
-    },
-    {
       "repo": "scosman/pelicans_riding_bicycles",
       "url": "https://github.com/scosman/pelicans_riding_bicycles",
       "description": "This is a collection of the best SVG images of pelicans riding bicycles.",
@@ -388,48 +367,6 @@
     }
   ],
   "posts": [
-    {
-      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mjvho5z2xc2t",
-      "url": "https://bsky.app/profile/simonwillison.net/post/3mjvho5z2xc2t",
-      "author": {
-        "handle": "simonwillison.net",
-        "displayName": "Simon Willison",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
-      },
-      "content": "New TIL on fetching data from a Datasette instance into Google Sheets using importdata(), named custom functions or Google Apps Script til.simonwillison.net/google-sheet...",
-      "createdAt": "2026-04-20T02:53:45.690Z",
-      "likeCount": 16,
-      "replyCount": 0,
-      "repostCount": 1,
-      "highlights": "",
-      "worthReading": "",
-      "tags": [
-        "tooling",
-        "deployment"
-      ],
-      "type": "bluesky"
-    },
-    {
-      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mjvb2hinfc2q",
-      "url": "https://bsky.app/profile/simonwillison.net/post/3mjvb2hinfc2q",
-      "author": {
-        "handle": "simonwillison.net",
-        "displayName": "Simon Willison",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
-      },
-      "content": "I upgraded my Claude token counter tool to compare different models and Opus 4.7 appears to use 1.46x times the tokens for text and up to 3x the tokens for images - it's priced the same as Opus 4.6 on a per-token basis so this is actually a pretty big price bump simonwillison.net/2026/Apr/20/...",
-      "createdAt": "2026-04-20T00:55:22.095Z",
-      "likeCount": 91,
-      "replyCount": 8,
-      "repostCount": 15,
-      "highlights": "",
-      "worthReading": "",
-      "tags": [
-        "llm",
-        "evaluation"
-      ],
-      "type": "bluesky"
-    },
     {
       "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mk24tklb522i",
       "url": "https://bsky.app/profile/simonwillison.net/post/3mk24tklb522i",
@@ -1114,6 +1051,27 @@
         "tooling"
       ],
       "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mmahk7bg3s2h",
+      "url": "https://bsky.app/profile/simonwillison.net/post/3mmahk7bg3s2h",
+      "author": {
+        "handle": "simonwillison.net",
+        "displayName": "Simon Willison",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
+      },
+      "content": "My notes on Gemini 3.5 Flash - 3x the price of Gemini 3 Flash but Google are planning to use it for many of their own products simonwillison.net/2026/May/19/...",
+      "createdAt": "2026-05-19T22:41:13.172Z",
+      "likeCount": 47,
+      "replyCount": 5,
+      "repostCount": 5,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [
+        "llm",
+        "deployment"
+      ],
+      "type": "bluesky"
     }
   ],
   "videos": [],
@@ -1277,30 +1235,19 @@
       "highlights": "The post summarizes key developments in LLMs over the past six months, including the rise of multi-modal models, improved reasoning capabilities, and the increasing importance of evaluation frameworks. It highlights practical tools and techniques for working with LLMs, such as prompt engineering and fine-tuning.",
       "worthReading": "It offers a concise, high-level overview of recent LLM advancements, making it useful for practitioners who want to stay updated without diving into lengthy technical papers.",
       "type": "blog"
+    },
+    {
+      "title": "Gemini 3.5 Flash: more expensive, but Google plan to use it for everything",
+      "url": "https://simonwillison.net/2026/May/19/gemini-35-flash/#atom-entries",
+      "author": "Simon Willison",
+      "publishedAt": "2026-05-19T22:40:25+00:00",
+      "summary": "<p>Today at Google I/O, Google <a href=\"https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5/\">released Gemini 3.5 Flash</a>. This one skipped the <code>-preview</code> modifier and went straight to general availability, and Google appear to be using it for a whole lot...",
+      "highlights": "Google released Gemini 3.5 Flash directly to general availability, skipping the preview phase, and plans to integrate it across many products. Despite being more expensive, it offers improved performance and efficiency, making it a versatile model for various applications.",
+      "worthReading": "This post provides insight into Google's strategic shift towards a more powerful, production-ready model and its implications for developers and users.",
+      "type": "blog"
     }
   ],
   "xPosts": [
-    {
-      "type": "x",
-      "id": "2021280918204228082",
-      "url": "https://x.com/simonw/status/2021280918204228082",
-      "author": {
-        "handle": "simonw",
-        "displayName": "Simon Willison",
-        "avatar": "https://avatars.githubusercontent.com/simonw"
-      },
-      "content": "I built two new tools to help coding agents demonstrate their work beyond just running",
-      "createdAt": "2026-04-20T04:10:09.476Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Simon Willison developed new tools to improve how coding agents showcase their work processes and outputs.",
-      "worthReading": "It demonstrates practical innovation in AI tooling for better transparency and debugging of agent behavior.",
-      "tags": [
-        "agent",
-        "tooling"
-      ]
-    },
     {
       "type": "x",
       "id": "1952830887671861407",
@@ -2634,10 +2581,30 @@
         "llm",
         "tooling"
       ]
+    },
+    {
+      "type": "x",
+      "id": "1940781740978851923",
+      "url": "https://x.com/simonw/status/1940781740978851923",
+      "author": {
+        "handle": "simonw",
+        "displayName": "Simon Willison",
+        "avatar": "https://avatars.githubusercontent.com/simonw"
+      },
+      "content": "Quitting programming as a career right now because of LLMs would be like quitting carpentry as a...",
+      "createdAt": "2026-05-20T04:29:40.453Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Simon Willison argues that quitting programming due to LLMs is analogous to quitting carpentry due to power tools, implying LLMs are tools that augment rather than replace programmers.",
+      "worthReading": "Provides a balanced perspective on LLMs' impact on programming careers, countering fear with historical analogy.",
+      "tags": [
+        "llm",
+        "tooling"
+      ]
     }
   ],
   "dailyCounts": [
-    4,
     8,
     5,
     5,
@@ -2666,7 +2633,8 @@
     2,
     4,
     1,
-    2
+    3,
+    1
   ],
-  "interestSummary": "Simon Willison is deeply engaged with the latest developments in AI, particularly around coding agents, model pricing shifts, and open-source tools like LiteParse, while also exploring whimsical benchmarks for image generation and maintaining his Datasette ecosystem."
+  "interestSummary": "Simon Willison is deeply engaged with the latest developments in AI coding agents and large language models, frequently testing new models (DeepSeek V4, Qwen3.6, GPT-5.5) and tools for document parsing, code review, and local inference, while also maintaining a playful interest in AI-generated images of pelicans riding bicycles."
 }

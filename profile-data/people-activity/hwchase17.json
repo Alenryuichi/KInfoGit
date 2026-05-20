@@ -7,71 +7,6 @@
   "xPosts": [
     {
       "type": "x",
-      "id": "2010044779225329688",
-      "url": "https://x.com/hwchase17/status/2010044779225329688",
-      "author": {
-        "handle": "hwchase17",
-        "displayName": "Harrison Chase",
-        "avatar": "https://avatars.githubusercontent.com/hwchase17"
-      },
-      "content": "This means that operations you would do on code in the software world, you now do on traces in the agent world. Debugging, testing, profiling",
-      "createdAt": "2026-04-20T04:10:22.844Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Drawing parallels between software engineering practices and agent operations, emphasizing trace-based debugging, testing, and profiling.",
-      "worthReading": "It highlights the evolution of development practices in AI agent systems.",
-      "tags": [
-        "agent",
-        "evaluation",
-        "tooling"
-      ]
-    },
-    {
-      "type": "x",
-      "id": "2021261552222158955",
-      "url": "https://x.com/hwchase17/status/2021261552222158955",
-      "author": {
-        "handle": "hwchase17",
-        "displayName": "Harrison Chase",
-        "avatar": "https://avatars.githubusercontent.com/hwchase17"
-      },
-      "content": "TL;DR: More and more agents need a workspace: a computer where they can run code, install packages, and access files. Sandboxes provide this",
-      "createdAt": "2026-04-20T04:10:22.844Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Advocating for agent workspaces or sandboxes as essential infrastructure for running code, managing dependencies, and accessing files.",
-      "worthReading": "It addresses a critical infrastructure need for scalable and secure AI agent deployment.",
-      "tags": [
-        "agent",
-        "infra",
-        "deployment"
-      ]
-    },
-    {
-      "type": "x",
-      "id": "2041682886722728368",
-      "url": "https://x.com/hwchase17/status/2041682886722728368",
-      "author": {
-        "handle": "hwchase17",
-        "displayName": "Harrison Chase",
-        "avatar": "https://avatars.githubusercontent.com/hwchase17"
-      },
-      "content": "RT @samecrowder: as always, it's an exciting time to be working at LangChain!",
-      "createdAt": "2026-04-20T04:10:22.844Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Retweeting a positive sentiment about working at LangChain, indicating endorsement of the message.",
-      "worthReading": "It reflects the ongoing enthusiasm and momentum within the LangChain ecosystem.",
-      "tags": [
-        "agent",
-        "tooling"
-      ]
-    },
-    {
-      "type": "x",
       "id": "1975603633791377920",
       "url": "https://x.com/hwchase17/status/1975603633791377920",
       "author": {
@@ -2193,10 +2128,71 @@
         "agent",
         "llm"
       ]
+    },
+    {
+      "type": "x",
+      "id": "2021261552222158955",
+      "url": "https://x.com/hwchase17/status/2021261552222158955",
+      "author": {
+        "handle": "hwchase17",
+        "displayName": "Harrison Chase",
+        "avatar": "https://avatars.githubusercontent.com/hwchase17"
+      },
+      "content": "TL;DR: More and more agents need a workspace: a computer where they can run code, install packages, and access files. Sandboxes provide this",
+      "createdAt": "2026-05-20T04:29:45.211Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Agents require sandboxed environments to execute code and manage files securely.",
+      "worthReading": "Highlights a key infrastructure need for deploying AI agents safely.",
+      "tags": [
+        "agent",
+        "infra"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2054971176464847188",
+      "url": "https://x.com/hwchase17/status/2054971176464847188",
+      "author": {
+        "handle": "hwchase17",
+        "displayName": "Harrison Chase",
+        "avatar": "https://avatars.githubusercontent.com/hwchase17"
+      },
+      "content": "Today we're launching LangChain Labs, a new applied research effort focused on Continual Learning. Our goal is to advance open,",
+      "createdAt": "2026-05-20T04:29:45.211Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Announcement of LangChain Labs dedicated to continual learning research.",
+      "worthReading": "Signals LangChain's investment in long-term AI learning capabilities.",
+      "tags": [
+        "llm",
+        "fine-tuning"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "1975603633791377920",
+      "url": "https://x.com/hwchase17/status/1975603633791377920",
+      "author": {
+        "handle": "hwchase17",
+        "displayName": "Harrison Chase",
+        "avatar": "https://avatars.githubusercontent.com/hwchase17"
+      },
+      "content": "I am not excited about visual workflow builders 1. Not simple enough for the average user",
+      "createdAt": "2026-05-20T04:29:45.211Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Skepticism towards visual workflow builders due to complexity.",
+      "worthReading": "Reflects a design philosophy prioritizing simplicity in AI tools.",
+      "tags": [
+        "tooling"
+      ]
     }
   ],
   "dailyCounts": [
-    3,
     4,
     3,
     2,
@@ -2224,8 +2220,9 @@
     4,
     3,
     4,
+    3,
     3,
     3
   ],
-  "interestSummary": "Harrison Chase is deeply focused on the practical infrastructure for AI agents, particularly emphasizing the need for agent workspaces (sandboxes) and the critical shift from traditional software debugging to trace-based iteration on production data. He is also actively promoting LangChain's new no-code Agent Builder and its memory system, while expressing skepticism about visual workflow builders."
+  "interestSummary": "Harrison Chase is focused on advancing AI agent development, particularly through no-code tools like LangSmith Agent Builder and emphasizing the need for sandboxed workspaces where agents can run code and access files. He also prioritizes the importance of trace-based debugging and iteration on production data over traditional software development methods."
 }

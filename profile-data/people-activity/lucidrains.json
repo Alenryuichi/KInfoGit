@@ -135,6 +135,48 @@
       "score": 5,
       "scoreReason": "Freshness is low (428 stars, no recent updates), relevance is moderate (touches optimization but not frontier AI), concreteness is high (working code with clear methodology).",
       "type": "github"
+    },
+    {
+      "repo": "sapientinc/HRM-Text",
+      "url": "https://github.com/sapientinc/HRM-Text",
+      "description": "HRM-Text is a 1B text generation model based on the HRM architecture, strengthened by task completion and latent space reasoning.",
+      "language": "Python",
+      "stargazersCount": 436,
+      "starredBy": "lucidrains",
+      "starredAt": "2026-05-19T20:44:39Z",
+      "highlights": "HRM-Text is a 1B parameter text generation model that introduces hierarchical reasoning and latent space reasoning to improve task completion. It offers a novel architecture that could enhance reasoning capabilities in LLMs.",
+      "worthReading": "This repo presents a fresh approach to reasoning in language models, which is a frontier topic. It's worth exploring for those interested in advancing beyond standard transformer architectures.",
+      "topics": [
+        "hierarchical-reasoning-model",
+        "hrm",
+        "large-language-models",
+        "pretraining"
+      ],
+      "tags": [
+        "llm",
+        "fine-tuning"
+      ],
+      "score": 7,
+      "scoreReason": "Freshness is moderate (436 stars, new architecture but not yet widely adopted), relevance is high (LLM reasoning), and concreteness is solid (specific model and code available).",
+      "type": "github"
+    },
+    {
+      "repo": "elcritch/sarcophagus",
+      "url": "https://github.com/elcritch/sarcophagus",
+      "description": "auth and other api helpers for mummy",
+      "language": "Nim",
+      "stargazersCount": 18,
+      "starredBy": "lucidrains",
+      "starredAt": "2026-05-19T18:29:44Z",
+      "highlights": "Sarcophagus provides authentication and API helper utilities for the Mummy web framework in Nim. It simplifies common backend tasks like user auth, session management, and request handling.",
+      "worthReading": "For Nim developers building web applications with Mummy, this library offers ready-to-use auth and API helpers that can accelerate development.",
+      "topics": [],
+      "tags": [
+        "infra"
+      ],
+      "score": 3,
+      "scoreReason": "Low freshness (18 stars, niche language), moderate relevance (web infra but not frontier AI), and concrete but very specific utility (Nim web helpers).",
+      "type": "github"
     }
   ],
   "posts": [],
@@ -427,7 +469,6 @@
     }
   ],
   "dailyCounts": [
-    0,
     2,
     0,
     0,
@@ -456,7 +497,8 @@
     2,
     0,
     0,
-    1
+    3,
+    0
   ],
-  "interestSummary": "Phil Wang's recent activity shows a strong focus on open-source hardware and software projects, particularly in robotics, exoskeletons, and medical devices, alongside an interest in efficient AI inference engines like DeepSeek 4 Flash and stealth LLM tools."
+  "interestSummary": "Phil Wang is currently exploring open-source hardware and robotics projects, specifically humanoid robots and exoskeletons, while also showing interest in efficient AI inference engines and local model deployment."
 }

@@ -2,31 +2,6 @@
   "id": "minimaxir",
   "stars": [
     {
-      "repo": "vega/vega",
-      "url": "https://github.com/vega/vega",
-      "description": "A visualization grammar.",
-      "language": "JavaScript",
-      "stargazersCount": 11846,
-      "starredBy": "minimaxir",
-      "highlights": "Vega provides a declarative visualization grammar for creating interactive graphics through JSON specifications. It enables data-driven visualizations that work across multiple rendering targets (SVG, Canvas) with a consistent API.",
-      "worthReading": "It's a foundational visualization framework used in many data science and AI workflows, offering a structured approach to creating complex visualizations programmatically.",
-      "topics": [
-        "canvas",
-        "d3",
-        "svg",
-        "vega",
-        "visualization",
-        "visualization-grammar"
-      ],
-      "tags": [
-        "tooling"
-      ],
-      "score": 5,
-      "scoreReason": "Moderate relevance for AI tooling and good concreteness, but limited freshness as an established visualization library rather than cutting-edge AI development.",
-      "starredAt": "2026-04-20T16:42:17Z",
-      "type": "github"
-    },
-    {
       "repo": "criterion-rs/criterion.rs",
       "url": "https://github.com/criterion-rs/criterion.rs",
       "description": "",
@@ -185,66 +160,43 @@
       "score": 8,
       "scoreReason": "Freshness 3 (20k stars but still actively growing with recent releases), Relevance 3 (directly useful for AI/ML workflows as a development and deployment tool), Concreteness 2 (fully functional with clear features and use cases).",
       "type": "github"
+    },
+    {
+      "repo": "wiltodelta/remove-ai-watermarks",
+      "url": "https://github.com/wiltodelta/remove-ai-watermarks",
+      "description": "CLI and library for removing visible (Gemini) and invisible (SynthID, C2PA, EXIF) AI watermarks from images",
+      "language": "Python",
+      "stargazersCount": 346,
+      "starredBy": "minimaxir",
+      "starredAt": "2026-05-20T04:21:37Z",
+      "highlights": "A CLI and Python library that removes visible (Gemini) and invisible (SynthID, C2PA, EXIF) AI watermarks from images. It provides a practical tool for privacy and data cleaning, supporting multiple watermark types.",
+      "worthReading": "Explores the intersection of AI-generated content and digital forensics, offering hands-on utility for developers dealing with watermarked images from generative models.",
+      "topics": [
+        "ai",
+        "c2pa",
+        "cli",
+        "computer-vision",
+        "diffusion-models",
+        "gemini",
+        "image-processing",
+        "metadata",
+        "python",
+        "synthid",
+        "watermark-removal"
+      ],
+      "tags": [
+        "tooling",
+        "multi-modal"
+      ],
+      "score": 6,
+      "scoreReason": "Freshness is moderate (346 stars, niche but rising), relevance is high (AI watermark removal ties to multi-modal and tooling), concreteness is strong (working CLI and library).",
+      "type": "github"
     }
   ],
   "posts": [],
   "videos": [],
   "blogs": [],
   "xPosts": [
-    {
-      "type": "x",
-      "id": "1641885820734046209",
-      "url": "https://x.com/minimaxir/status/1641885820734046209",
-      "author": {
-        "handle": "minimaxir",
-        "displayName": "Max Woolf",
-        "avatar": "https://avatars.githubusercontent.com/minimaxir"
-      },
-      "content": "LOL",
-      "createdAt": "2026-04-20T04:11:46.061Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "A short, humorous tweet expressing amusement.",
-      "worthReading": "Shows the user's casual, engaging communication style.",
-      "tags": []
-    },
-    {
-      "type": "x",
-      "id": "2019510645180494156",
-      "url": "https://x.com/minimaxir/status/2019510645180494156",
-      "author": {
-        "handle": "minimaxir",
-        "displayName": "Max Woolf",
-        "avatar": "https://avatars.githubusercontent.com/minimaxir"
-      },
-      "content": "",
-      "createdAt": "2026-04-20T04:11:46.061Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "A tweet with no visible text content, only view metrics.",
-      "worthReading": "Indicates engagement but lacks substantive content for analysis.",
-      "tags": []
-    },
-    {
-      "type": "x",
-      "id": "1825584262311186616",
-      "url": "https://x.com/minimaxir/status/1825584262311186616",
-      "author": {
-        "handle": "minimaxir",
-        "displayName": "Max Woolf",
-        "avatar": "https://avatars.githubusercontent.com/minimaxir"
-      },
-      "content": "",
-      "createdAt": "2026-04-20T04:11:46.061Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "A tweet with no visible text content, only like metrics.",
-      "worthReading": "Shows audience interaction but no textual information.",
-      "tags": []
-    },
     {
       "type": "x",
       "id": "2029982443026223510",
@@ -1394,10 +1346,65 @@
       "highlights": "A short, relatable post expressing a personal sentiment.",
       "worthReading": "Illustrates Max Woolf's casual and humorous online presence.",
       "tags": []
+    },
+    {
+      "type": "x",
+      "id": "1877857554060972273",
+      "url": "https://x.com/minimaxir/status/1877857554060972273",
+      "author": {
+        "handle": "minimaxir",
+        "displayName": "Max Woolf",
+        "avatar": "https://avatars.githubusercontent.com/minimaxir"
+      },
+      "content": "what",
+      "createdAt": "2026-05-20T04:30:17.470Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "A short, ambiguous post.",
+      "worthReading": "Shows the author's casual posting style.",
+      "tags": []
+    },
+    {
+      "type": "x",
+      "id": "2029982443026223510",
+      "url": "https://x.com/minimaxir/status/2029982443026223510",
+      "author": {
+        "handle": "minimaxir",
+        "displayName": "Max Woolf",
+        "avatar": "https://avatars.githubusercontent.com/minimaxir"
+      },
+      "content": "me irl",
+      "createdAt": "2026-05-20T04:30:17.470Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "A relatable meme-style post.",
+      "worthReading": "Demonstrates personal humor.",
+      "tags": []
+    },
+    {
+      "type": "x",
+      "id": "1600258754993262594",
+      "url": "https://x.com/minimaxir/status/1600258754993262594",
+      "author": {
+        "handle": "minimaxir",
+        "displayName": "Max Woolf",
+        "avatar": "https://avatars.githubusercontent.com/minimaxir"
+      },
+      "content": "congrats to OpenAI on winning the Turing Test",
+      "createdAt": "2026-05-20T04:30:17.470Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Sarcastic congratulations to OpenAI.",
+      "worthReading": "Reflects opinion on AI progress.",
+      "tags": [
+        "llm"
+      ]
     }
   ],
   "dailyCounts": [
-    4,
     3,
     3,
     3,
@@ -1426,7 +1433,8 @@
     3,
     2,
     3,
-    2
+    2,
+    4
   ],
-  "interestSummary": "Max Woolf's recent activity indicates a focus on Rust and Python development tooling, including data visualization, benchmarking, graph data structures, and AI inference engines, alongside an interest in creative coding utilities like embedding source code in PNGs."
+  "interestSummary": "Max Woolf's recent activity shows a strong focus on Rust tooling for performance benchmarking, graph data structures, and AI watermark removal, alongside interest in AI-native Python notebooks and a specific DeepSeek inference engine. He also engaged with a VS Code theme and a method for embedding source code in PNGs."
 }

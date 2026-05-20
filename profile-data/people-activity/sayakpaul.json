@@ -36,33 +36,30 @@
       "score": 4,
       "scoreReason": "Freshness is low (12 stars, no recent traction), relevance is moderate (PyTorch infra but not frontier AI), concreteness is low (blog, not code/artifact).",
       "type": "github"
+    },
+    {
+      "repo": "tarekziade/ai-reviewer",
+      "url": "https://github.com/tarekziade/ai-reviewer",
+      "description": "",
+      "language": "Python",
+      "stargazersCount": 1,
+      "starredBy": "sayakpaul",
+      "starredAt": "2026-05-20T03:59:05Z",
+      "highlights": "AI Reviewer is a Python tool that uses AI to automatically review code changes, providing feedback on code quality, potential bugs, and adherence to best practices. It integrates with GitHub to analyze pull requests and suggest improvements.",
+      "worthReading": "This repository offers a practical approach to automating code reviews with AI, which can save developers time and improve code quality. It's worth exploring for teams looking to streamline their review process.",
+      "topics": [],
+      "tags": [
+        "tooling"
+      ],
+      "score": 3,
+      "scoreReason": "Freshness is low (1 star, no traction), relevance is moderate (AI tooling for code review), concreteness is moderate (Python code, but no description or details).",
+      "type": "github"
     }
   ],
   "posts": [],
   "videos": [],
   "blogs": [],
   "xPosts": [
-    {
-      "type": "x",
-      "id": "2044802837146943750",
-      "url": "https://x.com/RisingSayak/status/2044802837146943750",
-      "author": {
-        "handle": "sayakpaul",
-        "displayName": "Sayak Paul",
-        "avatar": "https://avatars.githubusercontent.com/sayakpaul"
-      },
-      "content": "Working at Hugging Face over the past 3.5+ years has allowed me to identify what technical areas truly interest me! In turn, that has allowed me to directly...",
-      "createdAt": "2026-04-20T04:12:25.300Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Reflection on career growth at Hugging Face, identifying personal technical interests through hands-on experience.",
-      "worthReading": "Provides insight into professional development and specialization in the AI/ML field.",
-      "tags": [
-        "infra",
-        "tooling"
-      ]
-    },
     {
       "type": "x",
       "id": "2044802837146943750",
@@ -1197,10 +1194,91 @@
         "deployment",
         "tooling"
       ]
+    },
+    {
+      "type": "x",
+      "id": "sig-1779251440112-9axc4q",
+      "url": "https://x.com/paulsayak88/status/unknown",
+      "author": {
+        "handle": "sayakpaul",
+        "displayName": "Sayak Paul",
+        "avatar": "https://avatars.githubusercontent.com/sayakpaul"
+      },
+      "content": "Live a little, love a little, take time out to find happiness in small things, be grateful as we have one life. #lifemantra #WorkLifeBalance",
+      "createdAt": "2026-05-20T04:30:40.112Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Encourages finding happiness in small things and maintaining work-life balance.",
+      "worthReading": "Reflects personal philosophy on life and balance.",
+      "tags": []
+    },
+    {
+      "type": "x",
+      "id": "sig-1779251440112-02dt9o",
+      "url": "https://x.com/RisingSayak/status/unknown",
+      "author": {
+        "handle": "sayakpaul",
+        "displayName": "Sayak Paul",
+        "avatar": "https://avatars.githubusercontent.com/sayakpaul"
+      },
+      "content": "We're looking to work w/ folks who're interested in doing agentic kernel dev, providing real optim value to real models. Reach out if interested :)",
+      "createdAt": "2026-05-20T04:30:40.112Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Seeking collaborators for agentic kernel development to optimize real models.",
+      "worthReading": "Indicates focus on practical model optimization and agentic systems.",
+      "tags": [
+        "agent",
+        "fine-tuning",
+        "deployment"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2054792086982205518",
+      "url": "https://x.com/RisingSayak/status/2054792086982205518",
+      "author": {
+        "handle": "sayakpaul",
+        "displayName": "Sayak Paul",
+        "avatar": "https://avatars.githubusercontent.com/sayakpaul"
+      },
+      "content": "After working on releasing the v5, this is the latest release from the Transformers team at",
+      "createdAt": "2026-05-20T04:30:40.112Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Mention of Transformers v5 release from Hugging Face team.",
+      "worthReading": "Highlights involvement in major open-source release.",
+      "tags": [
+        "infra",
+        "deployment"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2028653642530881969",
+      "url": "https://x.com/RisingSayak/status/2028653642530881969",
+      "author": {
+        "handle": "sayakpaul",
+        "displayName": "Sayak Paul",
+        "avatar": "https://avatars.githubusercontent.com/sayakpaul"
+      },
+      "content": "Thanks @AnthropicAI. Thanks @huggingface for letting me work on Diffusers and other open-source projects across the fleet.",
+      "createdAt": "2026-05-20T04:30:40.112Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Expresses gratitude to Anthropic and Hugging Face for work on Diffusers and open-source projects.",
+      "worthReading": "Shows collaboration with AI companies and contributions to open-source.",
+      "tags": [
+        "multi-modal",
+        "tooling"
+      ]
     }
   ],
   "dailyCounts": [
-    1,
     1,
     1,
     2,
@@ -1229,7 +1307,8 @@
     2,
     3,
     2,
-    2
+    2,
+    5
   ],
-  "interestSummary": "Sayak Paul is focused on advancing the Hugging Face Diffusers library, particularly through integration with PyTorch's `torch.compile` and profiling optimizations, while also exploring community trust systems and PyTorch development updates."
+  "interestSummary": "Sayak Paul is focused on advancing diffusion models and their integration with PyTorch tools like `torch.compile`, while also exploring community trust systems and AI development practices. His recent work emphasizes improving Diffusers performance and profiling, alongside a broader interest in technical areas identified during his tenure at Hugging Face."
 }

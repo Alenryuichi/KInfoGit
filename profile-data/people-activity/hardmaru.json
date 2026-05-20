@@ -3,47 +3,6 @@
   "stars": [],
   "posts": [
     {
-      "uri": "at://did:plc:7chsbgw6o6oh5oiglpgc3467/app.bsky.feed.post/3mjwrfrcqu22m",
-      "url": "https://bsky.app/profile/hardmaru.bsky.social/post/3mjwrfrcqu22m",
-      "author": {
-        "handle": "hardmaru.bsky.social",
-        "displayName": "hardmaru",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:7chsbgw6o6oh5oiglpgc3467/bafkreicpq2lhscgzahbyspqimfvb5y34acedy2xqsjiykptgvr2dk2tyga"
-      },
-      "content": "Getting LLMs to simulate “true” randomness or generate diverse outputs is surprisingly difficult. We found a simple prompting trick that solves this by having the model generate and manipulate a random string. To be presented at #ICLR2026 this week!\n\nBlog: pub.sakana.ai/ssot",
-      "createdAt": "2026-04-20T15:20:41.096Z",
-      "likeCount": 20,
-      "replyCount": 1,
-      "repostCount": 5,
-      "highlights": "",
-      "worthReading": "",
-      "tags": [
-        "llm",
-        "evaluation"
-      ],
-      "type": "bluesky"
-    },
-    {
-      "uri": "at://did:plc:7chsbgw6o6oh5oiglpgc3467/app.bsky.feed.post/3mjwkg4d7wc2g",
-      "url": "https://bsky.app/profile/hardmaru.bsky.social/post/3mjwkg4d7wc2g",
-      "author": {
-        "handle": "hardmaru.bsky.social",
-        "displayName": "hardmaru",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:7chsbgw6o6oh5oiglpgc3467/bafkreicpq2lhscgzahbyspqimfvb5y34acedy2xqsjiykptgvr2dk2tyga"
-      },
-      "content": "I am very proud of our team for releasing EDINET-Bench, and it is fantastic to see a Japanese financial dataset recognized at #ICLR2026 this week. We need more diverse, non-English datasets to evaluate models in the real world.\n\nPaper: openreview.net/forum?id=Dxn...",
-      "createdAt": "2026-04-20T13:15:36.418Z",
-      "likeCount": 15,
-      "replyCount": 1,
-      "repostCount": 2,
-      "highlights": "",
-      "worthReading": "",
-      "tags": [
-        "evaluation"
-      ],
-      "type": "bluesky"
-    },
-    {
       "uri": "at://did:plc:7chsbgw6o6oh5oiglpgc3467/app.bsky.feed.post/3mk7djq62js27",
       "url": "https://bsky.app/profile/hardmaru.bsky.social/post/3mk7djq62js27",
       "author": {
@@ -278,7 +237,6 @@
     }
   ],
   "dailyCounts": [
-    2,
     1,
     1,
     0,
@@ -300,6 +258,7 @@
     1,
     0,
     1,
+    0,
     0,
     0,
     0,
@@ -309,5 +268,5 @@
     0,
     0
   ],
-  "interestSummary": "David Ha's recent focus centers on advancing AI through dynamic model orchestration, test-time compute scaling, and prompting techniques, with specific projects including a Japanese financial dataset benchmark, a transformer efficiency paper with NVIDIA, and efforts to reproduce foundational world models research."
+  "interestSummary": "David Ha is focused on advancing AI through dynamic model orchestration and test-time compute scaling, as demonstrated by his work on Sakana Fugu and a new ICML paper on sparser transformer models, while also exploring AI-driven prompt engineering and reproducing foundational research papers."
 }

@@ -1,0 +1,73 @@
+{
+  "date": "2026-05-20",
+  "stars": [
+    {
+      "repo": "wiltodelta/remove-ai-watermarks",
+      "url": "https://github.com/wiltodelta/remove-ai-watermarks",
+      "description": "CLI and library for removing visible (Gemini) and invisible (SynthID, C2PA, EXIF) AI watermarks from images",
+      "language": "Python",
+      "stargazersCount": 346,
+      "starredBy": "minimaxir",
+      "starredAt": "2026-05-20T04:21:37Z",
+      "highlights": "A CLI and Python library that removes visible (Gemini) and invisible (SynthID, C2PA, EXIF) AI watermarks from images. It provides a practical tool for privacy and data cleaning, supporting multiple watermark types.",
+      "worthReading": "Explores the intersection of AI-generated content and digital forensics, offering hands-on utility for developers dealing with watermarked images from generative models.",
+      "topics": [
+        "ai",
+        "c2pa",
+        "cli",
+        "computer-vision",
+        "diffusion-models",
+        "gemini",
+        "image-processing",
+        "metadata",
+        "python",
+        "synthid",
+        "watermark-removal"
+      ],
+      "tags": [
+        "tooling",
+        "multi-modal"
+      ],
+      "score": 6,
+      "scoreReason": "Freshness is moderate (346 stars, niche but rising), relevance is high (AI watermark removal ties to multi-modal and tooling), concreteness is strong (working CLI and library)."
+    },
+    {
+      "repo": "tarekziade/ai-reviewer",
+      "url": "https://github.com/tarekziade/ai-reviewer",
+      "description": "",
+      "language": "Python",
+      "stargazersCount": 1,
+      "starredBy": "sayakpaul",
+      "starredAt": "2026-05-20T03:59:05Z",
+      "highlights": "AI Reviewer is a Python tool that uses AI to automatically review code changes, providing feedback on code quality, potential bugs, and adherence to best practices. It integrates with GitHub to analyze pull requests and suggest improvements.",
+      "worthReading": "This repository offers a practical approach to automating code reviews with AI, which can save developers time and improve code quality. It's worth exploring for teams looking to streamline their review process.",
+      "topics": [],
+      "tags": [
+        "tooling"
+      ],
+      "score": 3,
+      "scoreReason": "Freshness is low (1 star, no traction), relevance is moderate (AI tooling for code review), concreteness is moderate (Python code, but no description or details)."
+    },
+    {
+      "repo": "remorses/playwriter",
+      "url": "https://github.com/remorses/playwriter",
+      "description": "Chrome extension & CLI to let agents control your browser. Runs Playwright snippets in a stateful sandbox. Available as CLI or MCP",
+      "language": "HTML",
+      "stargazersCount": 3525,
+      "starredBy": "philschmid",
+      "starredAt": "2026-05-20T00:09:56Z",
+      "highlights": "Playwriter is a Chrome extension and CLI that enables AI agents to control your browser by executing Playwright snippets in a stateful sandbox. It supports both CLI and MCP (Model Context Protocol) interfaces, making it easy to integrate with various agent frameworks.",
+      "worthReading": "It bridges the gap between AI agents and browser automation, offering a practical tool for testing and deploying agent-based workflows. The MCP support aligns with emerging standards for agent-tool interaction.",
+      "topics": [
+        "mcp",
+        "playwright"
+      ],
+      "tags": [
+        "agent",
+        "tooling"
+      ],
+      "score": 8,
+      "scoreReason": "Freshness: moderate (3.5k stars, rising but not yet mainstream); Relevance: high (directly enables agent-based browser control, a frontier AI topic); Concreteness: high (working extension/CLI with clear documentation)."
+    }
+  ]
+}
