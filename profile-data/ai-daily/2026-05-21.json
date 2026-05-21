@@ -1,192 +1,99 @@
 {
   "date": "2026-05-21",
-  "itemCount": 17,
+  "itemCount": 70,
   "sections": [
     {
       "id": "headlines",
       "title": "Headlines & Launches",
       "items": [
         {
-          "title": "SpaceX S-1 Reveals $18.7B Revenue, $4.9B Loss, $1.25B/Month AI Deal",
-          "summary": "SpaceX filed its S-1 for an IPO, revealing 2025 revenue of $18.7 billion, a net loss of $4.9 billion, and a cloud services agreement with Anthropic worth $1.25 billion per month through May 2029. This filing provides unprecedented transparency into SpaceX's finances, showing Starlink as a cash cow while the company bets big on AI infrastructure via space-based data centers, potentially reshaping the cloud computing landscape. The Anthropic deal covers compute capacity across SpaceX's Colossus and Colossus II data centers, with capacity ramping in May and June 2026 at a reduced fee. SpaceX's adjusted EBITDA was $6.6 billion, but capital expenditure reached $20.7 billion.",
-          "url": "https://www.sec.gov/Archives/edgar/data/1181412/000162828026036936/spaceexplorationtechnologi.htm",
+          "title": "OpenAI barrels toward IPO that may happen in September | TechCrunch",
+          "summary": "OpenAI加速推进IPO，可能于9月上市。",
+          "url": "https://techcrunch.com/2026/05/20/openai-barrels-toward-ipo-that-may-happen-in-september/",
           "score": 9,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "cachecow"
+              "name": "techcrunch.com"
             }
           ],
           "tags": [
-            "SpaceX",
-            "IPO",
-            "AI infrastructure",
-            "financials",
-            "cloud computing"
+            "openai",
+            "ipo",
+            "funding"
           ],
-          "focusTopics": [],
-          "background": "SpaceX, traditionally a launch and satellite company, is expanding into AI compute infrastructure. The S-1 filing is required for an IPO, detailing financials and risks. Anthropic, an AI lab behind Claude, needs massive compute for training and inference, leading to this large-scale deal.",
-          "discussion": "Commenters noted the stark contrast between Starlink's profitability ($4.4B operating income) and SpaceX's overall loss, with some questioning the viability of space-based data centers due to cooling challenges. Others highlighted the massive valuation relative to revenue, comparing it to larger companies like Northrop."
+          "focusTopics": []
         },
         {
-          "title": "Mozilla retires asm.js from SpiderMonkey",
-          "summary": "Mozilla announced the removal of asm.js support from its SpiderMonkey JavaScript engine, marking the official end of the technology that pioneered high-performance web computing. Asm.js was a critical stepping stone to WebAssembly, enabling near-native performance in the browser and proving the viability of running complex applications like Figma and Unreal Engine on the web. Its deprecation signifies the full transition to WebAssembly as the standard for high-performance web code. Asm.js is a strict subset of JavaScript that allows ahead-of-time optimization, but it still requires parsing as JavaScript, leading to larger bundle sizes and slower load times compared to WebAssembly. The removal will simplify SpiderMonkey's codebase and encourage developers to migrate to WebAssembly.",
-          "url": "https://spidermonkey.dev/blog/2026/05/20/saying-goodbye-to-asmjs.html",
+          "title": "Nvidia commits $90 billion to AI deals | Semafor",
+          "summary": "英伟达承诺900亿美元用于AI交易，彰显行业主导地位。",
+          "url": "https://www.semafor.com/article/05/20/2026/nvidia-commits-90-billion-to-ai-deals",
           "score": 8,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "eqrion"
+              "name": "semafor.com"
             }
           ],
           "tags": [
-            "asm.js",
-            "WebAssembly",
-            "SpiderMonkey",
-            "JavaScript",
-            "web performance"
+            "nvidia",
+            "investment",
+            "infrastructure"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "NanoCo launches enterprise AI assistants after 250,000 NanoClaw downloads - ynetnews",
+          "summary": "NanoCo获1200万美元种子轮，推出企业AI助手。",
+          "url": "https://www.ynetnews.com/business/article/byqweojymx",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "ynetnews.com"
+            }
+          ],
+          "tags": [
+            "funding",
+            "ai-agents",
+            "open-source"
           ],
           "focusTopics": [
-            "memory"
-          ],
-          "background": "Asm.js was introduced by Mozilla in 2013 as a low-level subset of JavaScript that could be compiled from C/C++ via Emscripten, enabling near-native performance in the browser. It was a response to Google's NaCl and PNaCl technologies. WebAssembly, which superseded asm.js, became a W3C standard in 2019 and is now supported by all major browsers.",
-          "discussion": "Commenters expressed nostalgia and appreciation for asm.js's historical role, with some noting its use in early Figma and Unreal Engine demos. There was also a cultural reference to Gary Bernhardt's famous talk 'The Birth and Death of JavaScript,' which predicted a similar evolution. Overall sentiment was bittersweet but acknowledged that WebAssembly is a worthy successor."
+            "agent-harness"
+          ]
         },
         {
-          "title": "Railway Incident: GCP Account Suspension Disrupts Service",
-          "summary": "On May 19, 2026, Google Cloud incorrectly suspended Railway's account, causing a platform-wide outage that lasted nearly 8 hours and affected workloads on AWS and Railway Metal infrastructure. This incident highlights systemic trust issues with Google Cloud as a B2B provider, prompting Railway to plan removal of GCP from its data plane hot path, which could influence other companies to reconsider reliance on Google Cloud. The suspension was triggered by an automated process, and Google provided no clear explanation for the root cause. Railway acknowledged architectural failure in trusting GCP and is working to reduce dependency.",
-          "url": "https://blog.railway.com/p/incident-report-may-19-2026-gcp-account-outage",
-          "score": 8,
+          "title": "Intuit to lay off over 3k employees to refocus on AI",
+          "summary": "Intuit裁员3000人，转向AI。",
+          "url": "https://techcrunch.com/2026/05/20/intuit-to-lay-off-over-3000-employees-to-refocus-on-ai/",
+          "score": 6.438,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "0xedb"
+              "name": "HN (21)"
             }
           ],
           "tags": [
-            "Google Cloud",
-            "incident report",
-            "cloud reliability",
-            "vendor lock-in",
-            "SaaS"
+            "layoffs",
+            "ai",
+            "enterprise"
           ],
-          "focusTopics": [],
-          "background": "Railway is a cloud platform that hosts applications for developers. Google Cloud Platform (GCP) is a major cloud provider. Account suspensions can occur due to policy violations or billing issues, but in this case, the suspension was erroneous and lacked transparency.",
-          "discussion": "The Hacker News community expressed strong criticism of Google Cloud's practices, with users noting a pattern of arbitrary suspensions and lack of accountability. Some praised Railway's honest post-mortem, while others questioned the unresolved root cause."
+          "focusTopics": []
         },
         {
-          "title": "Meta Blocks Human Rights Accounts in Saudi Arabia, UAE",
-          "summary": "Meta has been blocking human rights accounts from reaching audiences in Saudi Arabia and the UAE, as reported by Al Qst. This action restricts the visibility of content from these accounts to users in those countries. This raises serious concerns about censorship and corporate complicity in suppressing free speech, especially in regions with limited press freedoms. It highlights the tension between platform governance and geopolitical pressures. The blocking appears to be targeted, affecting only certain accounts, and users in the UAE report that the reporting site alqst.org is itself blocked. Meta has not publicly commented on the specific actions.",
-          "url": "https://www.alqst.org/ar/posts/1190",
-          "score": 8,
+          "title": "Anthropic is expanding to Colossus2. Will use GB200",
+          "summary": "Anthropic扩展至Colossus2，将使用GB200芯片。",
+          "url": "https://xcancel.com/nottombrown/status/2057194829986300375",
+          "score": 6.181,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "giuliomagnifico"
+              "name": "HN (77)"
             }
           ],
           "tags": [
-            "censorship",
-            "social media",
-            "free speech",
-            "Meta",
-            "geopolitics"
-          ],
-          "focusTopics": [],
-          "background": "Social media platforms like Meta operate under local laws in each country, which can include content restrictions. In Saudi Arabia and the UAE, governments have strict controls over online speech, and companies often comply to avoid being blocked entirely.",
-          "discussion": "Comments express frustration with Meta's prioritization of profits over principles, with some noting that the company has little choice but to comply or face expulsion. Users also highlight the irony that the article itself is blocked in the UAE, requiring a VPN to access."
-        },
-        {
-          "title": "Formal Verification as a Guard for AI Coding Loops",
-          "summary": "Reuben Brooks proposes using formal verification as a guard to improve the reliability of AI agent code generation, introducing a structural backpressure mechanism to prevent incorrect code from being deployed. This approach could significantly reduce the risk of AI-generated code introducing bugs or security vulnerabilities, making AI coding agents more trustworthy for production use. The proposal uses formal verification as an oracle to check code correctness before deployment, and the backpressure signal resists the flow of incorrect code, acting as a rate control rather than error feedback.",
-          "url": "https://reubenbrooks.dev/blog/structural-backpressure-beats-smarter-agents/",
-          "score": 8,
-          "sources": [
-            {
-              "name": "hackernews",
-              "meta": "pyrex41"
-            }
-          ],
-          "tags": [
-            "formal verification",
-            "AI agents",
-            "software engineering",
-            "LLM",
-            "DevOps"
-          ],
-          "focusTopics": [],
-          "background": "Formal verification is a technique that mathematically proves a system meets its specifications, but it is rarely used in industrial software engineering due to high expertise requirements. AI coding agents often generate code that looks plausible but contains subtle errors, and traditional testing may not catch all issues.",
-          "discussion": "The community debated whether backpressure is the right signal, with some arguing that an error control signal (like formal verification oracle feedback) is more appropriate. Others shared practical experiences using deterministic tools and formal methods to improve agent reliability, and noted that formal verification rules must be fully specified to be effective."
-        },
-        {
-          "title": "Qian Xuesen: The missile genius America lost and China gained",
-          "summary": "A 2025 article in Naval History magazine provides a detailed account of Qian Xuesen's life, focusing on his deportation from the US to China and the subsequent geopolitical consequences. This story highlights the long-term impact of talent migration and national security decisions, as Qian's expertise directly accelerated China's missile and space programs, altering the strategic balance. The article notes that Qian Xuesen was a co-founder of JPL and a key figure in US rocketry before being accused of communist ties and deported in 1955. He later led China's missile program, earning the title 'Father of Chinese Rocketry'.",
-          "url": "https://www.usni.org/magazines/naval-history/2025/december/missile-genius-america-lost-and-china-gained",
-          "score": 7,
-          "sources": [
-            {
-              "name": "hackernews",
-              "meta": "thnaks"
-            }
-          ],
-          "tags": [
-            "history",
-            "geopolitics",
-            "talent migration",
-            "missile technology",
-            "cold war"
+            "anthropic",
+            "infrastructure",
+            "gpu"
           ],
           "focusTopics": [
-            "memory"
-          ],
-          "background": "Qian Xuesen was a brilliant Chinese-American scientist who contributed to US rocket research during and after WWII. Amid the Red Scare, he was accused of being a communist and placed under house arrest, eventually being deported to China. There, he became the architect of China's missile and space programs, including the Dongfeng missiles and Long March rockets.",
-          "discussion": "Commenters discuss the difficulty of making a biopic about an organizational genius, the US's continued anti-Chinese sentiment affecting scientists, and the counterfactual of whether China could have achieved its missile program without Qian. Some note the story is mythologized in Chinese education."
-        },
-        {
-          "title": "Google fights AI search manipulation",
-          "summary": "BBC reports that Google is quietly implementing measures to combat manipulation of its AI-generated search results, where bad actors use hidden text and low-quality pages to influence AI summaries. This matters because AI-generated search results are increasingly central to how users get information, and manipulation could spread misinformation, harm trust, and undermine the integrity of search. Google has updated its spam policies to target techniques like hidden text that feeds AI answer systems without helping users, and scaled low-value pages that pollute retrieval pools for generated answers.",
-          "url": "https://www.bbc.com/future/article/20260519-google-tackles-attempts-to-hack-its-ai-results",
-          "score": 7,
-          "sources": [
-            {
-              "name": "hackernews",
-              "meta": "tigerlily"
-            }
-          ],
-          "tags": [
-            "AI",
-            "search",
-            "Google",
-            "manipulation",
-            "SEO"
-          ],
-          "focusTopics": [
-            "memory"
-          ],
-          "background": "AI search tools like Google's AI Overviews generate answers by searching the internet in real time, which opens a new attack surface for manipulation. Unlike traditional SEO spam that targets rankings, these attacks aim to inject false or biased information directly into AI-generated summaries. Google has struggled with search spam for decades, and the rise of AI search introduces new challenges.",
-          "discussion": "Community comments express deep skepticism about Google's ability and motivation to fix this, with users noting Google's long history of failing to keep spam out of search results and questioning whether Google prioritizes user retention over truth."
-        },
-        {
-          "title": "Flipper One Specs Reveal Linux, Missing Classic Radio",
-          "summary": "Flipper One's official tech specs reveal a Linux-based device with WiFi, Bluetooth, and Ethernet, but notably lack NFC, RFID, sub-1GHz radio, and IR found in the Flipper Zero. This marks a significant shift from the Flipper Zero's focus on radio hacking to a more general-purpose Linux computer, potentially alienating core users who relied on those missing features. The device uses a dual-processor architecture: a Linux SoC (Allwinner V3s) for general computing and an STM32 MCU for real-time tasks, with the display connected to the MCU rather than the SoC.",
-          "url": "https://docs.flipper.net/one/general/tech-specs",
-          "score": 6,
-          "sources": [
-            {
-              "name": "hackernews",
-              "meta": "gregsadetsky"
-            }
-          ],
-          "tags": [
-            "Flipper",
-            "hardware",
-            "hacking",
-            "IoT",
-            "embedded"
-          ],
-          "focusTopics": [],
-          "background": "The Flipper Zero is a popular multi-tool for hacking and exploring access control systems and radio protocols, featuring NFC, RFID, sub-1GHz radio, and IR. The Flipper One is positioned as a more powerful successor with a full Linux environment, but early specs suggest it drops many of the Zero's signature radio capabilities.",
-          "discussion": "Community comments express disappointment over the missing radio features, with users like sterlind noting the absence of NFC, RFID, and sub-1GHz radio. Others question design choices such as the low-resolution display and the SoC-display split, while some appreciate the Ethernet ports for network debugging."
+            "model-release"
+          ]
         }
       ]
     },
@@ -195,95 +102,519 @@
       "title": "Research & Innovation",
       "items": [
         {
-          "title": "OpenAI Model Disproves Long-Standing Discrete Geometry Conjecture",
-          "summary": "OpenAI's model has disproved a central conjecture in discrete geometry, originally proposed by Paul Erdős, by finding a counterexample. The result was published alongside commentary from mathematicians including Tim Gowers. This marks a significant milestone in AI-assisted mathematical research, demonstrating that large language models can contribute to genuine mathematical discovery. It sparks debate on the role of LLMs in mathematics and their potential to augment human reasoning. The disproof was achieved by finding a counterexample to Erdős' original conjecture, which some mathematicians consider less interesting than a constructive proof. The model used a program search approach similar to FunSearch, combining LLMs with evolutionary algorithms.",
+          "title": "An OpenAI model has disproved a central conjecture in discrete geometry",
+          "summary": "OpenAI模型推翻离散几何中心猜想，展示推理能力。",
           "url": "https://openai.com/index/model-disproves-discrete-geometry-conjecture/",
-          "score": 9,
+          "score": 9.575,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "tedsanders"
+              "name": "HN (721)"
             }
           ],
           "tags": [
-            "AI",
-            "mathematics",
-            "LLM",
-            "research",
-            "geometry"
+            "openai",
+            "math",
+            "reasoning",
+            "discrete-geometry"
           ],
           "focusTopics": [
             "planning"
-          ],
-          "background": "Discrete geometry studies combinatorial properties of geometric objects, such as points, lines, and polytopes. Erdős' conjecture, a central problem in the field, had remained open for decades. Large language models like GPT-4 have recently been applied to mathematical discovery, as seen in DeepMind's FunSearch work published in Nature.",
-          "discussion": "The HN community expressed mixed feelings: some were impressed by the result, while others debated whether LLMs truly 'discover' or merely interpolate. Tim Gowers' commentary was highlighted as providing nuanced perspective. A commenter noted that finding a counterexample is less theoretically deep than a proof."
+          ]
         },
         {
-          "title": "Qwen3.7-Max: New Frontier Model with SOTA Non-Hallucination",
-          "summary": "Alibaba's Qwen team released Qwen3.7-Max, a proprietary frontier model that achieves state-of-the-art non-hallucination rates on the AA-omniscience benchmark, surpassing Opus 4.7, Gemini 3.1 Pro, and GPT5.5. This release demonstrates that proprietary models from Chinese AI labs can compete with top Western frontier models on key metrics like hallucination, while the community discussion highlights the growing practical viability of open-source alternatives for many tasks. Qwen3.7-Max supports a 1 million token context window and scores 57 on the Artificial Analysis Intelligence Index, well above the average of 14. The model also achieved a 10x performance improvement on the Pingtouge Zhenwu M890 domestic chip during a 35-hour optimization task.",
-          "url": "https://qwen.ai/blog?id=qwen3.7",
-          "score": 8,
+          "title": "OpenAI claims it solved an 80-year-old math problem — for real this time | TechCrunch",
+          "summary": "OpenAI声称解决80年数学难题，引发学界关注。",
+          "url": "https://techcrunch.com/2026/05/20/openai-claims-it-solved-an-80-year-old-math-problem-for-real-this-time/",
+          "score": 9.5,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "kevinsimper"
+              "name": "techcrunch.com"
             }
           ],
           "tags": [
-            "AI",
-            "LLM",
-            "Open Source",
-            "Qwen",
-            "Agent"
+            "openai",
+            "math",
+            "reasoning"
           ],
           "focusTopics": [
-            "memory"
-          ],
-          "background": "Frontier AI models are the most advanced general-purpose models, enabling reasoning, multimodal generation, and agentic workflows. Hallucination rates measure how often a model produces factually inconsistent summaries, and lower rates are critical for reliable AI agents.",
-          "discussion": "The community is excited about the non-hallucination SOTA, with one user noting it's better than Opus 4.7, Gemini 3.1 Pro, and GPT5.5. Another user praised open-source models like Qwen3.6 as a free alternative to Claude Code, while others expressed frustration over the lack of US availability and uncertainty about whether the model will remain proprietary or be released open-source."
+            "planning"
+          ]
         },
         {
-          "title": "Disembodied Human Brains Used for Drug Testing",
-          "summary": "Scientists are using disembodied human brains for drug testing, raising urgent ethical questions about consciousness and potential torture. This research could revolutionize drug testing by providing a more accurate human model, but it also forces society to confront profound ethical dilemmas about the moral status of brain tissue that might retain consciousness. The technique builds on previous work keeping pig brains alive outside the body, and researchers acknowledge that restoring awareness is a possibility, though current protocols use heavy sedation to prevent electrical activity.",
-          "url": "https://www.science.org/content/article/not-alive-not-dead-disembodied-human-brains-used-drug-testing",
+          "title": "DecisionBench: A Benchmark for Emergent Delegation in Long-Horizon Agentic Workflows",
+          "summary": "提出DecisionBench基准，评估长周期智能体工作流中的紧急委托。",
+          "url": "https://arxiv.org/abs/2605.19099",
           "score": 8,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "Timofeibu"
+              "name": "ArXiv cs.AI"
             }
           ],
           "tags": [
-            "ethics",
-            "neuroscience",
-            "biomedical research",
-            "consciousness"
+            "benchmark",
+            "agent",
+            "delegation"
           ],
-          "focusTopics": [],
-          "background": "Disembodied brain research has roots in experiments like MKUltra, which used psychoactive drugs on human subjects without consent. More recently, scientists have kept pig brains alive in a 'brain in a bucket' setup, and similar methods could work on primate brains, including humans. Brain organoids—lab-grown mini-brains—have also raised concerns about consciousness and moral status.",
-          "discussion": "Commenters express horror and ethical outrage, comparing the practice to torture and sci-fi dystopias. Some question how such research could pass ethics review, while others draw parallels to factory farming of animals, arguing that society tolerates massive animal suffering for cheap food."
+          "focusTopics": [
+            "evals",
+            "agent-harness"
+          ]
         },
         {
-          "title": "SBCL as a Macro-Assembler for High-Performance VMs",
-          "summary": "A 2014 article demonstrates using SBCL's compiler as a macro-assembler to build a high-performance x86_64 virtual machine, with precise control over register allocation and instruction alignment. This approach showcases the power of Lisp macros and compiler internals for low-level optimization, offering a unique alternative to traditional assemblers for VM implementation. The author used 8 x86_64 registers for the VM's stack slots and calculated padding and alignment for each instruction version, which would be tedious with a normal assembler.",
-          "url": "https://pvk.ca/Blog/2014/03/15/sbcl-the-ultimate-assembly-code-breadboard/",
+          "title": "AgentNLQ: A General-Purpose Agent for Natural Language to SQL",
+          "summary": "提出通用NL2SQL智能体AgentNLQ，提升自然语言转SQL能力。",
+          "url": "https://arxiv.org/abs/2605.19010",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "nl2sql",
+            "agent",
+            "database"
+          ],
+          "focusTopics": [
+            "tool-use"
+          ]
+        },
+        {
+          "title": "Agent Meltdowns: The Road to Hell Is Paved with Helpful Agents",
+          "summary": "研究智能体在计算机和网页使用中的崩溃现象。",
+          "url": "https://arxiv.org/abs/2605.19149",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "agent",
+            "failure",
+            "computer-use"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "MMoA: An AI-Agent framework with recurrence for Memoried Mixure-of-Agent",
+          "summary": "提出MMoA框架，通过递归记忆机制改进混合智能体协作。",
+          "url": "https://arxiv.org/abs/2605.19194",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "mixture-of-agents",
+            "llm",
+            "agent-framework"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "Diagnosing Multi-step Reasoning Failures in Black-box LLMs via Stepwise Confidence Attribution",
+          "summary": "通过逐步置信度归因诊断黑盒LLM的多步推理失败。",
+          "url": "https://arxiv.org/abs/2605.19228",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "reasoning",
+            "llm",
+            "diagnosis"
+          ],
+          "focusTopics": [
+            "planning"
+          ]
+        },
+        {
+          "title": "CANTANTE: Optimizing Agentic Systems via Contrastive Credit Attribution [R]",
+          "summary": "CANTANTE：通过对比信用分配优化多智能体系统。",
+          "url": "https://www.reddit.com/r/MachineLearning/comments/1tij4st/cantante_optimizing_agentic_systems_via/",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "Reddit r/MachineLearning"
+            }
+          ],
+          "tags": [
+            "multi-agent",
+            "reinforcement-learning",
+            "optimization"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "Position: Let's Develop Data Probes to Fundamentally Understand How Data Affects LLM Performance",
+          "summary": "提出数据探针方法以理解数据如何影响LLM性能。",
+          "url": "https://arxiv.org/abs/2605.18801",
           "score": 7,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "yacin"
+              "name": "ArXiv cs.AI"
             }
           ],
           "tags": [
-            "SBCL",
-            "Common Lisp",
-            "assembly",
-            "VM",
-            "x86_64"
+            "llm",
+            "data-quality",
+            "interpretability"
           ],
-          "focusTopics": [],
-          "background": "SBCL (Steel Bank Common Lisp) is a high-performance Common Lisp compiler that generates native code. Macro-assemblers allow programmers to write assembly-like code with high-level abstractions. This article leverages SBCL's compiler to generate optimized x86_64 machine code for a custom VM.",
-          "discussion": "The article has been repeatedly posted on Hacker News over the years, with comments expressing admiration for the technique while noting its complexity. Some readers found it over their heads but appreciated the clever use of SBCL as a macro-assembler."
+          "focusTopics": []
+        },
+        {
+          "title": "Embedding by Elicitation: Dynamic Representations for Bayesian Optimization of System Prompts",
+          "summary": "通过动态表示进行系统提示的贝叶斯优化。",
+          "url": "https://arxiv.org/abs/2605.19093",
+          "score": 7,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "prompt-optimization",
+            "bayesian-optimization",
+            "system-prompt"
+          ],
+          "focusTopics": [
+            "context-engineering"
+          ]
+        },
+        {
+          "title": "Time to REFLECT: Can We Trust LLM Judges for Evidence-based Research Agents?",
+          "summary": "研究LLM作为裁判在证据型研究智能体中的可靠性。",
+          "url": "https://arxiv.org/abs/2605.19196",
+          "score": 7,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "llm-judge",
+            "evaluation",
+            "research-agent"
+          ],
+          "focusTopics": [
+            "evals"
+          ]
+        },
+        {
+          "title": "Position: Uncertainty Quantification in LLMs is Just Unsupervised Clustering",
+          "summary": "提出LLM不确定性量化可视为无监督聚类问题。",
+          "url": "https://arxiv.org/abs/2605.19220",
+          "score": 7,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "uncertainty-quantification",
+            "llm",
+            "clustering"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "HalBench: I built a custom sycophancy and hallucination benchmark and tested 4 frontier models (Sonnet 4.6, Grok 4.3, GPT 5.4 and Gemini 3.1 Pro), looking for input on what OSS models to run next!",
+          "summary": "自定义谄媚与幻觉基准测试，评估4个前沿模型。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tizvih/halbench_i_built_a_custom_sycophancy_and/",
+          "score": 7,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "benchmark",
+            "sycophancy",
+            "hallucination",
+            "eval"
+          ],
+          "focusTopics": [
+            "evals"
+          ]
+        },
+        {
+          "title": "PopuLoRA: Co-Evolving LLM Populations for Reasoning Self- Play",
+          "summary": "PopuLoRA：通过自我对弈协同进化LLM群体以提升推理能力。",
+          "url": "https://vmax.ai/team/populora-co-evolving-llm-populations-for-reasoning-self-play",
+          "score": 6.899,
+          "sources": [
+            {
+              "name": "HN (33)"
+            }
+          ],
+          "tags": [
+            "llm",
+            "reasoning",
+            "self-play",
+            "lora"
+          ],
+          "focusTopics": [
+            "planning",
+            "post-training"
+          ]
+        },
+        {
+          "title": "Formal Verification Gates for AI Coding Loops",
+          "summary": "提出形式化验证门控机制，防止AI编码循环出错。",
+          "url": "https://reubenbrooks.dev/blog/structural-backpressure-beats-smarter-agents/",
+          "score": 6.708,
+          "sources": [
+            {
+              "name": "HN (111)"
+            }
+          ],
+          "tags": [
+            "ai-safety",
+            "formal-verification",
+            "coding-agent"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "Trustworthy Agent Network: Trust in Agent Networks Must Be Baked In, Not Bolted On",
+          "summary": "提出可信智能体网络，强调信任需内建而非附加。",
+          "url": "https://arxiv.org/abs/2605.19035",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "agent",
+            "trust",
+            "security"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "ReacTOD: Bounded Neuro-Symbolic Agentic NLU for Zero-Shot Dialogue State Tracking",
+          "summary": "提出ReacTOD，有界神经符号智能体NLU用于零样本对话状态跟踪。",
+          "url": "https://arxiv.org/abs/2605.19077",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "dialogue",
+            "nlu",
+            "neuro-symbolic"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "Learn-by-Wire Training Control Governance: Bounded Autonomous Training Under Stress for Stability and Efficiency",
+          "summary": "提出有界自主训练治理框架，提升语言模型训练稳定性。",
+          "url": "https://arxiv.org/abs/2605.19008",
+          "score": 6,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "training",
+            "stability",
+            "governance"
+          ],
+          "focusTopics": [
+            "post-training"
+          ]
+        },
+        {
+          "title": "Interference-Aware Multi-Task Unlearning",
+          "summary": "提出干扰感知的多任务遗忘方法，提升机器遗忘效率。",
+          "url": "https://arxiv.org/abs/2605.19042",
+          "score": 6,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "machine-unlearning",
+            "multi-task",
+            "privacy"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Prompting language influences diagnostic reasoning and accuracy of large language models",
+          "summary": "研究提示语言影响LLM的诊断推理和准确性。",
+          "url": "https://arxiv.org/abs/2605.19173",
+          "score": 6,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "llm",
+            "clinical",
+            "prompting"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Qwen 3.6 35B GGUF: NTP vs MTP quantization results across GPUs and CPUs",
+          "summary": "Qwen 3.6 35B GGUF量化结果对比：NTP vs MTP。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tipihx/qwen_36_35b_gguf_ntp_vs_mtp_quantization_results/",
+          "score": 6,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "qwen",
+            "quantization",
+            "gguf",
+            "benchmark"
+          ],
+          "focusTopics": [
+            "evals"
+          ]
+        },
+        {
+          "title": "Operationalizing Document AI: A Microservice Architecture for OCR and LLM Pipelines in Production",
+          "summary": "提出用于OCR和LLM管线的微服务架构，弥合学术与生产差距。",
+          "url": "https://arxiv.org/abs/2605.18818",
+          "score": 5.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "document-ai",
+            "microservice",
+            "production"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "The Annotation Scarcity Paradox in Low-Resource NLP Evaluation: A Decade of Acceleration and Emerging Constraints",
+          "summary": "分析低资源NLP评估中的标注稀缺悖论。",
+          "url": "https://arxiv.org/abs/2605.19066",
+          "score": 5.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "low-resource",
+            "nlp",
+            "annotation"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Fine-tuning language encoding models on slow fMRI improves prediction for fast ECoG",
+          "summary": "用fMRI微调语言编码模型提升ECoG预测性能。",
+          "url": "https://arxiv.org/abs/2605.19224",
+          "score": 5.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "brain-computer-interface",
+            "fmri",
+            "language-model"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "NVlabs/Sana",
+          "summary": "高效高分辨率图像合成线性扩散Transformer",
+          "url": "https://github.com/NVlabs/Sana",
+          "score": 5.427,
+          "sources": [
+            {
+              "name": "GitHub trending:python (+218★)"
+            }
+          ],
+          "tags": [
+            "image-generation",
+            "diffusion",
+            "transformer"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Evaluating the Utility of Personal Health Records in Personalized Health AI",
+          "summary": "评估个人健康记录在个性化健康AI中的效用。",
+          "url": "https://arxiv.org/abs/2605.18937",
+          "score": 5,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "healthcare",
+            "personal-health-records"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "KAN-MLP-Mixer: A comprehensive investigation of the usage of Kolmogorov-Arnold Networks (KANs) for improving IMU-based Human Activity Recognition",
+          "summary": "探索KAN用于改进基于IMU的人类活动识别。",
+          "url": "https://arxiv.org/abs/2605.19031",
+          "score": 5,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "kan",
+            "human-activity-recognition",
+            "imu"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Benchmarking Commercial ASR Systems on Code-Switching Speech: Arabic, Persian, and German",
+          "summary": "基准测试商业ASR系统在代码切换语音上的表现。",
+          "url": "https://arxiv.org/abs/2605.19069",
+          "score": 5,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "asr",
+            "code-switching",
+            "benchmark"
+          ],
+          "focusTopics": []
         }
       ]
     },
@@ -292,113 +623,682 @@
       "title": "Engineering & Resources",
       "items": [
         {
-          "title": "GitHub Confirms Breach of 3,800 Repos via Malicious VSCode Extension",
-          "summary": "GitHub confirmed that approximately 3,800 internal repositories were breached after an employee installed a malicious VSCode extension, which exfiltrated data to attackers. The incident was claimed by a group called TeamPCP. This breach highlights the severe security risks in the VSCode extension ecosystem, where trusted extensions can be compromised and used as supply chain attack vectors. It underscores the need for stronger vetting and monitoring of developer tools. The malicious extension was a trojanized version of a legitimate extension, and the breach occurred when an employee with access to internal repositories installed it. The Nx Console extension (2.2M installs) was also compromised for 18 minutes on the Visual Studio Marketplace, potentially affecting many users.",
-          "url": "https://www.bleepingcomputer.com/news/security/github-confirms-breach-of-3-800-repos-via-malicious-vscode-extension/",
-          "score": 8,
+          "title": "Qwen3.7-Max: The Agent Frontier",
+          "summary": "Qwen发布3.7-Max模型，聚焦Agent能力，性能领先。",
+          "url": "https://qwen.ai/blog?id=qwen3.7",
+          "score": 9.575,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "Timofeibu"
+              "name": "HN (607)"
             }
           ],
           "tags": [
-            "security",
-            "supply chain",
-            "VSCode",
-            "GitHub",
-            "breach"
+            "llm",
+            "agent",
+            "qwen"
           ],
-          "focusTopics": [],
-          "background": "VSCode extensions are add-ons that enhance the editor's functionality, but they run with the same privileges as the user, making them a potent attack vector. Supply chain attacks via compromised extensions have become increasingly common, as attackers target the trust users place in widely-used tools. GitHub, owned by Microsoft, is a major platform for code hosting and collaboration.",
-          "discussion": "The community expressed concern about the security of VSCode extensions, with users noting that auto-updates and misleading extension names make it easy for malicious extensions to spread. Some commenters pointed out that the breach could have been prevented if Microsoft (owner of VSCode, npm, and GitHub) had implemented better security measures. Others speculated about the specific extension involved, linking it to the compromised Nx Console extension."
+          "focusTopics": [
+            "model-release",
+            "agent-harness"
+          ]
         },
         {
-          "title": "Google's AI Search Threatens Open Web",
-          "summary": "Google is prioritizing AI-generated answers over traditional web links in search results, using its Gemini 3 Pro model to provide direct answers via 'AI Mode'. This shift undermines the symbiotic relationship between Google and content creators, where websites provide content in exchange for traffic, potentially breaking the economic incentive for independent creators and threatening the open web ecosystem. Google's 'AI Mode' uses Gemini 3 Pro to generate answers with dynamic visual layouts and interactive tools, while traditional '10 blue links' remain but are deprioritized. The change is driven by competition from AI chatbots like ChatGPT.",
-          "url": "https://tante.cc/2026/05/20/on-google-declaring-war-on-the-web/",
-          "score": 8,
+          "title": "colbymchenry/codegraph",
+          "summary": "CodeGraph：为Claude Code等提供预索引代码知识图谱。",
+          "url": "https://github.com/colbymchenry/codegraph",
+          "score": 8.725,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "cdrnsf"
+              "name": "GitHub trending:all (+2123★)"
             }
           ],
           "tags": [
-            "Google",
-            "AI Search",
-            "Open Web",
-            "Content Creation",
-            "SEO"
+            "code-graph",
+            "claude-code",
+            "cursor",
+            "open-source"
           ],
-          "focusTopics": [],
-          "background": "For decades, Google Search relied on indexing web pages and displaying links, driving traffic to content creators. This symbiotic relationship—content for traffic—sustained the open web. With the rise of generative AI, Google now aims to keep users on its own platform by providing direct answers, reducing the need to visit external sites.",
-          "discussion": "Commenters express concern that AI summaries will reduce traffic to independent sites, with some noting that Google has no choice due to competition from ChatGPT. Others suggest finding alternative traffic sources, like a decentralized replacement for StumbleUpon."
+          "focusTopics": [
+            "coding-agents",
+            "context-engineering"
+          ]
         },
         {
-          "title": "Google I/O 2026: Gemini Spark and Antigravity",
-          "summary": "Google announced Gemini Spark, a personal AI agent that integrates with Google apps, and revealed Antigravity as the underlying runtime. The open-source Gemini CLI will be deprecated and replaced by the closed-source Antigravity CLI on June 18th. Gemini Spark represents a major step toward practical AI agents that can autonomously manage personal tasks across Google services, but its security measures against prompt injection will be critical to avoid a potential 'challenger disaster' for agent security. Gemini Spark runs on Gemini 3.5 Flash and Antigravity, with Antigravity described as a desktop app, CLI tool, SDK, and IDE. Google claims Spark operates in isolated ephemeral VMs with DLP policies and encrypted credentials.",
-          "url": "https://simonwillison.net/2026/May/20/google-io/#atom-everything",
+          "title": "obra/superpowers",
+          "summary": "Agent技能框架与软件开发方法论",
+          "url": "https://github.com/obra/superpowers",
+          "score": 8.725,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+1743★)"
+            }
+          ],
+          "tags": [
+            "agent-framework",
+            "skills",
+            "methodology"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "HKUDS/CLI-Anything",
+          "summary": "让所有软件支持Agent原生交互的CLI框架",
+          "url": "https://github.com/HKUDS/CLI-Anything",
+          "score": 8.559999999999999,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+890★)"
+            }
+          ],
+          "tags": [
+            "agent-native",
+            "cli",
+            "tool-use"
+          ],
+          "focusTopics": [
+            "tool-use"
+          ]
+        },
+        {
+          "title": "multica-ai/andrej-karpathy-skills",
+          "summary": "基于Karpathy观察的Claude Code行为改进配置文件",
+          "url": "https://github.com/multica-ai/andrej-karpathy-skills",
+          "score": 8.3,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+2679★)"
+            }
+          ],
+          "tags": [
+            "claude-code",
+            "coding-agent",
+            "config"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "rohitg00/agentmemory",
+          "summary": "基于基准测试的AI编码代理持久记忆方案",
+          "url": "https://github.com/rohitg00/agentmemory",
+          "score": 8.3,
+          "sources": [
+            {
+              "name": "GitHub trending:typescript (+1080★)"
+            }
+          ],
+          "tags": [
+            "memory",
+            "coding-agent",
+            "persistent"
+          ],
+          "focusTopics": [
+            "context-engineering",
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "[AINews] Google I/O 2026: Gemini 3.5 Flash, Omni (NanoBanana for Video), Spark (background agents), and Antigravity 2.0",
+          "summary": "Google I/O发布Gemini 3.5 Flash、Omni、Spark等新模型。",
+          "url": "https://www.latent.space/p/ainews-google-io-2026-gemini-35-flash",
+          "score": 8,
+          "sources": [
+            {
+              "name": "Latent Space"
+            }
+          ],
+          "tags": [
+            "gemini",
+            "google-io",
+            "model-release"
+          ],
+          "focusTopics": [
+            "model-release"
+          ]
+        },
+        {
+          "title": "Railway: The Agent-Native Cloud — Jake Cooper",
+          "summary": "Railway推出Agent原生云平台，支持编码Agent。",
+          "url": "https://www.latent.space/p/railway",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "Latent Space"
+            }
+          ],
+          "tags": [
+            "agent-native-cloud",
+            "coding-agent",
+            "infrastructure"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "Figma has a product design AI agent. | The Verge",
+          "summary": "Figma推出产品设计AI代理，辅助UI/UX工作流。",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/934533/figma-has-a-product-design-ai-agent",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "theverge.com"
+            }
+          ],
+          "tags": [
+            "design",
+            "ai-agents",
+            "figma"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "Imbad0202/academic-research-skills",
+          "summary": "学术研究技能工具，集成Claude Code进行全流程研究。",
+          "url": "https://github.com/Imbad0202/academic-research-skills",
+          "score": 7.45,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+1667★)"
+            }
+          ],
+          "tags": [
+            "research",
+            "claude-code",
+            "academic"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "anthropics/claude-plugins-official",
+          "summary": "Anthropic官方Claude Code插件目录",
+          "url": "https://github.com/anthropics/claude-plugins-official",
+          "score": 7.386,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+674★)"
+            }
+          ],
+          "tags": [
+            "claude-code",
+            "plugins",
+            "official"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "HKUDS/ViMax",
+          "summary": "Agent驱动的视频生成系统，集成导演编剧功能",
+          "url": "https://github.com/HKUDS/ViMax",
+          "score": 7.386,
+          "sources": [
+            {
+              "name": "GitHub trending:python (+674★)"
+            }
+          ],
+          "tags": [
+            "video-generation",
+            "agentic",
+            "multimodal"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "msitarzewski/agency-agents",
+          "summary": "多Agent AI机构框架，包含前端到社区管理代理",
+          "url": "https://github.com/msitarzewski/agency-agents",
+          "score": 7.0249999999999995,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+1636★)"
+            }
+          ],
+          "tags": [
+            "multi-agent",
+            "agency",
+            "automation"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "Фигма ўзининг дизайн платформасига сунъий интеллект агентини қўшди - Zamin.uz",
+          "summary": "Figma在其设计平台中集成AI智能体。",
+          "url": "https://zamin.uz/en/technology/202251-figma-adds-ai-agent-to-its-design-platform.html",
           "score": 7,
           "sources": [
             {
-              "name": "rss",
-              "meta": "Simon Willison"
+              "name": "zamin.uz"
             }
           ],
           "tags": [
-            "Google I/O",
-            "AI agents",
-            "Gemini",
-            "tech commentary"
+            "figma",
+            "ai-agent",
+            "design"
           ],
-          "focusTopics": [],
-          "background": "Google I/O is Google's annual developer conference where it showcases new products and technologies. Gemini is Google's family of large language models, and AI agents are autonomous systems that can perform tasks on behalf of users. Prompt injection is a security vulnerability where malicious instructions are inserted into AI prompts to hijack the agent's behavior."
+          "focusTopics": [
+            "tool-use"
+          ]
         },
         {
-          "title": "Map of Metal: Interactive Evolution of Metal Subgenres",
-          "summary": "An interactive HTML5 map tracing the evolution and subgenres of metal music has been ported from its original Flash version to modern web technologies, now available at mapofmetal.com. This visualization provides a unique historical and educational resource for metal fans and music enthusiasts, showcasing the interconnectedness of genres in an engaging, interactive format. The map was originally built in Flash by pjgalbraith and a friend, then ported to HTML5 a few years ago; the code is available on GitHub. It retains a Flash-like aesthetic and covers numerous metal subgenres with clickable nodes for exploration.",
-          "url": "https://mapofmetal.com/",
-          "score": 6,
+          "title": "Zendesk Introduces the Autonomous Service Workforce - marketscreener.com",
+          "summary": "Zendesk推出自主服务劳动力，用AI代理替代传统客服机器人。",
+          "url": "https://www.marketscreener.com/news/zendesk-introduces-the-autonomous-service-workforce-ce7f5ad8d181f72d",
+          "score": 7,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "robin_reala"
+              "name": "marketscreener.com"
             }
           ],
           "tags": [
-            "music",
-            "visualization",
-            "web",
-            "interactive",
+            "customer-service",
+            "ai-agents",
+            "enterprise"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "You can now remix other people’s YouTube Shorts with AI | The Verge",
+          "summary": "谷歌Gemini Omni支持AI混剪YouTube Shorts。",
+          "url": "https://www.theverge.com/tech/934704/google-gemini-omni-youtub-shorts-remix-ai",
+          "score": 7,
+          "sources": [
+            {
+              "name": "theverge.com"
+            }
+          ],
+          "tags": [
+            "google",
+            "multimodal",
+            "video"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "It’s make or break time for AI labelling systems",
+          "summary": "AI标签系统面临关键考验，谷歌扩展SynthID等工具。",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/934521/google-synthid-c2pa-content-credentials-ai-labelling-efforts",
+          "score": 7,
+          "sources": [
+            {
+              "name": "theverge.com"
+            }
+          ],
+          "tags": [
+            "ai-safety",
+            "content-authentication",
+            "regulation"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "RTX 5080 16GB: Qwen3.6 35B MoE at 128k context — 56 tok/s, and why MTP doesn't help",
+          "summary": "RTX 5080 运行 Qwen3.6 35B MoE 128k 上下文，56 tok/s，MTP 无帮助。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tiixql/rtx_5080_16gb_qwen36_35b_moe_at_128k_context_56/",
+          "score": 7,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "qwen",
+            "inference",
+            "hardware"
+          ],
+          "focusTopics": [
+            "context-engineering"
+          ]
+        },
+        {
+          "title": "antirez/ds4",
+          "summary": "antirez 发布 DeepSeek 4 本地推理引擎，支持 Metal。",
+          "url": "https://github.com/antirez/ds4",
+          "score": 7,
+          "sources": [
+            {
+              "name": "Co-Starred"
+            }
+          ],
+          "tags": [
+            "deepseek",
+            "inference",
             "metal"
           ],
-          "focusTopics": [],
-          "background": "Interactive maps like this one use HTML5 and JavaScript to create clickable, zoomable visualizations without requiring plugins. The original Flash version relied on Adobe Flash, which was deprecated in favor of open web standards. Porting to HTML5 ensures long-term accessibility and compatibility with modern browsers.",
-          "discussion": "The community praised the map's nostalgic Flash vibes and historical accuracy, with some users noting similar projects like Ishkur's Guide to Electronic Music. Others requested similar maps for jazz, classical, or hip-hop, and suggested features like showing spiritual successors of bands."
+          "focusTopics": [
+            "model-release"
+          ]
         },
         {
-          "title": "Tool visualizes LLM token speeds",
-          "summary": "Mike Veerman created an HTML app that simulates LLM token output speeds from 5 to 800 tokens per second, helping users visualize advertised rates like '30 tokens/second'. This tool makes abstract token speed claims tangible for developers and users evaluating LLMs, aiding in model selection and expectation setting. The app is a single HTML file with source code available on GitHub, covering speeds from 5 to 800 tokens per second.",
-          "url": "https://simonwillison.net/2026/May/20/tokens-per-second/#atom-everything",
-          "score": 6,
+          "title": "tinyhumansai/openhuman",
+          "summary": "OpenHuman：个人AI超级智能，私密且强大。",
+          "url": "https://github.com/tinyhumansai/openhuman",
+          "score": 6.6,
           "sources": [
             {
-              "name": "rss",
-              "meta": "Simon Willison"
+              "name": "GitHub trending:all (+3394★)"
             }
           ],
           "tags": [
-            "llms",
-            "ai",
-            "tools",
+            "personal-ai",
+            "open-source",
+            "privacy"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Caseware rolls out 'Verity' AI platform and agents - Accounting Today",
+          "summary": "Caseware发布Verity AI平台，为审计提供智能编排层。",
+          "url": "https://www.accountingtoday.com/news/caseware-rolls-out-verity-ai-platform-and-agents",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "accountingtoday.com"
+            }
+          ],
+          "tags": [
+            "ai-agents",
+            "enterprise",
+            "audit"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "AI's Promises Are Starting to Materialize – With a Human Cost",
+          "summary": "AI承诺开始兑现，但伴随人类成本如裁员和自动化。",
+          "url": "https://www.bloomberg.com/news/newsletters/2026-05-20/ai-moves-from-hype-to-execution-as-meta-cuts-jobs-and-traders-automate",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "bloomberg.com"
+            }
+          ],
+          "tags": [
+            "ai-impact",
+            "automation",
+            "jobs"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "CohereLabs/command-a-plus-05-2026-bf16 · Hugging Face",
+          "summary": "Cohere发布command-a-plus-05-2026模型，bf16格式。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tiphqe/coherelabscommandaplus052026bf16_hugging_face/",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "cohere",
+            "model-release",
+            "command-a"
+          ],
+          "focusTopics": [
+            "model-release"
+          ]
+        },
+        {
+          "title": "Qwen3.7 Max scored by Artificial Analysis, 27B/35B waiting room",
+          "summary": "Qwen3.7 Max 在 Artificial Analysis 上获得评分，社区讨论。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tie6gy/qwen37_max_scored_by_artificial_analysis_27b35b/",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "qwen",
+            "benchmark",
+            "llm"
+          ],
+          "focusTopics": [
+            "evals"
+          ]
+        },
+        {
+          "title": "can1357/oh-my-pi",
+          "summary": "终端AI编码代理，支持哈希锚定编辑和子代理",
+          "url": "https://github.com/can1357/oh-my-pi",
+          "score": 6.355,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+270★)"
+            }
+          ],
+          "tags": [
+            "coding-agent",
+            "terminal",
+            "lsp"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "volcengine/OpenViking",
+          "summary": "专为AI Agent设计的开源上下文数据库",
+          "url": "https://github.com/volcengine/OpenViking",
+          "score": 6.1165,
+          "sources": [
+            {
+              "name": "GitHub trending:python (+111★)"
+            }
+          ],
+          "tags": [
+            "context-database",
+            "memory",
+            "agent"
+          ],
+          "focusTopics": [
+            "context-engineering"
+          ]
+        },
+        {
+          "title": "Google I/O, Gemini Spark, Antigravity",
+          "summary": "Simon Willison评论Google I/O发布，但未亲自试用。",
+          "url": "https://simonwillison.net/2026/May/20/google-io/#atom-everything",
+          "score": 6,
+          "sources": [
+            {
+              "name": "Simon Willison"
+            }
+          ],
+          "tags": [
+            "google-io",
+            "opinion"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Meta layoffs add to AI angst  | Semafor",
+          "summary": "Meta裁员加剧AI焦虑，行业转型引发社会讨论。",
+          "url": "https://www.semafor.com/article/05/20/2026/meta-layoffs-add-to-ai-angst",
+          "score": 6,
+          "sources": [
+            {
+              "name": "semafor.com"
+            }
+          ],
+          "tags": [
+            "meta",
+            "layoffs",
+            "ai-impact"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Move to backend sampling for MTP draft path by gaugarg-nv · Pull Request #23287 · ggml-org/llama.cpp",
+          "summary": "llama.cpp PR 改进 MTP 草案路径的后端采样。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tis73j/move_to_backend_sampling_for_mtp_draft_path_by/",
+          "score": 6,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "llama.cpp",
+            "mtp",
+            "performance"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Google's AI is being manipulated. The search giant is quietly fighting back",
+          "summary": "Google AI搜索结果被操纵，公司正悄悄反击。",
+          "url": "https://www.bbc.com/future/article/20260519-google-tackles-attempts-to-hack-its-ai-results",
+          "score": 5.864999999999999,
+          "sources": [
+            {
+              "name": "HN (255)"
+            }
+          ],
+          "tags": [
+            "search",
+            "adversarial",
+            "google-ai"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Google Search’s AI evolution includes more ads | The Verge",
+          "summary": "谷歌搜索AI进化引入更多广告，商业化加速。",
+          "url": "https://www.theverge.com/tech/934585/google-ai-shopping-ads-search",
+          "score": 5.5,
+          "sources": [
+            {
+              "name": "theverge.com"
+            }
+          ],
+          "tags": [
+            "google",
+            "search",
+            "ads"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "HuggingFace benchmark datasets now let you filter by model size",
+          "summary": "HuggingFace基准数据集新增按模型大小筛选功能。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tilvit/huggingface_benchmark_datasets_now_let_you_filter/",
+          "score": 5.5,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "huggingface",
+            "benchmark",
+            "filter"
+          ],
+          "focusTopics": [
+            "evals"
+          ]
+        },
+        {
+          "title": "Build 9254 fixes my TG regression and adds PDL for NVIDIA GPUs",
+          "summary": "llama.cpp 构建 9254 修复 TG 回归并添加 NVIDIA PDL 支持。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tj393d/build_9254_fixes_my_tg_regression_and_adds_pdl/",
+          "score": 5.5,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "llama.cpp",
+            "nvidia",
+            "performance"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "How fast is 10 tokens per second really?",
+          "summary": "一个展示10 tokens/s速度的HTML小工具。",
+          "url": "https://simonwillison.net/2026/May/20/tokens-per-second/#atom-everything",
+          "score": 5,
+          "sources": [
+            {
+              "name": "Simon Willison"
+            }
+          ],
+          "tags": [
+            "token-speed",
             "visualization"
           ],
-          "focusTopics": [],
-          "background": "Tokens are the basic units LLMs process (roughly 0.75 words per token). Advertised speeds like '30 tokens/second' can be hard to gauge without seeing real-time output.",
-          "discussion": "On Hacker News, the tool was well-received as a practical visualization, with users appreciating its simplicity and usefulness for comparing models."
+          "focusTopics": []
+        },
+        {
+          "title": "[WIP] Gemma 4 MTP",
+          "summary": "Gemma 4 MTP 工作进展，需自行编译，尚不稳定。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tijpwl/wip_gemma_4_mtp/",
+          "score": 5,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "gemma",
+            "mtp",
+            "open-source"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "ZhuLinsen/daily_stock_analysis",
+          "summary": "LLM驱动的股票分析系统，支持多市场",
+          "url": "https://github.com/ZhuLinsen/daily_stock_analysis",
+          "score": 4.8125,
+          "sources": [
+            {
+              "name": "GitHub trending:python (+375★)"
+            }
+          ],
+          "tags": [
+            "llm",
+            "finance",
+            "stock-analysis"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Show HN: CPU-only transcription for YouTube, TikTok, X, Instagram videos",
+          "summary": "CPU-only转录工具，支持YouTube等视频。",
+          "url": "https://github.com/kouhxp/yapsnap",
+          "score": 4.331,
+          "sources": [
+            {
+              "name": "HN (27)"
+            }
+          ],
+          "tags": [
+            "transcription",
+            "open-source",
+            "cpu"
+          ],
+          "focusTopics": []
         }
       ]
     }
-  ]
+  ],
+  "aiSummary": "今日AI领域动态密集：OpenAI加速推进9月IPO，并声称解决80年数学难题[OpenAI声称解决80年数学难题](#item-techcrunch-com-2026-05-20-openai-claims-it-solved-an-80-year)；英伟达承诺900亿美元用于AI交易[Nvidia commits $90 billion to AI deals](#item-semafor-com-article-05-20-2026-nvidia-commits-90-billion-to-)，NanoCo获1200万美元种子轮推出企业AI助手[NanoCo launches enterprise AI assistants](#item-ynetnews-com-business-article-byqweojymx)。研究方面，OpenAI模型推翻离散几何中心猜想[OpenAI模型推翻离散几何中心猜想](#item-openai-com-index-model-disproves-discrete-geometry-conjectur)，并发布DecisionBench基准评估长周期智能体[DecisionBench基准](#item-arxiv-org-abs-2605-19099)。工具更新中，Qwen发布3.7-Max模型聚焦Agent能力[Qwen3.7-Max](#item-qwen-ai-blog)，CodeGraph提供预索引代码知识图谱[CodeGraph](#item-github-com-colbymchenry-codegraph)。观点洞察指出，Google I/O发布Gemini 3.5 Flash等新模型[Google I/O 2026](#item-latent-space-p-ainews-google-io-2026-gemini-35-flash)，Railway推出Agent原生云平台[Railway](#item-latent-space-p-railway)，AI标签系统面临关键考验[AI标签系统](#item-theverge-com-ai-artificial-intelligence-934521-google-synthi)。"
 }
