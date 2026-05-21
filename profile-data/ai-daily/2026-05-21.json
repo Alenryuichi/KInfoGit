@@ -1,0 +1,404 @@
+{
+  "date": "2026-05-21",
+  "itemCount": 17,
+  "sections": [
+    {
+      "id": "headlines",
+      "title": "Headlines & Launches",
+      "items": [
+        {
+          "title": "SpaceX S-1 Reveals $18.7B Revenue, $4.9B Loss, $1.25B/Month AI Deal",
+          "summary": "SpaceX filed its S-1 for an IPO, revealing 2025 revenue of $18.7 billion, a net loss of $4.9 billion, and a cloud services agreement with Anthropic worth $1.25 billion per month through May 2029. This filing provides unprecedented transparency into SpaceX's finances, showing Starlink as a cash cow while the company bets big on AI infrastructure via space-based data centers, potentially reshaping the cloud computing landscape. The Anthropic deal covers compute capacity across SpaceX's Colossus and Colossus II data centers, with capacity ramping in May and June 2026 at a reduced fee. SpaceX's adjusted EBITDA was $6.6 billion, but capital expenditure reached $20.7 billion.",
+          "url": "https://www.sec.gov/Archives/edgar/data/1181412/000162828026036936/spaceexplorationtechnologi.htm",
+          "score": 9,
+          "sources": [
+            {
+              "name": "hackernews",
+              "meta": "cachecow"
+            }
+          ],
+          "tags": [
+            "SpaceX",
+            "IPO",
+            "AI infrastructure",
+            "financials",
+            "cloud computing"
+          ],
+          "focusTopics": [],
+          "background": "SpaceX, traditionally a launch and satellite company, is expanding into AI compute infrastructure. The S-1 filing is required for an IPO, detailing financials and risks. Anthropic, an AI lab behind Claude, needs massive compute for training and inference, leading to this large-scale deal.",
+          "discussion": "Commenters noted the stark contrast between Starlink's profitability ($4.4B operating income) and SpaceX's overall loss, with some questioning the viability of space-based data centers due to cooling challenges. Others highlighted the massive valuation relative to revenue, comparing it to larger companies like Northrop."
+        },
+        {
+          "title": "Mozilla retires asm.js from SpiderMonkey",
+          "summary": "Mozilla announced the removal of asm.js support from its SpiderMonkey JavaScript engine, marking the official end of the technology that pioneered high-performance web computing. Asm.js was a critical stepping stone to WebAssembly, enabling near-native performance in the browser and proving the viability of running complex applications like Figma and Unreal Engine on the web. Its deprecation signifies the full transition to WebAssembly as the standard for high-performance web code. Asm.js is a strict subset of JavaScript that allows ahead-of-time optimization, but it still requires parsing as JavaScript, leading to larger bundle sizes and slower load times compared to WebAssembly. The removal will simplify SpiderMonkey's codebase and encourage developers to migrate to WebAssembly.",
+          "url": "https://spidermonkey.dev/blog/2026/05/20/saying-goodbye-to-asmjs.html",
+          "score": 8,
+          "sources": [
+            {
+              "name": "hackernews",
+              "meta": "eqrion"
+            }
+          ],
+          "tags": [
+            "asm.js",
+            "WebAssembly",
+            "SpiderMonkey",
+            "JavaScript",
+            "web performance"
+          ],
+          "focusTopics": [
+            "memory"
+          ],
+          "background": "Asm.js was introduced by Mozilla in 2013 as a low-level subset of JavaScript that could be compiled from C/C++ via Emscripten, enabling near-native performance in the browser. It was a response to Google's NaCl and PNaCl technologies. WebAssembly, which superseded asm.js, became a W3C standard in 2019 and is now supported by all major browsers.",
+          "discussion": "Commenters expressed nostalgia and appreciation for asm.js's historical role, with some noting its use in early Figma and Unreal Engine demos. There was also a cultural reference to Gary Bernhardt's famous talk 'The Birth and Death of JavaScript,' which predicted a similar evolution. Overall sentiment was bittersweet but acknowledged that WebAssembly is a worthy successor."
+        },
+        {
+          "title": "Railway Incident: GCP Account Suspension Disrupts Service",
+          "summary": "On May 19, 2026, Google Cloud incorrectly suspended Railway's account, causing a platform-wide outage that lasted nearly 8 hours and affected workloads on AWS and Railway Metal infrastructure. This incident highlights systemic trust issues with Google Cloud as a B2B provider, prompting Railway to plan removal of GCP from its data plane hot path, which could influence other companies to reconsider reliance on Google Cloud. The suspension was triggered by an automated process, and Google provided no clear explanation for the root cause. Railway acknowledged architectural failure in trusting GCP and is working to reduce dependency.",
+          "url": "https://blog.railway.com/p/incident-report-may-19-2026-gcp-account-outage",
+          "score": 8,
+          "sources": [
+            {
+              "name": "hackernews",
+              "meta": "0xedb"
+            }
+          ],
+          "tags": [
+            "Google Cloud",
+            "incident report",
+            "cloud reliability",
+            "vendor lock-in",
+            "SaaS"
+          ],
+          "focusTopics": [],
+          "background": "Railway is a cloud platform that hosts applications for developers. Google Cloud Platform (GCP) is a major cloud provider. Account suspensions can occur due to policy violations or billing issues, but in this case, the suspension was erroneous and lacked transparency.",
+          "discussion": "The Hacker News community expressed strong criticism of Google Cloud's practices, with users noting a pattern of arbitrary suspensions and lack of accountability. Some praised Railway's honest post-mortem, while others questioned the unresolved root cause."
+        },
+        {
+          "title": "Meta Blocks Human Rights Accounts in Saudi Arabia, UAE",
+          "summary": "Meta has been blocking human rights accounts from reaching audiences in Saudi Arabia and the UAE, as reported by Al Qst. This action restricts the visibility of content from these accounts to users in those countries. This raises serious concerns about censorship and corporate complicity in suppressing free speech, especially in regions with limited press freedoms. It highlights the tension between platform governance and geopolitical pressures. The blocking appears to be targeted, affecting only certain accounts, and users in the UAE report that the reporting site alqst.org is itself blocked. Meta has not publicly commented on the specific actions.",
+          "url": "https://www.alqst.org/ar/posts/1190",
+          "score": 8,
+          "sources": [
+            {
+              "name": "hackernews",
+              "meta": "giuliomagnifico"
+            }
+          ],
+          "tags": [
+            "censorship",
+            "social media",
+            "free speech",
+            "Meta",
+            "geopolitics"
+          ],
+          "focusTopics": [],
+          "background": "Social media platforms like Meta operate under local laws in each country, which can include content restrictions. In Saudi Arabia and the UAE, governments have strict controls over online speech, and companies often comply to avoid being blocked entirely.",
+          "discussion": "Comments express frustration with Meta's prioritization of profits over principles, with some noting that the company has little choice but to comply or face expulsion. Users also highlight the irony that the article itself is blocked in the UAE, requiring a VPN to access."
+        },
+        {
+          "title": "Formal Verification as a Guard for AI Coding Loops",
+          "summary": "Reuben Brooks proposes using formal verification as a guard to improve the reliability of AI agent code generation, introducing a structural backpressure mechanism to prevent incorrect code from being deployed. This approach could significantly reduce the risk of AI-generated code introducing bugs or security vulnerabilities, making AI coding agents more trustworthy for production use. The proposal uses formal verification as an oracle to check code correctness before deployment, and the backpressure signal resists the flow of incorrect code, acting as a rate control rather than error feedback.",
+          "url": "https://reubenbrooks.dev/blog/structural-backpressure-beats-smarter-agents/",
+          "score": 8,
+          "sources": [
+            {
+              "name": "hackernews",
+              "meta": "pyrex41"
+            }
+          ],
+          "tags": [
+            "formal verification",
+            "AI agents",
+            "software engineering",
+            "LLM",
+            "DevOps"
+          ],
+          "focusTopics": [],
+          "background": "Formal verification is a technique that mathematically proves a system meets its specifications, but it is rarely used in industrial software engineering due to high expertise requirements. AI coding agents often generate code that looks plausible but contains subtle errors, and traditional testing may not catch all issues.",
+          "discussion": "The community debated whether backpressure is the right signal, with some arguing that an error control signal (like formal verification oracle feedback) is more appropriate. Others shared practical experiences using deterministic tools and formal methods to improve agent reliability, and noted that formal verification rules must be fully specified to be effective."
+        },
+        {
+          "title": "Qian Xuesen: The missile genius America lost and China gained",
+          "summary": "A 2025 article in Naval History magazine provides a detailed account of Qian Xuesen's life, focusing on his deportation from the US to China and the subsequent geopolitical consequences. This story highlights the long-term impact of talent migration and national security decisions, as Qian's expertise directly accelerated China's missile and space programs, altering the strategic balance. The article notes that Qian Xuesen was a co-founder of JPL and a key figure in US rocketry before being accused of communist ties and deported in 1955. He later led China's missile program, earning the title 'Father of Chinese Rocketry'.",
+          "url": "https://www.usni.org/magazines/naval-history/2025/december/missile-genius-america-lost-and-china-gained",
+          "score": 7,
+          "sources": [
+            {
+              "name": "hackernews",
+              "meta": "thnaks"
+            }
+          ],
+          "tags": [
+            "history",
+            "geopolitics",
+            "talent migration",
+            "missile technology",
+            "cold war"
+          ],
+          "focusTopics": [
+            "memory"
+          ],
+          "background": "Qian Xuesen was a brilliant Chinese-American scientist who contributed to US rocket research during and after WWII. Amid the Red Scare, he was accused of being a communist and placed under house arrest, eventually being deported to China. There, he became the architect of China's missile and space programs, including the Dongfeng missiles and Long March rockets.",
+          "discussion": "Commenters discuss the difficulty of making a biopic about an organizational genius, the US's continued anti-Chinese sentiment affecting scientists, and the counterfactual of whether China could have achieved its missile program without Qian. Some note the story is mythologized in Chinese education."
+        },
+        {
+          "title": "Google fights AI search manipulation",
+          "summary": "BBC reports that Google is quietly implementing measures to combat manipulation of its AI-generated search results, where bad actors use hidden text and low-quality pages to influence AI summaries. This matters because AI-generated search results are increasingly central to how users get information, and manipulation could spread misinformation, harm trust, and undermine the integrity of search. Google has updated its spam policies to target techniques like hidden text that feeds AI answer systems without helping users, and scaled low-value pages that pollute retrieval pools for generated answers.",
+          "url": "https://www.bbc.com/future/article/20260519-google-tackles-attempts-to-hack-its-ai-results",
+          "score": 7,
+          "sources": [
+            {
+              "name": "hackernews",
+              "meta": "tigerlily"
+            }
+          ],
+          "tags": [
+            "AI",
+            "search",
+            "Google",
+            "manipulation",
+            "SEO"
+          ],
+          "focusTopics": [
+            "memory"
+          ],
+          "background": "AI search tools like Google's AI Overviews generate answers by searching the internet in real time, which opens a new attack surface for manipulation. Unlike traditional SEO spam that targets rankings, these attacks aim to inject false or biased information directly into AI-generated summaries. Google has struggled with search spam for decades, and the rise of AI search introduces new challenges.",
+          "discussion": "Community comments express deep skepticism about Google's ability and motivation to fix this, with users noting Google's long history of failing to keep spam out of search results and questioning whether Google prioritizes user retention over truth."
+        },
+        {
+          "title": "Flipper One Specs Reveal Linux, Missing Classic Radio",
+          "summary": "Flipper One's official tech specs reveal a Linux-based device with WiFi, Bluetooth, and Ethernet, but notably lack NFC, RFID, sub-1GHz radio, and IR found in the Flipper Zero. This marks a significant shift from the Flipper Zero's focus on radio hacking to a more general-purpose Linux computer, potentially alienating core users who relied on those missing features. The device uses a dual-processor architecture: a Linux SoC (Allwinner V3s) for general computing and an STM32 MCU for real-time tasks, with the display connected to the MCU rather than the SoC.",
+          "url": "https://docs.flipper.net/one/general/tech-specs",
+          "score": 6,
+          "sources": [
+            {
+              "name": "hackernews",
+              "meta": "gregsadetsky"
+            }
+          ],
+          "tags": [
+            "Flipper",
+            "hardware",
+            "hacking",
+            "IoT",
+            "embedded"
+          ],
+          "focusTopics": [],
+          "background": "The Flipper Zero is a popular multi-tool for hacking and exploring access control systems and radio protocols, featuring NFC, RFID, sub-1GHz radio, and IR. The Flipper One is positioned as a more powerful successor with a full Linux environment, but early specs suggest it drops many of the Zero's signature radio capabilities.",
+          "discussion": "Community comments express disappointment over the missing radio features, with users like sterlind noting the absence of NFC, RFID, and sub-1GHz radio. Others question design choices such as the low-resolution display and the SoC-display split, while some appreciate the Ethernet ports for network debugging."
+        }
+      ]
+    },
+    {
+      "id": "research",
+      "title": "Research & Innovation",
+      "items": [
+        {
+          "title": "OpenAI Model Disproves Long-Standing Discrete Geometry Conjecture",
+          "summary": "OpenAI's model has disproved a central conjecture in discrete geometry, originally proposed by Paul Erdős, by finding a counterexample. The result was published alongside commentary from mathematicians including Tim Gowers. This marks a significant milestone in AI-assisted mathematical research, demonstrating that large language models can contribute to genuine mathematical discovery. It sparks debate on the role of LLMs in mathematics and their potential to augment human reasoning. The disproof was achieved by finding a counterexample to Erdős' original conjecture, which some mathematicians consider less interesting than a constructive proof. The model used a program search approach similar to FunSearch, combining LLMs with evolutionary algorithms.",
+          "url": "https://openai.com/index/model-disproves-discrete-geometry-conjecture/",
+          "score": 9,
+          "sources": [
+            {
+              "name": "hackernews",
+              "meta": "tedsanders"
+            }
+          ],
+          "tags": [
+            "AI",
+            "mathematics",
+            "LLM",
+            "research",
+            "geometry"
+          ],
+          "focusTopics": [
+            "planning"
+          ],
+          "background": "Discrete geometry studies combinatorial properties of geometric objects, such as points, lines, and polytopes. Erdős' conjecture, a central problem in the field, had remained open for decades. Large language models like GPT-4 have recently been applied to mathematical discovery, as seen in DeepMind's FunSearch work published in Nature.",
+          "discussion": "The HN community expressed mixed feelings: some were impressed by the result, while others debated whether LLMs truly 'discover' or merely interpolate. Tim Gowers' commentary was highlighted as providing nuanced perspective. A commenter noted that finding a counterexample is less theoretically deep than a proof."
+        },
+        {
+          "title": "Qwen3.7-Max: New Frontier Model with SOTA Non-Hallucination",
+          "summary": "Alibaba's Qwen team released Qwen3.7-Max, a proprietary frontier model that achieves state-of-the-art non-hallucination rates on the AA-omniscience benchmark, surpassing Opus 4.7, Gemini 3.1 Pro, and GPT5.5. This release demonstrates that proprietary models from Chinese AI labs can compete with top Western frontier models on key metrics like hallucination, while the community discussion highlights the growing practical viability of open-source alternatives for many tasks. Qwen3.7-Max supports a 1 million token context window and scores 57 on the Artificial Analysis Intelligence Index, well above the average of 14. The model also achieved a 10x performance improvement on the Pingtouge Zhenwu M890 domestic chip during a 35-hour optimization task.",
+          "url": "https://qwen.ai/blog?id=qwen3.7",
+          "score": 8,
+          "sources": [
+            {
+              "name": "hackernews",
+              "meta": "kevinsimper"
+            }
+          ],
+          "tags": [
+            "AI",
+            "LLM",
+            "Open Source",
+            "Qwen",
+            "Agent"
+          ],
+          "focusTopics": [
+            "memory"
+          ],
+          "background": "Frontier AI models are the most advanced general-purpose models, enabling reasoning, multimodal generation, and agentic workflows. Hallucination rates measure how often a model produces factually inconsistent summaries, and lower rates are critical for reliable AI agents.",
+          "discussion": "The community is excited about the non-hallucination SOTA, with one user noting it's better than Opus 4.7, Gemini 3.1 Pro, and GPT5.5. Another user praised open-source models like Qwen3.6 as a free alternative to Claude Code, while others expressed frustration over the lack of US availability and uncertainty about whether the model will remain proprietary or be released open-source."
+        },
+        {
+          "title": "Disembodied Human Brains Used for Drug Testing",
+          "summary": "Scientists are using disembodied human brains for drug testing, raising urgent ethical questions about consciousness and potential torture. This research could revolutionize drug testing by providing a more accurate human model, but it also forces society to confront profound ethical dilemmas about the moral status of brain tissue that might retain consciousness. The technique builds on previous work keeping pig brains alive outside the body, and researchers acknowledge that restoring awareness is a possibility, though current protocols use heavy sedation to prevent electrical activity.",
+          "url": "https://www.science.org/content/article/not-alive-not-dead-disembodied-human-brains-used-drug-testing",
+          "score": 8,
+          "sources": [
+            {
+              "name": "hackernews",
+              "meta": "Timofeibu"
+            }
+          ],
+          "tags": [
+            "ethics",
+            "neuroscience",
+            "biomedical research",
+            "consciousness"
+          ],
+          "focusTopics": [],
+          "background": "Disembodied brain research has roots in experiments like MKUltra, which used psychoactive drugs on human subjects without consent. More recently, scientists have kept pig brains alive in a 'brain in a bucket' setup, and similar methods could work on primate brains, including humans. Brain organoids—lab-grown mini-brains—have also raised concerns about consciousness and moral status.",
+          "discussion": "Commenters express horror and ethical outrage, comparing the practice to torture and sci-fi dystopias. Some question how such research could pass ethics review, while others draw parallels to factory farming of animals, arguing that society tolerates massive animal suffering for cheap food."
+        },
+        {
+          "title": "SBCL as a Macro-Assembler for High-Performance VMs",
+          "summary": "A 2014 article demonstrates using SBCL's compiler as a macro-assembler to build a high-performance x86_64 virtual machine, with precise control over register allocation and instruction alignment. This approach showcases the power of Lisp macros and compiler internals for low-level optimization, offering a unique alternative to traditional assemblers for VM implementation. The author used 8 x86_64 registers for the VM's stack slots and calculated padding and alignment for each instruction version, which would be tedious with a normal assembler.",
+          "url": "https://pvk.ca/Blog/2014/03/15/sbcl-the-ultimate-assembly-code-breadboard/",
+          "score": 7,
+          "sources": [
+            {
+              "name": "hackernews",
+              "meta": "yacin"
+            }
+          ],
+          "tags": [
+            "SBCL",
+            "Common Lisp",
+            "assembly",
+            "VM",
+            "x86_64"
+          ],
+          "focusTopics": [],
+          "background": "SBCL (Steel Bank Common Lisp) is a high-performance Common Lisp compiler that generates native code. Macro-assemblers allow programmers to write assembly-like code with high-level abstractions. This article leverages SBCL's compiler to generate optimized x86_64 machine code for a custom VM.",
+          "discussion": "The article has been repeatedly posted on Hacker News over the years, with comments expressing admiration for the technique while noting its complexity. Some readers found it over their heads but appreciated the clever use of SBCL as a macro-assembler."
+        }
+      ]
+    },
+    {
+      "id": "engineering",
+      "title": "Engineering & Resources",
+      "items": [
+        {
+          "title": "GitHub Confirms Breach of 3,800 Repos via Malicious VSCode Extension",
+          "summary": "GitHub confirmed that approximately 3,800 internal repositories were breached after an employee installed a malicious VSCode extension, which exfiltrated data to attackers. The incident was claimed by a group called TeamPCP. This breach highlights the severe security risks in the VSCode extension ecosystem, where trusted extensions can be compromised and used as supply chain attack vectors. It underscores the need for stronger vetting and monitoring of developer tools. The malicious extension was a trojanized version of a legitimate extension, and the breach occurred when an employee with access to internal repositories installed it. The Nx Console extension (2.2M installs) was also compromised for 18 minutes on the Visual Studio Marketplace, potentially affecting many users.",
+          "url": "https://www.bleepingcomputer.com/news/security/github-confirms-breach-of-3-800-repos-via-malicious-vscode-extension/",
+          "score": 8,
+          "sources": [
+            {
+              "name": "hackernews",
+              "meta": "Timofeibu"
+            }
+          ],
+          "tags": [
+            "security",
+            "supply chain",
+            "VSCode",
+            "GitHub",
+            "breach"
+          ],
+          "focusTopics": [],
+          "background": "VSCode extensions are add-ons that enhance the editor's functionality, but they run with the same privileges as the user, making them a potent attack vector. Supply chain attacks via compromised extensions have become increasingly common, as attackers target the trust users place in widely-used tools. GitHub, owned by Microsoft, is a major platform for code hosting and collaboration.",
+          "discussion": "The community expressed concern about the security of VSCode extensions, with users noting that auto-updates and misleading extension names make it easy for malicious extensions to spread. Some commenters pointed out that the breach could have been prevented if Microsoft (owner of VSCode, npm, and GitHub) had implemented better security measures. Others speculated about the specific extension involved, linking it to the compromised Nx Console extension."
+        },
+        {
+          "title": "Google's AI Search Threatens Open Web",
+          "summary": "Google is prioritizing AI-generated answers over traditional web links in search results, using its Gemini 3 Pro model to provide direct answers via 'AI Mode'. This shift undermines the symbiotic relationship between Google and content creators, where websites provide content in exchange for traffic, potentially breaking the economic incentive for independent creators and threatening the open web ecosystem. Google's 'AI Mode' uses Gemini 3 Pro to generate answers with dynamic visual layouts and interactive tools, while traditional '10 blue links' remain but are deprioritized. The change is driven by competition from AI chatbots like ChatGPT.",
+          "url": "https://tante.cc/2026/05/20/on-google-declaring-war-on-the-web/",
+          "score": 8,
+          "sources": [
+            {
+              "name": "hackernews",
+              "meta": "cdrnsf"
+            }
+          ],
+          "tags": [
+            "Google",
+            "AI Search",
+            "Open Web",
+            "Content Creation",
+            "SEO"
+          ],
+          "focusTopics": [],
+          "background": "For decades, Google Search relied on indexing web pages and displaying links, driving traffic to content creators. This symbiotic relationship—content for traffic—sustained the open web. With the rise of generative AI, Google now aims to keep users on its own platform by providing direct answers, reducing the need to visit external sites.",
+          "discussion": "Commenters express concern that AI summaries will reduce traffic to independent sites, with some noting that Google has no choice due to competition from ChatGPT. Others suggest finding alternative traffic sources, like a decentralized replacement for StumbleUpon."
+        },
+        {
+          "title": "Google I/O 2026: Gemini Spark and Antigravity",
+          "summary": "Google announced Gemini Spark, a personal AI agent that integrates with Google apps, and revealed Antigravity as the underlying runtime. The open-source Gemini CLI will be deprecated and replaced by the closed-source Antigravity CLI on June 18th. Gemini Spark represents a major step toward practical AI agents that can autonomously manage personal tasks across Google services, but its security measures against prompt injection will be critical to avoid a potential 'challenger disaster' for agent security. Gemini Spark runs on Gemini 3.5 Flash and Antigravity, with Antigravity described as a desktop app, CLI tool, SDK, and IDE. Google claims Spark operates in isolated ephemeral VMs with DLP policies and encrypted credentials.",
+          "url": "https://simonwillison.net/2026/May/20/google-io/#atom-everything",
+          "score": 7,
+          "sources": [
+            {
+              "name": "rss",
+              "meta": "Simon Willison"
+            }
+          ],
+          "tags": [
+            "Google I/O",
+            "AI agents",
+            "Gemini",
+            "tech commentary"
+          ],
+          "focusTopics": [],
+          "background": "Google I/O is Google's annual developer conference where it showcases new products and technologies. Gemini is Google's family of large language models, and AI agents are autonomous systems that can perform tasks on behalf of users. Prompt injection is a security vulnerability where malicious instructions are inserted into AI prompts to hijack the agent's behavior."
+        },
+        {
+          "title": "Map of Metal: Interactive Evolution of Metal Subgenres",
+          "summary": "An interactive HTML5 map tracing the evolution and subgenres of metal music has been ported from its original Flash version to modern web technologies, now available at mapofmetal.com. This visualization provides a unique historical and educational resource for metal fans and music enthusiasts, showcasing the interconnectedness of genres in an engaging, interactive format. The map was originally built in Flash by pjgalbraith and a friend, then ported to HTML5 a few years ago; the code is available on GitHub. It retains a Flash-like aesthetic and covers numerous metal subgenres with clickable nodes for exploration.",
+          "url": "https://mapofmetal.com/",
+          "score": 6,
+          "sources": [
+            {
+              "name": "hackernews",
+              "meta": "robin_reala"
+            }
+          ],
+          "tags": [
+            "music",
+            "visualization",
+            "web",
+            "interactive",
+            "metal"
+          ],
+          "focusTopics": [],
+          "background": "Interactive maps like this one use HTML5 and JavaScript to create clickable, zoomable visualizations without requiring plugins. The original Flash version relied on Adobe Flash, which was deprecated in favor of open web standards. Porting to HTML5 ensures long-term accessibility and compatibility with modern browsers.",
+          "discussion": "The community praised the map's nostalgic Flash vibes and historical accuracy, with some users noting similar projects like Ishkur's Guide to Electronic Music. Others requested similar maps for jazz, classical, or hip-hop, and suggested features like showing spiritual successors of bands."
+        },
+        {
+          "title": "Tool visualizes LLM token speeds",
+          "summary": "Mike Veerman created an HTML app that simulates LLM token output speeds from 5 to 800 tokens per second, helping users visualize advertised rates like '30 tokens/second'. This tool makes abstract token speed claims tangible for developers and users evaluating LLMs, aiding in model selection and expectation setting. The app is a single HTML file with source code available on GitHub, covering speeds from 5 to 800 tokens per second.",
+          "url": "https://simonwillison.net/2026/May/20/tokens-per-second/#atom-everything",
+          "score": 6,
+          "sources": [
+            {
+              "name": "rss",
+              "meta": "Simon Willison"
+            }
+          ],
+          "tags": [
+            "llms",
+            "ai",
+            "tools",
+            "visualization"
+          ],
+          "focusTopics": [],
+          "background": "Tokens are the basic units LLMs process (roughly 0.75 words per token). Advertised speeds like '30 tokens/second' can be hard to gauge without seeing real-time output.",
+          "discussion": "On Hacker News, the tool was well-received as a practical visualization, with users appreciating its simplicity and usefulness for comparing models."
+        }
+      ]
+    }
+  ]
+}
