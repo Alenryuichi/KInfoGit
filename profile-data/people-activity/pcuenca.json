@@ -2,26 +2,6 @@
   "id": "pcuenca",
   "stars": [
     {
-      "repo": "huggingface/ml-intern",
-      "url": "https://github.com/huggingface/ml-intern",
-      "description": "🤗 ml-intern: an open-source ML engineer that reads papers, trains models, and ships ML models",
-      "language": "Python",
-      "stargazersCount": 688,
-      "starredBy": "pcuenca",
-      "highlights": "An open-source ML engineer that automates the end-to-end ML pipeline from reading research papers to training and deploying models. It aims to reduce manual effort in implementing and operationalizing machine learning research.",
-      "worthReading": "It represents an ambitious attempt to automate complex ML workflows, potentially saving significant engineering time for practitioners implementing cutting-edge research.",
-      "topics": [],
-      "tags": [
-        "agent",
-        "llm",
-        "tooling"
-      ],
-      "score": 7,
-      "scoreReason": "Strong relevance to frontier AI (agent automation) and concrete implementation, with moderate freshness as a rising repository gaining traction.",
-      "starredAt": "2026-04-21T16:54:46Z",
-      "type": "github"
-    },
-    {
       "repo": "jundot/omlx",
       "url": "https://github.com/jundot/omlx",
       "description": "LLM inference server with continuous batching & SSD caching for Apple Silicon — managed from the macOS menu bar",
@@ -256,6 +236,25 @@
       "score": 3,
       "scoreReason": "Freshness is low (1 star, no traction), relevance is moderate (infra for AI but niche), concreteness is low (no description, minimal content).",
       "type": "github"
+    },
+    {
+      "repo": "IBM/AssetOpsBench",
+      "url": "https://github.com/IBM/AssetOpsBench",
+      "description": "AssetOpsBench - Industry 4.0",
+      "language": "Python",
+      "stargazersCount": 1572,
+      "starredBy": "pcuenca",
+      "starredAt": "2026-05-20T06:07:19Z",
+      "highlights": "AssetOpsBench is a benchmark for evaluating AI agents on Industry 4.0 asset operations tasks, such as predictive maintenance and anomaly detection. It provides realistic scenarios and metrics to assess agent performance in industrial settings.",
+      "worthReading": "It bridges the gap between AI agent research and real-world industrial applications, offering a standardized evaluation framework that is currently lacking.",
+      "topics": [],
+      "tags": [
+        "agent",
+        "evaluation"
+      ],
+      "score": 7,
+      "scoreReason": "Freshness is moderate (1.5k stars, niche domain), relevance is high (agent evaluation in industrial AI), and concreteness is strong (specific benchmark with code).",
+      "type": "github"
     }
   ],
   "posts": [],
@@ -263,7 +262,6 @@
   "blogs": [],
   "dailyCounts": [
     1,
-    1,
     0,
     1,
     0,
@@ -291,7 +289,8 @@
     1,
     1,
     0,
+    1,
     0
   ],
-  "interestSummary": "Pedro Cuenca is currently focused on open-source ML engineering tools, particularly around LLM inference optimization, Hugging Face infrastructure, and agent workflows, with interests in Apple Silicon performance and model caching."
+  "interestSummary": "Pedro Cuenca is currently focused on efficient LLM inference and tooling for Apple Silicon, particularly involving llama.cpp and Metal acceleration, as well as contributing to Hugging Face ecosystem projects like context engineering, workspace backups, and performance testing."
 }

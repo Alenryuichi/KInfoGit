@@ -139,71 +139,29 @@
         "evaluation"
       ],
       "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:oogxmzmgauh5ug2tfe5vc7wm/app.bsky.feed.post/3mmc55hmj3k2b",
+      "url": "https://bsky.app/profile/beenwrekt.bsky.social/post/3mmc55hmj3k2b",
+      "author": {
+        "handle": "beenwrekt.bsky.social",
+        "displayName": "Ben Recht",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:oogxmzmgauh5ug2tfe5vc7wm/bafkreigi5u3fn2porezvfmnxunm7zynzebk43tsrzvzeplciswiazdyqqe"
+      },
+      "content": "On my decade-long quest to reconcile scientific language with singular evidence.",
+      "createdAt": "2026-05-20T14:40:27.774Z",
+      "likeCount": 6,
+      "replyCount": 1,
+      "repostCount": 2,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [],
+      "type": "bluesky"
     }
   ],
   "videos": [],
   "blogs": [],
   "xPosts": [
-    {
-      "type": "x",
-      "id": "1927382200397251064",
-      "url": "https://x.com/beenwrekt/status/1927382200397251064",
-      "author": {
-        "handle": "beenwrekt",
-        "displayName": "Ben Recht",
-        "avatar": null
-      },
-      "content": "I weigh in on the Trump administration's newfound obsession with Gold Standard Science and reproducibility.",
-      "createdAt": "2026-04-21T04:11:53.316Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Commentary on political focus on scientific standards and reproducibility.",
-      "worthReading": "Provides perspective on intersection of politics and scientific methodology.",
-      "tags": [
-        "evaluation"
-      ]
-    },
-    {
-      "type": "x",
-      "id": "2014360939563520146",
-      "url": "https://x.com/beenwrekt/status/2014360939563520146",
-      "author": {
-        "handle": "beenwrekt",
-        "displayName": "Ben Recht",
-        "avatar": null
-      },
-      "content": "For the first time in almost a decade, I'm teaching a class on learning and control.",
-      "createdAt": "2026-04-21T04:11:53.316Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Announcement of teaching return to learning and control course after long hiatus.",
-      "worthReading": "Shows ongoing academic engagement and knowledge sharing in ML/control theory.",
-      "tags": [
-        "agent"
-      ]
-    },
-    {
-      "type": "x",
-      "id": "1995878181635850668",
-      "url": "https://x.com/beenwrekt/status/1995878181635850668",
-      "author": {
-        "handle": "beenwrekt",
-        "displayName": "Ben Recht",
-        "avatar": null
-      },
-      "content": "With more equations than usual, I explain how policy gradient gives you a framework to randomly search for",
-      "createdAt": "2026-04-21T04:11:53.316Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Technical explanation of policy gradient methods as structured random search frameworks.",
-      "worthReading": "Offers technical insight into reinforcement learning optimization approaches.",
-      "tags": [
-        "agent"
-      ]
-    },
     {
       "type": "x",
       "id": "1927382200397251064",
@@ -1960,10 +1918,69 @@
       "tags": [
         "evaluation"
       ]
+    },
+    {
+      "type": "x",
+      "id": "2014360939563520146",
+      "url": "https://x.com/beenwrekt/status/2014360939563520146",
+      "author": {
+        "handle": "beenwrekt",
+        "displayName": "Ben Recht",
+        "avatar": null
+      },
+      "content": "For the first time in almost a decade, I'm teaching a class on learning and control.",
+      "createdAt": "2026-05-21T04:33:48.728Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Ben Recht announces teaching a class on learning and control after a long hiatus.",
+      "worthReading": "Shows his renewed engagement with teaching at the intersection of learning and control theory.",
+      "tags": [
+        "evaluation"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2046959576646561917",
+      "url": "https://x.com/beenwrekt/status/2046959576646561917",
+      "author": {
+        "handle": "beenwrekt",
+        "displayName": "Ben Recht",
+        "avatar": null
+      },
+      "content": "Building a theory of the architecture of organizing machines and people.",
+      "createdAt": "2026-05-21T04:33:48.728Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "He is working on a theory for organizing both machines and people.",
+      "worthReading": "Reflects his interest in the broader implications of machine learning on organizational structures.",
+      "tags": [
+        "agent"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "1966147201446621595",
+      "url": "https://x.com/beenwrekt/status/1966147201446621595",
+      "author": {
+        "handle": "beenwrekt",
+        "displayName": "Ben Recht",
+        "avatar": null
+      },
+      "content": "On unquantifiable costs and inherent tradeoffs in decision theory.",
+      "createdAt": "2026-05-21T04:33:48.728Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "He discusses the challenges of unquantifiable costs and tradeoffs in decision theory.",
+      "worthReading": "Highlights his critical perspective on the limitations of optimization in decision-making.",
+      "tags": [
+        "safety"
+      ]
     }
   ],
   "dailyCounts": [
-    3,
     5,
     4,
     4,
@@ -1991,8 +2008,9 @@
     3,
     3,
     3,
+    4,
     4,
     3
   ],
-  "interestSummary": "Ben Recht is currently focused on developing a theory of engineering architecture for organizing machines and people, teaching a new class on learning and control, and promoting his book *The Irrational Decision* through public talks, while also critiquing quantification in institutions and the Trump administration's approach to scientific reproducibility."
+  "interestSummary": "Ben Recht is currently focused on the theory of engineering architecture and organizational design, as well as promoting his book *The Irrational Decision* through talks and discussions. He is also actively teaching a class on learning and control and engaging with debates about scientific reproducibility and the limits of quantification in machine learning."
 }

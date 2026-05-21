@@ -7,89 +7,6 @@
   "xPosts": [
     {
       "type": "x",
-      "id": "1975603633791377920",
-      "url": "https://x.com/hwchase17/status/1975603633791377920",
-      "author": {
-        "handle": "hwchase17",
-        "displayName": "Harrison Chase",
-        "avatar": "https://avatars.githubusercontent.com/hwchase17"
-      },
-      "content": "I am not excited about visual workflow builders 1. Not simple enough for the average user",
-      "createdAt": "2026-04-21T04:08:05.275Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Harrison Chase expresses skepticism about visual workflow builders, arguing they are not sufficiently simple for average users.",
-      "worthReading": "It reveals his perspective on usability barriers in current AI development tools.",
-      "tags": [
-        "tooling"
-      ]
-    },
-    {
-      "type": "x",
-      "id": "2011814697889316930",
-      "url": "https://x.com/hwchase17/status/2011814697889316930",
-      "author": {
-        "handle": "hwchase17",
-        "displayName": "Harrison Chase",
-        "avatar": "https://avatars.githubusercontent.com/hwchase17"
-      },
-      "content": "We launched LangSmith Agent Builder this week as a no-code way to build agents. A key part of Agent builder is it's memory system.",
-      "createdAt": "2026-04-21T04:08:05.275Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Announces the launch of LangSmith Agent Builder, a no-code platform for building agents, emphasizing its memory system as a core feature.",
-      "worthReading": "Highlights LangChain's product direction toward making agent development more accessible.",
-      "tags": [
-        "agent",
-        "tooling"
-      ]
-    },
-    {
-      "type": "x",
-      "id": "2013641863123870133",
-      "url": "https://x.com/hwchase17/status/2013641863123870133",
-      "author": {
-        "handle": "hwchase17",
-        "displayName": "Harrison Chase",
-        "avatar": "https://avatars.githubusercontent.com/hwchase17"
-      },
-      "content": "When building agents, you need to iterate on production data much more than when building traditional software. You need to iterate on how",
-      "createdAt": "2026-04-21T04:08:05.275Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Notes that developing agents requires more iteration on production data compared to traditional software, stressing the importance of iterative development processes.",
-      "worthReading": "It underscores a key difference in development practices for AI agents versus conventional software.",
-      "tags": [
-        "agent",
-        "deployment"
-      ]
-    },
-    {
-      "type": "x",
-      "id": "2021261552222158955",
-      "url": "https://x.com/hwchase17/status/2021261552222158955",
-      "author": {
-        "handle": "hwchase17",
-        "displayName": "Harrison Chase",
-        "avatar": "https://avatars.githubusercontent.com/hwchase17"
-      },
-      "content": "TL;DR: More and more agents need a workspace: a computer where they can run code, install packages, and access files. Sandboxes provide this",
-      "createdAt": "2026-04-21T04:08:05.275Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Summarizes that agents increasingly require a workspace with capabilities like code execution and file access, which sandboxes can offer.",
-      "worthReading": "Points to infrastructure needs for advanced AI agent functionality.",
-      "tags": [
-        "agent",
-        "infra"
-      ]
-    },
-    {
-      "type": "x",
       "id": "2034297125417460044",
       "url": "https://x.com/hwchase17/status/2034297125417460044",
       "author": {
@@ -2190,10 +2107,95 @@
       "tags": [
         "tooling"
       ]
+    },
+    {
+      "type": "x",
+      "id": "2013641863123870133",
+      "url": "https://x.com/hwchase17/status/2013641863123870133",
+      "author": {
+        "handle": "hwchase17",
+        "displayName": "Harrison Chase",
+        "avatar": "https://avatars.githubusercontent.com/hwchase17"
+      },
+      "content": "Visibility is the easiest piece. The hard part is analyzing and understanding what you're observing. I've spoken to teams recording 100k+",
+      "createdAt": "2026-05-21T04:32:37.939Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Visibility is easy, but analyzing observations is hard.",
+      "worthReading": "Highlights a common challenge in AI agent observability.",
+      "tags": [
+        "evaluation",
+        "tooling"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2021261552222158955",
+      "url": "https://x.com/hwchase17/status/2021261552222158955",
+      "author": {
+        "handle": "hwchase17",
+        "displayName": "Harrison Chase",
+        "avatar": "https://avatars.githubusercontent.com/hwchase17"
+      },
+      "content": "TL;DR: More and more agents need a workspace: a computer where they can run code, install packages, and access files. Sandboxes provide this",
+      "createdAt": "2026-05-21T04:32:37.939Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Agents require sandboxed workspaces for code execution.",
+      "worthReading": "Key insight for agent infrastructure and safety.",
+      "tags": [
+        "agent",
+        "infra",
+        "safety"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2054971176464847188",
+      "url": "https://x.com/hwchase17/status/2054971176464847188",
+      "author": {
+        "handle": "hwchase17",
+        "displayName": "Harrison Chase",
+        "avatar": "https://avatars.githubusercontent.com/hwchase17"
+      },
+      "content": "Today we're launching LangChain Labs, a new applied research effort focused on Continual Learning. Our goal is to advance open,",
+      "createdAt": "2026-05-21T04:32:37.939Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "LangChain Labs launched for continual learning research.",
+      "worthReading": "Signals LangChain's push into ongoing model adaptation.",
+      "tags": [
+        "llm",
+        "fine-tuning"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2053157547985834227",
+      "url": "https://x.com/hwchase17/status/2053157547985834227",
+      "author": {
+        "handle": "hwchase17",
+        "displayName": "Harrison Chase",
+        "avatar": "https://avatars.githubusercontent.com/hwchase17"
+      },
+      "content": "Everyone wants to ship agents. The best organizations have figured out how to do it repeatedly, safely, and systematically.",
+      "createdAt": "2026-05-21T04:32:37.939Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Top organizations ship agents repeatedly and safely.",
+      "worthReading": "Emphasizes systematic approach to agent deployment.",
+      "tags": [
+        "agent",
+        "deployment",
+        "safety"
+      ]
     }
   ],
   "dailyCounts": [
-    4,
     3,
     2,
     4,
@@ -2222,7 +2224,8 @@
     4,
     3,
     3,
-    3
+    3,
+    4
   ],
-  "interestSummary": "Harrison Chase is focused on advancing AI agent development, particularly through no-code tools like LangSmith Agent Builder and emphasizing the need for sandboxed workspaces where agents can run code and access files. He also prioritizes the importance of trace-based debugging and iteration on production data over traditional software development methods."
+  "interestSummary": "Harrison Chase, founder of LangChain, is focused on advancing AI agent development through agent harnesses, sandboxed workspaces, and trace analysis, emphasizing the need for stable abstractions and runtime observability to debug, test, and profile agent behavior."
 }

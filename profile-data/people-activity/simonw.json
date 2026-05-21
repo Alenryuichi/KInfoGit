@@ -2,43 +2,6 @@
   "id": "simonw",
   "stars": [
     {
-      "repo": "scosman/pelicans_riding_bicycles",
-      "url": "https://github.com/scosman/pelicans_riding_bicycles",
-      "description": "This is a collection of the best SVG images of pelicans riding bicycles.",
-      "language": null,
-      "stargazersCount": 72,
-      "starredBy": "simonw",
-      "highlights": "This repository is a curated collection of SVG images depicting pelicans riding bicycles, offering a whimsical and creative visual dataset. It serves as a unique resource for artistic inspiration or testing image processing tools with unconventional imagery.",
-      "worthReading": "It showcases creative AI applications in generating or curating novel visual content, potentially useful for testing multi-modal models or as a fun, offbeat dataset.",
-      "topics": [],
-      "tags": [
-        "multi-modal"
-      ],
-      "score": 3,
-      "scoreReason": "Low freshness (established but niche), moderate relevance (multi-modal dataset), and high concreteness (specific SVG collection).",
-      "starredAt": "2026-04-21T04:00:48Z",
-      "type": "github"
-    },
-    {
-      "repo": "google-labs-code/design.md",
-      "url": "https://github.com/google-labs-code/design.md",
-      "description": "A format specification for describing a visual identity to coding agents. DESIGN.md gives agents a persistent, structured understanding of a design system.",
-      "language": "TypeScript",
-      "stargazersCount": 1059,
-      "starredBy": "simonw",
-      "highlights": "A format specification for describing visual identity to coding agents, enabling persistent, structured understanding of design systems. It provides agents with consistent design context across coding tasks.",
-      "worthReading": "It addresses the emerging need for AI agents to maintain design consistency in code generation, making it valuable for teams implementing AI-assisted development workflows.",
-      "topics": [],
-      "tags": [
-        "agent",
-        "tooling"
-      ],
-      "score": 7,
-      "scoreReason": "Good freshness with moderate traction, high relevance to agent tooling, and concrete specification format.",
-      "starredAt": "2026-04-21T17:43:27Z",
-      "type": "github"
-    },
-    {
       "repo": "idesis-gmbh/GitHubExperiments",
       "url": "https://github.com/idesis-gmbh/GitHubExperiments",
       "description": " Experiments with GitHub event data ",
@@ -367,48 +330,6 @@
     }
   ],
   "posts": [
-    {
-      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mk24tklb522i",
-      "url": "https://bsky.app/profile/simonwillison.net/post/3mk24tklb522i",
-      "author": {
-        "handle": "simonwillison.net",
-        "displayName": "Simon Willison",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
-      },
-      "content": "This is so confusing. Did Anthropic really just drop Claude Code from their $20/month plan?\n\nWhy would they do that through a pricing page update without making a proper announcement?\n\nPlus, $20/month still gets you Cowork, which is really just Claude Code wearing a non-threatening hat!",
-      "createdAt": "2026-04-21T23:23:14.169Z",
-      "likeCount": 93,
-      "replyCount": 9,
-      "repostCount": 8,
-      "highlights": "",
-      "worthReading": "",
-      "tags": [
-        "deployment",
-        "tooling"
-      ],
-      "type": "bluesky"
-    },
-    {
-      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mjztisegwk2e",
-      "url": "https://bsky.app/profile/simonwillison.net/post/3mjztisegwk2e",
-      "author": {
-        "handle": "simonwillison.net",
-        "displayName": "Simon Willison",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
-      },
-      "content": "I came up with a somewhat foolish new benchmark for testing image generation models, to exercise the new ChatGPT Images 2.0:\n\n\"Do a where's Waldo style image but it's where is the raccoon holding a ham radio\"\n\nsimonwillison.net/2026/Apr/21/...",
-      "createdAt": "2026-04-21T20:36:09.562Z",
-      "likeCount": 97,
-      "replyCount": 9,
-      "repostCount": 7,
-      "highlights": "",
-      "worthReading": "",
-      "tags": [
-        "evaluation",
-        "multi-modal"
-      ],
-      "type": "bluesky"
-    },
     {
       "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mk2ggudol22m",
       "url": "https://bsky.app/profile/simonwillison.net/post/3mk2ggudol22m",
@@ -1072,6 +993,27 @@
         "deployment"
       ],
       "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mmcahayyqc2i",
+      "url": "https://bsky.app/profile/simonwillison.net/post/3mmcahayyqc2i",
+      "author": {
+        "handle": "simonwillison.net",
+        "displayName": "Simon Willison",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
+      },
+      "content": "I don't have much to say about this year's Google I/O because I prefer to write about products that have shipped, not just \"coming soon\" announcements - but here are some notes on Gemini Spark and Antigravity simonwillison.net/2026/May/20/...",
+      "createdAt": "2026-05-20T15:39:37.614Z",
+      "likeCount": 48,
+      "replyCount": 3,
+      "repostCount": 2,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [
+        "llm",
+        "deployment"
+      ],
+      "type": "bluesky"
     }
   ],
   "videos": [],
@@ -1248,89 +1190,6 @@
     }
   ],
   "xPosts": [
-    {
-      "type": "x",
-      "id": "1952830887671861407",
-      "url": "https://x.com/simonw/status/1952830887671861407",
-      "author": {
-        "handle": "simonw",
-        "displayName": "Simon Willison",
-        "avatar": "https://avatars.githubusercontent.com/simonw"
-      },
-      "content": "Here's the concluding section of my write-up of the new OpenAI open weights models - they're",
-      "createdAt": "2026-04-21T04:07:46.170Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Simon Willison shares concluding thoughts on OpenAI's new open weights models in his write-up.",
-      "worthReading": "Provides insight into expert analysis of emerging open weight AI models.",
-      "tags": [
-        "llm",
-        "evaluation"
-      ]
-    },
-    {
-      "type": "x",
-      "id": "1976989054240800798",
-      "url": "https://x.com/simonw/status/1976989054240800798",
-      "author": {
-        "handle": "simonw",
-        "displayName": "Simon Willison",
-        "avatar": "https://avatars.githubusercontent.com/simonw"
-      },
-      "content": "I'm beginning to suspect that a key skill in working effectively with coding agents is developing an intuition for when you don't need to",
-      "createdAt": "2026-04-21T04:07:46.170Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Suggests that effective use of coding agents requires knowing when not to use them.",
-      "worthReading": "Offers practical advice for developers integrating AI coding assistants.",
-      "tags": [
-        "agent",
-        "tooling"
-      ]
-    },
-    {
-      "type": "x",
-      "id": "1975570458683834729",
-      "url": "https://x.com/simonw/status/1975570458683834729",
-      "author": {
-        "handle": "simonw",
-        "displayName": "Simon Willison",
-        "avatar": "https://avatars.githubusercontent.com/simonw"
-      },
-      "content": "Vibe coding is irresponsibly building software through dice rolls, not caring what code is produced",
-      "createdAt": "2026-04-21T04:07:46.170Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Critiques 'vibe coding' as irresponsible software development through random generation.",
-      "worthReading": "Highlights concerns about quality and responsibility in AI-assisted coding practices.",
-      "tags": [
-        "agent",
-        "safety"
-      ]
-    },
-    {
-      "type": "x",
-      "id": "1639691902357483520",
-      "url": "https://x.com/simonw/status/1639691902357483520",
-      "author": {
-        "handle": "simonw",
-        "displayName": "Simon Willison",
-        "avatar": "https://avatars.githubusercontent.com/simonw"
-      },
-      "content": "If you're just starting to learn software engineering right now but you're considering dropping it",
-      "createdAt": "2026-04-21T04:07:46.170Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Addresses beginners in software engineering who might be considering quitting.",
-      "worthReading": "Provides perspective for new developers in the current AI-influenced landscape.",
-      "tags": [
-        "tooling"
-      ]
-    },
     {
       "type": "x",
       "id": "1975570458683834729",
@@ -2602,10 +2461,72 @@
         "llm",
         "tooling"
       ]
+    },
+    {
+      "type": "x",
+      "id": "1975570458683834729",
+      "url": "https://x.com/simonw/status/1975570458683834729",
+      "author": {
+        "handle": "simonw",
+        "displayName": "Simon Willison",
+        "avatar": "https://avatars.githubusercontent.com/simonw"
+      },
+      "content": "Vibe coding is irresponsibly building software through dice rolls, not caring what code is produced",
+      "createdAt": "2026-05-21T04:32:32.081Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Simon Willison critiques 'vibe coding' as an irresponsible approach to software development.",
+      "worthReading": "It offers a critical perspective on a popular coding trend.",
+      "tags": [
+        "agent",
+        "tooling"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2031002164165021868",
+      "url": "https://x.com/simonw/status/2031002164165021868",
+      "author": {
+        "handle": "simonw",
+        "displayName": "Simon Willison",
+        "avatar": "https://avatars.githubusercontent.com/simonw"
+      },
+      "content": "A short note that the predictions that LLMs would favor 'boring technology' that's once you attach them to a good coding agent harness at least",
+      "createdAt": "2026-05-21T04:32:32.081Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Simon Willison notes that LLMs might favor boring technology when paired with a good coding agent harness.",
+      "worthReading": "It provides insight into LLM behavior in coding contexts.",
+      "tags": [
+        "agent",
+        "llm"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "1976989054240800798",
+      "url": "https://x.com/simonw/status/1976989054240800798",
+      "author": {
+        "handle": "simonw",
+        "displayName": "Simon Willison",
+        "avatar": "https://avatars.githubusercontent.com/simonw"
+      },
+      "content": "I'm beginning to suspect that a key skill in working effectively with coding agents is developing an intuition for when you don't need to",
+      "createdAt": "2026-05-21T04:32:32.081Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Simon Willison suggests that intuition for when not to intervene is key for coding agent effectiveness.",
+      "worthReading": "It offers practical advice for working with AI coding agents.",
+      "tags": [
+        "agent",
+        "tooling"
+      ]
     }
   ],
   "dailyCounts": [
-    8,
     5,
     5,
     6,
@@ -2634,7 +2555,8 @@
     4,
     1,
     3,
-    1
+    2,
+    3
   ],
-  "interestSummary": "Simon Willison is deeply engaged with the latest developments in AI coding agents and large language models, frequently testing new models (DeepSeek V4, Qwen3.6, GPT-5.5) and tools for document parsing, code review, and local inference, while also maintaining a playful interest in AI-generated images of pelicans riding bicycles."
+  "interestSummary": "Simon Willison is deeply focused on evaluating and building with the latest AI models and tools, including coding agents, document parsers, and local inference engines, while also actively developing his own LLM CLI tool and engaging with the broader AI community on topics like model pricing, vibe coding, and open-source software."
 }

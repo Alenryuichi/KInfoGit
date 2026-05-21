@@ -899,7 +899,10 @@
       "repostCount": 120,
       "highlights": "",
       "worthReading": "",
-      "tags": [],
+      "tags": [
+        "evaluation",
+        "safety"
+      ],
       "type": "bluesky"
     },
     {
@@ -919,74 +922,29 @@
       "worthReading": "",
       "tags": [],
       "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:aeug3w4mdhnc2wv73hmrh36v/app.bsky.feed.post/3mmbw5mythb2c",
+      "url": "https://bsky.app/profile/emilymbender.bsky.social/post/3mmbw5mythb2c",
+      "author": {
+        "handle": "emilymbender.bsky.social",
+        "displayName": "Emily M. Bender",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:aeug3w4mdhnc2wv73hmrh36v/bafkreifvwtyrccviqr6ugi43apd3qe3rldsmzmeh6fudcwmgzgrjt4afku"
+      },
+      "content": "Me: Why is there an exceptionally high density of Google bullshit in the news this week?\n\nMe: Oh, it must be Google IO.\n\n*sigh*",
+      "createdAt": "2026-05-20T12:35:17.068Z",
+      "likeCount": 54,
+      "replyCount": 0,
+      "repostCount": 5,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [],
+      "type": "bluesky"
     }
   ],
   "videos": [],
   "blogs": [],
   "xPosts": [
-    {
-      "type": "x",
-      "id": "1852336263732551982",
-      "url": "https://x.com/emilymbender/status/1852336263732551982",
-      "author": {
-        "handle": "emilymbender",
-        "displayName": "Emily M. Bender",
-        "avatar": null
-      },
-      "content": "EMILY M. BENDER: Yeah. And so passive, like, oops, the moon, the moon went further away. It's like no, actually, you made some decisions.",
-      "createdAt": "2026-04-21T04:11:26.232Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Critiques the passive framing of AI outcomes, emphasizing that decisions are made by people, not just accidental occurrences.",
-      "worthReading": "Highlights the importance of accountability and intentionality in AI development.",
-      "tags": [
-        "safety",
-        "evaluation"
-      ]
-    },
-    {
-      "type": "x",
-      "id": "1491834518705033218",
-      "url": "https://x.com/emilymbender/status/1491834518705033218",
-      "author": {
-        "handle": "emilymbender",
-        "displayName": "Emily M. Bender",
-        "avatar": null
-      },
-      "content": "Image is of the 1990s Microsoft writing assistant character Clippy with its eyebrows raised positioned in.",
-      "createdAt": "2022-02-10",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Uses the iconic Clippy character to make a point, likely about AI assistants or hype.",
-      "worthReading": "Provides a cultural reference to critique or contextualize modern AI tools.",
-      "tags": [
-        "agent",
-        "tooling"
-      ]
-    },
-    {
-      "type": "x",
-      "id": "1593109710613655552",
-      "url": "https://x.com/emilymbender/status/1593109710613655552",
-      "author": {
-        "handle": "emilymbender",
-        "displayName": "Emily M. Bender",
-        "avatar": null
-      },
-      "content": "Fundamental point that ~all people who see LLMs as 'AI' seem to be missing: The *only ...",
-      "createdAt": "2026-04-21T04:11:26.232Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Argues that a critical misunderstanding exists when labeling LLMs as 'AI', hinting at a missing fundamental distinction.",
-      "worthReading": "Challenges common perceptions of AI, urging a more precise understanding of LLM capabilities.",
-      "tags": [
-        "llm",
-        "evaluation"
-      ]
-    },
     {
       "type": "x",
       "id": "1491834518705033218",
@@ -1844,10 +1802,72 @@
       "tags": [
         "safety"
       ]
+    },
+    {
+      "type": "x",
+      "id": "1491834518705033218",
+      "url": "https://x.com/emilymbender/status/1491834518705033218",
+      "author": {
+        "handle": "emilymbender",
+        "displayName": "Emily M. Bender",
+        "avatar": null
+      },
+      "content": "Image is of the 1990s Microsoft writing assistant character Clippy with its eyebrows raised positioned in.",
+      "createdAt": "2022-02-10T00:00:00",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Bender posts an image of Clippy, likely to comment on AI nostalgia or critique.",
+      "worthReading": "Shows Bender's use of cultural references to discuss AI.",
+      "tags": [
+        "llm",
+        "safety"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "1852336263732551982",
+      "url": "https://x.com/emilymbender/status/1852336263732551982",
+      "author": {
+        "handle": "emilymbender",
+        "displayName": "Emily M. Bender",
+        "avatar": null
+      },
+      "content": "EMILY M. BENDER: Yeah. And so passive, like, oops, the moon, the moon went further away. It's like no, actually, you made some decisions.",
+      "createdAt": "2024-11-01T00:00:00",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Bender critiques passive language in AI discourse, emphasizing human agency.",
+      "worthReading": "Illustrates Bender's focus on accountability in AI development.",
+      "tags": [
+        "safety",
+        "evaluation"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "1775911190385852840",
+      "url": "https://x.com/emilymbender/status/1775911190385852840",
+      "author": {
+        "handle": "emilymbender",
+        "displayName": "Emily M. Bender",
+        "avatar": null
+      },
+      "content": "Look what @alexhanna and I got to do! (Hang out with the cool kids ...) We're talking about the Turing Test, the grandmother of all tests for AI sentience. Joining us are AI researchers Alex Hanna and Emily M. Bender",
+      "createdAt": "2024-04-04T00:00:00",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Bender promotes a discussion on the Turing Test and AI sentience.",
+      "worthReading": "Highlights Bender's engagement with foundational AI concepts.",
+      "tags": [
+        "evaluation",
+        "safety"
+      ]
     }
   ],
   "dailyCounts": [
-    3,
     5,
     3,
     1,
@@ -1876,7 +1896,8 @@
     1,
     3,
     2,
-    0
+    1,
+    3
   ],
-  "interestSummary": "Emily M. Bender is actively engaged in critiquing AI hype and misinformation, particularly through her podcast \"Mystery AI Hype Theater 3000\" and public commentary on issues like medical AI consent, anthropomorphizing language, and the misuse of linguistic concepts. Her recent focus also includes promoting live events and collaborative work on race, ethnicity, and ethics in linguistic research."
+  "interestSummary": "Emily M. Bender is actively engaged in critiquing AI hype and anthropomorphism, particularly through her podcast \"Mystery AI Hype Theater 3000\" and live events, while also focusing on ethical issues in AI applications like medical scribes and the misuse of linguistic concepts."
 }
