@@ -1,232 +1,163 @@
 {
   "date": "2026-05-22",
-  "itemCount": 17,
+  "itemCount": 79,
   "sections": [
     {
       "id": "headlines",
       "title": "Headlines & Launches",
       "items": [
         {
-          "title": "Google Tests AI-Generated Ad Copy in Search",
-          "summary": "Google is testing new AI-powered ad formats in Search that use Gemini to generate custom product explanations and conversational ads, and expanding its Direct Offers pilot for AI Mode. This shift could degrade search quality by blurring the line between organic results and paid promotions, potentially manipulating users with AI-generated persuasive content. The Direct Offers pilot remains in alpha, and the new formats include Conversational Discovery ads, Highlighted Answers, and AI-powered Shopping ads, all built with Gemini.",
-          "url": "https://blog.google/products/ads-commerce/google-marketing-live-search-ads/",
+          "title": "Anthropic is paying $15 billion a year for access to Elon Musk’s data centers | The Verge",
+          "summary": "Anthropic每年支付150亿美元使用马斯克的数据中心",
+          "url": "https://www.theverge.com/science/935229/spacex-anthropic-ipo-ai-capacity-deal-colossus",
+          "score": 9,
+          "sources": [
+            {
+              "name": "theverge.com"
+            }
+          ],
+          "tags": [
+            "anthropic",
+            "data-center",
+            "spacex"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Microsoft and EY to Spend $1 Billion to Help Clients Adopt AI - Bloomberg",
+          "summary": "微软与安永联合投资10亿美元帮助企业采用AI",
+          "url": "https://www.bloomberg.com/news/articles/2026-05-21/microsoft-and-ey-to-spend-1-billion-to-help-clients-adopt-ai",
+          "score": 8.5,
+          "sources": [
+            {
+              "name": "bloomberg.com"
+            }
+          ],
+          "tags": [
+            "microsoft",
+            "enterprise-ai",
+            "investment"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Hark raises $700M Series A for its secretive 'universal' AI interface | TechCrunch",
+          "summary": "Hark融资7亿美元开发通用AI界面",
+          "url": "https://techcrunch.com/2026/05/21/hark-raises-700m-series-a-for-its-secretive-universal-ai-interface/",
+          "score": 8.5,
+          "sources": [
+            {
+              "name": "techcrunch.com"
+            }
+          ],
+          "tags": [
+            "startup",
+            "funding",
+            "ai-interface"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Pentagon Tests Rival AI Models in Race to Replace Anthropic",
+          "summary": "五角大楼测试OpenAI和Google模型以替代Anthropic",
+          "url": "https://www.bloomberg.com/news/articles/2026-05-21/pentagon-tests-rival-ai-models-in-race-to-replace-anthropic",
           "score": 8,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "sofumel"
+              "name": "bloomberg.com"
             }
           ],
           "tags": [
-            "Google",
-            "AI advertising",
-            "search",
-            "privacy",
-            "user experience"
+            "military-ai",
+            "openai",
+            "google"
           ],
-          "focusTopics": [],
-          "background": "Google has long relied on traditional text ads in search results. With the rise of generative AI, the company is integrating Gemini into its ad products to create more personalized and interactive ad experiences, raising concerns about user manipulation and ad blocking.",
-          "discussion": "Community comments express strong negative sentiment, with users planning to update ad blockers and criticizing the ads as manipulative. Some call for a public alternative to Google's search and ad ecosystem."
+          "focusTopics": []
         },
         {
-          "title": "Local news outlets restrict Internet Archive access",
-          "summary": "More than 340 local news outlets in the U.S. have implemented restrictions that limit the Internet Archive's ability to crawl and preserve their journalism, threatening the long-term availability of local news content. This trend undermines digital preservation efforts and historical research, as the Internet Archive's Wayback Machine is a critical resource for accessing deleted or changed web content. It also impacts AI training datasets that rely on archived news for language models. The restrictions typically involve blocking the Internet Archive's crawler via robots.txt or technical measures, preventing archiving of current articles. Some outlets allow access after a delay (e.g., one week), but many impose permanent blocks.",
-          "url": "https://www.niemanlab.org/2026/05/more-than-340-local-news-outlets-are-limiting-the-internet-archives-access-to-their-journalism/",
-          "score": 8,
+          "title": "Anthropic in Early Talks to Use Microsoft AI Chips, Information Reports - Bloomberg",
+          "summary": "Anthropic与微软洽谈使用其AI芯片",
+          "url": "https://www.bloomberg.com/news/articles/2026-05-21/anthropic-in-talks-to-use-microsoft-ai-chips-information-says",
+          "score": 7.5,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "jaredwiener"
+              "name": "bloomberg.com"
             }
           ],
           "tags": [
-            "digital preservation",
-            "internet archive",
-            "journalism",
-            "AI training",
-            "web archiving"
+            "anthropic",
+            "microsoft",
+            "ai-chips"
           ],
-          "focusTopics": [
-            "memory"
-          ],
-          "background": "The Internet Archive is a nonprofit digital library that runs the Wayback Machine, which archives web pages for public access. Local news outlets have faced financial pressures, with about 40% of U.S. local newspapers lost since the early 2000s. The restrictions are often motivated by concerns over lost subscription revenue and AI companies using archived content without payment.",
-          "discussion": "Commenters expressed regret over the loss of historical content, with some suggesting a simple fix: block the Archive for a week, then allow access. Others called for micropayment systems to compensate news outlets, while noting that newspapers are failing anyway and archiving is crucial to prevent permanent loss."
+          "focusTopics": []
         },
         {
-          "title": "Datasette Agent: Conversational AI for Data Exploration",
-          "summary": "Simon Willison announced the first release of Datasette Agent, an extensible AI assistant that brings conversational querying and chart generation to the Datasette platform, integrating his LLM library with Datasette. This integration makes data exploration more accessible to non-technical users by allowing them to ask questions in natural language and receive answers and charts, potentially broadening Datasette's user base and impact in data journalism and open data communities. Datasette Agent supports plugins like datasette-agent-charts for chart generation using Observable Plot, and datasette-agent-openai-imagegen for image generation. The live demo runs on Gemini 3.1 Flash-Lite, which is cheap and fast for SQLite queries.",
-          "url": "https://simonwillison.net/2026/May/21/datasette-agent/#atom-everything",
-          "score": 8,
+          "title": "Heretic has been served a legal notice by Meta, Inc.",
+          "summary": "Meta向Heretic项目发出法律通知，涉及开源AI模型合规问题。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tjmvx6/heretic_has_been_served_a_legal_notice_by_meta_inc/",
+          "score": 7.5,
           "sources": [
             {
-              "name": "rss",
-              "meta": "Simon Willison"
+              "name": "Reddit r/LocalLLaMA"
             }
           ],
           "tags": [
-            "AI",
-            "data analysis",
-            "open source",
-            "Datasette",
-            "LLM"
+            "legal",
+            "open-source",
+            "meta"
           ],
-          "focusTopics": [],
-          "background": "Datasette is an open-source tool for exploring and publishing tabular data, often used by journalists and researchers. The LLM library is a Python library for interacting with large language models. Datasette Agent combines these to enable natural language queries over Datasette databases."
+          "focusTopics": []
         },
         {
-          "title": "Project Hail Mary Stellar Navigation Chart",
-          "summary": "A stellar navigation chart called Project Hail Mary has been created using GAIA DR3 data to render over 1.8 billion stars, with a custom Python script generating the skybox images. This project showcases a creative and visually impressive use of the massive GAIA DR3 dataset, making stellar data accessible and engaging for astronomy enthusiasts and the general public. The star positions and colors are based on GAIA data, except for a few bright stars not in the dataset. The chart is not to scale; the creator notes that planetary sizes and distances are not accurately represented.",
-          "url": "https://valhovey.github.io/gaia-mary/",
+          "title": "Meta lays off thousands of employees to offset AI investments | The Verge",
+          "summary": "Meta裁员数千人以抵消AI投资成本",
+          "url": "https://www.theverge.com/tech/935163/meta-layoffs-ai-investment-offset-memo",
           "score": 7,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "speleo"
+              "name": "theverge.com"
             }
           ],
           "tags": [
-            "astronomy",
-            "data visualization",
-            "GAIA",
-            "open data",
-            "space"
+            "meta",
+            "layoffs",
+            "ai-investment"
           ],
-          "focusTopics": [],
-          "background": "GAIA DR3 is a data release from the European Space Agency's Gaia mission, which maps over 1.8 billion stars in the Milky Way. The dataset includes precise positions, brightness, and colors of stars. This project uses that data to create an interactive star chart for the novel 'Project Hail Mary'.",
-          "discussion": "Community comments discuss the scale of the universe, with one user noting the vast emptiness of space using a scale analogy. Another user inquires about DIY home star projectors, sparking interest in combining such visualizations with physical devices."
+          "focusTopics": []
         },
         {
-          "title": "Seattle Shield: Police-Private Surveillance Network Exposed",
-          "summary": "Prism Reports published an investigation revealing Seattle Shield, an intelligence-sharing network operated by the Seattle Police Department since 2009, which includes private companies like Amazon and Facebook, as well as the FBI. This network raises serious concerns about surveillance, privacy, and civil liberties, as it enables police to access private-sector data with limited oversight, potentially sidestepping Fourth Amendment protections. Seattle Shield originally focused on terrorism prevention but has shifted to monitoring protests and traffic delays. Some members, such as the Church of Scientology and the U.S. Navy, have reportedly left the network.",
-          "url": "https://prismreports.org/2026/05/20/seattle-shield-private-companies-surveillance/",
-          "score": 7,
-          "sources": [
-            {
-              "name": "hackernews",
-              "meta": "root-parent"
-            }
-          ],
-          "tags": [
-            "surveillance",
-            "privacy",
-            "law enforcement",
-            "public-private partnership",
-            "civil liberties"
-          ],
-          "focusTopics": [],
-          "background": "Public-private surveillance partnerships allow law enforcement to leverage private companies' data and infrastructure for intelligence gathering, often with less transparency and accountability than government-only operations. Seattle Shield is one such partnership, operating as a collaborative information-sharing environment between the Seattle Police Department and select public/private entities in the Seattle area.",
-          "discussion": "Comments show mixed reactions: some question the sensationalism and note the network's local scope, while others express concern about privacy and urge employees of member companies to take action. A former FBI agent's characterization of the network as a 'Panopticon' is debated."
-        },
-        {
-          "title": "Python 3.15's Overlooked Features: Lazy Imports, Iterator Sync, Counter Set Ops",
-          "summary": "A blog post highlights three lesser-known features in Python 3.15: explicit lazy imports via the 'lazy' keyword, iterator synchronization primitives in the threading module, and set operations (union, intersection, difference, symmetric difference) on Counter objects. These features improve Python's performance and expressiveness for concurrent and data-intensive applications, while the community discussion reveals corrections and real-world use cases that deepen understanding of the changes. Lazy imports are enabled via PEP 810, using 'lazy import' syntax to defer module loading until first use. The threading module adds 'synchronized_iterator' for safe concurrent iteration. Counter now supports '&', '|', '-', '^' operators for multiset operations, though subtraction behavior differs from expected (e.g., Counter({'a':3,'b':1}) - Counter({'a':1,'b':2}) yields Counter({'a':2})).",
-          "url": "https://blog.changs.co.uk/python-315-features-that-didnt-make-the-headlines.html",
-          "score": 7,
-          "sources": [
-            {
-              "name": "hackernews",
-              "meta": "rbanffy"
-            }
-          ],
-          "tags": [
-            "Python",
-            "programming languages",
-            "release notes",
-            "community discussion"
-          ],
-          "focusTopics": [],
-          "background": "Python 3.15 is the latest version of the Python programming language, released in 2025. Lazy imports have been a long-desired feature to reduce startup time, especially for CLI tools and large applications. Iterator synchronization addresses thread safety when iterating over shared data. Counter is a dict subclass for counting hashable objects, and set operations allow multiset algebra.",
-          "discussion": "Commenters clarified that lazy imports are indeed new in 3.15 (PEP 810), and one user noted that their 'threaded-generator' package complements the new iterator synchronization. Another commenter pointed out an error in the blog's Counter subtraction example, showing that Counter subtraction does not produce negative counts. A discussion also arose about symmetric difference use cases for Counter."
-        },
-        {
-          "title": "Waymo pauses Atlanta service after robotaxis drive into floods",
-          "summary": "Waymo has paused its autonomous ride-hailing service in Atlanta after multiple robotaxis repeatedly drove into flooded streets, leading to a nationwide recall affecting all 5th-gen and 6th-gen vehicles. This incident highlights a critical limitation in autonomous driving systems: handling rare edge cases like flooded roads. It fuels debate on whether AI can achieve human-level driving reliability and raises questions about the pace of autonomous vehicle deployment. The National Highway Traffic Safety Administration (NHTSA) recall notice describes a classification error in the decision stack: the software may allow the vehicle to slow and then drive into standing water on higher-speed roadways. Waymo's 5th-gen Jaguar I-Pace and 6th-gen Zeekr RT both carry LiDAR, radar, and cameras, yet the system still misjudges flood depth.",
-          "url": "https://techcrunch.com/2026/05/21/waymo-pauses-atlanta-service-as-its-robotaxis-keep-driving-into-floods/",
-          "score": 7,
-          "sources": [
-            {
-              "name": "hackernews",
-              "meta": "mattas"
-            }
-          ],
-          "tags": [
-            "autonomous vehicles",
-            "AI safety",
-            "edge cases",
-            "Waymo",
-            "machine learning"
-          ],
-          "focusTopics": [],
-          "background": "Autonomous vehicles rely on machine learning models trained on large datasets to perceive and navigate the world. However, rare or unusual situations—such as flooded roads—may be underrepresented in training data, causing the model to fail. Waymo has been operating robotaxi services in several U.S. cities, and this is not the first time edge cases have caused service disruptions; previous incidents include power outages and interactions with pedestrians.",
-          "discussion": "Commenters expressed mixed views: some see this as a normal part of rollout and an opportunity for improvement, while others argue it reveals fundamental AI limitations. One user noted that if the situation is not in training data, the model is unequipped to handle it, echoing a known phenomenon. Another sarcastically compared the behavior to human drivers who misjudge flood depth."
-        },
-        {
-          "title": "Lost Trinity Nuclear Test Photos Restored After 20 Years",
-          "summary": "A 20-year restoration effort has recovered hundreds of lost or degraded photographs from the 1945 Trinity nuclear test, the first detonation of a nuclear weapon. The restored images, featured in the book 'Trinity: An Illustrated History of Earth’s First Atomic Experiment,' offer unprecedented clarity of the event. These restored images provide historians, scientists, and the public with a clearer visual record of the dawn of the nuclear age, enhancing understanding of the test's technical and human dimensions. The restoration also preserves fragile historical artifacts that might otherwise be lost to time. The restoration involved digitizing and enhancing original film negatives and prints from the Manhattan Project, some of which had been stored in poor conditions for decades. The book includes over 400 images, many never before published in such high quality.",
-          "url": "https://spectrum.ieee.org/trinity-nuclear-test",
-          "score": 7,
-          "sources": [
-            {
-              "name": "hackernews",
-              "meta": "pseudolus"
-            }
-          ],
-          "tags": [
-            "history",
-            "nuclear",
-            "photography",
-            "science",
-            "technology"
-          ],
-          "focusTopics": [
-            "memory"
-          ],
-          "background": "The Trinity test was conducted by the United States on July 16, 1945, in New Mexico, as part of the Manhattan Project. It used an implosion-design plutonium bomb, the same type later dropped on Nagasaki. The test marked the beginning of the nuclear age and raised profound questions about humanity's destructive power.",
-          "discussion": "Commenters praised the restoration for educational value, with one former teacher noting they started their class on contemporary science with Trinity. Others discussed the human impact, including the exclusion of Trinity downwinders from the Radiation Exposure Compensation Act, and shared personal experiences visiting the site."
-        },
-        {
-          "title": "Critique of AI-Generated Walls of Text in Conversations",
-          "summary": "A blog post criticizes the practice of sharing verbose AI-generated chat logs in conversations, comparing them to boring dream descriptions that nobody cares about. This highlights a growing cultural friction in software engineering and online communication as AI-generated content becomes more common, affecting how people perceive effort and relevance. The post argues that sharing raw AI chat logs is akin to recounting dreams—interesting only to the sharer—and suggests that such verbose outputs waste colleagues' time.",
-          "url": "https://noslopgrenade.com/",
-          "score": 7,
-          "sources": [
-            {
-              "name": "hackernews",
-              "meta": "napolux"
-            }
-          ],
-          "tags": [
-            "AI",
-            "communication",
-            "culture",
-            "Hacker News"
-          ],
-          "focusTopics": [
-            "reflection"
-          ],
-          "background": "AI chatbots like ChatGPT generate detailed, often verbose responses that users may copy-paste into conversations. This practice has sparked debate about communication norms, as some see it as helpful while others view it as inconsiderate or lazy.",
-          "discussion": "Commenters largely agree with the critique, with some suggesting a 'view prompt' button to see the original query instead of the verbose output. Others note cultural differences and advocate for patience, while a few defend long messages as providing necessary context."
-        },
-        {
-          "title": "Blog Migrates from Ubuntu 16.04 to FreeBSD After 10 Years",
-          "summary": "A blog owner migrated their personal server from Ubuntu 16.04, which had been running for 10 years, to FreeBSD, documenting the challenges and decisions involved in the process. This story highlights the real-world difficulties of maintaining long-lived systems and the trade-offs between Linux and FreeBSD for personal servers, offering practical insights for system administrators facing similar legacy migrations. The migration involved moving from a Linux distribution that had reached end-of-life to FreeBSD, a Unix-like operating system known for its stability and ZFS filesystem. The author likely had to adapt to differences in package management, init system, and firewall configuration.",
-          "url": "https://crocidb.com/post/this-blog-ran-on-ubuntu-16-04-for-10-years-i-migrated-it-to-freebsd/",
+          "title": "White House Postpones AI Cybersecurity Order Signing by Trump - Bloomberg",
+          "summary": "白宫推迟特朗普签署AI网络安全行政令",
+          "url": "https://www.bloomberg.com/news/articles/2026-05-21/white-house-postpones-ai-cybersecurity-order-signing-by-trump",
           "score": 6,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "speckx"
+              "name": "bloomberg.com"
             }
           ],
           "tags": [
-            "FreeBSD",
-            "Ubuntu",
-            "server migration",
-            "system administration"
+            "policy",
+            "cybersecurity",
+            "white-house"
           ],
-          "focusTopics": [],
-          "background": "Ubuntu 16.04 LTS reached its end of standard support in April 2021, and extended security maintenance ended in April 2024. FreeBSD is a free and open-source Unix-like operating system descended from the Berkeley Software Distribution (BSD), known for its advanced networking, security, and storage features like ZFS. Migrating between Linux and FreeBSD requires adapting to different command-line tools, package managers (apt vs. pkg), and system administration paradigms.",
-          "discussion": "Commenters shared similar experiences of long-running servers becoming difficult to maintain, with some noting the appeal of FreeBSD's simplicity but also practical pain points like buggy PM2 support and complex firewall configuration. Others advocated for containerized approaches using Docker and Caddy to simplify migration and management."
+          "focusTopics": []
+        },
+        {
+          "title": "Waymo pauses Atlanta service as its robotaxis keep driving into floods",
+          "summary": "Waymo因自动驾驶出租车频繁驶入洪水暂停亚特兰大服务。",
+          "url": "https://techcrunch.com/2026/05/21/waymo-pauses-atlanta-service-as-its-robotaxis-keep-driving-into-floods/",
+          "score": 5.85,
+          "sources": [
+            {
+              "name": "HN (250)"
+            }
+          ],
+          "tags": [
+            "autonomous-driving",
+            "waymo",
+            "safety"
+          ],
+          "focusTopics": []
         }
       ]
     },
@@ -235,48 +166,479 @@
       "title": "Research & Innovation",
       "items": [
         {
-          "title": "Freenet Redesign: Decentralized Key-Value Store with WASM Contracts",
-          "summary": "The new Freenet has been running since December 2024 as a global decentralized key-value store where keys are WebAssembly contracts that define state validity, mutation rules, and synchronization. Early applications include River (decentralized group chat) and Delta (decentralized CMS), with users already building games and other apps. This redesign revives a historic peer-to-peer project with a novel architecture that uses commutative merge operations for fast, consistent state propagation, potentially enabling truly decentralized applications without centralized servers. It addresses key challenges in decentralized systems like consistency and state synchronization. Each contract must define a commutative merge operation, allowing state updates to spread like a virus and typically achieve global consistency in seconds. Applications run in a web browser as single-page apps, connecting locally to the Freenet peer via WebSocket instead of a remote API.",
-          "url": "https://freenet.org/",
+          "title": "[AINews] OpenAI GPT-next disproves 80 year old Erdős planar unit distance problem for under $1000",
+          "summary": "OpenAI GPT-next以不到1000美元推翻80年历史的Erdős问题。",
+          "url": "https://www.latent.space/p/ainews-openai-gpt-next-disproves",
+          "score": 8.5,
+          "sources": [
+            {
+              "name": "Latent Space"
+            }
+          ],
+          "tags": [
+            "openai",
+            "mathematics",
+            "reasoning"
+          ],
+          "focusTopics": [
+            "model-release",
+            "evals"
+          ]
+        },
+        {
+          "title": "Long-Context Reasoning Through Proxy-Based Chain-of-Thought Tuning",
+          "summary": "提出基于代理的思维链调优，提升长上下文推理能力。",
+          "url": "https://arxiv.org/abs/2605.20201",
           "score": 8,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "sanity"
+              "name": "ArXiv cs.CL"
             }
           ],
           "tags": [
-            "decentralization",
-            "p2p",
-            "webassembly",
-            "distributed-systems",
-            "open-source"
+            "long-context",
+            "reasoning",
+            "chain-of-thought"
           ],
-          "focusTopics": [],
-          "background": "Freenet is a peer-to-peer platform originally created in the early 2000s for censorship-resistant communication and file sharing. The original project was renamed Hyphanet, and this new Freenet is a complete rewrite from scratch. WebAssembly (WASM) is a binary instruction format that allows code to run efficiently in browsers and other environments, and is increasingly used for smart contracts in blockchain systems. The commutative merge operation is a concept from conflict-free replicated data types (CRDTs), which ensure eventual consistency in distributed systems.",
-          "discussion": "Comments include concerns about governance: one user claims the redesign was forced by a board without consulting the original development team. Others discuss technical aspects, such as the need for update logs for values without natural merge functions, and the potential centralization risk of requiring donations to Freenet for ghost key reputation."
+          "focusTopics": [
+            "context-engineering",
+            "planning"
+          ]
         },
         {
-          "title": "Kagi Search Improves Accessibility for Low Vision Users",
-          "summary": "A blog post highlights how Kagi Search's clean, ad-free interface and extensive customization options make it more accessible for users with low vision compared to traditional search engines like Google. This matters because accessibility in search engines is often overlooked, and Kagi's approach demonstrates how paid, privacy-focused search can also improve usability for people with disabilities, potentially influencing industry standards. The blog author notes that Kagi allows users to adjust font size, contrast, and layout, and its lack of ads reduces visual clutter. However, Kagi is a paid service, which may limit access for some users.",
-          "url": "https://veroniiiica.com/using-kagi-search-with-low-vision/",
+          "title": "Position: Let's Develop Data Probes to Fundamentally Understand How Data Affects LLM Performance",
+          "summary": "提出开发数据探针以理解数据如何影响LLM性能。",
+          "url": "https://arxiv.org/abs/2605.18801",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "llm",
+            "data-analysis",
+            "interpretability"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "DecisionBench: A Benchmark for Emergent Delegation in Long-Horizon Agentic Workflows",
+          "summary": "提出用于长周期智能体工作流中紧急委托的基准。",
+          "url": "https://arxiv.org/abs/2605.19099",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "benchmark",
+            "agent",
+            "delegation"
+          ],
+          "focusTopics": [
+            "evals",
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "MedicalBench: Evaluating Large Language Models Toward Improved Medical Concept Extraction",
+          "summary": "提出MedicalBench基准，评估LLM医学概念提取能力。",
+          "url": "https://arxiv.org/abs/2605.20197",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "benchmark",
+            "medical",
+            "llm"
+          ],
+          "focusTopics": [
+            "evals"
+          ]
+        },
+        {
+          "title": "AgentNLQ: A General-Purpose Agent for Natural Language to SQL",
+          "summary": "提出通用NL2SQL智能体AgentNLQ。",
+          "url": "https://arxiv.org/abs/2605.19010",
+          "score": 7,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "nl2sql",
+            "agent",
+            "database"
+          ],
+          "focusTopics": [
+            "tool-use"
+          ]
+        },
+        {
+          "title": "Data Scaling as Progressive Coverage of a Predictive Contribution Spectrum",
+          "summary": "研究数据缩放定律，提出预测贡献谱的渐进覆盖假说。",
+          "url": "https://arxiv.org/abs/2605.20196",
+          "score": 7,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "scaling-laws",
+            "data",
+            "theory"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "FlowLM: Few-Step Language Modeling via Diffusion-to-Flow Adaptation",
+          "summary": "通过扩散到流匹配适应实现少步语言建模。",
+          "url": "https://arxiv.org/abs/2605.20199",
+          "score": 7,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "flow-matching",
+            "diffusion",
+            "language-model"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Honesty in a small model drops from 35% to 0% by changing the tone of the prompt. Sharing the findings.",
+          "summary": "研究发现改变提示语气可使小模型诚实度从35%降至0%。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tjmswd/honesty_in_a_small_model_drops_from_35_to_0_by/",
+          "score": 7,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "honesty",
+            "prompt-engineering",
+            "small-model"
+          ],
+          "focusTopics": [
+            "evals"
+          ]
+        },
+        {
+          "title": "Masked Diffusion Language Models are Strong and Steerable Text-Based World Models for Agentic RL [R]",
+          "summary": "掩码扩散语言模型作为agentic RL的强世界模型。",
+          "url": "https://www.reddit.com/r/MachineLearning/comments/1tj9tna/masked_diffusion_language_models_are_strong_and/",
+          "score": 7,
+          "sources": [
+            {
+              "name": "Reddit r/MachineLearning"
+            }
+          ],
+          "tags": [
+            "diffusion",
+            "world-model",
+            "reinforcement-learning"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "Multi-Stream LLMs: new paper on parallelizing/separating prompts, thinking, I/O",
+          "summary": "新论文提出多流LLM并行化提示、思考与I/O。",
+          "url": "https://arxiv.org/abs/2605.12460",
+          "score": 6.968,
+          "sources": [
+            {
+              "name": "HN (56)"
+            }
+          ],
+          "tags": [
+            "llm",
+            "parallelization",
+            "multi-stream"
+          ],
+          "focusTopics": [
+            "context-engineering"
+          ]
+        },
+        {
+          "title": "Trustworthy Agent Network: Trust in Agent Networks Must Be Baked In, Not Bolted On",
+          "summary": "提出可信智能体网络，强调信任需内建而非附加。",
+          "url": "https://arxiv.org/abs/2605.19035",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "agent",
+            "trust",
+            "security"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "Embedding by Elicitation: Dynamic Representations for Bayesian Optimization of System Prompts",
+          "summary": "通过启发式嵌入动态表示优化系统提示。",
+          "url": "https://arxiv.org/abs/2605.19093",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "prompt-optimization",
+            "bayesian-optimization",
+            "system-prompt"
+          ],
+          "focusTopics": [
+            "context-engineering"
+          ]
+        },
+        {
+          "title": "Under Pressure: Emotional Framing Induces Measurable Behavioral Shifts and Structured Internal Geometry in Small Language Models",
+          "summary": "研究情感框架如何改变小语言模型的行为和内部几何结构。",
+          "url": "https://arxiv.org/abs/2605.20202",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "emotion",
+            "behavior",
+            "small-lm"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "I created an LLM post-training method called RPS. Preliminary results show that it improved Qwen3-8b's program synthesis reliability. [R]",
+          "summary": "提出RPS后训练方法，提升Qwen3-8b程序合成可靠性。",
+          "url": "https://www.reddit.com/r/MachineLearning/comments/1tjpivb/i_created_an_llm_posttraining_method_called_rps/",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "Reddit r/MachineLearning"
+            }
+          ],
+          "tags": [
+            "post-training",
+            "program-synthesis",
+            "qwen"
+          ],
+          "focusTopics": [
+            "post-training"
+          ]
+        },
+        {
+          "title": "karpathy/autoresearch",
+          "summary": "AI 代理自动进行单 GPU nanochat 训练研究。",
+          "url": "https://github.com/karpathy/autoresearch",
+          "score": 6.3385,
+          "sources": [
+            {
+              "name": "GitHub trending:python (+259★)"
+            }
+          ],
+          "tags": [
+            "ai-agent",
+            "training",
+            "automation"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "Learn-by-Wire Training Control Governance: Bounded Autonomous Training Under Stress for Stability and Efficiency",
+          "summary": "提出Learn-by-Wire训练控制治理，提升训练稳定性。",
+          "url": "https://arxiv.org/abs/2605.19008",
           "score": 6,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "speckx"
+              "name": "ArXiv cs.AI"
             }
           ],
           "tags": [
-            "accessibility",
-            "search engines",
-            "Kagi",
-            "low vision",
-            "UX"
+            "training",
+            "stability",
+            "governance"
           ],
-          "focusTopics": [],
-          "background": "Kagi is a paid, ad-free search engine that prioritizes user privacy and does not track or sell user data. Traditional search engines like Google often have cluttered results pages with ads and distractions, which can be challenging for users with low vision or other disabilities.",
-          "discussion": "Commenters praised Kagi's accessibility and the blog's own design, with one noting that Google is an \"accessibility nightmare\" for screen reader users. Another pointed out that Kagi may lack location-based recommendations found in Google Maps, requiring more user effort."
+          "focusTopics": [
+            "post-training"
+          ]
+        },
+        {
+          "title": "Interference-Aware Multi-Task Unlearning",
+          "summary": "提出干扰感知的多任务机器遗忘方法。",
+          "url": "https://arxiv.org/abs/2605.19042",
+          "score": 6,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "machine-unlearning",
+            "multi-task",
+            "privacy"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Operationalizing Document AI: A Microservice Architecture for OCR and LLM Pipelines in Production",
+          "summary": "提出用于OCR和LLM管线的微服务架构，弥合学术与生产差距。",
+          "url": "https://arxiv.org/abs/2605.18818",
+          "score": 5.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "document-ai",
+            "microservice",
+            "production"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Parallel LLM Reasoning for Bias-Resilient, Robust Conceptual Abstraction",
+          "summary": "提出并行LLM推理以实现抗偏见的鲁棒概念抽象。",
+          "url": "https://arxiv.org/abs/2605.20194",
+          "score": 5.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "llm",
+            "reasoning",
+            "bias-mitigation"
+          ],
+          "focusTopics": [
+            "planning"
+          ]
+        },
+        {
+          "title": "Pseudo-Siamese Network for Planning in Target-Oriented Proactive Dialogues",
+          "summary": "提出伪孪生网络用于目标导向主动对话中的规划。",
+          "url": "https://arxiv.org/abs/2605.20195",
+          "score": 5.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "dialogue",
+            "planning",
+            "proactive"
+          ],
+          "focusTopics": [
+            "planning"
+          ]
+        },
+        {
+          "title": "Evaluating the Utility of Personal Health Records in Personalized Health AI",
+          "summary": "评估个人健康记录在个性化健康AI中的效用。",
+          "url": "https://arxiv.org/abs/2605.18937",
+          "score": 5,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "healthcare",
+            "phr",
+            "personalized-ai"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "KAN-MLP-Mixer: A comprehensive investigation of the usage of Kolmogorov-Arnold Networks (KANs) for improving IMU-based Human Activity Recognition",
+          "summary": "探索KAN用于改进基于IMU的人类活动识别。",
+          "url": "https://arxiv.org/abs/2605.19031",
+          "score": 5,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "kan",
+            "human-activity-recognition",
+            "imu"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Shiny Stories, Hidden Struggles: Investigating the Representation of Disability Through the Lens of LLMs",
+          "summary": "研究LLM对残疾的表征，揭示隐藏困境。",
+          "url": "https://arxiv.org/abs/2605.20191",
+          "score": 5,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "llm",
+            "bias",
+            "disability"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Improving Quantized Model Performance in Qualitative Analysis with Multi-Pass Prompt Verification",
+          "summary": "通过多轮提示验证改进量化模型在定性分析中的性能。",
+          "url": "https://arxiv.org/abs/2605.20193",
+          "score": 5,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "quantization",
+            "qualitative-analysis",
+            "prompt-verification"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Leveraging Large Language Models for Sentiment Analysis: Multi-Modal Analysis of Decentraland's MANA Token",
+          "summary": "利用LLM对Decentraland的MANA代币进行多模态情感分析。",
+          "url": "https://arxiv.org/abs/2605.20192",
+          "score": 4.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "sentiment-analysis",
+            "crypto",
+            "multimodal"
+          ],
+          "focusTopics": []
         }
       ]
     },
@@ -285,117 +647,811 @@
       "title": "Engineering & Resources",
       "items": [
         {
-          "title": "Local video indexing on MacBook with Gemma 4 31B",
-          "summary": "A developer indexed a year of personal video footage locally on a 2021 MacBook using Google's Gemma 4 31B model with 50GB swap memory, and open-sourced the tool as 'framedex' on GitHub. This demonstrates that large multimodal models can run on consumer hardware for practical archival tasks, potentially enabling privacy-preserving personal media management without cloud dependency. The Gemma 4 31B model uses 4-bit quantization to reduce memory footprint, yet still required 50GB of swap on a 16GB RAM MacBook, leading to concerns about SSD wear from heavy swapping.",
-          "url": "https://blog.simbastack.com/indexed-a-year-of-video-locally/",
+          "title": "colbymchenry/codegraph",
+          "summary": "Codegraph：预索引代码知识图谱，减少AI编码工具调用。",
+          "url": "https://github.com/colbymchenry/codegraph",
+          "score": 8.725,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+4294★)"
+            }
+          ],
+          "tags": [
+            "code-knowledge-graph",
+            "ai-coding",
+            "local"
+          ],
+          "focusTopics": [
+            "coding-agents",
+            "context-engineering"
+          ]
+        },
+        {
+          "title": "obra/superpowers",
+          "summary": "Superpowers：代理技能框架与软件开发方法论。",
+          "url": "https://github.com/obra/superpowers",
+          "score": 8.3,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+1576★)"
+            }
+          ],
+          "tags": [
+            "agent-framework",
+            "skills",
+            "methodology"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "Two hours that changed AI",
+          "summary": "分析OpenAI和Anthropic近期重大事件对AI行业的影响",
+          "url": "https://www.axios.com/2026/05/21/ai-news-cycle-openai-anthropic-spacex",
           "score": 8,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "asenna"
+              "name": "axios.com"
+            }
+          ],
+          "tags": [
+            "openai",
+            "anthropic",
+            "industry-impact"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Anthropic’s Code with Claude showed off coding's future—whether you like it or not | MIT Technology Review",
+          "summary": "评论Anthropic的Code with Claude展示AI编程未来",
+          "url": "https://www.technologyreview.com/2026/05/21/1137735/anthropics-code-with-claude-showed-off-codings-future-whether-you-like-it-or-not/",
+          "score": 8,
+          "sources": [
+            {
+              "name": "technologyreview.com"
+            }
+          ],
+          "tags": [
+            "anthropic",
+            "ai-coding",
+            "claude"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "multica-ai/andrej-karpathy-skills",
+          "summary": "基于Karpathy观察的Claude Code改进配置。",
+          "url": "https://github.com/multica-ai/andrej-karpathy-skills",
+          "score": 7.875,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+2614★)"
+            }
+          ],
+          "tags": [
+            "claude-code",
+            "coding-agents",
+            "prompt-engineering"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "Datasette Agent",
+          "summary": "发布Datasette Agent，一个可扩展的AI助手。",
+          "url": "https://simonwillison.net/2026/May/21/datasette-agent/#atom-everything",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "Simon Willison"
+            }
+          ],
+          "tags": [
+            "datasette",
+            "ai-assistant",
+            "open-source"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "The Pulse: Antigravity 2.0 takes ‘IDE’ out of its new IDE",
+          "summary": "谷歌新AI IDE Antigravity 2.0遭负面反馈，Meta裁员10%。",
+          "url": "https://newsletter.pragmaticengineer.com/p/the-pulse-antigravity-20-takes-ide",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "Pragmatic Engineer"
+            }
+          ],
+          "tags": [
+            "google",
+            "ide",
+            "ai-coding"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "antirez/ds4",
+          "summary": "antirez发布DeepSeek 4 Flash本地推理引擎。",
+          "url": "https://github.com/antirez/ds4",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "Co-Starred"
+            }
+          ],
+          "tags": [
+            "deepseek",
+            "local-inference",
+            "metal"
+          ],
+          "focusTopics": [
+            "model-release"
+          ]
+        },
+        {
+          "title": "Imbad0202/academic-research-skills",
+          "summary": "Claude Code 学术研究技能，自动化研究到写作流程。",
+          "url": "https://github.com/Imbad0202/academic-research-skills",
+          "score": 7.45,
+          "sources": [
+            {
+              "name": "GitHub trending:python (+2579★)"
+            }
+          ],
+          "tags": [
+            "claude-code",
+            "research",
+            "academic"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "HKUDS/CLI-Anything",
+          "summary": "CLI-Anything：让所有软件支持AI代理原生交互。",
+          "url": "https://github.com/HKUDS/CLI-Anything",
+          "score": 7.359,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+656★)"
+            }
+          ],
+          "tags": [
+            "cli",
+            "agent-native",
+            "tool-use"
+          ],
+          "focusTopics": [
+            "tool-use"
+          ]
+        },
+        {
+          "title": "Indexing a year of video locally on a 2021 MacBook with Gemma4-31B (50GB swap)",
+          "summary": "在2021款MacBook上使用Gemma4-31B本地索引一年视频，展示本地AI能力。",
+          "url": "https://blog.simbastack.com/indexed-a-year-of-video-locally/",
+          "score": 7.239,
+          "sources": [
+            {
+              "name": "HN (288)"
             }
           ],
           "tags": [
             "local-llm",
             "video-indexing",
-            "personal-archives",
-            "gemma",
-            "macbook"
+            "gemma"
           ],
-          "focusTopics": [
-            "memory"
-          ],
-          "background": "Gemma 4 is a family of open multimodal models by Google DeepMind, supporting text and image inputs with up to 256K token context. The 31B variant is designed for consumer GPUs and workstations. Swap memory is a Linux/Unix mechanism that uses disk space as virtual RAM when physical memory is insufficient.",
-          "discussion": "Commenters questioned the necessity of 50GB swap, noting that 4-bit quantized Gemma 4 31B should only require ~19 GiB, and expressed concerns about accelerated SSD wear. The author responded by open-sourcing the code and outlining plans to integrate with DaVinci Resolve for video editing."
+          "focusTopics": []
         },
         {
-          "title": "Google's Antigravity IDE Bait-and-Switch Angers Users",
-          "summary": "Google updated its Antigravity IDE, replacing the original VSCode-based editor with a new agentic tool, effectively abandoning the previous product and frustrating existing users. This bait-and-switch undermines trust in Google's developer tools and highlights the company's inconsistent product strategy, potentially driving developers away from its ecosystem. The update effectively resets the product, ignoring existing users' workflows and settings; community members have created workarounds to restore the original VSCode integration.",
-          "url": "https://www.0xsid.com/blog/antigravity-bait-n-switch",
-          "score": 8,
+          "title": "can1357/oh-my-pi",
+          "summary": "终端 AI 编码代理，支持哈希锚定编辑、LSP、子代理等。",
+          "url": "https://github.com/can1357/oh-my-pi",
+          "score": 7.125,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "ssiddharth"
+              "name": "GitHub trending:all (+500★)"
             }
           ],
           "tags": [
-            "Google",
-            "Antigravity IDE",
-            "developer tools",
-            "bait and switch",
-            "VSCode"
+            "coding-agent",
+            "terminal",
+            "open-source"
           ],
-          "focusTopics": [],
-          "background": "Antigravity IDE was originally a lightweight VSCode-based editor with AI features powered by Gemini. The new version pivots to an agentic tool that acts autonomously, a shift that caught many users off guard.",
-          "discussion": "Users expressed frustration and distrust, with some noting Google's history of abandoning products. One user shared a Python script to restore the old setup, while others debated whether the new direction is viable."
+          "focusTopics": [
+            "coding-agents"
+          ]
         },
         {
-          "title": "Flipper One Announced: Community Help Sought",
-          "summary": "Flipper Devices announced the Flipper One, a more powerful multi-protocol tool and portable Arm Linux computer, and asked the community for input on its development. The Flipper One represents a significant upgrade from the popular Flipper Zero, adding Linux capabilities, 5G, Ethernet, and AI features, which could expand its user base from hobbyists to advanced developers and security researchers. The device is powered by a Rockchip RK3576 octa-core SoC and a Raspberry Pi RP2350 for low-level control, and features M.2, GPIO, and network connectivity. However, the blog post is vague about the specific help needed, causing confusion among readers.",
-          "url": "https://blog.flipper.net/flipper-one-we-need-your-help/",
+          "title": "Giving Agents Computers — Ivan Burazin, Daytona",
+          "summary": "与Daytona CEO讨论Agent云平台、裸金属沙箱和RL评估。",
+          "url": "https://www.latent.space/p/daytona",
           "score": 7,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "sandebert"
+              "name": "Latent Space"
+            }
+          ],
+          "tags": [
+            "agent",
+            "cloud",
+            "sandbox"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "Google is pitching an AI agent ecosystem to consumers who may not buy it - TechCrunch",
+          "summary": "谷歌向消费者推销AI代理生态系统，但可能不被接受。",
+          "url": "https://techcrunch.com/2026/05/21/google-is-pitching-an-ai-agent-ecosystem-to-consumers-who-may-not-buy-it/",
+          "score": 7,
+          "sources": [
+            {
+              "name": "techcrunch.com"
+            }
+          ],
+          "tags": [
+            "google",
+            "agent",
+            "consumer"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "anthropics/claude-plugins-official",
+          "summary": "Anthropic官方Claude插件目录发布。",
+          "url": "https://github.com/anthropics/claude-plugins-official",
+          "score": 6.973,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+682★)"
+            }
+          ],
+          "tags": [
+            "claude",
+            "plugins",
+            "anthropic"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "Lum1104/Understand-Anything",
+          "summary": "将代码转为交互式知识图谱，支持探索和问答。",
+          "url": "https://github.com/Lum1104/Understand-Anything",
+          "score": 6.949,
+          "sources": [
+            {
+              "name": "GitHub trending:typescript (+666★)"
+            }
+          ],
+          "tags": [
+            "knowledge-graph",
+            "code-analysis",
+            "interactive"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Launch HN: Runtime (YC P26) – Sandboxed coding agents for everyone on a team",
+          "summary": "Runtime发布沙箱化编码代理，面向团队协作。",
+          "url": "https://www.runtm.com/",
+          "score": 6.576,
+          "sources": [
+            {
+              "name": "HN (67)"
+            }
+          ],
+          "tags": [
+            "coding-agents",
+            "sandbox",
+            "team-collaboration"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "antoinezambelli/forge",
+          "summary": "自托管 LLM 工具调用和多步代理工作流的 Python 框架。",
+          "url": "https://github.com/antoinezambelli/forge",
+          "score": 6.547000000000001,
+          "sources": [
+            {
+              "name": "GitHub trending:python (+398★)"
+            }
+          ],
+          "tags": [
+            "llm",
+            "tool-calling",
+            "agent-framework"
+          ],
+          "focusTopics": [
+            "tool-use",
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "Expedia to Launch Agentic AI Tools for B2B Partners - Skift",
+          "summary": "Expedia为B2B合作伙伴推出代理AI工具。",
+          "url": "https://skift.com/2026/05/21/expedia-to-launch-agentic-ai-tools-for-b2b-partners/",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "skift.com"
+            }
+          ],
+          "tags": [
+            "travel",
+            "agent",
+            "b2b"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "Tencent Hy 30B/7B/1.8B",
+          "summary": "腾讯发布Hy-MT2系列多语言翻译模型，含30B/7B/1.8B版本。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tjien7/tencent_hy_30b7b18b/",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "translation",
+            "multilingual",
+            "tencent"
+          ],
+          "focusTopics": [
+            "model-release"
+          ]
+        },
+        {
+          "title": "Alishahryar1/free-claude-code",
+          "summary": "免费使用 Claude Code 的工具，支持终端和 VSCode。",
+          "url": "https://github.com/Alishahryar1/free-claude-code",
+          "score": 6.199999999999999,
+          "sources": [
+            {
+              "name": "GitHub trending:python (+450★)"
+            }
+          ],
+          "tags": [
+            "claude-code",
+            "free",
+            "vscode"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "ChromeDevTools/chrome-devtools-mcp",
+          "summary": "Chrome DevTools MCP 服务器，为编码代理提供浏览器调试能力。",
+          "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+          "score": 6.1765,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+151★)"
+            }
+          ],
+          "tags": [
+            "coding-agent",
+            "mcp",
+            "devtools"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "google-gemini/gemini-cli",
+          "summary": "Google Gemini 开源 CLI 代理，终端内调用 Gemini。",
+          "url": "https://github.com/google-gemini/gemini-cli",
+          "score": 6.1000000000000005,
+          "sources": [
+            {
+              "name": "GitHub trending:typescript (+100★)"
+            }
+          ],
+          "tags": [
+            "gemini",
+            "cli",
+            "open-source"
+          ],
+          "focusTopics": [
+            "model-release"
+          ]
+        },
+        {
+          "title": "datasette-agent-sprites 0.1a0",
+          "summary": "发布datasette-agent-sprites 0.1a0，支持精灵图。",
+          "url": "https://simonwillison.net/2026/May/21/datasette-agent-sprites/#atom-everything",
+          "score": 6,
+          "sources": [
+            {
+              "name": "Simon Willison"
+            }
+          ],
+          "tags": [
+            "datasette",
+            "plugin",
+            "release"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "datasette-agent-charts 0.1a2",
+          "summary": "发布datasette-agent-charts 0.1a2，图表功能。",
+          "url": "https://simonwillison.net/2026/May/21/datasette-agent-charts/#atom-everything",
+          "score": 6,
+          "sources": [
+            {
+              "name": "Simon Willison"
+            }
+          ],
+          "tags": [
+            "datasette",
+            "chart",
+            "release"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "datasette-agent 0.1a3",
+          "summary": "发布datasette-agent 0.1a3，核心更新。",
+          "url": "https://simonwillison.net/2026/May/21/datasette-agent-2/#atom-everything",
+          "score": 6,
+          "sources": [
+            {
+              "name": "Simon Willison"
+            }
+          ],
+          "tags": [
+            "datasette",
+            "agent",
+            "release"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Waiting for Qwen 3.7 open weight... The new King has arrived...",
+          "summary": "社区期待Qwen 3.7开源权重发布，认为将成新标杆。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tjvz6l/waiting_for_qwen_37_open_weight_the_new_king_has/",
+          "score": 6,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "qwen",
+            "open-source",
+            "model-release"
+          ],
+          "focusTopics": [
+            "model-release"
+          ]
+        },
+        {
+          "title": "Throwing AI-generated walls of text into conversations",
+          "summary": "批评在对话中滥用AI生成的长文本",
+          "url": "https://noslopgrenade.com/",
+          "score": 5.7379999999999995,
+          "sources": [
+            {
+              "name": "HN (496)"
+            }
+          ],
+          "tags": [
+            "ai-ethics",
+            "conversation"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Show HN: Agent.email – sign up via curl, claim with a human OTP",
+          "summary": "Agent.email为AI代理提供邮箱，支持curl注册。",
+          "url": "https://news.ycombinator.com/item?id=48225596",
+          "score": 5.704999999999999,
+          "sources": [
+            {
+              "name": "HN (60)"
+            }
+          ],
+          "tags": [
+            "ai-agents",
+            "email",
+            "tool-use"
+          ],
+          "focusTopics": [
+            "tool-use"
+          ]
+        },
+        {
+          "title": "google-labs-code/stitch-skills",
+          "summary": "Stitch MCP 服务器的代理技能库，兼容编码代理。",
+          "url": "https://github.com/google-labs-code/stitch-skills",
+          "score": 5.6285,
+          "sources": [
+            {
+              "name": "GitHub trending:typescript (+69★)"
+            }
+          ],
+          "tags": [
+            "mcp",
+            "agent-skills",
+            "open-standard"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "Qwen3.6 35Ba3 has changed my workflows and even how I use my computer",
+          "summary": "用户分享Qwen3.6 35Ba3模型如何改变其工作流和电脑使用方式。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tjwrp7/qwen36_35ba3_has_changed_my_workflows_and_even/",
+          "score": 5.5,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "qwen",
+            "workflow",
+            "coding-agent"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "teng-lin/notebooklm-py",
+          "summary": "非官方 NotebookLM Python API 及代理技能，支持编程访问。",
+          "url": "https://github.com/teng-lin/notebooklm-py",
+          "score": 5.379,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+186★)"
+            }
+          ],
+          "tags": [
+            "notebooklm",
+            "python-api",
+            "agentic"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "The memory shortage is causing a repricing of consumer electronics",
+          "summary": "AI导致内存短缺，推高消费电子产品价格。",
+          "url": "https://davidoks.blog/p/ai-is-killing-the-cheap-smartphone",
+          "score": 5.372999999999999,
+          "sources": [
+            {
+              "name": "HN (91)"
+            }
+          ],
+          "tags": [
+            "memory",
+            "pricing",
+            "ai-impact"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "dotnet/skills",
+          "summary": "微软发布.NET和C#的AI编码代理技能库。",
+          "url": "https://github.com/dotnet/skills",
+          "score": 5.2935,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+129★)"
+            }
+          ],
+          "tags": [
+            "dotnet",
+            "csharp",
+            "coding-agents"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "software-mansion/argent",
+          "summary": "代理工具包，用于控制、调试和剖析 iOS/Android 应用。",
+          "url": "https://github.com/software-mansion/argent",
+          "score": 5.2005,
+          "sources": [
+            {
+              "name": "GitHub trending:typescript (+67★)"
+            }
+          ],
+          "tags": [
+            "mobile",
+            "debugging",
+            "agentic"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Was my $48K GPU server worth it?",
+          "summary": "作者分享价值4.8万美元GPU服务器的使用体验，涉及AI训练成本。",
+          "url": "https://rosmine.ai/2026/05/13/was-my-48k-gpu-worth-it/",
+          "score": 5.087,
+          "sources": [
+            {
+              "name": "HN (279)"
+            }
+          ],
+          "tags": [
+            "gpu",
+            "infrastructure",
+            "cost"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "ZhuLinsen/daily_stock_analysis",
+          "summary": "LLM 驱动的股票分析系统，集成多数据源和决策仪表盘。",
+          "url": "https://github.com/ZhuLinsen/daily_stock_analysis",
+          "score": 5.014,
+          "sources": [
+            {
+              "name": "GitHub trending:python (+226★)"
+            }
+          ],
+          "tags": [
+            "llm",
+            "finance",
+            "dashboard"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "LatitudeGames/Equinox-31B · Hugging Face",
+          "summary": "LatitudeGames发布Equinox-31B模型，基于Gemma 31B微调。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tjtz31/latitudegamesequinox31b_hugging_face/",
+          "score": 5,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "model-release",
+            "gemma",
+            "fine-tune"
+          ],
+          "focusTopics": [
+            "model-release"
+          ]
+        },
+        {
+          "title": "110 tok/s with 12GB VRAM on Qwen3.6 35B A3B and ik_llama.cpp",
+          "summary": "用户报告在12GB VRAM上以110 tok/s运行Qwen3.6 35B A3B模型。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tjh7az/110_toks_with_12gb_vram_on_qwen36_35b_a3b_and_ik/",
+          "score": 5,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "performance",
+            "qwen",
+            "llamacpp"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "For everyone that uses OpenCode / Pi - Heres your promptprocessing fix!",
+          "summary": "llama.cpp PR修复了OpenCode/pi中的持续prompt处理问题。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tjoiij/for_everyone_that_uses_opencode_pi_heres_your/",
+          "score": 5,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "llamacpp",
+            "bug-fix",
+            "coding-agent"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "Watch The Next Phase of Artificial Intelligence - Bloomberg",
+          "summary": "Bloomberg视频讨论AI下一阶段发展",
+          "url": "https://www.bloomberg.com/news/videos/2026-05-21/the-next-phase-of-artificial-intelligence",
+          "score": 4,
+          "sources": [
+            {
+              "name": "bloomberg.com"
+            }
+          ],
+          "tags": [
+            "ai-future",
+            "video"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Latest b9274 Addresses MTP VRAM leak",
+          "summary": "llama.cpp最新版本b9274修复了MTP VRAM泄漏问题。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tk0grd/latest_b9274_addresses_mtp_vram_leak/",
+          "score": 4,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "llamacpp",
+            "bug-fix",
+            "vram"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Qwen3.6 27B and llama.cpp appreciation post",
+          "summary": "用户分享Qwen3.6 27B与llama.cpp的使用体验和配置。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tjbi24/qwen36_27b_and_llamacpp_appreciation_post/",
+          "score": 4,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "qwen",
+            "llamacpp",
+            "deployment"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "In theory, if I have $20k-ish to spend on hardware what would actually get me closest to local coding agent that would allow me to go totally off the social grid?",
+          "summary": "讨论用2万美元硬件搭建本地编码代理以脱离社交网络。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tk2s09/in_theory_if_i_have_20kish_to_spend_on_hardware/",
+          "score": 3.5,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
             }
           ],
           "tags": [
             "hardware",
-            "hacking",
-            "flipper-zero",
-            "open-source",
-            "community"
+            "coding-agent",
+            "local-ai"
           ],
-          "focusTopics": [],
-          "background": "Flipper Zero is a popular multi-tool for hacking and interacting with various wireless protocols, known for its compact size and ease of use. The Flipper One aims to be a more powerful successor, running a full Linux OS and supporting advanced networking and AI workloads, but its larger size and increased complexity have drawn comparisons to the \"second-system effect.\"",
-          "discussion": "Community comments express excitement about the concept but raise concerns about feature creep and the vague request for help. Some users question the need for on-device AI and note the risk of the second-system effect, while others appreciate the powerful chip choice and potential for open-source projects."
-        },
-        {
-          "title": "BBEdit 16 Released with One-Time Pricing",
-          "summary": "Bare Bones Software released BBEdit 16, the latest version of its long-standing macOS text editor, continuing its tradition of one-time purchase pricing instead of a subscription model. BBEdit 16's release reaffirms the viability of one-time pricing in an era dominated by subscriptions, appealing to users who value ownership and stability over recurring fees. An individual license for BBEdit 16 costs $60, significantly lower than its inflation-adjusted price of $245 in 1998. The editor remains macOS-native and extensible via shell scripts, Python, or Rust tools.",
-          "url": "https://www.barebones.com/products/bbedit/bbedit16.html",
-          "score": 6,
-          "sources": [
-            {
-              "name": "hackernews",
-              "meta": "qaz_plm"
-            }
-          ],
-          "tags": [
-            "text editor",
-            "macOS",
-            "software release",
-            "pricing"
-          ],
-          "focusTopics": [],
-          "background": "BBEdit is a long-standing text editor for macOS, first released as shareware in the early 1990s. It has maintained a loyal user base by focusing on native performance and avoiding subscription pricing, unlike many modern editors.",
-          "discussion": "Community comments are largely positive, with users praising BBEdit's pricing model and longevity. Some compare it favorably to Electron-based editors, while others mention alternatives like CotEditor or Zed, but overall sentiment is nostalgic and appreciative."
-        },
-        {
-          "title": "Vivaldi 8.0: Incremental Update with Community Buzz",
-          "summary": "Vivaldi 8.0 has been released as a minor update to the desktop browser, bringing incremental improvements and refinements rather than major new features. While not groundbreaking, Vivaldi 8.0 reinforces the browser's position as a feature-rich, privacy-focused alternative to mainstream browsers, and the active community discussion highlights ongoing user concerns about openness and business models. The update includes performance tweaks, UI polish, and bug fixes, but notably avoids bundling AI features, which some users appreciate. Vivaldi remains partially closed-source, with its proprietary UI layer built on top of the open-source Chromium engine.",
-          "url": "https://vivaldi.com/blog/vivaldi-on-desktop-8-0/",
-          "score": 6,
-          "sources": [
-            {
-              "name": "hackernews",
-              "meta": "OuterVale"
-            }
-          ],
-          "tags": [
-            "Vivaldi",
-            "browser",
-            "release",
-            "privacy",
-            "open-source"
-          ],
-          "focusTopics": [],
-          "background": "Vivaldi is a web browser known for its high customizability, built-in tools (like mail, calendar, and notes), and strong privacy features. It uses Chromium as its base but adds a proprietary interface. The browser targets power users who want more control than Chrome or Firefox offer.",
-          "discussion": "Community comments show mixed sentiments: some users praise Vivaldi's workspaces and compatibility, while others express privacy concerns due to its partially closed-source nature. Several users appreciate the absence of AI features in this release, and some compare it favorably to Firefox for specific use cases."
+          "focusTopics": [
+            "coding-agents"
+          ]
         }
       ]
     }
-  ]
+  ],
+  "aiSummary": "今日AI领域多项重大动态：Anthropic每年支付150亿美元使用马斯克数据中心[#item-theverge-com-science-935229-spacex-anthropic-ipo-ai-capacity]，微软与安永联合投资10亿美元帮助企业采用AI[#item-bloomberg-com-news-articles-2026-05-21-microsoft-and-ey-to-s]，Hark融资7亿美元开发通用AI界面[#item-techcrunch-com-2026-05-21-hark-raises-700m-series-a-for-its-]。研究方面，OpenAI GPT-next以不到1000美元推翻80年历史的Erdős问题[#item-latent-space-p-ainews-openai-gpt-next-disproves]，并提出了基于代理的思维链调优[#item-arxiv-org-abs-2605-20201]和数据探针方法[#item-arxiv-org-abs-2605-18801]。工具更新包括Codegraph预索引代码知识图谱[#item-github-com-colbymchenry-codegraph]、Superpowers代理技能框架[#item-github-com-obra-superpowers]及基于Karpathy观察的Claude Code改进配置[#item-github-com-multica-ai-andrej-karpathy-skills]。观点洞察指出，OpenAI和Anthropic近期事件正改变AI行业格局[#item-axios-com-2026-05-21-ai-news-cycle-openai-anthropic-spacex]，Anthropic的Code with Claude展示了AI编程未来[#item-technologyreview-com-2026-05-21-1137735-anthropics-code-with]，而谷歌新AI IDE Antigravity 2.0遭遇负面反馈[#item-newsletter-pragmaticengineer-com-p-the-pulse-antigravity-20-]。"
 }
