@@ -18,6 +18,25 @@
       "score": 5,
       "scoreReason": "Freshness is moderate (269 stars, new but not viral), relevance is low (C library not directly AI), concreteness is high (real library with code).",
       "type": "github"
+    },
+    {
+      "repo": "NVlabs/GatedDeltaNet-2",
+      "url": "https://github.com/NVlabs/GatedDeltaNet-2",
+      "description": "Official PyTorch Implementation of Gated DeltaNet-2: Decoupling Erase and Write in Linear Attention",
+      "language": "Python",
+      "stargazersCount": 37,
+      "starredBy": "jph00",
+      "starredAt": "2026-05-22T00:59:34Z",
+      "highlights": "Gated DeltaNet-2 introduces a novel linear attention mechanism that decouples erase and write operations, improving memory management in recurrent neural networks. Built on the DeltaNet architecture, it achieves competitive performance with standard attention while maintaining linear complexity, making it suitable for long-sequence tasks.",
+      "worthReading": "This repository offers a fresh perspective on efficient attention mechanisms, which is crucial for scaling transformers to longer contexts. The decoupling of erase and write could inspire new architectures in LLM and agent systems.",
+      "topics": [],
+      "tags": [
+        "llm",
+        "infra"
+      ],
+      "score": 7,
+      "scoreReason": "Freshness is high (new repo with 37 stars, rising), relevance is strong (linear attention for LLMs), and concreteness is solid (official PyTorch implementation with clear description).",
+      "type": "github"
     }
   ],
   "posts": [],
@@ -193,66 +212,6 @@
   ],
   "blogs": [],
   "xPosts": [
-    {
-      "type": "x",
-      "id": "1943444549696917714",
-      "url": "https://x.com/jeremyphoward/status/1943444549696917714",
-      "author": {
-        "handle": "jeremyphoward",
-        "displayName": "Jeremy Howard",
-        "avatar": "https://avatars.githubusercontent.com/jph00"
-      },
-      "content": "Here's a complete unedited video of asking Grok for its views on the Israel/Palestine situation. It first searches twitter for what Elon thinks.",
-      "createdAt": "2026-04-22T04:07:09.192Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Demonstrates Grok's behavior when asked about a complex geopolitical topic, showing it searches for Elon Musk's opinions first.",
-      "worthReading": "Provides insight into how certain AI systems might prioritize information sources.",
-      "tags": [
-        "llm",
-        "evaluation"
-      ]
-    },
-    {
-      "type": "x",
-      "id": "1969152436519514202",
-      "url": "https://x.com/jeremyphoward/status/1969152436519514202",
-      "author": {
-        "handle": "jeremyphoward",
-        "displayName": "Jeremy Howard",
-        "avatar": "https://avatars.githubusercontent.com/jph00"
-      },
-      "content": "Here's what I would prefer to see:",
-      "createdAt": "2026-04-22T04:07:09.192Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Jeremy Howard expresses a preference for how something should be presented or implemented.",
-      "worthReading": "Shows his perspective on ideal approaches or solutions.",
-      "tags": []
-    },
-    {
-      "type": "x",
-      "id": "1939835364392476800",
-      "url": "https://x.com/jeremyphoward/status/1939835364392476800",
-      "author": {
-        "handle": "jeremyphoward",
-        "displayName": "Jeremy Howard",
-        "avatar": "https://avatars.githubusercontent.com/jph00"
-      },
-      "content": "Useful thread to read for folks that haven't done enterprise deployments before.",
-      "createdAt": "2026-04-22T04:07:09.192Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Shares a resource thread about enterprise AI deployments for those new to the topic.",
-      "worthReading": "Provides educational value for practitioners working on enterprise AI implementation.",
-      "tags": [
-        "deployment",
-        "infra"
-      ]
-    },
     {
       "type": "x",
       "id": "1773001662808129620",
@@ -1469,7 +1428,6 @@
     }
   ],
   "dailyCounts": [
-    3,
     2,
     2,
     2,
@@ -1498,7 +1456,8 @@
     2,
     2,
     1,
-    0
+    0,
+    1
   ],
-  "interestSummary": "Jeremy Howard is currently focused on critiquing AI alignment discourse and the behavior of AI models like Grok, particularly regarding their deference to Elon Musk's views on sensitive topics, while also exploring practical new projects like ShellSage and FastHTML integrations with Anthropic's Claude."
+  "interestSummary": "Jeremy Howard's recent activity shows a focus on AI safety and alignment critique, particularly regarding biases in systems like Grok, alongside practical tooling interests in safe C programming, linear attention architectures, and his own projects like FastHTML and ShellSage."
 }

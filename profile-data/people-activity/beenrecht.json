@@ -3,27 +3,6 @@
   "stars": [],
   "posts": [
     {
-      "uri": "at://did:plc:oogxmzmgauh5ug2tfe5vc7wm/app.bsky.feed.post/3mk3phkjzas2m",
-      "url": "https://bsky.app/profile/beenwrekt.bsky.social/post/3mk3phkjzas2m",
-      "author": {
-        "handle": "beenwrekt.bsky.social",
-        "displayName": "Ben Recht",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:oogxmzmgauh5ug2tfe5vc7wm/bafkreigi5u3fn2porezvfmnxunm7zynzebk43tsrzvzeplciswiazdyqqe"
-      },
-      "content": "Building a theory of the architecture of organizing machines and people.",
-      "createdAt": "2026-04-22T14:29:12.312Z",
-      "likeCount": 14,
-      "replyCount": 0,
-      "repostCount": 2,
-      "highlights": "",
-      "worthReading": "",
-      "tags": [
-        "agent",
-        "infra"
-      ],
-      "type": "bluesky"
-    },
-    {
       "uri": "at://did:plc:oogxmzmgauh5ug2tfe5vc7wm/app.bsky.feed.post/3mk6a453zik22",
       "url": "https://bsky.app/profile/beenwrekt.bsky.social/post/3mk6a453zik22",
       "author": {
@@ -155,93 +134,15 @@
       "repostCount": 2,
       "highlights": "",
       "worthReading": "",
-      "tags": [],
+      "tags": [
+        "evaluation"
+      ],
       "type": "bluesky"
     }
   ],
   "videos": [],
   "blogs": [],
   "xPosts": [
-    {
-      "type": "x",
-      "id": "1927382200397251064",
-      "url": "https://x.com/beenwrekt/status/1927382200397251064",
-      "author": {
-        "handle": "beenwrekt",
-        "displayName": "Ben Recht",
-        "avatar": null
-      },
-      "content": "I weigh in on the Trump administration's newfound obsession with Gold Standard Science and reproducibility.",
-      "createdAt": "2026-04-22T04:10:25.919Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Ben Recht comments on the Trump administration's focus on scientific reproducibility and gold standard science.",
-      "worthReading": "Provides insight into political discourse around scientific standards from a technical expert's perspective.",
-      "tags": [
-        "evaluation"
-      ]
-    },
-    {
-      "type": "x",
-      "id": "2014360939563520146",
-      "url": "https://x.com/beenwrekt/status/2014360939563520146",
-      "author": {
-        "handle": "beenwrekt",
-        "displayName": "Ben Recht",
-        "avatar": null
-      },
-      "content": "For the first time in almost a decade, I'm teaching a class on learning and control.",
-      "createdAt": "2026-04-22T04:10:25.919Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Ben Recht announces he's teaching a class on learning and control after nearly ten years.",
-      "worthReading": "Shows his ongoing academic engagement and expertise in machine learning and control systems.",
-      "tags": [
-        "agent"
-      ]
-    },
-    {
-      "type": "x",
-      "id": "1995878181635850668",
-      "url": "https://x.com/beenwrekt/status/1995878181635850668",
-      "author": {
-        "handle": "beenwrekt",
-        "displayName": "Ben Recht",
-        "avatar": null
-      },
-      "content": "With more equations than usual, I explain how policy gradient gives you a framework to randomly search for",
-      "createdAt": "2026-04-22T04:10:25.919Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Ben Recht explains policy gradient methods as a framework for random search in reinforcement learning.",
-      "worthReading": "Offers technical insight into reinforcement learning algorithms from an expert in the field.",
-      "tags": [
-        "agent"
-      ]
-    },
-    {
-      "type": "x",
-      "id": "1943316482408222961",
-      "url": "https://x.com/beenwrekt/status/1943316482408222961",
-      "author": {
-        "handle": "beenwrekt",
-        "displayName": "Ben Recht",
-        "avatar": null
-      },
-      "content": "Fully open machine learning requires not only GPU access but a community commitment to openness.",
-      "createdAt": "2026-04-22T04:10:25.919Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Ben Recht argues that open machine learning requires both hardware access and community commitment to openness.",
-      "worthReading": "Highlights important considerations for open source AI development beyond just computational resources.",
-      "tags": [
-        "infra"
-      ]
-    },
     {
       "type": "x",
       "id": "1841846986351509513",
@@ -1978,10 +1879,71 @@
       "tags": [
         "safety"
       ]
+    },
+    {
+      "type": "x",
+      "id": "1945854952368386233",
+      "url": "https://x.com/beenwrekt/status/1945854952368386233",
+      "author": {
+        "handle": "beenwrekt",
+        "displayName": "Ben Recht",
+        "avatar": null
+      },
+      "content": "Very half-baked philosophy of engineering post: How do we prove that something is unpredictable in machine learning",
+      "createdAt": "2026-05-22T04:31:07.303Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Ben Recht questions how to prove unpredictability in machine learning, reflecting on engineering philosophy.",
+      "worthReading": "Challenges assumptions about predictability in ML systems.",
+      "tags": [
+        "safety",
+        "evaluation"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2014360939563520146",
+      "url": "https://x.com/beenwrekt/status/2014360939563520146",
+      "author": {
+        "handle": "beenwrekt",
+        "displayName": "Ben Recht",
+        "avatar": null
+      },
+      "content": "For the first time in almost a decade, I'm teaching a class on learning and control.",
+      "createdAt": "2026-05-22T04:31:07.303Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Ben Recht announces teaching a class on learning and control after a decade.",
+      "worthReading": "Indicates renewed focus on control theory in ML education.",
+      "tags": [
+        "deployment"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "1624818456645468160",
+      "url": "https://x.com/beenwrekt/status/1624818456645468160",
+      "author": {
+        "handle": "beenwrekt",
+        "displayName": "Ben Recht",
+        "avatar": null
+      },
+      "content": "I have a recommended reading list for Artificial Intelligence, and it hasn't changed since 2019.",
+      "createdAt": "2026-05-22T04:31:07.303Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Ben Recht's AI reading list remains unchanged since 2019, suggesting foundational texts.",
+      "worthReading": "Highlights enduring principles in AI literature.",
+      "tags": [
+        "llm",
+        "evaluation"
+      ]
     }
   ],
   "dailyCounts": [
-    5,
     4,
     4,
     3,
@@ -2010,7 +1972,8 @@
     3,
     4,
     4,
+    3,
     3
   ],
-  "interestSummary": "Ben Recht is currently focused on the theory of engineering architecture and organizational design, as well as promoting his book *The Irrational Decision* through talks and discussions. He is also actively teaching a class on learning and control and engaging with debates about scientific reproducibility and the limits of quantification in machine learning."
+  "interestSummary": "Ben Recht is currently focused on teaching a new class on learning and control, promoting his book *The Irrational Decision*, and critically engaging with themes of scientific rationality, reproducibility, and the limits of optimization in machine learning and institutional contexts."
 }

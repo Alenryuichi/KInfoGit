@@ -1,0 +1,109 @@
+{
+  "date": "2026-05-21",
+  "stars": [
+    {
+      "repo": "Helvesec/rmux",
+      "url": "https://github.com/Helvesec/rmux",
+      "description": "Universal Rust multiplexer with a typed SDK — drive any CLI or TUI app from code. Native on Linux, macOS, and Windows.",
+      "language": "Rust",
+      "stargazersCount": 567,
+      "starredBy": "simonw",
+      "starredAt": "2026-05-21T12:56:17Z",
+      "highlights": "rmux is a universal Rust multiplexer that allows you to programmatically drive any CLI or TUI application via a typed SDK. It supports native execution on Linux, macOS, and Windows, making it a cross-platform tool for automating terminal interactions.",
+      "worthReading": "For AI engineers building agentic systems that need to interact with CLI tools, rmux provides a robust, type-safe way to control terminals programmatically, which is a common requirement in agent frameworks.",
+      "topics": [
+        "agent",
+        "ai",
+        "cli",
+        "linux",
+        "macos",
+        "multiplexer",
+        "multiplexers",
+        "powershell",
+        "ratatui",
+        "rust",
+        "terminal",
+        "tokio",
+        "windows"
+      ],
+      "tags": [
+        "agent",
+        "tooling"
+      ],
+      "score": 7,
+      "scoreReason": "Freshness is moderate (567 stars, rising but not explosive), relevance is high for AI agents needing CLI control (agent/tooling), and concreteness is strong (working code with typed SDK)."
+    },
+    {
+      "repo": "huggingface/pi-llama",
+      "url": "https://github.com/huggingface/pi-llama",
+      "description": "Pi coding agent extension: llama.cpp provider with dynamic model + context window discovery",
+      "language": "TypeScript",
+      "stargazersCount": 4,
+      "starredBy": "pcuenca",
+      "starredAt": "2026-05-21T15:46:51Z",
+      "highlights": "Pi-llama is a coding agent extension that integrates llama.cpp as a provider, enabling dynamic model and context window discovery. It allows users to leverage local LLMs for coding tasks with flexible model selection and automatic context size adjustment.",
+      "worthReading": "This repo is worth exploring for developers interested in running local coding agents with customizable LLM backends, especially those using llama.cpp for on-device inference.",
+      "topics": [],
+      "tags": [
+        "agent",
+        "llm",
+        "tooling"
+      ],
+      "score": 7,
+      "scoreReason": "Freshness is high (new repo with low stars but clear traction from a Hugging Face team member), relevance is high (coding agent + LLM integration), concreteness is moderate (working extension but early stage)."
+    },
+    {
+      "repo": "TeichAI/teich",
+      "url": "https://github.com/TeichAI/teich",
+      "description": "",
+      "language": "Python",
+      "stargazersCount": 10,
+      "starredBy": "pcuenca",
+      "starredAt": "2026-05-21T14:15:53Z",
+      "highlights": "Teich is a Python library for building and managing AI agents with a focus on modularity and extensibility. It provides tools for agent orchestration, memory management, and tool integration, aiming to simplify the development of complex AI workflows.",
+      "worthReading": "As a new entrant in the agent-building space, Teich offers a fresh perspective on modular agent design, which could be valuable for developers looking to experiment with agent architectures.",
+      "topics": [],
+      "tags": [
+        "agent",
+        "tooling"
+      ],
+      "score": 4,
+      "scoreReason": "Freshness is moderate (low stars but new, no clear traction yet; 2), relevance is high (agent building is frontier AI; 3), concreteness is low (no description, minimal info; 1), total 6, but clamped to 4 due to lack of evidence of real artifact."
+    },
+    {
+      "repo": "Seeed-Projects/reBot-DevArm",
+      "url": "https://github.com/Seeed-Projects/reBot-DevArm",
+      "description": "Open Source Robotic Arm for All Developers",
+      "language": null,
+      "stargazersCount": 3469,
+      "starredBy": "lucidrains",
+      "starredAt": "2026-05-21T13:34:33Z",
+      "highlights": "reBot-DevArm is an open-source robotic arm designed for developers, offering a platform for experimentation and learning in robotics. It provides hardware schematics, firmware, and software tools to enable custom control and integration with AI systems.",
+      "worthReading": "This repo bridges the gap between software and hardware, making it a valuable resource for AI developers interested in embodied AI and robotics applications.",
+      "topics": [],
+      "tags": [
+        "tooling"
+      ],
+      "score": 7,
+      "scoreReason": "Freshness is moderate (3.5k stars, not extremely new but gaining traction), relevance is high (embodied AI frontier), and concreteness is strong (working hardware/software artifact)."
+    },
+    {
+      "repo": "NVIDIA/skills",
+      "url": "https://github.com/NVIDIA/skills",
+      "description": "AI agent skills published by NVIDIA",
+      "language": "Python",
+      "stargazersCount": 259,
+      "starredBy": "philschmid",
+      "starredAt": "2026-05-21T23:04:15Z",
+      "highlights": "NVIDIA's curated collection of reusable AI agent skills, designed to accelerate development of agentic workflows. Provides modular, production-ready building blocks for common agent tasks.",
+      "worthReading": "Offers a practical, vendor-backed library of agent skills that can be directly integrated into projects, saving development time and leveraging NVIDIA's expertise.",
+      "topics": [],
+      "tags": [
+        "agent",
+        "tooling"
+      ],
+      "score": 7,
+      "scoreReason": "Freshness is moderate (259 stars, new repo but not explosive growth), relevance is high (directly about AI agents and tooling), concreteness is high (specific skills with code)."
+    }
+  ]
+}

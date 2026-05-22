@@ -191,66 +191,39 @@
       "score": 6,
       "scoreReason": "Freshness is moderate (346 stars, niche but rising), relevance is high (AI watermark removal ties to multi-modal and tooling), concreteness is strong (working CLI and library).",
       "type": "github"
+    },
+    {
+      "repo": "postlund/pyatv",
+      "url": "https://github.com/postlund/pyatv",
+      "description": "A client library for Apple TV and AirPlay devices",
+      "language": "Python",
+      "stargazersCount": 1117,
+      "starredBy": "minimaxir",
+      "starredAt": "2026-05-22T04:15:36Z",
+      "highlights": "A Python client library for controlling Apple TV and AirPlay devices, enabling home automation and media streaming. It supports asyncio for async operations and is available on PyPI.",
+      "worthReading": "Useful for developers integrating Apple TV into smart home systems or building custom media controllers.",
+      "topics": [
+        "airplay",
+        "apple-tv",
+        "asyncio",
+        "hacktoberfest",
+        "home-automation",
+        "pypi",
+        "python3",
+        "raop"
+      ],
+      "tags": [
+        "tooling"
+      ],
+      "score": 4,
+      "scoreReason": "Freshness is low (established repo, 1.1k stars, no recent surge), relevance is moderate (home automation tooling, not frontier AI), concreteness is high (working library with clear functionality).",
+      "type": "github"
     }
   ],
   "posts": [],
   "videos": [],
   "blogs": [],
   "xPosts": [
-    {
-      "type": "x",
-      "id": "1641885820734046209",
-      "url": "https://x.com/minimaxir/status/1641885820734046209",
-      "author": {
-        "handle": "minimaxir",
-        "displayName": "Max Woolf",
-        "avatar": "https://avatars.githubusercontent.com/minimaxir"
-      },
-      "content": "LOL",
-      "createdAt": "2026-04-22T04:08:21.453Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "A simple humorous tweet expressing amusement.",
-      "worthReading": "Shows the person's casual engagement style on the platform.",
-      "tags": []
-    },
-    {
-      "type": "x",
-      "id": "2019510645180494156",
-      "url": "https://x.com/minimaxir/status/2019510645180494156",
-      "author": {
-        "handle": "minimaxir",
-        "displayName": "Max Woolf",
-        "avatar": "https://avatars.githubusercontent.com/minimaxir"
-      },
-      "content": "",
-      "createdAt": "2026-04-22T04:08:21.453Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "A tweet with no visible text content in the snippet, only showing view count.",
-      "worthReading": "Indicates engagement through views rather than text content.",
-      "tags": []
-    },
-    {
-      "type": "x",
-      "id": "1825584262311186616",
-      "url": "https://x.com/minimaxir/status/1825584262311186616",
-      "author": {
-        "handle": "minimaxir",
-        "displayName": "Max Woolf",
-        "avatar": "https://avatars.githubusercontent.com/minimaxir"
-      },
-      "content": "",
-      "createdAt": "2026-04-22T04:08:21.453Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "A tweet with no visible text content in the snippet, only showing like count.",
-      "worthReading": "Shows engagement through likes despite minimal visible content.",
-      "tags": []
-    },
     {
       "type": "x",
       "id": "1641885820734046209",
@@ -1386,10 +1359,31 @@
       "highlights": "A short, relatable post with an image (content not fully captured).",
       "worthReading": "Demonstrates Woolf's casual, personal style on social media.",
       "tags": []
+    },
+    {
+      "type": "x",
+      "id": "1600258754993262594",
+      "url": "https://x.com/minimaxir/status/1600258754993262594",
+      "author": {
+        "handle": "minimaxir",
+        "displayName": "Max Woolf",
+        "avatar": "https://avatars.githubusercontent.com/minimaxir"
+      },
+      "content": "congrats to OpenAI on winning the Turing Test",
+      "createdAt": "2022-12-07T00:00:00Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Max Woolf sarcastically congratulates OpenAI for supposedly winning the Turing Test, likely referencing ChatGPT's human-like responses.",
+      "worthReading": "Highlights the ongoing debate about AI passing the Turing Test and the implications for AI capabilities.",
+      "tags": [
+        "llm",
+        "evaluation",
+        "deployment"
+      ]
     }
   ],
   "dailyCounts": [
-    3,
     3,
     1,
     1,
@@ -1418,7 +1412,8 @@
     3,
     2,
     4,
+    2,
     2
   ],
-  "interestSummary": "Max Woolf is currently focused on Rust-based performance and benchmarking tools, AI inference engines, and Python development environments, with an interest in image manipulation and watermark removal."
+  "interestSummary": "Max Woolf's recent interests center on Rust development tools (benchmarking, graph data structures, and criterion.rs), AI watermark removal, and reactive Python notebooks, alongside a humorous engagement with AI discourse on X."
 }

@@ -3,26 +3,6 @@
   "stars": [],
   "posts": [
     {
-      "uri": "at://did:plc:b35wwuj336x4ufo5dyykfolz/app.bsky.feed.post/3mk2i6mdnys27",
-      "url": "https://bsky.app/profile/tdietterich.bsky.social/post/3mk2i6mdnys27",
-      "author": {
-        "handle": "tdietterich.bsky.social",
-        "displayName": "Thomas Dietterich",
-        "avatar": null
-      },
-      "content": "Cool perspective on statistical learning!",
-      "createdAt": "2026-04-22T02:46:16.279Z",
-      "likeCount": 5,
-      "replyCount": 0,
-      "repostCount": 2,
-      "highlights": "",
-      "worthReading": "",
-      "tags": [
-        "evaluation"
-      ],
-      "type": "bluesky"
-    },
-    {
       "uri": "at://did:plc:b35wwuj336x4ufo5dyykfolz/app.bsky.feed.post/3mk4yh44d2c27",
       "url": "https://bsky.app/profile/tdietterich.bsky.social/post/3mk4yh44d2c27",
       "author": {
@@ -157,14 +137,16 @@
       "repostCount": 0,
       "highlights": "",
       "worthReading": "",
-      "tags": [],
+      "tags": [
+        "evaluation",
+        "safety"
+      ],
       "type": "bluesky"
     }
   ],
   "videos": [],
   "blogs": [],
   "dailyCounts": [
-    1,
     1,
     0,
     0,
@@ -193,7 +175,8 @@
     0,
     1,
     0,
+    0,
     0
   ],
-  "interestSummary": "Thomas Dietterich is focused on advancing safe and interpretable AI/ML, particularly by integrating symbolic systems with large language models to address their limitations. He also expresses concern about cybersecurity threats like phishing and engages with political science discussions on constitutional reform."
+  "interestSummary": "Thomas Dietterich's recent activity shows a focus on security concerns like phishing, as well as interest in AI and LLM limitations, specifically layering symbolic systems atop them. He is also engaging with political reform discussions, particularly around making Congress more representative."
 }

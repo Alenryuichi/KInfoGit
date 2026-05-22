@@ -2,31 +2,6 @@
   "id": "simonw",
   "stars": [
     {
-      "repo": "idesis-gmbh/GitHubExperiments",
-      "url": "https://github.com/idesis-gmbh/GitHubExperiments",
-      "description": " Experiments with GitHub event data ",
-      "language": "Python",
-      "stargazersCount": 9,
-      "starredBy": "simonw",
-      "starredAt": "2026-04-22T20:01:18Z",
-      "highlights": "This repository demonstrates practical data warehousing techniques for GitHub event data using modern tools like DuckDB and dbt. It provides concrete examples of dimensional modeling and star schema implementation for analyzing GitHub activity patterns.",
-      "worthReading": "It offers a real-world example of data engineering applied to GitHub analytics, which could inform similar projects analyzing developer activity or platform metrics.",
-      "topics": [
-        "data-warehouse",
-        "dbt",
-        "dimensional-modeling",
-        "duckdb",
-        "rill",
-        "star-schema"
-      ],
-      "tags": [
-        "infra"
-      ],
-      "score": 3,
-      "scoreReason": "Low freshness (small repo with minimal traction), moderate relevance (data engineering rather than frontier AI), and good concreteness (specific implementation).",
-      "type": "github"
-    },
-    {
       "repo": "run-llama/liteparse",
       "url": "https://github.com/run-llama/liteparse",
       "description": "A fast, helpful, and open-source document parser",
@@ -327,50 +302,42 @@
       "score": 4,
       "scoreReason": "Freshness is low (6 stars, no clear traction), relevance is moderate (infra security but not frontier AI), concreteness is high (specific data and analysis for a talk).",
       "type": "github"
+    },
+    {
+      "repo": "Helvesec/rmux",
+      "url": "https://github.com/Helvesec/rmux",
+      "description": "Universal Rust multiplexer with a typed SDK — drive any CLI or TUI app from code. Native on Linux, macOS, and Windows.",
+      "language": "Rust",
+      "stargazersCount": 567,
+      "starredBy": "simonw",
+      "starredAt": "2026-05-21T12:56:17Z",
+      "highlights": "rmux is a universal Rust multiplexer that allows you to programmatically drive any CLI or TUI application via a typed SDK. It supports native execution on Linux, macOS, and Windows, making it a cross-platform tool for automating terminal interactions.",
+      "worthReading": "For AI engineers building agentic systems that need to interact with CLI tools, rmux provides a robust, type-safe way to control terminals programmatically, which is a common requirement in agent frameworks.",
+      "topics": [
+        "agent",
+        "ai",
+        "cli",
+        "linux",
+        "macos",
+        "multiplexer",
+        "multiplexers",
+        "powershell",
+        "ratatui",
+        "rust",
+        "terminal",
+        "tokio",
+        "windows"
+      ],
+      "tags": [
+        "agent",
+        "tooling"
+      ],
+      "score": 7,
+      "scoreReason": "Freshness is moderate (567 stars, rising but not explosive), relevance is high for AI agents needing CLI control (agent/tooling), and concreteness is strong (working code with typed SDK).",
+      "type": "github"
     }
   ],
   "posts": [
-    {
-      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mk2ggudol22m",
-      "url": "https://bsky.app/profile/simonwillison.net/post/3mk2ggudol22m",
-      "author": {
-        "handle": "simonwillison.net",
-        "displayName": "Simon Willison",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
-      },
-      "content": "Wrote up Anthropic's self-own about Claude Code pricing from this afternoon on my blog - it turned out they'd reversed course just as I hit publish, so I've tried to update it to reflect the current state\nsimonwillison.net/2026/Apr/22/...",
-      "createdAt": "2026-04-22T02:15:05.620Z",
-      "likeCount": 41,
-      "replyCount": 2,
-      "repostCount": 5,
-      "highlights": "",
-      "worthReading": "",
-      "tags": [
-        "deployment"
-      ],
-      "type": "bluesky"
-    },
-    {
-      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mk3xe6ii2c2z",
-      "url": "https://bsky.app/profile/simonwillison.net/post/3mk3xe6ii2c2z",
-      "author": {
-        "handle": "simonwillison.net",
-        "displayName": "Simon Willison",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
-      },
-      "content": "The new Qwen3.6-27B just gave me definitely the best pelican riding a bicycle I've had from a 16.8GB model file! simonwillison.net/2026/Apr/22/...",
-      "createdAt": "2026-04-22T16:50:28.949Z",
-      "likeCount": 137,
-      "replyCount": 6,
-      "repostCount": 6,
-      "highlights": "",
-      "worthReading": "",
-      "tags": [
-        "llm",
-        "multi-modal"
-      ],
-      "type": "bluesky"
-    },
     {
       "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mk6znzgmc22i",
       "url": "https://bsky.app/profile/simonwillison.net/post/3mk6znzgmc22i",
@@ -1014,6 +981,28 @@
         "deployment"
       ],
       "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mmfa2jn56c25",
+      "url": "https://bsky.app/profile/simonwillison.net/post/3mmfa2jn56c25",
+      "author": {
+        "handle": "simonwillison.net",
+        "displayName": "Simon Willison",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
+      },
+      "content": "I released the first alpha of Datasette Agent - a conversational AI assistant for Datasette that can  answer questions about data in SQLite databases, and can be extended with plugins to add extra tools and features\n\nYou can watch a demo video or try it out yourself on agent.datasette.io",
+      "createdAt": "2026-05-21T20:10:29.669Z",
+      "likeCount": 38,
+      "replyCount": 6,
+      "repostCount": 3,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [
+        "llm",
+        "agent",
+        "tooling"
+      ],
+      "type": "bluesky"
     }
   ],
   "videos": [],
@@ -1187,51 +1176,19 @@
       "highlights": "Google released Gemini 3.5 Flash directly to general availability, skipping the preview phase, and plans to integrate it across many products. Despite being more expensive, it offers improved performance and efficiency, making it a versatile model for various applications.",
       "worthReading": "This post provides insight into Google's strategic shift towards a more powerful, production-ready model and its implications for developers and users.",
       "type": "blog"
+    },
+    {
+      "title": "Datasette Agent",
+      "url": "https://simonwillison.net/2026/May/21/datasette-agent/#atom-entries",
+      "author": "Simon Willison",
+      "publishedAt": "2026-05-21T19:52:19+00:00",
+      "summary": "<p>We just <a href=\"https://datasette.io/blog/2026/datasette-agent/\">announced the first release of Datasette Agent</a>, a new extensible AI assistant for Datasette. I've been working on my <a href=\"https://llm.datasette.io/\">LLM</a> Python library for just over three years now, and Datasette Agent...",
+      "highlights": "Datasette Agent is a new extensible AI assistant for Datasette, built on the LLM Python library. It enables natural language querying of databases and can be extended with plugins for custom workflows. This release marks a significant step in combining AI with data exploration.",
+      "worthReading": "If you use Datasette for data analysis, this tool offers a powerful way to interact with your databases using natural language, making data queries more accessible and efficient.",
+      "type": "blog"
     }
   ],
   "xPosts": [
-    {
-      "type": "x",
-      "id": "1975570458683834729",
-      "url": "https://x.com/simonw/status/1975570458683834729",
-      "author": {
-        "handle": "simonw",
-        "displayName": "Simon Willison",
-        "avatar": "https://avatars.githubusercontent.com/simonw"
-      },
-      "content": "Vibe coding is irresponsibly building software through dice rolls, not caring what code is produced",
-      "createdAt": "2026-04-22T04:06:17.426Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Critiques 'vibe coding' as irresponsible software development that relies on random chance rather than deliberate design.",
-      "worthReading": "Offers a critical perspective on careless AI-assisted coding practices.",
-      "tags": [
-        "agent",
-        "tooling"
-      ]
-    },
-    {
-      "type": "x",
-      "id": "1976989054240800798",
-      "url": "https://x.com/simonw/status/1976989054240800798",
-      "author": {
-        "handle": "simonw",
-        "displayName": "Simon Willison",
-        "avatar": "https://avatars.githubusercontent.com/simonw"
-      },
-      "content": "I'm beginning to suspect that a key skill in working effectively with coding agents is developing an intuition for when you don't need to",
-      "createdAt": "2026-04-22T04:06:17.426Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Suggests that effective use of AI coding agents requires knowing when not to use them, not just how to use them.",
-      "worthReading": "Highlights a nuanced, experience-based skill for AI-assisted development.",
-      "tags": [
-        "agent",
-        "tooling"
-      ]
-    },
     {
       "type": "x",
       "id": "1976989054240800798",
@@ -2524,11 +2481,95 @@
         "agent",
         "tooling"
       ]
+    },
+    {
+      "type": "x",
+      "id": "1975570458683834729",
+      "url": "https://x.com/simonw/status/1975570458683834729",
+      "author": {
+        "handle": "simonw",
+        "displayName": "Simon Willison",
+        "avatar": "https://avatars.githubusercontent.com/simonw"
+      },
+      "content": "Vibe coding is irresponsibly building software through dice rolls, not caring what code is produced",
+      "createdAt": "2026-05-22T04:29:43.028Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Simon criticizes 'vibe coding' as an irresponsible approach to software development.",
+      "worthReading": "Highlights a key debate on coding practices with AI.",
+      "tags": [
+        "agent",
+        "safety",
+        "tooling"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2031002164165021868",
+      "url": "https://x.com/simonw/status/2031002164165021868",
+      "author": {
+        "handle": "simonw",
+        "displayName": "Simon Willison",
+        "avatar": "https://avatars.githubusercontent.com/simonw"
+      },
+      "content": "A short note that the predictions that LLMs would favor 'boring technology' that's...",
+      "createdAt": "2026-05-22T04:29:43.028Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Simon notes that LLMs may not favor boring technology as predicted.",
+      "worthReading": "Offers insight into LLM adoption trends.",
+      "tags": [
+        "llm",
+        "deployment"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "1976989054240800798",
+      "url": "https://x.com/simonw/status/1976989054240800798",
+      "author": {
+        "handle": "simonw",
+        "displayName": "Simon Willison",
+        "avatar": "https://avatars.githubusercontent.com/simonw"
+      },
+      "content": "I'm beginning to suspect that a key skill in working effectively with coding agents is developing an intuition for when you don't need to...",
+      "createdAt": "2026-05-22T04:29:43.028Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Simon suggests that knowing when not to use coding agents is a key skill.",
+      "worthReading": "Important for effective use of AI coding tools.",
+      "tags": [
+        "agent",
+        "tooling"
+      ]
+    },
+    {
+      "type": "x",
+      "id": "2008298185962512763",
+      "url": "https://x.com/simonw/status/2008298185962512763",
+      "author": {
+        "handle": "simonw",
+        "displayName": "Simon Willison",
+        "avatar": "https://avatars.githubusercontent.com/simonw"
+      },
+      "content": "This seems like a good bet to me - coding agents make it no longer remotely excusable to skip out on...",
+      "createdAt": "2026-05-22T04:29:43.028Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Simon argues coding agents remove excuses for skipping certain practices.",
+      "worthReading": "Reinforces the value of coding agents in improving software quality.",
+      "tags": [
+        "agent",
+        "tooling"
+      ]
     }
   ],
   "dailyCounts": [
     5,
-    5,
     6,
     3,
     1,
@@ -2556,7 +2597,8 @@
     1,
     3,
     2,
-    3
+    5,
+    4
   ],
-  "interestSummary": "Simon Willison is deeply focused on evaluating and building with the latest AI models and tools, including coding agents, document parsers, and local inference engines, while also actively developing his own LLM CLI tool and engaging with the broader AI community on topics like model pricing, vibe coding, and open-source software."
+  "interestSummary": "Simon Willison is deeply engaged in the practical application and critique of AI tools, particularly focusing on vibe coding, local inference engines (like DeepSeek V4), and building web UIs for open-source AI libraries. He is also actively maintaining his own LLM tool and sharing insights on the broader AI industry's dynamics, including model releases and corporate partnerships."
 }

@@ -4,6 +4,30 @@
   "posts": [],
   "videos": [],
   "blogs": [],
+  "xPosts": [
+    {
+      "type": "x",
+      "id": "sig-1779424238303-xw2f5i",
+      "url": "https://x.com/_rpf",
+      "author": {
+        "handle": "younesbelkada",
+        "displayName": "Younes Belkada",
+        "avatar": "https://avatars.githubusercontent.com/younesbelkada"
+      },
+      "content": "MLT __init__ Paper Reading & Discussion Tim Dettmers, Mike Lewis, Younes Belkada, Luke Zettlemoyer: LLM.int8(): 8-bit Matrix Multiplication for Transformers at Scale.",
+      "createdAt": "2026-05-22T04:30:38.303Z",
+      "likeCount": 0,
+      "replyCount": 0,
+      "retweetCount": 0,
+      "highlights": "Younes Belkada co-authored the paper on LLM.int8() for 8-bit matrix multiplication, enabling large transformers to run with reduced memory.",
+      "worthReading": "This work is foundational for efficient deployment of large language models.",
+      "tags": [
+        "llm",
+        "infra",
+        "deployment"
+      ]
+    }
+  ],
   "dailyCounts": [
     0,
     0,
@@ -34,7 +58,7 @@
     0,
     0,
     0,
-    0
+    1
   ],
-  "interestSummary": ""
+  "interestSummary": "Younes Belkada's recent activity centers on large language model optimization, specifically 8-bit matrix multiplication for Transformers at scale, reflecting a focus on quantization and efficient deployment of LLMs."
 }

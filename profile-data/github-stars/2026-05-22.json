@@ -1,0 +1,49 @@
+{
+  "date": "2026-05-22",
+  "stars": [
+    {
+      "repo": "NVlabs/GatedDeltaNet-2",
+      "url": "https://github.com/NVlabs/GatedDeltaNet-2",
+      "description": "Official PyTorch Implementation of Gated DeltaNet-2: Decoupling Erase and Write in Linear Attention",
+      "language": "Python",
+      "stargazersCount": 37,
+      "starredBy": "jph00",
+      "starredAt": "2026-05-22T00:59:34Z",
+      "highlights": "Gated DeltaNet-2 introduces a novel linear attention mechanism that decouples erase and write operations, improving memory management in recurrent neural networks. Built on the DeltaNet architecture, it achieves competitive performance with standard attention while maintaining linear complexity, making it suitable for long-sequence tasks.",
+      "worthReading": "This repository offers a fresh perspective on efficient attention mechanisms, which is crucial for scaling transformers to longer contexts. The decoupling of erase and write could inspire new architectures in LLM and agent systems.",
+      "topics": [],
+      "tags": [
+        "llm",
+        "infra"
+      ],
+      "score": 7,
+      "scoreReason": "Freshness is high (new repo with 37 stars, rising), relevance is strong (linear attention for LLMs), and concreteness is solid (official PyTorch implementation with clear description)."
+    },
+    {
+      "repo": "postlund/pyatv",
+      "url": "https://github.com/postlund/pyatv",
+      "description": "A client library for Apple TV and AirPlay devices",
+      "language": "Python",
+      "stargazersCount": 1117,
+      "starredBy": "minimaxir",
+      "starredAt": "2026-05-22T04:15:36Z",
+      "highlights": "A Python client library for controlling Apple TV and AirPlay devices, enabling home automation and media streaming. It supports asyncio for async operations and is available on PyPI.",
+      "worthReading": "Useful for developers integrating Apple TV into smart home systems or building custom media controllers.",
+      "topics": [
+        "airplay",
+        "apple-tv",
+        "asyncio",
+        "hacktoberfest",
+        "home-automation",
+        "pypi",
+        "python3",
+        "raop"
+      ],
+      "tags": [
+        "tooling"
+      ],
+      "score": 4,
+      "scoreReason": "Freshness is low (established repo, 1.1k stars, no recent surge), relevance is moderate (home automation tooling, not frontier AI), concreteness is high (working library with clear functionality)."
+    }
+  ]
+}
