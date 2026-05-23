@@ -2,32 +2,6 @@
   "id": "simonw",
   "stars": [
     {
-      "repo": "run-llama/liteparse",
-      "url": "https://github.com/run-llama/liteparse",
-      "description": "A fast, helpful, and open-source document parser",
-      "language": "TypeScript",
-      "stargazersCount": 4528,
-      "starredBy": "simonw",
-      "starredAt": "2026-04-23T03:00:15Z",
-      "highlights": "Liteparse is a fast, open-source document parser that efficiently extracts text from PDFs and images using OCR. It provides a helpful API for developers needing reliable document processing with TypeScript support.",
-      "worthReading": "It's worth exploring because it offers a practical, production-ready solution for document parsing that's gaining traction among developers, and being starred by Simon Willison suggests it addresses real-world needs.",
-      "topics": [
-        "document-ocr",
-        "document-processing",
-        "ocr",
-        "ocr-recognition",
-        "pdf",
-        "pdf-parser",
-        "text-extraction"
-      ],
-      "tags": [
-        "tooling"
-      ],
-      "score": 5,
-      "scoreReason": "Moderate freshness with growing stars, good relevance as AI tooling, and high concreteness as a working library.",
-      "type": "github"
-    },
-    {
       "repo": "deeleeramone/PyWry",
       "url": "https://github.com/deeleeramone/PyWry",
       "description": "PyWry is a cross-platform app factory, rendering engine and UI toolkit for Python that produces native desktop, web, and notebook experiences from a single API.",
@@ -335,50 +309,41 @@
       "score": 7,
       "scoreReason": "Freshness is moderate (567 stars, rising but not explosive), relevance is high for AI agents needing CLI control (agent/tooling), and concreteness is strong (working code with typed SDK).",
       "type": "github"
+    },
+    {
+      "repo": "datasette/datasette-agent-charts",
+      "url": "https://github.com/datasette/datasette-agent-charts",
+      "description": "Observable Plot charts for Datasette Agent",
+      "language": "Python",
+      "stargazersCount": 8,
+      "starredBy": "simonw",
+      "starredAt": "2026-05-23T00:19:36Z",
+      "highlights": "",
+      "worthReading": "",
+      "topics": [],
+      "tags": [],
+      "score": 0,
+      "scoreReason": "",
+      "type": "github"
+    },
+    {
+      "repo": "datasette/datasette-agent",
+      "url": "https://github.com/datasette/datasette-agent",
+      "description": "An LLM-powered agent for Datasette",
+      "language": "Python",
+      "stargazersCount": 43,
+      "starredBy": "simonw",
+      "starredAt": "2026-05-23T00:19:17Z",
+      "highlights": "",
+      "worthReading": "",
+      "topics": [],
+      "tags": [],
+      "score": 0,
+      "scoreReason": "",
+      "type": "github"
     }
   ],
   "posts": [
-    {
-      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mk6znzgmc22i",
-      "url": "https://bsky.app/profile/simonwillison.net/post/3mk6znzgmc22i",
-      "author": {
-        "handle": "simonwillison.net",
-        "displayName": "Simon Willison",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
-      },
-      "content": "I vibe coded a web UI to LiteParse by LlamaIndex, a neat open source library for extracting text from annoying layouts PDFs simonw.github.io/liteparse/\n\nMore about how I built it on my blog: simonwillison.net/2026/Apr/23/...",
-      "createdAt": "2026-04-23T22:09:45.889Z",
-      "likeCount": 46,
-      "replyCount": 5,
-      "repostCount": 1,
-      "highlights": "",
-      "worthReading": "",
-      "tags": [
-        "tooling"
-      ],
-      "type": "bluesky"
-    },
-    {
-      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mk6sr32rp22m",
-      "url": "https://bsky.app/profile/simonwillison.net/post/3mk6sr32rp22m",
-      "author": {
-        "handle": "simonwillison.net",
-        "displayName": "Simon Willison",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
-      },
-      "content": "GPT-5.5 is out but not yet in the OpenAI API - but in the ongoing battle with Anthropic over OpenClaw OpenAI made their Codex tool's private backend API a semi-approved mechanism... and that one has GPT-5.5...\n\nSo I used it to draw some pelicans simonwillison.net/2026/Apr/23/...",
-      "createdAt": "2026-04-23T20:06:12.068Z",
-      "likeCount": 53,
-      "replyCount": 4,
-      "repostCount": 3,
-      "highlights": "",
-      "worthReading": "",
-      "tags": [
-        "llm",
-        "deployment"
-      ],
-      "type": "bluesky"
-    },
     {
       "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mkb5frxhf22k",
       "url": "https://bsky.app/profile/simonwillison.net/post/3mkb5frxhf22k",
@@ -1003,6 +968,24 @@
         "tooling"
       ],
       "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mmg5pg3jhk2m",
+      "url": "https://bsky.app/profile/simonwillison.net/post/3mmg5pg3jhk2m",
+      "author": {
+        "handle": "simonwillison.net",
+        "displayName": "Simon Willison",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
+      },
+      "content": "@futurism.com important update to your story from September 2024 futurism.com/the-byte/fac... - the FTC just punished those companies for lying about how their technology works, they weren't listening through device microphones at all",
+      "createdAt": "2026-05-22T05:01:09.102Z",
+      "likeCount": 140,
+      "replyCount": 4,
+      "repostCount": 41,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [],
+      "type": "bluesky"
     }
   ],
   "videos": [],
@@ -1189,48 +1172,6 @@
     }
   ],
   "xPosts": [
-    {
-      "type": "x",
-      "id": "1976989054240800798",
-      "url": "https://x.com/simonw/status/1976989054240800798",
-      "author": {
-        "handle": "simonw",
-        "displayName": "Simon Willison",
-        "avatar": "https://avatars.githubusercontent.com/simonw"
-      },
-      "content": "I'm beginning to suspect that a key skill in working effectively with coding agents is developing an intuition for when you don't need to",
-      "createdAt": "2026-04-23T04:07:23.879Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Working with coding agents requires developing intuition about when not to use them, suggesting efficiency comes from selective application rather than constant reliance.",
-      "worthReading": "It highlights a nuanced skill for developers using AI coding assistants, moving beyond simple automation to strategic decision-making.",
-      "tags": [
-        "agent",
-        "tooling"
-      ]
-    },
-    {
-      "type": "x",
-      "id": "1975570458683834729",
-      "url": "https://x.com/simonw/status/1975570458683834729",
-      "author": {
-        "handle": "simonw",
-        "displayName": "Simon Willison",
-        "avatar": "https://avatars.githubusercontent.com/simonw"
-      },
-      "content": "Vibe coding is irresponsibly building software through dice rolls, not caring what code is produced",
-      "createdAt": "2026-04-23T04:07:23.879Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Criticizes 'vibe coding' as irresponsible software development that relies on random outcomes without concern for code quality or correctness.",
-      "worthReading": "This tweet warns against careless AI-assisted coding practices that prioritize speed over responsible engineering.",
-      "tags": [
-        "agent",
-        "safety"
-      ]
-    },
     {
       "type": "x",
       "id": "1975570458683834729",
@@ -2569,7 +2510,6 @@
     }
   ],
   "dailyCounts": [
-    5,
     6,
     3,
     1,
@@ -2598,7 +2538,8 @@
     3,
     2,
     5,
-    4
+    5,
+    2
   ],
-  "interestSummary": "Simon Willison is deeply engaged in the practical application and critique of AI tools, particularly focusing on vibe coding, local inference engines (like DeepSeek V4), and building web UIs for open-source AI libraries. He is also actively maintaining his own LLM tool and sharing insights on the broader AI industry's dynamics, including model releases and corporate partnerships."
+  "interestSummary": ""
 }
