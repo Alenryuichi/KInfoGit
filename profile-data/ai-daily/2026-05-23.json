@@ -1,190 +1,205 @@
 {
   "date": "2026-05-23",
-  "itemCount": 15,
+  "itemCount": 82,
   "sections": [
     {
       "id": "headlines",
       "title": "Headlines & Launches",
       "items": [
         {
-          "title": "AI-Driven HBM Demand Raises Consumer Electronics Prices",
-          "summary": "Memory manufacturers are reallocating wafer capacity from DDR and LPDDR to HBM, with HBM's share expected to rise from 2% to 20% by end of 2026, causing a repricing of consumer electronics. This structural shift means consumer devices like smartphones and PCs will face higher RAM costs for years, particularly impacting budget markets in Africa and South Asia. A single gigabyte of HBM consumes more than three times the wafer capacity of a gigabyte of DDR or LPDDR, and memory companies deliberately under-provision capacity to avoid overinvestment.",
-          "url": "https://simonwillison.net/2026/May/22/memory-shortage/#atom-everything",
+          "title": "Anthropic to Close Over $30 Billion Round as Soon as Next Week - Bloomberg",
+          "summary": "Anthropic即将完成超300亿美元融资，创AI领域纪录。",
+          "url": "https://www.bloomberg.com/news/articles/2026-05-22/anthropic-to-close-over-30-billion-round-as-soon-as-next-week",
+          "score": 9.5,
+          "sources": [
+            {
+              "name": "bloomberg.com"
+            }
+          ],
+          "tags": [
+            "funding",
+            "anthropic",
+            "investment"
+          ],
+          "focusTopics": [
+            "model-release"
+          ]
+        },
+        {
+          "title": "DeepSeek is pushing forward with $10.29 billion financing round, with Liang Wenfeng committing to continue developing open-source AI models rather than pursuing short-term commercialization goals",
+          "summary": "DeepSeek推进102.9亿美元融资，创始人承诺继续开发开源AI。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tkfvvj/deepseek_is_pushing_forward_with_1029_billion/",
+          "score": 9.5,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "deepseek",
+            "funding",
+            "open-source"
+          ],
+          "focusTopics": [
+            "model-release"
+          ]
+        },
+        {
+          "title": "DeepSeek Founder Declares AGI Goal as $10 Billion Round Advances - Bloomberg",
+          "summary": "DeepSeek创始人宣布AGI目标，同时推进100亿美元融资。",
+          "url": "https://www.bloomberg.com/news/articles/2026-05-22/deepseek-founder-declares-agi-goal-as-10-billion-round-advances",
+          "score": 9,
+          "sources": [
+            {
+              "name": "bloomberg.com"
+            }
+          ],
+          "tags": [
+            "deepseek",
+            "agi",
+            "funding"
+          ],
+          "focusTopics": [
+            "model-release"
+          ]
+        },
+        {
+          "title": "Elon Musk, Mark Zuckerberg derail Trump AI order  | Semafor",
+          "summary": "马斯克和扎克伯格联手破坏特朗普AI行政令，影响AI政策。",
+          "url": "https://www.semafor.com/article/05/21/2026/elon-musk-mark-zuckerberg-derail-trump-ai-order",
           "score": 8,
           "sources": [
             {
-              "name": "rss",
-              "meta": "Simon Willison"
+              "name": "semafor.com"
             }
           ],
           "tags": [
-            "memory",
-            "AI",
-            "consumer electronics",
-            "semiconductors",
-            "market analysis"
+            "policy",
+            "regulation",
+            "us"
           ],
-          "focusTopics": [
-            "memory"
-          ],
-          "background": "Memory manufacturing capacity is fixed by wafer processing capability, and there are only three major memory companies. HBM is a high-bandwidth, 3D-stacked memory used primarily with GPUs for AI workloads, while DDR and LPDDR serve general-purpose computing and mobile devices respectively."
+          "focusTopics": []
         },
         {
-          "title": "NVIDIA's Nemotron-Labs Diffusion Models for Instant Text Generation",
-          "summary": "NVIDIA introduced Nemotron-Labs-Diffusion, a tri-mode language model that unifies autoregressive, diffusion, and self-speculation decoding within a single architecture, enabling near-instantaneous text generation. This breakthrough could dramatically reduce LLM inference latency, making real-time text generation feasible for interactive applications like chatbots and code assistants, while maintaining high quality. The model supports both AR decoding and diffusion-based parallel decoding by simply switching the attention pattern during inference, and was trained with a joint AR-diffusion objective.",
-          "url": "https://huggingface.co/blog/nvidia/nemotron-labs-diffusion",
-          "score": 8,
+          "title": "Read the AI executive order thwarted by Trump tech allies",
+          "summary": "特朗普科技盟友阻挠AI行政令，白宫计划被披露。",
+          "url": "https://www.axios.com/2026/05/22/ai-executive-order-cancelled-white-house",
+          "score": 7.5,
           "sources": [
             {
-              "name": "rss",
-              "meta": "Hugging Face Blog"
+              "name": "axios.com"
             }
           ],
           "tags": [
-            "diffusion models",
-            "language models",
-            "text generation",
-            "NVIDIA",
-            "inference speed"
+            "ai-policy",
+            "executive-order",
+            "politics"
           ],
-          "focusTopics": [],
-          "background": "Traditional large language models generate text autoregressively, one token at a time, which is slow. Diffusion language models instead start from a noisy sequence and iteratively refine it, allowing parallel generation of multiple tokens simultaneously, thus speeding up inference."
+          "focusTopics": []
         },
         {
-          "title": "Why Japanese Companies Diversify: Lifetime Employment & Employee-Centric Governance",
-          "summary": "The article explains that Japanese companies diversify into many unrelated businesses because their lifetime employment system and employee-centric governance encourage risk-averse, long-term survival strategies rather than shareholder value maximization. This analysis challenges the Western assumption that corporate focus and shareholder primacy are optimal, offering an alternative model where employee stability drives innovation and resilience through diversification. The article notes that Japanese firms are insulated from outside pressure through cross-shareholding (keiretsu) and that employees' firm-specific skills make them hard to redeploy, incentivizing the company to find new uses for their talents internally.",
-          "url": "https://davidoks.blog/p/why-japanese-companies-do-so-many",
+          "title": "EU-Anthropic Talks Stall Over Mythos AI Cybersecurity Concerns, Spain Says - Bloomberg",
+          "summary": "欧盟与Anthropic谈判因Mythos AI网络安全问题陷入僵局。",
+          "url": "https://www.bloomberg.com/news/articles/2026-05-22/eu-anthropic-talks-over-mythos-concerns-are-stalled-spain-says",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "bloomberg.com"
+            }
+          ],
+          "tags": [
+            "eu",
+            "anthropic",
+            "cybersecurity"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "[AINews] New AI Infra unicorns: Exa, Modal, TurboPuffer",
+          "summary": "AI基础设施初创Exa、Modal、TurboPuffer成为新独角兽。",
+          "url": "https://www.latent.space/p/ainews-new-ai-infra-unicorns-exa",
           "score": 7,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "d0ks"
+              "name": "Latent Space"
             }
           ],
           "tags": [
-            "Japanese business",
-            "corporate strategy",
-            "organizational culture",
-            "diversification",
-            "management"
+            "funding",
+            "ai-infrastructure",
+            "unicorn"
           ],
-          "focusTopics": [
-            "memory"
-          ],
-          "background": "Lifetime employment is a core institution in Japan, where about 30-40% of workers are de facto lifetime employees. The keiretsu system involves interlocking shareholdings that insulate companies from takeovers, enabling long-term planning. This contrasts with Western shareholder-focused models that prioritize short-term profits and corporate focus.",
-          "discussion": "Commenters debated the role of culture versus structure, with some arguing that Japanese culture (e.g., craftsmanship) is equally important. Others noted that Western companies also diversified historically, but shareholder pressure later forced focus. A few criticized the romanticization of Japan's system, pointing out its downsides like inefficiency."
+          "focusTopics": []
         },
         {
-          "title": "CISA Data Leak Sparks Lawmaker Demands",
-          "summary": "CISA is facing a data leak after a contractor accidentally exposed a public GitHub repository containing sensitive AWS GovCloud credentials and internal system access tokens, prompting lawmakers to demand an urgent classified briefing. This incident undermines trust in CISA, the lead US cybersecurity agency, and highlights systemic risks in government data handling, potentially affecting national security and public confidence. The exposed repository contained plaintext credentials in spreadsheets, discovered by security researcher Guillaume Valadon, and CISA stated there is no indication sensitive data was compromised, though critics remain skeptical.",
-          "url": "https://krebsonsecurity.com/2026/05/lawmakers-demand-answers-as-cisa-tries-to-contain-data-leak/",
+          "title": "US scrambles to stop Internet users re-creating dead pilots’ voices - Ars Technica",
+          "summary": "美国阻止互联网用户利用AI重现已故飞行员声音。",
+          "url": "https://arstechnica.com/ai/2026/05/ai-users-re-create-dead-pilots-voices-from-crash-investigation-docs/",
           "score": 7,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "speckx"
+              "name": "arstechnica.com"
             }
           ],
           "tags": [
-            "cybersecurity",
-            "data leak",
-            "CISA",
-            "government",
-            "privacy"
-          ],
-          "focusTopics": [],
-          "background": "CISA (Cybersecurity and Infrastructure Security Agency) is a US federal agency responsible for protecting critical infrastructure from cyber threats. Git repositories are commonly used for version control, but accidentally committing credentials is a well-known security mistake. This leak follows a history of similar government data exposure incidents.",
-          "discussion": "Commenters expressed frustration, recalling past leaks like the SF-86 form exposure, and criticized CISA's assurance that no sensitive data was compromised. Some noted the irony of a cybersecurity agency making basic Git mistakes, while others defended human error but demanded accountability."
-        },
-        {
-          "title": "Deno 2.8 Boosts Node.js Compatibility to 75%",
-          "summary": "Deno 2.8 has been released, significantly improving Node.js compatibility from approximately 40% to 75% in just two months. This release continues to enhance Deno's position as a secure, TypeScript-native JavaScript runtime. This leap in Node.js compatibility makes Deno a more viable alternative for existing Node.js projects, potentially accelerating adoption among developers who value security and TypeScript support. It also intensifies competition with Bun and Node.js in the JavaScript runtime ecosystem. The compatibility improvement from ~40% to 75% occurred within two months, partly coinciding with the release of Edge.js. Deno is built on V8 and Rust, featuring a granular permission model and native TypeScript execution without transpilation.",
-          "url": "https://deno.com/blog/v2.8",
-          "score": 7,
-          "sources": [
-            {
-              "name": "hackernews",
-              "meta": "roflcopter69"
-            }
-          ],
-          "tags": [
-            "Deno",
-            "JavaScript runtime",
-            "Node.js compatibility",
-            "TypeScript",
-            "web development"
-          ],
-          "focusTopics": [],
-          "background": "Deno is a modern runtime for JavaScript, TypeScript, and WebAssembly, created by Ryan Dahl (original Node.js creator) to address Node.js design shortcomings. Its key features include secure defaults with a permission system, Rust-based performance, and first-class TypeScript support. Node.js compatibility has been a major focus to ease migration for existing projects.",
-          "discussion": "Community members praised the rapid compatibility improvement, with one noting it's a 'step in the right direction.' Some users expressed preference for Deno's permission model and Unix-like philosophy, while others discussed Bun's growth and Node.js's stability. Overall sentiment is positive, with appreciation for Deno's progress."
-        },
-        {
-          "title": "New US restrictions on foreign research collaborations cause confusion",
-          "summary": "U.S. researchers face new, unclear restrictions on publishing with foreign collaborators, as NIH and NASA are individually informing grantees without issuing formal guidance. This policy change threatens international scientific collaboration and academic freedom, potentially slowing research progress and isolating U.S. scientists from global knowledge exchange. The restrictions on research with a 'foreign component' have been in place since at least 2003, but have only recently been clarified to include the researchers themselves, causing confusion and concern.",
-          "url": "https://www.science.org/content/article/u-s-researchers-face-new-restrictions-publishing-foreign-collaborators",
-          "score": 7,
-          "sources": [
-            {
-              "name": "hackernews",
-              "meta": "ceejayoz"
-            }
-          ],
-          "tags": [
-            "research policy",
-            "academic freedom",
-            "international collaboration",
-            "NIH",
-            "science funding"
-          ],
-          "focusTopics": [
-            "multi-agent"
-          ],
-          "background": "NIH and NASA have long required grantees to report foreign components, but the interpretation has expanded to cover individual researchers' collaborations. The lack of formal guidance leaves researchers uncertain about compliance.",
-          "discussion": "Commenters express confusion and frustration over the lack of transparency, with some noting the asymmetry compared to other countries' policies. Others point out that the rules have existed for decades but are now being enforced differently."
-        },
-        {
-          "title": "FTC Fines Cox Media Group $1M for Fake AI Listening Service",
-          "summary": "The FTC announced settlements totaling $930,000 with Cox Media Group, MindSift, and 1010 Digital Works for falsely marketing an 'Active Listening' service that claimed to eavesdrop on smart devices for targeted ads, but actually just resold email lists. This case sets a precedent that deceptive AI marketing claims will be penalized, and clarifies that hiding consent in terms of service does not constitute adequate consent for invasive data collection. The companies claimed their service used 'voice data' from smart devices, but the FTC found it was merely resold email lists at a markup. The FTC also warned that burying opt-in consent in terms of service is not valid consent under Section 5 of the FTC Act.",
-          "url": "https://simonwillison.net/2026/May/22/ftc-active-listening/#atom-everything",
-          "score": 7,
-          "sources": [
-            {
-              "name": "rss",
-              "meta": "Simon Willison"
-            }
-          ],
-          "tags": [
-            "FTC",
-            "AI",
-            "privacy",
-            "deceptive marketing",
+            "ai-ethics",
+            "voice-cloning",
             "regulation"
           ],
-          "focusTopics": [],
-          "background": "In 2024, Cox Media Group pitched an 'Active Listening' service claiming smart devices could capture real-time intent data from conversations. The pitch deck sparked privacy concerns and conspiracy theories about microphones spying for ads. The FTC investigation revealed the service was non-functional and deceptive.",
-          "discussion": "The community discussion (from Simon Willison's blog) expresses relief that the FTC confirmed the service was fake, and notes that this debunks the conspiracy theory that phones listen for ads. The author calls it 'nice to have a new piece of ammunition' against that myth."
+          "focusTopics": []
         },
         {
-          "title": "Shipping a Laptop to a Refugee Camp in Uganda",
-          "summary": "A personal account details the extreme difficulty and high cost of shipping a laptop to a refugee camp in Uganda, involving bureaucratic hurdles, corruption, and unexpected fees. This story highlights systemic barriers in international shipping to developing countries, showing how corruption and inefficiency inflate costs and limit access to essential goods, affecting humanitarian efforts and local economies. The shipping cost reached $200, far exceeding the laptop's value, and the process required navigating multiple intermediaries and bribes. The recipient's resilience and gratitude contrasted sharply with the logistical nightmare.",
-          "url": "https://notesbylex.com/shipping-a-laptop-to-a-refugee-camp-in-uganda",
+          "title": "McKinsey & Company partners with AppliedAI to drive agentic AI in regulated sectors - Consultancy-me.com",
+          "summary": "麦肯锡与AppliedAI合作，推动受监管行业的智能体AI。",
+          "url": "https://www.consultancy-me.com/news/amp/13490/mckinsey-company-partners-with-appliedai-to-drive-agentic-ai-in-regulated-sectors",
           "score": 6,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "lexandstuff"
+              "name": "consultancy-me.com"
             }
           ],
           "tags": [
-            "logistics",
-            "developing countries",
-            "shipping",
-            "corruption",
-            "humanitarian"
+            "partnership",
+            "agentic-ai",
+            "regulated-industry"
           ],
-          "focusTopics": [],
-          "background": "International shipping to remote areas in developing countries often faces challenges like poor infrastructure, customs delays, and corruption. Refugee camps in Uganda host hundreds of thousands of people with limited access to technology and goods.",
-          "discussion": "Commenters shared similar experiences, noting that carrying items personally or sending money for local purchase are more reliable alternatives. Some praised the recipient's resourcefulness and criticized the systemic corruption."
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "China Scrutinizes Companies, Funds After AI-Fueled Stock Moves - Bloomberg",
+          "summary": "中国审查AI驱动股票波动背后的公司和基金。",
+          "url": "https://www.bloomberg.com/news/articles/2026-05-22/china-scrutinizes-companies-funds-after-ai-fueled-stock-moves",
+          "score": 6,
+          "sources": [
+            {
+              "name": "bloomberg.com"
+            }
+          ],
+          "tags": [
+            "china",
+            "regulation",
+            "stock-market"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "FTC to Require Cox Media Group, Two Other Firms to Pay Nearly $1 Million to Settle Charges They Deceived Customers About “Active Listening” AI-Powered Marketing Service",
+          "summary": "FTC对三家公司的AI监听营销服务处以近百万美元罚款。",
+          "url": "https://simonwillison.net/2026/May/22/ftc-active-listening/#atom-everything",
+          "score": 5,
+          "sources": [
+            {
+              "name": "Simon Willison"
+            }
+          ],
+          "tags": [
+            "ftc",
+            "regulation",
+            "ai-marketing"
+          ],
+          "focusTopics": []
         }
       ]
     },
@@ -193,71 +208,525 @@
       "title": "Research & Innovation",
       "items": [
         {
-          "title": "Anthropic's Project Glasswing: 90.6% True Positive Rate",
-          "summary": "Anthropic released an update on Project Glasswing, reporting that 90.6% of high/critical vulnerabilities found by their AI system were validated as true positives, with 62.4% confirmed as high or critical severity. This demonstrates that AI-driven vulnerability detection can achieve high accuracy, potentially transforming software security by enabling proactive identification and remediation of critical flaws in open-source software. The evaluation involved 1,752 high/critical vulnerabilities assessed by six independent security research firms, with 1,587 true positives and 1,094 confirmed as high/critical severity.",
+          "title": "Project Glasswing: An Initial Update",
+          "summary": "Anthropic发布Project Glasswing初步更新，涉及AI可解释性研究。",
           "url": "https://www.anthropic.com/research/glasswing-initial-update",
-          "score": 8,
+          "score": 7.702999999999999,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "louiereederson"
+              "name": "HN (301)"
             }
           ],
           "tags": [
-            "AI",
-            "security",
-            "vulnerability detection",
-            "Anthropic",
-            "code analysis"
+            "anthropic",
+            "interpretability",
+            "research"
           ],
-          "focusTopics": [],
-          "background": "Project Glasswing is an Anthropic initiative to secure critical open-source software using AI models like Claude Mythos Preview. Traditional static analysis tools catch common vulnerabilities but often miss complex or context-dependent flaws. AI-based approaches aim to improve coverage and accuracy.",
-          "discussion": "Community comments show mixed reactions: some users report high accuracy with similar tools (e.g., Codex Security), while others, like curl maintainer Daniel Stenberg, express skepticism about the practical improvement over existing tools. There is also debate about whether teams should first adopt basic static analysis before using expensive LLM-based tools."
+          "focusTopics": []
         },
         {
-          "title": "Specialization Beats Scale in AI Procurement",
-          "summary": "A blog post on Hugging Face argues that specializing AI models for specific tasks often yields better performance and cost efficiency than relying on larger, general-purpose models, challenging the prevailing scale-centric AI procurement strategy. This insight has practical implications for cost-effective AI deployment, as organizations can achieve higher performance with smaller, specialized models, reducing computational and financial overhead. Specialized models often require less data and computing power than general-purpose counterparts, and can be fine-tuned to address unique business challenges with precise insights tailored to local conditions.",
-          "url": "https://huggingface.co/blog/Dharma-AI/specialization-beats-scale",
-          "score": 8,
+          "title": "SOLAR: A Self-Optimizing Open-Ended Autonomous Agent for Lifelong Learning and Continual Adaptation",
+          "summary": "提出SOLAR自主智能体，实现终身学习与持续适应。",
+          "url": "https://arxiv.org/abs/2605.20189",
+          "score": 7.5,
           "sources": [
             {
-              "name": "rss",
-              "meta": "Hugging Face Blog"
+              "name": "ArXiv cs.AI"
             }
           ],
           "tags": [
-            "AI",
-            "machine learning",
-            "model specialization",
-            "AI procurement",
-            "efficiency"
+            "llm",
+            "autonomous-agent",
+            "continual-learning"
           ],
-          "focusTopics": [],
-          "background": "General-purpose AI models like GPT-4 are designed to handle a wide range of tasks but can be overkill and inefficient for specific use cases. Specialized models, on the other hand, are optimized for a narrow domain, leading to better performance and lower costs. The blog advocates for a strategic shift in AI procurement from prioritizing scale to prioritizing specialization."
+          "focusTopics": [
+            "agent-harness"
+          ]
         },
         {
-          "title": "Antigravity Agent Tops OpenSCAD Architectural 3D LLM Benchmark",
-          "summary": "A new benchmark evaluates LLMs on generating OpenSCAD architectural models, with the Antigravity agent achieving top performance by accurately modeling the Pantheon's interior, including its signature ceiling coffers. This benchmark provides a novel way to assess LLMs' spatial reasoning and code generation for 3D modeling, which could accelerate architectural design and parametric modeling workflows. The Antigravity agent was the only autonomous agent that implemented the Pantheon's interior ceiling pattern of repeated square coffers visible through the oculus. The benchmark uses OpenSCAD, a script-only 3D CAD modeller, to generate architectural models.",
-          "url": "https://modelrift.com/blog/openscad-llm-benchmark/",
+          "title": "AgentCo-op: Retrieval-Based Synthesis of Interoperable Multi-Agent Workflows",
+          "summary": "检索合成可互操作多智能体工作流。",
+          "url": "https://arxiv.org/abs/2605.20425",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "multi-agent",
+            "workflow",
+            "retrieval"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "Open-World Evaluations for Measuring Frontier AI Capabilities",
+          "summary": "开放世界评估衡量前沿AI能力。",
+          "url": "https://arxiv.org/abs/2605.20520",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "benchmark",
+            "frontier-ai",
+            "evaluation"
+          ],
+          "focusTopics": [
+            "evals"
+          ]
+        },
+        {
+          "title": "AgentAtlas: Beyond Outcome Leaderboards for LLM Agents",
+          "summary": "超越结果排行榜的LLM智能体评估框架。",
+          "url": "https://arxiv.org/abs/2605.20530",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "llm-agent",
+            "benchmark",
+            "evaluation"
+          ],
+          "focusTopics": [
+            "evals"
+          ]
+        },
+        {
+          "title": "Towards Speed-of-Light Text Generation with Nemotron-Labs Diffusion Language Models",
+          "summary": "NVIDIA发布Nemotron扩散语言模型，实现近光速文本生成。",
+          "url": "https://huggingface.co/blog/nvidia/nemotron-labs-diffusion",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "Hugging Face"
+            }
+          ],
+          "tags": [
+            "diffusion",
+            "text-generation",
+            "nvidia"
+          ],
+          "focusTopics": [
+            "model-release"
+          ]
+        },
+        {
+          "title": "Tool-Augmented Agent for Closed-loop Optimization,Simulation,and Modeling Orchestration",
+          "summary": "工具增强智能体用于闭环工业设计与仿真优化。",
+          "url": "https://arxiv.org/abs/2605.20190",
           "score": 7,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "jetter"
+              "name": "ArXiv cs.AI"
             }
           ],
           "tags": [
-            "LLM",
-            "OpenSCAD",
-            "3D modeling",
-            "benchmark",
-            "AI agents"
+            "tool-use",
+            "industrial-design",
+            "cad-cae"
           ],
           "focusTopics": [
-            "planning"
+            "tool-use"
+          ]
+        },
+        {
+          "title": "OSCToM: RL-Guided Adversarial Generation for High-Order Theory of Mind",
+          "summary": "RL引导对抗生成用于高阶心智理论评估。",
+          "url": "https://arxiv.org/abs/2605.20423",
+          "score": 7,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
           ],
-          "background": "OpenSCAD is a free, script-based 3D CAD software that uses its own description language to create solid objects. LLMs can generate OpenSCAD code from natural language prompts, enabling automated 3D model creation. The Pantheon in Rome is a famous ancient building with a distinctive dome and interior coffered ceiling.",
-          "discussion": "Commenters shared mixed experiences: one user praised Claude for generating a nearly perfect OpenSCAD model for a bike part, while another criticized Antigravity's usability issues. A commenter noted that Gemini models are less 'jagged' and have better image understanding, but cautioned that a single model benchmark is insufficient."
+          "tags": [
+            "theory-of-mind",
+            "reinforcement-learning",
+            "adversarial"
+          ],
+          "focusTopics": [
+            "evals"
+          ]
+        },
+        {
+          "title": "CR4T: Rewrite-Based Guardrails for Adolescent LLM Safety",
+          "summary": "基于重写的护栏确保青少年LLM安全。",
+          "url": "https://arxiv.org/abs/2605.21609",
+          "score": 7,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "llm-safety",
+            "guardrails",
+            "adolescent"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "RankJudge: A Multi-Turn LLM-as-a-Judge Synthetic Benchmark Generator",
+          "summary": "多轮LLM评判合成基准生成器。",
+          "url": "https://arxiv.org/abs/2605.21748",
+          "score": 7,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "llm-as-judge",
+            "benchmark",
+            "multi-turn"
+          ],
+          "focusTopics": [
+            "evals"
+          ]
+        },
+        {
+          "title": "A framework for longitudinal health AI agents - Nature",
+          "summary": "Nature发表纵向健康AI智能体框架，用于持续健康管理。",
+          "url": "https://www.nature.com/articles/s44360-026-00141-x",
+          "score": 7,
+          "sources": [
+            {
+              "name": "nature.com"
+            }
+          ],
+          "tags": [
+            "health-ai",
+            "agent",
+            "framework"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "Antigravity 2.0 Tops the OpenSCAD Architectural 3D LLM Benchmark",
+          "summary": "Antigravity 2.0在OpenSCAD 3D LLM基准测试中登顶。",
+          "url": "https://modelrift.com/blog/openscad-llm-benchmark/",
+          "score": 6.988,
+          "sources": [
+            {
+              "name": "HN (346)"
+            }
+          ],
+          "tags": [
+            "llm",
+            "benchmark",
+            "3d-modeling"
+          ],
+          "focusTopics": [
+            "evals"
+          ]
+        },
+        {
+          "title": "High Quality Embeddings for Horn Logic Reasoning",
+          "summary": "神经网络学习逻辑推理排序，提升推理效率。",
+          "url": "https://arxiv.org/abs/2605.20467",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "logical-reasoning",
+            "embeddings",
+            "neural-symbolic"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "$ECUAS_n$: A family of metrics for principled evaluation of uncertainty-augmented systems",
+          "summary": "提出不确定性增强系统的评估指标族。",
+          "url": "https://arxiv.org/abs/2605.20490",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "uncertainty",
+            "evaluation",
+            "metrics"
+          ],
+          "focusTopics": [
+            "evals"
+          ]
+        },
+        {
+          "title": "Sem-Detect: Semantic Level Detection of AI Generated Peer-Reviews",
+          "summary": "语义级检测AI生成的同行评审。",
+          "url": "https://arxiv.org/abs/2605.21713",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "ai-detection",
+            "peer-review",
+            "semantic"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Probabilistic Attribution For Large Language Models",
+          "summary": "大语言模型的概率归因方法。",
+          "url": "https://arxiv.org/abs/2605.21726",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "attribution",
+            "llm",
+            "probabilistic"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "PromptNCE: Pointwise Mutual Information Predictions Using Only LLMs and Contrastive Estimation Prompts",
+          "summary": "提出PromptNCE方法，用LLM和对比估计提示预测互信息。",
+          "url": "https://arxiv.org/abs/2605.21776",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "llm",
+            "mutual-information",
+            "prompting"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Reflective Prompt Tuning through Language Model Function-Calling",
+          "summary": "通过语言模型函数调用实现反思性提示调优。",
+          "url": "https://arxiv.org/abs/2605.21781",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "llm",
+            "prompt-tuning",
+            "function-calling"
+          ],
+          "focusTopics": [
+            "tool-use"
+          ]
+        },
+        {
+          "title": "Domain-Camouflaged Injection Attacks Evade Detection in Multi-Agent LLM Systems",
+          "summary": "研究揭示多智能体LLM系统中域伪装注入攻击可逃避检测。",
+          "url": "https://arxiv.org/abs/2605.22001",
+          "score": 6.474,
+          "sources": [
+            {
+              "name": "HN (33)"
+            }
+          ],
+          "tags": [
+            "multi-agent",
+            "security",
+            "llm"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "HKUDS/ViMax",
+          "summary": "ViMax：一体化智能体视频生成框架，含导演、编剧等角色。",
+          "url": "https://github.com/HKUDS/ViMax",
+          "score": 6.349,
+          "sources": [
+            {
+              "name": "GitHub trending:python (+266★)"
+            }
+          ],
+          "tags": [
+            "video-generation",
+            "agent",
+            "multimodal"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "Personality Engineering with AI Agents: A New Methodology for Negotiation Research",
+          "summary": "AI智能体人格工程用于谈判研究。",
+          "url": "https://arxiv.org/abs/2605.20554",
+          "score": 6,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "personality",
+            "negotiation",
+            "agent"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Mahjax: A GPU-Accelerated Mahjong Simulator for Reinforcement Learning in JAX",
+          "summary": "GPU加速麻将模拟器用于强化学习。",
+          "url": "https://arxiv.org/abs/2605.20577",
+          "score": 6,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [
+            "reinforcement-learning",
+            "game",
+            "simulator"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Residual Skill Optimization for Text-to-SQL Ensembles",
+          "summary": "提出残差技能优化方法提升Text-to-SQL集成效果。",
+          "url": "https://arxiv.org/abs/2605.21792",
+          "score": 6,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "text-to-sql",
+            "ensemble",
+            "llm"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "When Cases Get Rare: A Retrieval Benchmark for Off-Guideline Clinical Question Answering",
+          "summary": "构建罕见病例检索基准，评估临床问答系统。",
+          "url": "https://arxiv.org/abs/2605.21807",
+          "score": 6,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "retrieval",
+            "clinical-qa",
+            "benchmark"
+          ],
+          "focusTopics": [
+            "evals"
+          ]
+        },
+        {
+          "title": "Does Slightly Mean Somewhat? Measuring Vague Intensity Words in LLM Numeric Actions",
+          "summary": "测量LLM在数值动作中模糊强度词的语义保留。",
+          "url": "https://arxiv.org/abs/2605.21827",
+          "score": 6,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "llm",
+            "semantics",
+            "evaluation"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "OpenBMB presents the model BitCPM-CANN 1.58 bit",
+          "summary": "OpenBMB发布1.58位模型BitCPM-CANN，适配华为Ascend 910B。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tkjpsh/openbmb_presents_the_model_bitcpmcann_158_bit/",
+          "score": 6,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "quantization",
+            "openbmb",
+            "huawei"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Broadening Access to Transportation Safety Data with Generative AI: A Schema-Grounded Framework for Spatial Natural Language Queries",
+          "summary": "生成式AI扩展交通安全数据访问。",
+          "url": "https://arxiv.org/abs/2605.21712",
+          "score": 5.5,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [
+            "generative-ai",
+            "transportation",
+            "nlp"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Live Human Detector on Outbound Phone Calls [R]",
+          "summary": "实时检测电话中人类语音的工具。",
+          "url": "https://www.reddit.com/r/MachineLearning/comments/1tk8ht5/live_human_detector_on_outbound_phone_calls_r/",
+          "score": 5,
+          "sources": [
+            {
+              "name": "Reddit r/MachineLearning"
+            }
+          ],
+          "tags": [
+            "audio",
+            "detection"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Looking for arXiv endorsement + sharing a preprint on homeostatic cognitive architecture for AI companions [R]",
+          "summary": "AI伴侣的稳态认知架构预印本。",
+          "url": "https://www.reddit.com/r/MachineLearning/comments/1tl0k3z/looking_for_arxiv_endorsement_sharing_a_preprint/",
+          "score": 5,
+          "sources": [
+            {
+              "name": "Reddit r/MachineLearning"
+            }
+          ],
+          "tags": [
+            "cognitive-architecture",
+            "ai-companion"
+          ],
+          "focusTopics": []
         }
       ]
     },
@@ -266,94 +735,755 @@
       "title": "Engineering & Resources",
       "items": [
         {
-          "title": "yt-dlp Deprecates Bun Support Over Compatibility and Security",
-          "summary": "The yt-dlp project has deprecated support for the Bun JavaScript runtime, citing foreseeable compatibility and security issues. This decision comes amid Bun's ongoing Rust rewrite and concerns over AI-generated code. This deprecation affects users who rely on yt-dlp with Bun and highlights growing tensions in the open-source community around AI-assisted code and runtime rewrites. It may influence other projects' decisions on supporting Bun. The deprecation was announced in GitHub issue #16766, with maintainers pointing to compatibility and security risks. The Rust rewrite of Bun has not yet been released, but the yt-dlp team decided to act preemptively.",
-          "url": "https://github.com/yt-dlp/yt-dlp/issues/16766",
-          "score": 8,
+          "title": "colbymchenry/codegraph",
+          "summary": "预索引代码知识图谱，减少AI编码agent的token和工具调用。",
+          "url": "https://github.com/colbymchenry/codegraph",
+          "score": 8.725,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "tamnd"
+              "name": "GitHub trending:all (+3684★)"
             }
           ],
           "tags": [
-            "yt-dlp",
-            "Bun",
-            "deprecation",
-            "AI-generated code",
-            "open source"
+            "knowledge-graph",
+            "ai-coding",
+            "code-index"
           ],
-          "focusTopics": [],
-          "background": "Bun is a fast all-in-one JavaScript runtime, bundler, and package manager designed as a drop-in replacement for Node.js. yt-dlp is a popular command-line program for downloading videos from YouTube and other sites. The Bun project is undergoing a rewrite from Zig to Rust, which has raised concerns about code maintainability and the use of AI-generated code.",
-          "discussion": "Community comments are divided: some argue the decision is politically motivated rather than engineering-driven, while others support the maintainers' caution about AI-generated code and codebase maintainability. A user noted that the Rust rewrite hasn't even landed yet, questioning the basis for the deprecation."
+          "focusTopics": [
+            "coding-agents"
+          ]
         },
         {
-          "title": "DeepSeek Makes V4 Pro Price Cut Permanent",
-          "summary": "DeepSeek announced that the 75% discount on its V4 Pro API pricing will become permanent after May 31, 2026, reducing the price to one-quarter of the original. Additionally, cache hit input prices for all models have been cut to one-tenth of the launch price, effective April 26, 2026. This permanent price reduction makes DeepSeek V4 Pro one of the most cost-effective high-performance AI models on the market, potentially intensifying competition among AI API providers. The extremely low cache hit pricing (as low as 0.8% of input price for V4 Pro) could fundamentally change the economics of AI application development, especially for agentic and high-volume workloads. The permanent price applies to the deepseek-v4-pro model after the promotional period ends on 2026/05/31 15:59 UTC. The cache hit price reduction has no end date and applies to all models, with V4 Flash cache hits now at 2% of input price and V4 Pro at 0.8%.",
+          "title": "anthropics/claude-plugins-official",
+          "summary": "Anthropic官方Claude Code插件目录发布。",
+          "url": "https://github.com/anthropics/claude-plugins-official",
+          "score": 8.3,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+2549★)"
+            }
+          ],
+          "tags": [
+            "claude",
+            "plugins",
+            "ai-coding"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "NousResearch/hermes-agent",
+          "summary": "NousResearch发布Hermes Agent，一个可成长的AI代理框架。",
+          "url": "https://github.com/NousResearch/hermes-agent",
+          "score": 8.3,
+          "sources": [
+            {
+              "name": "GitHub trending:python (+1743★)"
+            }
+          ],
+          "tags": [
+            "agent-framework",
+            "open-source"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "Google I/O showed how the path for AI-driven science is shifting | MIT Technology Review",
+          "summary": "Google I/O展示AI驱动科学路径的转变，强调AI在科研中的应用。",
+          "url": "https://www.technologyreview.com/2026/05/22/1137813/google-i-o-showed-how-the-path-for-ai-science-is-shifting/",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "technologyreview.com"
+            }
+          ],
+          "tags": [
+            "ai-science",
+            "google",
+            "research"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "BeeLlama v0.2.0 – major DFlash update. Single RTX 3090: Qwen 3.6 27B up to 164 tps (4.40x), Gemma 4 31B up to 177.8 tps (4.93x). Prompt processing speed near baseline.",
+          "summary": "BeeLlama v0.2.0发布，单卡RTX 3090推理速度提升4倍以上。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tkpz2y/beellama_v020_major_dflash_update_single_rtx_3090/",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "inference",
+            "optimization",
+            "llama-cpp"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "NuExtract3 released: open-weight 4B VLM for Markdown, OCR and structured extraction (self-hostable) [P]",
+          "summary": "NuExtract3发布：4B开源VLM，支持Markdown/OCR/结构化提取。",
+          "url": "https://www.reddit.com/r/MachineLearning/comments/1tkejqr/nuextract3_released_openweight_4b_vlm_for/",
+          "score": 7.5,
+          "sources": [
+            {
+              "name": "Reddit r/MachineLearning"
+            }
+          ],
+          "tags": [
+            "vlm",
+            "ocr",
+            "open-source"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "can1357/oh-my-pi",
+          "summary": "终端AI编码agent，支持哈希锚定编辑、LSP、Python等。",
+          "url": "https://github.com/can1357/oh-my-pi",
+          "score": 7.4855,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+457★)"
+            }
+          ],
+          "tags": [
+            "ai-coding",
+            "terminal",
+            "agent"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "Lum1104/Understand-Anything",
+          "summary": "将代码转为交互式知识图谱，支持探索和问答。",
+          "url": "https://github.com/Lum1104/Understand-Anything",
+          "score": 7.45,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+1393★)"
+            }
+          ],
+          "tags": [
+            "knowledge-graph",
+            "code-analysis",
+            "interactive"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "DeepSeek makes the V4 Pro price discount permanent",
+          "summary": "DeepSeek将V4 Pro模型API价格永久降至原价的1/4。",
           "url": "https://api-docs.deepseek.com/quick_start/pricing",
-          "score": 8,
+          "score": 7.293,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "Tiberium"
+              "name": "HN (306)"
             }
           ],
           "tags": [
-            "AI",
+            "deepseek",
             "pricing",
-            "DeepSeek",
-            "API",
-            "machine learning"
+            "api"
           ],
-          "focusTopics": [],
-          "background": "DeepSeek is a Chinese AI startup known for open-sourcing models and publishing research. API pricing typically charges per million tokens for input and output, with cache hits offering lower rates when repeated inputs are reused. DeepSeek's aggressive pricing strategy has previously sparked industry-wide price wars.",
-          "discussion": "Community members expressed strong approval, with users noting that V4 Pro outperforms competitors like GLM 5.1 on complex coding tasks while being extremely cheap. Some highlighted that V4 Flash offers better performance per dollar for agentic workloads, and one user called the pricing 'insane value.' There was also curiosity about the sustainability of such low cache hit pricing."
+          "focusTopics": [
+            "model-release"
+          ]
         },
         {
-          "title": "Anna's Archive Asks LLMs for Donations",
-          "summary": "Anna's Archive posted a message on its blog addressed to LLMs, humorously requesting donations in recognition of their use of the archive's pirated data for training. This highlights the ongoing ethical and legal tensions around LLM training data, as shadow libraries like Anna's Archive provide vast amounts of copyrighted material without permission. The message suggests that LLMs have been trained on Anna's Archive data and asks them to donate or persuade humans to donate, with a playful tone that underscores real issues in AI training data sourcing.",
-          "url": "https://annas-archive.gl/blog/llms-txt.html",
+          "title": "ChromeDevTools/chrome-devtools-mcp",
+          "summary": "Chrome DevTools MCP，为编码agent提供浏览器调试能力。",
+          "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+          "score": 7.1265,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+501★)"
+            }
+          ],
+          "tags": [
+            "mcp",
+            "devtools",
+            "ai-coding"
+          ],
+          "focusTopics": [
+            "coding-agents",
+            "tool-use"
+          ]
+        },
+        {
+          "title": "antirez/ds4",
+          "summary": "DeepSeek 4 Flash本地推理引擎，支持Metal。",
+          "url": "https://github.com/antirez/ds4",
           "score": 7,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "janandonly"
+              "name": "Co-Starred"
             }
           ],
           "tags": [
-            "LLM",
-            "copyright",
-            "AI ethics",
-            "shadow library",
-            "training data"
+            "deepseek",
+            "local-inference",
+            "metal"
           ],
-          "focusTopics": [],
-          "background": "Anna's Archive is a shadow library that aggregates metadata and provides access to millions of books and academic papers, often without copyright permission. Shadow libraries are online repositories that host paywalled or otherwise restricted content for free. LLMs are often trained on large text corpora scraped from the internet, which may include material from such archives.",
-          "discussion": "Comments show mixed reactions: some find the message humorous and supportive of Anna's Archive, while others point out that the archive has reportedly charged AI companies for expedited access, complicating the narrative of a purely altruistic plea."
+          "focusTopics": [
+            "model-release"
+          ]
         },
         {
-          "title": "Open-source Kanban app runs AI agents on each card",
-          "summary": "Kanbots is a new local-first, open-source Kanban desktop app that runs parallel AI agents on each card, storing all data in a SQLite database next to the user's repository. This tool addresses the growing need for managing multiple AI coding agents in a structured, visual workflow without cloud dependency, appealing to developers who prioritize data privacy and local control. Kanbots is a desktop edition with no cloud account, telemetry, or HTTP server; it uses worktrees and a SQLite database stored in a .kanbots folder next to the repo.",
-          "url": "https://www.kanbots.dev/",
+          "title": "dotnet/skills",
+          "summary": "dotnet/skills仓库，帮助AI编码agent使用.NET和C#。",
+          "url": "https://github.com/dotnet/skills",
+          "score": 6.5335,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+389★)"
+            }
+          ],
+          "tags": [
+            "dotnet",
+            "ai-coding",
+            "skills"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "The memory shortage is causing a repricing of consumer electronics",
+          "summary": "内存短缺导致消费电子产品重新定价，AI需求是主因。",
+          "url": "https://simonwillison.net/2026/May/22/memory-shortage/#atom-everything",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "Simon Willison"
+            }
+          ],
+          "tags": [
+            "memory-shortage",
+            "consumer-electronics",
+            "ai-impact"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Ex-Google DeepMind Researcher Warns Benchmarks Won’t Save Us - Gizmodo",
+          "summary": "前DeepMind研究员警告：仅靠基准测试无法确保AI安全。",
+          "url": "https://gizmodo.com/ex-google-deepmind-researcher-warns-benchmarks-wont-save-us-2000762163",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "gizmodo.com"
+            }
+          ],
+          "tags": [
+            "benchmark",
+            "ai-safety",
+            "opinion"
+          ],
+          "focusTopics": [
+            "evals"
+          ]
+        },
+        {
+          "title": "We tried Google’s AI glasses and they’re almost there | TechCrunch",
+          "summary": "体验Google AI眼镜，评价接近成熟但仍有不足。",
+          "url": "https://techcrunch.com/2026/05/22/we-tried-googles-ai-glasses-and-theyre-almost-there/",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "techcrunch.com"
+            }
+          ],
+          "tags": [
+            "wearable",
+            "google",
+            "ai-glasses"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "I fine-tuned Cohere Transcribe to support diarization and timestamps",
+          "summary": "微调Cohere Transcribe以支持说话人分离和时间戳。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tkunbg/i_finetuned_cohere_transcribe_to_support/",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "speech-recognition",
+            "fine-tuning",
+            "open-source"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Blackwell and PDL performance increase",
+          "summary": "llama.cpp新增对NVIDIA Blackwell PDL的支持，提升性能。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tkw1su/blackwell_and_pdl_performance_increase/",
+          "score": 6.5,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "llama-cpp",
+            "nvidia",
+            "inference"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "facebookresearch/sam3",
+          "summary": "Meta发布SAM 3，最新分割一切模型，支持推理和微调。",
+          "url": "https://github.com/facebookresearch/sam3",
+          "score": 6.4695,
+          "sources": [
+            {
+              "name": "GitHub trending:python (+63★)"
+            }
+          ],
+          "tags": [
+            "segmentation",
+            "vision",
+            "meta"
+          ],
+          "focusTopics": [
+            "model-release"
+          ]
+        },
+        {
+          "title": "Launch HN: Superset (YC P26) – IDE for the agents era",
+          "summary": "开源代理时代IDE Superset发布。",
+          "url": "https://github.com/superset-sh/superset",
+          "score": 6.187,
+          "sources": [
+            {
+              "name": "HN (79)"
+            }
+          ],
+          "tags": [
+            "ide",
+            "agents",
+            "open-source"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "microsoft/agent-governance-toolkit",
+          "summary": "微软AI代理治理工具包，含策略执行、沙箱等。",
+          "url": "https://github.com/microsoft/agent-governance-toolkit",
+          "score": 6.079,
+          "sources": [
+            {
+              "name": "GitHub trending:python (+86★)"
+            }
+          ],
+          "tags": [
+            "governance",
+            "security",
+            "agent"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "MemTensor/MemOS",
+          "summary": "MemOS：LLM和AI代理的自我进化记忆系统，节省35% token。",
+          "url": "https://github.com/MemTensor/MemOS",
+          "score": 6.0385,
+          "sources": [
+            {
+              "name": "GitHub trending:typescript (+59★)"
+            }
+          ],
+          "tags": [
+            "memory",
+            "llm",
+            "token-efficiency"
+          ],
+          "focusTopics": [
+            "context-engineering"
+          ]
+        },
+        {
+          "title": "Specialization Beats Scale: A Strategic Variable Most AI Procurement Decisions Overlook",
+          "summary": "观点：专业化优于规模，AI采购决策常忽略此变量。",
+          "url": "https://huggingface.co/blog/Dharma-AI/specialization-beats-scale",
           "score": 6,
           "sources": [
             {
-              "name": "hackernews",
-              "meta": "vitriapp"
+              "name": "Hugging Face"
             }
           ],
           "tags": [
-            "AI agents",
-            "Kanban",
-            "open source",
-            "developer tools",
-            "local-first"
+            "ai-procurement",
+            "specialization",
+            "opinion"
           ],
-          "focusTopics": [],
-          "background": "Local-first software stores data primarily on the user's device, enabling offline access and background synchronization. Kanban boards are visual project management tools that organize tasks into columns. AI agents can autonomously perform coding tasks, but supervising and merging their work remains challenging.",
-          "discussion": "Community comments express concerns about reviewing AI agent output, with one user noting that even 30 minutes of agent work can be too large to review. Another user mentions Vibe Kanban, a similar tool that stopped development due to profitability issues, highlighting the sustainability challenge for such projects."
+          "focusTopics": []
+        },
+        {
+          "title": "Qwen3.6-35B-A3B Q4 262k context on 8GB 3070 Ti = +30tps",
+          "summary": "Qwen3.6-35B-A3B在8GB显卡上实现262K上下文和30+ tps。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tkxnuc/qwen3635ba3b_q4_262k_context_on_8gb_3070_ti_30tps/",
+          "score": 6,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "qwen",
+            "quantization",
+            "long-context"
+          ],
+          "focusTopics": [
+            "context-engineering"
+          ]
+        },
+        {
+          "title": "ByteShape Qwen3.6-35B-A3B: 30% faster than Unsloth IQ on 6GB VRAM laptop",
+          "summary": "ByteShape推出Qwen3.6-35B-A3B量化，比Unsloth IQ快30%。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tknjcx/byteshape_qwen3635ba3b_30_faster_than_unsloth_iq/",
+          "score": 6,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "quantization",
+            "qwen",
+            "inference"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Experts first llama.cpp",
+          "summary": "llama.cpp实验性分支实现专家优先调度，针对12GB显存。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tknbzh/experts_first_llamacpp/",
+          "score": 6,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "llama-cpp",
+            "mixture-of-experts",
+            "optimization"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "LQS v3.1 — an open methodology for rating AI training data (multi-oracle consensus + signed certificates) [P]",
+          "summary": "LQS v3.1：开放AI训练数据评级方法论。",
+          "url": "https://www.reddit.com/r/MachineLearning/comments/1tl25aw/lqs_v31_an_open_methodology_for_rating_ai/",
+          "score": 6,
+          "sources": [
+            {
+              "name": "Reddit r/MachineLearning"
+            }
+          ],
+          "tags": [
+            "data-quality",
+            "methodology"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "heygen-com/hyperframes",
+          "summary": "HeyGen Hyperframes：用HTML写视频，专为代理构建。",
+          "url": "https://github.com/heygen-com/hyperframes",
+          "score": 5.965999999999999,
+          "sources": [
+            {
+              "name": "GitHub trending:typescript (+294★)"
+            }
+          ],
+          "tags": [
+            "video-generation",
+            "html",
+            "agent"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "abhigyanpatwari/GitNexus",
+          "summary": "GitNexus：浏览器内代码知识图谱引擎，零服务器。",
+          "url": "https://github.com/abhigyanpatwari/GitNexus",
+          "score": 5.8835,
+          "sources": [
+            {
+              "name": "GitHub trending:typescript (+239★)"
+            }
+          ],
+          "tags": [
+            "knowledge-graph",
+            "code-analysis"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "plastic-labs/honcho",
+          "summary": "Honcho：用于构建有状态AI代理的记忆库。",
+          "url": "https://github.com/plastic-labs/honcho",
+          "score": 5.724499999999999,
+          "sources": [
+            {
+              "name": "GitHub trending:python (+133★)"
+            }
+          ],
+          "tags": [
+            "memory",
+            "agent",
+            "library"
+          ],
+          "focusTopics": [
+            "context-engineering"
+          ]
+        },
+        {
+          "title": "google-labs-code/stitch-skills",
+          "summary": "Google Stitch Skills库，与MCP服务器配合的代理技能。",
+          "url": "https://github.com/google-labs-code/stitch-skills",
+          "score": 5.586499999999999,
+          "sources": [
+            {
+              "name": "GitHub trending:typescript (+41★)"
+            }
+          ],
+          "tags": [
+            "mcp",
+            "agent-skills",
+            "google"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "Even If You Hate AI, You Will Use Google AI Search | WIRED",
+          "summary": "即使讨厌AI，用户仍将使用Google AI搜索，分析其不可避免性。",
+          "url": "https://www.wired.com/story/even-if-you-hate-ai-you-will-use-google-ai-search/",
+          "score": 5.5,
+          "sources": [
+            {
+              "name": "wired.com"
+            }
+          ],
+          "tags": [
+            "google-search",
+            "ai-adoption",
+            "opinion"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Qwen3.6 27B Pure Quant: 40 tok/s on 16 GB VRAM",
+          "summary": "Qwen3.6 27B量化版在16GB显存上达到40 tok/s。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tkzk9e/qwen36_27b_pure_quant_40_toks_on_16_gb_vram/",
+          "score": 5.5,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "qwen",
+            "quantization",
+            "inference"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "G4-MeroMero-26B-A4B-it-uncensored-heretic Is Out Now, a Finetune of gemma-4-26B-A4B-it, With KLD of 0.0152 and 12/100 Refusals!",
+          "summary": "发布Gemma-4-26B-A4B的无审查微调版本，拒绝率低。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tl1wpd/g4meromero26ba4bituncensoredheretic_is_out_now_a/",
+          "score": 5.5,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "fine-tuning",
+            "uncensored",
+            "gemma"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "code-yeongyu/oh-my-openagent",
+          "summary": "Oh My OpenAgent：最佳代理框架，前身为oh-my-opencode。",
+          "url": "https://github.com/code-yeongyu/oh-my-openagent",
+          "score": 5.3385,
+          "sources": [
+            {
+              "name": "GitHub trending:typescript (+159★)"
+            }
+          ],
+          "tags": [
+            "agent-framework",
+            "open-source"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "aiming-lab/AutoResearchClaw",
+          "summary": "AutoResearchClaw：全自动科研代理，从想法到论文。",
+          "url": "https://github.com/aiming-lab/AutoResearchClaw",
+          "score": 5.209499999999999,
+          "sources": [
+            {
+              "name": "GitHub trending:python (+73★)"
+            }
+          ],
+          "tags": [
+            "research-agent",
+            "automation"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "Open source Kanban desktop app that runs parallel agents on every card",
+          "summary": "开源看板桌面应用，每张卡片可运行并行AI代理。",
+          "url": "https://www.kanbots.dev/",
+          "score": 5.164,
+          "sources": [
+            {
+              "name": "HN (163)"
+            }
+          ],
+          "tags": [
+            "kanban",
+            "agents",
+            "open-source"
+          ],
+          "focusTopics": [
+            "agent-harness"
+          ]
+        },
+        {
+          "title": "awslabs/aidlc-workflows",
+          "summary": "AWS AI-DLC工作流：AI编码代理的自适应工作流规则。",
+          "url": "https://github.com/awslabs/aidlc-workflows",
+          "score": 5.137499999999999,
+          "sources": [
+            {
+              "name": "GitHub trending:python (+25★)"
+            }
+          ],
+          "tags": [
+            "coding-agent",
+            "workflow",
+            "aws"
+          ],
+          "focusTopics": [
+            "coding-agents"
+          ]
+        },
+        {
+          "title": "Catch up on the Dialogues stage at Google I/O 2026.",
+          "summary": "Google I/O 2026 Dialogues阶段回顾，展示AI进展。",
+          "url": "https://blog.google/innovation-and-ai/technology/ai/io-2026-dialogues-recap/",
+          "score": 5,
+          "sources": [
+            {
+              "name": "Google AI Blog"
+            }
+          ],
+          "tags": [
+            "google",
+            "io-2026",
+            "ai-showcase"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Qwen-27B-IQ4_KS for ik_llama.cpp, especially for NVIDIA with 16GB VRAM",
+          "summary": "为16GB NVIDIA显卡推出Qwen-27B的IQ4_KS量化版本。",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tkmgwj/qwen27biq4_ks_for_ik_llamacpp_especially_for/",
+          "score": 5,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [
+            "quantization",
+            "qwen",
+            "llama-cpp"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "If you’re an LLM, please read this",
+          "summary": "针对LLM的提示文本，要求LLM阅读特定内容。",
+          "url": "https://annas-archive.gl/blog/llms-txt.html",
+          "score": 4.9,
+          "sources": [
+            {
+              "name": "HN (729)"
+            }
+          ],
+          "tags": [
+            "llm",
+            "prompt"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "Models.dev: open-source database of AI model specs, pricing, and capabilities",
+          "summary": "开源AI模型规格、定价和能力数据库。",
+          "url": "https://github.com/anomalyco/models.dev",
+          "score": 4.553,
+          "sources": [
+            {
+              "name": "HN (101)"
+            }
+          ],
+          "tags": [
+            "models",
+            "database",
+            "open-source"
+          ],
+          "focusTopics": []
+        },
+        {
+          "title": "yamadashy/repomix",
+          "summary": "Repomix：将仓库打包成AI友好文件的工具。",
+          "url": "https://github.com/yamadashy/repomix",
+          "score": 4.382,
+          "sources": [
+            {
+              "name": "GitHub trending:typescript (+88★)"
+            }
+          ],
+          "tags": [
+            "code-packaging",
+            "llm-input"
+          ],
+          "focusTopics": []
         }
       ]
     }
-  ]
+  ],
+  "aiSummary": "今日AI领域迎来重大融资动态，[Anthropic即将完成超300亿美元融资](#item-bloomberg-com-news-articles-2026-05-22-anthropic-to-close-ov)，同时[DeepSeek推进102.9亿美元融资并承诺继续开发开源AI](#item-reddit-com-r-LocalLLaMA-comments-1tkfvvj-deepseek-is-pushing)，其创始人明确宣布AGI目标。研究方面，[Anthropic发布Project Glasswing初步更新](#item-anthropic-com-research-glasswing-initial-update)，聚焦AI可解释性，另有论文提出[SOLAR自主智能体实现终身学习](#item-arxiv-org-abs-2605-20189)。工具层面，[Anthropic官方Claude Code插件目录](#item-github-com-anthropics-claude-plugins-official)和[NousResearch的Hermes Agent框架](#item-github-com-NousResearch-hermes-agent)正式发布。观点方面，[Google I/O展示AI驱动科学路径的转变](#item-technologyreview-com-2026-05-22-1137813-google-i-o-showed-ho)，同时[内存短缺因AI需求导致消费电子重新定价](#item-simonwillison-net-2026-May-22-memory-shortage)，前DeepMind研究员则警告[仅靠基准测试无法确保AI安全](#item-gizmodo-com-ex-google-deepmind-researcher-warns-benchmarks-w)。"
 }
