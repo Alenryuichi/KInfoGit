@@ -2,27 +2,6 @@
   "id": "lucidrains",
   "stars": [
     {
-      "repo": "nim-lang/uirelays",
-      "url": "https://github.com/nim-lang/uirelays",
-      "description": "Native Nim UI library based on the idea of \"relays\" which is a new fancy name for dependency injections via global callbacks. Has Windows API, X11, Cocoa and SDL 3 support. Write UI apps as easily as terminal apps!",
-      "language": "Nim",
-      "stargazersCount": 34,
-      "starredBy": "lucidrains",
-      "starredAt": "2026-04-24T19:07:45Z",
-      "highlights": "A native Nim UI library using a 'relays' pattern (dependency injection via global callbacks) for simplicity. Supports Windows API, X11, Cocoa, and SDL 3 backends, enabling cross-platform UI development with minimal boilerplate.",
-      "worthReading": "Explores an alternative approach to UI architecture in Nim, potentially reducing complexity for desktop app development. Interesting for Nim enthusiasts and those curious about novel dependency injection patterns.",
-      "topics": [
-        "nim",
-        "ui"
-      ],
-      "tags": [
-        "tooling"
-      ],
-      "score": 3,
-      "scoreReason": "Low freshness (34 stars, niche language), low relevance (general UI library, not frontier AI), but concrete (working code with multiple backends).",
-      "type": "github"
-    },
-    {
       "repo": "asimovinc/asimov-v1",
       "url": "https://github.com/asimovinc/asimov-v1",
       "description": "v1 of Asimov, an open-source humanoid robot ",
@@ -194,6 +173,35 @@
       ],
       "score": 7,
       "scoreReason": "Freshness is moderate (3.5k stars, not extremely new but gaining traction), relevance is high (embodied AI frontier), and concreteness is strong (working hardware/software artifact).",
+      "type": "github"
+    },
+    {
+      "repo": "cafeTechne/antigravity-link-extension",
+      "url": "https://github.com/cafeTechne/antigravity-link-extension",
+      "description": "Mobile companion for Google's Antigravity IDE. Mirror AI sessions on your phone, send messages, stop generation, automate via 9 MCP tools or OpenAPI.",
+      "language": "HTML",
+      "stargazersCount": 168,
+      "starredBy": "lucidrains",
+      "starredAt": "2026-05-23T20:14:48Z",
+      "highlights": "",
+      "worthReading": "",
+      "topics": [
+        "ai-tools",
+        "antigravity",
+        "chrome-devtools-protocol",
+        "claude",
+        "developer-tools",
+        "mcp",
+        "mcp-server",
+        "mobile",
+        "model-context-protocol",
+        "openapi",
+        "typescript",
+        "vscode-extension"
+      ],
+      "tags": [],
+      "score": 0,
+      "scoreReason": "",
       "type": "github"
     }
   ],
@@ -469,7 +477,6 @@
     }
   ],
   "dailyCounts": [
-    1,
     0,
     0,
     3,
@@ -496,6 +503,7 @@
     0,
     3,
     0,
+    1,
     1,
     1,
     0
