@@ -4,8 +4,16 @@
     <title>Stars &amp; Posts — Kylin Miao</title>
     <link>https://kylinmiao.me/stars/</link>
     <description>Daily curated GitHub starred repos, Bluesky/X posts, YouTube videos and blog articles from AI leaders with AI-powered summaries.</description>
-    <lastBuildDate>Sun, 24 May 2026 04:30:31 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 25 May 2026 04:33:46 GMT</lastBuildDate>
     <atom:link href="https://kylinmiao.me/stars/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Stars &amp; Posts — 2026-05-25</title>
+      <link>https://kylinmiao.me/stars/2026-05-25/</link>
+      <guid isPermaLink="true">https://kylinmiao.me/stars/2026-05-25/</guid>
+      <pubDate>Mon, 25 May 2026 12:00:00 GMT</pubDate>
+      <description>Bluesky Posts:
+* Simon Willison: Fun new feature in Datasette 1.0a30 - a &quot;jump to&quot; menu, also available by the &quot;/&quot; keyboard shortcut, which lets you type to jump to a database, table ...</description>
+    </item>
     <item>
       <title>Stars &amp; Posts — 2026-05-24</title>
       <link>https://kylinmiao.me/stars/2026-05-24/</link>
@@ -16,9 +24,14 @@
 * AnswerDotAI/lisette — litellm helper [Jupyter Notebook]
 * AnswerDotAI/fastcore — Python supercharged for the fastai library [Jupyter Notebook]
 * AnswerDotAI/dialoghelper — Helper functions for solveit dialogs [Jupyter Notebook]
+* automic-vault/automic-vault — Run agents autonomously without losing secrets, control, or your mind. [Rust]
+* black-forest-labs/Self-Flow — [ICML&apos;26] Code and website for Self-Flow: Self-Supervised Flow Matching for Scalable Multi-Modal Synthesis [Python]
 
 Bluesky Posts:
-* Ethan Mollick: GPT-5.5 Pro is a very solid fact checker. I can throw entire chapters at it and it will hunt down every key reference accurately. The only real annoya...</description>
+* Ethan Mollick: GPT-5.5 Pro is a very solid fact checker. I can throw entire chapters at it and it will hunt down every key reference accurately. The only real annoya...
+* Thomas Dietterich: Excellent post on Waymo&apos;s handling of safety incidents. open.substack.com/pub/philkoop...
+* Nathan Lambert: I heard people needed clarification that my book was a post-training book posttrainingbook.com
+* Ethan Mollick: As more people come to recognize the tells of AI, which mostly happens as you start to work with AI a lot, the scales are going to fall from their eye...</description>
     </item>
     <item>
       <title>Stars &amp; Posts — 2026-05-23</title>
@@ -2128,74 +2141,6 @@ X Posts:
 * Ben Recht: For the first time in almost a decade, I&apos;m teaching a class on learning and control.
 * Ben Recht: Revisiting Sutton&apos;s Bitter Lesson in the wake of GPT-5.
 * Ben Recht: Fully open machine learning requires not only GPU access but a community commitment to openness.</description>
-    </item>
-    <item>
-      <title>Stars &amp; Posts — 2026-04-25</title>
-      <link>https://kylinmiao.me/stars/2026-04-25/</link>
-      <guid isPermaLink="true">https://kylinmiao.me/stars/2026-04-25/</guid>
-      <pubDate>Sat, 25 Apr 2026 12:00:00 GMT</pubDate>
-      <description>Today’s discourse centers on the operational challenges of multi-agent AI systems, with Ethan Mollick pinpointing organizational design and collaborative benchmarking as the next &quot;critical frontier&quot; for enterprise value. Meanwhile, Emily M. Bender introduces the term &quot;demythifying&quot; from a review of *The AI Con*, signaling a continued pushback against AI hype. On GitHub, repositories focused on agent orchestration frameworks and evaluation toolkits saw a surge in stars, reflecting the community’s pivot from single-model capabilities to managing agent swarms at scale. The tension between scaling agentic systems and maintaining rigorous, myth-busting critique remains the dominant theme of the day.
-
-GitHub Repos:
-* ROCm/FlyDSL — FlyDSL is the Python front‑end of the project: Flexible LaYout DSL. [Python]
-
-Bluesky Posts:
-* Ethan Mollick: Organizational design for agents is hard, benchmarking agents working in concert is hard. Together, this is the next critical frontier for making AI m...
-* Emily M. Bender: Favorite new to me word, from a review of The AI Con: demythifying.
-* Simon Willison: I think ChatGPT Images 2.0 deciding to add a &quot;WHY ARE YOU LIKE THIS&quot; sign to the background of this image is the first time I&apos;ve felt a glimpse of AGI...
-* Ethan Mollick: If you believe that AI is going to have a big impact on work and life, the only real tool for mitigating bad impacts and channeling usage for good wil...
-* Ethan Mollick: I think that academia has not absorbed the fact that AI agents are now good enough to independently reconstruct complex papers without access to code ...
-* angela zhou: im just a rat that types and writes papers (cough revises) at verve coffee
-
-X Posts:
-* Andrej Karpathy: Bought a new Mac mini to properly tinker with claws over the weekend. The apple store person told me they are selling like hotcakes and everyone is co...
-* Andrej Karpathy: 2025 LLM Year in Review
-* Andrej Karpathy: Very interested in what the coming era of highly bespoke software ... Example from this morning - I&apos;ve become a bit loosy goosy with my cardio recentl...
-* Simon Willison: I&apos;m beginning to suspect that a key skill in working effectively with coding agents is developing an intuition for when you don&apos;t need to
-* Simon Willison: Vibe coding is irresponsibly building software through dice rolls, not caring what code is produced
-* Harrison Chase: im excited about agent harnesses because i think are the first stable agent abstractions we can build on top (which is why we&apos;re investing so much in ...
-* Harrison Chase: This means that operations you would do on code in the software world, you now do on traces in the agent world. Debugging, testing, profiling
-* Harrison Chase: TL;DR: More and more agents need a workspace: a computer where they can run code, install packages, and access files. Sandboxes provide this
-* Harrison Chase: When you ship traditional software to production, you have a good sense of what to expect. Users click buttons, fill out forms,
-* Jim Fan: I&apos;ve been a bit quiet on X recently. The past year has been a transformational experience.
-* Jeremy Howard: I replicated this result, that Grok focuses nearly entirely on finding out what Elon thinks in
-* Jeremy Howard: Absolutely any time I try to explore something even slightly against commonly accepted beliefs,
-* Soumith Chintala: reading &quot;AI News&quot; (previously Smol Talk) is probably the highest-leverage 45 mins
-* Francois Chollet: I think it&apos;s clear that for many smaller companies that invested in deep learning, it turned out
-* Francois Chollet: Folks who work in AI or software engineering feel like the world is changing exponential fast.
-* David Ha: Don&apos;t miss David Ha @hardmaru&apos;s keynote at @ALifeConf #ALIFE2021 on &quot;World Models and Attention for Reinforcement Learning&quot;!
-* David Ha: It&apos;s spectacular to have followed David Ha&apos;s (@hardmaru) incredible career arc —MD of Fixed Income at Goldman Sachs —restarted his career
-* Yann LeCun: It seems to me that before &quot;urgently figuring out how to control AI systems much smarter than us&quot; we need
-* Yann LeCun: An A.I. Pioneer Warns the Tech &apos;Herd&apos; Is Marching Into a Dead End. www.nytimes.com.
-* Yann LeCun: The emergence of superintelligence is not going to be an event. We don&apos;t have anything close to a
-* Fei-Fei Li: Very excited to share @theworldlabs &apos;s latest research work RTFM!! It&apos;s a real-time, ...
-* Max Woolf: me irl
-* Sasha Rush: On the infra side, composer 2 uses CP. This is (i think?) the first real detail from using CP on MLA. My understanding is that each rank first compute...
-* Sasha Rush: ⛏️
-* Sasha Rush: 
-* Stas Bekman: If you were holding off to try @MSFTDeepSpeed ZeRO++ it looks like deepspeed@master should
-* Stas Bekman: Hear, hear, I&apos;m excited to introduce a new performance metric: Maximum Achievable Matmul
-* Stas Bekman: If you&apos;re trying out FA4, you&apos;re likely to run into not being able to load cutlass.cute
-* Stas Bekman: Thanks to an awesome contribution from @omarnomad The Machine Learning Engineering Open book now can
-* Sayak Paul: Install `diffusers` from source and start using Kontext from @bfl_ml 🧨
-
-Use your favorite optims, too :)
-
-Training is also supported (@linoy_tsaban a...
-* Sayak Paul: Release notes: Release Diffusers 0.34.0: New Image and Video Models, Better torch.
-* Philipp Schmid: Guide: ReAct agent from scratch with Gemini 2.5 and LangGraph | Gemini API | Google AI for Developers. ai.google.dev.
-* Ethan Mollick: AI is actually pretty good at ideas as well.
-* Ethan Mollick: My most popular AI post was a bunch of made-up &quot;graphs&quot; four years ago.
-* Ethan Mollick: So much work is going into faking continual learning and memory for AIs,
-* Ethan Mollick: If it helps, I teach at a business school &amp; many of my smartest students are hired by funds because they can reliably turn their only-human
-* Emily M. Bender: @kohntom A synthetic text extruding machine is not well-matched to any application where the accuracy of the content matters. This is clearly one such...
-* Naomi Saphra: This book starts like it&apos;s gonna be a fun microhistory of TB (it gave us the Stetson!
-* Naomi Saphra: New preprint! Everyone loves causal interp. It&apos;s coherently defined! It makes testable predictions
-* Naomi Saphra: New preprint! Phase transitions! We love to see them during LM training.
-* Angela Zhou: #throwback to the beginnings of a beautiful friendship =D @ansonmount @HellOnWheelsAMC #HellonWheels #onlocation.
-* Ben Recht: I weigh in on the Trump administration’s newfound obsession with Gold Standard Science and reproducibility. Though it’s not all in bad faith, it’s lik...
-* Ben Recht: For the first time in almost a decade, I&apos;m teaching a class on learning and control.
-* Ben Recht: Revisiting Sutton&apos;s Bitter Lesson in the wake of GPT-5.</description>
     </item>
   </channel>
 </rss>

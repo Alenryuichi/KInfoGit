@@ -361,26 +361,6 @@
   ],
   "posts": [
     {
-      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mkdikalmcs2u",
-      "url": "https://bsky.app/profile/simonwillison.net/post/3mkdikalmcs2u",
-      "author": {
-        "handle": "simonwillison.net",
-        "displayName": "Simon Willison",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
-      },
-      "content": "I think ChatGPT Images 2.0 deciding to add a \"WHY ARE YOU LIKE THIS\" sign to the background of this image is the first time I've felt a glimpse of AGI simonwillison.net/2026/Apr/25/...",
-      "createdAt": "2026-04-25T16:46:44.256Z",
-      "likeCount": 214,
-      "replyCount": 14,
-      "repostCount": 20,
-      "highlights": "",
-      "worthReading": "",
-      "tags": [
-        "multi-modal"
-      ],
-      "type": "bluesky"
-    },
-    {
       "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mkjblmouzc2p",
       "url": "https://bsky.app/profile/simonwillison.net/post/3mkjblmouzc2p",
       "author": {
@@ -921,6 +901,24 @@
       "worthReading": "",
       "tags": [],
       "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mmn7ho7lxc24",
+      "url": "https://bsky.app/profile/simonwillison.net/post/3mmn7ho7lxc24",
+      "author": {
+        "handle": "simonwillison.net",
+        "displayName": "Simon Willison",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
+      },
+      "content": "Fun new feature in Datasette 1.0a30 - a \"jump to\" menu, also available by the \"/\" keyboard shortcut, which lets you type to jump to a database, table or canned query. It offers a hook so plugins can extend it with additional content too datasette.io/blog/2026/ju...",
+      "createdAt": "2026-05-25T00:21:14.842Z",
+      "likeCount": 13,
+      "replyCount": 1,
+      "repostCount": 0,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [],
+      "type": "bluesky"
     }
   ],
   "videos": [],
@@ -1107,48 +1105,6 @@
     }
   ],
   "xPosts": [
-    {
-      "type": "x",
-      "id": "1976989054240800798",
-      "url": "https://x.com/simonw/status/1976989054240800798",
-      "author": {
-        "handle": "simonw",
-        "displayName": "Simon Willison",
-        "avatar": "https://avatars.githubusercontent.com/simonw"
-      },
-      "content": "I'm beginning to suspect that a key skill in working effectively with coding agents is developing an intuition for when you don't need to",
-      "createdAt": "2026-04-25T04:01:04.122Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Simon suggests that a key skill with coding agents is knowing when to step back.",
-      "worthReading": "Highlights a nuanced skill for effective human-AI collaboration in coding.",
-      "tags": [
-        "agent",
-        "tooling"
-      ]
-    },
-    {
-      "type": "x",
-      "id": "1975570458683834729",
-      "url": "https://x.com/simonw/status/1975570458683834729",
-      "author": {
-        "handle": "simonw",
-        "displayName": "Simon Willison",
-        "avatar": "https://avatars.githubusercontent.com/simonw"
-      },
-      "content": "Vibe coding is irresponsibly building software through dice rolls, not caring what code is produced",
-      "createdAt": "2026-04-25T04:01:04.122Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Simon defines 'vibe coding' as irresponsible software development.",
-      "worthReading": "Critiques a trend in AI-assisted coding that prioritizes speed over quality.",
-      "tags": [
-        "agent",
-        "evaluation"
-      ]
-    },
     {
       "type": "x",
       "id": "1970147806225854531",
@@ -2403,7 +2359,6 @@
     }
   ],
   "dailyCounts": [
-    3,
     1,
     4,
     5,
@@ -2432,7 +2387,8 @@
     5,
     5,
     3,
-    0
+    0,
+    1
   ],
   "interestSummary": ""
 }
