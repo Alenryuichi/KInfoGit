@@ -919,6 +919,24 @@
       "worthReading": "",
       "tags": [],
       "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mmppliwaes23",
+      "url": "https://bsky.app/profile/simonwillison.net/post/3mmppliwaes23",
+      "author": {
+        "handle": "simonwillison.net",
+        "displayName": "Simon Willison",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
+      },
+      "content": "When I woke up this morning I didn't think I'd be spending a bunch of time today getting familiar with Catholic theology, but here we are. Notes on Pope Leo XIV's encyclical on AI. simonwillison.net/2026/May/25/...",
+      "createdAt": "2026-05-26T00:15:02.855Z",
+      "likeCount": 63,
+      "replyCount": 3,
+      "repostCount": 14,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [],
+      "type": "bluesky"
     }
   ],
   "videos": [],
@@ -1102,30 +1120,19 @@
       "highlights": "Datasette Agent is a new extensible AI assistant for Datasette, built on the LLM Python library. It enables natural language querying of databases and can be extended with plugins for custom workflows. This release marks a significant step in combining AI with data exploration.",
       "worthReading": "If you use Datasette for data analysis, this tool offers a powerful way to interact with your databases using natural language, making data queries more accessible and efficient.",
       "type": "blog"
+    },
+    {
+      "title": "Notes on Pope Leo XIV's encyclical on AI",
+      "url": "https://simonwillison.net/2026/May/25/encyclical-on-ai/#atom-entries",
+      "author": "Simon Willison",
+      "publishedAt": "2026-05-25T23:58:17+00:00",
+      "summary": "<p>Dropped this morning by the Vatican: <a href=\"https://www.vatican.va/content/leo-xiv/en/encyclicals/documents/20260515-magnifica-humanitas.html\">Magnifica Humanitas of His Holiness Pope Leo XIV on Safeguarding the Human Person in the Time of Artificial Intelligence</a>. This is a <em>very...",
+      "highlights": "",
+      "worthReading": "",
+      "type": "blog"
     }
   ],
   "xPosts": [
-    {
-      "type": "x",
-      "id": "1970147806225854531",
-      "url": "https://x.com/simonw/status/1970147806225854531",
-      "author": {
-        "handle": "simonw",
-        "displayName": "Simon Willison",
-        "avatar": "https://avatars.githubusercontent.com/simonw"
-      },
-      "content": "It's interesting how \"better at code\" has become the defining goal of almost every AI lab over the",
-      "createdAt": "2026-04-26T04:11:50.099Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Simon Willison observes that improving code generation has become the primary objective for AI labs.",
-      "worthReading": "Reflects a key trend in AI development priorities.",
-      "tags": [
-        "llm",
-        "evaluation"
-      ]
-    },
     {
       "type": "x",
       "id": "1970147806225854531",
@@ -2359,7 +2366,6 @@
     }
   ],
   "dailyCounts": [
-    1,
     4,
     5,
     3,
@@ -2388,6 +2394,7 @@
     5,
     3,
     0,
+    1,
     1
   ],
   "interestSummary": ""
