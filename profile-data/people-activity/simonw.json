@@ -361,66 +361,6 @@
   ],
   "posts": [
     {
-      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mkjblmouzc2p",
-      "url": "https://bsky.app/profile/simonwillison.net/post/3mkjblmouzc2p",
-      "author": {
-        "handle": "simonwillison.net",
-        "displayName": "Simon Willison",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
-      },
-      "content": "Love this so much\n\n(Also definitive proof that humans are so much better than machines)",
-      "createdAt": "2026-04-27T23:58:12.738Z",
-      "likeCount": 102,
-      "replyCount": 2,
-      "repostCount": 11,
-      "highlights": "",
-      "worthReading": "",
-      "tags": [],
-      "type": "bluesky"
-    },
-    {
-      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mkjb3t2mhk2z",
-      "url": "https://bsky.app/profile/simonwillison.net/post/3mkjb3t2mhk2z",
-      "author": {
-        "handle": "simonwillison.net",
-        "displayName": "Simon Willison",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
-      },
-      "content": "Microsoft's MIT licensed VibeVoice speech-to-text model (think Whisper with speaker diarization) is really good - my notes on running the 5.71GB 4bit MLX conversion on an M5 MacBook, using about 60GB of RAM at peak and transcribing 1hr of audio in ~9 mins simonwillison.net/2026/Apr/27/...",
-      "createdAt": "2026-04-27T23:49:22.542Z",
-      "likeCount": 72,
-      "replyCount": 8,
-      "repostCount": 5,
-      "highlights": "",
-      "worthReading": "",
-      "tags": [
-        "deployment",
-        "tooling"
-      ],
-      "type": "bluesky"
-    },
-    {
-      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mkiprvdfv22b",
-      "url": "https://bsky.app/profile/simonwillison.net/post/3mkiprvdfv22b",
-      "author": {
-        "handle": "simonwillison.net",
-        "displayName": "Simon Willison",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
-      },
-      "content": "Today OpenAI announced that \"Revenue share payments from OpenAI to Microsoft continue through 2030, independent of OpenAI’s technology progress\"\n\nThat \"independent of OpenAI’s technology progress\" fragment appears to mean that the weird AGI clause is now deceased simonwillison.net/2026/Apr/27/...",
-      "createdAt": "2026-04-27T18:39:35.772Z",
-      "likeCount": 54,
-      "replyCount": 5,
-      "repostCount": 5,
-      "highlights": "",
-      "worthReading": "",
-      "tags": [
-        "llm",
-        "infra"
-      ],
-      "type": "bluesky"
-    },
-    {
       "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mkjl5mwpsk2h",
       "url": "https://bsky.app/profile/simonwillison.net/post/3mkjl5mwpsk2h",
       "author": {
@@ -1133,27 +1073,6 @@
     }
   ],
   "xPosts": [
-    {
-      "type": "x",
-      "id": "1970147806225854531",
-      "url": "https://x.com/simonw/status/1970147806225854531",
-      "author": {
-        "handle": "simonw",
-        "displayName": "Simon Willison",
-        "avatar": "https://avatars.githubusercontent.com/simonw"
-      },
-      "content": "It's interesting how \"better at code\" has become the defining goal of almost every AI lab over the",
-      "createdAt": "2026-04-27T04:16:27.890Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Simon notes that AI labs are increasingly focusing on improving code generation as a primary objective.",
-      "worthReading": "Reflects a key trend in AI development priorities.",
-      "tags": [
-        "llm",
-        "deployment"
-      ]
-    },
     {
       "type": "x",
       "id": "1970147806225854531",
@@ -2366,7 +2285,6 @@
     }
   ],
   "dailyCounts": [
-    4,
     5,
     3,
     6,
@@ -2395,7 +2313,8 @@
     3,
     0,
     1,
-    1
+    1,
+    0
   ],
   "interestSummary": ""
 }
