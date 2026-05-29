@@ -337,28 +337,6 @@
   ],
   "posts": [
     {
-      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mknsn2l6us2a",
-      "url": "https://bsky.app/profile/simonwillison.net/post/3mknsn2l6us2a",
-      "author": {
-        "handle": "simonwillison.net",
-        "displayName": "Simon Willison",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
-      },
-      "content": "I released LLM 0.32a0 this morning, a major backwards-compatible refactor of my LLM Python library and CLI tool for working with language models - the new changes should help LLM work better with reasoning models and other new frontier capabilities simonwillison.net/2026/Apr/29/...",
-      "createdAt": "2026-04-29T19:13:53.415Z",
-      "likeCount": 51,
-      "replyCount": 5,
-      "repostCount": 3,
-      "highlights": "",
-      "worthReading": "",
-      "tags": [
-        "llm",
-        "deployment",
-        "tooling"
-      ],
-      "type": "bluesky"
-    },
-    {
       "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mkohhvx6fs22",
       "url": "https://bsky.app/profile/simonwillison.net/post/3mkohhvx6fs22",
       "author": {
@@ -832,6 +810,42 @@
       "worthReading": "",
       "tags": [],
       "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mmxey6b7rs22",
+      "url": "https://bsky.app/profile/simonwillison.net/post/3mmxey6b7rs22",
+      "author": {
+        "handle": "simonwillison.net",
+        "displayName": "Simon Willison",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
+      },
+      "content": "Anthropic's self-reported run-rate revenue growth is wild - Axios Jim VandeHei said he couldn't find \"any company — in any industry, in any era — that has scaled organic revenue this quickly at this level as Anthropic\" when they were at $30B and now they're at $47B! simonwillison.net/2026/May/29/...",
+      "createdAt": "2026-05-29T01:26:34.636Z",
+      "likeCount": 71,
+      "replyCount": 4,
+      "repostCount": 9,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [],
+      "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mmxb7sanxk2m",
+      "url": "https://bsky.app/profile/simonwillison.net/post/3mmxb7sanxk2m",
+      "author": {
+        "handle": "simonwillison.net",
+        "displayName": "Simon Willison",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
+      },
+      "content": "Notes on Claude Opus 4.8, which Anthropic call \"a modest but tangible improvement\" - plus pelicans riding bicycles for each of the five different thinking efforts simonwillison.net/2026/May/28/...",
+      "createdAt": "2026-05-29T00:19:15.501Z",
+      "likeCount": 46,
+      "replyCount": 3,
+      "repostCount": 7,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [],
+      "type": "bluesky"
     }
   ],
   "videos": [],
@@ -1035,50 +1049,19 @@
       "highlights": "",
       "worthReading": "",
       "type": "blog"
+    },
+    {
+      "title": "Claude Opus 4.8: \"a modest but tangible improvement\"",
+      "url": "https://simonwillison.net/2026/May/28/claude-opus-4-8/#atom-entries",
+      "author": "Simon Willison",
+      "publishedAt": "2026-05-28T23:59:50+00:00",
+      "summary": "<p>Anthropic shipped <a href=\"https://www.anthropic.com/news/claude-opus-4-8\">Claude Opus 4.8</a> today. My favourite thing about it is this note in the release announcement:</p> <blockquote> <p>Users will find Opus 4.8 to be a modest but tangible improvement on its predecessor. There’s still more...",
+      "highlights": "",
+      "worthReading": "",
+      "type": "blog"
     }
   ],
   "xPosts": [
-    {
-      "type": "x",
-      "id": "1970147806225854531",
-      "url": "https://x.com/simonw/status/1970147806225854531",
-      "author": {
-        "handle": "simonw",
-        "displayName": "Simon Willison",
-        "avatar": "https://avatars.githubusercontent.com/simonw"
-      },
-      "content": "It's interesting how \"better at code\" has become the defining goal of almost every AI lab over the",
-      "createdAt": "2026-04-29T04:15:59.751Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Simon Willison notes that AI labs are increasingly focused on improving code generation as a primary goal.",
-      "worthReading": "Reflects a key trend in AI development priorities.",
-      "tags": [
-        "llm",
-        "tooling"
-      ]
-    },
-    {
-      "type": "x",
-      "id": "952257232380379136",
-      "url": "https://x.com/simonw/status/952257232380379136",
-      "author": {
-        "handle": "simonw",
-        "displayName": "Simon Willison",
-        "avatar": "https://avatars.githubusercontent.com/simonw"
-      },
-      "content": "This may be the best guidance I've seen anywhere on writing a really good commit history.",
-      "createdAt": "2026-04-29T04:15:59.751Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Simon Willison praises guidance on writing good commit history.",
-      "worthReading": "Useful for developers aiming to improve version control practices.",
-      "tags": [
-        "tooling"
-      ]
-    },
     {
       "type": "x",
       "id": "1970147806225854531",
@@ -2208,7 +2191,6 @@
     }
   ],
   "dailyCounts": [
-    3,
     6,
     5,
     4,
@@ -2237,7 +2219,8 @@
     1,
     1,
     2,
-    0
+    0,
+    2
   ],
   "interestSummary": ""
 }
