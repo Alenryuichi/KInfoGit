@@ -3,47 +3,6 @@
   "stars": [],
   "posts": [
     {
-      "uri": "at://did:plc:flxq4uyjfotciovpw3x3fxnu/app.bsky.feed.post/3mkr67pos322e",
-      "url": "https://bsky.app/profile/emollick.bsky.social/post/3mkr67pos322e",
-      "author": {
-        "handle": "emollick.bsky.social",
-        "displayName": "Ethan Mollick",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:flxq4uyjfotciovpw3x3fxnu/bafkreigq63ljumc43yx5eoxchrq75d72irea6ddcceedwmdttxebyowc3q"
-      },
-      "content": "I deleted this post since I think I was imprecise in the language.\n\nIt is an interesting pre-registered RCT, but I should have been clearer that .3 SD is a modest effect size, the \"big results\" I was referring to is that it was cheap and had no apparent downsides.\n\nPaper: www.iza.org/publications...",
-      "createdAt": "2026-05-01T03:19:09.904Z",
-      "likeCount": 15,
-      "replyCount": 0,
-      "repostCount": 1,
-      "highlights": "",
-      "worthReading": "",
-      "tags": [
-        "evaluation"
-      ],
-      "type": "bluesky"
-    },
-    {
-      "uri": "at://did:plc:flxq4uyjfotciovpw3x3fxnu/app.bsky.feed.post/3mks6hfbia22g",
-      "url": "https://bsky.app/profile/emollick.bsky.social/post/3mks6hfbia22g",
-      "author": {
-        "handle": "emollick.bsky.social",
-        "displayName": "Ethan Mollick",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:flxq4uyjfotciovpw3x3fxnu/bafkreigq63ljumc43yx5eoxchrq75d72irea6ddcceedwmdttxebyowc3q"
-      },
-      "content": "New paper (on an old AI model) tests o1 against doctors on medical benchmarks & real ER cases: “across a variety of scenarios and applications, the large language model outperformed both human physicians and older models”\n\nThe high potential of AI suggests an “urgent need for prospective trials.”",
-      "createdAt": "2026-05-01T12:56:07.157Z",
-      "likeCount": 51,
-      "replyCount": 5,
-      "repostCount": 9,
-      "highlights": "",
-      "worthReading": "",
-      "tags": [
-        "llm",
-        "evaluation"
-      ],
-      "type": "bluesky"
-    },
-    {
       "uri": "at://did:plc:flxq4uyjfotciovpw3x3fxnu/app.bsky.feed.post/3mktkvi5df22f",
       "url": "https://bsky.app/profile/emollick.bsky.social/post/3mktkvi5df22f",
       "author": {
@@ -1096,91 +1055,29 @@
       "worthReading": "",
       "tags": [],
       "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:flxq4uyjfotciovpw3x3fxnu/app.bsky.feed.post/3mn47sslk7c24",
+      "url": "https://bsky.app/profile/emollick.bsky.social/post/3mn47sslk7c24",
+      "author": {
+        "handle": "emollick.bsky.social",
+        "displayName": "Ethan Mollick",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:flxq4uyjfotciovpw3x3fxnu/bafkreigq63ljumc43yx5eoxchrq75d72irea6ddcceedwmdttxebyowc3q"
+      },
+      "content": "It does seem like meaningfully better AI releases are accelerating, especially from OpenAI & Anthropic.\n\nTo illustrate, I caused this timeline to be created. It only lists new models that scored 3 points or higher over previous models in the Artificial Analysis index.",
+      "createdAt": "2026-05-30T23:37:24.598Z",
+      "likeCount": 49,
+      "replyCount": 3,
+      "repostCount": 2,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [],
+      "type": "bluesky"
     }
   ],
   "videos": [],
   "blogs": [],
   "xPosts": [
-    {
-      "type": "x",
-      "id": "2048812210839785668",
-      "url": "https://x.com/emollick/status/2048812210839785668",
-      "author": {
-        "handle": "emollick",
-        "displayName": "Ethan Mollick",
-        "avatar": null
-      },
-      "content": "Very cool analysis of the submissions to a major management journal that shows how much the",
-      "createdAt": "2026-05-01T04:28:02.876Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Analysis of management journal submissions reveals interesting trends.",
-      "worthReading": "Provides insight into academic publishing and research trends.",
-      "tags": [
-        "evaluation"
-      ]
-    },
-    {
-      "type": "x",
-      "id": "2044880350237626844",
-      "url": "https://x.com/emollick/status/2044880350237626844",
-      "author": {
-        "handle": "emollick",
-        "displayName": "Ethan Mollick",
-        "avatar": null
-      },
-      "content": "On the plus side with Opus 4.7, if it does decide to think it produces BY FAR the best",
-      "createdAt": "2026-05-01T04:28:02.876Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Opus 4.7 produces best results when it decides to think.",
-      "worthReading": "Highlights performance of a specific AI model.",
-      "tags": [
-        "llm"
-      ]
-    },
-    {
-      "type": "x",
-      "id": "2045318277958709540",
-      "url": "https://x.com/emollick/status/2045318277958709540",
-      "author": {
-        "handle": "emollick",
-        "displayName": "Ethan Mollick",
-        "avatar": null
-      },
-      "content": "One thing thing about AI, for better and worse, is that 'everything around me is somebody's life",
-      "createdAt": "2026-05-01T04:28:02.876Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "AI impacts real lives, for better or worse.",
-      "worthReading": "Reflects on the human impact of AI.",
-      "tags": [
-        "safety"
-      ]
-    },
-    {
-      "type": "x",
-      "id": "1894300000000000000",
-      "url": "https://x.com/emollick/status/1894300000000000000",
-      "author": {
-        "handle": "emollick",
-        "displayName": "Ethan Mollick",
-        "avatar": null
-      },
-      "content": "AI is actually pretty good at ideas as well. https://t.co/AhnzrnkN03",
-      "createdAt": "2026-02-25T00:00:00Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "AI is good at generating ideas.",
-      "worthReading": "Challenges the notion that AI lacks creativity.",
-      "tags": [
-        "llm"
-      ]
-    },
     {
       "type": "x",
       "id": "2048812210839785668",
@@ -2513,7 +2410,6 @@
     }
   ],
   "dailyCounts": [
-    6,
     5,
     6,
     7,
@@ -2542,6 +2438,7 @@
     2,
     5,
     2,
+    1,
     0
   ],
   "interestSummary": ""

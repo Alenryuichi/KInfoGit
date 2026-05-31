@@ -1026,111 +1026,6 @@
   "xPosts": [
     {
       "type": "x",
-      "id": "1780000000000000000",
-      "url": "https://x.com/simonw/status/1780000000000000000",
-      "author": {
-        "handle": "simonw",
-        "displayName": "Simon Willison",
-        "avatar": "https://avatars.githubusercontent.com/simonw"
-      },
-      "content": "Our evaluation of OpenAI's GPT-5.5 cyber capabilities. The UK's AI Security Institute previously evaluated Claude Mythos: now they've evaluated GPT-5.5 for finding security vulnerability and found it to be comparable to Mythos, but unlike Mythos it's generally available right now.",
-      "createdAt": "2026-04-30",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "GPT-5.5 is comparable to Claude Mythos in finding security vulnerabilities and is generally available.",
-      "worthReading": "Highlights the security capabilities of a widely accessible model.",
-      "tags": [
-        "safety",
-        "evaluation"
-      ]
-    },
-    {
-      "type": "x",
-      "id": "1780000000000000001",
-      "url": "https://x.com/simonw/status/1780000000000000001",
-      "author": {
-        "handle": "simonw",
-        "displayName": "Simon Willison",
-        "avatar": "https://avatars.githubusercontent.com/simonw"
-      },
-      "content": "Never talk about goblins, gremlins, raccoons, trolls, ogres, pigeons, or other animals or creatures unless it is absolutely and unambiguously relevant to the user's query. — OpenAI Codex",
-      "createdAt": "2026-04-28",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "OpenAI Codex includes an instruction to avoid discussing certain animals unless relevant.",
-      "worthReading": "Reveals an interesting constraint in AI model instructions.",
-      "tags": [
-        "llm",
-        "safety"
-      ]
-    },
-    {
-      "type": "x",
-      "id": "1780000000000000002",
-      "url": "https://x.com/simonw/status/1780000000000000002",
-      "author": {
-        "handle": "simonw",
-        "displayName": "Simon Willison",
-        "avatar": "https://avatars.githubusercontent.com/simonw"
-      },
-      "content": "llm 0.31 released: supports GPT-5.5 and adds a verbosity parameter for controlling output detail on OpenAI's latest models.",
-      "createdAt": "2026-04-27",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "New version of llm CLI tool adds GPT-5.5 support and verbosity control.",
-      "worthReading": "Useful for developers using OpenAI models via command line.",
-      "tags": [
-        "tooling",
-        "llm"
-      ]
-    },
-    {
-      "type": "x",
-      "id": "1780000000000000003",
-      "url": "https://x.com/simonw/status/1780000000000000003",
-      "author": {
-        "handle": "simonw",
-        "displayName": "Simon Willison",
-        "avatar": "https://avatars.githubusercontent.com/simonw"
-      },
-      "content": "llm 0.32a0 alpha: major backwards-compatible refactor. Models can now be prompted with a list of messages, OpenAI Chat Completions style.",
-      "createdAt": "2026-04-29",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Alpha refactor enables message list prompting in llm CLI.",
-      "worthReading": "Important update for users of the llm tool.",
-      "tags": [
-        "tooling",
-        "llm"
-      ]
-    },
-    {
-      "type": "x",
-      "id": "1780000000000000004",
-      "url": "https://x.com/simonw/status/1780000000000000004",
-      "author": {
-        "handle": "simonw",
-        "displayName": "Simon Willison",
-        "avatar": "https://avatars.githubusercontent.com/simonw"
-      },
-      "content": "DeepSeek V4 - almost on the frontier, a fraction of the price.",
-      "createdAt": "2026-04-24",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "DeepSeek V4 offers near-frontier performance at a much lower cost.",
-      "worthReading": "Highlights a cost-effective alternative to top-tier models.",
-      "tags": [
-        "llm",
-        "deployment"
-      ]
-    },
-    {
-      "type": "x",
       "id": "952257232380379136",
       "url": "https://x.com/simonw/status/952257232380379136",
       "author": {
@@ -2071,7 +1966,6 @@
     }
   ],
   "dailyCounts": [
-    5,
     4,
     5,
     6,
@@ -2100,6 +1994,7 @@
     2,
     0,
     2,
+    0,
     0
   ],
   "interestSummary": ""
