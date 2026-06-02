@@ -3,48 +3,6 @@
   "stars": [],
   "posts": [
     {
-      "uri": "at://did:plc:flxq4uyjfotciovpw3x3fxnu/app.bsky.feed.post/3mky3ycur322b",
-      "url": "https://bsky.app/profile/emollick.bsky.social/post/3mky3ycur322b",
-      "author": {
-        "handle": "emollick.bsky.social",
-        "displayName": "Ethan Mollick",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:flxq4uyjfotciovpw3x3fxnu/bafkreigq63ljumc43yx5eoxchrq75d72irea6ddcceedwmdttxebyowc3q"
-      },
-      "content": "I am not sure I would agree with all of this post (by a well-known researcher at OpenAI), but the relationship between Anthropic and Claude is quite different than the relationship between other labs and their models. And that shows up in lots of ways, from models to how labs think about the future.",
-      "createdAt": "2026-05-03T21:27:52.274Z",
-      "likeCount": 137,
-      "replyCount": 10,
-      "repostCount": 5,
-      "highlights": "",
-      "worthReading": "",
-      "tags": [
-        "safety",
-        "agent"
-      ],
-      "type": "bluesky"
-    },
-    {
-      "uri": "at://did:plc:flxq4uyjfotciovpw3x3fxnu/app.bsky.feed.post/3mkxj3qtegs2t",
-      "url": "https://bsky.app/profile/emollick.bsky.social/post/3mkxj3qtegs2t",
-      "author": {
-        "handle": "emollick.bsky.social",
-        "displayName": "Ethan Mollick",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:flxq4uyjfotciovpw3x3fxnu/bafkreigq63ljumc43yx5eoxchrq75d72irea6ddcceedwmdttxebyowc3q"
-      },
-      "content": "The single most accurate science fiction author writing about AI turned out to be… Douglas Adams\n\nHe wrote about AIs that work best when emotionally manipulated & that guilt you in turn. And he understood there was no upper bound on test time compute for hard problem. Also dolphin communication!",
-      "createdAt": "2026-05-03T15:49:46.477Z",
-      "likeCount": 191,
-      "replyCount": 6,
-      "repostCount": 23,
-      "highlights": "",
-      "worthReading": "",
-      "tags": [
-        "agent",
-        "safety"
-      ],
-      "type": "bluesky"
-    },
-    {
       "uri": "at://did:plc:flxq4uyjfotciovpw3x3fxnu/app.bsky.feed.post/3ml2adq5kzs2h",
       "url": "https://bsky.app/profile/emollick.bsky.social/post/3ml2adq5kzs2h",
       "author": {
@@ -1053,90 +1011,29 @@
       "worthReading": "",
       "tags": [],
       "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:flxq4uyjfotciovpw3x3fxnu/app.bsky.feed.post/3mnbpbtqj522e",
+      "url": "https://bsky.app/profile/emollick.bsky.social/post/3mnbpbtqj522e",
+      "author": {
+        "handle": "emollick.bsky.social",
+        "displayName": "Ethan Mollick",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:flxq4uyjfotciovpw3x3fxnu/bafkreigq63ljumc43yx5eoxchrq75d72irea6ddcceedwmdttxebyowc3q"
+      },
+      "content": "Big paper on AI coding agents using Github data.\n\nThe early auto-complete tools (like Copilot) led to 2.2x as much code, local agents like original Claude Code led to 7.4x, & current remote coding agents 17.3x(!)\n\nBut human bottlenecks in the coding process means actual releases \"only\" went up 30%.",
+      "createdAt": "2026-06-02T03:57:33.948Z",
+      "likeCount": 27,
+      "replyCount": 2,
+      "repostCount": 4,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [],
+      "type": "bluesky"
     }
   ],
   "videos": [],
   "blogs": [],
   "xPosts": [
-    {
-      "type": "x",
-      "id": "2020713378319417626",
-      "url": "https://x.com/emollick/status/2020713378319417626",
-      "author": {
-        "handle": "emollick",
-        "displayName": "Ethan Mollick",
-        "avatar": null
-      },
-      "content": "So much work is going into faking continual learning and memory for AIs",
-      "createdAt": "2026-05-03T04:22:38.394Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Critiques the effort spent on simulating continual learning and memory in AI systems.",
-      "worthReading": "Highlights a potential misdirection in AI research priorities.",
-      "tags": [
-        "llm",
-        "evaluation"
-      ]
-    },
-    {
-      "type": "x",
-      "id": "1891913605890609624",
-      "url": "https://x.com/emollick/status/1891913605890609624",
-      "author": {
-        "handle": "emollick",
-        "displayName": "Ethan Mollick",
-        "avatar": null
-      },
-      "content": "As someone who is pretty good at keeping up with AI, I can barely keep up with it all.",
-      "createdAt": "2026-05-03T04:22:38.394Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Even an AI expert finds the pace of AI development overwhelming.",
-      "worthReading": "Emphasizes the rapid acceleration of AI progress.",
-      "tags": [
-        "deployment"
-      ]
-    },
-    {
-      "type": "x",
-      "id": "2049894109318459798",
-      "url": "https://x.com/emollick/status/2049894109318459798",
-      "author": {
-        "handle": "emollick",
-        "displayName": "Ethan Mollick",
-        "avatar": null
-      },
-      "content": "\"Load bearing,\" \"I keep coming back to,\" \"Not X, but Y\" A curse of using AI a lot is that",
-      "createdAt": "2026-05-03T04:22:38.394Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Notes common phrases that emerge from heavy AI use.",
-      "worthReading": "Observations on how AI influences language and thinking patterns.",
-      "tags": [
-        "llm"
-      ]
-    },
-    {
-      "type": "x",
-      "id": "2048278196596945219",
-      "url": "https://x.com/emollick/status/2048278196596945219",
-      "author": {
-        "handle": "emollick",
-        "displayName": "Ethan Mollick",
-        "avatar": null
-      },
-      "content": "Ethan Mollick profile. Ethan Mollick. ✓. emollick. Apr 25. Ethan Mollick's Image on X. 32. 337. 4220. 243898 ·.",
-      "createdAt": "2026-05-03T04:22:38.394Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Profile page, not a tweet.",
-      "worthReading": "Not a tweet.",
-      "tags": []
-    },
     {
       "type": "x",
       "id": "2030813923469894093",
@@ -2312,7 +2209,6 @@
     }
   ],
   "dailyCounts": [
-    6,
     7,
     5,
     4,
@@ -2341,7 +2237,8 @@
     2,
     1,
     0,
-    0
+    0,
+    1
   ],
   "interestSummary": ""
 }
