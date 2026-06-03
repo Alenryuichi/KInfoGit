@@ -2,43 +2,6 @@
   "id": "simonw",
   "stars": [
     {
-      "repo": "danshapiro/ringdown",
-      "url": "https://github.com/danshapiro/ringdown",
-      "description": "",
-      "language": "Python",
-      "stargazersCount": 19,
-      "starredBy": "simonw",
-      "starredAt": "2026-05-04T18:41:19Z",
-      "highlights": "Ringdown is a lightweight Python tool for recording and replaying HTTP responses, useful for testing and development. It simplifies mocking external APIs by capturing real responses and serving them offline.",
-      "worthReading": "It offers a simple, practical approach to HTTP recording that can speed up development and testing workflows, especially for projects relying on external APIs.",
-      "topics": [],
-      "tags": [
-        "tooling"
-      ],
-      "score": 4,
-      "scoreReason": "Freshness is low (19 stars, no recent activity), relevance is moderate (tooling for AI devs but not frontier), and concreteness is high (working code).",
-      "type": "github"
-    },
-    {
-      "repo": "danshapiro/trycycle",
-      "url": "https://github.com/danshapiro/trycycle",
-      "description": "",
-      "language": "Python",
-      "stargazersCount": 173,
-      "starredBy": "simonw",
-      "starredAt": "2026-05-04T18:12:46Z",
-      "highlights": "Trycycle is a tool that helps developers iterate quickly on AI prompts by automatically generating and testing variations, making it easier to find the best prompt for a given task. It integrates with popular AI models and provides a simple CLI interface for prompt experimentation.",
-      "worthReading": "For developers working with LLMs, Trycycle offers a practical way to systematically improve prompts, saving time and effort in prompt engineering.",
-      "topics": [],
-      "tags": [
-        "tooling",
-        "evaluation"
-      ],
-      "score": 6,
-      "scoreReason": "Freshness is moderate (173 stars, new but not explosive), relevance is high for AI prompt engineering, and concreteness is solid as a working CLI tool.",
-      "type": "github"
-    },
-    {
       "repo": "asg017/liblotus",
       "url": "https://github.com/asg017/liblotus",
       "description": "",
@@ -333,30 +296,25 @@
       "score": 0,
       "scoreReason": "",
       "type": "github"
+    },
+    {
+      "repo": "github/accessibility-scanner",
+      "url": "https://github.com/github/accessibility-scanner",
+      "description": "Finds potential accessibility gaps, files GitHub issues to track them, and attempts to fix them with Copilot.",
+      "language": "TypeScript",
+      "stargazersCount": 295,
+      "starredBy": "simonw",
+      "starredAt": "2026-06-02T23:24:14Z",
+      "highlights": "",
+      "worthReading": "",
+      "topics": [],
+      "tags": [],
+      "score": 0,
+      "scoreReason": "",
+      "type": "github"
     }
   ],
   "posts": [
-    {
-      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3ml2ugm6pok2x",
-      "url": "https://bsky.app/profile/simonwillison.net/post/3ml2ugm6pok2x",
-      "author": {
-        "handle": "simonwillison.net",
-        "displayName": "Simon Willison",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
-      },
-      "content": "I tried running the same \"Generate an SVG of a pelican riding a bicycle\" prompt against 21 different quantized variants of the same IBM Granite 4.1 3B model - the results weren't as interesting as I had hoped simonwillison.net/2026/May/4/g...",
-      "createdAt": "2026-05-04T23:50:41.082Z",
-      "likeCount": 27,
-      "replyCount": 6,
-      "repostCount": 0,
-      "highlights": "",
-      "worthReading": "",
-      "tags": [
-        "evaluation",
-        "deployment"
-      ],
-      "type": "bluesky"
-    },
     {
       "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3ml57nzilrs2z",
       "url": "https://bsky.app/profile/simonwillison.net/post/3ml57nzilrs2z",
@@ -1002,67 +960,6 @@
     }
   ],
   "xPosts": [
-    {
-      "type": "x",
-      "id": "1970147806225854531",
-      "url": "https://x.com/simonw/status/1970147806225854531",
-      "author": {
-        "handle": "simonw",
-        "displayName": "Simon Willison",
-        "avatar": "https://avatars.githubusercontent.com/simonw"
-      },
-      "content": "It's interesting how \"better at code\" has become the defining goal of almost every AI lab over the",
-      "createdAt": "2026-05-04T04:21:01.377Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Simon observes that AI labs are increasingly focused on improving code generation capabilities as a primary objective.",
-      "worthReading": "Reflects a key trend in AI development priorities.",
-      "tags": [
-        "llm",
-        "tooling"
-      ]
-    },
-    {
-      "type": "x",
-      "id": "1931090610724995303",
-      "url": "https://x.com/simonw/status/1931090610724995303",
-      "author": {
-        "handle": "simonw",
-        "displayName": "Simon Willison",
-        "avatar": "https://avatars.githubusercontent.com/simonw"
-      },
-      "content": "I've published video, slides and a detailed annotated transcript from my talk at this week's",
-      "createdAt": "2026-05-04T04:21:01.377Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Simon shares materials from a talk about the last year six months in LLMs, illustrated by pelicans on bicycles.",
-      "worthReading": "Provides a creative and insightful overview of recent LLM developments.",
-      "tags": [
-        "llm"
-      ]
-    },
-    {
-      "type": "x",
-      "id": "952257232380379136",
-      "url": "https://x.com/simonw/status/952257232380379136",
-      "author": {
-        "handle": "simonw",
-        "displayName": "Simon Willison",
-        "avatar": "https://avatars.githubusercontent.com/simonw"
-      },
-      "content": "This may be the best guidance I've seen anywhere on writing a really good commit history.",
-      "createdAt": "2026-05-04T04:21:01.377Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Simon recommends guidance on writing good commit history.",
-      "worthReading": "Useful for developers aiming to improve their version control practices.",
-      "tags": [
-        "tooling"
-      ]
-    },
     {
       "type": "x",
       "id": "1975570458683834729",
@@ -1800,7 +1697,6 @@
     }
   ],
   "dailyCounts": [
-    6,
     5,
     3,
     2,
@@ -1828,6 +1724,7 @@
     2,
     0,
     0,
+    1,
     1,
     0
   ],

@@ -2,24 +2,6 @@
   "id": "minimaxir",
   "stars": [
     {
-      "repo": "Fusion/pngsource",
-      "url": "https://github.com/Fusion/pngsource",
-      "description": "Embed Embed source code in png files",
-      "language": "HTML",
-      "stargazersCount": 109,
-      "starredBy": "minimaxir",
-      "starredAt": "2026-05-04T06:27:13Z",
-      "highlights": "This repository allows embedding source code into PNG images, enabling a novel way to distribute code alongside visual assets. It provides a simple tool to encode and decode code within image files, useful for sharing or obfuscation.",
-      "worthReading": "It's a creative approach to code distribution that could be handy for sharing small scripts or demos in a visually appealing manner, though its practical utility may be niche.",
-      "topics": [],
-      "tags": [
-        "tooling"
-      ],
-      "score": 3,
-      "scoreReason": "Freshness is low (109 stars, not clearly rising), relevance is low (not a frontier AI topic), concreteness is moderate (working tool but niche).",
-      "type": "github"
-    },
-    {
       "repo": "petgraph/petgraph",
       "url": "https://github.com/petgraph/petgraph",
       "description": "Graph data structure library for Rust.",
@@ -223,30 +205,37 @@
       "score": 0,
       "scoreReason": "",
       "type": "github"
+    },
+    {
+      "repo": "sparckles/Robyn",
+      "url": "https://github.com/sparckles/Robyn",
+      "description": "Robyn is a Super Fast Async Python Web Framework with a Rust runtime.",
+      "language": "Python",
+      "stargazersCount": 7247,
+      "starredBy": "minimaxir",
+      "starredAt": "2026-06-02T05:05:35Z",
+      "highlights": "",
+      "worthReading": "",
+      "topics": [
+        "async",
+        "backend",
+        "hacktoberfest",
+        "http-server",
+        "python",
+        "python3",
+        "rust",
+        "web"
+      ],
+      "tags": [],
+      "score": 0,
+      "scoreReason": "",
+      "type": "github"
     }
   ],
   "posts": [],
   "videos": [],
   "blogs": [],
   "xPosts": [
-    {
-      "type": "x",
-      "id": "1641885820734046209",
-      "url": "https://x.com/minimaxir/status/1641885820734046209",
-      "author": {
-        "handle": "minimaxir",
-        "displayName": "Max Woolf",
-        "avatar": "https://avatars.githubusercontent.com/minimaxir"
-      },
-      "content": "LOL",
-      "createdAt": "2023-04-01T00:00:00Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Max Woolf posted a simple reaction 'LOL'.",
-      "worthReading": "Shows a casual personal post from the user.",
-      "tags": []
-    },
     {
       "type": "x",
       "id": "2029982443026223510",
@@ -991,7 +980,6 @@
     }
   ],
   "dailyCounts": [
-    2,
     1,
     3,
     1,
@@ -1020,6 +1008,7 @@
     0,
     0,
     0,
+    1,
     0
   ],
   "interestSummary": ""
