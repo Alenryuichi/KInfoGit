@@ -2,25 +2,6 @@
   "id": "simonw",
   "stars": [
     {
-      "repo": "asg017/liblotus",
-      "url": "https://github.com/asg017/liblotus",
-      "description": "",
-      "language": "Rust",
-      "stargazersCount": 2,
-      "starredBy": "simonw",
-      "starredAt": "2026-05-05T16:06:58Z",
-      "highlights": "Liblotus is a Rust library for building fast, embeddable vector search indexes with support for hybrid search (sparse + dense vectors). It offers efficient indexing and querying for semantic search applications.",
-      "worthReading": "With only 2 stars but starred by Simon Willison, this early-stage project could become a key tool for lightweight, local vector search in AI applications.",
-      "topics": [],
-      "tags": [
-        "rag",
-        "infra"
-      ],
-      "score": 5,
-      "scoreReason": "Freshness is high (new repo, low stars, rising potential) but relevance is moderate (vector search for RAG) and concreteness is low (no description, early stage), resulting in a score of 5.",
-      "type": "github"
-    },
-    {
       "repo": "antirez/ds4",
       "url": "https://github.com/antirez/ds4",
       "description": "DeepSeek 4 Flash local inference engine for Metal",
@@ -315,27 +296,6 @@
     }
   ],
   "posts": [
-    {
-      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3ml57nzilrs2z",
-      "url": "https://bsky.app/profile/simonwillison.net/post/3ml57nzilrs2z",
-      "author": {
-        "handle": "simonwillison.net",
-        "displayName": "Simon Willison",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
-      },
-      "content": "AI-run business experiments are interesting and fun up to the point where they waste the time of humans who haven't opted into the experiments - I think they need to keep their own human operators in the loop for outbound actions that affect other people simonwillison.net/2026/May/5/o...",
-      "createdAt": "2026-05-05T22:17:00.556Z",
-      "likeCount": 42,
-      "replyCount": 4,
-      "repostCount": 11,
-      "highlights": "",
-      "worthReading": "",
-      "tags": [
-        "agent",
-        "safety"
-      ],
-      "type": "bluesky"
-    },
     {
       "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3ml732s52h22v",
       "url": "https://bsky.app/profile/simonwillison.net/post/3ml732s52h22v",
@@ -744,6 +704,24 @@
       "worthReading": "",
       "tags": [],
       "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mnf2w4ctnc2n",
+      "url": "https://bsky.app/profile/simonwillison.net/post/3mnf2w4ctnc2n",
+      "author": {
+        "handle": "simonwillison.net",
+        "displayName": "Simon Willison",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
+      },
+      "content": "Uber reportedly now caps coding agents at $1,500/month per employee per tool - seems sensible to me, but it's also an interesting hint at the value Uber thinks these tools are providing\nsimonwillison.net/2026/Jun/3/u...",
+      "createdAt": "2026-06-03T12:03:44.401Z",
+      "likeCount": 127,
+      "replyCount": 17,
+      "repostCount": 12,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [],
+      "type": "bluesky"
     }
   ],
   "videos": [],
@@ -960,68 +938,6 @@
     }
   ],
   "xPosts": [
-    {
-      "type": "x",
-      "id": "1975570458683834729",
-      "url": "https://x.com/simonw/status/1975570458683834729",
-      "author": {
-        "handle": "simonw",
-        "displayName": "Simon Willison",
-        "avatar": "https://avatars.githubusercontent.com/simonw"
-      },
-      "content": "Vibe coding is irresponsibly building software through dice rolls, not caring what code is produced",
-      "createdAt": "2026-05-05T04:06:18.886Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Simon Willison criticizes 'vibe coding' as building software irresponsibly without regard for code quality.",
-      "worthReading": "It offers a critical perspective on a trendy but potentially dangerous development approach.",
-      "tags": [
-        "safety",
-        "tooling"
-      ]
-    },
-    {
-      "type": "x",
-      "id": "952257232380379136",
-      "url": "https://x.com/simonw/status/952257232380379136",
-      "author": {
-        "handle": "simonw",
-        "displayName": "Simon Willison",
-        "avatar": "https://avatars.githubusercontent.com/simonw"
-      },
-      "content": "This may be the best guidance I've seen anywhere on writing a really good commit history.",
-      "createdAt": "2026-05-05T04:06:18.886Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Simon Willison praises guidance on writing good commit history.",
-      "worthReading": "It highlights best practices for software development and version control.",
-      "tags": [
-        "tooling"
-      ]
-    },
-    {
-      "type": "x",
-      "id": "2031002164165021868",
-      "url": "https://x.com/simonw/status/2031002164165021868",
-      "author": {
-        "handle": "simonw",
-        "displayName": "Simon Willison",
-        "avatar": "https://avatars.githubusercontent.com/simonw"
-      },
-      "content": "A short note that the predictions that LLMs would favor 'boring technology' that's once you attach them to a good coding agent harness at least",
-      "createdAt": "2026-05-05T04:06:18.886Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Simon Willison notes that LLMs favor boring technology when attached to a good coding agent harness.",
-      "worthReading": "It provides insight into how LLMs interact with coding tools and technology choices.",
-      "tags": [
-        "agent",
-        "llm"
-      ]
-    },
     {
       "type": "x",
       "id": "952257232380379136",
@@ -1697,7 +1613,6 @@
     }
   ],
   "dailyCounts": [
-    5,
     3,
     2,
     4,
@@ -1724,6 +1639,7 @@
     2,
     0,
     0,
+    1,
     1,
     1,
     0

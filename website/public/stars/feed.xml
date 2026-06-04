@@ -4,15 +4,46 @@
     <title>Stars &amp; Posts — Kylin Miao</title>
     <link>https://kylinmiao.me/stars/</link>
     <description>Daily curated GitHub starred repos, Bluesky/X posts, YouTube videos and blog articles from AI leaders with AI-powered summaries.</description>
-    <lastBuildDate>Wed, 03 Jun 2026 04:34:31 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 04 Jun 2026 04:34:05 GMT</lastBuildDate>
     <atom:link href="https://kylinmiao.me/stars/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Stars &amp; Posts — 2026-06-04</title>
+      <link>https://kylinmiao.me/stars/2026-06-04/</link>
+      <guid isPermaLink="true">https://kylinmiao.me/stars/2026-06-04/</guid>
+      <pubDate>Thu, 04 Jun 2026 12:00:00 GMT</pubDate>
+      <description>Bluesky Posts:
+* Marc Lanctot: I love deadmau5 and it&apos;s so very cool to see him making his own custom tools to make music! 🎵</description>
+    </item>
     <item>
       <title>Stars &amp; Posts — 2026-06-03</title>
       <link>https://kylinmiao.me/stars/2026-06-03/</link>
       <guid isPermaLink="true">https://kylinmiao.me/stars/2026-06-03/</guid>
       <pubDate>Wed, 03 Jun 2026 12:00:00 GMT</pubDate>
       <description>GitHub Repos:
-* chopratejas/headroom — Compress tool outputs, logs, files, and RAG chunks before they reach the LLM. 60-95% fewer tokens, same answers. Library, proxy, MCP server. [Python]</description>
+* chopratejas/headroom — Compress tool outputs, logs, files, and RAG chunks before they reach the LLM. 60-95% fewer tokens, same answers. Library, proxy, MCP server. [Python]
+
+Bluesky Posts:
+* Simon Willison: Uber reportedly now caps coding agents at $1,500/month per employee per tool - seems sensible to me, but it&apos;s also an interesting hint at the value Ub...
+* Mark Riedl: Microsoft could have been building its own models, but has relied on GPT. Now that OpenAI and Microsoft are going separate ways, Microsoft has a lot o...
+* Margaret Mitchell: 🪶 www.tiktok.com/t/ZP8s8cepR/
+So good!
+Also appreciate the eagle/red-tailed hawk call-out: “You’ve been lied to!”
+* Nathan Lambert: A key lesson of the last year of building open models, once it became so obvious the US is behind, is that talk is cheap.
+
+Many people say they&apos;re hel...
+* Yoshua Bengio: J&apos;ai beaucoup apprécié mon récent passage à C dans lair pour discuter des risques de l&apos;IA pour nos sociétés, nos économies, et nos démocraties. Merci ...
+* Yoshua Bengio: I’m thrilled to be joining the EU&apos;s AI Scientific Panel to advise on the implementation of the EU AI Act and help assess and address AI’s growing risk...
+* Ethan Mollick: In early May, the best superforecasters predicted that, by the end of the year, the longest METR 80% task horizons would reach 3-4 hours.
+
+In late May...
+* Ethan Mollick: Most people, including really accomplished people, don&apos;t have an accurate mental model of how LLMs operate (and why would they?)
+
+You see this in wide...
+* Ethan Mollick: Hey, its our paper!
+* Ethan Mollick: Had Claude Code build a snake game where the snake becomes aware it is in the game and then... stuff happens. Some impressive creative decisions by th...
+* Emily M. Bender: &quot;Even if the Microsoft Office team employed a philosopher who said you shouldn’t be so certain, because consciousness is not well understood, that wou...
+* Naomi Saphra: Given the number of desk rejections for pure slop submissions, there’s never been a better time for ACs to chill out about minor LaTeX template violat...
+* Naomi Saphra: Given how FTSE is now permitting clearly overvalued stocks (👀 you know it), I’m trying to figure out what passive investment isn’t exposed. S&amp;P seem ...</description>
     </item>
     <item>
       <title>Stars &amp; Posts — 2026-06-02</title>
@@ -1574,76 +1605,6 @@ X Posts:
 Blog Articles:
 * Live blog: Code w/ Claude 2026 — Simon Willison: &lt;p&gt;I&apos;m at Anthropic&apos;s Code w/ Claude event today. Here&apos;s my live blog of the morning keynote sessions.&lt;/p&gt;&lt;p&gt;&lt;em&gt;You are only seeing the long-form art...
 * Vibe coding and agentic engineering are getting closer than I&apos;d like — Simon Willison: &lt;p&gt;I recently talked with Joseph Ruscio about AI coding tools for Heavybit&apos;s High Leverage podcast: &lt;a href=&quot;https://www.heavybit.com/library/podcasts...</description>
-    </item>
-    <item>
-      <title>Stars &amp; Posts — 2026-05-05</title>
-      <link>https://kylinmiao.me/stars/2026-05-05/</link>
-      <guid isPermaLink="true">https://kylinmiao.me/stars/2026-05-05/</guid>
-      <pubDate>Tue, 05 May 2026 12:00:00 GMT</pubDate>
-      <description>The open-source world saw a quiet but notable uptick in infrastructure and education, with **asg017/liblotus** (a Rust library starred by Simon Willison) and Hugging Face’s **context-course** (a new Python resource on context engineering for code agents) gaining traction. On Bluesky, the conversation turned sharply toward the ethics and limits of AI autonomy: **Simon Willison** pushed back on “AI-run business experiments” that waste non-consenting humans’ time, while **Nathan Lambert** lamented that even top-tier coding agents struggle with on-policy distillation despite being fed core papers and extensive context. Meanwhile, **Ethan Mollick** injected a political reality check into the “AI replacing doctors” debate, noting that powerful professional guilds (doctors, lawyers, bankers) hold voting power and deep community ties—factors often overlooked in purely technical forecasts. The day’s threads collectively underscore a growing tension between AI’s rapid deployment and the human systems—from consent to professional politics—that resist frictionless automation.
-
-GitHub Repos:
-* asg017/liblotus [Rust]
-* huggingface/context-course — A course on context engineering with code agents. [Python]
-
-Bluesky Posts:
-* Simon Willison: AI-run business experiments are interesting and fun up to the point where they waste the time of humans who haven&apos;t opted into the experiments - I thi...
-* Nathan Lambert: Adding an on policy distillation section to the RLHF book and it’s remarkable how bad LLMs / coding agents are at it, despite me giving them the core ...
-* Ethan Mollick: Missing from the “will AI replace doctors?”  debate is that doctors (and lawyers and psychologists and bankers) all vote &amp; form the donor base to poli...
-
-X Posts:
-* Andrej Karpathy: 2025 LLM Year in Review
-* Andrej Karpathy: LLM Knowledge Bases
-
-Something I&apos;m finding very useful recently: using LLMs to build personal knowledge bases for various topics of research interest....
-* Andrej Karpathy: I&apos;m being accused of overhyping the [site everyone heard too much about today already].
-* Simon Willison: Vibe coding is irresponsibly building software through dice rolls, not caring what code is produced
-* Simon Willison: This may be the best guidance I&apos;ve seen anywhere on writing a really good commit history.
-* Simon Willison: A short note that the predictions that LLMs would favor &apos;boring technology&apos; that&apos;s once you attach them to a good coding agent harness at least
-* Harrison Chase: Visibility is the easiest piece. The hard part is analyzing and understanding what you&apos;re observing. I&apos;ve spoken to teams recording 100k+
-* Harrison Chase: TL;DR: More and more agents need a workspace: a computer where they can run code, install packages, and access files. Sandboxes provide this
-* Jim Fan: Resource constraints are a beautiful thing. Superior OSS models put huge pressure on...
-* Jim Fan: The Second Pre-training Paradigm
-* Jim Fan: I&apos;ve been a bit quiet on X recently. The past year has been a transformational experience.
-* Jeremy Howard: Absolutely any time I try to explore something even slightly against commonly accepted beliefs,
-* Jeremy Howard: I replicated this result, that Grok focuses nearly entirely on finding out what Elon thinks in
-* Soumith Chintala: reading &quot;AI News&quot; (previously Smol Talk) is probably the highest-leverage 45 mins
-* Soumith Chintala: I&apos;m giving the opening Keynote at ICML 2024 on Tuesday the 23rd @ 9:30am CEST.
-* Francois Chollet: I think it&apos;s clear that for many smaller companies that invested in deep learning, it turned out
-* Francois Chollet: Re-reading an article I wrote in 2017, and I&apos;m finding I could have written it yesterday
-* Francois Chollet: Folks who work in AI or software engineering feel like the world is changing exponential fast.
-* Francois Chollet: To really understand a concept, you have to &apos;invent&apos; it yourself in some capacity.
-* Yann LeCun: Dario is wrong. He knows absolutely nothing about the effects of technological revolutions on the labor market.
-* Yann LeCun: It seems to me that before &quot;urgently figuring out how to control AI systems much smarter than us&quot; we need
-* Yann LeCun: The emergence of superintelligence is not going to be an event. We don&apos;t have anything close to a
-* Fei-Fei Li: Very excited to share @theworldlabs &apos;s latest research work RTFM!! It&apos;s a real-time, ...
-* Clem Delangue: Just received new reach minis for the Miami office! This is the first robot that goes out
-* Max Woolf: me irl
-* Phil Wang: Gotta hand it to Labour&apos;s team. This is some top-drawer trolling.
-* Phil Wang: My Halloween costume this year is &apos;Sexy Stand-Up Comedian&apos;.
-* Stas Bekman: If you were holding off to try @MSFTDeepSpeed ZeRO++ it looks like deepspeed@master should
-* Stas Bekman: Hear, hear, I&apos;m excited to introduce a new performance metric: Maximum Achievable Matmul
-* Stas Bekman: If you&apos;re trying out FA4, you&apos;re likely to run into not being able to load cutlass.cute
-* Stas Bekman: Thanks to an awesome contribution from @omarnomad The Machine Learning Engineering Open book now can
-* Sayak Paul: Had a nice time chatting about the state of diffusion models and some text-to-image data shenanigans at
-* Sayak Paul: Release notes: Release Diffusers 0.34.0: New Image and Video Models, Better torch.
-* Sayak Paul: 2 years at HF today. Incredibly grateful for the mixed bag of opportunities I have been
-* Philipp Schmid: Guide: ReAct agent from scratch with Gemini 2.5 and LangGraph | Gemini API | Google AI for Developers. ai.google.dev.
-* Philipp Schmid: How to use Deep Research with the Gemini API. www.philschmid.de.
-* Ethan Mollick: Here is a full implementation of the Chinese Room using a printed copy of GPT-1, in case you have a few spare years and want to actually run
-* Ethan Mollick: So much work is going into faking continual learning and memory for AIs
-* Ethan Mollick: Sometimes when I demo AI, I show it turning cover letters into goofy formats (poetry, ...)
-* Ethan Mollick: If it helps, I teach at a business school &amp; many of my smartest students are hired by funds because they can reliably turn their only-human ...
-* Emily M. Bender: EMILY M. BENDER: Yeah. And so passive, like, oops, the moon, the moon went further away. It&apos;s like no, actually, you made some decisions.
-* Emily M. Bender: @emilymbender.bsky.social. emilymbender. Feb 10. Image is of the 1990s Microsoft writing assistant character Clippy with its eyebrows raised positione...
-* Emily M. Bender: Facebook (sorry: Meta) AI: Check out our &quot;AI&quot; that lets you access all of humanity&apos;s knowledge.
-* Naomi Saphra: New preprint! Everyone loves causal interp. It&apos;s coherently defined! It makes testable predictions
-* Naomi Saphra: Ok, I wrote this up (link below)
-* Naomi Saphra: I work on understanding and improving training for NLP models, with a focus on studying how structures and mechanistic behaviors emerge over the
-* Angela Zhou: #throwback to the beginnings of a beautiful friendship =D @ansonmount @HellOnWheelsAMC #HellonWheels #onlocation.
-* Ben Recht: For the first time in almost a decade, I&apos;m teaching a class on learning and control.
-* Ben Recht: Everyone knows actions are fundamentally different than predictions, but it&apos;s hard to write this
-* Ben Recht: Very half-baked philosophy of engineering post: How do we prove that something is unpredictable in machine</description>
     </item>
   </channel>
 </rss>
