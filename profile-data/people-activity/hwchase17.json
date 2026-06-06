@@ -7,109 +7,6 @@
   "xPosts": [
     {
       "type": "x",
-      "id": "1975603633791377920",
-      "url": "https://x.com/hwchase17/status/1975603633791377920",
-      "author": {
-        "handle": "hwchase17",
-        "displayName": "Harrison Chase",
-        "avatar": "https://avatars.githubusercontent.com/hwchase17"
-      },
-      "content": "I am not excited about visual workflow builders 1. Not simple enough for the average user",
-      "createdAt": "2026-05-07T04:18:36.310Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Harrison Chase expresses skepticism about visual workflow builders, citing lack of simplicity for average users.",
-      "worthReading": "Provides insight into his design philosophy for developer tools.",
-      "tags": [
-        "tooling"
-      ]
-    },
-    {
-      "type": "x",
-      "id": "2011814697889316930",
-      "url": "https://x.com/hwchase17/status/2011814697889316930",
-      "author": {
-        "handle": "hwchase17",
-        "displayName": "Harrison Chase",
-        "avatar": "https://avatars.githubusercontent.com/hwchase17"
-      },
-      "content": "We launched LangSmith Agent Builder this week as a no-code way to build agents. A key part of Agent builder is it's memory system.",
-      "createdAt": "2026-05-07T04:18:36.310Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Announcement of LangSmith Agent Builder with emphasis on its memory system.",
-      "worthReading": "Shows LangChain's push towards no-code agent building.",
-      "tags": [
-        "agent",
-        "tooling"
-      ]
-    },
-    {
-      "type": "x",
-      "id": "2040467997022884194",
-      "url": "https://x.com/hwchase17/status/2040467997022884194",
-      "author": {
-        "handle": "hwchase17",
-        "displayName": "Harrison Chase",
-        "avatar": "https://avatars.githubusercontent.com/hwchase17"
-      },
-      "content": "In the hot path as the agent is running. The agent can decided to (or the user can prompt it to) update its memory as it is working on the core",
-      "createdAt": "2026-05-07T04:18:36.310Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Discusses agent memory updates during runtime, either autonomously or via user prompt.",
-      "worthReading": "Highlights dynamic memory management in agents.",
-      "tags": [
-        "agent"
-      ]
-    },
-    {
-      "type": "x",
-      "id": "2013641863123870133",
-      "url": "https://x.com/hwchase17/status/2013641863123870133",
-      "author": {
-        "handle": "hwchase17",
-        "displayName": "Harrison Chase",
-        "avatar": "https://avatars.githubusercontent.com/hwchase17"
-      },
-      "content": "When building agents, you need to iterate on production data much more than when building traditional software. You need to iterate on how",
-      "createdAt": "2026-05-07T04:18:36.310Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Emphasizes the importance of iterating on production data for agent development.",
-      "worthReading": "Key insight for agent development workflow.",
-      "tags": [
-        "agent",
-        "evaluation"
-      ]
-    },
-    {
-      "type": "x",
-      "id": "2021261552222158955",
-      "url": "https://x.com/hwchase17/status/2021261552222158955",
-      "author": {
-        "handle": "hwchase17",
-        "displayName": "Harrison Chase",
-        "avatar": "https://avatars.githubusercontent.com/hwchase17"
-      },
-      "content": "TL;DR: More and more agents need a workspace: a computer where they can run code, install packages, and access files. Sandboxes provide this",
-      "createdAt": "2026-05-07T04:18:36.310Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Argues that agents require sandboxed workspaces for code execution and file access.",
-      "worthReading": "Explains the need for sandboxes in agent infrastructure.",
-      "tags": [
-        "agent",
-        "infra"
-      ]
-    },
-    {
-      "type": "x",
       "id": "2011814697889316930",
       "url": "https://x.com/hwchase17/status/2011814697889316930",
       "author": {
@@ -1211,7 +1108,6 @@
     }
   ],
   "dailyCounts": [
-    5,
     3,
     3,
     4,
@@ -1227,6 +1123,7 @@
     3,
     4,
     3,
+    0,
     0,
     0,
     0,

@@ -297,27 +297,6 @@
   ],
   "posts": [
     {
-      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mlbpmp4udc2l",
-      "url": "https://bsky.app/profile/simonwillison.net/post/3mlbpmp4udc2l",
-      "author": {
-        "handle": "simonwillison.net",
-        "displayName": "Simon Willison",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
-      },
-      "content": "Under-reported details of the xAI/Anthropic Colossus data center deal: Anthropic get Colossus 1 but xAI keep using the larger Colossus 2, Colossus 1 has a REALLY bad environmental record, and xAI just shut down a bunch of older models on 2 weeks' notice simonwillison.net/2026/May/7/x...",
-      "createdAt": "2026-05-07T17:13:14.954Z",
-      "likeCount": 123,
-      "replyCount": 5,
-      "repostCount": 24,
-      "highlights": "",
-      "worthReading": "",
-      "tags": [
-        "infra",
-        "deployment"
-      ],
-      "type": "bluesky"
-    },
-    {
       "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mlecjzhefs2i",
       "url": "https://bsky.app/profile/simonwillison.net/post/3mlecjzhefs2i",
       "author": {
@@ -929,30 +908,19 @@
       "highlights": "",
       "worthReading": "",
       "type": "blog"
+    },
+    {
+      "title": "Running Python code in a sandbox with MicroPython and WASM",
+      "url": "https://simonwillison.net/2026/Jun/6/micropython-in-a-sandbox/#atom-entries",
+      "author": "Simon Willison",
+      "publishedAt": "2026-06-06T03:53:34+00:00",
+      "summary": "<p>I've been experimenting with different approaches to running code in a sandbox for several years now, but my latest attempt feels like it might finally have all of the characteristics I've been looking for. I've released it as an alpha package called <a...",
+      "highlights": "",
+      "worthReading": "",
+      "type": "blog"
     }
   ],
   "xPosts": [
-    {
-      "type": "x",
-      "id": "1970147806225854531",
-      "url": "https://x.com/simonw/status/1970147806225854531",
-      "author": {
-        "handle": "simonw",
-        "displayName": "Simon Willison",
-        "avatar": "https://avatars.githubusercontent.com/simonw"
-      },
-      "content": "It's interesting how \"better at code\" has become the defining goal of almost every AI lab over the",
-      "createdAt": "2026-05-07T04:18:26.824Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Simon observes that AI labs are increasingly focused on improving code generation capabilities.",
-      "worthReading": "Reflects a key trend in AI development priorities.",
-      "tags": [
-        "llm",
-        "deployment"
-      ]
-    },
     {
       "type": "x",
       "id": "952257232380379136",
@@ -1587,7 +1555,6 @@
     }
   ],
   "dailyCounts": [
-    2,
     4,
     4,
     3,
@@ -1616,6 +1583,7 @@
     1,
     1,
     2,
+    0,
     0
   ],
   "interestSummary": ""
