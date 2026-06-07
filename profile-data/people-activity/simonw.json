@@ -2,25 +2,6 @@
   "id": "simonw",
   "stars": [
     {
-      "repo": "antirez/ds4",
-      "url": "https://github.com/antirez/ds4",
-      "description": "DeepSeek 4 Flash local inference engine for Metal",
-      "language": "C",
-      "stargazersCount": 2657,
-      "starredBy": "simonw",
-      "starredAt": "2026-05-08T10:34:50Z",
-      "highlights": "A local inference engine for DeepSeek 4 Flash optimized for Apple Metal, enabling fast LLM inference on Mac hardware. Written in C for performance, it provides a lightweight alternative to cloud-based inference.",
-      "worthReading": "Essential for AI developers using Apple Silicon who want to run DeepSeek models locally with minimal overhead and high speed.",
-      "topics": [],
-      "tags": [
-        "llm",
-        "deployment"
-      ],
-      "score": 7,
-      "scoreReason": "Freshness is moderate (2, new repo with 2.6k stars, rising), relevance is high (4, frontier LLM inference), concreteness is high (2, working engine).",
-      "type": "github"
-    },
-    {
       "repo": "roborev-dev/roborev",
       "url": "https://github.com/roborev-dev/roborev",
       "description": "Continuous background code review database for agents, work faster and smarter with accountability for every line of generated code.",
@@ -293,27 +274,41 @@
       "score": 0,
       "scoreReason": "",
       "type": "github"
+    },
+    {
+      "repo": "simonw/micropython-wasm",
+      "url": "https://github.com/simonw/micropython-wasm",
+      "description": "Python library for running a MicroPython sandbox using WebAssembly",
+      "language": "Python",
+      "stargazersCount": 72,
+      "starredBy": "simonw",
+      "starredAt": "2026-06-06T12:00:29Z",
+      "highlights": "",
+      "worthReading": "",
+      "topics": [],
+      "tags": [],
+      "score": 0,
+      "scoreReason": "",
+      "type": "github"
+    },
+    {
+      "repo": "CharlyCst/spadebox",
+      "url": "https://github.com/CharlyCst/spadebox",
+      "description": "Sandboxed tools and JS runtime for AI agents",
+      "language": "Rust",
+      "stargazersCount": 6,
+      "starredBy": "simonw",
+      "starredAt": "2026-06-06T11:59:41Z",
+      "highlights": "",
+      "worthReading": "",
+      "topics": [],
+      "tags": [],
+      "score": 0,
+      "scoreReason": "",
+      "type": "github"
     }
   ],
   "posts": [
-    {
-      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mlecjzhefs2i",
-      "url": "https://bsky.app/profile/simonwillison.net/post/3mlecjzhefs2i",
-      "author": {
-        "handle": "simonwillison.net",
-        "displayName": "Simon Willison",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
-      },
-      "content": "Just realized that the reason I like TikTok so much is that it's lightning talks! I've always loved lightning talks",
-      "createdAt": "2026-05-08T17:57:05.692Z",
-      "likeCount": 40,
-      "replyCount": 2,
-      "repostCount": 1,
-      "highlights": "",
-      "worthReading": "",
-      "tags": [],
-      "type": "bluesky"
-    },
     {
       "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mlfg7qnaq22r",
       "url": "https://bsky.app/profile/simonwillison.net/post/3mlfg7qnaq22r",
@@ -695,6 +690,24 @@
       "worthReading": "",
       "tags": [],
       "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mnlt3a6fm22b",
+      "url": "https://bsky.app/profile/simonwillison.net/post/3mnlt3a6fm22b",
+      "author": {
+        "handle": "simonwillison.net",
+        "displayName": "Simon Willison",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
+      },
+      "content": "I may have finally found the Python-in-a-sandbox solution I've been looking for... here's my latest experiment, this time running MicroPython in WebAssembly inside my Python applications simonwillison.net/2026/Jun/6/m...",
+      "createdAt": "2026-06-06T04:32:04.457Z",
+      "likeCount": 122,
+      "replyCount": 9,
+      "repostCount": 14,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [],
+      "type": "bluesky"
     }
   ],
   "videos": [],
@@ -921,47 +934,6 @@
     }
   ],
   "xPosts": [
-    {
-      "type": "x",
-      "id": "952257232380379136",
-      "url": "https://x.com/simonw/status/952257232380379136",
-      "author": {
-        "handle": "simonw",
-        "displayName": "Simon Willison",
-        "avatar": "https://avatars.githubusercontent.com/simonw"
-      },
-      "content": "This may be the best guidance I've seen anywhere on writing a really good commit history.",
-      "createdAt": "2018-01-13T00:00:00.000Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Simon praises a resource on writing good commit history.",
-      "worthReading": "Highlights best practices for commit messages.",
-      "tags": [
-        "tooling"
-      ]
-    },
-    {
-      "type": "x",
-      "id": "1970147806225854531",
-      "url": "https://x.com/simonw/status/1970147806225854531",
-      "author": {
-        "handle": "simonw",
-        "displayName": "Simon Willison",
-        "avatar": "https://avatars.githubusercontent.com/simonw"
-      },
-      "content": "It's interesting how \"better at code\" has become the defining goal of almost every AI lab over the",
-      "createdAt": "2025-10-20T00:00:00.000Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Simon observes that AI labs are focused on improving code generation.",
-      "worthReading": "Reflects a key trend in AI development.",
-      "tags": [
-        "llm",
-        "agent"
-      ]
-    },
     {
       "type": "x",
       "id": "1931090610724995303",
@@ -1556,7 +1528,6 @@
   ],
   "dailyCounts": [
     4,
-    4,
     3,
     5,
     6,
@@ -1584,6 +1555,7 @@
     1,
     2,
     0,
+    3,
     0
   ],
   "interestSummary": ""
