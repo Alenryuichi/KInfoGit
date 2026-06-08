@@ -1,0 +1,985 @@
+{
+  "week": "2026-W23",
+  "dateRange": "2026-06-01 — 2026-06-07",
+  "generatedAt": "2026-06-08T05:40:00.748Z",
+  "editors": [
+    {
+      "name": "Gemini CLI",
+      "category": "cli",
+      "version": "v0.45.0-nightly.20260602.g665228e98",
+      "highlights": [
+        "## What's Changed; * Transition to flash GA model when experiment flag is present. by @DavidAPierce in https://github.com/google-gemini/gemini-cli/pull/27570; **Full Changelog**: https://github.com/google-gemini/gemini-cli/compare/v0.45.0-nightly.20260530.g013914071...v0.45.0-nightly.20260602.g665228e98",
+        "Google Kills Gemini CLI on June 18: Builder Migration Guide | AI Builder Club",
+        "Google Gemini New Features 2026 — The Update That Quietly ...",
+        "Gemini CLI release notes",
+        "Big changes are coming! Google has announced that Gemini CLI ...",
+        "Google Is Killing Gemini CLI on June 18. Here Is What to Do Before Then - DEV Community"
+      ],
+      "source": "GitHub Releases",
+      "sourceUrl": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.45.0-nightly.20260602.g665228e98",
+      "aiSummary": ""
+    },
+    {
+      "name": "Cursor",
+      "category": "ide",
+      "highlights": [
+        "Cursor Release Notes - June 2026 Latest Updates - Releasebot",
+        "Cursor Changelog: What's coming next in 2026? - PromptLayer Blog",
+        "Cursor: The best coding agent",
+        "What's New in Cursor — Latest Updates & Release Notes",
+        "Cursor AI: The Only IDE You Need in 2026 (Beginner to Pro)"
+      ],
+      "source": "Search",
+      "sourceUrl": "https://releasebot.io/updates/cursor",
+      "aiSummary": ""
+    },
+    {
+      "name": "Windsurf",
+      "category": "ide",
+      "highlights": [
+        "Windsurf Release Notes - June 2026 Latest Updates - Releasebot",
+        "Changelog - Devin Docs",
+        "Changelog (Next) - Devin Docs",
+        "Windsurf 1.2.6 Patch Fixes Update : r/Codeium - Reddit",
+        "How to Install and Use Windsurf (AI Code Editor) on Windows 11 ..."
+      ],
+      "source": "Search",
+      "sourceUrl": "https://releasebot.io/updates/windsurf",
+      "aiSummary": ""
+    },
+    {
+      "name": "Trae",
+      "category": "ide",
+      "highlights": [
+        "Trae: A New Free AI-Powered Code Editor from ByteDance",
+        "ByteDance Launches New AI Coding Tool Trae with ...",
+        "Trae: The New AI-Powered IDE from ByteDance - Tomas Svojanovsky",
+        "Have you had a chance to try Trae, ByteDance's new AI-powered ...",
+        "TikTok built an IDE to rival Cursor - Trae AI - YouTube"
+      ],
+      "source": "Search",
+      "sourceUrl": "https://www.digitalocean.com/community/tutorials/trae-free-ai-code-editor",
+      "aiSummary": ""
+    },
+    {
+      "name": "Augment",
+      "category": "ide",
+      "highlights": [
+        "Augment Code UPDATE: RIP Cursor! NEW AGENT! AI Software ...",
+        "Augment Code vs Cursor (2026): Same Model, 15-Problem Gap",
+        "Changelog | Augment Code",
+        "Best Augment Code Alternatives in 2026: 8 Tools Compared – Tembo",
+        "Augment Code - AI Assistant w. Superpowers - Mojo - Modular"
+      ],
+      "source": "Search",
+      "sourceUrl": "https://www.youtube.com/watch?v=0rAub1uA_mU",
+      "aiSummary": ""
+    },
+    {
+      "name": "Claude Code",
+      "category": "cli",
+      "highlights": [
+        "claude-code/CHANGELOG.md at main · anthropics/claude-code",
+        "Claude Updates by Anthropic - June 2026 - Releasebot",
+        "Anthropic released Claude code 2.0.73 with 9 CLI changes,details below : r/ClaudeAI",
+        "Claude Code: The Changelog Nobody Read Is the Most Important ...",
+        "Microsoft Ends Claude Code Use Internally, Shifts to ..."
+      ],
+      "source": "Search",
+      "sourceUrl": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md",
+      "aiSummary": ""
+    },
+    {
+      "name": "OpenCode",
+      "category": "cli",
+      "highlights": [
+        "OpenCode | The open source AI coding agent",
+        "OpenCode: Free AI Coding Agent Setup Guide 2026 - YouTube",
+        "What's your AI coding setup in 2026? : r/opencodeCLI - Reddit",
+        "OpenCode Deep Dive: Provider-Agnostic AI CLI in 2026 (v1 ...",
+        "Claude Code vs Codex vs OpenCode: Which AI Coding Agent Is ..."
+      ],
+      "source": "Search",
+      "sourceUrl": "https://opencode.ai",
+      "aiSummary": ""
+    },
+    {
+      "name": "Aider",
+      "category": "cli",
+      "highlights": [
+        "Aider Review 2026 | Software Engineering Tool - Pricing & Features",
+        "Releases · Aider-AI/aider · GitHub",
+        "8 AI Coding Tools So Good They Feel Illegal in 2026",
+        "8 Best AI Coding Assistants [Updated May 2026]",
+        "Best AI Coding Agents 2026: 15 Tested, 3 Worth It - Morph"
+      ],
+      "source": "Search",
+      "sourceUrl": "https://aiagentslist.com/agents/aider",
+      "aiSummary": ""
+    },
+    {
+      "name": "Copilot",
+      "category": "cli",
+      "highlights": [
+        "GitHub Release Notes - June 2026 Latest Updates - Releasebot",
+        "Updates to GitHub Copilot billing and plans",
+        "GitHub Copilot Ends Flat Pricing June 1: What Changes",
+        "End of an Era [June 1, 2026] - GitHub Copilot models and prices ...",
+        "Microsoft Build 2026 Community Recap #197336 - GitHub"
+      ],
+      "source": "Search",
+      "sourceUrl": "https://releasebot.io/updates/github",
+      "aiSummary": ""
+    },
+    {
+      "name": "CodeBuddy",
+      "category": "cli",
+      "highlights": [
+        "Overview - Tencent Cloud",
+        "Tencent Cloud Code Assistant CodeBuddy – AI Code Editor",
+        "CodeBuddy（An AI code assistant launched by Tencent Cloud ...",
+        "Tencent Cloud Code Assistant CodeBuddy – AI Code Editor",
+        "Tencent Mulls Workflow Overhaul After Widespread Embrace of AI ..."
+      ],
+      "source": "Search",
+      "sourceUrl": "https://www.tencentcloud.com/document/product/1256/77266",
+      "aiSummary": ""
+    }
+  ],
+  "benchmarks": {
+    "arenaRanking": [
+      {
+        "rank": 1,
+        "model": "Claude Opus 4.7 Thinking",
+        "elo": 1567,
+        "org": "Anthropic",
+        "delta": null
+      },
+      {
+        "rank": 2,
+        "model": "Claude Opus 4.7",
+        "elo": 1557,
+        "org": "Anthropic",
+        "delta": null
+      },
+      {
+        "rank": 3,
+        "model": "Claude Opus 4.8 Thinking",
+        "elo": 1552,
+        "org": "Anthropic",
+        "delta": null
+      },
+      {
+        "rank": 4,
+        "model": "Claude Opus 4.8",
+        "elo": 1545,
+        "org": "Anthropic",
+        "delta": null
+      },
+      {
+        "rank": 5,
+        "model": "Claude Opus 4.6 Thinking",
+        "elo": 1543,
+        "org": "Anthropic",
+        "delta": null
+      },
+      {
+        "rank": 6,
+        "model": "Claude Opus 4.6",
+        "elo": 1538,
+        "org": "Anthropic",
+        "delta": null
+      },
+      {
+        "rank": 7,
+        "model": "Qwen3.7 Max 20260517",
+        "elo": 1537,
+        "org": "Alibaba",
+        "delta": null
+      },
+      {
+        "rank": 8,
+        "model": "GLM 5.1",
+        "elo": 1532,
+        "org": "Z.ai",
+        "delta": null
+      },
+      {
+        "rank": 9,
+        "model": "Minimax M3",
+        "elo": 1528,
+        "org": "MiniMax",
+        "delta": null
+      },
+      {
+        "rank": 10,
+        "model": "Claude Sonnet 4.6",
+        "elo": 1522,
+        "org": "Anthropic",
+        "delta": null
+      },
+      {
+        "rank": 11,
+        "model": "Kimi K2.6",
+        "elo": 1516,
+        "org": "Moonshot",
+        "delta": null
+      },
+      {
+        "rank": 12,
+        "model": "Muse Spark",
+        "elo": 1508,
+        "org": "Meta",
+        "delta": null
+      },
+      {
+        "rank": 13,
+        "model": "Gemini 3.5 Flash",
+        "elo": 1506,
+        "org": "Google",
+        "delta": null
+      },
+      {
+        "rank": 14,
+        "model": "GPT-5.5 Xhigh (codex Harness)",
+        "elo": 1502,
+        "org": "OpenAI",
+        "delta": null
+      },
+      {
+        "rank": 15,
+        "model": "Claude Opus 4.5 20251101 Thinking 32k",
+        "elo": 1491,
+        "org": "Anthropic",
+        "delta": null
+      },
+      {
+        "rank": 16,
+        "model": "Qwen3.6 Max Preview",
+        "elo": 1484,
+        "org": "Alibaba",
+        "delta": null
+      },
+      {
+        "rank": 17,
+        "model": "GPT-5.5 High (codex Harness)",
+        "elo": 1482,
+        "org": "OpenAI",
+        "delta": null
+      },
+      {
+        "rank": 18,
+        "model": "Claude Opus 4.5 20251101",
+        "elo": 1467,
+        "org": "Anthropic",
+        "delta": null
+      },
+      {
+        "rank": 19,
+        "model": "Mimo V2.5 Pro",
+        "elo": 1466,
+        "org": "Xiaomi",
+        "delta": null
+      },
+      {
+        "rank": 20,
+        "model": "Qwen3.6 Plus",
+        "elo": 1463,
+        "org": "Alibaba",
+        "delta": null
+      }
+    ],
+    "aiderLeaderboard": [
+      {
+        "model": "gpt-5 (high)",
+        "passRate": 88,
+        "delta": null
+      },
+      {
+        "model": "gpt-5 (medium)",
+        "passRate": 86.7,
+        "delta": null
+      },
+      {
+        "model": "o3-pro (high)",
+        "passRate": 84.9,
+        "delta": null
+      },
+      {
+        "model": "gemini-2.5-pro-preview-06-05 (32k think)",
+        "passRate": 83.1,
+        "delta": null
+      },
+      {
+        "model": "o3 (high)",
+        "passRate": 81.3,
+        "delta": null
+      },
+      {
+        "model": "gpt-5 (low)",
+        "passRate": 81.3,
+        "delta": null
+      },
+      {
+        "model": "grok-4 (high)",
+        "passRate": 79.6,
+        "delta": null
+      },
+      {
+        "model": "gemini-2.5-pro-preview-06-05 (default think)",
+        "passRate": 79.1,
+        "delta": null
+      },
+      {
+        "model": "o3 (high) + gpt-4.1",
+        "passRate": 78.2,
+        "delta": null
+      },
+      {
+        "model": "Gemini 2.5 Pro Preview 05-06",
+        "passRate": 76.9,
+        "delta": null
+      },
+      {
+        "model": "o3",
+        "passRate": 76.9,
+        "delta": null
+      },
+      {
+        "model": "DeepSeek-V3.2-Exp (Reasoner)",
+        "passRate": 74.2,
+        "delta": null
+      },
+      {
+        "model": "Gemini 2.5 Pro Preview 03-25",
+        "passRate": 72.9,
+        "delta": null
+      },
+      {
+        "model": "o4-mini (high)",
+        "passRate": 72,
+        "delta": null
+      },
+      {
+        "model": "claude-opus-4-20250514 (32k thinking)",
+        "passRate": 72,
+        "delta": null
+      },
+      {
+        "model": "DeepSeek R1 (0528)",
+        "passRate": 71.4,
+        "delta": null
+      },
+      {
+        "model": "claude-opus-4-20250514 (no think)",
+        "passRate": 70.7,
+        "delta": null
+      },
+      {
+        "model": "DeepSeek-V3.2-Exp (Chat)",
+        "passRate": 70.2,
+        "delta": null
+      },
+      {
+        "model": "claude-3-7-sonnet-20250219 (32k thinking tokens)",
+        "passRate": 64.9,
+        "delta": null
+      },
+      {
+        "model": "DeepSeek R1 + claude-3-5-sonnet-20241022",
+        "passRate": 64,
+        "delta": null
+      },
+      {
+        "model": "o1-2024-12-17 (high)",
+        "passRate": 61.7,
+        "delta": null
+      },
+      {
+        "model": "claude-sonnet-4-20250514 (32k thinking)",
+        "passRate": 61.3,
+        "delta": null
+      },
+      {
+        "model": "o3-mini (high)",
+        "passRate": 60.4,
+        "delta": null
+      },
+      {
+        "model": "claude-3-7-sonnet-20250219 (no thinking)",
+        "passRate": 60.4,
+        "delta": null
+      },
+      {
+        "model": "Qwen3 235B A22B diff, no think, Alibaba API",
+        "passRate": 59.6,
+        "delta": null
+      },
+      {
+        "model": "Kimi K2",
+        "passRate": 59.1,
+        "delta": null
+      },
+      {
+        "model": "DeepSeek R1",
+        "passRate": 56.9,
+        "delta": null
+      },
+      {
+        "model": "claude-sonnet-4-20250514 (no thinking)",
+        "passRate": 56.4,
+        "delta": null
+      },
+      {
+        "model": "DeepSeek V3 (0324)",
+        "passRate": 55.1,
+        "delta": null
+      },
+      {
+        "model": "gemini-2.5-flash-preview-05-20 (24k think)",
+        "passRate": 55.1,
+        "delta": null
+      }
+    ],
+    "sweBench": [
+      {
+        "model": "live-SWE-agent + Claude 4.5 Opus medium (20251101)",
+        "resolved": 79.2,
+        "org": "UIUC"
+      },
+      {
+        "model": "Sonar Foundation Agent + Claude 4.5 Opus",
+        "resolved": 79.2,
+        "org": "Sonar"
+      },
+      {
+        "model": "TRAE + Doubao-Seed-Code",
+        "resolved": 78.8,
+        "org": "ByteDance"
+      },
+      {
+        "model": "live-SWE-agent + Gemini 3 Pro Preview (2025-11-18)",
+        "resolved": 77.4,
+        "org": "UIUC"
+      },
+      {
+        "model": "Atlassian Rovo Dev (2025-09-02)",
+        "resolved": 76.8,
+        "org": "Atlassian"
+      },
+      {
+        "model": "EPAM AI/Run Developer Agent v20250719 + Claude 4 Sonnet",
+        "resolved": 76.8,
+        "org": "EPAM Systems, Inc."
+      },
+      {
+        "model": "mini-SWE-agent + Claude 4.5 Opus (high reasoning)",
+        "resolved": 76.8,
+        "org": "Anthropic"
+      },
+      {
+        "model": "ACoder",
+        "resolved": 76.4,
+        "org": "ACoder"
+      },
+      {
+        "model": "mini-SWE-agent + Gemini 3 Flash (high reasoning)",
+        "resolved": 75.8,
+        "org": "Google DeepMind"
+      },
+      {
+        "model": "mini-SWE-agent + MiniMax M2.5 (high reasoning)",
+        "resolved": 75.8,
+        "org": "Minimax"
+      },
+      {
+        "model": "Warp",
+        "resolved": 75.6,
+        "org": "Warp"
+      },
+      {
+        "model": "mini-SWE-agent + Claude Opus 4.6",
+        "resolved": 75.6,
+        "org": "Anthropic"
+      },
+      {
+        "model": "TRAE + Claude Sonnet 4 + Opus 4 + Sonnet 3.7 + Gemini 2.5 Pro",
+        "resolved": 75.2,
+        "org": "TRAE"
+      },
+      {
+        "model": "Harness AI",
+        "resolved": 74.8,
+        "org": "Harness"
+      },
+      {
+        "model": "Sonar Foundation Agent + Claude 4.5 Sonnet",
+        "resolved": 74.8,
+        "org": "Sonar"
+      },
+      {
+        "model": "Lingxi-v1.5_claude-4-sonnet-20250514",
+        "resolved": 74.6,
+        "org": "Lingxi"
+      },
+      {
+        "model": "JoyCode + Claude 4 Sonnet + GPT-4.1",
+        "resolved": 74.6,
+        "org": "JoyCode"
+      },
+      {
+        "model": "Refact.ai Agent + Claude 4 Sonnet + o4-mini",
+        "resolved": 74.4,
+        "org": "Refact.ai"
+      },
+      {
+        "model": "Prometheus-v1.2.1 + GPT-5",
+        "resolved": 74.4,
+        "org": "EuniAI"
+      },
+      {
+        "model": "mini-SWE-agent + Claude 4.5 Opus medium (20251101)",
+        "resolved": 74.4,
+        "org": "Anthropic"
+      },
+      {
+        "model": "mini-SWE-agent + Gemini 3 Pro Preview (2025-11-18)",
+        "resolved": 74.2,
+        "org": "Google DeepMind"
+      },
+      {
+        "model": "Salesforce AI Research SAGE (OpenHands)",
+        "resolved": 73.8,
+        "org": "Salesforce AI Research"
+      },
+      {
+        "model": "Tools + Claude 4 Opus (2025-05-22)",
+        "resolved": 73.2
+      },
+      {
+        "model": "Salesforce AI Research SAGE (bash-only)",
+        "resolved": 73,
+        "org": "Salesforce AI Research"
+      },
+      {
+        "model": "mini-SWE-agent + GPT-5-2 Codex",
+        "resolved": 72.8,
+        "org": "OpenAI"
+      },
+      {
+        "model": "mini-SWE-agent + GLM-5 (high reasoning)",
+        "resolved": 72.8,
+        "org": "Z-AI"
+      },
+      {
+        "model": "mini-SWE-agent + GPT-5-2 (high reasoning)",
+        "resolved": 72.8,
+        "org": "OpenAI"
+      },
+      {
+        "model": "Tools + Claude 4 Sonnet (2025-05-22)",
+        "resolved": 72.4
+      },
+      {
+        "model": "OpenHands + GPT-5",
+        "resolved": 71.8,
+        "org": "OpenHands"
+      },
+      {
+        "model": "mini-SWE-agent + GPT-5.2 (2025-12-11) (high reasoning)",
+        "resolved": 71.8,
+        "org": "OpenAI"
+      }
+    ],
+    "liveCodeBench": [
+      {
+        "model": "O4-Mini (High)",
+        "passRate": 87.3,
+        "easy": 98.4,
+        "medium": 92.7,
+        "hard": 71.1
+      },
+      {
+        "model": "O3 (High)",
+        "passRate": 84.7,
+        "easy": 99.1,
+        "medium": 89.8,
+        "hard": 66
+      },
+      {
+        "model": "O4-Mini (Medium)",
+        "passRate": 84.5,
+        "easy": 98.8,
+        "medium": 92.2,
+        "hard": 62.9
+      },
+      {
+        "model": "DeepSeek-R1-0528",
+        "passRate": 84.4,
+        "easy": 99.2,
+        "medium": 90.9,
+        "hard": 63.6
+      },
+      {
+        "model": "Gemini-2.5-Pro-06-05",
+        "passRate": 84.3,
+        "easy": 99.1,
+        "medium": 92.2,
+        "hard": 62
+      },
+      {
+        "model": "Gemini-2.5-Pro-05-06",
+        "passRate": 82.7,
+        "easy": 98.8,
+        "medium": 90.6,
+        "hard": 59.4
+      },
+      {
+        "model": "OpenReasoning-Nemotron-32B",
+        "passRate": 81,
+        "easy": 98.6,
+        "medium": 87.5,
+        "hard": 57.5
+      },
+      {
+        "model": "EXAONE-4.0-32B",
+        "passRate": 80.9,
+        "easy": 98.8,
+        "medium": 88.3,
+        "hard": 56.3
+      },
+      {
+        "model": "Qwen3-235B-A22B",
+        "passRate": 80.4,
+        "easy": 99.1,
+        "medium": 88.8,
+        "hard": 54
+      },
+      {
+        "model": "XBai-o4-medium",
+        "passRate": 80.1,
+        "easy": 98.8,
+        "medium": 90.1,
+        "hard": 52
+      },
+      {
+        "model": "OpenCodeReasoning-Nemotron-1.1-32B",
+        "passRate": 78.5,
+        "easy": 98,
+        "medium": 85.7,
+        "hard": 52.8
+      },
+      {
+        "model": "Grok-3-Mini (High)",
+        "passRate": 78.1,
+        "easy": 98.1,
+        "medium": 85.9,
+        "hard": 51.1
+      },
+      {
+        "model": "O3-Mini-2025-01-31 (High)",
+        "passRate": 77.7,
+        "easy": 99.1,
+        "medium": 87.5,
+        "hard": 47.4
+      },
+      {
+        "model": "O4-Mini (Low)",
+        "passRate": 77.4,
+        "easy": 98.1,
+        "medium": 86.2,
+        "hard": 48.9
+      },
+      {
+        "model": "Gemini-2.5-Flash-05-20",
+        "passRate": 76.2,
+        "easy": 99.1,
+        "medium": 82.5,
+        "hard": 48.3
+      },
+      {
+        "model": "O3-Mini-2025-01-31 (Med)",
+        "passRate": 75.4,
+        "easy": 98.8,
+        "medium": 85.1,
+        "hard": 43.1
+      },
+      {
+        "model": "Gemini-2.5-Flash-04-17",
+        "passRate": 75.1,
+        "easy": 98.4,
+        "medium": 81.2,
+        "hard": 46.9
+      },
+      {
+        "model": "O3-Mini-2025-01-31 (Low)",
+        "passRate": 70.6,
+        "easy": 97.8,
+        "medium": 77.5,
+        "hard": 38
+      },
+      {
+        "model": "Claude-Opus-4 (Thinking)",
+        "passRate": 70.4,
+        "easy": 99.1,
+        "medium": 80.4,
+        "hard": 33.1
+      },
+      {
+        "model": "Claude-Sonnet-4 (Thinking)",
+        "passRate": 68.5,
+        "easy": 98.8,
+        "medium": 76,
+        "hard": 32.6
+      },
+      {
+        "model": "Claude-Opus-4",
+        "passRate": 62.4,
+        "easy": 96.3,
+        "medium": 69.2,
+        "hard": 23.7
+      },
+      {
+        "model": "Claude-Sonnet-4",
+        "passRate": 59.4,
+        "easy": 96.3,
+        "medium": 64,
+        "hard": 20.6
+      },
+      {
+        "model": "DeepSeek-V3",
+        "passRate": 49.6,
+        "easy": 83.3,
+        "medium": 53.5,
+        "hard": 14.2
+      },
+      {
+        "model": "Claude-3.5-Sonnet-20241022",
+        "passRate": 48.7,
+        "easy": 92.6,
+        "medium": 44.6,
+        "hard": 12.8
+      },
+      {
+        "model": "GPT-4O-2024-08-06",
+        "passRate": 38.3,
+        "easy": 82.5,
+        "medium": 32.1,
+        "hard": 4.5
+      },
+      {
+        "model": "GPT-4-Turbo-2024-04-09",
+        "passRate": 37.3,
+        "easy": 81.4,
+        "medium": 30.7,
+        "hard": 4
+      },
+      {
+        "model": "GPT-4O-mini-2024-07-18",
+        "passRate": 35.5,
+        "easy": 81.7,
+        "medium": 25.2,
+        "hard": 4.3
+      },
+      {
+        "model": "Claude-3-Haiku",
+        "passRate": 22.5,
+        "easy": 61.1,
+        "medium": 9,
+        "hard": 1.9
+      }
+    ],
+    "notable": ""
+  },
+  "blogs": [
+    {
+      "company": "Google AI",
+      "title": "The latest AI news we announced in May 2026",
+      "url": "https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-may-2026/",
+      "publishedAt": "2026-06-05T14:45:00.000Z",
+      "summary": "May AI recap",
+      "tags": [
+        "gemini",
+        "deepmind"
+      ]
+    },
+    {
+      "company": "Google AI",
+      "title": "5 ways Google Search can level up your thrift and vintage shopping",
+      "url": "https://blog.google/products-and-platforms/products/search/thrifting-tips/",
+      "publishedAt": "2026-06-03T13:00:00.000Z",
+      "summary": "A colorful, grain-textured collage of various items scattered across a light blue background. The items include a green bucket hat, a wooden clothes hanger, a blue-and-red striped collar, blue sunglasses, denim shorts, a yellow price tag, a red high-heele",
+      "tags": [
+        "gemini",
+        "deepmind"
+      ]
+    },
+    {
+      "company": "Google AI",
+      "title": "How we used Gemini to build Google I/O 2026",
+      "url": "https://blog.google/innovation-and-ai/technology/ai/io-2026-google-ai/",
+      "publishedAt": "2026-06-01T16:00:00.000Z",
+      "summary": "A collage of I/O-related images, including the Antigravity Coffee Co. pop-up, a colorful jellyfish and a still from the Timmy TPU video. The word AI repeats three times on the left of the image, and there are colorful icons, including a sparkle, as well.",
+      "tags": [
+        "gemini",
+        "deepmind"
+      ]
+    },
+    {
+      "company": "Cursor",
+      "title": "Design Mode Improvements",
+      "url": "https://cursor.com/changelog/design-mode-improvements",
+      "publishedAt": "2026-06-05T00:00:00.000Z",
+      "summary": "With Design Mode in the Cursor browser, you can click, draw, or describe changes by voice to help agents update your UI.",
+      "tags": [
+        "cursor",
+        "ide"
+      ]
+    },
+    {
+      "company": "Cursor",
+      "title": "Custom stores, custom tools, and auto-review for the Cursor SDK",
+      "url": "https://cursor.com/changelog/sdk-updates-jun-2026",
+      "publishedAt": "2026-06-04T00:00:00.000Z",
+      "summary": "New stores, custom tools, auto-review, and nested subagents for the TypeScript and Python SDKs, plus run correlation IDs, lighter imports, and reliability fixes.",
+      "tags": [
+        "cursor",
+        "ide"
+      ]
+    },
+    {
+      "company": "Cursor",
+      "title": "Canvas Design Mode and Context Usage Report",
+      "url": "https://cursor.com/changelog/canvas-improvements",
+      "publishedAt": "2026-06-04T00:00:00.000Z",
+      "summary": "With canvases , agents can create interactive artifacts like dashboards, reports, and internal tools that you can share with your team .",
+      "tags": [
+        "cursor",
+        "ide"
+      ]
+    },
+    {
+      "company": "Cursor",
+      "title": "Organizations for Cursor Enterprise",
+      "url": "https://cursor.com/changelog/enterprise-organizations",
+      "publishedAt": "2026-06-03T00:00:00.000Z",
+      "summary": "Enterprise customers can now manage multiple Cursor teams from one place, with different security, governance, budget, and feature controls for each. These capabilities are now generally available to all Enterprise customers.",
+      "tags": [
+        "cursor",
+        "ide"
+      ]
+    },
+    {
+      "company": "Vercel",
+      "title": "Drives for Vercel Sandbox in Private Beta",
+      "url": "https://vercel.com/changelog/drives-for-vercel-sandbox-in-private-beta",
+      "publishedAt": "2026-06-05T00:01:00.000Z",
+      "summary": "\n          Vercel Sandbox now supports drives in private beta. Drives are persistent, attachable storage with a lifecycle independent from any sandbox.Create a drive once, then mount it at a configurable path when starting a sandbox. When the sandbox stops, the drive remains available to attach to a later sandbox.Install the beta SDK (@vercel/sandbox@beta) or beta CLI (sandbox@beta), then create and mount a drive:Sandbox Drives are useful for:Keeping agent workspaces across disposable sandboxesR",
+      "tags": [
+        "v0",
+        "ai-sdk"
+      ]
+    },
+    {
+      "company": "Vercel",
+      "title": "The skills.sh API is now available",
+      "url": "https://vercel.com/changelog/the-skills-sh-api-is-now-available",
+      "publishedAt": "2026-06-05T00:00:00.000Z",
+      "summary": "\n          The skills.sh API is now available. Authenticate with your project's Vercel OIDC token and start querying more than 600,000 skills from across the open-source ecosystem.Search for skills, pull detailed info on any one, check its security audit, and more.Vercel issues a short-lived token scoped to your team and project, rotated automatically, so there's no long-lived secret to leak or rotate. On each request, skills.sh verifies the token and applies a rate limit of 600 requests per min",
+      "tags": [
+        "v0",
+        "ai-sdk"
+      ]
+    },
+    {
+      "company": "Vercel",
+      "title": "Updates to Legal Terms",
+      "url": "https://vercel.com/changelog/updates-to-legal-terms-june-2026",
+      "publishedAt": "2026-06-04T18:00:00.000Z",
+      "summary": "\n          The proliferation of agentic workflows means developers now regularly grant AI tools direct access to their infrastructure, use services that act autonomously, and build on platforms that themselves use AI to operate. We’ve updated our Terms of Service and Marketplace terms to clarify shared responsibility when actions on your account may be taken by AI, whether Vercel's own or a third-party tool you've connected, as well as other important updates detailed below.What is changing?AI F",
+      "tags": [
+        "v0",
+        "ai-sdk"
+      ]
+    },
+    {
+      "company": "Vercel",
+      "title": "Nemotron 3 Ultra now available on AI Gateway",
+      "url": "https://vercel.com/changelog/nemotron-3-ultra-now-available-on-ai-gateway",
+      "publishedAt": "2026-06-04T07:00:00.000Z",
+      "summary": "\n          Nemotron 3 Ultra from Nvidia is now available on Vercel AI Gateway.Nemotron 3 Ultra is an open Mixture-of-Experts reasoning model built for orchestrating long-running agent workflows, with a 1M token context window. The model targets multi-turn agent workflows: planning, tool use, sub-agent delegation, and error recovery. Throughput reaches up to 350 tokens per second, with up to 30% lower cost on agentic tasks.To use Nemotron 3 Ultra, set model to nvidia/nemotron-3-ultra-550b-a55b in",
+      "tags": [
+        "v0",
+        "ai-sdk"
+      ]
+    },
+    {
+      "company": "Vercel",
+      "title": "Build and deploy Shopify storefronts on Vercel",
+      "url": "https://vercel.com/changelog/build-and-deploy-shopify-storefronts-on-vercel",
+      "publishedAt": "2026-06-04T00:00:00.000Z",
+      "summary": "\n          You can now create a Shopify store directly from Vercel and start building a production-ready storefront in minutes.Install the Shopify integration to automatically configure your Shopify credentials in Vercel. Create a free test store, build with v0 and deploy without leaving your workflow. When you're ready to launch, you can claim the store and take ownership of it.Coming soon: Connect an existing Shopify store to Vercel.Get started by installing Shopify from the Vercel Marketplace",
+      "tags": [
+        "v0",
+        "ai-sdk"
+      ]
+    },
+    {
+      "company": "Vercel",
+      "title": "Trace any Vercel request from the CLI",
+      "url": "https://vercel.com/changelog/trace-any-vercel-request-from-the-cli",
+      "publishedAt": "2026-06-03T00:00:00.000Z",
+      "summary": "\n          You can now generate Session Traces through the Vercel CLI.Use the new vercel curl --trace command to generate an OpenTelemetry trace to the specified endpoint from the terminal. Use the new vercel traces get command to fetch the generated trace by request ID.Available on all plans.\n\nUpdate the Vercel CLI to the latest version and run vercel curl --trace to get started. Learn more about the vercel curl CLI command.\n          \n            Read more\n          \n        ",
+      "tags": [
+        "v0",
+        "ai-sdk"
+      ]
+    },
+    {
+      "company": "Vercel",
+      "title": "Grok Imagine Video 1.5 on AI Gateway",
+      "url": "https://vercel.com/changelog/grok-imagine-video-1-5-on-ai-gateway",
+      "publishedAt": "2026-06-03T00:00:00.000Z",
+      "summary": "\n          Grok Imagine Video 1.5 from xAI is now available on AI Gateway. The model generates video from an input image with synchronized audio in a single pass.This release improves audio quality, prompt following, and photorealism. Face accuracy and character consistency are stronger across longer sequences, with better lighting and physical realism in the output. Reference image support has been expanded to give more control over visual style and subject.To use this model, set model to xai/g",
+      "tags": [
+        "v0",
+        "ai-sdk"
+      ]
+    },
+    {
+      "company": "Vercel",
+      "title": "Edit Git settings for all projects in a repo",
+      "url": "https://vercel.com/changelog/edit-git-settings-for-all-projects-in-a-repo",
+      "publishedAt": "2026-06-02T06:00:00.000Z",
+      "summary": "\n          Monorepos that deploy many projects can now configure all of their project's Git settings more conveniently. Previously, if you wanted to consistently configure each project's settings for commit status, repository_dispatch events, etc., you had to click through to every project's settings and consistently apply the same setting. Now, you can do it all in one place.Try it out in project settings or visit the docs to learn more!\n          \n            Read more\n          \n        ",
+      "tags": [
+        "v0",
+        "ai-sdk"
+      ]
+    },
+    {
+      "company": "Vercel",
+      "title": "Signed URLs are now available for Vercel Blob",
+      "url": "https://vercel.com/changelog/signed-urls-are-now-available-for-vercel-blob",
+      "publishedAt": "2026-06-02T00:00:00.000Z",
+      "summary": "\n          You can now generate time-bound signed URLs for Vercel Blob. A signed URL is a scoped URL with an expiry that allows you to upload, download, inspect, or delete a specific object without giving access to your entire Blob store.Each URL is scoped to a single operation (put, get, head, or delete), a single pathname, and an expiry you choose, up to 7 days. The signature covers the operation and constraints, so a URL signed for a GET can't be reused as a PUT.Direct uploads from the browse",
+      "tags": [
+        "v0",
+        "ai-sdk"
+      ]
+    },
+    {
+      "company": "Vercel",
+      "title": "Elastic Build Machines now protect against out of memory builds",
+      "url": "https://vercel.com/changelog/elastic-build-machines-now-protect-against-out-of-memory-builds",
+      "publishedAt": "2026-06-01T18:30:00.000Z",
+      "summary": "\n          Elastic build machines now monitor your build's memory usage and automatically adjust to prevent out-of-memory (OOM) failures:If your build is fast but memory-intensive, we will no longer downgrade you to a smaller machineIf your build is close to running out of memory, we will automatically upgrade to a higher tierIf your build fails due to an out-of-memory error, the next deployment will automatically run on a higher tierThresholds are set conservatively to balance deployment reliab",
+      "tags": [
+        "v0",
+        "ai-sdk"
+      ]
+    }
+  ],
+  "ecosystem": [],
+  "weekSummary": "本周共追踪到 10 个编辑器的更新和 17 篇公司博客文章。"
+}
