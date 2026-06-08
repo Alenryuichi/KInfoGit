@@ -4,15 +4,30 @@
     <title>Stars &amp; Posts — Kylin Miao</title>
     <link>https://kylinmiao.me/stars/</link>
     <description>Daily curated GitHub starred repos, Bluesky/X posts, YouTube videos and blog articles from AI leaders with AI-powered summaries.</description>
-    <lastBuildDate>Sun, 07 Jun 2026 04:34:02 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 08 Jun 2026 04:34:46 GMT</lastBuildDate>
     <atom:link href="https://kylinmiao.me/stars/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Stars &amp; Posts — 2026-06-08</title>
+      <link>https://kylinmiao.me/stars/2026-06-08/</link>
+      <guid isPermaLink="true">https://kylinmiao.me/stars/2026-06-08/</guid>
+      <pubDate>Mon, 08 Jun 2026 12:00:00 GMT</pubDate>
+      <description>Bluesky Posts:
+* Mark Riedl: So Conrad, who are you wearing for the big day?
+* Ethan Mollick: A year ago the closest thing we had to a general AI agent was o3.
+* angela zhou: i don&apos;t think we should waste real expert reviewer&apos;s time reviewing mediocre AI-written papers and having real expert reviewer provide valuable feedba...</description>
+    </item>
     <item>
       <title>Stars &amp; Posts — 2026-06-07</title>
       <link>https://kylinmiao.me/stars/2026-06-07/</link>
       <guid isPermaLink="true">https://kylinmiao.me/stars/2026-06-07/</guid>
       <pubDate>Sun, 07 Jun 2026 12:00:00 GMT</pubDate>
       <description>GitHub Repos:
-* FunAudioLLM/Fun-ASR — End-to-end speech recognition large model: 31 languages, dialects, accents, lyrics, hotwords, timestamps, speaker diarization. Trained on tens of millions of hours. [Python]</description>
+* FunAudioLLM/Fun-ASR — End-to-end speech recognition large model: 31 languages, dialects, accents, lyrics, hotwords, timestamps, speaker diarization. Trained on tens of millions of hours. [Python]
+
+Bluesky Posts:
+* Marc Lanctot: Omg, best easter egg ever ! C= 🦇🧍‍♂️ 👌
+* Marc Lanctot: TIL Kim Thayil wrote a memoir! Coming out June 9th 👍🎸
+* angela zhou: has anyone written about the inherent optimism in scaling up pilots to larger-scale implementations? DM&apos;s policy is not risk-averse for beneficial soc...</description>
     </item>
     <item>
       <title>Stars &amp; Posts — 2026-06-06</title>
@@ -1381,86 +1396,6 @@ X Posts:
 * Ben Recht: Building a theory of the architecture of organizing machines and people.
 * Ben Recht: With more equations than usual, I explain how policy gradient gives you a framework to randomly search for
 * Ben Recht: On unquantifiable costs and inherent tradeoffs in decision theory.</description>
-    </item>
-    <item>
-      <title>Stars &amp; Posts — 2026-05-09</title>
-      <link>https://kylinmiao.me/stars/2026-05-09/</link>
-      <guid isPermaLink="true">https://kylinmiao.me/stars/2026-05-09/</guid>
-      <pubDate>Sat, 09 May 2026 12:00:00 GMT</pubDate>
-      <description>Today&apos;s open-source landscape is buzzing with **roborev**, a new tool that provides continuous background code review for AI agents, hitting nearly 1,000 stars and earning a nod from Simon Willison. On the research front, Mark Riedl&apos;s team at Anthropic published findings that pairing high-quality constitutions with fictional stories about aligned AI can significantly reduce agentic misalignment—a practical twist on safety training. Meanwhile, Nathan Lambert shared vivid on-the-ground observations from a tour of China’s AI and robotics firms, offering a rare glimpse into the pace of development there. Ethan Mollick noted a curious benchmark limitation: Mythos ran out of graph capacity while measuring task duration, hinting at the complexity of evaluating long-horizon agents. Finally, a lively discussion is brewing around Leaflet’s new newsletter feature as a potential Substack alternative, with Angela Zhou wondering if cross-platform paper recommendations could bridge Bluesky and Leaflet.
-
-GitHub Repos:
-* roborev-dev/roborev — Continuous background code review database for agents, work faster and smarter with accountability for every line of generated code. [Go]
-* microsoft/delegate52 — Code  that accompanies the paper release for &quot;LLMs Corrupt Your Documents When You Delegate&quot; [Python]
-
-Bluesky Posts:
-* Mark Riedl: &quot;We found that high-quality constitutional documents combined with fictional stories portraying an aligned AI can reduce agentic misalignment&quot; www.ant...
-* Nathan Lambert: Great telling of the sights when visiting China’s AI and robotics companies (the same trip I was on!).
-
-open.substack.com/pub/ailibrar...
-* Ethan Mollick: Huh. They ran out of graph when trying to measure how long a task Mythos could do.
-* Naomi Saphra: this is a very neat initiative
-* angela zhou: yay leaflet has newsletters now!
-this is looking like a promising substack alternative!
-I wonder if we can build similar paper recommend / network / r...
-* Simon Willison: Mission accomplished: tap danced in the big community college dance recital for the second time
-* hardmaru: Reproducing all of Jürgen Schmidhuber’s papers (1990-2025) using an AI coding assistant.
-
-Cool project by Yaroslav! It even reproduced the “World Mode...
-* angela zhou: why &quot;ai for social impact/good&quot; (however you want to call it) should get better at engaging with organizations and institutions that deliver social im...
-* angela zhou: 
-
-X Posts:
-* Andrej Karpathy: LLM Knowledge Bases Something I&apos;m finding very useful recently: using LLMs to build personal knowledge bases for various topics of research interest.
-* Andrej Karpathy: Excited to share that I am starting an AI+Education company called Eureka Labs.
-* Simon Willison: I&apos;ve published video, slides and a detailed annotated transcript from my talk at this week&apos;s AI Engineer World&apos;s
-* Harrison Chase: Visibility is the easiest piece. The hard part is analyzing and understanding what you&apos;re observing. I&apos;ve spoken to teams recording 100k+
-* Harrison Chase: TL;DR: More and more agents need a workspace: a computer where they can run code, install packages, and access files. Sandboxes provide this
-* Harrison Chase: When you ship traditional software to production, you have a good sense of what to expect. Users click buttons, fill out forms,
-* Jim Fan: I&apos;ve been a bit quiet on X recently. The past year has been a transformational experience.
-* Jeremy Howard: Early reports from people using this are that it&apos;s the real deal. Strong coding. Good multilingual. Consistent over long contexts.
-* Jeremy Howard: Here&apos;s a complete unedited video of asking Grok for its views on the Israel/Palestine situation. It first searches twitter for what Elon thinks.
-* Jeremy Howard: I can&apos;t begin to describe how life-changing this new project, ShellSage, has been for me over the last few weeks.
-* Soumith Chintala: reading &quot;AI News&quot; (previously Smol Talk) is probably the highest-leverage 45 mins
-* Soumith Chintala: MacStudio you ask? Apple Engineering&apos;s **actual** time spent on PyTorch support
-* Soumith Chintala: Sometimes we forget that NVIDIA wins because it&apos;s a software company.
-* Soumith Chintala: ChatGPT seems to be **really** good for creative work and a solid starting point
-* Francois Chollet: A lot of the current discourse about AI comes from a fatalistic position of total surrender of
-* Francois Chollet: I think it&apos;s clear that for many smaller companies that invested in deep learning, it turned out
-* Francois Chollet: GenAI isn&apos;t just a technology; it&apos;s an informational pollutant—a pervasive cognitive smog that
-* Francois Chollet: AI automates tasks, not jobs, and when a task gets cheaper, demand for the job grows.
-* Francois Chollet: Reaching AGI won&apos;t be beating a benchmark. It will be the end of the human-AI gap.
-* Fei-Fei Li: Very excited to share @theworldlabs &apos;s latest research work RTFM!! It&apos;s a real-time, ...
-* Clem Delangue: Just received new reach minis for the Miami office! This is the first robot that goes out
-* Clem Delangue: Looks like we&apos;re going to welcome two more Hugging Faces to the family next year. My wife is a hero!
-* Max Woolf: LOL
-* Max Woolf: congrats to OpenAI on winning the Turing Test
-* Phil Wang: I got to cover for the excellent @HadleyFreeman in the Guardian today so
-* Phil Wang: My girlfriend and I are delighted to announce the birth of our first son, Jeghro.
-* Sasha Rush: Some personal news: I recently joined Cursor. Cursor is a small, ambitious team, and they&apos;ve created
-* Sasha Rush: Wager established. Jonathan Frankle (@jefrankle) stepped up to my Transformer long bet.
-* Stas Bekman: If you were holding off to try @MSFTDeepSpeed ZeRO++ it looks like deepspeed@master should
-* Stas Bekman: Hear, hear, I&apos;m excited to introduce a new performance metric: Maximum Achievable Matmul
-* Stas Bekman: Thanks to an awesome contribution from @omarnomad The Machine Learning Engineering Open book now can
-* Stas Bekman: Classical Jensen math. Unidirectional bandwidth is topped at 450GB/s, and then there comes a protocol overhead of two digit percentage. 1.
-* Sayak Paul: Live a little, love a little, take time out to find happiness in small things, be grateful as we have one life. #lifemantra #WorkLifeBalance
-* Sayak Paul: Together w/ the community, our initiative of profiling Diffusers pipelines &amp; potentially improving them is going very strong
-* Philipp Schmid: I read three technical reports from Moonshot AI&apos;s Kimi K2.5 paper, Cursor&apos;s Composer 2 report and blog post, and Chroma&apos;s Context-1 write-up
-* Philipp Schmid: Random thought. We are going to be so much faster at creating and building.
-* Philipp Schmid: Skills have become one of the most used extension points in agents. They&apos;re flexible, easy to make, and simple to distribute.
-* Philipp Schmid: Last year I covered why isolating tasks into focused agents improves reliability. Since then, better planning and tool use have unlocked
-* Ethan Mollick: I don&apos;t have much to add to the bubble discussion, but the “this time is different”
-* Ethan Mollick: On the plus side with Opus 4.7, if it does decide to think it produces BY FAR the best
-* Ethan Mollick: We are starting to see some nuanced discussions of what it means to work with advanced AI In this
-* Emily M. Bender: Image is of the 1990s Microsoft writing assistant character Clippy with its eyebrows raised positioned in.
-* Emily M. Bender: Look what @alexhanna and I got to do! (Hang out with the cool kids ... We&apos;re talking about the Turing Test, the grandmother of all tests for AI sentie...
-* Emily M. Bender: For those playing along at home, here&apos;s a &quot;AI is sentient!&quot; argument bingo card.
-* Emily M. Bender: Facebook (sorry: Meta) AI: Check out our &quot;AI&quot; that lets you access all of humanity&apos;s knowledge.
-* Naomi Saphra: New preprint! Everyone loves causal interp. It&apos;s coherently defined! It makes testable predictions
-* Angela Zhou: #throwback coz it&apos;s finally the day again!!! #HellOnWheels back on AMC 9/8c tonight!
-* Ben Recht: Revisiting Sutton&apos;s Bitter Lesson in the wake of GPT-5.
-* Ben Recht: And awesome to see many Berkeley alums thriving here. @LaurentLessard, @DimitrisPapail, and Shivaram
-* Ben Recht: For the first time in almost a decade, I&apos;m teaching a class on learning and control.</description>
     </item>
   </channel>
 </rss>

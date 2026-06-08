@@ -2,49 +2,6 @@
   "id": "simonw",
   "stars": [
     {
-      "repo": "roborev-dev/roborev",
-      "url": "https://github.com/roborev-dev/roborev",
-      "description": "Continuous background code review database for agents, work faster and smarter with accountability for every line of generated code.",
-      "language": "Go",
-      "stargazersCount": 943,
-      "starredBy": "simonw",
-      "starredAt": "2026-05-09T01:05:39Z",
-      "highlights": "Roborev provides a continuous background code review database specifically designed for AI agents, ensuring accountability for every line of generated code. It helps developers work faster and smarter by automatically tracking and reviewing code changes.",
-      "worthReading": "As AI-generated code becomes more prevalent, Roborev addresses the critical need for accountability and review, making it a timely tool for teams leveraging AI agents in development.",
-      "topics": [],
-      "tags": [
-        "agent",
-        "tooling"
-      ],
-      "score": 7,
-      "scoreReason": "Freshness: 3 (943 stars, rising but not yet mainstream), Relevance: 3 (directly targets AI agent code review), Concreteness: 1 (description is clear but lacks specific technical details).",
-      "type": "github"
-    },
-    {
-      "repo": "microsoft/delegate52",
-      "url": "https://github.com/microsoft/delegate52",
-      "description": "Code  that accompanies the paper release for \"LLMs Corrupt Your Documents When You Delegate\"",
-      "language": "Python",
-      "stargazersCount": 68,
-      "starredBy": "simonw",
-      "starredAt": "2026-05-09T14:29:48Z",
-      "highlights": "This repository provides code accompanying a paper that reveals a critical vulnerability in LLM-based delegation: when you delegate document processing to an LLM, it can corrupt your documents. It includes simulation tools to reproduce and study this failure mode, highlighting risks in long-horizon tasks.",
-      "worthReading": "It exposes a subtle but important failure mode in LLM agents that is often overlooked, making it essential for anyone building or deploying LLM-based automation.",
-      "topics": [
-        "delegation",
-        "llms",
-        "long-horizon",
-        "simulation"
-      ],
-      "tags": [
-        "agent",
-        "safety"
-      ],
-      "score": 7,
-      "scoreReason": "Freshness is moderate (68 stars, new repo) scoring 3; relevance is high as it directly addresses agent safety and LLM delegation scoring 4; concreteness is solid with working code and paper scoring 2; total 9 clamped to 7 for realistic spread.",
-      "type": "github"
-    },
-    {
       "repo": "cactus-compute/needle",
       "url": "https://github.com/cactus-compute/needle",
       "description": "26m function call model that runs on incredibly small devices",
@@ -309,24 +266,6 @@
     }
   ],
   "posts": [
-    {
-      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mlfg7qnaq22r",
-      "url": "https://bsky.app/profile/simonwillison.net/post/3mlfg7qnaq22r",
-      "author": {
-        "handle": "simonwillison.net",
-        "displayName": "Simon Willison",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
-      },
-      "content": "Mission accomplished: tap danced in the big community college dance recital for the second time",
-      "createdAt": "2026-05-09T04:35:35.608Z",
-      "likeCount": 103,
-      "replyCount": 4,
-      "repostCount": 0,
-      "highlights": "",
-      "worthReading": "",
-      "tags": [],
-      "type": "bluesky"
-    },
     {
       "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mllxsz32422q",
       "url": "https://bsky.app/profile/simonwillison.net/post/3mllxsz32422q",
@@ -936,28 +875,6 @@
   "xPosts": [
     {
       "type": "x",
-      "id": "1931090610724995303",
-      "url": "https://x.com/simonw/status/1931090610724995303",
-      "author": {
-        "handle": "simonw",
-        "displayName": "Simon Willison",
-        "avatar": "https://avatars.githubusercontent.com/simonw"
-      },
-      "content": "I've published video, slides and a detailed annotated transcript from my talk at this week's AI Engineer World's",
-      "createdAt": "2025-04-20T00:00:00Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Simon Willison published materials from his talk at AI Engineer World's, covering the last six months in LLMs.",
-      "worthReading": "Provides a comprehensive overview of recent LLM developments with annotated transcript.",
-      "tags": [
-        "llm",
-        "evaluation",
-        "tooling"
-      ]
-    },
-    {
-      "type": "x",
       "id": "2031002164165021868",
       "url": "https://x.com/simonw/status/2031002164165021868",
       "author": {
@@ -1527,7 +1444,6 @@
     }
   ],
   "dailyCounts": [
-    4,
     3,
     5,
     6,
@@ -1556,6 +1472,7 @@
     2,
     0,
     3,
+    0,
     0
   ],
   "interestSummary": ""
