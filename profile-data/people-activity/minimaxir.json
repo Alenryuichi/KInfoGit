@@ -2,27 +2,6 @@
   "id": "minimaxir",
   "stars": [
     {
-      "repo": "petgraph/petgraph",
-      "url": "https://github.com/petgraph/petgraph",
-      "description": "Graph data structure library for Rust.",
-      "language": "Rust",
-      "stargazersCount": 3890,
-      "starredBy": "minimaxir",
-      "starredAt": "2026-05-10T16:23:37Z",
-      "highlights": "Petgraph is a comprehensive graph data structure library for Rust, offering a variety of graph types (undirected, directed, with or without node/edge weights) and classic graph algorithms (DFS, BFS, shortest paths, minimum spanning trees, etc.). It is widely used in the Rust ecosystem for modeling and solving graph problems efficiently.",
-      "worthReading": "For AI engineers working on graph-based models, network analysis, or any Rust project requiring graph manipulation, petgraph provides a robust, well-documented foundation that can accelerate development.",
-      "topics": [
-        "graph-algorithms",
-        "rust"
-      ],
-      "tags": [
-        "infra"
-      ],
-      "score": 4,
-      "scoreReason": "Freshness is low (0) as it's a mature library with no recent major updates; relevance is moderate (2) as graph algorithms are useful in AI but not directly frontier; concreteness is high (2) as it provides real, working code and algorithms.",
-      "type": "github"
-    },
-    {
       "repo": "sharkdp/hyperfine",
       "url": "https://github.com/sharkdp/hyperfine",
       "description": "A command-line benchmarking tool",
@@ -236,45 +215,6 @@
   "videos": [],
   "blogs": [],
   "xPosts": [
-    {
-      "type": "x",
-      "id": "1641885820734046209",
-      "url": "https://x.com/minimaxir/status/1641885820734046209",
-      "author": {
-        "handle": "minimaxir",
-        "displayName": "Max Woolf",
-        "avatar": "https://avatars.githubusercontent.com/minimaxir"
-      },
-      "content": "LOL",
-      "createdAt": "2026-05-10T04:24:50.101Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Max Woolf posted a simple 'LOL' tweet.",
-      "worthReading": "Shows a casual, humorous side of the author.",
-      "tags": []
-    },
-    {
-      "type": "x",
-      "id": "1600258754993262594",
-      "url": "https://x.com/minimaxir/status/1600258754993262594",
-      "author": {
-        "handle": "minimaxir",
-        "displayName": "Max Woolf",
-        "avatar": "https://avatars.githubusercontent.com/minimaxir"
-      },
-      "content": "congrats to OpenAI on winning the Turing Test",
-      "createdAt": "2026-05-10T04:24:50.101Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Max Woolf sarcastically congratulates OpenAI for supposedly winning the Turing Test.",
-      "worthReading": "Reflects the author's critical perspective on AI hype.",
-      "tags": [
-        "llm",
-        "evaluation"
-      ]
-    },
     {
       "type": "x",
       "id": "1600258754993262594",
@@ -784,7 +724,6 @@
     }
   ],
   "dailyCounts": [
-    3,
     1,
     2,
     2,
@@ -808,6 +747,7 @@
     0,
     0,
     1,
+    0,
     0,
     0,
     0,
