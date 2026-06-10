@@ -267,47 +267,6 @@
   ],
   "posts": [
     {
-      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mllxsz32422q",
-      "url": "https://bsky.app/profile/simonwillison.net/post/3mllxsz32422q",
-      "author": {
-        "handle": "simonwillison.net",
-        "displayName": "Simon Willison",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
-      },
-      "content": "New TIL: I figured out how to use my LLM CLI tool in a shebang line, which means you can write executable scripts in English, or hook up more complex scripts with a snippet of YAML template - til.simonwillison.net/llms/llm-she...",
-      "createdAt": "2026-05-11T19:06:34.024Z",
-      "likeCount": 114,
-      "replyCount": 8,
-      "repostCount": 5,
-      "highlights": "",
-      "worthReading": "",
-      "tags": [
-        "tooling"
-      ],
-      "type": "bluesky"
-    },
-    {
-      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mllkcpjq7c2s",
-      "url": "https://bsky.app/profile/simonwillison.net/post/3mllkcpjq7c2s",
-      "author": {
-        "handle": "simonwillison.net",
-        "displayName": "Simon Willison",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
-      },
-      "content": "This is excellent. I particularly like the definition of the \"Zombie Internet\", which starts: \"It’s people talking to bots, people talking to people, people creating “AI agents” and then instructing them to interact with people. It’s people using AI talking to people who are not using AI [...]\"",
-      "createdAt": "2026-05-11T15:04:48.506Z",
-      "likeCount": 72,
-      "replyCount": 8,
-      "repostCount": 8,
-      "highlights": "",
-      "worthReading": "",
-      "tags": [
-        "agent",
-        "llm"
-      ],
-      "type": "bluesky"
-    },
-    {
       "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mlms5alufs2e",
       "url": "https://bsky.app/profile/simonwillison.net/post/3mlms5alufs2e",
       "author": {
@@ -647,6 +606,42 @@
       "worthReading": "",
       "tags": [],
       "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mnv6hg66qs23",
+      "url": "https://bsky.app/profile/simonwillison.net/post/3mnv6hg66qs23",
+      "author": {
+        "handle": "simonwillison.net",
+        "displayName": "Simon Willison",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
+      },
+      "content": "A TIL on using agentsview.io to calculate token spending with Claude Fable 5 despite that model not yet being included in the AgentsView pricing database til.simonwillison.net/llms/agentsv...",
+      "createdAt": "2026-06-09T21:49:42.199Z",
+      "likeCount": 16,
+      "replyCount": 4,
+      "repostCount": 0,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [],
+      "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mnvglpg73s2c",
+      "url": "https://bsky.app/profile/simonwillison.net/post/3mnvglpg73s2c",
+      "author": {
+        "handle": "simonwillison.net",
+        "displayName": "Simon Willison",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
+      },
+      "content": "Wrote up my initial impressions of Claude Fable 5 - it has a big model smell: slow, expensive and capable of crunching through pretty much everything I threw at it simonwillison.net/2026/Jun/9/c...",
+      "createdAt": "2026-06-10T00:15:16.051Z",
+      "likeCount": 62,
+      "replyCount": 4,
+      "repostCount": 7,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [],
+      "type": "bluesky"
     }
   ],
   "videos": [],
@@ -870,72 +865,19 @@
       "highlights": "",
       "worthReading": "",
       "type": "blog"
+    },
+    {
+      "title": "Initial impressions of Claude Fable 5",
+      "url": "https://simonwillison.net/2026/Jun/9/claude-fable-5/#atom-entries",
+      "author": "Simon Willison",
+      "publishedAt": "2026-06-09T23:59:54+00:00",
+      "summary": "<p>I didn't have early access to today's <a href=\"https://www.anthropic.com/news/claude-fable-5-mythos-5\">Claude Fable 5</a> release, but I've spent the past ~5.5 hours putting it through its paces. My initial impressions are that this is something of a <em>beast</em>. It's slow, expensive and has...",
+      "highlights": "",
+      "worthReading": "",
+      "type": "blog"
     }
   ],
   "xPosts": [
-    {
-      "type": "x",
-      "id": "2031002164165021868",
-      "url": "https://x.com/simonw/status/2031002164165021868",
-      "author": {
-        "handle": "simonw",
-        "displayName": "Simon Willison",
-        "avatar": "https://avatars.githubusercontent.com/simonw"
-      },
-      "content": "A short note that the predictions that LLMs would favor 'boring technology' that's once you attach them to a good coding agent harness at least",
-      "createdAt": "2026-05-11T04:29:13.832Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "LLMs attached to coding agents may favor boring technology, challenging earlier predictions.",
-      "worthReading": "Insight into how LLM behavior changes when integrated with agentic harnesses.",
-      "tags": [
-        "agent",
-        "llm",
-        "tooling"
-      ]
-    },
-    {
-      "type": "x",
-      "id": "1976989054240800798",
-      "url": "https://x.com/simonw/status/1976989054240800798",
-      "author": {
-        "handle": "simonw",
-        "displayName": "Simon Willison",
-        "avatar": "https://avatars.githubusercontent.com/simonw"
-      },
-      "content": "I'm beginning to suspect that a key skill in working effectively with coding agents is developing an intuition for when you don't need to",
-      "createdAt": "2026-05-11T04:29:13.832Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Key skill for coding agents is knowing when to intervene.",
-      "worthReading": "Practical advice for developers using AI coding assistants.",
-      "tags": [
-        "agent",
-        "tooling"
-      ]
-    },
-    {
-      "type": "x",
-      "id": "952257232380379136",
-      "url": "https://x.com/simonw/status/952257232380379136",
-      "author": {
-        "handle": "simonw",
-        "displayName": "Simon Willison",
-        "avatar": "https://avatars.githubusercontent.com/simonw"
-      },
-      "content": "This may be the best guidance I've seen anywhere on writing a really good commit history. My ideal commit combines",
-      "createdAt": "2026-05-11T04:29:13.832Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Recommends best guidance for writing commit history.",
-      "worthReading": "Useful for developers aiming to improve their commit practices.",
-      "tags": [
-        "tooling"
-      ]
-    },
     {
       "type": "x",
       "id": "1931090610724995303",
@@ -1381,7 +1323,6 @@
     }
   ],
   "dailyCounts": [
-    5,
     6,
     3,
     3,
@@ -1410,7 +1351,8 @@
     3,
     0,
     0,
-    0
+    1,
+    1
   ],
   "interestSummary": ""
 }

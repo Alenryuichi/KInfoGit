@@ -7,90 +7,6 @@
   "xPosts": [
     {
       "type": "x",
-      "id": "2040467997022884194",
-      "url": "https://x.com/hwchase17/status/2040467997022884194",
-      "author": {
-        "handle": "hwchase17",
-        "displayName": "Harrison Chase",
-        "avatar": "https://avatars.githubusercontent.com/hwchase17"
-      },
-      "content": "In the hot path as the agent is running. The agent can decided to (or the user can prompt it to) update its memory as it is working on the core",
-      "createdAt": "2026-05-11T04:29:24.494Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Memory updates can happen in the hot path of agent execution, either agent-initiated or user-prompted.",
-      "worthReading": "Highlights the dynamic memory management in agent systems.",
-      "tags": [
-        "agent",
-        "tooling"
-      ]
-    },
-    {
-      "type": "x",
-      "id": "2021261552222158955",
-      "url": "https://x.com/hwchase17/status/2021261552222158955",
-      "author": {
-        "handle": "hwchase17",
-        "displayName": "Harrison Chase",
-        "avatar": "https://avatars.githubusercontent.com/hwchase17"
-      },
-      "content": "TL;DR: More and more agents need a workspace: a computer where they can run code, install packages, and access files. Sandboxes provide this",
-      "createdAt": "2026-05-11T04:29:24.494Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Agents increasingly require sandboxed workspaces for code execution and file access.",
-      "worthReading": "Explains the growing need for sandbox environments in agent systems.",
-      "tags": [
-        "agent",
-        "infra"
-      ]
-    },
-    {
-      "type": "x",
-      "id": "2042978500567609738",
-      "url": "https://x.com/hwchase17/status/2042978500567609738",
-      "author": {
-        "handle": "hwchase17",
-        "displayName": "Harrison Chase",
-        "avatar": "https://avatars.githubusercontent.com/hwchase17"
-      },
-      "content": "Your harness, your memory ... The “best” way to build agentic systems has changed dramatically over the past three years. When ChatGPT came out,",
-      "createdAt": "2026-05-11T04:29:24.494Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "The best practices for building agentic systems have evolved significantly since ChatGPT's release.",
-      "worthReading": "Reflects on the rapid evolution of agent building approaches.",
-      "tags": [
-        "agent",
-        "llm"
-      ]
-    },
-    {
-      "type": "x",
-      "id": "2011814697889316930",
-      "url": "https://x.com/hwchase17/status/2011814697889316930",
-      "author": {
-        "handle": "hwchase17",
-        "displayName": "Harrison Chase",
-        "avatar": "https://avatars.githubusercontent.com/hwchase17"
-      },
-      "content": "We launched LangSmith Agent Builder this week as a no-code way to build agents. A key part of Agent builder is it's memory system. In this",
-      "createdAt": "2026-05-11T04:29:24.494Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "LangSmith Agent Builder enables no-code agent creation with a focus on memory systems.",
-      "worthReading": "Introduces a no-code tool for building agents with integrated memory.",
-      "tags": [
-        "agent",
-        "tooling"
-      ]
-    },
-    {
-      "type": "x",
       "id": "2021261552222158955",
       "url": "https://x.com/hwchase17/status/2021261552222158955",
       "author": {
@@ -898,7 +814,6 @@
     }
   ],
   "dailyCounts": [
-    4,
     3,
     4,
     4,
@@ -910,6 +825,7 @@
     3,
     4,
     3,
+    0,
     0,
     0,
     0,

@@ -4,8 +4,26 @@
     <title>Stars &amp; Posts — Kylin Miao</title>
     <link>https://kylinmiao.me/stars/</link>
     <description>Daily curated GitHub starred repos, Bluesky/X posts, YouTube videos and blog articles from AI leaders with AI-powered summaries.</description>
-    <lastBuildDate>Tue, 09 Jun 2026 04:28:48 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 10 Jun 2026 04:33:36 GMT</lastBuildDate>
     <atom:link href="https://kylinmiao.me/stars/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Stars &amp; Posts — 2026-06-10</title>
+      <link>https://kylinmiao.me/stars/2026-06-10/</link>
+      <guid isPermaLink="true">https://kylinmiao.me/stars/2026-06-10/</guid>
+      <pubDate>Wed, 10 Jun 2026 12:00:00 GMT</pubDate>
+      <description>Bluesky Posts:
+* Simon Willison: Wrote up my initial impressions of Claude Fable 5 - it has a big model smell: slow, expensive and capable of crunching through pretty much everything ...
+* Ethan Mollick: Science fiction authors in the order you want them to be right about AI:
+Iain Banks
+Becky Chambers
+Martha Wells
+Douglas Adams
+Charles Stross (Singular...
+* Ethan Mollick: One thing I mentioned in passing in my Fable post is that, for long running tasks, Fable starts to develop its own dialect as its many agents and task...
+* Ethan Mollick: The fact that Anthropic may take away subscription access to Fable in two weeks is weird &amp; discourages investing in learning about the model.
+
+Subscri...</description>
+    </item>
     <item>
       <title>Stars &amp; Posts — 2026-06-09</title>
       <link>https://kylinmiao.me/stars/2026-06-09/</link>
@@ -15,7 +33,26 @@
 * TeichAI/teich [Python]
 
 Bluesky Posts:
-* Ethan Mollick: Both Anthropic and OpenAI mention the possibilities of slowing AI development in their latest &quot;what comes next&quot; in AI posts, but say they need to be a...</description>
+* Ethan Mollick: Both Anthropic and OpenAI mention the possibilities of slowing AI development in their latest &quot;what comes next&quot; in AI posts, but say they need to be a...
+* Simon Willison: A TIL on using agentsview.io to calculate token spending with Claude Fable 5 despite that model not yet being included in the AgentsView pricing datab...
+* Mark Riedl: Dude, I just wanted to Google the Am (Automated Mathematician) system because I wanted to know when it was invented. Is this so unreasonable?
+* Mark Riedl: Lawyers on both sides of this case either admitted to directly using AI or admitted to rubber stamping legal briefs that had been prepared with AI wit...
+* Mark Riedl: April: Claude Mythos was too dangerous for release. 40 organizations got early access to fix their software security issues.
+
+June: Claude Mythos rele...
+* Margaret Mitchell: Come join us to socialize, virtually!
+* Nathan Lambert: Why I think Anthropic&apos;s uneven safety policies with the release of Claude Fable 5 undermine the broader AI community&apos;s cohesion and accelerate us to m...
+* Ethan Mollick: I&apos;ve had access to Claude 5 Fable for a bit. A genuine jump in capability, I could feed it a 15 page design document for a project and it would work f...
+* Ethan Mollick: The New York Times published a roundtable discussion among Daron Acemoglu,
+Dean Ball, Clara Shih &amp; myself about the future of AI &amp; who wins at work. I...
+* Naomi Saphra: ✨ it&apos;s coming ✨
+
+NEMI 2026 will be lit. It will also be the new BU interp supergroup&apos;s debut ball. Come meet us!
+* Ben Recht: Have to appreciate the audacity of Anthropic defending three successive model releases with diminishing quality by claiming it&apos;s both intentional and ...
+
+Blog Articles:
+* Initial impressions of Claude Fable 5 — Simon Willison: &lt;p&gt;I didn&apos;t have early access to today&apos;s &lt;a href=&quot;https://www.anthropic.com/news/claude-fable-5-mythos-5&quot;&gt;Claude Fable 5&lt;/a&gt; release, but I&apos;ve spent t...
+* Claude Fable 5 and new AI safety fables — Nathan Lambert: One step further into the power politics of frontier AI systems.</description>
     </item>
     <item>
       <title>Stars &amp; Posts — 2026-06-08</title>
@@ -1288,83 +1325,6 @@ X Posts:
 
 Blog Articles:
 * How open model ecosystems compound — Nathan Lambert: Further reflections on China&apos;s high-participation, open-first AI ecosystem.</description>
-    </item>
-    <item>
-      <title>Stars &amp; Posts — 2026-05-11</title>
-      <link>https://kylinmiao.me/stars/2026-05-11/</link>
-      <guid isPermaLink="true">https://kylinmiao.me/stars/2026-05-11/</guid>
-      <pubDate>Mon, 11 May 2026 12:00:00 GMT</pubDate>
-      <description>Today’s discourse was notably split between high-stakes AI biography and the ongoing tension between open and proprietary models. Marc Lanctot kicked off a new book recommendation, praising *The Infinity Machine* on Demis Hassabis and DeepMind, signaling sustained interest in the personalities behind the superintelligence race. Meanwhile, Emily M. Bender shared a positive note on a screening at SIFF, subtly reminding the community of the cultural and ethical conversations happening outside of code commits. On the GitHub front, while the hockey post was a welcome distraction, the real trend remains the community’s deep dive into foundational AI narratives and the philosophical debates they ignite.
-
-GitHub Repos:
-* mitchellh/vouch — A community trust management system based on explicit vouches to participate. [Nushell]
-* pytorch/devlogs — Developer blog for PyTorch [CSS]
-
-Bluesky Posts:
-* Marc Lanctot: What a game by the @canadiens.com winning 6-2 vs. Buffalo to take a 2-1 lead in the series! #gohabsgo youtu.be/mswVDkbb7J0?...
-* Marc Lanctot: Ok #booksky, time to post about the third of the recent biographies: &quot;The Infinity Machine: Demis Hassabis, DeepMind, and the Quest for Superintellige...
-* Emily M. Bender: This was really great! Also showing tomorrow at SIFF (though not IMAX).
-* Simon Willison: New TIL: I figured out how to use my LLM CLI tool in a shebang line, which means you can write executable scripts in English, or hook up more complex ...
-* Simon Willison: This is excellent. I particularly like the definition of the &quot;Zombie Internet&quot;, which starts: &quot;It’s people talking to bots, people talking to people, ...
-* Nathan Lambert: Pretty wild I got my PhD 4 years ago to the day. I feel very lucky that I got to do it and make my switch into AI. 
-
-Lot&apos;s of people today in AI are u...
-* Yoshua Bengio: Excellent explainer video by @fryrsquared.bsky.social on the risks of AI agents. We shouldn’t make the mistake of thinking current limitations will ne...
-* Emily M. Bender: Join us today!
-* angela zhou: hivemind what are your recommended reads for getting out of the chicken-egg cycle of co-design ?
-* Ben Recht: The quantification trap, or how well-intentioned attempts at intersubjectivity breed institutionalized postmodern optimization. 
-
-(Part 2 in my series...
-
-X Posts:
-* Andrej Karpathy: Judging by my tl there is a growing gap in understanding of AI capability. The first issue I think is around
-* Andrej Karpathy: I&apos;m starting to get into a habit of reading everything (blogs, articles, book chapters,…)
-* Andrej Karpathy: My most amusing interaction was where the model (I think I was given some earlier version with a
-* Andrej Karpathy: By training LLMs against auto
-* Simon Willison: A short note that the predictions that LLMs would favor &apos;boring technology&apos; that&apos;s once you attach them to a good coding agent harness at least
-* Simon Willison: I&apos;m beginning to suspect that a key skill in working effectively with coding agents is developing an intuition for when you don&apos;t need to
-* Simon Willison: This may be the best guidance I&apos;ve seen anywhere on writing a really good commit history. My ideal commit combines
-* Harrison Chase: In the hot path as the agent is running. The agent can decided to (or the user can prompt it to) update its memory as it is working on the core
-* Harrison Chase: TL;DR: More and more agents need a workspace: a computer where they can run code, install packages, and access files. Sandboxes provide this
-* Harrison Chase: Your harness, your memory ... The “best” way to build agentic systems has changed dramatically over the past three years. When ChatGPT came out,
-* Harrison Chase: We launched LangSmith Agent Builder this week as a no-code way to build agents. A key part of Agent builder is it&apos;s memory system. In this
-* Jim Fan: Resource constraints are a beautiful thing. Survival instinct in a cut-throat AI competitive land
-* Jim Fan: I&apos;ve been a bit quiet on X recently. The past year has been a transformational experience.
-* Jim Fan: Everyone&apos;s freaking out about vibe coding. In the holiday spirit, allow me to share my anxiety on the wild
-* Jim Fan: It gives me a lot of comfort knowing that we are the last generation without advanced robots everywhere.
-* Jeremy Howard: Here&apos;s a complete unedited video of asking Grok for its views on the Israel/Palestine situation. It first searches twitter for what Elon thinks.
-* Jeremy Howard: Here&apos;s what I would prefer to see:
-* Soumith Chintala: reading &apos;AI News&apos; (previously Smol Talk) is probably the highest-leverage 45 mins
-* Soumith Chintala: we&apos;ve been working on democratizing fast kernel writing on the @PyTorch team. try
-* Soumith Chintala: Sometimes we forget that NVIDIA wins because it&apos;s a software company.
-* Francois Chollet: It&apos;s surprisingly easy to do &quot;hard&quot; things -- for the most part, you need to get started and keep at it
-* David Ha: Don&apos;t miss David Ha @hardmaru&apos;s keynote at @ALifeConf #ALIFE2021 on &apos;World Models and Attention for Reinforcement Learning&apos;!
-* Yann LeCun: Dario is wrong. He knows absolutely nothing about the effects of technological revolutions on the labor market.
-* Yann LeCun: The emergence of superintelligence is not going to be an event. We don&apos;t have anything close to a
-* Yann LeCun: It seems to me that before &apos;urgently figuring out how to control AI systems much smarter than us&apos; we need
-* Fei-Fei Li: Very excited to share @theworldlabs &apos;s latest research work RTFM!! It&apos;s a real-time, ...
-* Max Woolf: congrats to OpenAI on winning the Turing Test
-* Sasha Rush: Some personal news: I recently joined Cursor. Cursor is a small, ambitious team, and they&apos;ve created
-* Sasha Rush: Wager established. Jonathan Frankle (@jefrankle) stepped up to my Transformer long bet.
-* Sasha Rush: today i woke up to a living version of a phd student&apos;s nightmare. a new paper in my inbox: a detailed reproduction of a paper i wrote
-* Stas Bekman: I have been compiling LLM/VLM training logbooks/chronicles. This is the one of the best sources to
-* Stas Bekman: Thanks to an awesome contribution from @omarnomad The Machine Learning Engineering Open book now can
-* Stas Bekman: If you were holding off to try @MSFTDeepSpeed ZeRO++ it looks like deepspeed@master should
-* Stas Bekman: Modern art. Artist: PyTorch memory profiler Model: Llama-8B The piece on the left is the
-* Sayak Paul: Together w/ the community, our initiative of profiling Diffusers pipelines &amp; potentially improving them is going very strong
-* Sayak Paul: My presentation at the @PyTorch Conf EU is now live. It&apos;s an exciting piece given its emphasis on how we make Diffusers play quite well w/ `torch.comp...
-* Philipp Schmid: I read three technical reports from Moonshot AI&apos;s Kimi K2.5 paper, Cursor&apos;s Composer 2 report and blog post, and Chroma&apos;s Context-1 write-up
-* Philipp Schmid: Told an AI agent to read the autoresearch repo and build a version for QMD. Get training data from tobi/qmd github. Went to sleep. Woke up to a 0.8B m...
-* Philipp Schmid: Random thought. We are going to be so much faster at creating and building.
-* Ethan Mollick: So much work is going into faking continual learning and memory for AIs
-* Ethan Mollick: Had early access to GPT-5.4 and Pro. They are very good. One fun illustration of progress
-* Emily M. Bender: Image is of the 1990s Microsoft writing assistant character Clippy with its eyebrows raised positioned in.
-* Naomi Saphra: New preprint! Everyone loves causal interp. It&apos;s coherently defined! It makes testable predictions
-* Naomi Saphra: Ok, I wrote this up (link below)
-* Angela Zhou: #throwback coz it&apos;s finally the day again!!! #HellOnWheels back on AMC 9/8c tonight! It&apos;s gunna be so intense.
-* Ben Recht: Revisiting Sutton&apos;s Bitter Lesson in the wake of GPT-5.
-* Ben Recht: This stupid website is so cooked.
-* Ben Recht: For the first time in almost a decade, I&apos;m teaching a class on learning and control.</description>
     </item>
   </channel>
 </rss>
