@@ -2,45 +2,6 @@
   "id": "pcuenca",
   "stars": [
     {
-      "repo": "julien-c/hf-speedtest",
-      "url": "https://github.com/julien-c/hf-speedtest",
-      "description": "How FastFast can you pull from Hugging Face?",
-      "language": "Python",
-      "stargazersCount": 24,
-      "starredBy": "pcuenca",
-      "starredAt": "2026-05-12T16:23:03Z",
-      "highlights": "A simple Python script to benchmark download speeds from Hugging Face Hub, measuring how fast you can pull models and datasets. Useful for diagnosing network performance and optimizing CI/CD pipelines.",
-      "worthReading": "If you frequently download from Hugging Face, this tool helps identify speed bottlenecks and compare providers or regions.",
-      "topics": [
-        "hf-extension"
-      ],
-      "tags": [
-        "infra",
-        "tooling"
-      ],
-      "score": 5,
-      "scoreReason": "Freshness is low (24 stars, no clear traction), relevance is moderate (infra/tooling for AI devs), concreteness is high (working benchmark script).",
-      "type": "github"
-    },
-    {
-      "repo": "antirez/ds4",
-      "url": "https://github.com/antirez/ds4",
-      "description": "DeepSeek 4 Flash local inference engine for Metal and CUDA",
-      "language": "C",
-      "stargazersCount": 8134,
-      "starredBy": "pcuenca",
-      "starredAt": "2026-05-12T12:05:14Z",
-      "highlights": "ds4 is a lightweight, high-performance local inference engine for DeepSeek 4 Flash, supporting both Metal (Apple Silicon) and CUDA (NVIDIA GPUs). It offers efficient model execution with minimal dependencies, making it ideal for on-device AI applications.",
-      "worthReading": "This repo provides a practical, optimized solution for running DeepSeek 4 Flash locally, which is valuable for developers seeking to deploy LLMs on edge devices without cloud dependencies.",
-      "topics": [],
-      "tags": [
-        "deployment"
-      ],
-      "score": 8,
-      "scoreReason": "Freshness (3): 8k stars and rising, new release; Relevance (4): directly addresses local LLM inference, a frontier AI topic; Concreteness (2): working engine with clear hardware support.",
-      "type": "github"
-    },
-    {
       "repo": "apocryphx/ObjCTokenizer",
       "url": "https://github.com/apocryphx/ObjCTokenizer",
       "description": "Objective-C port of the tokenizer in HuggingFace's swift-transformers",
@@ -353,7 +314,6 @@
   "blogs": [],
   "dailyCounts": [
     2,
-    2,
     1,
     1,
     0,
@@ -380,6 +340,7 @@
     1,
     0,
     1,
+    0,
     0,
     0
   ],
