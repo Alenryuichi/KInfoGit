@@ -222,26 +222,6 @@
   ],
   "posts": [
     {
-      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mlp3eosabk2l",
-      "url": "https://bsky.app/profile/simonwillison.net/post/3mlp3eosabk2l",
-      "author": {
-        "handle": "simonwillison.net",
-        "displayName": "Simon Willison",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
-      },
-      "content": "This \"Unethical Guide to Surviving AI Layoffs\" by Mo Bitar perfectly captures the current moment www.tiktok.com/@atmoio/vide...",
-      "createdAt": "2026-05-13T00:48:07.671Z",
-      "likeCount": 55,
-      "replyCount": 3,
-      "repostCount": 7,
-      "highlights": "",
-      "worthReading": "",
-      "tags": [
-        "deployment"
-      ],
-      "type": "bluesky"
-    },
-    {
       "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mlyseldi322a",
       "url": "https://bsky.app/profile/simonwillison.net/post/3mlyseldi322a",
       "author": {
@@ -559,6 +539,42 @@
       "worthReading": "",
       "tags": [],
       "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mo2ffgezqs2f",
+      "url": "https://bsky.app/profile/simonwillison.net/post/3mo2ffgezqs2f",
+      "author": {
+        "handle": "simonwillison.net",
+        "displayName": "Simon Willison",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
+      },
+      "content": "After two days with Claude Fable 5 the best way I can describe it is \"relentlessly proactive\" - here's an example where I dropped in a screenshot of a bug and it span up custom CORS Python servers and used pyobjc-framework-Quartz to capture screenshots simonwillison.net/2026/Jun/11/...",
+      "createdAt": "2026-06-11T23:37:10.199Z",
+      "likeCount": 63,
+      "replyCount": 7,
+      "repostCount": 9,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [],
+      "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mnzspi2kxs25",
+      "url": "https://bsky.app/profile/simonwillison.net/post/3mnzspi2kxs25",
+      "author": {
+        "handle": "simonwillison.net",
+        "displayName": "Simon Willison",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
+      },
+      "content": "New Datasette release: 1.0a33, which finally brings documents the ?_extra= JSON API mechanism and brings it to the row and query pages in addition to the table pages\n\n(Most of the code in this release was built with the help of Claude Fable 5) datasette.io/blog/2026/ap...",
+      "createdAt": "2026-06-11T18:02:46.403Z",
+      "likeCount": 15,
+      "replyCount": 3,
+      "repostCount": 0,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [],
+      "type": "bluesky"
     }
   ],
   "videos": [],
@@ -792,52 +808,19 @@
       "highlights": "",
       "worthReading": "",
       "type": "blog"
+    },
+    {
+      "title": "Claude Fable is relentlessly proactive",
+      "url": "https://simonwillison.net/2026/Jun/11/fable-is-relentlessly-proactive/#atom-entries",
+      "author": "Simon Willison",
+      "publishedAt": "2026-06-11T23:35:17+00:00",
+      "summary": "<p>After two days of experience with <a href=\"https://simonwillison.net/2026/Jun/9/claude-fable-5/\">Claude Fable 5</a> I think the best way to describe it is <strong>relentlessly proactive</strong>. It knows a whole lot of tricks and it will deploy pretty much any of them to get to its goal.</p>...",
+      "highlights": "",
+      "worthReading": "",
+      "type": "blog"
     }
   ],
   "xPosts": [
-    {
-      "type": "x",
-      "id": "1975570458683834729",
-      "url": "https://x.com/simonw/status/1975570458683834729",
-      "author": {
-        "handle": "simonw",
-        "displayName": "Simon Willison",
-        "avatar": "https://avatars.githubusercontent.com/simonw"
-      },
-      "content": "Vibe coding is irresponsibly building software through dice rolls, not caring what code is produced",
-      "createdAt": "2026-05-13T04:22:35.173Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Simon Willison defines vibe coding as irresponsible software development where code quality is neglected.",
-      "worthReading": "Provides a critical perspective on a trending AI-assisted coding practice.",
-      "tags": [
-        "agent",
-        "safety",
-        "evaluation"
-      ]
-    },
-    {
-      "type": "x",
-      "id": "2031002164165021868",
-      "url": "https://x.com/simonw/status/2031002164165021868",
-      "author": {
-        "handle": "simonw",
-        "displayName": "Simon Willison",
-        "avatar": "https://avatars.githubusercontent.com/simonw"
-      },
-      "content": "A short note that the predictions that LLMs would favor 'boring technology' that's",
-      "createdAt": "2026-05-13T04:22:35.173Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Willison notes that LLMs may not favor boring technology as predicted.",
-      "worthReading": "Challenges a common assumption about LLM preferences in technology choices.",
-      "tags": [
-        "llm",
-        "deployment"
-      ]
-    },
     {
       "type": "x",
       "id": "2031002164165021868",
@@ -1200,7 +1183,6 @@
   ],
   "dailyCounts": [
     3,
-    3,
     1,
     2,
     4,
@@ -1228,6 +1210,7 @@
     0,
     1,
     1,
+    2,
     0
   ],
   "interestSummary": ""
