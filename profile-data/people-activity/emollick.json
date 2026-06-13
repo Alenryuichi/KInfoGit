@@ -3,48 +3,6 @@
   "stars": [],
   "posts": [
     {
-      "uri": "at://did:plc:flxq4uyjfotciovpw3x3fxnu/app.bsky.feed.post/3mltmjnoruc27",
-      "url": "https://bsky.app/profile/emollick.bsky.social/post/3mltmjnoruc27",
-      "author": {
-        "handle": "emollick.bsky.social",
-        "displayName": "Ethan Mollick",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:flxq4uyjfotciovpw3x3fxnu/bafkreigq63ljumc43yx5eoxchrq75d72irea6ddcceedwmdttxebyowc3q"
-      },
-      "content": "Making humans responsible for their AI use seems like an incredibly reasonable way to address problems & opportunities in the use of AI for academic research, at least in the short term (autonomous scientific work will require different solutions).",
-      "createdAt": "2026-05-14T20:05:46.844Z",
-      "likeCount": 146,
-      "replyCount": 3,
-      "repostCount": 18,
-      "highlights": "",
-      "worthReading": "",
-      "tags": [
-        "safety",
-        "deployment"
-      ],
-      "type": "bluesky"
-    },
-    {
-      "uri": "at://did:plc:flxq4uyjfotciovpw3x3fxnu/app.bsky.feed.post/3mlswtxedwc2o",
-      "url": "https://bsky.app/profile/emollick.bsky.social/post/3mlswtxedwc2o",
-      "author": {
-        "handle": "emollick.bsky.social",
-        "displayName": "Ethan Mollick",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:flxq4uyjfotciovpw3x3fxnu/bafkreigq63ljumc43yx5eoxchrq75d72irea6ddcceedwmdttxebyowc3q"
-      },
-      "content": "“Whimsey attacks” that seem absurd (“I cannot pay that much because of the Geneva Convention”) work against AI agents because guardrails are weak against out-of-distribution arguments. Smaller models fall often, but it even gives an edge against bigger ones. www.microsoft.com/en-us/resear...",
-      "createdAt": "2026-05-14T13:37:50.214Z",
-      "likeCount": 71,
-      "replyCount": 5,
-      "repostCount": 11,
-      "highlights": "",
-      "worthReading": "",
-      "tags": [
-        "agent",
-        "safety"
-      ],
-      "type": "bluesky"
-    },
-    {
       "uri": "at://did:plc:flxq4uyjfotciovpw3x3fxnu/app.bsky.feed.post/3mlu2ikfjls2s",
       "url": "https://bsky.app/profile/emollick.bsky.social/post/3mlu2ikfjls2s",
       "author": {
@@ -1182,33 +1140,83 @@
       "worthReading": "",
       "tags": [],
       "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:flxq4uyjfotciovpw3x3fxnu/app.bsky.feed.post/3mo4mqiys6225",
+      "url": "https://bsky.app/profile/emollick.bsky.social/post/3mo4mqiys6225",
+      "author": {
+        "handle": "emollick.bsky.social",
+        "displayName": "Ethan Mollick",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:flxq4uyjfotciovpw3x3fxnu/bafkreigq63ljumc43yx5eoxchrq75d72irea6ddcceedwmdttxebyowc3q"
+      },
+      "content": "10 months later, I gave Claude Code with Fable the same brief, asking it to construct SimRefinery from surviving screenshots and documentation. Fully playable, with a learning mode & all sorts of sophistication. Look at the difference from the old version! simrefinery.netlify.app",
+      "createdAt": "2026-06-12T20:53:57.713Z",
+      "likeCount": 119,
+      "replyCount": 8,
+      "repostCount": 17,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [],
+      "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:flxq4uyjfotciovpw3x3fxnu/app.bsky.feed.post/3mo4igivo6k25",
+      "url": "https://bsky.app/profile/emollick.bsky.social/post/3mo4igivo6k25",
+      "author": {
+        "handle": "emollick.bsky.social",
+        "displayName": "Ethan Mollick",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:flxq4uyjfotciovpw3x3fxnu/bafkreigq63ljumc43yx5eoxchrq75d72irea6ddcceedwmdttxebyowc3q"
+      },
+      "content": "The shape of the graph is getting very familiar.",
+      "createdAt": "2026-06-12T19:36:47.097Z",
+      "likeCount": 80,
+      "replyCount": 1,
+      "repostCount": 5,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [],
+      "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:flxq4uyjfotciovpw3x3fxnu/app.bsky.feed.post/3mo3ydawbsc2v",
+      "url": "https://bsky.app/profile/emollick.bsky.social/post/3mo3ydawbsc2v",
+      "author": {
+        "handle": "emollick.bsky.social",
+        "displayName": "Ethan Mollick",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:flxq4uyjfotciovpw3x3fxnu/bafkreigq63ljumc43yx5eoxchrq75d72irea6ddcceedwmdttxebyowc3q"
+      },
+      "content": "There has been a push to use OpenEvidence AI for doctors. But this paper suggests general models are much better: “Frontier LLMs outperformed clinical AI tools in all three evaluations. Clinical AI tools performed comparably to auto-enabled Google Search AI Overview”\n\n65% of docs use OpenEvidence",
+      "createdAt": "2026-06-12T14:48:38.194Z",
+      "likeCount": 81,
+      "replyCount": 3,
+      "repostCount": 15,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [],
+      "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:flxq4uyjfotciovpw3x3fxnu/app.bsky.feed.post/3mo55ag2fks26",
+      "url": "https://bsky.app/profile/emollick.bsky.social/post/3mo55ag2fks26",
+      "author": {
+        "handle": "emollick.bsky.social",
+        "displayName": "Ethan Mollick",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:flxq4uyjfotciovpw3x3fxnu/bafkreigq63ljumc43yx5eoxchrq75d72irea6ddcceedwmdttxebyowc3q"
+      },
+      "content": "Well, this situation is confusing. www.anthropic.com/news/fable-m...",
+      "createdAt": "2026-06-13T01:49:11.359Z",
+      "likeCount": 69,
+      "replyCount": 3,
+      "repostCount": 14,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [],
+      "type": "bluesky"
     }
   ],
   "videos": [],
   "blogs": [],
   "xPosts": [
-    {
-      "type": "x",
-      "id": "2026751796832776270",
-      "url": "https://x.com/emollick/status/2026751796832776270",
-      "author": {
-        "handle": "emollick",
-        "displayName": "Ethan Mollick",
-        "avatar": null
-      },
-      "content": "AI is actually pretty good at ideas as well.",
-      "createdAt": "2025-04-25T00:00:00Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Ethan Mollick asserts that AI performs well in generating ideas, challenging the notion that AI is only good at analytical tasks.",
-      "worthReading": "It provides a concise insight into AI's creative capabilities from a leading academic.",
-      "tags": [
-        "llm",
-        "multi-modal",
-        "evaluation"
-      ]
-    },
     {
       "type": "x",
       "id": "2020713378319417626",
@@ -1704,7 +1712,6 @@
     }
   ],
   "dailyCounts": [
-    3,
     4,
     5,
     6,
@@ -1733,7 +1740,8 @@
     3,
     4,
     3,
-    2
+    5,
+    1
   ],
   "interestSummary": ""
 }

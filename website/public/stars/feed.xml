@@ -4,14 +4,32 @@
     <title>Stars &amp; Posts — Kylin Miao</title>
     <link>https://kylinmiao.me/stars/</link>
     <description>Daily curated GitHub starred repos, Bluesky/X posts, YouTube videos and blog articles from AI leaders with AI-powered summaries.</description>
-    <lastBuildDate>Fri, 12 Jun 2026 04:34:06 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 13 Jun 2026 04:33:27 GMT</lastBuildDate>
     <atom:link href="https://kylinmiao.me/stars/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Stars &amp; Posts — 2026-06-13</title>
+      <link>https://kylinmiao.me/stars/2026-06-13/</link>
+      <guid isPermaLink="true">https://kylinmiao.me/stars/2026-06-13/</guid>
+      <pubDate>Sat, 13 Jun 2026 12:00:00 GMT</pubDate>
+      <description>Bluesky Posts:
+* Simon Willison: I got fed up of waiting for OpenAI to bring their much improved gpt-realtime-2 voice conversation model to the ChatGPT product, so I upgraded my OpenA...
+* Marc Lanctot: That time when the show you&apos;re watching has a character bribe someone with a Revised Wheel of Fortune 😅
+
+The best was the dialogue right before it. S...
+* Ethan Mollick: Well, this situation is confusing. www.anthropic.com/news/fable-m...</description>
+    </item>
     <item>
       <title>Stars &amp; Posts — 2026-06-12</title>
       <link>https://kylinmiao.me/stars/2026-06-12/</link>
       <guid isPermaLink="true">https://kylinmiao.me/stars/2026-06-12/</guid>
       <pubDate>Fri, 12 Jun 2026 12:00:00 GMT</pubDate>
-      <description>Bluesky Posts:
+      <description>GitHub Repos:
+* mudler/locate-anything.cpp — Port of Nvidia LocateAnything-3B on ggml [C++]
+* langchain-ai/voice-demo — Three voice-agent backends (LiveKit, OpenAI Realtime, Google ADK Live) sharing one console interface, each instrumented for LangSmith [Python]
+* Snowflake-AI-Research/Arctic-Platform — Arctic Training and Inference Platform [Python]
+* MiniMax-AI/MSA [Python]
+
+Bluesky Posts:
 * Mark Riedl: This is disturbing, but inevitable. www.newscientist.com/article/2529...
 * Marc Lanctot: This looks awesome!! 🤩
 
@@ -22,7 +40,21 @@ RL post-training framework using self-hosted Gemma models
 * Ethan Mollick: Since I am on an AI &amp; poetry kick, here is what Fable did with &quot;the duino elegies as a game. get the mood right&quot;
 
 It made a beautiful little art game,...
-* angela zhou: Ugh www.nytimes.com/2026/06/11/u...</description>
+* angela zhou: Ugh www.nytimes.com/2026/06/11/u...
+* Mark Riedl: Project Mail Harry
+* Mark Riedl: That is something magical about university campuses during summer
+* Mark Riedl: “policing minister… lauded the transformational potential of the technology.”
+
+UK police officer under criminal investigation for using AI to generate...
+* Mark Riedl: 👏
+* Margaret Mitchell: So apparently KPMG wrote a report describing the successful use of AI by businesses. But the case studies turned out to be AI hallucinations.
+www.ft.c...
+* Ethan Mollick: 10 months later, I gave Claude Code with Fable the same brief, asking it to construct SimRefinery from surviving screenshots and documentation. Fully ...
+* Ethan Mollick: The shape of the graph is getting very familiar.
+* Ethan Mollick: There has been a push to use OpenEvidence AI for doctors. But this paper suggests general models are much better: “Frontier LLMs outperformed clinical...
+* Emily M. Bender: If every billionaire is a policy failure, a trillionaire is 1000 policy failures in a trenchcoat.
+* Emily M. Bender: That’s not the effective analogy the doomers seem to think it is… @nathaliemarechal.net joins me and @alexhanna.bsky.social to observe and contextuali...
+* Ben Recht: In _The Ideas Letter_, Leif Weatherby, Tyler Shoemaker, and I wrote about the creation of reality through pseudoscience, religion, and psychosis. Of c...</description>
     </item>
     <item>
       <title>Stars &amp; Posts — 2026-06-11</title>
@@ -1154,89 +1186,6 @@ X Posts:
 * Naomi Saphra: Life update: I&apos;m starting as faculty at Boston University in 2026! BU ...
 * Ben Recht: For the first time in almost a decade, I&apos;m teaching a class on learning and control.
 * Ben Recht: Everyone knows actions are fundamentally different than predictions, but it&apos;s hard to write this</description>
-    </item>
-    <item>
-      <title>Stars &amp; Posts — 2026-05-14</title>
-      <link>https://kylinmiao.me/stars/2026-05-14/</link>
-      <guid isPermaLink="true">https://kylinmiao.me/stars/2026-05-14/</guid>
-      <pubDate>Thu, 14 May 2026 12:00:00 GMT</pubDate>
-      <description>Today’s discourse is dominated by the hardening of accountability norms in AI research, with Mark Riedl underscoring that authorship entails full responsibility for content regardless of how it was generated—a stance reinforced by ArXiV’s new LLM policy and echoed by Ethan Mollick’s call for human oversight of AI use in academia. On the practical side, developers are zeroing in on local inference and benchmarking: the Rust-based CLI tool **hyperfine** (28k stars) remains a staple for performance measurement, while **DeepSeek 4 Flash** (9k stars) is gaining traction as a local inference engine for Metal and CUDA, signaling continued demand for on-device AI. A lighter but pointed discussion emerged around “whimsey attacks,” where absurd out-of-distribution prompts can fool AI agents due to weak guardrails, highlighting a growing security concern. Meanwhile, Emily M. Bender and Margaret Mitchell kept the critical lens sharp, reminding the community that ChatGPT is a data-collection product and revisiting the “instrumental convergence” theory as a caution against runaway resource consumption. Finally, the inaugural ACM AI Leadership Summit (Aug 30–Sep 2 in Atlanta) was announced, promising to convene researchers, policymakers, and industry leaders to tackle these very tensions.
-
-GitHub Repos:
-* sharkdp/hyperfine — A command-line benchmarking tool [Rust]
-* antirez/ds4 — DeepSeek 4 Flash local inference engine for Metal and CUDA [C]
-* ariG23498/trace-util — A utility script to upload pytorch traces to a Hugging Face Bucket, and then build sharable trace URL [Python]
-
-Bluesky Posts:
-* Mark Riedl: “by signing your name as an author of a paper, each author takes full responsibility for all its contents, irrespective of how the contents were gener...
-* Mark Riedl: ArXiV has a new LLM policy
-
-(Screenshots with alt text so you don’t have to click through to the other place and see all the stupid responses)
-* Mark Riedl: The inaugural ACM AI Leadership Summit will be held in Atlanta, August 30-September 2. aisummit26.acm.org
-
-It convenes researchers, practitioners, ind...
-* Mark Riedl: oh great
-* Mark Riedl: We live in a sad world in which one cannot even trust their favorite poop analysis app to not sell their data to an AI company www.404media.co/ai-poop...
-* Marc Lanctot: &quot;As the Instagram employee put it, “Everyone is just like, do it now, jesus fucking christ.”&quot; 😬
-* Margaret Mitchell: The “instrumental convergence” theory posits an AI that, in its quest for a narrow goal, uses all of the earth’s resources. If that theory pans out, i...
-* Ethan Mollick: Making humans responsible for their AI use seems like an incredibly reasonable way to address problems &amp; opportunities in the use of AI for academic r...
-* Ethan Mollick: “Whimsey attacks” that seem absurd (“I cannot pay that much because of the Geneva Convention”) work against AI agents because guardrails are weak agai...
-* Emily M. Bender: Always worth remembering: ChatGPT isn&apos;t a tool, it isn&apos;t a companion. It&apos;s a product -- and everything you type in that box is data you are sending to...
-* Emily M. Bender: Also available as video on PeerTube:
-peertube.dair-institute.org/w/iccQCfUvfr...
-* Emily M. Bender: Mystery AI Hype Theater 3000 Episode 77
-
-Y’all won’t stop producing Fresh AI Hell, so @alexhanna.bsky.social and I had to try to make another pass at ...
-
-X Posts:
-* Andrej Karpathy: Judging by my tl there is a growing gap in understanding of AI capability. The first issue I think is around recency and tier of use. I think a lot of...
-* Andrej Karpathy: 2025 LLM Year in Review. 2025 has been a strong and eventful year of progress in LLMs. The following is a list of personally notable and mildly surpri...
-* Andrej Karpathy: A few random notes from claude coding quite a bit last few weeks. Given the latest lift in LLM coding capability, like many others I rapidly went from...
-* Simon Willison: A short note that the predictions that LLMs would favor &quot;boring technology&quot; that&apos;s once you attach them to a good coding agent harness at least
-* Simon Willison: I&apos;m beginning to suspect that a key skill in working effectively with coding agents is developing an intuition for when you don&apos;t need to
-* Simon Willison: Vibe coding is irresponsibly building software through dice rolls, not caring what code is produced
-* Harrison Chase: In the hot path as the agent is running. The agent can decided to (or the user can prompt it to) update its memory as it is working on the core
-* Harrison Chase: TL;DR: More and more agents need a workspace: a computer where they can run code, install packages, and access files. Sandboxes provide this
-* Harrison Chase: Traditional Application Performance Monitoring (APM) tools focus on metrics like latency, traffic, errors, and saturation. They track HTTP
-* Harrison Chase: I am not excited about visual workflow builders 1. Not simple enough for the average user
-* Jim Fan: The Second Pre-training Paradigm
-* Jim Fan: Robotics: Endgame
-* Jeremy Howard: Folks seem to rediscover this every couple of years. As I&apos;ve been saying for many years,
-* Jeremy Howard: Absolutely any time I try to explore something even slightly against commonly accepted beliefs,
-* Jeremy Howard: I replicated this result, that Grok focuses nearly entirely on finding out what Elon thinks in
-* Jeremy Howard: Early reports from people using this are that it&apos;s the real deal. Strong coding. Good multilingual. Consistent over long contexts.
-* Soumith Chintala: reading &quot;AI News&quot; (previously Smol Talk) is probably the highest-leverage 45 mins
-* Francois Chollet: Current AI is a librarian of existing knowledge. Science requires an explorer of the unknown.
-* Francois Chollet: It&apos;s surprisingly easy to do &apos;hard&apos; things -- for the most part, you need to get started and keep at it.
-* Francois Chollet: I think it&apos;s clear that for many smaller companies that invested in deep learning, it turned out...
-* Yann LeCun: Dario is wrong. He knows absolutely nothing about the effects of technological revolutions on the labor market.
-* Yann LeCun: It seems to me that before &quot;urgently figuring out how to control AI systems much smarter than us&quot; we need
-* Yann LeCun: Worth repeating: Do not confuse retrieval with reasoning. Do not confuse rote learning with understanding
-* Fei-Fei Li: Very excited to share @theworldlabs &apos;s latest research work RTFM!! It&apos;s a real-time, ...
-* Clem Delangue: Looks like we&apos;re going to welcome two more Hugging Faces to the family next year. My wife is a hero!
-* Max Woolf: congrats to OpenAI on winning the Turing Test
-* Max Woolf: me irl
-* Phil Wang: I got to cover for the excellent @HadleyFreeman in the Guardian today so
-* Phil Wang: Phil Wang // Insta: @wangpix&apos;s Image on X
-* Sasha Rush: Some personal news: I recently joined Cursor. Cursor is a small, ambitious team, and they&apos;ve created
-* Sasha Rush: Wager established. Jonathan Frankle (@jefrankle) stepped up to my Transformer long bet.
-* Sasha Rush: today i woke up to a living version of a phd student&apos;s nightmare. a new paper in my inbox: a detailed reproduction of a paper i wrote
-* Stas Bekman: If you were holding off to try @MSFTDeepSpeed ZeRO++ it looks like deepspeed@master should
-* Stas Bekman: Hear, hear, I&apos;m excited to introduce a new performance metric: Maximum Achievable Matmul
-* Stas Bekman: Thanks to an awesome contribution from @omarnomad The Machine Learning Engineering Open book now can
-* Stas Bekman: Classical Jensen math. Unidirectional bandwidth is topped at 450GB/s, and then there comes a protocol overhead of two digit percentage. 1.
-* Sayak Paul: 1. Read the post. 2. Contemplate. 3. Repeat 1.
-* Sayak Paul: Had a nice time chatting about the state of diffusion models and some text-to-image data shenanigans at
-* Sayak Paul: Release notes: Release Diffusers 0.34.0: New Image and Video Models, Better torch.
-* Philipp Schmid: Guide: ReAct agent from scratch with Gemini 2.5 and LangGraph | Gemini API | Google AI for Developers.
-* Philipp Schmid: Google DeepMind and Korea Partner to Accelerate Scientific Discovery.
-* Ethan Mollick: AI is actually pretty good at ideas as well.
-* Emily M. Bender: Look what @alexhanna and I got to do! (Hang out with the cool kids ...) We&apos;re talking about the Turing Test, the grandmother of all tests for AI senti...
-* Emily M. Bender: For those playing along at home, here&apos;s a &quot;AI is sentient!&quot; argument bingo card.
-* Naomi Saphra: what a perfect space for scientific discourse! I&apos;ll start off with a few images of myself
-* Naomi Saphra: Life update: I&apos;m starting as faculty at Boston University in 2026! BU ...
-* Ben Recht: For the first time in almost a decade, I&apos;m teaching a class on learning and control.
-* Ben Recht: I have a recommended reading list for Artificial Intelligence, and it hasn&apos;t changed since 2019.</description>
     </item>
   </channel>
 </rss>
