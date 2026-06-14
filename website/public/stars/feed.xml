@@ -4,8 +4,18 @@
     <title>Stars &amp; Posts — Kylin Miao</title>
     <link>https://kylinmiao.me/stars/</link>
     <description>Daily curated GitHub starred repos, Bluesky/X posts, YouTube videos and blog articles from AI leaders with AI-powered summaries.</description>
-    <lastBuildDate>Sat, 13 Jun 2026 04:33:27 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 14 Jun 2026 04:34:23 GMT</lastBuildDate>
     <atom:link href="https://kylinmiao.me/stars/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Stars &amp; Posts — 2026-06-14</title>
+      <link>https://kylinmiao.me/stars/2026-06-14/</link>
+      <guid isPermaLink="true">https://kylinmiao.me/stars/2026-06-14/</guid>
+      <pubDate>Sun, 14 Jun 2026 12:00:00 GMT</pubDate>
+      <description>Bluesky Posts:
+* Simon Willison: It&apos;s now possible to compile Python extensions (C, C++, Rust etc) to WebAssembly and distribute them through PyPI such that Pyodide can install them d...
+* Mark Riedl: San Andreas should stop reading the news
+* angela zhou: headed back to the isaac newton institute and im stoked to live off 5£ meal deals for the foreseeable future</description>
+    </item>
     <item>
       <title>Stars &amp; Posts — 2026-06-13</title>
       <link>https://kylinmiao.me/stars/2026-06-13/</link>
@@ -16,7 +26,18 @@
 * Marc Lanctot: That time when the show you&apos;re watching has a character bribe someone with a Revised Wheel of Fortune 😅
 
 The best was the dialogue right before it. S...
-* Ethan Mollick: Well, this situation is confusing. www.anthropic.com/news/fable-m...</description>
+* Ethan Mollick: Well, this situation is confusing. www.anthropic.com/news/fable-m...
+* Mark Riedl: Is there significant daylight between Mythos and GPT 5.5? Feels like the US government regulation is ad-hoc, spurious, and maliciously targeted. If fe...
+* Mark Riedl: Fable was been jailbroken. Access to Fable has been halted. 
+
+But the reason for the halt is wild… 1/
+ www.wsj.com/tech/ai/anth...
+* Ethan Mollick: I wrote this a few months ago right after the first Anthropic/DoW conflict &amp; Citrini &amp; Block: “t But I think that single week is a good illustration o...
+* Emily M. Bender: Just heard some reporters on NPR trying to figure out whether SpaceX could possibly merit its $2 trillion valuation. They were skeptical about that, b...
+* Naomi Saphra: People keep making jokes about USA sucking at soccer but we are the most successful team? We&apos;ve won 4 times? We almost always medal? idgi what am I mi...
+
+Blog Articles:
+* Publishing WASM wheels to PyPI for use with Pyodide — Simon Willison: &lt;p&gt;The &lt;a href=&quot;https://blog.pyodide.org/posts/314-release/&quot;&gt;Pyodide 314.0 release announcement&lt;/a&gt; (via &lt;a href=&quot;https://news.ycombinator.com/item?id...</description>
     </item>
     <item>
       <title>Stars &amp; Posts — 2026-06-12</title>
@@ -1115,77 +1136,6 @@ X Posts:
 Blog Articles:
 * Recent Developments in LLM Architectures: KV Sharing, mHC, and Compressed Attention — Sebastian Raschka: From Gemma 4 to DeepSeek V4, How New Open-Weight LLMs Are Reducing Long-Context Costs
 * Latest open artifacts (#21): Open model bonanza! Gemma 4, DeepSeek V4, Kimi K2.6, MiMo 2.5, GLM-5.1 &amp; others. On CAISI&apos;s V4 assessment. — Nathan Lambert: An eventful month with one flagship release after another</description>
-    </item>
-    <item>
-      <title>Stars &amp; Posts — 2026-05-15</title>
-      <link>https://kylinmiao.me/stars/2026-05-15/</link>
-      <guid isPermaLink="true">https://kylinmiao.me/stars/2026-05-15/</guid>
-      <pubDate>Fri, 15 May 2026 12:00:00 GMT</pubDate>
-      <description>Today&apos;s AI discourse is dominated by a push for academic integrity and a reaffirmation of computational scaling. The ACL conference has set a hard line against AI-generated slop in research, announcing that papers containing hallucinated references will face desk rejection, a move that underscores growing concerns about reliability in published work. Meanwhile, Ethan Mollick highlights the enduring power of the &quot;Second Scaling Law,&quot; noting that simply allowing models more tokens—more time to &quot;think&quot;—consistently improves performance on complex tasks like hacking, math, and science. On GitHub, this trend is reflected in a surge of interest in inference-time compute optimizations and chain-of-thought frameworks, as developers race to harness longer reasoning chains without prohibitive costs. The message is clear: the field is simultaneously cracking down on dishonesty and doubling down on the brute-force effectiveness of letting models reason longer.
-
-GitHub Repos:
-* Tyriar/vscode-theme-sapphire — Sapphire is a vibrant blue theme for Visual Studio Code [TypeScript]
-* marimo-team/marimo — A reactive notebook for Python — run reproducible experiments, query with SQL, execute as a script, deploy as an app, and version with git. Stored as pure Python. All in a modern, AI-native editor. [Python]
-* abetlen/llama-cpp-python — Python bindings for llama.cpp [Python]
-* qualisero/awesome-pi-agent — Awesome list of add-ons, hooks, tools, skills, and resources for the pi coding agent (pi-mono). [JavaScript]
-
-Bluesky Posts:
-* Mark Riedl: The ACL conference has put out a statement that papers with hallucinated references will be desk-rejected 2026.aclweb.org/acl_statement/
-* Ethan Mollick: The Second Scaling Law of AI remains undefeated.
-
-If you want better hacking (or math, or science, or crossword puzzle solving) out of an LLM, just le...
-* Mark Riedl: Imagine getting upset over a movie that doesn’t involve Optimus Prime dying
-* Mark Riedl: Relative change in A grades given since the release of ChatGPT www.wsj.com/us-news/educ...
-* Ethan Mollick: Anton labs have hooked up a bunch of AI models to harnesses and had them working as DJs, programming and running a radio station, including taking cal...
-* Emily M. Bender: Seattle-area friends: See you Sunday?
-
-www.pikeplacemarket.org/events-calen...
-* angela zhou: 
-* Lijun An: If you want to learn proteomics signatures of APOE genetic variants on a massive sample from multi-chort, you should not miss this tour de force! 
-
-Hu...
-
-X Posts:
-* Andrej Karpathy: I&apos;m being accused of overhyping the [site everyone heard too much about today already].
-* Andrej Karpathy: Power to the people: How LLMs flip the script on technology diffusion. So it strikes me as quite unique and remarkable that LLMs display a dramatic re...
-* Andrej Karpathy: There&apos;s a new kind of coding I call &quot;vibe coding&quot;, where you fully give in to the vibes, embrace exponentials, and forget that the code even exists. A...
-* Simon Willison: It&apos;s interesting how &quot;better at code&quot; has become the defining goal of almost every AI lab over the
-* Harrison Chase: TL;DR: More and more agents need a workspace: a computer where they can run code, install packages, and access files. Sandboxes provide this
-* Harrison Chase: When building agents, you need to iterate on production data much more than when building traditional software. You need to iterate on how
-* Harrison Chase: Traditional Application Performance Monitoring (APM) tools focus on metrics like latency, traffic, errors, and saturation. They track HTTP
-* Harrison Chase: I am not excited about visual workflow builders 1. Not simple enough for the average user
-* Jeremy Howard: I replicated this result, that Grok focuses nearly entirely on finding out what Elon thinks in
-* Jeremy Howard: Absolutely any time I try to explore something even slightly against commonly accepted beliefs,
-* Soumith Chintala: We are scientists, engineers, and builders behind some of the most widely used AI products and libraries, including ChatGPT.
-* Francois Chollet: It was always the case that agency was self-compounding, but AI is magnifying the effect. Low-agency AI users further lose agency, high-agency AI user...
-* Francois Chollet: Current AI is a librarian of existing knowledge. Science requires an explorer of the unknown.
-* Yann LeCun: Dario is wrong. He knows absolutely nothing about the effects of technological revolutions on the labor market.
-* Yann LeCun: The emergence of superintelligence is not going to be an event. We don&apos;t have anything close to a
-* Yann LeCun: It seems to me that before &apos;urgently figuring out how to control AI systems much smarter than us&apos; we need
-* Fei-Fei Li: Very excited to share @theworldlabs &apos;s latest research work RTFM!! It&apos;s a real-time, ...
-* Clem Delangue: We&apos;re facing an LLM bubble, not a broader AI bubble. The industry is obsessed with building one massive model when we should be focusing on practical ...
-* Max Woolf: LOL. Remove the code in the algorithm that boosts the tweets of Elon by elvodqa · Pull Request #160 ·... github.com.
-* Max Woolf: me irl
-* Max Woolf: what
-* Phil Wang: I got to cover for the excellent @HadleyFreeman in the Guardian today so
-* Sasha Rush: Some news: moving this fall from Harvard -&gt; Cornell Tech. Sad to leave such an incredible
-* Sasha Rush: Some personal news: I recently joined Cursor. Cursor is a small, ambitious team, and they&apos;ve created
-* Sasha Rush: ⛏️
-* Stas Bekman: I have been compiling LLM/VLM training logbooks/chronicles. This is the one of the best sources to
-* Stas Bekman: Thanks to an awesome contribution from @omarnomad The Machine Learning Engineering Open book now can
-* Stas Bekman: This is a long overdue section of the ML Engineering Understanding Training Loss Patterns
-* Stas Bekman: Modern art. Artist: PyTorch memory profiler Model: Llama-8B The piece on the left is the
-* Sayak Paul: After working on releasing the v5, this is the latest release from the Transformers team at
-* Philipp Schmid: I read three technical reports from Moonshot AI&apos;s Kimi K2.5 paper, Cursor&apos;s Composer 2 report and blog post, and Chroma&apos;s Context-1 write-up
-* Philipp Schmid: Random thought. We are going to be so much faster at creating and building.
-* Philipp Schmid: 83 likes 3 replies ...
-* Philipp Schmid: 4 likes 882 views ...
-* Ethan Mollick: So much work is going into faking continual learning and memory for AIs,
-* Ethan Mollick: Oh no.
-* Naomi Saphra: what a perfect space for scientific discourse! I&apos;ll start off with a few images of myself
-* Naomi Saphra: Life update: I&apos;m starting as faculty at Boston University in 2026! BU ...
-* Ben Recht: For the first time in almost a decade, I&apos;m teaching a class on learning and control.
-* Ben Recht: Everyone knows actions are fundamentally different than predictions, but it&apos;s hard to write this</description>
     </item>
   </channel>
 </rss>

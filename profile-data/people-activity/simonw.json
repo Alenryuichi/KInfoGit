@@ -593,6 +593,24 @@
       "worthReading": "",
       "tags": [],
       "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mo7i33sgsc2k",
+      "url": "https://bsky.app/profile/simonwillison.net/post/3mo7i33sgsc2k",
+      "author": {
+        "handle": "simonwillison.net",
+        "displayName": "Simon Willison",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
+      },
+      "content": "It's now possible to compile Python extensions (C, C++, Rust etc) to WebAssembly and distribute them through PyPI such that Pyodide can install them directly simonwillison.net/2026/Jun/13/...",
+      "createdAt": "2026-06-14T00:08:23.477Z",
+      "likeCount": 75,
+      "replyCount": 4,
+      "repostCount": 5,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [],
+      "type": "bluesky"
     }
   ],
   "videos": [],
@@ -836,30 +854,19 @@
       "highlights": "",
       "worthReading": "",
       "type": "blog"
+    },
+    {
+      "title": "Publishing WASM wheels to PyPI for use with Pyodide",
+      "url": "https://simonwillison.net/2026/Jun/13/publishing-wasm-wheels/#atom-entries",
+      "author": "Simon Willison",
+      "publishedAt": "2026-06-13T23:55:18+00:00",
+      "summary": "<p>The <a href=\"https://blog.pyodide.org/posts/314-release/\">Pyodide 314.0 release announcement</a> (via <a href=\"https://news.ycombinator.com/item?id=48462759\">Hacker News</a>) includes news I've been looking forward to for a long time:</p> <blockquote> <p>You can now publish Python packages built...",
+      "highlights": "",
+      "worthReading": "",
+      "type": "blog"
     }
   ],
   "xPosts": [
-    {
-      "type": "x",
-      "id": "1970147806225854531",
-      "url": "https://x.com/simonw/status/1970147806225854531",
-      "author": {
-        "handle": "simonw",
-        "displayName": "Simon Willison",
-        "avatar": "https://avatars.githubusercontent.com/simonw"
-      },
-      "content": "It's interesting how \"better at code\" has become the defining goal of almost every AI lab over the",
-      "createdAt": "2026-05-15T04:25:27.882Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Simon notes that AI labs are increasingly focused on improving code generation capabilities.",
-      "worthReading": "Reflects a key trend in AI development priorities.",
-      "tags": [
-        "llm",
-        "tooling"
-      ]
-    },
     {
       "type": "x",
       "id": "1970147806225854531",
@@ -1136,7 +1143,6 @@
     }
   ],
   "dailyCounts": [
-    1,
     2,
     4,
     1,
@@ -1165,6 +1171,7 @@
     1,
     2,
     0,
+    1,
     1
   ],
   "interestSummary": ""
