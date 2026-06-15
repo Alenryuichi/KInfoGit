@@ -2,42 +2,6 @@
   "id": "lucidrains",
   "stars": [
     {
-      "repo": "mratsim/tattletale",
-      "url": "https://github.com/mratsim/tattletale",
-      "description": "Stealth LLM inference engine",
-      "language": "Nim",
-      "stargazersCount": 10,
-      "starredBy": "lucidrains",
-      "starredAt": "2026-05-16T01:21:36Z",
-      "highlights": "Tattletale is a stealth LLM inference engine written in Nim, focusing on performance and efficiency. It aims to provide a lightweight alternative for running large language models with minimal overhead.",
-      "worthReading": "It's worth exploring for its novel approach to LLM inference using Nim, which could offer unique performance characteristics and a fresh perspective in a field dominated by Python and C++.",
-      "topics": [],
-      "tags": [
-        "llm"
-      ],
-      "score": 5,
-      "scoreReason": "Freshness is moderate (low stars but rising, early stage), relevance is high (LLM inference engine), concreteness is low (stealth, no detailed features yet).",
-      "type": "github"
-    },
-    {
-      "repo": "noahgolmant/pytorch-hessian-eigenthings",
-      "url": "https://github.com/noahgolmant/pytorch-hessian-eigenthings",
-      "description": "Efficient PyTorch Hessian eigendecomposition tools!",
-      "language": "Python",
-      "stargazersCount": 428,
-      "starredBy": "lucidrains",
-      "starredAt": "2026-05-16T23:52:56Z",
-      "highlights": "This repository provides efficient tools for computing eigenvalues and eigenvectors of the Hessian matrix in PyTorch, enabling deeper understanding of neural network loss landscapes. It implements power iteration and Lanczos methods for scalable eigendecomposition, useful for optimization analysis and generalization studies.",
-      "worthReading": "Understanding Hessian properties is crucial for advanced optimization and generalization research; this library makes such analysis accessible and efficient for PyTorch users.",
-      "topics": [],
-      "tags": [
-        "tooling"
-      ],
-      "score": 5,
-      "scoreReason": "Freshness is low (428 stars, no recent updates), relevance is moderate (touches optimization but not frontier AI), concreteness is high (working code with clear methodology).",
-      "type": "github"
-    },
-    {
       "repo": "sapientinc/HRM-Text",
       "url": "https://github.com/sapientinc/HRM-Text",
       "description": "HRM-Text is a 1B text generation model based on the HRM architecture, strengthened by task completion and latent space reasoning.",
@@ -254,7 +218,6 @@
     }
   ],
   "dailyCounts": [
-    2,
     0,
     0,
     3,
@@ -272,6 +235,7 @@
     0,
     0,
     1,
+    0,
     0,
     0,
     0,
