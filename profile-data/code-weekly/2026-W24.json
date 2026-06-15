@@ -1,0 +1,989 @@
+{
+  "week": "2026-W24",
+  "dateRange": "2026-06-08 — 2026-06-14",
+  "generatedAt": "2026-06-15T05:53:16.542Z",
+  "editors": [
+    {
+      "name": "Gemini CLI",
+      "category": "cli",
+      "version": "v0.45.3",
+      "highlights": [
+        "## What's Changed; * fix(patch): cherry-pick f08b4af to release/v0.45.2-pr-27749 to patch version v0.45.2 and create version 0.45.3 by @gemini-cli-robot in https://github.com/google-gemini/gemini-cli/pull/27769; **Full Changelog**: https://github.com/google-gemini/gemini-cli/compare/v0.45.2...v0.45.3",
+        "An important update: Transitioning Gemini CLI to Antigravity CLI",
+        "Move to Antigravity: Gemini CLI Is Sunsetting On 06/18/2026",
+        "Google Kills Gemini CLI on June 18: Builder Migration Guide",
+        "Gemini CLI release notes",
+        "Big changes are coming! Google has announced that Gemini CLI ..."
+      ],
+      "source": "GitHub Releases",
+      "sourceUrl": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.45.3",
+      "aiSummary": ""
+    },
+    {
+      "name": "Cursor",
+      "category": "ide",
+      "highlights": [
+        "Cursor Release Notes - June 2026 Latest Updates",
+        "What's New in Cursor — Latest Updates & Release Notes",
+        "Cursor: AI coding agent",
+        "How to Master Cursor AI in 12 Steps [2026]",
+        "Building software with AI in 2026 - diving into Cursor"
+      ],
+      "source": "Search",
+      "sourceUrl": "https://releasebot.io/updates/cursor",
+      "aiSummary": ""
+    },
+    {
+      "name": "Windsurf",
+      "category": "ide",
+      "highlights": [
+        "Windsurf Release Notes - June 2026 Latest Updates - Releasebot",
+        "Windsurf IDE: Codeium's AI-Native Dev Environment",
+        "Windsurf 1.2.6 Patch Fixes Update : r/Codeium - Reddit",
+        "How to Install and Use Windsurf (AI Code Editor) on Windows 11 ...",
+        "windsurf changelog - changelogs.directory"
+      ],
+      "source": "Search",
+      "sourceUrl": "https://releasebot.io/updates/windsurf",
+      "aiSummary": ""
+    },
+    {
+      "name": "Trae",
+      "category": "ide",
+      "highlights": [
+        "Trae: A New Free AI-Powered Code Editor from ByteDance | DigitalOcean",
+        "ByteDance's Trae: A Powerful AI IDE Tool That Competes with Cursor!",
+        "Trae: The New AI-Powered IDE from ByteDance - Tomas Svojanovsky",
+        "Trae Review: TikTok's take on AI-powered coding | Balazs Barta ∙ Design Technologist",
+        "ByteDance Launches New AI Coding Tool Trae with DeepSeek R1 ..."
+      ],
+      "source": "Search",
+      "sourceUrl": "https://www.digitalocean.com/community/tutorials/trae-free-ai-code-editor",
+      "aiSummary": ""
+    },
+    {
+      "name": "Augment",
+      "category": "ide",
+      "highlights": [
+        "Augment Code vs Cursor (2026): Same Model, 15-Problem Gap",
+        "Augment Code Unveils New Code Review Agent to Eliminate ...",
+        "Changelog | Augment Code",
+        "Augment Code CEO Matt McClernan on the shift from copilots to ...",
+        "Augment Code: Details, Reviews, Pricing, & Features | CheckThat.ai"
+      ],
+      "source": "Search",
+      "sourceUrl": "https://www.morphllm.com/comparisons/augment-code-vs-cursor",
+      "aiSummary": ""
+    },
+    {
+      "name": "Claude Code",
+      "category": "cli",
+      "highlights": [
+        "claude-code/CHANGELOG.md at main - GitHub",
+        "Claude Updates by Anthropic - June 2026 - Releasebot",
+        "The Complete Guide to Every Claude Update in Q1 2026 (Tested by ...",
+        "Anthropic just released Claude Code 2.1.27 with 11 CLI and 1 flag change, details below : r/ClaudeAI",
+        "Claude Code: The Changelog Nobody Read Is the Most Important ..."
+      ],
+      "source": "Search",
+      "sourceUrl": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md",
+      "aiSummary": ""
+    },
+    {
+      "name": "OpenCode",
+      "category": "cli",
+      "highlights": [
+        "OpenCode: Free AI Coding Agent Setup Guide 2026 - YouTube",
+        "Coding just got a serious upgrade. OpenCode isn't just another AI tool",
+        "OpenCode Just Dethroned Claude Code With 172000 Stars — I ...",
+        "The best way to do agentic development in 2026 - DEV Community",
+        "Best AI Coding Agents (2026): Ranked by Benchmark and Price"
+      ],
+      "source": "Search",
+      "sourceUrl": "https://www.youtube.com/watch?v=20vcJmqAr4M",
+      "aiSummary": ""
+    },
+    {
+      "name": "Aider",
+      "category": "cli",
+      "highlights": [
+        "Best AI Coding Agents in 2026: Top Tools by Use Case - Coursiv",
+        "15 Best AI Coding Assistant Tools in 2026 (Best For + Pricing)",
+        "8 Best AI Coding Assistants [Updated May 2026]",
+        "10 Best AI Coding Assistant Tools in 2026 - Saigon Technology",
+        "Aider - AI Pair Programming in Your Terminal"
+      ],
+      "source": "Search",
+      "sourceUrl": "https://coursiv.io/blog/best-ai-agents-for-coding-2026",
+      "aiSummary": ""
+    },
+    {
+      "name": "Copilot",
+      "category": "cli",
+      "highlights": [
+        "GitHub Release Notes - June 2026 Latest Updates - Releasebot",
+        "GitHub Copilot Shifts to Usage-Based Billing June 1 2026 | Dimpy Adhikary posted on the topic | LinkedIn",
+        "GitHub Copilot is Changing – Here's What You Need to Know",
+        "Updates to GitHub Copilot billing and plans",
+        "GitHub Copilot Ends Flat Pricing June 1: What Changes — Enterprise DNA"
+      ],
+      "source": "Search",
+      "sourceUrl": "https://releasebot.io/updates/github",
+      "aiSummary": ""
+    },
+    {
+      "name": "CodeBuddy",
+      "category": "cli",
+      "highlights": [
+        "All Data and AI Weekly #245-08 June 2026 - LinkedIn",
+        "Tencent Cloud Code Assistant CodeBuddy – AI Code Editor",
+        "Overview - Tencent Cloud",
+        "AI Code Editor - Tencent Cloud Code Assistant CodeBuddy",
+        "AI Builders on Instagram: \"Vibe coding hackathon interviews ..."
+      ],
+      "source": "Search",
+      "sourceUrl": "https://www.linkedin.com/pulse/all-data-ai-weekly-245-08-june-2026-tim-spann-8uqqe",
+      "aiSummary": ""
+    }
+  ],
+  "benchmarks": {
+    "arenaRanking": [
+      {
+        "rank": 1,
+        "model": "Claude Fable 5",
+        "elo": 1665,
+        "org": "Anthropic",
+        "delta": null
+      },
+      {
+        "rank": 2,
+        "model": "Claude Opus 4.7 Thinking",
+        "elo": 1566,
+        "org": "Anthropic",
+        "delta": null
+      },
+      {
+        "rank": 3,
+        "model": "Claude Opus 4.8 Thinking",
+        "elo": 1559,
+        "org": "Anthropic",
+        "delta": null
+      },
+      {
+        "rank": 4,
+        "model": "Claude Opus 4.7",
+        "elo": 1557,
+        "org": "Anthropic",
+        "delta": null
+      },
+      {
+        "rank": 5,
+        "model": "Claude Opus 4.8",
+        "elo": 1543,
+        "org": "Anthropic",
+        "delta": null
+      },
+      {
+        "rank": 6,
+        "model": "Claude Opus 4.6 Thinking",
+        "elo": 1542,
+        "org": "Anthropic",
+        "delta": null
+      },
+      {
+        "rank": 7,
+        "model": "Claude Opus 4.6",
+        "elo": 1539,
+        "org": "Anthropic",
+        "delta": null
+      },
+      {
+        "rank": 8,
+        "model": "Qwen3.7 Max 20260517",
+        "elo": 1534,
+        "org": "Alibaba",
+        "delta": null
+      },
+      {
+        "rank": 9,
+        "model": "GLM 5.1",
+        "elo": 1532,
+        "org": "Z.ai",
+        "delta": null
+      },
+      {
+        "rank": 10,
+        "model": "Claude Sonnet 4.6",
+        "elo": 1523,
+        "org": "Anthropic",
+        "delta": null
+      },
+      {
+        "rank": 11,
+        "model": "Minimax M3",
+        "elo": 1521,
+        "org": "MiniMax",
+        "delta": null
+      },
+      {
+        "rank": 12,
+        "model": "Kimi K2.6",
+        "elo": 1515,
+        "org": "Moonshot",
+        "delta": null
+      },
+      {
+        "rank": 13,
+        "model": "Muse Spark",
+        "elo": 1508,
+        "org": "Meta",
+        "delta": null
+      },
+      {
+        "rank": 14,
+        "model": "Gemini 3.5 Flash",
+        "elo": 1506,
+        "org": "Google",
+        "delta": null
+      },
+      {
+        "rank": 15,
+        "model": "GPT-5.5 Xhigh (codex Harness)",
+        "elo": 1501,
+        "org": "OpenAI",
+        "delta": null
+      },
+      {
+        "rank": 16,
+        "model": "Claude Opus 4.5 20251101 Thinking 32k",
+        "elo": 1490,
+        "org": "Anthropic",
+        "delta": null
+      },
+      {
+        "rank": 17,
+        "model": "Qwen3.6 Max Preview",
+        "elo": 1484,
+        "org": "Alibaba",
+        "delta": null
+      },
+      {
+        "rank": 18,
+        "model": "GPT-5.5 High (codex Harness)",
+        "elo": 1482,
+        "org": "OpenAI",
+        "delta": null
+      },
+      {
+        "rank": 19,
+        "model": "Mimo V2.5 Pro",
+        "elo": 1468,
+        "org": "Xiaomi",
+        "delta": null
+      },
+      {
+        "rank": 20,
+        "model": "Claude Opus 4.5 20251101",
+        "elo": 1467,
+        "org": "Anthropic",
+        "delta": null
+      },
+      {
+        "rank": 21,
+        "model": "Qwen3.6 Plus",
+        "elo": 1464,
+        "org": "Alibaba",
+        "delta": null
+      },
+      {
+        "rank": 22,
+        "model": "Deepseek V4 Pro Thinking",
+        "elo": 1462,
+        "org": "DeepSeek",
+        "delta": null
+      },
+      {
+        "rank": 23,
+        "model": "GPT-5.4 High (codex Harness)",
+        "elo": 1457,
+        "org": "OpenAI",
+        "delta": null
+      },
+      {
+        "rank": 24,
+        "model": "GPT-5.5 (codex Harness)",
+        "elo": 1449,
+        "org": "OpenAI",
+        "delta": null
+      },
+      {
+        "rank": 25,
+        "model": "Gemini 3.1 Pro Preview",
+        "elo": 1447,
+        "org": "Google",
+        "delta": null
+      },
+      {
+        "rank": 26,
+        "model": "GLM 4.7",
+        "elo": 1440,
+        "org": "Z.ai",
+        "delta": null
+      },
+      {
+        "rank": 27,
+        "model": "Gemini 3 Pro",
+        "elo": 1439,
+        "org": "Google",
+        "delta": null
+      },
+      {
+        "rank": 28,
+        "model": "GPT-5.4 Medium (codex Harness)",
+        "elo": 1437,
+        "org": "OpenAI",
+        "delta": null
+      },
+      {
+        "rank": 29,
+        "model": "Gemini 3 Flash",
+        "elo": 1437,
+        "org": "Google",
+        "delta": null
+      },
+      {
+        "rank": 30,
+        "model": "Mimo V2.5",
+        "elo": 1435,
+        "org": "Xiaomi",
+        "delta": null
+      }
+    ],
+    "aiderLeaderboard": [
+      {
+        "model": "gpt-5 (high)",
+        "passRate": 88,
+        "delta": null
+      },
+      {
+        "model": "gpt-5 (medium)",
+        "passRate": 86.7,
+        "delta": null
+      },
+      {
+        "model": "o3-pro (high)",
+        "passRate": 84.9,
+        "delta": null
+      },
+      {
+        "model": "gemini-2.5-pro-preview-06-05 (32k think)",
+        "passRate": 83.1,
+        "delta": null
+      },
+      {
+        "model": "o3 (high)",
+        "passRate": 81.3,
+        "delta": null
+      },
+      {
+        "model": "gpt-5 (low)",
+        "passRate": 81.3,
+        "delta": null
+      },
+      {
+        "model": "grok-4 (high)",
+        "passRate": 79.6,
+        "delta": null
+      },
+      {
+        "model": "gemini-2.5-pro-preview-06-05 (default think)",
+        "passRate": 79.1,
+        "delta": null
+      },
+      {
+        "model": "o3 (high) + gpt-4.1",
+        "passRate": 78.2,
+        "delta": null
+      },
+      {
+        "model": "Gemini 2.5 Pro Preview 05-06",
+        "passRate": 76.9,
+        "delta": null
+      },
+      {
+        "model": "o3",
+        "passRate": 76.9,
+        "delta": null
+      },
+      {
+        "model": "DeepSeek-V3.2-Exp (Reasoner)",
+        "passRate": 74.2,
+        "delta": null
+      },
+      {
+        "model": "Gemini 2.5 Pro Preview 03-25",
+        "passRate": 72.9,
+        "delta": null
+      },
+      {
+        "model": "o4-mini (high)",
+        "passRate": 72,
+        "delta": null
+      },
+      {
+        "model": "claude-opus-4-20250514 (32k thinking)",
+        "passRate": 72,
+        "delta": null
+      },
+      {
+        "model": "DeepSeek R1 (0528)",
+        "passRate": 71.4,
+        "delta": null
+      },
+      {
+        "model": "claude-opus-4-20250514 (no think)",
+        "passRate": 70.7,
+        "delta": null
+      },
+      {
+        "model": "DeepSeek-V3.2-Exp (Chat)",
+        "passRate": 70.2,
+        "delta": null
+      },
+      {
+        "model": "claude-3-7-sonnet-20250219 (32k thinking tokens)",
+        "passRate": 64.9,
+        "delta": null
+      },
+      {
+        "model": "DeepSeek R1 + claude-3-5-sonnet-20241022",
+        "passRate": 64,
+        "delta": null
+      },
+      {
+        "model": "o1-2024-12-17 (high)",
+        "passRate": 61.7,
+        "delta": null
+      },
+      {
+        "model": "claude-sonnet-4-20250514 (32k thinking)",
+        "passRate": 61.3,
+        "delta": null
+      },
+      {
+        "model": "o3-mini (high)",
+        "passRate": 60.4,
+        "delta": null
+      },
+      {
+        "model": "claude-3-7-sonnet-20250219 (no thinking)",
+        "passRate": 60.4,
+        "delta": null
+      },
+      {
+        "model": "Qwen3 235B A22B diff, no think, Alibaba API",
+        "passRate": 59.6,
+        "delta": null
+      },
+      {
+        "model": "Kimi K2",
+        "passRate": 59.1,
+        "delta": null
+      },
+      {
+        "model": "DeepSeek R1",
+        "passRate": 56.9,
+        "delta": null
+      },
+      {
+        "model": "claude-sonnet-4-20250514 (no thinking)",
+        "passRate": 56.4,
+        "delta": null
+      },
+      {
+        "model": "DeepSeek V3 (0324)",
+        "passRate": 55.1,
+        "delta": null
+      },
+      {
+        "model": "gemini-2.5-flash-preview-05-20 (24k think)",
+        "passRate": 55.1,
+        "delta": null
+      }
+    ],
+    "sweBench": [
+      {
+        "model": "live-SWE-agent + Claude 4.5 Opus medium (20251101)",
+        "resolved": 79.2,
+        "org": "UIUC"
+      },
+      {
+        "model": "Sonar Foundation Agent + Claude 4.5 Opus",
+        "resolved": 79.2,
+        "org": "Sonar"
+      },
+      {
+        "model": "TRAE + Doubao-Seed-Code",
+        "resolved": 78.8,
+        "org": "ByteDance"
+      },
+      {
+        "model": "live-SWE-agent + Gemini 3 Pro Preview (2025-11-18)",
+        "resolved": 77.4,
+        "org": "UIUC"
+      },
+      {
+        "model": "Atlassian Rovo Dev (2025-09-02)",
+        "resolved": 76.8,
+        "org": "Atlassian"
+      },
+      {
+        "model": "EPAM AI/Run Developer Agent v20250719 + Claude 4 Sonnet",
+        "resolved": 76.8,
+        "org": "EPAM Systems, Inc."
+      },
+      {
+        "model": "mini-SWE-agent + Claude 4.5 Opus (high reasoning)",
+        "resolved": 76.8,
+        "org": "Anthropic"
+      },
+      {
+        "model": "ACoder",
+        "resolved": 76.4,
+        "org": "ACoder"
+      },
+      {
+        "model": "mini-SWE-agent + Gemini 3 Flash (high reasoning)",
+        "resolved": 75.8,
+        "org": "Google DeepMind"
+      },
+      {
+        "model": "mini-SWE-agent + MiniMax M2.5 (high reasoning)",
+        "resolved": 75.8,
+        "org": "Minimax"
+      },
+      {
+        "model": "Warp",
+        "resolved": 75.6,
+        "org": "Warp"
+      },
+      {
+        "model": "mini-SWE-agent + Claude Opus 4.6",
+        "resolved": 75.6,
+        "org": "Anthropic"
+      },
+      {
+        "model": "TRAE + Claude Sonnet 4 + Opus 4 + Sonnet 3.7 + Gemini 2.5 Pro",
+        "resolved": 75.2,
+        "org": "TRAE"
+      },
+      {
+        "model": "Harness AI",
+        "resolved": 74.8,
+        "org": "Harness"
+      },
+      {
+        "model": "Sonar Foundation Agent + Claude 4.5 Sonnet",
+        "resolved": 74.8,
+        "org": "Sonar"
+      },
+      {
+        "model": "Lingxi-v1.5_claude-4-sonnet-20250514",
+        "resolved": 74.6,
+        "org": "Lingxi"
+      },
+      {
+        "model": "JoyCode + Claude 4 Sonnet + GPT-4.1",
+        "resolved": 74.6,
+        "org": "JoyCode"
+      },
+      {
+        "model": "Refact.ai Agent + Claude 4 Sonnet + o4-mini",
+        "resolved": 74.4,
+        "org": "Refact.ai"
+      },
+      {
+        "model": "Prometheus-v1.2.1 + GPT-5",
+        "resolved": 74.4,
+        "org": "EuniAI"
+      },
+      {
+        "model": "mini-SWE-agent + Claude 4.5 Opus medium (20251101)",
+        "resolved": 74.4,
+        "org": "Anthropic"
+      },
+      {
+        "model": "mini-SWE-agent + Gemini 3 Pro Preview (2025-11-18)",
+        "resolved": 74.2,
+        "org": "Google DeepMind"
+      },
+      {
+        "model": "Salesforce AI Research SAGE (OpenHands)",
+        "resolved": 73.8,
+        "org": "Salesforce AI Research"
+      },
+      {
+        "model": "Tools + Claude 4 Opus (2025-05-22)",
+        "resolved": 73.2
+      },
+      {
+        "model": "Salesforce AI Research SAGE (bash-only)",
+        "resolved": 73,
+        "org": "Salesforce AI Research"
+      },
+      {
+        "model": "mini-SWE-agent + GPT-5-2 Codex",
+        "resolved": 72.8,
+        "org": "OpenAI"
+      },
+      {
+        "model": "mini-SWE-agent + GLM-5 (high reasoning)",
+        "resolved": 72.8,
+        "org": "Z-AI"
+      },
+      {
+        "model": "mini-SWE-agent + GPT-5-2 (high reasoning)",
+        "resolved": 72.8,
+        "org": "OpenAI"
+      },
+      {
+        "model": "Tools + Claude 4 Sonnet (2025-05-22)",
+        "resolved": 72.4
+      },
+      {
+        "model": "OpenHands + GPT-5",
+        "resolved": 71.8,
+        "org": "OpenHands"
+      },
+      {
+        "model": "mini-SWE-agent + GPT-5.2 (2025-12-11) (high reasoning)",
+        "resolved": 71.8,
+        "org": "OpenAI"
+      }
+    ],
+    "liveCodeBench": [
+      {
+        "model": "O4-Mini (High)",
+        "passRate": 87.3,
+        "easy": 98.4,
+        "medium": 92.7,
+        "hard": 71.1
+      },
+      {
+        "model": "O3 (High)",
+        "passRate": 84.7,
+        "easy": 99.1,
+        "medium": 89.8,
+        "hard": 66
+      },
+      {
+        "model": "O4-Mini (Medium)",
+        "passRate": 84.5,
+        "easy": 98.8,
+        "medium": 92.2,
+        "hard": 62.9
+      },
+      {
+        "model": "DeepSeek-R1-0528",
+        "passRate": 84.4,
+        "easy": 99.2,
+        "medium": 90.9,
+        "hard": 63.6
+      },
+      {
+        "model": "Gemini-2.5-Pro-06-05",
+        "passRate": 84.3,
+        "easy": 99.1,
+        "medium": 92.2,
+        "hard": 62
+      },
+      {
+        "model": "Gemini-2.5-Pro-05-06",
+        "passRate": 82.7,
+        "easy": 98.8,
+        "medium": 90.6,
+        "hard": 59.4
+      },
+      {
+        "model": "OpenReasoning-Nemotron-32B",
+        "passRate": 81,
+        "easy": 98.6,
+        "medium": 87.5,
+        "hard": 57.5
+      },
+      {
+        "model": "EXAONE-4.0-32B",
+        "passRate": 80.9,
+        "easy": 98.8,
+        "medium": 88.3,
+        "hard": 56.3
+      },
+      {
+        "model": "Qwen3-235B-A22B",
+        "passRate": 80.4,
+        "easy": 99.1,
+        "medium": 88.8,
+        "hard": 54
+      },
+      {
+        "model": "XBai-o4-medium",
+        "passRate": 80.1,
+        "easy": 98.8,
+        "medium": 90.1,
+        "hard": 52
+      },
+      {
+        "model": "OpenCodeReasoning-Nemotron-1.1-32B",
+        "passRate": 78.5,
+        "easy": 98,
+        "medium": 85.7,
+        "hard": 52.8
+      },
+      {
+        "model": "Grok-3-Mini (High)",
+        "passRate": 78.1,
+        "easy": 98.1,
+        "medium": 85.9,
+        "hard": 51.1
+      },
+      {
+        "model": "O3-Mini-2025-01-31 (High)",
+        "passRate": 77.7,
+        "easy": 99.1,
+        "medium": 87.5,
+        "hard": 47.4
+      },
+      {
+        "model": "O4-Mini (Low)",
+        "passRate": 77.4,
+        "easy": 98.1,
+        "medium": 86.2,
+        "hard": 48.9
+      },
+      {
+        "model": "Gemini-2.5-Flash-05-20",
+        "passRate": 76.2,
+        "easy": 99.1,
+        "medium": 82.5,
+        "hard": 48.3
+      },
+      {
+        "model": "O3-Mini-2025-01-31 (Med)",
+        "passRate": 75.4,
+        "easy": 98.8,
+        "medium": 85.1,
+        "hard": 43.1
+      },
+      {
+        "model": "Gemini-2.5-Flash-04-17",
+        "passRate": 75.1,
+        "easy": 98.4,
+        "medium": 81.2,
+        "hard": 46.9
+      },
+      {
+        "model": "O3-Mini-2025-01-31 (Low)",
+        "passRate": 70.6,
+        "easy": 97.8,
+        "medium": 77.5,
+        "hard": 38
+      },
+      {
+        "model": "Claude-Opus-4 (Thinking)",
+        "passRate": 70.4,
+        "easy": 99.1,
+        "medium": 80.4,
+        "hard": 33.1
+      },
+      {
+        "model": "Claude-Sonnet-4 (Thinking)",
+        "passRate": 68.5,
+        "easy": 98.8,
+        "medium": 76,
+        "hard": 32.6
+      },
+      {
+        "model": "Claude-Opus-4",
+        "passRate": 62.4,
+        "easy": 96.3,
+        "medium": 69.2,
+        "hard": 23.7
+      },
+      {
+        "model": "Claude-Sonnet-4",
+        "passRate": 59.4,
+        "easy": 96.3,
+        "medium": 64,
+        "hard": 20.6
+      },
+      {
+        "model": "DeepSeek-V3",
+        "passRate": 49.6,
+        "easy": 83.3,
+        "medium": 53.5,
+        "hard": 14.2
+      },
+      {
+        "model": "Claude-3.5-Sonnet-20241022",
+        "passRate": 48.7,
+        "easy": 92.6,
+        "medium": 44.6,
+        "hard": 12.8
+      },
+      {
+        "model": "GPT-4O-2024-08-06",
+        "passRate": 38.3,
+        "easy": 82.5,
+        "medium": 32.1,
+        "hard": 4.5
+      },
+      {
+        "model": "GPT-4-Turbo-2024-04-09",
+        "passRate": 37.3,
+        "easy": 81.4,
+        "medium": 30.7,
+        "hard": 4
+      },
+      {
+        "model": "GPT-4O-mini-2024-07-18",
+        "passRate": 35.5,
+        "easy": 81.7,
+        "medium": 25.2,
+        "hard": 4.3
+      },
+      {
+        "model": "Claude-3-Haiku",
+        "passRate": 22.5,
+        "easy": 61.1,
+        "medium": 9,
+        "hard": 1.9
+      }
+    ],
+    "notable": ""
+  },
+  "blogs": [
+    {
+      "company": "Google AI",
+      "title": "Our new community investments in Virginia support local jobs and expand energy affordability.",
+      "url": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/virginia-community-investments/",
+      "publishedAt": "2026-06-11T20:00:00.000Z",
+      "summary": "We’re helping build the state’s next-generation workforce and investing in energy programs.",
+      "tags": [
+        "gemini",
+        "deepmind"
+      ]
+    },
+    {
+      "company": "Cursor",
+      "title": "Bugbot is now over 3x faster, 22% cheaper, and finds 10% more bugs",
+      "url": "https://cursor.com/changelog/bugbot-updates-june-2026",
+      "publishedAt": "2026-06-10T00:00:00.000Z",
+      "summary": "Bugbot is now over 3x faster, 22% cheaper, and finds 10% more bugs per review, plus a new /review command to run reviews before you push.",
+      "tags": [
+        "cursor",
+        "ide"
+      ]
+    },
+    {
+      "company": "Vercel",
+      "title": "Workflow SDK now runs natively in Nitro v3",
+      "url": "https://vercel.com/changelog/workflow-sdk-now-runs-natively-in-nitro-v3",
+      "publishedAt": "2026-06-13T00:00:00.000Z",
+      "summary": "\n          Workflow SDK's native Nitro v3 integration is now in beta. Steps run inside the same bundled runtime as the rest of your app, instead of a separate bundle. Nitro's useStorage() and other server-side APIs work directly inside \"use step\" functions.The Nitro dev server also serves the workflow web UI at /_workflow. Open it in your browser to inspect, monitor, and debug workflow runs.Workflow routes are now bundled by Nitro as part of the app build. Dependencies are traced, and unused cod",
+      "tags": [
+        "v0",
+        "ai-sdk"
+      ]
+    },
+    {
+      "company": "Vercel",
+      "title": "Claude Fable 5 access suspended on AI Gateway",
+      "url": "https://vercel.com/changelog/claude-fable-5-access-suspended-on-ai-gateway",
+      "publishedAt": "2026-06-12T07:01:00.000Z",
+      "summary": "\n          In compliance with the US Government's directive, access to Claude Fable 5 is now suspended on AI Gateway for all users. We do not know if or when access to the model will be restored.You can still access and use other Anthropic models through AI Gateway.\n          \n            Read more\n          \n        ",
+      "tags": [
+        "v0",
+        "ai-sdk"
+      ]
+    },
+    {
+      "company": "Vercel",
+      "title": "Kimi K2.7 Code now available on AI Gateway",
+      "url": "https://vercel.com/changelog/kimi-k2-7-code-now-available-on-ai-gateway",
+      "publishedAt": "2026-06-12T00:00:00.000Z",
+      "summary": "\n          Kimi K2.7 Code from Moonshot AI is now available on AI Gateway.K2.7 Code is a coding model built for long-horizon programming tasks, generalizing across scenarios including frontend development, DevOps, and performance optimization. The model has a native multimodal architecture that supports text and vision input, and always runs in thinking mode.To use K2.7 Code, set model to moonshotai/kimi-k2.7-code in the AI SDK:Pass an image alongside a prompt to use the model's multimodal input",
+      "tags": [
+        "v0",
+        "ai-sdk"
+      ]
+    },
+    {
+      "company": "Vercel",
+      "title": "Program Claude Code, Codex, Pi and other agent harnesses with AI SDK",
+      "url": "https://vercel.com/changelog/program-agent-harnesses-with-ai-sdk",
+      "publishedAt": "2026-06-12T00:00:00.000Z",
+      "summary": "\n          AI SDK 7 introduces HarnessAgent, a single API for running established agent harnesses, including Claude Code, Codex, and Pi. AI SDK has always let you switch models without rewriting your agent. Now you can switch the harness the same way.Write the agent once. Use the best harness available.\nToday. In 3 months. A year from now.Harnesses manage the components above a model call, including skills, sandboxes, sessions, permission flows, compaction, runtime configuration, and sub-agents.",
+      "tags": [
+        "v0",
+        "ai-sdk"
+      ]
+    },
+    {
+      "company": "Vercel",
+      "title": "Introducing Vercel Drop",
+      "url": "https://vercel.com/changelog/vercel-drop",
+      "publishedAt": "2026-06-12T00:00:00.000Z",
+      "summary": "\n          Vercel Drop lets you deploy a file or folder by dragging it into your browser. You don't need Git, the Vercel CLI, or any local setup.Drop a project onto vercel.com/drop, pick a team and project name, and select Deploy. Vercel will create a new project, upload your files, and publish them straight to production with a live URL you can share. All in a matter of seconds.Vercel Drop handles more than static files:- Framework projects: Vercel detects your framework (e.g., Next.js) and bui",
+      "tags": [
+        "v0",
+        "ai-sdk"
+      ]
+    },
+    {
+      "company": "Vercel",
+      "title": "How Okara runs CMO agents for 120,000 companies on Vercel",
+      "url": "https://vercel.com/blog/how-okara-runs-cmo-agents-for-120000-companies-on-vercel",
+      "publishedAt": "2026-06-11T04:00:00.000Z",
+      "summary": "\n          Okara on Vercel4 billion tokens processed daily across a multi-provider AI stack on VercelAI CMOs actively managing growth for 120,000+ businessesEight sub-agents handling SEO, GEO, social, content, Reddit, and Hacker NewsNew AI models available to users the same day they shipOkara is an AI CMO that directs a team of specialized sub-agents to drive marketing, so founders don't have to. Give Okara your website URL, and the AI CMO builds a marketing strategy, develops a brand voice, and",
+      "tags": [
+        "v0",
+        "ai-sdk"
+      ]
+    },
+    {
+      "company": "Vercel",
+      "title": "Vercel plugin is now available in Grok Build",
+      "url": "https://vercel.com/changelog/vercel-plugin-is-now-available-in-grok-build",
+      "publishedAt": "2026-06-11T00:00:00.000Z",
+      "summary": "\n          The Vercel plugin is now available in Grok Build.Grok can now draw on Vercel knowledge as you work. Real-time activity, including file edits and terminal commands, dynamically injects the relevant knowledge into context, so answers stay aligned with current platform APIs and recommended patterns.Install it in either of two ways:Add vercel to your prompt and Grok will recommend installing it in chatOpen the Grok Build marketplace with /marketplace, then search for and install VercelLea",
+      "tags": [
+        "v0",
+        "ai-sdk"
+      ]
+    },
+    {
+      "company": "Vercel",
+      "title": "DeepSeek models now available via Azure on AI Gateway",
+      "url": "https://vercel.com/changelog/deepseek-models-now-available-via-azure-on-ai-gateway",
+      "publishedAt": "2026-06-11T00:00:00.000Z",
+      "summary": "\n          Azure is now a provider for DeepSeek V4 Pro and V4 Flash on AI Gateway.Requests to either model can route through Azure alongside the existing providers for another failover path. No code changes are required: default routing considers Azure automatically, and if a provider fails the gateway falls back through the remaining list.If you want requests to try Azure first, use order in the gateway provider options to prefer Azure while keeping the other providers as fallback for deepseek/",
+      "tags": [
+        "v0",
+        "ai-sdk"
+      ]
+    },
+    {
+      "company": "Vercel",
+      "title": "Threshold billing is now enabled for Pro teams",
+      "url": "https://vercel.com/changelog/threshold-billing-is-now-enabled-for-pro-teams",
+      "publishedAt": "2026-06-10T00:00:00.000Z",
+      "summary": "\n          Threshold billing now sends Pro teams a partial invoice mid-cycle once on-demand usage reaches a threshold, instead of holding all charges until the end of the billing period. Partial invoices and the end-of-cycle invoice add up to your total usage, so the same usage is never billed twice.Learn more about partial invoices.\n          \n            Read more\n          \n        ",
+      "tags": [
+        "v0",
+        "ai-sdk"
+      ]
+    }
+  ],
+  "ecosystem": [],
+  "weekSummary": "本周共追踪到 10 个编辑器的更新和 11 篇公司博客文章。"
+}
