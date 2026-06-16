@@ -314,32 +314,29 @@
       "worthReading": "",
       "tags": [],
       "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:l3vbx3e2lqnlja7q64wfrrzq/app.bsky.feed.post/3moddyv3vb22u",
+      "url": "https://bsky.app/profile/nsaphra.bsky.social/post/3moddyv3vb22u",
+      "author": {
+        "handle": "nsaphra.bsky.social",
+        "displayName": "Naomi Saphra",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:l3vbx3e2lqnlja7q64wfrrzq/bafkreig6ovedhsoxqq2nugccygcgsl2pwtuxvcuisnr5c5lkk44xgukobq"
+      },
+      "content": "We don’t always know what problems are hard for LLMs. So devs evaluate on tasks HUMANS find hard or on broad benchmarks. What if we could instead anticipate which scenarios a model will fail on—all without evaluating specific input examples?\n\n🧵NEW PAPER by @jenniferlumeng.bsky.social",
+      "createdAt": "2026-06-15T13:06:13.320Z",
+      "likeCount": 112,
+      "replyCount": 2,
+      "repostCount": 27,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [],
+      "type": "bluesky"
     }
   ],
   "videos": [],
   "blogs": [],
   "xPosts": [
-    {
-      "type": "x",
-      "id": "1943315677026144576",
-      "url": "https://x.com/nsaphra/status/1943315677026144576",
-      "author": {
-        "handle": "NaomiSaphra",
-        "displayName": "Naomi Saphra",
-        "avatar": null
-      },
-      "content": "New preprint! Everyone loves causal interp. It's coherently defined! It makes testable predictions",
-      "createdAt": "2026-05-17T04:28:17.547Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Announces a new preprint on causal interpretation, emphasizing its coherent definition and testable predictions.",
-      "worthReading": "Relevant for understanding recent advances in mechanistic interpretability of language models.",
-      "tags": [
-        "evaluation",
-        "safety"
-      ]
-    },
     {
       "type": "x",
       "id": "2008205702133936412",
@@ -565,7 +562,6 @@
     }
   ],
   "dailyCounts": [
-    1,
     3,
     2,
     5,
@@ -594,7 +590,8 @@
     0,
     1,
     0,
-    1
+    2,
+    0
   ],
   "interestSummary": ""
 }

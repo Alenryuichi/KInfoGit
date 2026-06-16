@@ -2,61 +2,6 @@
   "id": "simonw",
   "stars": [
     {
-      "repo": "psf/pypistats.org",
-      "url": "https://github.com/psf/pypistats.org",
-      "description": "PyPI downloads analytics dashboard",
-      "language": "Python",
-      "stargazersCount": 187,
-      "starredBy": "simonw",
-      "starredAt": "2026-05-17T21:57:49Z",
-      "highlights": "PyPI Stats provides a public dashboard for viewing download statistics of Python packages from PyPI. It offers insights into package popularity and trends over time, useful for developers and maintainers.",
-      "worthReading": "For AI leaders tracking the adoption of their Python-based AI tools, this repo offers a simple way to monitor download metrics and gauge community interest.",
-      "topics": [
-        "download-counts",
-        "pypi",
-        "pypi-packages",
-        "python",
-        "python-packages"
-      ],
-      "tags": [
-        "tooling"
-      ],
-      "score": 4,
-      "scoreReason": "Freshness is low (187 stars, not rising), relevance is moderate as a tooling for monitoring Python package downloads, and concreteness is high with a working dashboard.",
-      "type": "github"
-    },
-    {
-      "repo": "mschwager/cohesion",
-      "url": "https://github.com/mschwager/cohesion",
-      "description": "A tool for measuring Python class cohesion.",
-      "language": "Python",
-      "stargazersCount": 263,
-      "starredBy": "simonw",
-      "starredAt": "2026-05-17T20:36:46Z",
-      "highlights": "Cohesion is a flake8 plugin that measures Python class cohesion using the Lack of Cohesion of Methods (LCOM) metric. It helps developers identify classes that may be doing too much and should be refactored, improving code maintainability and adherence to single responsibility principle.",
-      "worthReading": "For Python developers focused on code quality, this tool provides a concrete, automated way to detect low-cohesion classes, which is a key indicator of design issues in object-oriented code.",
-      "topics": [
-        "class",
-        "code",
-        "cohesion",
-        "flake8",
-        "flake8-plugin",
-        "lint",
-        "linter-plugin",
-        "measure",
-        "module",
-        "oop",
-        "python",
-        "quality"
-      ],
-      "tags": [
-        "tooling"
-      ],
-      "score": 5,
-      "scoreReason": "Freshness is low (263 stars, not new), relevance is moderate as a code quality tool for Python OOP, and concreteness is high (working flake8 plugin with clear metric).",
-      "type": "github"
-    },
-    {
       "repo": "andrew/pycon",
       "url": "https://github.com/andrew/pycon",
       "description": "Data collection and analysis for a PyCon talk on GitHub Actions security across Python packages.",
@@ -631,6 +576,24 @@
       "worthReading": "",
       "tags": [],
       "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3moesh6qn6s2d",
+      "url": "https://bsky.app/profile/simonwillison.net/post/3moesh6qn6s2d",
+      "author": {
+        "handle": "simonwillison.net",
+        "displayName": "Simon Willison",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
+      },
+      "content": "Saw this pair of absolute dumplings on our walk today",
+      "createdAt": "2026-06-16T02:57:25.325Z",
+      "likeCount": 134,
+      "replyCount": 2,
+      "repostCount": 10,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [],
+      "type": "bluesky"
     }
   ],
   "videos": [],
@@ -889,48 +852,6 @@
   "xPosts": [
     {
       "type": "x",
-      "id": "1975570458683834729",
-      "url": "https://x.com/simonw/status/1975570458683834729",
-      "author": {
-        "handle": "simonw",
-        "displayName": "Simon Willison",
-        "avatar": "https://avatars.githubusercontent.com/simonw"
-      },
-      "content": "Vibe coding is irresponsibly building software through dice rolls, not caring what code is produced",
-      "createdAt": "2026-05-17T04:27:05.141Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Simon Willison criticizes 'vibe coding' as an irresponsible approach to software development.",
-      "worthReading": "Highlights a critical perspective on a trending coding methodology.",
-      "tags": [
-        "llm",
-        "safety"
-      ]
-    },
-    {
-      "type": "x",
-      "id": "2031002164165021868",
-      "url": "https://x.com/simonw/status/2031002164165021868",
-      "author": {
-        "handle": "simonw",
-        "displayName": "Simon Willison",
-        "avatar": "https://avatars.githubusercontent.com/simonw"
-      },
-      "content": "A short note that the predictions that LLMs would favor 'boring technology' that's",
-      "createdAt": "2026-05-17T04:27:05.141Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Simon Willison notes that LLMs may not favor boring technology as predicted.",
-      "worthReading": "Challenges common assumptions about LLM preferences.",
-      "tags": [
-        "llm",
-        "evaluation"
-      ]
-    },
-    {
-      "type": "x",
       "id": "1970147806225854531",
       "url": "https://x.com/simonw/status/1970147806225854531",
       "author": {
@@ -1142,7 +1063,6 @@
     }
   ],
   "dailyCounts": [
-    4,
     1,
     3,
     2,
@@ -1171,7 +1091,8 @@
     0,
     1,
     3,
-    0
+    0,
+    1
   ],
   "interestSummary": ""
 }

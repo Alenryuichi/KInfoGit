@@ -4,8 +4,17 @@
     <title>Stars &amp; Posts — Kylin Miao</title>
     <link>https://kylinmiao.me/stars/</link>
     <description>Daily curated GitHub starred repos, Bluesky/X posts, YouTube videos and blog articles from AI leaders with AI-powered summaries.</description>
-    <lastBuildDate>Mon, 15 Jun 2026 04:35:34 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 16 Jun 2026 04:35:43 GMT</lastBuildDate>
     <atom:link href="https://kylinmiao.me/stars/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Stars &amp; Posts — 2026-06-16</title>
+      <link>https://kylinmiao.me/stars/2026-06-16/</link>
+      <guid isPermaLink="true">https://kylinmiao.me/stars/2026-06-16/</guid>
+      <pubDate>Tue, 16 Jun 2026 12:00:00 GMT</pubDate>
+      <description>Bluesky Posts:
+* Simon Willison: Saw this pair of absolute dumplings on our walk today
+* Mark Riedl: Analysis of the jailbreak of Fable by someone who was asked to review the report. Indicates that the jailbreak allowed Fable to find deliberately plan...</description>
+    </item>
     <item>
       <title>Stars &amp; Posts — 2026-06-15</title>
       <link>https://kylinmiao.me/stars/2026-06-15/</link>
@@ -13,7 +22,22 @@
       <pubDate>Mon, 15 Jun 2026 12:00:00 GMT</pubDate>
       <description>Bluesky Posts:
 * Mark Riedl: China may have accesed Fable/Mythos 5. Export-control, which was used to force Anthropic to shut down Fable, would do nothing to stop corporate espion...
-* Naomi Saphra: The last thing I did with Fable was generate a bunch of videos for the paper thread I’m posting as soon as arxiv posts it.</description>
+* Naomi Saphra: The last thing I did with Fable was generate a bunch of videos for the paper thread I’m posting as soon as arxiv posts it.
+* Mark Riedl: Don&apos;t overlook the importance of the &quot;retrieval&quot; part of retrieval-augmented generation (RAG).
+
+Cornell Tech researchers find it is trivially easy to ...
+* Nathan Lambert: I launched 3 more videos in my post-training course!
+1. Lecture 5: The rise of reasoning models
+2. Lecture 6: DPO derivation, intuitions, and practice...
+* Ethan Mollick: Fable was really good, as I wrote last week after testing it.
+
+It was a leap, but that may because, as exponential gains progress, the improvements in...
+* Ethan Mollick: Very clever experiment by Josh Tycko on models and data analysis. It matches what I would expect: models have become quite good at data methodology bu...
+* Ethan Mollick: It is a good time for moonshots.
+
+AI has reached a level where there are transformative projects that could result in huge social good, but require pu...
+* Naomi Saphra: We don’t always know what problems are hard for LLMs. So devs evaluate on tasks HUMANS find hard or on broad benchmarks. What if we could instead anti...
+* angela zhou: i feel like if academia doesn&apos;t work out for me, maybe i can become an applied researcher at an evaluation shop and then partial identification could ...</description>
     </item>
     <item>
       <title>Stars &amp; Posts — 2026-06-14</title>
@@ -1025,72 +1049,6 @@ Coding workflow. Given the latest lift in LLM coding capability, like many other
 * Ben Recht: Revisiting Sutton&apos;s Bitter Lesson in the wake of GPT-5.
 * Ben Recht: For the first time in almost a decade, I&apos;m teaching a class on learning and control.
 * Ben Recht: I have a recommended reading list for Artificial Intelligence, and it hasn&apos;t changed since 2019.</description>
-    </item>
-    <item>
-      <title>Stars &amp; Posts — 2026-05-17</title>
-      <link>https://kylinmiao.me/stars/2026-05-17/</link>
-      <guid isPermaLink="true">https://kylinmiao.me/stars/2026-05-17/</guid>
-      <pubDate>Sun, 17 May 2026 12:00:00 GMT</pubDate>
-      <description>Today&apos;s trending signals point to a dual focus on foundational tooling and the cultural shape of AI development. On GitHub, Python infrastructure is getting a sharp upgrade, with **psf/pypistats.org** (a PyPI analytics dashboard) and **mschwager/cohesion** (a class cohesion measurer) both gaining traction via simonw’s stars, while the ever-dominant **llama.cpp** crosses 110K stars, cementing its role as the go-to for local LLM inference. On Bluesky, Ethan Mollick sparked a lively debate by revealing GPT-5.5 Pro’s attempt at humor analysis produced “scrotum snorkel” and “tuba subpoena,” underscoring that even advanced models struggle with nuanced creativity. Nathan Lambert’s call for more “zagging” in AI—valuing independent thought over Silicon Valley monoculture—resonated, while Emily M. Bender took a sharp jab at misplaced graduation speeches, and Amy Zhang celebrated Kevin Feng’s dissertation on designing interactive systems for “generally capable AI,” marking a milestone for the Social Futures Lab. The throughline: a community balancing rigorous engineering with a growing appetite for critical, human-centered perspectives on where the technology is heading.
-
-GitHub Repos:
-* psf/pypistats.org — PyPI downloads analytics dashboard [Python]
-* mschwager/cohesion — A tool for measuring Python class cohesion. [Python]
-* ggml-org/llama.cpp — LLM inference in C/C++ [C++]
-
-Bluesky Posts:
-* Nathan Lambert: Being out of SF has lowered my information proximity but with the big upside of giving me space to cultivate my own beliefs and values around ai. 
-
-We...
-* Ethan Mollick: GPT-5.5 Pro faces its hardest academic challenge: to apply the technique from a paper analyzing which word pairs were funny &amp; why to come up with its ...
-* Ethan Mollick: “Data centers create economic activity, especially in directly related sectors and during construction, and they are associated with larger county-lev...
-* Ethan Mollick: I know the upcoming film version of the Odyssey is controversial, so I whipped together a completely accurate take that I think will be happily accept...
-* Emily M. Bender: The kids are alright. 
-
-Quite on top of everything else, what kind of bozo makes a graduation speech that isn&apos;t actually about the graduates?
-* Amy Zhang: Congrats to @kjfeng.me on passing his dissertation defense, titled &quot;Designing for Interactive Systems Powered by Generally Capable AI&quot;! Kevin is @soci...
-
-X Posts:
-* Andrej Karpathy: LLM Knowledge Bases Something I&apos;m finding very useful recently: using LLMs to build personal knowledge bases for various topics of research interest. ...
-* Andrej Karpathy: I&apos;m being accused of overhyping the [site everyone heard too much about today already].
-* Andrej Karpathy: Very interested in what the coming era of highly bespoke software might look like. Example from this morning - I&apos;ve become a bit loosy goosy with my c...
-* Simon Willison: Vibe coding is irresponsibly building software through dice rolls, not caring what code is produced
-* Simon Willison: A short note that the predictions that LLMs would favor &apos;boring technology&apos; that&apos;s
-* Harrison Chase: I am not excited about visual workflow builders 1. Not simple enough for the average user
-* Harrison Chase: We launched LangSmith Agent Builder this week as a no-code way to build agents. A key part of Agent builder is it&apos;s memory system.
-* Harrison Chase: In the hot path as the agent is running. The agent can decided to (or the user can prompt it to) update its memory as it is working on the core
-* Harrison Chase: Your harness, your memory ... The “best” way to build agentic systems has changed dramatically over the past three years. When ChatGPT came out,
-* Jim Fan: It gives me a lot of comfort knowing that we are the last generation without advanced robots everywhere.
-* Jim Fan: Resource constraints are a beautiful thing. Survival instinct in a cut-throat AI competitive land.
-* Jim Fan: In this context, I define world modeling as predicting the next plausible world state (or a longer duration of states) conditioned on an action.
-* Jeremy Howard: Here&apos;s a complete unedited video of asking Grok for its views on the Israel/Palestine situation. It first searches twitter for what Elon thinks.
-* Jeremy Howard: Here&apos;s what I would prefer to see:
-* Soumith Chintala: reading &apos;AI News&apos; (previously Smol Talk) is probably the highest-leverage 45 mins
-* Soumith Chintala: we&apos;ve been working on democratizing fast kernel writing on the @PyTorch team. try
-* Soumith Chintala: Sometimes we forget that NVIDIA wins because it&apos;s a software company.
-* Francois Chollet: I think it&apos;s clear that for many smaller companies that invested in deep learning, it turned out
-* Fei-Fei Li: Very excited to share @theworldlabs &apos;s latest research work RTFM!! It&apos;s a real-time, ...
-* Clem Delangue: HuggingFace CEO Clem Delangue said we&apos;re in an “LLM bubble“ that might burst next year, arguing the industry&apos;s obsessed with building one massive mode...
-* Clem Delangue: Clem Delangue, CEO of Hugging Face, is making open-source AI practical, scalable, and ethical. See why he&apos;s one of BigDATAwire&apos;s 2026 People
-* Max Woolf: congrats to OpenAI on winning the Turing Test
-* Max Woolf: me irl
-* Sasha Rush: Some personal news: I recently joined Cursor. Cursor is a small, ambitious team, and they&apos;ve created
-* Sasha Rush: Been reflecting a bit on the Harvard news. This paper from 2017 was ... Didn&apos;t realize at the time how lucky for us Americans to work with incredible ...
-* Sasha Rush: today i woke up to a living version of a phd student&apos;s nightmare. a new paper in my inbox: a detailed reproduction of a paper i wrote
-* Stas Bekman: Classical Jensen math. Unidirectional bandwidth is topped at 450GB/s, and then there comes a protocol overhead of two digit percentage.
-* Stas Bekman: Hear, hear, I&apos;m excited to introduce a new performance metric: Maximum Achievable Matmul
-* Stas Bekman: Thanks to an awesome contribution from @omarnomad The Machine Learning Engineering Open book now can
-* Stas Bekman: If you&apos;re trying out FA4, you&apos;re likely to run into not being able to load cutlass.cute
-* Sayak Paul: After working on releasing the v5, this is the latest release from the Transformers team at
-* Sayak Paul: Thanks @AnthropicAI. Thanks @huggingface for letting me work on Diffusers and other open-source projects across the fleet.
-* Sayak Paul: My presentation at the @PyTorch Conf EU is now live. It&apos;s an exciting piece given its
-* Ethan Mollick: Ethan Mollick (@emollick). 124 likes 7 replies.
-* Ethan Mollick: On the plus side with Opus 4.7, if it does decide to think it produces BY FAR the best
-* Ethan Mollick: From a pure &apos;do good for the world&apos; mission perspective, having the acting like a solid personalized tutor is one of the better uses of AI.
-* Naomi Saphra: New preprint! Everyone loves causal interp. It&apos;s coherently defined! It makes testable predictions
-* Ben Recht: For the first time in almost a decade, I&apos;m teaching a class on learning and control.
-* Ben Recht: Everyone knows actions are fundamentally different than predictions, but it&apos;s hard to write this
-* Ben Recht: Assembling a reading list for a class on the theory of engineering architecture.</description>
     </item>
   </channel>
 </rss>
