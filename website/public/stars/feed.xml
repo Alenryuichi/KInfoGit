@@ -4,16 +4,51 @@
     <title>Stars &amp; Posts — Kylin Miao</title>
     <link>https://kylinmiao.me/stars/</link>
     <description>Daily curated GitHub starred repos, Bluesky/X posts, YouTube videos and blog articles from AI leaders with AI-powered summaries.</description>
-    <lastBuildDate>Tue, 16 Jun 2026 04:35:43 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 17 Jun 2026 04:34:57 GMT</lastBuildDate>
     <atom:link href="https://kylinmiao.me/stars/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Stars &amp; Posts — 2026-06-17</title>
+      <link>https://kylinmiao.me/stars/2026-06-17/</link>
+      <guid isPermaLink="true">https://kylinmiao.me/stars/2026-06-17/</guid>
+      <pubDate>Wed, 17 Jun 2026 12:00:00 GMT</pubDate>
+      <description>Bluesky Posts:
+* Jeff Dean: Messi!
+* Ethan Mollick: Credit to GLM-5.2 Max, the new Chinese open weights model, for pulling this off.
+
+...but you can see the difference between it and Fable in a way benc...
+* Naomi Saphra: when you&apos;re so used to oppression that you don&apos;t clip the basting stitch when the pockets are real</description>
+    </item>
     <item>
       <title>Stars &amp; Posts — 2026-06-16</title>
       <link>https://kylinmiao.me/stars/2026-06-16/</link>
       <guid isPermaLink="true">https://kylinmiao.me/stars/2026-06-16/</guid>
       <pubDate>Tue, 16 Jun 2026 12:00:00 GMT</pubDate>
-      <description>Bluesky Posts:
+      <description>GitHub Repos:
+* reflex-dev/fast-walk — fast ast walk [Rust]
+* huggingface/is-it-agentic-enough [Python]
+
+Bluesky Posts:
 * Simon Willison: Saw this pair of absolute dumplings on our walk today
-* Mark Riedl: Analysis of the jailbreak of Fable by someone who was asked to review the report. Indicates that the jailbreak allowed Fable to find deliberately plan...</description>
+* Mark Riedl: Analysis of the jailbreak of Fable by someone who was asked to review the report. Indicates that the jailbreak allowed Fable to find deliberately plan...
+* Mark Riedl: Is promoting a model equivalent to “taking or sending” a model? 
+
+Anthropic probably doesn’t want to guess wrong nor incur more ire, but my reading of...
+* Marc Lanctot: Check out GameLab: an eval benchmark for language models playing games!
+
+Initial results on Gin rummy, Crosswords, and Block Champ!
+
+Backed by the gam...
+* Nathan Lambert: It&apos;s hard to pinpoint open-closed gap and so-on, but I trust the Arena team and just look where GLM 5.2 is on this. An MIT licensed, to be open weight...
+* Nathan Lambert: New podcast with my (former) colleague Finbarr Timbers on the state of frontier post-training recipes and how we got here. A fun review of how we went...
+* Ethan Mollick: Fable&apos;s implementation of Borges&apos;s Library of Babel, finished posthumously by Opus 4.8. Quite accurate to the story.
+
+It is multiplayer (others appear...
+* Emily M. Bender: This whole thread up &amp; down is important and insightful.
+
+I want to add one linguistic point here:
+
+Blog Articles:
+* Frontier post-training recipe review with Finbarr Timbers — Nathan Lambert: &quot;Interview&quot; #18</description>
     </item>
     <item>
       <title>Stars &amp; Posts — 2026-06-15</title>
@@ -971,84 +1006,6 @@ We ex...
 Blog Articles:
 * The last six months in LLMs in five minutes — Simon Willison: &lt;p&gt;I put together these annotated slides from my five minute lightning talk at PyCon US 2026, using the &lt;a href=&quot;https://tools.simonwillison.net/annot...
 * Gemini 3.5 Flash: more expensive, but Google plan to use it for everything — Simon Willison: &lt;p&gt;Today at Google I/O, Google &lt;a href=&quot;https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5/&quot;&gt;released Gemini 3.5 Flash...</description>
-    </item>
-    <item>
-      <title>Stars &amp; Posts — 2026-05-18</title>
-      <link>https://kylinmiao.me/stars/2026-05-18/</link>
-      <guid isPermaLink="true">https://kylinmiao.me/stars/2026-05-18/</guid>
-      <pubDate>Mon, 18 May 2026 12:00:00 GMT</pubDate>
-      <description>The AI research community is navigating a fragmented landscape, as Ethan Mollick notes that his Bluesky feed has grown quieter—not because tensions have eased, but because automated blocking lists have effectively siloed conversations. Meanwhile, a prescient two-month-post-ChatGPT prediction is being recirculated as a daily reminder of how the field’s trajectory remains eerily on track. On GitHub, the star charts reflect a continued focus on open-weight model fine-tuning and agentic tooling, with several new repositories for structured output parsing and long-context inference gaining traction. Naomi Saphra’s lighthearted but pointed observation about always reading YouTube comments underscores a broader sentiment: the most raw and unfiltered feedback on AI tools often comes from unexpected corners of the web. Overall, the day’s signals point to a community both self-aware of its echo chambers and hungry for ground-level signals amid the noise.
-
-GitHub Repos:
-* dacorvo/hf-mount-cache-examples [Shell]
-
-Bluesky Posts:
-* Ethan Mollick: BlueSky AI conversations have gotten less heated recently*
-
-* because much of this site has blocked me via automated lists so I have no contact with l...
-* Ethan Mollick: Most prophetic tweet of all time (2 months post ChatGPT release by a member of the AI technical staff). And you can safely repost it every day and it ...
-* Naomi Saphra: I will ALWAYS read the youtube comments
-* Mark Riedl: Musk loses court battle with OpenAI on the grounds that the statute of limitations had passed. 
-
-The 🍿 was good while it lasted 
-www.cnbc.com/2026/05...
-* Ethan Mollick: In a Turing Test of sorts, it looks like a 100% AI generated story just won the Commonwealth Prize for the Caribbean region &quot;for its lyrical precision...
-* Ethan Mollick: One thing to watch for with Claude &amp; GPT is that the models expose too much irrelevant history in their outputs. Slides are given footers saying thing...
-* Emily M. Bender: Absolutely horrified at this planned study from my own institution:
-
-www.404media.co/researchers-...
-
-&gt;&gt;
-
-X Posts:
-* Andrej Karpathy: LLM Knowledge Bases
-
-Something I&apos;m finding very useful recently: using LLMs to build personal knowledge bases for various topics of research interest....
-* Andrej Karpathy: A few random notes from claude coding quite a bit last few weeks.
-
-Coding workflow. Given the latest lift in LLM coding capability, like many others I...
-* Andrej Karpathy: Judging by my tl there is a growing gap in understanding of AI capability. The first issue I think is around recency and tier of use. I think a lot of...
-* Simon Willison: It&apos;s interesting how &quot;better at code&quot; has become the defining goal of almost every AI lab over the
-* Harrison Chase: TL;DR: More and more agents need a workspace: a computer where they can run code, install packages, and access files. Sandboxes provide this
-* Harrison Chase: Your harness, your memory ... The “best” way to build agentic systems has changed dramatically over the past three years. When ChatGPT came out,
-* Harrison Chase: Today we&apos;re launching LangChain Labs, a new applied research effort focused on Continual Learning. Our goal is to advance open,
-* Jim Fan: The Second Pre-training Paradigm
-* Jeremy Howard: Here&apos;s a complete unedited video of asking Grok for its views on the Israel/Palestine situation. It first searches twitter for what Elon thinks.
-* Jeremy Howard: My 4yo daughter (and her stuffed animals) have just started learning to code. I&apos;m amazed at how great the learning tools are for pretty much everythin...
-* Soumith Chintala: @Mojo_flyin @dwarkesh_sp i&apos;d be excited to have Google and AMD create real ecosystems. I fail to see why Jensen has a burden there. There should be mu...
-* Soumith Chintala: Thinky&apos;s secret plan:
-
-1: Increase Human&lt;-&gt;AI bandwidth
-2: Raise ceiling of human+AI intelligence
-3: Help humans continue as main-characters in the ne...
-* Francois Chollet: Current AI is a librarian of existing knowledge. Science requires an explorer of the unknown.
-* Francois Chollet: Folks who work in AI or software engineering feel like the world is changing exponential fast.
-* Francois Chollet: The 3rd edition of my book Deep Learning with Python is being printed right now, and will be in bookstores within 2 weeks. The problem with Facebook i...
-* Fei-Fei Li: Very excited to share @theworldlabs &apos;s latest research work RTFM!! It&apos;s a real-time,
-* Clem Delangue: We&apos;re launching the agentic robotics app store today. Let&apos;s democratize AI robotics for all! 300+ apps shipped. 10,000 robots in the wild. It used to ...
-* Clem Delangue: Local open-weight AI on a laptop has been improving more than twice as fast as Moore&apos;s Law! Between May 2024 and May 2026, the most expensive MacBook ...
-* Max Woolf: what
-* Max Woolf: me irl
-* Max Woolf: congrats to OpenAI on winning the Turing Test
-* Sasha Rush: Wager established. Jonathan Frankle (@jefrankle) stepped up to my Transformer long bet.
-* Sasha Rush: Some personal news: I recently joined Cursor. Cursor is a small, ambitious team, and they&apos;ve created...
-* Sasha Rush: Been reflecting a bit on the Harvard news. This paper from 2017 was ... Didn&apos;t realize at the time how lucky for us Americans to work with incredible ...
-* Stas Bekman: When dealing with tight gpu memory situations try to change a PyTorch version to both newer and older and it might just do the trick. I get massively ...
-* Stas Bekman: I have been compiling LLM/VLM training logbooks/chronicles. This is the one of the best sources to ...
-* Stas Bekman: Thanks to an awesome contribution from @omarnomad The Machine Learning Engineering Open book now can ...
-* Stas Bekman: This is a long overdue section of the ML Engineering Understanding Training Loss Patterns ...
-* Sayak Paul: The kernels project at Hugging Face has been growing! We want it to be the go-to place for kernel devs and kernel users. We&apos;re looking to work w/ folk...
-* Sayak Paul: 1. Read the post. 2. Contemplate. 3. Repeat 1.
-* Philipp Schmid: Google DeepMind and Korea Partner to Accelerate Scientific Discovery. deepmind.google.
-* Ethan Mollick: I think the adaptive thinking requirement in Claude Opus 4.7 is bad in the ways that all AI effort routers are bad, but magnified by the fact that the...
-* Ethan Mollick: Here is a full implementation of the Chinese Room using a printed copy of GPT-1, in case you have a few spare years and want to actually run
-* Emily M. Bender: Look what @alexhanna and I got to do! (Hang out with the cool kids ...) We&apos;re talking about the Turing Test, the grandmother of all tests for AI senti...
-* Emily M. Bender: For those playing along at home, here&apos;s a &quot;AI is sentient!&quot; argument bingo card.
-* Naomi Saphra: what a perfect space for scientific discourse! I&apos;ll start off with a few images of myself
-* Naomi Saphra: Life update: I&apos;m starting as faculty at Boston University in 2026! BU ...
-* Ben Recht: Revisiting Sutton&apos;s Bitter Lesson in the wake of GPT-5.
-* Ben Recht: For the first time in almost a decade, I&apos;m teaching a class on learning and control.
-* Ben Recht: I have a recommended reading list for Artificial Intelligence, and it hasn&apos;t changed since 2019.</description>
     </item>
   </channel>
 </rss>
