@@ -2,24 +2,6 @@
   "id": "simonw",
   "stars": [
     {
-      "repo": "andrew/pycon",
-      "url": "https://github.com/andrew/pycon",
-      "description": "Data collection and analysis for a PyCon talk on GitHub Actions security across Python packages.",
-      "language": "HTML",
-      "stargazersCount": 6,
-      "starredBy": "simonw",
-      "starredAt": "2026-05-19T00:08:47Z",
-      "highlights": "This repository provides data collection and analysis scripts for a PyCon talk on GitHub Actions security across Python packages. It offers insights into how GitHub Actions are used in the Python ecosystem and potential security risks.",
-      "worthReading": "It's worth exploring for insights into GitHub Actions security practices and for understanding the security posture of Python packages.",
-      "topics": [],
-      "tags": [
-        "infra"
-      ],
-      "score": 4,
-      "scoreReason": "Freshness is low (6 stars, no clear traction), relevance is moderate (infra security but not frontier AI), concreteness is high (specific data and analysis for a talk).",
-      "type": "github"
-    },
-    {
       "repo": "Helvesec/rmux",
       "url": "https://github.com/Helvesec/rmux",
       "description": "Universal Rust multiplexer with a typed SDK — drive any CLI or TUI app from code. Native on Linux, macOS, and Windows.",
@@ -223,27 +205,6 @@
     }
   ],
   "posts": [
-    {
-      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mmahk7bg3s2h",
-      "url": "https://bsky.app/profile/simonwillison.net/post/3mmahk7bg3s2h",
-      "author": {
-        "handle": "simonwillison.net",
-        "displayName": "Simon Willison",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
-      },
-      "content": "My notes on Gemini 3.5 Flash - 3x the price of Gemini 3 Flash but Google are planning to use it for many of their own products simonwillison.net/2026/May/19/...",
-      "createdAt": "2026-05-19T22:41:13.172Z",
-      "likeCount": 47,
-      "replyCount": 5,
-      "repostCount": 5,
-      "highlights": "",
-      "worthReading": "",
-      "tags": [
-        "llm",
-        "deployment"
-      ],
-      "type": "bluesky"
-    },
     {
       "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mmcahayyqc2i",
       "url": "https://bsky.app/profile/simonwillison.net/post/3mmcahayyqc2i",
@@ -610,6 +571,42 @@
       "worthReading": "",
       "tags": [],
       "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3moidsp2qe22z",
+      "url": "https://bsky.app/profile/simonwillison.net/post/3moidsp2qe22z",
+      "author": {
+        "handle": "simonwillison.net",
+        "displayName": "Simon Willison",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
+      },
+      "content": "I see accounts posting stolen, uncredited 8 year old Reddit content are a thing on Bluesky too now www.reddit.com/r/aww/commen...",
+      "createdAt": "2026-06-17T12:46:04.360Z",
+      "likeCount": 51,
+      "replyCount": 5,
+      "repostCount": 3,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [],
+      "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mohjkrxgzs2y",
+      "url": "https://bsky.app/profile/simonwillison.net/post/3mohjkrxgzs2y",
+      "author": {
+        "handle": "simonwillison.net",
+        "displayName": "Simon Willison",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
+      },
+      "content": "Posted 37 wildlife photos on my blog in June already and it's only the 17th (in UTC, the timezone of my blog) simonwillison.net/elsewhere/si...",
+      "createdAt": "2026-06-17T04:56:21.670Z",
+      "likeCount": 27,
+      "replyCount": 2,
+      "repostCount": 1,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [],
+      "type": "bluesky"
     }
   ],
   "videos": [],
@@ -863,30 +860,19 @@
       "highlights": "",
       "worthReading": "",
       "type": "blog"
+    },
+    {
+      "title": "GLM-5.2 is probably the most powerful text-only open weights LLM",
+      "url": "https://simonwillison.net/2026/Jun/17/glm-52/#atom-entries",
+      "author": "Simon Willison",
+      "publishedAt": "2026-06-17T23:58:39+00:00",
+      "summary": "<p>Chinese AI lab <a href=\"https://z.ai/\">Z.ai</a> released GLM-5.2 <a href=\"https://x.com/Zai_org/status/2065704919299235870\">to their coding plan subscribers</a> on June 13th, and then yesterday (June 16th) released the full open weights under an MIT license. Similar in size to their previous...",
+      "highlights": "",
+      "worthReading": "",
+      "type": "blog"
     }
   ],
   "xPosts": [
-    {
-      "type": "x",
-      "id": "1940781740978851923",
-      "url": "https://x.com/simonw/status/1940781740978851923",
-      "author": {
-        "handle": "simonw",
-        "displayName": "Simon Willison",
-        "avatar": "https://avatars.githubusercontent.com/simonw"
-      },
-      "content": "Quitting programming as a career right now because of LLMs would be like quitting carpentry as a career because of power tools.",
-      "createdAt": "2025-01-01T00:00:00Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Analogizes LLMs in programming to power tools in carpentry, suggesting they augment rather than replace.",
-      "worthReading": "Provides a grounded perspective on the impact of LLMs on software development careers.",
-      "tags": [
-        "llm",
-        "tooling"
-      ]
-    },
     {
       "type": "x",
       "id": "1940781740978851923",
@@ -1058,7 +1044,6 @@
     }
   ],
   "dailyCounts": [
-    3,
     2,
     5,
     5,
@@ -1086,6 +1071,7 @@
     1,
     3,
     0,
+    2,
     2,
     0
   ],
