@@ -4,19 +4,49 @@
     <title>Stars &amp; Posts — Kylin Miao</title>
     <link>https://kylinmiao.me/stars/</link>
     <description>Daily curated GitHub starred repos, Bluesky/X posts, YouTube videos and blog articles from AI leaders with AI-powered summaries.</description>
-    <lastBuildDate>Thu, 18 Jun 2026 04:34:32 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 19 Jun 2026 04:35:11 GMT</lastBuildDate>
     <atom:link href="https://kylinmiao.me/stars/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Stars &amp; Posts — 2026-06-19</title>
+      <link>https://kylinmiao.me/stars/2026-06-19/</link>
+      <guid isPermaLink="true">https://kylinmiao.me/stars/2026-06-19/</guid>
+      <pubDate>Fri, 19 Jun 2026 12:00:00 GMT</pubDate>
+      <description>GitHub Repos:
+* Snowflake-AI-Research/Arctic-Platform — Arctic Training and Inference Platform [Python]
+
+Bluesky Posts:
+* Simon Willison: Just launched Datasette Apps - a plugin for Datasette that lets you host full HTML+JS apps in an iframe sandbox that can query your database and do in...
+* Mark Riedl: Grok was used in operation Epic Fury to enable the deployment of over 2,000 munitions to 2,000 separate targets. This was revealed as national defense...</description>
+    </item>
     <item>
       <title>Stars &amp; Posts — 2026-06-18</title>
       <link>https://kylinmiao.me/stars/2026-06-18/</link>
       <guid isPermaLink="true">https://kylinmiao.me/stars/2026-06-18/</guid>
       <pubDate>Thu, 18 Jun 2026 12:00:00 GMT</pubDate>
-      <description>Bluesky Posts:
+      <description>GitHub Repos:
+* huggingface/is-it-agentic-enough [Python]
+
+Bluesky Posts:
 * Mark Riedl: Training on copyrighted material may or may not be a problem for AI companies. Illegally obtaining the data is definitely a problem www.gadgetreview.c...
 * Marc Lanctot: 🤣
 * Ethan Mollick: There is a ton of money riding on the hope that the exponential curve the Big Three Labs are on will end soon
 
-If that happens, small and open models ...</description>
+If that happens, small and open models ...
+* Ethan Mollick: Interestingly, Google no longer has a public frontier AI model. They have a very good flash model, but a very good flash model can&apos;t do frontier work ...
+* Emily M. Bender: Co-signed.
+
+Also, every time you see that framing, note how it zeroes in on what the specific &quot;AI&quot; system is allegedly doing and takes a similarly nar...
+* Emily M. Bender: It&apos;s worthwhile to document these impacts, because they are harmful.
+
+But also: &quot;When utilized in literature review&quot; ... for this AND MANY OTHER REASO...
+* Emily M. Bender: Shorter version: If you can&apos;t understand the film exposing the fascist history and present of so-called AI systems, you&apos;re better off just saying noth...
+* Emily M. Bender: I am curious what would lead to someone voluntarily embarrassing themselves this way.
+
+🧵 &gt;&gt;
+* Ben Recht: In the last day, I’ve seen a study confirming the shingle vaccine prevents dementia, and another finding it has no effect whatsoever on dementia. You’...
+
+Blog Articles:
+* Datasette Apps: Host custom HTML applications inside Datasette — Simon Willison: &lt;p&gt;Today we launched a new plugin for Datasette, &lt;a href=&quot;https://github.com/datasette/datasette-apps&quot;&gt;datasette-apps&lt;/a&gt;, with &lt;a href=&quot;https://datas...</description>
     </item>
     <item>
       <title>Stars &amp; Posts — 2026-06-17</title>
@@ -880,78 +910,6 @@ X Posts:
 
 Blog Articles:
 * Datasette Agent — Simon Willison: &lt;p&gt;We just &lt;a href=&quot;https://datasette.io/blog/2026/datasette-agent/&quot;&gt;announced the first release of Datasette Agent&lt;/a&gt;, a new extensible AI assistant...</description>
-    </item>
-    <item>
-      <title>Stars &amp; Posts — 2026-05-20</title>
-      <link>https://kylinmiao.me/stars/2026-05-20/</link>
-      <guid isPermaLink="true">https://kylinmiao.me/stars/2026-05-20/</guid>
-      <pubDate>Wed, 20 May 2026 12:00:00 GMT</pubDate>
-      <description>The race between AI watermarking and removal tools is heating up, with **wiltodelta/remove-ai-watermarks** surging to 346 stars after being flagged by prominent developer minimaxir. This CLI and library aggressively targets both visible Gemini watermarks and invisible forensic markers like SynthID and C2PA, raising immediate questions about content provenance and the effectiveness of current detection standards. Meanwhile, browser automation is the other major theme, as **remorses/playwriter** (3,525 stars) gains traction for giving LLM agents stateful control over browsers via Playwright, catching the eye of AWS AI lead philschmid. A quieter but notable entry, **tarekziade/ai-reviewer**, hints at growing demand for automated code review tools, though it remains early-stage with just one star. The day’s trend is clear: developers are arming themselves with tools to both control and circumvent the AI ecosystem’s guardrails.
-
-GitHub Repos:
-* wiltodelta/remove-ai-watermarks — CLI and library for removing visible (Gemini) and invisible (SynthID, C2PA, EXIF) AI watermarks from images [Python]
-* tarekziade/ai-reviewer [Python]
-* remorses/playwriter — Chrome extension &amp; CLI to let agents control your browser. Runs Playwright snippets in a stateful sandbox. Available as CLI or MCP [HTML]
-* IBM/AssetOpsBench — AssetOpsBench - Industry 4.0 [Python]
-
-Bluesky Posts:
-* Simon Willison: I don&apos;t have much to say about this year&apos;s Google I/O because I prefer to write about products that have shipped, not just &quot;coming soon&quot; announcements...
-* Mark Riedl: “This flight will be full to Atlanta”
-
-Thank god. I don’t want to be in the plane that only goes part way
-* Mark Riedl: I would have liked to see Sanderson’s Reckoners series as a TV series, but I’m good with this.
-* Margaret Mitchell: Instead of finding content you need, you get to have an interactive AI *experience*.
-* Ethan Mollick: June 2024: The latest general-purpose LLMs could not count the r&apos;s in strawberry.
-July 2025: The latest general-purpose LLMs get gold in the Internati...
-* Ethan Mollick: I am starting to have trouble paying attention to even interesting information if it is written in Claude or ChatGPT house style. I think some is the ...
-* Emily M. Bender: Me: Why is there an exceptionally high density of Google bullshit in the news this week?
-
-Me: Oh, it must be Google IO.
-
-*sigh*
-* Naomi Saphra: I won&apos;t claim this is the most embarrassing social media post I made as a teenager, but it may be the most confusing
-* Naomi Saphra: I tried to make the theory work out but the computer devil kept lying to me (ChatGPT generated incorrect proofs)
-* angela zhou: one simple rule for detangling academic writing: Who is doing what to whom and why, and who should do what instead.
-* Ben Recht: On my decade-long quest to reconcile scientific language with singular evidence.
-
-X Posts:
-* Andrej Karpathy: Personal update: I&apos;ve joined Anthropic. I think the next few years at the frontier of LLMs will be especially formative. I am very excited to join the...
-* Andrej Karpathy: A few random notes from claude coding quite a bit last few weeks. Given the latest lift in LLM coding capability, like many others I rapidly went from...
-* Andrej Karpathy: I&apos;m being accused of overhyping the [site everyone heard too much about today already].
-* Simon Willison: Quitting programming as a career right now because of LLMs would be like quitting carpentry as a...
-* Harrison Chase: TL;DR: More and more agents need a workspace: a computer where they can run code, install packages, and access files. Sandboxes provide this
-* Harrison Chase: Today we&apos;re launching LangChain Labs, a new applied research effort focused on Continual Learning. Our goal is to advance open,
-* Harrison Chase: I am not excited about visual workflow builders 1. Not simple enough for the average user
-* Jim Fan: Stanford CS 25 &apos;Transformers United&apos; featured stellar guest speakers like Andrej Karpathy
-* Jim Fan: It gives me a lot of comfort knowing that we are the last generation without advanced robots everywhere.
-* Jim Fan: In this context, I define world modeling as predicting the next plausible world state (or a longer duration of states) conditioned on an action.
-* Jim Fan: those who think RL use less compute don&apos;t know RL at all SFT: human generates data and machine learns RL:
-* Jeremy Howard: hi, i&apos;m a sole proprietor/founder in Austria and i earn many many multiples of what i&apos;d earn as an employee, despite &quot;predatory income tax&quot;. in fact, ...
-* Soumith Chintala: reading &quot;AI News&quot; (previously Smol Talk) is probably the highest-leverage 45 mins
-* Soumith Chintala: we&apos;ve been working on democratizing fast kernel writing on the @PyTorch team. try
-* Francois Chollet: It&apos;s surprisingly easy to do &quot;hard&quot; things -- for the most part, you need to get started and keep at it
-* Francois Chollet: Many people assume that LRM reasoning breaks down past a certain &quot;complexity&quot; or &quot;number of steps&quot;
-* Fei-Fei Li: AI’s next frontier is Spatial Intelligence, a technology that will turn seeing into reasoning, perception into action, and imagination into creation. ...
-* Max Woolf: what
-* Max Woolf: me irl
-* Max Woolf: congrats to OpenAI on winning the Turing Test
-* Stas Bekman: I have been compiling LLM/VLM training logbooks/chronicles. This is the one of the best sources to ...
-* Stas Bekman: Thanks to an awesome contribution from @omarnomad The Machine Learning Engineering Open book now can ...
-* Stas Bekman: If you were holding off to try @MSFTDeepSpeed ZeRO++ it looks like deepspeed@master should ...
-* Sayak Paul: Live a little, love a little, take time out to find happiness in small things, be grateful as we have one life. #lifemantra #WorkLifeBalance
-* Sayak Paul: We&apos;re looking to work w/ folks who&apos;re interested in doing agentic kernel dev, providing real optim value to real models. Reach out if interested :)
-* Sayak Paul: After working on releasing the v5, this is the latest release from the Transformers team at
-* Sayak Paul: Thanks @AnthropicAI. Thanks @huggingface for letting me work on Diffusers and other open-source projects across the fleet.
-* Ethan Mollick: We are starting to see some nuanced discussions of what it means to work with advanced AI In this
-* Ethan Mollick: On the plus side with Opus 4.7, if it does decide to think it produces BY FAR the best
-* Ethan Mollick: If it helps, I teach at a business school &amp; many of my smartest students are hired by funds because they can reliably turn their only-human
-* Ethan Mollick: This is going to get even worse as people realize that careful tuning in their prompts can
-* Naomi Saphra: New preprint! Everyone loves causal interp. It&apos;s coherently defined! It makes testable predictions
-* Naomi Saphra: Waiting on a robot body. All opinions are universal and held by both employers and family. Now a dedicated grok hate account. Accepting ML/NLP PhD stu...
-* Naomi Saphra: Life update: I&apos;m starting as faculty at Boston University in 2026! BU has SCHEMES for LM interpretability &amp; analysis, so I couldn&apos;t be more pumped to ...
-* Ben Recht: For the first time in almost a decade, I&apos;m teaching a class on learning and control.
-* Ben Recht: Building a theory of the architecture of organizing machines and people.
-* Ben Recht: On unquantifiable costs and inherent tradeoffs in decision theory.</description>
     </item>
   </channel>
 </rss>

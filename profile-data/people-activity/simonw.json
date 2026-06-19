@@ -206,27 +206,6 @@
   ],
   "posts": [
     {
-      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mmcahayyqc2i",
-      "url": "https://bsky.app/profile/simonwillison.net/post/3mmcahayyqc2i",
-      "author": {
-        "handle": "simonwillison.net",
-        "displayName": "Simon Willison",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
-      },
-      "content": "I don't have much to say about this year's Google I/O because I prefer to write about products that have shipped, not just \"coming soon\" announcements - but here are some notes on Gemini Spark and Antigravity simonwillison.net/2026/May/20/...",
-      "createdAt": "2026-05-20T15:39:37.614Z",
-      "likeCount": 48,
-      "replyCount": 3,
-      "repostCount": 2,
-      "highlights": "",
-      "worthReading": "",
-      "tags": [
-        "llm",
-        "deployment"
-      ],
-      "type": "bluesky"
-    },
-    {
       "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mmfa2jn56c25",
       "url": "https://bsky.app/profile/simonwillison.net/post/3mmfa2jn56c25",
       "author": {
@@ -607,6 +586,24 @@
       "worthReading": "",
       "tags": [],
       "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3molzyitscs2t",
+      "url": "https://bsky.app/profile/simonwillison.net/post/3molzyitscs2t",
+      "author": {
+        "handle": "simonwillison.net",
+        "displayName": "Simon Willison",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
+      },
+      "content": "Just launched Datasette Apps - a plugin for Datasette that lets you host full HTML+JS apps in an iframe sandbox that can query your database and do interesting things with your data \nsimonwillison.net/2026/Jun/18/...",
+      "createdAt": "2026-06-19T00:01:00.704Z",
+      "likeCount": 29,
+      "replyCount": 1,
+      "repostCount": 1,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [],
+      "type": "bluesky"
     }
   ],
   "videos": [],
@@ -870,30 +867,19 @@
       "highlights": "",
       "worthReading": "",
       "type": "blog"
+    },
+    {
+      "title": "Datasette Apps: Host custom HTML applications inside Datasette",
+      "url": "https://simonwillison.net/2026/Jun/18/datasette-apps/#atom-entries",
+      "author": "Simon Willison",
+      "publishedAt": "2026-06-18T23:58:38+00:00",
+      "summary": "<p>Today we launched a new plugin for Datasette, <a href=\"https://github.com/datasette/datasette-apps\">datasette-apps</a>, with <a href=\"https://datasette.io/blog/2026/datasette-apps/\">this launch announcement post</a> on the Datasette project blog. That post has the <em>what</em>, but I'm going to...",
+      "highlights": "",
+      "worthReading": "",
+      "type": "blog"
     }
   ],
   "xPosts": [
-    {
-      "type": "x",
-      "id": "1940781740978851923",
-      "url": "https://x.com/simonw/status/1940781740978851923",
-      "author": {
-        "handle": "simonw",
-        "displayName": "Simon Willison",
-        "avatar": "https://avatars.githubusercontent.com/simonw"
-      },
-      "content": "Quitting programming as a career right now because of LLMs would be like quitting carpentry as a...",
-      "createdAt": "2026-05-20T04:29:40.453Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Simon Willison argues that quitting programming due to LLMs is analogous to quitting carpentry due to power tools, implying LLMs are tools that augment rather than replace programmers.",
-      "worthReading": "Provides a balanced perspective on LLMs' impact on programming careers, countering fear with historical analogy.",
-      "tags": [
-        "llm",
-        "tooling"
-      ]
-    },
     {
       "type": "x",
       "id": "1975570458683834729",
@@ -1044,7 +1030,6 @@
     }
   ],
   "dailyCounts": [
-    2,
     5,
     5,
     3,
@@ -1073,7 +1058,8 @@
     0,
     2,
     2,
-    0
+    0,
+    1
   ],
   "interestSummary": ""
 }

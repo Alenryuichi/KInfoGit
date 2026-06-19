@@ -52,76 +52,34 @@
       "score": 0,
       "scoreReason": "",
       "type": "github"
+    },
+    {
+      "repo": "Snowflake-AI-Research/Arctic-Platform",
+      "url": "https://github.com/Snowflake-AI-Research/Arctic-Platform",
+      "description": "Arctic Training and Inference Platform",
+      "language": "Python",
+      "stargazersCount": 2,
+      "starredBy": "stas00",
+      "starredAt": "2026-06-19T04:02:35Z",
+      "highlights": "",
+      "worthReading": "",
+      "topics": [
+        "llms",
+        "post-training",
+        "reinforcement-learning",
+        "rl",
+        "training"
+      ],
+      "tags": [],
+      "score": 0,
+      "scoreReason": "",
+      "type": "github"
     }
   ],
   "posts": [],
   "videos": [],
   "blogs": [],
   "xPosts": [
-    {
-      "type": "x",
-      "id": "1716181162354442450",
-      "url": "https://x.com/StasBekman/status/1716181162354442450",
-      "author": {
-        "handle": "stas00",
-        "displayName": "Stas Bekman",
-        "avatar": "https://avatars.githubusercontent.com/stas00"
-      },
-      "content": "I have been compiling LLM/VLM training logbooks/chronicles. This is the one of the best sources to ...",
-      "createdAt": "2023-10-22T00:00:00Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Stas Bekman curates training logbooks for LLMs and VLMs, providing a valuable resource.",
-      "worthReading": "Essential for practitioners tracking training methodologies and best practices.",
-      "tags": [
-        "llm",
-        "fine-tuning",
-        "infra"
-      ]
-    },
-    {
-      "type": "x",
-      "id": "2014578754782409106",
-      "url": "https://x.com/StasBekman/status/2014578754782409106",
-      "author": {
-        "handle": "stas00",
-        "displayName": "Stas Bekman",
-        "avatar": "https://avatars.githubusercontent.com/stas00"
-      },
-      "content": "Thanks to an awesome contribution from @omarnomad The Machine Learning Engineering Open book now can ...",
-      "createdAt": "2024-05-25T00:00:00Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Acknowledges a contribution to the Machine Learning Engineering Open Book, enhancing its utility.",
-      "worthReading": "Highlights collaborative improvements to open-source ML resources.",
-      "tags": [
-        "tooling",
-        "llm"
-      ]
-    },
-    {
-      "type": "x",
-      "id": "1750636949612974498",
-      "url": "https://x.com/StasBekman/status/1750636949612974498",
-      "author": {
-        "handle": "stas00",
-        "displayName": "Stas Bekman",
-        "avatar": "https://avatars.githubusercontent.com/stas00"
-      },
-      "content": "If you were holding off to try @MSFTDeepSpeed ZeRO++ it looks like deepspeed@master should ...",
-      "createdAt": "2024-01-26T00:00:00Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Announces that DeepSpeed ZeRO++ is now ready for use, encouraging adoption.",
-      "worthReading": "Relevant for those optimizing memory and speed in large model training.",
-      "tags": [
-        "infra",
-        "fine-tuning"
-      ]
-    },
     {
       "type": "x",
       "id": "1716181162354442450",
@@ -273,7 +231,6 @@
     }
   ],
   "dailyCounts": [
-    3,
     4,
     3,
     0,
@@ -302,7 +259,8 @@
     0,
     0,
     0,
-    0
+    0,
+    1
   ],
   "interestSummary": ""
 }
