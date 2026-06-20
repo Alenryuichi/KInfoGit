@@ -2,39 +2,6 @@
   "id": "simonw",
   "stars": [
     {
-      "repo": "Helvesec/rmux",
-      "url": "https://github.com/Helvesec/rmux",
-      "description": "Universal Rust multiplexer with a typed SDK — drive any CLI or TUI app from code. Native on Linux, macOS, and Windows.",
-      "language": "Rust",
-      "stargazersCount": 567,
-      "starredBy": "simonw",
-      "starredAt": "2026-05-21T12:56:17Z",
-      "highlights": "rmux is a universal Rust multiplexer that allows you to programmatically drive any CLI or TUI application via a typed SDK. It supports native execution on Linux, macOS, and Windows, making it a cross-platform tool for automating terminal interactions.",
-      "worthReading": "For AI engineers building agentic systems that need to interact with CLI tools, rmux provides a robust, type-safe way to control terminals programmatically, which is a common requirement in agent frameworks.",
-      "topics": [
-        "agent",
-        "ai",
-        "cli",
-        "linux",
-        "macos",
-        "multiplexer",
-        "multiplexers",
-        "powershell",
-        "ratatui",
-        "rust",
-        "terminal",
-        "tokio",
-        "windows"
-      ],
-      "tags": [
-        "agent",
-        "tooling"
-      ],
-      "score": 7,
-      "scoreReason": "Freshness is moderate (567 stars, rising but not explosive), relevance is high for AI agents needing CLI control (agent/tooling), and concreteness is strong (working code with typed SDK).",
-      "type": "github"
-    },
-    {
       "repo": "datasette/datasette-agent-charts",
       "url": "https://github.com/datasette/datasette-agent-charts",
       "description": "Observable Plot charts for Datasette Agent",
@@ -202,31 +169,35 @@
       "score": 0,
       "scoreReason": "",
       "type": "github"
+    },
+    {
+      "repo": "Choochmeque/tauri-webdriver",
+      "url": "https://github.com/Choochmeque/tauri-webdriver",
+      "description": "Cross-platform WebDriver server for Tauri applications (Linux, macOS, Windows)",
+      "language": "Rust",
+      "stargazersCount": 8,
+      "starredBy": "simonw",
+      "starredAt": "2026-06-19T05:10:02Z",
+      "highlights": "",
+      "worthReading": "",
+      "topics": [
+        "appium",
+        "e2e",
+        "linux",
+        "macos",
+        "selenium",
+        "tauri",
+        "testing",
+        "webdriver",
+        "windows"
+      ],
+      "tags": [],
+      "score": 0,
+      "scoreReason": "",
+      "type": "github"
     }
   ],
   "posts": [
-    {
-      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mmfa2jn56c25",
-      "url": "https://bsky.app/profile/simonwillison.net/post/3mmfa2jn56c25",
-      "author": {
-        "handle": "simonwillison.net",
-        "displayName": "Simon Willison",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
-      },
-      "content": "I released the first alpha of Datasette Agent - a conversational AI assistant for Datasette that can  answer questions about data in SQLite databases, and can be extended with plugins to add extra tools and features\n\nYou can watch a demo video or try it out yourself on agent.datasette.io",
-      "createdAt": "2026-05-21T20:10:29.669Z",
-      "likeCount": 38,
-      "replyCount": 6,
-      "repostCount": 3,
-      "highlights": "",
-      "worthReading": "",
-      "tags": [
-        "llm",
-        "agent",
-        "tooling"
-      ],
-      "type": "bluesky"
-    },
     {
       "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mmg5pg3jhk2m",
       "url": "https://bsky.app/profile/simonwillison.net/post/3mmg5pg3jhk2m",
@@ -890,69 +861,6 @@
         "avatar": "https://avatars.githubusercontent.com/simonw"
       },
       "content": "Vibe coding is irresponsibly building software through dice rolls, not caring what code is produced",
-      "createdAt": "2026-05-21T04:32:32.081Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Simon Willison critiques 'vibe coding' as an irresponsible approach to software development.",
-      "worthReading": "It offers a critical perspective on a popular coding trend.",
-      "tags": [
-        "agent",
-        "tooling"
-      ]
-    },
-    {
-      "type": "x",
-      "id": "2031002164165021868",
-      "url": "https://x.com/simonw/status/2031002164165021868",
-      "author": {
-        "handle": "simonw",
-        "displayName": "Simon Willison",
-        "avatar": "https://avatars.githubusercontent.com/simonw"
-      },
-      "content": "A short note that the predictions that LLMs would favor 'boring technology' that's once you attach them to a good coding agent harness at least",
-      "createdAt": "2026-05-21T04:32:32.081Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Simon Willison notes that LLMs might favor boring technology when paired with a good coding agent harness.",
-      "worthReading": "It provides insight into LLM behavior in coding contexts.",
-      "tags": [
-        "agent",
-        "llm"
-      ]
-    },
-    {
-      "type": "x",
-      "id": "1976989054240800798",
-      "url": "https://x.com/simonw/status/1976989054240800798",
-      "author": {
-        "handle": "simonw",
-        "displayName": "Simon Willison",
-        "avatar": "https://avatars.githubusercontent.com/simonw"
-      },
-      "content": "I'm beginning to suspect that a key skill in working effectively with coding agents is developing an intuition for when you don't need to",
-      "createdAt": "2026-05-21T04:32:32.081Z",
-      "likeCount": 0,
-      "replyCount": 0,
-      "retweetCount": 0,
-      "highlights": "Simon Willison suggests that intuition for when not to intervene is key for coding agent effectiveness.",
-      "worthReading": "It offers practical advice for working with AI coding agents.",
-      "tags": [
-        "agent",
-        "tooling"
-      ]
-    },
-    {
-      "type": "x",
-      "id": "1975570458683834729",
-      "url": "https://x.com/simonw/status/1975570458683834729",
-      "author": {
-        "handle": "simonw",
-        "displayName": "Simon Willison",
-        "avatar": "https://avatars.githubusercontent.com/simonw"
-      },
-      "content": "Vibe coding is irresponsibly building software through dice rolls, not caring what code is produced",
       "createdAt": "2026-05-22T04:29:43.028Z",
       "likeCount": 0,
       "replyCount": 0,
@@ -1031,7 +939,6 @@
   ],
   "dailyCounts": [
     5,
-    5,
     3,
     0,
     1,
@@ -1059,7 +966,8 @@
     2,
     2,
     0,
-    1
+    2,
+    0
   ],
   "interestSummary": ""
 }
