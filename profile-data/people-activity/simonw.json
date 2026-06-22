@@ -2,54 +2,6 @@
   "id": "simonw",
   "stars": [
     {
-      "repo": "datasette/datasette-agent-charts",
-      "url": "https://github.com/datasette/datasette-agent-charts",
-      "description": "Observable Plot charts for Datasette Agent",
-      "language": "Python",
-      "stargazersCount": 8,
-      "starredBy": "simonw",
-      "starredAt": "2026-05-23T00:19:36Z",
-      "highlights": "",
-      "worthReading": "",
-      "topics": [],
-      "tags": [],
-      "score": 0,
-      "scoreReason": "",
-      "type": "github"
-    },
-    {
-      "repo": "datasette/datasette-agent",
-      "url": "https://github.com/datasette/datasette-agent",
-      "description": "An LLM-powered agent for Datasette",
-      "language": "Python",
-      "stargazersCount": 43,
-      "starredBy": "simonw",
-      "starredAt": "2026-05-23T00:19:17Z",
-      "highlights": "",
-      "worthReading": "",
-      "topics": [],
-      "tags": [],
-      "score": 0,
-      "scoreReason": "",
-      "type": "github"
-    },
-    {
-      "repo": "genotrance/quickjs-ng",
-      "url": "https://github.com/genotrance/quickjs-ng",
-      "description": "Thin Python wrapper of quickjs-ng",
-      "language": "Python",
-      "stargazersCount": 3,
-      "starredBy": "simonw",
-      "starredAt": "2026-05-23T21:53:41Z",
-      "highlights": "",
-      "worthReading": "",
-      "topics": [],
-      "tags": [],
-      "score": 0,
-      "scoreReason": "",
-      "type": "github"
-    },
-    {
       "repo": "datasette/datasette-sidebar",
       "url": "https://github.com/datasette/datasette-sidebar",
       "description": "",
@@ -557,6 +509,24 @@
       "worthReading": "",
       "tags": [],
       "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3motjzxn4mc2o",
+      "url": "https://bsky.app/profile/simonwillison.net/post/3motjzxn4mc2o",
+      "author": {
+        "handle": "simonwillison.net",
+        "displayName": "Simon Willison",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
+      },
+      "content": "I just released the first release candidate for sqlite-utils v4, adding a migrations system (previously released independently as sqlite-migrate) and support for nested transactions: simonwillison.net/2026/Jun/21/...",
+      "createdAt": "2026-06-21T23:36:47.805Z",
+      "likeCount": 18,
+      "replyCount": 1,
+      "repostCount": 1,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [],
+      "type": "bluesky"
     }
   ],
   "videos": [],
@@ -830,10 +800,19 @@
       "highlights": "",
       "worthReading": "",
       "type": "blog"
+    },
+    {
+      "title": "sqlite-utils 4.0rc1 adds migrations and nested transactions",
+      "url": "https://simonwillison.net/2026/Jun/21/sqlite-utils-40rc1/#atom-entries",
+      "author": "Simon Willison",
+      "publishedAt": "2026-06-21T23:35:47+00:00",
+      "summary": "<p><a href=\"https://sqlite-utils.datasette.io/en/latest/\">sqlite-utils</a> is my combined Python library and CLI tool for working with SQLite databases. It provides an extensive set of higher-level operations on top of Python's default <a href=\"https://docs.python.org/3/library/sqlite3.html\">sqlite3...",
+      "highlights": "",
+      "worthReading": "",
+      "type": "blog"
     }
   ],
   "dailyCounts": [
-    3,
     0,
     1,
     1,
@@ -862,6 +841,7 @@
     0,
     2,
     0,
+    1,
     0
   ],
   "interestSummary": ""
