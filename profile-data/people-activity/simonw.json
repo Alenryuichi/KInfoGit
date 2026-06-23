@@ -527,6 +527,24 @@
       "worthReading": "",
       "tags": [],
       "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mow3ec7ycc2s",
+      "url": "https://bsky.app/profile/simonwillison.net/post/3mow3ec7ycc2s",
+      "author": {
+        "handle": "simonwillison.net",
+        "displayName": "Simon Willison",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
+      },
+      "content": "My parallel agent side-project today was having Claude Code port the new Moebius image pinpointing model to ONNX in order to run it entirely in the browser\nsimonwillison.net/2026/Jun/22/...",
+      "createdAt": "2026-06-22T23:52:07.542Z",
+      "likeCount": 25,
+      "replyCount": 4,
+      "repostCount": 3,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [],
+      "type": "bluesky"
     }
   ],
   "videos": [],
@@ -810,10 +828,19 @@
       "highlights": "",
       "worthReading": "",
       "type": "blog"
+    },
+    {
+      "title": "Porting the Moebius 0.2B image inpainting model to run in the browser with Claude Code",
+      "url": "https://simonwillison.net/2026/Jun/22/porting-moebius/#atom-entries",
+      "author": "Simon Willison",
+      "publishedAt": "2026-06-22T23:43:51+00:00",
+      "summary": "<p>This morning <a href=\"https://news.ycombinator.com/item?id=48630171\">on Hacker News</a> I saw <a href=\"https://hustvl.github.io/Moebius/\">Moebius: 0.2B Lightweight Image Inpainting Framework with 10B-Level Performance</a>, describing a small but effective inpainting model - a model where you can...",
+      "highlights": "",
+      "worthReading": "",
+      "type": "blog"
     }
   ],
   "dailyCounts": [
-    0,
     1,
     1,
     2,
@@ -841,6 +868,7 @@
     0,
     2,
     0,
+    1,
     1,
     0
   ],
