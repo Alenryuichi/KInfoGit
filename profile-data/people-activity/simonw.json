@@ -163,27 +163,50 @@
       "score": 0,
       "scoreReason": "",
       "type": "github"
+    },
+    {
+      "repo": "BoundaryML/baml",
+      "url": "https://github.com/BoundaryML/baml",
+      "description": "The programming language for agents",
+      "language": "Rust",
+      "stargazersCount": 8469,
+      "starredBy": "simonw",
+      "starredAt": "2026-06-30T20:58:20Z",
+      "highlights": "",
+      "worthReading": "",
+      "topics": [
+        "boundaryml",
+        "guardrails",
+        "llm",
+        "programming-language",
+        "structured-data"
+      ],
+      "tags": [],
+      "score": 0,
+      "scoreReason": "",
+      "type": "github"
+    },
+    {
+      "repo": "metareflection/guardians",
+      "url": "https://github.com/metareflection/guardians",
+      "description": "an implementation of the ideas in Erik Meijer's \"Guardians of the Agents: Formal Verification of AI Workflows\" (Communications of the ACM, January 2026)",
+      "language": "Python",
+      "stargazersCount": 117,
+      "starredBy": "simonw",
+      "starredAt": "2026-06-30T20:55:49Z",
+      "highlights": "",
+      "worthReading": "",
+      "topics": [
+        "llm",
+        "verification"
+      ],
+      "tags": [],
+      "score": 0,
+      "scoreReason": "",
+      "type": "github"
     }
   ],
   "posts": [
-    {
-      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mna77rupi22d",
-      "url": "https://bsky.app/profile/simonwillison.net/post/3mna77rupi22d",
-      "author": {
-        "handle": "simonwillison.net",
-        "displayName": "Simon Willison",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
-      },
-      "content": "Hacker News has an alarmingly high tolerance for slop content these days\n\nIt also has social norms against accusing something of being written with AI, which means the community has trouble strengthening its immune system against that slop",
-      "createdAt": "2026-06-01T13:37:25.272Z",
-      "likeCount": 160,
-      "replyCount": 20,
-      "repostCount": 6,
-      "highlights": "",
-      "worthReading": "",
-      "tags": [],
-      "type": "bluesky"
-    },
     {
       "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mnf2w4ctnc2n",
       "url": "https://bsky.app/profile/simonwillison.net/post/3mnf2w4ctnc2n",
@@ -489,6 +512,42 @@
       "worthReading": "",
       "tags": [],
       "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mpjwupjxyc2n",
+      "url": "https://bsky.app/profile/simonwillison.net/post/3mpjwupjxyc2n",
+      "author": {
+        "handle": "simonwillison.net",
+        "displayName": "Simon Willison",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
+      },
+      "content": "Notes (and a Pelican) on Claude Sonnet 5 - the new tokenizer makes it ~1.4x more expensive for English, ~1.33x more expensive for Spanish but roughly the same price for Simplified Mandarin simonwillison.net/2026/Jun/30/...",
+      "createdAt": "2026-06-30T21:25:04.430Z",
+      "likeCount": 45,
+      "replyCount": 3,
+      "repostCount": 4,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [],
+      "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mpjhtsbbq223",
+      "url": "https://bsky.app/profile/simonwillison.net/post/3mpjhtsbbq223",
+      "author": {
+        "handle": "simonwillison.net",
+        "displayName": "Simon Willison",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
+      },
+      "content": "I've added video support to my \"shot-scraper\" browser automation tool - you (or your coding agent) can now create a storyboard YAML file and use that to record a video demo of new web application features simonwillison.net/2026/Jun/30/...",
+      "createdAt": "2026-06-30T16:56:07.608Z",
+      "likeCount": 34,
+      "replyCount": 7,
+      "repostCount": 0,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [],
+      "type": "bluesky"
     }
   ],
   "videos": [],
@@ -782,12 +841,21 @@
       "highlights": "",
       "worthReading": "",
       "type": "blog"
+    },
+    {
+      "title": "Have your agent record video demos of its work with shot-scraper video",
+      "url": "https://simonwillison.net/2026/Jun/30/shot-scraper-video/#atom-entries",
+      "author": "Simon Willison",
+      "publishedAt": "2026-06-30T16:54:26+00:00",
+      "summary": "<p><a href=\"https://shot-scraper.datasette.io/en/stable/video.html\">shot-scraper video</a> is a new command introduced in today's <a href=\"https://github.com/simonw/shot-scraper/releases/tag/1.10\">shot-scraper 1.10</a> release which accepts a <code>storyboard.yml</code> file defining a routine to...",
+      "highlights": "",
+      "worthReading": "",
+      "type": "blog"
     }
   ],
   "dailyCounts": [
     1,
     1,
-    1,
     2,
     0,
     3,
@@ -814,7 +882,8 @@
     0,
     0,
     0,
-    2
+    6,
+    0
   ],
   "interestSummary": ""
 }

@@ -4,8 +4,18 @@
     <title>Stars &amp; Posts — Kylin Miao</title>
     <link>https://kylinmiao.me/stars/</link>
     <description>Daily curated GitHub starred repos, Bluesky/X posts, YouTube videos and blog articles from AI leaders with AI-powered summaries.</description>
-    <lastBuildDate>Tue, 30 Jun 2026 04:29:13 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 01 Jul 2026 04:34:56 GMT</lastBuildDate>
     <atom:link href="https://kylinmiao.me/stars/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Stars &amp; Posts — 2026-07-01</title>
+      <link>https://kylinmiao.me/stars/2026-07-01/</link>
+      <guid isPermaLink="true">https://kylinmiao.me/stars/2026-07-01/</guid>
+      <pubDate>Wed, 01 Jul 2026 12:00:00 GMT</pubDate>
+      <description>Bluesky Posts:
+* Mark Riedl: Fable has really been more of a Saga
+* Ethan Mollick: Fable is very good, and having it taken away after getting early access delayed a few things I was working on &amp; made me defer others until it returned...
+* Emily M. Bender: Working on slides based on a journal paper submission and though this work is tedious, I can&apos;t imagine being able to present the talk coherently, if I...</description>
+    </item>
     <item>
       <title>Stars &amp; Posts — 2026-06-30</title>
       <link>https://kylinmiao.me/stars/2026-06-30/</link>
@@ -14,9 +24,36 @@
       <description>GitHub Repos:
 * bambamramfan/ai-compass — Political Compass for AI [HTML]
 * mikefarah/yq — yq is a portable command-line YAML, JSON, XML, CSV, TOML, HCL  and properties processor [Go]
+* BoundaryML/baml — The programming language for agents [Rust]
+* metareflection/guardians — an implementation of the ideas in Erik Meijer&apos;s &quot;Guardians of the Agents: Formal Verification of AI Workflows&quot; (Communications of the ACM, January 2026) [Python]
+* omnigent-ai/omnigent — Omnigent is an open-source AI agent framework and meta-harness: orchestrate Claude Code, Codex, Cursor, Pi, and custom agents — swap harnesses without rewriting, enforce policies and sandboxing, and collaborate in real time from any device. [Python]
+* evaleval/every_eval_ever — Every Eval Ever is a shared schema and crowdsourced eval database. It defines a standardized metadata format for storing AI evaluation results — from leaderboard scrapes and research papers to local evaluation runs — so that results from different frameworks can be compared, reproduced, and reused. [Python]
 
 Bluesky Posts:
-* Simon Willison: Looks like I&apos;m my own patron saint!</description>
+* Simon Willison: Looks like I&apos;m my own patron saint!
+* Simon Willison: Notes (and a Pelican) on Claude Sonnet 5 - the new tokenizer makes it ~1.4x more expensive for English, ~1.33x more expensive for Spanish but roughly ...
+* Simon Willison: I&apos;ve added video support to my &quot;shot-scraper&quot; browser automation tool - you (or your coding agent) can now create a storyboard YAML file and use that ...
+* Mark Riedl: Will there be a procedure in place after this? Or is this the next round of Calvinball? www.politico.com/news/2026/06...
+* Mark Riedl: Evidence that Anthropic is using prompt stenography to track whether Claude Code is being used by certain labs and certain web domains thereallo.dev/b...
+* Marc Lanctot: Wtf @bsky.app ??? 🤬
+
+Nobody will take this place seriously if you continue like this. 
+
+Growth has slowed considerably, you can&apos;t afford losing more ...
+* Jeff Dean: The video of the commencement speech I gave at the UW Allen School @uwcse.bsky.social a couple of weeks ago is now up.  Congratulations to all the gra...
+* Ethan Mollick: I wrote about how the rapid rise in AI abilities is leading to both a transformation in how AI is used at work, and the sort of sudden lurches in poli...
+* Emily M. Bender: Transmisogyny is misogyny, and even as it harms trans women first and foremost, it also harms other women too.
+* Emily M. Bender: Quietly fuming all day about the SCOTUS decisions. Anti-trans laws are bad for all women and girls, including especially trans women and girls.
+* Emily M. Bender: Quietly fuming all day about the SCOTUS decisions. Anti-trans laws and bad for all women and girls, including especially trans women and girls.
+* Emily M. Bender: Oh no. No no no no.
+
+GenAI is absolutely NOT about access to information. It is about despoiling our information ecosystem.
+
+And the text extruded fro...
+* Ben Recht: NFL Hall of Famer Chris Johnson&apos;s ALS diagnosis and the indefatigable search for treatments.
+
+Blog Articles:
+* Have your agent record video demos of its work with shot-scraper video — Simon Willison: &lt;p&gt;&lt;a href=&quot;https://shot-scraper.datasette.io/en/stable/video.html&quot;&gt;shot-scraper video&lt;/a&gt; is a new command introduced in today&apos;s &lt;a href=&quot;https://git...</description>
     </item>
     <item>
       <title>Stars &amp; Posts — 2026-06-29</title>
@@ -830,37 +867,6 @@ Ai2 is a wonderful place. The last 2.5+ years building Olmo, Tulu, and other pro
 
 Blog Articles:
 * Farewell Ai2 — Nathan Lambert: This was my last week at the Allen Institute for AI (Ai2), where I got the great privilege to work on the Olmo models, to grow, to learn, and to have ...</description>
-    </item>
-    <item>
-      <title>Stars &amp; Posts — 2026-06-01</title>
-      <link>https://kylinmiao.me/stars/2026-06-01/</link>
-      <guid isPermaLink="true">https://kylinmiao.me/stars/2026-06-01/</guid>
-      <pubDate>Mon, 01 Jun 2026 12:00:00 GMT</pubDate>
-      <description>GitHub Repos:
-* LiangSu8899/FlashRT — FlashRT is a high-performance realtime inference engine for small-batch, latency-sensitive AI workloads. The flagship integration is production VLA control for Pi0, Pi0.5, GROOT N1.6, and Pi0-FAST. Also support llm e.g, qwen3.6-27B [C++]
-* neovim/neovim — Vim-fork focused on extensibility and usability [Vim Script]
-* hyperpuncher/chough — &quot;it just vibes your audio into text bro&quot; - 🐦‍⬛ [Go]
-* ggml-org/llama.pages — llama.cpp&apos;s official website [Svelte]
-* huggingface/OpenEnv — An interface library for RL post training with environments.  [Python]
-* coyotte508/publish-to-hf — Test publish to HF
-* google-gemma/gemma-skills — Skills for the Gemma and model/agent interactions [Python]
-
-Bluesky Posts:
-* Simon Willison: Hacker News has an alarmingly high tolerance for slop content these days
-
-It also has social norms against accusing something of being written with AI...
-* Margaret Mitchell: 📣 Announcing the release of the 🕊️ Annotated Encyclical 🕊️ from the ethics &amp; society folks at @hf.co. Includes citations to relevant academic work....
-* Nathan Lambert: Can closed labs can create margins with very high cost services in the long-term? I say yes, but only in a few niches like high end knowledge work. Me...
-* Emily M. Bender: Don&apos;t illustrate posts about The AI Con or any of my work with slop (aka synthetic images) challenge: Level impossible, it seems alas.
-
-w/ @alexhanna....
-* Emily M. Bender: Today!
-* Emily M. Bender: The Guardian reviews @ghostdoc2026.bsky.social :
-
-&quot;The roots of AI in rightwing ideology is examined in Valerie Veatch’s enjoyable doc, including an a...
-
-Blog Articles:
-* Open and closed models are on different exponentials — Nathan Lambert: Where marginally higher intelligence drives value, and where it doesn&apos;t.</description>
     </item>
   </channel>
 </rss>
