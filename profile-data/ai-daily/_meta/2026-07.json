@@ -1,0 +1,41 @@
+[
+  {
+    "date": "2026-07-01",
+    "timestamp": "2026-07-01T01:52:40.791Z",
+    "durationMs": 128313,
+    "sources": {
+      "rss": 34,
+      "search": 1,
+      "social": 0,
+      "horizon": 30,
+      "github": 28,
+      "reddit": 15,
+      "coStarred": 1
+    },
+    "dedup": {
+      "urlDropped": 5,
+      "titleDropped": 2
+    },
+    "scoring": {
+      "batches": 197,
+      "failed": 197,
+      "halveRetries": 95,
+      "keywordFallback": 102,
+      "hnWeighted": 0
+    },
+    "anchors": {
+      "loaded": 1,
+      "bands": [
+        "low"
+      ]
+    },
+    "output": {
+      "itemCount": 57,
+      "avgScore": 5,
+      "maxScore": 5,
+      "sectionCounts": {
+        "engineering": 57
+      }
+    }
+  }
+]
