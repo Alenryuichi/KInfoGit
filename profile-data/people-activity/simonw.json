@@ -550,6 +550,24 @@
       "worthReading": "",
       "tags": [],
       "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mpuf4qk5m22j",
+      "url": "https://bsky.app/profile/simonwillison.net/post/3mpuf4qk5m22j",
+      "author": {
+        "handle": "simonwillison.net",
+        "displayName": "Simon Willison",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
+      },
+      "content": "Somewhat humbling to have Claude Fable do a final review of some software that you're about to release and have it then find (and fix) FIVE release blockers, for an estimated (unsubsidized) cost of $149.25 simonwillison.net/2026/Jul/5/s...",
+      "createdAt": "2026-07-05T01:06:43.689Z",
+      "likeCount": 70,
+      "replyCount": 8,
+      "repostCount": 4,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [],
+      "type": "bluesky"
     }
   ],
   "videos": [],
@@ -853,10 +871,19 @@
       "highlights": "",
       "worthReading": "",
       "type": "blog"
+    },
+    {
+      "title": "sqlite-utils 4.0rc2, mostly written by Claude Fable (for about $149.25)",
+      "url": "https://simonwillison.net/2026/Jul/5/sqlite-utils-fable/#atom-entries",
+      "author": "Simon Willison",
+      "publishedAt": "2026-07-05T01:00:48+00:00",
+      "summary": "<p>I wrote about the <a href=\"https://simonwillison.net/2026/Jun/21/sqlite-utils-40rc1/\">sqlite-utils 4.0rc1</a> release a couple of weeks ago. Since we only have Claude Fable on our Max subscriptions for a few more days, I decided to see if it could help me get to a 4.0 stable release that I felt...",
+      "highlights": "",
+      "worthReading": "",
+      "type": "blog"
     }
   ],
   "dailyCounts": [
-    0,
     3,
     0,
     0,
@@ -885,7 +912,8 @@
     0,
     1,
     3,
-    0
+    0,
+    1
   ],
   "interestSummary": ""
 }
