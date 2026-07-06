@@ -2,38 +2,6 @@
   "id": "simonw",
   "stars": [
     {
-      "repo": "simonw/micropython-wasm",
-      "url": "https://github.com/simonw/micropython-wasm",
-      "description": "Python library for running a MicroPython sandbox using WebAssembly",
-      "language": "Python",
-      "stargazersCount": 72,
-      "starredBy": "simonw",
-      "starredAt": "2026-06-06T12:00:29Z",
-      "highlights": "",
-      "worthReading": "",
-      "topics": [],
-      "tags": [],
-      "score": 0,
-      "scoreReason": "",
-      "type": "github"
-    },
-    {
-      "repo": "CharlyCst/spadebox",
-      "url": "https://github.com/CharlyCst/spadebox",
-      "description": "Sandboxed tools and JS runtime for AI agents",
-      "language": "Rust",
-      "stargazersCount": 6,
-      "starredBy": "simonw",
-      "starredAt": "2026-06-06T11:59:41Z",
-      "highlights": "",
-      "worthReading": "",
-      "topics": [],
-      "tags": [],
-      "score": 0,
-      "scoreReason": "",
-      "type": "github"
-    },
-    {
       "repo": "charmbracelet/vhs",
       "url": "https://github.com/charmbracelet/vhs",
       "description": "Your CLI home video recorder 📼",
@@ -188,27 +156,32 @@
       "score": 0,
       "scoreReason": "",
       "type": "github"
+    },
+    {
+      "repo": "json-e/json-e",
+      "url": "https://github.com/json-e/json-e",
+      "description": "A data-structure parameterization system written for embedding context in JSON objects",
+      "language": "Rust",
+      "stargazersCount": 195,
+      "starredBy": "simonw",
+      "starredAt": "2026-07-05T14:15:07Z",
+      "highlights": "",
+      "worthReading": "",
+      "topics": [
+        "expression-language",
+        "json",
+        "string-interpolation",
+        "template",
+        "untrusted-values",
+        "yaml"
+      ],
+      "tags": [],
+      "score": 0,
+      "scoreReason": "",
+      "type": "github"
     }
   ],
   "posts": [
-    {
-      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mnlt3a6fm22b",
-      "url": "https://bsky.app/profile/simonwillison.net/post/3mnlt3a6fm22b",
-      "author": {
-        "handle": "simonwillison.net",
-        "displayName": "Simon Willison",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
-      },
-      "content": "I may have finally found the Python-in-a-sandbox solution I've been looking for... here's my latest experiment, this time running MicroPython in WebAssembly inside my Python applications simonwillison.net/2026/Jun/6/m...",
-      "createdAt": "2026-06-06T04:32:04.457Z",
-      "likeCount": 122,
-      "replyCount": 9,
-      "repostCount": 14,
-      "highlights": "",
-      "worthReading": "",
-      "tags": [],
-      "type": "bluesky"
-    },
     {
       "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mnv6hg66qs23",
       "url": "https://bsky.app/profile/simonwillison.net/post/3mnv6hg66qs23",
@@ -884,7 +857,6 @@
     }
   ],
   "dailyCounts": [
-    3,
     0,
     0,
     1,
@@ -913,7 +885,8 @@
     1,
     3,
     0,
-    1
+    2,
+    0
   ],
   "interestSummary": ""
 }
