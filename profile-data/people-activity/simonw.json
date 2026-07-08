@@ -179,6 +179,22 @@
       "score": 0,
       "scoreReason": "",
       "type": "github"
+    },
+    {
+      "repo": "wouterdebie/davit",
+      "url": "https://github.com/wouterdebie/davit",
+      "description": "A native macOS UI for Apple's platform",
+      "language": "Swift",
+      "stargazersCount": 284,
+      "starredBy": "simonw",
+      "starredAt": "2026-07-07T20:07:45Z",
+      "highlights": "",
+      "worthReading": "",
+      "topics": [],
+      "tags": [],
+      "score": 0,
+      "scoreReason": "",
+      "type": "github"
     }
   ],
   "posts": [
@@ -541,6 +557,24 @@
       "worthReading": "",
       "tags": [],
       "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mq3e6p7gs227",
+      "url": "https://bsky.app/profile/simonwillison.net/post/3mq3e6p7gs227",
+      "author": {
+        "handle": "simonwillison.net",
+        "displayName": "Simon Willison",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
+      },
+      "content": "I released sqlite-utils 4.0, the 124th release but the first major version bump since 3.0 back in 2020\n\nI managed to keep things backwards-compatible all the way up to version 3.39 before the accumulated design mistakes forced me to bump that number!  simonwillison.net/2026/Jul/7/s...",
+      "createdAt": "2026-07-07T19:38:33.825Z",
+      "likeCount": 31,
+      "replyCount": 2,
+      "repostCount": 2,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [],
+      "type": "bluesky"
     }
   ],
   "videos": [],
@@ -854,10 +888,19 @@
       "highlights": "",
       "worthReading": "",
       "type": "blog"
+    },
+    {
+      "title": "sqlite-utils 4.0, now with database schema migrations",
+      "url": "https://simonwillison.net/2026/Jul/7/sqlite-utils-4/#atom-entries",
+      "author": "Simon Willison",
+      "publishedAt": "2026-07-07T19:32:57+00:00",
+      "summary": "<p>This morning I released <a href=\"https://sqlite-utils.datasette.io/en/stable/changelog.html#v4-0\">sqlite-utils 4.0</a>, the 124th release of that project and the first major version bump since <a href=\"https://sqlite-utils.datasette.io/en/stable/changelog.html#v3-0\">3.0</a> in November 2020. In...",
+      "highlights": "",
+      "worthReading": "",
+      "type": "blog"
     }
   ],
   "dailyCounts": [
-    0,
     1,
     1,
     2,
@@ -886,6 +929,7 @@
     0,
     2,
     0,
+    2,
     0
   ],
   "interestSummary": ""
