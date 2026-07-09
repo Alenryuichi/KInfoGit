@@ -195,27 +195,25 @@
       "score": 0,
       "scoreReason": "",
       "type": "github"
+    },
+    {
+      "repo": "nasa/spacewasm",
+      "url": "https://github.com/nasa/spacewasm",
+      "description": "A flight-compliant WebAssembly interpreter for safety-critical execution",
+      "language": "Rust",
+      "stargazersCount": 63,
+      "starredBy": "simonw",
+      "starredAt": "2026-07-09T02:33:19Z",
+      "highlights": "",
+      "worthReading": "",
+      "topics": [],
+      "tags": [],
+      "score": 0,
+      "scoreReason": "",
+      "type": "github"
     }
   ],
   "posts": [
-    {
-      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mnv6hg66qs23",
-      "url": "https://bsky.app/profile/simonwillison.net/post/3mnv6hg66qs23",
-      "author": {
-        "handle": "simonwillison.net",
-        "displayName": "Simon Willison",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
-      },
-      "content": "A TIL on using agentsview.io to calculate token spending with Claude Fable 5 despite that model not yet being included in the AgentsView pricing database til.simonwillison.net/llms/agentsv...",
-      "createdAt": "2026-06-09T21:49:42.199Z",
-      "likeCount": 16,
-      "replyCount": 4,
-      "repostCount": 0,
-      "highlights": "",
-      "worthReading": "",
-      "tags": [],
-      "type": "bluesky"
-    },
     {
       "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mnvglpg73s2c",
       "url": "https://bsky.app/profile/simonwillison.net/post/3mnvglpg73s2c",
@@ -902,7 +900,6 @@
   ],
   "dailyCounts": [
     1,
-    1,
     2,
     0,
     1,
@@ -930,7 +927,8 @@
     2,
     0,
     2,
-    0
+    0,
+    1
   ],
   "interestSummary": ""
 }
