@@ -215,24 +215,6 @@
   ],
   "posts": [
     {
-      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mnvglpg73s2c",
-      "url": "https://bsky.app/profile/simonwillison.net/post/3mnvglpg73s2c",
-      "author": {
-        "handle": "simonwillison.net",
-        "displayName": "Simon Willison",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
-      },
-      "content": "Wrote up my initial impressions of Claude Fable 5 - it has a big model smell: slow, expensive and capable of crunching through pretty much everything I threw at it simonwillison.net/2026/Jun/9/c...",
-      "createdAt": "2026-06-10T00:15:16.051Z",
-      "likeCount": 62,
-      "replyCount": 4,
-      "repostCount": 7,
-      "highlights": "",
-      "worthReading": "",
-      "tags": [],
-      "type": "bluesky"
-    },
-    {
       "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mo2ffgezqs2f",
       "url": "https://bsky.app/profile/simonwillison.net/post/3mo2ffgezqs2f",
       "author": {
@@ -573,6 +555,24 @@
       "worthReading": "",
       "tags": [],
       "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mqafoxnsl226",
+      "url": "https://bsky.app/profile/simonwillison.net/post/3mqafoxnsl226",
+      "author": {
+        "handle": "simonwillison.net",
+        "displayName": "Simon Willison",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
+      },
+      "content": "Notes on GPT-5.6, which includes some interesting new additions to the API (programmatic tool calling and multi-agent in particular) - plus 18 pelicans for the 6 reasoning levels and 3 new models: simonwillison.net/2026/Jul/9/g...",
+      "createdAt": "2026-07-09T19:48:51.988Z",
+      "likeCount": 77,
+      "replyCount": 4,
+      "repostCount": 5,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [],
+      "type": "bluesky"
     }
   ],
   "videos": [],
@@ -896,10 +896,19 @@
       "highlights": "",
       "worthReading": "",
       "type": "blog"
+    },
+    {
+      "title": "The new GPT-5.6 family: Luna, Terra, Sol",
+      "url": "https://simonwillison.net/2026/Jul/9/gpt-5-6/#atom-entries",
+      "author": "Simon Willison",
+      "publishedAt": "2026-07-09T19:46:38+00:00",
+      "summary": "<p>OpenAI's latest flagship model <a href=\"https://openai.com/index/gpt-5-6/\">hit general availability this morning</a>, and comes in three sizes: Luna, Terra, and Sol (from smallest to largest).</p> <p>The new models are priced per 1M input/output tokens as Luna $1/$6, Terra $2.50/$15, Sol $5/$30....",
+      "highlights": "",
+      "worthReading": "",
+      "type": "blog"
     }
   ],
   "dailyCounts": [
-    1,
     2,
     0,
     1,
@@ -928,7 +937,8 @@
     0,
     2,
     0,
-    1
+    2,
+    0
   ],
   "interestSummary": ""
 }
