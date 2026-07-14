@@ -2,47 +2,6 @@
   "id": "simonw",
   "stars": [
     {
-      "repo": "charmbracelet/vhs",
-      "url": "https://github.com/charmbracelet/vhs",
-      "description": "Your CLI home video recorder 📼",
-      "language": "Go",
-      "stargazersCount": 19999,
-      "starredBy": "simonw",
-      "starredAt": "2026-06-14T19:50:58Z",
-      "highlights": "",
-      "worthReading": "",
-      "topics": [
-        "ascii",
-        "cli",
-        "command-line",
-        "gif",
-        "recording",
-        "terminal",
-        "vhs",
-        "video"
-      ],
-      "tags": [],
-      "score": 0,
-      "scoreReason": "",
-      "type": "github"
-    },
-    {
-      "repo": "tamnd/ascii-gif",
-      "url": "https://github.com/tamnd/ascii-gif",
-      "description": "Turn a terminal session into a good-looking animated GIF. A vhs wrapper with an attractive default look.",
-      "language": "Go",
-      "stargazersCount": 57,
-      "starredBy": "simonw",
-      "starredAt": "2026-06-14T19:48:37Z",
-      "highlights": "",
-      "worthReading": "",
-      "topics": [],
-      "tags": [],
-      "score": 0,
-      "scoreReason": "",
-      "type": "github"
-    },
-    {
       "repo": "reflex-dev/fast-walk",
       "url": "https://github.com/reflex-dev/fast-walk",
       "description": "fast ast walk",
@@ -214,24 +173,6 @@
     }
   ],
   "posts": [
-    {
-      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mo7i33sgsc2k",
-      "url": "https://bsky.app/profile/simonwillison.net/post/3mo7i33sgsc2k",
-      "author": {
-        "handle": "simonwillison.net",
-        "displayName": "Simon Willison",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
-      },
-      "content": "It's now possible to compile Python extensions (C, C++, Rust etc) to WebAssembly and distribute them through PyPI such that Pyodide can install them directly simonwillison.net/2026/Jun/13/...",
-      "createdAt": "2026-06-14T00:08:23.477Z",
-      "likeCount": 75,
-      "replyCount": 4,
-      "repostCount": 5,
-      "highlights": "",
-      "worthReading": "",
-      "tags": [],
-      "type": "bluesky"
-    },
     {
       "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3moesh6qn6s2d",
       "url": "https://bsky.app/profile/simonwillison.net/post/3moesh6qn6s2d",
@@ -551,6 +492,24 @@
       "likeCount": 16,
       "replyCount": 7,
       "repostCount": 0,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [],
+      "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mqkzftto4226",
+      "url": "https://bsky.app/profile/simonwillison.net/post/3mqkzftto4226",
+      "author": {
+        "handle": "simonwillison.net",
+        "displayName": "Simon Willison",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
+      },
+      "content": "New TIL: Using uvx in GitHub Actions in a cache-friendly way\n\nI finally found a recipe that I like for running `uvx tool-name` in GitHub Actions without downloading a fresh copy of the package every time til.simonwillison.net/github-actio...",
+      "createdAt": "2026-07-14T01:08:18.217Z",
+      "likeCount": 20,
+      "replyCount": 1,
+      "repostCount": 2,
       "highlights": "",
       "worthReading": "",
       "tags": [],
@@ -891,7 +850,6 @@
     }
   ],
   "dailyCounts": [
-    3,
     0,
     2,
     2,
@@ -920,7 +878,8 @@
     1,
     0,
     1,
-    0
+    0,
+    1
   ],
   "interestSummary": ""
 }
