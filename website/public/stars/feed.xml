@@ -4,8 +4,19 @@
     <title>Stars &amp; Posts — Kylin Miao</title>
     <link>https://kylinmiao.me/stars/</link>
     <description>Daily curated GitHub starred repos, Bluesky/X posts, YouTube videos and blog articles from AI leaders with AI-powered summaries.</description>
-    <lastBuildDate>Wed, 15 Jul 2026 05:28:17 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 16 Jul 2026 05:37:28 GMT</lastBuildDate>
     <atom:link href="https://kylinmiao.me/stars/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Stars &amp; Posts — 2026-07-16</title>
+      <link>https://kylinmiao.me/stars/2026-07-16/</link>
+      <guid isPermaLink="true">https://kylinmiao.me/stars/2026-07-16/</guid>
+      <pubDate>Thu, 16 Jul 2026 12:00:00 GMT</pubDate>
+      <description>GitHub Repos:
+* robertsdotpm/runloom — Real Goroutines for Python 3.13t+ free-threaded. [Python]
+
+Bluesky Posts:
+* Simon Willison: I poked around in the just open sourced Grok Build CLI tool - 844,000 lines of Rust code! - and dug up a few interesting highlights, including a &quot;self...</description>
+    </item>
     <item>
       <title>Stars &amp; Posts — 2026-07-15</title>
       <link>https://kylinmiao.me/stars/2026-07-15/</link>
@@ -13,10 +24,26 @@
       <pubDate>Wed, 15 Jul 2026 12:00:00 GMT</pubDate>
       <description>GitHub Repos:
 * darrylmorley/whatcable — macOS menu bar app that tells you, in plain English, what each USB-C cable plugged into your Mac can actually do [Swift]
+* xai-org/grok-build — SpaceXAI&apos;s coding agent harness and TUI. Fullscreen, mouse interactive, extensible. [Rust]
+* thinking-machines-lab/tinker-cookbook — Post-training with Tinker [Python]
 
 Bluesky Posts:
 * Marc Lanctot: Great paper from great colleagues 😁
-* Ethan Mollick: Fable: &quot;Pitch Odysseus as a management consultant, arguing that he has found product-market fit, and he should just stick with Trojan Horse making as ...</description>
+* Ethan Mollick: Fable: &quot;Pitch Odysseus as a management consultant, arguing that he has found product-market fit, and he should just stick with Trojan Horse making as ...
+* Mark Riedl: So glad I signed up for the transhumanism upgrade subscription plan. I wonder what new features will be installed in my DNA this time?
+* Mark Riedl: Hack reveals that Suno (AI music generator) was trained on copyrighted music www.404media.co/hack-reveals...
+* Nathan Lambert: The new Inkling model was somewhat inevitable once Tinker took off -- integration of post-training services across Thinking Machine’s entire stack -- ...
+* Nathan Lambert: Thinking Machines just released with a ~1T param, 41B active, apache-2 model
+Benchmarks are a clear step up from Nemotron Ultra (55B active), new best...
+* Ethan Mollick: I wanted to use my Stream Deck to control Codex. Had GPT-5.6 Pro write a project plan based on my specs, Fable audited it. Codex implemented it. I did...
+* Emily M. Bender: Referring to something as &quot;an AI&quot; is a common yet misapplied turn of phrase these days.
+
+I tried to set the record straight with @spectrum.ieee.org af...
+* Emily M. Bender: I really appreciate this stance. 
+
+Too many people try to use &quot;but it&apos;s useful&quot; as a counterargument to what we say, for example, in The AI Con. Usefu...
+* Emily M. Bender: Tempted to do some kind of linguistic annotation project to explore whether Mastodon responses really are more &apos;splainy than those on bsky and what rh...
+* Naomi Saphra: if you think students will be routinely collaborating with LLMs after graduation, #1 priority is to study rhetoric because you need to recognize BS an...</description>
     </item>
     <item>
       <title>Stars &amp; Posts — 2026-07-14</title>
@@ -864,38 +891,6 @@ Blog Articles:
 Blog Articles:
 * GLM-5.2 is probably the most powerful text-only open weights LLM — Simon Willison: &lt;p&gt;Chinese AI lab &lt;a href=&quot;https://z.ai/&quot;&gt;Z.ai&lt;/a&gt; released GLM-5.2 &lt;a href=&quot;https://x.com/Zai_org/status/2065704919299235870&quot;&gt;to their coding plan su...
 * State of the blog, mid-2026 — Nathan Lambert: About 3 years since I started writing weekly.</description>
-    </item>
-    <item>
-      <title>Stars &amp; Posts — 2026-06-16</title>
-      <link>https://kylinmiao.me/stars/2026-06-16/</link>
-      <guid isPermaLink="true">https://kylinmiao.me/stars/2026-06-16/</guid>
-      <pubDate>Tue, 16 Jun 2026 12:00:00 GMT</pubDate>
-      <description>GitHub Repos:
-* reflex-dev/fast-walk — fast ast walk [Rust]
-* huggingface/is-it-agentic-enough [Python]
-
-Bluesky Posts:
-* Simon Willison: Saw this pair of absolute dumplings on our walk today
-* Mark Riedl: Analysis of the jailbreak of Fable by someone who was asked to review the report. Indicates that the jailbreak allowed Fable to find deliberately plan...
-* Mark Riedl: Is promoting a model equivalent to “taking or sending” a model? 
-
-Anthropic probably doesn’t want to guess wrong nor incur more ire, but my reading of...
-* Marc Lanctot: Check out GameLab: an eval benchmark for language models playing games!
-
-Initial results on Gin rummy, Crosswords, and Block Champ!
-
-Backed by the gam...
-* Nathan Lambert: It&apos;s hard to pinpoint open-closed gap and so-on, but I trust the Arena team and just look where GLM 5.2 is on this. An MIT licensed, to be open weight...
-* Nathan Lambert: New podcast with my (former) colleague Finbarr Timbers on the state of frontier post-training recipes and how we got here. A fun review of how we went...
-* Ethan Mollick: Fable&apos;s implementation of Borges&apos;s Library of Babel, finished posthumously by Opus 4.8. Quite accurate to the story.
-
-It is multiplayer (others appear...
-* Emily M. Bender: This whole thread up &amp; down is important and insightful.
-
-I want to add one linguistic point here:
-
-Blog Articles:
-* Frontier post-training recipe review with Finbarr Timbers — Nathan Lambert: &quot;Interview&quot; #18</description>
     </item>
   </channel>
 </rss>

@@ -2,22 +2,6 @@
   "id": "simonw",
   "stars": [
     {
-      "repo": "reflex-dev/fast-walk",
-      "url": "https://github.com/reflex-dev/fast-walk",
-      "description": "fast ast walk",
-      "language": "Rust",
-      "stargazersCount": 20,
-      "starredBy": "simonw",
-      "starredAt": "2026-06-16T17:12:20Z",
-      "highlights": "",
-      "worthReading": "",
-      "topics": [],
-      "tags": [],
-      "score": 0,
-      "scoreReason": "",
-      "type": "github"
-    },
-    {
       "repo": "Choochmeque/tauri-webdriver",
       "url": "https://github.com/Choochmeque/tauri-webdriver",
       "description": "Cross-platform WebDriver server for Tauri applications (Linux, macOS, Windows)",
@@ -170,27 +154,41 @@
       "score": 0,
       "scoreReason": "",
       "type": "github"
+    },
+    {
+      "repo": "xai-org/grok-build",
+      "url": "https://github.com/xai-org/grok-build",
+      "description": "SpaceXAI's coding agent harness and TUI. Fullscreen, mouse interactive, extensible.",
+      "language": "Rust",
+      "stargazersCount": 6130,
+      "starredBy": "simonw",
+      "starredAt": "2026-07-15T22:32:40Z",
+      "highlights": "",
+      "worthReading": "",
+      "topics": [],
+      "tags": [],
+      "score": 0,
+      "scoreReason": "",
+      "type": "github"
+    },
+    {
+      "repo": "robertsdotpm/runloom",
+      "url": "https://github.com/robertsdotpm/runloom",
+      "description": "Real Goroutines for Python 3.13t+ free-threaded.",
+      "language": "Python",
+      "stargazersCount": 81,
+      "starredBy": "simonw",
+      "starredAt": "2026-07-16T05:07:13Z",
+      "highlights": "",
+      "worthReading": "",
+      "topics": [],
+      "tags": [],
+      "score": 0,
+      "scoreReason": "",
+      "type": "github"
     }
   ],
   "posts": [
-    {
-      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3moesh6qn6s2d",
-      "url": "https://bsky.app/profile/simonwillison.net/post/3moesh6qn6s2d",
-      "author": {
-        "handle": "simonwillison.net",
-        "displayName": "Simon Willison",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
-      },
-      "content": "Saw this pair of absolute dumplings on our walk today",
-      "createdAt": "2026-06-16T02:57:25.325Z",
-      "likeCount": 134,
-      "replyCount": 2,
-      "repostCount": 10,
-      "highlights": "",
-      "worthReading": "",
-      "tags": [],
-      "type": "bluesky"
-    },
     {
       "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3moidsp2qe22z",
       "url": "https://bsky.app/profile/simonwillison.net/post/3moidsp2qe22z",
@@ -527,6 +525,24 @@
       "createdAt": "2026-07-14T22:54:04.853Z",
       "likeCount": 32,
       "replyCount": 4,
+      "repostCount": 4,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [],
+      "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mqpwytj6lc2d",
+      "url": "https://bsky.app/profile/simonwillison.net/post/3mqpwytj6lc2d",
+      "author": {
+        "handle": "simonwillison.net",
+        "displayName": "Simon Willison",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
+      },
+      "content": "I poked around in the just open sourced Grok Build CLI tool - 844,000 lines of Rust code! - and dug up a few interesting highlights, including a \"self-contained terminal renderer for Mermaid diagrams\" that renders them using Unicode box-art!\nsimonwillison.net/2026/Jul/15/...",
+      "createdAt": "2026-07-16T00:08:32.874Z",
+      "likeCount": 44,
+      "replyCount": 3,
       "repostCount": 4,
       "highlights": "",
       "worthReading": "",
@@ -869,7 +885,6 @@
   ],
   "dailyCounts": [
     2,
-    2,
     0,
     2,
     0,
@@ -897,7 +912,8 @@
     1,
     0,
     2,
-    0
+    1,
+    2
   ],
   "interestSummary": ""
 }
