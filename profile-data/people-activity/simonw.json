@@ -186,45 +186,25 @@
       "score": 0,
       "scoreReason": "",
       "type": "github"
+    },
+    {
+      "repo": "theogbob/WebkitWasm",
+      "url": "https://github.com/theogbob/WebkitWasm",
+      "description": "WebKit compiled to WebAssembly: a full browser engine running inside a browser tab, rendering to canvas, networking over Wisp.",
+      "language": "C++",
+      "stargazersCount": 11,
+      "starredBy": "simonw",
+      "starredAt": "2026-07-16T16:04:29Z",
+      "highlights": "",
+      "worthReading": "",
+      "topics": [],
+      "tags": [],
+      "score": 0,
+      "scoreReason": "",
+      "type": "github"
     }
   ],
   "posts": [
-    {
-      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3moidsp2qe22z",
-      "url": "https://bsky.app/profile/simonwillison.net/post/3moidsp2qe22z",
-      "author": {
-        "handle": "simonwillison.net",
-        "displayName": "Simon Willison",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
-      },
-      "content": "I see accounts posting stolen, uncredited 8 year old Reddit content are a thing on Bluesky too now www.reddit.com/r/aww/commen...",
-      "createdAt": "2026-06-17T12:46:04.360Z",
-      "likeCount": 51,
-      "replyCount": 5,
-      "repostCount": 3,
-      "highlights": "",
-      "worthReading": "",
-      "tags": [],
-      "type": "bluesky"
-    },
-    {
-      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mohjkrxgzs2y",
-      "url": "https://bsky.app/profile/simonwillison.net/post/3mohjkrxgzs2y",
-      "author": {
-        "handle": "simonwillison.net",
-        "displayName": "Simon Willison",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
-      },
-      "content": "Posted 37 wildlife photos on my blog in June already and it's only the 17th (in UTC, the timezone of my blog) simonwillison.net/elsewhere/si...",
-      "createdAt": "2026-06-17T04:56:21.670Z",
-      "likeCount": 27,
-      "replyCount": 2,
-      "repostCount": 1,
-      "highlights": "",
-      "worthReading": "",
-      "tags": [],
-      "type": "bluesky"
-    },
     {
       "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3molzyitscs2t",
       "url": "https://bsky.app/profile/simonwillison.net/post/3molzyitscs2t",
@@ -544,6 +524,42 @@
       "likeCount": 44,
       "replyCount": 3,
       "repostCount": 4,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [],
+      "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mqs2y7gutk2a",
+      "url": "https://bsky.app/profile/simonwillison.net/post/3mqs2y7gutk2a",
+      "author": {
+        "handle": "simonwillison.net",
+        "displayName": "Simon Willison",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
+      },
+      "content": "My notes on Kimi K3, plus some thoughts on what we can still learn from the pelican benchmark even while it becomes further detached from how good the models are at the things that matter (like agentic tool calling across longer conversations) simonwillison.net/2026/Jul/16/...",
+      "createdAt": "2026-07-16T20:25:06.271Z",
+      "likeCount": 86,
+      "replyCount": 5,
+      "repostCount": 13,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [],
+      "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mqspdej7wc2u",
+      "url": "https://bsky.app/profile/simonwillison.net/post/3mqspdej7wc2u",
+      "author": {
+        "handle": "simonwillison.net",
+        "displayName": "Simon Willison",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
+      },
+      "content": "Suggestion for hyperscalers feeling pressure over data center water use:\n\nBuy up a few exclusive country clubs, convert the golf courses into public parks, pay for guides and binoculars to get the previous members into birdwatching - help them embrace a more sustainable hobby!",
+      "createdAt": "2026-07-17T02:29:15.526Z",
+      "likeCount": 128,
+      "replyCount": 3,
+      "repostCount": 15,
       "highlights": "",
       "worthReading": "",
       "tags": [],
@@ -881,10 +897,19 @@
       "highlights": "",
       "worthReading": "",
       "type": "blog"
+    },
+    {
+      "title": "Kimi K3, and what we can still learn from the pelican benchmark",
+      "url": "https://simonwillison.net/2026/Jul/16/kimi-k3/#atom-entries",
+      "author": "Simon Willison",
+      "publishedAt": "2026-07-16T20:19:30+00:00",
+      "summary": "<p>Chinese AI lab Moonshot AI <a href=\"https://www.kimi.com/blog/kimi-k3\">announced Kimi K3</a> this morning, describing it as their \"most capable model to date, with 2.8 trillion parameters\". It's currently available via their website and API, but an open weight release is promised \"by July 27,...",
+      "highlights": "",
+      "worthReading": "",
+      "type": "blog"
     }
   ],
   "dailyCounts": [
-    2,
     0,
     2,
     0,
@@ -913,7 +938,8 @@
     0,
     2,
     1,
-    2
+    4,
+    1
   ],
   "interestSummary": ""
 }
