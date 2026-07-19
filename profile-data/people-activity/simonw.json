@@ -2,32 +2,6 @@
   "id": "simonw",
   "stars": [
     {
-      "repo": "Choochmeque/tauri-webdriver",
-      "url": "https://github.com/Choochmeque/tauri-webdriver",
-      "description": "Cross-platform WebDriver server for Tauri applications (Linux, macOS, Windows)",
-      "language": "Rust",
-      "stargazersCount": 8,
-      "starredBy": "simonw",
-      "starredAt": "2026-06-19T05:10:02Z",
-      "highlights": "",
-      "worthReading": "",
-      "topics": [
-        "appium",
-        "e2e",
-        "linux",
-        "macos",
-        "selenium",
-        "tauri",
-        "testing",
-        "webdriver",
-        "windows"
-      ],
-      "tags": [],
-      "score": 0,
-      "scoreReason": "",
-      "type": "github"
-    },
-    {
       "repo": "mdn/mcp",
       "url": "https://github.com/mdn/mcp",
       "description": "MDN's prototype MCP server",
@@ -227,27 +201,30 @@
       "score": 0,
       "scoreReason": "",
       "type": "github"
+    },
+    {
+      "repo": "handy-computer/transcribe.cpp",
+      "url": "https://github.com/handy-computer/transcribe.cpp",
+      "description": " ggml speech-to-text inference for 16+ model families",
+      "language": "C++",
+      "stargazersCount": 403,
+      "starredBy": "simonw",
+      "starredAt": "2026-07-19T03:43:47Z",
+      "highlights": "",
+      "worthReading": "",
+      "topics": [
+        "asr",
+        "ggml",
+        "gguf",
+        "speech-to-text"
+      ],
+      "tags": [],
+      "score": 0,
+      "scoreReason": "",
+      "type": "github"
     }
   ],
   "posts": [
-    {
-      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3molzyitscs2t",
-      "url": "https://bsky.app/profile/simonwillison.net/post/3molzyitscs2t",
-      "author": {
-        "handle": "simonwillison.net",
-        "displayName": "Simon Willison",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
-      },
-      "content": "Just launched Datasette Apps - a plugin for Datasette that lets you host full HTML+JS apps in an iframe sandbox that can query your database and do interesting things with your data \nsimonwillison.net/2026/Jun/18/...",
-      "createdAt": "2026-06-19T00:01:00.704Z",
-      "likeCount": 29,
-      "replyCount": 1,
-      "repostCount": 1,
-      "highlights": "",
-      "worthReading": "",
-      "tags": [],
-      "type": "bluesky"
-    },
     {
       "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3motjzxn4mc2o",
       "url": "https://bsky.app/profile/simonwillison.net/post/3motjzxn4mc2o",
@@ -585,6 +562,24 @@
       "likeCount": 128,
       "replyCount": 3,
       "repostCount": 15,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [],
+      "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mqxvkzieoc2t",
+      "url": "https://bsky.app/profile/simonwillison.net/post/3mqxvkzieoc2t",
+      "author": {
+        "handle": "simonwillison.net",
+        "displayName": "Simon Willison",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
+      },
+      "content": "If you have Claude Code installed you're running software that uses the new (unreleased) version of Bun that's been rewritten in Rust - here are two commands you can run to see that for yourself simonwillison.net/2026/Jul/19/...",
+      "createdAt": "2026-07-19T04:04:13.540Z",
+      "likeCount": 43,
+      "replyCount": 1,
+      "repostCount": 7,
       "highlights": "",
       "worthReading": "",
       "tags": [],
@@ -935,7 +930,6 @@
     }
   ],
   "dailyCounts": [
-    2,
     0,
     1,
     1,
@@ -964,7 +958,8 @@
     1,
     4,
     2,
-    0
+    0,
+    2
   ],
   "interestSummary": ""
 }
