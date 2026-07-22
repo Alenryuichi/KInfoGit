@@ -242,24 +242,6 @@
   ],
   "posts": [
     {
-      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mow3ec7ycc2s",
-      "url": "https://bsky.app/profile/simonwillison.net/post/3mow3ec7ycc2s",
-      "author": {
-        "handle": "simonwillison.net",
-        "displayName": "Simon Willison",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
-      },
-      "content": "My parallel agent side-project today was having Claude Code port the new Moebius image pinpointing model to ONNX in order to run it entirely in the browser\nsimonwillison.net/2026/Jun/22/...",
-      "createdAt": "2026-06-22T23:52:07.542Z",
-      "likeCount": 25,
-      "replyCount": 4,
-      "repostCount": 3,
-      "highlights": "",
-      "worthReading": "",
-      "tags": [],
-      "type": "bluesky"
-    },
-    {
       "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mphy2qvius2i",
       "url": "https://bsky.app/profile/simonwillison.net/post/3mphy2qvius2i",
       "author": {
@@ -596,6 +578,42 @@
       "likeCount": 35,
       "replyCount": 3,
       "repostCount": 4,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [],
+      "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mr5ucqec2s24",
+      "url": "https://bsky.app/profile/simonwillison.net/post/3mr5ucqec2s24",
+      "author": {
+        "handle": "simonwillison.net",
+        "displayName": "Simon Willison",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
+      },
+      "content": "I interviewed Cat Wu and Thariq Shihipar  from the Claude Code team at the AI engineer World's Fair a couple of weeks ago - the video is now out, so I've published an annotated transcript of our conversation simonwillison.net/2026/Jul/21/...",
+      "createdAt": "2026-07-21T12:57:40.221Z",
+      "likeCount": 40,
+      "replyCount": 3,
+      "repostCount": 3,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [],
+      "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mr7bxnbqls2x",
+      "url": "https://bsky.app/profile/simonwillison.net/post/3mr7bxnbqls2x",
+      "author": {
+        "handle": "simonwillison.net",
+        "displayName": "Simon Willison",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
+      },
+      "content": "Today at Pier 39 in San Francisco I learned that if you want to take a good photograph of a sea lion, you should aim to get their teeth",
+      "createdAt": "2026-07-22T02:34:40.012Z",
+      "likeCount": 57,
+      "replyCount": 3,
+      "repostCount": 0,
       "highlights": "",
       "worthReading": "",
       "tags": [],
@@ -943,10 +961,19 @@
       "highlights": "",
       "worthReading": "",
       "type": "blog"
+    },
+    {
+      "title": "A Fireside Chat with Cat and Thariq from the Claude Code team",
+      "url": "https://simonwillison.net/2026/Jul/21/cat-and-thariq/#atom-entries",
+      "author": "Simon Willison",
+      "publishedAt": "2026-07-21T12:54:02+00:00",
+      "summary": "<p>Earlier this month I hosted a fireside chat session at the <a href=\"https://www.ai.engineer/worldsfair/2026\">AI Engineer World's Fair</a> with Cat Wu and Thariq Shihipar from Anthropic's Claude Code team. We talked about Claude Code, Claude Tag, Fable, coding agent security, evals, tool design,...",
+      "highlights": "",
+      "worthReading": "",
+      "type": "blog"
     }
   ],
   "dailyCounts": [
-    1,
     0,
     1,
     0,
@@ -975,7 +1002,8 @@
     0,
     2,
     0,
-    2
+    3,
+    1
   ],
   "interestSummary": ""
 }
