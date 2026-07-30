@@ -2,63 +2,6 @@
   "id": "simonw",
   "stars": [
     {
-      "repo": "bambamramfan/ai-compass",
-      "url": "https://github.com/bambamramfan/ai-compass",
-      "description": "Political Compass for AI",
-      "language": "HTML",
-      "stargazersCount": 4,
-      "starredBy": "simonw",
-      "starredAt": "2026-06-30T02:42:39Z",
-      "highlights": "",
-      "worthReading": "",
-      "topics": [],
-      "tags": [],
-      "score": 0,
-      "scoreReason": "",
-      "type": "github"
-    },
-    {
-      "repo": "BoundaryML/baml",
-      "url": "https://github.com/BoundaryML/baml",
-      "description": "The programming language for agents",
-      "language": "Rust",
-      "stargazersCount": 8469,
-      "starredBy": "simonw",
-      "starredAt": "2026-06-30T20:58:20Z",
-      "highlights": "",
-      "worthReading": "",
-      "topics": [
-        "boundaryml",
-        "guardrails",
-        "llm",
-        "programming-language",
-        "structured-data"
-      ],
-      "tags": [],
-      "score": 0,
-      "scoreReason": "",
-      "type": "github"
-    },
-    {
-      "repo": "metareflection/guardians",
-      "url": "https://github.com/metareflection/guardians",
-      "description": "an implementation of the ideas in Erik Meijer's \"Guardians of the Agents: Formal Verification of AI Workflows\" (Communications of the ACM, January 2026)",
-      "language": "Python",
-      "stargazersCount": 117,
-      "starredBy": "simonw",
-      "starredAt": "2026-06-30T20:55:49Z",
-      "highlights": "",
-      "worthReading": "",
-      "topics": [
-        "llm",
-        "verification"
-      ],
-      "tags": [],
-      "score": 0,
-      "scoreReason": "",
-      "type": "github"
-    },
-    {
       "repo": "json-e/json-e",
       "url": "https://github.com/json-e/json-e",
       "description": "A data-structure parameterization system written for embedding context in JSON objects",
@@ -254,63 +197,34 @@
       "score": 0,
       "scoreReason": "",
       "type": "github"
+    },
+    {
+      "repo": "rhaiscript/rhai",
+      "url": "https://github.com/rhaiscript/rhai",
+      "description": "Rhai - An embedded scripting language for Rust.",
+      "language": "Rust",
+      "stargazersCount": 5531,
+      "starredBy": "simonw",
+      "starredAt": "2026-07-29T05:55:11Z",
+      "highlights": "",
+      "worthReading": "",
+      "topics": [
+        "embedded",
+        "embedded-scripting-language",
+        "no-std",
+        "rhai",
+        "scripting-engine",
+        "scripting-language",
+        "wasm",
+        "webassembly"
+      ],
+      "tags": [],
+      "score": 0,
+      "scoreReason": "",
+      "type": "github"
     }
   ],
   "posts": [
-    {
-      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mphy2qvius2i",
-      "url": "https://bsky.app/profile/simonwillison.net/post/3mphy2qvius2i",
-      "author": {
-        "handle": "simonwillison.net",
-        "displayName": "Simon Willison",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
-      },
-      "content": "Looks like I'm my own patron saint!",
-      "createdAt": "2026-06-30T02:41:01.442Z",
-      "likeCount": 61,
-      "replyCount": 5,
-      "repostCount": 3,
-      "highlights": "",
-      "worthReading": "",
-      "tags": [],
-      "type": "bluesky"
-    },
-    {
-      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mpjwupjxyc2n",
-      "url": "https://bsky.app/profile/simonwillison.net/post/3mpjwupjxyc2n",
-      "author": {
-        "handle": "simonwillison.net",
-        "displayName": "Simon Willison",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
-      },
-      "content": "Notes (and a Pelican) on Claude Sonnet 5 - the new tokenizer makes it ~1.4x more expensive for English, ~1.33x more expensive for Spanish but roughly the same price for Simplified Mandarin simonwillison.net/2026/Jun/30/...",
-      "createdAt": "2026-06-30T21:25:04.430Z",
-      "likeCount": 45,
-      "replyCount": 3,
-      "repostCount": 4,
-      "highlights": "",
-      "worthReading": "",
-      "tags": [],
-      "type": "bluesky"
-    },
-    {
-      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mpjhtsbbq223",
-      "url": "https://bsky.app/profile/simonwillison.net/post/3mpjhtsbbq223",
-      "author": {
-        "handle": "simonwillison.net",
-        "displayName": "Simon Willison",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
-      },
-      "content": "I've added video support to my \"shot-scraper\" browser automation tool - you (or your coding agent) can now create a storyboard YAML file and use that to record a video demo of new web application features simonwillison.net/2026/Jun/30/...",
-      "createdAt": "2026-06-30T16:56:07.608Z",
-      "likeCount": 34,
-      "replyCount": 7,
-      "repostCount": 0,
-      "highlights": "",
-      "worthReading": "",
-      "tags": [],
-      "type": "bluesky"
-    },
     {
       "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mpopb6qtnc2p",
       "url": "https://bsky.app/profile/simonwillison.net/post/3mpopb6qtnc2p",
@@ -1090,7 +1004,6 @@
     }
   ],
   "dailyCounts": [
-    6,
     0,
     1,
     3,
@@ -1119,7 +1032,8 @@
     0,
     0,
     1,
-    1
+    2,
+    0
   ],
   "interestSummary": ""
 }
