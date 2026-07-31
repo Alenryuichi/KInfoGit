@@ -1168,5 +1168,44 @@
         "engineering": 62
       }
     }
+  },
+  {
+    "date": "2026-07-31",
+    "timestamp": "2026-07-31T04:25:25.651Z",
+    "durationMs": 110753,
+    "sources": {
+      "rss": 29,
+      "search": 12,
+      "social": 0,
+      "horizon": 30,
+      "github": 24,
+      "reddit": 6,
+      "coStarred": 2
+    },
+    "dedup": {
+      "urlDropped": 5,
+      "titleDropped": 2
+    },
+    "scoring": {
+      "batches": 185,
+      "failed": 185,
+      "halveRetries": 89,
+      "keywordFallback": 96,
+      "hnWeighted": 0
+    },
+    "anchors": {
+      "loaded": 1,
+      "bands": [
+        "low"
+      ]
+    },
+    "output": {
+      "itemCount": 62,
+      "avgScore": 5,
+      "maxScore": 5,
+      "sectionCounts": {
+        "engineering": 62
+      }
+    }
   }
 ]
