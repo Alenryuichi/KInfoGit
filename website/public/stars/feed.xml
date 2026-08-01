@@ -4,8 +4,47 @@
     <title>Stars &amp; Posts — Kylin Miao</title>
     <link>https://kylinmiao.me/stars/</link>
     <description>Daily curated GitHub starred repos, Bluesky/X posts, YouTube videos and blog articles from AI leaders with AI-powered summaries.</description>
-    <lastBuildDate>Fri, 31 Jul 2026 06:09:35 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 01 Aug 2026 05:53:40 GMT</lastBuildDate>
     <atom:link href="https://kylinmiao.me/stars/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Stars &amp; Posts — 2026-08-01</title>
+      <link>https://kylinmiao.me/stars/2026-08-01/</link>
+      <guid isPermaLink="true">https://kylinmiao.me/stars/2026-08-01/</guid>
+      <pubDate>Sat, 01 Aug 2026 12:00:00 GMT</pubDate>
+      <description>GitHub Repos:
+* 0xD0GF00D/DocumentSASS — Unofficial description of the CUDA assembly (SASS) instruction sets. [Python]
+* NVlabs/CuTe — Reference implementation and examples of the CuTe Layout representation and algebra. [Python]
+
+Bluesky Posts:
+* Simon Willison: Got a disappointing pelican from DeepSeek-V4-Flash-0731 at default reasoning mode - on the left - but then I bumped reasoning up to high (via OpenRout...</description>
+    </item>
+    <item>
+      <title>Stars &amp; Posts — 2026-07-31</title>
+      <link>https://kylinmiao.me/stars/2026-07-31/</link>
+      <guid isPermaLink="true">https://kylinmiao.me/stars/2026-07-31/</guid>
+      <pubDate>Fri, 31 Jul 2026 12:00:00 GMT</pubDate>
+      <description>Bluesky Posts:
+* Simon Willison: The new stateless MCP specification has rekindled my interest in MCP, and inspired some new projects, including mcp-explorer and datasette-mcp simonwi...
+* Simon Willison: I&apos;m on Oxide and Friends podcast this week!
+
+We talked about accidental cyberattacks, Kimi K3, Golden Gate Claude, Zizians, Alameda wild turkey attack...
+* Simon Willison: I&apos;ve been working with Prime Radiant building a new tool for running small eval suites against models, harnesses, and prompts - it&apos;s called &quot;smevals&quot;,...
+* Simon Willison: Your infrequent reminder that if you live near the San Francisco Bay Area you should go to Moss Landing (south of Santa Cruz) and rent kayaks there, b...
+* Mark Riedl: They weren’t looking at what their agents were doing until just now?
+* Mark Riedl: Doom running on nothing but Regex find-and-replace
+* Marc Lanctot: Friday vibes... summer of 2026 edition! 🎶🎵
+
+I&apos;ve always loved instrumental songs. I&apos;ll post my top 10 favs (no more than three per artist), one on e...
+* Nathan Lambert: The pace of progress on models from so many organizations at once is genuinely incredible. Building LLMs isn&apos;t driven by rare secrets, but consistent ...
+* Ethan Mollick: One big result in our study at Procter &amp; Gamble was that AI blurred the lines between jobs. Now OpenAI has a similar finding
+
+Organizational boundarie...
+* Ethan Mollick: Continuing a trend, I had Fable build a working Rothko-inspired city builder based on the fake AI video I created a year ago. This time, the unique me...
+* Emily M. Bender: Altman proclaiming the “singularity”; the Guardian publishing blather about possible AI consciousness; OpenAI and Anthropic blaming their cybercrimes ...
+
+Blog Articles:
+* Stateless MCP has recaptured my interest (and inspired mcp-explorer and datasette-mcp) — Simon Willison: &lt;p&gt;Tuesday was &lt;a href=&quot;https://x.com/ade_oshineye/status/2082129440943866149&quot;&gt;Stateless MCP day&lt;/a&gt; - the rollout of MCP 2.0, or &lt;a href=&quot;https://blo...</description>
+    </item>
     <item>
       <title>Stars &amp; Posts — 2026-07-30</title>
       <link>https://kylinmiao.me/stars/2026-07-30/</link>
@@ -830,66 +869,6 @@ I told it &quot;For all coding tasks use yo...
 
 In Claude&apos;s view, AAA meant upgrading gra...
 * Emily M. Bender: “Responsible use” of LLMs isn’t a thing! On the next Mystery AI Hype Theater 3000 live stream, @savasavasava.myatproto.social joins @alexhanna.bsky.so...</description>
-    </item>
-    <item>
-      <title>Stars &amp; Posts — 2026-07-02</title>
-      <link>https://kylinmiao.me/stars/2026-07-02/</link>
-      <guid isPermaLink="true">https://kylinmiao.me/stars/2026-07-02/</guid>
-      <pubDate>Thu, 02 Jul 2026 12:00:00 GMT</pubDate>
-      <description>GitHub Repos:
-* stas00/python-cookbook — Stas&apos; Python Cookbook - Python recipes that I use daily [Python]
-* stas00/ml-engineering — Machine Learning Engineering Open Book [Python]
-
-Bluesky Posts:
-* Simon Willison: What&apos;s the most ambitious project you have Fable working on right now?
-* Mark Riedl: The inaugural ACM AI Leadership Summit is August 31-September 1 in Atlanta Georgia and attempts to tackle some big questions in AI: what is next? what...
-* Mark Riedl: My interpretation is that OpenAI is afraid that the government will take more if they don’t lock in a deal now. Bernie Sanders has proposed as much as...
-* Gaël Varoquaux: A fun podcast with Maxime Gabella about our dreams about AI.
-The next frontier of AI is building agents that use statistical learning to tackle proble...
-* Ethan Mollick: The concerns about Mythos-class models and cybersecurity were not, in fact, hype.  (As anyone using Fable to do autonomous work has probably recognize...
-* Ethan Mollick: Fable: &quot;download Unity and set up its MCP.&quot; Done.
-
-&quot;Now I want you to build a game that is a unique twist on a FPS. You want the player to say &quot;wow&quot; &amp;...
-* Ethan Mollick: You really need your own benchmarks. If you are translating hieroglyphics, use Gemini 3.5 Flash. If you are running a vending machine use Opus 4.8. 
-
-...
-* Ethan Mollick: Fable, one prompt: &quot;build an elaborate game that makes it feel like I&apos;m a brilliant chess player without knowing anything at all about chess. It shoul...
-* Emily M. Bender: Lots of folks replying to this here (and elsewhere) objecting to &quot;undesirable output&quot; as a replacement for &quot;hallucination&quot;. 
-
-Most of the alternative ...
-* angela zhou: do not let frontier labs capture the question of measuring the impact of AI on the economy</description>
-    </item>
-    <item>
-      <title>Stars &amp; Posts — 2026-07-01</title>
-      <link>https://kylinmiao.me/stars/2026-07-01/</link>
-      <guid isPermaLink="true">https://kylinmiao.me/stars/2026-07-01/</guid>
-      <pubDate>Wed, 01 Jul 2026 12:00:00 GMT</pubDate>
-      <description>GitHub Repos:
-* erincatto/box3d — Box3D is a 3D physics engine for games [C]
-* AhmadDarKhalil/HOI-DETR — Improving and Evaluating Hand-Object Interaction Detection [Python]
-* pranoyr/text-to-video [Python]
-
-Bluesky Posts:
-* Mark Riedl: Fable has really been more of a Saga
-* Ethan Mollick: Fable is very good, and having it taken away after getting early access delayed a few things I was working on &amp; made me defer others until it returned...
-* Emily M. Bender: Working on slides based on a journal paper submission and though this work is tedious, I can&apos;t imagine being able to present the talk coherently, if I...
-* Marc Lanctot: We can&apos;t be in a place where the only option is that US government shuts down AI access to everyone on command. 
-
-Work like this is super important as...
-* Nathan Lambert: I&apos;m doing Q&amp;A videos as I roll through my course. Here&apos;s the next one, covering subtle fixes to the on-policy distillation and reward model derivation...
-* Yoshua Bengio: We are at a turning point: many of the decisions we make about AI today will permanently shape our future. Governments and the public need to clearly ...
-* Ethan Mollick: Since its back, here were my impressions I posted a couple weeks ago of Fable after my time as an early access user (yes, it really is very impressive...
-* Ethan Mollick: It would be good to have an official government statement about the risks they saw in Fable, how they are viewing  defensive preparations in light of ...
-* Ethan Mollick: You need to benchmark models for your use case.
-
-As soon as judgements &amp; decisions stack on top of each other, the differences between models amplifie...
-* Emily M. Bender: So many conversations where otherwise serious people throw around the term &quot;AI&quot; without defining it, despite it being notoriously ill-defined.
-
-Thinki...
-* Ben Recht: I like that this paragraph is wrong about RCTs, observational causal inference, AND machine learning. It&apos;s impressively wrong!
-
-(Saloni&apos;s reaction is ...
-* Ben Recht: Three years of argmin and what year four might hold.</description>
     </item>
   </channel>
 </rss>
