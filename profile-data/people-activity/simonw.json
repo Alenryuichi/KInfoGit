@@ -222,63 +222,25 @@
       "score": 0,
       "scoreReason": "",
       "type": "github"
+    },
+    {
+      "repo": "openai/ten-proofs",
+      "url": "https://github.com/openai/ten-proofs",
+      "description": "Lean certificates accompanying proofs in mathematics and theoretical computer science",
+      "language": "Lean",
+      "stargazersCount": 236,
+      "starredBy": "simonw",
+      "starredAt": "2026-08-01T19:57:07Z",
+      "highlights": "",
+      "worthReading": "",
+      "topics": [],
+      "tags": [],
+      "score": 0,
+      "scoreReason": "",
+      "type": "github"
     }
   ],
   "posts": [
-    {
-      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mpr7ruh3ms2v",
-      "url": "https://bsky.app/profile/simonwillison.net/post/3mpr7ruh3ms2v",
-      "author": {
-        "handle": "simonwillison.net",
-        "displayName": "Simon Willison",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
-      },
-      "content": "The most interesting Fable tip I've heard so far is to let the model use its own judgement as much as possible\n\nI told it \"For all coding tasks use your judgement to decide an appropriate lower power model and run that in a subagent\" and it seems to be saving tokens simonwillison.net/2026/Jul/3/j...",
-      "createdAt": "2026-07-03T18:53:10.759Z",
-      "likeCount": 93,
-      "replyCount": 12,
-      "repostCount": 5,
-      "highlights": "",
-      "worthReading": "",
-      "tags": [],
-      "type": "bluesky"
-    },
-    {
-      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mpr2jnpkq222",
-      "url": "https://bsky.app/profile/simonwillison.net/post/3mpr2jnpkq222",
-      "author": {
-        "handle": "simonwillison.net",
-        "displayName": "Simon Willison",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
-      },
-      "content": "Sent out my sponsors-only monthly newsletter for June, which means the May newsletter is now available here github.com/simonw/month... - you can sponsor me through GitHub to stay a month ahead of the free copy!",
-      "createdAt": "2026-07-03T17:19:06.553Z",
-      "likeCount": 14,
-      "replyCount": 1,
-      "repostCount": 0,
-      "highlights": "",
-      "worthReading": "",
-      "tags": [],
-      "type": "bluesky"
-    },
-    {
-      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mpqwk4jnw22a",
-      "url": "https://bsky.app/profile/simonwillison.net/post/3mpqwk4jnw22a",
-      "author": {
-        "handle": "simonwillison.net",
-        "displayName": "Simon Willison",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
-      },
-      "content": "TikTok just found me a carousel influencer and now I know that the American frog aka hop toad carousel creature was inspired by Mr Toad from the Wind in the Willows! www.tiktok.com/@amusementpa...",
-      "createdAt": "2026-07-03T16:07:47.120Z",
-      "likeCount": 9,
-      "replyCount": 1,
-      "repostCount": 0,
-      "highlights": "",
-      "worthReading": "",
-      "tags": [],
-      "type": "bluesky"
-    },
     {
       "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mpuf4qk5m22j",
       "url": "https://bsky.app/profile/simonwillison.net/post/3mpuf4qk5m22j",
@@ -1086,7 +1048,6 @@
     }
   ],
   "dailyCounts": [
-    3,
     0,
     2,
     0,
@@ -1115,7 +1076,8 @@
     2,
     0,
     4,
-    1
+    2,
+    0
   ],
   "interestSummary": ""
 }
