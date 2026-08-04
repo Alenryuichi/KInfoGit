@@ -1,0 +1,806 @@
+{
+  "date": "2026-08-04",
+  "itemCount": 61,
+  "sections": [
+    {
+      "id": "engineering",
+      "title": "Engineering & Resources",
+      "items": [
+        {
+          "title": "AutoFOAM: The Self-Refining Autonomous OpenFOAM Agent",
+          "summary": "arXiv:2608.00003v1 Announce Type: new Abstract: Co",
+          "url": "https://arxiv.org/abs/2608.00003",
+          "score": 5,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "Enhancing LLMs with Context-Specific Knowledge for Mitigating Misinformation in SMEs: A RAG-based Modeling and Analysis",
+          "summary": "arXiv:2608.00006v1 Announce Type: new Abstract: La",
+          "url": "https://arxiv.org/abs/2608.00006",
+          "score": 5,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "Energy Efficiency of Locally Deployed LLMs: A Preliminary Quantitative GPU Power Benchmark on Consumer Hardware",
+          "summary": "arXiv:2608.00008v1 Announce Type: new Abstract: Th",
+          "url": "https://arxiv.org/abs/2608.00008",
+          "score": 5,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "CoT-Core: Accelerating LLM Evaluation via CoT-Aware Coreset Selection",
+          "summary": "arXiv:2608.00014v1 Announce Type: new Abstract: Ev",
+          "url": "https://arxiv.org/abs/2608.00014",
+          "score": 5,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "Memory Reward Inflation in Self-Improving LLM Agents",
+          "summary": "arXiv:2608.00017v1 Announce Type: new Abstract: Se",
+          "url": "https://arxiv.org/abs/2608.00017",
+          "score": 5,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "Request-Level Energy Attribution for Batched LLM Serving",
+          "summary": "arXiv:2608.00026v1 Announce Type: new Abstract: Ba",
+          "url": "https://arxiv.org/abs/2608.00026",
+          "score": 5,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "Nova: An End-to-End MLIR Compiler for Deep Learning",
+          "summary": "arXiv:2608.00029v1 Announce Type: new Abstract: Th",
+          "url": "https://arxiv.org/abs/2608.00029",
+          "score": 5,
+          "sources": [
+            {
+              "name": "ArXiv cs.AI"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "Cost-Effective Automated Judging of Natural-Language Mathematical Proofs",
+          "summary": "arXiv:2608.00004v1 Announce Type: new Abstract: Gr",
+          "url": "https://arxiv.org/abs/2608.00004",
+          "score": 5,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "RubricReviewer: From Direct Critique to Objective and Comprehensive Rubric-Driven Peer Review",
+          "summary": "arXiv:2608.00005v1 Announce Type: new Abstract: Pe",
+          "url": "https://arxiv.org/abs/2608.00005",
+          "score": 5,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "MemoryForge: Synthesize Lifelong Memory for Human-Like LLM Agents",
+          "summary": "arXiv:2608.00007v1 Announce Type: new Abstract: Eq",
+          "url": "https://arxiv.org/abs/2608.00007",
+          "score": 5,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "AgentMemBench: A Systematic Benchmark for Evaluating Long-Term Memory Management Strategies in Conversational AI Agents",
+          "summary": "arXiv:2608.00009v1 Announce Type: new Abstract: Lo",
+          "url": "https://arxiv.org/abs/2608.00009",
+          "score": 5,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "DLLM-TTS: Block Discrete Diffusion Language Model for Text-to-Speech Synthesis",
+          "summary": "arXiv:2608.00011v1 Announce Type: new Abstract: Cu",
+          "url": "https://arxiv.org/abs/2608.00011",
+          "score": 5,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "Obshazard-bench: Benchmarking Multimodal Foundation Models for Real-Time Disaster Intelligence from Raw Earth Observation Streams",
+          "summary": "arXiv:2608.00012v1 Announce Type: new Abstract: Mu",
+          "url": "https://arxiv.org/abs/2608.00012",
+          "score": 5,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "What Transfers from Text to Vision? Capability Scaling Laws and Transfer Dynamics for VLMs",
+          "summary": "arXiv:2608.00013v1 Announce Type: new Abstract: Ch",
+          "url": "https://arxiv.org/abs/2608.00013",
+          "score": 5,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "Exploring More to Solve More: Boosting Diversity in Text Diffusion Models via Entropy-Based Guidance",
+          "summary": "arXiv:2608.00024v1 Announce Type: new Abstract: Al",
+          "url": "https://arxiv.org/abs/2608.00024",
+          "score": 5,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "SLMs as Multi-Agent Routers: A Progressive SFT and Reinforcement Learning Approach",
+          "summary": "arXiv:2608.00030v1 Announce Type: new Abstract: Sp",
+          "url": "https://arxiv.org/abs/2608.00030",
+          "score": 5,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "The Inference Engineering Masterclass — Philip Kiely & Ali Taha, Baseten",
+          "summary": "Baseten just raised a $13B Series F and is now one",
+          "url": "https://www.latent.space/p/inference-eng",
+          "score": 5,
+          "sources": [
+            {
+              "name": "Latent Space"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "Quoting Steve Yegge",
+          "summary": "<blockquote cite=\"https://yegge.ai/essays/the-shap",
+          "url": "https://simonwillison.net/2026/Aug/4/steve-yegge/#atom-everything",
+          "score": 5,
+          "sources": [
+            {
+              "name": "Simon Willison"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "Don't be a meat proxy",
+          "summary": "<p><strong><a href=\"https://gruhn.me/blog/2026-08-",
+          "url": "https://simonwillison.net/2026/Aug/3/dont-be-a-meat-proxy/#atom-everything",
+          "score": 5,
+          "sources": [
+            {
+              "name": "Simon Willison"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "Introducing the Wiz Sensor for Developer Workstations to Protect Endpoints in the AI Era",
+          "summary": "2026 report, 71% of organizations have at least on",
+          "url": "https://www.wiz.io/blog/introducing-the-wiz-sensor-for-developer-workstations",
+          "score": 5,
+          "sources": [
+            {
+              "name": "wiz.io"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "OpenAI, Anthropic, Google to Join White House AI Safety ...",
+          "summary": "OpenAI, Anthropic, Google to Join White House AI S",
+          "url": "https://www.bloomberg.com/news/articles/2026-08-03/openai-anthropic-google-to-join-white-house-ai-safety-meeting",
+          "score": 5,
+          "sources": [
+            {
+              "name": "bloomberg.com"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "Here's why AI agents lie and cheat to reach their goals",
+          "summary": "Here’s why AI agents lie and cheat to reach their ",
+          "url": "https://www.technologyreview.com/2026/08/03/1141009/heres-why-ai-agents-lie-and-cheat-to-reach-their-goals/",
+          "score": 5,
+          "sources": [
+            {
+              "name": "technologyreview.com"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "Europe’s AI labeling and transparency rules are now in effect | The Verge",
+          "summary": "Europe’s AI labeling and transparency rules are no",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/974571/eu-ai-act-transparency-labels-rules-deepfakes",
+          "score": 5,
+          "sources": [
+            {
+              "name": "theverge.com"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "China’s Alibaba takes another swipe at America’s AI supremacy | The Verge",
+          "summary": "China’s Alibaba takes another swipe at America’s A",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/974342/alibaba-qwen-max-open-weight-ai",
+          "score": 5,
+          "sources": [
+            {
+              "name": "theverge.com"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "Trump’s AI protectionism has come for robotics | MIT Technology Review",
+          "summary": "# Trump’s AI protectionism has come for robotics |",
+          "url": "https://www.technologyreview.com/2026/08/03/1141056/trumps-ai-protectionism-has-come-for-robotics/",
+          "score": 5,
+          "sources": [
+            {
+              "name": "technologyreview.com"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "Qwen3.8-Max arrives with a bold claim: it outperforms GPT-5.6 Sol Max and Fable 5 on agentic computer use | VentureBeat",
+          "summary": "# Qwen3.8-Max arrives with a bold claim: it outper",
+          "url": "https://venturebeat.com/technology/qwen3-8-max-arrives-with-a-bold-claim-it-outperforms-gpt-5-6-sol-max-and-fable-5-on-agentic-computer-use",
+          "score": 5,
+          "sources": [
+            {
+              "name": "venturebeat.com"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "The White House will brief AI companies about its model testing framework tomorrow. | The Verge",
+          "summary": "The White House will brief AI companies about its ",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/974825/the-white-house-will-brief-ai-companies-about-its-model-testing-framework-tomorrow",
+          "score": 5,
+          "sources": [
+            {
+              "name": "theverge.com"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "White House to Host AI Companies on Tuesday to Review ...",
+          "summary": "White House to Host AI Companies on Tuesday to Rev",
+          "url": "https://www.theinformation.com/articles/white-house-host-ai-companies-tuesday-review-ai-framework",
+          "score": 5,
+          "sources": [
+            {
+              "name": "theinformation.com"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "Beyond representational alignment with brain-guided language models for robust reasoning | Nature Machine Intelligence",
+          "summary": "# Beyond representational alignment with brain-gui",
+          "url": "https://www.nature.com/articles/s42256-026-01278-w",
+          "score": 5,
+          "sources": [
+            {
+              "name": "nature.com"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "After killer quarter, Palantir CEO Alex Karp calls AI industry 'Marxist' | TechCrunch",
+          "summary": "After killer quarter, Palantir CEO Alex Karp calls",
+          "url": "https://techcrunch.com/2026/08/03/after-killer-quarter-palantir-ceo-alex-karp-calls-ai-industry-marxist/",
+          "score": 5,
+          "sources": [
+            {
+              "name": "techcrunch.com"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "Prevent cognitive debt by manually retyping LLM-generated code",
+          "summary": "",
+          "url": "https://ankursethi.com/blog/prevent-cognitive-debt-by-manually-retyping-llm-generated-code/",
+          "score": 5,
+          "sources": [
+            {
+              "name": "HN (413)"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "AirLLM 70B inference with single 4GB GPU",
+          "summary": "",
+          "url": "https://github.com/lyogavin/airllm",
+          "score": 5,
+          "sources": [
+            {
+              "name": "HN (200)"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "Launch HN: Hoplite (YC S26) – Effortlessly deploy cloud coding agents",
+          "summary": "Hi HN, we’re Bence and Ryan, founders of Hoplite (",
+          "url": "https://hoplite.sh",
+          "score": 5,
+          "sources": [
+            {
+              "name": "HN (63)"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "zhaoxuya520/reverse-skill",
+          "summary": "Reverse Engineering / Authorized Penetration Testi",
+          "url": "https://github.com/zhaoxuya520/reverse-skill",
+          "score": 5,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+2446★)"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "esengine/DeepSeek-Reasonix",
+          "summary": "DeepSeek-native AI coding agent for your terminal.",
+          "url": "https://github.com/esengine/DeepSeek-Reasonix",
+          "score": 5,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+883★)"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "TencentCloud/TencentDB-Agent-Memory",
+          "summary": "TencentDB Agent Memory is a team-level memory hub ",
+          "url": "https://github.com/TencentCloud/TencentDB-Agent-Memory",
+          "score": 5,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+1090★)"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "microsoft/AI-For-Beginners",
+          "summary": "12 Weeks, 24 Lessons, AI for All!",
+          "url": "https://github.com/microsoft/AI-For-Beginners",
+          "score": 5,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+1902★)"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "microsoft/generative-ai-for-beginners",
+          "summary": "21 Lessons, Get Started Building with Generative A",
+          "url": "https://github.com/microsoft/generative-ai-for-beginners",
+          "score": 5,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+775★)"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "antirez/ds4",
+          "summary": "DeepSeek 4 Flash and PRO local inference engine fo",
+          "url": "https://github.com/antirez/ds4",
+          "score": 5,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+384★)"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "Panniantong/Agent-Reach",
+          "summary": "Give your AI agent eyes to see the entire internet",
+          "url": "https://github.com/Panniantong/Agent-Reach",
+          "score": 5,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+1057★)"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "Alishahryar1/free-claude-code",
+          "summary": "Use Claude Code, Codex and Pi for free from your t",
+          "url": "https://github.com/Alishahryar1/free-claude-code",
+          "score": 5,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+278★)"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "livekit/agents",
+          "summary": "A framework for building realtime voice AI agents ",
+          "url": "https://github.com/livekit/agents",
+          "score": 5,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+148★)"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "SimplifyJobs/Summer2027-Internships",
+          "summary": "Summer 2026 software engineering, data science, AI",
+          "url": "https://github.com/SimplifyJobs/Summer2027-Internships",
+          "score": 5,
+          "sources": [
+            {
+              "name": "GitHub trending:python (+66★)"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "vitali87/code-graph-rag",
+          "summary": "The ultimate RAG for your monorepo. Query, underst",
+          "url": "https://github.com/vitali87/code-graph-rag",
+          "score": 5,
+          "sources": [
+            {
+              "name": "GitHub trending:python (+30★)"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "comet-ml/opik",
+          "summary": "Debug, evaluate, and monitor your LLM applications",
+          "url": "https://github.com/comet-ml/opik",
+          "score": 5,
+          "sources": [
+            {
+              "name": "GitHub trending:python (+29★)"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "jamwithai/production-agentic-rag-course",
+          "summary": "(no description)",
+          "url": "https://github.com/jamwithai/production-agentic-rag-course",
+          "score": 5,
+          "sources": [
+            {
+              "name": "GitHub trending:python (+28★)"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "K-Dense-AI/scientific-agent-skills",
+          "summary": "Turn any AI agent into an AI Scientist. The #1 Age",
+          "url": "https://github.com/K-Dense-AI/scientific-agent-skills",
+          "score": 5,
+          "sources": [
+            {
+              "name": "GitHub trending:python (+107★)"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "jamiepine/voicebox",
+          "summary": "The open-source AI voice studio. Clone, dictate, c",
+          "url": "https://github.com/jamiepine/voicebox",
+          "score": 5,
+          "sources": [
+            {
+              "name": "GitHub trending:typescript (+412★)"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "can1357/oh-my-pi",
+          "summary": "⌥ AI Coding agent for the terminal — hash-anchored",
+          "url": "https://github.com/can1357/oh-my-pi",
+          "score": 5,
+          "sources": [
+            {
+              "name": "GitHub trending:typescript (+301★)"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "karakeep-app/karakeep",
+          "summary": "A self-hostable bookmark-everything app (links, no",
+          "url": "https://github.com/karakeep-app/karakeep",
+          "score": 5,
+          "sources": [
+            {
+              "name": "GitHub trending:typescript (+45★)"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "simstudioai/sim",
+          "summary": "Build, deploy, and orchestrate AI agents. Sim is t",
+          "url": "https://github.com/simstudioai/sim",
+          "score": 5,
+          "sources": [
+            {
+              "name": "GitHub trending:typescript (+20★)"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "slopus/happy",
+          "summary": "Mobile and Web client for Codex and Claude Code, w",
+          "url": "https://github.com/slopus/happy",
+          "score": 5,
+          "sources": [
+            {
+              "name": "GitHub trending:typescript (+41★)"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "Qwen3.8-Max matches Kimi K3 and DeepSeek V4 Flash",
+          "summary": "Qwen3.8-Max (2.4T) is another massive contribution",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vellf2/qwen38max_matches_kimi_k3_and_deepseek_v4_flash/",
+          "score": 5,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "I CANNOT believe I've got DeepSeek-V4-Flash-0731, a frontier model, running on my home PC. Insane!",
+          "summary": "So this is the stuff of absolute insanity. In less",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vehn87/i_cannot_believe_ive_got_deepseekv4flash0731_a/",
+          "score": 5,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "DeepSeek V4-Flash (284B MoE) at 33 tok/s single / 68 tok/s aggregate on 2× RTX 3090 + a used quad-Xeon DDR4 server — full config",
+          "summary": "Ran DeepSeek V4-Flash-0731 — the full official che",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1veow4b/deepseek_v4flash_284b_moe_at_33_toks_single_68/",
+          "score": 5,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "NousResearch keeps doing things on hermes",
+          "summary": "Has anyone followed nousresearch work on Hermes? I",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1veswt9/nousresearch_keeps_doing_things_on_hermes/",
+          "score": 5,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "\"Data center in a Box (on Wheels)\" 256Gb VRAM/512Gb RAM AI Server 6-8 Month Operational Review, Stability Write Up, Benchmarks",
+          "summary": "I've been out of these forums for awhile but I fig",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1veg9uq/data_center_in_a_box_on_wheels_256gb_vram512gb/",
+          "score": 5,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "GLM 5.3 Spotted",
+          "summary": "https://github.com/zai-org/z-ai-sdk-java/commits/g",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1ve9ms0/glm_53_spotted/",
+          "score": 5,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "V4-Flash-0731 - vibes after first weekend of use",
+          "summary": "Spent way too much time with V4-Flash-0731 this we",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vee1ob/v4flash0731_vibes_after_first_weekend_of_use/",
+          "score": 5,
+          "sources": [
+            {
+              "name": "Reddit r/LocalLLaMA"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "xai-org/grok-build",
+          "summary": "Starred by 2 leaders (philschmid, simonw): SpaceXA",
+          "url": "https://github.com/xai-org/grok-build",
+          "score": 5,
+          "sources": [
+            {
+              "name": "Co-Starred"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "handy-computer/transcribe.cpp",
+          "summary": "Starred by 2 leaders (ggerganov, simonw):  ggml sp",
+          "url": "https://github.com/handy-computer/transcribe.cpp",
+          "score": 5,
+          "sources": [
+            {
+              "name": "Co-Starred"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        }
+      ]
+    }
+  ],
+  "aiSummary": null
+}
