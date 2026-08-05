@@ -699,6 +699,42 @@
       "worthReading": "",
       "tags": [],
       "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3msbpz3kmak27",
+      "url": "https://bsky.app/profile/simonwillison.net/post/3msbpz3kmak27",
+      "author": {
+        "handle": "simonwillison.net",
+        "displayName": "Simon Willison",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
+      },
+      "content": "The MiniMax-H3 video generation model is a lot of fun - here's what I generated on my M5 Pro Mac for the prompt \"a rainbow colored skunk leaps over a mossy log in a supermarket\" (~115GB model download, took around 45 minutes to generate) - notes on how I ran it here simonwillison.net/2026/Aug/4/m...",
+      "createdAt": "2026-08-04T19:16:32.035Z",
+      "likeCount": 80,
+      "replyCount": 4,
+      "repostCount": 4,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [],
+      "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3msc7zqolvk2b",
+      "url": "https://bsky.app/profile/simonwillison.net/post/3msc7zqolvk2b",
+      "author": {
+        "handle": "simonwillison.net",
+        "displayName": "Simon Willison",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
+      },
+      "content": "Big new release of my LLM CLI tool and Python library for talking to hundreds of different LLMs - reasoning traces, OpenAI Responses support, server-side tools, smarter logging and a whole lot more\nsimonwillison.net/2026/Aug/4/n...",
+      "createdAt": "2026-08-05T00:03:14.055Z",
+      "likeCount": 47,
+      "replyCount": 2,
+      "repostCount": 5,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [],
+      "type": "bluesky"
     }
   ],
   "videos": [],
@@ -1072,10 +1108,19 @@
       "highlights": "",
       "worthReading": "",
       "type": "blog"
+    },
+    {
+      "title": "New release of LLM adds support for reasoning traces, OpenAI Responses, server-side tools, and smarter logging",
+      "url": "https://simonwillison.net/2026/Aug/4/new-release-of-llm/#atom-entries",
+      "author": "Simon Willison",
+      "publishedAt": "2026-08-04T23:58:24+00:00",
+      "summary": "<p>I released <a href=\"https://llm.datasette.io/en/stable/changelog.html#v0-32\">LLM 0.32</a> this morning, the most significant new version of LLM since the initial launch of the project. The new version includes support for visible reasoning traces, server-side provider tools, redesigned...",
+      "highlights": "",
+      "worthReading": "",
+      "type": "blog"
     }
   ],
   "dailyCounts": [
-    0,
     2,
     0,
     2,
@@ -1104,7 +1149,8 @@
     2,
     2,
     2,
-    0
+    1,
+    1
   ],
   "interestSummary": ""
 }
