@@ -2,22 +2,6 @@
   "id": "simonw",
   "stars": [
     {
-      "repo": "wouterdebie/davit",
-      "url": "https://github.com/wouterdebie/davit",
-      "description": "A native macOS UI for Apple's platform",
-      "language": "Swift",
-      "stargazersCount": 284,
-      "starredBy": "simonw",
-      "starredAt": "2026-07-07T20:07:45Z",
-      "highlights": "",
-      "worthReading": "",
-      "topics": [],
-      "tags": [],
-      "score": 0,
-      "scoreReason": "",
-      "type": "github"
-    },
-    {
       "repo": "nasa/spacewasm",
       "url": "https://github.com/nasa/spacewasm",
       "description": "A flight-compliant WebAssembly interpreter for safety-critical execution",
@@ -247,27 +231,62 @@
       "score": 0,
       "scoreReason": "",
       "type": "github"
+    },
+    {
+      "repo": "StarKnightt/jungle-trail",
+      "url": "https://github.com/StarKnightt/jungle-trail",
+      "description": "A fully procedural first-person jungle in Three.js. Zero external art assets - every texture, mesh and sound generated in code.",
+      "language": "JavaScript",
+      "stargazersCount": 161,
+      "starredBy": "simonw",
+      "starredAt": "2026-08-05T23:52:04Z",
+      "highlights": "",
+      "worthReading": "",
+      "topics": [
+        "game",
+        "glsl",
+        "procedural-generation",
+        "procedural-graphics",
+        "shaders",
+        "threejs",
+        "webgl"
+      ],
+      "tags": [],
+      "score": 0,
+      "scoreReason": "",
+      "type": "github"
+    },
+    {
+      "repo": "rivet-dev/secure-exec",
+      "url": "https://github.com/rivet-dev/secure-exec",
+      "description": "Secure Node.js Execution Without a Sandbox  A lightweight library for secure Node.js execution. No containers, no VMs — just npm-compatible sandboxing out of the box.",
+      "language": "MDX",
+      "stargazersCount": 956,
+      "starredBy": "simonw",
+      "starredAt": "2026-08-05T21:12:52Z",
+      "highlights": "",
+      "worthReading": "",
+      "topics": [
+        "agent",
+        "ai",
+        "ai-agents",
+        "code-execution",
+        "code-interpreter",
+        "llm",
+        "sandbox",
+        "sandboxing",
+        "v8",
+        "wasi",
+        "wasix",
+        "wasm"
+      ],
+      "tags": [],
+      "score": 0,
+      "scoreReason": "",
+      "type": "github"
     }
   ],
   "posts": [
-    {
-      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mq3e6p7gs227",
-      "url": "https://bsky.app/profile/simonwillison.net/post/3mq3e6p7gs227",
-      "author": {
-        "handle": "simonwillison.net",
-        "displayName": "Simon Willison",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
-      },
-      "content": "I released sqlite-utils 4.0, the 124th release but the first major version bump since 3.0 back in 2020\n\nI managed to keep things backwards-compatible all the way up to version 3.39 before the accumulated design mistakes forced me to bump that number!  simonwillison.net/2026/Jul/7/s...",
-      "createdAt": "2026-07-07T19:38:33.825Z",
-      "likeCount": 31,
-      "replyCount": 2,
-      "repostCount": 2,
-      "highlights": "",
-      "worthReading": "",
-      "tags": [],
-      "type": "bluesky"
-    },
     {
       "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mqafoxnsl226",
       "url": "https://bsky.app/profile/simonwillison.net/post/3mqafoxnsl226",
@@ -735,6 +754,78 @@
       "worthReading": "",
       "tags": [],
       "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3msepngc2kk26",
+      "url": "https://bsky.app/profile/simonwillison.net/post/3msepngc2kk26",
+      "author": {
+        "handle": "simonwillison.net",
+        "displayName": "Simon Willison",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
+      },
+      "content": "Just had to create an \"accidental-cyberattacks\" tag on my blog\n\nWe're up to four now: the original OpenAI+Hugging Face one, Anthropic's me-too attacks, then two new ones from the UK AI Safety Institute and Irregular that OpenAI reported yesterday simonwillison.net/tags/acciden...",
+      "createdAt": "2026-08-05T23:47:59.851Z",
+      "likeCount": 98,
+      "replyCount": 9,
+      "repostCount": 21,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [],
+      "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3msed56zylc2c",
+      "url": "https://bsky.app/profile/simonwillison.net/post/3msed56zylc2c",
+      "author": {
+        "handle": "simonwillison.net",
+        "displayName": "Simon Willison",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
+      },
+      "content": "Four years ago today I tweeted a concept for a \"Raccoon Heist\" video game, product description generated by GPT-3 and concept \"art\" created by DALL-E\n\nToday I fed those assets into Fable 5 and had it build full working game, single shot prompt, no feedback from me simonwillison.net/2026/Aug/5/r...",
+      "createdAt": "2026-08-05T20:04:10.474Z",
+      "likeCount": 46,
+      "replyCount": 7,
+      "repostCount": 5,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [],
+      "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3msectisgws27",
+      "url": "https://bsky.app/profile/simonwillison.net/post/3msectisgws27",
+      "author": {
+        "handle": "simonwillison.net",
+        "displayName": "Simon Willison",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
+      },
+      "content": "Apparently peak golf course construction in the USA was in 1999, with 509 golf courses opened in that single year! archive.lib.msu.edu/tic/holen/ar...",
+      "createdAt": "2026-08-05T19:58:45.162Z",
+      "likeCount": 13,
+      "replyCount": 2,
+      "repostCount": 2,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [],
+      "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mseqv5z4qk2z",
+      "url": "https://bsky.app/profile/simonwillison.net/post/3mseqv5z4qk2z",
+      "author": {
+        "handle": "simonwillison.net",
+        "displayName": "Simon Willison",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
+      },
+      "content": "One of the things the pelican benchmark is still useful for is visually representing (to a tiny extent) the improvements in a single model family\n\nHere's Meta AI's Spark (8th April), Spark 1.1 (9th July), and Spark 1.2 (today, 5th August)\n\nsimonwillison.net/2026/Aug/5/m...",
+      "createdAt": "2026-08-06T00:10:13.344Z",
+      "likeCount": 18,
+      "replyCount": 1,
+      "repostCount": 2,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [],
+      "type": "bluesky"
     }
   ],
   "videos": [],
@@ -1118,10 +1209,19 @@
       "highlights": "",
       "worthReading": "",
       "type": "blog"
+    },
+    {
+      "title": "One-shotting a Raccoon Heist game using Claude Fable 5",
+      "url": "https://simonwillison.net/2026/Aug/5/raccoon-heist/#atom-entries",
+      "author": "Simon Willison",
+      "publishedAt": "2026-08-05T19:42:38+00:00",
+      "summary": "<p>Back in 2024 <a href=\"https://twitter.com/simonw/status/1555626060384911360\">I tweeted</a> screenshots of a game concept generated by GPT-3 and some concept \"art\" created using DALL-E. Today, on the fourth anniversary of that tweet, I decided to see if Claude Fable 5 (running in <a...",
+      "highlights": "",
+      "worthReading": "",
+      "type": "blog"
     }
   ],
   "dailyCounts": [
-    2,
     0,
     2,
     1,
@@ -1150,6 +1250,7 @@
     2,
     2,
     1,
+    6,
     1
   ],
   "interestSummary": ""
