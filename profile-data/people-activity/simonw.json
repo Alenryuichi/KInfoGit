@@ -2,22 +2,6 @@
   "id": "simonw",
   "stars": [
     {
-      "repo": "nasa/spacewasm",
-      "url": "https://github.com/nasa/spacewasm",
-      "description": "A flight-compliant WebAssembly interpreter for safety-critical execution",
-      "language": "Rust",
-      "stargazersCount": 63,
-      "starredBy": "simonw",
-      "starredAt": "2026-07-09T02:33:19Z",
-      "highlights": "",
-      "worthReading": "",
-      "topics": [],
-      "tags": [],
-      "score": 0,
-      "scoreReason": "",
-      "type": "github"
-    },
-    {
       "repo": "xai-org/grok-build",
       "url": "https://github.com/xai-org/grok-build",
       "description": "SpaceXAI's coding agent harness and TUI. Fullscreen, mouse interactive, extensible.",
@@ -287,24 +271,6 @@
     }
   ],
   "posts": [
-    {
-      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mqafoxnsl226",
-      "url": "https://bsky.app/profile/simonwillison.net/post/3mqafoxnsl226",
-      "author": {
-        "handle": "simonwillison.net",
-        "displayName": "Simon Willison",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
-      },
-      "content": "Notes on GPT-5.6, which includes some interesting new additions to the API (programmatic tool calling and multi-agent in particular) - plus 18 pelicans for the 6 reasoning levels and 3 new models: simonwillison.net/2026/Jul/9/g...",
-      "createdAt": "2026-07-09T19:48:51.988Z",
-      "likeCount": 77,
-      "replyCount": 4,
-      "repostCount": 5,
-      "highlights": "",
-      "worthReading": "",
-      "tags": [],
-      "type": "bluesky"
-    },
     {
       "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mqcn6ojgp22j",
       "url": "https://bsky.app/profile/simonwillison.net/post/3mqcn6ojgp22j",
@@ -826,6 +792,24 @@
       "worthReading": "",
       "tags": [],
       "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3msjr3mlnz22x",
+      "url": "https://bsky.app/profile/simonwillison.net/post/3msjr3mlnz22x",
+      "author": {
+        "handle": "simonwillison.net",
+        "displayName": "Simon Willison",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
+      },
+      "content": "Thanks to the video from the Black Hat security conference of OpenAI's presentation about \"The Hugging Face Incident\" we now have a detailed timeline of what happened from OpenAI's perspective - I wrote up the details here, it's pretty wild \nsimonwillison.net/2026/Aug/7/o...",
+      "createdAt": "2026-08-07T23:57:08.652Z",
+      "likeCount": 54,
+      "replyCount": 4,
+      "repostCount": 10,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [],
+      "type": "bluesky"
     }
   ],
   "videos": [],
@@ -1219,10 +1203,19 @@
       "highlights": "",
       "worthReading": "",
       "type": "blog"
+    },
+    {
+      "title": "Now we have a timeline of the OpenAI accidental attack against Hugging Face",
+      "url": "https://simonwillison.net/2026/Aug/7/openai-timeline/#atom-entries",
+      "author": "Simon Willison",
+      "publishedAt": "2026-08-07T23:55:58+00:00",
+      "summary": "<p>OpenAI gave a last-minute presentation at the Black Hat security on Wednesday about \"the Hugging Face Incident\" (<a href=\"https://simonwillison.net/2026/Jul/22/openai-cyberattack/\">previously</a> on this blog). <a href=\"https://www.youtube.com/watch?v=87DyyMV0kCY\">The video</a> was published...",
+      "highlights": "",
+      "worthReading": "",
+      "type": "blog"
     }
   ],
   "dailyCounts": [
-    2,
     1,
     0,
     1,
@@ -1250,6 +1243,7 @@
     2,
     1,
     6,
+    1,
     1,
     0
   ],
