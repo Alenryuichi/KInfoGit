@@ -327,42 +327,6 @@
   ],
   "posts": [
     {
-      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mqkzftto4226",
-      "url": "https://bsky.app/profile/simonwillison.net/post/3mqkzftto4226",
-      "author": {
-        "handle": "simonwillison.net",
-        "displayName": "Simon Willison",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
-      },
-      "content": "New TIL: Using uvx in GitHub Actions in a cache-friendly way\n\nI finally found a recipe that I like for running `uvx tool-name` in GitHub Actions without downloading a fresh copy of the package every time til.simonwillison.net/github-actio...",
-      "createdAt": "2026-07-14T01:08:18.217Z",
-      "likeCount": 20,
-      "replyCount": 1,
-      "repostCount": 2,
-      "highlights": "",
-      "worthReading": "",
-      "tags": [],
-      "type": "bluesky"
-    },
-    {
-      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mqnceqzbsc24",
-      "url": "https://bsky.app/profile/simonwillison.net/post/3mqnceqzbsc24",
-      "author": {
-        "handle": "simonwillison.net",
-        "displayName": "Simon Willison",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
-      },
-      "content": "Made myself a custom Codex pet today (you'll never guess what it was), and had some fun reverse-engineering how the feature works - it generates animated sprite sheets using gpt-image-2 simonwillison.net/2026/Jul/14/...",
-      "createdAt": "2026-07-14T22:54:04.853Z",
-      "likeCount": 32,
-      "replyCount": 4,
-      "repostCount": 4,
-      "highlights": "",
-      "worthReading": "",
-      "tags": [],
-      "type": "bluesky"
-    },
-    {
       "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mqpwytj6lc2d",
       "url": "https://bsky.app/profile/simonwillison.net/post/3mqpwytj6lc2d",
       "author": {
@@ -1232,10 +1196,19 @@
       "highlights": "",
       "worthReading": "",
       "type": "blog"
+    },
+    {
+      "title": "Now we have a timeline of the OpenAI accidental attack against Hugging Face",
+      "url": "https://simonwillison.net/2026/Aug/7/openai-timeline/",
+      "author": "Simon Willison",
+      "publishedAt": "2026-08-07T23:55:58+00:00",
+      "summary": "<p>OpenAI gave a last-minute presentation at the Black Hat security on Wednesday about \"the Hugging Face Incident\" (<a href=\"https://simonwillison.net/2026/Jul/22/openai-cyberattack/\">previously</a> on this blog). <a href=\"https://www.youtube.com/watch?v=87DyyMV0kCY\">The video</a> was published...",
+      "highlights": "",
+      "worthReading": "",
+      "type": "blog"
     }
   ],
   "dailyCounts": [
-    2,
     1,
     4,
     2,
@@ -1264,6 +1237,7 @@
     0,
     2,
     1,
+    0,
     0
   ],
   "interestSummary": ""
