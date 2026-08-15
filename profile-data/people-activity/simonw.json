@@ -2,38 +2,6 @@
   "id": "simonw",
   "stars": [
     {
-      "repo": "robertsdotpm/runloom",
-      "url": "https://github.com/robertsdotpm/runloom",
-      "description": "Real Goroutines for Python 3.13t+ free-threaded.",
-      "language": "Python",
-      "stargazersCount": 81,
-      "starredBy": "simonw",
-      "starredAt": "2026-07-16T05:07:13Z",
-      "highlights": "",
-      "worthReading": "",
-      "topics": [],
-      "tags": [],
-      "score": 0,
-      "scoreReason": "",
-      "type": "github"
-    },
-    {
-      "repo": "theogbob/WebkitWasm",
-      "url": "https://github.com/theogbob/WebkitWasm",
-      "description": "WebKit compiled to WebAssembly: a full browser engine running inside a browser tab, rendering to canvas, networking over Wisp.",
-      "language": "C++",
-      "stargazersCount": 11,
-      "starredBy": "simonw",
-      "starredAt": "2026-07-16T16:04:29Z",
-      "highlights": "",
-      "worthReading": "",
-      "topics": [],
-      "tags": [],
-      "score": 0,
-      "scoreReason": "",
-      "type": "github"
-    },
-    {
       "repo": "rivet-dev/agentos",
       "url": "https://github.com/rivet-dev/agentos",
       "description": "A faster, lighter, cheaper alternative to sandboxes. Run any coding agent inside an isolated Linux VM, with agent orchestration built in.",
@@ -307,45 +275,31 @@
       "score": 0,
       "scoreReason": "",
       "type": "github"
+    },
+    {
+      "repo": "prime-radiant-inc/engineering-notebook",
+      "url": "https://github.com/prime-radiant-inc/engineering-notebook",
+      "description": "A Bun CLI that ingests Claude Code and Codex session transcripts, generates LLM-powered daily summaries, and serves a browsable web UI for your engineering journal.",
+      "language": "TypeScript",
+      "stargazersCount": 273,
+      "starredBy": "simonw",
+      "starredAt": "2026-08-14T18:38:40Z",
+      "highlights": "",
+      "worthReading": "",
+      "topics": [
+        "bun",
+        "claude-code",
+        "cli",
+        "sqlite",
+        "typescript"
+      ],
+      "tags": [],
+      "score": 0,
+      "scoreReason": "",
+      "type": "github"
     }
   ],
   "posts": [
-    {
-      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mqpwytj6lc2d",
-      "url": "https://bsky.app/profile/simonwillison.net/post/3mqpwytj6lc2d",
-      "author": {
-        "handle": "simonwillison.net",
-        "displayName": "Simon Willison",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
-      },
-      "content": "I poked around in the just open sourced Grok Build CLI tool - 844,000 lines of Rust code! - and dug up a few interesting highlights, including a \"self-contained terminal renderer for Mermaid diagrams\" that renders them using Unicode box-art!\nsimonwillison.net/2026/Jul/15/...",
-      "createdAt": "2026-07-16T00:08:32.874Z",
-      "likeCount": 44,
-      "replyCount": 3,
-      "repostCount": 4,
-      "highlights": "",
-      "worthReading": "",
-      "tags": [],
-      "type": "bluesky"
-    },
-    {
-      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mqs2y7gutk2a",
-      "url": "https://bsky.app/profile/simonwillison.net/post/3mqs2y7gutk2a",
-      "author": {
-        "handle": "simonwillison.net",
-        "displayName": "Simon Willison",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
-      },
-      "content": "My notes on Kimi K3, plus some thoughts on what we can still learn from the pelican benchmark even while it becomes further detached from how good the models are at the things that matter (like agentic tool calling across longer conversations) simonwillison.net/2026/Jul/16/...",
-      "createdAt": "2026-07-16T20:25:06.271Z",
-      "likeCount": 86,
-      "replyCount": 5,
-      "repostCount": 13,
-      "highlights": "",
-      "worthReading": "",
-      "tags": [],
-      "type": "bluesky"
-    },
     {
       "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mqspdej7wc2u",
       "url": "https://bsky.app/profile/simonwillison.net/post/3mqspdej7wc2u",
@@ -795,6 +749,42 @@
       "worthReading": "",
       "tags": [],
       "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mt2ynhrlk22z",
+      "url": "https://bsky.app/profile/simonwillison.net/post/3mt2ynhrlk22z",
+      "author": {
+        "handle": "simonwillison.net",
+        "displayName": "Simon Willison",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
+      },
+      "content": "The new Qwen 3.7 27B, running as a 17GB GGUF in LM Studio on my M5 Max MacBook Pro, just drew me the best pelican riding a bicycle I've seen from any model that runs on my laptop",
+      "createdAt": "2026-08-14T20:27:39.327Z",
+      "likeCount": 146,
+      "replyCount": 6,
+      "repostCount": 11,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [],
+      "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mt3pp4emz222",
+      "url": "https://bsky.app/profile/simonwillison.net/post/3mt3pp4emz222",
+      "author": {
+        "handle": "simonwillison.net",
+        "displayName": "Simon Willison",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
+      },
+      "content": "Got a photo of Morris, a local celebrity: the only known Northern Gannet in the entire Pacific Ocean simonwillison.net/2026/Aug/15/...",
+      "createdAt": "2026-08-15T03:20:10.535Z",
+      "likeCount": 8,
+      "replyCount": 0,
+      "repostCount": 0,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [],
+      "type": "bluesky"
     }
   ],
   "videos": [],
@@ -1211,7 +1201,6 @@
     }
   ],
   "dailyCounts": [
-    4,
     2,
     0,
     2,
@@ -1240,6 +1229,7 @@
     1,
     0,
     0,
+    3,
     1
   ],
   "interestSummary": ""

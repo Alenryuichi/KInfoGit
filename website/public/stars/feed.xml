@@ -4,17 +4,52 @@
     <title>Stars &amp; Posts — Kylin Miao</title>
     <link>https://kylinmiao.me/stars/</link>
     <description>Daily curated GitHub starred repos, Bluesky/X posts, YouTube videos and blog articles from AI leaders with AI-powered summaries.</description>
-    <lastBuildDate>Fri, 14 Aug 2026 04:47:38 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 15 Aug 2026 03:37:00 GMT</lastBuildDate>
     <atom:link href="https://kylinmiao.me/stars/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Stars &amp; Posts — 2026-08-15</title>
+      <link>https://kylinmiao.me/stars/2026-08-15/</link>
+      <guid isPermaLink="true">https://kylinmiao.me/stars/2026-08-15/</guid>
+      <pubDate>Sat, 15 Aug 2026 12:00:00 GMT</pubDate>
+      <description>Bluesky Posts:
+* Simon Willison: Got a photo of Morris, a local celebrity: the only known Northern Gannet in the entire Pacific Ocean simonwillison.net/2026/Aug/15/...</description>
+    </item>
     <item>
       <title>Stars &amp; Posts — 2026-08-14</title>
       <link>https://kylinmiao.me/stars/2026-08-14/</link>
       <guid isPermaLink="true">https://kylinmiao.me/stars/2026-08-14/</guid>
       <pubDate>Fri, 14 Aug 2026 12:00:00 GMT</pubDate>
-      <description>Bluesky Posts:
+      <description>GitHub Repos:
+* prime-radiant-inc/engineering-notebook — A Bun CLI that ingests Claude Code and Codex session transcripts, generates LLM-powered daily summaries, and serves a browsable web UI for your engineering journal. [TypeScript]
+* tile-ai/TileRT — Tile-Based Runtime for Ultra-Low-Latency LLM Inference [Python]
+
+Bluesky Posts:
 * Simon Willison: Watching Silo genuinely makes me want to hook up some generative AI abomination that rewrites every frame to make it look like they turned the lights ...
 * Mark Riedl: I submitted a paper to arXiv in April. It was rejected by moderators, despite being accepted to a long-running workshop at one of the most prestigious...
-* Thomas Dietterich: The agriculture water issue is definitely real. Water rights and pricing are crazy</description>
+* Thomas Dietterich: The agriculture water issue is definitely real. Water rights and pricing are crazy
+* Simon Willison: The new Qwen 3.7 27B, running as a 17GB GGUF in LM Studio on my M5 Max MacBook Pro, just drew me the best pelican riding a bicycle I&apos;ve seen from any ...
+* Mark Riedl: no likey
+* Mark Riedl: Nice try tho
+* Mark Riedl: I used Cursor exactly once (to see how students were using to cheat). I had to create a free account. I am now going out of my way to delete my accoun...
+* Marc Lanctot: Friday vibes... summer of 2026 edition! 🎶🎵
+
+I&apos;ve always loved instrumental songs. I&apos;ll post my top 10 favs (no more than three per artist), one on e...
+* Nathan Lambert: GLM 5.3 notes and why we should stop being so surprised about these very strong Chinese models (most of this is talking myself through some of my deni...
+* Nathan Lambert: Farewell Seattle! It&apos;s been such a wonderful life/career stage for me. Onto new adventures (and mountains).
+* Emily M. Bender: Thinking of colleagues who work in the academy depite racism, transphobia, ableism, etc and all of the extra scrutiny put on them---and all of the ext...
+* Emily M. Bender: Introduce yourself as what almost killed you. 
+
+Hi, I&apos;m Mt St Helens.
+* Emily M. Bender: Finally got my author copies of the UK paperback of The AI Con, and they&apos;re even prettier in person!
+
+w/@alexhanna.bsky.social
+
+thecon.ai
+* angela zhou: am I brave enough to entitle some ongoing work &quot;DIP: Decision-Improved Predictions&quot; or nah
+* Ben Recht: The least agentic people alive!
+
+Blog Articles:
+* GLM-5.3: How Chinese labs keep stride with the frontier — Nathan Lambert: Hint: It&amp;#8217;s really not a distillation story.</description>
     </item>
     <item>
       <title>Stars &amp; Posts — 2026-08-13</title>
@@ -801,35 +836,6 @@ S...
 * angela zhou: somewhat embarrassed to admit that i had a useful convo w claude about book recs. Yes i&apos;m sorry for killing a fish with that :(
 * Ben Recht: Dean Ball: Open source software is communist and threatens to bring on a dystopian hellscape. Also, it&apos;s COVID.
 * Ben Recht: What does it mean for exercise to be “science-based?”</description>
-    </item>
-    <item>
-      <title>Stars &amp; Posts — 2026-07-16</title>
-      <link>https://kylinmiao.me/stars/2026-07-16/</link>
-      <guid isPermaLink="true">https://kylinmiao.me/stars/2026-07-16/</guid>
-      <pubDate>Thu, 16 Jul 2026 12:00:00 GMT</pubDate>
-      <description>GitHub Repos:
-* robertsdotpm/runloom — Real Goroutines for Python 3.13t+ free-threaded. [Python]
-* theogbob/WebkitWasm — WebKit compiled to WebAssembly: a full browser engine running inside a browser tab, rendering to canvas, networking over Wisp. [C++]
-* xai-org/grok-build — SpaceXAI&apos;s coding agent harness and TUI. Fullscreen, mouse interactive, extensible. [Rust]
-* Genivia/ugrep — 🔍 ugrep 7.8 file pattern searcher -- a user-friendly, faster, more capable grep replacement. Includes a TUI, Google-like Boolean search with AND/OR/NOT, fuzzy search, hexdumps, searches (nested) archives (zip, 7z, tar, pax, cpio), compressed files (gz, Z, bz2, lzma, xz, lz4, zstd, brotli), pdfs, docs, and more [C++]
-* tavianator/bfs — A breadth-first version of the UNIX find command [C]
-
-Bluesky Posts:
-* Simon Willison: I poked around in the just open sourced Grok Build CLI tool - 844,000 lines of Rust code! - and dug up a few interesting highlights, including a &quot;self...
-* Simon Willison: My notes on Kimi K3, plus some thoughts on what we can still learn from the pelican benchmark even while it becomes further detached from how good the...
-* Mark Riedl: Tell you cat I said &quot;THS THDPSSSSPS&quot;
-* Mark Riedl: Very important decisions were made and now the Georgia Tech Machine Learning Center has new t-shirts for members
-* Mark Riedl: Just in time for the World Cup finals
-* Gaël Varoquaux: Materials for my course on machine learning for health data:
-runnable examples of ML on health data, to get people thinking about model flexibility an...
-* Yoshua Bengio: J’ai discuté de l’importance d’un meilleur encadrement technique et sociétal de l’IA avec Anouch Seydtaghia du journal @letemps.ch à Genève la semaine...
-* Ethan Mollick: A note of caution: I will say that when doing some complex statistical auditing of some of my prior academic work, Kimi K3 Max messed up in a bunch of...
-* Ethan Mollick: Post-Kimi K3 and open weights models getting closer to the frontier again, I wonder if Anthropic and OpenAI will be allowed to increase their release ...
-* Ethan Mollick: My benchmark where I have AIs create one file procedurally-generated harbor towns through history  in one shot now has GPT-5.6 Pro, Fable, Kimi K3, an...
-* Emily M. Bender: My favorite part of this one is where Seb is talking about trying to distinguish what he wants to be true from what is true ... which is a great openi...
-
-Blog Articles:
-* Kimi K3, and what we can still learn from the pelican benchmark — Simon Willison: &lt;p&gt;Chinese AI lab Moonshot AI &lt;a href=&quot;https://www.kimi.com/blog/kimi-k3&quot;&gt;announced Kimi K3&lt;/a&gt; this morning, describing it as their &quot;most capable mod...</description>
     </item>
   </channel>
 </rss>
