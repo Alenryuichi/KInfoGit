@@ -178,81 +178,46 @@
       "score": 0,
       "scoreReason": "",
       "type": "github"
+    },
+    {
+      "repo": "ddalcu/mlx-serve",
+      "url": "https://github.com/ddalcu/mlx-serve",
+      "description": "Native LLM inference server for Apple Silicon. OpenAI + Anthropic API compatible. No Python. Includes MLX Core macOS app with chat, agent mode, and tool calling.",
+      "language": "Zig",
+      "stargazersCount": 922,
+      "starredBy": "simonw",
+      "starredAt": "2026-08-29T18:55:23Z",
+      "highlights": "",
+      "worthReading": "",
+      "topics": [
+        "agent",
+        "anthropic-api",
+        "apple-silicon",
+        "claude-code",
+        "deepseek-v4",
+        "diffusion",
+        "gguf",
+        "image-generation",
+        "inference",
+        "llm",
+        "local-llm",
+        "macos",
+        "macos-app",
+        "mlx",
+        "openai-api",
+        "tool-calling",
+        "video-generation",
+        "voice-agent",
+        "voice-cloning",
+        "zig"
+      ],
+      "tags": [],
+      "score": 0,
+      "scoreReason": "",
+      "type": "github"
     }
   ],
   "posts": [
-    {
-      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mry3ilyu7s2f",
-      "url": "https://bsky.app/profile/simonwillison.net/post/3mry3ilyu7s2f",
-      "author": {
-        "handle": "simonwillison.net",
-        "displayName": "Simon Willison",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
-      },
-      "content": "The new stateless MCP specification has rekindled my interest in MCP, and inspired some new projects, including mcp-explorer and datasette-mcp simonwillison.net/2026/Jul/31/...",
-      "createdAt": "2026-07-31T23:15:26.372Z",
-      "likeCount": 48,
-      "replyCount": 2,
-      "repostCount": 3,
-      "highlights": "",
-      "worthReading": "",
-      "tags": [],
-      "type": "bluesky"
-    },
-    {
-      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mrxxwdfhxk2o",
-      "url": "https://bsky.app/profile/simonwillison.net/post/3mrxxwdfhxk2o",
-      "author": {
-        "handle": "simonwillison.net",
-        "displayName": "Simon Willison",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
-      },
-      "content": "I'm on Oxide and Friends podcast this week!\n\nWe talked about accidental cyberattacks, Kimi K3, Golden Gate Claude, Zizians, Alameda wild turkey attacks, Soviet Marburg virus research, the Lead-crime hypothesis, and a bunch of other worthy digressions oxide-and-friends.transistor.fm/episodes/the...",
-      "createdAt": "2026-07-31T22:11:32.143Z",
-      "likeCount": 19,
-      "replyCount": 0,
-      "repostCount": 0,
-      "highlights": "",
-      "worthReading": "",
-      "tags": [],
-      "type": "bluesky"
-    },
-    {
-      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mrxwydoc5k25",
-      "url": "https://bsky.app/profile/simonwillison.net/post/3mrxwydoc5k25",
-      "author": {
-        "handle": "simonwillison.net",
-        "displayName": "Simon Willison",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
-      },
-      "content": "I've been working with Prime Radiant building a new tool for running small eval suites against models, harnesses, and prompts - it's called \"smevals\", you can try it with \"uvx smevals docs\", and I wrote about it here: primeradiant.com/blog/2026/sm...",
-      "createdAt": "2026-07-31T21:54:45.799Z",
-      "likeCount": 36,
-      "replyCount": 5,
-      "repostCount": 3,
-      "highlights": "",
-      "worthReading": "",
-      "tags": [],
-      "type": "bluesky"
-    },
-    {
-      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mrx6kneuhc2i",
-      "url": "https://bsky.app/profile/simonwillison.net/post/3mrx6kneuhc2i",
-      "author": {
-        "handle": "simonwillison.net",
-        "displayName": "Simon Willison",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
-      },
-      "content": "Your infrequent reminder that if you live near the San Francisco Bay Area you should go to Moss Landing (south of Santa Cruz) and rent kayaks there, because the estuary is full of sea otters and you will encounter dozens of them",
-      "createdAt": "2026-07-31T14:37:36.409Z",
-      "likeCount": 146,
-      "replyCount": 12,
-      "repostCount": 10,
-      "highlights": "",
-      "worthReading": "",
-      "tags": [],
-      "type": "bluesky"
-    },
     {
       "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mry67nj6jk25",
       "url": "https://bsky.app/profile/simonwillison.net/post/3mry67nj6jk25",
@@ -994,7 +959,6 @@
     }
   ],
   "dailyCounts": [
-    4,
     2,
     2,
     2,
@@ -1022,6 +986,7 @@
     0,
     0,
     0,
+    1,
     1,
     0
   ],
