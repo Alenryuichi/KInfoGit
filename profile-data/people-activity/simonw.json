@@ -2,22 +2,6 @@
   "id": "simonw",
   "stars": [
     {
-      "repo": "openai/ten-proofs",
-      "url": "https://github.com/openai/ten-proofs",
-      "description": "Lean certificates accompanying proofs in mathematics and theoretical computer science",
-      "language": "Lean",
-      "stargazersCount": 236,
-      "starredBy": "simonw",
-      "starredAt": "2026-08-01T19:57:07Z",
-      "highlights": "",
-      "worthReading": "",
-      "topics": [],
-      "tags": [],
-      "score": 0,
-      "scoreReason": "",
-      "type": "github"
-    },
-    {
       "repo": "oframe/ogl",
       "url": "https://github.com/oframe/ogl",
       "description": "Minimal WebGL Library",
@@ -218,24 +202,6 @@
     }
   ],
   "posts": [
-    {
-      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mry67nj6jk25",
-      "url": "https://bsky.app/profile/simonwillison.net/post/3mry67nj6jk25",
-      "author": {
-        "handle": "simonwillison.net",
-        "displayName": "Simon Willison",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
-      },
-      "content": "Got a disappointing pelican from DeepSeek-V4-Flash-0731 at default reasoning mode - on the left - but then I bumped reasoning up to high (via OpenRouter) and got the much better one on the right simonwillison.net/2026/Jul/31/...",
-      "createdAt": "2026-08-01T00:04:07.186Z",
-      "likeCount": 29,
-      "replyCount": 3,
-      "repostCount": 3,
-      "highlights": "",
-      "worthReading": "",
-      "tags": [],
-      "type": "bluesky"
-    },
     {
       "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3ms42wydw4k2h",
       "url": "https://bsky.app/profile/simonwillison.net/post/3ms42wydw4k2h",
@@ -519,6 +485,24 @@
       "likeCount": 316,
       "replyCount": 11,
       "repostCount": 40,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [],
+      "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mudmaynuz22c",
+      "url": "https://bsky.app/profile/simonwillison.net/post/3mudmaynuz22c",
+      "author": {
+        "handle": "simonwillison.net",
+        "displayName": "Simon Willison",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
+      },
+      "content": "Here's my attempt at explaining what ChatGPT Work can actually do - it's a deeply confusing but extremely powerful tool with a whole lot of useful features that aren't available in regular ChatGPT simonwillison.net/2026/Aug/30/...",
+      "createdAt": "2026-08-31T00:05:05.196Z",
+      "likeCount": 90,
+      "replyCount": 7,
+      "repostCount": 17,
       "highlights": "",
       "worthReading": "",
       "tags": [],
@@ -956,10 +940,19 @@
       "highlights": "",
       "worthReading": "",
       "type": "blog"
+    },
+    {
+      "title": "Understanding ChatGPT Work",
+      "url": "https://simonwillison.net/2026/Aug/30/understanding-chatgpt-work/",
+      "author": "Simon Willison",
+      "publishedAt": "2026-08-30T23:59:47+00:00",
+      "summary": "<p>OpenAI <a href=\"https://openai.com/index/chatgpt-for-your-most-ambitious-work/\">announced ChatGPT Work</a> on July 9th, and have been furiously iterating on it ever since. It is an extraordinarily confusing and very powerful product. Here's what I've figured out about it so far.</p> <h4...",
+      "highlights": "",
+      "worthReading": "",
+      "type": "blog"
     }
   ],
   "dailyCounts": [
-    2,
     2,
     2,
     1,
@@ -988,7 +981,8 @@
     0,
     1,
     1,
-    0
+    0,
+    1
   ],
   "interestSummary": ""
 }
