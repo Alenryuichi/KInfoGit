@@ -171,24 +171,6 @@
   ],
   "posts": [
     {
-      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3msbpz3kmak27",
-      "url": "https://bsky.app/profile/simonwillison.net/post/3msbpz3kmak27",
-      "author": {
-        "handle": "simonwillison.net",
-        "displayName": "Simon Willison",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
-      },
-      "content": "The MiniMax-H3 video generation model is a lot of fun - here's what I generated on my M5 Pro Mac for the prompt \"a rainbow colored skunk leaps over a mossy log in a supermarket\" (~115GB model download, took around 45 minutes to generate) - notes on how I ran it here simonwillison.net/2026/Aug/4/m...",
-      "createdAt": "2026-08-04T19:16:32.035Z",
-      "likeCount": 80,
-      "replyCount": 4,
-      "repostCount": 4,
-      "highlights": "",
-      "worthReading": "",
-      "tags": [],
-      "type": "bluesky"
-    },
-    {
       "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3msc7zqolvk2b",
       "url": "https://bsky.app/profile/simonwillison.net/post/3msc7zqolvk2b",
       "author": {
@@ -525,6 +507,24 @@
       "likeCount": 279,
       "replyCount": 12,
       "repostCount": 19,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [],
+      "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3muk4vfcq2k2f",
+      "url": "https://bsky.app/profile/simonwillison.net/post/3muk4vfcq2k2f",
+      "author": {
+        "handle": "simonwillison.net",
+        "displayName": "Simon Willison",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
+      },
+      "content": "I wrote some notes on what's new in the (published) Fable 5.1 system prompt in comparison to Fable 5 - it's mostly about not reproducing song lyrics and avoiding drawing copyrighted characters simonwillison.net/2026/Sep/2/c...",
+      "createdAt": "2026-09-02T14:18:47.846Z",
+      "likeCount": 43,
+      "replyCount": 8,
+      "repostCount": 5,
       "highlights": "",
       "worthReading": "",
       "tags": [],
@@ -982,10 +982,19 @@
       "highlights": "",
       "worthReading": "",
       "type": "blog"
+    },
+    {
+      "title": "Claude's new system prompt really doesn't want to reproduce song lyrics",
+      "url": "https://simonwillison.net/2026/Sep/2/claudes-new-system-prompt/",
+      "author": "Simon Willison",
+      "publishedAt": "2026-09-02T14:16:42+00:00",
+      "summary": "<p>Anthropic <a href=\"https://platform.claude.com/docs/en/release-notes/system-prompts/overview\">publish the system prompts</a> for their Claude consumer applications (<a href=\"https://claude.ai/\">Claude.ai</a> and the Claude mobile apps - sadly not for Claude Cowork or Claude Code). I...",
+      "highlights": "",
+      "worthReading": "",
+      "type": "blog"
     }
   ],
   "dailyCounts": [
-    1,
     6,
     1,
     1,
@@ -1014,7 +1023,8 @@
     0,
     2,
     2,
-    2
+    3,
+    0
   ],
   "interestSummary": ""
 }
