@@ -118,24 +118,6 @@
   ],
   "posts": [
     {
-      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mseqv5z4qk2z",
-      "url": "https://bsky.app/profile/simonwillison.net/post/3mseqv5z4qk2z",
-      "author": {
-        "handle": "simonwillison.net",
-        "displayName": "Simon Willison",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
-      },
-      "content": "One of the things the pelican benchmark is still useful for is visually representing (to a tiny extent) the improvements in a single model family\n\nHere's Meta AI's Spark (8th April), Spark 1.1 (9th July), and Spark 1.2 (today, 5th August)\n\nsimonwillison.net/2026/Aug/5/m...",
-      "createdAt": "2026-08-06T00:10:13.344Z",
-      "likeCount": 18,
-      "replyCount": 1,
-      "repostCount": 2,
-      "highlights": "",
-      "worthReading": "",
-      "tags": [],
-      "type": "bluesky"
-    },
-    {
       "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3msjr3mlnz22x",
       "url": "https://bsky.app/profile/simonwillison.net/post/3msjr3mlnz22x",
       "author": {
@@ -400,6 +382,42 @@
       "likeCount": 43,
       "replyCount": 8,
       "repostCount": 5,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [],
+      "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mupxubgrls2c",
+      "url": "https://bsky.app/profile/simonwillison.net/post/3mupxubgrls2c",
+      "author": {
+        "handle": "simonwillison.net",
+        "displayName": "Simon Willison",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
+      },
+      "content": "Got access to GPT-6 Astra. Want to see some pelicans? Yeah you want to see some pelicans... here's a grid comparing Astra to GPT-5.6 Sol, Terra, and Luna static.simonwillison.net/static/2026/...\n\nTranscript from generating the Astra pelicans here: tools.simonwillison.net/markdown-svg...",
+      "createdAt": "2026-09-04T22:04:39.941Z",
+      "likeCount": 141,
+      "replyCount": 14,
+      "repostCount": 7,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [],
+      "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mupj3vhqo22k",
+      "url": "https://bsky.app/profile/simonwillison.net/post/3mupj3vhqo22k",
+      "author": {
+        "handle": "simonwillison.net",
+        "displayName": "Simon Willison",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
+      },
+      "content": "It happened again... this time OpenAI's rogue agents cyber-attacked (well, spammed) a dormant German wiki and used it to share the answers to a benchmark they were training against simonwillison.net/2026/Sep/4/r...",
+      "createdAt": "2026-09-04T17:40:29.713Z",
+      "likeCount": 74,
+      "replyCount": 9,
+      "repostCount": 15,
       "highlights": "",
       "worthReading": "",
       "tags": [],
@@ -867,11 +885,30 @@
       "highlights": "",
       "worthReading": "",
       "type": "blog"
+    },
+    {
+      "title": "The Pelican comparison grid for Astra is pretty interesting",
+      "url": "https://simonwillison.net/2026/Sep/4/astra-pelicans/",
+      "author": "Simon Willison",
+      "publishedAt": "2026-09-04T23:59:05+00:00",
+      "summary": "<p>I got access to GPT-6 Astra this afternoon, so naturally I used it to generate <a href=\"https://simonwillison.net/tags/pelican-riding-a-bicycle/\">SVGs of pelicans riding bicycles</a> - at low, medium, high, xhigh and max reasoning levels (Astra doesn't support reasoning=none). Then I rendered...",
+      "highlights": "",
+      "worthReading": "",
+      "type": "blog"
+    },
+    {
+      "title": "OpenAI's rogue agents were caught communicating via public wikis",
+      "url": "https://simonwillison.net/2026/Sep/4/rogue-agent-wikis/",
+      "author": "Simon Willison",
+      "publishedAt": "2026-09-04T17:38:48+00:00",
+      "summary": "<p>Here we go again... <a href=\"https://collusion.wiki\">Discovery of a new OpenAI agent message board</a> by Sydney Von Arx, Cormac Slade Byrd, Spencer Kitts, and Thomas Larsen describes the <em>latest</em> <a href=\"https://simonwillison.net/tags/accidental-cyberattacks/\">accidental cyberattack</a>...",
+      "highlights": "",
+      "worthReading": "",
+      "type": "blog"
     }
   ],
   "dailyCounts": [
     1,
-    1,
     0,
     0,
     2,
@@ -899,6 +936,7 @@
     2,
     3,
     0,
+    2,
     0
   ],
   "interestSummary": ""
