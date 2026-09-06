@@ -118,24 +118,6 @@
   ],
   "posts": [
     {
-      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3msjr3mlnz22x",
-      "url": "https://bsky.app/profile/simonwillison.net/post/3msjr3mlnz22x",
-      "author": {
-        "handle": "simonwillison.net",
-        "displayName": "Simon Willison",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
-      },
-      "content": "Thanks to the video from the Black Hat security conference of OpenAI's presentation about \"The Hugging Face Incident\" we now have a detailed timeline of what happened from OpenAI's perspective - I wrote up the details here, it's pretty wild \nsimonwillison.net/2026/Aug/7/o...",
-      "createdAt": "2026-08-07T23:57:08.652Z",
-      "likeCount": 54,
-      "replyCount": 4,
-      "repostCount": 10,
-      "highlights": "",
-      "worthReading": "",
-      "tags": [],
-      "type": "bluesky"
-    },
-    {
       "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3msz2okp6d22f",
       "url": "https://bsky.app/profile/simonwillison.net/post/3msz2okp6d22f",
       "author": {
@@ -418,6 +400,24 @@
       "likeCount": 74,
       "replyCount": 9,
       "repostCount": 15,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [],
+      "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3murtmdynq22s",
+      "url": "https://bsky.app/profile/simonwillison.net/post/3murtmdynq22s",
+      "author": {
+        "handle": "simonwillison.net",
+        "displayName": "Simon Willison",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
+      },
+      "content": "New TIL on using Blender with coding agents on macOS: til.simonwillison.net/llms/blender... \n\nGPT-6 Astra (medium):\n\n> Use the already install /Applications/Blender to render a scene of a pelican riding a bicycle\n\n> OK add a background and a lot of flair\n\n> OK make it a whole lot better\n\nResult:",
+      "createdAt": "2026-09-05T15:53:58.684Z",
+      "likeCount": 349,
+      "replyCount": 22,
+      "repostCount": 29,
       "highlights": "",
       "worthReading": "",
       "tags": [],
@@ -908,7 +908,6 @@
     }
   ],
   "dailyCounts": [
-    1,
     0,
     0,
     2,
@@ -937,6 +936,7 @@
     3,
     0,
     2,
+    1,
     0
   ],
   "interestSummary": ""
