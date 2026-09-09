@@ -289,5 +289,41 @@
     "auxiliaryStale": [],
     "refusedWrite": false,
     "summary": "ok but thin: arena"
+  },
+  {
+    "runAt": "2026-09-09T09:17:22.313Z",
+    "weekRelative": "2026-09-09",
+    "sources": [
+      {
+        "name": "arena",
+        "count": 50,
+        "previousCount": 20,
+        "status": "ok"
+      },
+      {
+        "name": "aider",
+        "count": 30,
+        "previousCount": 30,
+        "ageDays": 137.38706380787036,
+        "status": "ok"
+      },
+      {
+        "name": "sweBench",
+        "count": 30,
+        "previousCount": 30,
+        "status": "ok"
+      },
+      {
+        "name": "liveCodeBench",
+        "count": 28,
+        "previousCount": 28,
+        "status": "ok"
+      }
+    ],
+    "criticalEmpty": [],
+    "auxiliaryFallback": [],
+    "auxiliaryStale": [],
+    "refusedWrite": false,
+    "summary": "ok"
   }
 ]
