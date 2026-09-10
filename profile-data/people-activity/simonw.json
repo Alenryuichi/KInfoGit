@@ -2,22 +2,6 @@
   "id": "simonw",
   "stars": [
     {
-      "repo": "verialabs/ctf-agent",
-      "url": "https://github.com/verialabs/ctf-agent",
-      "description": "Autonomous CTF solver that races multiple AI models in parallel. 1st place BSidesSF 2026.",
-      "language": "Python",
-      "stargazersCount": 690,
-      "starredBy": "simonw",
-      "starredAt": "2026-08-11T21:30:33Z",
-      "highlights": "",
-      "worthReading": "",
-      "topics": [],
-      "tags": [],
-      "score": 0,
-      "scoreReason": "",
-      "type": "github"
-    },
-    {
       "repo": "prime-radiant-inc/engineering-notebook",
       "url": "https://github.com/prime-radiant-inc/engineering-notebook",
       "description": "A Bun CLI that ingests Claude Code and Codex session transcripts, generates LLM-powered daily summaries, and serves a browsable web UI for your engineering journal.",
@@ -415,6 +399,24 @@
       "likeCount": 201,
       "replyCount": 5,
       "repostCount": 35,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [],
+      "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mv4su6pfzk24",
+      "url": "https://bsky.app/profile/simonwillison.net/post/3mv4su6pfzk24",
+      "author": {
+        "handle": "simonwillison.net",
+        "displayName": "Simon Willison",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
+      },
+      "content": "Here's a Blender model of a Pluribus themed Fabergé egg I had GPT-6 Astra build - I generated the concept image using ChatGPT Images 2.5, then pasted the image into Codex and told Astra to turn that into a Blender file\nsimonwillison.net/2026/Sep/9/b...",
+      "createdAt": "2026-09-10T00:39:44.981Z",
+      "likeCount": 36,
+      "replyCount": 3,
+      "repostCount": 5,
       "highlights": "",
       "worthReading": "",
       "tags": [],
@@ -905,7 +907,6 @@
     }
   ],
   "dailyCounts": [
-    1,
     0,
     0,
     3,
@@ -934,7 +935,8 @@
     0,
     1,
     1,
-    0
+    0,
+    1
   ],
   "interestSummary": ""
 }
