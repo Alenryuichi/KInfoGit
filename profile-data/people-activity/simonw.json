@@ -421,6 +421,24 @@
       "worthReading": "",
       "tags": [],
       "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mv7nb6bezk23",
+      "url": "https://bsky.app/profile/simonwillison.net/post/3mv7nb6bezk23",
+      "author": {
+        "handle": "simonwillison.net",
+        "displayName": "Simon Willison",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
+      },
+      "content": "Datasette 1.0a39 and 0.65.4 security releases - datasette.io/blog/2026/se...\n\nWe ran an extensive audit using Claude Fable 5.1, GPT-5.6 Sol and GPT-6 Astra, then fixed a range of different bugs. If you're running a Datasette instance on a public website you should upgrade.",
+      "createdAt": "2026-09-11T03:37:37.495Z",
+      "likeCount": 23,
+      "replyCount": 0,
+      "repostCount": 6,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [],
+      "type": "bluesky"
     }
   ],
   "videos": [],
@@ -904,11 +922,20 @@
       "highlights": "",
       "worthReading": "",
       "type": "blog"
+    },
+    {
+      "title": "Some thoughts on the Navier–Stokes Millennium Prize Problem",
+      "url": "https://simonwillison.net/2026/Sep/8/on-navier-stokes/",
+      "author": "Simon Willison",
+      "publishedAt": "2026-09-08T23:55:12+00:00",
+      "summary": "<p><a href=\"https://openai.com/index/navier-stokes-solution/\">On the Navier–Stokes Millennium Prize Problem</a> introduces an impressive result from OpenAI, who used an unreleased model to produce a resolution to <a href=\"https://en.wikipedia.org/wiki/Navier–Stokes_existence_and_smoothness\">the...",
+      "highlights": "",
+      "worthReading": "",
+      "type": "blog"
     }
   ],
   "dailyCounts": [
     0,
-    0,
     3,
     2,
     1,
@@ -936,6 +963,7 @@
     1,
     1,
     0,
+    1,
     1
   ],
   "interestSummary": ""
