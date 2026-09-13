@@ -4,22 +4,67 @@
     <title>Stars &amp; Posts — Kylin Miao</title>
     <link>https://kylinmiao.me/stars/</link>
     <description>Daily curated GitHub starred repos, Bluesky/X posts, YouTube videos and blog articles from AI leaders with AI-powered summaries.</description>
-    <lastBuildDate>Sat, 12 Sep 2026 07:39:27 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 13 Sep 2026 07:57:58 GMT</lastBuildDate>
     <atom:link href="https://kylinmiao.me/stars/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Stars &amp; Posts — 2026-09-13</title>
+      <link>https://kylinmiao.me/stars/2026-09-13/</link>
+      <guid isPermaLink="true">https://kylinmiao.me/stars/2026-09-13/</guid>
+      <pubDate>Sun, 13 Sep 2026 12:00:00 GMT</pubDate>
+      <description>Bluesky Posts:
+* Simon Willison: This is pretty neat: ChatGPT Work and GPT-6 Astra (I used &quot;Max&quot;) can take an address and produce a 5K/10K circular running route starting from that ad...
+* Mark Riedl: I&apos;m working with Claude on website updates. It is referencing a conversation about website code we had yesterday. Either Claude is hallucinating or I ...
+* Ethan Mollick: One of the downsides in AI getting so good is that it is getting harder to demonstrate its strengths and weaknesses at the frontier. Yes, Astra and Fa...
+* Emily M. Bender: Between the PRs of (largely likely stolen) math breakthroughs, claims of &quot;rogue AI&quot; (actually cybercrimes by companies, but whatevs), and doomerist &quot;w...
+* Emily M. Bender: Can we make &quot;1000s of lesswrong posts&quot; a meme like &quot;30-50 feral hogs&quot; or &quot;large boulder the size of a small boulder&quot;?
+* Emily M. Bender: Straight talk time: Doomerism is BORING. It&apos;s the same fantasties rehashed over and over again, just louder each time.
+
+And with each iteration it see...
+* Emily M. Bender: Here&apos;s the thing. We do not, under any circumstances, have to hand it to them. No common cause with TESCREALists, no platforming their nonsense as if ...
+* Ben Recht: The creepy other side of their obsession with accidentally creating a utility monster: The labs are trying to build a machine that can complete any ta...</description>
+    </item>
     <item>
       <title>Stars &amp; Posts — 2026-09-12</title>
       <link>https://kylinmiao.me/stars/2026-09-12/</link>
       <guid isPermaLink="true">https://kylinmiao.me/stars/2026-09-12/</guid>
       <pubDate>Sat, 12 Sep 2026 12:00:00 GMT</pubDate>
-      <description>Bluesky Posts:
+      <description>GitHub Repos:
+* monatis/ggmlc — A multi-framework neural network compiler lowering PyTorch, JAX, Flax, and Keras models to portable, high-performance GGML execution [Python]
+* mark3labs/mcp-go — A Go implementation of the Model Context Protocol (MCP), enabling seamless integration between LLM applications and external data sources and tools. [Go]
+
+Bluesky Posts:
 * Simon Willison: Wow. Turns out another OpenAI agent swarm was busy spamming and exploiting RubyGems way back in May, within days of the previously uncovered Wiki atta...
 * Marc Lanctot: 25 Fields Medalists.. 😱
 
 mathandai.org
 * Ben Recht: With Felony Bench being rapidly saturated, which AI company will be the first to get on the Light Treason Bench leaderboard?
+* Simon Willison: &quot;For a while, I must admit, it looked as if software developer roles like mine were done for. [...] But our industry is slowly realizing that making t...
+* Mark Riedl: Do openAI and Anthropic employees not understand how computers work.
+* Mark Riedl: Anthropic pledges to pace themselves. TL;DR: we will slow down, but still move fast. 
+
+darioamodei.com/post/we-must...
+
+And how does one verify this? ...
+* Mark Riedl: This is a correct take imo. First, METR and Anthropic are all part of the same rationalist/longtermist community. This is akin to giving your friends ...
+* hardmaru: Do large language models actually understand the world, or are they just very good at pretending? Does it even matter?
+
+Our recent Royal Society speci...
+* Ethan Mollick: So here is Astra&apos;s attempt to make an Ultima-style RPG game using feedback from agents to improve, etc.
+
+Good look at both strengths (one shot complex...
+* Ethan Mollick: This week brought some of the clearest statements we&apos;ve heard from both Anthropic &amp; OpenAI that some form of recursive self-improvement has been achie...
+* angela zhou: waking up to - **gestures wildly** all of this - dario&apos;s letter, sama&apos;s tweet. I think it&apos;s impt now that folks understand why voluntary regulation wi...
+* Ben Recht: Good thread by Colin here, refuting the weird rationalist ideas about AI and utility monsters (sadly held by people who now have far too much money an...
+* Ben Recht: Why don&apos;t I trust these EA-x-risk people to self-regulate?
+
+EA prediction market company, originally funded by FTX money, creates a philanthropic wing...
+* Ben Recht: The right way to pace the frontier is to commit to a robust, open-source AI ecosystem, thereby diluting the power of these badly behaving frontier lab...
+* Ben Recht: Companies do not get to choose who audits them.
+* Ben Recht: Oh boy, Dario has put up another insufferable post. darioamodei.com/post/we-must...
 
 Blog Articles:
-* OpenAI agents attacked RubyGems back in May — Simon Willison: &lt;p&gt;&lt;a href=&quot;https://www.rubyhack.ai/&quot;&gt;OpenAI agents carried out an undisclosed attack on RubyGems&lt;/a&gt; is a new bombshell report from Spencer Kitts, Th...</description>
+* OpenAI agents attacked RubyGems back in May — Simon Willison: &lt;p&gt;&lt;a href=&quot;https://www.rubyhack.ai/&quot;&gt;OpenAI agents carried out an undisclosed attack on RubyGems&lt;/a&gt; is a new bombshell report from Spencer Kitts, Th...
+* Generating running routes with GPT-6 Astra and ChatGPT Work — Simon Willison: &lt;p&gt;Here&apos;s a neat thing I had &lt;a href=&quot;https://simonwillison.net/2026/Aug/30/understanding-chatgpt-work/&quot;&gt;ChatGPT Work&lt;/a&gt; with GPT-6 Astra (Max) do th...</description>
     </item>
     <item>
       <title>Stars &amp; Posts — 2026-09-11</title>
@@ -817,43 +862,6 @@ bsky.app/profile/bren...
 
 Blog Articles:
 * Building an AI Text Detector From Scratch — Sebastian Raschka: An End-to-End Project With Dataset Construction, Model Training, Local Deployment, and RLVR</description>
-    </item>
-    <item>
-      <title>Stars &amp; Posts — 2026-08-14</title>
-      <link>https://kylinmiao.me/stars/2026-08-14/</link>
-      <guid isPermaLink="true">https://kylinmiao.me/stars/2026-08-14/</guid>
-      <pubDate>Fri, 14 Aug 2026 12:00:00 GMT</pubDate>
-      <description>GitHub Repos:
-* prime-radiant-inc/engineering-notebook — A Bun CLI that ingests Claude Code and Codex session transcripts, generates LLM-powered daily summaries, and serves a browsable web UI for your engineering journal. [TypeScript]
-* tile-ai/TileRT — Tile-Based Runtime for Ultra-Low-Latency LLM Inference [Python]
-
-Bluesky Posts:
-* Simon Willison: Watching Silo genuinely makes me want to hook up some generative AI abomination that rewrites every frame to make it look like they turned the lights ...
-* Mark Riedl: I submitted a paper to arXiv in April. It was rejected by moderators, despite being accepted to a long-running workshop at one of the most prestigious...
-* Thomas Dietterich: The agriculture water issue is definitely real. Water rights and pricing are crazy
-* Simon Willison: The new Qwen 3.7 27B, running as a 17GB GGUF in LM Studio on my M5 Max MacBook Pro, just drew me the best pelican riding a bicycle I&apos;ve seen from any ...
-* Mark Riedl: no likey
-* Mark Riedl: Nice try tho
-* Mark Riedl: I used Cursor exactly once (to see how students were using to cheat). I had to create a free account. I am now going out of my way to delete my accoun...
-* Marc Lanctot: Friday vibes... summer of 2026 edition! 🎶🎵
-
-I&apos;ve always loved instrumental songs. I&apos;ll post my top 10 favs (no more than three per artist), one on e...
-* Nathan Lambert: GLM 5.3 notes and why we should stop being so surprised about these very strong Chinese models (most of this is talking myself through some of my deni...
-* Nathan Lambert: Farewell Seattle! It&apos;s been such a wonderful life/career stage for me. Onto new adventures (and mountains).
-* Emily M. Bender: Thinking of colleagues who work in the academy depite racism, transphobia, ableism, etc and all of the extra scrutiny put on them---and all of the ext...
-* Emily M. Bender: Introduce yourself as what almost killed you. 
-
-Hi, I&apos;m Mt St Helens.
-* Emily M. Bender: Finally got my author copies of the UK paperback of The AI Con, and they&apos;re even prettier in person!
-
-w/@alexhanna.bsky.social
-
-thecon.ai
-* angela zhou: am I brave enough to entitle some ongoing work &quot;DIP: Decision-Improved Predictions&quot; or nah
-* Ben Recht: The least agentic people alive!
-
-Blog Articles:
-* GLM-5.3: How Chinese labs keep stride with the frontier — Nathan Lambert: Hint: It&amp;#8217;s really not a distillation story.</description>
     </item>
   </channel>
 </rss>

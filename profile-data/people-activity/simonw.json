@@ -2,28 +2,6 @@
   "id": "simonw",
   "stars": [
     {
-      "repo": "prime-radiant-inc/engineering-notebook",
-      "url": "https://github.com/prime-radiant-inc/engineering-notebook",
-      "description": "A Bun CLI that ingests Claude Code and Codex session transcripts, generates LLM-powered daily summaries, and serves a browsable web UI for your engineering journal.",
-      "language": "TypeScript",
-      "stargazersCount": 273,
-      "starredBy": "simonw",
-      "starredAt": "2026-08-14T18:38:40Z",
-      "highlights": "",
-      "worthReading": "",
-      "topics": [
-        "bun",
-        "claude-code",
-        "cli",
-        "sqlite",
-        "typescript"
-      ],
-      "tags": [],
-      "score": 0,
-      "scoreReason": "",
-      "type": "github"
-    },
-    {
       "repo": "ddalcu/mlx-serve",
       "url": "https://github.com/ddalcu/mlx-serve",
       "description": "Native LLM inference server for Apple Silicon. OpenAI + Anthropic API compatible. No Python. Includes MLX Core macOS app with chat, agent mode, and tool calling.",
@@ -109,42 +87,6 @@
     }
   ],
   "posts": [
-    {
-      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3msz2okp6d22f",
-      "url": "https://bsky.app/profile/simonwillison.net/post/3msz2okp6d22f",
-      "author": {
-        "handle": "simonwillison.net",
-        "displayName": "Simon Willison",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
-      },
-      "content": "Watching Silo genuinely makes me want to hook up some generative AI abomination that rewrites every frame to make it look like they turned the lights on",
-      "createdAt": "2026-08-14T01:58:43.955Z",
-      "likeCount": 28,
-      "replyCount": 4,
-      "repostCount": 0,
-      "highlights": "",
-      "worthReading": "",
-      "tags": [],
-      "type": "bluesky"
-    },
-    {
-      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mt2ynhrlk22z",
-      "url": "https://bsky.app/profile/simonwillison.net/post/3mt2ynhrlk22z",
-      "author": {
-        "handle": "simonwillison.net",
-        "displayName": "Simon Willison",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
-      },
-      "content": "The new Qwen 3.7 27B, running as a 17GB GGUF in LM Studio on my M5 Max MacBook Pro, just drew me the best pelican riding a bicycle I've seen from any model that runs on my laptop",
-      "createdAt": "2026-08-14T20:27:39.327Z",
-      "likeCount": 146,
-      "replyCount": 6,
-      "repostCount": 11,
-      "highlights": "",
-      "worthReading": "",
-      "tags": [],
-      "type": "bluesky"
-    },
     {
       "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mt3pp4emz222",
       "url": "https://bsky.app/profile/simonwillison.net/post/3mt3pp4emz222",
@@ -500,6 +442,42 @@
       "likeCount": 122,
       "replyCount": 5,
       "repostCount": 22,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [],
+      "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mvdokksrl223",
+      "url": "https://bsky.app/profile/simonwillison.net/post/3mvdokksrl223",
+      "author": {
+        "handle": "simonwillison.net",
+        "displayName": "Simon Willison",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
+      },
+      "content": "\"For a while, I must admit, it looked as if software developer roles like mine were done for. [...] But our industry is slowly realizing that making truly cutting-edge software still requires humans to think and work together, to maximize their skill sets and to practice their respective crafts.\"",
+      "createdAt": "2026-09-12T18:11:25.315Z",
+      "likeCount": 104,
+      "replyCount": 4,
+      "repostCount": 18,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [],
+      "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mved4krjbs2b",
+      "url": "https://bsky.app/profile/simonwillison.net/post/3mved4krjbs2b",
+      "author": {
+        "handle": "simonwillison.net",
+        "displayName": "Simon Willison",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
+      },
+      "content": "This is pretty neat: ChatGPT Work and GPT-6 Astra (I used \"Max\") can take an address and produce a 5K/10K circular running route starting from that address, using OSM data simonwillison.net/2026/Sep/12/...",
+      "createdAt": "2026-09-13T00:19:24.106Z",
+      "likeCount": 67,
+      "replyCount": 8,
+      "repostCount": 1,
       "highlights": "",
       "worthReading": "",
       "tags": [],
@@ -1007,10 +985,19 @@
       "highlights": "",
       "worthReading": "",
       "type": "blog"
+    },
+    {
+      "title": "Generating running routes with GPT-6 Astra and ChatGPT Work",
+      "url": "https://simonwillison.net/2026/Sep/12/astra-running-routes/",
+      "author": "Simon Willison",
+      "publishedAt": "2026-09-12T23:56:42+00:00",
+      "summary": "<p>Here's a neat thing I had <a href=\"https://simonwillison.net/2026/Aug/30/understanding-chatgpt-work/\">ChatGPT Work</a> with GPT-6 Astra (Max) do this morning:</p> <blockquote> <p><code>I live at <my address>. Figure out 5K and 10K running routes from me that loop from my house. Use OSM...",
+      "highlights": "",
+      "worthReading": "",
+      "type": "blog"
     }
   ],
   "dailyCounts": [
-    3,
     2,
     1,
     1,
@@ -1039,6 +1026,7 @@
     0,
     1,
     3,
+    2,
     1
   ],
   "interestSummary": ""
