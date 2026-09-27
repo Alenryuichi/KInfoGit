@@ -165,24 +165,6 @@
   ],
   "posts": [
     {
-      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mu5443unn22s",
-      "url": "https://bsky.app/profile/simonwillison.net/post/3mu5443unn22s",
-      "author": {
-        "handle": "simonwillison.net",
-        "displayName": "Simon Willison",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
-      },
-      "content": "My LLM cliché highlighter is up to 38 patterns now tools.simonwillison.net/llm-cliche-h...",
-      "createdAt": "2026-08-28T10:00:02.488Z",
-      "likeCount": 316,
-      "replyCount": 11,
-      "repostCount": 40,
-      "highlights": "",
-      "worthReading": "",
-      "tags": [],
-      "type": "bluesky"
-    },
-    {
       "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mudmaynuz22c",
       "url": "https://bsky.app/profile/simonwillison.net/post/3mudmaynuz22c",
       "author": {
@@ -573,6 +555,24 @@
       "likeCount": 68,
       "replyCount": 5,
       "repostCount": 7,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [],
+      "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mwhjlrkyx22f",
+      "url": "https://bsky.app/profile/simonwillison.net/post/3mwhjlrkyx22f",
+      "author": {
+        "handle": "simonwillison.net",
+        "displayName": "Simon Willison",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
+      },
+      "content": "I included a few references to this year's record-breaking Kākāpō breeding season in a talk I gave yesterday, and since Claude Opus 5.5 is surprisingly capable at pixel art animation I had it create this celebratory video for my closing slide",
+      "createdAt": "2026-09-27T00:18:27.844Z",
+      "likeCount": 44,
+      "replyCount": 4,
+      "repostCount": 3,
       "highlights": "",
       "worthReading": "",
       "tags": [],
@@ -1114,7 +1114,6 @@
   ],
   "dailyCounts": [
     1,
-    1,
     0,
     2,
     2,
@@ -1142,7 +1141,8 @@
     1,
     1,
     0,
-    0
+    0,
+    1
   ],
   "interestSummary": ""
 }
