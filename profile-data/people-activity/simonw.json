@@ -2,43 +2,6 @@
   "id": "simonw",
   "stars": [
     {
-      "repo": "ddalcu/mlx-serve",
-      "url": "https://github.com/ddalcu/mlx-serve",
-      "description": "Native LLM inference server for Apple Silicon. OpenAI + Anthropic API compatible. No Python. Includes MLX Core macOS app with chat, agent mode, and tool calling.",
-      "language": "Zig",
-      "stargazersCount": 922,
-      "starredBy": "simonw",
-      "starredAt": "2026-08-29T18:55:23Z",
-      "highlights": "",
-      "worthReading": "",
-      "topics": [
-        "agent",
-        "anthropic-api",
-        "apple-silicon",
-        "claude-code",
-        "deepseek-v4",
-        "diffusion",
-        "gguf",
-        "image-generation",
-        "inference",
-        "llm",
-        "local-llm",
-        "macos",
-        "macos-app",
-        "mlx",
-        "openai-api",
-        "tool-calling",
-        "video-generation",
-        "voice-agent",
-        "voice-cloning",
-        "zig"
-      ],
-      "tags": [],
-      "score": 0,
-      "scoreReason": "",
-      "type": "github"
-    },
-    {
       "repo": "tractordev/wanix",
       "url": "https://github.com/tractordev/wanix",
       "description": "A compute toolkit for the web with the depth of Plan 9 from Bell Labs",
@@ -577,6 +540,24 @@
       "worthReading": "",
       "tags": [],
       "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mwjcwvab6c2k",
+      "url": "https://bsky.app/profile/simonwillison.net/post/3mwjcwvab6c2k",
+      "author": {
+        "handle": "simonwillison.net",
+        "displayName": "Simon Willison",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
+      },
+      "content": "How late to the party am I on WebP?\n\nI only recently started using it as my preferred format for non-photo images and it's SO MUCH smaller than PNG, and looks much better than JPG used to shrink down screenshots too\n\nHas everyone else been having a WebP party without me for years?",
+      "createdAt": "2026-09-27T17:24:44.069Z",
+      "likeCount": 64,
+      "replyCount": 15,
+      "repostCount": 1,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [],
+      "type": "bluesky"
     }
   ],
   "videos": [],
@@ -1110,10 +1091,19 @@
       "highlights": "",
       "worthReading": "",
       "type": "blog"
+    },
+    {
+      "title": "2026 in LLMs (so far)",
+      "url": "https://simonwillison.net/2026/Sep/27/2026-in-llms-so-far/",
+      "author": "Simon Willison",
+      "publishedAt": "2026-09-27T23:54:15+00:00",
+      "summary": "<p>On Friday I gave the closing keynote at the <a href=\"https://www.wearedevelopers.com/world-congress-north-america\">WeAreDevelopers World Congress North America</a> in San Jose. I tied together the key trends from the past year into a chronological exploration of everything that happened in 2026....",
+      "highlights": "",
+      "worthReading": "",
+      "type": "blog"
     }
   ],
   "dailyCounts": [
-    1,
     0,
     2,
     2,
@@ -1142,7 +1132,8 @@
     1,
     0,
     0,
-    1
+    2,
+    0
   ],
   "interestSummary": ""
 }
