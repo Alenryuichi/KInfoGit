@@ -1,0 +1,38 @@
+[
+  {
+    "runAt": "2026-10-01T11:14:47.598Z",
+    "weekRelative": "2026-10-01",
+    "sources": [
+      {
+        "name": "arena",
+        "count": 50,
+        "previousCount": 20,
+        "status": "ok"
+      },
+      {
+        "name": "aider",
+        "count": 30,
+        "previousCount": 30,
+        "ageDays": 159.46860645833334,
+        "status": "ok"
+      },
+      {
+        "name": "sweBench",
+        "count": 30,
+        "previousCount": 30,
+        "status": "ok"
+      },
+      {
+        "name": "liveCodeBench",
+        "count": 28,
+        "previousCount": 28,
+        "status": "ok"
+      }
+    ],
+    "criticalEmpty": [],
+    "auxiliaryFallback": [],
+    "auxiliaryStale": [],
+    "refusedWrite": false,
+    "summary": "ok"
+  }
+]
