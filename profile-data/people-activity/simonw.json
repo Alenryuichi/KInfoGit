@@ -144,42 +144,6 @@
   ],
   "posts": [
     {
-      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mupxubgrls2c",
-      "url": "https://bsky.app/profile/simonwillison.net/post/3mupxubgrls2c",
-      "author": {
-        "handle": "simonwillison.net",
-        "displayName": "Simon Willison",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
-      },
-      "content": "Got access to GPT-6 Astra. Want to see some pelicans? Yeah you want to see some pelicans... here's a grid comparing Astra to GPT-5.6 Sol, Terra, and Luna static.simonwillison.net/static/2026/...\n\nTranscript from generating the Astra pelicans here: tools.simonwillison.net/markdown-svg...",
-      "createdAt": "2026-09-04T22:04:39.941Z",
-      "likeCount": 141,
-      "replyCount": 14,
-      "repostCount": 7,
-      "highlights": "",
-      "worthReading": "",
-      "tags": [],
-      "type": "bluesky"
-    },
-    {
-      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mupj3vhqo22k",
-      "url": "https://bsky.app/profile/simonwillison.net/post/3mupj3vhqo22k",
-      "author": {
-        "handle": "simonwillison.net",
-        "displayName": "Simon Willison",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
-      },
-      "content": "It happened again... this time OpenAI's rogue agents cyber-attacked (well, spammed) a dormant German wiki and used it to share the answers to a benchmark they were training against simonwillison.net/2026/Sep/4/r...",
-      "createdAt": "2026-09-04T17:40:29.713Z",
-      "likeCount": 74,
-      "replyCount": 9,
-      "repostCount": 15,
-      "highlights": "",
-      "worthReading": "",
-      "tags": [],
-      "type": "bluesky"
-    },
-    {
       "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3murtmdynq22s",
       "url": "https://bsky.app/profile/simonwillison.net/post/3murtmdynq22s",
       "author": {
@@ -516,6 +480,24 @@
       "likeCount": 229,
       "replyCount": 12,
       "repostCount": 26,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [],
+      "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mwz2hvy5ys2j",
+      "url": "https://bsky.app/profile/simonwillison.net/post/3mwz2hvy5ys2j",
+      "author": {
+        "handle": "simonwillison.net",
+        "displayName": "Simon Willison",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
+      },
+      "content": "Just published this post about how we’re going to need default hard budget caps on pretty much everything simonwillison.net/2026/Oct/3/d...",
+      "createdAt": "2026-10-03T23:35:47.414Z",
+      "likeCount": 96,
+      "replyCount": 10,
+      "repostCount": 9,
       "highlights": "",
       "worthReading": "",
       "tags": [],
@@ -1073,10 +1055,19 @@
       "highlights": "",
       "worthReading": "",
       "type": "blog"
+    },
+    {
+      "title": "We're going to need default hard budget caps on pretty much everything",
+      "url": "https://simonwillison.net/2026/Oct/3/default-hard-budget-caps/",
+      "author": "Simon Willison",
+      "publishedAt": "2026-10-03T23:34:02+00:00",
+      "summary": "<p>Here's a product feature which the world is going to need a whole lot more of over the coming months and years: <strong>default hard budget caps</strong>. I'm talking about the feature of pay-by-usage services and APIs that lets you say \"after $X/month, cut this thing off and return errors\"....",
+      "highlights": "",
+      "worthReading": "",
+      "type": "blog"
     }
   ],
   "dailyCounts": [
-    2,
     1,
     0,
     1,
@@ -1104,6 +1095,7 @@
     1,
     0,
     0,
+    1,
     1,
     0
   ],
