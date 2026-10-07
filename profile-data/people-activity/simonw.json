@@ -144,24 +144,6 @@
   ],
   "posts": [
     {
-      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3muwzopsoqs26",
-      "url": "https://bsky.app/profile/simonwillison.net/post/3muwzopsoqs26",
-      "author": {
-        "handle": "simonwillison.net",
-        "displayName": "Simon Willison",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
-      },
-      "content": "\"I don't know the answer myself, but I asked a blowhard I know and he took a wild guess, here's what he said: \"\n\nHow I interpret pasted replies from an LLM in online conversations",
-      "createdAt": "2026-09-07T17:25:59.347Z",
-      "likeCount": 139,
-      "replyCount": 9,
-      "repostCount": 14,
-      "highlights": "",
-      "worthReading": "",
-      "tags": [],
-      "type": "bluesky"
-    },
-    {
       "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mv2a4quhpk2d",
       "url": "https://bsky.app/profile/simonwillison.net/post/3mv2a4quhpk2d",
       "author": {
@@ -498,6 +480,24 @@
       "likeCount": 122,
       "replyCount": 40,
       "repostCount": 1,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [],
+      "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mxap2pofos2t",
+      "url": "https://bsky.app/profile/simonwillison.net/post/3mxap2pofos2t",
+      "author": {
+        "handle": "simonwillison.net",
+        "displayName": "Simon Willison",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
+      },
+      "content": "I released an LLM plugin for sending prompts to OpenAI's new Jev-clone decision model that's based on GPT-6 Luna simonwillison.net/2026/Oct/6/l...",
+      "createdAt": "2026-10-07T00:32:51.343Z",
+      "likeCount": 25,
+      "replyCount": 3,
+      "repostCount": 3,
       "highlights": "",
       "worthReading": "",
       "tags": [],
@@ -1069,7 +1069,6 @@
   ],
   "dailyCounts": [
     1,
-    1,
     0,
     1,
     3,
@@ -1097,7 +1096,8 @@
     1,
     0,
     1,
-    0
+    0,
+    1
   ],
   "interestSummary": ""
 }
