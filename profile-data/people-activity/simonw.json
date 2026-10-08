@@ -140,27 +140,25 @@
       "score": 0,
       "scoreReason": "",
       "type": "github"
+    },
+    {
+      "repo": "microsoft/quicksand",
+      "url": "https://github.com/microsoft/quicksand",
+      "description": "Quickly sandbox your AI agent.",
+      "language": "Python",
+      "stargazersCount": 66,
+      "starredBy": "simonw",
+      "starredAt": "2026-10-08T05:18:08Z",
+      "highlights": "",
+      "worthReading": "",
+      "topics": [],
+      "tags": [],
+      "score": 0,
+      "scoreReason": "",
+      "type": "github"
     }
   ],
   "posts": [
-    {
-      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mv2a4quhpk2d",
-      "url": "https://bsky.app/profile/simonwillison.net/post/3mv2a4quhpk2d",
-      "author": {
-        "handle": "simonwillison.net",
-        "displayName": "Simon Willison",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
-      },
-      "content": "Wrote up my thoughts on the whole OpenAI Navier–Stokes Millennium Prize Problem story, and how it highlights the still confusing question of what using my data \"to improve model performance\" actually means\nsimonwillison.net/2026/Sep/8/o...",
-      "createdAt": "2026-09-08T23:59:11.885Z",
-      "likeCount": 201,
-      "replyCount": 5,
-      "repostCount": 35,
-      "highlights": "",
-      "worthReading": "",
-      "tags": [],
-      "type": "bluesky"
-    },
     {
       "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mv4su6pfzk24",
       "url": "https://bsky.app/profile/simonwillison.net/post/3mv4su6pfzk24",
@@ -498,6 +496,24 @@
       "likeCount": 25,
       "replyCount": 3,
       "repostCount": 3,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [],
+      "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mxctkjruk22c",
+      "url": "https://bsky.app/profile/simonwillison.net/post/3mxctkjruk22c",
+      "author": {
+        "handle": "simonwillison.net",
+        "displayName": "Simon Willison",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
+      },
+      "content": "Pelicans and a bunch of notes on the pricing of the new Claude Haiku 5.5 simonwillison.net/2026/Oct/7/c...",
+      "createdAt": "2026-10-07T20:58:36.480Z",
+      "likeCount": 54,
+      "replyCount": 6,
+      "repostCount": 4,
       "highlights": "",
       "worthReading": "",
       "tags": [],
@@ -1065,10 +1081,19 @@
       "highlights": "",
       "worthReading": "",
       "type": "blog"
+    },
+    {
+      "title": "Claude Haiku 5.5",
+      "url": "https://simonwillison.net/2026/Oct/7/claude-haiku-5-5/",
+      "author": "Simon Willison",
+      "publishedAt": "2026-10-07T20:56:21+00:00",
+      "summary": "<p>As previously <a href=\"https://simonwillison.net/2026/Sep/28/claude-sonnet-5-5/\">promised</a>, here's Anthropic's new fast, low cost model: <a href=\"https://www.anthropic.com/claude-haiku-5-5\">Introducing Claude Haiku 5.5</a>.</p> <p>The previous Haiku, 4.5, was very much showing its age. It...",
+      "highlights": "",
+      "worthReading": "",
+      "type": "blog"
     }
   ],
   "dailyCounts": [
-    1,
     0,
     1,
     3,
@@ -1097,6 +1122,7 @@
     0,
     1,
     0,
+    2,
     1
   ],
   "interestSummary": ""
