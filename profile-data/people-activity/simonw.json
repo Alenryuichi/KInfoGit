@@ -160,24 +160,6 @@
   ],
   "posts": [
     {
-      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mv4su6pfzk24",
-      "url": "https://bsky.app/profile/simonwillison.net/post/3mv4su6pfzk24",
-      "author": {
-        "handle": "simonwillison.net",
-        "displayName": "Simon Willison",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
-      },
-      "content": "Here's a Blender model of a Pluribus themed Fabergé egg I had GPT-6 Astra build - I generated the concept image using ChatGPT Images 2.5, then pasted the image into Codex and told Astra to turn that into a Blender file\nsimonwillison.net/2026/Sep/9/b...",
-      "createdAt": "2026-09-10T00:39:44.981Z",
-      "likeCount": 36,
-      "replyCount": 3,
-      "repostCount": 5,
-      "highlights": "",
-      "worthReading": "",
-      "tags": [],
-      "type": "bluesky"
-    },
-    {
       "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mv7nb6bezk23",
       "url": "https://bsky.app/profile/simonwillison.net/post/3mv7nb6bezk23",
       "author": {
@@ -514,6 +496,24 @@
       "likeCount": 54,
       "replyCount": 6,
       "repostCount": 4,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [],
+      "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mxh2nlvc7s26",
+      "url": "https://bsky.app/profile/simonwillison.net/post/3mxh2nlvc7s26",
+      "author": {
+        "handle": "simonwillison.net",
+        "displayName": "Simon Willison",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
+      },
+      "content": "I built a new feature for my blog entirely by voice with Codex Desktop, while I was cooking dinner simonwillison.net/2026/Oct/9/b...",
+      "createdAt": "2026-10-09T13:16:14.499Z",
+      "likeCount": 54,
+      "replyCount": 11,
+      "repostCount": 3,
       "highlights": "",
       "worthReading": "",
       "tags": [],
@@ -1091,10 +1091,19 @@
       "highlights": "",
       "worthReading": "",
       "type": "blog"
+    },
+    {
+      "title": "A new feature for my blog, built using my voice",
+      "url": "https://simonwillison.net/2026/Oct/9/built-using-my-voice/",
+      "author": "Simon Willison",
+      "publishedAt": "2026-10-09T12:54:06+00:00",
+      "summary": "<p>I shipped a new feature for my blog today: the <a href=\"https://simonwillison.net/newsletters/\">Newsletters</a> page, which offers an index of all of the newsletters I've sent out, both my free <a href=\"https://simonw.substack.com/\">weekly Substack</a> and my <a...",
+      "highlights": "",
+      "worthReading": "",
+      "type": "blog"
     }
   ],
   "dailyCounts": [
-    1,
     3,
     2,
     1,
@@ -1122,6 +1131,7 @@
     1,
     0,
     2,
+    1,
     1,
     0
   ],
