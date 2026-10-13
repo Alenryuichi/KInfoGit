@@ -113,24 +113,6 @@
   ],
   "posts": [
     {
-      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mved4krjbs2b",
-      "url": "https://bsky.app/profile/simonwillison.net/post/3mved4krjbs2b",
-      "author": {
-        "handle": "simonwillison.net",
-        "displayName": "Simon Willison",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
-      },
-      "content": "This is pretty neat: ChatGPT Work and GPT-6 Astra (I used \"Max\") can take an address and produce a 5K/10K circular running route starting from that address, using OSM data simonwillison.net/2026/Sep/12/...",
-      "createdAt": "2026-09-13T00:19:24.106Z",
-      "likeCount": 67,
-      "replyCount": 8,
-      "repostCount": 1,
-      "highlights": "",
-      "worthReading": "",
-      "tags": [],
-      "type": "bluesky"
-    },
-    {
       "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mvgxs4ygd223",
       "url": "https://bsky.app/profile/simonwillison.net/post/3mvgxs4ygd223",
       "author": {
@@ -431,6 +413,24 @@
       "likeCount": 26,
       "replyCount": 2,
       "repostCount": 0,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [],
+      "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mxp55chsbc2c",
+      "url": "https://bsky.app/profile/simonwillison.net/post/3mxp55chsbc2c",
+      "author": {
+        "handle": "simonwillison.net",
+        "displayName": "Simon Willison",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
+      },
+      "content": "Shared some notes on Python 3.15, using it with uv, and features from Python 3.11 I'm excited to use now that 3.10 is no longer the minimum supported version for my own projects simonwillison.net/2026/Oct/12/...",
+      "createdAt": "2026-10-12T18:22:06.876Z",
+      "likeCount": 56,
+      "replyCount": 2,
+      "repostCount": 4,
       "highlights": "",
       "worthReading": "",
       "tags": [],
@@ -1018,10 +1018,19 @@
       "highlights": "",
       "worthReading": "",
       "type": "blog"
+    },
+    {
+      "title": "Hello Python 3.15, goodbye 3.10, and now I can use 3.11",
+      "url": "https://simonwillison.net/2026/Oct/12/python-3-15/",
+      "author": "Simon Willison",
+      "publishedAt": "2026-10-12T18:15:38+00:00",
+      "summary": "<p>Python 3.15 <a href=\"https://www.python.org/downloads/release/python-3150/\">is here</a>! Here's the essential <a href=\"https://docs.python.org/3.15/whatsnew/3.15.html\">What's new in Python 3.15</a> guide, this year curated by 3.14 and 3.15 release manager Hugo van Kemenade. As someone who builds...",
+      "highlights": "",
+      "worthReading": "",
+      "type": "blog"
     }
   ],
   "dailyCounts": [
-    1,
     1,
     1,
     0,
@@ -1050,7 +1059,8 @@
     1,
     0,
     0,
-    1
+    2,
+    0
   ],
   "interestSummary": ""
 }
