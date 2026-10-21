@@ -110,24 +110,6 @@
   ],
   "posts": [
     {
-      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mw2tsop42c2u",
-      "url": "https://bsky.app/profile/simonwillison.net/post/3mw2tsop42c2u",
-      "author": {
-        "handle": "simonwillison.net",
-        "displayName": "Simon Willison",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
-      },
-      "content": "Put together some notes on Jev and the new category of system one aka decision models simonwillison.net/2026/Sep/21/...",
-      "createdAt": "2026-09-21T23:16:40.533Z",
-      "likeCount": 72,
-      "replyCount": 8,
-      "repostCount": 10,
-      "highlights": "",
-      "worthReading": "",
-      "tags": [],
-      "type": "bluesky"
-    },
-    {
       "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mw5g6izoms2n",
       "url": "https://bsky.app/profile/simonwillison.net/post/3mw5g6izoms2n",
       "author": {
@@ -428,6 +410,24 @@
       "likeCount": 79,
       "replyCount": 18,
       "repostCount": 1,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [],
+      "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mydffvspjs2x",
+      "url": "https://bsky.app/profile/simonwillison.net/post/3mydffvspjs2x",
+      "author": {
+        "handle": "simonwillison.net",
+        "displayName": "Simon Willison",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
+      },
+      "content": "I built a Command & Conquer style RTS called Battle Drones, mainly using Claude Opus 5.5, which runs in the browser and includes device-to-device multiplayer over an audio link simonwillison.net/2026/Oct/20/...",
+      "createdAt": "2026-10-20T19:43:20.267Z",
+      "likeCount": 229,
+      "replyCount": 27,
+      "repostCount": 14,
       "highlights": "",
       "worthReading": "",
       "tags": [],
@@ -1025,13 +1025,22 @@
       "highlights": "",
       "worthReading": "",
       "type": "blog"
+    },
+    {
+      "title": "Battle Drones - a vibe coded RTS with audio-based multiplayer",
+      "url": "https://simonwillison.net/2026/Oct/20/battledrones/",
+      "author": "Simon Willison",
+      "publishedAt": "2026-10-20T19:34:19+00:00",
+      "summary": "<p>My latest vibe coded game experiment is a Command &amp; Conquer style RTS (Real Time Strategy) game called <a href=\"https://github.com/simonw/battledrones#readme\">Battle Drones</a> (<a href=\"https://simonw.github.io/battledrones/\">play it here</a>). Unlike <a...",
+      "highlights": "",
+      "worthReading": "",
+      "type": "blog"
     }
   ],
   "dailyCounts": [
     1,
     1,
     1,
-    1,
     0,
     0,
     2,
@@ -1057,6 +1066,7 @@
     0,
     0,
     2,
+    1,
     0
   ],
   "interestSummary": ""
