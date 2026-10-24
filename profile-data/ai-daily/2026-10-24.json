@@ -1,0 +1,754 @@
+{
+  "date": "2026-10-24",
+  "itemCount": 57,
+  "sections": [
+    {
+      "id": "engineering",
+      "title": "Engineering & Resources",
+      "items": [
+        {
+          "title": "Lighthouse: On Building a Trustworthy Digital Assistant for Exploring History with Civil Rights Archives",
+          "summary": "arXiv:2610.30158v1 Announce Type: new Abstract: Ar",
+          "url": "https://arxiv.org/abs/2610.30158",
+          "score": 5,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "FusionEval: Benchmarking Model Fusion for Large Language Models",
+          "summary": "arXiv:2610.30162v1 Announce Type: new Abstract: Mo",
+          "url": "https://arxiv.org/abs/2610.30162",
+          "score": 5,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "AQL-Lite: Enabling Efficient Knowledge Acquisition for Arabic LLMs via Data-Centric Continual Pretraining",
+          "summary": "arXiv:2610.30344v1 Announce Type: new Abstract: Tr",
+          "url": "https://arxiv.org/abs/2610.30344",
+          "score": 5,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "Consistency Is Not Validity: Self-Rewarded Moral Argumentation Makes Language Models Decisive but Pliable",
+          "summary": "arXiv:2610.30349v1 Announce Type: new Abstract: LL",
+          "url": "https://arxiv.org/abs/2610.30349",
+          "score": 5,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "Climbing the Ladder: Automating Data Pipelines and Reproducing Baselines in Low-Resource Settings",
+          "summary": "arXiv:2610.30374v1 Announce Type: new Abstract: Th",
+          "url": "https://arxiv.org/abs/2610.30374",
+          "score": 5,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "MemPlan: Memory-Conditioned PDDL Planning for Partially Observable Text Environments",
+          "summary": "arXiv:2610.30379v1 Announce Type: new Abstract: LL",
+          "url": "https://arxiv.org/abs/2610.30379",
+          "score": 5,
+          "sources": [
+            {
+              "name": "ArXiv cs.CL"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "AI Is Getting Good at Math. Here’s Why.",
+          "summary": "AI models are solving more mathematical problems. ",
+          "url": "https://latent.space/p/ai-is-getting-good-at-math/",
+          "score": 5,
+          "sources": [
+            {
+              "name": "Latent Space"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "Quick Study",
+          "summary": "<p><strong>Tool:</strong> <a href=\"https://tools.s",
+          "url": "https://simonwillison.net/2026/Oct/23/quick-study-painter/",
+          "score": 5,
+          "sources": [
+            {
+              "name": "Simon Willison"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "Introducing Kimi K3.1 Pro",
+          "summary": "<p><strong><a href=\"https://www.kimi.ai/blog/kimi-",
+          "url": "https://simonwillison.net/2026/Oct/23/kimi-k31-pro/",
+          "score": 5,
+          "sources": [
+            {
+              "name": "Simon Willison"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "\"An AI agent benchmark reported 94.3% success. After ...",
+          "summary": "An AI agent benchmark reported 94.3% success. Afte",
+          "url": "https://x.com/al3rez/status/2113672045175398624",
+          "score": 5,
+          "sources": [
+            {
+              "name": "x.com"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "Apollo Research's findings from its evaluation of Z.ai's ...",
+          "summary": "The study calls for a reevaluation and enhancement",
+          "url": "https://www.facebook.com/SamLiccardo1/posts/apollo-researchs-findings-from-its-evaluation-of-zais-model-glm-53-show-how-incr/1741433330677806",
+          "score": 5,
+          "sources": [
+            {
+              "name": "facebook.com"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "32 reactions | SOMEONE JUST BUILT A PHYSICAL STATUS LIGHT FOR CLAUDE CODE, SO HE KNOWS EXACTLY WHEN AI NEEDS HIM.\n\nAnd this might be one of the funniest yet genuinely useful developer setups we've seen.\n\nA developer on Reddit got tired of constantly checking whether Claude Code was still working or waiting for his input.\n\nHe had Claude running on a separate laptop, handling long coding tasks for his 3D Battleship game.\n\nBut there was one annoying problem.\n\nSometimes Claude would stop midway through a task and wait for a response, leaving the developer completely unaware.\n\nSo instead of checking his screen every few minutes, he connected an old Kuando Busylight to Claude Code using hooks.\n\nAnd the solution is ridiculously simple.\n\n•Blinking Red: Claude is actively working. •Solid Red: Claude needs human input. •Green: Claude is idle.\n\nNow he can instantly see what his AI coding assistant is doing without constantly switching screens.\n\nThe setup doesn't require a special AI device. It's an existing USB light connected to Claude Code's event system.\n\nThe Reddit community loved the idea, with developers sharing their own notification setups.\n\nAnd this perfectly captures where AI-assisted programming is heading.\n\nDevelopers are no longer just writing code. They're supervising AI agents that write code for them.\n\nBro literally gave his AI employee an office status light.\n\nNow the human knows when he's needed.\n\ncredit: r/ClaudeAI on Reddit\n\n#claudecode #anthropic #aicoding #developerhumor #aitools\n\n{claude code, anthropic, claude ai, ai coding, coding agents, usb status light, kuando busylight, developer tools, software engineering, ai automation, ai agents, coding workflow, productivity tools, developer productivity, claude code hooks, coding assistant, agentic coding, ai programming, physical notification, status indicator, usb light, autonomous coding, reddit claudeai, ai development, tech diy, programming memes, ai tools, ai news, workflow automation, developer setup} | Askgpts",
+          "summary": "MICROSOFT JUST REVEALED AI AGENTS TARGETING HUNDRE",
+          "url": "https://www.facebook.com/askgptss/videos/someone-just-built-a-physical-status-light-for-claude-code-so-he-knows-exactly-w/1745209193222017",
+          "score": 5,
+          "sources": [
+            {
+              "name": "facebook.com"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "What Is Vibe Coding? How It Works, Benefits & Risks",
+          "summary": "Code generation is merely the starting point. Team",
+          "url": "https://www.truefoundry.com/de/glossary/what-is-vibe-coding-yrcxl",
+          "score": 5,
+          "sources": [
+            {
+              "name": "truefoundry.com"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "Instagram",
+          "summary": "{claude code, anthropic, claude ai, ai coding, cod",
+          "url": "https://www.instagram.com/reel/De1D2YtzT0r",
+          "score": 5,
+          "sources": [
+            {
+              "name": "instagram.com"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "Best AI Agents in 2026: 30 Tools Compared",
+          "summary": "Best for: developers who want project-wide AI assi",
+          "url": "https://felloai.com/best-ai-agents",
+          "score": 5,
+          "sources": [
+            {
+              "name": "felloai.com"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "5 Free AI Coding Agents You Should Try in 2026 - KDnuggets",
+          "summary": "## 4. Cline\n\nCline is another coding agent I reall",
+          "url": "https://www.kdnuggets.com/5-free-ai-coding-agents-you-should-try-in-2026",
+          "score": 5,
+          "sources": [
+            {
+              "name": "kdnuggets.com"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "Agentic AI en multi-agentsystemen (MAS) | The Agentics Co.",
+          "summary": "Het Model Context Protocol, of MCP, is een open st",
+          "url": "https://theagentics.co/nl/enterprise-ai-transformation/agentic-ai-multi-agent-systems",
+          "score": 5,
+          "sources": [
+            {
+              "name": "theagentics.co"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "Model Context Protocol (MCP) for AI Agents | Thinkwise",
+          "summary": "MCP enables AI agents to access data and functiona",
+          "url": "https://www.thinkwisesoftware.com/model-context-protocol-mcp",
+          "score": 5,
+          "sources": [
+            {
+              "name": "thinkwisesoftware.com"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "Smart Orchestration: Multi-Agent Systems and Workflows - Global AI Community",
+          "summary": "Smart Orchestration resolves both traps by pairing",
+          "url": "https://globalai.community/e/pk2wpvhu",
+          "score": 5,
+          "sources": [
+            {
+              "name": "globalai.community"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "Moonshot Debuts First AI Upgrade Since Its Own DeepSeek Moment - Bloomberg",
+          "summary": "Moonshot Debuts First AI Upgrade Since Its Own Dee",
+          "url": "https://www.bloomberg.com/news/articles/2026-10-23/moonshot-debuts-first-ai-upgrade-since-its-own-deepseek-moment",
+          "score": 5,
+          "sources": [
+            {
+              "name": "bloomberg.com"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "AI Hacks Are Coming Thick and Fast and Overwhelming the Internet - WSJ",
+          "summary": "AI Hacks Are Coming Thick and Fast and Overwhelmin",
+          "url": "https://www.wsj.com/tech/ai/ai-hacks-are-coming-thick-and-fast-and-overwhelming-the-internet-4529c26c",
+          "score": 5,
+          "sources": [
+            {
+              "name": "wsj.com"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "Artificial Intelligence | The Verge",
+          "summary": "Artificial Intelligence | The Verge\n\n# AI\n\nArtific",
+          "url": "https://www.theverge.com/ai-artificial-intelligence",
+          "score": 5,
+          "sources": [
+            {
+              "name": "theverge.com"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "News | The Verge",
+          "summary": "News | The Verge\n\n# News\n\nAll the news you need to",
+          "url": "https://www.theverge.com/news",
+          "score": 5,
+          "sources": [
+            {
+              "name": "theverge.com"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "OpenAI says it will no longer train its AI models on the live internet, citing “significant risks” | TechCrunch",
+          "summary": "OpenAI says it will no longer train its AI models ",
+          "url": "https://techcrunch.com/2026/10/23/openai-says-it-will-no-longer-train-its-ai-models-on-the-live-internet-citing-significant-risks/",
+          "score": 5,
+          "sources": [
+            {
+              "name": "techcrunch.com"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "Moonshot AI Launches New Kimi K3.1 Pro Model  — The Information",
+          "summary": "Moonshot AI Launches New Kimi K3.1 Pro Model — The",
+          "url": "https://www.theinformation.com/briefings/moonshot-ai-launches-new-kimi-k3-1-pro-model",
+          "score": 5,
+          "sources": [
+            {
+              "name": "theinformation.com"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "Texas becomes the latest state to sue OpenAI. | The Verge",
+          "summary": "Texas becomes the latest state to sue OpenAI. | Th",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1017900/texas-becomes-the-latest-state-to-sue-openai",
+          "score": 5,
+          "sources": [
+            {
+              "name": "theverge.com"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "OpenAI now trains its frontier AI models with no internet access | The Verge",
+          "summary": "OpenAI now trains its frontier AI models with no i",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1018021/openai-training-top-ai-models-no-internet",
+          "score": 5,
+          "sources": [
+            {
+              "name": "theverge.com"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "Jack Dorsey’s Block made an AI model that talks to you like an awkward new friend | The Verge",
+          "summary": "Jack Dorsey’s Block made an AI model that talks to",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1017906/jack-dorsey-block-dessa-ai-voice-speech",
+          "score": 5,
+          "sources": [
+            {
+              "name": "theverge.com"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "How Claude Fable 5.1 can encode — and decode —messages in images. | The Verge",
+          "summary": "How Claude Fable 5.1 can encode — and decode —mess",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1017498/how-claude-fable-5-1-can-encode-and-decode-messages-in-images",
+          "score": 5,
+          "sources": [
+            {
+              "name": "theverge.com"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "Kimi K3.1 Pro and K3.1 Pro Highspeed",
+          "summary": "https:&#x2F;&#x2F;www.kimi.com&#x2F;code&#x2F;docs",
+          "url": "https://www.kimi.ai/blog/kimi-k3-1-pro",
+          "score": 5,
+          "sources": [
+            {
+              "name": "HN (812)"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "Show HN: Corgi, a helpful {agent, terminal} multiplexer",
+          "summary": "Hey everyone, Inspired by Herdr, I&#x27;ve built a",
+          "url": "https://corgi.computer/",
+          "score": 5,
+          "sources": [
+            {
+              "name": "HN (63)"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "A practical guide to AI image generation, from diffusion to agents",
+          "summary": "",
+          "url": "https://danielball.com/notes/ai_image_generation.html",
+          "score": 5,
+          "sources": [
+            {
+              "name": "HN (12)"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "cloudflare/security-audit-skill",
+          "summary": "A coding-agent skill for multi-phase security audi",
+          "url": "https://github.com/cloudflare/security-audit-skill",
+          "score": 5,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+2716★)"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "anthropics/knowledge-work-plugins",
+          "summary": "Open source repository of plugins primarily intend",
+          "url": "https://github.com/anthropics/knowledge-work-plugins",
+          "score": 5,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+635★)"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "NVIDIA/OpenShell",
+          "summary": "OpenShell is the safe, private runtime for autonom",
+          "url": "https://github.com/NVIDIA/OpenShell",
+          "score": 5,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+1119★)"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "SnailSploit/Claude-Red",
+          "summary": "claude-red is a curated library of offensive secur",
+          "url": "https://github.com/SnailSploit/Claude-Red",
+          "score": 5,
+          "sources": [
+            {
+              "name": "GitHub trending:all (+226★)"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "TauricResearch/TradingAgents",
+          "summary": "TradingAgents: Multi-Agents LLM Financial Trading ",
+          "url": "https://github.com/TauricResearch/TradingAgents",
+          "score": 5,
+          "sources": [
+            {
+              "name": "GitHub trending:python (+485★)"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "Graphify-Labs/graphify",
+          "summary": "Turn any codebase, with its docs, SQL schemas, con",
+          "url": "https://github.com/Graphify-Labs/graphify",
+          "score": 5,
+          "sources": [
+            {
+              "name": "GitHub trending:python (+1173★)"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "virgiliojr94/book-to-skill",
+          "summary": "Turn any technical book PDF into a Claude Code ski",
+          "url": "https://github.com/virgiliojr94/book-to-skill",
+          "score": 5,
+          "sources": [
+            {
+              "name": "GitHub trending:python (+143★)"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "onyx-dot-app/onyx",
+          "summary": "Open Source AI Platform - AI Chat with advanced fe",
+          "url": "https://github.com/onyx-dot-app/onyx",
+          "score": 5,
+          "sources": [
+            {
+              "name": "GitHub trending:python (+86★)"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "vllm-project/vllm",
+          "summary": "A high-throughput and memory-efficient inference a",
+          "url": "https://github.com/vllm-project/vllm",
+          "score": 5,
+          "sources": [
+            {
+              "name": "GitHub trending:python (+108★)"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "Anil-matcha/open-duet",
+          "summary": "Open-source, self-hosted alternative to Claude Due",
+          "url": "https://github.com/Anil-matcha/open-duet",
+          "score": 5,
+          "sources": [
+            {
+              "name": "GitHub trending:python (+68★)"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "stablyai/orca",
+          "summary": "Orca is the place for working with a fleet of agen",
+          "url": "https://github.com/stablyai/orca",
+          "score": 5,
+          "sources": [
+            {
+              "name": "GitHub trending:typescript (+1081★)"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "Vincentwei1021/video-shotcraft",
+          "summary": "AI video skill for Claude Code & Codex — cinematic",
+          "url": "https://github.com/Vincentwei1021/video-shotcraft",
+          "score": 5,
+          "sources": [
+            {
+              "name": "GitHub trending:typescript (+259★)"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "supabase/supabase",
+          "summary": "The Postgres development platform. Supabase gives ",
+          "url": "https://github.com/supabase/supabase",
+          "score": 5,
+          "sources": [
+            {
+              "name": "GitHub trending:typescript (+428★)"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "logto-io/logto",
+          "summary": "🧑‍🚀 Authentication and authorization infrastruct",
+          "url": "https://github.com/logto-io/logto",
+          "score": 5,
+          "sources": [
+            {
+              "name": "GitHub trending:typescript (+12★)"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "promptfoo/promptfoo",
+          "summary": "Test your prompts, agents, and RAGs. Red teaming/p",
+          "url": "https://github.com/promptfoo/promptfoo",
+          "score": 5,
+          "sources": [
+            {
+              "name": "GitHub trending:typescript (+56★)"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "twentyhq/twenty",
+          "summary": "The open alternative to Salesforce, designed for A",
+          "url": "https://github.com/twentyhq/twenty",
+          "score": 5,
+          "sources": [
+            {
+              "name": "GitHub trending:typescript (+79★)"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "genspark-ai/genoffice",
+          "summary": "Free, open-source AI Office suite: Docs, Sheets, S",
+          "url": "https://github.com/genspark-ai/genoffice",
+          "score": 5,
+          "sources": [
+            {
+              "name": "GitHub trending:typescript (+152★)"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "liguobao/ds-harness-remote",
+          "summary": "一个基于 DeepSeek Harness 插件机制构建的多端远程访问方案，通过安全、低延迟、端到端",
+          "url": "https://github.com/liguobao/ds-harness-remote",
+          "score": 5,
+          "sources": [
+            {
+              "name": "GitHub trending:typescript (+331★)"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "OpenHands/OpenHands",
+          "summary": "🙌 OpenHands: AI-Driven Development",
+          "url": "https://github.com/OpenHands/OpenHands",
+          "score": 5,
+          "sources": [
+            {
+              "name": "GitHub trending:typescript (+97★)"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "[R] The Hive Mind is a Single Reinforcement Learning Agent: Deriving the Exact Equivalence Between Swarm Dynamics and Multi-Armed Bandits",
+          "summary": "TL;DR We prove a mathematical equivalence between ",
+          "url": "https://www.reddit.com/r/MachineLearning/comments/1xdhf7r/r_the_hive_mind_is_a_single_reinforcement/",
+          "score": 5,
+          "sources": [
+            {
+              "name": "Reddit r/MachineLearning"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "Is symbolic ai dead? [D]",
+          "summary": "New research keeps finding things that keep reintr",
+          "url": "https://www.reddit.com/r/MachineLearning/comments/1xdekrf/is_symbolic_ai_dead_d/",
+          "score": 5,
+          "sources": [
+            {
+              "name": "Reddit r/MachineLearning"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "I just came across Next-Concept Modeling and the idea is fascinating[R]",
+          "summary": "I've been learning how language models work, espec",
+          "url": "https://www.reddit.com/r/MachineLearning/comments/1xd7bsu/i_just_came_across_nextconcept_modeling_and_the/",
+          "score": 5,
+          "sources": [
+            {
+              "name": "Reddit r/MachineLearning"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "Are we solving LLM memory by remembering more, when the real problem is knowing what to forget?[D]",
+          "summary": "Long-context models can now handle hundreds of tho",
+          "url": "https://www.reddit.com/r/MachineLearning/comments/1xdpek9/are_we_solving_llm_memory_by_remembering_more/",
+          "score": 5,
+          "sources": [
+            {
+              "name": "Reddit r/MachineLearning"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "Study Notes on Transformers and Hamiltonian Monte Carlo [P]",
+          "summary": "I’m sharing my study notes in case they might be u",
+          "url": "https://www.reddit.com/r/MachineLearning/comments/1xdfeki/study_notes_on_transformers_and_hamiltonian_monte/",
+          "score": 5,
+          "sources": [
+            {
+              "name": "Reddit r/MachineLearning"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        },
+        {
+          "title": "I made Transformer Architecture from scratch [P]",
+          "summary": "I implemented the 2017 transformer architecture us",
+          "url": "https://www.reddit.com/r/MachineLearning/comments/1xdctou/i_made_transformer_architecture_from_scratch_p/",
+          "score": 5,
+          "sources": [
+            {
+              "name": "Reddit r/MachineLearning"
+            }
+          ],
+          "tags": [],
+          "focusTopics": []
+        }
+      ]
+    }
+  ],
+  "aiSummary": null
+}
