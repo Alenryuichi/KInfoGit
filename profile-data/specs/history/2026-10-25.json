@@ -1,0 +1,318 @@
+{
+  "updatedAt": "2026-10-25T09:55:08.964Z",
+  "frameworks": [
+    {
+      "id": "spec-kit",
+      "name": "Spec-Kit",
+      "category": "toolkit",
+      "description": "GitHub 官方 spec-driven development toolkit，constitution → specify → plan → tasks → implement",
+      "website": "https://github.com/github/spec-kit",
+      "github": {
+        "repo": "github/spec-kit",
+        "stars": 142780,
+        "forks": 12787,
+        "openIssues": 220,
+        "pushedAt": "2026-10-23T18:16:37Z",
+        "latestRelease": {
+          "tag": "v1.2.3",
+          "publishedAt": "2026-10-22T13:33:20Z"
+        },
+        "weeklyCommits": 0,
+        "contributors": 326
+      }
+    },
+    {
+      "id": "bmad",
+      "name": "BMAD Method",
+      "category": "agent-framework",
+      "description": "21 个专家角色 (PM/架构师/Dev/QA…) + 34+ workflows 的 AI 驱动敏捷开发框架",
+      "website": "https://github.com/bmad-code-org/BMAD-METHOD",
+      "github": {
+        "repo": "bmad-code-org/BMAD-METHOD",
+        "stars": 54523,
+        "forks": 6100,
+        "openIssues": 79,
+        "pushedAt": "2026-10-20T03:24:19Z",
+        "latestRelease": {
+          "tag": "v6.12.4",
+          "publishedAt": "2026-10-14T21:19:19Z"
+        },
+        "weeklyCommits": 0,
+        "contributors": 161
+      },
+      "npm": {
+        "package": "bmad-method",
+        "latestVersion": "6.12.4",
+        "weeklyDownloads": 13982,
+        "lastPublishedAt": "2026-10-14T21:20:32.981Z"
+      }
+    },
+    {
+      "id": "openspec",
+      "name": "OpenSpec",
+      "category": "toolkit",
+      "description": "轻量 spec-driven development，brownfield 友好，fluid iterative 变更管理",
+      "website": "https://github.com/Fission-AI/OpenSpec",
+      "github": {
+        "repo": "Fission-AI/OpenSpec",
+        "stars": 72931,
+        "forks": 4981,
+        "openIssues": 195,
+        "pushedAt": "2026-10-24T03:59:34Z",
+        "latestRelease": {
+          "tag": "v1.15.0",
+          "publishedAt": "2026-10-24T00:50:05Z"
+        },
+        "weeklyCommits": 0,
+        "contributors": 147
+      },
+      "npm": {
+        "package": "openspec",
+        "latestVersion": "0.0.0",
+        "weeklyDownloads": 1141,
+        "lastPublishedAt": "2019-04-09T11:53:58.989Z"
+      }
+    },
+    {
+      "id": "gsd",
+      "name": "GSD-2",
+      "category": "toolkit",
+      "description": "自主 agent CLI — Milestone→Slice→Task 分层执行，crash recovery + 成本追踪",
+      "website": "https://github.com/gsd-build/gsd-2",
+      "github": {
+        "repo": "gsd-build/gsd-2",
+        "stars": 7764,
+        "forks": 753,
+        "openIssues": 20,
+        "pushedAt": "2026-05-22T23:08:59Z",
+        "latestRelease": {
+          "tag": "v3.0.0",
+          "publishedAt": "2026-05-14T20:41:50Z"
+        },
+        "weeklyCommits": 0,
+        "contributors": 96
+      },
+      "npm": {
+        "package": "gsd-pi",
+        "latestVersion": "3.0.0",
+        "weeklyDownloads": 555,
+        "lastPublishedAt": "2026-05-14T20:41:45.417Z"
+      }
+    },
+    {
+      "id": "kiro",
+      "name": "Kiro",
+      "category": "ide",
+      "description": "AWS 出品 agentic IDE，EARS notation spec-driven + Agent Hooks + autopilot",
+      "website": "https://kiro.dev"
+    },
+    {
+      "id": "tessl",
+      "name": "Tessl",
+      "category": "platform",
+      "description": "Agent enablement platform — skill registry + performance evaluation，Snyk 创始人创办",
+      "website": "https://tessl.io",
+      "npm": {
+        "package": "tessl",
+        "latestVersion": "0.118.0",
+        "weeklyDownloads": 9558,
+        "lastPublishedAt": "2026-10-23T09:28:37.907Z"
+      }
+    },
+    {
+      "id": "rulebook-ai",
+      "name": "Rulebook-AI",
+      "category": "toolkit",
+      "description": "一次定义 rules 环境，同步到 10+ AI 工具 (Cursor/Claude Code/Copilot/...)",
+      "website": "https://github.com/botingw/rulebook-ai",
+      "github": {
+        "repo": "botingw/rulebook-ai",
+        "stars": 612,
+        "forks": 95,
+        "openIssues": 24,
+        "pushedAt": "2025-10-03T00:56:25Z",
+        "weeklyCommits": 0,
+        "contributors": 6
+      }
+    },
+    {
+      "id": "awesome-cursorrules",
+      "name": "awesome-cursorrules",
+      "category": "rules",
+      "description": "39k★ 社区 .cursorrules 模板合集，150+ 框架/语言覆盖",
+      "website": "https://github.com/PatrickJS/awesome-cursorrules",
+      "github": {
+        "repo": "PatrickJS/awesome-cursorrules",
+        "stars": 41019,
+        "forks": 3527,
+        "openIssues": 107,
+        "pushedAt": "2026-05-30T18:01:29Z",
+        "weeklyCommits": 0,
+        "contributors": 87
+      }
+    }
+  ],
+  "discovered": [
+    {
+      "name": "go-zero",
+      "fullName": "zeromicro/go-zero",
+      "stars": 33402,
+      "description": "A cloud-native Go microservices framework with cli tool for productivity.",
+      "url": "https://github.com/zeromicro/go-zero",
+      "language": "Go",
+      "pushedAt": "2026-10-24T13:18:50Z",
+      "discoveredAt": "2026-10-25",
+      "source": "github"
+    },
+    {
+      "name": "gsd-core",
+      "fullName": "open-gsd/gsd-core",
+      "stars": 10842,
+      "description": "Git. Ship. Done - Core",
+      "url": "https://github.com/open-gsd/gsd-core",
+      "language": "JavaScript",
+      "pushedAt": "2026-10-25T08:30:08Z",
+      "discoveredAt": "2026-10-25",
+      "source": "github"
+    },
+    {
+      "name": "gentle-ai",
+      "fullName": "Gentleman-Programming/gentle-ai",
+      "stars": 8001,
+      "description": "Gentle-AI configures the AI coding agents you already use: Claude Code, Cursor, OpenCode, Codex, Pi, and more. Choose persistent memory, Organic-Driven Development, curated skills, MCP servers, personas, and optional bounded review. Open source, no agent lock-in.",
+      "url": "https://github.com/Gentleman-Programming/gentle-ai",
+      "language": "Go",
+      "pushedAt": "2026-10-25T09:41:22Z",
+      "discoveredAt": "2026-10-25",
+      "source": "github"
+    },
+    {
+      "name": "agent-os",
+      "fullName": "buildermethods/agent-os",
+      "stars": 5542,
+      "description": "Agent OS is a system for injecting your codebase standards and writing better specs for spec-driven development.",
+      "url": "https://github.com/buildermethods/agent-os",
+      "language": "Shell",
+      "pushedAt": "2026-10-07T04:18:58Z",
+      "discoveredAt": "2026-10-25",
+      "source": "github"
+    },
+    {
+      "name": "conductor",
+      "fullName": "gemini-cli-extensions/conductor",
+      "stars": 3773,
+      "description": "A plugin for AI coding agents (Antigravity, Claude Code) enabling Spec-Driven Development to specify, plan, and implement software features.",
+      "url": "https://github.com/gemini-cli-extensions/conductor",
+      "language": "Python",
+      "pushedAt": "2026-09-01T22:58:24Z",
+      "discoveredAt": "2026-10-25",
+      "source": "github"
+    },
+    {
+      "name": "cc-sdd",
+      "fullName": "gotalab/cc-sdd",
+      "stars": 3738,
+      "description": "Turn approved specs into long-running autonomous implementation. A minimal, adaptable SDD harness with Agent Skills for Claude Code, Codex, Cursor, Copilot, Windsurf, OpenCode, Gemini CLI, and Antigravity.",
+      "url": "https://github.com/gotalab/cc-sdd",
+      "language": "TypeScript",
+      "pushedAt": "2026-10-22T03:43:11Z",
+      "discoveredAt": "2026-10-25",
+      "source": "github"
+    },
+    {
+      "name": "qualitylayer",
+      "fullName": "maxritter/qualitylayer",
+      "stars": 2101,
+      "description": "Plan, build and review software with your coding agents. Work side by side in the App or browser, or use your favourite terminal or IDE.",
+      "url": "https://github.com/maxritter/qualitylayer",
+      "language": "PowerShell",
+      "pushedAt": "2026-10-25T08:49:50Z",
+      "discoveredAt": "2026-10-25",
+      "source": "github"
+    },
+    {
+      "name": "agtx",
+      "fullName": "fynnfluegge/agtx",
+      "stars": 1719,
+      "description": "🏄🏼‍♂️ The blackboard for coding agents - agentic development environment for claude code, codex, cursor, opencode, grok and more.",
+      "url": "https://github.com/fynnfluegge/agtx",
+      "language": "Rust",
+      "pushedAt": "2026-10-23T02:23:10Z",
+      "discoveredAt": "2026-10-25",
+      "source": "github"
+    },
+    {
+      "name": "spec-kitty",
+      "fullName": "spec-kitty/spec-kitty",
+      "stars": 1704,
+      "description": "Spec-Driven Development with organizational governance. Specs tell AI agents what to build; Charter governs how they build it. Git-native missions, enforceable workflows, and consistent engineering standards across AI coding agents and harnesses.",
+      "url": "https://github.com/spec-kitty/spec-kitty",
+      "language": "Python",
+      "pushedAt": "2026-10-25T09:50:49Z",
+      "discoveredAt": "2026-10-25",
+      "source": "github"
+    },
+    {
+      "name": "gentle-shell",
+      "fullName": "Gentleman-Programming/gentle-shell",
+      "stars": 1423,
+      "description": "Your coding agent for controlled development in the workspace you lead. A Pi-native shell with Organic Driven Development, focused subagents, risk-based native review, live changes and agent views, and permission  modes that keep destructive guards.",
+      "url": "https://github.com/Gentleman-Programming/gentle-shell",
+      "language": "TypeScript",
+      "pushedAt": "2026-10-25T02:57:28Z",
+      "discoveredAt": "2026-10-25",
+      "source": "github"
+    }
+  ],
+  "deltas": [
+    {
+      "frameworkId": "spec-kit",
+      "starsDelta": 134,
+      "npmDelta": null
+    },
+    {
+      "frameworkId": "bmad",
+      "starsDelta": 32,
+      "npmDelta": 0
+    },
+    {
+      "frameworkId": "openspec",
+      "starsDelta": 54,
+      "npmDelta": 0
+    },
+    {
+      "frameworkId": "gsd",
+      "starsDelta": 0,
+      "npmDelta": 0
+    },
+    {
+      "frameworkId": "kiro",
+      "starsDelta": null,
+      "npmDelta": null
+    },
+    {
+      "frameworkId": "tessl",
+      "starsDelta": null,
+      "npmDelta": 0
+    },
+    {
+      "frameworkId": "rulebook-ai",
+      "starsDelta": 1,
+      "npmDelta": null
+    },
+    {
+      "frameworkId": "awesome-cursorrules",
+      "starsDelta": 10,
+      "npmDelta": null
+    }
+  ],
+  "weeklyDiff": {
+    "topGainer": {
+      "frameworkId": "spec-kit",
+      "delta": 134
+    },
+    "newDiscovered": [],
+    "exitedDiscovered": []
+  },
+  "insights": null
+}
