@@ -90,27 +90,68 @@
       "score": 0,
       "scoreReason": "",
       "type": "github"
+    },
+    {
+      "repo": "githubnext/chopin",
+      "url": "https://github.com/githubnext/chopin",
+      "description": "Let's compose rich plans together",
+      "language": "TypeScript",
+      "stargazersCount": 535,
+      "starredBy": "simonw",
+      "starredAt": "2026-10-28T19:49:31Z",
+      "highlights": "",
+      "worthReading": "",
+      "topics": [],
+      "tags": [],
+      "score": 0,
+      "scoreReason": "",
+      "type": "github"
+    },
+    {
+      "repo": "githubnext/ace",
+      "url": "https://github.com/githubnext/ace",
+      "description": "A tool for building software with your team, locally.",
+      "language": "TypeScript",
+      "stargazersCount": 8,
+      "starredBy": "simonw",
+      "starredAt": "2026-10-28T19:41:48Z",
+      "highlights": "",
+      "worthReading": "",
+      "topics": [],
+      "tags": [],
+      "score": 0,
+      "scoreReason": "",
+      "type": "github"
+    },
+    {
+      "repo": "JuliusBrussee/caveman",
+      "url": "https://github.com/JuliusBrussee/caveman",
+      "description": "🪨 why use many token when few token do trick. Viral skill + proxy for coding agents that cuts 65% of tokens by talking like a caveman.",
+      "language": "Go",
+      "stargazersCount": 115905,
+      "starredBy": "simonw",
+      "starredAt": "2026-10-28T17:44:54Z",
+      "highlights": "",
+      "worthReading": "",
+      "topics": [
+        "ai",
+        "anthropic",
+        "caveman",
+        "claude",
+        "claude-code",
+        "llm",
+        "meme",
+        "prompt-engineering",
+        "skill",
+        "tokens"
+      ],
+      "tags": [],
+      "score": 0,
+      "scoreReason": "",
+      "type": "github"
     }
   ],
   "posts": [
-    {
-      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mwoc6wab4s2d",
-      "url": "https://bsky.app/profile/simonwillison.net/post/3mwoc6wab4s2d",
-      "author": {
-        "handle": "simonwillison.net",
-        "displayName": "Simon Willison",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
-      },
-      "content": "I'm at OpenAI's DevDay event in San Francisco today - as I have for the past three DevDay events, I'm running a live blog where I'll be posting updates during the keynote, which starts in five minutes simonwillison.net/2026/Sep/29/...",
-      "createdAt": "2026-09-29T16:54:38.502Z",
-      "likeCount": 84,
-      "replyCount": 3,
-      "repostCount": 11,
-      "highlights": "",
-      "worthReading": "",
-      "tags": [],
-      "type": "bluesky"
-    },
     {
       "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mwvldzjzqk2z",
       "url": "https://bsky.app/profile/simonwillison.net/post/3mwvldzjzqk2z",
@@ -358,6 +399,24 @@
       "likeCount": 208,
       "replyCount": 13,
       "repostCount": 26,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [],
+      "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mywwaogdac23",
+      "url": "https://bsky.app/profile/simonwillison.net/post/3mywwaogdac23",
+      "author": {
+        "handle": "simonwillison.net",
+        "displayName": "Simon Willison",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
+      },
+      "content": "I think October represents another inflection point in capabilities for coding agents and the models that drive them: Claude Opus 5.5 can now build video games that are actually fun simonwillison.net/2026/Oct/28/...",
+      "createdAt": "2026-10-28T14:05:13.419Z",
+      "likeCount": 163,
+      "replyCount": 18,
+      "repostCount": 9,
       "highlights": "",
       "worthReading": "",
       "tags": [],
@@ -965,10 +1024,19 @@
       "highlights": "",
       "worthReading": "",
       "type": "blog"
+    },
+    {
+      "title": "The October inflection point for vibe game development",
+      "url": "https://simonwillison.net/2026/Oct/28/vibe-game-development/",
+      "author": "Simon Willison",
+      "publishedAt": "2026-10-28T13:55:15+00:00",
+      "summary": "<p>I've written before about how November 2025 was <a href=\"https://simonwillison.net/tags/november-2025-inflection/\">an inflection point for coding agents</a> - the point where Opus 4.5 and GPT-5.1 crossed a tipping point that meant their respective coding agents became reliable daily drivers for...",
+      "highlights": "",
+      "worthReading": "",
+      "type": "blog"
     }
   ],
   "dailyCounts": [
-    1,
     0,
     0,
     1,
@@ -997,6 +1065,7 @@
     0,
     0,
     0,
+    4,
     0
   ],
   "interestSummary": ""
