@@ -217,24 +217,6 @@
   ],
   "posts": [
     {
-      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mx5vpoesps2c",
-      "url": "https://bsky.app/profile/simonwillison.net/post/3mx5vpoesps2c",
-      "author": {
-        "handle": "simonwillison.net",
-        "displayName": "Simon Willison",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
-      },
-      "content": "I need to decide if 1KB means 1,000 bytes or 1,024 bytes in all of my software\n\nI was leaning 1,024 but it looks like macOS and Windows both define KB as 1,000 these days\n\nI want whatever people are most likely to understand\n\n(I do not think most people know what KiB or MiB means)",
-      "createdAt": "2026-10-05T21:53:57.855Z",
-      "likeCount": 122,
-      "replyCount": 40,
-      "repostCount": 1,
-      "highlights": "",
-      "worthReading": "",
-      "tags": [],
-      "type": "bluesky"
-    },
-    {
       "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mxap2pofos2t",
       "url": "https://bsky.app/profile/simonwillison.net/post/3mxap2pofos2t",
       "author": {
@@ -481,6 +463,42 @@
       "likeCount": 43,
       "replyCount": 2,
       "repostCount": 7,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [],
+      "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mzgb77cpis2w",
+      "url": "https://bsky.app/profile/simonwillison.net/post/3mzgb77cpis2w",
+      "author": {
+        "handle": "simonwillison.net",
+        "displayName": "Simon Willison",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
+      },
+      "content": "There's a buzzy new paper about GPT-6 Astra being able to directly interpret model weights (prompts full of floating point numbers) - I tried it with Qwen 3.8 27B on my laptop and found that, after 45+ minutes, that model could achieve the same thing simonwillison.net/2026/Nov/3/q...",
+      "createdAt": "2026-11-03T16:31:11.256Z",
+      "likeCount": 207,
+      "replyCount": 13,
+      "repostCount": 22,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [],
+      "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mzh4tiie3s2d",
+      "url": "https://bsky.app/profile/simonwillison.net/post/3mzh4tiie3s2d",
+      "author": {
+        "handle": "simonwillison.net",
+        "displayName": "Simon Willison",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
+      },
+      "content": "Anyone know how to stop the New York Times app from hijacking my phone's top bar like this?",
+      "createdAt": "2026-11-04T00:45:42.988Z",
+      "likeCount": 36,
+      "replyCount": 10,
+      "repostCount": 1,
       "highlights": "",
       "worthReading": "",
       "tags": [],
@@ -1108,10 +1126,19 @@
       "highlights": "",
       "worthReading": "",
       "type": "blog"
+    },
+    {
+      "title": "Qwen 3.8 27B on my laptop can interpret model weights, too",
+      "url": "https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights/",
+      "author": "Simon Willison",
+      "publishedAt": "2026-11-03T16:29:48+00:00",
+      "summary": "<p>Yesterday's hot paper was <a href=\"https://rikiyat.github.io/blog/weight-space-programming/\">Sparks of Weight-Space Programming: LLMs can natively read &amp; write neural network weights</a> by Rikiya Takehi, Jayden Teoh, Alex Zhang, and Omar Khattab. The paper (OK, the authors classify is as a...",
+      "highlights": "",
+      "worthReading": "",
+      "type": "blog"
     }
   ],
   "dailyCounts": [
-    1,
     0,
     2,
     1,
@@ -1140,7 +1167,8 @@
     1,
     1,
     2,
-    0
+    1,
+    1
   ],
   "interestSummary": ""
 }
