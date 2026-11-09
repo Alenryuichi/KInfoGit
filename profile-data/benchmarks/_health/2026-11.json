@@ -286,5 +286,44 @@
     "auxiliaryStale": [],
     "refusedWrite": false,
     "summary": "ok"
+  },
+  {
+    "runAt": "2026-11-09T13:28:19.389Z",
+    "weekRelative": "2026-11-09",
+    "sources": [
+      {
+        "name": "arena",
+        "count": 0,
+        "previousCount": 50,
+        "status": "empty",
+        "note": "critical source returned 0 rows"
+      },
+      {
+        "name": "aider",
+        "count": 30,
+        "previousCount": 30,
+        "ageDays": 198.56133552083332,
+        "status": "ok"
+      },
+      {
+        "name": "sweBench",
+        "count": 30,
+        "previousCount": 30,
+        "status": "ok"
+      },
+      {
+        "name": "liveCodeBench",
+        "count": 28,
+        "previousCount": 28,
+        "status": "ok"
+      }
+    ],
+    "criticalEmpty": [
+      "arena"
+    ],
+    "auxiliaryFallback": [],
+    "auxiliaryStale": [],
+    "refusedWrite": false,
+    "summary": "partial: 1 critical source(s) empty (arena)"
   }
 ]
