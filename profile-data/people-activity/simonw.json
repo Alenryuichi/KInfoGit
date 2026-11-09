@@ -197,6 +197,22 @@
       "score": 0,
       "scoreReason": "",
       "type": "github"
+    },
+    {
+      "repo": "KraXen72/genanki-web",
+      "url": "https://github.com/KraXen72/genanki-web",
+      "description": "",
+      "language": "TypeScript",
+      "stargazersCount": 1,
+      "starredBy": "simonw",
+      "starredAt": "2026-11-08T10:32:34Z",
+      "highlights": "",
+      "worthReading": "",
+      "topics": [],
+      "tags": [],
+      "score": 0,
+      "scoreReason": "",
+      "type": "github"
     }
   ],
   "posts": [
@@ -465,6 +481,24 @@
       "likeCount": 31,
       "replyCount": 1,
       "repostCount": 1,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [],
+      "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mzu42ujywk24",
+      "url": "https://bsky.app/profile/simonwillison.net/post/3mzu42ujywk24",
+      "author": {
+        "handle": "simonwillison.net",
+        "displayName": "Simon Willison",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
+      },
+      "content": "I've recently started hiding the bulk of my AI-generated GitHub PR descriptions behind a collapsed <details><summary> HTML tag (thankfully supported by GitHub Markdown) and I think it's a useful pattern for making PR slop a little bit less exhausting simonwillison.net/2026/Nov/9/d...",
+      "createdAt": "2026-11-09T04:36:33.369Z",
+      "likeCount": 147,
+      "replyCount": 14,
+      "repostCount": 11,
       "highlights": "",
       "worthReading": "",
       "tags": [],
@@ -1102,10 +1136,19 @@
       "highlights": "",
       "worthReading": "",
       "type": "blog"
+    },
+    {
+      "title": "Hide your slop PR descriptions behind <details><summary>",
+      "url": "https://simonwillison.net/2026/Nov/9/details-summary/",
+      "author": "Simon Willison",
+      "publishedAt": "2026-11-09T04:25:05+00:00",
+      "summary": "<p>Most of the changes I make to my projects these days come in the form of PRs opened for me by Claude Code or Codex. The PR is my unit of work - I use them to bundle commits together, iterating on them until a feature is complete, document decisions and then merge the finished result. Today's...",
+      "highlights": "",
+      "worthReading": "",
+      "type": "blog"
     }
   ],
   "dailyCounts": [
-    0,
     0,
     2,
     0,
@@ -1134,6 +1177,7 @@
     0,
     1,
     0,
+    2,
     1
   ],
   "interestSummary": ""
