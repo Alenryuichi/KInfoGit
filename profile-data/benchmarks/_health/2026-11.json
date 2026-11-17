@@ -577,5 +577,44 @@
     "auxiliaryStale": [],
     "refusedWrite": false,
     "summary": "ok"
+  },
+  {
+    "runAt": "2026-11-17T13:58:32.471Z",
+    "weekRelative": "2026-11-17",
+    "sources": [
+      {
+        "name": "arena",
+        "count": 50,
+        "previousCount": 50,
+        "status": "ok"
+      },
+      {
+        "name": "aider",
+        "count": 30,
+        "previousCount": 30,
+        "ageDays": 206.5823202662037,
+        "status": "ok"
+      },
+      {
+        "name": "sweBench",
+        "count": 0,
+        "previousCount": 30,
+        "status": "empty",
+        "note": "0 rows this run, falling back to 30 previous rows"
+      },
+      {
+        "name": "liveCodeBench",
+        "count": 28,
+        "previousCount": 28,
+        "status": "ok"
+      }
+    ],
+    "criticalEmpty": [],
+    "auxiliaryFallback": [
+      "sweBench"
+    ],
+    "auxiliaryStale": [],
+    "refusedWrite": false,
+    "summary": "ok with fallback: sweBench using previous rows"
   }
 ]
