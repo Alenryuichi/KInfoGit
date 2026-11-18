@@ -2,22 +2,6 @@
   "id": "simonw",
   "stars": [
     {
-      "repo": "NethIafin/wine",
-      "url": "https://github.com/NethIafin/wine",
-      "description": "Wine for OpenBSD",
-      "language": "C",
-      "stargazersCount": 5,
-      "starredBy": "simonw",
-      "starredAt": "2026-10-19T16:13:50Z",
-      "highlights": "",
-      "worthReading": "",
-      "topics": [],
-      "tags": [],
-      "score": 0,
-      "scoreReason": "",
-      "type": "github"
-    },
-    {
       "repo": "menufactory43/panache",
       "url": "https://github.com/menufactory43/panache",
       "description": "Panache — RTS Belle Époque pour mobile (adaptation française de Battle Drones)",
@@ -213,24 +197,6 @@
     }
   ],
   "posts": [
-    {
-      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3myahrcpxu22s",
-      "url": "https://bsky.app/profile/simonwillison.net/post/3myahrcpxu22s",
-      "author": {
-        "handle": "simonwillison.net",
-        "displayName": "Simon Willison",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
-      },
-      "content": "Anyone else's TikTok occasionally decide to show them promotional videos from Chinese industrial machinery suppliers?",
-      "createdAt": "2026-10-19T15:47:31.202Z",
-      "likeCount": 79,
-      "replyCount": 18,
-      "repostCount": 1,
-      "highlights": "",
-      "worthReading": "",
-      "tags": [],
-      "type": "bluesky"
-    },
     {
       "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mydffvspjs2x",
       "url": "https://bsky.app/profile/simonwillison.net/post/3mydffvspjs2x",
@@ -514,6 +480,42 @@
       "likeCount": 37,
       "replyCount": 9,
       "repostCount": 4,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [],
+      "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3n2k4j57tg22m",
+      "url": "https://bsky.app/profile/simonwillison.net/post/3n2k4j57tg22m",
+      "author": {
+        "handle": "simonwillison.net",
+        "displayName": "Simon Willison",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
+      },
+      "content": "Here's GPT-6.2 Astra and GPT-6.2 Sol for \"Make a three js animation where yonkers stands up as a big mech (cool stand up motion) and stomps around manhattan and queens and Brooklyn, use openstreetmap mapping data\" simonwillison.net/2026/Nov/17/...",
+      "createdAt": "2026-11-17T22:43:06.480Z",
+      "likeCount": 46,
+      "replyCount": 7,
+      "repostCount": 0,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [],
+      "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3n2jlhapz522o",
+      "url": "https://bsky.app/profile/simonwillison.net/post/3n2jlhapz522o",
+      "author": {
+        "handle": "simonwillison.net",
+        "displayName": "Simon Willison",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
+      },
+      "content": "I shipped a new version of Datasette Lite recently - my build of the Datasette Python web app that runs entirely in the browser with WebAssembly and Pyodide - here's what's new and how it all works\nsimonwillison.net/2026/Nov/17/...",
+      "createdAt": "2026-11-17T17:37:49.437Z",
+      "likeCount": 30,
+      "replyCount": 2,
+      "repostCount": 1,
       "highlights": "",
       "worthReading": "",
       "tags": [],
@@ -1171,10 +1173,19 @@
       "highlights": "",
       "worthReading": "",
       "type": "blog"
+    },
+    {
+      "title": "Running the full server-side Datasette Python app in the browser with service workers and Pyodide",
+      "url": "https://simonwillison.net/2026/Nov/17/datasette-lite/",
+      "author": "Simon Willison",
+      "publishedAt": "2026-11-17T16:48:33+00:00",
+      "summary": "<p><a href=\"https://lite.datasette.io/\">Datasette Lite</a> is my port of the <a href=\"https://datasette.io/\">Datasette</a> Python application to run directly in the browser using WebAssembly and <a href=\"https://pyodide.org/\">Pyodide</a>. I've released a complete rewrite of Datasette Lite using...",
+      "highlights": "",
+      "worthReading": "",
+      "type": "blog"
     }
   ],
   "dailyCounts": [
-    2,
     1,
     2,
     1,
@@ -1203,6 +1214,7 @@
     1,
     0,
     0,
+    2,
     0
   ],
   "interestSummary": ""

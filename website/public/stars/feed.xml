@@ -4,8 +4,27 @@
     <title>Stars &amp; Posts — Kylin Miao</title>
     <link>https://kylinmiao.me/stars/</link>
     <description>Daily curated GitHub starred repos, Bluesky/X posts, YouTube videos and blog articles from AI leaders with AI-powered summaries.</description>
-    <lastBuildDate>Tue, 17 Nov 2026 11:28:18 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 18 Nov 2026 11:02:28 GMT</lastBuildDate>
     <atom:link href="https://kylinmiao.me/stars/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Stars &amp; Posts — 2026-11-18</title>
+      <link>https://kylinmiao.me/stars/2026-11-18/</link>
+      <guid isPermaLink="true">https://kylinmiao.me/stars/2026-11-18/</guid>
+      <pubDate>Wed, 18 Nov 2026 12:00:00 GMT</pubDate>
+      <description>GitHub Repos:
+* Niko1221/Strata — Qwen3.8-Flash-Next on any consumer hardware: one-click install for Windows / Linux. Strata inference engine, OpenAI/Anthropic API on localhost, optional image input. [C++]
+
+Bluesky Posts:
+* Mark Riedl: On the surface Meta being sued by Muse is funny. Lurking under the surface is a huge problem: AI flooding lawyers, journalists, and politicians with t...
+* Thomas Dietterich: Would be great to have this enacted.
+* Ethan Mollick: All of that aside, the fact that an AI can make all of this, including creating 3D assets in Blender is still nuts.
+
+If you have a decent computer, it...
+* Ethan Mollick: A rush of patches to address security concerns is exactly the most plausible answer for recent outages, as well as the official answer. CIOs I spoke t...
+* Emily M. Bender: Marked safe from signing my name alongside the sex offenders &amp; race scientists
+* Emily M. Bender: Another story that&apos;s going around about this post is that I say that Pangram (or &quot;AI&quot;) is racist. Folks, that&apos;s not how racism works and it&apos;s also not...
+* Naomi Saphra: It’s so frustrating to go from low-hanging fruit criticisms from human reviewers (need more models! not big enough!) to even more rigidly cliched LLM ...</description>
+    </item>
     <item>
       <title>Stars &amp; Posts — 2026-11-17</title>
       <link>https://kylinmiao.me/stars/2026-11-17/</link>
@@ -13,12 +32,27 @@
       <pubDate>Tue, 17 Nov 2026 12:00:00 GMT</pubDate>
       <description>GitHub Repos:
 * AnswerDotAI/typrose — Typography styles for Tailwind CSS v4. A CSS-native alternative to @tailwindcss/typography. [CSS]
+* argonrobotics-ai/alloy — Alloy: a multi-material, parallel physics engine for robot learning, built on Newton, MuJoCo Warp and Warp. Rigid robots, cloth, liquids and soft bodies in one scene, in parallel worlds on a GPU (thousands for free rigid bodies, up to 4,096 for a robot arm), or on a CPU. Python 3.11 or 3.12. [Python]
 
 Bluesky Posts:
 * Mark Riedl: What an amazing coincidence given the IPO is days away gizmodo.com/anthropic-sa... 
 Our progress is accelerating so fast that we need to be extra care...
 * Ethan Mollick: A lot of folks don&apos;t realize how much of our computer infrastructure is an improvised system prone to cascading failures. You didn&apos;t need offensive AI...
 * Ben Recht: I am reading AI2027 again. How can it be more infuriating than I remembered?
+* Simon Willison: Here&apos;s GPT-6.2 Astra and GPT-6.2 Sol for &quot;Make a three js animation where yonkers stands up as a big mech (cool stand up motion) and stomps around man...
+* Simon Willison: I shipped a new version of Datasette Lite recently - my build of the Datasette Python web app that runs entirely in the browser with WebAssembly and P...
+* Mark Riedl: What is your p(james_bond_villain_will_be_a_rogue_ai)?
+* Mark Riedl: If I were to create the ultimate AI villain, I would create a sandbox simulation for the AI to try to take over the world. I would add an adversary wi...
+* Mark Riedl: Every year like clockwork
+* Nathan Lambert: Everyone online: OMG Qwen 4 Max is closed source, Chinese open-weight strategy is over.
+
+In reality: It&apos;s the same strategy they&apos;ve had for years. Qwe...
+* Ethan Mollick: I’ve been using GPT-6.2 Astra prior to launch &amp; I found it very uneven  &amp; weird. On one hand, it was harder to steer &amp; work with than other models. On...
+* Ethan Mollick: The discussion of AI in gaming is pernicious now. The idea that games are going to be the only field where humans write code unassisted is obviously w...
+* Emily M. Bender: Yes, totally. &quot;Not technical enough&quot; in this situation is exactly &quot;not male enough&quot; ... which is both deplorable and also laughable, because of the kn...
+* Emily M. Bender: This post seems to have gotten a lot of (hostile) attention over on X, largely from economists (?) and the weirdest thing is people asserting that it&apos;...
+* Emily M. Bender: Worth a listen! Sounds like a really cool project + it&apos;s interesting to hear about the process. (And yes, an audio podcast about photography worked re...
+* Ben Recht: Over on argmin, we continue p(doom) week to celebrate the Anthropic IPO. Today’s post delves into computational forecasts of the end of days.
 
 YouTube Videos:
 * SIWC Lesson 2 (Jeremy Howard)
@@ -30,7 +64,10 @@ YouTube Videos:
 * SIWC Lesson 11 (Jeremy Howard)
 * SIWC Lesson 13 (Jeremy Howard)
 * SIWC Lesson 7 (Jeremy Howard)
-* SIWC Lesson 4 (Jeremy Howard)</description>
+* SIWC Lesson 4 (Jeremy Howard)
+
+Blog Articles:
+* Running the full server-side Datasette Python app in the browser with service workers and Pyodide — Simon Willison: &lt;p&gt;&lt;a href=&quot;https://lite.datasette.io/&quot;&gt;Datasette Lite&lt;/a&gt; is my port of the &lt;a href=&quot;https://datasette.io/&quot;&gt;Datasette&lt;/a&gt; Python application to run d...</description>
     </item>
     <item>
       <title>Stars &amp; Posts — 2026-11-16</title>
@@ -901,48 +938,6 @@ I’ll tak...
 Blog Articles:
 * Battle Drones - a vibe coded RTS with audio-based multiplayer — Simon Willison: &lt;p&gt;My latest vibe coded game experiment is a Command &amp;amp; Conquer style RTS (Real Time Strategy) game called &lt;a href=&quot;https://github.com/simonw/battl...
 * Latest open artifacts (#25): DeepSeek V4.1 Flash 1017, American-made models, and new regulatory controls in the US &amp; China — Nathan Lambert: Western open models strike back</description>
-    </item>
-    <item>
-      <title>Stars &amp; Posts — 2026-10-19</title>
-      <link>https://kylinmiao.me/stars/2026-10-19/</link>
-      <guid isPermaLink="true">https://kylinmiao.me/stars/2026-10-19/</guid>
-      <pubDate>Mon, 19 Oct 2026 12:00:00 GMT</pubDate>
-      <description>GitHub Repos:
-* NethIafin/wine — Wine for OpenBSD [C]
-* mattt/AnyDecisionModel-Examples — Examples and evaluation tools for AnyDecisionModel, a Swift package for typed decisions from language models [Swift]
-
-Bluesky Posts:
-* Mark Riedl: Dear all the college kids,
-
-Get your flu shot.
-
-Sincerely,
-All your professors
-* Mark Riedl: Half the reason I am learning to play guitar is because I want to do things like this. 
-
-The other half is because I find using AI to make music so un...
-* Simon Willison: Anyone else&apos;s TikTok occasionally decide to show them promotional videos from Chinese industrial machinery suppliers?
-* Mark Riedl: There are two 𝖶̶𝗈̶𝗅̶𝗏̶𝖾̶𝗌̶ factories inside you, one real, and the other is so real it might as well be real
-* Mark Riedl: Finally a good use case for AI techcrunch.com/2026/10/19/p...
-* Mark Riedl: Reporter: OpenAI is a true champion of equity and democratization, with new results on low-resource languages… hold on, I’m getting an update…
-
-*holds...
-* Mark Riedl: One of the co-founders of Anthropic has declared that the Singularity has begun. (From Jack Clark&apos;s personal newsletter)
-* Mark Riedl: Monkeys watching an awkward ape walking upright in the arid lands that were once the edges of the rain forest:
-
-The singularity has begun.
-* Nathan Lambert: Trying to use the models for things outside of coding / ml, like making slides or coherent plans or longish content design, makes me feel the AGI-is-g...
-* Ethan Mollick: My book comes out tomorrow, so this is the last day to qualify for the pre-order bonus: a fun 10 minute AI voice interview that gives you personalized...
-* Ethan Mollick: Writing good STATA code was important for my academic career. It looks like that skill is largely becoming obsolete post Sonnet 4.6. (Also take this i...
-* Emily M. Bender: Some words on how to evaluate language technologies (and caution against using them to undermine others&apos; work)
-
-
-buttondown.com/maiht3k/arch...
-* Emily M. Bender: Buzzsprout is informing us that Mystery AI Hype Theater 3000 has reached half a million downloads!
-
-Pretty proud of our scrappy lil pod.
-
-w/@alexhanna...</description>
     </item>
   </channel>
 </rss>
