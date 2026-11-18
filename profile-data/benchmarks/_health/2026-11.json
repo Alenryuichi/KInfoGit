@@ -616,5 +616,41 @@
     "auxiliaryStale": [],
     "refusedWrite": false,
     "summary": "ok with fallback: sweBench using previous rows"
+  },
+  {
+    "runAt": "2026-11-18T13:33:06.269Z",
+    "weekRelative": "2026-11-18",
+    "sources": [
+      {
+        "name": "arena",
+        "count": 50,
+        "previousCount": 50,
+        "status": "ok"
+      },
+      {
+        "name": "aider",
+        "count": 30,
+        "previousCount": 30,
+        "ageDays": 207.5646558912037,
+        "status": "ok"
+      },
+      {
+        "name": "sweBench",
+        "count": 30,
+        "previousCount": 30,
+        "status": "ok"
+      },
+      {
+        "name": "liveCodeBench",
+        "count": 28,
+        "previousCount": 28,
+        "status": "ok"
+      }
+    ],
+    "criticalEmpty": [],
+    "auxiliaryFallback": [],
+    "auxiliaryStale": [],
+    "refusedWrite": false,
+    "summary": "ok"
   }
 ]
