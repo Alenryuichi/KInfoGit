@@ -198,24 +198,6 @@
   ],
   "posts": [
     {
-      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mydffvspjs2x",
-      "url": "https://bsky.app/profile/simonwillison.net/post/3mydffvspjs2x",
-      "author": {
-        "handle": "simonwillison.net",
-        "displayName": "Simon Willison",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
-      },
-      "content": "I built a Command & Conquer style RTS called Battle Drones, mainly using Claude Opus 5.5, which runs in the browser and includes device-to-device multiplayer over an audio link simonwillison.net/2026/Oct/20/...",
-      "createdAt": "2026-10-20T19:43:20.267Z",
-      "likeCount": 229,
-      "replyCount": 27,
-      "repostCount": 14,
-      "highlights": "",
-      "worthReading": "",
-      "tags": [],
-      "type": "bluesky"
-    },
-    {
       "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3myfmdrox3k2u",
       "url": "https://bsky.app/profile/simonwillison.net/post/3myfmdrox3k2u",
       "author": {
@@ -516,6 +498,24 @@
       "likeCount": 30,
       "replyCount": 2,
       "repostCount": 1,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [],
+      "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3n2nhnbueh22q",
+      "url": "https://bsky.app/profile/simonwillison.net/post/3n2nhnbueh22q",
+      "author": {
+        "handle": "simonwillison.net",
+        "displayName": "Simon Willison",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
+      },
+      "content": "The most useful thing about the pelican riding a bicycle test continues to be illustrating the differences between models in the same family running at different effort levels - here's Gemini 4 Carbon, the new Gemini 4 Neon, and Gemini 4 Hydrogen at low, medium, and high",
+      "createdAt": "2026-11-19T06:40:15.930Z",
+      "likeCount": 75,
+      "replyCount": 6,
+      "repostCount": 4,
       "highlights": "",
       "worthReading": "",
       "tags": [],
@@ -1186,7 +1186,6 @@
     }
   ],
   "dailyCounts": [
-    1,
     2,
     1,
     1,
@@ -1215,7 +1214,8 @@
     0,
     0,
     2,
-    0
+    0,
+    1
   ],
   "interestSummary": ""
 }
