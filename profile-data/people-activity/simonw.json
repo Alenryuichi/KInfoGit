@@ -178,27 +178,32 @@
       "score": 0,
       "scoreReason": "",
       "type": "github"
+    },
+    {
+      "repo": "muruhq/muru",
+      "url": "https://github.com/muruhq/muru",
+      "description": "Routing edge, control plane and Python runtime for WSGI and ASGI applications, with zero-downtime releases, traffic management and Python-aware process management.",
+      "language": "Rust",
+      "stargazersCount": 29,
+      "starredBy": "simonw",
+      "starredAt": "2026-11-21T23:52:11Z",
+      "highlights": "",
+      "worthReading": "",
+      "topics": [
+        "asgi",
+        "deployment",
+        "python",
+        "rust",
+        "web-server",
+        "wsgi"
+      ],
+      "tags": [],
+      "score": 0,
+      "scoreReason": "",
+      "type": "github"
     }
   ],
   "posts": [
-    {
-      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mykwxawoa22u",
-      "url": "https://bsky.app/profile/simonwillison.net/post/3mykwxawoa22u",
-      "author": {
-        "handle": "simonwillison.net",
-        "displayName": "Simon Willison",
-        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
-      },
-      "content": "Notes on Kimi K3.1 - this one is a big deal, the first time an open weights (well, soon-to-be open weights) model has competed this credibly with the current frontier simonwillison.net/2026/Oct/23/...",
-      "createdAt": "2026-10-23T19:45:54.167Z",
-      "likeCount": 208,
-      "replyCount": 13,
-      "repostCount": 26,
-      "highlights": "",
-      "worthReading": "",
-      "tags": [],
-      "type": "bluesky"
-    },
     {
       "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3mywwaogdac23",
       "url": "https://bsky.app/profile/simonwillison.net/post/3mywwaogdac23",
@@ -464,6 +469,42 @@
       "likeCount": 75,
       "replyCount": 6,
       "repostCount": 4,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [],
+      "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3n2tsb6pguk27",
+      "url": "https://bsky.app/profile/simonwillison.net/post/3n2tsb6pguk27",
+      "author": {
+        "handle": "simonwillison.net",
+        "displayName": "Simon Willison",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
+      },
+      "content": "Gemini 4 tip: the difference between Gemini 4 Hydrogen on \"high\" thinking effort and that same model on \"xhigh\" is VERY significant\n\nHere's the high v.s. the xhigh pelican - high cost 3.99 cents and used 5,311 output tokens, xhigh cost 23.61 cents and used 31,477 output tokens",
+      "createdAt": "2026-11-21T19:06:19.565Z",
+      "likeCount": 80,
+      "replyCount": 13,
+      "repostCount": 8,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [],
+      "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3n2uxw3563224",
+      "url": "https://bsky.app/profile/simonwillison.net/post/3n2uxw3563224",
+      "author": {
+        "handle": "simonwillison.net",
+        "displayName": "Simon Willison",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
+      },
+      "content": "Saw an excellent pelican in the harbor today",
+      "createdAt": "2026-11-22T06:20:08.909Z",
+      "likeCount": 73,
+      "replyCount": 7,
+      "repostCount": 0,
       "highlights": "",
       "worthReading": "",
       "tags": [],
@@ -1134,7 +1175,6 @@
     }
   ],
   "dailyCounts": [
-    1,
     0,
     0,
     0,
@@ -1163,7 +1203,8 @@
     0,
     1,
     0,
-    0
+    2,
+    1
   ],
   "interestSummary": ""
 }
