@@ -509,6 +509,42 @@
       "worthReading": "",
       "tags": [],
       "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3n2zbiqydh22d",
+      "url": "https://bsky.app/profile/simonwillison.net/post/3n2zbiqydh22d",
+      "author": {
+        "handle": "simonwillison.net",
+        "displayName": "Simon Willison",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
+      },
+      "content": "I built (with a lot of help from Fable 5.2) a new datasette-charts plugin, which is my best attempt yet at having Datasette automatically pick credible visualizations for any data you might throw at it simonwillison.net/2026/Nov/23/...",
+      "createdAt": "2026-11-23T23:22:18.436Z",
+      "likeCount": 76,
+      "replyCount": 6,
+      "repostCount": 8,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [],
+      "type": "bluesky"
+    },
+    {
+      "uri": "at://did:plc:kft6lu4trxowqmter2b6vg6z/app.bsky.feed.post/3n2z5f6wby22o",
+      "url": "https://bsky.app/profile/simonwillison.net/post/3n2z5f6wby22o",
+      "author": {
+        "handle": "simonwillison.net",
+        "displayName": "Simon Willison",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kft6lu4trxowqmter2b6vg6z/bafkreiewl57f52tt6jrd7gtn75edweos7z6bjxsqhottxw4l7zme6o55ma"
+      },
+      "content": "I've been trying out the first Ladybird browser alpha release - a from-scratch implementation of most of what it means to be a browser (CSS, HTML, JS, even WebAssembly) - and it's very impressive simonwillison.net/2026/Nov/23/...",
+      "createdAt": "2026-11-23T22:08:43.862Z",
+      "likeCount": 68,
+      "replyCount": 3,
+      "repostCount": 9,
+      "highlights": "",
+      "worthReading": "",
+      "tags": [],
+      "type": "bluesky"
     }
   ],
   "videos": [],
@@ -1172,10 +1208,19 @@
       "highlights": "",
       "worthReading": "",
       "type": "blog"
+    },
+    {
+      "title": "Ladybird's first alpha release",
+      "url": "https://simonwillison.net/2026/Nov/23/ladybird/",
+      "author": "Simon Willison",
+      "publishedAt": "2026-11-23T21:46:35+00:00",
+      "summary": "<p><a href=\"https://ladybird.org\">Ladybird</a> is an astonishingly ambitious project: a new browser, in 2026, with its own implementation of most of the key components - HTML parsing, CSS engine, layout, JavaScript, even WebAssembly. It still uses a few external components - things like <a...",
+      "highlights": "",
+      "worthReading": "",
+      "type": "blog"
     }
   ],
   "dailyCounts": [
-    0,
     0,
     0,
     4,
@@ -1204,6 +1249,7 @@
     0,
     2,
     1,
+    2,
     0
   ],
   "interestSummary": ""
